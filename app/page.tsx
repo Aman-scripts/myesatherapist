@@ -7,6 +7,7 @@ import { JourneySection } from "@/components/home/JourneySection";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { LicensedProviderSection } from "@/components/home/LicensedProviderSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { EmotionalSupportSection } from "@/components/home/EmotionalSupportSection";
 import { QualifyingConditions } from "@/components/home/QualifyingConditions";
 import { PricingSection } from "@/components/home/PricingSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
@@ -48,6 +49,9 @@ export default function HomePage() {
 
         {/* Why Choose Us — 6 feature cards */}
         <WhyChooseUs />
+
+        {/* What is an Emotional Support Animal? */}
+        <EmotionalSupportSection />
 
         {/* Video Testimonials */}
         <TestimonialsSection />
