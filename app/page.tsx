@@ -50,23 +50,17 @@ export default function HomePage() {
         {/* Why Choose Us — 6 feature cards */}
         <WhyChooseUs />
 
-        {/* What is an Emotional Support Animal? */}
-        <EmotionalSupportSection />
+        {/* <EmotionalSupportSection />
 
-        {/* Video Testimonials */}
         <TestimonialsSection />
 
-        {/* Pricing — Basic / Standard */}
         <PricingSection />
 
-        {/* FAQ accordion */}
         <FaqSection />
 
-        {/* CTA Banner */}
-        <CtaBanner />
+        <CtaBanner /> */}
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
