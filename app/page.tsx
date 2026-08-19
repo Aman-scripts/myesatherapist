@@ -61,7 +61,7 @@ export default function HomePage() {
         <CtaBanner /> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
