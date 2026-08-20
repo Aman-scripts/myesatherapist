@@ -1,48 +1,41 @@
 "use client";
 
 import React from "react";
-import {
-  CreditCard,
-  Monitor,
-  HeartHandshake,
-  Award,
-  Globe,
-  FileSearch,
-} from "lucide-react";
+import Image from "next/image";
 
 const features = [
   {
-    Icon: CreditCard,
+    icon: "/whychoose-section-license-professional.svg",
     title: "Licensed Professionals",
     description:
       "Evaluations are conducted by independent U.S.-licensed mental health professionals authorized to assess ESA eligibility.",
   },
   {
-    Icon: Monitor,
+    icon: "/whychoose-section-secure-thealth.svg",
     title: "Secure Telehealth Platform",
     description:
       "HIPAA-compliant systems ensure your information remains confidential and protected.",
   },
   {
-    Icon: HeartHandshake,
+    icon: "/whychoose-section-clinical-integrity.svg",
     title: "Clinical Integrity First",
     description:
       "We do not guarantee ESA approval. Recommendations are based solely on clinical judgment.",
   },
   {
-    Icon: Award,
+    icon: "/whychoose-section-legimate-documentation.svg",
     title: "Legitimate ESA Documentation",
     description:
       "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
   },
   {
-    Icon: Globe,
+    icon: "/whychoose-section-nationwide-access.svg",
     title: "Nationwide Access",
     description:
       "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
   },
   {
-    Icon: FileSearch,
+    icon: "/whychoose-section-transparent-process.svg",
     title: "Transparent Process",
     description:
       "Clear steps, clear expectations, no misleading claims.",
@@ -70,14 +63,21 @@ export function WhyChooseUs() {
 
         {/* 3-column 2-row grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 lg:gap-y-16 pt-4">
-          {features.map(({ Icon, title, description }) => (
+          {features.map(({ icon, title, description }) => (
             <div
               key={title}
               className="relative bg-white rounded-[24px] border border-[#E2E8F0] border-t-[4px] border-t-[#E8B92C] shadow-[0_10px_30px_-10px_rgba(26,61,79,0.08)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[220px]"
             >
               {/* Floating icon circle on top border */}
               <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-[64px] h-[64px] rounded-full bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-center">
-                <Icon className="w-7 h-7 text-[#1A4D59]" strokeWidth={1.8} />
+                <Image
+                  src={icon}
+                  alt=""
+                  width={30}
+                  height={30}
+                  unoptimized
+                  className="object-contain"
+                />
               </div>
 
               {/* Title */}
