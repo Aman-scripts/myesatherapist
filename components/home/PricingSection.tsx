@@ -2,137 +2,176 @@
 
 import React from "react";
 import Image from "next/image";
-import { Check } from "lucide-react";
 
-const plans = [
-  {
-    name: "Basic",
-    description: "Ideal for small projects",
-    currency: "$",
-    price: "99",
-    priceNote: "/per user",
-    features: [
-      "Phone consultation",
-      "PSD letter if qualified",
-      "Official clinic letterhead",
-      "Licensed professional",
-      "Email delivery",
-    ],
-    cta: "Get Started",
-    secondaryNote: "or contact sales",
-    highlighted: false,
-  },
-  {
-    name: "Standard",
-    description: "Ideal for small projects",
-    currency: "",
-    price: "149",
-    priceNote: "/per user",
-    features: [
-      "Video consultation",
-      "PSD letter if qualified",
-      "Licensed professional",
-      "Priority 24-hour delivery",
-      "Email delivery",
-    ],
-    cta: "Start Consultation",
-    secondaryNote: "",
-    highlighted: true,
-  },
-];
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+
+function FeatureBadgeIcon() {
+  return (
+    <Image
+      src="/price-section-badge.svg"
+      alt=""
+      width={16}
+      height={16}
+      className="shrink-0"
+    />
+  );
+}
 
 export function PricingSection() {
   return (
-    <section className="py-14 sm:py-16 lg:py-20 bg-[#EEEBE0]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left: heading + plan cards */}
-          <div className="w-full lg:flex-1 lg:max-w-[626px]">
-            <div className="text-center lg:text-left mb-10 space-y-3">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em]">
-                Plans &amp; Pricing
-              </h2>
-              <p className="text-muted-foreground text-base sm:text-lg font-semibold max-w-lg mx-auto lg:mx-0">
-                Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.
-              </p>
+    <section id="pricing" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header (Centered) */}
+        <div className="text-center max-w-[709px] mx-auto mb-14 space-y-4">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em]">
+            Plans &amp; Pricing
+          </h2>
+          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+            Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.
+          </p>
+        </div>
+
+        {/* Center Container for Both Cards + Floating Dog Paw */}
+        <div className="relative max-w-[624px] mx-auto">
+          {/* Both Cards Centered */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-6 sm:gap-4 relative z-10">
+            {/* 1. Starter / Basic Plan Card */}
+            <div className="w-full sm:w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] p-8 shadow-[0_8px_16px_rgba(0,0,0,0.06)] flex flex-col justify-between h-[398px] shrink-0">
+              <div>
+                {/* Title & Subtitle */}
+                <div className="space-y-1">
+                  <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                    Basic
+                  </h3>
+                  <p className="text-[14px] text-[#666666] font-semibold leading-[26px] font-sans">
+                    Ideal for small projects
+                  </p>
+                </div>
+
+                {/* Price */}
+                <div className="mt-4 mb-6">
+                  <span className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                    $99
+                  </span>
+                </div>
+
+                {/* Feature List */}
+                <ul className="space-y-2.5 font-sans">
+                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                    <FeatureBadgeIcon />
+                    <span>Phone consultation</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                    <FeatureBadgeIcon />
+                    <span>PSD letter if qualified</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                    <FeatureBadgeIcon />
+                    <span>Official clinic letterhead</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                    <FeatureBadgeIcon />
+                    <span>Licensed professional</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                    <FeatureBadgeIcon />
+                    <span>Email delivery</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Action Button & Note */}
+              <div className="pt-4 text-center space-y-1.5">
+                <a
+                  href="#how-it-works"
+                  className="inline-flex items-center justify-center w-[153px] h-[46px] rounded-[42px] text-white font-bold text-[18px] shadow-[0_2px_6px_rgba(232,185,44,0.3)] hover:opacity-95 transition-opacity"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  Get Started
+                </a>
+                <p className="text-[14px] text-[#1A1A1A] font-medium leading-[16px] font-sans">
+                  or contact sales
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center sm:items-stretch justify-center lg:justify-start gap-6">
-              {plans.map((plan) => (
-                <div
-                  key={plan.name}
-                  className={`relative w-full max-w-[300px] rounded-[28px] flex flex-col ${
-                    plan.highlighted ? "bg-[#E8B92C] pt-2.5 px-1 pb-1 shadow-[0_25px_50px_-15px_rgba(232,185,44,0.5)]" : ""
-                  }`}
-                >
-                  {plan.highlighted && (
-                    <div className="text-center text-primary text-xs font-bold tracking-[0.08em] uppercase pb-2.5">
-                      Most Popular
-                    </div>
-                  )}
-                  <div
-                    className={`flex flex-col justify-between h-full rounded-[24px] bg-white px-8 pt-[30px] pb-8 shadow-[0_10px_35px_-15px_rgba(46,90,102,0.25)] ${
-                      plan.highlighted ? "" : "border border-[#E1E1E1]"
-                    }`}
-                  >
-                    <div className="space-y-8">
-                      <div className="space-y-4">
-                        <div className="space-y-1">
-                          <h3 className="font-heading text-xl font-bold text-primary">
-                            {plan.name}
-                          </h3>
-                          <p className="text-sm text-[#666666] font-semibold">{plan.description}</p>
-                        </div>
-                        <div className="flex items-baseline gap-0.5">
-                          <span className="font-heading text-2xl font-bold text-primary">
-                            ${plan.price}
-                          </span>
-                          <span className="text-sm text-muted-foreground font-semibold">
-                            {plan.priceNote}
-                          </span>
-                        </div>
-                      </div>
+            {/* 2. Professional / Standard Plan Card (MOST POPULAR) */}
+            <div className="w-full sm:w-[308px] rounded-[28px] bg-[#E8B92C] pt-2.5 px-1 pb-1 shadow-[0_8px_18px_rgba(0,0,0,0.08),0_33px_33px_rgba(0,0,0,0.06),0_73px_44px_rgba(0,0,0,0.03)] flex flex-col items-center shrink-0">
+              <div className="text-center text-[#2E5A66] text-[14px] font-bold tracking-[1.12px] uppercase pb-2 font-sans">
+                MOST POPULAR
+              </div>
 
-                      <ul className="space-y-2.5">
-                        {plan.features.map((f) => (
-                          <li key={f} className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                            <Check className="w-4 h-4 text-[#1A1A1A] shrink-0" strokeWidth={2.5} />
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mt-8 space-y-2">
-                      <a
-                        href="#"
-                        className="block text-center py-3 rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-white font-bold text-base hover:opacity-90 transition-opacity shadow-md"
-                      >
-                        {plan.cta}
-                      </a>
-                      {!plan.highlighted && (
-                        <p className="text-center text-sm text-[#1A1A1A] font-medium">
-                          {plan.secondaryNote}
-                        </p>
-                      )}
-                    </div>
+              <div className="w-full bg-white rounded-[24px] p-8 shadow-[0_2px_4px_rgba(0,0,0,0.08)] flex flex-col justify-between h-[398px]">
+                <div>
+                  {/* Title & Subtitle */}
+                  <div className="space-y-1">
+                    <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                      Standard
+                    </h3>
+                    <p className="text-[14px] text-[#666666] font-semibold leading-[26px] font-sans">
+                      Ideal for small projects
+                    </p>
                   </div>
+
+                  {/* Price */}
+                  <div className="flex items-baseline gap-1 mt-4 mb-6">
+                    <span className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                      $149
+                    </span>
+                    <span className="text-[14px] text-[#5F6B6F] font-semibold leading-[26px] font-sans">
+                      /per user
+                    </span>
+                  </div>
+
+                  {/* Feature List */}
+                  <ul className="space-y-2.5 font-sans">
+                    <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                      <FeatureBadgeIcon />
+                      <span>Video consultation</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                      <FeatureBadgeIcon />
+                      <span>PSD letter if qualified</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                      <FeatureBadgeIcon />
+                      <span>Licensed professional</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                      <FeatureBadgeIcon />
+                      <span>Priority 24-hour delivery</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px]">
+                      <FeatureBadgeIcon />
+                      <span>Email delivery</span>
+                    </li>
+                  </ul>
                 </div>
-              ))}
+
+                {/* Action Button */}
+                <div className="pt-4 text-center">
+                  <a
+                    href="#how-it-works"
+                    className="inline-flex items-center justify-center w-[205px] h-[46px] rounded-[42px] text-white font-bold text-[18px] shadow-[0_2px_6px_rgba(232,185,44,0.3)] hover:opacity-95 transition-opacity"
+                    style={{ backgroundImage: TEAL_GRADIENT }}
+                  >
+                    Start Consultation
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right: dog photo */}
-          <div className="w-full max-w-[441px] lg:flex-1 lg:max-w-none">
-            <div className="relative w-full aspect-[441/376] rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/pricing-section-dog.png"
-                alt="Dog giving a paw to its owner"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 441px, 90vw"
-              />
-            </div>
+          {/* Floating Dog Paw & Human Hand Image (Positioned directly to the right without shifting centered cards) */}
+          <div className="hidden xl:block absolute left-[100%] top-[45px] w-[441px] h-[376px] pointer-events-none z-0 -ml-5">
+            <Image
+              src="/pricing-section-dog.png"
+              alt="Dog giving paw to woman hand"
+              width={441}
+              height={376}
+              priority
+              className="object-contain object-left"
+            />
           </div>
         </div>
       </div>
