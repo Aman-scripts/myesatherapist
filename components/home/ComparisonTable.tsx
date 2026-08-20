@@ -1,195 +1,269 @@
 "use client";
 
 import React from "react";
-import { Check, X, HelpCircle, Shield, Plane, Home, Sparkles } from "lucide-react";
+import Image from "next/image";
+
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+
+function GreenCheckIcon() {
+  return (
+    <span className="w-[26px] h-[26px] rounded-full bg-[#00BA00] flex items-center justify-center shrink-0 shadow-xs">
+      <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.5 5.5L5 9L12.5 1.5" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </span>
+  );
+}
+
+function RedCrossIcon() {
+  return (
+    <span className="w-[26px] h-[26px] rounded-full bg-[#FF5023] flex items-center justify-center shrink-0 shadow-xs">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L10 10M10 2L2 10" stroke="#FFF5F5" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    </span>
+  );
+}
+
+function WarningOrangeIcon() {
+  return (
+    <span className="w-[26px] h-[26px] rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 3.5V7.5M7 10.5H7.01" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    </span>
+  );
+}
+
+const comparisonRows = [
+  {
+    feature: "Evaluations",
+    icon: "/comparison-evaluations.svg",
+    myEsa: "Evaluations by state licensed mental health professionals",
+    others: "Often not licensed professionals",
+    othersType: "cross",
+  },
+  {
+    feature: "Determination",
+    icon: "/comparison-determination.svg",
+    myEsa: "Independent clinical evaluation & professional judgement",
+    others: "Instant approval or no evaluation",
+    othersType: "cross",
+  },
+  {
+    feature: "Telehealth",
+    icon: "/comparison-telehealth.svg",
+    myEsa: "HIPAA-compliant teleheath for your privacy & secuirity",
+    others: "Privacy may be lacking",
+    othersType: "warning",
+  },
+  {
+    feature: "Compliance-focused",
+    icon: "/comparison-compliance.svg",
+    myEsa: "Aligned wih FHA & HUD guidance & best practices",
+    others: "Often non-compliant with guidelines",
+    othersType: "warning",
+  },
+  {
+    feature: "Transparency",
+    icon: "/comparison-transparency.svg",
+    myEsa: "Clear steps & honest communication",
+    others: "Unclear process or hidden fees",
+    othersType: "cross",
+  },
+  {
+    feature: "Privacy",
+    icon: "/comparison-privacy.svg",
+    myEsa: "Your information is encrypted and never shared",
+    others: "Privacy protections may be weak",
+    othersType: "cross",
+  },
+  {
+    feature: "Nationwide",
+    icon: "/comparisontable-nationwide.svg",
+    myEsa: "Licensed providers in all U.S. states (where allowed)",
+    others: "Limited or regional only",
+    othersType: "warning",
+  },
+  {
+    feature: "Trust & Legitimacy",
+    icon: "/comparisontable-trust&legacy.svg",
+    myEsa: "Trusted by thousands since 2019",
+    others: "Unknown sources or reviews",
+    othersType: "cross",
+  },
+];
 
 export function ComparisonTable() {
-  const comparisonRows = [
-    {
-      feature: "Protected in Housing (Fair Housing Act)",
-      esa: true,
-      psd: true,
-      pet: false,
-      info: "Landlords must legally accommodate without pet fees or restrictions",
-    },
-    {
-      feature: "Exempt from Pet Deposit & Monthly Pet Rent",
-      esa: true,
-      psd: true,
-      pet: false,
-      info: "Saves $1,000 to $2,500+ every year in rental housing fees",
-    },
-    {
-      feature: "Bypasses 'No Pet' Policies & Breed/Weight Caps",
-      esa: true,
-      psd: true,
-      pet: false,
-      info: "Applies to all apartments, rental homes, condos, and HOAs",
-    },
-    {
-      feature: "Free Airplane Cabin Access (DOT Air Carrier Access Act)",
-      esa: false,
-      psd: true,
-      pet: false,
-      info: "PSDs fly free in cabin with owner under DOT service dog rules",
-    },
-    {
-      feature: "Full Public Access (Restaurants, Stores, Malls under ADA)",
-      esa: false,
-      psd: true,
-      pet: false,
-      info: "PSDs have full ADA Title III public access rights anywhere",
-    },
-    {
-      feature: "Specialized Task Training Required?",
-      esa: false, // "No training needed" - this is an advantage for ESA
-      psd: true, // "Trained for psychiatric tasks"
-      pet: false,
-      isSpecialNote: true,
-      esaLabel: "No Training Required",
-      psdLabel: "Trained for Tasks",
-      petLabel: "No",
-    },
-    {
-      feature: "Licensed Mental Health Professional Letter Required?",
-      esa: true,
-      psd: true,
-      pet: false,
-      info: "Official diagnosis and prescription letter signed by licensed clinician",
-    },
-    {
-      feature: "Any Pet Species Allowed (Dogs, Cats, Birds, etc.)",
-      esa: true,
-      psd: false, // (PSDs are dogs)
-      pet: true,
-      info: "ESAs can be dogs, cats, rabbits, birds, etc. PSDs must be dogs",
-    },
-  ];
-
   return (
-    <section id="psd" className="py-20 lg:py-28 bg-[#FBF9F5] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="compare" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-[1441px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6F3F0] text-[#0F5B4C] text-xs font-bold uppercase tracking-wider">
-            Legal Rights Matrix
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-            ESA vs Psychiatric Service Dog vs Pet
+        <div className="text-center max-w-[758px] mx-auto mb-12 space-y-3">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em]">
+            Compare to other ESA Letter Services
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Compare the legal protections under federal laws (FHA, ADA, and ACAA) to pick the exact letter you need.
+          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+            We set the standard for professional care, compliance, and trust.
           </p>
         </div>
 
-        {/* Comparison Table Container */}
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[640px]">
-              <thead>
-                <tr className="border-b border-slate-200 bg-slate-50/70">
-                  <th className="p-6 text-sm font-bold text-slate-900 w-2/5">
-                    Rights & Protections
-                  </th>
-                  <th className="p-6 text-center w-1/5 bg-emerald-50/70 border-x border-emerald-100">
-                    <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#0F5B4C] text-white text-[10px] font-bold uppercase tracking-wider mb-1">
-                      Most Popular
-                    </div>
-                    <div className="text-base font-extrabold text-[#0F5B4C]">
-                      ESA Letter
-                    </div>
-                    <div className="text-xs text-emerald-800 font-medium">Housing Protection</div>
-                  </th>
-                  <th className="p-6 text-center w-1/5 bg-amber-50/50">
-                    <div className="text-base font-extrabold text-amber-900">
-                      PSD Letter
-                    </div>
-                    <div className="text-xs text-amber-800 font-medium">Housing + Travel + Public</div>
-                  </th>
-                  <th className="p-6 text-center w-1/5 text-slate-500">
-                    <div className="text-base font-bold text-slate-700">
-                      Standard Pet
-                    </div>
-                    <div className="text-xs text-slate-500">No Legal Protection</div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 text-sm">
-                {comparisonRows.map((row, idx) => (
-                  <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
-                    <td className="p-5 font-medium text-slate-800">
-                      <div className="font-semibold text-slate-900">{row.feature}</div>
-                      {row.info && (
-                        <div className="text-xs text-slate-500 mt-0.5">{row.info}</div>
-                      )}
-                    </td>
-
-                    {/* ESA Column */}
-                    <td className="p-5 text-center bg-emerald-50/30 border-x border-emerald-100 font-medium">
-                      {row.isSpecialNote ? (
-                        <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
-                          {row.esaLabel}
-                        </span>
-                      ) : row.esa ? (
-                        <div className="w-7 h-7 rounded-full bg-[#0F5B4C] text-white flex items-center justify-center mx-auto shadow-xs">
-                          <Check className="w-4 h-4 stroke-[3]" />
-                        </div>
-                      ) : (
-                        <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center mx-auto">
-                          <X className="w-3.5 h-3.5 stroke-[3]" />
-                        </div>
-                      )}
-                    </td>
-
-                    {/* PSD Column */}
-                    <td className="p-5 text-center bg-amber-50/20 font-medium">
-                      {row.isSpecialNote ? (
-                        <span className="inline-flex items-center gap-1 text-xs font-bold text-amber-900 bg-amber-100 px-2.5 py-1 rounded-full">
-                          {row.psdLabel}
-                        </span>
-                      ) : row.psd ? (
-                        <div className="w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center mx-auto shadow-xs">
-                          <Check className="w-4 h-4 stroke-[3]" />
-                        </div>
-                      ) : (
-                        <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center mx-auto">
-                          <X className="w-3.5 h-3.5 stroke-[3]" />
-                        </div>
-                      )}
-                    </td>
-
-                    {/* Pet Column */}
-                    <td className="p-5 text-center text-slate-500">
-                      {row.isSpecialNote ? (
-                        <span className="text-xs text-slate-500 font-medium">{row.petLabel}</span>
-                      ) : row.pet ? (
-                        <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center mx-auto">
-                          <Check className="w-3.5 h-3.5" />
-                        </div>
-                      ) : (
-                        <div className="w-6 h-6 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
-                          <X className="w-3.5 h-3.5" />
-                        </div>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Footer Callout inside matrix */}
-          <div className="p-6 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-            <div className="text-sm text-slate-700">
-              <strong className="text-slate-900">Not sure which one you need?</strong> Take our free 2-minute pre-screening to find out in seconds.
+        {/* Desktop Comparison Table Structure */}
+        <div className="hidden lg:block w-full max-w-[1210px] relative">
+          {/* Main Background Frame */}
+          <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0_2px_6px_rgba(0,0,0,0.15)] pb-6 relative z-0">
+            {/* Header Labels for FEATURES and OTHERS */}
+            <div className="flex items-center justify-between pt-6 px-12 h-[80px]">
+              <div className="w-[300px] text-center">
+                <h3 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                  FEATURES
+                </h3>
+              </div>
+              <div className="w-[478px]" /> {/* Spacer for elevated center card */}
+              <div className="w-[300px] text-center">
+                <h3 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                  OTHERS
+                </h3>
+              </div>
             </div>
-            <a
-              href="#pricing"
-              className="px-6 py-2.5 rounded-xl bg-[#0F5B4C] hover:bg-[#0A3E34] text-white font-bold text-sm shadow-sm transition-colors shrink-0"
-            >
-              Choose Your Package
-            </a>
+
+            {/* Table Rows */}
+            <div className="divide-y divide-[#C8B9A7]/30 px-6">
+              {comparisonRows.map((row, idx) => (
+                <div key={idx} className="flex items-center justify-between h-[61px] px-6">
+                  {/* Features Column */}
+                  <div className="w-[280px] flex items-center gap-3">
+                    <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
+                      <Image
+                        src={row.icon}
+                        alt=""
+                        width={18}
+                        height={18}
+                        unoptimized
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="font-heading text-[18px] lg:text-[20px] font-bold text-[#2E5A66]">
+                      {row.feature}
+                    </span>
+                  </div>
+
+                  {/* Empty space matching elevated column width */}
+                  <div className="w-[478px]" />
+
+                  {/* Others Column */}
+                  <div className="w-[300px] flex items-center justify-start gap-2.5 pl-4">
+                    {row.othersType === "cross" ? (
+                      <RedCrossIcon />
+                    ) : (
+                      <WarningOrangeIcon />
+                    )}
+                    <span className="text-[15px] xl:text-[16px] text-[#5F6B6F] font-normal leading-[24px] font-[family-name:var(--font-lato)] text-left">
+                      {row.others}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Elevated Center Overlay Card: MY ESA THERAPIST */}
+          <div
+            className="absolute left-[366px] top-[-18px] w-[478px] bg-white rounded-[20px] shadow-[3px_3px_48px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4"
+          >
+            {/* Top Teal Gradient Header Banner */}
+            <div
+              className="h-[91px] rounded-b-[20px] flex items-center justify-center px-6 shadow-md"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              <h3 className="font-heading text-[24px] font-bold text-[#FAF7F2] tracking-wide">
+                MY ESA THERAPIST
+              </h3>
+            </div>
+
+            {/* Elevated Card Rows */}
+            <div className="divide-y divide-[#C8B9A7]/20 pt-2">
+              {comparisonRows.map((row, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 h-[61px] px-6 text-left"
+                >
+                  <GreenCheckIcon />
+                  <span className="text-[15px] xl:text-[16px] text-[#5F6B6F] font-medium leading-[22px] font-[family-name:var(--font-lato)]">
+                    {row.myEsa}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile / Tablet Responsive View */}
+        <div className="lg:hidden w-full space-y-6 max-w-xl mx-auto">
+          {/* Card 1: My ESA Therapist (Highlighted) */}
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-[#2E5A66]/20 overflow-hidden">
+            <div
+              className="py-5 px-6 text-center text-white font-heading text-2xl font-bold"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              MY ESA THERAPIST
+            </div>
+            <div className="p-6 space-y-4 divide-y divide-slate-100">
+              {comparisonRows.map((row, idx) => (
+                <div key={idx} className="pt-3 first:pt-0 flex items-start gap-3">
+                  <GreenCheckIcon />
+                  <div>
+                    <div className="font-heading font-bold text-[#2E5A66] text-base">
+                      {row.feature}
+                    </div>
+                    <div className="text-sm text-[#5F6B6F] mt-0.5">
+                      {row.myEsa}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Card 2: Other Services */}
+          <div className="bg-[#FAF7F2] rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 divide-y divide-[#C8B9A7]/30">
+            <h3 className="font-heading text-xl font-bold text-[#2E5A66] text-center pb-2">
+              Other ESA Services
+            </h3>
+            {comparisonRows.map((row, idx) => (
+              <div key={idx} className="pt-3 first:pt-0 flex items-start gap-3">
+                {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
+                <div>
+                  <div className="font-heading font-semibold text-slate-800 text-sm">
+                    {row.feature}
+                  </div>
+                  <div className="text-xs text-[#5F6B6F] mt-0.5">
+                    {row.others}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA Button */}
+        <div className="mt-12">
+          <a
+            href="#how-it-works"
+            className="inline-flex items-center justify-between w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 text-white font-semibold text-[16px] shadow-[0_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
+            style={{ backgroundImage: TEAL_GRADIENT }}
+          >
+            <span className="font-sans">Get Started</span>
+            <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <Image
+                src="/send-icon.svg"
+                alt=""
+                width={22}
+                height={22}
+                className="translate-x-[1px]"
+              />
+            </span>
+          </a>
         </div>
       </div>
     </section>
