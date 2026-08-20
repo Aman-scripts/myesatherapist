@@ -2,96 +2,131 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Plus, Minus } from "lucide-react";
+
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 const faqs = [
   {
+    num: "01.",
     q: "Is My ESA Therapist Legitimate?",
-    a: "Yes. My ESA Therapist connects you with independent, U.S.-licensed mental health professionals authorized to evaluate ESA eligibility. All documentation is issued in compliance with applicable federal guidelines.",
+    a: "Yes. My ESA Therapist connects you directly with independent, state-licensed mental health professionals (LMHPs) who conduct clinical assessments in full compliance with federal Fair Housing Act (FHA) and HUD regulations. Every letter issued includes the clinician's official state license number, contact details, and clinical verification.",
   },
   {
+    num: "02.",
     q: "How Does My ESA Therapist Work?",
-    a: "You schedule an appointment, speak with a licensed mental health professional via telehealth, and if clinically appropriate, receive ESA documentation by email.",
+    a: "Our process is simple and transparent: 1) Complete a confidential online pre-screening questionnaire; 2) Schedule a telehealth consultation with a licensed clinician in your state; 3) If qualified, receive your official ESA recommendation letter delivered securely via email.",
   },
   {
+    num: "03.",
     q: "Is My Information Safe With My ESA?",
-    a: "Absolutely. We use HIPAA-compliant systems to ensure your personal and health information remains confidential and protected.",
+    a: "Yes. We take privacy extremely seriously. All personal and clinical information is encrypted, transmitted securely, and protected under strict HIPAA-compliant protocols. We will never share or sell your private information.",
   },
   {
-    q: "What Conditions Qualify for an ESA?",
-    a: "A licensed mental health professional determines eligibility during your consultation based on conditions such as anxiety, depression, PTSD, and other ADA-recognized conditions.",
+    num: "04.",
+    q: "What Are the Housing Protections for ESAs?",
+    a: "Under the federal Fair Housing Act (FHA), housing providers are legally required to provide reasonable accommodation for individuals with an ESA letter from a licensed healthcare provider. This includes waiving pet deposits, monthly pet fees, and pet bans or breed restrictions.",
   },
   {
-    q: "How Long Does the Process Take?",
-    a: "Most evaluations are completed within 24-48 hours of your appointment, with documentation delivered directly to your email if clinically appropriate.",
+    num: "05.",
+    q: "How Quickly Can I Receive My ESA Letter?",
+    a: "After completing your telehealth evaluation with our licensed provider, approved ESA letters are delivered via secure digital PDF within 24 to 48 hours. Priority expedited delivery options are also available.",
   },
   {
-    q: "What Is an ESA Letter?",
-    a: "An ESA letter is official documentation from a licensed mental health professional stating that you have a condition that may benefit from an emotional support animal.",
+    num: "06.",
+    q: "What If I Don't Qualify for an ESA?",
+    a: "We offer a 100% money-back satisfaction guarantee. If our licensed mental health professional evaluates your case and determines that an ESA is not clinically appropriate for your situation, you will receive a full refund.",
   },
 ];
 
 export function FaqSection() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mb-10 lg:mb-14 space-y-2">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary">
+    <section id="faq" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
+        {/* Frame 1000011716: Section Header */}
+        <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em]">
             Frequently Asked Questions
           </h2>
-          <p className="text-ink-soft text-sm sm:text-base font-sans font-semibold">
+          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
             Get answers to common questions about ESA letters and our service.
           </p>
         </div>
 
-        {/* 2-col layout: left image, right FAQs */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start max-w-5xl mx-auto">
-          {/* Left: image */}
-          <div className="relative rounded-[20px] overflow-hidden min-h-[300px] lg:min-h-[673px] w-full">
+        {/* Frame 1000011803: Content Row (551px Image + 566px Accordions, gap: 60px) */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-[60px] max-w-[1184px] mx-auto">
+          {/* Left: image 35 (551x673px, rounded-[20px]) */}
+          <div className="w-full max-w-[551px] lg:w-[551px] h-[420px] lg:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
             <Image
               src="/faq-section-image.png"
-              alt="Person with emotional support animal"
+              alt="Person holding emotional support animal"
               fill
-              sizes="(max-width: 1024px) 100vw, 460px"
+              priority
               className="object-cover"
+              sizes="(min-width: 1024px) 551px, 90vw"
             />
           </div>
 
-          {/* Right: FAQ list */}
-          <div className="space-y-3">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="overflow-hidden rounded-[20px]">
-                <button
-                  onClick={() => setOpen(open === idx ? null : idx)}
-                  className="w-full flex items-stretch text-left bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] rounded-[20px]"
+          {/* Right: Frame 1000011715 (566px width, gap: 25px) */}
+          <div className="w-full max-w-[566px] space-y-[25px] flex flex-col justify-center">
+            {faqs.map((faq, idx) => {
+              const isOpen = openIdx === idx;
+              return (
+                <div
+                  key={idx}
+                  className="w-full rounded-[20px] overflow-hidden shadow-sm transition-all duration-200"
                 >
-                  {/* Gold number block */}
-                  <div className="w-[64px] sm:w-[78px] shrink-0 bg-gold flex items-center justify-center font-heading font-extrabold text-primary text-xl sm:text-2xl rounded-l-[20px]">
-                    {String(idx + 1).padStart(2, "0")}.
-                  </div>
-                  {/* Teal label area */}
-                  <div className="flex-1 text-white font-sans font-semibold text-sm sm:text-base px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3">
-                    <span>{faq.q}</span>
-                    <span className="w-6 h-6 shrink-0 rounded-full bg-white/15 flex items-center justify-center">
-                      {open === idx ? (
-                        <Minus className="w-3.5 h-3.5" />
-                      ) : (
-                        <Plus className="w-3.5 h-3.5" />
-                      )}
-                    </span>
-                  </div>
-                </button>
-                {/* Answer */}
-                {open === idx && (
-                  <div className="bg-warm-bg px-5 sm:px-6 py-4 text-sm text-ink-soft font-sans leading-relaxed border border-primary/10 border-t-0 rounded-b-[20px]">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            ))}
+                  <button
+                    onClick={() => setOpenIdx(isOpen ? null : idx)}
+                    className="w-full h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative"
+                    style={{ backgroundImage: TEAL_GRADIENT }}
+                  >
+                    {/* Gold Number Block: Frame 1000011949 (78px wide, #E8B92C) */}
+                    <div className="w-[78px] h-full shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-[28px] text-[#2E5A66] leading-[30px] rounded-l-[20px]">
+                      {faq.num}
+                    </div>
+
+                    {/* Question Title Area & Plus Icon (+) */}
+                    <div className="flex-1 px-6 flex items-center justify-between gap-4">
+                      <span className="font-sans font-semibold text-[18px] text-white leading-[30px]">
+                        {faq.q}
+                      </span>
+
+                      {/* Figma Plus Icon (+) */}
+                      <span
+                        className={`w-[20px] h-[20px] flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                          isOpen ? "rotate-45" : ""
+                        }`}
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 3V15M3 9H15"
+                            stroke="#FAF7F2"
+                            strokeWidth="2.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </button>
+
+                  {/* Accordion Answer Content */}
+                  {isOpen && (
+                    <div className="bg-[#FAF7F2] px-7 py-5 text-[16px] text-[#5F6B6F] font-sans font-medium leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
