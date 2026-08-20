@@ -2,56 +2,78 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowUpRight, PawPrint } from "lucide-react";
+
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 export function CtaBanner() {
   return (
-    <section className="py-0 lg:py-0 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-20">
-        <div className="relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72]">
-          {/* Decorative paw prints */}
-          <div className="pointer-events-none select-none absolute inset-0 hidden lg:block">
-            <PawPrint className="absolute top-10 right-[28%] w-8 h-8 text-warm-bg/20 rotate-12" />
-            <PawPrint className="absolute top-32 right-[20%] w-6 h-6 text-warm-bg/15 -rotate-6" />
-            <PawPrint className="absolute bottom-24 right-[32%] w-7 h-7 text-warm-bg/10 rotate-45" />
-            <PawPrint className="absolute bottom-10 right-[16%] w-5 h-5 text-warm-bg/15 rotate-12" />
+    <section className="relative w-full bg-white pt-[125px] overflow-visible">
+      {/* Full-width Teal Gradient Banner (Edge to Edge) */}
+      <div
+        className="w-full relative min-h-[400px]"
+        style={{ backgroundImage: TEAL_GRADIENT }}
+      >
+        <div className="max-w-[1442px] mx-auto px-6 sm:px-12 lg:px-[104px] py-12 lg:py-[49px] relative min-h-[400px] flex items-center">
+          {/* Paw Prints: Flush with the bottom edge (bottom-0) matching Figma */}
+          <div className="absolute left-[38%] lg:left-[42%] bottom-0 w-[254px] h-[169px] pointer-events-none z-0 hidden md:block">
+            <Image
+              src="/cta-section-paw.png"
+              alt=""
+              width={254}
+              height={169}
+              className="object-contain object-bottom"
+            />
           </div>
 
-          <div className="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-6 px-6 sm:px-12 lg:px-[104px] py-10 lg:py-[49px]">
-            {/* Text + CTA */}
-            <div className="flex-1 space-y-4 text-center lg:text-left">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-warm-bg leading-tight max-w-lg mx-auto lg:mx-0">
+          {/* Left Text & CTA Area */}
+          <div className="relative z-10 max-w-[575px] space-y-6 text-left">
+            <div className="space-y-4">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#FAF7F2] leading-[54px] tracking-[-0.0066em] max-w-[431px]">
                 Ready to Start Your ESA Evaluation?
               </h2>
-              <p className="text-warm-bg text-base sm:text-lg font-sans font-semibold max-w-md mx-auto lg:mx-0">
-                If you believe an Emotional Support Animal may be appropriate
-                for your situation, you can begin a professional evaluation
-                today.
+              <p className="text-[#FAF7F2] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+                If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.
               </p>
-              <div className="pt-2">
-                <a
-                  href="#"
-                  className="inline-block px-8 py-3 rounded-full bg-gold text-white font-[family-name:var(--font-lato)] font-bold text-base sm:text-lg hover:opacity-90 transition-opacity shadow-lg"
-                >
-                  Start your Evaluation
-                </a>
-              </div>
             </div>
 
-            {/* Photo */}
-            <div className="relative w-full max-w-[400px] lg:max-w-none lg:w-[420px] h-[220px] lg:h-[280px] rounded-2xl overflow-hidden shrink-0">
-              <Image
-                src="/cta-banner-background.png"
-                alt="Person with emotional support animal"
-                fill
-                sizes="(max-width: 1024px) 100vw, 420px"
-                className="object-cover"
-              />
-              <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gold/90 flex items-center justify-center">
-                <ArrowUpRight className="w-5 h-5 text-white" />
-              </div>
+            {/* Button */}
+            <div className="pt-2">
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center w-[226px] h-[46px] rounded-[58px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
+              >
+                <span
+                  className="font-[family-name:var(--font-lato)] font-bold text-[18px] leading-[22px] bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  Start your Evaluation
+                </span>
+              </a>
             </div>
           </div>
+
+          {/* Overlapping Woman with Dog Photo (653x525px extending 125px above teal banner, flush with bottom) */}
+          <div className="hidden lg:block absolute right-0 bottom-0 w-[653px] h-[525px] pointer-events-none z-20">
+            <Image
+              src="/cta-banner-background.png"
+              alt="Woman embracing emotional support dog"
+              fill
+              priority
+              className="object-contain object-right-bottom"
+              sizes="653px"
+            />
+          </div>
+        </div>
+
+        {/* Mobile Photo fallback */}
+        <div className="lg:hidden relative w-full h-[260px] sm:h-[320px] pointer-events-none">
+          <Image
+            src="/cta-banner-background.png"
+            alt="Woman embracing emotional support dog"
+            fill
+            className="object-contain object-bottom"
+            sizes="100vw"
+          />
         </div>
       </div>
     </section>

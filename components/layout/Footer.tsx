@@ -1,270 +1,302 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, Clock, MapPin } from "lucide-react";
 
-function FacebookIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.95 2 14.66 2 11.98 2 10 3.66 10 6.7v2.8H7v4h3V22h4v-8.5z" />
-    </svg>
-  );
-}
+const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #000000 100%)";
 
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  );
-}
+const companyLinks = [
+  { label: "About Us", href: "#about" },
+  { label: "Contact Us", href: "#contact" },
+  { label: "Meet our Therapists", href: "#therapists" },
+  { label: "HIPAA Compliance", href: "#compliance" },
+  { label: "Video Testimonials", href: "#testimonials" },
+  { label: "Customer Reviews", href: "#reviews" },
+];
 
-function TwitterIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.9c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" />
-    </svg>
-  );
-}
+const quickLinks = [
+  { label: "ESA Letter Online", href: "#how-it-works" },
+  { label: "ESA Letter for Housing", href: "#housing" },
+  { label: "ESA Letter Renewal", href: "#renewal" },
+  { label: "ESA Letter by State", href: "#states" },
+  { label: "ESA Letter Cost", href: "#pricing" },
+  { label: "ESA Resources", href: "#resources" },
+];
 
-function LinkedinIcon({ className }: { className?: string }) {
+function HipaaBadge() {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
+    <div className="w-[155px] h-[67px] bg-white rounded-xl border-[3.5px] border-[#E8B92C] flex items-center justify-center gap-2 px-2 shadow-md">
+      {/* Caduceus Medical Symbol SVG */}
+      <svg
+        width="34"
+        height="38"
+        viewBox="0 0 34 38"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0"
+      >
+        {/* Wings */}
+        <path
+          d="M17 11C12 5 3 7 2 13C1 18 10 17 17 14M17 11C22 5 31 7 32 13C33 18 24 17 17 14"
+          stroke="#006584"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        {/* Central Staff */}
+        <line x1="17" y1="3" x2="17" y2="35" stroke="#006584" strokeWidth="2.2" strokeLinecap="round" />
+        <circle cx="17" cy="4" r="2.5" fill="#006584" />
+        {/* Snakes Intertwined */}
+        <path
+          d="M9 16C12 19 22 19 25 22C27 24 26 27 22 28C17 29 11 29 17 34"
+          stroke="#006584"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M25 16C22 19 12 19 9 22C7 24 8 27 12 28C17 29 23 29 17 34"
+          stroke="#006584"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
 
-function YoutubeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" xmlns="http://www.w3.org/2000/svg">
-      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function PawLogo() {
-  return (
-    <div className="inline-flex items-center gap-2.5 bg-white rounded-2xl border-2 border-gold px-5 py-2.5">
-      <div className="w-9 h-9 bg-primary rounded-full flex items-center justify-center shrink-0">
-        <span className="text-base">🐾</span>
-      </div>
-      <div className="text-left leading-none">
-        <span className="block text-primary font-heading font-bold text-sm">
-          My ESA
+      {/* HIPAA Compliant Text */}
+      <div className="flex flex-col justify-center leading-none text-left">
+        <span className="text-[12px] font-black text-[#006584] tracking-wider font-sans">
+          HIPAA
         </span>
-        <span className="block text-primary font-heading font-bold text-sm -mt-0.5">
-          Therapist
+        <span className="text-[8px] font-bold text-[#006584] tracking-tight uppercase font-sans">
+          COMPLIANT
         </span>
       </div>
     </div>
   );
 }
 
-const companyLinks = [
-  { label: "About Us", href: "#" },
-  { label: "Meet our Therapists", href: "#" },
-  { label: "HIPAA Compliance", href: "#" },
-  { label: "Video Testimonials", href: "#" },
-  { label: "Customer Reviews", href: "#" },
-];
-
-const quickLinks = [
-  { label: "ESA Letter Online", href: "#" },
-  { label: "ESA Letter for Housing", href: "#" },
-  { label: "ESA Letter Renewal", href: "#" },
-  { label: "ESA Letter by State", href: "#" },
-  { label: "ESA Letter Cost", href: "#" },
-  { label: "ESA Resources", href: "#" },
-];
-
-const socialIcons = [
-  { Icon: FacebookIcon, label: "Facebook" },
-  { Icon: InstagramIcon, label: "Instagram" },
-  { Icon: TwitterIcon, label: "Twitter" },
-  { Icon: LinkedinIcon, label: "LinkedIn" },
-  { Icon: YoutubeIcon, label: "YouTube" },
-];
-
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-gradient-to-b from-black via-[#040E14] to-[#081729] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
-        {/* Brand block */}
-        <div className="text-center mb-10 space-y-4 max-w-xl mx-auto">
-          <PawLogo />
+    <footer className="w-full bg-white pt-10 sm:pt-14 lg:pt-16">
+      {/* 100% Full-Width Dark Gradient Container with Rounded Top Corners */}
+      <div
+        className="w-full rounded-t-[40px] sm:rounded-t-[60px] pt-16 pb-10 text-white relative overflow-hidden"
+        style={{ backgroundImage: FOOTER_GRADIENT }}
+      >
+        <div className="max-w-[1380px] mx-auto px-6 sm:px-10 lg:px-14">
+          {/* Top Centered Section */}
+          <div className="flex flex-col items-center text-center max-w-[700px] mx-auto space-y-5">
+            {/* Logo Card with Gold Border (Frame 1000011910) */}
+            <div className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-[#E8B92C] p-3 flex items-center justify-center shadow-xl">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/myesa-logo.svg"
+                  alt="My ESA Therapist"
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-          <h3 className="font-heading text-2xl sm:text-3xl font-bold pt-2">
-            My ESA <span className="text-gold">Therapist</span>
-          </h3>
+            {/* Heading with Gold Highlight */}
+            <h3 className="font-heading text-3xl sm:text-[38px] font-bold text-white leading-tight">
+              My ESA <span className="text-[#E8B92C]">Therapist</span>
+            </h3>
 
-          <p className="text-warm-bg/80 text-sm sm:text-base font-sans font-semibold leading-relaxed">
-            A 100% legal platform providing emotional support animal
-            evaluations to those who suffer from any mental or emotional
-            disability — trusted, professional &amp; confidential.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <a
-              href="#"
-              className="px-6 py-2.5 rounded-full bg-gold text-white font-sans font-semibold text-sm hover:opacity-90 transition-opacity"
-            >
-              Apply your ESA Letter
-            </a>
-            <a
-              href="#"
-              className="px-6 py-2.5 rounded-full border border-warm-bg/40 text-warm-bg font-sans font-semibold text-sm hover:bg-white/10 transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          {/* Social icons */}
-          <div className="flex items-center justify-center gap-3 pt-4">
-            {socialIcons.map(({ Icon, label }) => (
-              <a
-                key={label}
-                href="#"
-                aria-label={label}
-                className="w-9 h-9 rounded-full bg-gold flex items-center justify-center hover:opacity-90 transition-opacity"
-              >
-                <Icon className="w-4 h-4 text-white" />
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Navigation columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mt-10 pt-10 border-t border-white/10">
-          {/* About Us */}
-          <div>
-            <h4 className="text-gold font-sans font-semibold text-sm mb-4 tracking-wide">
-              ABOUT US
-            </h4>
-            <p className="text-warm-bg/70 text-xs leading-relaxed font-sans font-semibold">
-              We connect you with licensed therapists across all 50 US states
-              to obtain legitimate ESA letters quickly, securely, and
-              affordably.
+            {/* Subtitle */}
+            <p className="text-[#FAF7F2] text-sm sm:text-[16px] font-semibold leading-[26px] sm:leading-[28px] font-sans max-w-[640px] opacity-90">
+              A 100% legal platform providing emotional support animal evaluations to those who suffer from any mental or emotional disability — trusted, professional &amp; confidential.
             </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center px-8 h-[46px] rounded-full bg-[#E8B92C] text-[#04161C] font-[family-name:var(--font-lato)] font-bold text-[16px] shadow-md hover:brightness-105 transition-all"
+              >
+                Apply your ESA Letter
+              </a>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 h-[46px] rounded-full border-[1.5px] border-[#FAF7F2] text-[#FAF7F2] font-[family-name:var(--font-lato)] font-bold text-[16px] hover:bg-white/10 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
 
-          {/* Company */}
-          <div>
-            <h4 className="text-gold font-sans font-semibold text-sm mb-4 tracking-wide">
-              COMPANY
-            </h4>
-            <ul className="space-y-2.5 text-warm-bg/80 text-xs font-sans font-semibold">
-              {companyLinks.map((l) => (
-                <li key={l.label}>
-                  <Link href={l.href} className="hover:text-gold transition-colors">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Full-width Divider Line */}
+          <div className="w-full border-t border-white/15 my-14" />
+
+          {/* 4 Navigation Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+            {/* Column 1: ABOUT US */}
+            <div className="space-y-4">
+              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+                ABOUT US
+              </h4>
+              <p className="text-[#FAF7F2]/80 text-xs font-semibold leading-relaxed font-sans pr-2">
+                We connect you with licensed therapists across all 50 US states to obtain legitimate ESA letters quickly, securely, and affordably.
+              </p>
+              <div className="pt-2">
+                <HipaaBadge />
+              </div>
+            </div>
+
+            {/* Column 2: COMPANY */}
+            <div className="space-y-4">
+              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+                COMPANY
+              </h4>
+              <ul className="space-y-3 font-sans">
+                {companyLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-2 text-xs font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
+                    >
+                      <span className="text-[#FAF7F2]/60 group-hover:text-[#E8B92C] text-xs transition-colors">
+                        ›
+                      </span>
+                      <span>{link.label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3: QUICK LINKS */}
+            <div className="space-y-4">
+              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+                QUICK LINKS
+              </h4>
+              <ul className="space-y-3 font-sans">
+                {quickLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-2 text-xs font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
+                    >
+                      <span className="text-[#FAF7F2]/60 group-hover:text-[#E8B92C] text-xs transition-colors">
+                        ›
+                      </span>
+                      <span>{link.label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 4: GET IN TOUCH */}
+            <div className="space-y-4">
+              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+                GET IN TOUCH
+              </h4>
+              <div className="space-y-4 font-sans">
+                {/* Phone */}
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
+                    <Image
+                      src="/footer-phone-icon.svg"
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-left leading-tight">
+                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                      +1 (888) 412-4041
+                    </div>
+                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                      24/7 Online Support
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
+                    <Image
+                      src="/footer-email-icon.svg"
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-left leading-tight">
+                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                      info@myesatherapist.com
+                    </div>
+                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                      Email us anytime
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
+                    <Image
+                      src="/footer-clock-icon.svg"
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-left leading-tight">
+                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                      Mon - Sat: 9AM - 6PM
+                    </div>
+                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                      Sunday: Closed
+                    </div>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
+                    <Image
+                      src="/footer-location-icon.svg"
+                      alt=""
+                      width={14}
+                      height={14}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-left leading-tight">
+                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                      Serving  All 50 US States
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-gold font-sans font-semibold text-sm mb-4 tracking-wide">
-              QUICK LINKS
-            </h4>
-            <ul className="space-y-2.5 text-warm-bg/80 text-xs font-sans font-semibold">
-              {quickLinks.map((l) => (
-                <li key={l.label}>
-                  <Link href={l.href} className="hover:text-gold transition-colors">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Bottom Divider Line */}
+          <div className="w-full border-t border-white/10 mt-14 mb-6" />
 
-          {/* Get In Touch */}
-          <div>
-            <h4 className="text-gold font-sans font-semibold text-sm mb-4 tracking-wide">
-              GET IN TOUCH
-            </h4>
-            <ul className="space-y-4 text-xs font-sans">
-              <li className="flex items-center gap-3">
-                <span className="w-7 h-7 rounded-full bg-gold flex items-center justify-center shrink-0">
-                  <Phone className="w-3.5 h-3.5 text-white" />
-                </span>
-                <div>
-                  <div className="text-warm-bg font-semibold text-xs">
-                    +1 (888) 412-4041
-                  </div>
-                  <div className="text-warm-bg/60 font-bold text-[10px]">
-                    24/7 Online Support
-                  </div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-7 h-7 rounded-full bg-gold flex items-center justify-center shrink-0">
-                  <Mail className="w-3.5 h-3.5 text-white" />
-                </span>
-                <div>
-                  <div className="text-warm-bg font-semibold text-xs">
-                    info@myesatherapist.com
-                  </div>
-                  <div className="text-warm-bg/60 font-bold text-[10px]">
-                    Email us anytime
-                  </div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-7 h-7 rounded-full bg-gold flex items-center justify-center shrink-0">
-                  <Clock className="w-3.5 h-3.5 text-white" />
-                </span>
-                <div>
-                  <div className="text-warm-bg font-semibold text-xs">
-                    Mon - Sat: 9AM - 6PM
-                  </div>
-                  <div className="text-warm-bg/60 font-bold text-[10px]">
-                    Sunday: Closed
-                  </div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-7 h-7 rounded-full bg-gold flex items-center justify-center shrink-0">
-                  <MapPin className="w-3.5 h-3.5 text-white" />
-                </span>
-                <div>
-                  <div className="text-warm-bg font-semibold text-xs">
-                    Serving All 50 US States
-                  </div>
-                  <div className="text-warm-bg/60 font-bold text-[10px]">
-                    Nationwide Service
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-10 pt-6 border-t border-white/10 text-xs font-sans">
-          <p className="text-warm-bg/70">
-            &copy; {currentYear} myesatherapist.com — All Rights Reserved
-          </p>
-          <div className="flex items-center gap-6 text-warm-bg/70">
-            <Link href="#" className="hover:text-gold transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:text-gold transition-colors">
-              Refund Policy
-            </Link>
-            <Link href="#" className="hover:text-gold transition-colors">
-              Terms of Use
-            </Link>
+          {/* Bottom Bar */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#FAF7F2]">
+            <p className="font-semibold">
+              &copy; 2026 myesatherapist.com — All Rights Reserved
+            </p>
+            <div className="flex items-center gap-8 font-semibold">
+              <Link href="#privacy" className="hover:text-[#E8B92C] transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="#refund" className="hover:text-[#E8B92C] transition-colors">
+                Refund Policy
+              </Link>
+              <Link href="#terms" className="hover:text-[#E8B92C] transition-colors">
+                Terms of Use
+              </Link>
+            </div>
           </div>
         </div>
       </div>
