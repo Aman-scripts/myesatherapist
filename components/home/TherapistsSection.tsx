@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { FileText } from "lucide-react";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -38,7 +37,14 @@ function StatBadge({ label, value }: { label: string; value: string }) {
     <div className="relative flex-1 min-w-[95px] rounded-[14px] bg-white border border-[#E2E8F0] border-t-[3.5px] border-t-[#E8B92C] shadow-sm pt-5 pb-3.5 px-2 text-center">
       {/* Small floating badge icon at top center */}
       <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-center">
-        <FileText className="w-3.5 h-3.5 text-[#1A4D59]" strokeWidth={2.2} />
+        <Image
+          src="/therapist-section-badge.svg"
+          alt=""
+          width={14}
+          height={13}
+          unoptimized
+          className="object-contain"
+        />
       </div>
       <div className="text-xs sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight">
         {label}
