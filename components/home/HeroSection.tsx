@@ -99,8 +99,15 @@ export function HeroSection() {
             {/* Action Row */}
             <div className="flex items-center gap-3 flex-wrap mt-6">
               {/* State Dropdown */}
-              <button className="flex items-center gap-2 px-5 sm:px-[29px] py-3 sm:py-0 rounded-[30px] bg-[#FAF7F2] font-semibold text-sm sm:text-[18px] hover:bg-white transition-colors min-h-[44px] sm:h-[54px]">
-                <MapPin className="w-4 h-4 text-primary shrink-0" />
+              <button className="flex items-center gap-2.5 px-5 sm:px-[29px] py-3 sm:py-0 rounded-[30px] bg-[#FAF7F2] font-semibold text-sm sm:text-[18px] hover:bg-white transition-colors min-h-[44px] sm:h-[54px]">
+                <Image
+                  src="/hero-section-map.svg"
+                  alt=""
+                  width={16}
+                  height={21}
+                  unoptimized
+                  className="shrink-0 object-contain"
+                />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   Start your State
                 </span>
