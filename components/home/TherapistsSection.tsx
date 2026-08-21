@@ -34,7 +34,7 @@ const therapists = [
 
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
-    <div className="relative flex-1 min-w-[95px] rounded-[14px] bg-white border border-[#E2E8F0] border-t-[3.5px] border-t-[#E8B92C] shadow-sm pt-5 pb-3.5 px-2 text-center">
+    <div className="relative flex-1 min-w-0 rounded-[14px] bg-white border border-[#E2E8F0] border-t-[3.5px] border-t-[#E8B92C] shadow-sm pt-4 sm:pt-5 pb-3 sm:pb-3.5 px-1 sm:px-2 text-center flex flex-col justify-center">
       {/* Small floating badge icon at top center */}
       <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-center">
         <Image
@@ -44,12 +44,13 @@ function StatBadge({ label, value }: { label: string; value: string }) {
           height={13}
           unoptimized
           className="object-contain"
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
-      <div className="text-xs sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight">
+      <div className="text-[11px] sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight">
         {label}
       </div>
-      <div className="text-[11px] text-[#5F6B6F] font-semibold mt-1">
+      <div className="text-[10px] sm:text-[11px] font-semibold text-[#5F6B6F] mt-1 sm:mt-1.5 leading-tight">
         {value}
       </div>
     </div>
@@ -80,9 +81,9 @@ export function TherapistsSection() {
               className="bg-white rounded-[28px] overflow-hidden shadow-[0_10px_35px_-5px_rgba(26,61,79,0.12)] border border-[#E2E8F0] flex flex-col justify-between"
             >
               {/* Teal Header Bar */}
-              <div className="bg-gradient-to-r from-[#184652] via-[#1A4D59] to-[#1D5E6A] px-6 py-4 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3.5 min-w-0">
-                  <div className="w-[64px] h-[64px] sm:w-[70px] sm:h-[70px] rounded-full border-[3px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+              <div className="bg-gradient-to-r from-[#184652] via-[#1A4D59] to-[#1D5E6A] px-4 sm:px-6 py-4 flex items-center justify-between gap-3 sm:gap-4">
+                <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
+                  <div className="w-[56px] h-[56px] sm:w-[70px] sm:h-[70px] rounded-full border-[3px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                     <Image
                       src="/therapist-avatar.png"
                       alt={t.name}
@@ -92,7 +93,7 @@ export function TherapistsSection() {
                     />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-white font-heading font-bold text-lg sm:text-xl truncate">
+                    <div className="text-white font-heading font-bold text-base sm:text-xl truncate">
                       {t.name}
                     </div>
                     <div className="text-[#E8B92C] text-xs sm:text-sm font-semibold truncate">
@@ -102,20 +103,20 @@ export function TherapistsSection() {
                 </div>
 
                 {/* LinkedIn Badge */}
-                <div className="w-10 h-10 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-colors cursor-pointer">
-                  <LinkedinIcon className="w-5 h-5 text-[#184652]" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-colors cursor-pointer">
+                  <LinkedinIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#184652]" />
                 </div>
               </div>
 
               {/* Card Body */}
-              <div className="p-6 space-y-6 flex-1 flex flex-col justify-between">
+              <div className="p-4 sm:p-6 space-y-5 sm:space-y-6 flex-1 flex flex-col justify-between">
                 {/* Bio text */}
                 <p className="text-[#5F6B6F] text-sm sm:text-[15px] font-semibold leading-relaxed">
                   {t.bio}
                 </p>
 
                 {/* 3 Stat Badges */}
-                <div className="flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
+                <div className="flex items-stretch gap-1.5 sm:gap-3.5 pt-2">
                   <StatBadge label="Licensed In" value={t.licensedIn} />
                   <StatBadge label="Evaluation Method" value={t.method} />
                   <StatBadge label="Focus Areas" value={t.focus} />
@@ -130,7 +131,7 @@ export function TherapistsSection() {
                   >
                     <span>Book Appointment</span>
                     <span className="w-[34px] h-[34px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-                      <Image src="/send-icon.svg" alt="" width={15} height={15} />
+                      <Image src="/send-icon.svg" alt="" width={15} height={15} style={{ width: "auto", height: "auto" }} />
                     </span>
                   </a>
 
@@ -141,7 +142,7 @@ export function TherapistsSection() {
                   >
                     <span>View Profile</span>
                     <span className="w-[34px] h-[34px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-                      <Image src="/send-icon.svg" alt="" width={15} height={15} />
+                      <Image src="/send-icon.svg" alt="" width={15} height={15} style={{ width: "auto", height: "auto" }} />
                     </span>
                   </a>
                 </div>

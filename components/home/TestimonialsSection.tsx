@@ -131,7 +131,7 @@ export function TestimonialsSection() {
           >
             <span>See More Reviews</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image src="/send-icon.svg" alt="" width={15} height={15} />
+              <Image src="/send-icon.svg" alt="" width={15} height={15} style={{ width: "auto", height: "auto" }} />
             </span>
           </a>
         </div>

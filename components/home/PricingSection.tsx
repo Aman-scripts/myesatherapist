@@ -13,6 +13,7 @@ function FeatureBadgeIcon() {
       width={16}
       height={16}
       className="shrink-0"
+      style={{ width: "auto", height: "auto" }}
     />
   );
 }
@@ -171,6 +172,7 @@ export function PricingSection() {
               height={376}
               priority
               className="object-contain object-left"
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
         </div>

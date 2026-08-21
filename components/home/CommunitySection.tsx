@@ -39,6 +39,7 @@ export function CommunitySection() {
                 width={22}
                 height={22}
                 className="translate-x-[1px]"
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </a>
