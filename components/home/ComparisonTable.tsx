@@ -141,6 +141,7 @@ export function ComparisonTable() {
                         height={18}
                         unoptimized
                         className="object-contain"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     </div>
                     <span className="font-heading text-[18px] lg:text-[20px] font-bold text-[#2E5A66]">
@@ -261,6 +262,7 @@ export function ComparisonTable() {
                 width={22}
                 height={22}
                 className="translate-x-[1px]"
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </a>

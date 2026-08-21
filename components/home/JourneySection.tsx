@@ -66,6 +66,7 @@ export function JourneySection() {
                       width={38}
                       height={38}
                       className="w-[38px] h-[38px] object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
 

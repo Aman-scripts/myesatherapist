@@ -77,6 +77,7 @@ export function WhyChooseUs() {
                   height={30}
                   unoptimized
                   className="object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
 
