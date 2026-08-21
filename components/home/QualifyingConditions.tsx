@@ -181,6 +181,7 @@ export function QualifyingConditions() {
                         height={20}
                         unoptimized
                         className="object-contain"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     </span>
                     <span
@@ -258,6 +259,7 @@ export function QualifyingConditions() {
                         height={18}
                         unoptimized
                         className="object-contain"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     </span>
                     <span
