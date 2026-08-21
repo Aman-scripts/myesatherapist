@@ -42,7 +42,7 @@ export function FaqSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="pt-12 sm:pt-16 lg:pt-24 pb-12 sm:pb-16 lg:pb-24 bg-white relative overflow-hidden">
+    <section id="faq" className="pt-12 sm:pt-16 lg:pt-24 pb-12 sm:pb-16 lg:pb-24 bg-[#EEEBE0] relative overflow-hidden">
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">

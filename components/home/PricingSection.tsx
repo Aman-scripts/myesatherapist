@@ -18,9 +18,13 @@ function FeatureBadgeIcon() {
   );
 }
 
-export function PricingSection() {
+interface PricingSectionProps {
+  bgColor?: string;
+}
+
+export function PricingSection({ bgColor = "bg-white" }: PricingSectionProps) {
   return (
-    <section id="pricing" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section id="pricing" className={`py-16 lg:py-24 ${bgColor} relative overflow-hidden`}>
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header (Centered) */}
         <div className="text-center max-w-[709px] mx-auto mb-14 space-y-4">
