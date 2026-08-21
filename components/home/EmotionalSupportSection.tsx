@@ -71,7 +71,7 @@ export function EmotionalSupportSection() {
             >
               <span>Get Started</span>
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} />
+                <Image src="/send-icon.svg" alt="" width={18} height={20} style={{ width: "auto", height: "auto" }} />
               </span>
             </a>
           </div>
@@ -112,62 +112,83 @@ export function EmotionalSupportSection() {
       </div>
 
       {/* Mobile / Tablet Responsive Fallback */}
-      <div className="lg:hidden px-4 sm:px-6 py-12 space-y-8">
-        <div className="space-y-4">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1A3D4F] leading-tight tracking-[-0.006em]">
-            What is an Emotional Support Animal?
-          </h2>
-          <div className="space-y-3.5 text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed">
-            <p>
-              An Emotional Support Animal (ESA) is a companion animal that
-              provides comfort and emotional stability to individuals with
-              mental or emotional health conditions. ESAs are not trained to
-              perform specific tasks but offer therapeutic benefits simply
-              through their presence. They can help reduce stress, ease
-              feelings of loneliness, and improve overall emotional
-              well-being.
-            </p>
-            <p>
-              ESAs are recognized under certain housing laws, allowing
-              individuals to live with them in places that might otherwise have
-              pet restrictions. To qualify, a licensed mental health
-              professional must provide a formal recommendation explaining how
-              the animal supports your emotional health. For individuals who
-              may require additional support, evaluations for Psychiatric
-              Service Dogs (PSDs) are also available when clinically
-              appropriate.
-            </p>
+      <div className="lg:hidden py-12 space-y-8 w-full">
+        {/* Full-width Image Container (Edge to Edge) */}
+        <div className="w-full">
+          {/* Mobile Image (< sm / under 640px) */}
+          <div className="block sm:hidden relative w-full aspect-[390/425] rounded-none">
+            <Image
+              src="/mobile-emotional-support.png"
+              alt="What is an Emotional Support Animal"
+              fill
+              unoptimized
+              priority
+              className="object-contain rounded-none"
+              sizes="100vw"
+            />
+          </div>
+
+          {/* Tablet Image (sm: to lg: / 640px to 1023px) */}
+          <div className="hidden sm:block lg:hidden relative w-full aspect-[834/521] rounded-none">
+            <Image
+              src="/tablet-emotional-support-section.png"
+              alt="What is an Emotional Support Animal"
+              fill
+              unoptimized
+              priority
+              className="object-contain rounded-none"
+              sizes="100vw"
+            />
           </div>
         </div>
 
-        {/* Mobile Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <button className="w-full sm:w-[193px] h-[48px] rounded-[30px] bg-[#FAF7F2] flex items-center justify-center font-semibold text-[16px]">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-              Learn about ESA&apos;s
-            </span>
-          </button>
-          <a
-            href="#how-it-works"
-            className="w-full sm:w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 flex items-center justify-between text-white font-semibold text-[16px]"
-            style={{ backgroundImage: TEAL_GRADIENT }}
-          >
-            <span>Get Started</span>
-            <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image src="/send-icon.svg" alt="" width={18} height={20} />
-            </span>
-          </a>
-        </div>
+        {/* Text & Button Container */}
+        <div className="px-4 sm:px-6 max-w-3xl mx-auto space-y-8">
+          <div className="space-y-4">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1A3D4F] leading-tight tracking-[-0.006em]">
+              What is an Emotional Support Animal?
+            </h2>
+            <div className="space-y-3.5 text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed">
+              <p>
+                An Emotional Support Animal (ESA) is a companion animal that
+                provides comfort and emotional stability to individuals with
+                mental or emotional health conditions. ESAs are not trained to
+                perform specific tasks but offer therapeutic benefits simply
+                through their presence. They can help reduce stress, ease
+                feelings of loneliness, and improve overall emotional
+                well-being.
+              </p>
+              <p>
+                ESAs are recognized under certain housing laws, allowing
+                individuals to live with them in places that might otherwise have
+                pet restrictions. To qualify, a licensed mental health
+                professional must provide a formal recommendation explaining how
+                the animal supports your emotional health. For individuals who
+                may require additional support, evaluations for Psychiatric
+                Service Dogs (PSDs) are also available when clinically
+                appropriate.
+              </p>
+            </div>
+          </div>
 
-        {/* Mobile Photo with bottom accents */}
-        <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md">
-          <Image
-            src="/emotional-support-right-frame.png"
-            alt="Woman embracing emotional support golden retriever"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button className="w-full sm:w-[193px] h-[48px] rounded-[30px] bg-[#FAF7F2] flex items-center justify-center font-semibold text-[16px] shadow-sm">
+              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                Learn about ESA&apos;s
+              </span>
+            </button>
+            <a
+              href="#how-it-works"
+              className="w-full sm:w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 flex items-center justify-between text-white font-semibold text-[16px] shadow-sm"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              <span>Get Started</span>
+              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={18} height={20} style={{ width: "auto", height: "auto" }} />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

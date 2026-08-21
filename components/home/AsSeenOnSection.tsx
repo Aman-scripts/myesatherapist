@@ -48,6 +48,7 @@ export function AsSeenOnSection() {
                 height={90}
                 className="shrink-0 h-[36px] sm:h-[44px] lg:h-[60px] w-auto object-contain opacity-75 hover:opacity-100 transition-opacity duration-200"
                 sizes="280px"
+                style={{ width: "auto", height: "auto" }}
               />
             ))}
           </div>
