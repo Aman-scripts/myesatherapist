@@ -7,7 +7,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 export function CtaBanner() {
   return (
-    <section className="relative w-full bg-white pt-[125px] overflow-visible">
+    <section className="relative w-full bg-white pt-0 lg:pt-[125px] overflow-visible">
       {/* Full-width Teal Gradient Banner (Edge to Edge) */}
       <div
         className="w-full relative min-h-[400px]"
@@ -22,6 +22,7 @@ export function CtaBanner() {
               width={254}
               height={169}
               className="object-contain object-bottom"
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
 

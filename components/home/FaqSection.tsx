@@ -42,7 +42,7 @@ export function FaqSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section id="faq" className="pt-12 sm:pt-16 lg:pt-24 pb-12 sm:pb-16 lg:pb-24 bg-white relative overflow-hidden">
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
@@ -79,17 +79,17 @@ export function FaqSection() {
                 >
                   <button
                     onClick={() => setOpenIdx(isOpen ? null : idx)}
-                    className="w-full h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative"
+                    className="w-full min-h-[64px] sm:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {/* Gold Number Block: Frame 1000011949 (78px wide, #E8B92C) */}
-                    <div className="w-[78px] h-full shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-[28px] text-[#2E5A66] leading-[30px] rounded-l-[20px]">
+                    <div className="w-[60px] sm:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-xl sm:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
                     {/* Question Title Area & Plus Icon (+) */}
-                    <div className="flex-1 px-6 flex items-center justify-between gap-4">
-                      <span className="font-sans font-semibold text-[18px] text-white leading-[30px]">
+                    <div className="flex-1 py-3 px-4 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
+                      <span className="font-sans font-semibold text-base sm:text-[18px] text-white leading-snug sm:leading-[30px]">
                         {faq.q}
                       </span>
 
