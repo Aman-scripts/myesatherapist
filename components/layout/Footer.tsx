@@ -203,6 +203,7 @@ export function Footer() {
                       width={14}
                       height={14}
                       className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
                   <div className="text-left leading-tight">
@@ -224,6 +225,7 @@ export function Footer() {
                       width={14}
                       height={14}
                       className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
                   <div className="text-left leading-tight">
@@ -245,6 +247,7 @@ export function Footer() {
                       width={14}
                       height={14}
                       className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
                   <div className="text-left leading-tight">
@@ -266,6 +269,7 @@ export function Footer() {
                       width={14}
                       height={14}
                       className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
                   <div className="text-left leading-tight">

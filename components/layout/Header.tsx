@@ -22,6 +22,7 @@ export function Header() {
               height={71}
               className="h-10 w-auto lg:h-[62px]"
               priority
+              style={{ width: "auto", height: "auto" }}
             />
           </Link>
 
@@ -60,7 +61,7 @@ export function Header() {
             >
               Get Started
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} />
+                <Image src="/send-icon.svg" alt="" width={18} height={20} style={{ width: "auto", height: "auto" }} />
               </span>
             </a>
           </div>
