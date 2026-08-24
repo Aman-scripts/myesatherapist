@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#EAE5DC] shadow-xs">
       {/* Main Navigation Bar */}
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
         <div className="flex items-center justify-between h-20 lg:h-[84px]">
 
           {/* Logo */}
@@ -28,59 +28,56 @@ export function Header() {
               height={71}
               priority
               unoptimized
-              className="h-10 lg:h-12 w-auto"
+              className="h-9 lg:h-10 xl:h-12 w-auto shrink-0"
               style={{ width: "auto", height: "auto" }}
             />
           </Link>
 
           {/* Desktop Nav (Exact menu items matching Screenshot 1 & Screenshot 2) */}
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-9 font-sans">
+          <nav className="hidden lg:flex items-center gap-3 lg:gap-4 xl:gap-9 font-sans shrink-0">
             <a
               href="#therapists"
-              className="text-[#1E3E47] font-medium text-[15px] hover:text-[#1D6E72] transition-colors"
+              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Our Therapists
             </a>
             <a
               href="#about"
-              className="text-[#1E3E47] font-medium text-[15px] hover:text-[#1D6E72] transition-colors"
+              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               About Us
             </a>
             <a
               href="#resources"
-              className="text-[#1E3E47] font-medium text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5"
+              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
-              Resources <ChevronDown className="w-4 h-4 text-[#1E3E47]" />
+              Resources <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47]" />
             </a>
             <a
               href="#contact"
-              className="text-[#1E3E47] font-medium text-[15px] hover:text-[#1D6E72] transition-colors"
+              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Contact Us
             </a>
           </nav>
 
           {/* Desktop Right Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-3 shrink-0">
             {isPsd ? (
               /* Screenshot 2 (PSD Letter Page): Single "Start Your Consultation" Button */
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-3.5 pl-6 pr-2 py-2 rounded-full text-white font-bold text-[15px] shadow-sm hover:shadow transition-all duration-200"
+                className="inline-flex items-center gap-2 lg:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Start Your Consultation</span>
-                <span className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                   <Image
                     src="/send-icon.svg"
                     alt=""
-                    width={16}
-                    height={16}
-                    unoptimized
-                    priority
-                    className="object-contain"
-                    style={{ width: "auto", height: "auto" }}
+                    width={19}
+                    height={21}
+                    className="w-[16px] h-[18px] xl:w-[19px] xl:h-[21px]"
                   />
                 </span>
               </a>
@@ -89,26 +86,23 @@ export function Header() {
               <>
                 <a
                   href="#eligibility"
-                  className="px-5 py-2.5 rounded-full bg-[#FAF7F2] hover:bg-[#F5EFE6] text-[#1E3E47] font-bold text-sm lg:text-[14.5px] border border-[#EAE5DC] transition-colors"
+                  className="px-3 lg:px-3.5 xl:px-5 py-2 lg:py-2.5 rounded-full bg-[#FAF7F2] hover:bg-[#F5EFE6] text-[#1E3E47] font-bold text-[12px] lg:text-[13px] xl:text-[14.5px] border border-[#EAE5DC] transition-colors whitespace-nowrap"
                 >
                   Free ESA Eligibility Checker
                 </a>
                 <a
                   href="#pricing"
-                  className="inline-flex items-center gap-3 pl-5 pr-2 py-2 rounded-full text-white font-bold text-[15px] shadow-sm hover:shadow transition-all duration-200"
+                  className="inline-flex items-center gap-2 lg:gap-2.5 xl:gap-3 pl-3.5 lg:pl-4 xl:pl-5 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
                   <span>Get Started</span>
-                  <span className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                  <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                     <Image
                       src="/send-icon.svg"
                       alt=""
-                      width={16}
-                      height={16}
-                      unoptimized
-                      priority
-                      className="object-contain"
-                      style={{ width: "auto", height: "auto" }}
+                      width={19}
+                      height={21}
+                      className="w-[16px] h-[18px] xl:w-[19px] xl:h-[21px]"
                     />
                   </span>
                 </a>
@@ -128,16 +122,16 @@ export function Header() {
       </div>
 
       {/* States Bar (Bottom row matching Screenshot 1 & Screenshot 2) */}
-      <div className="hidden lg:block bg-[#FAF7F2]  ">
-        <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2.5 text-[14px] font-medium text-[#5F6B6F]">
-          <div className="flex items-center gap-7">
+      <div className="hidden lg:block bg-[#FAF7F2]">
+        <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between py-2.5 text-[13px] xl:text-[14px] font-medium text-[#5F6B6F]">
+          <div className="flex items-center gap-4 xl:gap-7">
             {["California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Washington"].map((state) => (
-              <a key={state} href="#" className="hover:text-[#1E3E47] transition-colors">
+              <a key={state} href="#" className="hover:text-[#1E3E47] transition-colors whitespace-nowrap">
                 {state}
               </a>
             ))}
           </div>
-          <a href="#" className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1">
+          <a href="#" className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1 whitespace-nowrap">
             See all 50 States &rarr;
           </a>
         </div>
@@ -196,12 +190,9 @@ export function Header() {
                 <Image
                   src="/send-icon.svg"
                   alt=""
-                  width={16}
-                  height={16}
-                  unoptimized
-                  priority
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  width={19}
+                  height={21}
+                  className="w-[19px] h-[21px]"
                 />
               </span>
             </a>

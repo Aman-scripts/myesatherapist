@@ -107,7 +107,7 @@ export function HeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={16} height={18} style={{ width: "auto", height: "auto" }} />
+                <Image src="/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
               </span>
             </a>
           </div>
@@ -192,7 +192,7 @@ export function HeroSection() {
             >
               Get Started
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} style={{ width: "auto", height: "auto" }} />
+                <Image src="/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
             </a>
           </div>
@@ -201,9 +201,9 @@ export function HeroSection() {
 
       {/* ---------------------------------------------------- */}
       {/* 3. DESKTOP HERO SECTION (lg: / 1024px and up)        */}
-      {/* Exact Figma Layout                                   */}
+      {/* Responsive Layout for 1024px to 1440px+              */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1441/744]">
+      <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
         {/* Background Image: hero-section.png */}
         <Image
           src="/hero-section.png"
@@ -214,29 +214,29 @@ export function HeroSection() {
           sizes="100vw"
         />
 
-        {/* Content — positioned at exact Figma offsets: left 5.69%, top 12.37%, width 47.05% */}
+        {/* Content — positioned with responsive offsets for 1024px vs 1440px */}
         <div className="absolute inset-0">
-          <div className="absolute left-[5.69%] top-[12.37%] w-[47.05%]">
+          <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[42%] xl:w-[47.05%]">
             {/* Stat Pills */}
             <div className="flex items-center gap-[0.83%] flex-wrap">
               {statsData.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[110px]"
+                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 xl:py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[95px] xl:min-w-[110px]"
                 >
                   <span
-                    className="font-heading text-2xl font-bold leading-none bg-clip-text text-transparent"
+                    className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {stat.value}
                   </span>
-                  <span className="text-xs font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
+                  <span className="text-[10px] xl:text-xs font-semibold text-[#5F6B6F] mt-0.5 xl:mt-1 whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
 
             {/* Headline */}
-            <h1 className="font-heading text-[44px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-6">
+            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6">
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 Emotional Support
                 <br />
@@ -247,14 +247,14 @@ export function HeroSection() {
             </h1>
 
             {/* Subheading */}
-            <p className="text-[16px] leading-[1.625] text-[#5F6B6F] font-semibold max-w-none mt-4 font-[family-name:var(--font-lato)]">
+            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[16px] leading-[1.55] xl:leading-[1.625] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-[family-name:var(--font-lato)]">
               Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
             </p>
 
             {/* Action Row */}
-            <div className="flex items-center gap-3 flex-wrap mt-6">
+            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-4 xl:mt-6">
               {/* State Dropdown */}
-              <button className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[18px] hover:bg-white transition-colors h-[54px]">
+              <button className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0">
                 <Image
                   src="/hero-section-map.svg"
                   alt=""
@@ -273,24 +273,24 @@ export function HeroSection() {
               {/* Get Started Button */}
               <a
                 href="#how-it-works"
-                className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-[16px] transition-opacity hover:opacity-90 h-[48px]"
+                className="flex items-center gap-2.5 xl:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-[30px] text-white font-semibold text-[14.5px] xl:text-[16px] transition-opacity hover:opacity-90 h-[46px] xl:h-[48px] shrink-0"
                 style={{ backgroundImage: TEAL_GRADIENT }}
               >
                 Get Started
-                <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/send-icon.svg" alt="" width={18} height={20} style={{ width: "auto", height: "auto" }} />
+                <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                  <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
                 </span>
               </a>
             </div>
 
             {/* Trustpilot Badge */}
-            <div className="flex flex-col items-center gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[230px] px-[18px] pt-[11px] pb-[9px] mt-[30px]">
+            <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[210px] xl:w-[230px] px-3.5 xl:px-[18px] py-2 xl:pt-[11px] xl:pb-[9px] mt-4 xl:mt-[30px]">
               <div className="flex items-center gap-[6px]">
-                <StarMark className="w-[20px] h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
-                <span className="text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
+                <StarMark className="w-[18px] h-[17px] xl:w-[20px] xl:h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
+                <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
               </div>
               <TrustpilotStars />
-              <div className="flex items-center gap-[10px] text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
+              <div className="flex items-center gap-[8px] xl:gap-[10px] text-[11px] xl:text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
                 <span className="font-semibold">Trustscore 4.4</span>
                 <span>23,900 reviews</span>
               </div>

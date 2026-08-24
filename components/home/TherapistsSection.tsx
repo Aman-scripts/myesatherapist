@@ -131,7 +131,7 @@ export function TherapistsSection() {
                   >
                     <span>Book Appointment</span>
                     <span className="w-[34px] h-[34px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-                      <Image src="/send-icon.svg" alt="" width={15} height={15} style={{ width: "auto", height: "auto" }} />
+                      <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
                     </span>
                   </a>
 
@@ -142,7 +142,7 @@ export function TherapistsSection() {
                   >
                     <span>View Profile</span>
                     <span className="w-[34px] h-[34px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-                      <Image src="/send-icon.svg" alt="" width={15} height={15} style={{ width: "auto", height: "auto" }} />
+                      <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
                     </span>
                   </a>
                 </div>

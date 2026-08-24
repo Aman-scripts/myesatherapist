@@ -135,12 +135,9 @@ export function PsdProcessSection() {
               <Image
                 src="/send-icon.svg"
                 alt=""
-                width={16}
-                height={16}
-                unoptimized
-                priority
-                className="object-contain transform group-hover:translate-x-0.5 transition-transform"
-                style={{ width: "auto", height: "auto" }}
+                width={19}
+                height={21}
+                className="w-[19px] h-[21px] transform group-hover:translate-x-0.5 transition-transform"
               />
             </div>
           </a>

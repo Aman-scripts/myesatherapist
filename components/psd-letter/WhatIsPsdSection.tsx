@@ -5,8 +5,63 @@ import Image from "next/image";
 
 export function WhatIsPsdSection() {
   return (
-    <section className="relative overflow-hidden bg-white w-full py-12 sm:py-16 lg:py-0">
-      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-8 lg:py-6 xl:py-16">
+    <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
+      {/* Mobile Image (< 640px) - Rendered FIRST above text */}
+      <div className="sm:hidden w-full">
+        <div className="relative w-full">
+          <Image
+            src="/whatispsd-section-mobile.png"
+            alt="What is a Psychiatric Service Dog Letter"
+            width={390}
+            height={547}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+          {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (90.5% from top) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[90.5%] w-[54px] h-[54px] z-30 pointer-events-none">
+            <Image
+              src="/psd-dogphyscarist-section-icon.svg"
+              alt="Heart Paw Badge"
+              width={73}
+              height={73}
+              unoptimized
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet Image (640px to 1023px) - Rendered FIRST above text */}
+      <div className="hidden sm:block lg:hidden w-full">
+        <div className="relative w-full">
+          <Image
+            src="/whatispsd-section-tablet.png"
+            alt="What is a Psychiatric Service Dog Letter"
+            width={834}
+            height={654}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+          {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (93.3% from top) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[93.3%] w-[68px] h-[68px] z-30 pointer-events-none">
+            <Image
+              src="/psd-dogphyscarist-section-icon.svg"
+              alt="Heart Paw Badge"
+              width={73}
+              height={73}
+              unoptimized
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Text Content Container (Renders AFTER image on Mobile/Tablet) */}
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-6 xl:py-16">
         <div className="w-full lg:w-[48%] xl:w-[52%] max-w-[680px] lg:max-w-[460px] xl:max-w-[680px]">
           {/* Heading */}
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[28px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.15] xl:leading-[1.18] tracking-tight mb-2 sm:mb-6">
@@ -40,10 +95,10 @@ export function WhatIsPsdSection() {
         </div>
       </div>
 
-      {/* Right Visual Frame: Flush to top, bottom, and right edge with 0 gaps */}
-      <div className="mt-10 lg:mt-0 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full w-full lg:w-[48%] xl:w-[48%] max-w-[671px] pointer-events-none z-10">
+      {/* Desktop Image Frame (1024px and up) */}
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[48%] xl:w-[48%] max-w-[671px] pointer-events-none z-10">
         <div className="relative w-full h-full">
-          {/* 1. Main Photo (Pre-cut Curved PNG asset) - Flush Right */}
+          {/* 1. Main Photo */}
           <div className="absolute right-0 top-0 bottom-0 w-full h-full z-10">
             <Image
               src="/psd-dogphyscarist-section.png"
@@ -57,7 +112,7 @@ export function WhatIsPsdSection() {
           </div>
 
           {/* 2. Golden Decorative Curve Line SVG */}
-          <div className="absolute left-[-20px] top-0 bottom-0 w-[34%] max-w-[230px] h-full z-20 pointer-events-none hidden sm:block">
+          <div className="absolute left-[-20px] top-0 bottom-0 w-[34%] max-w-[230px] h-full z-20 pointer-events-none">
             <Image
               src="/psd-dogphyscarist-section-line.svg"
               alt=""
@@ -70,7 +125,7 @@ export function WhatIsPsdSection() {
           </div>
 
           {/* 3. Floating Heart-Paw Badge Icon */}
-          <div className="absolute left-[16px] top-[49%] -translate-y-1/2 w-[56px] h-[56px] lg:w-[52px] lg:h-[52px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
+          <div className="absolute left-[16px] top-[49%] -translate-y-1/2 w-[52px] h-[52px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
             <Image
               src="/psd-dogphyscarist-section-icon.svg"
               alt="Heart Paw Badge"

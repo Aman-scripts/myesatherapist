@@ -13,6 +13,7 @@ import { EmotionalSupportSection } from "@/components/home/EmotionalSupportSecti
 import { DoYouNeedEsaSection } from "@/components/home/DoYouNeedEsaSection";
 import { PricingSection } from "@/components/home/PricingSection";
 import { CommunitySection } from "@/components/home/CommunitySection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { ComparisonTable } from "@/components/home/ComparisonTable";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -41,9 +42,10 @@ export default function HomePage() {
         <WhyChooseUs />
 
         <EmotionalSupportSection />
-        <PricingSection />
+        <TestimonialsSection />
 
         <DoYouNeedEsaSection />
+        <PricingSection />
 
         <CommunitySection />
 

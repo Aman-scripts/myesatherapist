@@ -38,8 +38,63 @@ const benefitsData = [
 
 export function WhoBenefitsSection() {
   return (
-    <section className="relative overflow-hidden bg-white w-full py-12 sm:py-16 lg:py-0">
-      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-10 lg:py-10 xl:py-16">
+    <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
+      {/* Mobile Image (< 640px) - Rendered FIRST above text */}
+      <div className="sm:hidden w-full">
+        <div className="relative w-full">
+          <Image
+            src="/whobenefits-section-mobile.png"
+            alt="People who benefitted most from the PSD Letter"
+            width={390}
+            height={652}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+          {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (95.1% from top) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[95.1%] w-[54px] h-[54px] z-30 pointer-events-none">
+            <Image
+              src="/whobenefits-section-icon.svg"
+              alt="Heart Paw Badge"
+              width={73}
+              height={73}
+              unoptimized
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet Image (640px to 1023px) - Rendered FIRST above text */}
+      <div className="hidden sm:block lg:hidden w-full">
+        <div className="relative w-full">
+          <Image
+            src="/whobenefits-section-tablet.png"
+            alt="People who benefitted most from the PSD Letter"
+            width={833}
+            height={1140}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+          {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (93.9% from top) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[93.9%] w-[68px] h-[68px] z-30 pointer-events-none">
+            <Image
+              src="/whobenefits-section-icon.svg"
+              alt="Heart Paw Badge"
+              width={73}
+              height={73}
+              unoptimized
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Text Content Container (Renders AFTER image on Mobile/Tablet) */}
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-10 xl:py-16">
         <div className="w-full lg:w-[52%] xl:w-[55%] max-w-[660px]">
 
           {/* Header */}
@@ -90,8 +145,8 @@ export function WhoBenefitsSection() {
         </div>
       </div>
 
-      {/* Right Image Frame: Flush to top, bottom, and right edge with 0 gaps */}
-      <div className="mt-10 lg:mt-0 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full w-full lg:w-[42%] xl:w-[45%] max-w-[567px] pointer-events-none z-10">
+      {/* Desktop Image Frame (1024px and up) */}
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[42%] xl:w-[45%] max-w-[567px] pointer-events-none z-10">
         <div className="relative w-full h-full">
 
           {/* 1. Main Photo */}
@@ -108,7 +163,7 @@ export function WhoBenefitsSection() {
           </div>
 
           {/* 2. Organic Wavy S-Curve SVG Line */}
-          <div className="absolute left-[-20px] top-0 bottom-0 w-[83px] h-full z-20 pointer-events-none hidden sm:block">
+          <div className="absolute left-[-20px] top-0 bottom-0 w-[83px] h-full z-20 pointer-events-none">
             <Image
               src="/whobenefits-section-line.svg"
               alt=""
@@ -121,7 +176,7 @@ export function WhoBenefitsSection() {
           </div>
 
           {/* 3. Floating Paw/Heart Badge Icon */}
-          <div className="absolute left-[-16px] top-[49%] -translate-x-1/2 -translate-y-1/2 w-[56px] h-[56px] lg:w-[60px] lg:h-[60px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none hidden sm:block">
+          <div className="absolute left-[-16px] top-[49%] -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
             <Image
               src="/whobenefits-section-icon.svg"
               alt="Paw Heart Icon"

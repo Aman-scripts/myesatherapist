@@ -2,8 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 const TRUSTPILOT_GREEN = "#00B67A";
+
+const statsData = [
+  { value: "51,488+", label: "ESA Evaluations" },
+  { value: "5+", label: "Years Serving" },
+  { value: "4.9", label: "Verified Reviews" },
+];
 
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -17,14 +25,14 @@ function TrustpilotStars() {
   return (
     <div className="flex gap-1.5">
       {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="w-6 h-6 flex items-center justify-center shrink-0 rounded-[2px]" style={{ backgroundColor: TRUSTPILOT_GREEN }}>
-          <StarMark className="w-4 h-4 text-white" />
+        <div key={i} className="w-5 h-5 xl:w-6 xl:h-6 flex items-center justify-center shrink-0 rounded-[2px]" style={{ backgroundColor: TRUSTPILOT_GREEN }}>
+          <StarMark className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white" />
         </div>
       ))}
-      <div className="relative w-6 h-6 shrink-0 overflow-hidden rounded-[2px]" style={{ backgroundColor: "#CCCCCC" }}>
+      <div className="relative w-5 h-5 xl:w-6 xl:h-6 shrink-0 overflow-hidden rounded-[2px]" style={{ backgroundColor: "#CCCCCC" }}>
         <div className="absolute inset-y-0 left-0 w-1/2" style={{ backgroundColor: TRUSTPILOT_GREEN }} />
         <div className="absolute inset-0 flex items-center justify-center">
-          <StarMark className="w-4 h-4 text-white" />
+          <StarMark className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white" />
         </div>
       </div>
     </div>
@@ -33,72 +41,228 @@ function TrustpilotStars() {
 
 export function PsdHeroSection() {
   return (
-    <section className="relative w-full aspect-[1440/814] min-h-[560px] sm:min-h-[660px] lg:min-h-[760px] xl:min-h-[814px] bg-[#FAF7F2] overflow-hidden flex flex-col items-center">
-      {/* Background Hero Image */}
-      <Image
-        src="/psd-hero-section.png"
-        alt="Psychiatric Service Dog Letter Assistance illustration"
-        fill
-        priority
-        className="object-cover object-top sm:object-center"
-        sizes="100vw"
-      />
+    <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
+      {/* ---------------------------------------------------- */}
+      {/* 1. MOBILE PSD HERO SECTION (sm:hidden / < 640px)     */}
+      {/* Matches Screenshot 3                                 */}
+      {/* ---------------------------------------------------- */}
+      <div className="sm:hidden relative w-full aspect-[390/846] min-h-[680px]">
+        <Image
+          src="/psd-herosection-mobile.png"
+          alt="Psychiatric Service Dog Letter Assistance"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
 
-      {/* Content Overlay Centered at top */}
-      <div className="relative z-10 text-center flex flex-col items-center px-4 pt-8 sm:pt-14 lg:pt-16 xl:pt-20 max-w-4xl mx-auto">
-        {/* Headline */}
-        <h1 className="font-heading text-3xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-bold text-[#1E3E47] tracking-tight leading-[1.15] max-w-3xl">
-          Psychiatric Service
-          <br />
-          Dog Letter Assistance
-        </h1>
+        {/* Content Container at Top */}
+        <div className="absolute inset-x-0 top-0 px-4 pt-8 text-center flex flex-col items-center z-10">
+          <h1 className="font-heading text-[28px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto">
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+              Psychiatric Service
+              <br />
+              Dog Letter Assistance
+            </span>
+          </h1>
 
-        {/* Subtitle */}
-        <p className="text-sm sm:text-base lg:text-[17px] text-[#475467] font-semibold max-w-xl mx-auto mt-4 sm:mt-5 leading-relaxed font-[family-name:var(--font-lato)]">
-          Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
-        </p>
+          <p className="text-[13px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-3 font-[family-name:var(--font-lato)]">
+            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
+          </p>
 
-        {/* Buttons Row */}
-        <div className="flex flex-row items-center justify-center gap-3 sm:gap-5 mt-6 sm:mt-7">
-          {/* Schedule Consultation Button */}
-          <a
-            href="#pricing"
-            className="flex items-center justify-center px-5 sm:px-8 py-3 sm:py-3.5 rounded-full bg-white text-[#1E3E47] font-bold text-sm sm:text-base shadow-md border border-[#E2E8F0] hover:bg-gray-50 transition-all duration-200"
-          >
-            Schedule Consultation
-          </a>
-
-          {/* Call us Now Button */}
-          <a
-            href="tel:+18884124041"
-            className="flex items-center justify-center gap-3 pl-6 sm:pl-7 pr-2 py-2 sm:py-2.5 rounded-full bg-[#1E3E47] text-white font-bold text-sm sm:text-base shadow-md hover:bg-[#163038] transition-all duration-200"
-          >
-            <span>Call us Now</span>
-            <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+          <div className="flex flex-col items-center gap-3 w-full max-w-[280px] mx-auto mt-5">
+            <button className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-[30px] bg-[#FAF7F2] font-semibold text-sm hover:bg-white transition-colors w-full min-h-[44px] shadow-xs">
               <Image
-                src="/send-icon.svg"
+                src="/hero-section-map.svg"
                 alt=""
                 width={16}
-                height={16}
-                className="w-4 h-4 object-contain"
+                height={21}
+                unoptimized
+                className="shrink-0 object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
+              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                Start your State
+              </span>
+              <ChevronDown className="w-4 h-4 text-primary shrink-0" />
+            </button>
+
+            <a
+              href="#pricing"
+              className="flex items-center justify-between pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 w-full min-h-[44px] shadow-xs"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              <span>Get Started</span>
+              <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ---------------------------------------------------- */}
+      {/* 2. TABLET PSD HERO SECTION (sm: to lg: / 640-1023px) */}
+      {/* Matches Screenshot 2                                 */}
+      {/* ---------------------------------------------------- */}
+      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1190] min-h-[880px]">
+        <Image
+          src="/psd-hero-section-tablet.png"
+          alt="Psychiatric Service Dog Letter Assistance"
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+
+        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            {statsData.map((stat) => (
+              <div
+                key={stat.label}
+                className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
+              >
+                <span
+                  className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  {stat.value}
+                </span>
+                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto">
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+              Psychiatric Service
+              <br />
+              Dog Letter Assistance
             </span>
-          </a>
-        </div>
+          </h1>
 
-        {/* Centered Trustpilot Badge (Slightly larger) */}
-        <div className="flex flex-col items-center gap-2 bg-white/80 backdrop-blur-md rounded-[20px] w-[230px] sm:w-[245px] px-5 pt-3 pb-2.5 mt-5 shadow-sm border border-white hover:bg-white/90 transition-colors">
-          <div className="flex items-center gap-2">
-            <StarMark className="w-5 h-5" style={{ color: TRUSTPILOT_GREEN }} />
-            <span className="text-base font-bold text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
-          </div>
-          <TrustpilotStars />
-          <div className="flex items-center gap-2.5 text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
-            <span className="font-bold">Trustscore 4.4</span>
-            <span className="font-medium">23,900 reviews</span>
+          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-[family-name:var(--font-lato)]">
+            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
+          </p>
+
+          <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
+            <button className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm">
+              <Image
+                src="/hero-section-map.svg"
+                alt=""
+                width={16}
+                height={21}
+                unoptimized
+                className="shrink-0 object-contain"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                Start your State
+              </span>
+              <ChevronDown className="w-4 h-4 text-primary shrink-0" />
+            </button>
+
+            <a
+              href="#pricing"
+              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-sm"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              Get Started
+              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
+              </span>
+            </a>
           </div>
         </div>
+      </div>
 
+      {/* ---------------------------------------------------- */}
+      {/* 3. DESKTOP PSD HERO SECTION (lg: / 1024px and up)     */}
+      {/* Matches Screenshot 1                                 */}
+      {/* ---------------------------------------------------- */}
+      <div className="hidden lg:block relative w-full aspect-[1440/814] min-h-[580px] xl:min-h-0">
+        <Image
+          src="/psd-herosection-new.png"
+          alt="Psychiatric Service Dog Letter Assistance"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+
+        <div className="absolute inset-0">
+          <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[42%] xl:w-[47.05%]">
+            <div className="flex items-center gap-[0.83%] flex-wrap">
+              {statsData.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 xl:py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[95px] xl:min-w-[110px]"
+                >
+                  <span
+                    className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
+                    style={{ backgroundImage: TEAL_GRADIENT }}
+                  >
+                    {stat.value}
+                  </span>
+                  <span className="text-[10px] xl:text-xs font-semibold text-[#5F6B6F] mt-0.5 xl:mt-1 whitespace-nowrap">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+
+            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6">
+              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                Psychiatric Service
+                <br />
+                Dog Letter Assistance
+              </span>
+            </h1>
+
+            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[16px] leading-[1.55] xl:leading-[1.625] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-[family-name:var(--font-lato)]">
+              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
+            </p>
+
+            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-4 xl:mt-6">
+              <button className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0">
+                <Image
+                  src="/hero-section-map.svg"
+                  alt=""
+                  width={16}
+                  height={21}
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
+                />
+                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                  Start your State
+                </span>
+                <ChevronDown className="w-4 h-4 text-primary shrink-0" />
+              </button>
+
+              <a
+                href="#pricing"
+                className="flex items-center gap-2.5 xl:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-[30px] text-white font-semibold text-[14.5px] xl:text-[16px] transition-opacity hover:opacity-90 h-[46px] xl:h-[48px] shrink-0"
+                style={{ backgroundImage: TEAL_GRADIENT }}
+              >
+                Get Started
+                <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                  <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
+                </span>
+              </a>
+            </div>
+
+            <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[210px] xl:w-[230px] px-3.5 xl:px-[18px] py-2 xl:pt-[11px] xl:pb-[9px] mt-4 xl:mt-[30px]">
+              <div className="flex items-center gap-[6px]">
+                <StarMark className="w-[18px] h-[17px] xl:w-[20px] xl:h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
+                <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
+              </div>
+              <TrustpilotStars />
+              <div className="flex items-center gap-[8px] xl:gap-[10px] text-[11px] xl:text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
+                <span className="font-semibold">Trustscore 4.4</span>
+                <span>23,900 reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

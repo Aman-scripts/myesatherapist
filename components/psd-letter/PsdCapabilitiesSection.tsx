@@ -26,8 +26,63 @@ const capabilitiesData = [
 
 export function PsdCapabilitiesSection() {
   return (
-    <section className="relative overflow-hidden bg-white w-full py-12 sm:py-16 lg:py-0">
-      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-10 lg:py-10 xl:py-16">
+    <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
+      {/* Mobile Image (< 640px) - Rendered FIRST above text */}
+      <div className="sm:hidden w-full">
+        <div className="relative w-full">
+          <Image
+            src="/psdcapabilites-section-mobile.png"
+            alt="What a Psychiatric Service Dog can do"
+            width={390}
+            height={680}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+          {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (88.1% from top) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[88.1%] w-[54px] h-[54px] z-30 pointer-events-none">
+            <Image
+              src="/psdcapabilites-section-icon.svg"
+              alt="Heart Paw Badge"
+              width={73}
+              height={73}
+              unoptimized
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet Image (640px to 1023px) - Rendered FIRST above text */}
+      <div className="hidden sm:block lg:hidden w-full">
+        <div className="relative w-full">
+          <Image
+            src="/psdcapabilities-section-tablet.png"
+            alt="What a Psychiatric Service Dog can do"
+            width={834}
+            height={1013}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+          {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (84.7% from top) */}
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[84.7%] w-[68px] h-[68px] z-30 pointer-events-none">
+            <Image
+              src="/psdcapabilites-section-icon.svg"
+              alt="Heart Paw Badge"
+              width={73}
+              height={73}
+              unoptimized
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Text Content Container (Renders AFTER image on Mobile/Tablet) */}
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-10 xl:py-16">
         <div className="w-full lg:w-[50%] xl:w-[52%] max-w-[640px]">
 
           {/* Section Header */}
@@ -74,8 +129,8 @@ export function PsdCapabilitiesSection() {
         </div>
       </div>
 
-      {/* Right Image Frame: Flush to top, bottom, and right edge with 0 gaps (matching Figma Screenshot 3) */}
-      <div className="mt-10 lg:mt-0 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full w-full lg:w-[45%] xl:w-[48%] max-w-[635px] pointer-events-none z-10">
+      {/* Desktop Image Frame (1024px and up) */}
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[45%] xl:w-[48%] max-w-[635px] pointer-events-none z-10">
         <div className="relative w-full h-full">
           <Image
             src="/psdcapabilities-new-image.png"

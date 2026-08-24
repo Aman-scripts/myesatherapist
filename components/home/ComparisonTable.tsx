@@ -259,9 +259,8 @@ export function ComparisonTable() {
                 src="/send-icon.svg"
                 alt=""
                 width={22}
-                height={22}
-                className="translate-x-[1px]"
-                style={{ width: "auto", height: "auto" }}
+                height={24}
+                className="w-[22px] h-[24px]"
               />
             </span>
           </a>

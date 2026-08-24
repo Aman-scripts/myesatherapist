@@ -22,7 +22,7 @@ interface PricingSectionProps {
   bgColor?: string;
 }
 
-export function PricingSection({ bgColor = "bg-white" }: PricingSectionProps) {
+export function PricingSection({ bgColor = "bg-[#EEEBE0]" }: PricingSectionProps) {
   return (
     <section id="pricing" className={`py-16 lg:py-24 ${bgColor} relative overflow-hidden`}>
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8">

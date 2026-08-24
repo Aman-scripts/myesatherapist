@@ -58,22 +58,23 @@ export function EmotionalSupportSection() {
             >
               <span>Get Started</span>
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} style={{ width: "auto", height: "auto" }} />
+                <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[22px] h-[24px]" />
               </span>
             </a>
           </div>
         </div>
 
-        {/* Right Graphics (Image Frame for Desktop & Laptop) */}
-        <div className="w-full lg:w-[44%] xl:w-[45%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0 pointer-events-none z-0 flex items-center justify-center lg:justify-end">
+        {/* Right Graphics (Spans 100% full height top-0 to bottom-0 with ZERO top & bottom gap) */}
+        <div className="w-full lg:w-[44%] xl:w-[45%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full pointer-events-none z-0 flex items-center justify-center lg:justify-end">
           <div className="relative w-full aspect-[834/521] lg:aspect-auto lg:h-full lg:w-full max-w-[607px] lg:max-w-none">
             <Image
               src="/emotional-support-right-frame.png"
               alt="Emotional support dog and woman"
-              width={607}
-              height={811}
+              fill
               priority
-              className="object-contain object-center lg:object-right lg:h-full lg:w-auto ml-auto"
+              unoptimized
+              className="object-cover object-center lg:object-right"
+              sizes="(min-width: 1024px) 607px, 100vw"
             />
           </div>
         </div>

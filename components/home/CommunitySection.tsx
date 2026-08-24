@@ -7,7 +7,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 export function CommunitySection() {
   return (
-    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-[#EEEBE0] relative overflow-hidden">
       <div className="max-w-[1251px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         {/* Title */}
         <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em] max-w-[797px] mx-auto mb-6">
@@ -37,9 +37,8 @@ export function CommunitySection() {
                 src="/send-icon.svg"
                 alt=""
                 width={22}
-                height={22}
-                className="translate-x-[1px]"
-                style={{ width: "auto", height: "auto" }}
+                height={24}
+                className="w-[22px] h-[24px]"
               />
             </span>
           </a>
