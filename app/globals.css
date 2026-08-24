@@ -89,13 +89,16 @@
     @apply border-border outline-ring/50;
     scroll-behavior: smooth;
   }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
   }
-  button:not(:disabled), [role="button"]:not(:disabled) {
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
     cursor: pointer;
   }
 }
@@ -128,6 +131,7 @@
 .card-hover {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .card-hover:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px -8px rgba(46, 90, 102, 0.12);
@@ -135,12 +139,17 @@
 
 /* Marquee animation */
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
-  animation: marquee 22s linear infinite;
+  animation: marquee 14s linear infinite;
 }
 
 .animate-marquee:hover {

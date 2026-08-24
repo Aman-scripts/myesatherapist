@@ -1,19 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Check } from "lucide-react";
-
-const mediaLogos = [
-  "/asseenon-section-image-one.png",
-  "/asseenon-section-image-two.png",
-  "/asseenon-section-image-three.png",
-  "/asseenon-section-image-four.png",
-  "/asseenon-section-image-five.png",
-  "/asseenon-section-image-six.png",
-];
-
-const marqueeLogos = [...mediaLogos, ...mediaLogos];
 
 export function PsdTrustBarSection() {
   return (
