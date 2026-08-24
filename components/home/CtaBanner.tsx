@@ -17,26 +17,39 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
         className="w-full relative min-h-[400px]"
         style={{ backgroundImage: TEAL_GRADIENT }}
       >
-        <div className="max-w-[1442px] mx-auto px-6 sm:px-12 lg:px-[104px] py-12 lg:py-[49px] relative min-h-[400px] flex items-center">
-          {/* Paw Prints: Flush with the bottom edge (bottom-0) matching Figma */}
-          <div className="absolute left-[38%] lg:left-[42%] bottom-0 w-[254px] h-[169px] pointer-events-none z-0 hidden md:block">
-            <Image
-              src="/cta-section-paw.png"
-              alt=""
-              width={254}
-              height={169}
-              className="object-contain object-bottom"
-              style={{ width: "auto", height: "auto" }}
-            />
-          </div>
+        {/* Paw Prints: Flush with the bottom edge of teal banner */}
+        <div className="absolute left-[35%] lg:left-[38%] xl:left-[42%] bottom-0 w-[180px] lg:w-[200px] xl:w-[254px] h-[120px] lg:h-[135px] xl:h-[169px] pointer-events-none z-0 hidden md:block">
+          <Image
+            src="/cta-section-paw.png"
+            alt=""
+            fill
+            unoptimized
+            priority
+            className="object-contain object-bottom"
+          />
+        </div>
 
+        {/* Overlapping Woman with Dog Photo (Flush with bottom edge of teal banner) */}
+        <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[520px] xl:w-[653px] h-[400px] lg:h-[430px] xl:h-[525px] pointer-events-none z-20">
+          <Image
+            src="/cta-banner-background.png"
+            alt="Woman embracing emotional support dog"
+            fill
+            priority
+            unoptimized
+            className="object-contain object-right-bottom"
+            sizes="(max-width: 1280px) 520px, 653px"
+          />
+        </div>
+
+        <div className="max-w-[1442px] mx-auto px-6 sm:px-12 lg:px-[60px] xl:px-[104px] py-12 lg:py-[49px] relative min-h-[400px] flex items-center">
           {/* Left Text & CTA Area */}
           <div className="relative z-10 max-w-[575px] space-y-6 text-left">
             <div className="space-y-4">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#FAF7F2] leading-[54px] tracking-[-0.0066em] max-w-[431px]">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[431px]">
                 Ready to Start Your ESA Evaluation?
               </h2>
-              <p className="text-[#FAF7F2] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+              <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
                 If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.
               </p>
             </div>
@@ -56,18 +69,6 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
               </a>
             </div>
           </div>
-
-          {/* Overlapping Woman with Dog Photo (653x525px extending 125px above teal banner, flush with bottom) */}
-          <div className="hidden lg:block absolute right-0 bottom-0 w-[653px] h-[525px] pointer-events-none z-20">
-            <Image
-              src="/cta-banner-background.png"
-              alt="Woman embracing emotional support dog"
-              fill
-              priority
-              className="object-contain object-right-bottom"
-              sizes="653px"
-            />
-          </div>
         </div>
 
         {/* Mobile Photo fallback */}
@@ -76,6 +77,8 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
             src="/cta-banner-background.png"
             alt="Woman embracing emotional support dog"
             fill
+            unoptimized
+            priority
             className="object-contain object-bottom"
             sizes="100vw"
           />
