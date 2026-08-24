@@ -107,12 +107,12 @@ export function DoYouNeedEsaSection() {
 
       </div>
 
-      {/* Mobile / Tablet View (Rendered with 0 top gap) */}
-      <div className="lg:hidden w-full">
+      {/* Mobile / Tablet View (Rendered with 0 top gap and 0 rounded corners) */}
+      <div className="lg:hidden w-full rounded-none">
         {/* Full-width Image Container (Edge to Edge, Image FIRST) */}
-        <div className="w-full">
+        <div className="w-full rounded-none">
           {/* Mobile Image (< 640px) */}
-          <div className="sm:hidden w-full">
+          <div className="sm:hidden w-full rounded-none">
             <Image
               src="/mobile-do-you-need-emotional-support.png"
               alt="Do You Need an Emotional Support Animal"
@@ -120,12 +120,12 @@ export function DoYouNeedEsaSection() {
               height={475}
               priority
               unoptimized
-              className="w-full h-auto block"
+              className="w-full h-auto block rounded-none"
             />
           </div>
 
           {/* Tablet Image (640px to 1023px) */}
-          <div className="hidden sm:block w-full">
+          <div className="hidden sm:block w-full rounded-none">
             <Image
               src="/tablet-do-you-need-emotional-support.png"
               alt="Do You Need an Emotional Support Animal"
@@ -133,7 +133,7 @@ export function DoYouNeedEsaSection() {
               height={533}
               priority
               unoptimized
-              className="w-full h-auto block"
+              className="w-full h-auto block rounded-none"
             />
           </div>
         </div>
