@@ -108,32 +108,32 @@ export function ComparisonTable() {
           </p>
         </div>
 
-        {/* Desktop Comparison Table Structure */}
-        <div className="hidden lg:block w-full max-w-[1210px] relative">
+        {/* Tablet & Desktop Comparison Table Structure */}
+        <div className="hidden md:block w-full max-w-[1210px] relative">
           {/* Main Background Frame */}
           <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0_2px_6px_rgba(0,0,0,0.15)] pb-6 relative z-0">
             {/* Header Labels for FEATURES and OTHERS */}
-            <div className="flex items-center justify-between pt-6 px-12 h-[80px]">
-              <div className="w-[300px] text-center">
-                <h3 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+            <div className="flex items-center justify-between pt-6 px-4 md:px-5 lg:px-6 xl:px-12 h-[80px]">
+              <div className="w-[185px] md:w-[195px] lg:w-[220px] xl:w-[300px] text-center">
+                <h3 className="font-heading text-[17px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   FEATURES
                 </h3>
               </div>
-              <div className="w-[478px]" /> {/* Spacer for elevated center card */}
-              <div className="w-[300px] text-center">
-                <h3 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+              <div className="w-[310px] md:w-[320px] lg:w-[360px] xl:w-[478px]" /> {/* Spacer for elevated center card */}
+              <div className="w-[200px] md:w-[215px] lg:w-[240px] xl:w-[300px] text-center">
+                <h3 className="font-heading text-[17px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   OTHERS
                 </h3>
               </div>
             </div>
 
             {/* Table Rows */}
-            <div className="divide-y divide-[#C8B9A7]/30 px-6">
+            <div className="divide-y divide-[#C8B9A7]/30 px-2 md:px-3 lg:px-4 xl:px-6">
               {comparisonRows.map((row, idx) => (
-                <div key={idx} className="flex items-center justify-between h-[61px] px-6">
+                <div key={idx} className="flex items-center justify-between h-[61px] px-1 md:px-2 xl:px-6">
                   {/* Features Column */}
-                  <div className="w-[280px] flex items-center gap-3">
-                    <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
+                  <div className="w-[185px] md:w-[195px] lg:w-[220px] xl:w-[280px] flex items-center gap-2 lg:gap-2.5 xl:gap-3">
+                    <div className="w-[26px] h-[26px] lg:w-[30px] lg:h-[30px] xl:w-[36px] xl:h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                       <Image
                         src={row.icon}
                         alt=""
@@ -144,22 +144,22 @@ export function ComparisonTable() {
                         style={{ width: "auto", height: "auto" }}
                       />
                     </div>
-                    <span className="font-heading text-[18px] lg:text-[20px] font-bold text-[#2E5A66]">
+                    <span className="font-heading text-[13.5px] md:text-[14px] lg:text-[15px] xl:text-[20px] font-bold text-[#2E5A66] leading-tight">
                       {row.feature}
                     </span>
                   </div>
 
                   {/* Empty space matching elevated column width */}
-                  <div className="w-[478px]" />
+                  <div className="w-[310px] md:w-[320px] lg:w-[360px] xl:w-[478px]" />
 
                   {/* Others Column */}
-                  <div className="w-[300px] flex items-center justify-start gap-2.5 pl-4">
+                  <div className="w-[200px] md:w-[215px] lg:w-[240px] xl:w-[300px] flex items-center justify-start gap-1.5 md:gap-2 xl:gap-2.5 pl-1 md:pl-2 xl:pl-4">
                     {row.othersType === "cross" ? (
                       <RedCrossIcon />
                     ) : (
                       <WarningOrangeIcon />
                     )}
-                    <span className="text-[15px] xl:text-[16px] text-[#5F6B6F] font-normal leading-[24px] font-[family-name:var(--font-lato)] text-left">
+                    <span className="text-[11.5px] md:text-[12px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-normal leading-[16px] xl:leading-[24px] font-[family-name:var(--font-lato)] text-left">
                       {row.others}
                     </span>
                   </div>
@@ -170,14 +170,14 @@ export function ComparisonTable() {
 
           {/* Elevated Center Overlay Card: MY ESA THERAPIST */}
           <div
-            className="absolute left-[366px] top-[-18px] w-[478px] bg-white rounded-[20px] shadow-[3px_3px_48px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4"
+            className="absolute left-1/2 -translate-x-1/2 top-[-18px] w-[310px] md:w-[320px] lg:w-[360px] xl:w-[478px] bg-white rounded-[20px] shadow-[3px_3px_48px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4"
           >
             {/* Top Teal Gradient Header Banner */}
             <div
-              className="h-[91px] rounded-b-[20px] flex items-center justify-center px-6 shadow-md"
+              className="h-[91px] rounded-b-[20px] flex items-center justify-center px-3 md:px-4 xl:px-6 shadow-md"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
-              <h3 className="font-heading text-[24px] font-bold text-[#FAF7F2] tracking-wide">
+              <h3 className="font-heading text-[17px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] tracking-wide">
                 MY ESA THERAPIST
               </h3>
             </div>
@@ -187,10 +187,10 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-3 h-[61px] px-6 text-left"
+                  className="flex items-center gap-2 md:gap-2.5 xl:gap-3 h-[61px] px-3 md:px-4 xl:px-6 text-left"
                 >
                   <GreenCheckIcon />
-                  <span className="text-[15px] xl:text-[16px] text-[#5F6B6F] font-medium leading-[22px] font-[family-name:var(--font-lato)]">
+                  <span className="text-[11.5px] md:text-[12px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-medium leading-[16px] xl:leading-[22px] font-[family-name:var(--font-lato)]">
                     {row.myEsa}
                   </span>
                 </div>
@@ -199,8 +199,8 @@ export function ComparisonTable() {
           </div>
         </div>
 
-        {/* Mobile / Tablet Responsive View */}
-        <div className="lg:hidden w-full space-y-6 max-w-xl mx-auto">
+        {/* Mobile Responsive View (< 768px) */}
+        <div className="md:hidden w-full space-y-6 max-w-xl mx-auto">
           {/* Card 1: My ESA Therapist (Highlighted) */}
           <div className="bg-white rounded-3xl shadow-xl border-2 border-[#2E5A66]/20 overflow-hidden">
             <div
