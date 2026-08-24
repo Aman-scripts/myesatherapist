@@ -8,10 +8,10 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 export function EmotionalSupportSection() {
   return (
     <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
-      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet with 0 top gap and 0 rounded corners) */}
-      <div className="lg:hidden w-full rounded-none">
+      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet with 0 top gap) */}
+      <div className="lg:hidden w-full overflow-hidden">
         {/* Mobile Image (< 640px) */}
-        <div className="sm:hidden w-full rounded-none">
+        <div className="sm:hidden w-full -mt-2.5">
           <Image
             src="/mobile-emotional-support.png"
             alt="What is an Emotional Support Animal"
@@ -19,12 +19,12 @@ export function EmotionalSupportSection() {
             height={425}
             priority
             unoptimized
-            className="w-full h-auto block rounded-none"
+            className="w-full h-auto block"
           />
         </div>
 
         {/* Tablet Image (640px to 1023px) */}
-        <div className="hidden sm:block w-full rounded-none">
+        <div className="hidden sm:block w-full -mt-3.5">
           <Image
             src="/tablet-emotional-support-section.png"
             alt="What is an Emotional Support Animal"
@@ -32,7 +32,7 @@ export function EmotionalSupportSection() {
             height={521}
             priority
             unoptimized
-            className="w-full h-auto block rounded-none"
+            className="w-full h-auto block"
           />
         </div>
       </div>
