@@ -26,69 +26,66 @@ const capabilitiesData = [
 
 export function PsdCapabilitiesSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-16 bg-white relative overflow-hidden">
-      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Heading + 3 Framework Cards */}
-          <div className="lg:col-span-7 xl:col-span-6 z-10 max-w-[620px]">
-            {/* Section Header */}
-            <div className="mb-8 lg:mb-10 text-left">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.15] tracking-tight mb-3">
-                What a Psychiatric Service dog can do?
-              </h2>
-              <p className="text-[#5F6B6F] text-base sm:text-lg font-normal italic font-lato leading-relaxed">
-                Understand the legal framework behind your PSD empowers you as a handler.
-              </p>
-            </div>
+    <section className="relative overflow-hidden bg-white w-full py-12 sm:py-16 lg:py-0">
+      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-10 lg:py-10 xl:py-16">
+        <div className="w-full lg:w-[50%] xl:w-[52%] max-w-[640px]">
 
-            {/* 3 Capabilities Cards Stack */}
-            <div className="space-y-4 sm:space-y-5">
-              {capabilitiesData.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-[16px] p-5 sm:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.04)] flex items-center gap-4 sm:gap-6 border-0"
-                >
-                  {/* Number Circle Badge (Soft Grayish-Teal Tint bg #AEBBBE33) */}
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#AEBBBE33] text-[#5F6B6F] font-heading font-bold text-xl sm:text-[22px] flex items-center justify-center shrink-0">
-                    {item.number}
-                  </div>
+          {/* Section Header */}
+          <div className="mb-5 sm:mb-8 text-left">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.15] tracking-tight mb-2 sm:mb-3">
+              What a Psychiatric Service dog can do?
+            </h2>
+            <p className="text-[#5F6B6F] text-base lg:text-[15px] xl:text-lg font-normal italic font-lato leading-relaxed">
+              Understand the legal framework behind your PSD empowers you as a handler.
+            </p>
+          </div>
 
-                  {/* Card Content */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2.5 mb-1.5">
-                      <h3 className="font-heading font-bold text-lg sm:text-xl text-[#1E3E47]">
-                        {item.title}
-                      </h3>
-                      {/* Dark Teal Pill Tag */}
-                      <span className="bg-[#1E3E47] text-white font-lato italic font-medium text-xs px-3 py-1 rounded-full shrink-0">
-                        {item.framework}
-                      </span>
-                    </div>
-                    <p className="text-sm sm:text-[15px] font-normal text-[#5F6B6F] font-lato leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+          {/* 3 Capabilities Cards Stack */}
+          <div className="space-y-3.5 lg:space-y-3 xl:space-y-5 lg:max-w-[490px] xl:max-w-[640px]">
+            {capabilitiesData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-[16px] p-4 lg:p-3 xl:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.04)] flex items-center gap-3.5 lg:gap-3 xl:gap-6 border-0"
+              >
+                {/* Number Circle Badge */}
+                <div className="w-12 h-12 lg:w-11 lg:h-11 xl:w-16 xl:h-16 rounded-full bg-[#AEBBBE33] text-[#5F6B6F] font-heading font-bold text-lg lg:text-base xl:text-[22px] flex items-center justify-center shrink-0">
+                  {item.number}
                 </div>
-              ))}
-            </div>
+
+                {/* Card Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 lg:gap-2 mb-1 sm:mb-1.5">
+                    <h3 className="font-heading font-bold text-base lg:text-[15px] xl:text-xl text-[#1E3E47]">
+                      {item.title}
+                    </h3>
+                    {/* Dark Teal Pill Tag */}
+                    <span className="bg-[#1E3E47] text-white font-lato italic font-medium text-[11px] lg:text-[11px] xl:text-xs px-2.5 py-0.5 xl:px-3 xl:py-1 rounded-full shrink-0">
+                      {item.framework}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm lg:text-[12px] xl:text-[15px] font-normal text-[#5F6B6F] font-lato leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Right Column: Full-Bleed Image Frame (Top-to-Bottom Flush, 0 Padding) */}
-          <div className="lg:col-span-5 xl:col-span-6 relative lg:static">
-            <div className="relative w-full max-w-[635px] mx-auto lg:max-w-none lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-[635px] lg:h-full shrink-0">
-              <Image
-                src="/psdcapabilities-new-image.png"
-                alt="What a Psychiatric Service Dog can do"
-                fill
-                priority
-                unoptimized
-                className="object-cover object-left h-full w-full"
-                sizes="(max-width: 1024px) 100vw, 635px"
-              />
-            </div>
-          </div>
+        </div>
+      </div>
 
+      {/* Right Image Frame: Flush to top, bottom, and right edge with 0 gaps (matching Figma Screenshot 3) */}
+      <div className="mt-10 lg:mt-0 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full w-full lg:w-[45%] xl:w-[48%] max-w-[635px] pointer-events-none z-10">
+        <div className="relative w-full h-full">
+          <Image
+            src="/psdcapabilities-new-image.png"
+            alt="What a Psychiatric Service Dog can do"
+            fill
+            priority
+            unoptimized
+            className="object-cover object-right h-full w-full"
+            sizes="(max-width: 1280px) 45vw, 635px"
+          />
         </div>
       </div>
     </section>
