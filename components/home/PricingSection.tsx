@@ -168,15 +168,15 @@ export function PricingSection({ bgColor = "bg-white" }: PricingSectionProps) {
           </div>
 
           {/* Floating Dog Paw & Human Hand Image (Positioned directly to the right without shifting centered cards) */}
-          <div className="hidden xl:block absolute left-[100%] top-[45px] w-[441px] h-[376px] pointer-events-none z-0 -ml-5">
+          <div className="hidden lg:block absolute left-[85%] lg:left-[88%] xl:left-[100%] top-[70px] lg:top-[60px] xl:top-[45px] w-[280px] lg:w-[340px] xl:w-[441px] h-auto pointer-events-none z-0 -ml-5">
             <Image
               src="/pricing-section-dog.png"
               alt="Dog giving paw to woman hand"
               width={441}
               height={376}
               priority
-              className="object-contain object-left"
-              style={{ width: "auto", height: "auto" }}
+              unoptimized
+              className="object-contain object-left w-full h-auto"
             />
           </div>
         </div>
