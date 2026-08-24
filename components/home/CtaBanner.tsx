@@ -11,7 +11,7 @@ type CtaBannerProps = {
 
 export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
   return (
-    <section className={`relative w-full ${bgColor} pt-0 lg:pt-[125px] overflow-visible`}>
+    <section className={`relative w-full ${bgColor} pt-0 lg:pt-8 xl:pt-[125px] overflow-visible`}>
       {/* Full-width Teal Gradient Banner (Edge to Edge) */}
       <div
         className="w-full relative min-h-[400px]"
