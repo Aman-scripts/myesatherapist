@@ -54,22 +54,22 @@ export function FaqSection() {
           </p>
         </div>
 
-        {/* Frame 1000011803: Content Row (551px Image + 566px Accordions, gap: 60px) */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-[60px] max-w-[1184px] mx-auto">
-          {/* Left: image 35 (551x673px, rounded-[20px]) */}
-          <div className="w-full max-w-[551px] lg:w-[551px] h-[420px] lg:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
+        {/* Frame 1000011803: Content Row (Image + Accordions) */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8 xl:gap-[60px] max-w-[1184px] mx-auto">
+          {/* Left: image (380x540px on 1024px lg, 551x673px on 1440px xl, rounded-[20px]) */}
+          <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
             <Image
               src="/faq-section-image.png"
               alt="Person holding emotional support animal"
               fill
               priority
               className="object-cover"
-              sizes="(min-width: 1024px) 551px, 90vw"
+              sizes="(min-width: 1280px) 551px, (min-width: 1024px) 380px, 90vw"
             />
           </div>
 
-          {/* Right: Frame 1000011715 (566px width, gap: 25px) */}
-          <div className="w-full max-w-[566px] space-y-[25px] flex flex-col justify-center">
+          {/* Right: Frame 1000011715 (Question Cards) */}
+          <div className="w-full max-w-[566px] lg:max-w-none lg:flex-1 space-y-3.5 sm:space-y-5 xl:space-y-[25px] flex flex-col justify-center">
             {faqs.map((faq, idx) => {
               const isOpen = openIdx === idx;
               return (
@@ -79,23 +79,23 @@ export function FaqSection() {
                 >
                   <button
                     onClick={() => setOpenIdx(isOpen ? null : idx)}
-                    className="w-full min-h-[64px] sm:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative"
+                    className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    {/* Gold Number Block: Frame 1000011949 (78px wide, #E8B92C) */}
-                    <div className="w-[60px] sm:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-xl sm:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
+                    {/* Gold Number Block: Frame 1000011949 (#E8B92C) */}
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
                     {/* Question Title Area & Plus Icon (+) */}
-                    <div className="flex-1 py-3 px-4 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
-                      <span className="font-sans font-semibold text-base sm:text-[18px] text-white leading-snug sm:leading-[30px]">
+                    <div className="flex-1 py-2.5 sm:py-3 px-3.5 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
+                      <span className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-white leading-snug sm:leading-[26px] xl:leading-[30px]">
                         {faq.q}
                       </span>
 
                       {/* Figma Plus Icon (+) */}
                       <span
-                        className={`w-[20px] h-[20px] flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                        className={`w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] flex items-center justify-center shrink-0 transition-transform duration-300 ${
                           isOpen ? "rotate-45" : ""
                         }`}
                       >
@@ -120,7 +120,7 @@ export function FaqSection() {
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-7 py-5 text-[16px] text-[#5F6B6F] font-sans font-medium leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn">
+                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 text-sm sm:text-[16px] text-[#5F6B6F] font-sans font-medium leading-[24px] sm:leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn">
                       {faq.a}
                     </div>
                   )}
