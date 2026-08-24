@@ -17,8 +17,8 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
         className="w-full relative min-h-[400px]"
         style={{ backgroundImage: TEAL_GRADIENT }}
       >
-        {/* Paw Prints: Flush with the bottom edge of teal banner */}
-        <div className="absolute left-[35%] lg:left-[38%] xl:left-[42%] bottom-0 w-[180px] lg:w-[200px] xl:w-[254px] h-[120px] lg:h-[135px] xl:h-[169px] pointer-events-none z-0 hidden md:block">
+        {/* Paw Prints: Flush with the bottom edge of teal banner, centered in clear gap on 1024px */}
+        <div className="absolute left-[35%] lg:left-[28%] xl:left-[41%] bottom-0 w-[160px] lg:w-[175px] xl:w-[240px] h-[110px] lg:h-[120px] xl:h-[160px] pointer-events-none z-0 hidden md:block">
           <Image
             src="/cta-section-paw.png"
             alt=""
@@ -30,7 +30,7 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
         </div>
 
         {/* Overlapping Woman with Dog Photo (Flush with bottom edge of teal banner) */}
-        <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[520px] xl:w-[653px] h-[400px] lg:h-[430px] xl:h-[525px] pointer-events-none z-20">
+        <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[490px] xl:w-[653px] h-[390px] lg:h-[410px] xl:h-[525px] pointer-events-none z-20">
           <Image
             src="/cta-banner-background.png"
             alt="Woman embracing emotional support dog"
@@ -38,7 +38,7 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
             priority
             unoptimized
             className="object-contain object-right-bottom"
-            sizes="(max-width: 1280px) 520px, 653px"
+            sizes="(max-width: 1280px) 490px, 653px"
           />
         </div>
 
