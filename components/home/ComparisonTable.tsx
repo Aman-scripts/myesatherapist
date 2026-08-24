@@ -7,8 +7,8 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 function GreenCheckIcon() {
   return (
-    <span className="w-[26px] h-[26px] rounded-full bg-[#00BA00] flex items-center justify-center shrink-0 shadow-xs">
-      <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px] xl:w-[26px] xl:h-[26px] rounded-full bg-[#00BA00] flex items-center justify-center shrink-0 shadow-xs">
+      <svg className="w-2.5 h-2 md:w-3 md:h-2.5 lg:w-3.5 lg:h-3" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 5.5L5 9L12.5 1.5" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     </span>
@@ -17,8 +17,8 @@ function GreenCheckIcon() {
 
 function RedCrossIcon() {
   return (
-    <span className="w-[26px] h-[26px] rounded-full bg-[#FF5023] flex items-center justify-center shrink-0 shadow-xs">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px] xl:w-[26px] xl:h-[26px] rounded-full bg-[#FF5023] flex items-center justify-center shrink-0 shadow-xs">
+      <svg className="w-2.5 h-2.5 md:w-3 md:h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2L10 10M10 2L2 10" stroke="#FFF5F5" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     </span>
@@ -27,8 +27,8 @@ function RedCrossIcon() {
 
 function WarningOrangeIcon() {
   return (
-    <span className="w-[26px] h-[26px] rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px] xl:w-[26px] xl:h-[26px] rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs">
+      <svg className="w-3 h-3" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 3.5V7.5M7 10.5H7.01" stroke="white" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     </span>
@@ -113,15 +113,15 @@ export function ComparisonTable() {
           {/* Main Background Frame */}
           <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0_2px_6px_rgba(0,0,0,0.15)] pb-6 relative z-0">
             {/* Header Labels for FEATURES and OTHERS */}
-            <div className="flex items-center justify-between pt-6 px-4 md:px-5 lg:px-6 xl:px-12 h-[80px]">
-              <div className="w-[185px] md:w-[195px] lg:w-[220px] xl:w-[300px] text-center">
-                <h3 className="font-heading text-[17px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+            <div className="flex items-center justify-between pt-6 px-3 md:px-4 lg:px-6 xl:px-12 h-[75px] md:h-[75px] lg:h-[80px]">
+              <div className="w-[190px] md:w-[210px] lg:w-[250px] xl:w-[300px] text-center shrink-0">
+                <h3 className="font-heading text-[16px] md:text-[17px] lg:text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   FEATURES
                 </h3>
               </div>
-              <div className="w-[310px] md:w-[320px] lg:w-[360px] xl:w-[478px]" /> {/* Spacer for elevated center card */}
-              <div className="w-[200px] md:w-[215px] lg:w-[240px] xl:w-[300px] text-center">
-                <h3 className="font-heading text-[17px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+              <div className="w-[240px] md:w-[260px] lg:w-[340px] xl:w-[478px] shrink-0" /> {/* Spacer for elevated center card */}
+              <div className="w-[190px] md:w-[210px] lg:w-[250px] xl:w-[300px] text-center shrink-0">
+                <h3 className="font-heading text-[16px] md:text-[17px] lg:text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   OTHERS
                 </h3>
               </div>
@@ -132,34 +132,33 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div key={idx} className="flex items-center justify-between h-[61px] px-1 md:px-2 xl:px-6">
                   {/* Features Column */}
-                  <div className="w-[185px] md:w-[195px] lg:w-[220px] xl:w-[280px] flex items-center gap-2 lg:gap-2.5 xl:gap-3">
-                    <div className="w-[26px] h-[26px] lg:w-[30px] lg:h-[30px] xl:w-[36px] xl:h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
+                  <div className="w-[190px] md:w-[210px] lg:w-[250px] xl:w-[280px] shrink-0 flex items-center gap-1.5 md:gap-2 lg:gap-2.5 xl:gap-3">
+                    <div className="w-[24px] h-[24px] md:w-[26px] md:h-[26px] lg:w-[30px] lg:h-[30px] xl:w-[36px] xl:h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                       <Image
                         src={row.icon}
                         alt=""
                         width={18}
                         height={18}
                         unoptimized
-                        className="object-contain"
-                        style={{ width: "auto", height: "auto" }}
+                        className="object-contain w-3.5 h-3.5 md:w-4 md:h-4 xl:w-5 xl:h-5"
                       />
                     </div>
-                    <span className="font-heading text-[13.5px] md:text-[14px] lg:text-[15px] xl:text-[20px] font-bold text-[#2E5A66] leading-tight">
+                    <span className="font-heading text-[12px] md:text-[13px] lg:text-[15px] xl:text-[20px] font-bold text-[#2E5A66] leading-tight">
                       {row.feature}
                     </span>
                   </div>
 
                   {/* Empty space matching elevated column width */}
-                  <div className="w-[310px] md:w-[320px] lg:w-[360px] xl:w-[478px]" />
+                  <div className="w-[240px] md:w-[260px] lg:w-[340px] xl:w-[478px] shrink-0" />
 
                   {/* Others Column */}
-                  <div className="w-[200px] md:w-[215px] lg:w-[240px] xl:w-[300px] flex items-center justify-start gap-1.5 md:gap-2 xl:gap-2.5 pl-1 md:pl-2 xl:pl-4">
+                  <div className="w-[190px] md:w-[210px] lg:w-[250px] xl:w-[300px] shrink-0 flex items-center justify-start gap-1.5 md:gap-2 xl:gap-2.5 pl-1 md:pl-2 xl:pl-4">
                     {row.othersType === "cross" ? (
                       <RedCrossIcon />
                     ) : (
                       <WarningOrangeIcon />
                     )}
-                    <span className="text-[11.5px] md:text-[12px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-normal leading-[16px] xl:leading-[24px] font-[family-name:var(--font-lato)] text-left">
+                    <span className="text-[10.5px] md:text-[11px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-normal leading-[14px] md:leading-[15px] lg:leading-[18px] xl:leading-[24px] font-[family-name:var(--font-lato)] text-left">
                       {row.others}
                     </span>
                   </div>
@@ -170,14 +169,14 @@ export function ComparisonTable() {
 
           {/* Elevated Center Overlay Card: MY ESA THERAPIST */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 top-[-18px] w-[310px] md:w-[320px] lg:w-[360px] xl:w-[478px] bg-white rounded-[20px] shadow-[3px_3px_48px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4"
+            className="absolute left-1/2 -translate-x-1/2 top-[-18px] w-[240px] md:w-[260px] lg:w-[340px] xl:w-[478px] bg-white rounded-[20px] shadow-[3px_3px_48px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4"
           >
             {/* Top Teal Gradient Header Banner */}
             <div
-              className="h-[91px] rounded-b-[20px] flex items-center justify-center px-3 md:px-4 xl:px-6 shadow-md"
+              className="h-[84px] md:h-[84px] lg:h-[88px] xl:h-[91px] rounded-b-[20px] flex items-center justify-center px-2 md:px-3 xl:px-6 shadow-md"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
-              <h3 className="font-heading text-[17px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] tracking-wide">
+              <h3 className="font-heading text-[15px] md:text-[16px] lg:text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] tracking-wide">
                 MY ESA THERAPIST
               </h3>
             </div>
@@ -187,10 +186,10 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 md:gap-2.5 xl:gap-3 h-[61px] px-3 md:px-4 xl:px-6 text-left"
+                  className="flex items-center gap-1.5 md:gap-2 lg:gap-2.5 xl:gap-3 h-[61px] px-2.5 md:px-3 lg:px-4 xl:px-6 text-left"
                 >
                   <GreenCheckIcon />
-                  <span className="text-[11.5px] md:text-[12px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-medium leading-[16px] xl:leading-[22px] font-[family-name:var(--font-lato)]">
+                  <span className="text-[10.5px] md:text-[11px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-medium leading-[14px] md:leading-[15px] lg:leading-[18px] xl:leading-[22px] font-[family-name:var(--font-lato)]">
                     {row.myEsa}
                   </span>
                 </div>

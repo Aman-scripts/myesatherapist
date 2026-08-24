@@ -59,7 +59,7 @@ export function PsdProcessSection() {
           </div>
 
           {/* Floating Circle Badge - Top Right Edge */}
-          <div className="absolute top-[20%] right-[-24px] sm:top-[22%] sm:right-[-34px] w-[56px] h-[56px] sm:w-[73px] sm:h-[73px] z-20 pointer-events-none drop-shadow-md">
+          <div className="absolute top-[18%] right-[-14px] sm:top-[20%] sm:right-[-18px] md:top-[22%] md:right-[-20px] lg:right-[-34px] w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
               src="/psdprocess-section-icon.svg"
               alt=""
@@ -72,7 +72,7 @@ export function PsdProcessSection() {
           </div>
 
           {/* Floating Circle Badge - Bottom Left Edge */}
-          <div className="absolute bottom-[20%] left-[-24px] sm:bottom-[22%] sm:left-[-34px] w-[56px] h-[56px] sm:w-[73px] sm:h-[73px] z-20 pointer-events-none drop-shadow-md">
+          <div className="absolute bottom-[18%] left-[-14px] sm:bottom-[20%] sm:left-[-18px] md:bottom-[22%] md:left-[-20px] lg:left-[-34px] w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
               src="/psdprocess-section-icon.svg"
               alt=""
@@ -86,19 +86,19 @@ export function PsdProcessSection() {
         </div>
 
         {/* 3. Three Step Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-[1140px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8 max-w-[1140px] mx-auto">
           {stepsData.map((step, idx) => (
             <div
               key={idx}
-              className="relative bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_4px_16px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)]"
+              className="relative bg-white rounded-[20px] md:rounded-[24px] p-5 sm:p-6 lg:p-8 flex flex-col items-center text-center shadow-[0_4px_16px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)]"
             >
               {/* Step Number Circle Badge at Top-Left (3D Gold Circle with pure black drop shadow) */}
-              <div className="absolute top-5 left-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#E2B755] text-[#1E3E47] font-heading font-bold text-base sm:text-lg flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
+              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-[#E2B755] text-[#1E3E47] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
                 {step.number}
               </div>
 
               {/* Step Icon Container (Soft grayish-teal tint with no border) */}
-              <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full bg-[#AEBBBE33] flex items-center justify-center mb-5 mt-3 shrink-0">
+              <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-full bg-[#AEBBBE33] flex items-center justify-center mb-4 sm:mb-5 mt-2 sm:mt-3 shrink-0">
                 <Image
                   src={step.icon}
                   alt={step.title}
@@ -106,18 +106,18 @@ export function PsdProcessSection() {
                   height={36}
                   unoptimized
                   priority
-                  className="object-contain"
+                  className="object-contain w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
                   style={{ width: "auto", height: "auto" }}
                 />
               </div>
 
               {/* Step Title */}
-              <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] mb-3">
+              <h3 className="font-heading text-lg sm:text-xl lg:text-[22px] font-bold text-[#1E3E47] mb-2 sm:mb-3">
                 {step.title}
               </h3>
 
               {/* Step Description */}
-              <p className="text-sm sm:text-[15px] text-[#5F6B6F] font-normal leading-[1.6] font-lato">
+              <p className="text-xs sm:text-sm lg:text-[15px] text-[#5F6B6F] font-normal leading-[1.6] font-lato">
                 {step.description}
               </p>
             </div>

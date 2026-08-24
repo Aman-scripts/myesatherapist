@@ -171,17 +171,16 @@ export function QualifyingConditions() {
                   {/* Badge */}
                   <div
                     onClick={() => setHoveredCondition(c.label)}
-                    className="flex items-center gap-3 bg-white rounded-[10px] pl-2 pr-4 h-12 shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit text-[16px] font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+                    className="flex items-center gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-3 bg-white rounded-[6px] md:rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] pl-1 md:pl-1 lg:pl-1.5 xl:pl-2 pr-2.5 md:pr-2.5 lg:pr-3.5 xl:pr-4 h-[28px] md:h-[28px] lg:h-[36px] xl:h-12 shadow-[0_4px_12px_-6px_rgba(46,90,102,0.35)] lg:shadow-[0_6px_18px_-8px_rgba(46,90,102,0.35)] xl:shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit text-[10.5px] md:text-[10.5px] lg:text-[13px] xl:text-[16px] font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
                   >
-                    <span className="w-[35px] h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
+                    <span className="w-[20px] h-[20px] md:w-[20px] md:h-[20px] lg:w-[26px] lg:h-[26px] xl:w-[35px] xl:h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
                       <Image
                         src={c.icon}
                         alt=""
                         width={20}
                         height={20}
                         unoptimized
-                        className="object-contain"
-                        style={{ width: "auto", height: "auto" }}
+                        className="object-contain w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5"
                       />
                     </span>
                     <span
@@ -195,31 +194,31 @@ export function QualifyingConditions() {
                   {/* Popover Card (Shown on Hover/Active) */}
                   {isVisible && (
                     <div
-                      className={`absolute top-full mt-3 ${
+                      className={`absolute top-full mt-1.5 md:mt-1.5 lg:mt-2 xl:mt-3 ${
                         c.alignRight ? "right-0" : "left-0"
-                      } w-[240px] bg-white rounded-[16px] p-3.5 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
+                      } w-[160px] md:w-[170px] lg:w-[200px] xl:w-[240px] bg-white rounded-[10px] md:rounded-[10px] lg:rounded-[14px] xl:rounded-[16px] p-2 md:p-2 lg:p-3 xl:p-3.5 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
                     >
                       {/* Top Arrow Pointer */}
                       <div
-                        className={`absolute -top-2 ${
-                          c.alignRight ? "right-8" : "left-8"
-                        } w-4 h-4 bg-white rotate-45 border-l border-t border-[#E2E8F0]`}
+                        className={`absolute -top-1.5 ${
+                          c.alignRight ? "right-4 lg:right-6 xl:right-8" : "left-4 lg:left-6 xl:left-8"
+                        } w-3 h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 bg-white rotate-45 border-l border-t border-[#E2E8F0]`}
                       />
 
                       {/* Puppy Photo */}
-                      <div className="relative w-full h-[105px] rounded-[10px] overflow-hidden bg-slate-100">
+                      <div className="relative w-full h-[65px] md:h-[70px] lg:h-[85px] xl:h-[105px] rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] overflow-hidden bg-slate-100">
                         <Image
                           src="/qualifying-condtions-tag.png"
                           alt="Puppy resting"
                           fill
                           unoptimized
                           className="object-cover"
-                          sizes="240px"
+                          sizes="(min-width: 1280px) 240px, (min-width: 1024px) 200px, 170px"
                         />
                       </div>
 
                       {/* Description */}
-                      <p className="text-[#5F6B6F] text-[13px] font-medium leading-[20px] font-sans mt-2.5 text-left">
+                      <p className="text-[#5F6B6F] text-[10px] md:text-[10.5px] lg:text-[12px] xl:text-[13px] font-medium leading-[14px] md:leading-[15px] lg:leading-[18px] xl:leading-[20px] font-sans mt-1.5 lg:mt-2 xl:mt-2.5 text-left">
                         {c.description}
                       </p>
                     </div>

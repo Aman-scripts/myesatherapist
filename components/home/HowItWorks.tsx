@@ -30,47 +30,47 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-14 sm:py-16 lg:py-20 bg-[#EEEBE0]">
+    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-[#EEEBE0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[20px] shadow-[0_20px_60px_-15px_rgba(46,90,102,0.15)] px-6 py-10 sm:px-10 sm:py-14 lg:px-[142px] lg:py-[60px]">
+        <div className="bg-white rounded-[20px] shadow-[0_20px_60px_-15px_rgba(46,90,102,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-8 lg:px-[142px] lg:py-[60px]">
           {/* Heading */}
-          <div className="text-center mb-10 lg:mb-[72px] space-y-2">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em]">
+          <div className="text-center mb-8 sm:mb-10 lg:mb-[72px] space-y-2">
+            <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em]">
               How Online ESA Evaluation Works?
             </h2>
-            <p className="text-muted-foreground text-base sm:text-lg font-semibold max-w-xl mx-auto">
+            <p className="text-muted-foreground text-sm sm:text-base lg:text-lg font-semibold max-w-xl mx-auto">
               A simple 3-step process to complete your emotional support animal letter evaluation
             </p>
           </div>
 
           {/* 3 Step Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-11 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-6 lg:gap-x-11 lg:gap-y-12">
             {steps.map((step) => (
               <div key={step.number} className="flex flex-col items-center text-center">
                 {/* Circular Image with number badge */}
-                <div className="relative w-[228px] h-[226px] shrink-0 flex items-center justify-center">
+                <div className="relative w-[180px] h-[180px] md:w-[190px] md:h-[190px] lg:w-[228px] lg:h-[226px] shrink-0 flex items-center justify-center">
                   <div className="absolute inset-0 rounded-full bg-[#EFFFF1] shadow-[0_10px_30px_-8px_rgba(46,90,102,0.25)]" />
-                  <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden">
+                  <div className="relative w-[156px] h-[156px] md:w-[166px] md:h-[166px] lg:w-[200px] lg:h-[200px] rounded-full overflow-hidden">
                     <Image
                       src={step.image}
                       alt={step.title}
                       fill
                       className="object-cover"
-                      sizes="200px"
+                      sizes="(min-width: 1024px) 200px, 166px"
                     />
                   </div>
                   {/* Number badge */}
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[65px] h-[65px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-[#FAF7F2] font-bold text-3xl flex items-center justify-center shadow-md">
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[52px] h-[52px] md:w-[56px] md:h-[56px] lg:w-[65px] lg:h-[65px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-[#FAF7F2] font-bold text-2xl lg:text-3xl flex items-center justify-center shadow-md">
                     {step.number}
                   </div>
                 </div>
 
                 {/* Text */}
-                <div className="space-y-2 pt-6 max-w-[273px]">
-                  <h3 className="font-[family-name:var(--font-lato)] text-xl sm:text-2xl font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent tracking-[-0.017em]">
+                <div className="space-y-2 pt-5 sm:pt-6 max-w-[273px]">
+                  <h3 className="font-[family-name:var(--font-lato)] text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent tracking-[-0.017em]">
                     {step.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
