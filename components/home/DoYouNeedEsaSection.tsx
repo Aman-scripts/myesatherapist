@@ -15,7 +15,7 @@ export function DoYouNeedEsaSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white w-full py-12 lg:py-0">
+    <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
       {/* Desktop & Laptop Container */}
       <div className="hidden lg:flex relative w-full max-w-[1442px] mx-auto items-center justify-between h-[566px] xl:h-[701px]">
         
@@ -107,45 +107,45 @@ export function DoYouNeedEsaSection() {
 
       </div>
 
-      {/* Mobile / Tablet View */}
-      <div className="lg:hidden py-8 space-y-8 w-full">
-        {/* Full-width Image Container (Edge to Edge) */}
+      {/* Mobile / Tablet View (Rendered with 0 top gap) */}
+      <div className="lg:hidden w-full">
+        {/* Full-width Image Container (Edge to Edge, Image FIRST) */}
         <div className="w-full">
-          {/* Mobile Image (< sm / under 640px) */}
-          <div className="block sm:hidden relative w-full aspect-[390/475] rounded-none">
+          {/* Mobile Image (< 640px) */}
+          <div className="sm:hidden w-full">
             <Image
               src="/mobile-do-you-need-emotional-support.png"
               alt="Do You Need an Emotional Support Animal"
-              fill
-              unoptimized
+              width={390}
+              height={475}
               priority
-              className="object-contain rounded-none"
-              sizes="100vw"
+              unoptimized
+              className="w-full h-auto block"
             />
           </div>
 
-          {/* Tablet Image (sm: to lg: / 640px to 1023px) */}
-          <div className="hidden sm:block lg:hidden relative w-full aspect-[834/533] rounded-none">
+          {/* Tablet Image (640px to 1023px) */}
+          <div className="hidden sm:block w-full">
             <Image
               src="/tablet-do-you-need-emotional-support.png"
               alt="Do You Need an Emotional Support Animal"
-              fill
-              unoptimized
+              width={834}
+              height={533}
               priority
-              className="object-contain rounded-none"
-              sizes="100vw"
+              unoptimized
+              className="w-full h-auto block"
             />
           </div>
         </div>
 
-        {/* Text & Button Container */}
-        <div className="px-4 sm:px-6 max-w-3xl mx-auto space-y-8">
+        {/* Text & Button Container (Text SECOND) */}
+        <div className="px-4 sm:px-6 max-w-3xl mx-auto py-6 sm:py-8 space-y-6 sm:space-y-8">
           <div className="space-y-4">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#2E5A66] leading-tight tracking-[-0.0066em]">
               Do You Need an Emotional Support Animal?
             </h2>
 
-            <div className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed space-y-3">
+            <div className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed space-y-3 font-sans">
               <p>
                 You might consider an Emotional Support Animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
               </p>

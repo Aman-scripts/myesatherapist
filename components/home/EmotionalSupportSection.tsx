@@ -7,10 +7,40 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 export function EmotionalSupportSection() {
   return (
-    <section className="relative overflow-hidden bg-white w-full py-12 lg:py-0">
+    <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
+      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet with 0 top gap) */}
+      <div className="lg:hidden w-full">
+        {/* Mobile Image (< 640px) */}
+        <div className="sm:hidden w-full">
+          <Image
+            src="/mobile-emotional-support.png"
+            alt="What is an Emotional Support Animal"
+            width={390}
+            height={425}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+        </div>
+
+        {/* Tablet Image (640px to 1023px) */}
+        <div className="hidden sm:block w-full">
+          <Image
+            src="/tablet-emotional-support-section.png"
+            alt="What is an Emotional Support Animal"
+            width={834}
+            height={521}
+            priority
+            unoptimized
+            className="w-full h-auto block"
+          />
+        </div>
+      </div>
+
+      {/* Main Container */}
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative min-h-0 lg:min-h-[640px] xl:min-h-[760px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0">
-        {/* Left Content Area */}
-        <div className="w-full lg:w-[56%] xl:w-[52%] z-10 py-4 lg:py-16 xl:py-24 space-y-6 lg:space-y-5 xl:space-y-6">
+        {/* Left Content Area (Renders AFTER image on Mobile/Tablet) */}
+        <div className="w-full lg:w-[56%] xl:w-[52%] z-10 py-6 sm:py-8 lg:py-16 xl:py-24 space-y-6 lg:space-y-5 xl:space-y-6">
           <div className="space-y-3 lg:space-y-3.5">
             {/* Heading */}
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[32px] xl:text-[44px] font-bold text-[#1A3D4F] leading-tight lg:leading-[42px] xl:leading-[54px] tracking-[-0.006em]">
@@ -64,17 +94,17 @@ export function EmotionalSupportSection() {
           </div>
         </div>
 
-        {/* Right Graphics (Spans 100% full height top-0 to bottom-0 with ZERO top & bottom gap) */}
-        <div className="w-full lg:w-[44%] xl:w-[45%] lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:h-full pointer-events-none z-0 flex items-center justify-center lg:justify-end">
-          <div className="relative w-full aspect-[834/521] lg:aspect-auto lg:h-full lg:w-full max-w-[607px] lg:max-w-none">
+        {/* Desktop Right Graphics (Hidden on mobile/tablet) */}
+        <div className="hidden lg:flex w-[44%] xl:w-[45%] absolute right-0 top-0 bottom-0 h-full pointer-events-none z-0 items-center justify-end">
+          <div className="relative w-full h-full max-w-[607px] lg:max-w-none">
             <Image
               src="/emotional-support-right-frame.png"
               alt="Emotional support dog and woman"
               fill
               priority
               unoptimized
-              className="object-cover object-center lg:object-right"
-              sizes="(min-width: 1024px) 607px, 100vw"
+              className="object-cover object-right"
+              sizes="607px"
             />
           </div>
         </div>
