@@ -126,9 +126,17 @@ export function Header() {
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between py-2.5 text-[13px] xl:text-[14px] font-medium text-[#5F6B6F]">
           <div className="flex items-center gap-4 xl:gap-7">
             {["California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Washington"].map((state) => (
-              <a key={state} href="#" className="hover:text-[#1E3E47] transition-colors whitespace-nowrap">
+              <Link
+                key={state}
+                href={state === "California" ? "/california" : "#"}
+                className={`hover:text-[#1E3E47] transition-colors whitespace-nowrap ${
+                  pathname === "/california" && state === "California"
+                    ? "text-[#1E3E47] font-bold underline underline-offset-4 decoration-[#E8B92C]"
+                    : ""
+                }`}
+              >
                 {state}
-              </a>
+              </Link>
             ))}
           </div>
           <a href="#" className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1 whitespace-nowrap">
