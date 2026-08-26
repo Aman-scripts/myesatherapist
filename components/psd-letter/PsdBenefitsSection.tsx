@@ -67,45 +67,45 @@ export function PsdBenefitsSection() {
         </div>
 
         {/* 6 Grid Cards (2 Rows x 3 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-7 pt-6">
           {benefitsData.map((item, index) => (
             <div
               key={index}
-              className={`relative pt-12 pb-9 px-6 sm:px-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 ${
+              className={`relative pt-14 pb-9 px-6 sm:px-8 rounded-[24px] flex flex-col items-center text-center transition-all duration-300 ${
                 item.isDark
-                  ? "bg-[#1E3E47] text-white border-t-4 border-t-[#D4AF37] border-x border-b border-[#1E3E47] shadow-lg"
-                  : "bg-white text-[#1E3E47] border-t-4 border-t-[#D4AF37] border-x border-b border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md"
+                  ? "bg-gradient-to-b from-[#113642] via-[#174653] to-[#1D5E6A] text-white border-t-[5px] border-t-[#E8B92C] shadow-[0_12px_40px_rgba(20,50,60,0.22)]"
+                  : "bg-white text-[#184652] border-t-[5px] border-t-[#E8B92C] border-x border-b border-[#EAE5DC] shadow-[0_4px_24px_rgba(0,0,0,0.05)] hover:shadow-md"
               }`}
             >
               {/* Floating Top-Center Circle Badge Icon */}
               <div
-                className={`absolute top-[-36px] left-1/2 -translate-x-1/2 w-[72px] h-[72px] rounded-full flex items-center justify-center ${
+                className={`absolute -top-[40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full flex items-center justify-center z-20 ${
                   item.isDark
-                    ? "bg-[#1E3E47] border-2 border-white/20 shadow-md"
-                    : "bg-white border border-[#EAE5DC] shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+                    ? "bg-gradient-to-b from-[#113642] to-[#1D5E6A] border border-white/20 shadow-[0_6px_20px_rgba(0,0,0,0.25)]"
+                    : "bg-white border border-[#EAE5DC] shadow-[0_4px_16px_rgba(0,0,0,0.08)]"
                 }`}
               >
                 <Image
                   src={item.icon}
                   alt={item.title}
-                  width={34}
-                  height={34}
+                  width={36}
+                  height={36}
                   className="object-contain"
                   style={{ width: "auto", height: "auto" }}
                 />
               </div>
 
-              {/* Optional Top-Right "Most Requested" Pill Badge */}
+              {/* Top-Right "Most Requested" Pill Badge Floating on Top Edge with Clear Margin */}
               {item.badge && (
-                <div className="absolute top-4 right-4 bg-white text-[#1E3E47] text-[11px] sm:text-[12px] font-bold px-3 py-1 rounded-full shadow-xs tracking-tight">
+                <div className="absolute -top-3.5 right-3 sm:right-4 md:right-5 bg-[#FCFAF7] border border-[#E2E8F0] text-[#184652] text-[12px] sm:text-[13px] font-bold px-3.5 sm:px-4 py-1.5 rounded-[12px] sm:rounded-[14px] shadow-sm tracking-tight font-sans z-10 whitespace-nowrap">
                   {item.badge}
                 </div>
               )}
 
               {/* Card Title */}
               <h3
-                className={`font-heading text-xl sm:text-[22px] font-bold mb-3.5 mt-2 ${
-                  item.isDark ? "text-white" : "text-[#1E3E47]"
+                className={`font-heading text-2xl sm:text-[26px] font-bold mb-3.5 mt-1 leading-tight ${
+                  item.isDark ? "text-white" : "text-[#184652]"
                 }`}
               >
                 {item.title}
@@ -113,8 +113,8 @@ export function PsdBenefitsSection() {
 
               {/* Card Description */}
               <p
-                className={`text-sm sm:text-[15px] font-medium leading-relaxed font-[family-name:var(--font-lato)] ${
-                  item.isDark ? "text-white/90" : "text-[#5F6B6F]"
+                className={`text-sm sm:text-[15px] font-medium leading-[24px] sm:leading-[25px] font-[family-name:var(--font-lato)] ${
+                  item.isDark ? "text-white/95" : "text-[#5F6B6F]"
                 }`}
               >
                 {item.description}

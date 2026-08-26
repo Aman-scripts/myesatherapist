@@ -44,21 +44,21 @@ export function PsdHeroSection() {
     <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PSD HERO SECTION (sm:hidden / < 640px)     */}
-      {/* Matches Screenshot 3                                 */}
+      {/* Matches Screenshot 2 (Figma iPhone 13 & 14)          */}
       {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full aspect-[390/846] min-h-[680px]">
+      <div className="sm:hidden relative w-full aspect-[390/740] min-h-[580px] max-h-[760px] overflow-hidden">
         <Image
           src="/psd-herosection-mobile.png"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           priority
-          className="object-cover object-top"
+          className="object-cover object-bottom"
           sizes="100vw"
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-8 text-center flex flex-col items-center z-10">
-          <h1 className="font-heading text-[28px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto">
+        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
+          <h1 className="font-heading text-[26px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto">
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
               Psychiatric Service
               <br />
@@ -66,30 +66,35 @@ export function PsdHeroSection() {
             </span>
           </h1>
 
-          <p className="text-[13px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-3 font-[family-name:var(--font-lato)]">
+          <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-[family-name:var(--font-lato)]">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
           </p>
 
-          <div className="flex flex-col items-center gap-3 w-full max-w-[280px] mx-auto mt-5">
-            <button className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-[30px] bg-[#FAF7F2] font-semibold text-sm hover:bg-white transition-colors w-full min-h-[44px] shadow-xs">
-              <Image
-                src="/hero-section-map.svg"
-                alt=""
-                width={16}
-                height={21}
-                unoptimized
-                className="shrink-0 object-contain"
-                style={{ width: "auto", height: "auto" }}
-              />
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                Start your State
+          {/* Stacked Action Buttons */}
+          <div className="flex flex-col items-center gap-2.5 mt-4 w-full max-w-[250px]">
+            {/* State Dropdown Button */}
+            <button className="flex items-center justify-between px-5 h-[46px] w-full rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors">
+              <span className="flex items-center gap-2">
+                <Image
+                  src="/hero-section-map.svg"
+                  alt=""
+                  width={16}
+                  height={21}
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
+                />
+                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                  Start your State
+                </span>
               </span>
               <ChevronDown className="w-4 h-4 text-primary shrink-0" />
             </button>
 
+            {/* Get Started CTA Button */}
             <a
               href="#pricing"
-              className="flex items-center justify-between pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 w-full min-h-[44px] shadow-xs"
+              className="flex items-center justify-between pl-6 pr-1.5 h-[46px] w-full rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 shadow-sm"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
