@@ -18,29 +18,20 @@ type Condition = {
 
 const conditions: Condition[] = [
   {
+    label: "Agroraphobia",
+    icon: "/qualifying-conditions-agroraphobia.svg",
+    left: 56.81,
+    top: -0.24,
+    description:
+      "Serving as a confident, trusted companion that eases anxiety when leaving home or entering public spaces.",
+  },
+  {
     label: "Anxiety Disorders",
     icon: "/qualifying-conditions-anxiety-disorder.svg",
     left: 29.42,
     top: 4.55,
     description:
       "ESAs help lower elevated stress levels and provide grounding sensory stimulation during periods of intense anxiety.",
-  },
-  {
-    label: "Bipolar Disorders",
-    icon: "/qualifying-conditions-bipoler-disorder.svg",
-    left: 57.04,
-    top: 8.85,
-    description:
-      "Providing consistent daily routine, emotional grounding, and a soothing presence across mood transitions.",
-  },
-  {
-    label: "OCD",
-    icon: "/qualifying-conditions-ocd.svg",
-    left: 80.9,
-    top: 15.31,
-    alignRight: true,
-    description:
-      "Offering comforting distraction and reassuring sensory presence during compulsive distress cycles.",
   },
   {
     label: "Panic Disorders",
@@ -51,25 +42,34 @@ const conditions: Condition[] = [
       "Emotional support animals may provide comfort and a calming presence during episodes of intense anxiety or panic.",
   },
   {
+    label: "OCD",
+    icon: "/qualifying-conditions-ocd.svg",
+    left: 80.91,
+    top: 15.31,
+    alignRight: true,
+    description:
+      "Offering comforting distraction and reassuring sensory presence during compulsive distress cycles.",
+  },
+  {
+    label: "Bipolar Disorders",
+    icon: "/qualifying-conditions-bipoler-disorder.svg",
+    left: 28.01,
+    top: 29.67,
+    description:
+      "Providing consistent daily routine, emotional grounding, and a soothing presence across mood transitions.",
+  },
+  {
     label: "PTSD",
     icon: "/qualifying-conditions-ptsd.svg",
-    left: 24.26,
-    top: 32.78,
+    left: 67.53,
+    top: 29.67,
     description:
       "Emotional support animals offer deep grounding touch and security to help manage sudden trauma triggers and hyperarousal.",
   },
   {
-    label: "Agoraphobia",
-    icon: "/qualifying-conditions-agroraphobia.svg",
-    left: 63.07,
-    top: 32.78,
-    description:
-      "Serving as a confident, trusted companion that eases anxiety when leaving home or entering public spaces.",
-  },
-  {
     label: "Social Anxiety",
     icon: "/qualifying-conditions-social-anxiety.svg",
-    left: 1.8,
+    left: 1.80,
     top: 39.47,
     description:
       "An ESA can help reduce social stress, offering non-judgmental companionship that eases discomfort in public or social situations.",
@@ -103,13 +103,13 @@ const conditions: Condition[] = [
   {
     label: "Depression",
     icon: "/qualifying-conditions-depression.svg",
-    left: 1.57,
+    left: 0.00,
     top: 84.93,
     description:
       "Having an ESA encourages daily routine, physical activity, and provides vital companionship that counteracts feelings of isolation and despair.",
   },
   {
-    label: "Schizophrenia",
+    label: "Schizpphrenia",
     icon: "/qualifying-conditions-schizpphrenia.svg",
     left: 82.24,
     top: 84.93,
@@ -123,7 +123,7 @@ export function QualifyingConditions() {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section className="py-14 sm:py-16 lg:py-20 pb-24 sm:pb-28 lg:pb-32 bg-[#EEEBE0]">
+    <section className="py-14 sm:py-16 lg:py-20 pb-28 sm:pb-32 lg:pb-36 bg-[#EEEBE0] overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[709px] mx-auto">
@@ -138,17 +138,18 @@ export function QualifyingConditions() {
         {/* Desktop / tablet: dog photo with hover-enabled floating badges */}
         <div className="hidden md:block relative mx-auto" style={{ maxWidth: 1278 }}>
           <div className="relative w-full" style={{ aspectRatio: "1278 / 418" }}>
-            {/* Photo — Figma: left 19.56%, top 14.11%, width 60.88% of the stage, own 778/491 aspect */}
+            {/* Photo: frf 1 from Figma */}
             <div
               className="absolute overflow-hidden pointer-events-none"
-              style={{ left: "19.56%", top: "14.11%", width: "60.88%", aspectRatio: "778 / 491" }}
+              style={{ left: "11.50%", top: "7.89%", width: "74.49%", aspectRatio: "952 / 493" }}
             >
               <Image
-                src="/qualifying-conditions-section.png"
-                alt="Dog qualifying as an emotional support animal"
+                src="/qualifying-conditions.png"
+                alt="Woman and dog on sofa qualifying for ESA"
                 fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 778px, 61vw"
+                priority
+                className="object-contain"
+                sizes="(min-width: 1024px) 952px, 75vw"
               />
             </div>
 
@@ -194,31 +195,37 @@ export function QualifyingConditions() {
                   {/* Popover Card (Shown on Hover/Active) */}
                   {isVisible && (
                     <div
-                      className={`absolute top-full mt-1.5 md:mt-1.5 lg:mt-2 xl:mt-3 ${
+                      className={`absolute ${
+                        c.top > 55 ? "bottom-full mb-2" : "top-full mt-2"
+                      } ${
                         c.alignRight ? "right-0" : "left-0"
-                      } w-[160px] md:w-[170px] lg:w-[200px] xl:w-[240px] bg-white rounded-[10px] md:rounded-[10px] lg:rounded-[14px] xl:rounded-[16px] p-2 md:p-2 lg:p-3 xl:p-3.5 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
+                      } w-[170px] lg:w-[210px] xl:w-[230px] bg-white rounded-[10px] lg:rounded-[14px] p-2.5 lg:p-3 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
                     >
-                      {/* Top Arrow Pointer */}
+                      {/* Arrow Pointer */}
                       <div
-                        className={`absolute -top-1.5 ${
-                          c.alignRight ? "right-4 lg:right-6 xl:right-8" : "left-4 lg:left-6 xl:left-8"
-                        } w-3 h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 bg-white rotate-45 border-l border-t border-[#E2E8F0]`}
+                        className={`absolute ${
+                          c.top > 55
+                            ? "-bottom-1.5 border-r border-b"
+                            : "-top-1.5 border-l border-t"
+                        } ${
+                          c.alignRight ? "right-6" : "left-6"
+                        } w-3 h-3 lg:w-3.5 lg:h-3.5 bg-white rotate-45 border-[#E2E8F0]`}
                       />
 
                       {/* Puppy Photo */}
-                      <div className="relative w-full h-[65px] md:h-[70px] lg:h-[85px] xl:h-[105px] rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] overflow-hidden bg-slate-100">
+                      <div className="relative w-full h-[65px] lg:h-[80px] xl:h-[95px] rounded-[6px] lg:rounded-[8px] overflow-hidden bg-slate-100">
                         <Image
                           src="/qualifying-condtions-tag.png"
                           alt="Puppy resting"
                           fill
                           unoptimized
                           className="object-cover"
-                          sizes="(min-width: 1280px) 240px, (min-width: 1024px) 200px, 170px"
+                          sizes="230px"
                         />
                       </div>
 
                       {/* Description */}
-                      <p className="text-[#5F6B6F] text-[10px] md:text-[10.5px] lg:text-[12px] xl:text-[13px] font-medium leading-[14px] md:leading-[15px] lg:leading-[18px] xl:leading-[20px] font-sans mt-1.5 lg:mt-2 xl:mt-2.5 text-left">
+                      <p className="text-[#5F6B6F] text-[10.5px] lg:text-[12px] font-medium leading-[15px] lg:leading-[17px] font-sans mt-2 text-left">
                         {c.description}
                       </p>
                     </div>
@@ -231,13 +238,14 @@ export function QualifyingConditions() {
 
         {/* Mobile: stacked photo + wrapping badge grid */}
         <div className="md:hidden flex flex-col items-center gap-8">
-          <div className="relative w-full max-w-xs aspect-[778/491] overflow-hidden">
+          <div className="relative w-full max-w-sm aspect-[952/493] overflow-hidden">
             <Image
-              src="/qualifying-conditions-section.png"
-              alt="Dog qualifying as an emotional support animal"
+              src="/qualifying-conditions.png"
+              alt="Woman and dog on sofa qualifying for ESA"
               fill
-              className="object-cover"
-              sizes="320px"
+              priority
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 384px"
             />
           </div>
 
