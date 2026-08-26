@@ -40,5 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local ide / claude
+# local ide / claude / agents
 .claude/
+CLAUDE.md
+AGENTS.md
+
+# local helper scripts & temp figma frames
+scripts/
+figma_frame_*.png
+*.tmp
