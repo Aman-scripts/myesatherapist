@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 
 const reviews = [
@@ -40,12 +40,36 @@ function YouTubePlayIcon({ className }: { className?: string }) {
 
 export function TestimonialsSection() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const scrollLeft = scrollRef.current.scrollLeft;
+      const width = scrollRef.current.clientWidth;
+      if (width > 0) {
+        const index = Math.round(scrollLeft / width);
+        setCurrentIndex(index);
+      }
+    }
+  };
+
+  const scrollToIndex = (index: number) => {
+    if (scrollRef.current) {
+      const width = scrollRef.current.clientWidth;
+      scrollRef.current.scrollTo({
+        left: index * width,
+        behavior: "smooth",
+      });
+      setCurrentIndex(index);
+    }
+  };
 
   return (
-    <section className="py-16 lg:py-24 bg-[#EEEBE0]">
+    <section className="py-16 lg:py-24 bg-[#EEEBE0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 lg:mb-16 space-y-2.5 max-w-[850px] mx-auto">
+        <div className="text-center mb-10 lg:mb-16 space-y-2.5 max-w-[850px] mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1A3D4F] leading-tight tracking-[-0.006em]">
             See What Our Clients Say
           </h2>
@@ -54,15 +78,20 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* 3 Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto">
+        {/* Testimonials Carousel (1 card per view on Mobile with Touch Swipe) / Grid on MD+ */}
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {reviews.map((review) => {
             const isPlaying = activeVideo === review.id;
 
             return (
               <div
                 key={review.id}
-                className="bg-white rounded-[28px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
+                className="w-full shrink-0 snap-center md:w-auto md:shrink bg-white rounded-[28px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
               >
                 {/* Video Area (Top) */}
                 <div
@@ -117,11 +146,21 @@ export function TestimonialsSection() {
         </div>
 
         {/* Dots Pagination + See More Reviews CTA */}
-        <div className="flex flex-col items-center gap-6 mt-12 lg:mt-14">
+        <div className="flex flex-col items-center gap-6 mt-8 md:mt-12 lg:mt-14">
           <div className="flex items-center gap-2">
-            <div className="w-[6px] h-[6px] rounded-full bg-[#E8B92C]" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[#1A3D4F]" />
-            <div className="w-[6px] h-[6px] rounded-full bg-[#E8B92C]" />
+            {reviews.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => scrollToIndex(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`transition-all duration-300 rounded-full ${
+                  currentIndex === idx
+                    ? "w-4 h-2.5 bg-[#1A3D4F]"
+                    : "w-2 h-2 bg-[#E8B92C] hover:opacity-80"
+                }`}
+              />
+            ))}
           </div>
 
           <a

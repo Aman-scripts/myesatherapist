@@ -94,9 +94,6 @@ export function PricingSection({ bgColor = "bg-[#EEEBE0]" }: PricingSectionProps
                 >
                   Get Started
                 </a>
-                <p className="text-[14px] text-[#1A1A1A] font-medium leading-[16px] font-sans">
-                  or contact sales
-                </p>
               </div>
             </div>
 
