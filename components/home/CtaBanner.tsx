@@ -7,9 +7,19 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 type CtaBannerProps = {
   bgColor?: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonHref?: string;
 };
 
-export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
+export function CtaBanner({
+  bgColor = "bg-[#EEEBE0]",
+  title = "Ready to Start Your ESA Evaluation?",
+  description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
+  buttonText = "Start your Evaluation",
+  buttonHref = "#how-it-works",
+}: CtaBannerProps) {
   return (
     <section className={`relative w-full ${bgColor} pt-0 lg:pt-8 xl:pt-[125px] overflow-visible`}>
       {/* Full-width Teal Gradient Banner (Edge to Edge) */}
@@ -47,24 +57,24 @@ export function CtaBanner({ bgColor = "bg-[#EEEBE0]" }: CtaBannerProps) {
           <div className="relative z-10 max-w-[575px] space-y-6 text-left">
             <div className="space-y-4">
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[431px]">
-                Ready to Start Your ESA Evaluation?
+                {title}
               </h2>
               <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
-                If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.
+                {description}
               </p>
             </div>
 
             {/* Button */}
             <div className="pt-2">
               <a
-                href="#how-it-works"
+                href={buttonHref}
                 className="inline-flex items-center justify-center w-[226px] h-[46px] rounded-[58px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
               >
                 <span
                   className="font-[family-name:var(--font-lato)] font-bold text-[18px] leading-[22px] bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
-                  Start your Evaluation
+                  {buttonText}
                 </span>
               </a>
             </div>

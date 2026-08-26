@@ -26,49 +26,17 @@ const quickLinks = [
 
 function HipaaBadge() {
   return (
-    <div className="w-[155px] h-[67px] bg-white rounded-xl border-[3.5px] border-[#E8B92C] flex items-center justify-center gap-2 px-2 shadow-md">
-      {/* Caduceus Medical Symbol SVG */}
-      <svg
-        width="34"
-        height="38"
-        viewBox="0 0 34 38"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0"
-      >
-        {/* Wings */}
-        <path
-          d="M17 11C12 5 3 7 2 13C1 18 10 17 17 14M17 11C22 5 31 7 32 13C33 18 24 17 17 14"
-          stroke="#006584"
-          strokeWidth="1.8"
-          strokeLinecap="round"
+    <div className="w-[155px] h-[67px] bg-white rounded-xl border-[3.5px] border-[#E8B92C] flex items-center justify-center p-2 shadow-md">
+      <div className="relative w-full h-full">
+        <Image
+          src="/hippa_log.png"
+          alt="HIPAA Compliant"
+          fill
+          unoptimized
+          priority
+          className="object-contain"
+          sizes="155px"
         />
-        {/* Central Staff */}
-        <line x1="17" y1="3" x2="17" y2="35" stroke="#006584" strokeWidth="2.2" strokeLinecap="round" />
-        <circle cx="17" cy="4" r="2.5" fill="#006584" />
-        {/* Snakes Intertwined */}
-        <path
-          d="M9 16C12 19 22 19 25 22C27 24 26 27 22 28C17 29 11 29 17 34"
-          stroke="#006584"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-        <path
-          d="M25 16C22 19 12 19 9 22C7 24 8 27 12 28C17 29 23 29 17 34"
-          stroke="#006584"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-      </svg>
-
-      {/* HIPAA Compliant Text */}
-      <div className="flex flex-col justify-center leading-none text-left">
-        <span className="text-[12px] font-black text-[#006584] tracking-wider font-sans">
-          HIPAA
-        </span>
-        <span className="text-[8px] font-bold text-[#006584] tracking-tight uppercase font-sans">
-          COMPLIANT
-        </span>
       </div>
     </div>
   );
@@ -274,7 +242,10 @@ export function Footer() {
                   </div>
                   <div className="text-left leading-tight">
                     <div className="text-xs font-semibold text-[#FAF7F2]">
-                      Serving  All 50 US States
+                      Serving All 50 US States
+                    </div>
+                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                      Nationwide Service
                     </div>
                   </div>
                 </div>
@@ -288,7 +259,7 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#FAF7F2]">
             <p className="font-semibold">
-              &copy; 2026 myesatherapist.com — All Rights Reserved
+              &copy; 2026 <span className="text-[#E8B92C]">myesatherapist.com</span> — All Rights Reserved
             </p>
             <div className="flex items-center gap-8 font-semibold">
               <Link href="#privacy" className="hover:text-[#E8B92C] transition-colors">
