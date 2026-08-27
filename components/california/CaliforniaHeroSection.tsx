@@ -317,6 +317,8 @@ export function CaliforniaHeroSection() {
 
       {/* ======================================================== */}
       {/* 2. TABLET VIEW (hidden sm:block lg:hidden / 640-1023px)  */}
+      {/* ======================================================== */}
+      {/* 2. TABLET VIEW (hidden sm:block lg:hidden / 640-1023px)  */}
       {/* Uses public/california-hero-section-tablet.png (834x1774) */}
       {/* Live HTML text + evaluation form card aligned over image  */}
       {/* ======================================================== */}
@@ -333,15 +335,15 @@ export function CaliforniaHeroSection() {
 
         {/* Top Centered Header & Text */}
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
-          <div className="text-center space-y-3 max-w-[580px] mx-auto">
-            <h1 className="font-heading text-[32px] sm:text-[36px] font-bold text-[#1E3E47] leading-[1.16] tracking-[-0.011em]">
+          <div className="text-center space-y-3 max-w-[620px] mx-auto">
+            <h1 className="font-heading text-[44px] font-bold text-[#1E3E47] leading-[54px] tracking-[-0.01em] text-center">
               California ESA Letter
               <br />
               Evaluations by Licensed
               <br />
               Therapists
             </h1>
-            <p className="text-[14px] sm:text-[14.5px] text-[#5F6B6F] font-semibold leading-[1.55] max-w-[520px] mx-auto font-sans">
+            <p className="font-sans text-[16px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
               Connect with a California licensed mental health professional for a online ESA
               evaluation from the comfort of your home. Our secure telehealth process follows
               California&apos;s AB 468 requirements and federal housing guidelines.
@@ -378,15 +380,15 @@ export function CaliforniaHeroSection() {
 
         {/* Top Centered Header & Text */}
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
-          <div className="text-center space-y-2 pt-1 px-1 max-w-[340px] mx-auto">
-            <h1 className="font-heading text-[22px] xs:text-[24px] font-bold text-[#1E3E47] leading-[1.18] tracking-[-0.011em]">
+          <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
+            <h1 className="font-heading text-[28px] font-bold text-[#1E3E47] leading-[36px] tracking-[-0.01em] text-center">
               California ESA Letter
               <br />
               Evaluations by Licensed
               <br />
               Therapists
             </h1>
-            <p className="text-[11.5px] xs:text-[12px] text-[#5F6B6F] font-semibold leading-[1.48] max-w-[310px] mx-auto font-sans">
+            <p className="font-sans text-[14px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
               Connect with a California licensed mental health professional for a online ESA
               evaluation from the comfort of your home. Our secure telehealth process follows
               California&apos;s AB 468 requirements and federal housing guidelines.
