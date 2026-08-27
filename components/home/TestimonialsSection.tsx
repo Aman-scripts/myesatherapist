@@ -48,20 +48,23 @@ export function TestimonialsSection() {
       const scrollLeft = scrollRef.current.scrollLeft;
       const width = scrollRef.current.clientWidth;
       if (width > 0) {
-        const index = Math.round(scrollLeft / width);
-        setCurrentIndex(index);
+        const index = Math.round(scrollLeft / (width * 0.85));
+        setCurrentIndex(Math.min(index, reviews.length - 1));
       }
     }
   };
 
   const scrollToIndex = (index: number) => {
     if (scrollRef.current) {
-      const width = scrollRef.current.clientWidth;
-      scrollRef.current.scrollTo({
-        left: index * width,
-        behavior: "smooth",
-      });
-      setCurrentIndex(index);
+      const child = scrollRef.current.children[index] as HTMLElement;
+      if (child) {
+        child.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+        setCurrentIndex(index);
+      }
     }
   };
 
@@ -78,11 +81,11 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonials Carousel (1 card per view on Mobile with Touch Swipe) / Grid on MD+ */}
+        {/* Testimonials Carousel (1 card per view on Mobile & Tablet with Touch Swipe) / 3-col Grid on LG+ */}
         <div
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
+          className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 lg:pb-0 px-2 lg:px-0 scrollbar-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {reviews.map((review) => {
@@ -91,7 +94,7 @@ export function TestimonialsSection() {
             return (
               <div
                 key={review.id}
-                className="w-full shrink-0 snap-center md:w-auto md:shrink bg-white rounded-[28px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
+                className="w-[85vw] sm:w-[360px] md:w-[380px] shrink-0 snap-center lg:w-auto lg:shrink bg-white rounded-[28px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
               >
                 {/* Video Area (Top) */}
                 <div
@@ -145,9 +148,9 @@ export function TestimonialsSection() {
           })}
         </div>
 
-        {/* Dots Pagination + See More Reviews CTA */}
+        {/* Dots Pagination (Mobile & Tablet only) + See More Reviews CTA */}
         <div className="flex flex-col items-center gap-6 mt-8 md:mt-12 lg:mt-14">
-          <div className="flex items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             {reviews.map((_, idx) => (
               <button
                 key={idx}
