@@ -61,9 +61,9 @@ export function PsdHeroSection() {
           <h1 className="font-heading text-[26px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto">
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
               Psychiatric Service
-              <br />
-              Dog Letter Assistance
             </span>
+            <br />
+            <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
           </h1>
 
           <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-[family-name:var(--font-lato)]">
@@ -141,9 +141,9 @@ export function PsdHeroSection() {
           <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto">
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
               Psychiatric Service
-              <br />
-              Dog Letter Assistance
             </span>
+            <br />
+            <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
           </h1>
 
           <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-[family-name:var(--font-lato)]">
@@ -217,9 +217,9 @@ export function PsdHeroSection() {
             <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6">
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 Psychiatric Service
-                <br />
-                Dog Letter Assistance
               </span>
+              <br />
+              <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
             </h1>
 
             <p className="text-[13.5px] lg:text-[14.5px] xl:text-[16px] leading-[1.55] xl:leading-[1.625] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-[family-name:var(--font-lato)]">
