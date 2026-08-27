@@ -33,13 +33,88 @@ const conditions = [
 export function CaliforniaWhoQualifiesSection() {
   return (
     <section className="w-full bg-white py-0 overflow-hidden relative z-10">
-      <div className="w-full max-w-[1440px] ml-auto mr-0 pl-4 sm:pl-6 lg:pl-10 xl:pl-16 pr-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
+      <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-10 xl:pl-16 lg:pr-0">
+        
+        {/* On Desktop: 2 cols (Text left, Image right). On Mobile/Tablet: Stacked (Image first, Text after) */}
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
           
-          {/* Left Column: Text & Cards (7 cols at 1024px+) */}
-          <div className="lg:col-span-7 py-4 sm:py-6 lg:py-4 xl:py-6 pr-4 sm:pr-6 lg:pr-2 xl:pr-4 flex flex-col justify-center">
+          {/* Top Image Frame - Full Width Edge-to-Edge on Mobile & Tablet */}
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
+            {/* Mobile Image (< 640px) */}
+            <div className="sm:hidden relative w-full aspect-[390/440]">
+              <Image
+                src="/california-who-qualifies-mobile.png"
+                alt="Who May Qualify for an ESA Letter in California Mobile View"
+                fill
+                priority
+                unoptimized
+                className="object-cover object-top"
+                sizes="100vw"
+              />
+              {/* Heart Icon Badge - Centered in artwork wave dip at 73.8% width */}
+              <div className="absolute bottom-0 left-[73.8%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
+                <Image
+                  src="/whomayqualifies-california_icon.svg"
+                  alt="Heart Icon"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
+              </div>
+            </div>
+
+            {/* Tablet Image (640px - 1023px) */}
+            <div className="hidden sm:block lg:hidden relative w-full aspect-[834/943]">
+              <Image
+                src="/california-who-qualifies-tablet.png"
+                alt="Who May Qualify for an ESA Letter in California Tablet View"
+                fill
+                priority
+                unoptimized
+                className="object-cover object-top"
+                sizes="100vw"
+              />
+              {/* Heart Icon Badge - Centered in artwork wave dip at 75.3% width */}
+              <div className="absolute bottom-0 left-[75.3%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
+                <Image
+                  src="/whomayqualifies-california_icon.svg"
+                  alt="Heart Icon"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
+              </div>
+            </div>
+
+            {/* Desktop Image (1024px+) */}
+            <div className="hidden lg:block relative w-full h-full min-h-[360px]">
+              <Image
+                src="/whomayqualifies.png"
+                alt="Who qualifies for California ESA Letter"
+                fill
+                priority
+                unoptimized
+                className="object-cover object-right pointer-events-none"
+                sizes="42vw"
+              />
+
+              {/* Floating Green Heart Badge - Centered in left curve dip at 9.2% width, 45.2% height */}
+              <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+                <Image
+                  src="/whomayqualifies-california_icon.svg"
+                  alt="Heart Icon"
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Text Section - Displays AFTER Image with proper side padding on Mobile/Tablet */}
+          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 py-2 sm:py-4 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
             {/* Header Title & Subtitle */}
-            <div className="mb-3 lg:mb-4">
+            <div className="mb-4 lg:mb-4">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-2">
                 Who May Qualifies for an
                 <br />
@@ -58,7 +133,7 @@ export function CaliforniaWhoQualifiesSection() {
                 Qualifying Conditions :
               </h3>
 
-              {/* 2x2 Grid optimized for 1024px and all screens */}
+              {/* 2x2 Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-3 xl:gap-4 max-w-[620px]">
                 {conditions.map((item) => (
                   <div
@@ -91,34 +166,11 @@ export function CaliforniaWhoQualifiesSection() {
             </div>
           </div>
 
-          {/* Right Column: Hero Image Frame (5 cols at 1024px+) - Flush Right, Top & Bottom with object-cover */}
-          <div className="lg:col-span-5 relative flex justify-end items-stretch h-full pr-0">
-            <div className="relative w-full h-full min-h-[360px] sm:min-h-[420px] lg:min-h-0">
-              <Image
-                src="/whomayqualifies.png"
-                alt="Who qualifies for California ESA Letter"
-                fill
-                priority
-                unoptimized
-                className="object-cover object-right pointer-events-none"
-                sizes="(max-width: 1024px) 100vw, 42vw"
-              />
-
-              {/* Floating Green Heart Badge on curve */}
-              <div className="absolute left-[-12px] sm:left-[-18px] lg:left-[-14px] xl:left-[-22px] top-[45%] -translate-y-1/2 z-10 w-12 h-12 sm:w-14 sm:h-14 lg:w-12 lg:h-12 xl:w-16 xl:h-16">
-                <Image
-                  src="/whomayqualifies-california_icon.svg"
-                  alt="Heart Icon"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-contain drop-shadow-md"
-                />
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
   );
 }
+
+
+
