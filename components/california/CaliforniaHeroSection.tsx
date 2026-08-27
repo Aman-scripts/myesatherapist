@@ -17,29 +17,29 @@ function StarMark({ className, style }: { className?: string; style?: React.CSSP
 
 function TrustpilotBox() {
   return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-[20px] p-3.5 sm:p-4 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.04)] w-fit">
-      {/* Top line */}
-      <div className="flex items-center gap-1.5 mb-2">
+    <div className="bg-white/95 backdrop-blur-sm rounded-[18px] p-3.5 sm:p-4 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.04)] w-fit">
+      {/* Top line: Star + Trustpilot name */}
+      <div className="flex items-center gap-1.5 mb-1.5">
         <StarMark className="w-4 h-4" style={{ color: TRUSTPILOT_GREEN }} />
-        <span className="text-[14px] font-semibold text-[#1E3E47] font-[family-name:var(--font-lato)]">
+        <span className="text-[14px] font-bold text-[#1E3E47] tracking-tight">
           Trustpilot
         </span>
       </div>
 
       {/* 5 Green Star squares */}
-      <div className="flex items-center gap-1.5 mb-2">
+      <div className="flex items-center gap-1 mb-2">
         {[0, 1, 2, 3].map((i) => (
           <div
             key={i}
-            className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center shrink-0 rounded-[2px]"
+            className="w-5 h-5 sm:w-5.5 sm:h-5.5 flex items-center justify-center shrink-0 rounded-[2px]"
             style={{ backgroundColor: TRUSTPILOT_GREEN }}
           >
-            <StarMark className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            <StarMark className="w-3.5 h-3.5 text-white" />
           </div>
         ))}
         {/* Half star */}
         <div
-          className="relative w-5 h-5 sm:w-6 sm:h-6 shrink-0 overflow-hidden rounded-[2px]"
+          className="relative w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0 overflow-hidden rounded-[2px]"
           style={{ backgroundColor: "#CCCCCC" }}
         >
           <div
@@ -47,15 +47,16 @@ function TrustpilotBox() {
             style={{ backgroundColor: TRUSTPILOT_GREEN }}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <StarMark className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            <StarMark className="w-3.5 h-3.5 text-white" />
           </div>
         </div>
       </div>
 
       {/* Bottom text */}
-      <div className="flex items-center gap-3 text-[11px] sm:text-xs text-[#5F6B6F] font-sans">
-        <span className="font-semibold">Trustscore 4.4</span>
-        <span>23,900 reviews</span>
+      <div className="flex items-center gap-2 text-[11px] text-[#5F6B6F] font-sans">
+        <span className="font-semibold">TrustScore 4.4</span>
+        <span className="text-gray-300">|</span>
+        <span>22,980 reviews</span>
       </div>
     </div>
   );
@@ -87,7 +88,7 @@ export function CaliforniaHeroSection() {
       {/* 1. DESKTOP & TABLET VIEW (md and up)                     */}
       {/* Full-width exact background image with overlaid content */}
       {/* ======================================================== */}
-      <div className="hidden md:block relative w-full aspect-[4320/2439] min-h-[680px] lg:min-h-[760px] xl:min-h-[810px]">
+      <div className="hidden md:block relative w-full aspect-[4320/2439] min-h-[660px] lg:min-h-[740px] xl:min-h-[800px]">
         {/* Background Image: public/california-hero-section.png */}
         <Image
           src="/california-hero-section.png"
@@ -104,9 +105,9 @@ export function CaliforniaHeroSection() {
           <div className="max-w-[1360px] mx-auto h-full px-6 lg:px-10 flex items-start justify-between pt-6 sm:pt-8 lg:pt-10 xl:pt-12">
             
             {/* Left Content Column */}
-            <div className="w-[44%] lg:w-[42%] xl:w-[40%] space-y-4 lg:space-y-5">
+            <div className="w-[46%] lg:w-[44%] xl:w-[42%] space-y-4 lg:space-y-5 pt-2">
               {/* Heading */}
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-[46px] xl:text-[54px] font-bold text-[#1E3E47] leading-[1.12] tracking-tight">
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-[44px] xl:text-[52px] font-bold text-[#1E3E47] leading-[1.14] tracking-tight">
                 California ESA Letter
                 <br />
                 Evaluations by
@@ -115,7 +116,7 @@ export function CaliforniaHeroSection() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-[13.5px] lg:text-[15px] xl:text-[16px] text-[#5F6B6F] font-medium leading-[1.55] max-w-[440px] font-sans">
+              <p className="text-[13.5px] lg:text-[14.5px] xl:text-[15.5px] text-[#5F6B6F] font-medium leading-[1.6] max-w-[460px] font-sans">
                 Connect with a California licensed mental health professional for a online ESA
                 evaluation from the comfort of your home. Our secure telehealth process follows
                 California&apos;s AB 468 requirements and federal housing guidelines.
@@ -129,24 +130,24 @@ export function CaliforniaHeroSection() {
 
             {/* Right Form Card Column (Exact Match to Figma Screenshot) */}
             <div className="w-[44%] lg:w-[40%] xl:w-[38%] flex justify-end">
-              <div className="w-full max-w-[430px] bg-[#F5E5D0]/85 backdrop-blur-md rounded-[32px] lg:rounded-[36px] px-7 sm:px-8 py-7 sm:py-8 border border-[#DECDBB]/50 shadow-[0_16px_40px_rgba(26,61,79,0.06)]">
+              <div className="w-full max-w-[420px] bg-[#F5E5D0]/85 backdrop-blur-md rounded-[28px] lg:rounded-[32px] px-6 sm:px-7 py-6 sm:py-7 border border-[#DECDBB]/60 shadow-[0_16px_40px_rgba(26,61,79,0.06)]">
                 
                 {/* Header */}
-                <div className="text-center mb-6">
-                  <h2 className="font-heading text-[30px] sm:text-[34px] lg:text-[36px] font-bold text-[#1E3E47] leading-tight tracking-tight">
+                <div className="text-center mb-5">
+                  <h2 className="font-heading text-[28px] sm:text-[32px] lg:text-[34px] font-bold text-[#1E3E47] leading-tight tracking-tight">
                     Start Your Evaluation
                   </h2>
-                  <p className="text-[13.5px] sm:text-[14px] text-[#5F6B6F] font-medium mt-1.5 font-sans">
+                  <p className="text-[12.5px] sm:text-[13px] text-[#5F6B6F] font-medium mt-1 font-sans">
                     Free consultation - takes less than 5 minutes.
                   </p>
                 </div>
 
                 {isSubmitted ? (
-                  <div className="py-12 text-center space-y-3 animate-fadeIn">
-                    <div className="w-14 h-14 rounded-full bg-[#184F59] text-white flex items-center justify-center mx-auto shadow-md">
-                      <CheckCircle2 className="w-8 h-8 text-[#E8B92C]" />
+                  <div className="py-10 text-center space-y-3 animate-fadeIn">
+                    <div className="w-12 h-12 rounded-full bg-[#184F59] text-white flex items-center justify-center mx-auto shadow-md">
+                      <CheckCircle2 className="w-7 h-7 text-[#E8B92C]" />
                     </div>
-                    <div className="font-heading text-xl font-bold text-[#1E3E47]">
+                    <div className="font-heading text-lg font-bold text-[#1E3E47]">
                       Evaluation Request Received!
                     </div>
                     <p className="text-xs text-[#5F6B6F] font-medium">
@@ -154,11 +155,11 @@ export function CaliforniaHeroSection() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-3.5">
                     {/* First & Last Name */}
-                    <div className="grid grid-cols-2 gap-3.5">
+                    <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[13.5px] sm:text-[14px] font-semibold text-[#4F5E63] mb-1.5 font-sans">
+                        <label className="block text-[12.5px] sm:text-[13px] font-semibold text-[#4F5E63] mb-1 font-sans">
                           First Name
                         </label>
                         <input
@@ -167,11 +168,11 @@ export function CaliforniaHeroSection() {
                           placeholder="First Name"
                           value={formData.firstName}
                           onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                          className="w-full h-[46px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[14px] text-[#1E3E47] placeholder:text-[#8E7E70] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
+                          className="w-full h-[44px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[13.5px] text-[#1E3E47] placeholder:text-[#9A897B] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
                         />
                       </div>
                       <div>
-                        <label className="block text-[13.5px] sm:text-[14px] font-semibold text-[#4F5E63] mb-1.5 font-sans">
+                        <label className="block text-[12.5px] sm:text-[13px] font-semibold text-[#4F5E63] mb-1 font-sans">
                           Last Name
                         </label>
                         <input
@@ -180,14 +181,14 @@ export function CaliforniaHeroSection() {
                           placeholder="Last Name"
                           value={formData.lastName}
                           onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                          className="w-full h-[46px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[14px] text-[#1E3E47] placeholder:text-[#8E7E70] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
+                          className="w-full h-[44px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[13.5px] text-[#1E3E47] placeholder:text-[#9A897B] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
                         />
                       </div>
                     </div>
 
                     {/* Email Address */}
                     <div>
-                      <label className="block text-[13.5px] sm:text-[14px] font-semibold text-[#4F5E63] mb-1.5 font-sans">
+                      <label className="block text-[12.5px] sm:text-[13px] font-semibold text-[#4F5E63] mb-1 font-sans">
                         Email Address
                       </label>
                       <input
@@ -196,13 +197,13 @@ export function CaliforniaHeroSection() {
                         placeholder="your@email.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full h-[46px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[14px] text-[#1E3E47] placeholder:text-[#8E7E70] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
+                        className="w-full h-[44px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[13.5px] text-[#1E3E47] placeholder:text-[#9A897B] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
                       />
                     </div>
 
                     {/* Phone Number */}
                     <div>
-                      <label className="block text-[13.5px] sm:text-[14px] font-semibold text-[#4F5E63] mb-1.5 font-sans">
+                      <label className="block text-[12.5px] sm:text-[13px] font-semibold text-[#4F5E63] mb-1 font-sans">
                         Phone Number
                       </label>
                       <input
@@ -211,15 +212,15 @@ export function CaliforniaHeroSection() {
                         placeholder="(555) 000-0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full h-[46px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[14px] text-[#1E3E47] placeholder:text-[#8E7E70] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
+                        className="w-full h-[44px] px-3.5 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-[13.5px] text-[#1E3E47] placeholder:text-[#9A897B] focus:outline-none focus:ring-2 focus:ring-[#184F59]/25 focus:border-[#184F59] transition-all font-sans"
                       />
                     </div>
 
                     {/* Submit Button */}
-                    <div className="pt-2">
+                    <div className="pt-1.5">
                       <button
                         type="submit"
-                        className="w-full h-[52px] rounded-full bg-[#184F59] hover:bg-[#133F47] text-white font-bold text-[15px] sm:text-[16px] shadow-[0_6px_20px_rgba(24,79,89,0.22)] transition-all flex items-center justify-center gap-2.5 group"
+                        className="w-full h-[48px] rounded-full bg-[#184F59] hover:bg-[#133F47] text-white font-bold text-[14.5px] sm:text-[15.5px] shadow-[0_6px_20px_rgba(24,79,89,0.22)] transition-all flex items-center justify-center gap-2 group"
                       >
                         <span>Start your Free Evaluation</span>
                         <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform group-hover:translate-x-1" />
@@ -227,7 +228,7 @@ export function CaliforniaHeroSection() {
                     </div>
 
                     {/* Subtext */}
-                    <p className="text-center text-[12px] text-[#5F6B6F] font-medium pt-1 font-sans">
+                    <p className="text-center text-[11.5px] text-[#5F6B6F] font-medium pt-0.5 font-sans">
                       Your information is 100% secure and private.
                     </p>
                   </form>
@@ -295,7 +296,7 @@ export function CaliforniaHeroSection() {
                   placeholder="First Name"
                   value={formData.firstName}
                   onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#8E7E70]"
+                  className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#9A897B]"
                 />
               </div>
               <div>
@@ -306,7 +307,7 @@ export function CaliforniaHeroSection() {
                   placeholder="Last Name"
                   value={formData.lastName}
                   onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#8E7E70]"
+                  className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#9A897B]"
                 />
               </div>
             </div>
@@ -319,7 +320,7 @@ export function CaliforniaHeroSection() {
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#8E7E70]"
+                className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#9A897B]"
               />
             </div>
 
@@ -331,7 +332,7 @@ export function CaliforniaHeroSection() {
                 placeholder="(555) 000-0000"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#8E7E70]"
+                className="w-full h-11 px-3 rounded-[10px] border border-[#DFCBA8] bg-[#F1DECA]/70 text-xs text-[#1E3E47] placeholder:text-[#9A897B]"
               />
             </div>
 
