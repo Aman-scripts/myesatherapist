@@ -63,10 +63,10 @@ export function CaliforniaWhoQualifiesSection() {
                 {conditions.map((item) => (
                   <div
                     key={item.title}
-                    className="bg-[#FAF7F2] rounded-[18px] xl:rounded-[24px] p-3 sm:p-3.5 lg:p-3 xl:p-5 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex items-start gap-2.5 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
+                    className="bg-[#FAF7F2] rounded-[18px] xl:rounded-[24px] p-3 sm:p-3.5 lg:p-3 xl:p-5 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex items-center gap-2.5 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
                   >
                     {/* Left Icon */}
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 xl:w-9 xl:h-9 shrink-0 mt-0.5 relative flex items-center justify-center">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 xl:w-9 xl:h-9 shrink-0 relative flex items-center justify-center">
                       <Image
                         src={item.icon}
                         alt={item.title}
