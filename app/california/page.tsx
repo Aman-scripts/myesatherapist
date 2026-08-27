@@ -4,6 +4,9 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { CaliforniaHeroSection } from "@/components/california/CaliforniaHeroSection";
 import { CaliforniaTrustBar } from "@/components/california/CaliforniaTrustBar";
+import { CaliforniaProcessSection } from "@/components/california/CaliforniaProcessSection";
+import { CaliforniaWhoQualifiesSection } from "@/components/california/CaliforniaWhoQualifiesSection";
+import { CaliforniaRequirementsSection } from "@/components/california/CaliforniaRequirementsSection";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
@@ -26,28 +29,39 @@ export default function CaliforniaEsaPage() {
       <Header />
 
       <main className="flex-1 bg-[#FAF7F2]">
-        {/* 1. California Hero Section */}
+        {/* 1. Hero Section */}
         <CaliforniaHeroSection />
 
-        {/* 2. California Trust Bar (Floating centered between Hero & As Seen On) */}
+        {/* 2. Trust Bar */}
         <CaliforniaTrustBar />
-
-        {/* 3. As Seen On Section */}
+        {/* As Seen On Section */}
         <AsSeenOnSection bgColor="bg-[#FAF7F2]" />
 
-        {/* 4. Therapists Section */}
+        {/* Therapists Section */}
         <TherapistsSection />
 
-        {/* 5. Why Choose Us Section */}
+        {/* 3. Frame 1000012002: How California ESA Evaluation Process Works */}
+        <CaliforniaProcessSection />
+
+        {/* 4. Frame 1000011975: Who May Qualify for an ESA Letter in California */}
+        <CaliforniaWhoQualifiesSection />
+
+        {/* 5. Frame 1000011979: Basic Requirements For California ESA Letter */}
+        <CaliforniaRequirementsSection />
+
+
+
+
+        {/* Why Choose Us Section */}
         <WhyChooseUs />
 
-        {/* 6. Testimonials Section (Video Reviews) */}
+        {/* Testimonials Section */}
         <TestimonialsSection />
 
-        {/* 7. Frequently Asked Questions */}
+        {/* FAQ Section */}
         <FaqSection />
 
-        {/* 8. CTA Banner */}
+        {/* CTA Banner */}
         <CtaBanner
           title="Ready to Start Your California ESA Evaluation?"
           description="Connect with a California-licensed mental health professional today for a legitimate, AB 468 compliant ESA letter."
