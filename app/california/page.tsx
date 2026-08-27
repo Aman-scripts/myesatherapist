@@ -57,9 +57,9 @@ export default function CaliforniaEsaPage() {
 
         <CaliforniaScamsSection />
 
-        <CaliforniaPsdVsEsaSection />
+        {/* <CaliforniaPsdVsEsaSection />
 
-        <CaliforniaAvailableCitiesSection />
+        <CaliforniaAvailableCitiesSection /> */}
 
         <FaqSection />
 
