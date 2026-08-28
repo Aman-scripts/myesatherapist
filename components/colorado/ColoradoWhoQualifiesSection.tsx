@@ -35,7 +35,7 @@ export function ColoradoWhoQualifiesSection() {
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
           
           {/* Top Image Frame */}
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-center w-full">
             {/* Mobile Image (< 640px) */}
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
@@ -81,25 +81,27 @@ export function ColoradoWhoQualifiesSection() {
             </div>
 
             {/* Desktop Image (1024px+) */}
-            <div className="hidden lg:block relative w-full h-full min-h-[360px]">
-              <Image
-                src="/whomayqualifies.png"
-                alt="Who Qualifies For an ESA Letter in Colorado"
-                fill
-                priority
-                unoptimized
-                className="object-cover object-right pointer-events-none"
-                sizes="42vw"
-              />
-
-              <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+            <div className="hidden lg:flex items-center justify-end w-full h-full">
+              <div className="relative w-full max-h-[620px] aspect-[694/827] ml-auto">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
-                  alt="Heart Icon"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-contain drop-shadow-md"
+                  src="/whomayqualifies.png"
+                  alt="Who Qualifies For an ESA Letter in Colorado"
+                  fill
+                  priority
+                  unoptimized
+                  className="object-contain object-right pointer-events-none"
+                  sizes="42vw"
                 />
+
+                <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+                  <Image
+                    src="/whomayqualifies-california_icon.svg"
+                    alt="Heart Icon"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-contain drop-shadow-md"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -109,10 +111,15 @@ export function ColoradoWhoQualifiesSection() {
             {/* Header Title & Subtitle */}
             <div className="mb-4 lg:mb-4">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-2">
-                Who Qualifies For an ESA Letter in Colorado?
+                Who May Qualify For an
+                <br />
+                ESA Letter in Colorado?
               </h2>
               <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-medium leading-[1.5] max-w-[540px]">
-                Individuals experiencing emotional or mental health challenges that impact daily life may be eligible for an ESA letter, following an evaluation by a licensed mental health professional in Colorado. Clinicians can assess a range of conditions, including:
+                To protect privacy and confidentiality, all consultations are conducted through secure,
+                HIPAA-compliant telehealth platforms. During the evaluation, a licensed clinician discusses
+                mental health concerns that may impact daily life and overall functioning. These conditions
+                may include, but are not limited to:
               </p>
             </div>
 

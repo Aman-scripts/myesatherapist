@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-// Trustpilot brand green
 const TRUSTPILOT_GREEN = "#00B67A";
 
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
@@ -18,7 +17,6 @@ function StarMark({ className, style }: { className?: string; style?: React.CSSP
 function TrustpilotBox() {
   return (
     <div className="bg-white/95 backdrop-blur-sm rounded-[18px] p-3.5 sm:p-4 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.04)] w-fit">
-      {/* Top line: Star + Trustpilot name */}
       <div className="flex items-center gap-1.5 mb-1.5">
         <StarMark className="w-4 h-4" style={{ color: TRUSTPILOT_GREEN }} />
         <span className="text-[14px] font-bold text-[#1E3E47] tracking-tight">
@@ -26,7 +24,6 @@ function TrustpilotBox() {
         </span>
       </div>
 
-      {/* 5 Green Star squares */}
       <div className="flex items-center gap-1 mb-2">
         {[0, 1, 2, 3].map((i) => (
           <div
@@ -37,7 +34,6 @@ function TrustpilotBox() {
             <StarMark className="w-3.5 h-3.5 text-white" />
           </div>
         ))}
-        {/* Half star */}
         <div
           className="relative w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0 overflow-hidden rounded-[2px]"
           style={{ backgroundColor: "#CCCCCC" }}
@@ -52,7 +48,6 @@ function TrustpilotBox() {
         </div>
       </div>
 
-      {/* Bottom text */}
       <div className="flex items-center gap-2 text-[11.5px] text-[#5F6B6F] font-sans">
         <span className="font-semibold">TrustScore 4.9</span>
         <span className="text-gray-300">|</span>
@@ -97,7 +92,6 @@ function EvaluationFormCard({
           : "rounded-[24px] lg:rounded-[26px] xl:rounded-[32px] px-5 lg:px-5 xl:px-8 py-4 lg:py-5 xl:py-8"
       }`}
     >
-      {/* Header */}
       <div className={`${compact ? "mb-3 text-center" : "mb-3 lg:mb-4 xl:mb-6 text-center"}`}>
         <h2
           className={`font-heading font-bold text-[#1E3E47] leading-tight ${
@@ -124,12 +118,11 @@ function EvaluationFormCard({
             Evaluation Request Received!
           </div>
           <p className="text-xs text-[#5F6B6F] font-medium">
-            Our Arizona intake specialist is reviewing your submission.
+            Our Alabama intake specialist is reviewing your submission.
           </p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={compact ? "space-y-2.5" : "space-y-2.5 lg:space-y-3 xl:space-y-4"}>
-          {/* First & Last Name */}
           <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5">
             <div>
               <label
@@ -171,7 +164,6 @@ function EvaluationFormCard({
             </div>
           </div>
 
-          {/* Email Address */}
           <div>
             <label
               className={`block font-semibold text-[#4F5E63] mb-1 font-sans ${
@@ -192,7 +184,6 @@ function EvaluationFormCard({
             />
           </div>
 
-          {/* Phone Number */}
           <div>
             <label
               className={`block font-semibold text-[#4F5E63] mb-1 font-sans ${
@@ -213,7 +204,6 @@ function EvaluationFormCard({
             />
           </div>
 
-          {/* Submit Button */}
           <div className={compact ? "pt-1" : "pt-1 xl:pt-2"}>
             <button
               type="submit"
@@ -226,7 +216,6 @@ function EvaluationFormCard({
             </button>
           </div>
 
-          {/* Subtext */}
           <p className="text-center text-[10.5px] sm:text-[11.5px] text-[#5F6B6F] font-medium pt-0.5 font-sans">
             Your information is 100% secure and private.
           </p>
@@ -236,7 +225,7 @@ function EvaluationFormCard({
   );
 }
 
-export function ArizonaHeroSection() {
+export function AlabamaHeroSection() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -258,11 +247,11 @@ export function ArizonaHeroSection() {
 
   return (
     <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
-      {/* 1. DESKTOP VIEW (lg:block) */}
+      {/* 1. DESKTOP VIEW */}
       <div className="hidden lg:block relative w-full aspect-[4320/2439] min-h-[640px] lg:min-h-[680px] xl:min-h-[820px]">
         <Image
           src="/california-hero-section.png"
-          alt="Arizona ESA Letter Evaluation by Licensed Therapists"
+          alt="Alabama ESA Letter Evaluation by Licensed Therapists"
           fill
           priority
           unoptimized
@@ -274,16 +263,16 @@ export function ArizonaHeroSection() {
           <div className="max-w-[1360px] mx-auto h-full px-6 lg:px-8 xl:px-10 flex items-start justify-between pt-6 lg:pt-7 xl:pt-14">
             
             <div className="w-[44%] lg:w-[37%] xl:w-[42%] space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-[32px] xl:text-[56px] font-bold text-[#1E3E47] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
-                Arizona ESA
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-[#1E3E47] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
+                Alabama ESA
                 <br />
                 Letter Evaluations by
                 <br />
-                <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Therapists</span>
+                <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
               </h1>
 
               <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
-                Begin a legitimate ESA Letter evaluation in Arizona with a licensed therapist. Secure, HIPAA-compliant, and aligned with Fair Housing Act guidelines.
+                Connect with Alabama licensed therapists for legitimate emotional support animal evaluations through a secure telehealth platform.
               </p>
 
               <div className="pt-0.5 xl:pt-1">
@@ -310,7 +299,7 @@ export function ArizonaHeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1774] max-w-[834px] mx-auto overflow-hidden">
         <Image
           src="/california-hero-section-tablet.png"
-          alt="Arizona ESA Letter Evaluation Tablet View"
+          alt="Alabama ESA Letter Evaluation Tablet View"
           fill
           priority
           unoptimized
@@ -321,12 +310,14 @@ export function ArizonaHeroSection() {
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
             <h1 className="font-heading text-[44px] font-bold text-[#1E3E47] leading-[54px] tracking-[-0.01em] text-center">
-              Arizona ESA Letter
+              Alabama ESA
               <br />
-              Evaluations by <span className="text-[#5F6B6F]">Licensed Therapists</span>
+              Letter Evaluations by
+              <br />
+              <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
             </h1>
             <p className="font-sans text-[16px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
-              Begin a legitimate ESA Letter evaluation in Arizona with a licensed therapist. Secure, HIPAA-compliant, and aligned with Fair Housing Act guidelines.
+              Connect with Alabama licensed therapists for legitimate emotional support animal evaluations through a secure telehealth platform.
             </p>
           </div>
         </div>
@@ -345,7 +336,7 @@ export function ArizonaHeroSection() {
       <div className="sm:hidden relative w-full aspect-[390/1298] overflow-hidden">
         <Image
           src="/california-hero-section-mobile.png"
-          alt="Arizona ESA Letter Evaluation Mobile View"
+          alt="Alabama ESA Letter Evaluation Mobile View"
           fill
           priority
           unoptimized
@@ -356,12 +347,14 @@ export function ArizonaHeroSection() {
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
             <h1 className="font-heading text-[28px] font-bold text-[#1E3E47] leading-[36px] tracking-[-0.01em] text-center">
-              Arizona ESA Letter
+              Alabama ESA
               <br />
-              Evaluations by <span className="text-[#5F6B6F]">Licensed Therapists</span>
+              Letter Evaluations by
+              <br />
+              <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
             </h1>
             <p className="font-sans text-[14px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
-              Begin a legitimate ESA Letter evaluation in Arizona with a licensed therapist.
+              Connect with Alabama licensed therapists for legitimate ESA evaluations through a secure platform.
             </p>
           </div>
         </div>

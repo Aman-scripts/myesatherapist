@@ -35,7 +35,7 @@ export function AlaskaPsdVsEsaSection() {
           
           {/* Card 1 (Left): Emotional Support Animals (ESA) */}
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
-            <div className="relative w-full sm:w-[32%] lg:w-[30%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
+            <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
                 src="/emotionalsupportnanimal.png"
                 alt="Emotional Support Animals (ESA)"
@@ -65,14 +65,14 @@ export function AlaskaPsdVsEsaSection() {
                 </ul>
               </div>
 
-              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-wrap">
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-nowrap">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Housing Rights
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   No Pet Fees
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Emotional Support
                 </span>
               </div>
@@ -81,7 +81,7 @@ export function AlaskaPsdVsEsaSection() {
 
           {/* Card 2 (Right): Psychiatric Service Dogs (PSD) */}
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
-            <div className="relative w-full sm:w-[32%] lg:w-[30%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
+            <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
                 src="/psychiatricservicedogs.png"
                 alt="Psychiatric Service Dogs (PSD)"
@@ -111,14 +111,14 @@ export function AlaskaPsdVsEsaSection() {
                 </ul>
               </div>
 
-              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-wrap">
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-nowrap">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Full Public Access
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Trained Tasks
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   ADA Protected
                 </span>
               </div>

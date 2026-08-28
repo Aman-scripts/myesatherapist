@@ -4,18 +4,19 @@ import React from "react";
 import Image from "next/image";
 
 const esaBullets = [
-  "Provide emotional comfort and companionship to reduce disability symptoms.",
-  "Protected under the Fair Housing Act (FHA) for residential housing.",
-  "No specialized task training required; valid ESA letter needed.",
+  "Provide companionship and emotional comfort for individuals with mental health conditions.",
+  "No specialized task training required; valid ESA letter needed for housing accommodations.",
+  "Protected under the Fair Housing Act for housing rights in Arkansas (with HB 1420 compliance).",
+  "Approved ESA housing usually excludes pet rent or additional deposits.",
 ];
 
 const psdBullets = [
-  "Specially trained dogs performing tasks for psychiatric disabilities.",
-  "Protected under the Americans with Disabilities Act (ADA) for full public access.",
-  "Permitted in stores, restaurants, workplaces, and public transportation.",
+  "Specially trained dogs performing tasks supporting psychiatric disabilities.",
+  "Legally recognized under the Americans with Disabilities Act.",
+  "Allowed public access in restaurants, stores, workplaces, and other locations.",
 ];
 
-export function TexasPsdVsEsaSection() {
+export function ArkansasPsdVsEsaSection() {
   return (
     <section className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1080px] mx-auto">
@@ -24,10 +25,10 @@ export function TexasPsdVsEsaSection() {
         <div className="text-center max-w-[840px] mx-auto mb-10 sm:mb-12 lg:mb-14">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.2] tracking-tight">
             Psychiatric Service Dogs vs. Emotional
-            <br className="hidden sm:inline" /> Support Animals in Texas
+            <br className="hidden sm:inline" /> Support Animals in Arkansas
           </h2>
           <p className="font-sans text-xs sm:text-sm lg:text-[15px] text-[#5F6B6F] font-medium leading-relaxed mt-3 max-w-[760px] mx-auto">
-            Understanding the distinction between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) helps ensure you pursue the correct support option and documentation in Texas.
+            It is critical to understand the distinctions between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Arkansas. While both help people with mental health issues, their training requirements, legal protections, and public access rights are very different.
           </p>
         </div>
 

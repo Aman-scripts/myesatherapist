@@ -5,28 +5,28 @@ import Image from "next/image";
 
 const conditions = [
   {
-    title: "Post-Traumatic Stress Disorder (PTSD)",
-    description: "A mental health condition that may affect daily functioning after a traumatic experience.",
-    icon: "/whomayqualifies-california_posttrauma.svg",
-  },
-  {
-    title: "Major Depressive Disorder",
-    description: "A mood disorder that may cause persistent sadness and difficulty with daily activities.",
+    title: "Mood Conditions",
+    description: "Conditions such as depression or bipolar disorder affecting daily emotional balance.",
     icon: "/whomayqualifies-moodconditions.svg",
   },
   {
-    title: "Obsessive-Compulsive Disorder (OCD)",
-    description: "A condition involving intrusive thoughts or repetitive behaviors that may interfere with daily life.",
+    title: "Anxiety Disorders",
+    description: "Generalized anxiety or panic conditions that impact daily functioning.",
     icon: "/whomayqualifies-panicattack.svg",
   },
   {
-    title: "Other Mental Health Conditions",
-    description: "Other mental or emotional health conditions evaluated by a licensed professional.",
+    title: "Obsessive-Compulsive Personality Disorder (OCPD)",
+    description: "Persistent preoccupation with orderliness and control interfering with daily tasks.",
+    icon: "/whomayqualifies-california_posttrauma.svg",
+  },
+  {
+    title: "Binge Eating Disorder",
+    description: "Eating disorders associated with severe emotional distress and coping challenges.",
     icon: "/whomayqualifies-california_chronicworry.svg",
   },
 ];
 
-export function IllinoisWhoQualifiesSection() {
+export function AlabamaWhoQualifiesSection() {
   return (
     <section className="w-full bg-white py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-10 xl:pl-16 lg:pr-0">
@@ -35,12 +35,12 @@ export function IllinoisWhoQualifiesSection() {
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
           
           {/* Top Image Frame */}
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-center w-full">
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
             {/* Mobile Image (< 640px) */}
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
                 src="/california-who-qualifies-mobile.png"
-                alt="Who May Qualify for an Emotional Support Animal in Illinois Mobile View"
+                alt="Who May Qualify for an Emotional Support Animal in Alabama Mobile View"
                 fill
                 priority
                 unoptimized
@@ -62,7 +62,7 @@ export function IllinoisWhoQualifiesSection() {
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/943]">
               <Image
                 src="/california-who-qualifies-tablet.png"
-                alt="Who May Qualify for an Emotional Support Animal in Illinois Tablet View"
+                alt="Who May Qualify for an Emotional Support Animal in Alabama Tablet View"
                 fill
                 priority
                 unoptimized
@@ -81,27 +81,25 @@ export function IllinoisWhoQualifiesSection() {
             </div>
 
             {/* Desktop Image (1024px+) */}
-            <div className="hidden lg:flex items-center justify-end w-full h-full">
-              <div className="relative w-full max-h-[620px] aspect-[694/827] ml-auto">
-                <Image
-                  src="/whomayqualifies.png"
-                  alt="Who May Qualify for an Emotional Support Animal in Illinois"
-                  fill
-                  priority
-                  unoptimized
-                  className="object-contain object-right pointer-events-none"
-                  sizes="42vw"
-                />
+            <div className="hidden lg:block relative w-full h-full min-h-[360px]">
+              <Image
+                src="/whomayqualifies.png"
+                alt="Who May Qualify for an Emotional Support Animal in Alabama"
+                fill
+                priority
+                unoptimized
+                className="object-cover object-right pointer-events-none"
+                sizes="42vw"
+              />
 
-                <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
-                  <Image
-                    src="/whomayqualifies-california_icon.svg"
-                    alt="Heart Icon"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-contain drop-shadow-md"
-                  />
-                </div>
+              <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+                <Image
+                  src="/whomayqualifies-california_icon.svg"
+                  alt="Heart Icon"
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
               </div>
             </div>
           </div>
@@ -113,7 +111,7 @@ export function IllinoisWhoQualifiesSection() {
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-2">
                 Who May Qualify For an
                 <br />
-                ESA Letter in Illinois?
+                ESA Letter in Alabama?
               </h2>
               <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-medium leading-[1.5] max-w-[540px]">
                 To protect privacy and confidentiality, all consultations are conducted through secure,

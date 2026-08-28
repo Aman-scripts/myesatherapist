@@ -125,9 +125,17 @@ export function Header() {
       <div className="hidden lg:block bg-[#FAF7F2]">
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between py-2.5 text-[13px] xl:text-[14px] font-medium text-[#5F6B6F]">
           <div className="flex items-center gap-3.5 xl:gap-6 overflow-x-auto no-scrollbar">
-            {["California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Arizona", "Alaska", "Washington", "Wisconsin", "Wyoming"].map((state) => {
+            {["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Washington", "Wisconsin", "Wyoming"].map((state) => {
               const href =
-                state === "California"
+                state === "Alabama"
+                  ? "/alabama"
+                  : state === "Alaska"
+                  ? "/alaska"
+                  : state === "Arizona"
+                  ? "/arizona"
+                  : state === "Arkansas"
+                  ? "/arkansas"
+                  : state === "California"
                   ? "/california"
                   : state === "Texas"
                   ? "/texas"
@@ -139,10 +147,6 @@ export function Header() {
                   ? "/colorado"
                   : state === "Illinois"
                   ? "/illinois"
-                  : state === "Arizona"
-                  ? "/arizona"
-                  : state === "Alaska"
-                  ? "/alaska"
                   : state === "Washington"
                   ? "/washington"
                   : state === "Wisconsin"
@@ -152,14 +156,16 @@ export function Header() {
                   : "#";
 
               const isActive =
+                ((pathname === "/alabama" || pathname === "/esa-alabama" || pathname === "/esa-letter-alabama") && state === "Alabama") ||
+                ((pathname === "/alaska" || pathname === "/esa-alaska" || pathname === "/esa-letter-alaska") && state === "Alaska") ||
+                ((pathname === "/arizona" || pathname === "/esa-arizona" || pathname === "/esa-letter-arizona") && state === "Arizona") ||
+                ((pathname === "/arkansas" || pathname === "/esa-arkansas" || pathname === "/esa-letter-arkansas") && state === "Arkansas") ||
                 (pathname === "/california" && state === "California") ||
                 (pathname === "/texas" && state === "Texas") ||
                 ((pathname === "/new-york" || pathname === "/esa-new-york" || pathname === "/esa-letter-new-york") && state === "New York") ||
                 ((pathname === "/florida" || pathname === "/esa-florida" || pathname === "/esa-letter-florida") && state === "Florida") ||
                 ((pathname === "/colorado" || pathname === "/esa-colorado" || pathname === "/esa-letter-colorado") && state === "Colorado") ||
                 ((pathname === "/illinois" || pathname === "/esa-illinois" || pathname === "/esa-letter-illinois") && state === "Illinois") ||
-                ((pathname === "/arizona" || pathname === "/esa-arizona" || pathname === "/esa-letter-arizona") && state === "Arizona") ||
-                ((pathname === "/alaska" || pathname === "/esa-alaska" || pathname === "/esa-letter-alaska") && state === "Alaska") ||
                 (pathname === "/washington" && state === "Washington") ||
                 (pathname === "/wisconsin" && state === "Wisconsin") ||
                 (pathname === "/wyoming" && state === "Wyoming");

@@ -274,12 +274,12 @@ export function IllinoisHeroSection() {
           <div className="max-w-[1360px] mx-auto h-full px-6 lg:px-8 xl:px-10 flex items-start justify-between pt-6 lg:pt-7 xl:pt-14">
             
             <div className="w-[44%] lg:w-[37%] xl:w-[42%] space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-[#1E3E47] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
-                Illinois ESA Letter
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-[32px] xl:text-[56px] font-bold text-[#1E3E47] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
+                Illinois ESA
                 <br />
-                Evaluations by
+                Letter Evaluations by
                 <br />
-                <span className="text-[#5F6B6F]">Licensed Professionals</span>
+                <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
               </h1>
 
               <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
@@ -321,9 +321,11 @@ export function IllinoisHeroSection() {
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
             <h1 className="font-heading text-[44px] font-bold text-[#1E3E47] leading-[54px] tracking-[-0.01em] text-center">
-              Illinois ESA Letter
+              Illinois ESA
               <br />
-              Evaluations by <span className="text-[#5F6B6F]">Licensed Professionals</span>
+              Letter Evaluations by
+              <br />
+              <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
             </h1>
             <p className="font-sans text-[16px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
               Connect with an Illinois-licensed mental health professional for a confidential emotional support animal evaluation. ESA letters are issued only when clinically appropriate, following Fair Housing Act guidelines.
@@ -356,9 +358,11 @@ export function IllinoisHeroSection() {
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
             <h1 className="font-heading text-[28px] font-bold text-[#1E3E47] leading-[36px] tracking-[-0.01em] text-center">
-              Illinois ESA Letter
+              Illinois ESA
               <br />
-              Evaluations by <span className="text-[#5F6B6F]">Licensed Professionals</span>
+              Letter Evaluations by
+              <br />
+              <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
             </h1>
             <p className="font-sans text-[14px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
               Connect with an Illinois-licensed mental health professional for a confidential emotional support animal evaluation.

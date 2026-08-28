@@ -4,16 +4,15 @@ import React from "react";
 import Image from "next/image";
 
 const esaBullets = [
-  "Provide companionship and emotional comfort for individuals with mental health conditions.",
-  "No specialized training required; valid ESA letter needed for housing accommodations.",
-  "Protected under the Fair Housing Act for housing rights.",
-  "Approved ESA housing usually excludes pet rent or additional deposits.",
+  "Provide emotional comfort and companionship for mental health conditions.",
+  "Protected under the Fair Housing Act (FHA) for residential housing.",
+  "No specialized task training required; valid ESA letter needed.",
 ];
 
 const psdBullets = [
-  "Specially trained dogs performing tasks supporting psychiatric disabilities.",
-  "Legally recognized under the Americans with Disabilities Act.",
-  "Allowed public access in restaurants, stores, workplaces, and other locations.",
+  "Specially trained dogs performing tasks for psychiatric disabilities.",
+  "Protected under the Americans with Disabilities Act (ADA) for full public access.",
+  "Permitted in stores, restaurants, workplaces, and public transportation.",
 ];
 
 export function WyomingPsdVsEsaSection() {
@@ -28,7 +27,7 @@ export function WyomingPsdVsEsaSection() {
             <br className="hidden sm:inline" /> Support Animals in Wyoming
           </h2>
           <p className="font-sans text-xs sm:text-sm lg:text-[15px] text-[#5F6B6F] font-medium leading-relaxed mt-3 max-w-[760px] mx-auto">
-            It is critical to understand the distinctions between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Wyoming. While both help people with mental health issues, their training requirements, legal protections, and roles are very different.
+            Understanding the distinction between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) helps ensure you pursue the correct support option and documentation in Wyoming.
           </p>
         </div>
 
@@ -37,7 +36,7 @@ export function WyomingPsdVsEsaSection() {
           
           {/* Card 1 (Left): Emotional Support Animals (ESA) */}
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
-            <div className="relative w-full sm:w-[32%] lg:w-[30%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
+            <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
                 src="/emotionalsupportnanimal.png"
                 alt="Emotional Support Animals (ESA)"
@@ -69,14 +68,14 @@ export function WyomingPsdVsEsaSection() {
                 </ul>
               </div>
 
-              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-wrap">
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-nowrap">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Housing Rights
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   No Pet Fees
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Emotional Support
                 </span>
               </div>
@@ -85,7 +84,7 @@ export function WyomingPsdVsEsaSection() {
 
           {/* Card 2 (Right): Psychiatric Service Dogs (PSD) */}
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
-            <div className="relative w-full sm:w-[32%] lg:w-[30%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
+            <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
                 src="/psychiatricservicedogs.png"
                 alt="Psychiatric Service Dogs (PSD)"
@@ -117,34 +116,20 @@ export function WyomingPsdVsEsaSection() {
                 </ul>
               </div>
 
-              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-wrap">
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-nowrap">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Full Public Access
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   Trained Tasks
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-2 sm:px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-[#184F59] bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
                   ADA Protected
                 </span>
               </div>
             </div>
           </div>
 
-        </div>
-
-        {/* Bottom Notice Box */}
-        <div className="max-w-[840px] mx-auto bg-[#FCF6E8] rounded-[18px] sm:rounded-[22px] overflow-hidden flex items-stretch shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
-          <div className="w-3.5 sm:w-4 bg-[#E5B627] shrink-0" />
-
-          <div className="p-4 sm:p-5 lg:p-6 flex-1">
-            <h3 className="font-heading text-sm sm:text-base lg:text-[17px] font-bold text-[#1E3E47] mb-1.5 leading-snug">
-              Getting a Psychiatric Service Dog in Wyoming
-            </h3>
-            <p className="font-sans text-[11px] sm:text-xs lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
-              In Wyoming, a qualified mental health professional&apos;s documentation confirming a psychiatric disability is often required for anyone requesting a psychiatric service dog. The dog needs to be trained to perform activities that directly assist the person&apos;s condition. Depending on how complicated the tasks are, training a PSD could take several months or more. Based on the dog&apos;s skill level and particular training needs, professional training programs can range in price from $5,000 to $30,000.
-            </p>
-          </div>
         </div>
 
       </div>

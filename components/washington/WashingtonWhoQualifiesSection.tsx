@@ -35,7 +35,7 @@ export function WashingtonWhoQualifiesSection() {
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
           
           {/* Top Image Frame - Full Width Edge-to-Edge on Mobile & Tablet */}
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-center w-full">
             {/* Mobile Image (< 640px) */}
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
@@ -83,26 +83,28 @@ export function WashingtonWhoQualifiesSection() {
             </div>
 
             {/* Desktop Image (1024px+) */}
-            <div className="hidden lg:block relative w-full h-full min-h-[360px]">
-              <Image
-                src="/whomayqualifies.png"
-                alt="Who qualifies for Washington ESA Letter"
-                fill
-                priority
-                unoptimized
-                className="object-cover object-right pointer-events-none"
-                sizes="42vw"
-              />
-
-              {/* Floating Green Heart Badge */}
-              <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+            <div className="hidden lg:flex items-center justify-end w-full h-full">
+              <div className="relative w-full max-h-[620px] aspect-[694/827] ml-auto">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
-                  alt="Heart Icon"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-contain drop-shadow-md"
+                  src="/whomayqualifies.png"
+                  alt="Who qualifies for Washington ESA Letter"
+                  fill
+                  priority
+                  unoptimized
+                  className="object-contain object-right pointer-events-none"
+                  sizes="42vw"
                 />
+
+                {/* Floating Green Heart Badge */}
+                <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+                  <Image
+                    src="/whomayqualifies-california_icon.svg"
+                    alt="Heart Icon"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-contain drop-shadow-md"
+                  />
+                </div>
               </div>
             </div>
           </div>
