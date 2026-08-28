@@ -126,8 +126,32 @@ export function Header() {
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between py-2.5 text-[13px] xl:text-[14px] font-medium text-[#5F6B6F]">
           <div className="flex items-center gap-4 xl:gap-7">
             {["California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Washington", "Wisconsin", "Wyoming"].map((state) => {
-              const href = state === "California" ? "/california" : state === "Texas" ? "/texas" : state === "Washington" ? "/washington" : state === "Wisconsin" ? "/wisconsin" : state === "Wyoming" ? "/wyoming" : "#";
-              const isActive = (pathname === "/california" && state === "California") || (pathname === "/texas" && state === "Texas") || (pathname === "/washington" && state === "Washington") || (pathname === "/wisconsin" && state === "Wisconsin") || (pathname === "/wyoming" && state === "Wyoming");
+              const href =
+                state === "California"
+                  ? "/california"
+                  : state === "Texas"
+                  ? "/texas"
+                  : state === "New York"
+                  ? "/new-york"
+                  : state === "Florida"
+                  ? "/florida"
+                  : state === "Washington"
+                  ? "/washington"
+                  : state === "Wisconsin"
+                  ? "/wisconsin"
+                  : state === "Wyoming"
+                  ? "/wyoming"
+                  : "#";
+
+              const isActive =
+                (pathname === "/california" && state === "California") ||
+                (pathname === "/texas" && state === "Texas") ||
+                ((pathname === "/new-york" || pathname === "/esa-new-york" || pathname === "/esa-letter-new-york") && state === "New York") ||
+                ((pathname === "/florida" || pathname === "/esa-florida" || pathname === "/esa-letter-florida") && state === "Florida") ||
+                (pathname === "/washington" && state === "Washington") ||
+                (pathname === "/wisconsin" && state === "Wisconsin") ||
+                (pathname === "/wyoming" && state === "Wyoming");
+
               return (
                 <Link
                   key={state}
