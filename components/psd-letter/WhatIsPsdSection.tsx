@@ -124,8 +124,8 @@ export function WhatIsPsdSection() {
             />
           </div>
 
-          {/* 3. Floating Heart-Paw Badge Icon */}
-          <div className="absolute left-[16px] top-[49%] -translate-y-1/2 w-[52px] h-[52px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
+          {/* 3. Floating Heart-Paw Badge Icon - Centered in curve dip at 6.7% width, 50% height */}
+          <div className="absolute left-[6.7%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[52px] h-[52px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
             <Image
               src="/psd-dogphyscarist-section-icon.svg"
               alt="Heart Paw Badge"
@@ -133,8 +133,7 @@ export function WhatIsPsdSection() {
               height={73}
               unoptimized
               priority
-              className="object-contain"
-              style={{ width: "auto", height: "auto" }}
+              className="object-contain w-full h-full drop-shadow-md"
             />
           </div>
         </div>
