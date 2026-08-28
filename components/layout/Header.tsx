@@ -135,6 +135,10 @@ export function Header() {
                   ? "/new-york"
                   : state === "Florida"
                   ? "/florida"
+                  : state === "Colorado"
+                  ? "/colorado"
+                  : state === "Illinois"
+                  ? "/illinois"
                   : state === "Washington"
                   ? "/washington"
                   : state === "Wisconsin"
@@ -148,6 +152,8 @@ export function Header() {
                 (pathname === "/texas" && state === "Texas") ||
                 ((pathname === "/new-york" || pathname === "/esa-new-york" || pathname === "/esa-letter-new-york") && state === "New York") ||
                 ((pathname === "/florida" || pathname === "/esa-florida" || pathname === "/esa-letter-florida") && state === "Florida") ||
+                ((pathname === "/colorado" || pathname === "/esa-colorado" || pathname === "/esa-letter-colorado") && state === "Colorado") ||
+                ((pathname === "/illinois" || pathname === "/esa-illinois" || pathname === "/esa-letter-illinois") && state === "Illinois") ||
                 (pathname === "/washington" && state === "Washington") ||
                 (pathname === "/wisconsin" && state === "Wisconsin") ||
                 (pathname === "/wyoming" && state === "Wyoming");
