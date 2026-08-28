@@ -1,58 +1,51 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+
+const stats = [
+  {
+    value: "6,537+",
+    label: "Wyoming residents served",
+  },
+  {
+    value: "4.9/5.0",
+    label: "Average Verified Ratings",
+  },
+  {
+    value: "5+ years",
+    label: "Serving Wyoming",
+  },
+  {
+    value: "$149",
+    label: "All inclusive, no surprises",
+  },
+  {
+    value: "Secure",
+    label: "Online Evaluation",
+  },
+];
 
 export function WyomingTrustBar() {
   return (
-    <section className="w-full bg-[#184F59] py-4 lg:py-5 border-y border-[#184F59]/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center divide-x divide-white/10">
-          
-          {/* Stat 1 */}
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8B92C]">
-              1,200+
-            </span>
-            <span className="text-xs sm:text-sm text-white/90 font-medium mt-1 font-sans">
-              Wyoming Residents Served
-            </span>
-          </div>
-
-          {/* Stat 2 */}
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8B92C]">
-              100%
-            </span>
-            <span className="text-xs sm:text-sm text-white/90 font-medium mt-1 font-sans">
-              State-Licensed LMHPs
-            </span>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8B92C]">
-              4.9 / 5
-            </span>
-            <div className="flex items-center gap-1 mt-1">
-              <span className="text-xs sm:text-sm text-white/90 font-medium font-sans">
-                Verified Client Ratings
-              </span>
+    <div className="hidden lg:block relative z-30 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto mb-8 sm:mb-12 lg:mb-16">
+      {/* Floating Trust Banner Card centered between Hero and Process Section */}
+      <div className="bg-white rounded-[24px] lg:rounded-[32px] border border-[#EAE5DC] shadow-[0_16px_48px_rgba(26,61,79,0.09)] py-6 sm:py-7 px-4 sm:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 lg:gap-0 items-center lg:divide-x lg:divide-[#EAE5DC]">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="flex flex-col items-center text-center px-2 lg:px-4"
+            >
+              <div className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1E3E47] leading-none tracking-tight">
+                {stat.value}
+              </div>
+              <div className="font-sans text-xs sm:text-[13px] font-medium text-[#5F6B6F] mt-2.5 leading-tight">
+                {stat.label}
+              </div>
             </div>
-          </div>
-
-          {/* Stat 4 */}
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8B92C]">
-              FHA
-            </span>
-            <span className="text-xs sm:text-sm text-white/90 font-medium mt-1 font-sans">
-              Protected by FHA &amp; State Laws
-            </span>
-          </div>
-
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
