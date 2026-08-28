@@ -124,8 +124,8 @@ export function Header() {
       {/* States Bar (Bottom row matching Screenshot 1 & Screenshot 2) */}
       <div className="hidden lg:block bg-[#FAF7F2]">
         <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between py-2.5 text-[13px] xl:text-[14px] font-medium text-[#5F6B6F]">
-          <div className="flex items-center gap-4 xl:gap-7">
-            {["California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Washington", "Wisconsin", "Wyoming"].map((state) => {
+          <div className="flex items-center gap-3.5 xl:gap-6 overflow-x-auto no-scrollbar">
+            {["California", "Texas", "New York", "Florida", "Colorado", "Illinois", "Arizona", "Alaska", "Washington", "Wisconsin", "Wyoming"].map((state) => {
               const href =
                 state === "California"
                   ? "/california"
@@ -139,6 +139,10 @@ export function Header() {
                   ? "/colorado"
                   : state === "Illinois"
                   ? "/illinois"
+                  : state === "Arizona"
+                  ? "/arizona"
+                  : state === "Alaska"
+                  ? "/alaska"
                   : state === "Washington"
                   ? "/washington"
                   : state === "Wisconsin"
@@ -154,6 +158,8 @@ export function Header() {
                 ((pathname === "/florida" || pathname === "/esa-florida" || pathname === "/esa-letter-florida") && state === "Florida") ||
                 ((pathname === "/colorado" || pathname === "/esa-colorado" || pathname === "/esa-letter-colorado") && state === "Colorado") ||
                 ((pathname === "/illinois" || pathname === "/esa-illinois" || pathname === "/esa-letter-illinois") && state === "Illinois") ||
+                ((pathname === "/arizona" || pathname === "/esa-arizona" || pathname === "/esa-letter-arizona") && state === "Arizona") ||
+                ((pathname === "/alaska" || pathname === "/esa-alaska" || pathname === "/esa-letter-alaska") && state === "Alaska") ||
                 (pathname === "/washington" && state === "Washington") ||
                 (pathname === "/wisconsin" && state === "Wisconsin") ||
                 (pathname === "/wyoming" && state === "Wyoming");
