@@ -269,7 +269,7 @@ export function LouisianaHeroSection() {
                 <br />
                 Evaluations by
                 <br />
-                <span className="text-[#5F6B6F]">Licensed Professionals</span>
+                <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
               </h1>
 
               <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
@@ -314,7 +314,7 @@ export function LouisianaHeroSection() {
             <h1 className="font-heading text-[44px] font-bold text-[#1E3E47] leading-[54px] tracking-[-0.01em] text-center">
               Louisiana ESA Letter
               <br />
-              Evaluations by <span className="text-[#5F6B6F]">Licensed Professionals</span>
+              Evaluations by <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
             </h1>
             <p className="font-sans text-[16px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
               Get in touch with Louisiana-authorized clinical practitioners for mental health evaluations. Connect with a licensed clinician who will review your needs and guide you through a professional, confidential ESA assessment process compliant with House Bill 407 and federal housing guidelines.
@@ -349,7 +349,7 @@ export function LouisianaHeroSection() {
             <h1 className="font-heading text-[28px] font-bold text-[#1E3E47] leading-[36px] tracking-[-0.01em] text-center">
               Louisiana ESA Letter
               <br />
-              Evaluations by <span className="text-[#5F6B6F]">Licensed Professionals</span>
+              Evaluations by <span className="text-[#5F6B6F] whitespace-nowrap">Licensed Professionals</span>
             </h1>
             <p className="font-sans text-[14px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
               Get in touch with Louisiana-authorized clinical practitioners for mental health evaluations. Connect with a licensed clinician who will review your needs and guide you through a professional, confidential ESA assessment process compliant with House Bill 407 and federal housing guidelines.
