@@ -16,6 +16,8 @@ const AVAILABLE_STATES = [
   { name: "Connecticut", slug: "connecticut" },
   { name: "Delaware", slug: "delaware" },
   { name: "Florida", slug: "florida" },
+  { name: "Georgia", slug: "georgia" },
+  { name: "Hawaii", slug: "hawaii" },
   { name: "Illinois", slug: "illinois" },
   { name: "New York", slug: "new-york" },
   { name: "Texas", slug: "texas" },
