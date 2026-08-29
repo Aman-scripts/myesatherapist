@@ -275,7 +275,7 @@ export function HawaiiHeroSection() {
             
             {/* Left Column */}
             <div className="w-[48%] lg:w-[42%] xl:w-[45%] space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-[28px] xl:text-[46px] 2xl:text-[52px] font-bold text-[#1E3E47] leading-[1.15] xl:leading-[54px] 2xl:leading-[60px] tracking-[-0.011em]">
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-[#1E3E47] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
                 <span className="whitespace-nowrap">Hawaii ESA Letter</span>
                 <br />
                 Evaluations by
