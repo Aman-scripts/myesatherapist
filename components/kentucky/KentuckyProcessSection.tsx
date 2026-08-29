@@ -51,10 +51,8 @@ export function KentuckyProcessSection() {
       <div className="max-w-[1260px] mx-auto">
         
         {/* Header */}
-        <div className="text-center max-w-[840px] mx-auto mb-14 sm:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4">
-            How ESA Evaluation Process Works in Kentucky?
-          </h2>
+        <div className="text-center max-w-[1050px] mx-auto mb-14 sm:mb-16">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4 md:whitespace-nowrap"> How ESA Evaluation Process Works in Kentucky? </h2>
           <p className="font-sans text-sm sm:text-base lg:text-[16.5px] text-[#5F6B6F] font-medium leading-[1.65]">
             A licensed mental health professional in Kentucky can carry out an emotional support animal evaluation for residents. From initial consultation to final documentation, the process is straightforward, confidential, and guided by clinical standards.
           </p>
@@ -99,8 +97,8 @@ export function KentuckyProcessSection() {
         </div>
 
         {/* Differentiators Container */}
-        <div className="bg-[#FAF5EB] rounded-[32px] sm:rounded-[36px] border border-[#EFE8DC] p-8 sm:p-10 lg:p-12 max-w-[820px] mx-auto shadow-xs">
-          <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#1E3E47] text-center mb-8">
+        <div className="bg-[#FAF5EB] rounded-[32px] sm:rounded-[36px] border border-[#EFE8DC] p-8 sm:p-10 lg:p-12 max-w-[920px] mx-auto shadow-xs">
+          <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] xl:text-3xl font-bold text-[#1E3E47] text-center mb-8 md:whitespace-nowrap">
             Why Kentucky Residents Choose Our ESA Letter Process?
           </h3>
 

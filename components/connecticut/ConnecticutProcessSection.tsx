@@ -51,11 +51,8 @@ export function ConnecticutProcessSection() {
       <div className="max-w-[1260px] mx-auto">
         
         {/* Header */}
-        <div className="text-center max-w-[820px] mx-auto mb-14 sm:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4">
-            How the Connecticut ESA Evaluation
-            <br className="hidden sm:block" /> Process Works?
-          </h2>
+        <div className="text-center max-w-[1050px] mx-auto mb-14 sm:mb-16">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4 md:whitespace-nowrap"> How the Connecticut ESA Evaluation Process Works? </h2>
           <p className="font-sans text-sm sm:text-base lg:text-[16.5px] text-[#5F6B6F] font-medium leading-[1.65]">
             Our platform helps Connecticut residents connect with licensed mental health professionals for
             ESA evaluations conducted through secure telehealth in accordance with state guidelines and federal housing laws.
@@ -98,8 +95,8 @@ export function ConnecticutProcessSection() {
         </div>
 
         {/* Why Our Process Is Different Container */}
-        <div className="bg-[#FAF5EB] rounded-[32px] sm:rounded-[36px] border border-[#EFE8DC] p-8 sm:p-10 lg:p-12 max-w-[760px] mx-auto shadow-xs">
-          <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#1E3E47] text-center mb-8">
+        <div className="bg-[#FAF5EB] rounded-[32px] sm:rounded-[36px] border border-[#EFE8DC] p-8 sm:p-10 lg:p-12 max-w-[920px] mx-auto shadow-xs">
+          <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] xl:text-3xl font-bold text-[#1E3E47] text-center mb-8 md:whitespace-nowrap">
             Why Our Process Is Different
           </h3>
 

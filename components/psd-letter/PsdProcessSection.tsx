@@ -34,18 +34,14 @@ export function PsdProcessSection() {
         
         {/* 1. Section Header (2-Column Layout on Desktop matching Frame 1000011750) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-12 lg:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight max-w-xl">
-            A simple, secure,
-            <br className="hidden sm:block" />
-            {" "}three-step process
-          </h2>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight max-w-xl"> A simple, secure, {" "}three-step process </h2>
           <p className="text-[#5F6B6F] text-base lg:text-[17px] font-medium leading-[1.65] max-w-xl lg:mt-2 font-[family-name:var(--font-lato)]">
             From consultation to letter delivery, everything happens online. No paperwork, no waiting rooms — just a clear path to professional documentation.
           </p>
         </div>
 
         {/* 2. Main Center Photo Container with Floating Heart-Paw Badges (Floating on Left & Right Edges matching Figma) */}
-        <div className="relative w-full max-w-[840px] mx-auto mb-16 lg:mb-20">
+        <div className="relative w-full max-w-[1050px] mx-auto mb-16 lg:mb-20">
           <div className="relative aspect-[16/9] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
             <Image
               src="/psd-three-steps.png"
