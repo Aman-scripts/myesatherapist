@@ -23,6 +23,8 @@ const AVAILABLE_STATES = [
   { name: "Indiana", slug: "indiana" },
   { name: "Iowa", slug: "iowa" },
   { name: "Kansas", slug: "kansas" },
+  { name: "Kentucky", slug: "kentucky" },
+  { name: "Louisiana", slug: "louisiana" },
   { name: "New York", slug: "new-york" },
   { name: "Texas", slug: "texas" },
   { name: "Washington", slug: "washington" },
