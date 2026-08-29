@@ -1,62 +1,46 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+
+const stats = [
+  {
+    value: "6,000+",
+    label: "Kentucky residents served",
+  },
+  {
+    value: "4.9/5.0",
+    label: "Average Verified Ratings",
+  },
+  {
+    value: "5+ years",
+    label: "Serving Kentucky",
+  },
+  {
+    value: "$149",
+    label: "All inclusive, no surprises",
+  },
+  {
+    value: "Secure",
+    label: "Online Evaluation",
+  },
+];
 
 export function KentuckyTrustBar() {
-  const metrics = [
-    {
-      value: "6,000+",
-      label: "Kentucky residents served",
-      icon: "/trustbar-users.svg",
-    },
-    {
-      value: "4.9 / 5",
-      label: "Average verified rating",
-      icon: "/trustbar-star.svg",
-    },
-    {
-      value: "5+ yrs",
-      label: "Serving Kentucky",
-      icon: "/trustbar-badge.svg",
-    },
-    {
-      value: "$149",
-      label: "All-inclusive, no surprises",
-      icon: "/trustbar-tag.svg",
-    },
-    {
-      value: "Statewide",
-      label: "Available Across Kentucky",
-      icon: "/trustbar-shield.svg",
-    },
-  ];
-
   return (
-    <div className="w-full bg-[#1A4D59] py-4 sm:py-5 border-y border-[#184F59]/30">
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center justify-between">
-          {metrics.map((m, idx) => (
+    <div className="hidden lg:block relative z-30 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto mb-8 sm:mb-12 lg:mb-16">
+      {/* Floating Trust Banner Card centered between Hero and Process Section */}
+      <div className="bg-white rounded-[24px] lg:rounded-[32px] border border-[#EAE5DC] shadow-[0_16px_48px_rgba(26,61,79,0.09)] py-6 sm:py-7 px-4 sm:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 lg:gap-0 items-center lg:divide-x lg:divide-[#EAE5DC]">
+          {stats.map((stat) => (
             <div
-              key={idx}
-              className="flex items-center gap-3 sm:gap-3.5 text-white/90 justify-center md:justify-start"
+              key={stat.label}
+              className="flex flex-col items-center text-center px-2 lg:px-4"
             >
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                <Image
-                  src={m.icon}
-                  alt=""
-                  width={18}
-                  height={18}
-                  className="w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain"
-                />
+              <div className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1E3E47] leading-none tracking-tight">
+                {stat.value}
               </div>
-              <div>
-                <div className="font-heading text-base sm:text-lg font-bold text-white leading-tight">
-                  {m.value}
-                </div>
-                <div className="font-sans text-[11px] sm:text-xs text-white/80 font-medium leading-snug">
-                  {m.label}
-                </div>
+              <div className="font-sans text-xs sm:text-[13px] font-medium text-[#5F6B6F] mt-2.5 leading-tight">
+                {stat.label}
               </div>
             </div>
           ))}
