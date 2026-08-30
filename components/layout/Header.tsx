@@ -45,9 +45,13 @@ const AVAILABLE_STATES = [
   { name: "Oklahoma", slug: "oklahoma" },
   { name: "Oregon", slug: "oregon" },
   { name: "Pennsylvania", slug: "pennsylvania" },
+  { name: "South Carolina", slug: "south-carolina" },
   { name: "South Dakota", slug: "south-dakota" },
   { name: "Texas", slug: "texas" },
+  { name: "Utah", slug: "utah" },
+  { name: "Virginia", slug: "virginia" },
   { name: "Washington", slug: "washington" },
+  { name: "West Virginia", slug: "west-virginia" },
   { name: "Wisconsin", slug: "wisconsin" },
   { name: "Wyoming", slug: "wyoming" },
 ];
@@ -94,18 +98,18 @@ export function Header() {
             >
               About Us
             </a>
-            <a
-              href="#resources"
+            <Link
+              href="/blogs"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
               Resources <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47]" />
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/contact-us"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Contact Us
-            </a>
+            </Link>
           </nav>
 
           {/* Desktop Right Action Buttons */}
@@ -287,21 +291,21 @@ export function Header() {
           >
             About Us
           </a>
-          <a
-            href="#resources"
+          <Link
+            href="/blogs"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between"
             onClick={() => setMobileOpen(false)}
           >
             <span>Resources</span>
             <ChevronDown className="w-4 h-4 text-[#1E3E47]" />
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/contact-us"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             Contact Us
-          </a>
+          </Link>
 
           {/* Mobile All Available States section */}
           <div className="border-t border-[#EAE5DC] pt-4">

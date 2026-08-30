@@ -8,7 +8,7 @@ const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #00000
 
 const companyLinks = [
   { label: "About Us", href: "#about" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "Meet our Therapists", href: "#therapists" },
   { label: "HIPAA Compliance", href: "#compliance" },
   { label: "Video Testimonials", href: "#testimonials" },
@@ -21,7 +21,7 @@ const quickLinks = [
   { label: "ESA Letter Renewal", href: "#renewal" },
   { label: "ESA Letter by State", href: "#states" },
   { label: "ESA Letter Cost", href: "#pricing" },
-  { label: "ESA Resources", href: "#resources" },
+  { label: "ESA Resources", href: "/blogs" },
 ];
 
 function HipaaBadge() {
@@ -85,12 +85,12 @@ export function Footer() {
                 Apply your ESA Letter
               </a>
 
-              <a
-                href="#contact"
+              <Link
+                href="/contact-us"
                 className="inline-flex items-center justify-center px-8 h-[46px] rounded-full border-[1.5px] border-[#FAF7F2] text-[#FAF7F2] font-[family-name:var(--font-lato)] font-bold text-[16px] hover:bg-white/10 transition-colors"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
 
