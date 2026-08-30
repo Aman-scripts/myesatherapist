@@ -35,7 +35,17 @@ const AVAILABLE_STATES = [
   { name: "Montana", slug: "montana" },
   { name: "Nebraska", slug: "nebraska" },
   { name: "Nevada", slug: "nevada" },
+  { name: "New Hampshire", slug: "new-hampshire" },
+  { name: "New Jersey", slug: "new-jersey" },
+  { name: "New Mexico", slug: "new-mexico" },
   { name: "New York", slug: "new-york" },
+  { name: "North Carolina", slug: "north-carolina" },
+  { name: "North Dakota", slug: "north-dakota" },
+  { name: "Ohio", slug: "ohio" },
+  { name: "Oklahoma", slug: "oklahoma" },
+  { name: "Oregon", slug: "oregon" },
+  { name: "Pennsylvania", slug: "pennsylvania" },
+  { name: "South Dakota", slug: "south-dakota" },
   { name: "Texas", slug: "texas" },
   { name: "Washington", slug: "washington" },
   { name: "Wisconsin", slug: "wisconsin" },
@@ -225,8 +235,8 @@ export function Header() {
                 </button>
               </div>
 
-              {/* Grid: 5 columns on desktop -> 5 states in each row! */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
+              {/* Grid: 7 columns on desktop -> 7 states in each row */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-2.5">
                 {AVAILABLE_STATES.map((st) => {
                   const href = `/${st.slug}`;
                   const isCurrentActive =
@@ -239,15 +249,15 @@ export function Header() {
                       key={st.slug}
                       href={href}
                       onClick={() => setAllStatesOpen(false)}
-                      className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl border text-xs sm:text-[13px] font-semibold transition-all duration-150 ${
+                      className={`group flex items-center justify-between px-2.5 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-150 ${
                         isCurrentActive
                           ? "bg-[#1E3E47] text-white border-[#1E3E47] shadow-xs"
                           : "bg-[#FAF7F2] text-[#1E3E47] border-[#EAE5DC] hover:border-[#184F59]/40 hover:bg-[#E7F5EE] hover:text-[#184F59]"
                       }`}
                     >
-                      <span>{st.name}</span>
+                      <span className="truncate">{st.name}</span>
                       <ArrowRight
-                        className={`w-4 h-4 sm:w-[18px] sm:h-[18px] shrink-0 stroke-[2.5] transition-transform group-hover:translate-x-0.5 ${
+                        className={`w-3.5 h-3.5 shrink-0 stroke-[2.5] transition-transform group-hover:translate-x-0.5 ${
                           isCurrentActive ? "text-[#E8B92C]" : "text-[#5F6B6F] group-hover:text-[#184F59]"
                         }`}
                       />
