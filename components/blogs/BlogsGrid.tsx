@@ -7,6 +7,7 @@ import Link from "next/link";
 const ARTICLES = [
   {
     id: 1,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
@@ -14,13 +15,15 @@ const ARTICLES = [
   },
   {
     id: 2,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
     title: "How an Emotional Support Animal Can Support Daily Well-Being",
     author: "by DR Marcus Cole",
     excerpt: "Explore how emotional support animals assist individuals coping with anxiety, depression, and mental health challenges.",
-    image: "/blog_seven-things-to_know.png",
+    image: "/blog_cards.png",
   },
   {
     id: 3,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
     title: "What Makes an Emotional Support Animal Letter Legitimate?",
     author: "by DR Marcus Cole",
     excerpt: "Learn the essential legal requirements for a valid ESA letter, including clinician licensing and housing verification.",
@@ -28,6 +31,7 @@ const ARTICLES = [
   },
   {
     id: 4,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
     title: "Moving With an Emotional Support Animal: What to Know about ESA",
     author: "by DR Marcus Cole",
     excerpt: "Key guidelines for notifying landlords, submitting ESA documentation under Fair Housing laws, and avoiding common issues.",
@@ -35,16 +39,42 @@ const ARTICLES = [
   },
   {
     id: 5,
-    title: "Understanding ESA Housing Rights Under the Fair Housing Act",
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
+    title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Comprehensive breakdown of tenant rights under federal FHA guidelines, fee waivers, and no-pet policy exemptions.",
-    image: "/blog_seven-things-to_know.png",
+    image: "/blog_cards.png",
   },
   {
     id: 6,
-    title: "How to Talk to Your Therapist About an Emotional Support Animal",
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
+    title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Tips on discussing your mental health needs and requesting an ESA recommendation from a licensed healthcare provider.",
+    image: "/blog_cards.png",
+  },
+  {
+    id: 7,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
+    title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
+    author: "by DR Marcus Cole",
+    excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
+    image: "/blog_cards.png",
+  },
+  {
+    id: 8,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
+    title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
+    author: "by DR Marcus Cole",
+    excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
+    image: "/blog_cards.png",
+  },
+  {
+    id: 9,
+    slug: "how-to-verify-if-an-esa-letter-is-legitimate",
+    title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
+    author: "by DR Marcus Cole",
+    excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
     image: "/blog_cards.png",
   },
 ];
@@ -59,10 +89,13 @@ export function BlogsGrid() {
             /* Frame 1000011907 Card Component (Sharp top corners, rounded bottom corners) */
             <div
               key={art.id}
-              className="bg-white rounded-t-none rounded-b-[20px] overflow-hidden shadow-[0_6px_25px_rgba(0,0,0,0.04)] border border-[#EAE5DC] flex flex-col justify-between group hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition-all duration-300 min-h-[580px]"
+              className="bg-white rounded-t-none rounded-b-[20px] overflow-hidden shadow-[0_6px_25px_rgba(0,0,0,0.04)] border border-[#EAE5DC] flex flex-col justify-between group hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition-all duration-300 min-h-[560px]"
             >
               {/* Card Header Image: aspect-[410/317] (Sharp top corners) */}
-              <div className="w-full h-[250px] sm:h-[270px] lg:h-[280px] relative overflow-hidden bg-[#FAF7F2] shrink-0 rounded-t-none">
+              <Link
+                href={`/blogs/${art.slug}`}
+                className="w-full h-[250px] sm:h-[270px] lg:h-[280px] relative overflow-hidden bg-[#FAF7F2] shrink-0 rounded-t-none block cursor-pointer"
+              >
                 <Image
                   src={art.image}
                   alt={art.title}
@@ -70,7 +103,7 @@ export function BlogsGrid() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
-              </div>
+              </Link>
 
               {/* Card Body (Frame 1000011890) */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
@@ -78,9 +111,11 @@ export function BlogsGrid() {
                   
                   {/* Title & Author Block matching screenshot */}
                   <div className="space-y-2">
-                    <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] leading-[1.28] group-hover:text-[#1D6E72] transition-colors">
-                      {art.title}
-                    </h3>
+                    <Link href={`/blogs/${art.slug}`}>
+                      <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] leading-[1.28] group-hover:text-[#1D6E72] transition-colors cursor-pointer">
+                        {art.title}
+                      </h3>
+                    </Link>
                     <div className="text-sm font-sans font-medium text-[#8E9A9F] text-right">
                       {art.author}
                     </div>
@@ -95,7 +130,7 @@ export function BlogsGrid() {
                 {/* Read More Pill Button with Circular Icon (Frame 1000011890) */}
                 <div className="pt-2">
                   <Link
-                    href={`/blog/${art.id}`}
+                    href={`/blogs/${art.slug}`}
                     className="inline-flex items-center gap-3 pl-6 sm:pl-7 pr-2 py-2 sm:py-2.5 rounded-[30px] text-white font-sans font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all duration-200 group/btn w-fit"
                     style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                   >
