@@ -78,7 +78,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
             </div>
 
             <div className="hidden lg:flex items-center justify-end w-full h-full">
-              <div className="relative w-full max-h-[620px] aspect-[694/827] ml-auto">
+              <div className="relative w-full max-w-[520px] aspect-[694/827] ml-auto">
                 <Image
                   src="/whomayqualifies.png"
                   alt={`Who qualifies for ${stateName} ESA Letter`}
@@ -102,19 +102,19 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
           </div>
 
           <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 py-2 sm:py-4 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
-            <div className="mb-4 lg:mb-4">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-2">
+            <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 Who May Eligible For ESA
                 <br />
                 Letter in {stateName}?
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-medium leading-[1.5] max-w-[540px]">
+              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-medium leading-relaxed xl:leading-[26px] max-w-[540px]">
                 {stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in {stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:
               </p>
             </div>
 
             <div>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-2xl font-bold text-[#1E3E47] mb-2.5 lg:mb-3">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-2xl font-bold text-[#1E3E47] mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
                 Qualifying Conditions :
               </h3>
 
