@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { List, X, ChevronRight } from "lucide-react";
+import { createPortal } from "react-dom";
+import { X, ChevronRight } from "lucide-react";
 
 const tocItems = [
   { id: "what-is-a-legitimate-esa-letter", label: "What Makes an ESA Letter Legit?" },
@@ -17,6 +18,23 @@ const tocItems = [
 export function BlogTableOfContents() {
   const [activeId, setActiveId] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Lock background body scroll when drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,14 +61,17 @@ export function BlogTableOfContents() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -90;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-      setActiveId(id);
-      setIsOpen(false);
-    }
+    setIsOpen(false);
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -90;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        setActiveId(id);
+      }
+    }, 100);
   };
 
   return (
@@ -97,78 +118,81 @@ export function BlogTableOfContents() {
       </aside>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. TABLET & MOBILE TRIGGER (Ellipse 2385)            */}
+      {/* 2. TABLET & MOBILE TRIGGER (Ellipse 2385 / Semicircle) */}
       {/* Floating half-circle toggle button on left edge     */}
       {/* ---------------------------------------------------- */}
       <button
         type="button"
         onClick={() => setIsOpen(true)}
         aria-label="Open Table of Contents"
-        className="lg:hidden fixed left-0 top-[45%] -translate-y-1/2 z-40 w-[56px] sm:w-[76px] h-[56px] sm:h-[76px] -ml-[28px] sm:-ml-[38px] rounded-full shadow-[0_4px_20px_rgba(26,61,79,0.35)] flex items-center justify-end pr-2 sm:pr-3 text-white transition-all hover:translate-x-1 active:scale-95 group cursor-pointer"
+        className="lg:hidden fixed left-0 top-[45%] -translate-y-1/2 z-40 w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.35)] flex items-center justify-center pl-0.5 text-white transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
         style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
       >
-        <List className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] group-hover:text-[#E8B92C] transition-colors" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-[#E8B92C] transition-all" />
       </button>
 
       {/* ---------------------------------------------------- */}
-      {/* 3. TABLET & MOBILE SLIDE-OUT DRAWER                 */}
+      {/* 3. TABLET & MOBILE PORTAL DRAWER (Directly in Body)  */}
       {/* Frame 1000012120 (Tablet: 382px) / Frame 1000011828 (Mobile: 295px) */}
       {/* ---------------------------------------------------- */}
-      {isOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 flex">
-          {/* Backdrop Overlay */}
-          <div
-            onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/50 backdrop-blur-xs transition-opacity duration-300"
-          />
-
-          {/* Sliding Content Panel */}
-          <div
-            className="relative w-[295px] sm:w-[382px] h-full max-h-screen overflow-y-auto z-50 text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-[41px] pt-14 sm:pt-[100px] pb-12 transition-transform duration-300"
-            style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-          >
-            {/* Close Button */}
-            <button
+      {mounted &&
+        isOpen &&
+        createPortal(
+          <div className="fixed inset-0 z-[99999] flex" role="dialog" aria-modal="true">
+            {/* Backdrop Overlay */}
+            <div
               onClick={() => setIsOpen(false)}
-              className="absolute top-5 right-5 p-2 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
-              aria-label="Close Table of Contents"
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300"
+            />
+
+            {/* Sliding Content Panel */}
+            <div
+              className="relative w-[295px] sm:w-[382px] h-full max-h-screen overflow-y-auto z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-[41px] pt-8 sm:pt-10 pb-12 transition-transform duration-300"
+              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
-              <X className="w-6 h-6" />
-            </button>
+              {/* Drawer Header: Title and Close Button */}
+              <div className="flex items-center justify-between mb-4 sm:mb-5">
+                <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight tracking-[-0.00015em]">
+                  Table of Contents
+                </h2>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                  aria-label="Close Table of Contents"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
 
-            {/* Frame 1000011829: Title */}
-            <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight mb-4 sm:mb-5 tracking-[-0.00015em]">
-              Table of Contents
-            </h2>
+              {/* Line 11 Divider */}
+              <div className="w-full h-[1px] bg-white/30 mb-6 sm:mb-8" />
 
-            {/* Line 11 Divider */}
-            <div className="w-full h-[1px] bg-white/30 mb-6 sm:mb-8" />
-
-            {/* Frame 1000011841: Links List */}
-            <nav className="flex-1">
-              <ul className="space-y-4 sm:space-y-[32px]">
-                {tocItems.map((item) => {
-                  const isActive = activeId === item.id;
-                  return (
-                    <li key={item.id} className="flex items-start gap-2.5">
-                      <span className="text-white/70 text-base sm:text-lg leading-none mt-0.5">•</span>
-                      <a
-                        href={`#${item.id}`}
-                        onClick={(e) => scrollToSection(e, item.id)}
-                        className={`font-sans text-sm sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-[#E8B92C] ${
-                          isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
-                        }`}
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-          </div>
-        </div>
-      )}
+              {/* Frame 1000011841: Links List */}
+              <nav className="flex-1">
+                <ul className="space-y-4 sm:space-y-[32px]">
+                  {tocItems.map((item) => {
+                    const isActive = activeId === item.id;
+                    return (
+                      <li key={item.id} className="flex items-start gap-2.5">
+                        <span className="text-white/70 text-base sm:text-lg leading-none mt-0.5">•</span>
+                        <a
+                          href={`#${item.id}`}
+                          onClick={(e) => scrollToSection(e, item.id)}
+                          className={`font-sans text-sm sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-[#E8B92C] ${
+                            isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
+                          }`}
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+            </div>
+          </div>,
+          document.body
+        )}
     </>
   );
 }
