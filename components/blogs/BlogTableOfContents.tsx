@@ -71,7 +71,7 @@ export function BlogTableOfContents() {
         window.scrollTo({ top: y, behavior: "smooth" });
         setActiveId(id);
       }
-    }, 100);
+    }, 150);
   };
 
   return (
@@ -132,22 +132,31 @@ export function BlogTableOfContents() {
       </button>
 
       {/* ---------------------------------------------------- */}
-      {/* 3. TABLET & MOBILE PORTAL DRAWER (Directly in Body)  */}
+      {/* 3. TABLET & MOBILE PORTAL DRAWER (Smooth Slide-In)   */}
       {/* Frame 1000012120 (Tablet: 382px) / Frame 1000011828 (Mobile: 295px) */}
       {/* ---------------------------------------------------- */}
       {mounted &&
-        isOpen &&
         createPortal(
-          <div className="fixed inset-0 z-[99999] flex" role="dialog" aria-modal="true">
-            {/* Backdrop Overlay */}
+          <div
+            className={`fixed inset-0 z-[99999] flex transition-all duration-300 ${
+              isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
+            }`}
+            role="dialog"
+            aria-modal="true"
+          >
+            {/* Backdrop Overlay with smooth fade */}
             <div
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300"
+              className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ease-in-out ${
+                isOpen ? "opacity-100" : "opacity-0"
+              }`}
             />
 
-            {/* Sliding Content Panel */}
+            {/* Sliding Content Panel with smooth transform */}
             <div
-              className="relative w-[295px] sm:w-[382px] h-full max-h-screen overflow-y-auto z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-[41px] pt-8 sm:pt-10 pb-12 transition-transform duration-300"
+              className={`relative w-[295px] sm:w-[382px] h-full max-h-screen overflow-y-auto z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-[41px] pt-8 sm:pt-10 pb-12 transition-transform duration-300 ease-out transform ${
+                isOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
               {/* Drawer Header: Title and Close Button */}
