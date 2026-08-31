@@ -118,25 +118,21 @@ export function BlogTableOfContents() {
       </aside>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. TABLET & MOBILE TRIGGER (Ellipse 2385 / Semicircle) */}
-      {/* Floating half-circle toggle button on left edge     */}
-      {/* ---------------------------------------------------- */}
-      <button
-        type="button"
-        onClick={() => setIsOpen(true)}
-        aria-label="Open Table of Contents"
-        className="lg:hidden fixed left-0 top-[45%] -translate-y-1/2 z-40 w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.35)] flex items-center justify-center pl-0.5 text-white transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
-        style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-      >
-        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-[#E8B92C] transition-all" />
-      </button>
-
-      {/* ---------------------------------------------------- */}
-      {/* 3. TABLET & MOBILE PORTAL DRAWER (Smooth Slide-In)   */}
-      {/* Frame 1000012120 (Tablet: 382px) / Frame 1000011828 (Mobile: 295px) */}
+      {/* 2. TABLET & MOBILE TRIGGER + PORTAL DRAWER           */}
       {/* ---------------------------------------------------- */}
       {mounted &&
         createPortal(
+          <>
+            {/* Floating half-circle toggle button on left edge (z-[80] sits above meta card) */}
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
+              aria-label="Open Table of Contents"
+              className="lg:hidden fixed left-0 top-[55%] sm:top-[50%] -translate-y-1/2 z-[80] w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.45)] flex items-center justify-center pl-0.5 text-white transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
+              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-[#E8B92C] transition-all" />
+            </button>
           <div
             className={`fixed inset-0 z-[99999] flex transition-all duration-300 ${
               isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
@@ -199,7 +195,8 @@ export function BlogTableOfContents() {
                 </ul>
               </nav>
             </div>
-          </div>,
+          </div>
+          </>,
           document.body
         )}
     </>
