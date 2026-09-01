@@ -64,14 +64,14 @@ export function WhatIsPsdSection() {
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-6 xl:py-16">
         <div className="w-full lg:w-[48%] xl:w-[52%] max-w-[680px] lg:max-w-[460px] xl:max-w-[680px]">
           {/* Heading */}
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[28px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.15] xl:leading-[1.18] tracking-tight mb-2 sm:mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-3 sm:mb-6">
             What is a Psychiatric
             <br className="hidden sm:inline" />
             {" "}Service Dog Letter?
           </h2>
 
           {/* Paragraphs */}
-          <div className="space-y-2.5 text-[#5F6B6F] text-base lg:text-[13.5px] xl:text-[17px] font-medium leading-[1.55] xl:leading-[1.65] font-lato mb-3.5 sm:mb-8">
+          <div className="space-y-3 text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans mb-5 sm:mb-8">
             <p>
               A Psychiatric Service Dog (PSD) letter is an official document from a licensed mental health professional that confirms you have a qualifying mental health condition under the Americans with Disabilities Act (ADA). This letter serves as important backup documentation for your psychiatric service dog.
             </p>
@@ -80,14 +80,17 @@ export function WhatIsPsdSection() {
             </p>
           </div>
 
-          {/* Left Accent Bar Callout Box */}
-          <div className="relative w-full p-3 sm:p-6 lg:p-3.5 xl:p-7 rounded-2xl bg-[#FAF7F2] border border-[#EAE5DC] shadow-xs overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#1E3E47]" />
-            <div className="pl-2.5 sm:pl-3">
-              <h3 className="font-heading text-base sm:text-lg lg:text-[14.5px] xl:text-xl font-bold text-[#1E3E47] mb-1">
+          {/* Left Accent Bar Callout Box (Frame 12) */}
+          <div className="relative w-full p-4 sm:p-6 rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-2.5"
+              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+            />
+            <div className="pl-3 sm:pl-4 space-y-1.5">
+              <h3 className="font-heading text-base sm:text-[20px] font-bold text-[#2E5A66] leading-tight">
                 Is a PSD Letter Required?
               </h3>
-              <p className="text-xs sm:text-sm lg:text-[12.5px] xl:text-[15px] text-[#5F6B6F] leading-relaxed font-medium font-lato">
+              <p className="text-xs sm:text-[14px] text-[#5F6B6F] leading-[22px] sm:leading-[26px] font-semibold font-sans">
                 While not legally required by the ADA for public access, a PSD letter is highly recommended as backup documentation. Many airlines, landlords, and housing providers request this documentation to verify your legitimate need for a service dog.
               </p>
             </div>
