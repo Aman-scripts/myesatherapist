@@ -96,6 +96,7 @@ export default async function DynamicStatePage({ params }: Props) {
         <StateAvailableCitiesSection data={data} />
         <FaqSection />
         <CtaBanner
+          bgColor="bg-[#FAF7F2]"
           title={`Ready to Start Your ${data.name} ESA Evaluation?`}
           description={`Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
           buttonText="Start your Evaluation"
