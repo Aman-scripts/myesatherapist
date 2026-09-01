@@ -33,7 +33,7 @@ export function StateTrustBar({ data }: { data: StateData }) {
   ];
 
   return (
-    <div className="relative z-30 -mt-6 sm:-mt-10 lg:-mt-14 max-w-[1146px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto mb-8 sm:mb-12 lg:mb-16">
+    <div className="hidden lg:block relative z-30 -mt-6 sm:-mt-10 lg:-mt-14 max-w-[1146px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto mb-8 sm:mb-12 lg:mb-16">
       {/* Floating Trust Banner Card Frame 1000011968 */}
       <div className="bg-white rounded-[22px] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] py-[22px] px-[27px]">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 lg:gap-0 items-center lg:divide-x lg:divide-[#5F6B6F]/20">
