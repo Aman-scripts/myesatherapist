@@ -57,16 +57,34 @@ export function PsdHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
-          <h1 className="font-heading text-[26px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+        <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
+          {/* Stat Pills at top (Mobile) */}
+          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
+            {statsData.map((stat) => (
+              <div
+                key={stat.label}
+                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
+              >
+                <span
+                  className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  {stat.value}
+                </span>
+                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <h1 className="font-heading text-[24px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto">
+            <span className="text-[#2E5A66]">
               Psychiatric Service
             </span>
             <br />
             <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
           </h1>
 
-          <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-[family-name:var(--font-lato)]">
+          <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
           </p>
 
@@ -81,8 +99,7 @@ export function PsdHeroSection() {
                   width={16}
                   height={21}
                   unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="shrink-0 object-contain w-[14px] h-[18px]"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   Start your State
@@ -99,7 +116,7 @@ export function PsdHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
+                <Image src="/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </a>
           </div>
@@ -214,15 +231,13 @@ export function PsdHeroSection() {
               ))}
             </div>
 
-            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6">
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                Psychiatric Service
-              </span>
+            <h1 className="font-heading text-[32px] lg:text-[40px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] text-[#2E5A66] mt-4 xl:mt-6">
+              Psychiatric Service
               <br />
-              <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
+              Dog Letter Assistance
             </h1>
 
-            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[16px] leading-[1.55] xl:leading-[1.625] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-[family-name:var(--font-lato)]">
+            <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-sans">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
             </p>
 

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function PsdLetterPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
       {/* Top Banner & Navigation */}
       <TopBanner />
       <Header />
