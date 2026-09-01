@@ -27,6 +27,8 @@ const stepsData = [
   },
 ];
 
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+
 export function PsdProcessSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
@@ -34,13 +36,16 @@ export function PsdProcessSection() {
         
         {/* 1. Section Header (2-Column Layout on Desktop matching Frame 1000011750) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-12 lg:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight max-w-xl"> A simple, secure, {" "}three-step process </h2>
-          <p className="text-[#5F6B6F] text-base lg:text-[17px] font-medium leading-[1.65] max-w-xl lg:mt-2 font-[family-name:var(--font-lato)]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight max-w-xl">
+            A simple, secure, <br className="hidden sm:block" />
+            three-step process
+          </h2>
+          <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
             From consultation to letter delivery, everything happens online. No paperwork, no waiting rooms — just a clear path to professional documentation.
           </p>
         </div>
 
-        {/* 2. Main Center Photo Container with Floating Heart-Paw Badges (Floating on Left & Right Edges matching Figma) */}
+        {/* 2. Main Center Photo Container with Floating Heart-Paw Badges */}
         <div className="relative w-full max-w-[1050px] mx-auto mb-16 lg:mb-20">
           <div className="relative aspect-[16/9] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
             <Image
@@ -86,14 +91,14 @@ export function PsdProcessSection() {
           {stepsData.map((step, idx) => (
             <div
               key={idx}
-              className="relative bg-white rounded-[20px] md:rounded-[24px] p-5 sm:p-6 lg:p-8 flex flex-col items-center text-center shadow-[0_4px_16px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)]"
+              className="relative bg-white rounded-[20px] md:rounded-[24px] p-6 sm:p-7 lg:p-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
             >
-              {/* Step Number Circle Badge at Top-Left (3D Gold Circle with pure black drop shadow) */}
-              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-[#E2B755] text-[#1E3E47] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.25)]">
+              {/* Step Number Circle Badge at Top-Left */}
+              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-[#E8B92C] text-[#2E5A66] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0px_2px_4px_rgba(58,58,58,0.25)]">
                 {step.number}
               </div>
 
-              {/* Step Icon Container (Soft grayish-teal tint with no border) */}
+              {/* Step Icon Container */}
               <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-full bg-[#AEBBBE33] flex items-center justify-center mb-4 sm:mb-5 mt-2 sm:mt-3 shrink-0">
                 <Image
                   src={step.icon}
@@ -108,12 +113,15 @@ export function PsdProcessSection() {
               </div>
 
               {/* Step Title */}
-              <h3 className="font-heading text-lg sm:text-xl lg:text-[22px] font-bold text-[#1E3E47] mb-2 sm:mb-3">
+              <h3
+                className="font-heading text-lg sm:text-xl lg:text-[24px] font-bold mb-2 sm:mb-3 bg-clip-text text-transparent"
+                style={{ backgroundImage: TEAL_GRADIENT }}
+              >
                 {step.title}
               </h3>
 
               {/* Step Description */}
-              <p className="text-xs sm:text-sm lg:text-[15px] text-[#5F6B6F] font-normal leading-[1.6] font-lato">
+              <p className="text-sm sm:text-[16px] text-[#5F6B6F] font-semibold leading-[24px] sm:leading-[26px] font-sans">
                 {step.description}
               </p>
             </div>
@@ -124,18 +132,19 @@ export function PsdProcessSection() {
         <div className="flex justify-center mt-12 sm:mt-16">
           <a
             href="#pricing"
-            className="inline-flex items-center gap-3.5 bg-[#1E3E47] hover:bg-[#163038] text-white font-bold text-base sm:text-[17px] pl-7 pr-3 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200 group"
+            className="inline-flex items-center justify-between min-w-[220px] h-[48px] rounded-[30px] pl-6 pr-1.5 text-white font-semibold text-[15px] sm:text-[16px] shadow-[0_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
+            style={{ backgroundImage: TEAL_GRADIENT }}
           >
-            <span>Start Your Consultation</span>
-            <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0">
+            <span className="font-sans mr-3">Start Your Consultation</span>
+            <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
                 src="/send-icon.svg"
                 alt=""
-                width={19}
-                height={21}
-                className="w-[19px] h-[21px] transform group-hover:translate-x-0.5 transition-transform"
+                width={18}
+                height={20}
+                className="w-[18px] h-[20px]"
               />
-            </div>
+            </span>
           </a>
         </div>
 
