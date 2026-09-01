@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 
 export default function BlogsHubPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#EEEBE0] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       <TopBanner />
       <Header />
 
-      <main className="flex-1 bg-[#EEEBE0]">
+      <main className="flex-1 bg-[#FAF7F2]">
         {/* 1. Hero Banner */}
         <BlogsHero />
 

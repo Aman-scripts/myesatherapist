@@ -81,20 +81,20 @@ const ARTICLES = [
 
 export function BlogsGrid() {
   return (
-    <section className="w-full bg-[#EEEBE0] pb-16 sm:pb-24 pt-4 sm:pt-6">
+    <section className="w-full bg-[#FAF7F2] pb-16 sm:pb-24 pt-4 sm:pt-6">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12">
-        {/* 3-Column Grid matching Frame 1261153615 (Sharp top corners, rounded bottom corners) */}
+        {/* 3-Column Grid matching Frame 1261153615 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {ARTICLES.map((art) => (
-            /* Frame 1000011907 Card Component (Sharp top corners, rounded bottom corners) */
+            /* Frame 1000011907 Card Component */
             <div
               key={art.id}
-              className="bg-white rounded-t-none rounded-b-[20px] overflow-hidden shadow-[0_6px_25px_rgba(0,0,0,0.04)] border border-[#EAE5DC] flex flex-col justify-between group hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition-all duration-300 min-h-[560px]"
+              className="bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between group hover:shadow-md transition-all duration-300 min-h-[580px]"
             >
-              {/* Card Header Image: aspect-[410/317] (Sharp top corners) */}
+              {/* Card Header Image: aspect-[410/317] */}
               <Link
                 href={`/blogs/${art.slug}`}
-                className="w-full h-[250px] sm:h-[270px] lg:h-[280px] relative overflow-hidden bg-[#FAF7F2] shrink-0 rounded-t-none block cursor-pointer"
+                className="w-full h-[260px] sm:h-[280px] lg:h-[317px] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
               >
                 <Image
                   src={art.image}
@@ -105,43 +105,43 @@ export function BlogsGrid() {
                 />
               </Link>
 
-              {/* Card Body (Frame 1000011890) */}
+              {/* Card Body (Frame 1000011908) */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   
-                  {/* Title & Author Block matching screenshot */}
-                  <div className="space-y-2">
+                  {/* Title & Author */}
+                  <div className="space-y-1.5">
                     <Link href={`/blogs/${art.slug}`}>
-                      <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] leading-[1.28] group-hover:text-[#1D6E72] transition-colors cursor-pointer">
+                      <h3 className="font-heading text-xl sm:text-[24px] font-bold text-[#2E5A66] leading-[1.3] lg:leading-[32px] group-hover:text-[#1D6E72] transition-colors cursor-pointer">
                         {art.title}
                       </h3>
                     </Link>
-                    <div className="text-sm font-sans font-medium text-[#8E9A9F] text-right">
+                    <div className="text-xs sm:text-sm font-sans font-medium text-[#8E9A9F]">
                       {art.author}
                     </div>
                   </div>
 
                   {/* Excerpt Description */}
-                  <p className="text-sm sm:text-[15px] text-[#5F6B6F] font-sans leading-relaxed">
+                  <p className="font-sans font-semibold text-sm sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#475467]">
                     {art.excerpt}
                   </p>
                 </div>
 
-                {/* Read More Pill Button with Circular Icon (Frame 1000011890) */}
+                {/* Get Started Button (Frame 1000011890) */}
                 <div className="pt-2">
                   <Link
                     href={`/blogs/${art.slug}`}
-                    className="inline-flex items-center gap-3 pl-6 sm:pl-7 pr-2 py-2 sm:py-2.5 rounded-[30px] text-white font-sans font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all duration-200 group/btn w-fit"
+                    className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
                     style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                   >
-                    <span>Read More</span>
-                    <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs group-hover/btn:scale-105 transition-transform">
+                    <span>Get Started</span>
+                    <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                       <Image
                         src="/send-icon.svg"
                         alt=""
-                        width={16}
-                        height={16}
-                        className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] object-contain"
+                        width={18}
+                        height={18}
+                        className="w-[16px] h-[16px] object-contain"
                       />
                     </span>
                   </Link>
