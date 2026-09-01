@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export function ContactHero() {
   const [formData, setFormData] = useState({
+    fullName: "",
     firstName: "",
     lastName: "",
     email: "",
@@ -17,44 +19,160 @@ export function ContactHero() {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ firstName: "", lastName: "", email: "", message: "" });
+      setFormData({
+        fullName: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+      });
     }, 4000);
   };
 
+  const cardStyle = {
+    background: "rgba(245, 166, 54, 0.26)",
+    border: "1px solid rgba(245, 166, 54, 0.09)",
+    backdropFilter: "blur(18px)",
+    WebkitBackdropFilter: "blur(18px)",
+  };
+
   return (
-    <section className="relative w-full min-h-[640px] sm:min-h-[720px] lg:min-h-[814px] bg-[#FAF7F2] overflow-hidden flex items-center">
-      {/* Background Image: contact-hero-section.png */}
-      <div className="absolute inset-0 w-full h-full z-0">
+    <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
+      
+      {/* ---------------------------------------------------- */}
+      {/* 1. MOBILE VIEW (< 640px)                             */}
+      {/* ---------------------------------------------------- */}
+      <div className="sm:hidden relative w-full aspect-[390/920] overflow-hidden">
+        {/* Background Image: contact-us-hero-section-mobile.png */}
         <Image
-          src="/contact-hero-section.png"
-          alt="Customer service representative at desk"
+          src="/contact-us-hero-section-mobile.png"
+          alt="Contact Customer Support Mobile"
           fill
           priority
-          className="object-cover object-right lg:object-center pointer-events-none"
+          unoptimized
+          className="object-cover object-bottom pointer-events-none"
           sizes="100vw"
         />
-      </div>
 
-      {/* Floating Request Info Overlay Card (Frame 1000011950) */}
-      <div className="relative z-10 max-w-[1446px] mx-auto px-4 sm:px-8 lg:px-[79px] w-full py-12 lg:py-[89px] flex items-center justify-start">
-        <div className="w-full max-w-[611px]">
-          {/* Frame 1000011950 */}
+        {/* Floating Request Info Overlay Card */}
+        <div className="relative z-10 pt-6 px-4 w-full flex justify-center">
           <div
-            className="w-full rounded-[30px] p-6 sm:p-8 lg:py-[32px] lg:px-[24px] space-y-6 shadow-sm"
-            style={{
-              background: "rgba(245, 166, 54, 0.26)",
-              border: "1px solid rgba(245, 166, 54, 0.09)",
-              backdropFilter: "blur(18px)",
-              WebkitBackdropFilter: "blur(18px)",
-            }}
+            className="w-full max-w-[358px] rounded-[30px] p-5 space-y-4 shadow-sm"
+            style={cardStyle}
           >
-
-            {/* Frame 1000011951: Centered Header */}
-            <div className="text-center space-y-2">
-              <h1 className="font-heading text-3xl sm:text-4xl lg:text-[36px] font-bold text-[#373737] leading-[44px] tracking-[-0.00015em]">
+            {/* Header */}
+            <div className="text-center space-y-1">
+              <h1 className="font-heading text-[28px] font-bold text-[#373737] leading-[36px] tracking-[-0.00015em]">
                 Request Info
               </h1>
-              <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+              <p className="font-sans font-semibold text-[12px] leading-[20px] text-[#5F6B6F] text-center">
+                Feel Free To Connect With Us! (24×7 Available At Your Service)
+              </p>
+            </div>
+
+            {submitted ? (
+              <div className="bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-white p-5 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
+                <div className="w-8 h-8 rounded-full bg-[#E8B92C] text-[#04161C] font-bold text-lg flex items-center justify-center mx-auto">
+                  ✓
+                </div>
+                <h3 className="font-heading text-lg font-bold">Thank You!</h3>
+                <p className="text-xs font-sans">Your message has been sent successfully.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-3">
+                {/* Full Name */}
+                <div className="space-y-1">
+                  <label className="block font-sans font-semibold text-[13px] leading-[22px] text-[#5F6B6F]">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Full Name"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    className="w-full h-[40px] px-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                  />
+                </div>
+
+                {/* Email Address */}
+                <div className="space-y-1">
+                  <label className="block font-sans font-semibold text-[13px] leading-[22px] text-[#5F6B6F]">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="your@email.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full h-[40px] px-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                  />
+                </div>
+
+                {/* Message */}
+                <div className="space-y-1">
+                  <label className="block font-sans font-semibold text-[13px] leading-[22px] text-[#5F6B6F]">
+                    Message
+                  </label>
+                  <textarea
+                    required
+                    rows={3}
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full min-h-[90px] p-3 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
+                  />
+                </div>
+
+                {/* Centered Button & Security Note */}
+                <div className="pt-1 flex flex-col items-center justify-center space-y-1.5">
+                  <button
+                    type="submit"
+                    className="w-full max-w-[280px] h-[44px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-[15px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
+                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
+                    <span>SEND</span>
+                    <ArrowRight className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+                  </button>
+
+                  <p className="font-sans font-semibold text-[11px] leading-[20px] text-[#5F6B6F] text-center">
+                    Your information is 100% secure and private.
+                  </p>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* ---------------------------------------------------- */}
+      {/* 2. TABLET VIEW (640px - 1023px)                      */}
+      {/* ---------------------------------------------------- */}
+      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1250] overflow-hidden">
+        {/* Background Image: contact_us-hero-section-tablet.png */}
+        <Image
+          src="/contact_us-hero-section-tablet.png"
+          alt="Contact Customer Support Tablet"
+          fill
+          priority
+          unoptimized
+          className="object-cover object-bottom pointer-events-none"
+          sizes="100vw"
+        />
+
+        {/* Floating Request Info Overlay Card */}
+        <div className="relative z-10 pt-10 sm:pt-14 px-6 w-full flex justify-center">
+          <div
+            className="w-full max-w-[560px] rounded-[30px] p-8 space-y-6 shadow-sm"
+            style={cardStyle}
+          >
+            {/* Header */}
+            <div className="text-center space-y-2">
+              <h1 className="font-heading text-[36px] font-bold text-[#373737] leading-[44px] tracking-[-0.00015em]">
+                Request Info
+              </h1>
+              <p className="font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F] text-center">
                 Feel Free To Connect With Us! (24×7 Available At Your Service)
               </p>
             </div>
@@ -68,10 +186,9 @@ export function ContactHero() {
                 <p className="text-sm font-sans">Your message has been sent successfully.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-3.5">
-                {/* Frame 1000011958: First Name & Last Name */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-6">
-                  {/* Frame 1000011954: First Name */}
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {/* First Name & Last Name */}
+                <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
                       First Name
@@ -82,11 +199,10 @@ export function ContactHero() {
                       placeholder="First Name"
                       value={formData.firstName}
                       onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] leading-[26px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                     />
                   </div>
 
-                  {/* Frame 1000011955: Last Name */}
                   <div className="space-y-1">
                     <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
                       Last Name
@@ -97,12 +213,12 @@ export function ContactHero() {
                       placeholder="Last Name"
                       value={formData.lastName}
                       onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] leading-[26px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                     />
                   </div>
                 </div>
 
-                {/* Frame 1000011956: Email Address */}
+                {/* Email Address */}
                 <div className="space-y-1">
                   <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
                     Email Address
@@ -113,11 +229,11 @@ export function ContactHero() {
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] leading-[26px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                    className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                   />
                 </div>
 
-                {/* Frame 1000011957: Message */}
+                {/* Message */}
                 <div className="space-y-1">
                   <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
                     Message
@@ -128,28 +244,19 @@ export function ContactHero() {
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full min-h-[110px] sm:min-h-[127px] p-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] leading-[26px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
+                    className="w-full min-h-[110px] p-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
                   />
                 </div>
 
-                {/* Frame 1000011961: Centered Button & Security Note */}
+                {/* Centered Button & Security Note */}
                 <div className="pt-2 flex flex-col items-center justify-center space-y-2">
-                  {/* Frame 1000011891 */}
                   <button
                     type="submit"
-                    className="w-full max-w-[356px] h-[48px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
+                    className="w-full max-w-[320px] h-[48px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
                     style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                   >
-                    <span>Get Started</span>
-                    <svg
-                      className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2.5}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
+                    <span>SEND</span>
+                    <ArrowRight className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
                   </button>
 
                   <p className="font-sans font-semibold text-[12px] leading-[26px] text-[#5F6B6F] text-center">
@@ -158,10 +265,137 @@ export function ContactHero() {
                 </div>
               </form>
             )}
-
           </div>
         </div>
       </div>
+
+      {/* ---------------------------------------------------- */}
+      {/* 3. DESKTOP VIEW (>= 1024px)                          */}
+      {/* ---------------------------------------------------- */}
+      <div className="hidden lg:flex relative w-full min-h-[814px] items-center">
+        {/* Background Image: contact-hero-section.png */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <Image
+            src="/contact-hero-section.png"
+            alt="Customer service representative at desk"
+            fill
+            priority
+            unoptimized
+            className="object-cover object-center pointer-events-none"
+            sizes="100vw"
+          />
+        </div>
+
+        {/* Floating Request Info Overlay Card (Frame 1000011950) */}
+        <div className="relative z-10 max-w-[1446px] mx-auto px-[79px] w-full py-[89px] flex items-center justify-start">
+          <div className="w-full max-w-[611px]">
+            <div
+              className="w-full rounded-[30px] py-[32px] px-[24px] space-y-6 shadow-sm"
+              style={cardStyle}
+            >
+              {/* Centered Header */}
+              <div className="text-center space-y-2">
+                <h1 className="font-heading text-[36px] font-bold text-[#373737] leading-[44px] tracking-[-0.00015em]">
+                  Request Info
+                </h1>
+                <p className="font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+                  Feel Free To Connect With Us! (24×7 Available At Your Service)
+                </p>
+              </div>
+
+              {submitted ? (
+                <div className="bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-[#E8B92C] text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
+                    ✓
+                  </div>
+                  <h3 className="font-heading text-xl font-bold">Thank You!</h3>
+                  <p className="text-sm font-sans">Your message has been sent successfully.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-3.5">
+                  {/* First Name & Last Name */}
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="space-y-1">
+                      <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="First Name"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Last Name"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email Address */}
+                  <div className="space-y-1">
+                    <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                    />
+                  </div>
+
+                  {/* Message */}
+                  <div className="space-y-1">
+                    <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                      Message
+                    </label>
+                    <textarea
+                      required
+                      rows={4}
+                      placeholder="Your Message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full min-h-[127px] p-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
+                    />
+                  </div>
+
+                  {/* Centered Button & Security Note */}
+                  <div className="pt-2 flex flex-col items-center justify-center space-y-2">
+                    <button
+                      type="submit"
+                      className="w-full max-w-[356px] h-[48px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
+                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    >
+                      <span>SEND</span>
+                      <ArrowRight className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+                    </button>
+
+                    <p className="font-sans font-semibold text-[12px] leading-[26px] text-[#5F6B6F] text-center">
+                      Your information is 100% secure and private.
+                    </p>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }
