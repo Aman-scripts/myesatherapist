@@ -46,23 +46,22 @@ const therapists = [
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
     <div className="relative flex-1 min-w-0 rounded-[12px] bg-[#E8B92C] pt-[3px] px-0 pb-0 shadow-xs flex flex-col">
-      <div className="bg-white rounded-[10px] pt-3.5 sm:pt-4 pb-2 sm:pb-2.5 px-1 sm:px-2 text-center flex-1 flex flex-col justify-center relative">
+      <div className="bg-white rounded-[10px] pt-3 sm:pt-4 pb-2 sm:pb-2.5 px-1 sm:px-2 text-center flex-1 flex flex-col justify-center relative">
         {/* Small floating badge icon at top center */}
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border border-[#E2E8F0] shadow-xs flex items-center justify-center">
+        <div className="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white border border-[#E2E8F0] shadow-xs flex items-center justify-center">
           <Image
             src="/therapist-section-badge.svg"
             alt=""
             width={12}
             height={12}
             unoptimized
-            className="object-contain"
-            style={{ width: "auto", height: "auto" }}
+            className="object-contain w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]"
           />
         </div>
-        <div className="text-[11px] sm:text-[12px] font-heading font-bold text-[#1A4D59] leading-tight">
+        <div className="text-[10px] sm:text-[12px] font-heading font-bold text-[#1A4D59] leading-tight truncate">
           {label}
         </div>
-        <div className="text-[9.5px] sm:text-[11px] font-semibold text-[#5F6B6F] mt-1 leading-tight">
+        <div className="text-[9px] sm:text-[11px] font-semibold text-[#5F6B6F] mt-0.5 sm:mt-1 leading-tight truncate">
           {value}
         </div>
       </div>
