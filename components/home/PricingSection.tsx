@@ -12,8 +12,7 @@ function FeatureBadgeIcon() {
       alt=""
       width={16}
       height={16}
-      className="shrink-0"
-      style={{ width: "auto", height: "auto" }}
+      className="shrink-0 w-3.5 h-3.5 sm:w-4 sm:h-4"
     />
   );
 }
