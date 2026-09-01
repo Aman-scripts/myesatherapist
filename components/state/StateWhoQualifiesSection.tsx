@@ -48,13 +48,13 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 className="object-cover object-top"
                 sizes="100vw"
               />
-              {/* Heart Icon centered at bottom */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
+              {/* Heart Icon positioned directly on the bottom wave curve dip */}
+              <div className="absolute bottom-0 left-[73.8%] -translate-x-1/2 translate-y-1/2 z-10 w-11 h-11">
                 <Image
                   src="/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
-                  width={48}
-                  height={48}
+                  width={44}
+                  height={44}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
               </div>
@@ -71,13 +71,13 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 className="object-cover object-top"
                 sizes="100vw"
               />
-              {/* Heart Icon centered at bottom */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-14 h-14">
+              {/* Heart Icon positioned directly on the bottom wave curve dip */}
+              <div className="absolute bottom-0 left-[75.3%] -translate-x-1/2 translate-y-1/2 z-10 w-13 h-13">
                 <Image
                   src="/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
-                  width={56}
-                  height={56}
+                  width={52}
+                  height={52}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
               </div>
@@ -109,7 +109,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
           </div>
 
           {/* Left Content Area: Frame 1000011976 */}
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-10 sm:pt-14 pb-8 lg:py-12 pr-0 lg:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-8 sm:pt-12 pb-8 lg:py-12 pr-0 lg:pr-4 flex flex-col justify-center">
             
             {/* Frame 1000011447 */}
             <div className="mb-6 lg:mb-8 space-y-3">
