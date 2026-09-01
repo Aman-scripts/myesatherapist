@@ -24,28 +24,28 @@ const resources = [
 
 export function BlogMoreResources() {
   return (
-    <section className="w-full bg-[#EEEBE0] py-14 sm:py-20 lg:py-24">
+    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
-        {/* Section Header */}
+        {/* Frame 1000011447: Section Header */}
         <div className="text-center space-y-2 max-w-[640px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
             More ESA Resources
           </h2>
-          <p className="font-sans text-sm sm:text-base lg:text-[18px] font-semibold text-[#5F6B6F] leading-relaxed">
+          <p className="font-sans text-sm sm:text-base lg:text-[18px] font-semibold text-[#5F6B6F] leading-[30px]">
             Get answers to common questions about ESA letters and our service.
           </p>
         </div>
 
-        {/* 3 Cards Grid */}
+        {/* Frame 1261153612: 3 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {resources.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[20px] shadow-[0px_2px_12px_rgba(0,0,0,0.06)] border border-[#EAE5DC] overflow-hidden flex flex-col justify-between hover:shadow-[0_12px_32px_rgba(26,61,79,0.1)] hover:-translate-y-1 transition-all duration-300 group"
+              className="bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300 group min-h-[580px]"
             >
-              {/* Card Image */}
-              <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
+              {/* Card Image: Gemini_Generated_Image */}
+              <div className="relative w-full h-[260px] sm:h-[280px] lg:h-[317px] overflow-hidden bg-[#FAF7F2] shrink-0">
                 <Image
                   src="/blog_cards.png"
                   alt={item.title}
@@ -54,32 +54,32 @@ export function BlogMoreResources() {
                 />
               </div>
 
-              {/* Card Content */}
+              {/* Card Content: Frame 1000011908 */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
-                <div className="space-y-3">
-                  <h3 className="font-heading text-lg sm:text-[22px] font-bold text-[#2E5A66] leading-[1.3] group-hover:text-[#184F59] transition-colors">
+                <div className="space-y-3.5">
+                  <h3 className="font-heading text-xl sm:text-[24px] font-bold text-[#2E5A66] leading-[1.3] lg:leading-[32px] group-hover:text-[#1D6E72] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm lg:text-[15px] text-[#475467] leading-[24px] font-medium">
+                  <p className="font-sans font-semibold text-sm sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#475467]">
                     {item.description}
                   </p>
                 </div>
 
-                {/* Get Started Button */}
+                {/* Frame 1000011890: Get Started Button */}
                 <div className="pt-2">
                   <Link
                     href={item.href}
-                    className="inline-flex items-center justify-between pl-6 pr-1.5 w-[160px] sm:w-[171px] h-[46px] sm:h-[48px] rounded-[30px] text-white font-sans font-semibold text-sm sm:text-base shadow-md hover:opacity-95 transition-all group"
+                    className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
                     style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                   >
                     <span>Get Started</span>
-                    <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 shadow-sm group-hover:translate-x-0.5 transition-transform">
+                    <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                       <Image
                         src="/send-icon.svg"
                         alt=""
-                        width={16}
-                        height={16}
-                        className="w-3.5 h-3.5 object-contain"
+                        width={18}
+                        height={18}
+                        className="w-[16px] h-[16px] object-contain"
                       />
                     </span>
                   </Link>

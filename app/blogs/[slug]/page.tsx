@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 
 export default function BlogDetailPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#EEEBE0] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       <TopBanner />
       <Header />
 
-      <main className="flex-1 bg-[#EEEBE0]">
+      <main className="flex-1 bg-[#FAF7F2]">
         {/* 1. Full-width Hero Section (Responsive Mobile, Tablet & Desktop) */}
         <BlogHeroSection />
 
@@ -66,7 +66,7 @@ export default function BlogDetailPage() {
           description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
           buttonText="Start your Evaluation"
           buttonHref="#faq"
-          bgColor="bg-[#EEEBE0]"
+          bgColor="bg-[#FAF7F2]"
         />
       </main>
 

@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export function BlogAuthorBio() {
   return (
-    <section id="about-the-author" className="w-full bg-[#EEEBE0] py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 scroll-mt-24">
+    <section id="about-the-author" className="w-full bg-[#FAF7F2] py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 scroll-mt-24">
       <div className="max-w-[1117px] mx-auto space-y-4 sm:space-y-6">
         
-        {/* Section Heading */}
-        <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-tight">
+        {/* Section Heading: Frame 1261153657 */}
+        <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-[-0.00015em]">
           About the Author
         </h2>
 

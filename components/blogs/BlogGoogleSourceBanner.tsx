@@ -5,22 +5,23 @@ import Image from "next/image";
 
 export function BlogGoogleSourceBanner() {
   return (
-    <section className="w-full bg-[#EEEBE0] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1065px] mx-auto bg-white rounded-[16px] shadow-[0px_2px_10px_rgba(0,0,0,0.04)] border border-[#EAE5DC] overflow-hidden flex items-stretch">
+    <section className="w-full bg-[#FAF7F2] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Frame 1000012004: Container */}
+      <div className="max-w-[1065px] mx-auto bg-white/40 sm:bg-white/20 backdrop-blur-xs rounded-[15px] shadow-[0px_1px_4px_rgba(103,103,103,0.1)] overflow-hidden flex flex-col sm:flex-row items-stretch min-h-[100px]">
         
-        {/* Left Teal Accent Bar */}
+        {/* Rectangle 25: Left Teal Accent Bar */}
         <div
-          className="w-3 sm:w-4 shrink-0"
+          className="w-full sm:w-[17px] h-2 sm:h-auto shrink-0 rounded-t-[10px] sm:rounded-t-none sm:rounded-l-[10px]"
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         />
 
-        {/* Content Area */}
-        <div className="flex-1 p-4 sm:p-6 lg:py-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+        {/* Frame 1261153667: Content Area */}
+        <div className="flex-1 p-5 sm:py-4 sm:pl-6 sm:pr-[67px] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
           
-          {/* Google Logo & Info */}
-          <div className="flex items-center gap-4 text-center sm:text-left">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center">
-              <svg className="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24">
+          {/* Frame 1261153666: Google Logo & Text */}
+          <div className="flex items-center gap-4 sm:gap-[22px] text-center sm:text-left">
+            <div className="w-[50px] h-[46px] sm:w-[58px] sm:h-[52px] shrink-0 flex items-center justify-center">
+              <svg className="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24">
                 <path
                   fill="#4285F4"
                   d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -40,28 +41,29 @@ export function BlogGoogleSourceBanner() {
               </svg>
             </div>
 
-            <div className="space-y-0.5">
-              <h4 className="font-sans font-bold text-sm sm:text-base text-[#2E5A66]">
+            {/* Frame 1000012015 */}
+            <div className="space-y-0.5 max-w-[366px]">
+              <h4 className="font-sans font-semibold text-sm sm:text-[16px] leading-[26px] text-[#2E5A66]">
                 See our articles highlighted in Google Search
               </h4>
-              <p className="font-sans text-xs sm:text-sm text-[#5F6B6F] font-medium">
-                Add a supportive pet as a source — see results your way.
+              <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F]">
+                Add a supportive pet as a source - see results your way.
               </p>
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* Frame 1000011890: CTA Button */}
           <div className="shrink-0">
             <a
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-between pl-5 pr-1.5 w-[160px] sm:w-[189px] h-[44px] sm:h-[48px] rounded-[30px] text-white font-sans font-semibold text-xs sm:text-sm shadow-md hover:opacity-95 transition-all group"
+              className="inline-flex items-center justify-between pl-6 pr-1.5 w-[189px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
               <span>Add a Source</span>
-              <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform p-1.5">
-                <svg className="w-4 h-4" viewBox="0 0 24 24">
+              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform p-2">
+                <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
                     fill="#4285F4"
                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
