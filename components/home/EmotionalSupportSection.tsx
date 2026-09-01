@@ -71,10 +71,10 @@ export function EmotionalSupportSection() {
             </div>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-row items-center justify-start gap-3 sm:gap-4 lg:gap-5 pt-2 flex-wrap">
+          {/* Action Buttons in One Line (Expanded & Proportional) */}
+          <div className="flex flex-row items-center gap-3 sm:gap-4 lg:gap-5 pt-2 w-full max-w-[420px] sm:max-w-none">
             {/* Learn about ESA's Button */}
-            <button className="h-[40px] sm:h-[48px] px-5 sm:w-[193px] sm:px-0 rounded-[30px] bg-[#FAF7F2] flex items-center justify-center font-semibold text-[14px] sm:text-[16px] shadow-sm hover:bg-[#f3efe6] transition-colors shrink-0">
+            <button className="flex-1 sm:flex-initial sm:w-auto px-4 sm:px-7 h-[46px] sm:h-[48px] rounded-full bg-[#FAF7F2] font-semibold text-[14.5px] sm:text-base shadow-sm hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap">
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 Learn about ESA&apos;s
               </span>
@@ -83,12 +83,12 @@ export function EmotionalSupportSection() {
             {/* Get Started Button */}
             <a
               href="#how-it-works"
-              className="h-[40px] sm:h-[48px] pl-4 sm:pl-6 pr-1 sm:pr-1.5 sm:w-[179px] rounded-[30px] flex items-center justify-between gap-2.5 sm:gap-0 text-white font-semibold text-[14px] sm:text-[16px] transition-opacity hover:opacity-90 shadow-sm shrink-0"
+              className="flex-1 sm:flex-initial sm:w-auto pl-4 sm:pl-6 pr-1.5 sm:pr-2 h-[46px] sm:h-[48px] rounded-full flex items-center justify-between gap-2 sm:gap-3 text-white font-semibold text-[14.5px] sm:text-base transition-opacity hover:opacity-90 shadow-md shrink-0 whitespace-nowrap"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[32px] h-[32px] sm:w-[42px] sm:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[22px] sm:h-[24px]" />
+              <span className="w-[34px] h-[34px] sm:w-[36px] sm:h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[19px] sm:h-[21px]" />
               </span>
             </a>
           </div>
