@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ContactHero } from "@/components/contact/ContactHero";
@@ -15,9 +16,10 @@ export const metadata: Metadata = {
 
 export default function ContactUsPage() {
   return (
-    <main className="min-h-screen bg-white flex flex-col justify-between">
+    <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+      <TopBanner />
       <Header />
-      <article className="flex-1">
+      <main className="flex-1 bg-[#FAF7F2]">
         <ContactHero />
         <ContactInfoCards />
         <ContactMap />
@@ -26,9 +28,11 @@ export default function ContactUsPage() {
           title="Need help with a PSD letter?"
           description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
           buttonText="Start your Evaluation"
+          buttonHref="#faq"
+          bgColor="bg-[#FAF7F2]"
         />
-      </article>
-      <Footer />
-    </main>
+      </main>
+      <Footer bgColor="bg-[#FAF7F2]" />
+    </div>
   );
 }
