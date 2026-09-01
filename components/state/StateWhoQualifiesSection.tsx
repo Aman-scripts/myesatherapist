@@ -33,10 +33,10 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
   return (
     <section className="w-full bg-white py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] mx-auto px-0 lg:pl-16 lg:pr-0">
-        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-0 lg:gap-4 xl:gap-8 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-0 lg:gap-4 xl:gap-8 items-center relative min-h-[auto] lg:min-h-[640px]">
           
-          {/* Top Image for Mobile/Tablet (Full Width, No Gap) & Right Image for Desktop */}
-          <div className="order-1 lg:order-2 lg:col-span-5 relative w-full flex justify-end items-center">
+          {/* Top Image for Mobile/Tablet (Full Width, No Gap) */}
+          <div className="order-1 lg:hidden relative w-full flex justify-end items-center">
             {/* Mobile View Image: Full width, edge-to-edge */}
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
@@ -82,34 +82,10 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 />
               </div>
             </div>
-
-            {/* Desktop View Image */}
-            <div className="hidden lg:flex items-center justify-end w-full h-full">
-              <div className="relative w-full max-w-[620px] aspect-[700/833] ml-auto">
-                <Image
-                  src="/whomayqualifies.png"
-                  alt={`Who qualifies for ${stateName} ESA Letter`}
-                  fill
-                  priority
-                  unoptimized
-                  className="object-contain object-right pointer-events-none"
-                  sizes="45vw"
-                />
-                <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
-                  <Image
-                    src="/whomayqualifies-california_icon.svg"
-                    alt="Heart Icon"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-contain drop-shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Left Content Area: Frame 1000011976 */}
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-8 sm:pt-12 pb-8 lg:py-12 pr-0 lg:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-8 sm:pt-12 pb-8 lg:py-16 pr-0 lg:pr-4 flex flex-col justify-center">
             
             {/* Frame 1000011447 */}
             <div className="mb-6 lg:mb-8 space-y-3">
@@ -154,6 +130,30 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop View Image: Full Height Top to Bottom, No Top/Bottom Gap */}
+          <div className="hidden lg:block lg:col-span-5 absolute right-0 top-0 bottom-0 h-full w-[44%] xl:w-[46%] max-w-[660px] pointer-events-none">
+            <div className="relative w-full h-full">
+              <Image
+                src="/whomayqualifies.png"
+                alt={`Who qualifies for ${stateName} ESA Letter`}
+                fill
+                priority
+                unoptimized
+                className="object-cover object-left"
+                sizes="(min-width: 1024px) 46vw, 100vw"
+              />
+              <div className="absolute left-[3%] top-[45%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+                <Image
+                  src="/whomayqualifies-california_icon.svg"
+                  alt="Heart Icon"
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
               </div>
             </div>
           </div>
