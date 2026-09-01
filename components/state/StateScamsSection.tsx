@@ -10,21 +10,20 @@ export function StateScamsSection({ data }: { data: StateData }) {
 
   return (
     <section className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1279px] mx-auto">
-        <div className="text-center max-w-[840px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-[1.23] tracking-[-0.00015em]">
+      <div className="max-w-[1060px] mx-auto">
+        <div className="text-center max-w-[840px] mx-auto mb-8 sm:mb-10 lg:mb-12">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.2] tracking-tight">
             {stateName} ESA Scams: What&apos;s Real vs. Fake
           </h2>
-          <p className="font-sans text-sm sm:text-base lg:text-[16px] text-[#5F6B6F] font-semibold leading-[26px] max-w-[760px] mx-auto">
+          <p className="font-sans text-xs sm:text-sm lg:text-[15px] text-[#5F6B6F] font-medium leading-relaxed mt-3 max-w-[760px] mx-auto">
             Getting an idea of the common ESA scams in {stateName} can help you save yourself from fake websites and false certifications and registrations online.
           </p>
         </div>
 
-        {/* Warning Alert Banner */}
-        <div className="max-w-[895px] mx-auto bg-[#FFF0F0] rounded-[20px] overflow-hidden flex items-stretch shadow-[0_4px_20px_rgba(0,0,0,0.02)] mb-10 sm:mb-12 lg:mb-14">
-          <div className="w-[14px] bg-[#D9383A] shrink-0" />
-          <div className="p-4 sm:p-5 lg:p-6 flex items-center gap-4 flex-1">
-            <div className="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0">
+        <div className="max-w-[840px] mx-auto bg-[#FFF0F0] rounded-[18px] sm:rounded-[22px] overflow-hidden flex items-stretch shadow-[0_4px_20px_rgba(0,0,0,0.02)] mb-10 sm:mb-12 lg:mb-14">
+          <div className="w-3.5 sm:w-4 bg-[#D9383A] shrink-0" />
+          <div className="p-4 sm:p-5 lg:p-6 flex items-center gap-3.5 sm:gap-4 flex-1">
+            <div className="relative w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 shrink-0">
               <Image
                 src="/californina-scams-alert-icon.svg"
                 alt="Alert Icon"
@@ -33,21 +32,20 @@ export function StateScamsSection({ data }: { data: StateData }) {
                 className="object-contain"
               />
             </div>
-            <div className="flex-1 space-y-1">
-              <h3 className="font-sans text-[15px] sm:text-[16px] font-bold text-[#D9383A] leading-[22px]">
+            <div className="flex-1">
+              <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D9383A] mb-1">
                 Important: No Official ESA Registry Exists
               </h3>
-              <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[24px]">
+              <p className="font-sans text-xs sm:text-[13px] lg:text-[13.5px] text-[#5F6B6F] font-medium leading-relaxed">
                 There is no state or federal registry, certification system, database, or official ESA ID in {stateName} or anywhere else in the United States.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-[1140px] mx-auto">
-          {/* Card 1: What You Actually Need */}
-          <div className="bg-white rounded-[30px] border border-[#EAE5DC]/50 shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
-            <div className="relative w-full h-[240px] sm:h-[280px] overflow-hidden shrink-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-8">
+          <div className="bg-[#EFF6F3] rounded-[20px] sm:rounded-[24px] lg:rounded-[26px] border border-[#E1EFE9] shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
                 src="/california-scams-whatyouneed.png"
                 alt="What You Actually Need for an ESA"
@@ -59,50 +57,50 @@ export function StateScamsSection({ data }: { data: StateData }) {
               />
             </div>
 
-            <div className="p-6 sm:p-8 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[24px] font-bold text-[#2E5A66] text-center mb-6 leading-[32px] tracking-[-0.00015em]">
+            <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[25px] font-bold text-[#1E3E47] text-center mb-6 sm:mb-7 leading-snug">
                 What You Actually Need
               </h3>
 
               <div className="space-y-5 flex-1">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <Check className="w-3 h-3 stroke-[3]" />
+                  <div className="w-5 h-5 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-sans text-[15px] sm:text-[16px] font-semibold text-[#2E5A66] leading-[24px]">
-                      A Clinical Evaluation
+                  <div>
+                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#1E3E47] mb-1">
+                      ESA Letter from a Licensed Provider
                     </h4>
-                    <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[22px]">
-                      A consultation with an {stateName}-licensed mental health professional who evaluates your need for an ESA.
+                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
+                      Your ESA letter {stateName} must come after a proper evaluation by a mental health professional licensed in the state.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <Check className="w-3 h-3 stroke-[3]" />
+                  <div className="w-5 h-5 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-sans text-[15px] sm:text-[16px] font-semibold text-[#2E5A66] leading-[24px]">
-                      A Legitimate Signed Letter
+                  <div>
+                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#1E3E47] mb-1">
+                      Clinical Mental Health Evaluation
                     </h4>
-                    <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[22px]">
-                      A written recommendation on professional letterhead with the clinician&apos;s license details and contact information.
+                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
+                      A comprehensive assessment of your emotional or mental health condition is a required part of the ESA review process.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <Check className="w-3 h-3 stroke-[3]" />
+                  <div className="w-5 h-5 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-sans text-[15px] sm:text-[16px] font-semibold text-[#2E5A66] leading-[24px]">
-                      Compliant Timeline
+                  <div>
+                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#1E3E47] mb-1">
+                      Verified Therapeutic Relationship
                     </h4>
-                    <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[22px]">
-                      Compliance with {stateName} state standards for valid clinical provider relationships.
+                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
+                      An ongoing or clearly established provider-patient relationship helps confirm the validity of the recommendation.
                     </p>
                   </div>
                 </div>
@@ -110,12 +108,11 @@ export function StateScamsSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          {/* Card 2: What to Avoid */}
-          <div className="bg-white rounded-[30px] border border-[#EAE5DC]/50 shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
-            <div className="relative w-full h-[240px] sm:h-[280px] overflow-hidden shrink-0">
+          <div className="bg-[#FFF0F0] rounded-[20px] sm:rounded-[24px] lg:rounded-[26px] border border-[#FCDADA] shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
                 src="/california-scams-commonesascams.png"
-                alt="What to Avoid with ESA Scams"
+                alt="Common ESA Scams to avoid"
                 fill
                 priority
                 unoptimized
@@ -124,57 +121,59 @@ export function StateScamsSection({ data }: { data: StateData }) {
               />
             </div>
 
-            <div className="p-6 sm:p-8 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[24px] font-bold text-[#D9383A] text-center mb-6 leading-[32px] tracking-[-0.00015em]">
-                What to Avoid
+            <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[25px] font-bold text-[#D9383A] text-center mb-6 sm:mb-7 leading-snug">
+                Common ESA Scams
               </h3>
 
-              <div className="space-y-5 flex-1">
+              <div className="space-y-4 sm:space-y-4.5 flex-1">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <X className="w-3 h-3 stroke-[3]" />
+                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-sans text-[15px] sm:text-[16px] font-semibold text-[#D9383A] leading-[24px]">
-                      &ldquo;Instant Approval&rdquo; Services
-                    </h4>
-                    <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[22px]">
-                      Websites claiming to issue valid ESA letters within minutes without clinician interaction.
-                    </p>
-                  </div>
+                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
+                    Advertise &ldquo;ESA registrations&rdquo; or suggest there is an official certification system.
+                  </h4>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <X className="w-3 h-3 stroke-[3]" />
+                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-sans text-[15px] sm:text-[16px] font-semibold text-[#D9383A] leading-[24px]">
-                      Registries &amp; ID Cards
-                    </h4>
-                    <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[22px]">
-                      Paid badges, certificates, vests, or ID cards that claim to make your pet an official ESA.
-                    </p>
-                  </div>
+                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
+                    Sell unofficial ESA letters, ID cards, badges, or animal accessories.
+                  </h4>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
-                    <X className="w-3 h-3 stroke-[3]" />
+                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="font-sans text-[15px] sm:text-[16px] font-semibold text-[#D9383A] leading-[24px]">
-                      Out-of-State Providers
-                    </h4>
-                    <p className="font-sans text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[22px]">
-                      Clinicians not licensed in {stateName} cannot legally issue compliant documentation for {stateName} residents.
-                    </p>
+                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
+                    Provide immediate ESA approvals without a proper clinical evaluation.
+                  </h4>
+                </div>
+
+                <div className="flex items-start gap-3.5">
+                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <X className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
+                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
+                    Claim guaranteed acceptance or approval by landlords or housing providers.
+                  </h4>
+                </div>
+
+                <div className="flex items-start gap-3.5">
+                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <X className="w-3.5 h-3.5 stroke-[3]" />
+                  </div>
+                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
+                    Operate without licensed {stateName} mental health professionals.
+                  </h4>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

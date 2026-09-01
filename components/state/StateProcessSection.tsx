@@ -13,32 +13,32 @@ export function StateProcessSection({ data }: { data: StateData }) {
       number: "01",
       icon: "/californina-esa-evalutation_schedule.svg",
       title: "Schedule an Evaluation",
-      description: `Create an account and schedule a telehealth appointment with a ${stateName}-licensed mental health professional.`,
+      description: `Choose a convenient time to speak with a licensed mental health professional authorized to practice in ${stateName}.`,
       offsetClass: "md:translate-y-0",
     },
     {
       number: "02",
       icon: "/californina-esa-evalutation_clinicalevaluation.svg",
-      title: "Clinical Evaluation & Ongoing Care",
+      title: "Complete Your Evaluation",
       description:
-        "Meet privately via secure audio or video consultation. The clinician assesses your needs and maintains the therapeutic relationship throughout the evaluation process.",
-      offsetClass: "md:translate-y-6 lg:translate-y-10",
+        "Join a confidential session via secure phone or video call. During the consultation, the clinician will assess your mental health history and current emotional concerns to determine whether an emotional support animal would be beneficial.",
+      offsetClass: "md:translate-y-8 lg:translate-y-12",
     },
     {
       number: "03",
       icon: "/californina-esa-evalutation_clinicaldetermination.svg",
       title: "Clinical Determination",
       description:
-        "If the clinician determines that an ESA is appropriate after the evaluation, a compliant ESA letter is issued and delivered securely.",
-      offsetClass: "md:translate-y-12 lg:translate-y-20",
+        "Following the evaluation, the licensed professional renders an independent decision. If appropriate, your ESA letter will be delivered to you via secure email.",
+      offsetClass: "md:translate-y-16 lg:translate-y-24",
     },
   ];
 
   const differentiators = [
-    "No instant or automated ESA letters issued.",
-    `${stateName}-compliant documentation.`,
-    `${stateName} licensed mental health professionals only.`,
-    "HIPAA‑compliant, secure telehealth platform.",
+    "No promises of instant or guaranteed ESA approvals.",
+    `Evaluations conducted by licensed mental health professionals in ${stateName}.`,
+    "Secure telehealth platform designed to meet HIPAA privacy standards.",
+    "ESA documentation issued only after an independent clinical determination.",
   ];
 
   const scrollToForm = () => {
@@ -48,45 +48,45 @@ export function StateProcessSection({ data }: { data: StateData }) {
   return (
     <section
       id="process"
-      className="w-full bg-[#FAF7F2] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 scroll-mt-24 relative z-10"
+      className="w-full bg-[#FAF7F2] pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 scroll-mt-36 relative z-10"
     >
-      <div className="max-w-[1283px] mx-auto">
-        <div className="text-center max-w-[1030px] mx-auto mb-12 sm:mb-16 space-y-2 sm:space-y-3">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-[1.23] tracking-[-0.00015em]">
-            How the {stateName} ESA Evaluation Process Works?
+      <div className="max-w-[1260px] mx-auto">
+        <div className="text-center max-w-[1050px] mx-auto mb-14 sm:mb-16">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4 md:whitespace-nowrap">
+            How ESA Letter Process Works in {stateName}?
           </h2>
-          <p className="font-sans text-sm sm:text-base lg:text-[18px] text-[#5F6B6F] font-semibold leading-[1.67] max-w-[885px] mx-auto">
-            Our platform helps {stateName} residents connect with licensed mental health professionals for ESA evaluations conducted through secure telehealth, in accordance with applicable requirements.
+          <p className="font-sans text-sm sm:text-base lg:text-[16.5px] text-[#5F6B6F] font-medium leading-[1.65]">
+            We connect {stateName} residents with licensed mental health professionals for personalized emotional wellness assessments.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16 sm:mb-24 lg:mb-32 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-24 sm:mb-32 lg:mb-40 items-start">
           {steps.map((step) => (
             <div
               key={step.number}
-              className={`bg-white rounded-[30px] p-[24px_22px] shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-between transition-all duration-300 hover:shadow-[0_16px_45px_rgba(26,61,79,0.08)] min-h-[290px] sm:min-h-[310px] ${step.offsetClass}`}
+              className={`bg-white rounded-[28px] lg:rounded-[32px] p-7 sm:p-8 border border-[#EAE5DC] shadow-[0_10px_35px_rgba(0,0,0,0.035)] flex flex-col justify-between transition-all duration-300 hover:shadow-[0_16px_45px_rgba(26,61,79,0.08)] min-h-[290px] sm:min-h-[310px] ${step.offsetClass}`}
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-[46px] h-[46px] rounded-full bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] flex items-center justify-center shrink-0 shadow-sm">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-13 h-13 rounded-full bg-[#184F59] flex items-center justify-center shrink-0 shadow-sm">
                     <Image
                       src={step.icon}
                       alt={step.title}
-                      width={24}
-                      height={24}
+                      width={26}
+                      height={26}
                       className="w-6 h-6 object-contain"
                     />
                   </div>
-                  <span className="font-heading text-[54px] leading-[66px] font-bold text-[#5F6B6F]/20 tracking-tight">
+                  <span className="font-heading text-4xl sm:text-5xl font-bold text-[#CBD5E1] tracking-tight">
                     {step.number}
                   </span>
                 </div>
 
-                <h3 className="font-heading text-[20px] sm:text-[24px] font-bold text-[#2E5A66] leading-[32px] mb-2 tracking-[-0.00015em]">
+                <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] leading-[1.3] mb-3">
                   {step.title}
                 </h3>
 
-                <p className="font-sans text-[14px] sm:text-[16px] text-[#5F6B6F] leading-[26px] font-semibold">
+                <p className="font-sans text-xs sm:text-[13.5px] text-[#5F6B6F] leading-[1.65] font-medium">
                   {step.description}
                 </p>
               </div>
@@ -94,18 +94,18 @@ export function StateProcessSection({ data }: { data: StateData }) {
           ))}
         </div>
 
-        <div className="bg-[rgba(232,185,44,0.1)] rounded-[30px] p-6 sm:p-8 lg:py-[25px] lg:px-[67px] max-w-[688px] mx-auto">
-          <h3 className="font-heading text-[20px] sm:text-[24px] font-bold text-[#2E5A66] leading-[32px] text-center mb-6 tracking-[-0.00015em]">
-            Why Our Process Is Different
+        <div className="bg-[#FAF5EB] rounded-[32px] sm:rounded-[36px] border border-[#EFE8DC] p-8 sm:p-10 lg:p-12 max-w-[920px] mx-auto shadow-xs">
+          <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] xl:text-3xl font-bold text-[#1E3E47] text-center mb-8 md:whitespace-nowrap">
+            Why {stateName} Residents Choose Our ESA Letter Process?
           </h3>
 
-          <div className="flex flex-col space-y-2 sm:space-y-2.5 max-w-[554px] mx-auto">
+          <div className="flex flex-col space-y-4 max-w-[660px] mx-auto">
             {differentiators.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-4">
-                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] text-white flex items-center justify-center shrink-0">
-                  <Check className="w-3 h-3 stroke-[3]" />
+              <div key={idx} className="flex items-center gap-3.5">
+                <div className="w-6 h-6 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span className="font-sans text-[14px] leading-[26px] font-semibold text-[#5F6B6F]">
+                <span className="font-sans text-xs sm:text-sm lg:text-[15px] font-semibold text-[#5F6B6F]">
                   {item}
                 </span>
               </div>
@@ -113,15 +113,15 @@ export function StateProcessSection({ data }: { data: StateData }) {
           </div>
         </div>
 
-        <div className="text-center mt-8 sm:mt-10">
+        <div className="text-center mt-10 sm:mt-12">
           <button
             onClick={scrollToForm}
-            className="inline-flex items-center justify-center gap-2 max-w-[356px] w-full h-[48px] rounded-[30px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] hover:opacity-95 text-white font-semibold text-[16px] leading-[26px] font-sans shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 group mx-auto"
+            className="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-[#184F59] hover:bg-[#133F47] text-white font-bold text-base sm:text-[17px] shadow-[0_8px_25px_rgba(24,79,89,0.22)] transition-all duration-200 group"
           >
-            <span>Get Started</span>
-            <ArrowRight className="w-4 h-4 stroke-[2.5] text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+            <span>Start your Free Evaluation</span>
+            <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform group-hover:translate-x-1" />
           </button>
-          <p className="font-sans text-[12px] leading-[26px] text-[#5F6B6F] font-semibold mt-2">
+          <p className="font-sans text-xs text-[#5F6B6F] font-medium mt-3">
             No hidden fees. HIPAA secure.
           </p>
         </div>
