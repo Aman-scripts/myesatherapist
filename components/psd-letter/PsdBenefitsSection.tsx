@@ -82,11 +82,12 @@ export function PsdBenefitsSection() {
             >
               {/* Floating Top-Center Circle Badge Icon */}
               <div
-                className={`absolute -top-[40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full flex items-center justify-center z-20 ${
+                className={`absolute -top-[40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full flex items-center justify-center z-20 shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] ${
                   item.isDark
-                    ? "bg-[#FAF7F2] shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)]"
-                    : "bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)]"
+                    ? "border border-white/10"
+                    : "bg-white"
                 }`}
+                style={item.isDark ? { backgroundImage: TEAL_GRADIENT } : {}}
               >
                 <Image
                   src={item.icon}
