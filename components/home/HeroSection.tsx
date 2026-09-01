@@ -107,8 +107,7 @@ export function HeroSection() {
                   width={16}
                   height={21}
                   unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="shrink-0 object-contain w-[14px] h-[18px]"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   Start your State
@@ -124,8 +123,8 @@ export function HeroSection() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
+              <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </a>
           </div>
