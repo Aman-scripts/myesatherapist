@@ -24,6 +24,8 @@ const capabilitiesData = [
   },
 ];
 
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+
 export function PsdCapabilitiesSection() {
   return (
     <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
@@ -87,10 +89,10 @@ export function PsdCapabilitiesSection() {
 
           {/* Section Header */}
           <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.15] tracking-tight mb-2 sm:mb-3">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
               What a Psychiatric Service dog can do?
             </h2>
-            <p className="text-[#5F6B6F] text-base lg:text-[15px] xl:text-lg font-normal italic font-lato leading-relaxed">
+            <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
               Understand the legal framework behind your PSD empowers you as a handler.
             </p>
           </div>
@@ -100,25 +102,28 @@ export function PsdCapabilitiesSection() {
             {capabilitiesData.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[16px] p-4 lg:p-3 xl:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.04)] flex items-center gap-3.5 lg:gap-3 xl:gap-6 border-0"
+                className="bg-white rounded-[16px] p-4 lg:p-4 xl:p-6 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center gap-3.5 lg:gap-4 xl:gap-6 border-0"
               >
                 {/* Number Circle Badge */}
-                <div className="w-12 h-12 lg:w-11 lg:h-11 xl:w-16 xl:h-16 rounded-full bg-[#AEBBBE33] text-[#5F6B6F] font-heading font-bold text-lg lg:text-base xl:text-[22px] flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#AEBBBE33] text-[#5F6B6F] font-heading font-bold text-xl lg:text-[30px] flex items-center justify-center shrink-0">
                   {item.number}
                 </div>
 
                 {/* Card Content */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2 lg:gap-2 mb-1 sm:mb-1.5">
-                    <h3 className="font-heading font-bold text-base lg:text-[15px] xl:text-xl text-[#1E3E47]">
+                  <div className="flex flex-wrap items-center gap-2 lg:gap-2.5 mb-1 sm:mb-1.5">
+                    <h3
+                      className="font-sans font-semibold text-base lg:text-[16px] bg-clip-text text-transparent"
+                      style={{ backgroundImage: TEAL_GRADIENT }}
+                    >
                       {item.title}
                     </h3>
                     {/* Dark Teal Pill Tag */}
-                    <span className="bg-[#1E3E47] text-white font-lato italic font-medium text-[11px] lg:text-[11px] xl:text-xs px-2.5 py-0.5 xl:px-3 xl:py-1 rounded-full shrink-0">
+                    <span className="bg-[#2E5A66] text-[#FAF7F2] font-sans italic font-normal text-[12px] lg:text-[13px] px-3 py-0.5 rounded-[16px] shrink-0">
                       {item.framework}
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm lg:text-[12px] xl:text-[15px] font-normal text-[#5F6B6F] font-lato leading-relaxed">
+                  <p className="text-xs sm:text-[14px] font-semibold text-[#5F6B6F] font-sans leading-[22px] sm:leading-[26px]">
                     {item.description}
                   </p>
                 </div>

@@ -36,6 +36,8 @@ const benefitsData = [
   },
 ];
 
+const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+
 export function WhoBenefitsSection() {
   return (
     <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
@@ -99,11 +101,11 @@ export function WhoBenefitsSection() {
 
           {/* Header */}
           <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-2 sm:mb-3">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
               People who benefitted most <br className="hidden sm:inline" />
               from the PSD Letter
             </h2>
-            <p className="text-[#5F6B6F] text-base lg:text-[15px] xl:text-lg font-normal">
+            <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
               If any of these describes you, a PSD letter may be exactly what you need.
             </p>
           </div>
@@ -113,7 +115,7 @@ export function WhoBenefitsSection() {
             {benefitsData.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[10px] p-3 lg:p-2.5 xl:pt-[15px] xl:pr-[20px] xl:pb-[15px] xl:pl-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.04)] flex items-center gap-2.5 lg:gap-2 xl:gap-[10px] min-h-[72px] lg:min-h-[68px] xl:min-h-[88.67px]"
+                className="bg-white rounded-[10px] p-3 lg:p-2.5 xl:pt-[15px] xl:pr-[20px] xl:pb-[15px] xl:pl-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center gap-2.5 lg:gap-2 xl:gap-[10px] min-h-[72px] lg:min-h-[68px] xl:min-h-[88px]"
               >
                 {/* Circular Icon Container */}
                 <div className="w-[38px] h-[38px] lg:w-[34px] lg:h-[34px] xl:w-[44px] xl:h-[44px] rounded-full bg-[#AEBBBE33] flex items-center justify-center shrink-0">
@@ -131,10 +133,13 @@ export function WhoBenefitsSection() {
 
                 {/* Card Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-[#1E3E47] text-[13.5px] lg:text-[12.5px] xl:text-[15px] leading-snug">
+                  <h3
+                    className="font-sans font-semibold text-[13.5px] lg:text-[14px] xl:text-[16px] leading-snug bg-clip-text text-transparent"
+                    style={{ backgroundImage: TEAL_GRADIENT }}
+                  >
                     {item.title}
                   </h3>
-                  <p className="font-lato italic font-normal text-[12px] lg:text-[11px] xl:text-[14px] leading-[135%] xl:leading-[145%] tracking-[-0.03em] text-[#5F6B6F] mt-0.5">
+                  <p className="font-sans italic font-normal text-[12px] lg:text-[13px] xl:text-[14px] leading-[18px] lg:leading-[20px] text-[#5F6B6F] mt-0.5">
                     {item.description}
                   </p>
                 </div>

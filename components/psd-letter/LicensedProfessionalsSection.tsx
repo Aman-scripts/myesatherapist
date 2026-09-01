@@ -15,7 +15,7 @@ function ThreeDotsIcon({ className }: { className?: string }) {
 
 function StarIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="#E8B92C" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="#F0BB00" xmlns="http://www.w3.org/2000/svg">
       <path d="M8 0L10.472 5.008L16 5.816L12 9.712L12.944 15.216L8 12.616L3.056 15.216L4 9.712L0 5.816L5.528 5.008L8 0Z" />
     </svg>
   );
@@ -44,15 +44,15 @@ const professionals = [
 
 export function LicensedProfessionalsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#EEEBE0] w-full">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#FAF7F2] w-full">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header (Frame 1000011783 Heading) */}
         <div className="text-center mb-12 lg:mb-16 max-w-[760px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-4">
             Licensed Professionals ready to help
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-lg font-medium leading-relaxed font-lato">
+          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
             All 200+ professionals in our network are state-licensed and specialize in mental-health conditions relevant to service animal evaluations.
           </p>
         </div>
@@ -62,10 +62,10 @@ export function LicensedProfessionalsSection() {
           {professionals.map((prof, idx) => (
             <div
               key={idx}
-              className="relative bg-white rounded-[20px] p-8 flex flex-col items-center text-center shadow-[0_2px_12px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] transition-all duration-200"
+              className="relative bg-white rounded-[10px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:shadow-md transition-all duration-200"
             >
               {/* Top-Right 3-Dot Menu Icon */}
-              <div className="absolute top-6 right-6 text-[#1E3E47]/40 hover:text-[#1E3E47] transition-colors cursor-pointer">
+              <div className="absolute top-6 right-6 text-[#2E5A66]/40 hover:text-[#2E5A66] transition-colors cursor-pointer">
                 <ThreeDotsIcon className="w-1.25 h-5" />
               </div>
 
@@ -83,12 +83,12 @@ export function LicensedProfessionalsSection() {
               </div>
 
               {/* Professional Name */}
-              <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] mb-1.5">
+              <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#313131] leading-[28px] mb-1">
                 {prof.name}
               </h3>
 
               {/* Title & Experience */}
-              <p className="text-sm sm:text-[15px] font-medium text-[#5F6B6F] mb-4 font-lato">
+              <p className="text-sm sm:text-[14px] font-semibold text-[#6B6B6B] leading-[26px] mb-4 font-sans">
                 {prof.title}
               </p>
 
@@ -99,7 +99,7 @@ export function LicensedProfessionalsSection() {
                     <StarIcon key={i} className="w-4 h-4" />
                   ))}
                 </div>
-                <span className="text-xs text-[#5F6B6F] font-normal font-lato">
+                <span className="text-xs text-[#2E5A66] font-normal font-sans">
                   {prof.evaluations}
                 </span>
               </div>
