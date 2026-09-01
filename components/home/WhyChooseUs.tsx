@@ -70,15 +70,14 @@ export function WhyChooseUs() {
             >
               <div className="w-full bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[228px]">
                 {/* Floating icon circle on top border */}
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-[64px] h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
+                <div className="absolute -top-6 sm:-top-7 left-1/2 -translate-x-1/2 w-[52px] h-[52px] sm:w-[58px] sm:h-[58px] lg:w-[64px] lg:h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
                   <Image
                     src={icon}
                     alt=""
                     width={32}
                     height={32}
                     unoptimized
-                    className="object-contain"
-                    style={{ width: "auto", height: "auto" }}
+                    className="object-contain w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[32px] lg:h-[32px]"
                   />
                 </div>
 
