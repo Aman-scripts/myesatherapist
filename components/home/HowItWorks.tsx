@@ -60,7 +60,7 @@ export function HowItWorks() {
                     />
                   </div>
                   {/* Number badge */}
-                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[52px] h-[52px] md:w-[56px] md:h-[56px] lg:w-[65px] lg:h-[65px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-[#FAF7F2] font-bold text-2xl lg:text-3xl flex items-center justify-center shadow-md">
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:w-[65px] lg:h-[65px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-[#FAF7F2] font-bold text-xl md:text-2xl lg:text-3xl flex items-center justify-center shadow-md">
                     {step.number}
                   </div>
                 </div>
@@ -82,12 +82,12 @@ export function HowItWorks() {
           <div className="flex justify-center mt-10 lg:mt-12">
             <a
               href="#"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-sm sm:text-[16px] transition-opacity hover:opacity-90 min-h-[44px] sm:h-[48px] shadow-md"
+              className="flex items-center gap-3 pl-6 pr-1.5 py-1.5 rounded-[30px] text-white font-semibold text-sm sm:text-[16px] transition-opacity hover:opacity-90 min-h-[44px] sm:h-[48px] shadow-md"
               style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
-              Get Started
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[22px] h-[24px]" />
+              <span>Get Started</span>
+              <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] lg:w-[40px] lg:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[16px] h-[18px] sm:w-[18px] sm:h-[20px] lg:w-[20px] lg:h-[22px]" />
               </span>
             </a>
           </div>
