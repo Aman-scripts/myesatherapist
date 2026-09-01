@@ -40,7 +40,7 @@ const statsData = [
 
 export function BlogsHero() {
   return (
-    <section className="relative w-full bg-[#EEEBE0] overflow-hidden">
+    <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE BLOGS HERO SECTION (sm:hidden / < 640px)   */}
       {/* Uses /blog_hero-section-mobile.png                   */}
