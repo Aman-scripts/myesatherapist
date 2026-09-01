@@ -4,11 +4,11 @@ import React from "react";
 
 export function LicensedProviderSection() {
   return (
-    <section className="py-14 sm:py-16 lg:py-20 bg-[#EEEBE0]">
+    <section className="pt-2 sm:pt-4 lg:pt-16 pb-12 sm:pb-14 lg:pb-20 bg-[#FAF7F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-8 lg:mb-12 space-y-3 max-w-[880px] mx-auto">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em] sm:whitespace-nowrap">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12 space-y-2.5 sm:space-y-3 max-w-[880px] mx-auto">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em] sm:whitespace-nowrap">
             Hear From a Licensed ESA Provider
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed max-w-[650px] mx-auto">

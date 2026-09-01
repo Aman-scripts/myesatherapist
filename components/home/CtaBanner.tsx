@@ -14,7 +14,7 @@ type CtaBannerProps = {
 };
 
 export function CtaBanner({
-  bgColor = "bg-[#EEEBE0]",
+  bgColor = "bg-[#FAF7F2]",
   title = "Ready to Start Your ESA Evaluation?",
   description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
   buttonText = "Start your Evaluation",

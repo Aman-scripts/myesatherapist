@@ -22,13 +22,13 @@ interface PricingSectionProps {
   bgColor?: string;
 }
 
-export function PricingSection({ bgColor = "bg-[#EEEBE0]" }: PricingSectionProps) {
+export function PricingSection({ bgColor = "bg-[#FAF7F2]" }: PricingSectionProps) {
   return (
     <section id="pricing" className={`py-16 lg:py-24 ${bgColor} relative overflow-hidden`}>
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header (Centered) */}
         <div className="text-center max-w-[709px] mx-auto mb-14 space-y-4">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em]">
+          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
             Plans &amp; Pricing
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">

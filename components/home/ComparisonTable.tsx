@@ -100,7 +100,7 @@ export function ComparisonTable() {
       <div className="max-w-[1441px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center">
         {/* Section Header */}
         <div className="text-center max-w-[758px] mx-auto mb-12 space-y-3">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em]">
+          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
             Compare to other ESA Letter Services
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">

@@ -21,10 +21,10 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
       <TopBanner />
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 bg-[#FAF7F2]">
         <HeroSection />
 
         <AsSeenOnSection />

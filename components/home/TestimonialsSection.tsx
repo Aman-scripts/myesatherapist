@@ -69,11 +69,11 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-[#EEEBE0] overflow-hidden">
+    <section className="py-16 lg:py-24 bg-[#FAF7F2] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-16 space-y-2.5 max-w-[850px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1A3D4F] leading-tight tracking-[-0.006em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
             See What Our Clients Say
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed">
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
             return (
               <div
                 key={review.id}
-                className="w-[85vw] sm:w-[360px] md:w-[380px] shrink-0 snap-center lg:w-auto lg:shrink bg-white rounded-[28px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
+                className="w-[85vw] sm:w-[360px] md:w-[380px] shrink-0 snap-center lg:w-auto lg:shrink bg-white rounded-[20px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
               >
                 {/* Video Area (Top) */}
                 <div
@@ -137,9 +137,12 @@ export function TestimonialsSection() {
                   )}
                 </div>
 
-                {/* Solid Dark Teal Quote Box (Bottom) */}
-                <div className="bg-[#1A4D59] px-6 py-6 text-center flex-1 flex items-center justify-center min-h-[140px]">
-                  <p className="text-white text-sm sm:text-base font-semibold leading-relaxed max-w-[300px] mx-auto">
+                {/* Solid Teal Gradient Quote Box (Bottom) */}
+                <div
+                  className="px-6 py-6 text-center flex-1 flex items-center justify-center min-h-[143px] rounded-b-[16px]"
+                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                >
+                  <p className="text-[#FAF7F2] text-sm sm:text-base font-semibold leading-relaxed max-w-[271px] mx-auto font-sans">
                     {review.quote}
                   </p>
                 </div>

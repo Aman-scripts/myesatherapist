@@ -44,11 +44,11 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 lg:py-24 bg-[#EEEBE0]">
+    <section className="py-16 lg:py-24 bg-[#FAF7F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-14 lg:mb-20 space-y-2.5">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
             Why Choose My ESA Therapist?
           </h2>
           <div className="text-[#5F6B6F] text-base sm:text-lg font-semibold max-w-[1050px] mx-auto leading-relaxed space-y-1">
@@ -66,30 +66,32 @@ export function WhyChooseUs() {
           {features.map(({ icon, title, description }) => (
             <div
               key={title}
-              className="relative bg-white rounded-[24px] border border-[#E2E8F0] border-t-[4px] border-t-[#E8B92C] shadow-[0_10px_30px_-10px_rgba(26,61,79,0.08)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[220px]"
+              className="relative rounded-[20px] bg-[#E8B92C] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-1.5 px-0 pb-0 flex flex-col items-center"
             >
-              {/* Floating icon circle on top border */}
-              <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-[64px] h-[64px] rounded-full bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-center">
-                <Image
-                  src={icon}
-                  alt=""
-                  width={30}
-                  height={30}
-                  unoptimized
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
-                />
+              <div className="w-full bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[228px]">
+                {/* Floating icon circle on top border */}
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-[64px] h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
+                  <Image
+                    src={icon}
+                    alt=""
+                    width={32}
+                    height={32}
+                    unoptimized
+                    className="object-contain"
+                    style={{ width: "auto", height: "auto" }}
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 className="font-[family-name:var(--font-lato)] text-xl sm:text-2xl lg:text-[24px] font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent mb-3 leading-[29px] tracking-[-0.017em]">
+                  {title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm sm:text-base lg:text-[16px] text-[#5F6B6F] font-semibold leading-[26px] max-w-[320px] font-sans">
+                  {description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[24px] font-bold text-[#1A4D59] mb-3 leading-snug">
-                {title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm sm:text-base lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed max-w-[320px]">
-                {description}
-              </p>
             </div>
           ))}
         </div>
