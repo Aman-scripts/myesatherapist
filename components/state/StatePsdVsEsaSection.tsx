@@ -85,7 +85,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[30px] border border-[#EAE5DC]/50 shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
             <div className="relative w-full sm:w-[35%] lg:w-[32%] xl:w-[36%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
-                src="/psychiatricservicedog.png"
+                src="/psychiatricservicedogs.png"
                 alt="Psychiatric Service Dogs (PSD)"
                 fill
                 priority

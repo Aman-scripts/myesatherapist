@@ -111,7 +111,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             <div className="hidden lg:flex items-center justify-end w-full h-full">
               <div className="relative w-full max-w-[620px] aspect-[864/1451] ml-auto">
                 <Image
-                  src="/ChatGPT Image Aug 24, 2026, 05_32_59 PM.png"
+                  src="/california-benefits-clinical-issued.png"
                   alt={`Benefits of ESA in ${stateName}`}
                   fill
                   priority

@@ -114,7 +114,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[30px] border border-[#EAE5DC]/50 shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full h-[240px] sm:h-[280px] overflow-hidden shrink-0">
               <Image
-                src="/california-scams-whattoavoid.png"
+                src="/california-scams-commonesascams.png"
                 alt="What to Avoid with ESA Scams"
                 fill
                 priority
