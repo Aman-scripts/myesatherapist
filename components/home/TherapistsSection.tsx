@@ -45,24 +45,26 @@ const therapists = [
 
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
-    <div className="relative flex-1 min-w-0 rounded-[14px] bg-white border border-[#E2E8F0] border-t-[3.5px] border-t-[#E8B92C] shadow-sm pt-4 sm:pt-5 pb-3 sm:pb-3.5 px-1 sm:px-2 text-center flex flex-col justify-center">
-      {/* Small floating badge icon at top center */}
-      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white border border-[#E2E8F0] shadow-sm flex items-center justify-center">
-        <Image
-          src="/therapist-section-badge.svg"
-          alt=""
-          width={14}
-          height={13}
-          unoptimized
-          className="object-contain"
-          style={{ width: "auto", height: "auto" }}
-        />
-      </div>
-      <div className="text-[11px] sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight">
-        {label}
-      </div>
-      <div className="text-[10px] sm:text-[11px] font-semibold text-[#5F6B6F] mt-1 sm:mt-1.5 leading-tight">
-        {value}
+    <div className="relative flex-1 min-w-0 rounded-[12px] bg-[#E8B92C] pt-[3px] px-0 pb-0 shadow-xs flex flex-col">
+      <div className="bg-white rounded-[10px] pt-3.5 sm:pt-4 pb-2 sm:pb-2.5 px-1 sm:px-2 text-center flex-1 flex flex-col justify-center relative">
+        {/* Small floating badge icon at top center */}
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border border-[#E2E8F0] shadow-xs flex items-center justify-center">
+          <Image
+            src="/therapist-section-badge.svg"
+            alt=""
+            width={12}
+            height={12}
+            unoptimized
+            className="object-contain"
+            style={{ width: "auto", height: "auto" }}
+          />
+        </div>
+        <div className="text-[11px] sm:text-[12px] font-heading font-bold text-[#1A4D59] leading-tight">
+          {label}
+        </div>
+        <div className="text-[9.5px] sm:text-[11px] font-semibold text-[#5F6B6F] mt-1 leading-tight">
+          {value}
+        </div>
       </div>
     </div>
   );
@@ -106,7 +108,7 @@ export function TherapistsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[950px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:whitespace-nowrap">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:whitespace-nowrap">
             Our Licensed Mental Health Professionals
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold max-w-[760px] mx-auto leading-relaxed">
@@ -119,7 +121,7 @@ export function TherapistsSection() {
         {/* Therapist Sliding Carousel Track */}
         <div
           ref={scrollRef}
-          className="flex items-stretch gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-4 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0"
+          className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-4 sm:px-6 lg:px-2"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {therapists.map((t, idx) => {
@@ -129,16 +131,16 @@ export function TherapistsSection() {
                 key={t.id}
                 data-card
                 onClick={() => scrollToSlide(idx)}
-                className={`snap-center shrink-0 w-[300px] sm:w-[460px] lg:w-[520px] rounded-[24px] sm:rounded-[28px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer ${
+                className={`snap-start shrink-0 w-[86vw] sm:w-[460px] lg:w-[500px] xl:w-[520px] rounded-[28px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white ${
                   isActive
-                    ? "border-2 border-[#E8B92C] shadow-[0_12px_36px_rgba(232,185,44,0.18)]"
-                    : "border border-[#E2E8F0] shadow-[0_10px_35px_-5px_rgba(26,61,79,0.08)] opacity-95 hover:opacity-100"
+                    ? "shadow-[0_12px_36px_rgba(232,185,44,0.2)]"
+                    : "shadow-[0_4px_20px_rgba(0,0,0,0.06)] opacity-95 hover:opacity-100"
                 }`}
               >
                 {/* Teal Header Bar */}
                 <div className="bg-gradient-to-r from-[#184652] via-[#1A4D59] to-[#1D5E6A] px-4 sm:px-6 py-4 flex items-center justify-between gap-3 sm:gap-4">
                   <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
-                    <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[3px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+                    <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                       <Image
                         src="/therapist-avatar.png"
                         alt={t.name}
@@ -164,17 +166,37 @@ export function TherapistsSection() {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-4 sm:p-6 bg-white space-y-4 sm:space-y-6 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
                   {/* Bio text */}
                   <p className="text-[#5F6B6F] text-xs sm:text-[14px] lg:text-[15px] font-semibold leading-relaxed">
                     {t.bio}
                   </p>
 
                   {/* 3 Stat Badges */}
-                  <div className="flex items-stretch gap-1.5 sm:gap-3.5 pt-1">
+                  <div className="flex items-stretch gap-2 sm:gap-3.5 pt-1">
                     <StatBadge label="Licensed In" value={t.licensedIn} />
                     <StatBadge label="Evaluation Method" value={t.method} />
                     <StatBadge label="Focus Areas" value={t.focus} />
+                  </div>
+
+                  {/* View Profile CTA Button INSIDE the Card */}
+                  <div className="pt-2 flex justify-center">
+                    <a
+                      href="#how-it-works"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-[172px] sm:w-[185px] h-[44px] sm:h-[46px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] text-[#184652] font-bold text-[15px] sm:text-[16px] transition-all flex items-center justify-between pl-6 pr-1.5 shadow-sm"
+                    >
+                      <span>View Profile</span>
+                      <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
+                        <Image
+                          src="/send-icon.svg"
+                          alt=""
+                          width={16}
+                          height={16}
+                          className="w-4 h-4 object-contain"
+                        />
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -189,7 +211,7 @@ export function TherapistsSection() {
               key={idx}
               onClick={() => scrollToSlide(idx)}
               aria-label={`Go to therapist ${idx + 1}`}
-              className={`transition-all duration-300 rounded-full ${
+              className={`transition-all duration-300 rounded-full cursor-pointer ${
                 idx === activeIndex
                   ? "w-5 h-2.5 bg-[#184652]"
                   : "w-2.5 h-2.5 bg-[#CBD5E1] hover:bg-slate-400"
@@ -198,38 +220,21 @@ export function TherapistsSection() {
           ))}
         </div>
 
-        {/* Separated Bottom Action Buttons (Directly below Carousel & Dots) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 sm:pt-10">
-          {/* Book Appointment */}
+        {/* Bottom Book Appointment Button */}
+        <div className="flex justify-center pt-8 sm:pt-10">
           <a
             href="#how-it-works"
-            className="w-full sm:w-[225px] h-[48px] rounded-full bg-[#184652] hover:bg-[#133741] text-white font-bold text-[15px] sm:text-[16px] transition-all flex items-center justify-between pl-6 pr-2 shadow-sm"
+            className="inline-flex items-center justify-between w-[225px] sm:w-[235px] h-[48px] rounded-full text-white font-bold text-[15px] sm:text-[16px] transition-opacity hover:opacity-95 pl-6 pr-1.5 shadow-md"
+            style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
           >
             <span>Book Appointment</span>
-            <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
+            <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 shadow-sm">
               <Image
                 src="/send-icon.svg"
                 alt=""
-                width={16}
-                height={16}
-                className="w-4 h-4 object-contain"
-              />
-            </span>
-          </a>
-
-          {/* View Profile */}
-          <a
-            href="#how-it-works"
-            className="w-full sm:w-[168px] h-[48px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] text-[#184652] font-bold text-[15px] sm:text-[16px] transition-all flex items-center justify-between pl-6 pr-2 shadow-sm"
-          >
-            <span>View Profile</span>
-            <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-              <Image
-                src="/send-icon.svg"
-                alt=""
-                width={16}
-                height={16}
-                className="w-4 h-4 object-contain"
+                width={18}
+                height={18}
+                className="w-[18px] h-[18px] object-contain"
               />
             </span>
           </a>
