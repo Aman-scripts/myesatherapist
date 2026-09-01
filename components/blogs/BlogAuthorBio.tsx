@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function BlogAuthorBio() {
   return (
-    <section id="about-the-author" className="w-full bg-[#FAF7F2] py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 scroll-mt-24">
+    <section id="about-the-author" className="w-full bg-white py-10 sm:py-12 lg:py-[48px] px-4 sm:px-8 lg:px-12 xl:px-[165px] scroll-mt-24">
       <div className="max-w-[1117px] mx-auto space-y-4 sm:space-y-6">
         
         {/* Section Heading: Frame 1261153657 */}
