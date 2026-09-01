@@ -166,15 +166,15 @@ export function DoYouNeedEsaSection() {
           </div>
 
           {/* Action Button */}
-          <div>
+          <div className="flex justify-center pt-2">
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-between h-[42px] sm:h-[48px] pl-5 sm:pl-6 pr-1 sm:pr-1.5 sm:w-[179px] rounded-[30px] text-white font-semibold text-[14px] sm:text-[16px] shadow-sm gap-3 sm:gap-0"
+              className="inline-flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-white font-semibold text-base transition-opacity hover:opacity-90 shadow-md min-h-[48px] w-fit shrink-0"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[34px] h-[34px] sm:w-[42px] sm:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[22px] sm:h-[24px]" />
+              <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
               </span>
             </a>
           </div>
