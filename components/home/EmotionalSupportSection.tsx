@@ -43,7 +43,7 @@ export function EmotionalSupportSection() {
         <div className="w-full lg:w-[56%] xl:w-[52%] z-10 py-6 sm:py-8 lg:py-16 xl:py-24 space-y-6 lg:space-y-5 xl:space-y-6">
           <div className="space-y-3 lg:space-y-3.5">
             {/* Heading */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[32px] xl:text-[44px] font-bold text-[#1A3D4F] leading-tight lg:leading-[42px] xl:leading-[54px] tracking-[-0.006em]">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[32px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[42px] xl:leading-[54px] tracking-[-0.006em]">
               What is an Emotional Support Animal?
             </h2>
 
@@ -72,9 +72,9 @@ export function EmotionalSupportSection() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 lg:gap-5 pt-2">
+          <div className="flex flex-row items-center justify-start gap-3 sm:gap-4 lg:gap-5 pt-2 flex-wrap">
             {/* Learn about ESA's Button */}
-            <button className="w-full sm:w-[193px] h-[48px] rounded-[30px] bg-[#FAF7F2] flex items-center justify-center font-semibold text-[16px] shadow-sm hover:bg-[#f3efe6] transition-colors shrink-0">
+            <button className="h-[40px] sm:h-[48px] px-5 sm:w-[193px] sm:px-0 rounded-[30px] bg-[#FAF7F2] flex items-center justify-center font-semibold text-[14px] sm:text-[16px] shadow-sm hover:bg-[#f3efe6] transition-colors shrink-0">
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 Learn about ESA&apos;s
               </span>
@@ -83,12 +83,12 @@ export function EmotionalSupportSection() {
             {/* Get Started Button */}
             <a
               href="#how-it-works"
-              className="w-full sm:w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 flex items-center justify-between text-white font-semibold text-[16px] transition-opacity hover:opacity-90 shadow-sm shrink-0"
+              className="h-[40px] sm:h-[48px] pl-4 sm:pl-6 pr-1 sm:pr-1.5 sm:w-[179px] rounded-[30px] flex items-center justify-between gap-2.5 sm:gap-0 text-white font-semibold text-[14px] sm:text-[16px] transition-opacity hover:opacity-90 shadow-sm shrink-0"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[22px] h-[24px]" />
+              <span className="w-[32px] h-[32px] sm:w-[42px] sm:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[22px] sm:h-[24px]" />
               </span>
             </a>
           </div>

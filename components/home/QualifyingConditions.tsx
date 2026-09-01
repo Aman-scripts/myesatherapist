@@ -123,11 +123,11 @@ export function QualifyingConditions() {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section className="py-14 sm:py-16 lg:py-20 pb-28 sm:pb-32 lg:pb-36 bg-[#EEEBE0] overflow-visible">
+    <section className="py-14 sm:py-16 lg:py-20 pb-28 sm:pb-32 lg:pb-36 bg-[#FAF7F2] overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[709px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
             Common Qualifying Conditions
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed">
@@ -279,29 +279,44 @@ export function QualifyingConditions() {
 
                   {/* Mobile Modal/Popover */}
                   {isVisible && (
-                    <div className="fixed inset-x-4 top-1/2 -translate-y-1/2 bg-white rounded-[20px] p-5 shadow-2xl border border-slate-200 z-50 max-w-xs mx-auto animate-fadeIn">
-                      <div className="relative w-full h-[140px] rounded-[12px] overflow-hidden mb-3">
-                        <Image
-                          src="/qualifying-condtions-tag.png"
-                          alt="Puppy resting"
-                          fill
-                          unoptimized
-                          className="object-cover"
-                        />
-                      </div>
-                      <h4 className="font-heading font-bold text-[#2E5A66] text-lg mb-1">
-                        {c.label}
-                      </h4>
-                      <p className="text-[#5F6B6F] text-sm leading-relaxed font-sans mb-4">
-                        {c.description}
-                      </p>
-                      <button
+                    <>
+                      {/* Backdrop overlay */}
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 animate-fadeIn"
                         onClick={() => setHoveredCondition(null)}
-                        className="w-full py-2 bg-[#2E5A66] text-white rounded-full text-sm font-bold"
-                      >
-                        Close
-                      </button>
-                    </div>
+                      />
+                      <div className="fixed inset-x-4 top-1/2 -translate-y-1/2 bg-white rounded-[16px] px-3.5 pt-2.5 pb-3.5 sm:px-4 sm:pt-3 sm:pb-4 shadow-[0_12px_40px_rgba(0,0,0,0.2)] border border-slate-100 z-50 w-full max-w-[260px] mx-auto animate-fadeIn">
+                        {/* Top Close Row (Zero Collision) */}
+                        <div className="flex justify-end mb-1.5">
+                          <button
+                            type="button"
+                            onClick={() => setHoveredCondition(null)}
+                            aria-label="Close"
+                            className="p-1 -mr-1 text-[#5F6B6F] hover:text-slate-900 transition-colors cursor-pointer"
+                          >
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.5 1.5L1.5 12.5M1.5 1.5L12.5 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+
+                        {/* Image */}
+                        <div className="relative w-full h-[115px] rounded-[12px] overflow-hidden mb-3">
+                          <Image
+                            src="/qualifying-condtions-tag.png"
+                            alt="Puppy resting"
+                            fill
+                            unoptimized
+                            className="object-cover"
+                          />
+                        </div>
+
+                        {/* Description text matching mockup */}
+                        <p className="text-[#5F6B6F] text-[13px] leading-[19px] font-sans font-medium text-left">
+                          {c.description}
+                        </p>
+                      </div>
+                    </>
                   )}
                 </div>
               );

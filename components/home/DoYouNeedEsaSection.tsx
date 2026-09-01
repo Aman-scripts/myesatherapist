@@ -169,12 +169,12 @@ export function DoYouNeedEsaSection() {
           <div>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-between w-full sm:w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 text-white font-semibold text-[16px] shadow-sm"
+              className="inline-flex items-center justify-between h-[42px] sm:h-[48px] pl-5 sm:pl-6 pr-1 sm:pr-1.5 sm:w-[179px] rounded-[30px] text-white font-semibold text-[14px] sm:text-[16px] shadow-sm gap-3 sm:gap-0"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[22px] h-[24px]" />
+              <span className="w-[34px] h-[34px] sm:w-[42px] sm:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[22px] sm:h-[24px]" />
               </span>
             </a>
           </div>
