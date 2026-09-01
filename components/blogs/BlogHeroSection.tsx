@@ -151,21 +151,21 @@ export function BlogHeroSection() {
       {/* 3. DESKTOP VIEW (>= 1024px)                          */}
       {/* Uses /blog-hero_section.png                          */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:flex relative w-full min-h-[620px] xl:min-h-[792px] flex-col justify-between">
+      <div className="hidden lg:flex relative w-full lg:min-h-[560px] xl:min-h-[792px] flex-col justify-between overflow-hidden">
         <Image
           src="/blog-hero_section.png"
           alt="How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist"
           fill
           priority
-          className="object-cover object-center pointer-events-none"
+          className="object-cover lg:object-[88%_center] xl:object-center pointer-events-none"
           sizes="100vw"
         />
 
         {/* Hero Content inside standard container width */}
-        <div className="relative z-10 max-w-[1440px] mx-auto w-full px-8 lg:px-16 xl:px-20 pt-16 lg:pt-20 xl:pt-24 pb-28 sm:pb-32 lg:pb-36">
-          <div className="max-w-[640px] xl:max-w-[700px] space-y-4 sm:space-y-6">
+        <div className="relative z-10 max-w-[1440px] mx-auto w-full px-8 lg:px-10 xl:px-20 pt-12 lg:pt-16 xl:pt-24 pb-20 lg:pb-28 xl:pb-36">
+          <div className="w-full lg:max-w-[430px] xl:max-w-[700px] space-y-3.5 lg:space-y-4 xl:space-y-6">
             {/* Breadcrumb Navigation */}
-            <nav className="flex items-center gap-2 text-sm sm:text-base font-sans font-semibold text-[#5F6B6F]">
+            <nav className="flex items-center gap-2 text-xs lg:text-sm xl:text-base font-sans font-semibold text-[#5F6B6F]">
               <Link href="/" className="hover:text-[#2E5A66] transition-colors">
                 Home
               </Link>
@@ -178,12 +178,12 @@ export function BlogHeroSection() {
             </nav>
 
             {/* Main Headline */}
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-[46px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.18] sm:leading-[1.15] xl:leading-[64px] tracking-[-0.015em]">
+            <h1 className="font-heading text-2xl sm:text-3xl lg:text-[34px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[42px] xl:leading-[64px] tracking-[-0.015em]">
               How to Verify If an ESA Letter Is Legitimate: A Landlord &amp; Tenant Checklist.
             </h1>
 
             {/* Subtitle */}
-            <p className="font-sans text-base sm:text-lg xl:text-[18px] text-[#5F6B6F] font-semibold leading-relaxed sm:leading-[30px] max-w-[580px]">
+            <p className="font-sans text-xs sm:text-sm lg:text-[15px] xl:text-[18px] text-[#5F6B6F] font-semibold leading-relaxed lg:leading-[24px] xl:leading-[30px] lg:max-w-[400px] xl:max-w-[580px]">
               Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
             </p>
           </div>

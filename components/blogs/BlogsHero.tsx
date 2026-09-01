@@ -42,20 +42,20 @@ export function BlogsHero() {
   return (
     <section className="relative overflow-hidden bg-warm-bg">
       {/* Responsive Container (matching Homepage Hero layout structure) */}
-      <div className="relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
+      <div className="relative w-full aspect-[1441/744] min-h-[620px] xl:min-h-0">
         {/* Background Image: blog-hero_section.png */}
         <Image
           src="/blog-hero_section.png"
           alt="Your Guide to Emotional Support Animals"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover lg:object-[82%_center] xl:object-center"
           sizes="100vw"
         />
 
         {/* Content — Positioned matching Homepage Hero text area structure */}
         <div className="absolute inset-0 z-10">
-          <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[88%] sm:w-[55%] lg:w-[44%] xl:w-[47.05%]">
+          <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[88%] sm:w-[60%] lg:w-[48%] xl:w-[47.05%] max-w-[640px]">
             
             {/* Stat Pills */}
             <div className="flex items-center gap-[10px] xl:gap-[12px] flex-wrap">
@@ -81,7 +81,7 @@ export function BlogsHero() {
                 Line 1: "Your Guide to Emotional" ("Your Guide to" in Teal Gradient, "Emotional" in #5F6B6F)
                 Line 2: "Support Animals" (in #5F6B6F)
             */}
-            <h1 className="font-heading text-[30px] sm:text-[36px] lg:text-[42px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6">
+            <h1 className="font-heading text-[32px] sm:text-[40px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.015em] leading-[1.15] lg:leading-[46px] xl:leading-[64px] mt-4 xl:mt-6">
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 Your Guide to
               </span>{" "}
@@ -95,12 +95,12 @@ export function BlogsHero() {
             </h1>
 
             {/* Subheading: Manrope, 600, 18px, line-height 30px, color #5F6B6F */}
-            <p className="font-sans font-semibold text-[15px] sm:text-[18px] leading-[24px] sm:leading-[30px] text-[#5F6B6F] max-w-[480px] xl:max-w-[540px] mt-3 xl:mt-4">
+            <p className="font-sans font-semibold text-[15px] sm:text-[18px] lg:text-[18px] xl:text-[18px] leading-[24px] sm:leading-[30px] lg:leading-[30px] xl:leading-[30px] text-[#5F6B6F] max-w-[480px] xl:max-w-[540px] mt-3 xl:mt-4">
               Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
             </p>
 
             {/* Trustpilot Badge */}
-            <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[210px] xl:w-[230px] px-3.5 xl:px-[18px] py-2 xl:pt-[11px] xl:pb-[9px] mt-4 xl:mt-[30px]">
+            <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[210px] xl:w-[230px] px-3.5 xl:px-[18px] py-2 xl:pt-[11px] xl:pb-[9px] mt-4 xl:mt-[24px]">
               <div className="flex items-center gap-[6px]">
                 <StarMark className="w-[18px] h-[17px] xl:w-[20px] xl:h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
                 <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
