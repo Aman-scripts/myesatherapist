@@ -61,9 +61,27 @@ export function HeroSection() {
         />
 
         {/* Content Container (Centered) */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-10 text-center flex flex-col items-center z-10">
+        <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
+          {/* Stat Pills at top (Mobile) */}
+          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
+            {statsData.map((stat) => (
+              <div
+                key={stat.label}
+                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
+              >
+                <span
+                  className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  {stat.value}
+                </span>
+                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
           {/* Headline */}
-          <h1 className="font-heading text-[26px] leading-[1.2] font-bold tracking-[-0.011em]">
+          <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em]">
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
               Emotional Support
               <br />
