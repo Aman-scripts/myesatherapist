@@ -7,7 +7,7 @@ export function BlogAuthorBio() {
       <div className="max-w-[1117px] mx-auto space-y-4 sm:space-y-6">
         
         {/* Section Heading: Frame 1261153657 */}
-        <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-[-0.00015em]">
+        <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-[-0.00015em] text-center sm:text-left">
           About the Author
         </h2>
 
