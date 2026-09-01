@@ -52,10 +52,10 @@ export function StateProcessSection({ data }: { data: StateData }) {
     >
       <div className="max-w-[1260px] mx-auto">
         <div className="text-center max-w-[1050px] mx-auto mb-14 sm:mb-16">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.18] tracking-tight mb-4 md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.18] tracking-tight mb-4 md:whitespace-nowrap">
             How ESA Letter Process Works in {stateName}?
           </h2>
-          <p className="font-sans text-sm sm:text-base lg:text-[16.5px] text-[#5F6B6F] font-medium leading-[1.65]">
+          <p className="font-sans text-sm sm:text-base lg:text-[18px] text-[#5F6B6F] font-semibold leading-[1.65]">
             We connect {stateName} residents with licensed mental health professionals for personalized emotional wellness assessments.
           </p>
         </div>
@@ -64,11 +64,14 @@ export function StateProcessSection({ data }: { data: StateData }) {
           {steps.map((step) => (
             <div
               key={step.number}
-              className={`bg-white rounded-[28px] lg:rounded-[32px] p-7 sm:p-8 border border-[#EAE5DC] shadow-[0_10px_35px_rgba(0,0,0,0.035)] flex flex-col justify-between transition-all duration-300 hover:shadow-[0_16px_45px_rgba(26,61,79,0.08)] min-h-[290px] sm:min-h-[310px] ${step.offsetClass}`}
+              className={`bg-white rounded-[28px] lg:rounded-[30px] p-7 sm:p-8 border border-[#EAE5DC] shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-between transition-all duration-300 hover:shadow-[0_16px_45px_rgba(26,61,79,0.08)] min-h-[290px] sm:min-h-[310px] ${step.offsetClass}`}
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-13 h-13 rounded-full bg-[#184F59] flex items-center justify-center shrink-0 shadow-sm">
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 shadow-sm"
+                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
                     <Image
                       src={step.icon}
                       alt={step.title}
@@ -77,16 +80,16 @@ export function StateProcessSection({ data }: { data: StateData }) {
                       className="w-6 h-6 object-contain"
                     />
                   </div>
-                  <span className="font-heading text-4xl sm:text-5xl font-bold text-[#CBD5E1] tracking-tight">
+                  <span className="font-heading text-4xl sm:text-5xl font-bold text-[#5F6B6F]/20 tracking-tight">
                     {step.number}
                   </span>
                 </div>
 
-                <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#1E3E47] leading-[1.3] mb-3">
+                <h3 className="font-heading text-xl sm:text-[22px] lg:text-[24px] font-bold text-[#2E5A66] leading-[1.3] mb-3">
                   {step.title}
                 </h3>
 
-                <p className="font-sans text-xs sm:text-[13.5px] text-[#5F6B6F] leading-[1.65] font-medium">
+                <p className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] text-[#5F6B6F] leading-[26px] font-semibold">
                   {step.description}
                 </p>
               </div>
@@ -94,18 +97,21 @@ export function StateProcessSection({ data }: { data: StateData }) {
           ))}
         </div>
 
-        <div className="bg-[#FAF5EB] rounded-[32px] sm:rounded-[36px] border border-[#EFE8DC] p-8 sm:p-10 lg:p-12 max-w-[920px] mx-auto shadow-xs">
-          <h3 className="font-heading text-xl sm:text-2xl lg:text-[28px] xl:text-3xl font-bold text-[#1E3E47] text-center mb-8 md:whitespace-nowrap">
+        <div className="bg-[rgba(232,185,44,0.1)] rounded-[30px] p-8 sm:p-10 lg:p-12 max-w-[895px] mx-auto shadow-xs">
+          <h3 className="font-heading text-xl sm:text-2xl lg:text-[24px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-8 md:whitespace-nowrap">
             Why {stateName} Residents Choose Our ESA Letter Process?
           </h3>
 
           <div className="flex flex-col space-y-4 max-w-[660px] mx-auto">
             {differentiators.map((item, idx) => (
               <div key={idx} className="flex items-center gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <Check className="w-3.5 h-3.5 stroke-[3]" />
+                <div
+                  className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 shadow-xs"
+                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                >
+                  <Check className="w-3 h-3 stroke-[3]" />
                 </div>
-                <span className="font-sans text-xs sm:text-sm lg:text-[15px] font-semibold text-[#5F6B6F]">
+                <span className="font-sans text-xs sm:text-sm lg:text-[14px] font-semibold text-[#5F6B6F]">
                   {item}
                 </span>
               </div>
@@ -116,12 +122,13 @@ export function StateProcessSection({ data }: { data: StateData }) {
         <div className="text-center mt-10 sm:mt-12">
           <button
             onClick={scrollToForm}
-            className="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-[#184F59] hover:bg-[#133F47] text-white font-bold text-base sm:text-[17px] shadow-[0_8px_25px_rgba(24,79,89,0.22)] transition-all duration-200 group"
+            className="inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full text-white font-semibold text-base sm:text-[16px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all duration-200 group"
+            style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
           >
-            <span>Start your Free Evaluation</span>
-            <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform group-hover:translate-x-1" />
+            <span>Get Started</span>
+            <ArrowRight className="w-4 h-4 stroke-[2] text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
           </button>
-          <p className="font-sans text-xs text-[#5F6B6F] font-medium mt-3">
+          <p className="font-sans text-xs text-[#5F6B6F] font-semibold mt-3">
             No hidden fees. HIPAA secure.
           </p>
         </div>

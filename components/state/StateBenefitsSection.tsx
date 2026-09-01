@@ -123,21 +123,21 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
           <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 py-2 sm:py-4 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
             <div className="mb-4 lg:mb-5 xl:mb-8">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
                 Benefits of Having an ESA
                 <br />
                 Letter in {stateName}
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[12px] xl:text-base text-[#5F6B6F] font-medium leading-relaxed max-w-[520px]">
+              <p className="font-sans text-xs sm:text-sm lg:text-[12px] xl:text-base text-[#5F6B6F] font-semibold leading-relaxed max-w-[520px]">
                 A properly issued emotional support animal letter in {stateName} can help residents obtain housing accommodations while also promoting emotional well-being and everyday stability.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 max-w-[650px] mb-2 lg:mb-3">
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[22px] font-bold text-[#1E3E47]">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F]">
                 Financial Benefits :
               </h3>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[22px] font-bold text-[#1E3E47] hidden sm:block">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] hidden sm:block">
                 Emotional Benefits :
               </h3>
             </div>
@@ -145,8 +145,8 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             <div className="space-y-3 lg:space-y-2.5 xl:space-y-4 max-w-[650px] mb-6">
               {benefitPairs.map((pair, idx) => (
                 <div key={idx} className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 items-stretch">
-                  <div className="bg-white rounded-[16px] lg:rounded-[18px] xl:rounded-[24px] p-3.5 sm:p-4 lg:p-3 xl:p-5 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-7.5 lg:h-7.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
+                  <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
                         src={pair.financial.icon}
                         alt={pair.financial.title}
@@ -157,17 +157,17 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[15.5px] font-bold text-[#1E3E47] mb-0.5 lg:mb-1 leading-snug">
+                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-[#2E5A66] mb-0.5 lg:mb-1 leading-snug">
                         {pair.financial.title}
                       </h4>
-                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[12.5px] text-[#5F6B6F] leading-tight xl:leading-normal font-medium">
+                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-normal font-semibold">
                         {pair.financial.description}
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-[16px] lg:rounded-[18px] xl:rounded-[24px] p-3.5 sm:p-4 lg:p-3 xl:p-5 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-7.5 lg:h-7.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
+                  <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
                         src={pair.emotional.icon}
                         alt={pair.emotional.title}
@@ -178,10 +178,10 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[15.5px] font-bold text-[#1E3E47] mb-0.5 lg:mb-1 leading-snug">
+                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-[#2E5A66] mb-0.5 lg:mb-1 leading-snug">
                         {pair.emotional.title}
                       </h4>
-                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[12.5px] text-[#5F6B6F] leading-tight xl:leading-normal font-medium">
+                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-normal font-semibold">
                         {pair.emotional.description}
                       </p>
                     </div>
@@ -193,10 +193,11 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             <div>
               <a
                 href="#faq"
-                className="inline-flex items-center gap-2.5 lg:gap-3 pl-5 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full bg-[#184F59] hover:bg-[#133F47] text-white font-bold text-xs lg:text-[13px] xl:text-[15px] transition-all shadow-md group"
+                className="inline-flex items-center gap-2.5 lg:gap-3 pl-6 pr-1.5 py-1.5 rounded-full text-white font-semibold text-xs lg:text-[13px] xl:text-[16px] transition-all shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 group"
+                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Apply your ESA Letter Now</span>
-                <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-white text-[#184F59] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
+                <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#FAF7F2] text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
                   <Image src="/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
                 </span>
               </a>

@@ -32,9 +32,9 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
   return (
     <section className="w-full bg-white py-0 overflow-hidden relative z-10">
-      <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-10 xl:pl-16 lg:pr-0">
-        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-center w-full">
+      <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-center">
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end w-full">
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
                 src="/california-who-qualifies-mobile.png"
@@ -77,44 +77,42 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div className="hidden lg:flex items-center justify-end w-full h-full">
-              <div className="relative w-full max-w-[520px] aspect-[694/827] ml-auto">
+            <div className="hidden lg:block relative w-full aspect-[694/827] ml-auto">
+              <Image
+                src="/whomayqualifies.png"
+                alt={`Who qualifies for ${stateName} ESA Letter`}
+                fill
+                priority
+                unoptimized
+                className="object-contain object-right pointer-events-none"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+              />
+              <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
                 <Image
-                  src="/whomayqualifies.png"
-                  alt={`Who qualifies for ${stateName} ESA Letter`}
-                  fill
-                  priority
-                  unoptimized
-                  className="object-contain object-right pointer-events-none"
-                  sizes="42vw"
+                  src="/whomayqualifies-california_icon.svg"
+                  alt="Heart Icon"
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-contain drop-shadow-md"
                 />
-                <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
-                  <Image
-                    src="/whomayqualifies-california_icon.svg"
-                    alt="Heart Icon"
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-contain drop-shadow-md"
-                  />
-                </div>
               </div>
             </div>
           </div>
 
           <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 py-2 sm:py-4 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
             <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[42px] font-bold text-[#1E3E47] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 Who May Eligible For ESA
                 <br />
                 Letter in {stateName}?
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-medium leading-relaxed xl:leading-[26px] max-w-[540px]">
+              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-semibold leading-relaxed xl:leading-[26px] max-w-[540px]">
                 {stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in {stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:
               </p>
             </div>
 
             <div>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-2xl font-bold text-[#1E3E47] mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-[#5F6B6F] mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
                 Qualifying Conditions :
               </h3>
 
@@ -122,23 +120,23 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 {conditions.map((item) => (
                   <div
                     key={item.title}
-                    className="bg-[#FAF7F2] rounded-[18px] xl:rounded-[24px] p-3 sm:p-3.5 lg:p-3 xl:p-5 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex items-center gap-2.5 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
+                    className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
                   >
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 xl:w-9 xl:h-9 shrink-0 relative flex items-center justify-center">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
                         src={item.icon}
                         alt={item.title}
-                        width={36}
-                        height={36}
+                        width={40}
+                        height={40}
                         className="object-contain w-full h-full"
                       />
                     </div>
 
                     <div className="min-w-0">
-                      <h4 className="font-heading text-xs sm:text-sm lg:text-[14px] xl:text-base font-bold text-[#1E3E47] mb-0.5 leading-snug">
+                      <h4 className="font-heading text-xs sm:text-sm lg:text-[14px] xl:text-[16px] font-bold text-[#2E5A66] mb-0.5 leading-snug">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[10px] sm:text-xs lg:text-[11px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-relaxed font-medium">
+                      <p className="font-sans text-[10px] sm:text-xs lg:text-[11px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-relaxed font-semibold">
                         {item.description}
                       </p>
                     </div>

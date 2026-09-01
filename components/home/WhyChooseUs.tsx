@@ -42,9 +42,9 @@ const features = [
   },
 ];
 
-export function WhyChooseUs() {
+export function WhyChooseUs({ bgColor = "bg-white" }: { bgColor?: string }) {
   return (
-    <section className="py-16 lg:py-24 bg-[#FAF7F2]">
+    <section className={`py-16 lg:py-24 ${bgColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-14 lg:mb-20 space-y-2.5">

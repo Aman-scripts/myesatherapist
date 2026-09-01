@@ -9,13 +9,13 @@ export function StateScamsSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1060px] mx-auto">
         <div className="text-center max-w-[840px] mx-auto mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#1E3E47] leading-[1.2] tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
             {stateName} ESA Scams: What&apos;s Real vs. Fake
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[15px] text-[#5F6B6F] font-medium leading-relaxed mt-3 max-w-[760px] mx-auto">
+          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
             Getting an idea of the common ESA scams in {stateName} can help you save yourself from fake websites and false certifications and registrations online.
           </p>
         </div>
@@ -36,7 +36,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
               <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D9383A] mb-1">
                 Important: No Official ESA Registry Exists
               </h3>
-              <p className="font-sans text-xs sm:text-[13px] lg:text-[13.5px] text-[#5F6B6F] font-medium leading-relaxed">
+              <p className="font-sans text-xs sm:text-[13px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
                 There is no state or federal registry, certification system, database, or official ESA ID in {stateName} or anywhere else in the United States.
               </p>
             </div>
@@ -58,48 +58,57 @@ export function StateScamsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[25px] font-bold text-[#1E3E47] text-center mb-6 sm:mb-7 leading-snug">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-6 sm:mb-7 leading-snug">
                 What You Actually Need
               </h3>
 
               <div className="space-y-5 flex-1">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                  <div
+                    className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
                   <div>
-                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#1E3E47] mb-1">
+                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
                       ESA Letter from a Licensed Provider
                     </h4>
-                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
+                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
                       Your ESA letter {stateName} must come after a proper evaluation by a mental health professional licensed in the state.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                  <div
+                    className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
                   <div>
-                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#1E3E47] mb-1">
+                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
                       Clinical Mental Health Evaluation
                     </h4>
-                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
+                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
                       A comprehensive assessment of your emotional or mental health condition is a required part of the ESA review process.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#184F59] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                  <div
+                    className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
                   <div>
-                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#1E3E47] mb-1">
+                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
                       Verified Therapeutic Relationship
                     </h4>
-                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[12.5px] text-[#5F6B6F] font-medium leading-relaxed">
+                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
                       An ongoing or clearly established provider-patient relationship helps confirm the validity of the recommendation.
                     </p>
                   </div>
