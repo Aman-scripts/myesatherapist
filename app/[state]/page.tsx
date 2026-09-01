@@ -15,6 +15,7 @@ import { StateLawsSection } from "@/components/state/StateLawsSection";
 import { StateScamsSection } from "@/components/state/StateScamsSection";
 import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
@@ -94,6 +95,7 @@ export default async function DynamicStatePage({ params }: Props) {
         <StateScamsSection data={data} />
         <StatePsdVsEsaSection data={data} />
         <StateAvailableCitiesSection data={data} />
+        <StateReviewerBanner />
         <FaqSection />
         <CtaBanner
           title={`Ready to Start Your ${data.name} ESA Evaluation?`}
