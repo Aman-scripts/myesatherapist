@@ -150,7 +150,7 @@ export function BlogTableOfContents() {
 
             {/* Sliding Content Panel with smooth transform */}
             <div
-              className={`relative w-[295px] sm:w-[382px] h-full max-h-screen overflow-y-auto z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-[41px] pt-8 sm:pt-10 pb-12 transition-transform duration-300 ease-out transform ${
+              className={`relative w-[295px] sm:w-[382px] h-full max-h-screen overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-[41px] pt-8 sm:pt-10 pb-12 transition-transform duration-300 ease-out transform ${
                 isOpen ? "translate-x-0" : "-translate-x-full"
               }`}
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
