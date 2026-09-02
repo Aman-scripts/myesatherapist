@@ -58,7 +58,6 @@ const AVAILABLE_STATES = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [allStatesOpen, setAllStatesOpen] = useState(false);
   const pathname = usePathname();
 
   // Check if current route is PSD Letter page
@@ -207,71 +206,15 @@ export function Header() {
             })}
           </div>
 
-          {/* See All 50 States Button */}
-          <button
-            onClick={() => setAllStatesOpen(!allStatesOpen)}
-            className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1.5 whitespace-nowrap cursor-pointer border-none bg-transparent"
+          {/* See All 50 States Direct Link to /states */}
+          <Link
+            href="/states"
+            className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
           >
             <span>See all 50 States</span>
-            <ChevronDown className={`w-4 h-4 text-[#1E3E47] transition-transform duration-200 ${allStatesOpen ? "rotate-180" : ""}`} />
-          </button>
+            <ArrowRight className="w-4 h-4 text-[#1E3E47]" />
+          </Link>
         </div>
-
-        {/* Dropdown for All 50 States (5 states per row grid) */}
-        {allStatesOpen && (
-          <div className="absolute top-full left-0 right-0 w-full bg-white border-b border-[#EAE5DC] shadow-[0_20px_50px_rgba(26,61,79,0.15)] z-50 animate-in fade-in duration-200">
-            <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 py-6">
-              <div className="flex items-center justify-between mb-5 pb-3 border-b border-[#F0EBE1]">
-                <div>
-                  <h3 className="font-heading text-lg font-bold text-[#1E3E47]">
-                    Select Your State (Available States)
-                  </h3>
-                  <p className="font-sans text-xs text-[#5F6B6F]">
-                    Connect with a licensed therapist in your state for a legitimate ESA letter evaluation.
-                  </p>
-                </div>
-                <button
-                  onClick={() => setAllStatesOpen(false)}
-                  className="p-1.5 rounded-full hover:bg-[#FAF7F2] text-[#5F6B6F] hover:text-[#1E3E47] transition-colors cursor-pointer"
-                  aria-label="Close states menu"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Grid: 7 columns on desktop -> 7 states in each row */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-2.5">
-                {AVAILABLE_STATES.map((st) => {
-                  const href = `/${st.slug}`;
-                  const isCurrentActive =
-                    pathname === href ||
-                    pathname === `/esa-${st.slug}` ||
-                    pathname === `/esa-letter-${st.slug}`;
-
-                  return (
-                    <Link
-                      key={st.slug}
-                      href={href}
-                      onClick={() => setAllStatesOpen(false)}
-                      className={`group flex items-center justify-between px-2.5 py-2.5 rounded-xl border text-xs font-semibold transition-all duration-150 ${
-                        isCurrentActive
-                          ? "bg-[#1E3E47] text-white border-[#1E3E47] shadow-xs"
-                          : "bg-[#FAF7F2] text-[#1E3E47] border-[#EAE5DC] hover:border-[#184F59]/40 hover:bg-[#E7F5EE] hover:text-[#184F59]"
-                      }`}
-                    >
-                      <span className="truncate">{st.name}</span>
-                      <ArrowRight
-                        className={`w-3.5 h-3.5 shrink-0 stroke-[2.5] transition-transform group-hover:translate-x-0.5 ${
-                          isCurrentActive ? "text-[#E8B92C]" : "text-[#5F6B6F] group-hover:text-[#184F59]"
-                        }`}
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Mobile Menu */}
@@ -309,31 +252,14 @@ export function Header() {
 
           {/* Mobile All Available States section */}
           <div className="border-t border-[#EAE5DC] pt-4">
-            <button
-              onClick={() => setAllStatesOpen(!allStatesOpen)}
+            <Link
+              href="/states"
+              onClick={() => setMobileOpen(false)}
               className="w-full flex items-center justify-between py-2 text-[#1E3E47] font-semibold text-base"
             >
               <span>See all 50 States</span>
-              <ChevronDown className={`w-4 h-4 transition-transform ${allStatesOpen ? "rotate-180" : ""}`} />
-            </button>
-            {allStatesOpen && (
-              <div className="grid grid-cols-2 gap-2 pt-3 max-h-60 overflow-y-auto">
-                {AVAILABLE_STATES.map((st) => (
-                  <Link
-                    key={st.slug}
-                    href={`/${st.slug}`}
-                    onClick={() => {
-                      setAllStatesOpen(false);
-                      setMobileOpen(false);
-                    }}
-                    className="flex items-center justify-between px-3 py-2 bg-[#FAF7F2] rounded-lg text-xs font-semibold text-[#1E3E47] border border-[#EAE5DC]"
-                  >
-                    <span>{st.name}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5F6B6F] stroke-[2.5]" />
-                  </Link>
-                ))}
-              </div>
-            )}
+              <ArrowRight className="w-4 h-4 text-[#1E3E47]" />
+            </Link>
           </div>
 
           <div className="pt-2 space-y-2.5">
