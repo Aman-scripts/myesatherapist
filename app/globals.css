@@ -8,8 +8,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
+  --font-manrope: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
+  --font-playfair: var(--font-heading);
   --font-lato: var(--font-lato);
   --font-space-grotesk: var(--font-space-grotesk);
 
