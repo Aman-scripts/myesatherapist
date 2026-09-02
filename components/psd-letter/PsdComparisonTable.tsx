@@ -7,8 +7,8 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 function GreenCheckIcon() {
   return (
-    <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] rounded-full bg-[#00BA00] flex items-center justify-center shrink-0 shadow-xs">
-      <svg className="w-2.5 h-2 md:w-3 md:h-2.5" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[24px] lg:h-[24px] rounded-full bg-[#00BA00] flex items-center justify-center shrink-0 shadow-xs">
+      <svg className="w-2.5 h-2 sm:w-2.5 sm:h-2 lg:w-3.5 lg:h-3" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 5.5L5 9L12.5 1.5" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     </span>
@@ -17,8 +17,8 @@ function GreenCheckIcon() {
 
 function RedCrossIcon() {
   return (
-    <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] rounded-full bg-[#FF5023] flex items-center justify-center shrink-0 shadow-xs">
-      <svg className="w-2.5 h-2.5 md:w-3 md:h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[24px] lg:h-[24px] rounded-full bg-[#FF5023] flex items-center justify-center shrink-0 shadow-xs">
+      <svg className="w-2.5 h-2.5 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2L10 10M10 2L2 10" stroke="#FFF5F5" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     </span>
@@ -27,8 +27,8 @@ function RedCrossIcon() {
 
 function WarningOrangeIcon() {
   return (
-    <span className="w-[20px] h-[20px] md:w-[22px] md:h-[22px] rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs">
-      <svg className="w-3 h-3" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <span className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[24px] lg:h-[24px] rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs">
+      <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-3.5 lg:h-3.5" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 3.5V7.5M7 10.5H7.01" stroke="white" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     </span>
@@ -101,35 +101,118 @@ function StatusIcon({ type }: { type: "check" | "cross" | "warning" }) {
 
 export function PsdComparisonTable() {
   return (
-    <section id="compare" className="py-16 lg:py-24 bg-white relative overflow-hidden">
-      <div className="max-w-[1441px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center">
+    <section id="compare" className="py-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-[1441px] mx-auto px-3 sm:px-6 lg:px-12 flex flex-col items-center">
         {/* Section Header */}
-        <div className="text-center max-w-[758px] mx-auto mb-12 space-y-3">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.0066em]">
+        <div className="text-center max-w-[758px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
+          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
             PSD Letter vs ESA Letter
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+          <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed sm:leading-[30px] font-sans">
             We set the standard for professional care, compliance, and trust.
           </p>
         </div>
 
-        {/* Tablet & Desktop Comparison Table Structure */}
-        <div className="hidden md:block w-full max-w-[1100px] relative">
-          {/* Main Background Frame: Beige/Cream for center & right columns */}
-          <div className="w-full bg-[#FAF7F2] rounded-[24px] shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-[#EDE8DE] overflow-hidden">
-            {/* Header Row for PSD Letter and ESA Letter */}
-            <div className="grid grid-cols-12 items-center h-[76px] border-b border-[#E6DEC8]/50">
-              {/* Spacer matching elevated Features column width */}
-              <div className="col-span-4" />
+        {/* ---------------------------------------------------- */}
+        {/* 1. MOBILE & TABLET 3-COLUMN LAYOUT (< 1024px)       */}
+        {/* ---------------------------------------------------- */}
+        <div className="block lg:hidden w-full max-w-[361px] sm:max-w-[600px] md:max-w-[680px] relative mx-auto pt-6">
+          {/* Main Background Box */}
+          <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-4">
+            {/* Header Row */}
+            <div className="flex items-center justify-between px-2 sm:px-6 h-[64px] sm:h-[72px]">
+              {/* Features Heading */}
+              <div className="w-[88px] sm:w-[150px] md:w-[170px] text-center">
+                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-[#2E5A66]">
+                  Features
+                </h3>
+              </div>
 
-              {/* PSD Letter Header */}
+              {/* Spacer for Center Elevated Card */}
+              <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
+
+              {/* ESA Letter Heading */}
+              <div className="w-[96px] sm:w-[150px] md:w-[170px] text-center">
+                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-[#2E5A66]">
+                  ESA Letter
+                </h3>
+              </div>
+            </div>
+
+            {/* Divider Rows */}
+            <div className="divide-y divide-[#C8B9A7]/40">
+              {psdComparisonRows.map((row, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center justify-between min-h-[94px] sm:min-h-[102px] px-2 sm:px-6"
+                >
+                  {/* Left Column: Feature Title */}
+                  <div className="w-[88px] sm:w-[150px] md:w-[170px] flex items-center justify-center text-center">
+                    <span className="font-heading font-bold text-[13px] sm:text-[14.5px] md:text-[16px] text-[#2E5A66] leading-tight">
+                      {row.feature}
+                    </span>
+                  </div>
+
+                  {/* Spacer for Center Card */}
+                  <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
+
+                  {/* Right Column: ESA Letter (Icon on Top + Text Below) */}
+                  <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1">
+                    <StatusIcon type={row.esa.type} />
+                    <span className="font-sans italic font-normal text-[11px] sm:text-[12px] md:text-[13px] text-[#5F6B6F] leading-[15px] sm:leading-[16px] text-center mt-1.5">
+                      {row.esa.text}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Elevated Center Overlay Card: PSD Letter */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[134px] sm:w-[214px] md:w-[234px] bg-white rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4">
+            {/* Top Teal Gradient Header Banner */}
+            <div
+              className="h-[68px] sm:h-[76px] rounded-b-[20px] flex flex-col items-center justify-center px-2 text-center shadow-md"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              <h3 className="font-heading font-bold text-[14.5px] sm:text-[17px] text-[#FAF7F2] leading-[17px] tracking-tight">
+                PSD
+                <br />
+                Letter
+              </h3>
+            </div>
+
+            {/* Elevated Rows: Status Icon on top + Description Below */}
+            <div className="divide-y divide-[#C8B9A7]/30">
+              {psdComparisonRows.map((row, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center justify-center text-center min-h-[94px] sm:min-h-[102px] px-2"
+                >
+                  <StatusIcon type={row.psd.type} />
+                  <span className="font-sans italic font-normal text-[11px] sm:text-[12px] md:text-[13px] text-[#5F6B6F] leading-[15px] sm:leading-[16px] text-center mt-1.5">
+                    {row.psd.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ---------------------------------------------------- */}
+        {/* 2. DESKTOP VIEW (>= 1024px)                          */}
+        {/* ---------------------------------------------------- */}
+        <div className="hidden lg:block w-full max-w-[1100px] relative">
+          {/* Main Background Frame */}
+          <div className="w-full bg-[#FAF7F2] rounded-[24px] shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-[#EDE8DE] overflow-hidden pb-4">
+            {/* Header Row */}
+            <div className="grid grid-cols-12 items-center h-[76px] border-b border-[#E6DEC8]/50">
+              <div className="col-span-4" />
               <div className="col-span-4 text-center">
                 <h3 className="font-heading text-[18px] lg:text-[22px] font-bold text-[#2E5A66]">
                   PSD Letter
                 </h3>
               </div>
-
-              {/* ESA Letter Header */}
               <div className="col-span-4 text-center">
                 <h3 className="font-heading text-[18px] lg:text-[22px] font-bold text-[#2E5A66]">
                   ESA Letter
@@ -140,22 +223,14 @@ export function PsdComparisonTable() {
             {/* Table Rows for PSD & ESA */}
             <div className="divide-y divide-[#E6DEC8]/50">
               {psdComparisonRows.map((row, idx) => (
-                <div
-                  key={idx}
-                  className="grid grid-cols-12 items-center h-[62px]"
-                >
-                  {/* Empty space matching elevated Features column */}
+                <div key={idx} className="grid grid-cols-12 items-center h-[62px]">
                   <div className="col-span-4" />
-
-                  {/* PSD Letter Column */}
                   <div className="col-span-4 flex items-center justify-start gap-2.5 px-6 lg:px-8">
                     <StatusIcon type={row.psd.type} />
                     <span className="text-[13px] lg:text-[15px] text-[#5F6B6F] font-normal leading-snug font-sans italic">
                       {row.psd.text}
                     </span>
                   </div>
-
-                  {/* ESA Letter Column */}
                   <div className="col-span-4 flex items-center justify-start gap-2.5 px-6 lg:px-8">
                     <StatusIcon type={row.esa.type} />
                     <span className="text-[13px] lg:text-[15px] text-[#5F6B6F] font-normal leading-snug font-sans italic">
@@ -167,9 +242,8 @@ export function PsdComparisonTable() {
             </div>
           </div>
 
-          {/* Elevated Left Card: FEATURES Column with White Body & Drop Shadow */}
-          <div className="absolute left-0 top-0 w-[33.333%] bg-white rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,0.08)] border border-[#E2E8F0] z-10 overflow-hidden">
-            {/* Top Dark Teal Header Box */}
+          {/* Elevated Left Card: FEATURES Column */}
+          <div className="absolute left-0 top-0 w-[33.333%] bg-white rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,0.08)] border border-[#E2E8F0] z-10 overflow-hidden pb-4">
             <div
               className="h-[76px] flex items-center justify-center px-6"
               style={{ backgroundImage: TEAL_GRADIENT }}
@@ -178,14 +252,9 @@ export function PsdComparisonTable() {
                 Features
               </h3>
             </div>
-
-            {/* White Body Rows */}
             <div className="divide-y divide-[#E2E8F0]">
               {psdComparisonRows.map((row, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3 h-[62px] px-5 lg:px-6 bg-white"
-                >
+                <div key={idx} className="flex items-center gap-3 h-[62px] px-5 lg:px-6 bg-white">
                   <div className="w-[32px] h-[32px] rounded-full bg-[#FAF7F2] border border-[#E2E8F0] shadow-xs flex items-center justify-center shrink-0">
                     <Image
                       src={row.icon}
@@ -202,54 +271,6 @@ export function PsdComparisonTable() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Mobile View (< 768px) */}
-        <div className="md:hidden w-full space-y-6 max-w-xl mx-auto">
-          {/* Card 1: PSD Letter */}
-          <div className="bg-white rounded-3xl shadow-lg border border-[#2E5A66]/20 overflow-hidden">
-            <div
-              className="py-4 px-6 text-center text-white font-heading text-xl font-bold"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              PSD Letter
-            </div>
-            <div className="p-5 space-y-3.5 divide-y divide-slate-100">
-              {psdComparisonRows.map((row, idx) => (
-                <div key={idx} className="pt-3 first:pt-0 flex items-start gap-3">
-                  <StatusIcon type={row.psd.type} />
-                  <div>
-                    <div className="font-heading font-bold text-[#2E5A66] text-sm">
-                      {row.feature}
-                    </div>
-                    <div className="text-xs text-[#5F6B6F] mt-0.5 italic">
-                      {row.psd.text}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Card 2: ESA Letter */}
-          <div className="bg-[#FAF7F2] rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3.5 divide-y divide-[#C8B9A7]/30">
-            <h3 className="font-heading text-lg font-bold text-[#2E5A66] text-center pb-1">
-              ESA Letter
-            </h3>
-            {psdComparisonRows.map((row, idx) => (
-              <div key={idx} className="pt-3 first:pt-0 flex items-start gap-3">
-                <StatusIcon type={row.esa.type} />
-                <div>
-                  <div className="font-heading font-semibold text-slate-800 text-sm">
-                    {row.feature}
-                  </div>
-                  <div className="text-xs text-[#5F6B6F] mt-0.5 italic">
-                    {row.esa.text}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
