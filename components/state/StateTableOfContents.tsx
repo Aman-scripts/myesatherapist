@@ -178,10 +178,10 @@ export function StateTableOfContents({ stateName }: Props) {
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer mt-1"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
               aria-label="Close Table of Contents"
             >
-              <X className="w-6 h-6 text-[#FAF7F2]" />
+              <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#FAF7F2] stroke-[2.2]" />
             </button>
           </div>
 
