@@ -30,6 +30,10 @@ const testimonials = [
 
 export function AboutTestimonialSection() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 45;
 
   const nextSlide = useCallback(() => {
     setActiveIdx((prev) => (prev + 1) % testimonials.length);
@@ -38,6 +42,27 @@ export function AboutTestimonialSection() {
   const prevSlide = useCallback(() => {
     setActiveIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   }, []);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,9 +87,14 @@ export function AboutTestimonialSection() {
         </div>
 
         {/* ---------------------------------------------------- */}
-        {/* Carousel Container                                   */}
+        {/* Carousel Container (with Touch Swipe)               */}
         {/* ---------------------------------------------------- */}
-        <div className="max-w-[360px] sm:max-w-[500px] md:max-w-[620px] lg:max-w-[720px] mx-auto flex flex-col items-center">
+        <div
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+          className="max-w-[360px] sm:max-w-[500px] md:max-w-[620px] lg:max-w-[720px] mx-auto flex flex-col items-center select-none cursor-grab active:cursor-grabbing"
+        >
           {/* Main Card Wrapper */}
           <div className="w-full">
             {/* Gradient Speech Bubble Box */}
