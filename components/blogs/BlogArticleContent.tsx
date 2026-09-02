@@ -202,11 +202,11 @@ export function BlogArticleContent() {
 
       {/* Inline CTA Banner: Frame 1000011717 */}
       <div
-        className="w-full rounded-[24px] sm:rounded-[30px] p-8 sm:p-10 lg:p-12 text-[#FAF7F2] relative overflow-hidden shadow-lg"
+        className="w-full rounded-[20px] sm:rounded-[24px] xl:rounded-[30px] p-6 sm:p-8 lg:p-7 xl:p-11 text-[#FAF7F2] relative overflow-hidden shadow-lg"
         style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
       >
-        {/* Paw decoration background */}
-        <div className="absolute right-0 sm:right-2 lg:right-6 bottom-0 w-[200px] sm:w-[250px] lg:w-[280px] h-[200px] sm:h-[250px] lg:h-[280px] opacity-85 pointer-events-none z-0">
+        {/* Paw decoration background (Scaled appropriately for 1024px and up) */}
+        <div className="hidden sm:block absolute right-0 sm:right-2 lg:right-3 xl:right-6 bottom-0 w-[140px] sm:w-[180px] lg:w-[170px] xl:w-[260px] h-[140px] sm:h-[180px] lg:h-[170px] xl:h-[260px] opacity-40 xl:opacity-75 pointer-events-none z-0">
           <Image
             src="/paw-icons.png"
             alt=""
@@ -215,19 +215,19 @@ export function BlogArticleContent() {
           />
         </div>
 
-        <div className="relative z-10 max-w-[620px] space-y-4">
-          <h3 className="font-heading text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#FAF7F2] leading-[1.22] tracking-[-0.00015em]">
+        <div className="relative z-10 max-w-[620px] mx-auto sm:mx-0 text-center sm:text-left flex flex-col items-center sm:items-start space-y-3 sm:space-y-4">
+          <h3 className="font-heading text-xl sm:text-2xl lg:text-[26px] xl:text-[34px] font-bold text-[#FAF7F2] leading-[1.25] tracking-[-0.00015em] max-w-[480px]">
             Request Housing Accommodations with Confidence
           </h3>
-          <p className="text-sm sm:text-base text-[#FAF7F2] font-sans font-semibold leading-[26px]">
+          <p className="text-xs sm:text-sm lg:text-[14px] xl:text-base text-[#FAF7F2]/90 font-sans font-medium leading-[22px] sm:leading-[24px] xl:leading-[26px] max-w-[420px] xl:max-w-[540px]">
             A valid ESA letter can help support your housing accommodation request. Connect with a licensed mental health professional to see if you qualify.
           </p>
-          <div className="pt-2">
+          <div className="pt-1.5 sm:pt-2 w-full sm:w-auto flex justify-center sm:justify-start">
             <Link
               href="#faq"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-[12px] bg-[#E8B92C] shadow-[0px_1px_4px_#E8B92C] hover:opacity-95 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center justify-center px-6 py-2.5 sm:px-7 sm:py-3 xl:px-8 xl:py-3.5 rounded-[12px] bg-[#E8B92C] shadow-[0px_1px_4px_#E8B92C] hover:opacity-95 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span className="font-[family-name:var(--font-lato)] font-bold text-base sm:text-[18px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72]">
+              <span className="font-[family-name:var(--font-lato)] font-bold text-sm sm:text-base xl:text-[18px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72]">
                 Start your Evaluation
               </span>
             </Link>
