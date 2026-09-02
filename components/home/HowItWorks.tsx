@@ -32,7 +32,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="pt-10 sm:pt-14 lg:pt-20 pb-8 sm:pb-10 lg:pb-20 bg-[#FAF7F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[20px] shadow-[0_20px_60px_-15px_rgba(46,90,102,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-8 lg:px-[142px] lg:py-[60px]">
+        <div className="bg-white rounded-[20px] shadow-[0_20px_60px_-15px_rgba(46,90,102,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-6 lg:px-8 xl:px-[142px] lg:py-[60px]">
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-10 lg:mb-[72px] space-y-2">
             <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
