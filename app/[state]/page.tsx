@@ -16,6 +16,7 @@ import { StateScamsSection } from "@/components/state/StateScamsSection";
 import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
+import { StateTableOfContents } from "@/components/state/StateTableOfContents";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
@@ -80,29 +81,34 @@ export default async function DynamicStatePage({ params }: Props) {
       <TopBanner />
       <Header />
 
+      {/* State Table of Contents Drawer & Left Edge Toggle */}
+      <StateTableOfContents stateName={data.name} />
+
       <main className="flex-1 bg-[#FAF7F2]">
         <StateHeroSection data={data} />
         <StateTrustBar data={data} />
         <AsSeenOnSection bgColor="bg-[#FAF7F2]" />
-        <TherapistsSection />
-        <StateProcessSection data={data} />
-        <StateWhoQualifiesSection data={data} />
+        <div id="therapists"><TherapistsSection /></div>
+        <div id="process"><StateProcessSection data={data} /></div>
+        <div id="who-qualifies"><StateWhoQualifiesSection data={data} /></div>
         <StateRequirementsSection data={data} />
-        <WhyChooseUs />
-        <TestimonialsSection />
-        <StateBenefitsSection data={data} />
-        <StateLawsSection data={data} />
-        <StateScamsSection data={data} />
-        <StatePsdVsEsaSection data={data} />
-        <StateAvailableCitiesSection data={data} />
+        <div id="why-choose"><WhyChooseUs /></div>
+        <div id="reviews"><TestimonialsSection /></div>
+        <div id="benefits"><StateBenefitsSection data={data} /></div>
+        <div id="laws"><StateLawsSection data={data} /></div>
+        <div id="scams"><StateScamsSection data={data} /></div>
+        <div id="psd-vs-esa"><StatePsdVsEsaSection data={data} /></div>
+        <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <StateReviewerBanner />
-        <FaqSection />
-        <CtaBanner
-          title={`Ready to Start Your ${data.name} ESA Evaluation?`}
-          description={`Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
-          buttonText="Start your Evaluation"
-          buttonHref="#faq"
-        />
+        <div id="faq"><FaqSection /></div>
+        <div id="cta">
+          <CtaBanner
+            title={`Ready to Start Your ${data.name} ESA Evaluation?`}
+            description={`Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
+            buttonText="Start your Evaluation"
+            buttonHref="#faq"
+          />
+        </div>
       </main>
 
       <Footer />
