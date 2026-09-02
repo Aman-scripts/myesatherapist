@@ -28,9 +28,9 @@ export function AboutHeroSection() {
     <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE VIEW (< 640px)                             */}
-      {/* Uses /about_us-mobile_hero_section.png               */}
+      {/* Uses /about_us-mobile_hero_section.png (390x768)     */}
       {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full aspect-[390/844] min-h-[660px] overflow-hidden">
+      <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[640px] overflow-hidden">
         <Image
           src="/about_us-mobile_hero_section.png"
           alt="About My ESA Therapist"
@@ -140,9 +140,9 @@ export function AboutHeroSection() {
 
       {/* ---------------------------------------------------- */}
       {/* 2. TABLET VIEW (640px - 1023px)                      */}
-      {/* Uses /about_us-tablet_hero_section.png               */}
+      {/* Uses /about_us-tablet_hero_section.png (834x1226)    */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1180] min-h-[760px] max-h-[960px] overflow-hidden">
+      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[760px] max-h-[1050px] overflow-hidden">
         <Image
           src="/about_us-tablet_hero_section.png"
           alt="About My ESA Therapist"
