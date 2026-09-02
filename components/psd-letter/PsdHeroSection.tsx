@@ -81,7 +81,8 @@ export function PsdHeroSection() {
               Psychiatric Service
             </span>
             <br />
-            <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
+            <span className="text-[#2E5A66]">Dog </span>
+            <span className="text-[#5F6B6F]">Letter Assistance</span>
           </h1>
 
           <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
@@ -156,11 +157,12 @@ export function PsdHeroSection() {
           </div>
 
           <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+            <span className="text-[#2E5A66]">
               Psychiatric Service
             </span>
             <br />
-            <span className="text-[#5F6B6F]">Dog Letter Assistance</span>
+            <span className="text-[#2E5A66]">Dog </span>
+            <span className="text-[#5F6B6F]">Letter Assistance</span>
           </h1>
 
           <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-[family-name:var(--font-lato)]">
@@ -231,10 +233,11 @@ export function PsdHeroSection() {
               ))}
             </div>
 
-            <h1 className="font-heading text-[32px] lg:text-[40px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] text-[#2E5A66] mt-4 xl:mt-6">
-              Psychiatric Service
+            <h1 className="font-heading text-[32px] lg:text-[40px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-4 xl:mt-6">
+              <span className="text-[#2E5A66]">Psychiatric Service</span>
               <br />
-              Dog Letter Assistance
+              <span className="text-[#2E5A66]">Dog </span>
+              <span className="text-[#5F6B6F]">Letter Assistance</span>
             </h1>
 
             <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-sans">

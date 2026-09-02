@@ -53,8 +53,9 @@ export function BlogHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-[22px] leading-[1.25] font-bold text-[#2E5A66] tracking-tight max-w-[320px]">
-            How to Verify If an ESA Letter Is Legitimate: A Landlord &amp; Tenant Checklist.
+          <h1 className="font-heading text-[22px] leading-[1.25] font-bold tracking-tight max-w-[320px]">
+            <span className="text-[#2E5A66]">How to Verify If an ESA Letter Is Legitimate: </span>
+            <span className="text-[#5F6B6F]">A Landlord &amp; Tenant Checklist.</span>
           </h1>
 
           {/* Subtitle */}
@@ -140,8 +141,9 @@ export function BlogHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-3xl sm:text-[34px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
-            How to Verify If an ESA Letter Is Legitimate: A Landlord &amp; Tenant Checklist.
+          <h1 className="font-heading text-3xl sm:text-[34px] font-bold leading-[1.2] tracking-tight">
+            <span className="text-[#2E5A66]">How to Verify If an ESA Letter Is Legitimate: </span>
+            <span className="text-[#5F6B6F]">A Landlord &amp; Tenant Checklist.</span>
           </h1>
 
           {/* Subtitle */}
@@ -240,8 +242,9 @@ export function BlogHeroSection() {
             </div>
 
             {/* Main Headline: Frame 1000011902 */}
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.15] lg:leading-[48px] xl:leading-[64px] tracking-[-0.0002em]">
-              How to Verify If an ESA Letter Is Legitimate: A Landlord &amp; Tenant Checklist.
+            <h1 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[56px] font-bold leading-[1.15] lg:leading-[48px] xl:leading-[64px] tracking-[-0.0002em]">
+              <span className="text-[#2E5A66]">How to Verify If an ESA Letter Is Legitimate: </span>
+              <span className="text-[#5F6B6F] block lg:inline xl:block">A Landlord &amp; Tenant Checklist.</span>
             </h1>
 
             {/* Subtitle */}
