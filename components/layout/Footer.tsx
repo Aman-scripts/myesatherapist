@@ -7,7 +7,7 @@ import Link from "next/link";
 const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #000000 100%)";
 
 const companyLinks = [
-  { label: "About Us", href: "#about" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Meet our Therapists", href: "#therapists" },
   { label: "HIPAA Compliance", href: "#compliance" },

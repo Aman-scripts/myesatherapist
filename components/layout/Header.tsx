@@ -92,12 +92,12 @@ export function Header() {
             >
               Our Therapists
             </a>
-            <a
-              href="#about"
+            <Link
+              href="/about-us"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               About Us
-            </a>
+            </Link>
             <Link
               href="/blogs"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5 whitespace-nowrap"
@@ -284,13 +284,13 @@ export function Header() {
           >
             Our Therapists
           </a>
-          <a
-            href="#about"
+          <Link
+            href="/about-us"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             About Us
-          </a>
+          </Link>
           <Link
             href="/blogs"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between"
