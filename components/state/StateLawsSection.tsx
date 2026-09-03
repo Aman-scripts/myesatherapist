@@ -26,7 +26,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/esalaws-fairemployment-housing.png"
+                src="/states/esalaws-fairemployment-housing.png"
                 alt="Federal Housing Guidelines"
                 fill
                 priority
@@ -83,7 +83,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/esalaws-california-state.png"
+                src="/states/esalaws-california-state.png"
                 alt="Housing Provider Roles & Responsibilities"
                 fill
                 priority

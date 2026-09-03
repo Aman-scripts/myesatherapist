@@ -11,17 +11,17 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     {
       title: "Comfortable Housing with Your ESA",
       description: `${stateName} tenants may request reasonable housing accommodations with their ESAs even in no-pet policy localities.`,
-      icon: "/whomayqualifies-california_chronicworry.svg",
+      icon: "/states/whomayqualifies-california_chronicworry.svg",
     },
     {
       title: "Avoid Extra Pet-Related Costs",
       description: `When valid ESA documentation is presented, ${stateName} landlords are prohibited from charging pet rent, deposits, or extra fees.`,
-      icon: "/california-benefits-workplaceconsideration.svg",
+      icon: "/states/california-benefits-workplaceconsideration.svg",
     },
     {
       title: "No Breed, Weight, or Size Limits",
       description: `Emotional support animals are not subject to standard breed, size, or weight limits by ${stateName} housing providers.`,
-      icon: "/california-benefits-workplaceconsideration.svg",
+      icon: "/states/california-benefits-workplaceconsideration.svg",
     },
   ];
 
@@ -30,19 +30,19 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
       title: "Supports Stress and Anxiety Relief",
       description:
         "Having an ESA nearby helps reduce anxiety levels and bring a calming presence during overwhelming high-stress situations.",
-      icon: "/whomayqualifies-panicattack.svg",
+      icon: "/states/whomayqualifies-panicattack.svg",
     },
     {
       title: "Encourages Emotional Balance",
       description:
         "Ongoing companionship from an ESA provides continuous reassurance and comfort to maintain consistent emotional well-being.",
-      icon: "/california-benefits-strongersense.svg",
+      icon: "/states/california-benefits-strongersense.svg",
     },
     {
       title: "Improves Daily Structure and Meaning",
       description:
         "Caring for an animal helps establish daily routine, generate responsibility, and add meaningful purpose to everyday life.",
-      icon: "/california-benefits-strongersense.svg",
+      icon: "/states/california-benefits-strongersense.svg",
     },
   ];
 
@@ -53,13 +53,13 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
   ];
 
   return (
-    <section className="w-full bg-white my-0 py-0 overflow-hidden relative z-10">
+    <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-3 xl:gap-8 items-stretch">
           <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
             <div className="sm:hidden relative w-full aspect-[390/513]">
               <Image
-                src="/californina-benefits-mobile.png"
+                src="/states/californina-benefits-mobile.png"
                 alt={`Benefits of Having an ESA Letter in ${stateName} Mobile View`}
                 fill
                 priority
@@ -69,7 +69,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               />
               <div className="absolute bottom-0 left-[36.4%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={40}
                   height={40}
@@ -80,7 +80,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1050]">
               <Image
-                src="/californina-benefits-tablet.png"
+                src="/states/californina-benefits-tablet.png"
                 alt={`Benefits of Having an ESA Letter in ${stateName} Tablet View`}
                 fill
                 priority
@@ -90,7 +90,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               />
               <div className="absolute bottom-0 left-[33.8%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={48}
                   height={48}
@@ -101,7 +101,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
             <div className="hidden lg:block relative w-full h-full lg:min-h-0 flex items-stretch">
               <Image
-                src="/california-benefits-clinical-issued.png"
+                src="/states/california-benefits-clinical-issued.png"
                 alt={`Benefits of Having an ESA Letter in ${stateName}`}
                 fill
                 priority
@@ -111,7 +111,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               />
               <div className="absolute left-[12.6%] top-[31.3%] -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={64}
                   height={64}
@@ -121,7 +121,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 py-2 sm:py-4 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-6 sm:pb-8 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
             <div className="mb-4 lg:mb-5 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
                 Benefits of Having an ESA
@@ -190,7 +190,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               ))}
             </div>
 
-            <div>
+            <div className="flex justify-center lg:justify-start pt-2">
               <a
                 href="#faq"
                 className="inline-flex items-center gap-2.5 lg:gap-3 pl-6 pr-1.5 py-1.5 rounded-full text-white font-semibold text-xs lg:text-[13px] xl:text-[16px] transition-all shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 group"
@@ -198,7 +198,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               >
                 <span>Apply your ESA Letter Now</span>
                 <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#FAF7F2] text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
-                  <Image src="/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
+                  <Image src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
                 </span>
               </a>
             </div>

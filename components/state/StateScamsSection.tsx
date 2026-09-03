@@ -25,7 +25,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="p-4 sm:p-5 lg:p-6 flex items-center gap-3.5 sm:gap-4 flex-1">
             <div className="relative w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 shrink-0">
               <Image
-                src="/californina-scams-alert-icon.svg"
+                src="/states/californina-scams-alert-icon.svg"
                 alt="Alert Icon"
                 fill
                 unoptimized
@@ -47,7 +47,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="bg-[#EFF6F3] rounded-[20px] sm:rounded-[24px] lg:rounded-[26px] border border-[#E1EFE9] shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/california-scams-whatyouneed.png"
+                src="/states/california-scams-whatyouneed.png"
                 alt="What You Actually Need for an ESA"
                 fill
                 priority
@@ -120,7 +120,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="bg-[#FFF0F0] rounded-[20px] sm:rounded-[24px] lg:rounded-[26px] border border-[#FCDADA] shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/california-scams-commonesascams.png"
+                src="/states/california-scams-commonesascams.png"
                 alt="Common ESA Scams to avoid"
                 fill
                 priority

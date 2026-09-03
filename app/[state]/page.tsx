@@ -14,6 +14,8 @@ import { StateBenefitsSection } from "@/components/state/StateBenefitsSection";
 import { StateLawsSection } from "@/components/state/StateLawsSection";
 import { StateScamsSection } from "@/components/state/StateScamsSection";
 import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
+import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
+import { StatePricingSection } from "@/components/state/StatePricingSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { StateTableOfContents } from "@/components/state/StateTableOfContents";
@@ -92,12 +94,14 @@ export default async function DynamicStatePage({ params }: Props) {
         <div id="process"><StateProcessSection data={data} /></div>
         <div id="who-qualifies"><StateWhoQualifiesSection data={data} /></div>
         <StateRequirementsSection data={data} />
-        <div id="why-choose"><WhyChooseUs /></div>
+        <div id="why-choose"><WhyChooseUs bgColor="bg-white" /></div>
         <div id="reviews"><TestimonialsSection /></div>
         <div id="benefits"><StateBenefitsSection data={data} /></div>
         <div id="laws"><StateLawsSection data={data} /></div>
         <div id="scams"><StateScamsSection data={data} /></div>
         <div id="psd-vs-esa"><StatePsdVsEsaSection data={data} /></div>
+        <div id="trusted-reviews"><TrustedByPetOwnersSection stateName={data.name} /></div>
+        <div id="pricing"><StatePricingSection stateName={data.name} /></div>
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <StateReviewerBanner />
         <div id="faq"><FaqSection /></div>

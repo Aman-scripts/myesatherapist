@@ -259,7 +259,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
       {/* 1. DESKTOP VIEW */}
       <div className="hidden lg:block relative w-full aspect-[4320/2439] min-h-[640px] lg:min-h-[680px] xl:min-h-[820px]">
         <Image
-          src="/california-hero-section.png"
+          src="/states/california-hero-section.png"
           alt={`${stateName} ESA Evaluations with Licensed Therapists`}
           fill
           priority
@@ -307,7 +307,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
       {/* 2. TABLET VIEW */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1774] max-w-[834px] mx-auto overflow-hidden">
         <Image
-          src="/california-hero-section-tablet.png"
+          src="/states/california-hero-section-tablet.png"
           alt={`${stateName} ESA Evaluations Tablet View`}
           fill
           priority
@@ -344,7 +344,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
       {/* 3. MOBILE VIEW */}
       <div className="sm:hidden relative w-full aspect-[390/1298] overflow-hidden">
         <Image
-          src="/california-hero-section-mobile.png"
+          src="/states/california-hero-section-mobile.png"
           alt={`${stateName} ESA Evaluations Mobile View`}
           fill
           priority

@@ -12,7 +12,7 @@ interface StateReviewerBannerProps {
 export function StateReviewerBanner({
   reviewerName = "Dr. Nicole",
   updatedDate = "May 12, 2026",
-  reviewerImage = "/dr-nicole-reviewer.jpg",
+  reviewerImage = "/blogs/dr-nicole-reviewer.jpg",
 }: StateReviewerBannerProps) {
   return (
     <section className="w-full bg-[#FAF7F2] pt-8 sm:pt-10 lg:pt-14 pb-0 px-4 sm:px-6 lg:px-8">

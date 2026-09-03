@@ -8,22 +8,22 @@ const conditions = [
   {
     title: "Panic Disorder with Agoraphobia",
     description: "Frequent panic attacks restricting leaving homes and public spaces.",
-    icon: "/whomayqualifies-california_chronicworry.svg",
+    icon: "/states/whomayqualifies-california_chronicworry.svg",
   },
   {
     title: "Chronic PTSD",
     description: "Trauma-related flashbacks affecting daily life or emotional regulation.",
-    icon: "/whomayqualifies-panicattack.svg",
+    icon: "/states/whomayqualifies-panicattack.svg",
   },
   {
     title: "Persistent Depressive Disorder",
     description: "Long-term depressive symptoms affecting motivation and energy.",
-    icon: "/whomayqualifies-california_posttrauma.svg",
+    icon: "/states/whomayqualifies-california_posttrauma.svg",
   },
   {
     title: "Obsessive-Compulsive Disorder",
     description: "Intrusive thoughts or compulsions disrupting routine activities.",
-    icon: "/whomayqualifies-moodconditions.svg",
+    icon: "/states/whomayqualifies-moodconditions.svg",
   },
 ];
 
@@ -31,13 +31,13 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
   return (
-    <section className="w-full bg-white py-0 overflow-hidden relative z-10">
+    <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-center">
           <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end w-full">
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
-                src="/california-who-qualifies-mobile.png"
+                src="/states/california-who-qualifies-mobile.png"
                 alt={`Who May Eligible For ESA Letter in ${stateName} Mobile View`}
                 fill
                 priority
@@ -47,7 +47,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               />
               <div className="absolute bottom-0 left-[73.8%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={40}
                   height={40}
@@ -58,7 +58,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/943]">
               <Image
-                src="/california-who-qualifies-tablet.png"
+                src="/states/california-who-qualifies-tablet.png"
                 alt={`Who May Eligible For ESA Letter in ${stateName} Tablet View`}
                 fill
                 priority
@@ -68,7 +68,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               />
               <div className="absolute bottom-0 left-[75.3%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={48}
                   height={48}
@@ -79,7 +79,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
             <div className="hidden lg:block relative w-full aspect-[694/827] ml-auto">
               <Image
-                src="/whomayqualifies.png"
+                src="/states/whomayqualifies.png"
                 alt={`Who qualifies for ${stateName} ESA Letter`}
                 fill
                 priority
@@ -89,7 +89,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               />
               <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
                 <Image
-                  src="/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={64}
                   height={64}
@@ -99,7 +99,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 py-2 sm:py-4 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-4 sm:pb-6 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
             <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 Who May Eligible For ESA

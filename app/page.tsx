@@ -11,6 +11,7 @@ import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { EmotionalSupportSection } from "@/components/home/EmotionalSupportSection";
 import { DoYouNeedEsaSection } from "@/components/home/DoYouNeedEsaSection";
+import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
 import { PricingSection } from "@/components/home/PricingSection";
 import { CommunitySection } from "@/components/home/CommunitySection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -46,6 +47,7 @@ export default function HomePage() {
 
         <DoYouNeedEsaSection />
         <PricingSection />
+        <TrustedByPetOwnersSection />
 
         <CommunitySection />
 

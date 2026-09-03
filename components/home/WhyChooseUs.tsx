@@ -5,44 +5,44 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "/whychoose-section-license-professional.svg",
+    icon: "/home/whychoose-section-license-professional.svg",
     title: "Licensed Professionals",
     description:
       "Evaluations are conducted by independent U.S.-licensed mental health professionals authorized to assess ESA eligibility.",
   },
   {
-    icon: "/whychoose-section-secure-thealth.svg",
+    icon: "/home/whychoose-section-secure-thealth.svg",
     title: "Secure Telehealth Platform",
     description:
       "HIPAA-compliant systems ensure your information remains confidential and protected.",
   },
   {
-    icon: "/whychoose-section-clinical-integrity.svg",
+    icon: "/home/whychoose-section-clinical-integrity.svg",
     title: "Clinical Integrity First",
     description:
       "We do not guarantee ESA approval. Recommendations are based solely on clinical judgment.",
   },
   {
-    icon: "/whychoose-section-legimate-documentation.svg",
+    icon: "/home/whychoose-section-legimate-documentation.svg",
     title: "Legitimate ESA Documentation",
     description:
       "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
   },
   {
-    icon: "/whychoose-section-nationwide-access.svg",
+    icon: "/home/whychoose-section-nationwide-access.svg",
     title: "Nationwide Access",
     description:
       "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
   },
   {
-    icon: "/whychoose-section-transparent-process.svg",
+    icon: "/home/whychoose-section-transparent-process.svg",
     title: "Transparent Process",
     description:
       "Clear steps, clear expectations, no misleading claims.",
   },
 ];
 
-export function WhyChooseUs({ bgColor = "bg-white" }: { bgColor?: string }) {
+export function WhyChooseUs({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
   return (
     <section className={`py-16 lg:py-24 ${bgColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

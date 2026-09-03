@@ -52,6 +52,14 @@ export function StateTableOfContents({ stateName }: Props) {
       label: `Psychiatric Service Dogs vs. Emotional Support Animals in ${stateName}`,
     },
     {
+      id: "trusted-reviews",
+      label: `Trusted by Thousands of Pet Owners in ${stateName}`,
+    },
+    {
+      id: "pricing",
+      label: `Emotional Support Animal Plans & Pricing in ${stateName}`,
+    },
+    {
       id: "available-cities",
       label: `Available Everywhere in ${stateName}`,
     },
@@ -156,67 +164,75 @@ export function StateTableOfContents({ stateName }: Props) {
 
         {/* Sliding Content Panel */}
         <div
-          className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10 pb-12 transition-transform duration-300 ease-out transform ${
+          className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
-          {/* Top Row: Logo Card + Close Button */}
-          <div className="flex items-start justify-between mb-7 sm:mb-8">
-            {/* Frame 1000011910: White Box with Gold Border */}
-            <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
-              <Image
-                src="/myesa-logo.svg"
-                alt="My ESA Therapist"
-                width={135}
-                height={56}
-                className="w-full h-full object-contain"
-                priority
-              />
+          {/* Fixed Top Header (Logo + Close Button + Title + Divider) */}
+          <div className="shrink-0 px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10">
+            {/* Top Row: Logo Card + Close Button */}
+            <div className="flex items-start justify-between mb-5 sm:mb-6">
+              {/* Frame 1000011910: White Box with Gold Border */}
+              <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
+                <Image
+                  src="/common/myesa-logo.svg"
+                  alt="My ESA Therapist"
+                  width={135}
+                  height={56}
+                  className="w-full h-full object-contain"
+                  priority
+                />
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
+                aria-label="Close Table of Contents"
+              >
+                <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#FAF7F2] stroke-[2.2]" />
+              </button>
             </div>
 
-            {/* Close Button */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
-              aria-label="Close Table of Contents"
-            >
-              <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#FAF7F2] stroke-[2.2]" />
-            </button>
+            {/* Heading: Table of Contents */}
+            <div className="space-y-2 mb-3 sm:mb-4">
+              <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight tracking-[-0.00015em]">
+                Table of Contents
+              </h2>
+            </div>
+
+            {/* Line 11 Divider (Placed directly at boundary) */}
+            <div className="w-full h-[0.5px] bg-white/30" />
           </div>
 
-          {/* Heading: Table of Contents */}
-          <div className="space-y-2 mb-4 sm:mb-5">
-            <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight tracking-[-0.00015em]">
-              Table of Contents
-            </h2>
+          {/* Scrollable Links List: Frame 1000011836 */}
+          <div
+            className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 sm:px-8 xl:px-[41px] pt-5 sm:pt-6 pb-10"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            <nav>
+              <ul className="space-y-4 sm:space-y-6">
+                {tocItems.map((item) => {
+                  const isActive = activeId === item.id;
+                  return (
+                    <li key={item.id} className="flex items-start gap-2.5">
+                      <span className="text-white/70 text-base sm:text-lg leading-none mt-1 shrink-0">•</span>
+                      <a
+                        href={`#${item.id}`}
+                        onClick={(e) => scrollToSection(e, item.id)}
+                        className={`font-sans text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-[#E8B92C] ${
+                          isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
+                        }`}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
           </div>
-
-          {/* Line 11 Divider */}
-          <div className="w-full h-[0.5px] bg-white/30 mb-6 sm:mb-8" />
-
-          {/* Links List: Frame 1000011836 */}
-          <nav className="flex-1">
-            <ul className="space-y-4 sm:space-y-6">
-              {tocItems.map((item) => {
-                const isActive = activeId === item.id;
-                return (
-                  <li key={item.id} className="flex items-start gap-2.5">
-                    <span className="text-white/70 text-base sm:text-lg leading-none mt-1 shrink-0">•</span>
-                    <a
-                      href={`#${item.id}`}
-                      onClick={(e) => scrollToSection(e, item.id)}
-                      className={`font-sans text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-[#E8B92C] ${
-                        isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
-                      }`}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
         </div>
       </div>
     </>,
