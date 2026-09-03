@@ -14,7 +14,7 @@ export function BlogsFeaturedArticle() {
           {/* Left Image: image 40 (w-full lg:w-[55%] xl:w-[628px], h-[340px] sm:h-[420px] lg:h-[463px], rounded-[20px]) */}
           <div className="w-full lg:w-[55%] xl:w-[628px] h-[340px] sm:h-[420px] lg:h-[463px] relative rounded-[20px] overflow-hidden shrink-0 shadow-sm z-0">
             <Image
-              src="/blog_seven-things-to_know.png"
+              src="/blogs/blog_seven-things-to_know.png"
               alt="7 Things to Know Before Getting an ESA Letter"
               fill
               priority
@@ -47,7 +47,7 @@ export function BlogsFeaturedArticle() {
                 <span>Get Started</span>
                 <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
-                    src="/send-icon.svg"
+                    src="/common/send-icon.svg"
                     alt=""
                     width={18}
                     height={18}

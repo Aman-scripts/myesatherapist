@@ -12,7 +12,7 @@ export function BlogMetaBar() {
         <div className="flex items-center gap-3.5 sm:gap-4 md:gap-2.5 lg:gap-3.5 flex-1 min-w-0 justify-start py-3 first:pt-0 md:py-0">
           <div className="w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[46px] md:h-[46px] lg:w-[60px] lg:h-[60px] xl:w-[68px] xl:h-[68px] rounded-full overflow-hidden shrink-0 relative shadow-xs border border-[#EAE5DC]/60">
             <Image
-              src="/blogs_trustbar-author.png"
+              src="/blogs/blogs_trustbar-author.png"
               alt="Allyson Valley"
               fill
               priority
@@ -42,7 +42,7 @@ export function BlogMetaBar() {
         <div className="flex items-center gap-3.5 sm:gap-4 md:gap-2.5 lg:gap-3.5 flex-1 min-w-0 justify-start py-3 md:py-0">
           <div className="w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[46px] md:h-[46px] lg:w-[60px] lg:h-[60px] xl:w-[68px] xl:h-[68px] shrink-0 relative flex items-center justify-center">
             <Image
-              src="/blogs_trustbar-publish.png"
+              src="/blogs/blogs_trustbar-publish.png"
               alt="Calendar Icon"
               fill
               priority
@@ -69,7 +69,7 @@ export function BlogMetaBar() {
         <div className="flex items-center gap-3.5 sm:gap-4 md:gap-2.5 lg:gap-3.5 flex-1 min-w-0 justify-start py-3 last:pb-0 md:py-0">
           <div className="w-[46px] h-[46px] sm:w-[54px] sm:h-[54px] md:w-[46px] md:h-[46px] lg:w-[60px] lg:h-[60px] xl:w-[68px] xl:h-[68px] rounded-full overflow-hidden shrink-0 relative shadow-xs border border-[#EAE5DC]/60">
             <Image
-              src="/blogs_medical_reviewer.png"
+              src="/blogs/blogs_medical_reviewer.png"
               alt="Max Phillips"
               fill
               priority

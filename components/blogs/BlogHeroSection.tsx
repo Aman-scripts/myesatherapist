@@ -22,7 +22,7 @@ export function BlogHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
         <Image
-          src="/blog_hero-section-mobile.png"
+          src="/blogs/blog_hero-section-mobile.png"
           alt="How to Verify If an ESA Letter Is Legitimate"
           fill
           priority
@@ -71,7 +71,7 @@ export function BlogHeroSection() {
             >
               <span className="flex items-center gap-2">
                 <Image
-                  src="/hero-section-map.svg"
+                  src="/home/hero-section-map.svg"
                   alt=""
                   width={14}
                   height={18}
@@ -92,7 +92,7 @@ export function BlogHeroSection() {
               <span className="font-sans text-sm font-semibold">Get Started</span>
               <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-                  src="/send-icon.svg"
+                  src="/common/send-icon.svg"
                   alt=""
                   width={16}
                   height={16}
@@ -110,7 +110,7 @@ export function BlogHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
         <Image
-          src="/blog_hero-section-tablet.png"
+          src="/blogs/blog_hero-section-tablet.png"
           alt="How to Verify If an ESA Letter Is Legitimate"
           fill
           priority
@@ -158,7 +158,7 @@ export function BlogHeroSection() {
               className="h-12 px-6 bg-[#FAF7F2] rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-[#2E5A66] hover:bg-white transition-colors"
             >
               <Image
-                src="/hero-section-map.svg"
+                src="/home/hero-section-map.svg"
                 alt=""
                 width={16}
                 height={20}
@@ -178,7 +178,7 @@ export function BlogHeroSection() {
               <span className="font-sans text-base font-semibold">Get Started</span>
               <span className="w-9 h-9 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-                  src="/send-icon.svg"
+                  src="/common/send-icon.svg"
                   alt=""
                   width={18}
                   height={18}
@@ -196,7 +196,7 @@ export function BlogHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:flex relative w-full lg:min-h-[580px] xl:min-h-[792px] flex-col justify-between overflow-hidden">
         <Image
-          src="/blog-hero_section.png"
+          src="/blogs/blog-hero_section.png"
           alt="How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist"
           fill
           priority

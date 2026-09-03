@@ -47,7 +47,7 @@ export function BlogMoreResources() {
               {/* Card Image: Gemini_Generated_Image */}
               <div className="relative w-full h-[260px] sm:h-[280px] lg:h-[317px] overflow-hidden bg-[#FAF7F2] shrink-0">
                 <Image
-                  src="/blog_cards.png"
+                  src="/blogs/blog_cards.png"
                   alt={item.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -75,7 +75,7 @@ export function BlogMoreResources() {
                     <span>Get Started</span>
                     <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                       <Image
-                        src="/send-icon.svg"
+                        src="/common/send-icon.svg"
                         alt=""
                         width={18}
                         height={18}

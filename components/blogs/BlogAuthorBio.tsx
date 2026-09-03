@@ -23,7 +23,7 @@ export function BlogAuthorBio() {
             <div className="flex flex-col items-center shrink-0 gap-2 w-[129px]">
               <div className="w-[110px] h-[110px] sm:w-[129px] sm:h-[129px] rounded-full overflow-hidden border-[4px] border-[#E8B92C] relative shadow-sm shrink-0">
                 <Image
-                  src="/blogs_trustbar-author.png"
+                  src="/blogs/blogs_trustbar-author.png"
                   alt="Allyson Valley"
                   fill
                   priority

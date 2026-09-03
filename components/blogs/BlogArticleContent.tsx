@@ -91,7 +91,7 @@ export function BlogArticleContent() {
         {/* Infographic 1: Tenant Checklist */}
         <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
           <Image
-            src="/blogs-tentant-checklist.png"
+            src="/blogs/blogs-tentant-checklist.png"
             alt="Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate"
             width={870}
             height={1300}
@@ -157,7 +157,7 @@ export function BlogArticleContent() {
         {/* Infographic 2: Landlord Checklist */}
         <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
           <Image
-            src="/blogs-landlord-checklist.png"
+            src="/blogs/blogs-landlord-checklist.png"
             alt="Landlord Checklist: How to Verify an ESA Letter"
             width={870}
             height={1300}
@@ -208,7 +208,7 @@ export function BlogArticleContent() {
         {/* Paw decoration background (Scaled appropriately for 1024px and up) */}
         <div className="hidden sm:block absolute right-0 sm:right-2 lg:right-3 xl:right-6 bottom-0 w-[140px] sm:w-[180px] lg:w-[170px] xl:w-[260px] h-[140px] sm:h-[180px] lg:h-[170px] xl:h-[260px] opacity-40 xl:opacity-75 pointer-events-none z-0">
           <Image
-            src="/paw-icons.png"
+            src="/common/paw-icons.png"
             alt=""
             fill
             className="object-contain object-right-bottom"

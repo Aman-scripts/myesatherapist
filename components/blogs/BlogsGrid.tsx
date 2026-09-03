@@ -11,7 +11,7 @@ const ARTICLES = [
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const ARTICLES = [
     title: "How an Emotional Support Animal Can Support Daily Well-Being",
     author: "by DR Marcus Cole",
     excerpt: "Explore how emotional support animals assist individuals coping with anxiety, depression, and mental health challenges.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const ARTICLES = [
     title: "What Makes an Emotional Support Animal Letter Legitimate?",
     author: "by DR Marcus Cole",
     excerpt: "Learn the essential legal requirements for a valid ESA letter, including clinician licensing and housing verification.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const ARTICLES = [
     title: "Moving With an Emotional Support Animal: What to Know about ESA",
     author: "by DR Marcus Cole",
     excerpt: "Key guidelines for notifying landlords, submitting ESA documentation under Fair Housing laws, and avoiding common issues.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const ARTICLES = [
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Comprehensive breakdown of tenant rights under federal FHA guidelines, fee waivers, and no-pet policy exemptions.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const ARTICLES = [
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Tips on discussing your mental health needs and requesting an ESA recommendation from a licensed healthcare provider.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 7,
@@ -59,7 +59,7 @@ const ARTICLES = [
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 8,
@@ -67,7 +67,7 @@ const ARTICLES = [
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
   {
     id: 9,
@@ -75,7 +75,7 @@ const ARTICLES = [
     title: "Emotional Support Animal vs. Service Animal: What's the Difference?",
     author: "by DR Marcus Cole",
     excerpt: "Explore the key differences between Emotional Support Animals, service animals, and psychiatric service dogs.",
-    image: "/blog_cards.png",
+    image: "/blogs/blog_cards.png",
   },
 ];
 
@@ -137,7 +137,7 @@ export function BlogsGrid() {
                     <span>Get Started</span>
                     <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                       <Image
-                        src="/send-icon.svg"
+                        src="/common/send-icon.svg"
                         alt=""
                         width={18}
                         height={18}
