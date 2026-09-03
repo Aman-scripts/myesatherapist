@@ -7,17 +7,17 @@ import Image from "next/image";
 const cards = [
   {
     stat: "80%",
-    image: "/journey-section-one.png",
+    image: "/home/journey-section-one.png",
     text: "Pet owners say their pets bring them happiness and emotional support.",
   },
   {
     stat: "84%",
-    image: "/journey-section-two.png",
+    image: "/home/journey-section-two.png",
     text: "Report a mostly positive impact on their mental health.",
   },
   {
     stat: "66%",
-    image: "/journey-section-three.png",
+    image: "/home/journey-section-three.png",
     text: "Believe their pets help reduce stress and promote calm.",
   },
 ];
@@ -62,7 +62,7 @@ export function JourneySection() {
                   {/* Circular Icon Badge */}
                   <div className="w-[64px] h-[64px] rounded-full bg-[#EFFFF1]/80 shadow-md flex items-center justify-center mb-2.5">
                     <Image
-                      src="/journey-section-icon.svg"
+                      src="/home/journey-section-icon.svg"
                       alt="Icon"
                       width={38}
                       height={38}

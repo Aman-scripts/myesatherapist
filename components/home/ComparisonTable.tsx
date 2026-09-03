@@ -38,56 +38,56 @@ function WarningOrangeIcon() {
 const comparisonRows = [
   {
     feature: "Evaluations",
-    icon: "/comparison-evaluations.svg",
+    icon: "/home/comparison-evaluations.svg",
     myEsa: "Evaluations by state licensed mental health professionals",
     others: "Often not licensed professionals",
     othersType: "cross",
   },
   {
     feature: "Determination",
-    icon: "/comparison-determination.svg",
+    icon: "/home/comparison-determination.svg",
     myEsa: "Independent clinical evaluation & professional judgement",
     others: "Instant approval or no evaluation",
     othersType: "cross",
   },
   {
     feature: "Telehealth",
-    icon: "/comparison-telehealth.svg",
+    icon: "/home/comparison-telehealth.svg",
     myEsa: "HIPAA-compliant teleheath for your privacy & secuirity",
     others: "Privacy may be lacking",
     othersType: "warning",
   },
   {
     feature: "Compliance",
-    icon: "/comparison-compliance.svg",
+    icon: "/home/comparison-compliance.svg",
     myEsa: "Aligned wih FHA & HUD guidance & best practices",
     others: "Often non-compliant with guidelines",
     othersType: "warning",
   },
   {
     feature: "Transparency",
-    icon: "/comparison-transparency.svg",
+    icon: "/home/comparison-transparency.svg",
     myEsa: "Clear steps & honest communication",
     others: "Unclear process or hidden fees",
     othersType: "cross",
   },
   {
     feature: "Privacy",
-    icon: "/comparison-privacy.svg",
+    icon: "/home/comparison-privacy.svg",
     myEsa: "Your information is encrypted and never shared",
     others: "Privacy protections may be weak",
     othersType: "cross",
   },
   {
     feature: "Nationwide",
-    icon: "/comparisontable-nationwide.svg",
+    icon: "/home/comparisontable-nationwide.svg",
     myEsa: "Licensed providers in all U.S. states (where allowed)",
     others: "Limited or regional only",
     othersType: "warning",
   },
   {
     feature: "Trust",
-    icon: "/comparisontable-trust&legacy.svg",
+    icon: "/home/comparisontable-trust&legacy.svg",
     myEsa: "Trusted by thousands since 2019",
     others: "Unknown sources or reviews",
     othersType: "cross",
@@ -294,7 +294,7 @@ export function ComparisonTable() {
             <span className="font-sans">Get Started</span>
             <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
-                src="/send-icon.svg"
+                src="/common/send-icon.svg"
                 alt=""
                 width={22}
                 height={24}

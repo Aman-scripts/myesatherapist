@@ -1,8 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
+import { STATES_DATA } from "@/data/statesData";
+
+const POPULAR_STATES = Object.values(STATES_DATA);
 
 // Trustpilot green (brand-locked, not part of the site palette)
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -43,8 +47,42 @@ const statsData = [
 ];
 
 export function HeroSection() {
+  const router = useRouter();
+  const [selectedState, setSelectedState] = useState("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRefMobile = useRef<HTMLDivElement>(null);
+  const dropdownRefTablet = useRef<HTMLDivElement>(null);
+  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      const isInside =
+        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
+        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
+        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
+
+      if (!isInside) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
+  const handleStateSelect = (slug: string) => {
+    setSelectedState(slug);
+    setIsDropdownOpen(false);
+    router.push(`/${slug}`);
+  };
+
   return (
-    <section className="relative overflow-hidden bg-warm-bg">
+    <section className="relative z-30 bg-warm-bg">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
       {/* Matches Screenshot 2                                 */}
@@ -52,7 +90,7 @@ export function HeroSection() {
       <div className="block sm:hidden relative w-full aspect-[390/833] min-h-[680px]">
         {/* Background Image: mobile-hero-section.png */}
         <Image
-          src="/mobile-hero-section.png"
+          src="/home/mobile-hero-section.png"
           alt="Emotional Support Animal Evaluations"
           fill
           priority
@@ -98,23 +136,50 @@ export function HeroSection() {
 
           {/* Stacked Action Buttons */}
           <div className="flex flex-col items-center gap-3 mt-5 w-full max-w-[250px]">
-            {/* State Dropdown Button */}
-            <button className="flex items-center justify-between px-5 h-[48px] w-full rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors">
-              <span className="flex items-center gap-2">
-                <Image
-                  src="/hero-section-map.svg"
-                  alt=""
-                  width={16}
-                  height={21}
-                  unoptimized
-                  className="shrink-0 object-contain w-[14px] h-[18px]"
-                />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  Start your State
+            {/* State Dropdown */}
+            <div className="relative w-full z-30" ref={dropdownRefMobile}>
+              <button
+                type="button"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center justify-between px-5 h-[48px] w-full rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors border border-[#EAE5DC]"
+              >
+                <span className="flex items-center gap-2">
+                  <Image
+                    src="/home/hero-section-map.svg"
+                    alt=""
+                    width={16}
+                    height={21}
+                    unoptimized
+                    className="shrink-0 object-contain w-[14px] h-[18px]"
+                  />
+                  <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
+                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                  </span>
                 </span>
-              </span>
-              <ChevronDown className="w-4 h-4 text-primary shrink-0" />
-            </button>
+                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {isDropdownOpen && (
+                <div
+                  className="absolute left-0 top-full mt-1.5 w-full max-h-[260px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  <div className="py-1">
+                    {POPULAR_STATES.map((state) => (
+                      <button
+                        key={state.slug}
+                        type="button"
+                        onClick={() => handleStateSelect(state.slug)}
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                      >
+                        <span>{state.name}</span>
+                        <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Get Started CTA Button */}
             <a
@@ -124,7 +189,7 @@ export function HeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
+                <Image src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </a>
           </div>
@@ -138,7 +203,7 @@ export function HeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1385] min-h-[900px]">
         {/* Background Image: tablet-hero-section.png */}
         <Image
-          src="/tablet-hero-section.png"
+          src="/home/tablet-hero-section.png"
           alt="Emotional Support Animal Evaluations"
           fill
           priority
@@ -185,21 +250,48 @@ export function HeroSection() {
           {/* Side-by-side Action Row */}
           <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
             {/* State Dropdown */}
-            <button className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm">
-              <Image
-                src="/hero-section-map.svg"
-                alt=""
-                width={16}
-                height={21}
-                unoptimized
-                className="shrink-0 object-contain"
-                style={{ width: "auto", height: "auto" }}
-              />
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                Start your State
-              </span>
-              <ChevronDown className="w-4 h-4 text-primary shrink-0" />
-            </button>
+            <div className="relative z-30" ref={dropdownRefTablet}>
+              <button
+                type="button"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+              >
+                <Image
+                  src="/home/hero-section-map.svg"
+                  alt=""
+                  width={16}
+                  height={21}
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
+                />
+                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                  {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                </span>
+                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {isDropdownOpen && (
+                <div
+                  className="absolute left-0 top-full mt-2 w-[260px] max-h-[280px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  <div className="py-1">
+                    {POPULAR_STATES.map((state) => (
+                      <button
+                        key={state.slug}
+                        type="button"
+                        onClick={() => handleStateSelect(state.slug)}
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                      >
+                        <span>{state.name}</span>
+                        <span className="text-xs text-neutral-400">{state.abbreviation}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Get Started Button */}
             <a
@@ -209,7 +301,7 @@ export function HeroSection() {
             >
               Get Started
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
+                <Image src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
             </a>
           </div>
@@ -223,7 +315,7 @@ export function HeroSection() {
       <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
         {/* Background Image: hero-section.png */}
         <Image
-          src="/hero-section.png"
+          src="/home/hero-section.png"
           alt="Woman embracing her emotional support golden retriever outdoors"
           fill
           priority
@@ -271,21 +363,48 @@ export function HeroSection() {
             {/* Action Row */}
             <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-4 xl:mt-6">
               {/* State Dropdown */}
-              <button className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0">
-                <Image
-                  src="/hero-section-map.svg"
-                  alt=""
-                  width={16}
-                  height={21}
-                  unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
-                />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  Start your State
-                </span>
-                <ChevronDown className="w-4 h-4 text-primary shrink-0" />
-              </button>
+              <div className="relative z-30" ref={dropdownRefDesktop}>
+                <button
+                  type="button"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
+                >
+                  <Image
+                    src="/home/hero-section-map.svg"
+                    alt=""
+                    width={16}
+                    height={21}
+                    unoptimized
+                    className="shrink-0 object-contain"
+                    style={{ width: "auto", height: "auto" }}
+                  />
+                  <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {isDropdownOpen && (
+                  <div
+                    className="absolute left-0 top-full mt-2 w-[280px] max-h-[340px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-2xl shadow-[0px_12px_32px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                  >
+                    <div className="py-1">
+                      {POPULAR_STATES.map((state) => (
+                        <button
+                          key={state.slug}
+                          type="button"
+                          onClick={() => handleStateSelect(state.slug)}
+                          className="w-full text-left px-3 py-2 text-sm font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                        >
+                          <span>{state.name}</span>
+                          <span className="text-xs text-neutral-400 font-mono">{state.abbreviation}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Get Started Button */}
               <a
@@ -295,7 +414,7 @@ export function HeroSection() {
               >
                 Get Started
                 <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
+                  <Image src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
                 </span>
               </a>
             </div>

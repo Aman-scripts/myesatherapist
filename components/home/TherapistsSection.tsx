@@ -50,7 +50,7 @@ function StatBadge({ label, value }: { label: string; value: string }) {
         {/* Small floating badge icon at top center */}
         <div className="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white border border-[#E2E8F0] shadow-xs flex items-center justify-center">
           <Image
-            src="/therapist-section-badge.svg"
+            src="/common/therapist-section-badge.svg"
             alt=""
             width={12}
             height={12}
@@ -141,7 +141,7 @@ export function TherapistsSection() {
                   <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
                     <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                       <Image
-                        src="/therapist-avatar.png"
+                        src="/common/therapist-avatar.png"
                         alt={t.name}
                         fill
                         sizes="67px"
@@ -188,7 +188,7 @@ export function TherapistsSection() {
                       <span>View Profile</span>
                       <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
                         <Image
-                          src="/send-icon.svg"
+                          src="/common/send-icon.svg"
                           alt=""
                           width={16}
                           height={16}
@@ -229,7 +229,7 @@ export function TherapistsSection() {
             <span>Book Appointment</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 shadow-sm">
               <Image
-                src="/send-icon.svg"
+                src="/common/send-icon.svg"
                 alt=""
                 width={18}
                 height={18}

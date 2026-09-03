@@ -7,21 +7,21 @@ import Image from "next/image";
 const steps = [
   {
     number: "1",
-    image: "/howworks-section-one.png",
+    image: "/home/howworks-section-one.png",
     title: "Set Up Your Appointment",
     description:
       "Create your account and choose a time that works for you to connect with a licensed mental health professional.",
   },
   {
     number: "2",
-    image: "/howworks-section-two.png",
+    image: "/home/howworks-section-two.png",
     title: "Speak With Professionals",
     description:
       "During the consultation, the professional reviews your emotional and mental health concerns and assesses whether an emotional support animal is appropriate.",
   },
   {
     number: "3",
-    image: "/howworks-section-three.png",
+    image: "/home/howworks-section-three.png",
     title: "Clinical Determination",
     description:
       "Following the professional evaluation, if deemed appropriate by the licensed professional, emotional support animal documentation is sent directly to your email. If not, no documentation is issued.",
@@ -87,7 +87,7 @@ export function HowItWorks() {
             >
               <span>Get Started</span>
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] lg:w-[40px] lg:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[16px] h-[18px] sm:w-[18px] sm:h-[20px] lg:w-[20px] lg:h-[22px]" />
+                <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[16px] h-[18px] sm:w-[18px] sm:h-[20px] lg:w-[20px] lg:h-[22px]" />
               </span>
             </a>
           </div>

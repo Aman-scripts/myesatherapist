@@ -30,7 +30,7 @@ export function CtaBanner({
         {/* Paw Prints: Flush with the bottom edge of teal banner, centered in clear gap on 1024px */}
         <div className="absolute left-[35%] lg:left-[28%] xl:left-[41%] bottom-0 w-[160px] lg:w-[175px] xl:w-[240px] h-[110px] lg:h-[120px] xl:h-[160px] pointer-events-none z-0 hidden md:block">
           <Image
-            src="/cta-section-paw.png"
+            src="/common/cta-section-paw.png"
             alt=""
             fill
             unoptimized
@@ -42,7 +42,7 @@ export function CtaBanner({
         {/* Overlapping Woman with Dog Photo (Flush with bottom edge of teal banner) */}
         <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[490px] xl:w-[653px] h-[390px] lg:h-[410px] xl:h-[525px] pointer-events-none z-20">
           <Image
-            src="/cta-banner-background.png"
+            src="/common/cta-banner-background.png"
             alt="Woman embracing emotional support dog"
             fill
             priority
@@ -84,7 +84,7 @@ export function CtaBanner({
         {/* Mobile Photo fallback */}
         <div className="lg:hidden relative w-full h-[260px] sm:h-[320px] pointer-events-none">
           <Image
-            src="/cta-banner-background.png"
+            src="/common/cta-banner-background.png"
             alt="Woman embracing emotional support dog"
             fill
             unoptimized

@@ -4,12 +4,12 @@ import React from "react";
 import Image from "next/image";
 
 const mediaLogos = [
-  "/asseenon-section-image-one.png",
-  "/asseenon-section-image-two.png",
-  "/asseenon-section-image-three.png",
-  "/asseenon-section-image-four.png",
-  "/asseenon-section-image-five.png",
-  "/asseenon-section-image-six.png",
+  "/home/asseenon-section-image-one.png",
+  "/home/asseenon-section-image-two.png",
+  "/home/asseenon-section-image-three.png",
+  "/home/asseenon-section-image-four.png",
+  "/home/asseenon-section-image-five.png",
+  "/home/asseenon-section-image-six.png",
 ];
 
 interface AsSeenOnSectionProps {

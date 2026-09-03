@@ -8,7 +8,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 function FeatureBadgeIcon() {
   return (
     <Image
-      src="/price-section-badge.svg"
+      src="/home/price-section-badge.svg"
       alt=""
       width={16}
       height={16}
@@ -166,7 +166,7 @@ export function PricingSection({ bgColor = "bg-[#FAF7F2]" }: PricingSectionProps
           {/* Floating Dog Paw & Human Hand Image (Positioned directly to the right without shifting centered cards) */}
           <div className="hidden lg:block absolute left-[85%] lg:left-[88%] xl:left-[100%] top-[70px] lg:top-[60px] xl:top-[45px] w-[280px] lg:w-[340px] xl:w-[441px] h-auto pointer-events-none z-0 -ml-5">
             <Image
-              src="/pricing-section-dog.png"
+              src="/home/pricing-section-dog.png"
               alt="Dog giving paw to woman hand"
               width={441}
               height={376}

@@ -59,7 +59,7 @@ export function FaqSection() {
           {/* Left: image (380x540px on 1024px lg, 551x673px on 1440px xl, rounded-[20px]) */}
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
             <Image
-              src="/faq-section-image.png"
+              src="/common/faq-section-image.png"
               alt="Person holding emotional support animal"
               fill
               priority
