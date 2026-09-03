@@ -54,23 +54,23 @@ export function ChooseStateGridSection() {
           </p>
         </div>
 
-        {/* 4 Columns Layout: Exact Figma Frame 1261153705 */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-[24px] lg:gap-y-[32px] justify-items-center">
+        {/* 2 Columns on Mobile, 4 Columns on Desktop */}
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-6 lg:gap-x-[24px] lg:gap-y-[32px] justify-items-center">
           {ALL_STATES.map((state) => (
             <Link
               key={state.slug}
               href={`/${state.slug}`}
-              className="group flex flex-col justify-center items-start px-[32px] py-[15px] bg-[#FAF7F2] hover:bg-white rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.15)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] h-[62px]"
+              className="group flex flex-col justify-center items-start px-2.5 sm:px-6 lg:px-[32px] py-2 sm:py-[15px] bg-[#FAF7F2] hover:bg-white rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.15)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] h-[52px] sm:h-[62px]"
             >
-              {/* Frame 1261153688: Inner Row (gap: 8px, height: 32px) */}
-              <div className="flex flex-row items-center gap-[8px] w-full h-[32px] overflow-hidden">
-                {/* fi_3177361: Pin Icon (32px x 32px) */}
-                <div className="w-[32px] h-[32px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              {/* Frame 1261153688: Inner Row */}
+              <div className="flex flex-row items-center gap-1.5 sm:gap-2 lg:gap-[8px] w-full h-[32px] overflow-hidden">
+                {/* fi_3177361: Pin Icon */}
+                <div className="w-5 h-5 sm:w-7 sm:h-7 lg:w-[32px] lg:h-[32px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <FigmaPinIcon />
                 </div>
 
-                {/* Page Description: State Text (18px Manrope, font-weight 600, line-height 30px, gradient) */}
-                <span className="font-sans font-semibold text-[18px] leading-[30px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
+                {/* Page Description: State Text */}
+                <span className="font-sans font-semibold text-[13px] sm:text-[15px] lg:text-[18px] leading-tight sm:leading-[30px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
                   {state.name}
                 </span>
               </div>
