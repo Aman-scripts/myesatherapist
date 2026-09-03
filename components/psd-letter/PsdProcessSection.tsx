@@ -6,21 +6,21 @@ import Image from "next/image";
 const stepsData = [
   {
     number: "1",
-    icon: "/psdprocess-section-schedule.svg",
+    icon: "/psd-letter/psdprocess-section-schedule.svg",
     title: "Schedule Consultation",
     description:
       "Complete our simple online form to request a consultation with a licensed mental health professional in your state.",
   },
   {
     number: "2",
-    icon: "/psdprocess-section-meetyourtherapist.svg",
+    icon: "/psd-letter/psdprocess-section-meetyourtherapist.svg",
     title: "Meet Your Therapist",
     description:
       "Connect with a licensed professional via secure video or phone. They'll assess whether a PSD letter may be appropriate for you.",
   },
   {
     number: "3",
-    icon: "/psdprocess-section-letterqualified.svg",
+    icon: "/psd-letter/psdprocess-section-letterqualified.svg",
     title: "Letter if Qualified",
     description:
       "If you qualify, you may receive your PSD letter within 24-72 hours via email, signed by your licensed professional.",
@@ -49,7 +49,7 @@ export function PsdProcessSection() {
         <div className="relative w-full max-w-[1050px] mx-auto mb-16 lg:mb-20">
           <div className="relative aspect-[16/9] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
             <Image
-              src="/psd-three-steps.png"
+              src="/psd-letter/psd-three-steps.png"
               alt="Woman smiling with psychiatric service dog"
               fill
               priority
@@ -62,7 +62,7 @@ export function PsdProcessSection() {
           {/* Floating Circle Badge - Top Right Edge */}
           <div className="absolute top-[18%] right-[-14px] sm:top-[20%] sm:right-[-18px] md:top-[22%] md:right-[-20px] lg:right-[-34px] w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
-              src="/psdprocess-section-icon.svg"
+              src="/psd-letter/psdprocess-section-icon.svg"
               alt=""
               width={73}
               height={73}
@@ -75,7 +75,7 @@ export function PsdProcessSection() {
           {/* Floating Circle Badge - Bottom Left Edge */}
           <div className="absolute bottom-[18%] left-[-14px] sm:bottom-[20%] sm:left-[-18px] md:bottom-[22%] md:left-[-20px] lg:left-[-34px] w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
-              src="/psdprocess-section-icon.svg"
+              src="/psd-letter/psdprocess-section-icon.svg"
               alt=""
               width={73}
               height={73}
@@ -138,7 +138,7 @@ export function PsdProcessSection() {
             <span className="font-sans mr-3">Start Your Consultation</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
-                src="/send-icon.svg"
+                src="/common/send-icon.svg"
                 alt=""
                 width={18}
                 height={20}

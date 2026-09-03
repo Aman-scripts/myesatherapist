@@ -33,7 +33,7 @@ export function PsdCapabilitiesSection() {
       <div className="sm:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psdcapabilites-section-mobile.png"
+            src="/psd-letter/psdcapabilites-section-mobile.png"
             alt="What a Psychiatric Service Dog can do"
             width={390}
             height={680}
@@ -44,7 +44,7 @@ export function PsdCapabilitiesSection() {
           {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (88.1% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[88.1%] w-[54px] h-[54px] z-30 pointer-events-none">
             <Image
-              src="/psdcapabilites-section-icon.svg"
+              src="/psd-letter/psdcapabilites-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -60,7 +60,7 @@ export function PsdCapabilitiesSection() {
       <div className="hidden sm:block lg:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psdcapabilities-section-tablet.png"
+            src="/psd-letter/psdcapabilities-section-tablet.png"
             alt="What a Psychiatric Service Dog can do"
             width={834}
             height={1013}
@@ -71,7 +71,7 @@ export function PsdCapabilitiesSection() {
           {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (84.7% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[84.7%] w-[68px] h-[68px] z-30 pointer-events-none">
             <Image
-              src="/psdcapabilites-section-icon.svg"
+              src="/psd-letter/psdcapabilites-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -138,7 +138,7 @@ export function PsdCapabilitiesSection() {
       <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[45%] xl:w-[48%] max-w-[635px] pointer-events-none z-10">
         <div className="relative w-full h-full">
           <Image
-            src="/psdcapabilities-new-image.png"
+            src="/psd-letter/psdcapabilities-new-image.png"
             alt="What a Psychiatric Service Dog can do"
             fill
             priority

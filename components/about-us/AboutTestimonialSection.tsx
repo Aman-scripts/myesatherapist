@@ -10,21 +10,21 @@ const testimonials = [
       "“Finally, a legitimate ESA service! My therapist was professional and understanding. Got my letter in under 24 hours and my landlord accepted it immediately.”",
     name: "Jason T., Texas",
     location: "Texas",
-    avatar: "/about_us-trusted-section-one.jpg",
+    avatar: "/about-us/about_us-trusted-section-one.jpg",
   },
   {
     quote:
       "“The video consultation was smooth and respectful. The therapist listened to all my anxiety concerns and provided an official letter that answered every landlord requirement.”",
     name: "Sarah M., California",
     location: "California",
-    avatar: "/about_us-trusted-section-two.jpg",
+    avatar: "/about-us/about_us-trusted-section-two.jpg",
   },
   {
     quote:
       "“Extremely transparent and HIPAA compliant. No hidden fees or fake ID card upselling like other sites. Truly professional healthcare service!”",
     name: "David K., Florida",
     location: "Florida",
-    avatar: "/about_us-trusted-section-one.jpg",
+    avatar: "/about-us/about_us-trusted-section-one.jpg",
   },
 ];
 

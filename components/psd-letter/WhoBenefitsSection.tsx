@@ -5,32 +5,32 @@ import Image from "next/image";
 
 const benefitsData = [
   {
-    icon: "/whobenefits-section-livingnopet.svg",
+    icon: "/psd-letter/whobenefits-section-livingnopet.svg",
     title: "Living in No-Pet Housing",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
-    icon: "/whobenefits-section-newservicedog.svg",
+    icon: "/psd-letter/whobenefits-section-newservicedog.svg",
     title: "Getting a new Service Dog",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
-    icon: "/whobenefits-section-frequentflayers.svg",
+    icon: "/psd-letter/whobenefits-section-frequentflayers.svg",
     title: "Frequent Flyers",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
-    icon: "/whobenefits-section-upgradingform.svg",
+    icon: "/psd-letter/whobenefits-section-upgradingform.svg",
     title: "Upgrading from ESA",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
-    icon: "/whobenefits-section-veteranspsd.svg",
+    icon: "/psd-letter/whobenefits-section-veteranspsd.svg",
     title: "Veterans with PTSD",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
-    icon: "/whobenefits-section-backupdocumentation.svg",
+    icon: "/psd-letter/whobenefits-section-backupdocumentation.svg",
     title: "Need Backup Documentation",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
@@ -45,7 +45,7 @@ export function WhoBenefitsSection() {
       <div className="sm:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/whobenefits-section-mobile.png"
+            src="/psd-letter/whobenefits-section-mobile.png"
             alt="People who benefitted most from the PSD Letter"
             width={390}
             height={652}
@@ -56,7 +56,7 @@ export function WhoBenefitsSection() {
           {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (95.1% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[95.1%] w-[54px] h-[54px] z-30 pointer-events-none">
             <Image
-              src="/whobenefits-section-icon.svg"
+              src="/psd-letter/whobenefits-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -72,7 +72,7 @@ export function WhoBenefitsSection() {
       <div className="hidden sm:block lg:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/whobenefits-section-tablet.png"
+            src="/psd-letter/whobenefits-section-tablet.png"
             alt="People who benefitted most from the PSD Letter"
             width={833}
             height={1140}
@@ -83,7 +83,7 @@ export function WhoBenefitsSection() {
           {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (93.9% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[93.9%] w-[68px] h-[68px] z-30 pointer-events-none">
             <Image
-              src="/whobenefits-section-icon.svg"
+              src="/psd-letter/whobenefits-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -157,7 +157,7 @@ export function WhoBenefitsSection() {
           {/* 1. Main Photo */}
           <div className="absolute right-0 top-0 bottom-0 w-full h-full z-10">
             <Image
-              src="/whobenefits-section-image.png"
+              src="/psd-letter/whobenefits-section-image.png"
               alt="People who benefitted most from the PSD Letter"
               fill
               unoptimized
@@ -170,7 +170,7 @@ export function WhoBenefitsSection() {
           {/* 2. Organic Wavy S-Curve SVG Line */}
           <div className="absolute left-[-20px] top-0 bottom-0 w-[83px] h-full z-20 pointer-events-none">
             <Image
-              src="/whobenefits-section-line.svg"
+              src="/psd-letter/whobenefits-section-line.svg"
               alt=""
               width={83}
               height={671}
@@ -183,7 +183,7 @@ export function WhoBenefitsSection() {
           {/* 3. Floating Paw/Heart Badge Icon */}
           <div className="absolute left-[-16px] top-[49%] -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
             <Image
-              src="/whobenefits-section-icon.svg"
+              src="/psd-letter/whobenefits-section-icon.svg"
               alt="Paw Heart Icon"
               width={73}
               height={73}

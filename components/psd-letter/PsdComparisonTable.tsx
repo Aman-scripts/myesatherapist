@@ -51,43 +51,43 @@ interface ComparisonRow {
 const psdComparisonRows: ComparisonRow[] = [
   {
     feature: "Public Access Rights",
-    icon: "/psdletter-comparisiontable-pubicaccess.svg",
+    icon: "/psd-letter/psdletter-comparisiontable-pubicaccess.svg",
     psd: { text: "Yes - ADA Protected", type: "check" },
     esa: { text: "No public access", type: "cross" },
   },
   {
     feature: "Housing Rights (FHA)",
-    icon: "/psdletter-comparisiontable-housingrights.svg",
+    icon: "/psd-letter/psdletter-comparisiontable-housingrights.svg",
     psd: { text: "Yes", type: "check" },
     esa: { text: "Yes", type: "check" },
   },
   {
     feature: "Airline Travel",
-    icon: "/psd-benfit-section-airtravel.svg",
+    icon: "/psd-letter/psd-benfit-section-airtravel.svg",
     psd: { text: "Airline Dependent", type: "warning" },
     esa: { text: "Airline Dependent", type: "warning" },
   },
   {
     feature: "Dog Training",
-    icon: "/psdletter-comparisiontable-dogtraining.svg",
+    icon: "/psd-letter/psdletter-comparisiontable-dogtraining.svg",
     psd: { text: "Must perform tasks", type: "check" },
     esa: { text: "Not Required", type: "cross" },
   },
   {
     feature: "Restaurant & Stores",
-    icon: "/psdletter-comparisiontable-restaurant.svg",
+    icon: "/psd-letter/psdletter-comparisiontable-restaurant.svg",
     psd: { text: "Allowed", type: "check" },
     esa: { text: "Not Allowed", type: "cross" },
   },
   {
     feature: "Therapist Letter",
-    icon: "/psdletter-comparisiontable-therapistletter.svg",
+    icon: "/psd-letter/psdletter-comparisiontable-therapistletter.svg",
     psd: { text: "Recommended", type: "check" },
     esa: { text: "Required for Housing", type: "check" },
   },
   {
     feature: "Animal Allowed",
-    icon: "/psdletter-comparisiontable-animalallowed.svg",
+    icon: "/psd-letter/psdletter-comparisiontable-animalallowed.svg",
     psd: { text: "Dogs only", type: "cross" },
     esa: { text: "Most animals", type: "check" },
   },
@@ -284,7 +284,7 @@ export function PsdComparisonTable() {
             <span className="font-sans mr-3">Start Your Consultation</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
-                src="/send-icon.svg"
+                src="/common/send-icon.svg"
                 alt=""
                 width={18}
                 height={20}

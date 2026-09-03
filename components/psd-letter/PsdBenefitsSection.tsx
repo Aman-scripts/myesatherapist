@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const benefitsData = [
   {
-    icon: "/psd-benfit-section-housesingupport.svg",
+    icon: "/psd-letter/psd-benfit-section-housesingupport.svg",
     title: "Housing Support",
     badge: "Most Requested",
     description:
@@ -13,35 +13,35 @@ const benefitsData = [
     isDark: true,
   },
   {
-    icon: "/psd-benfit-section-airtravel.svg",
+    icon: "/psd-letter/psd-benfit-section-airtravel.svg",
     title: "Air Travel Documentation",
     description:
       "Provides documentation that may support your air travel needs, subject to airline policies and approval.",
     isDark: false,
   },
   {
-    icon: "/psd-benfit-section-publicaccess.svg",
+    icon: "/psd-letter/psd-benfit-section-publicaccess.svg",
     title: "Public Access Information",
     description:
       "Offers documentation for public spaces when accompanied by your trained psychiatric service dog.",
     isDark: false,
   },
   {
-    icon: "/psd-benfit-section-professionaldocument.svg",
+    icon: "/psd-letter/psd-benfit-section-professionaldocument.svg",
     title: "Professional Documentation",
     description:
       "Official letter on letterhead from a state-licensed mental health professional with their credentials.",
     isDark: false,
   },
   {
-    icon: "/psd-benfit-section-supportivedocument.svg",
+    icon: "/psd-letter/psd-benfit-section-supportivedocument.svg",
     title: "Supportive Documentation",
     description:
       "Backup documentation regarding your condition to help support your needs as a service dog handler.",
     isDark: false,
   },
   {
-    icon: "/psd-benfit-section-mentalhealth.svg",
+    icon: "/psd-letter/psd-benfit-section-mentalhealth.svg",
     title: "Mental Health Consultation",
     description:
       "Professional assessment and consultation from licensed therapists who understand service dog considerations.",

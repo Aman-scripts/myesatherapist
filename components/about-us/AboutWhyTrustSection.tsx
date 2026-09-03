@@ -5,22 +5,22 @@ import Image from "next/image";
 
 const cards = [
   {
-    icon: "/about_us-whypetowners-licensed_clinics-icon.svg",
+    icon: "/about-us/about_us-whypetowners-licensed_clinics-icon.svg",
     title: "Licensed Clinicians",
     description: "State-licensed mental health professionals",
   },
   {
-    icon: "/about_us-whypetowners-phone_video-icon.svg",
+    icon: "/about-us/about_us-whypetowners-phone_video-icon.svg",
     title: "Phone or Video Evaluation",
     description: "Secure phone or video sessions",
   },
   {
-    icon: "/about_us-whypetowners-hippa_compliance-icon.svg",
+    icon: "/about-us/about_us-whypetowners-hippa_compliance-icon.svg",
     title: "HIPAA Compliant",
     description: "Secure handling of personal information",
   },
   {
-    icon: "/about_us-whypetowners-clinical_assement-icon.svg",
+    icon: "/about-us/about_us-whypetowners-clinical_assement-icon.svg",
     title: "Clinical Assessment",
     description: "Outcomes based on clinical assessment",
   },

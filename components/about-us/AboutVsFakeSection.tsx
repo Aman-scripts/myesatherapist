@@ -43,7 +43,7 @@ export function AboutVsFakeSection() {
             {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
-                src="/california-scams-whatyouneed.png"
+                src="/states/california-scams-whatyouneed.png"
                 alt="My ESA Therapist Legitimate Evaluation"
                 fill
                 priority
@@ -82,7 +82,7 @@ export function AboutVsFakeSection() {
             {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
-                src="/california-scams-commonesascams.png"
+                src="/states/california-scams-commonesascams.png"
                 alt="Fake ESA Websites Warning"
                 fill
                 priority

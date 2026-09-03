@@ -10,7 +10,7 @@ export function WhatIsPsdSection() {
       <div className="sm:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/whatispsd-section-mobile.png"
+            src="/psd-letter/whatispsd-section-mobile.png"
             alt="What is a Psychiatric Service Dog Letter"
             width={390}
             height={547}
@@ -21,7 +21,7 @@ export function WhatIsPsdSection() {
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (90.5% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[90.5%] w-[54px] h-[54px] z-30 pointer-events-none">
             <Image
-              src="/psd-dogphyscarist-section-icon.svg"
+              src="/psd-letter/psd-dogphyscarist-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -37,7 +37,7 @@ export function WhatIsPsdSection() {
       <div className="hidden sm:block lg:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/whatispsd-section-tablet.png"
+            src="/psd-letter/whatispsd-section-tablet.png"
             alt="What is a Psychiatric Service Dog Letter"
             width={834}
             height={654}
@@ -48,7 +48,7 @@ export function WhatIsPsdSection() {
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (93.3% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[93.3%] w-[68px] h-[68px] z-30 pointer-events-none">
             <Image
-              src="/psd-dogphyscarist-section-icon.svg"
+              src="/psd-letter/psd-dogphyscarist-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -104,7 +104,7 @@ export function WhatIsPsdSection() {
           {/* 1. Main Photo */}
           <div className="absolute right-0 top-0 bottom-0 w-full h-full z-10">
             <Image
-              src="/psd-dogphyscarist-section.png"
+              src="/psd-letter/psd-dogphyscarist-section.png"
               alt="Woman smiling with psychiatric service dog"
               fill
               priority
@@ -117,7 +117,7 @@ export function WhatIsPsdSection() {
           {/* 2. Golden Decorative Curve Line SVG */}
           <div className="absolute left-[-20px] top-0 bottom-0 w-[34%] max-w-[230px] h-full z-20 pointer-events-none">
             <Image
-              src="/psd-dogphyscarist-section-line.svg"
+              src="/psd-letter/psd-dogphyscarist-section-line.svg"
               alt=""
               width={230}
               height={699}
@@ -130,7 +130,7 @@ export function WhatIsPsdSection() {
           {/* 3. Floating Heart-Paw Badge Icon - Centered in curve dip at 6.7% width, 50% height */}
           <div className="absolute left-[6.7%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[52px] h-[52px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
             <Image
-              src="/psd-dogphyscarist-section-icon.svg"
+              src="/psd-letter/psd-dogphyscarist-section-icon.svg"
               alt="Heart Paw Badge"
               width={73}
               height={73}

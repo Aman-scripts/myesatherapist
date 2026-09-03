@@ -32,7 +32,7 @@ export function AboutHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[640px] overflow-hidden">
         <Image
-          src="/about_us-mobile_hero_section.png"
+          src="/about-us/about_us-mobile_hero_section.png"
           alt="About My ESA Therapist"
           fill
           priority
@@ -85,7 +85,7 @@ export function AboutHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
-                    src="/hero-section-map.svg"
+                    src="/home/hero-section-map.svg"
                     alt=""
                     width={14}
                     height={18}
@@ -126,7 +126,7 @@ export function AboutHeroSection() {
               <span className="font-sans text-sm font-semibold">Get Started</span>
               <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-                  src="/send-icon.svg"
+                  src="/common/send-icon.svg"
                   alt=""
                   width={16}
                   height={16}
@@ -144,7 +144,7 @@ export function AboutHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[760px] max-h-[1050px] overflow-hidden">
         <Image
-          src="/about_us-tablet_hero_section.png"
+          src="/about-us/about_us-tablet_hero_section.png"
           alt="About My ESA Therapist"
           fill
           priority
@@ -196,7 +196,7 @@ export function AboutHeroSection() {
                 className="h-12 px-6 bg-white rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-[#2E5A66] hover:bg-[#FAF7F2] transition-colors border border-[#EAE5DC]"
               >
                 <Image
-                  src="/hero-section-map.svg"
+                  src="/home/hero-section-map.svg"
                   alt=""
                   width={16}
                   height={20}
@@ -236,7 +236,7 @@ export function AboutHeroSection() {
               <span className="font-sans text-base font-semibold">Get Started</span>
               <span className="w-9 h-9 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-                  src="/send-icon.svg"
+                  src="/common/send-icon.svg"
                   alt=""
                   width={18}
                   height={18}
@@ -256,7 +256,7 @@ export function AboutHeroSection() {
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero_section-about_us.png"
+            src="/about-us/hero_section-about_us.png"
             alt="About My ESA Therapist"
             fill
             priority

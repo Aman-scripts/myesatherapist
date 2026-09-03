@@ -5,31 +5,31 @@ import Image from "next/image";
 
 const groups = [
   {
-    icon: "/about_us-whowehelp-renterfacing-icon.svg",
+    icon: "/about-us/about_us-whowehelp-renterfacing-icon.svg",
     title: "Renters Facing Housing Restrictions",
     description:
       "An ESA letter, issued after evaluation by a licensed professional, may help you live with your ESA in no-pet housing.",
   },
   {
-    icon: "/about_us-whowehelp-individuals_anxiety-icon.svg",
+    icon: "/about-us/about_us-whowehelp-individuals_anxiety-icon.svg",
     title: "Individuals with Anxiety, Depression, or PTSD",
     description:
       "Receive a professional assessment from licensed mental health professionals to evaluate emotional support needs.",
   },
   {
-    icon: "/about_us-whowehelp-remotetelepath-icon.svg",
+    icon: "/about-us/about_us-whowehelp-remotetelepath-icon.svg",
     title: "Remote or Telehealth Users",
     description:
       "Complete secure, HIPAA-compliant telehealth ESA evaluations from anywhere, with scheduling flexibility to suit your needs.",
   },
   {
-    icon: "/about_us-whowehelp-firsttimereturning-icon.svg",
+    icon: "/about-us/about_us-whowehelp-firsttimereturning-icon.svg",
     title: "First-Time and Returning ESA Applicants",
     description:
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
   {
-    icon: "/about_us-whowehelp-emotionalwellness-icon.svg",
+    icon: "/about-us/about_us-whowehelp-emotionalwellness-icon.svg",
     title: "Emotional Wellness-Focused Pet Owners",
     description:
       "Discuss with licensed professionals the potential role of a companion animal in emotional support.",
@@ -94,7 +94,7 @@ export function AboutWhoWeHelpSection() {
           <div className="lg:col-span-6 flex items-center justify-center order-1 lg:order-2">
             <div className="relative w-full max-w-[480px] lg:max-w-[540px] xl:max-w-[627px] aspect-[627/699] rounded-[24px] xl:rounded-[30px] overflow-hidden shadow-xl">
               <Image
-                src="/about_us-whowehelp-section.png"
+                src="/about-us/about_us-whowehelp-section.png"
                 alt="Woman sitting on floor hugging cat"
                 fill
                 priority

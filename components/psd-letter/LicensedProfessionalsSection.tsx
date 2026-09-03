@@ -26,19 +26,19 @@ const professionals = [
     name: "Chris Evans, California",
     title: "LCSW | 18 years Experience",
     evaluations: "1200+ evaluations",
-    avatar: "/licensedprofessional-section.png",
+    avatar: "/common/licensedprofessional-section.png",
   },
   {
     name: "Chris Evans, California",
     title: "LCSW | 18 years Experience",
     evaluations: "1200+ evaluations",
-    avatar: "/licensedprofessional-section.png",
+    avatar: "/common/licensedprofessional-section.png",
   },
   {
     name: "Chris Evans, California",
     title: "LCSW | 18 years Experience",
     evaluations: "1200+ evaluations",
-    avatar: "/licensedprofessional-section.png",
+    avatar: "/common/licensedprofessional-section.png",
   },
 ];
 
