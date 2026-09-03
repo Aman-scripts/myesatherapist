@@ -45,7 +45,7 @@ export function ContactHero() {
       <div className="sm:hidden relative w-full aspect-[390/1007] overflow-hidden max-w-[480px] mx-auto">
         {/* Background Image: contact-us-hero-section-mobile.png */}
         <Image
-          src="/contact-us-hero-section-mobile.png"
+          src="/contact/contact-us-hero-section-mobile.png"
           alt="Contact Customer Support Mobile"
           fill
           priority
@@ -152,7 +152,7 @@ export function ContactHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1380] overflow-hidden max-w-[834px] mx-auto">
         {/* Background Image: contact_us-hero-section-tablet.png */}
         <Image
-          src="/contact_us-hero-section-tablet.png"
+          src="/contact/contact_us-hero-section-tablet.png"
           alt="Contact Customer Support Tablet"
           fill
           priority
@@ -276,7 +276,7 @@ export function ContactHero() {
         {/* Background Image: contact-hero-section.png */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/contact-hero-section.png"
+            src="/contact/contact-hero-section.png"
             alt="Customer service representative at desk"
             fill
             priority

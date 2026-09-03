@@ -25,25 +25,25 @@ export function ContactSection() {
     {
       title: "CALL US AT:",
       detail: "+1 (888) 412-4041",
-      icon: "/contact_us-call-icon.svg",
+      icon: "/contact/contact_us-call-icon.svg",
       href: "tel:+18884124041",
     },
     {
       title: "EMAIL US AT:",
       detail: "info@myesatherapist.com",
-      icon: "/contact_us-call-message-icon.svg",
+      icon: "/contact/contact_us-call-message-icon.svg",
       href: "mailto:info@myesatherapist.com",
     },
     {
       title: "REACH US AT:",
       detail: "780 Lynnhaven Pkwy #400, Virginia Beach, VA",
-      icon: "/contact_us-map-icon.svg",
+      icon: "/contact/contact_us-map-icon.svg",
       href: "#map",
     },
     {
       title: "OPEN HOURS:",
       detail: "Mon–Fri · 8am – 8pm ET",
-      icon: "/footer-clock-icon.svg",
+      icon: "/common/footer-clock-icon.svg",
       href: "#hours",
     },
   ];
@@ -55,7 +55,7 @@ export function ContactSection() {
         {/* Background Image: contact_us_hero-section.png */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/contact_us_hero-section.png"
+            src="/contact/contact_us_hero-section.png"
             alt="Customer service representative at desk"
             fill
             priority

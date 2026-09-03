@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
@@ -13,6 +13,30 @@ export function StatesHeroSection() {
   const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRefMobile = useRef<HTMLDivElement>(null);
+  const dropdownRefTablet = useRef<HTMLDivElement>(null);
+  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      const isInside =
+        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
+        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
+        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
+
+      if (!isInside) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
 
   const handleStateSelect = (slug: string) => {
     setSelectedState(slug);
@@ -32,7 +56,7 @@ export function StatesHeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#FAF7F2]">
+    <section className="relative z-30 bg-[#FAF7F2]">
       
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
@@ -40,14 +64,16 @@ export function StatesHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="block sm:hidden relative w-full aspect-[390/833] min-h-[720px]">
         {/* Background Artwork */}
-        <Image
-          src="/state_hero-section-mobile.png"
-          alt="ESA Evaluation For Every State"
-          fill
-          priority
-          className="object-cover object-top"
-          sizes="100vw"
-        />
+        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+          <Image
+            src="/states/state_hero-section-mobile.png"
+            alt="ESA Evaluation For Every State"
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="100vw"
+          />
+        </div>
 
         {/* Content Container (Centered on top) */}
         <div className="absolute inset-x-0 top-0 px-4 pt-7 text-center flex flex-col items-center z-10">
@@ -92,7 +118,7 @@ export function StatesHeroSection() {
           <div className="flex flex-col items-center gap-3 mt-5 w-full max-w-[260px]">
             
             {/* Start your State Dropdown */}
-            <div className="relative w-full">
+            <div className="relative w-full z-30" ref={dropdownRefMobile}>
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -100,7 +126,7 @@ export function StatesHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
-                    src="/hero-section-map.svg"
+                    src="/home/hero-section-map.svg"
                     alt=""
                     width={16}
                     height={21}
@@ -114,18 +140,23 @@ export function StatesHeroSection() {
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute left-0 top-full mt-1.5 w-full max-h-[220px] overflow-y-auto bg-white rounded-xl shadow-xl border border-[#EAE5DC] z-50 p-2 divide-y divide-neutral-100">
-                  {POPULAR_STATES.map((state) => (
-                    <button
-                      key={state.slug}
-                      type="button"
-                      onClick={() => handleStateSelect(state.slug)}
-                      className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between"
-                    >
-                      <span>{state.name}</span>
-                      <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
-                    </button>
-                  ))}
+                <div
+                  className="absolute left-0 top-full mt-1.5 w-full max-h-[260px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  <div className="py-1">
+                    {POPULAR_STATES.map((state) => (
+                      <button
+                        key={state.slug}
+                        type="button"
+                        onClick={() => handleStateSelect(state.slug)}
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between"
+                      >
+                        <span>{state.name}</span>
+                        <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -139,7 +170,7 @@ export function StatesHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
+                <Image src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </button>
           </div>
@@ -152,14 +183,16 @@ export function StatesHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1385] min-h-[920px]">
         {/* Background Artwork */}
-        <Image
-          src="/state_hero-section-tablet.png"
-          alt="ESA Evaluation For Every State"
-          fill
-          priority
-          className="object-cover object-top"
-          sizes="100vw"
-        />
+        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+          <Image
+            src="/states/state_hero-section-tablet.png"
+            alt="ESA Evaluation For Every State"
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="100vw"
+          />
+        </div>
 
         {/* Content Container (Centered on top) */}
         <div className="absolute inset-x-0 top-0 px-6 pt-12 text-center flex flex-col items-center z-10">
@@ -204,7 +237,7 @@ export function StatesHeroSection() {
           <div className="flex items-center justify-center gap-4 mt-6">
             
             {/* Start your State Dropdown */}
-            <div className="relative">
+            <div className="relative z-30" ref={dropdownRefTablet}>
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -212,7 +245,7 @@ export function StatesHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
-                    src="/hero-section-map.svg"
+                    src="/home/hero-section-map.svg"
                     alt=""
                     width={16}
                     height={21}
@@ -226,18 +259,23 @@ export function StatesHeroSection() {
               </button>
 
               {isDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-[240px] max-h-[260px] overflow-y-auto bg-white rounded-xl shadow-xl border border-[#EAE5DC] z-50 p-2 divide-y divide-neutral-100">
-                  {POPULAR_STATES.map((state) => (
-                    <button
-                      key={state.slug}
-                      type="button"
-                      onClick={() => handleStateSelect(state.slug)}
-                      className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between"
-                    >
-                      <span>{state.name}</span>
-                      <span className="text-xs text-neutral-400">{state.abbreviation}</span>
-                    </button>
-                  ))}
+                <div
+                  className="absolute left-0 top-full mt-2 w-[260px] max-h-[280px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  <div className="py-1">
+                    {POPULAR_STATES.map((state) => (
+                      <button
+                        key={state.slug}
+                        type="button"
+                        onClick={() => handleStateSelect(state.slug)}
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between"
+                      >
+                        <span>{state.name}</span>
+                        <span className="text-xs text-neutral-400">{state.abbreviation}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -251,7 +289,7 @@ export function StatesHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
+                <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
               </span>
             </button>
           </div>
@@ -267,7 +305,7 @@ export function StatesHeroSection() {
         {/* Full-width Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <Image
-            src="/statepage_hero-section.png"
+            src="/states/statepage_hero-section.png"
             alt="ESA Evaluation For Every State"
             fill
             priority
@@ -287,7 +325,7 @@ export function StatesHeroSection() {
         >
           <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
             <Image
-              src="/state_page_her-section_map-icon.svg"
+              src="/states/state_page_her-section_map-icon.svg"
               alt="Available in all 50 states"
               width={34}
               height={34}
@@ -354,7 +392,7 @@ export function StatesHeroSection() {
             <div className="flex flex-wrap items-center gap-4 pt-1">
               
               {/* Start your State Selector Dropdown Button */}
-              <div className="relative">
+              <div className="relative z-30" ref={dropdownRefDesktop}>
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -363,7 +401,7 @@ export function StatesHeroSection() {
                 >
                   <div className="flex items-center gap-2.5">
                     <Image
-                      src="/hero-section-map.svg"
+                      src="/home/hero-section-map.svg"
                       alt="Location pin"
                       width={16}
                       height={21}
@@ -380,20 +418,20 @@ export function StatesHeroSection() {
 
                 {/* State Dropdown Menu */}
                 {isDropdownOpen && (
-                  <div className="absolute left-0 top-full mt-2 w-[260px] max-h-[320px] overflow-y-auto bg-white rounded-2xl shadow-xl border border-[#EAE5DC] z-50 p-2 divide-y divide-neutral-100">
-                    <div className="px-3 py-1.5 text-xs font-semibold text-neutral-400 uppercase tracking-wider">
-                      Select Your State
-                    </div>
+                  <div
+                    className="absolute left-0 top-full mt-2 w-[280px] max-h-[340px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-2xl shadow-[0px_12px_32px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                  >
                     <div className="py-1">
                       {POPULAR_STATES.map((state) => (
                         <button
                           key={state.slug}
                           type="button"
                           onClick={() => handleStateSelect(state.slug)}
-                          className="w-full text-left px-3 py-2 text-sm font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between"
+                          className="w-full text-left px-3 py-2 text-sm font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
                         >
                           <span>{state.name}</span>
-                          <span className="text-xs text-neutral-400">{state.abbreviation}</span>
+                          <span className="text-xs text-neutral-400 font-mono">{state.abbreviation}</span>
                         </button>
                       ))}
                     </div>
@@ -410,7 +448,7 @@ export function StatesHeroSection() {
               >
                 <span>Get Started</span>
                 <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/send-icon.svg" alt="" width={20} height={22} className="w-[19px] h-[21px]" />
+                  <Image src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[19px] h-[21px]" />
                 </span>
               </button>
             </div>
