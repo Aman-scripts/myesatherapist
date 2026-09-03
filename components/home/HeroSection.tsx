@@ -92,7 +92,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-[13px] leading-[1.5] text-[#5F6B6F] font-semibold max-w-[310px] mx-auto mt-3 font-[family-name:var(--font-lato)]">
+          <p className="text-[13px] leading-[1.5] text-[#5F6B6F] font-semibold max-w-[310px] mx-auto mt-3 font-sans tracking-normal align-middle">
             Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -178,7 +178,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-[family-name:var(--font-lato)]">
+          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-sans tracking-normal align-middle">
             Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -264,7 +264,7 @@ export function HeroSection() {
             </h1>
 
             {/* Subheading */}
-            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[16px] leading-[1.55] xl:leading-[1.625] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-[family-name:var(--font-lato)]">
+            <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-3 xl:mt-4 font-sans">
               Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
             </p>
 

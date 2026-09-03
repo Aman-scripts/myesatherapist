@@ -165,7 +165,7 @@ export function PsdHeroSection() {
             <span className="text-[#5F6B6F]">Letter Assistance</span>
           </h1>
 
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-[family-name:var(--font-lato)]">
+          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-md mx-auto mt-4 font-sans">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
           </p>
 
@@ -240,7 +240,7 @@ export function PsdHeroSection() {
               <span className="text-[#5F6B6F]">Letter Assistance</span>
             </h1>
 
-            <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold max-w-none mt-3 xl:mt-4 font-sans">
+            <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-3 xl:mt-4 font-sans">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
             </p>
 
