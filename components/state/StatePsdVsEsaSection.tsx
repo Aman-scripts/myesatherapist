@@ -37,7 +37,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
             <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
-                src="/emotionalsupportnanimal.png"
+                src="/home/emotionalsupportnanimal.png"
                 alt="Emotional Support Animals (ESA)"
                 fill
                 priority
@@ -83,7 +83,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
             <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
-                src="/psychiatricservicedogs.png"
+                src="/psd-letter/psychiatricservicedogs.png"
                 alt="Psychiatric Service Dogs (PSD)"
                 fill
                 priority
@@ -124,6 +124,22 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Frame 1000012004: Bottom Callout Box */}
+        <div className="relative w-full max-w-[959px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] overflow-hidden flex flex-row items-center pr-4 sm:pr-8 md:pr-[67px] gap-3 sm:gap-[24px]">
+          {/* Rectangle 25: Left Accent */}
+          <div className="w-[14px] sm:w-[19px] self-stretch min-h-[140px] sm:min-h-[181px] bg-[#E8B92C] shrink-0 rounded-l-[10px]" />
+
+          {/* Frame 1000012015: Content Area */}
+          <div className="py-5 sm:py-8 flex flex-col justify-center items-start gap-1 max-w-[849px] flex-1">
+            <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#2E5A66]">
+              Getting a Psychiatric Service Dog in {stateName}
+            </h3>
+            <p className="font-sans font-medium text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#5F6B6F]">
+              Qualifying for a Psychiatric Service Dog requires documentation of a psychiatric disability and completion of task-specific training. Training timelines and costs vary depending on the provider and the specific tasks required. Individuals exploring this option may choose to work with qualified professionals for evaluation, documentation, and guidance. Our platform can help connect individuals with appropriately licensed mental health professionals who can assist with the initial assessment process and discuss next steps.
+            </p>
           </div>
         </div>
       </div>
