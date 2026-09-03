@@ -72,7 +72,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/myesa-logo.svg"
+              src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
               width={171}
               height={71}
@@ -123,7 +123,7 @@ export function Header() {
                 <span>Start Your Consultation</span>
                 <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                   <Image
-                    src="/send-icon.svg"
+                    src="/common/send-icon.svg"
                     alt=""
                     width={19}
                     height={21}
@@ -148,7 +148,7 @@ export function Header() {
                   <span>Get Started</span>
                   <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                     <Image
-                      src="/send-icon.svg"
+                      src="/common/send-icon.svg"
                       alt=""
                       width={19}
                       height={21}
@@ -281,7 +281,7 @@ export function Header() {
               <span>{isPsd ? "Start Your Consultation" : "Get Started"}</span>
               <span className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0">
                 <Image
-                  src="/send-icon.svg"
+                  src="/common/send-icon.svg"
                   alt=""
                   width={19}
                   height={21}

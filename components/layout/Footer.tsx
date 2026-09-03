@@ -20,7 +20,7 @@ const quickLinks = [
   { label: "ESA Letter for Housing", href: "#housing" },
   { label: "ESA Letter Renewal", href: "#renewal" },
   { label: "ESA Letter by State", href: "#states" },
-  { label: "ESA Letter Cost", href: "#pricing" },
+  { label: "ESA Letter Cost", href: "/pricing" },
   { label: "ESA Resources", href: "/blogs" },
 ];
 
@@ -29,7 +29,7 @@ function HipaaBadge() {
     <div className="w-[155px] h-[67px] bg-white rounded-xl border-[3.5px] border-[#E8B92C] flex items-center justify-center p-2 shadow-md">
       <div className="relative w-full h-full">
         <Image
-          src="/hippa_log.png"
+          src="/common/hippa_log.png"
           alt="HIPAA Compliant"
           fill
           unoptimized
@@ -57,7 +57,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
             <div className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-[#E8B92C] p-3 flex items-center justify-center shadow-xl">
               <div className="relative w-full h-full">
                 <Image
-                  src="/myesa-logo.svg"
+                  src="/common/myesa-logo.svg"
                   alt="My ESA Therapist"
                   fill
                   priority
@@ -166,7 +166,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-                      src="/footer-phone-icon.svg"
+                      src="/common/footer-phone-icon.svg"
                       alt=""
                       width={14}
                       height={14}
@@ -188,7 +188,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-                      src="/footer-email-icon.svg"
+                      src="/common/footer-email-icon.svg"
                       alt=""
                       width={14}
                       height={14}
@@ -210,7 +210,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-                      src="/footer-clock-icon.svg"
+                      src="/common/footer-clock-icon.svg"
                       alt=""
                       width={14}
                       height={14}
@@ -232,7 +232,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-                      src="/footer-location-icon.svg"
+                      src="/common/footer-location-icon.svg"
                       alt=""
                       width={14}
                       height={14}
