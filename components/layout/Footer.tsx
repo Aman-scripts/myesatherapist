@@ -21,6 +21,7 @@ const quickLinks = [
   { label: "ESA Letter Renewal", href: "#renewal" },
   { label: "ESA Letter by State", href: "#states" },
   { label: "ESA Letter Cost", href: "/pricing" },
+  { label: "ESA FAQs", href: "/faq" },
   { label: "ESA Resources", href: "/blogs" },
 ];
 
