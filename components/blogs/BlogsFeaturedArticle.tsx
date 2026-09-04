@@ -40,7 +40,7 @@ export function BlogsFeaturedArticle() {
             {/* Frame 1000011890: CTA Button */}
             <div className="pt-1">
               <Link
-                href="/blogs/how-to-verify-if-an-esa-letter-is-legitimate"
+                href="/blog/how-to-verify-if-an-esa-letter-is-legitimate"
                 className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
                 style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >

@@ -214,7 +214,7 @@ export function BlogHeroSection() {
                 Home
               </Link>
               <span className="w-2 h-2 rounded-full bg-[#5F6B6F] inline-block shrink-0 opacity-70" />
-              <Link href="/blogs" className="hover:text-[#2E5A66] transition-colors">
+              <Link href="/blog" className="hover:text-[#2E5A66] transition-colors">
                 Blog
               </Link>
               <span className="w-2 h-2 rounded-full bg-[#5F6B6F] inline-block shrink-0 opacity-70" />

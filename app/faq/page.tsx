@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  alternates: {
+    canonical: "https://myesatherapist.com/faq",
+  },
 };
 
 export default function FaqPage() {

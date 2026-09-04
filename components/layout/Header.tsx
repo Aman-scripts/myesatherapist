@@ -98,7 +98,7 @@ export function Header() {
               About Us
             </Link>
             <Link
-              href="/blogs"
+              href="/blog"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
               Resources <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47]" />
@@ -235,7 +235,7 @@ export function Header() {
             About Us
           </Link>
           <Link
-            href="/blogs"
+            href="/blog"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between"
             onClick={() => setMobileOpen(false)}
           >

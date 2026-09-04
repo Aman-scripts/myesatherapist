@@ -93,7 +93,7 @@ export function BlogsGrid() {
             >
               {/* Card Header Image: aspect-[410/317] */}
               <Link
-                href={`/blogs/${art.slug}`}
+                href={`/blog/${art.slug}`}
                 className="w-full h-[260px] sm:h-[280px] lg:h-[317px] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
               >
                 <Image
@@ -111,7 +111,7 @@ export function BlogsGrid() {
                   
                   {/* Title & Author */}
                   <div className="space-y-1.5">
-                    <Link href={`/blogs/${art.slug}`}>
+                    <Link href={`/blog/${art.slug}`}>
                       <h3 className="font-heading text-xl sm:text-[24px] font-bold text-[#2E5A66] leading-[1.3] lg:leading-[32px] group-hover:text-[#1D6E72] transition-colors cursor-pointer">
                         {art.title}
                       </h3>
@@ -130,7 +130,7 @@ export function BlogsGrid() {
                 {/* Get Started Button (Frame 1000011890) */}
                 <div className="pt-2">
                   <Link
-                    href={`/blogs/${art.slug}`}
+                    href={`/blog/${art.slug}`}
                     className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
                     style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                   >

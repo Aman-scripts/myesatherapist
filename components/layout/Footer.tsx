@@ -22,7 +22,7 @@ const quickLinks = [
   { label: "ESA Letter by State", href: "#states" },
   { label: "ESA Letter Cost", href: "/pricing" },
   { label: "ESA FAQs", href: "/faq" },
-  { label: "ESA Resources", href: "/blogs" },
+  { label: "ESA Resources", href: "/blog" },
 ];
 
 function HipaaBadge() {
@@ -45,7 +45,7 @@ function HipaaBadge() {
 
 export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
   return (
-    <footer className={`w-full ${bgColor} pt-10 sm:pt-14 lg:pt-16`}>
+    <footer className={`w-full ${bgColor} pt-0`}>
       {/* 100% Full-Width Dark Gradient Container with Rounded Top Corners */}
       <div
         className="w-full rounded-t-[40px] sm:rounded-t-[60px] pt-16 pb-10 text-white relative overflow-hidden"
