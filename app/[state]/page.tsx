@@ -103,7 +103,6 @@ export default async function DynamicStatePage({ params }: Props) {
         <div id="trusted-reviews"><TrustedByPetOwnersSection stateName={data.name} /></div>
         <div id="pricing"><StatePricingSection stateName={data.name} /></div>
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
-        <StateReviewerBanner />
         <div id="faq"><FaqSection /></div>
         <div id="cta">
           <CtaBanner
@@ -113,6 +112,7 @@ export default async function DynamicStatePage({ params }: Props) {
             buttonHref="#faq"
           />
         </div>
+        <StateReviewerBanner />
       </main>
 
       <Footer />

@@ -18,6 +18,7 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { ComparisonTable } from "@/components/home/ComparisonTable";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { Footer } from "@/components/layout/Footer";
 
 export default function HomePage() {
@@ -56,6 +57,8 @@ export default function HomePage() {
         <FaqSection />
 
         <CtaBanner />
+
+        <StateReviewerBanner />
       </main>
 
       <Footer />

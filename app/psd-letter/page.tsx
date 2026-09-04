@@ -21,6 +21,7 @@ import { QualifyingConditions } from "@/components/home/QualifyingConditions";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "Psychiatric Service Dog (PSD) Letter Assistance | My ESA Therapist",
@@ -81,6 +82,9 @@ export default function PsdLetterPage() {
           buttonText="Start your Evaluation"
           buttonHref="#pricing"
         />
+
+        {/* 14. Content Reviewed by Doctor Badge */}
+        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

@@ -8,6 +8,7 @@ import { FederalHousingRulesSection } from "@/components/states/FederalHousingRu
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "ESA Evaluation For Every State | My ESA Therapist",
@@ -46,6 +47,9 @@ export default function StatesDirectoryPage() {
 
         {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonHref="#choose-state-section" />
+
+        {/* 6. Content Reviewed by Doctor Badge */}
+        <StateReviewerBanner />
       </main>
 
       <Footer />

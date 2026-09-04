@@ -12,6 +12,7 @@ import { PricingWhyTrustSection } from "@/components/pricing/PricingWhyTrustSect
 // Common Components from Homepage
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "ESA & PSD Letter Plans & Pricing | My ESA Therapist",
@@ -46,6 +47,9 @@ export default function PricingPage() {
           buttonText="Start your Evaluation"
           buttonHref="/psd-letter"
         />
+
+        {/* 6. Content Reviewed by Doctor Badge */}
+        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

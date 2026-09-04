@@ -12,6 +12,7 @@ import { AboutTransparentPricingSection } from "@/components/about-us/AboutTrans
 import { AboutTestimonialSection } from "@/components/about-us/AboutTestimonialSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "About Us | My ESA Therapist - Legitimate ESA & PSD Letters",
@@ -60,6 +61,9 @@ export default function AboutUsPage() {
           buttonHref="/psd-letter"
           bgColor="bg-[#FAF7F2]"
         />
+
+        {/* Section 11: Content Reviewed by Doctor Badge */}
+        <StateReviewerBanner />
       </main>
       <Footer bgColor="bg-[#FAF7F2]" />
     </div>

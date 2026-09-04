@@ -17,7 +17,7 @@ export function StateReviewerBanner({
   className = "",
 }: StateReviewerBannerProps) {
   return (
-    <section className={`w-full bg-[#FAF7F2] pt-14 sm:pt-18 lg:pt-22 pb-4 sm:pb-4 lg:pb-6 px-4 sm:px-6 lg:px-8 ${className}`}>
+    <section className={`w-full bg-[#FAF7F2] py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-[850px] mx-auto">
         <div
           className="w-full rounded-[20px] py-5 sm:py-[24px] px-6 sm:px-[40px] md:px-[60px] lg:px-[113px] shadow-[0px_4px_25px_rgba(26,61,79,0.12)] flex items-center justify-center sm:justify-start"
