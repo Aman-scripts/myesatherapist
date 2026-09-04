@@ -87,9 +87,12 @@
 }
 
 @layer base {
+  html[data-scroll-behavior="smooth"] {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border outline-ring/50;
-    scroll-behavior: smooth;
   }
 
   body {
