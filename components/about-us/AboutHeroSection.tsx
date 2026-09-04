@@ -64,9 +64,10 @@ export function AboutHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-[26px] font-bold tracking-tight leading-[1.2] max-w-[280px]">
-            <span className="text-[#2E5A66] block">About</span>
-            <span className="text-[#5F6B6F] block">My ESA Therapist</span>
+          <h1 className="font-heading text-[26px] font-bold tracking-tight leading-[1.2] max-w-[280px] text-[#2E5A66]">
+            About
+            <br />
+            My ESA Therapist
           </h1>
 
           {/* Subtitle */}
@@ -176,9 +177,8 @@ export function AboutHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-3xl sm:text-[38px] font-bold leading-[1.2] tracking-tight">
-            <span className="text-[#2E5A66]">About </span>
-            <span className="text-[#5F6B6F]">My ESA Therapist</span>
+          <h1 className="font-heading text-3xl sm:text-[38px] font-bold leading-[1.2] tracking-tight text-[#2E5A66]">
+            About My ESA Therapist
           </h1>
 
           {/* Subtitle */}
@@ -312,9 +312,8 @@ export function AboutHeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading text-4xl lg:text-[46px] xl:text-[56px] font-bold leading-tight lg:leading-[52px] xl:leading-[64px] tracking-[-0.0002em]">
-              <span className="text-[#2E5A66]">About My </span>
-              <span className="text-[#5F6B6F] block">ESA Therapist</span>
+            <h1 className="font-heading text-4xl lg:text-[46px] xl:text-[56px] font-bold leading-tight lg:leading-[52px] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66]">
+              About My ESA Therapist
             </h1>
 
             {/* Subtitle Description */}

@@ -103,10 +103,10 @@ export function StatesHeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[28px] sm:text-[32px] leading-[1.2] font-bold tracking-tight">
-            <span className="text-[#2E5A66]">ESA Evaluation For</span>
+          <h1 className="font-heading text-[28px] sm:text-[32px] leading-[1.2] font-bold tracking-tight text-[#2E5A66]">
+            ESA Evaluation For
             <br />
-            <span className="text-[#5F6B6F]">Every State</span>
+            Every State
           </h1>
 
           {/* Subtitle */}
@@ -222,10 +222,10 @@ export function StatesHeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[36px] sm:text-[42px] font-bold tracking-tight mt-6 leading-tight max-w-xl mx-auto">
-            <span className="text-[#2E5A66]">ESA Evaluation For</span>
+          <h1 className="font-heading text-[36px] sm:text-[42px] font-bold tracking-tight mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+            ESA Evaluation For
             <br />
-            <span className="text-[#5F6B6F]">Every State</span>
+            Every State
           </h1>
 
           {/* Subheading */}
@@ -378,10 +378,10 @@ export function StatesHeroSection() {
 
             {/* Heading */}
             <div className="flex flex-col gap-3">
-              <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[56px] lg:leading-[64px] tracking-tight">
-                <span className="text-[#2E5A66]">ESA Evaluation For</span>
+              <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[56px] lg:leading-[64px] tracking-tight text-[#2E5A66]">
+                ESA Evaluation For
                 <br />
-                <span className="text-[#5F6B6F]">Every State</span>
+                Every State
               </h1>
               <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-[#5F6B6F] max-w-[480px]">
                 Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.

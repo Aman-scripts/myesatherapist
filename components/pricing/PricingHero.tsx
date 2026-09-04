@@ -125,7 +125,7 @@ export function PricingHero() {
 
           {/* Heading */}
           <h1 className="font-heading text-[26px] leading-[32px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[320px]">
-            Choose the Right <span className="text-[#5F6B6F]">ESA Package for You</span>
+            Choose the Right ESA Package for You
           </h1>
 
           {/* Subtitle */}
@@ -239,7 +239,7 @@ export function PricingHero() {
           </div>
 
           <h1 className="font-heading text-4xl sm:text-[42px] leading-tight font-bold text-[#2E5A66] max-w-lg">
-            Choose the Right <span className="text-[#5F6B6F]">ESA Package for You</span>
+            Choose the Right ESA Package for You
           </h1>
 
           <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-3 font-sans">
@@ -355,7 +355,7 @@ export function PricingHero() {
 
           {/* Heading (Playfair Display 56px/64px) */}
           <h1 className="font-heading text-[42px] xl:text-[56px] leading-[48px] xl:leading-[64px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[553px]">
-            Choose the Right <span className="text-[#5F6B6F]">ESA Package for You</span>
+            Choose the Right ESA Package for You
           </h1>
 
           {/* Description (Manrope 18px/30px #5F6B6F) */}

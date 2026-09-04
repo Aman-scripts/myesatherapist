@@ -116,14 +116,10 @@ export function BlogsHero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em] max-w-xs mx-auto">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-              Your Guide to
-            </span>
+          <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em] max-w-xs mx-auto text-[#2E5A66]">
+            Your Guide to
             <br />
-            <span className="text-[#5F6B6F]">
-              Emotional Support Animals
-            </span>
+            Emotional Support Animals
           </h1>
 
           {/* Subtitle */}
@@ -230,14 +226,10 @@ export function BlogsHero() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-2 leading-tight max-w-xl mx-auto">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-              Your Guide to
-            </span>
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-2 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+            Your Guide to
             <br />
-            <span className="text-[#5F6B6F]">
-              Emotional Support Animals
-            </span>
+            Emotional Support Animals
           </h1>
 
           {/* Subtitle */}
@@ -344,17 +336,10 @@ export function BlogsHero() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-heading text-[32px] sm:text-[40px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.015em] leading-[1.15] lg:leading-[46px] xl:leading-[64px] mt-4 xl:mt-6">
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                Your Guide to
-              </span>{" "}
-              <span className="text-[#5F6B6F]">
-                Emotional
-              </span>
+            <h1 className="font-heading text-[32px] sm:text-[40px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.015em] leading-[1.15] lg:leading-[46px] xl:leading-[64px] mt-4 xl:mt-6 text-[#2E5A66]">
+              Your Guide to Emotional
               <br />
-              <span className="text-[#5F6B6F]">
-                Support Animals
-              </span>
+              Support Animals
             </h1>
 
             {/* Subheading */}

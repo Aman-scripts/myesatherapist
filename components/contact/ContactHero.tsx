@@ -62,7 +62,7 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1">
-              <h1 className="font-heading text-[26px] font-bold text-[#373737] leading-[32px] tracking-[-0.00015em]">
+              <h1 className="font-heading text-[26px] font-bold text-[#2E5A66] leading-[32px] tracking-[-0.00015em]">
                 Request Info
               </h1>
               <p className="font-sans font-semibold text-[11px] leading-[18px] text-[#5F6B6F] text-center">
@@ -169,7 +169,7 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1.5">
-              <h1 className="font-heading text-[30px] sm:text-[34px] font-bold text-[#373737] leading-[38px] sm:leading-[42px] tracking-[-0.00015em]">
+              <h1 className="font-heading text-[30px] sm:text-[34px] font-bold text-[#2E5A66] leading-[38px] sm:leading-[42px] tracking-[-0.00015em]">
                 Request Info
               </h1>
               <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] text-center">
@@ -295,7 +295,7 @@ export function ContactHero() {
             >
               {/* Centered Header */}
               <div className="text-center space-y-2">
-                <h1 className="font-heading text-[36px] font-bold text-[#373737] leading-[44px] tracking-[-0.00015em]">
+                <h1 className="font-heading text-[36px] font-bold text-[#2E5A66] leading-[44px] tracking-[-0.00015em]">
                   Request Info
                 </h1>
                 <p className="font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F] text-center">

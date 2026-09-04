@@ -349,7 +349,7 @@ export function FaqHero() {
           </div>
 
           {/* Heading (Playfair Display 56px, leading 64px) */}
-          <h1 className="font-heading font-bold text-[36px] lg:text-[44px] xl:text-[56px] leading-[1.14] xl:leading-[64px] tracking-[-0.0002em] text-[#1A3D4F]">
+          <h1 className="font-heading font-bold text-[36px] lg:text-[44px] xl:text-[56px] leading-[1.14] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66]">
             ESA Questions?
             <br />
             We’re here to Help.

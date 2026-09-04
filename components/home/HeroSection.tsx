@@ -119,14 +119,12 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em]">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-              Emotional Support
-              <br />
-              Animal Evaluations
-              <br />
-            </span>
-            <span className="text-[#5F6B6F]">by Licensed Professionals</span>
+          <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em] text-[#2E5A66]">
+            Emotional Support
+            <br />
+            Animal Evaluations
+            <br />
+            by Licensed Professionals
           </h1>
 
           {/* Subheading */}
@@ -232,14 +230,12 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto">
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-              Emotional Support
-              <br />
-              Animal Evaluations
-              <br />
-            </span>
-            <span className="text-[#5F6B6F]">by Licensed Professionals</span>
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+            Emotional Support
+            <br />
+            Animal Evaluations
+            <br />
+            by Licensed Professionals
           </h1>
 
           {/* Subheading */}
@@ -345,14 +341,12 @@ export function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6">
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                Emotional Support
-                <br />
-                Animal Evaluations
-                <br />
-              </span>
-              <span className="text-[#5F6B6F]">by Licensed Professionals</span>
+            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6 text-[#2E5A66]">
+              Emotional Support
+              <br />
+              Animal Evaluations
+              <br />
+              by Licensed Professionals
             </h1>
 
             {/* Subheading */}
