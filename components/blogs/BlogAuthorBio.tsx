@@ -28,6 +28,7 @@ export function BlogAuthorBio() {
                   fill
                   priority
                   className="object-cover"
+                  sizes="129px"
                 />
               </div>
 

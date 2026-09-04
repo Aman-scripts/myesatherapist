@@ -16,6 +16,7 @@ export function StatesPsdCtaSection() {
             alt="Paw prints decoration"
             fill
             className="object-contain"
+            sizes="192px"
           />
         </div>
 

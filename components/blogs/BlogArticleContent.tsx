@@ -212,6 +212,7 @@ export function BlogArticleContent() {
             alt=""
             fill
             className="object-contain object-right-bottom"
+            sizes="(min-width: 1280px) 260px, (min-width: 640px) 180px, 1px"
           />
         </div>
 

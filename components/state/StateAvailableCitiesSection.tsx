@@ -33,6 +33,7 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
                   fill
                   unoptimized
                   className="object-contain"
+                  sizes="68px"
                 />
               </div>
               <span className="font-heading text-sm sm:text-base lg:text-[19px] xl:text-[20px] font-bold text-[#2E5A66] whitespace-nowrap">

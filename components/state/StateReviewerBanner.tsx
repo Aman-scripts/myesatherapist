@@ -31,6 +31,7 @@ export function StateReviewerBanner({
                 priority
                 unoptimized
                 className="object-cover object-center"
+                sizes="89px"
               />
             </div>
 

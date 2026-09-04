@@ -30,6 +30,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
                 fill
                 unoptimized
                 className="object-contain"
+                sizes="40px"
               />
             </div>
             <div className="flex-1">

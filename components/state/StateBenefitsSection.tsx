@@ -65,7 +65,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 priority
                 unoptimized
                 className="object-cover object-top"
-                sizes="100vw"
+                sizes="(max-width: 639px) 100vw, 1px"
               />
               <div className="absolute bottom-0 left-[36.4%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
@@ -86,7 +86,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 priority
                 unoptimized
                 className="object-cover object-top"
-                sizes="100vw"
+                sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
               />
               <div className="absolute bottom-0 left-[33.8%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image

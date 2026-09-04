@@ -17,6 +17,7 @@ export function BlogMetaBar() {
               fill
               priority
               className="object-cover"
+              sizes="68px"
             />
           </div>
           <div className="flex flex-col items-start min-w-0">
@@ -47,6 +48,7 @@ export function BlogMetaBar() {
               fill
               priority
               className="object-contain"
+              sizes="68px"
             />
           </div>
           <div className="flex flex-col items-start min-w-0">
@@ -74,6 +76,7 @@ export function BlogMetaBar() {
               fill
               priority
               className="object-cover"
+              sizes="68px"
             />
           </div>
           <div className="flex flex-col items-start min-w-0">
