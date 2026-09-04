@@ -71,7 +71,7 @@ export function StatesHeroSection() {
             fill
             priority
             className="object-cover object-top"
-            sizes="100vw"
+            sizes="(max-width: 639px) 100vw, 1px"
           />
         </div>
 
@@ -190,7 +190,7 @@ export function StatesHeroSection() {
             fill
             priority
             className="object-cover object-top"
-            sizes="100vw"
+            sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
           />
         </div>
 
@@ -310,7 +310,7 @@ export function StatesHeroSection() {
             fill
             priority
             className="object-cover object-right-top 2xl:object-center"
-            sizes="100vw"
+            sizes="(min-width: 1024px) 100vw, 1px"
           />
         </div>
 

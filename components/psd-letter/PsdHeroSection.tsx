@@ -90,7 +90,7 @@ export function PsdHeroSection() {
           fill
           priority
           className="object-cover object-bottom"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         {/* Content Container at Top */}
@@ -199,7 +199,7 @@ export function PsdHeroSection() {
           fill
           priority
           className="object-cover object-top"
-          sizes="100vw"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
@@ -303,7 +303,7 @@ export function PsdHeroSection() {
           fill
           priority
           className="object-cover object-center"
-          sizes="100vw"
+          sizes="(min-width: 1024px) 100vw, 1px"
         />
 
         <div className="absolute inset-0">

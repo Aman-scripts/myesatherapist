@@ -265,7 +265,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
           priority
           unoptimized
           className="object-cover object-top pointer-events-none"
-          sizes="100vw"
+          sizes="(min-width: 1024px) 100vw, 1px"
         />
 
         <div className="absolute inset-0 z-10">
@@ -313,7 +313,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
           priority
           unoptimized
           className="object-cover object-top pointer-events-none"
-          sizes="100vw"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
@@ -350,7 +350,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
           priority
           unoptimized
           className="object-cover object-top pointer-events-none"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">

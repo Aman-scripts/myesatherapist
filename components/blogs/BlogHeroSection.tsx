@@ -27,7 +27,7 @@ export function BlogHeroSection() {
           fill
           priority
           className="object-cover object-bottom pointer-events-none"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         {/* Content Container at Top */}
@@ -115,7 +115,7 @@ export function BlogHeroSection() {
           fill
           priority
           className="object-cover object-bottom pointer-events-none"
-          sizes="100vw"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
         {/* Content Container at Top */}
@@ -201,7 +201,7 @@ export function BlogHeroSection() {
           fill
           priority
           className="object-cover lg:object-[88%_center] xl:object-center pointer-events-none"
-          sizes="100vw"
+          sizes="(min-width: 1024px) 100vw, 1px"
         />
 
         {/* Hero Content inside standard container width (Frame 1261153654) */}

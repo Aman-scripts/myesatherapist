@@ -51,7 +51,7 @@ export function ContactHero() {
           priority
           unoptimized
           className="object-cover object-top pointer-events-none"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         {/* Floating Request Info Overlay Card */}
@@ -158,7 +158,7 @@ export function ContactHero() {
           priority
           unoptimized
           className="object-cover object-top pointer-events-none"
-          sizes="100vw"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
         {/* Floating Request Info Overlay Card */}
@@ -282,7 +282,7 @@ export function ContactHero() {
             priority
             unoptimized
             className="object-cover object-center pointer-events-none"
-            sizes="100vw"
+            sizes="(min-width: 1024px) 100vw, 1px"
           />
         </div>
 

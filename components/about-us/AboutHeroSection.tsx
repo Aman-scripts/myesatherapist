@@ -38,7 +38,7 @@ export function AboutHeroSection() {
           priority
           unoptimized
           className="object-cover object-bottom pointer-events-none"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         {/* Content Container at Top */}
@@ -150,7 +150,7 @@ export function AboutHeroSection() {
           priority
           unoptimized
           className="object-cover object-bottom pointer-events-none"
-          sizes="100vw"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
         {/* Content Container at Top */}
@@ -262,7 +262,7 @@ export function AboutHeroSection() {
             priority
             unoptimized
             className="object-cover object-right"
-            sizes="100vw"
+            sizes="(min-width: 1024px) 100vw, 1px"
           />
         </div>
 

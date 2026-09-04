@@ -95,7 +95,7 @@ export function HeroSection() {
           fill
           priority
           className="object-cover object-top"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         {/* Content Container (Centered) */}
@@ -208,7 +208,7 @@ export function HeroSection() {
           fill
           priority
           className="object-cover object-top"
-          sizes="100vw"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
         {/* Content Container (Centered) */}
@@ -320,7 +320,7 @@ export function HeroSection() {
           fill
           priority
           className="object-cover object-center"
-          sizes="100vw"
+          sizes="(min-width: 1024px) 100vw, 1px"
         />
 
         {/* Content — positioned with responsive offsets for 1024px vs 1440px */}
