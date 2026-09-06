@@ -37,7 +37,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
           <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end w-full">
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
-                src="/states/california-who-qualifies-mobile.png"
+                src={data.whoQualifiesImageMobile ?? "/states/california-who-qualifies-mobile.png"}
                 alt={`Who May Eligible For ESA Letter in ${stateName} Mobile View`}
                 fill
                 priority
@@ -58,7 +58,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/943]">
               <Image
-                src="/states/california-who-qualifies-tablet.png"
+                src={data.whoQualifiesImageTablet ?? "/states/california-who-qualifies-tablet.png"}
                 alt={`Who May Eligible For ESA Letter in ${stateName} Tablet View`}
                 fill
                 priority

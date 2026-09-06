@@ -59,7 +59,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
           <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
             <div className="sm:hidden relative w-full aspect-[390/513]">
               <Image
-                src="/states/californina-benefits-mobile.png"
+                src={data.benefitsImageMobile ?? "/states/californina-benefits-mobile.png"}
                 alt={`Benefits of Having an ESA Letter in ${stateName} Mobile View`}
                 fill
                 priority
@@ -80,7 +80,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1050]">
               <Image
-                src="/states/californina-benefits-tablet.png"
+                src={data.benefitsImageTablet ?? "/states/californina-benefits-tablet.png"}
                 alt={`Benefits of Having an ESA Letter in ${stateName} Tablet View`}
                 fill
                 priority
