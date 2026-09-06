@@ -77,9 +77,12 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div className="hidden lg:block relative w-full aspect-[694/827] ml-auto">
+            <div
+              className="hidden lg:block relative w-full ml-auto"
+              style={{ aspectRatio: data.whoQualifiesAspect ?? "694/827" }}
+            >
               <Image
-                src="/states/whomayqualifies.png"
+                src={data.whoQualifiesImage ?? "/states/whomayqualifies.png"}
                 alt={`Who qualifies for ${stateName} ESA Letter`}
                 fill
                 priority
@@ -87,7 +90,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 className="object-contain object-right pointer-events-none"
                 sizes="(min-width: 1024px) 45vw, 100vw"
               />
-              <div className="absolute left-[9.2%] top-[45.2%] -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
+              <div className="absolute left-[9.2%] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
                 <Image
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
