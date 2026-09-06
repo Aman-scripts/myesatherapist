@@ -19,6 +19,9 @@ export interface StateData {
   card2Title?: string;
   card2Items?: Array<{ title: string; description: string }>;
   legalNotice?: string;
+  benefitsImage?: string;
+  whoQualifiesImage?: string;
+  whoQualifiesAspect?: string;
   cities: Array<{ name: string; icon: string }>;
 }
 
@@ -178,6 +181,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "FL",
     metaTitle: "Florida ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Official Florida ESA Letter online evaluations with state-licensed therapists. Fully compliant with Florida Senate Bill 1084 and FHA housing protections.",
+    benefitsImage: "/states/statewhobenefits-florida.png",
+    whoQualifiesImage: "/states/statewhoqualifies-florida.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "Miami", icon: "/states/losangeles.svg" },
       { name: "Orlando", icon: "/states/sanfrancisco.svg" },
@@ -538,6 +544,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "NY",
     metaTitle: "New York ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Official New York ESA Letter online evaluations with state-licensed therapists. Fully compliant with New York state regulations and federal Fair Housing Act.",
+    benefitsImage: "/states/statewhobenefits-newyork.png",
+    whoQualifiesImage: "/states/statewhoqualifies-newyork.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "New York City", icon: "/states/losangeles.svg" },
       { name: "Buffalo", icon: "/states/sanfrancisco.svg" },
@@ -556,6 +565,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "TX",
     metaTitle: "Texas ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Get an official Texas ESA Letter online from state-licensed mental health professionals. 100% compliant with Texas Property Code and the federal Fair Housing Act.",
+    benefitsImage: "/states/statewhobenefits-texas.png",
+    whoQualifiesImage: "/states/statewhoqualifies-texas.png",
+    whoQualifiesAspect: "712/886",
     cities: [
       { name: "Houston", icon: "/states/losangeles.svg" },
       { name: "San Antonio", icon: "/states/sanfrancisco.svg" },
@@ -574,6 +586,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "WA",
     metaTitle: "Washington ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Get an official Washington ESA Letter online from state-licensed mental health professionals. 100% compliant with Washington law and the federal Fair Housing Act.",
+    benefitsImage: "/states/statewhobenefits-washington.png",
+    whoQualifiesImage: "/states/statewhoqualifies-washington.png",
+    whoQualifiesAspect: "697/827",
     cities: [
       { name: "Seattle", icon: "/states/losangeles.svg" },
       { name: "Spokane", icon: "/states/sanfrancisco.svg" },
@@ -592,6 +607,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "WI",
     metaTitle: "Wisconsin ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Wisconsin ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation.",
+    benefitsImage: "/states/statewhobenefits-wisconsin.png",
+    whoQualifiesImage: "/states/statewhoqualifies-wisconsin.png",
+    whoQualifiesAspect: "698/827",
     cities: [
       { name: "Milwaukee", icon: "/states/losangeles.svg" },
       { name: "Madison", icon: "/states/sanfrancisco.svg" },
@@ -610,6 +628,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "WY",
     metaTitle: "Wyoming ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Get an official Wyoming ESA Letter online from state-licensed healthcare providers. Compliant with Fair Housing Act guidelines and state rules.",
+    benefitsImage: "/states/statewhobenefits-wyoming.png",
+    whoQualifiesImage: "/states/statewhoqualifies-wyoming.png",
+    whoQualifiesAspect: "704/915",
     cities: [
       { name: "Cheyenne", icon: "/states/losangeles.svg" },
       { name: "Casper", icon: "/states/sanfrancisco.svg" },
@@ -790,6 +811,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "SD",
     metaTitle: "South Dakota ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
     metaDescription: "South Dakota ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation.",
+    benefitsImage: "/states/statewhobenefits-southdakota.png",
+    whoQualifiesImage: "/states/statewhoqualifies-southdakota.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "Sioux Falls", icon: "/states/losangeles.svg" },
       { name: "Rapid City", icon: "/states/sanfrancisco.svg" },
@@ -808,6 +832,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "UT",
     metaTitle: "Utah ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with Utah-licensed mental health professionals for an official ESA evaluation. 100% compliant with Utah housing laws and federal regulations.",
+    benefitsImage: "/states/statewhobenefits-uttah.png",
+    whoQualifiesImage: "/states/statewhoqualifies-uttah.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "Salt Lake City", icon: "/states/losangeles.svg" },
       { name: "West Valley City", icon: "/states/sanfrancisco.svg" },
@@ -826,6 +853,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "SC",
     metaTitle: "South Carolina ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "South Carolina ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation under FHA.",
+    benefitsImage: "/states/statewhobenefits-southcarolina.png",
+    whoQualifiesImage: "/states/statewhoqualifies-southcarolina.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "Charleston", icon: "/states/losangeles.svg" },
       { name: "Columbia", icon: "/states/sanfrancisco.svg" },
@@ -844,6 +874,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "VA",
     metaTitle: "Virginia ESA Letter Online with Licensed Therapist | My ESA Therapist",
     metaDescription: "Official Virginia ESA Letter online evaluations with state-licensed therapists. Fully compliant with Virginia Fair Housing Law and federal regulations.",
+    benefitsImage: "/states/statewhobenefits-virginia.png",
+    whoQualifiesImage: "/states/statewhoqualifies-virginia.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "Virginia Beach", icon: "/states/losangeles.svg" },
       { name: "Chesapeake", icon: "/states/sanfrancisco.svg" },
@@ -862,6 +895,9 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "WV",
     metaTitle: "West Virginia ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
     metaDescription: "West Virginia ESA Letter evaluations conducted by state-licensed mental health professionals. Secure telehealth process for FHA housing compliance.",
+    benefitsImage: "/states/statewhobenefits-westvirginia.png",
+    whoQualifiesImage: "/states/statewhoqualifies-westvirginia.png",
+    whoQualifiesAspect: "699/1053",
     cities: [
       { name: "Charleston", icon: "/states/losangeles.svg" },
       { name: "Huntington", icon: "/states/sanfrancisco.svg" },

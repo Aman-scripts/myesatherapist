@@ -101,7 +101,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
             <div className="hidden lg:block relative w-full h-full lg:min-h-0 flex items-stretch">
               <Image
-                src="/states/california-benefits-clinical-issued.png"
+                src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.png"}
                 alt={`Benefits of Having an ESA Letter in ${stateName}`}
                 fill
                 priority
