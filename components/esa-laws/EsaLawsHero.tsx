@@ -49,11 +49,17 @@ const statsData = [
   { value: "100%", label: "Licensed Pros" },
 ];
 
+const HEADING = "Emotional Support Animal Laws by State and Federal Guidelines";
+const DESCRIPTION =
+  "Understand federal and state-level ESA regulations, housing rules, and evaluation requirements.";
+const HERO_IMAGE = "/esa-laws/esalaws-herosection-portrait.png";
+
 export function EsaLawsHero() {
   const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRefMobile = useRef<HTMLDivElement>(null);
+  const dropdownRefTablet = useRef<HTMLDivElement>(null);
   const dropdownRefDesktop = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -61,6 +67,7 @@ export function EsaLawsHero() {
       const target = event.target as Node;
       const isInside =
         (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
+        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
         (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
 
       if (!isInside) {
@@ -85,127 +92,216 @@ export function EsaLawsHero() {
   return (
     <section className="relative z-30 w-full bg-[#FAF7F2] overflow-visible">
       {/* ---------------------------------------------------- */}
-      {/* MOBILE / TABLET (< 1024px): Content stacked above photo */}
+      {/* 1. MOBILE ESA LAWS HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
-      <div className="lg:hidden w-full px-4 sm:px-8 pt-8 pb-0 flex flex-col items-center gap-6">
-        {/* Stat Pills */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 w-full max-w-[513px]">
-          {statsData.map((stat, idx) => (
-            <div
-              key={idx}
-              className="flex-1 h-[48px] sm:h-[53px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-1"
-            >
-              <span
-                className="font-heading font-bold text-[17px] sm:text-[22px] leading-tight bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
+      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
+        <Image
+          src={HERO_IMAGE}
+          alt="Woman reading ESA Laws guide with her emotional support dog"
+          fill
+          priority
+          className="object-cover object-bottom"
+          sizes="(max-width: 639px) 100vw, 1px"
+        />
+
+        {/* Content Container at Top */}
+        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
+          {/* Stat Pills at top (Mobile) */}
+          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3">
+            {statsData.map((stat, idx) => (
+              <div
+                key={idx}
+                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-xs"
               >
-                {stat.value}
-              </span>
-              <span className="font-sans font-semibold text-[9.5px] sm:text-[12px] leading-tight text-[#949494] whitespace-nowrap">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        <h1 className="w-full max-w-[560px] font-heading font-bold text-[28px] sm:text-[40px] leading-[36px] sm:leading-[48px] text-center tracking-[-0.00015em] text-[#2E5A66]">
-          Emotional Support Animal Laws by State and Federal Guidelines
-        </h1>
-
-        <p className="w-full max-w-[520px] font-sans font-semibold text-[14px] sm:text-[16px] leading-[26px] sm:leading-[28px] text-center text-[#5F6B6F]">
-          Understand federal and state-level ESA regulations, housing rules, and evaluation requirements.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[450px]">
-          <div className="relative w-full sm:w-[246px] z-30" ref={dropdownRefMobile}>
-            <button
-              type="button"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full sm:w-[246px] h-[54px] rounded-[30px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between px-[20px] cursor-pointer hover:bg-white transition-colors"
-            >
-              <div className="flex items-center gap-[8px]">
-                <Image
-                  src="/home/hero-section-map.svg"
-                  alt=""
-                  width={18}
-                  height={22}
-                  unoptimized
-                  className="shrink-0 object-contain w-[16px] h-[20px]"
-                />
                 <span
-                  className="font-sans font-semibold text-[16px] leading-[30px] bg-clip-text text-transparent truncate max-w-[140px]"
+                  className="font-heading font-bold text-xs leading-none bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
-                  {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                  {stat.value}
+                </span>
+                <span className="text-[9px] text-[#949494] font-semibold mt-0.5 leading-tight font-sans whitespace-nowrap">
+                  {stat.label}
                 </span>
               </div>
-              <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-            </button>
+            ))}
+          </div>
 
-            {isDropdownOpen && (
-              <div
-                className="absolute left-0 top-full mt-1.5 w-full max-h-[260px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          {/* Heading */}
+          <h1 className="font-heading text-[26px] leading-[32px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[340px]">
+            {HEADING}
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-[12px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[300px] mx-auto mt-2 font-sans">
+            {DESCRIPTION}
+          </p>
+
+          {/* Stacked Action Buttons */}
+          <div className="flex flex-col items-center gap-2.5 mt-4 w-full max-w-[250px]">
+            {/* State Dropdown */}
+            <div className="relative w-full z-50" ref={dropdownRefMobile}>
+              <button
+                type="button"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center justify-between px-5 h-[46px] w-full rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors border border-[#EAE5DC]"
               >
-                <div className="py-1">
-                  {POPULAR_STATES.map((state) => (
-                    <button
-                      key={state.slug}
-                      type="button"
-                      onClick={() => handleStateSelect(state.slug)}
-                      className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
-                    >
-                      <span>{state.name}</span>
-                      <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
-                    </button>
-                  ))}
+                <span className="flex items-center gap-2">
+                  <Image
+                    src="/home/hero-section-map.svg"
+                    alt=""
+                    width={16}
+                    height={21}
+                    unoptimized
+                    className="shrink-0 object-contain w-[14px] h-[18px]"
+                  />
+                  <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
+                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                  </span>
+                </span>
+                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {isDropdownOpen && (
+                <div
+                  className="absolute left-0 top-full mt-1.5 w-full max-h-[260px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.22)] border border-[#EAE5DC] z-[9999] p-2"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  <div className="py-1">
+                    {POPULAR_STATES.map((state) => (
+                      <button
+                        key={state.slug}
+                        type="button"
+                        onClick={() => handleStateSelect(state.slug)}
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                      >
+                        <span>{state.name}</span>
+                        <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
 
-          <a
-            href="#how-it-works"
-            className="w-full sm:w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white hover:opacity-95 transition-opacity"
-            style={{ backgroundImage: TEAL_GRADIENT }}
-          >
-            <span className="font-sans font-semibold text-[16px] leading-[26px] text-white">Get Started</span>
-            <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
-            </span>
-          </a>
-        </div>
-
-        <div
-          className="w-full max-w-[300px] rounded-[20px] p-3 flex flex-col justify-center items-center gap-2 border border-white/40 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
-          style={{ background: "rgba(255, 255, 255, 0.55)" }}
-        >
-          <div className="flex items-center gap-1.5">
-            <StarMark className="w-5 h-5" style={{ color: TRUSTPILOT_GREEN }} />
-            <span className="font-lato text-base text-[#5F6B6F]">Trustpilot</span>
+            {/* Get Started CTA Button */}
+            <a
+              href="#how-it-works"
+              className="flex items-center justify-between pl-6 pr-1.5 h-[46px] w-full rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 shadow-sm"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              <span>Get Started</span>
+              <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
+              </span>
+            </a>
           </div>
-          <TrustpilotStars />
-          <div className="flex items-center gap-2 text-xs font-lato text-[#5F6B6F] whitespace-nowrap">
-            <span>Trustscore 4.4</span>
-            <span>•</span>
-            <span>23,900 reviews</span>
-          </div>
-        </div>
-
-        <div className="relative w-full aspect-[3/2] rounded-[24px] overflow-hidden mt-2">
-          <Image
-            src="/esa-laws/esalaws-herosection.png"
-            alt="Woman reading ESA Laws guide with her emotional support dog"
-            fill
-            priority
-            className="object-cover object-[75%_center]"
-            sizes="100vw"
-          />
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
-      {/* DESKTOP (>= 1024px) */}
+      {/* 2. TABLET ESA LAWS HERO SECTION (640px to 1023px)    */}
+      {/* ---------------------------------------------------- */}
+      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
+        <Image
+          src={HERO_IMAGE}
+          alt="Woman reading ESA Laws guide with her emotional support dog"
+          fill
+          priority
+          className="object-cover object-bottom"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
+        />
+
+        {/* Content Container at Top */}
+        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
+          {/* Stat Pills */}
+          <div className="flex items-center justify-center gap-3 w-full max-w-md mx-auto mb-4">
+            {statsData.map((stat, idx) => (
+              <div
+                key={idx}
+                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-3 rounded-[30px] shadow-xs"
+              >
+                <span
+                  className="font-heading font-bold text-base leading-none bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  {stat.value}
+                </span>
+                <span className="text-[11px] text-[#949494] font-semibold mt-0.5 leading-tight font-sans whitespace-nowrap">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <h1 className="font-heading text-4xl sm:text-[38px] leading-tight font-bold text-[#2E5A66] max-w-xl">
+            {HEADING}
+          </h1>
+
+          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-3 font-sans">
+            {DESCRIPTION}
+          </p>
+
+          <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
+            {/* State Dropdown */}
+            <div className="relative z-50" ref={dropdownRefTablet}>
+              <button
+                type="button"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+              >
+                <Image
+                  src="/home/hero-section-map.svg"
+                  alt=""
+                  width={16}
+                  height={21}
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
+                />
+                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                  {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                </span>
+                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {isDropdownOpen && (
+                <div
+                  className="absolute left-0 top-full mt-2 w-[260px] max-h-[280px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.22)] border border-[#EAE5DC] z-[9999] p-2"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  <div className="py-1">
+                    {POPULAR_STATES.map((state) => (
+                      <button
+                        key={state.slug}
+                        type="button"
+                        onClick={() => handleStateSelect(state.slug)}
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                      >
+                        <span>{state.name}</span>
+                        <span className="text-xs text-neutral-400">{state.abbreviation}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <a
+              href="#how-it-works"
+              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-sm"
+              style={{ backgroundImage: TEAL_GRADIENT }}
+            >
+              Get Started
+              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ---------------------------------------------------- */}
+      {/* 3. DESKTOP (>= 1024px) */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/797] min-h-[560px] xl:min-h-0">
         <Image
@@ -240,11 +336,11 @@ export function EsaLawsHero() {
             </div>
 
             <h1 className="font-heading font-bold text-[36px] lg:text-[44px] xl:text-[56px] leading-[1.14] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66] max-w-[626px]">
-              Emotional Support Animal Laws by State and Federal Guidelines
+              {HEADING}
             </h1>
 
             <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[560px] xl:max-w-[625px]">
-              Understand federal and state-level ESA regulations, housing rules, and evaluation requirements.
+              {DESCRIPTION}
             </p>
           </div>
 
