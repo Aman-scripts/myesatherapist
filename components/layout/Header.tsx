@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 
+
 const AVAILABLE_STATES = [
   { name: "Alabama", slug: "alabama" },
   { name: "Alaska", slug: "alaska" },
@@ -194,11 +195,10 @@ export function Header() {
                 <Link
                   key={st.slug}
                   href={href}
-                  className={`hover:text-[#1E3E47] transition-colors whitespace-nowrap ${
-                    isActive
+                  className={`hover:text-[#1E3E47] transition-colors whitespace-nowrap ${isActive
                       ? "text-[#1E3E47] font-bold underline underline-offset-4 decoration-[#E8B92C]"
                       : ""
-                  }`}
+                    }`}
                 >
                   {st.name}
                 </Link>
