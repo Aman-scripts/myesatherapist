@@ -56,21 +56,10 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
           <div className="max-w-[711px] mx-auto relative overflow-hidden bg-[#FAF7F2] rounded-[10px] py-3.5 px-4 sm:px-6 shadow-xs flex items-center pl-6 sm:pl-7 text-left">
             <div className="absolute left-0 top-0 bottom-0 w-3 bg-[#E8B92C] rounded-l-[10px]" />
             <p className="font-sans text-[11.5px] sm:text-xs lg:text-[14px] font-semibold text-[#5F6B6F] leading-relaxed">
-              {note.startsWith("Important Note:") ? (
-                <>
-                  <span className="font-bold text-[#2E5A66] uppercase tracking-wider">
-                    IMPORTANT NOTE -{" "}
-                  </span>
-                  {note.replace(/^Important Note:\s*/i, "")}
-                </>
-              ) : (
-                <>
-                  <span className="font-bold text-[#2E5A66] uppercase tracking-wider">
-                    IMPORTANT -{" "}
-                  </span>
-                  {note}
-                </>
-              )}
+              <span className="font-bold text-[#2E5A66] uppercase tracking-wider">
+                {/^important\s*note/i.test(note) ? "IMPORTANT NOTE - " : "IMPORTANT - "}
+              </span>
+              {note.replace(/^(important\s*note[:\s-]*|important[:\s-]*)/i, "")}
             </p>
           </div>
         </div>

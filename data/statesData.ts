@@ -51,7 +51,7 @@ export interface StateData {
   whyChooseTitle?: string;
   whyChooseSubtitle?: string;
   whyChooseItems?: Array<{
-    icon: string;
+    icon?: string;
     title: string;
     description: string;
   }>;
@@ -453,16 +453,315 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "AK",
     metaTitle: "Alaska ESA Letter by Licensed Professionals | My ESA Therapist",
     metaDescription: "Alaska ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation under FHA.",
-    cities: [
-      { name: "Anchorage", icon: "/states/losangeles.svg" },
-      { name: "Fairbanks", icon: "/states/sanfrancisco.svg" },
-      { name: "Juneau", icon: "/states/losangelestwo.svg" },
-      { name: "Badger", icon: "/states/losangelesfour.svg" },
-      { name: "Knik-Fairview", icon: "/states/losangelesthree.svg" },
-      { name: "College", icon: "/states/sanfranciscotwo.svg" },
-      { name: "Sitka", icon: "/states/sanfranciscothree.svg" },
-      { name: "Ketchikan", icon: "/states/sanfranciscofour.svg" },
+    heroTitle: "ESA Letter\nEvaluations by Alaska\nLicensed Professionals",
+    heroSubtitle: "Connect with a licensed mental health professional for a secure emotional support animal evaluation. ESA letters are issued only when clinically appropriate and aligned with the Fair Housing Act (FHA).",
+    therapistsTitle: "Our Licensed Mental Health Professionals",
+    therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
+    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
+    therapistsList: [
+      {
+        id: 1,
+        name: "Robert Staaf",
+        title: "Licensed Clinical Social Worker",
+        bio: "LCSW with extensive psychotherapy experience. Pet owner and advocate for animal-assisted mental health treatment.",
+        licensedIn: "30+ States",
+        method: "Video or Phone",
+        focus: "Anxiety & Stress",
+      },
+      {
+        id: 2,
+        name: "Leslie K. Gamble",
+        title: "Licensed Independent Clinical Social Worker",
+        bio: "Licensed therapist with 13 years of healthcare experience serving individuals, couples, and families with flexible, goal-focused care.",
+        licensedIn: "15+ States",
+        method: "Video or Phone",
+        focus: "Depression & PTSD",
+      },
+      {
+        id: 3,
+        name: "Gaurav Patel, MD",
+        title: "Family Medicine Physician",
+        bio: "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
+        licensedIn: "17 States",
+        method: "Video or Phone",
+        focus: "Chronic Conditions & Sleep Concerns",
+      },
     ],
+    processTitle: "How ESA Evaluation Works in Alaska",
+    processSubtitle: "Our simple 3-step approach helps connect you with a licensed mental health professional.",
+    processSteps: [
+      {
+        number: "01",
+        icon: "/states/californina-esa-evalutation_schedule.svg",
+        title: "Schedule a Consultation",
+        description: "Sign up, choose a convenient date and time, and complete an intake form for a confidential evaluation with a licensed professional.",
+      },
+      {
+        number: "02",
+        icon: "/states/californina-esa-evalutation_clinicalevaluation.svg",
+        title: "Evaluation by a Licensed Clinician",
+        description: "Meet with a licensed mental health professional via video or audio call to discuss your mental health and potential ESA eligibility.",
+      },
+      {
+        number: "03",
+        icon: "/states/californina-esa-evalutation_clinicaldetermination.svg",
+        title: "Clinical Determination",
+        description: "If deemed clinically appropriate, you’ll receive an ESA letter on official letterhead, signed by the professional and securely delivered to your email.",
+      },
+    ],
+    processDifferentiatorsTitle: "What Makes Our Alaska ESA Evaluation Process Unique?",
+    processDifferentiators: [
+      "No instant or automated approvals",
+      "Evaluations conducted exclusively by Alaska-based licensed mental health professionals",
+      "HIPAA-compliant, secure online platform",
+      "ESA letters are issued only when clinically appropriate",
+    ],
+    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter; they do need to affirm that you have an applicable diagnosis.",
+    whoQualifiesTitle: "Who May Qualify for an Emotional Support Animal in Alaska?",
+    whoQualifiesSubtitle: "Individuals suffering from mental health conditions that may impact day-to-day activities may qualify for an ESA evaluation. Clinicians determine eligibility aligned with [DSM-5-TR](https://www.psychiatry.org/getmedia/b68a5776-f88c-45c7-9535-fd219d7aa5cb/APA-DSM5TR-Update-September-2025.pdf) criteria and federal housing guidelines.",
+    whoQualifiesSectionHeading: "Qualifying Mental Health Conditions",
+    whoQualifiesConditions: [
+      {
+        title: "Anxiety Disorders",
+        description: "A group of conditions characterized by excessive and persistent fear or worry that may interfere with daily functioning. An ESA may offer reassurance and companionship, helping individuals feel more grounded when managing anxiety and emotional stress.",
+        icon: "/states/whomayqualifies-california_chronicworry.svg",
+      },
+      {
+        title: "Major Depressive Disorder",
+        description: "A mood disorder marked by persistent feelings of sadness, loss of interest, or low motivation that can impact daily activities and overall well-being. An ESA can provide companionship and emotional reassurance, offering comfort during periods of low mood and emotional distress.",
+        icon: "/states/whomayqualifies-moodconditions.svg",
+      },
+      {
+        title: "Schizophrenia",
+        description: "A serious mental health condition that may affect thought processes, perception, emotional responsiveness, and behavior, potentially interfering with daily functioning. An ESA may provide a steady source of companionship and comfort, supporting emotional well-being during daily challenges.",
+        icon: "/states/whomayqualifies-panicattack.svg",
+      },
+      {
+        title: "Other Mental Health Conditions",
+        description: "Additional mental health conditions may be considered during an evaluation when symptoms substantially affect daily functioning and an ESA is deemed clinically appropriate.",
+        icon: "/states/whomayqualifies-california_posttrauma.svg",
+      },
+    ],
+    requirementsTitle: "Basic Requirements for ESA Letter Alaska",
+    requirementsIntro: "To be considered for an emotional support animal (ESA) evaluation in Alaska, the following criteria are typically reviewed by the evaluating clinician:",
+    requirementsItems: [
+      "You must be 18 years or older. For minors, a parent or legal guardian must participate in the evaluation and provide consent.",
+      "You must currently reside in Alaska or be planning to establish residency.",
+      "A mental health condition that impacts daily functioning must be identified during the clinical assessment.",
+      "You must demonstrate the ability to care for the animal safely and responsibly.",
+    ],
+    requirementsNote: "Important: ESA eligibility is determined solely by the licensed provider following a professional evaluation.",
+    whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation?",
+    whyChooseSubtitle: "We simplify online emotional support animal evaluations while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
+    whyChooseItems: [
+      {
+        title: "Licensed Professionals",
+        description: "ESA evaluations are conducted by independent US licensed mental health professionals authorized to assess ESA eligibility.",
+      },
+      {
+        title: "Secure Telehealth Platform",
+        description: "Our HIPAA-compliant systems ensure your information remains confidential and protected.",
+      },
+      {
+        title: "Clinical Integrity First",
+        description: "ESA recommendations are issued by licensed professionals based on individualized clinical evaluation.",
+      },
+      {
+        title: "Legitimate ESA Documentation",
+        description: "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
+      },
+      {
+        title: "Nationwide Access",
+        description: "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
+      },
+      {
+        title: "Transparent Process",
+        description: "Clear steps, clear expectations, no misleading claims.",
+      },
+    ],
+    reviewsTitle: "See What Our Clients Say",
+    reviewsSubtitle: "Here’s what our clients say about their experience.",
+    benefitsTitle: "Benefits Of a Legitimate ESA Letter in Alaska",
+    benefitsSubtitle: "A valid ESA letter in Alaska may support a housing accommodation request under the Fair Housing Act when reviewed by a housing provider.",
+    financialBenefitsHeading: "Housing Benefits",
+    financialBenefits: [
+      {
+        title: "Remote Housing Access",
+        description: "May support accommodation requests in Alaska’s limited or remote housing markets, when applicable under Fair Housing Act guidelines.",
+      },
+      {
+        title: "Policy Exceptions",
+        description: "May allow approved exceptions to “no-pet,” breed, or size restrictions in qualifying housing when reviewed and approved under Fair Housing Act guidelines.",
+      },
+      {
+        title: "Housing Stability",
+        description: "Approved ESA accommodations generally carry forward during lease renewals if circumstances remain unchanged.",
+      },
+    ],
+    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefits: [
+      {
+        title: "Social Ease",
+        description: "The presence of an ESA may help some individuals feel more emotionally at ease in everyday environments and interactions.",
+      },
+      {
+        title: "Reduced Isolation",
+        description: "The presence of an ESA may help individuals feel less emotionally isolated during extended time at home.",
+      },
+      {
+        title: "Daily Anchoring",
+        description: "Having an ESA can help anchor daily routines and provide consistency during emotionally uncertain periods.",
+      },
+    ],
+    lawsTitle: "Alaska ESA Laws for Tenants and Landlords",
+    lawsSubtitle: "Explore how federal housing regulations apply to ESAs in Alaska and what protections may be available when an ESA is recommended as part of a documented emotional need.",
+    card1Title: "Fair Housing Act (FHA)",
+    card1Items: [
+      {
+        title: "Housing Accommodations for ESAs",
+        description: "Under FHA, housing providers in Alaska may be required to consider ESA accommodation requests based on appropriate documentation, without relying solely on breed, size, or weight.",
+      },
+      {
+        title: "No Extra Fees for ESAs",
+        description: "When approved as a reasonable accommodation under the FHA, an ESA is not treated as a pet. Housing providers may not charge pet rent, pet fees, or pet deposits. However, tenants remain responsible for any damage caused by the animal.",
+      },
+      {
+        title: "Scope of FHA Protections",
+        description: "FHA protections apply specifically to housing-related accommodations. Emotional support animals do not have public access rights and are not permitted in places such as restaurants, stores, or workplaces unless separately allowed by policy.",
+      },
+    ],
+    card2Title: "Landlords Rights and Responsibilities",
+    card2Items: [
+      {
+        title: "Documentation Review",
+        description: "Landlords may request reliable documentation supporting the emotional need for an animal and cross verify the authenticity of an ESA letter.",
+      },
+      {
+        title: "Legal Exemptions",
+        description: "Certain housing providers may be exempt from FHA requirements, such as owner-occupied buildings with four or fewer units or single-family homes rented without a broker.",
+      },
+      {
+        title: "Reasonable Limits",
+        description: "An ESA accommodation may be denied if the animal poses a direct threat to others, causes substantial property damage, or creates an undue financial or administrative burden.",
+      },
+    ],
+    legalNotice: "Unlike psychiatric service dogs, ESAs are generally not permitted in public places such as restaurants and on airlines. Public access entirely depends on their respective policies. Therefore always confirm rules before visiting or traveling.",
+    scamsTitle: "Alaska ESA Scams: Fake vs. Legitimate ESA Service",
+    scamsSubtitle: "Knowing the difference between real and fake ESA providers helps to stay safe from misleading ESA service providers.",
+    scamsAlertTitle: "Important: No Official ESA Registry Exists",
+    scamsAlertText: "There is no government approved ESA registry or certification system in Alaska or anywhere in the U.S. Only a valid ESA letter from a licensed provider is recognized for housing accommodation requests.",
+    scamsWhatYouNeedTitle: "What You Actually Need",
+    scamsWhatYouNeedItems: [
+      {
+        title: "ESA Evaluation From a Licensed Clinician",
+        description: "A clinical assessment is conducted by a mental health professional licensed to practice in Alaska.",
+      },
+      {
+        title: "Legitimate ESA Letter in Alaska",
+        description: "An ESA letter is issued only when clinically appropriate and is formally written and signed by an LMHP.",
+      },
+      {
+        title: "Therapeutic Relationship",
+        description: "An appropriate therapeutic relationship is established as part of the clinical evaluation prior to any ESA recommendation.",
+      },
+    ],
+    scamsCommonTitle: "Common ESA Scams in Alaska",
+    scamsCommonSubtitle: "Be cautious of websites that offer:",
+    scamsCommonItems: [
+      "Instant ESA letters",
+      "Approval without a clinical evaluation",
+      "Promises of guaranteed housing approval",
+      "Claims of ESA registries, ID cards, or certificates, which are not legally recognized",
+    ],
+    psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Alaska",
+    psdVsEsaSubtitle: "Understanding the difference helps you to select the right choice based on your needs.",
+    esaCardTitle: "Emotional Support Animal",
+    esaCardBullets: [
+      "Provide comfort and emotional support that may contribute to improved emotional and mental well-being.",
+      "Protected under the Fair Housing Act (FHA) and are not considered regular pets for housing purposes.",
+      "ESAs have housing-related rights only and do not have public access to places such as stores or restaurants.",
+    ],
+    psdCardTitle: "Psychiatric Service Dog",
+    psdCardBullets: [
+      "Specially trained service dogs that perform specific tasks for individuals with a diagnosed psychiatric disability.",
+      "Protected under the Americans with Disabilities Act (ADA) and permitted to accompany their handler in most public spaces.",
+      "Tasks may include interrupting harmful behaviors, providing grounding support, or assisting with daily functional reminders.",
+    ],
+    citiesTitle: "Available Everywhere in Alaska",
+    citiesSubtitle: "From larger population centers to remote communities across the Last Frontier, renters throughout Alaska may encounter pet restrictions and housing policies. Our secure telehealth platform makes Alaska ESA letter evaluations accessible statewide, including rural and hard-to-reach areas.",
+    cities: [
+      {
+        name: "Anchorage",
+        description: "Many apartments, condos, and rental communities maintain pet restrictions and breed policies. An Anchorage ESA letter can help support housing accommodation requests.",
+        icon: "/states/losangeles.svg",
+      },
+      {
+        name: "Fairbanks",
+        description: "From university housing to family rentals, pet policies are common throughout the city. A Fairbanks ESA letter helps you deal with housing requirements with confidence.",
+        icon: "/states/sanfrancisco.svg",
+      },
+      {
+        name: "Juneau",
+        description: "As Alaska's capital city continues to grow, renters may encounter pet limitations in apartment complexes and rental properties. A Juneau ESA letter provides additional housing support.",
+        icon: "/states/losangelestwo.svg",
+      },
+      {
+        name: "Wasilla / Mat-Su Valley",
+        description: "Across Wasilla and the Mat-Su Valley, many landlords and property managers enforce pet restrictions. An ESA letter in Wasilla can help simplify the accommodation process.",
+        icon: "/states/losangelesfour.svg",
+      },
+      {
+        name: "Kenai Peninsula",
+        description: "From Kenai and Soldotna to surrounding communities, rental properties often have varying pet policies. A Kenai Peninsula ESA letter helps support your housing needs.",
+        icon: "/states/losangelesthree.svg",
+      },
+      {
+        name: "Ketchikan",
+        description: "Housing options in the city can be limited, and many rentals maintain pet rules or restrictions. An ESA letter in Ketchikan can help expand your housing opportunities.",
+        icon: "/states/sanfranciscofour.svg",
+      },
+      {
+        name: "Remote Communities & Interior Alaska",
+        description: "Many residents in remote Alaskan communities and Interior Alaska face unique housing challenges and limited rental availability. Our telehealth ESA evaluations make access to legitimate ESA documentation available regardless of location.",
+        icon: "/states/sanfranciscotwo.svg",
+      },
+      {
+        name: "All Other Alaska Cities",
+        description: "From Sitka and Kodiak to Bethel and Palmer, our telehealth ESA services are available throughout Alaska, ensuring statewide access to licensed mental health professionals.",
+        icon: "/states/sanfranciscothree.svg",
+      },
+    ],
+    faqTitle: "Frequently Asked Questions About ESA Letter Alaska",
+    faqSubtitle: "This section addresses common questions about emotional support animals, housing considerations, and the evaluation process in Alaska.",
+    faqs: [
+      {
+        q: "Can I Take My ESA on an Airline in Alaska?",
+        a: "No. Most U.S. airlines, including flights to or within Alaska, do not recognize emotional support animals. ESAs usually travel under standard pet policies. Only trained psychiatric service dogs may qualify for in-cabin access.",
+      },
+      {
+        q: "How Much Does an ESA Letter Cost in Alaska?",
+        a: "The cost of an ESA letter in Alaska depends on the provider and evaluation process, with most reputable services typically charging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation along with the ESA letter upon approval.",
+      },
+      {
+        q: "Does an ESA Letter Override All Breed Rules?",
+        a: "No. An ESA letter does not override the law, but under the Fair Housing Act, housing providers cannot deny an ESA solely based on breed, size, or weight. Requests are reviewed on a case-by-case basis.",
+      },
+      {
+        q: "Does My ESA Have to Be a Dog or Cat in Alaska?",
+        a: "No. Emotional support animals are not limited to dogs or cats. Other animals may qualify if the accommodation request is reasonable and does not create health, safety, or property concerns.",
+      },
+      {
+        q: "Can I Have More Than One ESA in Alaska?",
+        a: "Possibly yes. Multiple ESAs may be considered if each animal is supported by a documented, disability-related need and the request is reasonable under Fair Housing Act guidelines.",
+      },
+      {
+        q: "Can a Landlord in Alaska Require My ESA to Be Spayed or Neutered?",
+        a: "Generally, no. Landlords typically cannot require spaying or neutering as a condition for ESA approval, though tenants remain responsible for preventing health, safety, or nuisance issues.",
+      },
+    ],
+    ctaTitle: "Ready to Start Your ESA Evaluation?",
+    ctaSubtitle: "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
+    ctaNote: "Note: ESA eligibility is determined by a licensed mental health professional following a clinical assessment. Approval is not guaranteed.",
   },
   arizona: {
     slug: "arizona",

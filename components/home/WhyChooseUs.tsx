@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 export interface WhyChooseFeature {
-  icon: string;
+  icon?: string;
   title: string;
   description: string;
 }
@@ -89,23 +89,28 @@ export function WhyChooseUs({
 
         {/* 3-column 2-row grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 lg:gap-y-16 pt-4">
-          {items.map(({ icon, title: itemTitle, description }) => (
-            <div
-              key={itemTitle}
-              className="relative rounded-[20px] bg-[#E8B92C] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-1.5 px-0 pb-0 flex flex-col items-center"
-            >
-              <div className="w-full bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[228px]">
-                {/* Floating icon circle on top border */}
-                <div className="absolute -top-6 sm:-top-7 left-1/2 -translate-x-1/2 w-[52px] h-[52px] sm:w-[58px] sm:h-[58px] lg:w-[64px] lg:h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
-                  <Image
-                    src={icon}
-                    alt=""
-                    width={32}
-                    height={32}
-                    unoptimized
-                    className="object-contain w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[32px] lg:h-[32px]"
-                  />
-                </div>
+          {items.map(({ icon, title: itemTitle, description }, idx) => {
+            const resolvedIcon =
+              icon ||
+              defaultFeatures[idx % defaultFeatures.length]?.icon ||
+              "/home/whychoose-section-license-professional.svg";
+            return (
+              <div
+                key={itemTitle}
+                className="relative rounded-[20px] bg-[#E8B92C] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-1.5 px-0 pb-0 flex flex-col items-center"
+              >
+                <div className="w-full bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[228px]">
+                  {/* Floating icon circle on top border */}
+                  <div className="absolute -top-6 sm:-top-7 left-1/2 -translate-x-1/2 w-[52px] h-[52px] sm:w-[58px] sm:h-[58px] lg:w-[64px] lg:h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
+                    <Image
+                      src={resolvedIcon}
+                      alt=""
+                      width={32}
+                      height={32}
+                      unoptimized
+                      className="object-contain w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[32px] lg:h-[32px]"
+                    />
+                  </div>
 
                 {/* Title */}
                 <h3 className="font-[family-name:var(--font-lato)] text-xl sm:text-2xl lg:text-[24px] font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent mb-3 leading-[29px] tracking-[-0.017em]">
@@ -118,7 +123,8 @@ export function WhyChooseUs({
                 </p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -7,6 +7,49 @@ import { StateData } from "@/data/statesData";
 
 const TRUSTPILOT_GREEN = "#00B67A";
 
+function renderHeroTitle(title?: string, stateName?: string) {
+  if (!title) {
+    return (
+      <>
+        {stateName} ESA
+        <br />
+        Letter Evaluations by
+        <br />
+        Licensed Therapists
+      </>
+    );
+  }
+
+  if (title.includes("\n")) {
+    return title.split("\n").map((line, i, arr) => (
+      <React.Fragment key={i}>
+        {line}
+        {i < arr.length - 1 && <br />}
+      </React.Fragment>
+    ));
+  }
+
+  // Break standard titles into exactly 3 balanced lines:
+  // e.g. "ESA Letter Evaluations by Alaska Licensed Professionals" ->
+  // Line 1: ESA Letter
+  // Line 2: Evaluations by
+  // Line 3: Alaska Licensed Professionals
+  const match = title.match(/^(.*?ESA\s*Letter|.*?ESA)\s+(Evaluations\s+by)\s+(.*)$/i);
+  if (match) {
+    return (
+      <>
+        {match[1]}
+        <br />
+        {match[2]}
+        <br />
+        <span>{match[3]}</span>
+      </>
+    );
+  }
+
+  return title;
+}
+
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg viewBox="0 0 24 24" className={className} style={style} fill="currentColor">
@@ -270,13 +313,9 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute inset-0 z-10">
           <div className="max-w-[1360px] mx-auto h-full px-6 lg:px-8 xl:px-10 flex items-start justify-between pt-6 lg:pt-7 xl:pt-14">
-            <div className="w-[44%] lg:w-[37%] xl:w-[42%] space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
+            <div className="flex-1 min-w-0 pr-4 xl:pr-8 space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
               <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
-                {stateName} ESA
-                <br />
-                Letter Evaluations by
-                <br />
-                Licensed Therapists
+                {renderHeroTitle(data.heroTitle, stateName)}
               </h1>
 
               <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
@@ -289,16 +328,14 @@ export function StateHeroSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div className="w-[44%] lg:w-[38%] xl:w-[38%] flex justify-end">
-              <div className="w-full max-w-[360px] xl:max-w-[430px]">
-                <EvaluationFormCard
-                  formData={formData}
-                  setFormData={setFormData}
-                  handleSubmit={handleSubmit}
-                  isSubmitted={isSubmitted}
-                  stateName={stateName}
-                />
-              </div>
+            <div className="shrink-0 w-full max-w-[360px] xl:max-w-[430px] flex justify-end">
+              <EvaluationFormCard
+                formData={formData}
+                setFormData={setFormData}
+                handleSubmit={handleSubmit}
+                isSubmitted={isSubmitted}
+                stateName={stateName}
+              />
             </div>
           </div>
         </div>
@@ -319,9 +356,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
             <h1 className="font-heading text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.01em] text-center">
-              {stateName} ESA Letter
-              <br />
-              Evaluations by Licensed Therapists
+              {renderHeroTitle(data.heroTitle, stateName)}
             </h1>
             <p className="font-sans text-[16px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
               {data.heroSubtitle ||
@@ -356,9 +391,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
             <h1 className="font-heading text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-[-0.01em] text-center">
-              {stateName} ESA Letter
-              <br />
-              Evaluations by Licensed Therapists
+              {renderHeroTitle(data.heroTitle, stateName)}
             </h1>
             <p className="font-sans text-[14px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
               {data.heroSubtitle ||
