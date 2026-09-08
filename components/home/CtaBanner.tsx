@@ -58,7 +58,7 @@ export function CtaBanner({
           {/* Left Text & CTA Area */}
           <div className="relative z-10 max-w-[575px] space-y-6 text-left">
             <div className="space-y-4">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[431px]">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[540px] whitespace-pre-line">
                 {title}
               </h2>
               <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
