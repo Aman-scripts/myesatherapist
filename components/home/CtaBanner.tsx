@@ -9,6 +9,7 @@ type CtaBannerProps = {
   bgColor?: string;
   title?: string;
   description?: string;
+  note?: string;
   buttonText?: string;
   buttonHref?: string;
 };
@@ -17,6 +18,7 @@ export function CtaBanner({
   bgColor = "bg-[#FAF7F2]",
   title = "Ready to Start Your ESA Evaluation?",
   description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
+  note,
   buttonText = "Start your Evaluation",
   buttonHref = "#how-it-works",
 }: CtaBannerProps) {
@@ -62,6 +64,11 @@ export function CtaBanner({
               <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
                 {description}
               </p>
+              {note && (
+                <p className="text-[#E8B92C] text-sm sm:text-[15px] lg:text-[16px] font-semibold leading-relaxed font-sans pt-1">
+                  {note}
+                </p>
+              )}
             </div>
 
             {/* Button */}

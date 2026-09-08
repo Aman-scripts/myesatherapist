@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { StateData } from "@/data/statesData";
 
-const conditions = [
+const defaultConditions = [
   {
     title: "Panic Disorder with Agoraphobia",
     description: "Frequent panic attacks restricting leaving homes and public spaces.",
@@ -27,8 +27,47 @@ const conditions = [
   },
 ];
 
+function renderTextWithLinks(text: string): React.ReactNode {
+  const parts: React.ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const [, label, url] = match;
+    parts.push(
+      <a
+        key={match.index}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#1A3D4F] underline hover:text-[#1D6E72] font-bold transition-colors"
+      >
+        {label}
+      </a>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 export function StateWhoQualifiesSection({ data }: { data: StateData }) {
   const stateName = data.name;
+  const conditions = data.whoQualifiesConditions && data.whoQualifiesConditions.length > 0
+    ? data.whoQualifiesConditions
+    : defaultConditions;
+
+  const title = data.whoQualifiesTitle || `Who May Eligible For ESA Letter in ${stateName}?`;
+  const subtitle = data.whoQualifiesSubtitle || `${stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in ${stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:`;
+  const sectionHeading = data.whoQualifiesSectionHeading || "Qualifying Conditions :";
 
   return (
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
@@ -105,18 +144,16 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
           <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-4 sm:pb-6 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
             <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
-                Who May Eligible For ESA
-                <br />
-                Letter in {stateName}?
+                {title}
               </h2>
               <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-semibold leading-relaxed xl:leading-[26px] max-w-[540px]">
-                {stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in {stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:
+                {renderTextWithLinks(subtitle)}
               </p>
             </div>
 
             <div>
               <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-[#5F6B6F] mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
-                Qualifying Conditions :
+                {sectionHeading}
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-3 xl:gap-4 max-w-[620px]">
@@ -127,7 +164,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   >
                     <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
-                        src={item.icon}
+                        src={item.icon || "/states/whomayqualifies-moodconditions.svg"}
                         alt={item.title}
                         width={40}
                         height={40}

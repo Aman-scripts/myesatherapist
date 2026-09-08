@@ -13,7 +13,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
       <div className="max-w-[1060px] mx-auto">
         <div className="text-center max-w-[820px] mx-auto mb-8 sm:mb-10 lg:mb-12">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight mb-3">
-            Understanding {stateName} ESA Laws for Reasonable Accommodations
+            {data.lawsTitle || `Understanding ${stateName} ESA Laws for Reasonable Accommodations`}
           </h2>
           <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed max-w-[760px] mx-auto">
             {data.lawsSubtitle ||

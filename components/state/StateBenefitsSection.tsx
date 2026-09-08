@@ -7,7 +7,7 @@ import { StateData } from "@/data/statesData";
 export function StateBenefitsSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
-  const financialBenefits = [
+  const defaultFinancialBenefits = [
     {
       title: "Comfortable Housing with Your ESA",
       description: `${stateName} tenants may request reasonable housing accommodations with their ESAs even in no-pet policy localities.`,
@@ -25,7 +25,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     },
   ];
 
-  const emotionalBenefits = [
+  const defaultEmotionalBenefits = [
     {
       title: "Supports Stress and Anxiety Relief",
       description:
@@ -46,11 +46,24 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     },
   ];
 
-  const benefitPairs = [
-    { financial: financialBenefits[0], emotional: emotionalBenefits[0] },
-    { financial: financialBenefits[1], emotional: emotionalBenefits[1] },
-    { financial: financialBenefits[2], emotional: emotionalBenefits[2] },
-  ];
+  const financialBenefits = data.financialBenefits && data.financialBenefits.length > 0
+    ? data.financialBenefits
+    : defaultFinancialBenefits;
+
+  const emotionalBenefits = data.emotionalBenefits && data.emotionalBenefits.length > 0
+    ? data.emotionalBenefits
+    : defaultEmotionalBenefits;
+
+  const title = data.benefitsTitle || `Benefits of Having an ESA Letter in ${stateName}`;
+  const subtitle = data.benefitsSubtitle || `A properly issued emotional support animal letter in ${stateName} can help residents obtain housing accommodations while also promoting emotional well-being and everyday stability.`;
+  const financialHeading = data.financialBenefitsHeading || "Financial Benefits :";
+  const emotionalHeading = data.emotionalBenefitsHeading || "Emotional Benefits :";
+
+  const maxLen = Math.max(financialBenefits.length, emotionalBenefits.length);
+  const benefitPairs = Array.from({ length: maxLen }).map((_, idx) => ({
+    financial: financialBenefits[idx] || financialBenefits[0],
+    emotional: emotionalBenefits[idx] || emotionalBenefits[0],
+  }));
 
   return (
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
@@ -124,21 +137,19 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
           <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-6 sm:pb-8 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
             <div className="mb-4 lg:mb-5 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
-                Benefits of Having an ESA
-                <br />
-                Letter in {stateName}
+                {title}
               </h2>
               <p className="font-sans text-xs sm:text-sm lg:text-[12px] xl:text-base text-[#5F6B6F] font-semibold leading-relaxed max-w-[520px]">
-                A properly issued emotional support animal letter in {stateName} can help residents obtain housing accommodations while also promoting emotional well-being and everyday stability.
+                {subtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 max-w-[650px] mb-2 lg:mb-3">
               <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F]">
-                Financial Benefits :
+                {financialHeading}
               </h3>
               <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] hidden sm:block">
-                Emotional Benefits :
+                {emotionalHeading}
               </h3>
             </div>
 
@@ -148,7 +159,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
                     <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
-                        src={pair.financial.icon}
+                        src={pair.financial.icon || "/states/whomayqualifies-california_chronicworry.svg"}
                         alt={pair.financial.title}
                         width={40}
                         height={40}
@@ -169,7 +180,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
                     <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
-                        src={pair.emotional.icon}
+                        src={pair.emotional.icon || "/states/whomayqualifies-panicattack.svg"}
                         alt={pair.emotional.title}
                         width={40}
                         height={40}

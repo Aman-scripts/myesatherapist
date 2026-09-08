@@ -11,7 +11,66 @@ export interface StateData {
   metaDescription: string;
   residentsServed?: string;
   trustStat5?: { value: string; label: string };
+  heroTitle?: string;
   heroSubtitle?: string;
+  therapistsTitle?: string;
+  therapistsSubtitle?: string;
+  therapistsLicensureNote?: string;
+  therapistsList?: Array<{
+    id?: number | string;
+    name: string;
+    title: string;
+    bio: string;
+    licensedIn: string;
+    method?: string;
+    focus: string;
+  }>;
+  processTitle?: string;
+  processSubtitle?: string;
+  processSteps?: Array<{
+    number: string;
+    icon: string;
+    title: string;
+    description: string;
+  }>;
+  processDifferentiatorsTitle?: string;
+  processDifferentiators?: string[];
+  processNote?: string;
+  whoQualifiesTitle?: string;
+  whoQualifiesSubtitle?: string;
+  whoQualifiesSectionHeading?: string;
+  whoQualifiesConditions?: Array<{
+    title: string;
+    description: string;
+    icon?: string;
+  }>;
+  requirementsTitle?: string;
+  requirementsIntro?: string;
+  requirementsItems?: string[];
+  requirementsNote?: string;
+  whyChooseTitle?: string;
+  whyChooseSubtitle?: string;
+  whyChooseItems?: Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
+  reviewsTitle?: string;
+  reviewsSubtitle?: string;
+  benefitsTitle?: string;
+  benefitsSubtitle?: string;
+  financialBenefitsHeading?: string;
+  financialBenefits?: Array<{
+    title: string;
+    description: string;
+    icon?: string;
+  }>;
+  emotionalBenefitsHeading?: string;
+  emotionalBenefits?: Array<{
+    title: string;
+    description: string;
+    icon?: string;
+  }>;
   lawsTitle?: string;
   lawsSubtitle?: string;
   card1Title?: string;
@@ -19,6 +78,23 @@ export interface StateData {
   card2Title?: string;
   card2Items?: Array<{ title: string; description: string }>;
   legalNotice?: string;
+  scamsTitle?: string;
+  scamsSubtitle?: string;
+  scamsAlertTitle?: string;
+  scamsAlertText?: string;
+  scamsWhatYouNeedTitle?: string;
+  scamsWhatYouNeedItems?: Array<{ title: string; description: string }>;
+  scamsCommonTitle?: string;
+  scamsCommonSubtitle?: string;
+  scamsCommonItems?: string[];
+  psdVsEsaTitle?: string;
+  psdVsEsaSubtitle?: string;
+  esaCardTitle?: string;
+  esaCardBullets?: string[];
+  psdCardTitle?: string;
+  psdCardBullets?: string[];
+  psdCalloutTitle?: string;
+  psdCalloutText?: string;
   benefitsImage?: string;
   benefitsImageMobile?: string;
   benefitsImageTablet?: string;
@@ -26,7 +102,15 @@ export interface StateData {
   whoQualifiesAspect?: string;
   whoQualifiesImageMobile?: string;
   whoQualifiesImageTablet?: string;
-  cities: Array<{ name: string; icon: string }>;
+  citiesTitle?: string;
+  citiesSubtitle?: string;
+  cities: Array<{ name: string; description?: string; icon: string }>;
+  faqTitle?: string;
+  faqSubtitle?: string;
+  faqs?: Array<{ q: string; a: string }>;
+  ctaTitle?: string;
+  ctaSubtitle?: string;
+  ctaNote?: string;
 }
 
 export const STATES_DATA: Record<string, StateData> = {
@@ -35,18 +119,332 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Alabama",
     residentsServed: "6,400+",
     abbreviation: "AL",
-    metaTitle: "Alabama ESA Letter Evaluations by Licensed Professionals - My ESA Therapist",
-    metaDescription: "Connect with licensed mental health professionals in Alabama for legitimate, FHA-compliant Emotional Support Animal (ESA) letters. Quick telehealth evaluations.",
-    cities: [
-      { name: "Birmingham", icon: "/states/losangeles.svg" },
-      { name: "Montgomery", icon: "/states/sanfrancisco.svg" },
-      { name: "Huntsville", icon: "/states/losangelestwo.svg" },
-      { name: "Mobile", icon: "/states/losangelesfour.svg" },
-      { name: "Tuscaloosa", icon: "/states/losangelesthree.svg" },
-      { name: "Hoover", icon: "/states/sanfranciscotwo.svg" },
-      { name: "Auburn", icon: "/states/sanfranciscothree.svg" },
-      { name: "Dothan", icon: "/states/sanfranciscofour.svg" },
+    metaTitle: "Alabama ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
+    metaDescription: "Connect with a licensed mental health professional for an Alabama ESA letter evaluation based on FHA housing guidelines. Letters are issued solely at the evaluating clinician’s discretion.",
+    heroTitle: "Alabama ESA Letter Evaluations by Licensed Therapists",
+    heroSubtitle: "Connect with a licensed mental health professional for an Alabama ESA letter evaluation based on FHA housing guidelines. Letters are issued solely at the evaluating clinician’s discretion.",
+    therapistsTitle: "Our Licensed Mental Health Professionals",
+    therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
+    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
+    therapistsList: [
+      {
+        id: 1,
+        name: "Robert Staaf",
+        title: "Licensed Clinical Social Worker",
+        bio: "LCSW with extensive psychotherapy experience. Pet owner and advocate for animal-assisted mental health treatment.",
+        licensedIn: "30+ States",
+        method: "Video or Phone",
+        focus: "Anxiety & Stress",
+      },
+      {
+        id: 2,
+        name: "Leslie K. Gamble",
+        title: "Licensed Independent Clinical Social Worker",
+        bio: "Licensed therapist with 13 years of healthcare experience serving individuals, couples, and families with flexible, goal-focused care.",
+        licensedIn: "15+ States",
+        method: "Video or Phone",
+        focus: "Depression & PTSD",
+      },
+      {
+        id: 3,
+        name: "Gaurav Patel, MD",
+        title: "Family Medicine Physician",
+        bio: "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
+        licensedIn: "17 States",
+        method: "Video or Phone",
+        focus: "Chronic Conditions & Sleep Concerns",
+      },
     ],
+    processTitle: "How Does an ESA Evaluation Work in Alabama?",
+    processSubtitle: "Our simple 3-step process helps Alabama residents to connect with a licensed mental health professional through our HIPAA-compliant platform.",
+    processSteps: [
+      {
+        number: "01",
+        icon: "/states/californina-esa-evalutation_schedule.svg",
+        title: "Book Your Appointment",
+        description: "Create an account, choose a convenient date, and complete the intake form to schedule your appointment with a clinician.",
+      },
+      {
+        number: "02",
+        icon: "/states/californina-esa-evalutation_clinicalevaluation.svg",
+        title: "Connect With a Clinician",
+        description: "Meet securely with a licensed mental health professional via audio or video call to discuss your health concerns and ESA eligibility.",
+      },
+      {
+        number: "03",
+        icon: "/states/californina-esa-evalutation_clinicaldetermination.svg",
+        title: "ESA Letter (If Clinically Appropriate)",
+        description: "If you are found clinically eligible after a complete evaluation, your ESA recommendation will be securely emailed on official letterhead, including the clinician’s license number and signature.",
+      },
+    ],
+    processDifferentiatorsTitle: "Why Our Alabama ESA Evaluation Process is Unique",
+    processDifferentiators: [
+      "Evaluations conducted by LMHPs authorized to practice in Alabama.",
+      "Platform aligned with HIPAA compliance and high privacy standards.",
+      "Ethical ESA letters are accepted throughout Alabama, subject to approval.",
+      "ESA letters are not issued instantly, and approval is never guaranteed",
+    ],
+    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter; they do need to affirm that you have an applicable diagnosis.",
+    whoQualifiesTitle: "Who May Qualify For an ESA Letter in Alabama?",
+    whoQualifiesSubtitle: "Mental health conditions that substantially impact daily functioning may be considered during an ESA evaluation. As part of the assessment, clinicians may reference [DSM-5-TR](https://www.psychiatry.org/getmedia/b68a5776-f88c-45c7-9535-fd219d7aa5cb/APA-DSM5TR-Update-September-2025.pdf) diagnostic criteria.",
+    whoQualifiesSectionHeading: "Qualifying Mental Health Conditions",
+    whoQualifiesConditions: [
+      {
+        title: "Mood Disorders",
+        description: "Conditions that primarily affect emotional state, such as persistent feelings of sadness, low mood, or mood instability that impact daily functioning. An ESA may offer comfort, emotional support, and help with managing stress linked to mood disorders.",
+        icon: "/states/whomayqualifies-moodconditions.svg",
+      },
+      {
+        title: "Generalized Anxiety Disorders",
+        description: "A condition marked by ongoing, excessive worry and tension that can interfere with everyday activities and focus. An ESA can offer a sense of comfort and stability while helping individuals cope with ongoing anxiety and everyday stress.",
+        icon: "/states/whomayqualifies-california_chronicworry.svg",
+      },
+      {
+        title: "Obsessive-Compulsive Personality Disorder (OCPD)",
+        description: "A personality pattern characterized by rigid perfectionism, a strong need for control, and difficulty with flexibility in daily life. An ESA may provide a calming presence and emotional reassurance, helping individuals manage stress and navigate daily routines.",
+        icon: "/states/whomayqualifies-panicattack.svg",
+      },
+      {
+        title: "Binge Eating Disorder",
+        description: "An eating disorder involving recurring episodes of excessive food intake accompanied by a sense of loss of control and emotional distress. An ESA can offer companionship and emotional comfort, which may help individuals cope with stress and difficult emotions.",
+        icon: "/states/whomayqualifies-california_posttrauma.svg",
+      },
+    ],
+    requirementsTitle: "ESA Letter Requirements in Alabama",
+    requirementsIntro: "To be considered for an ESA recommendation in Alabama, clinicians typically review the following factors as part of the evaluation process:",
+    requirementsItems: [
+      "Individuals must be 18 or older to provide consent. For minors, a parent or legal guardian must participate in the evaluation and provide approval.",
+      "The individual must currently reside in Alabama or be planning to establish residency, as evaluations must be conducted by a mental health professional licensed to practice in Alabama at the time of evaluation.",
+      "A qualifying mental health condition that impacts daily functioning must be identified during the assessment.",
+      "The role of the animal in providing emotional support is evaluated on a case-by-case basis.",
+      "The individual must demonstrate the ability to care for the animal safely and responsibly.",
+    ],
+    requirementsNote: "Important Note: A mental health condition alone does not guarantee ESA approval. ESA letters are issued only after an Alabama-licensed mental health professional completes a full evaluation and determines eligibility.",
+    whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Alabama?",
+    whyChooseSubtitle: "We simplify online emotional support animal evaluations while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
+    whyChooseItems: [
+      {
+        icon: "/home/whychoose-section-license-professional.svg",
+        title: "Licensed Professionals",
+        description: "Alabama ESA evaluations are conducted by independent US licensed mental health professionals authorized to assess ESA eligibility.",
+      },
+      {
+        icon: "/home/whychoose-section-secure-thealth.svg",
+        title: "Secure Telehealth Platform",
+        description: "Our HIPAA-compliant systems ensure your information remains confidential and protected.",
+      },
+      {
+        icon: "/home/whychoose-section-clinical-integrity.svg",
+        title: "Clinical Integrity First",
+        description: "Alabama ESA letter recommendations are issued by licensed professionals based on individualized clinical evaluation.",
+      },
+      {
+        icon: "/home/whychoose-section-legimate-documentation.svg",
+        title: "Legitimate ESA Documentation",
+        description: "When clinically appropriate, ESA letters in Alabama are issued in compliance with applicable federal and state housing guidelines.",
+      },
+      {
+        icon: "/home/whychoose-section-nationwide-access.svg",
+        title: "Nationwide Access",
+        description: "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
+      },
+      {
+        icon: "/home/whychoose-section-transparent-process.svg",
+        title: "Transparent Process",
+        description: "Our Alabama ESA evaluation process helps you understand each stage, from the initial assessment to the clinician’s final decision.",
+      },
+    ],
+    reviewsTitle: "See What Our Clients Say",
+    reviewsSubtitle: "Here’s what our clients say about their experience.",
+    benefitsTitle: "Benefits of an ESA Letter in Alabama",
+    benefitsSubtitle: "Understand how an ESA letter may help you stay with your pet for emotional well-being, with no added financial burden.",
+    financialBenefitsHeading: "Financial and Housing Benefits",
+    financialBenefits: [
+      {
+        title: "Equal Housing Opportunity",
+        description: "An ESA is not considered a pet under fair housing laws, helping individuals with qualifying mental health conditions access reasonable accommodation without discrimination.",
+        icon: "/states/whomayqualifies-california_chronicworry.svg",
+      },
+      {
+        title: "More Housing Options",
+        description: "An ESA letter may allow individuals to live in housing that otherwise has a “no pets” policy, subject to applicable rules and approval.",
+        icon: "/states/california-benefits-workplaceconsideration.svg",
+      },
+      {
+        title: "Protection During Lease Renewal",
+        description: "An approved ESA accommodation generally carries forward during lease renewals, provided circumstances remain unchanged.",
+        icon: "/states/california-benefits-workplaceconsideration.svg",
+      },
+    ],
+    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefits: [
+      {
+        title: "Emotional Grounding in Daily Life",
+        description: "ESAs may help provide a steady sense of comfort and routine, which can support emotional well-being during day-to-day activities.",
+        icon: "/states/whomayqualifies-panicattack.svg",
+      },
+      {
+        title: "Support During Periods of Heightened Stress",
+        description: "The presence of an ESA may help individuals feel calmer and more supported during stressful situations, transitions, or emotionally challenging moments.",
+        icon: "/states/california-benefits-strongersense.svg",
+      },
+      {
+        title: "Improved Emotional Awareness and Regulation",
+        description: "Caring for and interacting with an ESA can encourage mindfulness, emotional connection, and healthier coping responses over time.",
+        icon: "/states/california-benefits-strongersense.svg",
+      },
+    ],
+    lawsTitle: "ESA Laws for Tenants and Landlords in Alabama",
+    lawsSubtitle: "Understand how federal housing regulations apply to ESAs in Alabama and the legal rights and responsibilities of ESA owners and landlords.",
+    card1Title: "Tenant Protection and Rights",
+    card1Items: [
+      {
+        title: "Legal Recognition Under the FHA",
+        description: "Under the Fair Housing Act, emotional support animals may be recognized as a reasonable housing accommodation when linked to a documented mental health need.",
+      },
+      {
+        title: "Standardized Evaluation Framework",
+        description: "ESA housing protections are applied using uniform federal guidelines, ensuring consistency in how eligibility is reviewed across covered housing.",
+      },
+      {
+        title: "Defined Scope of Protection",
+        description: "Federal protections apply specifically to housing-related needs and do not extend to public access rights or non-housing settings.",
+      },
+    ],
+    card2Title: "Landlords' Rights and Responsibilities",
+    card2Items: [
+      {
+        title: "Request Review Authority",
+        description: "Housing providers may review ESA accommodation requests to ensure they meet Fair Housing Act requirements.",
+      },
+      {
+        title: "Health and Safety Standards",
+        description: "Providers may consider objective, current health, safety, and property-related concerns specific to the animal when evaluating an accommodation, not assumptions or general policies.",
+      },
+      {
+        title: "Defined Legal Limits",
+        description: "The FHA allows accommodation requests to be limited when they pose a direct safety risk, cause significant property damage, or qualify for a legal exemption.",
+      },
+    ],
+    legalNotice: "ESAs do not have public-access rights. This means entry to stores, restaurants, and airlines depends on individual policies, so always cross-verify before visiting or traveling.",
+    scamsTitle: "ESA Scams in Alabama: Real vs. Fake ESA Service",
+    scamsSubtitle: "Protecting yourself from ESA scams starts with understanding the difference between legitimate ESA evaluations and online services that promise instant or guaranteed letters in Alabama.",
+    scamsAlertTitle: "Important: No Official ESA Registry Exists",
+    scamsAlertText: "There is no official ESA registry or government-issued certification in Alabama or any other U.S. state. Only a valid ESA letter from a licensed provider is recognized for housing accommodation requests.",
+    scamsWhatYouNeedTitle: "What You Actually Need",
+    scamsWhatYouNeedItems: [
+      {
+        title: "Mental Health Evaluation",
+        description: "A proper clinical assessment to determine whether an emotional support animal is appropriate based on your emotional and psychological needs.",
+      },
+      {
+        title: "ESA Letter from a Licensed Therapist",
+        description: "Your ESA recommendation must be issued by an Alabama-licensed mental health professional and include valid license details and required information.",
+      },
+      {
+        title: "Ongoing Therapeutic Relationship",
+        description: "A legitimate provider conducts a real evaluation and maintains professional responsibility for their clinical decision rather than issuing one-time, instant approvals.",
+      },
+    ],
+    scamsCommonTitle: "Common ESA Scams in Alabama",
+    scamsCommonSubtitle: "Be cautious of services that may claim:",
+    scamsCommonItems: [
+      "Instant or guaranteed ESA letters without a clinical evaluation",
+      "Claims of ESA “certification” or “registration,” which are not legally recognized",
+      "Promises of housing approval, which no service can guarantee",
+      "ESA letters missing a licensed clinician’s signature or license number",
+    ],
+    psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Alabama",
+    psdVsEsaSubtitle: "Understanding the difference between psychiatric service dogs (PSDs) and ESA is important. This helps you to select the right choice for your mental health.",
+    esaCardTitle: "Emotional Support Animals",
+    esaCardBullets: [
+      "Provide therapeutic emotional support related to a documented mental health condition, based on a clinical evaluation.",
+      "Recognized under federal housing law as a reasonable accommodation, but not granted public access rights.",
+      "Do not require task-specific training, as eligibility is determined by clinical need rather than training standards.",
+    ],
+    psdCardTitle: "Psychiatric Service Dogs",
+    psdCardBullets: [
+      "Individually trained to perform specific tasks that directly mitigate a diagnosed psychiatric disability",
+      "Protected under disability laws with public access rights in most public spaces",
+      "Require documented, disability-related task training that goes beyond emotional comfort alone",
+    ],
+    psdCalloutTitle: "Getting a Psychiatric Service Dog in Alabama",
+    psdCalloutText: "Eligibility for a psychiatric service dog in Alabama requires a documented psychiatric disability and a dog trained to perform disability-related tasks. We connect you with a licensed professional for a PSD evaluation.\nThere is no official certification or registration requirement for psychiatric service dogs under the Americans with Disabilities Act (ADA).",
+    citiesTitle: "Available Everywhere in Alabama",
+    citiesSubtitle: "From Alabama's largest cities to smaller communities across the state, renters often encounter pet restrictions and housing policies. Our secure telehealth platform makes ESA evaluations in Alabama accessible wherever you live.",
+    cities: [
+      {
+        name: "Birmingham",
+        description: "Many rental communities enforce pet restrictions. A Birmingham ESA letter helps support housing accommodation requests.",
+        icon: "/states/losangeles.svg",
+      },
+      {
+        name: "Huntsville",
+        description: "As one of Alabama's fastest-growing cities, renters may face competitive housing and pet policies. A Huntsville ESA letter helps support accommodation requests.",
+        icon: "/states/losangelestwo.svg",
+      },
+      {
+        name: "Mobile",
+        description: "From downtown apartments to coastal-area rentals, pet restrictions are common. A Mobile ESA letter can help support your request.",
+        icon: "/states/losangelesfour.svg",
+      },
+      {
+        name: "Montgomery",
+        description: "Many Montgomery landlords and property managers maintain pet rules. A Montgomery ESA letter helps you stay prepared.",
+        icon: "/states/sanfrancisco.svg",
+      },
+      {
+        name: "Tuscaloosa",
+        description: "Student housing and rental properties throughout Tuscaloosa often have pet limitations. A Tuscaloosa ESA letter provides added support.",
+        icon: "/states/losangelesthree.svg",
+      },
+      {
+        name: "Dothan / Southeast Alabama",
+        description: "Rental policies vary across Southeast Alabama. ESA documentation can help when pet restrictions affect housing options.",
+        icon: "/states/sanfranciscofour.svg",
+      },
+      {
+        name: "Hoover",
+        description: "HOA communities and apartment complexes in Hoover may enforce pet restrictions. An ESA letter in Hoover helps navigate them.",
+        icon: "/states/sanfranciscotwo.svg",
+      },
+      {
+        name: "All Other Alabama Cities",
+        description: "From Auburn and Decatur to Florence and Gadsden, our telehealth ESA services are available statewide.",
+        icon: "/states/sanfranciscothree.svg",
+      },
+    ],
+    faqTitle: "Frequently Asked Questions About ESA Letter Alabama",
+    faqSubtitle: "This section addresses common questions about emotional support animals, housing considerations, and the evaluation process in Alabama.",
+    faqs: [
+      {
+        q: "What questions are asked during an ESA evaluation in Alabama?",
+        a: "During an ESA evaluation in Alabama, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+      },
+      {
+        q: "How Much Does an ESA Letter Cost in Alabama?",
+        a: "The cost of an ESA letter in Alabama varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the evaluation and issuance of the ESA letter if you qualify.",
+      },
+      {
+        q: "Can Any Doctor Write an ESA Letter in Alabama?",
+        a: "No, not every doctor can write an ESA letter in Alabama. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to assess mental health.",
+      },
+      {
+        q: "Can Working Professionals in Alabama Qualify for an Emotional Support Animal?",
+        a: "Yes, working professionals in Alabama may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+      },
+      {
+        q: "Is a Single ESA Appointment Enough in Alabama?",
+        a: "A single ESA appointment in Alabama may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+      },
+      {
+        q: "Does a Condition Need to Be Severe to Qualify for an ESA in Alabama?",
+        a: "No, a condition does not need to be severe to qualify for an ESA in Alabama. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional’s evaluation.",
+      },
+    ],
+    ctaTitle: "Ready to Start Your ESA Evaluation?",
+    ctaSubtitle: "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
+    ctaNote: "Note: ESA eligibility is determined by a licensed mental health professional following a clinical assessment. Approval is not guaranteed.",
   },
   alaska: {
     slug: "alaska",

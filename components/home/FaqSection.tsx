@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
-const faqs = [
+const defaultFaqs = [
   {
     num: "01.",
     q: "Is My ESA Therapist Legitimate?",
@@ -38,8 +38,30 @@ const faqs = [
   },
 ];
 
-export function FaqSection() {
+export interface FaqItem {
+  num?: string;
+  q: string;
+  a: string;
+}
+
+interface FaqSectionProps {
+  title?: string;
+  subtitle?: string;
+  faqs?: FaqItem[];
+}
+
+export function FaqSection({
+  title = "Frequently Asked Questions",
+  subtitle = "Get answers to common questions about ESA letters and our service.",
+  faqs: customFaqs,
+}: FaqSectionProps = {}) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
+
+  const rawList = customFaqs && customFaqs.length > 0 ? customFaqs : defaultFaqs;
+  const items = rawList.map((f, i) => ({
+    ...f,
+    num: f.num || `${String(i + 1).padStart(2, "0")}.`,
+  }));
 
   return (
     <section id="faq" className="pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 bg-[#FAF7F2] relative overflow-hidden">
@@ -47,10 +69,10 @@ export function FaqSection() {
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
           <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
-            Frequently Asked Questions
+            {title}
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
-            Get answers to common questions about ESA letters and our service.
+            {subtitle}
           </p>
         </div>
 
@@ -70,7 +92,7 @@ export function FaqSection() {
 
           {/* Right: Frame 1000011715 (Question Cards) */}
           <div className="w-full max-w-[566px] lg:max-w-none lg:flex-1 space-y-3.5 sm:space-y-5 xl:space-y-[25px] flex flex-col justify-center">
-            {faqs.map((faq, idx) => {
+            {items.map((faq, idx) => {
               const isOpen = openIdx === idx;
               return (
                 <div

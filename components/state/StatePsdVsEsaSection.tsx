@@ -7,29 +7,41 @@ import { StateData } from "@/data/statesData";
 export function StatePsdVsEsaSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
-  const esaBullets = [
+  const defaultEsaBullets = [
     "Provide emotional comfort and support for conditions such as anxiety, depression, PTSD, and related mental health challenges.",
     `Do not need specialized task training, but housing protections require a valid ESA letter from an ${stateName}-licensed mental health professional.`,
     "Protected under the Fair Housing Act (FHA), which allows approved individuals to reside with their ESA in housing that normally limits pets.",
     "Not subject to standard pet fees, such as pet rent or deposits, once the accommodation is properly approved.",
   ];
 
-  const psdBullets = [
+  const defaultPsdBullets = [
     "Specially trained to perform certain tasks, such as stopping panic attacks or reminding handlers to take medication.",
     "Safeguarded by the Americans with Disabilities Act (ADA).",
     "Entitled to full public access rights, including to places of employment, stores, and other public spaces where dogs are normally forbidden.",
   ];
+
+  const title = data.psdVsEsaTitle || `Psychiatric Service Dogs vs. Emotional Support Animals in ${stateName}`;
+  const subtitle = data.psdVsEsaSubtitle || `Understanding the differences between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) will help you select the support that best meets your mental health needs in ${stateName}.`;
+  const esaTitle = data.esaCardTitle || "Emotional Support Animals (ESA)";
+  const esaBullets = data.esaCardBullets && data.esaCardBullets.length > 0
+    ? data.esaCardBullets
+    : defaultEsaBullets;
+  const psdTitle = data.psdCardTitle || "Psychiatric Service Dogs (PSD)";
+  const psdBullets = data.psdCardBullets && data.psdCardBullets.length > 0
+    ? data.psdCardBullets
+    : defaultPsdBullets;
+  const calloutTitle = data.psdCalloutTitle || `Getting a Psychiatric Service Dog in ${stateName}`;
+  const calloutText = data.psdCalloutText || `Qualifying for a Psychiatric Service Dog requires documentation of a psychiatric disability and completion of task-specific training. Training timelines and costs vary depending on the provider and the specific tasks required. Individuals exploring this option may choose to work with qualified professionals for evaluation, documentation, and guidance. Our platform can help connect individuals with appropriately licensed mental health professionals who can assist with the initial assessment process and discuss next steps.`;
 
   return (
     <section className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1080px] mx-auto">
         <div className="text-center max-w-[840px] mx-auto mb-10 sm:mb-12 lg:mb-14">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
-            Psychiatric Service Dogs vs. Emotional
-            <br className="hidden sm:inline" /> Support Animals in {stateName}
+            {title}
           </h2>
           <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
-            Understanding the differences between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) will help you select the support that best meets your mental health needs in {stateName}.
+            {subtitle}
           </p>
         </div>
 
@@ -50,9 +62,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
             <div className="p-4 sm:p-4 lg:p-4.5 xl:p-5 flex flex-col justify-between flex-1 min-w-0">
               <div>
                 <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-[#2E5A66] mb-3 leading-snug">
-                  Emotional Support Animals
-                  <br />
-                  (ESA)
+                  {esaTitle}
                 </h3>
                 <ul className="space-y-2 mb-4">
                   {esaBullets.map((bullet, idx) => (
@@ -96,9 +106,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
             <div className="p-4 sm:p-4 lg:p-4.5 xl:p-5 flex flex-col justify-between flex-1 min-w-0">
               <div>
                 <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-[#2E5A66] mb-3 leading-snug">
-                  Psychiatric Service Dogs
-                  <br />
-                  (PSD)
+                  {psdTitle}
                 </h3>
                 <ul className="space-y-2 mb-4">
                   {psdBullets.map((bullet, idx) => (
@@ -133,12 +141,12 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <div className="w-[14px] sm:w-[19px] self-stretch min-h-[140px] sm:min-h-[181px] bg-[#E8B92C] shrink-0 rounded-l-[10px]" />
 
           {/* Frame 1000012015: Content Area */}
-          <div className="py-5 sm:py-8 flex flex-col justify-center items-start gap-1 max-w-[849px] flex-1">
+          <div className="py-5 sm:py-8 flex flex-col justify-center items-start gap-1.5 max-w-[849px] flex-1">
             <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#2E5A66]">
-              Getting a Psychiatric Service Dog in {stateName}
+              {calloutTitle}
             </h3>
-            <p className="font-sans font-medium text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#5F6B6F]">
-              Qualifying for a Psychiatric Service Dog requires documentation of a psychiatric disability and completion of task-specific training. Training timelines and costs vary depending on the provider and the specific tasks required. Individuals exploring this option may choose to work with qualified professionals for evaluation, documentation, and guidance. Our platform can help connect individuals with appropriately licensed mental health professionals who can assist with the initial assessment process and discuss next steps.
+            <p className="font-sans font-medium text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#5F6B6F] whitespace-pre-line">
+              {calloutText}
             </p>
           </div>
         </div>

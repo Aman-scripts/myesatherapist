@@ -8,15 +8,52 @@ import { StateData } from "@/data/statesData";
 export function StateScamsSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
+  const defaultWhatYouNeed = [
+    {
+      title: "ESA Letter from a Licensed Provider",
+      description: `Your ESA letter ${stateName} must come after a proper evaluation by a mental health professional licensed in the state.`,
+    },
+    {
+      title: "Clinical Mental Health Evaluation",
+      description: "A comprehensive assessment of your emotional or mental health condition is a required part of the ESA review process.",
+    },
+    {
+      title: "Verified Therapeutic Relationship",
+      description: "An ongoing or clearly established provider-patient relationship helps confirm the validity of the recommendation.",
+    },
+  ];
+
+  const defaultCommonScams = [
+    "Advertise “ESA registrations” or suggest there is an official certification system.",
+    "Sell unofficial ESA letters, ID cards, badges, or animal accessories.",
+    "Provide immediate ESA approvals without a proper clinical evaluation.",
+    "Claim guaranteed acceptance or approval by landlords or housing providers.",
+    `Operate without licensed ${stateName} mental health professionals.`,
+  ];
+
+  const title = data.scamsTitle || `${stateName} ESA Scams: What's Real vs. Fake`;
+  const subtitle = data.scamsSubtitle || `Getting an idea of the common ESA scams in ${stateName} can help you save yourself from fake websites and false certifications and registrations online.`;
+  const alertTitle = data.scamsAlertTitle || "Important: No Official ESA Registry Exists";
+  const alertText = data.scamsAlertText || `There is no state or federal registry, certification system, database, or official ESA ID in ${stateName} or anywhere else in the United States.`;
+  const whatYouNeedTitle = data.scamsWhatYouNeedTitle || "What You Actually Need";
+  const whatYouNeedItems = data.scamsWhatYouNeedItems && data.scamsWhatYouNeedItems.length > 0
+    ? data.scamsWhatYouNeedItems
+    : defaultWhatYouNeed;
+  const commonTitle = data.scamsCommonTitle || "Common ESA Scams";
+  const commonSubtitle = data.scamsCommonSubtitle;
+  const commonItems = data.scamsCommonItems && data.scamsCommonItems.length > 0
+    ? data.scamsCommonItems
+    : defaultCommonScams;
+
   return (
     <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1060px] mx-auto">
         <div className="text-center max-w-[840px] mx-auto mb-8 sm:mb-10 lg:mb-12">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
-            {stateName} ESA Scams: What&apos;s Real vs. Fake
+            {title}
           </h2>
           <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
-            Getting an idea of the common ESA scams in {stateName} can help you save yourself from fake websites and false certifications and registrations online.
+            {subtitle}
           </p>
         </div>
 
@@ -35,10 +72,10 @@ export function StateScamsSection({ data }: { data: StateData }) {
             </div>
             <div className="flex-1">
               <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D9383A] mb-1">
-                Important: No Official ESA Registry Exists
+                {alertTitle}
               </h3>
               <p className="font-sans text-xs sm:text-[13px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
-                There is no state or federal registry, certification system, database, or official ESA ID in {stateName} or anywhere else in the United States.
+                {alertText}
               </p>
             </div>
           </div>
@@ -60,60 +97,28 @@ export function StateScamsSection({ data }: { data: StateData }) {
 
             <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
               <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-6 sm:mb-7 leading-snug">
-                What You Actually Need
+                {whatYouNeedTitle}
               </h3>
 
               <div className="space-y-5 flex-1">
-                <div className="flex items-start gap-3.5">
-                  <div
-                    className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                  >
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
+                {whatYouNeedItems.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3.5">
+                    <div
+                      className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    >
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    </div>
+                    <div>
+                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
-                      ESA Letter from a Licensed Provider
-                    </h4>
-                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
-                      Your ESA letter {stateName} must come after a proper evaluation by a mental health professional licensed in the state.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div
-                    className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                  >
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <div>
-                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
-                      Clinical Mental Health Evaluation
-                    </h4>
-                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
-                      A comprehensive assessment of your emotional or mental health condition is a required part of the ESA review process.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div
-                    className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                  >
-                    <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <div>
-                    <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
-                      Verified Therapeutic Relationship
-                    </h4>
-                    <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
-                      An ongoing or clearly established provider-patient relationship helps confirm the validity of the recommendation.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -132,55 +137,27 @@ export function StateScamsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[25px] font-bold text-[#D9383A] text-center mb-6 sm:mb-7 leading-snug">
-                Common ESA Scams
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-[#D9383A] text-center mb-5 sm:mb-6 leading-snug">
+                {commonTitle}
               </h3>
 
+              {commonSubtitle && (
+                <h4 className="font-sans text-sm sm:text-base lg:text-[16px] font-bold text-[#2E5A66] text-left mb-4">
+                  {commonSubtitle}
+                </h4>
+              )}
+
               <div className="space-y-4 sm:space-y-4.5 flex-1">
-                <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                    <X className="w-3.5 h-3.5 stroke-[3]" />
+                {commonItems.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3.5">
+                    <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                      <X className="w-3.5 h-3.5 stroke-[3]" />
+                    </div>
+                    <p className="font-sans text-xs sm:text-[13.5px] lg:text-[14.5px] font-semibold text-[#5F6B6F] pt-0.5 leading-snug">
+                      {item}
+                    </p>
                   </div>
-                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
-                    Advertise &ldquo;ESA registrations&rdquo; or suggest there is an official certification system.
-                  </h4>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                    <X className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
-                    Sell unofficial ESA letters, ID cards, badges, or animal accessories.
-                  </h4>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                    <X className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
-                    Provide immediate ESA approvals without a proper clinical evaluation.
-                  </h4>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                    <X className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
-                    Claim guaranteed acceptance or approval by landlords or housing providers.
-                  </h4>
-                </div>
-
-                <div className="flex items-start gap-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                    <X className="w-3.5 h-3.5 stroke-[3]" />
-                  </div>
-                  <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[14px] font-bold text-[#D9383A] pt-0.5 leading-snug">
-                    Operate without licensed {stateName} mental health professionals.
-                  </h4>
-                </div>
+                ))}
               </div>
             </div>
           </div>

@@ -84,18 +84,37 @@ export default async function DynamicStatePage({ params }: Props) {
       <Header />
 
       {/* State Table of Contents Drawer & Left Edge Toggle */}
-      <StateTableOfContents stateName={data.name} />
+      <StateTableOfContents stateName={data.name} data={data} />
 
       <main className="flex-1 bg-[#FAF7F2]">
         <StateHeroSection data={data} />
         <StateTrustBar data={data} />
         <AsSeenOnSection bgColor="bg-[#FAF7F2]" />
-        <div id="therapists"><TherapistsSection /></div>
+        <div id="therapists">
+          <TherapistsSection
+            title={data.therapistsTitle}
+            subtitle={data.therapistsSubtitle}
+            licensureNote={data.therapistsLicensureNote}
+            therapistsList={data.therapistsList}
+          />
+        </div>
         <div id="process"><StateProcessSection data={data} /></div>
         <div id="who-qualifies"><StateWhoQualifiesSection data={data} /></div>
         <StateRequirementsSection data={data} />
-        <div id="why-choose"><WhyChooseUs bgColor="bg-white" /></div>
-        <div id="reviews"><TestimonialsSection /></div>
+        <div id="why-choose">
+          <WhyChooseUs
+            bgColor="bg-white"
+            title={data.whyChooseTitle}
+            subtitle={data.whyChooseSubtitle}
+            features={data.whyChooseItems}
+          />
+        </div>
+        <div id="reviews">
+          <TestimonialsSection
+            title={data.reviewsTitle}
+            subtitle={data.reviewsSubtitle}
+          />
+        </div>
         <div id="benefits"><StateBenefitsSection data={data} /></div>
         <div id="laws"><StateLawsSection data={data} /></div>
         <div id="scams"><StateScamsSection data={data} /></div>
@@ -103,11 +122,18 @@ export default async function DynamicStatePage({ params }: Props) {
         <div id="trusted-reviews"><TrustedByPetOwnersSection stateName={data.name} /></div>
         <div id="pricing"><StatePricingSection stateName={data.name} /></div>
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
-        <div id="faq"><FaqSection /></div>
+        <div id="faq">
+          <FaqSection
+            title={data.faqTitle}
+            subtitle={data.faqSubtitle}
+            faqs={data.faqs}
+          />
+        </div>
         <div id="cta">
           <CtaBanner
-            title={`Ready to Start Your ${data.name} ESA Evaluation?`}
-            description={`Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
+            title={data.ctaTitle || `Ready to Start Your ${data.name} ESA Evaluation?`}
+            description={data.ctaSubtitle || `Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
+            note={data.ctaNote}
             buttonText="Start your Evaluation"
             buttonHref="#faq"
           />

@@ -13,55 +13,69 @@ function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
-const therapists = [
+export interface Therapist {
+  id?: number | string;
+  name: string;
+  title: string;
+  bio: string;
+  licensedIn: string;
+  method?: string;
+  focus: string;
+  avatar?: string;
+}
+
+const defaultTherapists: Therapist[] = [
   {
     id: 1,
     name: "Robert Staaf",
     title: "Licensed Clinical Social Worker",
-    bio: "LCSW licensed in 30+ states with extensive psychotherapy experience. Pet owner and advocate for animal-assisted mental health treatment.",
+    bio: "LCSW with extensive psychotherapy experience. Pet owner and advocate for animal-assisted mental health treatment.",
     licensedIn: "30+ States",
     method: "Video or Phone",
-    focus: "Anxiety, Stress",
+    focus: "Anxiety & Stress",
+    avatar: "/common/therapist-avatar.png",
   },
   {
     id: 2,
-    name: "Robert Staaf",
-    title: "Licensed Clinical Social Worker",
-    bio: "LCSW licensed in 30+ states with extensive psychotherapy experience. Pet owner and advocate for animal-assisted mental health treatment.",
-    licensedIn: "30+ States",
+    name: "Leslie K. Gamble",
+    title: "Licensed Independent Clinical Social Worker",
+    bio: "Licensed therapist with 13 years of healthcare experience serving individuals, couples, and families with flexible, goal-focused care.",
+    licensedIn: "15+ States",
     method: "Video or Phone",
-    focus: "Anxiety, Stress",
+    focus: "Depression & PTSD",
+    avatar: "/common/therapist-avatar.png",
   },
   {
     id: 3,
-    name: "Robert Staaf",
-    title: "Licensed Clinical Social Worker",
-    bio: "LCSW licensed in 30+ states with extensive psychotherapy experience. Pet owner and advocate for animal-assisted mental health treatment.",
-    licensedIn: "30+ States",
+    name: "Gaurav Patel, MD",
+    title: "Family Medicine Physician",
+    bio: "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
+    licensedIn: "17 States",
     method: "Video or Phone",
-    focus: "Anxiety, Stress",
+    focus: "Chronic Conditions & Sleep Concerns",
+    avatar: "/common/therapist-avatar.png",
   },
 ];
 
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
-    <div className="relative flex-1 min-w-0 rounded-[12px] bg-[#E8B92C] pt-[3px] px-0 pb-0 shadow-xs flex flex-col">
-      <div className="bg-white rounded-[10px] pt-3 sm:pt-4 pb-2 sm:pb-2.5 px-1 sm:px-2 text-center flex-1 flex flex-col justify-center relative">
-        {/* Small floating badge icon at top center */}
-        <div className="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white border border-[#E2E8F0] shadow-xs flex items-center justify-center">
+    <div className="relative flex-1 min-w-0 rounded-[14px] bg-[#E8B92C] pt-[3px] px-0 pb-0 shadow-xs flex flex-col">
+      <div className="bg-white rounded-[12px] pt-4 sm:pt-4.5 pb-2.5 sm:pb-3 px-1.5 sm:px-2.5 text-center flex-1 flex flex-col justify-center relative">
+        {/* Floating badge icon at top center */}
+        <div className="absolute -top-3.5 sm:-top-4 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white border-[1.5px] border-[#E8B92C]/50 shadow-xs flex items-center justify-center">
           <Image
             src="/common/therapist-section-badge.svg"
             alt=""
-            width={12}
-            height={12}
+            width={18}
+            height={18}
             unoptimized
-            className="object-contain w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]"
+            className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4"
           />
         </div>
-        <div className="text-[10px] sm:text-[12px] font-heading font-bold text-[#1A4D59] leading-tight truncate">
+        <div className="text-[11px] sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight truncate">
           {label}
         </div>
-        <div className="text-[9px] sm:text-[11px] font-semibold text-[#5F6B6F] mt-0.5 sm:mt-1 leading-tight truncate">
+        <div className="text-[9.5px] sm:text-[11.5px] font-semibold text-[#5F6B6F] mt-0.5 sm:mt-1 leading-tight truncate">
           {value}
         </div>
       </div>
@@ -69,7 +83,20 @@ function StatBadge({ label, value }: { label: string; value: string }) {
   );
 }
 
-export function TherapistsSection() {
+interface TherapistsSectionProps {
+  title?: string;
+  subtitle?: string;
+  licensureNote?: string;
+  therapistsList?: Therapist[];
+}
+
+export function TherapistsSection({
+  title = "Our Licensed Mental Health Professionals",
+  subtitle = "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
+  licensureNote = "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
+  therapistsList,
+}: TherapistsSectionProps) {
+  const therapists = therapistsList && therapistsList.length > 0 ? therapistsList : defaultTherapists;
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -106,16 +133,23 @@ export function TherapistsSection() {
     <section className="py-16 lg:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[950px] mx-auto">
+        <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[950px] mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:whitespace-nowrap">
-            Our Licensed Mental Health Professionals
+            {title}
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold max-w-[760px] mx-auto leading-relaxed">
-            We connect individuals with licensed mental health professionals who
-            are qualified to conduct evaluations and provide recommendations
-            when clinically appropriate.
+            {subtitle}
           </p>
         </div>
+
+        {/* Licensure Note */}
+        {licensureNote && (
+          <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-[#FAF7F2] border border-[#E8B92C]/30 text-center">
+            <p className="text-[#5F6B6F] text-xs sm:text-sm font-semibold leading-relaxed font-sans">
+              {licensureNote}
+            </p>
+          </div>
+        )}
 
         {/* Therapist Sliding Carousel Track */}
         <div
@@ -127,7 +161,7 @@ export function TherapistsSection() {
             const isActive = idx === activeIndex;
             return (
               <div
-                key={t.id}
+                key={t.id ?? `${t.name}-${idx}`}
                 data-card
                 onClick={() => scrollToSlide(idx)}
                 className={`snap-start shrink-0 w-[86vw] sm:w-[460px] lg:w-[500px] xl:w-[520px] rounded-[28px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white ${
@@ -174,7 +208,7 @@ export function TherapistsSection() {
                   {/* 3 Stat Badges */}
                   <div className="flex items-stretch gap-2 sm:gap-3.5 pt-1">
                     <StatBadge label="Licensed In" value={t.licensedIn} />
-                    <StatBadge label="Evaluation Method" value={t.method} />
+                    <StatBadge label="Evaluation Method" value={t.method || "Video or Phone"} />
                     <StatBadge label="Focus Areas" value={t.focus} />
                   </div>
 

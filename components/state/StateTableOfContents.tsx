@@ -5,11 +5,14 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, ChevronRight } from "lucide-react";
 
+import { StateData } from "@/data/statesData";
+
 interface Props {
   stateName: string;
+  data?: StateData;
 }
 
-export function StateTableOfContents({ stateName }: Props) {
+export function StateTableOfContents({ stateName, data }: Props) {
   const [activeId, setActiveId] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
@@ -17,39 +20,39 @@ export function StateTableOfContents({ stateName }: Props) {
   const tocItems = [
     {
       id: "therapists",
-      label: "Our Licensed Mental Health Professionals",
+      label: data?.therapistsTitle || "Our Licensed Mental Health Professionals",
     },
     {
       id: "process",
-      label: `How the ${stateName} ESA Evaluation Process Works?`,
+      label: data?.processTitle || `How the ${stateName} ESA Evaluation Process Works?`,
     },
     {
       id: "who-qualifies",
-      label: `Who May Qualifies for an ESA Letter in ${stateName}?`,
+      label: data?.whoQualifiesTitle || `Who May Qualify for an ESA Letter in ${stateName}?`,
     },
     {
       id: "why-choose",
-      label: "Why Choose My ESA Therapist?",
+      label: data?.whyChooseTitle || "Why Choose My ESA Therapist?",
     },
     {
       id: "reviews",
-      label: "See What Our Clients Say",
+      label: data?.reviewsTitle || "See What Our Clients Say",
     },
     {
       id: "benefits",
-      label: `Benefits of a Clinically Issued ESA Letter in ${stateName}`,
+      label: data?.benefitsTitle || `Benefits of Having an ESA Letter in ${stateName}`,
     },
     {
       id: "laws",
-      label: `Understanding ESA Laws in ${stateName} for Housing & Tenant Rights`,
+      label: data?.lawsTitle || `ESA Laws for Tenants and Landlords in ${stateName}`,
     },
     {
       id: "scams",
-      label: `${stateName} ESA Scams: What’s Real vs. Fake`,
+      label: data?.scamsTitle || `${stateName} ESA Scams: What’s Real vs. Fake`,
     },
     {
       id: "psd-vs-esa",
-      label: `Psychiatric Service Dogs vs. Emotional Support Animals in ${stateName}`,
+      label: data?.psdVsEsaTitle || `Psychiatric Service Dogs vs. Emotional Support Animals in ${stateName}`,
     },
     {
       id: "trusted-reviews",
@@ -61,15 +64,15 @@ export function StateTableOfContents({ stateName }: Props) {
     },
     {
       id: "available-cities",
-      label: `Available Everywhere in ${stateName}`,
+      label: data?.citiesTitle || `Available Everywhere in ${stateName}`,
     },
     {
       id: "faq",
-      label: "Frequently Asked Questions",
+      label: data?.faqTitle || "Frequently Asked Questions",
     },
     {
       id: "cta",
-      label: "Ready to Start Your ESA Evaluation?",
+      label: data?.ctaTitle || "Ready to Start Your ESA Evaluation?",
     },
   ];
 

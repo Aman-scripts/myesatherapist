@@ -38,7 +38,15 @@ function YouTubePlayIcon({ className }: { className?: string }) {
   );
 }
 
-export function TestimonialsSection() {
+interface TestimonialsSectionProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export function TestimonialsSection({
+  title = "See What Our Clients Say",
+  subtitle = "Here’s what our clients say about their experience.",
+}: TestimonialsSectionProps = {}) {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -74,10 +82,10 @@ export function TestimonialsSection() {
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-16 space-y-2.5 max-w-[850px] mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
-            See What Our Clients Say
+            {title}
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed">
-            Here’s what our clients say about their experience.
+            {subtitle}
           </p>
         </div>
 

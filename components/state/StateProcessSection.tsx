@@ -10,7 +10,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 export function StateProcessSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
-  const steps = [
+  const defaultSteps = [
     {
       number: "01",
       icon: "/states/californina-esa-evalutation_schedule.svg",
@@ -41,7 +41,14 @@ export function StateProcessSection({ data }: { data: StateData }) {
     },
   ];
 
-  const differentiators = [
+  const steps = data.processSteps && data.processSteps.length > 0
+    ? data.processSteps.map((s, idx) => ({
+        ...s,
+        offsetClass: idx === 0 ? "md:translate-y-0" : idx === 1 ? "md:translate-y-10" : "md:translate-y-20",
+      }))
+    : defaultSteps;
+
+  const differentiators = data.processDifferentiators || [
     "No instant or automated ESA letters issued.",
     data.abbreviation === "CA"
       ? "AB 468–compliant documentation."
@@ -49,6 +56,9 @@ export function StateProcessSection({ data }: { data: StateData }) {
     `${stateName} licensed mental health professionals only.`,
     "HIPAA‑compliant, secure telehealth platform.",
   ];
+
+  const title = data.processTitle || `How the ${stateName} ESA Evaluation Process Works?`;
+  const subtitle = data.processSubtitle || `Our platform helps ${stateName} residents connect with licensed mental health professionals for ESA evaluations conducted through secure telehealth, in accordance with ${data.abbreviation === "CA" ? "California’s AB 468 requirements" : `${stateName} state requirements`}.`;
 
   return (
     <section
@@ -60,10 +70,10 @@ export function StateProcessSection({ data }: { data: StateData }) {
         {/* Frame 1000011447: Heading and Subtitle */}
         <div className="text-center max-w-[1030px] mx-auto space-y-3 sm:space-y-4">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
-            How the {stateName} ESA Evaluation Process Works?
+            {title}
           </h2>
           <p className="font-sans font-semibold text-sm sm:text-base lg:text-[18px] text-[#5F6B6F] leading-relaxed sm:leading-[30px] max-w-[885px] mx-auto">
-            Our platform helps {stateName} residents connect with licensed mental health professionals for ESA evaluations conducted through secure telehealth, in accordance with {data.abbreviation === "CA" ? "California’s AB 468 requirements" : `${stateName} state requirements`}.
+            {subtitle}
           </p>
         </div>
 
@@ -109,29 +119,38 @@ export function StateProcessSection({ data }: { data: StateData }) {
           ))}
         </div>
 
-        {/* Frame 1000011978: Why Our Process Is Different */}
-        <div className="w-full max-w-[688px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] p-6 sm:p-[25px_67px] flex flex-col items-center gap-6 shadow-xs">
+        {/* Frame 1000011978: Why Our Process Is Different / Unique */}
+        <div className="w-full max-w-[760px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] p-6 sm:p-[25px_45px] flex flex-col items-center gap-6 shadow-xs">
           <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#2E5A66] text-center">
-            Why Our Process Is Different
+            {data.processDifferentiatorsTitle || "Why Our Process Is Different"}
           </h3>
 
           {/* Frame 1000012001: Checklist */}
-          <div className="flex flex-col items-start gap-2 w-full max-w-[554px]">
+          <div className="flex flex-col items-start gap-2.5 w-full max-w-[620px]">
             {differentiators.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-4 w-full">
+              <div key={idx} className="flex items-start gap-3.5 w-full">
                 {/* Frame 1000011979: Gradient Check Icon */}
                 <div
-                  className="w-5 h-5 rounded-[10px] text-white flex items-center justify-center shrink-0 shadow-xs"
+                  className="w-5 h-5 rounded-[10px] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   <Check className="w-[11px] h-[11px] stroke-[3.5]" />
                 </div>
-                <span className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-[#5F6B6F]">
+                <span className="font-sans font-semibold text-[13px] sm:text-[14px] leading-relaxed text-[#5F6B6F]">
                   {item}
                 </span>
               </div>
             ))}
           </div>
+
+          {/* Process Note if provided */}
+          {data.processNote && (
+            <div className="w-full bg-white/80 rounded-[16px] p-4 border border-[#E8B92C]/40 mt-2">
+              <p className="font-sans text-xs sm:text-[13px] font-semibold text-[#5F6B6F] leading-relaxed">
+                {data.processNote}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Frame 1000011961: CTA Button and Subtitle */}
