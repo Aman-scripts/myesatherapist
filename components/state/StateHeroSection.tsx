@@ -145,7 +145,7 @@ function EvaluationFormCard({
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                  compact ? "h-[38px] px-2.5 text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[13px] xl:text-[14px]"
+                  compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
                 }`}
               />
             </div>
@@ -164,7 +164,7 @@ function EvaluationFormCard({
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                 className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                  compact ? "h-[38px] px-2.5 text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[13px] xl:text-[14px]"
+                  compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
                 }`}
               />
             </div>
@@ -185,7 +185,7 @@ function EvaluationFormCard({
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                compact ? "h-[38px] px-2.5 text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[13px] xl:text-[14px]"
+                compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
               }`}
             />
           </div>
@@ -205,7 +205,7 @@ function EvaluationFormCard({
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                compact ? "h-[38px] px-2.5 text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[13px] xl:text-[14px]"
+                compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
               }`}
             />
           </div>
