@@ -112,14 +112,17 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div className="hidden lg:block relative w-full h-full lg:min-h-0 flex items-stretch">
+            <div
+              className="hidden lg:block relative h-full ml-auto"
+              style={{ aspectRatio: data.benefitsAspect ?? "724/1427" }}
+            >
               <Image
                 src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.png"}
                 alt={`Benefits of Having an ESA Letter in ${stateName}`}
                 fill
                 priority
                 unoptimized
-                className="object-cover object-right pointer-events-none"
+                className="object-contain object-right pointer-events-none"
                 sizes="42vw"
               />
               <div className="absolute left-[12.6%] top-[31.3%] -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16">
