@@ -17,21 +17,49 @@ function FeatureBadgeIcon() {
   );
 }
 
+import { StateData } from "@/data/statesData";
+
 interface StatePricingSectionProps {
   stateName?: string;
+  data?: StateData;
 }
 
-export function StatePricingSection({ stateName }: StatePricingSectionProps) {
+export function StatePricingSection({ stateName, data }: StatePricingSectionProps) {
+  const sectionTitle = data?.pricingTitle || (stateName ? `Emotional Support Animal Plans & Pricing in ${stateName}` : "Emotional Support Animal");
+  const sectionSubtitle = data?.pricingSubtitle || "Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.";
+
+  const plan1Title = data?.pricingPlan1Title || "ESA Letter";
+  const plan1Description = data?.pricingPlan1Description || "Official ESA letter from a U.S.-licensed mental health professional, valid for housing accommodations under federal guidelines.";
+  const plan1Price = data?.pricingPlan1Price || "$149";
+  const plan1Features = data?.pricingPlan1Features || [
+    "Phone consultation",
+    "PSD letter if qualified",
+    "Official clinic letterhead",
+    "Licensed professional",
+    "Email delivery",
+  ];
+
+  const plan2Title = data?.pricingPlan2Title || "ESA Letter + ID Card";
+  const plan2Description = data?.pricingPlan2Description || "Everything in the ESA Letter package, plus an official ESA ID card for easy identification of your emotional support animal.";
+  const plan2Price = data?.pricingPlan2Price || "$199";
+  const plan2Features = data?.pricingPlan2Features || [
+    "Video consultation",
+    "PSD letter if qualified",
+    "Licensed professional",
+    "Priority 24-hour delivery",
+    "Email delivery",
+  ];
+
   return (
     <section id="pricing" className="py-14 sm:py-18 lg:py-22 bg-[#FAF7F2] relative z-10 overflow-visible">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center max-w-[709px] mx-auto mb-10 sm:mb-14 space-y-3">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
-            Emotional Support Animal
+        <div className="text-center max-w-[950px] mx-auto mb-10 sm:mb-14 space-y-3">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em] sm:whitespace-nowrap">
+            {sectionTitle}
           </h2>
-          <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed sm:leading-[30px] font-sans">
-            Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.
+          <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed sm:leading-[30px] font-sans max-w-[709px] mx-auto">
+            {sectionSubtitle}
           </p>
         </div>
 
@@ -43,17 +71,17 @@ export function StatePricingSection({ stateName }: StatePricingSectionProps) {
               {/* Title & Description */}
               <div>
                 <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">
-                  ESA Letter
+                  {plan1Title}
                 </h3>
                 <p className="text-[12px] text-[#666666] font-semibold leading-[20px] font-sans mt-1 min-h-[60px]">
-                  Official ESA letter from a U.S.-licensed mental health professional, valid for housing accommodations under federal guidelines.
+                  {plan1Description}
                 </p>
               </div>
 
               {/* Price */}
               <div className="flex items-baseline gap-1.5 pt-1">
                 <span className="font-heading text-[36px] font-bold text-[#2E5A66] leading-[44px] tracking-[-0.00015em]">
-                  $149
+                  {plan1Price}
                 </span>
                 <span className="text-[14px] text-[#5F6B6F] font-semibold leading-[26px] font-sans">
                   /per user
@@ -62,26 +90,12 @@ export function StatePricingSection({ stateName }: StatePricingSectionProps) {
 
               {/* Feature List */}
               <ul className="space-y-2.5 font-sans pt-2">
-                <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                  <FeatureBadgeIcon />
-                  <span>Phone consultation</span>
-                </li>
-                <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                  <FeatureBadgeIcon />
-                  <span>PSD letter if qualified</span>
-                </li>
-                <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                  <FeatureBadgeIcon />
-                  <span>Official clinic letterhead</span>
-                </li>
-                <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                  <FeatureBadgeIcon />
-                  <span>Licensed professional</span>
-                </li>
-                <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                  <FeatureBadgeIcon />
-                  <span>Email delivery</span>
-                </li>
+                {plan1Features.map((feat, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
+                    <FeatureBadgeIcon />
+                    <span>{feat}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -108,17 +122,17 @@ export function StatePricingSection({ stateName }: StatePricingSectionProps) {
                 {/* Title & Description */}
                 <div>
                   <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">
-                    ESA Letter + ID Card
+                    {plan2Title}
                   </h3>
                   <p className="text-[12px] text-[#666666] font-semibold leading-[20px] font-sans mt-1 min-h-[60px]">
-                    Everything in the ESA Letter package, plus an official ESA ID card for easy identification of your emotional support animal.
+                    {plan2Description}
                   </p>
                 </div>
 
                 {/* Price */}
                 <div className="flex items-baseline gap-1.5 pt-1">
                   <span className="font-heading text-[36px] font-bold text-[#2E5A66] leading-[44px] tracking-[-0.00015em]">
-                    $199
+                    {plan2Price}
                   </span>
                   <span className="text-[14px] text-[#5F6B6F] font-semibold leading-[26px] font-sans">
                     /per user
@@ -127,26 +141,12 @@ export function StatePricingSection({ stateName }: StatePricingSectionProps) {
 
                 {/* Feature List */}
                 <ul className="space-y-2.5 font-sans pt-2">
-                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                    <FeatureBadgeIcon />
-                    <span>Video consultation</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                    <FeatureBadgeIcon />
-                    <span>PSD letter if qualified</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                    <FeatureBadgeIcon />
-                    <span>Licensed professional</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                    <FeatureBadgeIcon />
-                    <span>Priority 24-hour delivery</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
-                    <FeatureBadgeIcon />
-                    <span>Email delivery</span>
-                  </li>
+                  {plan2Features.map((feat, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-[14px] text-[#5F6B6F] font-normal leading-[17px] italic">
+                      <FeatureBadgeIcon />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 

@@ -8,7 +8,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 interface TestimonialItem {
   quote: string;
   name: string;
-  avatar: string;
+  avatar?: string;
 }
 
 const TESTIMONIALS: TestimonialItem[] = [
@@ -53,9 +53,19 @@ const TESTIMONIALS: TestimonialItem[] = [
 interface Props {
   bgColor?: string;
   stateName?: string;
+  title?: string;
+  subtitle?: string;
+  testimonials?: TestimonialItem[];
 }
 
-export function TrustedByPetOwnersSection({ bgColor = "bg-[#FFFFFF]", stateName }: Props) {
+export function TrustedByPetOwnersSection({
+  bgColor = "bg-[#FFFFFF]",
+  stateName,
+  title,
+  subtitle,
+  testimonials,
+}: Props) {
+  const list = testimonials && testimonials.length > 0 ? testimonials : TESTIMONIALS;
   const [activeIdx, setActiveIdx] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -63,12 +73,12 @@ export function TrustedByPetOwnersSection({ bgColor = "bg-[#FFFFFF]", stateName 
   const minSwipeDistance = 45;
 
   const nextSlide = useCallback(() => {
-    setActiveIdx((prev) => (prev + 1) % TESTIMONIALS.length);
-  }, []);
+    setActiveIdx((prev) => (prev + 1) % list.length);
+  }, [list.length]);
 
   const prevSlide = useCallback(() => {
-    setActiveIdx((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  }, []);
+    setActiveIdx((prev) => (prev - 1 + list.length) % list.length);
+  }, [list.length]);
 
   const onTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
@@ -98,7 +108,10 @@ export function TrustedByPetOwnersSection({ bgColor = "bg-[#FFFFFF]", stateName 
     return () => clearInterval(timer);
   }, [nextSlide]);
 
-  const current = TESTIMONIALS[activeIdx] || TESTIMONIALS[0];
+  const current = list[activeIdx] || list[0];
+
+  const displayTitle = title || (stateName ? `Trusted by Thousands of Pet Owners in ${stateName}` : "Trusted by Thousands of Pet Owners");
+  const displaySubtitle = subtitle || "See why so many clients trust MY ESA for their ESA needs. Real stories from real people who experienced our process firsthand.";
 
   return (
     <section className={`w-full ${bgColor} py-14 sm:py-18 xl:py-[63px] overflow-hidden`}>
@@ -108,10 +121,10 @@ export function TrustedByPetOwnersSection({ bgColor = "bg-[#FFFFFF]", stateName 
           {/* Heading Container (709px x 130px) */}
           <div className="text-center max-w-[709px] mx-auto space-y-4">
             <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
-              Trusted by Thousands of Pet Owners
+              {displayTitle}
             </h2>
             <p className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-[#5F6B6F] leading-relaxed xl:leading-[30px]">
-              See why so many clients trust MY ESA for their ESA needs. Real stories from real people who experienced our process firsthand.
+              {displaySubtitle}
             </p>
           </div>
 
@@ -155,7 +168,7 @@ export function TrustedByPetOwnersSection({ bgColor = "bg-[#FFFFFF]", stateName 
               {/* Avatar (60px x 60px with 4px white border) */}
               <div className="w-[60px] h-[60px] rounded-full border-[4px] border-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] overflow-hidden relative bg-[#E8F0F1] shrink-0">
                 <Image
-                  src={current.avatar}
+                  src={current.avatar || "/about-us/about_us-trusted-section-one.jpg"}
                   alt={current.name}
                   fill
                   className="object-cover"
@@ -170,7 +183,7 @@ export function TrustedByPetOwnersSection({ bgColor = "bg-[#FFFFFF]", stateName 
 
               {/* Frame 1000012071: Pagination Dots */}
               <div className="flex items-center justify-center gap-1 mt-1">
-                {TESTIMONIALS.map((_, idx) => (
+                {list.map((_, idx) => (
                   <button
                     key={idx}
                     type="button"

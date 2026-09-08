@@ -119,8 +119,15 @@ export default async function DynamicStatePage({ params }: Props) {
         <div id="laws"><StateLawsSection data={data} /></div>
         <div id="scams"><StateScamsSection data={data} /></div>
         <div id="psd-vs-esa"><StatePsdVsEsaSection data={data} /></div>
-        <div id="trusted-reviews"><TrustedByPetOwnersSection stateName={data.name} /></div>
-        <div id="pricing"><StatePricingSection stateName={data.name} /></div>
+        <div id="trusted-reviews">
+          <TrustedByPetOwnersSection
+            stateName={data.name}
+            title={data.trustedReviewsTitle}
+            subtitle={data.trustedReviewsSubtitle}
+            testimonials={data.trustedReviews}
+          />
+        </div>
+        <div id="pricing"><StatePricingSection stateName={data.name} data={data} /></div>
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <div id="faq">
           <FaqSection

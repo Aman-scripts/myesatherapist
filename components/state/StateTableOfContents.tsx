@@ -17,7 +17,7 @@ export function StateTableOfContents({ stateName, data }: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
 
-  const tocItems = [
+  const defaultTocItems = [
     {
       id: "therapists",
       label: data?.therapistsTitle || "Our Licensed Mental Health Professionals",
@@ -75,6 +75,8 @@ export function StateTableOfContents({ stateName, data }: Props) {
       label: data?.ctaTitle || "Ready to Start Your ESA Evaluation?",
     },
   ];
+
+  const tocItems = (data?.tableOfContents && data.tableOfContents.length > 0) ? data.tableOfContents : defaultTocItems;
 
   useEffect(() => {
     setMounted(true);

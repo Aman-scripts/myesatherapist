@@ -111,6 +111,20 @@ export interface StateData {
   ctaTitle?: string;
   ctaSubtitle?: string;
   ctaNote?: string;
+  tableOfContents?: Array<{ id: string; label: string }>;
+  trustedReviewsTitle?: string;
+  trustedReviewsSubtitle?: string;
+  trustedReviews?: Array<{ name: string; quote: string; avatar?: string }>;
+  pricingTitle?: string;
+  pricingSubtitle?: string;
+  pricingPlan1Title?: string;
+  pricingPlan1Description?: string;
+  pricingPlan1Price?: string;
+  pricingPlan1Features?: string[];
+  pricingPlan2Title?: string;
+  pricingPlan2Description?: string;
+  pricingPlan2Price?: string;
+  pricingPlan2Features?: string[];
 }
 
 export const STATES_DATA: Record<string, StateData> = {
@@ -254,8 +268,8 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "Our Alabama ESA evaluation process helps you understand each stage, from the initial assessment to the clinician’s final decision.",
       },
     ],
-    reviewsTitle: "See What Our Clients Say",
-    reviewsSubtitle: "Here’s what our clients say about their experience.",
+    reviewsTitle: "What People Say About Their ESA Letter Journey",
+    reviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
     benefitsTitle: "Benefits of an ESA Letter in Alabama",
     benefitsSubtitle: "Understand how an ESA letter may help you stay with your pet for emotional well-being, with no added financial burden.",
     financialBenefitsHeading: "Financial and Housing Benefits",
@@ -444,7 +458,79 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     ctaTitle: "Ready to Start Your ESA Evaluation?",
     ctaSubtitle: "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
-    ctaNote: "Note: ESA eligibility is determined by a licensed mental health professional following a clinical assessment. Approval is not guaranteed.",
+    trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviews: [
+      {
+        name: "Stewart, Oakland, CA",
+        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
+        avatar: "/about-us/about_us-trusted-section-one.jpg",
+      },
+      {
+        name: "Edward, Vernon Rockville, CT",
+        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
+        avatar: "/about-us/about_us-trusted-section-two.jpg",
+      },
+      {
+        name: "Bryan, Plymouth, MA",
+        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
+        avatar: "/about-us/about_us-trusted-section-one.jpg",
+      },
+      {
+        name: "Kerry, Decatur, IL",
+        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
+        avatar: "/about-us/about_us-trusted-section-two.jpg",
+      },
+      {
+        name: "Jimmy, Newport, PA",
+        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
+        avatar: "/about-us/about_us-trusted-section-one.jpg",
+      },
+      {
+        name: "Todd, San Francisco, CA",
+        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
+        avatar: "/about-us/about_us-trusted-section-two.jpg",
+      },
+    ],
+    pricingTitle: "The Cost of an ESA Letter in Alabama",
+    pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
+    pricingPlan1Title: "ESA Letter",
+    pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Alabama.",
+    pricingPlan1Price: "$149",
+    pricingPlan1Features: [
+      "Live telehealth evaluation with a licensed LMHP",
+      "Official ESA letter delivered by email",
+      "Documentation for housing accommodation requests",
+      "Coverage for all 50 U.S. states",
+      "HIPAA-secure telehealth experience",
+    ],
+    pricingPlan2Title: "ESA Letter + ID Card",
+    pricingPlan2Description: "Everything in the ESA Letter package, plus an official ESA ID card for added convenience when identifying your emotional support animal.",
+    pricingPlan2Price: "$199",
+    pricingPlan2Features: [
+      "Everything included with the ESA letter",
+      "Official ESA ID card for your animal",
+      "Convenient physical identification",
+      "Priority 24-hour delivery",
+      "Coverage for all 50 U.S. states",
+      "HIPAA-secure telehealth experience",
+    ],
+    tableOfContents: [
+      { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
+      { id: "process", label: "How to Get an ESA Letter in Alabama?" },
+      { id: "who-qualifies", label: "Can I Qualify for an ESA in Alabama?" },
+      { id: "why-choose", label: "Why Do I Choose My ESA Therapist?" },
+      { id: "reviews", label: "What Do ESA Owners Say About Their Experience?" },
+      { id: "benefits", label: "What Benefits Can I Get From an ESA Letter in Alabama?" },
+      { id: "laws", label: "What Are My ESA Housing Rights in Alabama?" },
+      { id: "scams", label: "What Should I Avoid When Applying for an ESA Letter?" },
+      { id: "psd-vs-esa", label: "Psychiatric Service Dogs vs. Emotional Support Animals in Alabama" },
+      { id: "trusted-reviews", label: "Trusted by Thousands of ESA Owners in Alabama" },
+      { id: "pricing", label: "How Much Will an ESA Letter Cost Me in Alabama?" },
+      { id: "available-cities", label: "Is My ESA Therapist Available All Across Alabama?" },
+      { id: "faq", label: "Frequently Asked Questions" },
+      { id: "cta", label: "Start My ESA Evaluation Now!" },
+    ],
   },
   alaska: {
     slug: "alaska",
@@ -761,7 +847,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     ctaTitle: "Ready to Start Your ESA Evaluation?",
     ctaSubtitle: "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
-    ctaNote: "Note: ESA eligibility is determined by a licensed mental health professional following a clinical assessment. Approval is not guaranteed.",
   },
   arizona: {
     slug: "arizona",
