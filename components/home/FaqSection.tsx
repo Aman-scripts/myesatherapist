@@ -64,7 +64,7 @@ export function FaqSection({
   }));
 
   return (
-    <section id="faq" className="pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 bg-[#FAF7F2] relative overflow-hidden">
+    <section id="faq" className="pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 bg-[#FAF7F2] relative">
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
@@ -77,9 +77,9 @@ export function FaqSection({
         </div>
 
         {/* Frame 1000011803: Content Row (Image + Accordions) */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8 xl:gap-[60px] max-w-[1184px] mx-auto">
-          {/* Left: image (380x540px on 1024px lg, 551x673px on 1440px xl, rounded-[20px]) */}
-          <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8 xl:gap-[60px] max-w-[1184px] mx-auto relative">
+          {/* Left: image (centered on mobile/tablet, sticky on desktop) */}
+          <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md self-center mx-auto lg:self-start lg:mx-0 lg:sticky lg:top-[104px]">
             <Image
               src="/common/faq-section-image.png"
               alt="Person holding emotional support animal"

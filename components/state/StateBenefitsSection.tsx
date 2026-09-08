@@ -148,10 +148,10 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 max-w-[650px] mb-2 lg:mb-3">
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F]">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] leading-tight whitespace-pre-line">
                 {financialHeading}
               </h3>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] hidden sm:block">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] leading-tight whitespace-pre-line hidden sm:block">
                 {emotionalHeading}
               </h3>
             </div>
