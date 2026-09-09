@@ -3878,7 +3878,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nFlorida ESA Evaluation?",
-    ctaSubtitle: "Connect with a Florida-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a Florida-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in Florida?" },

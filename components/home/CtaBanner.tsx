@@ -56,13 +56,22 @@ export function CtaBanner({
 
         <div className="max-w-[1442px] mx-auto px-6 sm:px-12 lg:px-[60px] xl:px-[104px] py-12 lg:py-[49px] relative min-h-[400px] flex items-center">
           {/* Left Text & CTA Area */}
-          <div className="relative z-10 max-w-[575px] lg:max-w-[640px] xl:max-w-[700px] space-y-6 text-left">
+          <div className="relative z-10 max-w-[575px] lg:max-w-[650px] xl:max-w-[720px] space-y-6 text-left">
             <div className="space-y-4">
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[540px] lg:max-w-[620px] xl:max-w-[680px] whitespace-pre-line">
                 {title}
               </h2>
               <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
-                {description}
+                {description.includes("\n") ? (
+                  description.split("\n").map((line, i, arr) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </React.Fragment>
+                  ))
+                ) : (
+                  description
+                )}
               </p>
               {note && (
                 <p className="text-[#E8B92C] text-sm sm:text-[15px] lg:text-[16px] font-semibold leading-relaxed font-sans pt-1">
