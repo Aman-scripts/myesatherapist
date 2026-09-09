@@ -3942,19 +3942,19 @@ export const STATES_DATA: Record<string, StateData> = {
     processSteps: [
       {
         number: "01",
-        icon: "/home/how-it-works-questionaire.svg",
+        icon: "/states/californina-esa-evalutation_schedule.svg",
         title: "Book Your Appointment",
         description: "Sign up and choose a preferred time to book your appointment with a licensed mental health professional.",
       },
       {
         number: "02",
-        icon: "/home/how-it-works-therapist.svg",
+        icon: "/states/californina-esa-evalutation_clinicalevaluation.svg",
         title: "Complete Your Evaluation",
         description: "Get ready to connect with your practitioner through a video or phone call. During the session, you will be evaluated based on your emotional well-being and relevant background. The professional will then consider whether an emotional support animal may offer therapeutic benefit or not.",
       },
       {
         number: "03",
-        icon: "/home/how-it-works-receive-letter.svg",
+        icon: "/states/californina-esa-evalutation_clinicaldetermination.svg",
         title: "Professional Determination",
         description: "After the evaluation process is finished, the professional will assess and make an independent decision based on the data gathered. If an ESA letter is clinically appropriate, it is issued securely and sent via email.",
       },
@@ -3974,7 +3974,7 @@ export const STATES_DATA: Record<string, StateData> = {
       {
         title: "Post-Traumatic Stress Disorder (PTSD)",
         description: "Reliving past traumatic events and difficulty in trusting people. An ESA may create a sense of comfort and security, helping individuals feel supported when dealing with trauma-related distress.",
-        icon: "/states/whomayqualifies-california_chronicworry.svg",
+        icon: "/states/whomayqualifies-california_posttrauma.svg",
       },
       {
         title: "Obsessive-Compulsive Disorder (OCD)",
@@ -3984,12 +3984,12 @@ export const STATES_DATA: Record<string, StateData> = {
       {
         title: "Social Anxiety Disorder",
         description: "Trouble forming and maintaining relationships with constant fear of neglect. An ESA may offer a familiar source of comfort, helping individuals feel more at ease when navigating social situations and everyday interactions.",
-        icon: "/states/whomayqualifies-depression.svg",
+        icon: "/states/whomayqualifies-california_chronicworry.svg",
       },
       {
         title: "Other Mental Health Conditions",
         description: "These include generalized depression, anxiety or panic attacks. An ESA may offer emotional comfort and companionship, helping individuals cope with depression, anxiety, panic, and related emotional challenges.",
-        icon: "/states/whomayqualifies-socialanxiety.svg",
+        icon: "/states/whomayqualifies-moodconditions.svg",
       },
     ],
     whoQualifiesNote: "Important: The presence of a mental health condition does not automatically qualify an individual for an ESA letter in Georgia. An ESA recommendation is provided only if a licensed mental health professional determines it is clinically appropriate.",
@@ -4218,37 +4218,37 @@ export const STATES_DATA: Record<string, StateData> = {
       {
         name: "Savannah",
         description: "Historic buildings, downtown rentals, and coastal housing each have their own unique leasing requirements. A Savannah ESA letter can be especially valuable for renters who handle pet policies in competitive housing markets.",
-        icon: "/states/sandiego.svg",
+        icon: "/states/losangelestwo.svg",
       },
       {
         name: "Augusta",
         description: "Home to healthcare professionals, military families, and a growing rental population, the city offers a wide range of housing options, many of which maintain pet restrictions. An Augusta ESA letter can help simplify the process.",
-        icon: "/states/sanfrancisco.svg",
+        icon: "/states/losangelesthree.svg",
       },
       {
         name: "Columbus",
         description: "With a strong military presence and a large number of rental communities, Columbus residents often face landlord pet policies that vary depending on property type and management company.",
-        icon: "/states/fresno.svg",
+        icon: "/states/losangelesfour.svg",
       },
       {
         name: "Macon",
         description: "As new developments continue to emerge throughout Macon, renters may find differing pet rules from one community to the next. An ESA letter in Macon provides documentation to support accommodation requests when needed.",
-        icon: "/states/sacramento.svg",
+        icon: "/states/sanfrancisco.svg",
       },
       {
         name: "Athens",
         description: "A major college town means a fast-moving rental market and student-focused housing communities, many of which maintain strict pet policies. An Athens ESA letter can help students and long-term residents alike.",
-        icon: "/states/longbeach.svg",
+        icon: "/states/sanfranciscotwo.svg",
       },
       {
         name: "South Georgia",
         description: "From Valdosta and Albany to Thomasville and smaller regional communities, access to in-person evaluations may not always be convenient. South Georgia ESA letter evaluations help bring licensed professionals directly to residents across the city.",
-        icon: "/states/oakland.svg",
+        icon: "/states/sanfranciscothree.svg",
       },
       {
         name: "All Other Georgia Cities",
         description: "Whether you're located in Roswell, Marietta, Warner Robins, Gainesville, or anywhere in between, our services are available statewide, making legitimate ESA evaluations accessible throughout Georgia.",
-        icon: "/states/bakersfield.svg",
+        icon: "/states/sanfranciscofour.svg",
       },
     ],
     faqTitle: "Frequently Asked Questions About ESA Letter Georgia",
