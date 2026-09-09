@@ -2581,7 +2581,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "Most airlines don’t treat Emotional Support Animals as service animals anymore, so they usually travel as regular pets now. It’s always best to take a quick look at your airline’s current pet policy to see whether your ESA can fly in the cabin or needs to be placed in cargo.",
       },
     ],
-    ctaTitle: "Ready to Start Your Colorado ESA Evaluation?",
+    ctaTitle: "Ready to Start Your\nColorado ESA Evaluation?",
     ctaSubtitle: "Connect with a Colorado-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
@@ -2983,7 +2983,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "Yes! If your move triggers anxiety, depression, or other mental health challenges, a licensed Connecticut therapist can evaluate you and provide an ESA letter to confirm your living accommodations.",
       },
     ],
-    ctaTitle: "Ready to Start Your Connecticut ESA Evaluation?",
+    ctaTitle: "Ready to Start Your\nConnecticut ESA Evaluation?",
     ctaSubtitle: "Connect with a Connecticut-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
