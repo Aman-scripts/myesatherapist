@@ -180,6 +180,18 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   </div>
                 ))}
               </div>
+
+              {data.whoQualifiesNote && (
+                <div className="mt-4 max-w-[620px] relative overflow-hidden bg-[#FAF7F2] rounded-[10px] py-3 px-4 shadow-xs flex items-center pl-6 text-left border border-[#EAE5DC]/60">
+                  <div className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#E8B92C] rounded-l-[10px]" />
+                  <p className="font-sans text-[11.5px] sm:text-xs lg:text-[13px] font-semibold text-[#5F6B6F] leading-relaxed">
+                    <span className="font-bold text-[#2E5A66] uppercase tracking-wider">
+                      {/^important\s*note/i.test(data.whoQualifiesNote) ? "IMPORTANT NOTE - " : "IMPORTANT - "}
+                    </span>
+                    {data.whoQualifiesNote.replace(/^(important\s*note[:\s-]*|important[:\s-]*)/i, "")}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
