@@ -2204,7 +2204,7 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "CO",
     metaTitle: "ESA Letter Evaluations by Colorado Licensed Therapists | My ESA Therapist",
     metaDescription: "Connect with licensed mental health professionals in Colorado for ESA letter evaluations. Letters are issued only when clinically appropriate, based on the provider’s independent assessment and in alignment with the Fair Housing Act.",
-    heroTitle: "ESA Letter Evaluations by Colorado Licensed Therapists",
+    heroTitle: "ESA Letter Evaluations\nby Colorado\nLicensed Therapists",
     heroSubtitle: "Connect with licensed mental health professionals in Colorado for ESA letter evaluations. Letters are issued only when clinically appropriate, based on the provider’s independent assessment and in alignment with the Fair Housing Act.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",

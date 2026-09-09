@@ -146,7 +146,16 @@ export function TherapistsSection({
         {licensureNote && (
           <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-[#FAF7F2] border border-[#E8B92C]/30 text-center">
             <p className="text-[#5F6B6F] text-xs sm:text-sm font-semibold leading-relaxed font-sans">
-              {licensureNote}
+              {/^A Note on Licensure Levels:?/i.test(licensureNote) ? (
+                <>
+                  <strong className="font-bold text-[#2E5A66]">
+                    {licensureNote.match(/^A Note on Licensure Levels:?/i)?.[0]}
+                  </strong>{" "}
+                  {licensureNote.replace(/^A Note on Licensure Levels:?\s*/i, "")}
+                </>
+              ) : (
+                licensureNote
+              )}
             </p>
           </div>
         )}
