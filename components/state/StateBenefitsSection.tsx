@@ -125,7 +125,13 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 className="object-contain object-right pointer-events-none"
                 sizes="42vw"
               />
-              <div className="absolute left-[12.6%] top-[31.3%] -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16">
+              <div
+                className="absolute -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16"
+                style={{
+                  top: data.benefitsBadgeTop ?? "31.3%",
+                  left: data.benefitsBadgeLeft ?? "12.6%",
+                }}
+              >
                 <Image
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"

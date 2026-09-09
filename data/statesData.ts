@@ -98,6 +98,8 @@ export interface StateData {
   psdCalloutText?: string;
   benefitsImage?: string;
   benefitsAspect?: string;
+  benefitsBadgeTop?: string;
+  benefitsBadgeLeft?: string;
   benefitsImageMobile?: string;
   benefitsImageTablet?: string;
   whoQualifiesImage?: string;
@@ -3726,6 +3728,9 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-secure telehealth experience",
     ],
     benefitsImage: "/states/statewhobenefits-florida.png",
+    benefitsAspect: "696/1623",
+    benefitsBadgeTop: "50%",
+    benefitsBadgeLeft: "3.3%",
     benefitsImageMobile: "/states/statewhobenefits-florida_mobile.png",
     benefitsImageTablet: "/states/statewhobenefits-florida_tablet.png",
     whoQualifiesImage: "/states/statewhoqualifies-florida.png",
