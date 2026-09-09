@@ -3524,7 +3524,7 @@ export const STATES_DATA: Record<string, StateData> = {
       {
         icon: "/home/whychoose-section-secure-thealth.svg",
         title: "Secure Telehealth Platform",
-        description: "Our HIPAA-compliant systems ensure your information remains confidential and protected.",
+        description: "Our HIPAA-compliant systems ensure your information remains confidential and protected. Any mental health service provided over an audio-visual platform must be HIPAA-compliant in order to be secure and protect your information.",
       },
       {
         icon: "/home/whychoose-section-clinical-integrity.svg",
