@@ -3413,7 +3413,7 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "FL",
     metaTitle: "ESA Letter Evaluations by Florida Licensed Therapists | My ESA Therapist",
     metaDescription: "Complete a legitimate ESA evaluation through our HIPAA-compliant, secure telehealth platform with Florida-licensed mental health professionals, in alignment with federal housing laws.",
-    heroTitle: "ESA Letter Evaluations by Florida Licensed Therapists",
+    heroTitle: "ESA Letter Evaluations\nby Florida\nLicensed Therapists",
     heroSubtitle: "Complete a legitimate ESA evaluation through our HIPAA-compliant, secure telehealth platform with Florida-licensed mental health professionals, in alignment with federal housing laws.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct emotional support animal (ESA) evaluations and provide recommendations for accommodation when clinically appropriate.",
