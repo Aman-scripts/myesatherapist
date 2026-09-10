@@ -79,15 +79,17 @@ export function FaqSection({
         {/* Frame 1000011803: Content Row (Image + Accordions) */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8 xl:gap-[60px] max-w-[1184px] mx-auto relative">
           {/* Left: image (centered on mobile/tablet, sticky on desktop) */}
-          <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md self-center mx-auto lg:self-start lg:mx-0 lg:sticky lg:top-[104px]">
-            <Image
-              src="/common/faq-section-image.png"
-              alt="Person holding emotional support animal"
-              fill
-              priority
-              className="object-cover"
-              sizes="(min-width: 1280px) 551px, (min-width: 1024px) 380px, 90vw"
-            />
+          <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] shrink-0 self-center mx-auto lg:self-start lg:mx-0 lg:sticky lg:top-[104px]">
+            <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-md">
+              <Image
+                src="/common/faq-section-image.png"
+                alt="Person holding emotional support animal"
+                fill
+                priority
+                className="object-cover"
+                sizes="(min-width: 1280px) 551px, (min-width: 1024px) 380px, 90vw"
+              />
+            </div>
           </div>
 
           {/* Right: Frame 1000011715 (Question Cards) */}
