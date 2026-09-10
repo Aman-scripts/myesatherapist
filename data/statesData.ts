@@ -7120,7 +7120,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nKentucky ESA Evaluation?",
-    ctaSubtitle: "Connect with a Kentucky-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a Kentucky-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in Kentucky?" },
