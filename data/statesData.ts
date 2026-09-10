@@ -9167,7 +9167,7 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "MN",
     metaTitle: "ESA Letter Evaluations by Minnesota Licensed Therapists | My ESA Therapist",
     metaDescription: "Speak with certified mental health professionals in Minnesota for personalized wellness evaluations. ESA letters are issued only when supported by Fair Housing rules and clinical recommendations.",
-    heroTitle: "ESA Letter Evaluations by Minnesota Licensed Therapists",
+    heroTitle: "ESA Letter Evaluations\nby Minnesota\nLicensed Therapists",
     heroSubtitle: "Speak with certified mental health professionals in Minnesota for personalized wellness evaluations. ESA letters are issued only when supported by Fair Housing rules and clinical recommendations.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
