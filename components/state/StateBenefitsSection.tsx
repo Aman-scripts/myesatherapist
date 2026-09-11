@@ -65,6 +65,8 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     emotional: emotionalBenefits[idx] || emotionalBenefits[0],
   }));
 
+  const isStateWhoBenefits = Boolean(data.benefitsImage?.includes("statewhobenefits"));
+
   return (
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
@@ -114,7 +116,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
             <div
               className="hidden lg:block relative h-full ml-auto"
-              style={{ aspectRatio: data.benefitsAspect ?? "724/1427" }}
+              style={{ aspectRatio: data.benefitsAspect ?? (isStateWhoBenefits ? "696/1623" : "724/1427") }}
             >
               <Image
                 src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.png"}
@@ -122,14 +124,14 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 fill
                 priority
                 unoptimized
-                className="object-contain object-right pointer-events-none"
+                className="object-contain object-right-top pointer-events-none"
                 sizes="42vw"
               />
               <div
                 className="absolute -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16"
                 style={{
-                  top: data.benefitsBadgeTop ?? "31.3%",
-                  left: data.benefitsBadgeLeft ?? "12.6%",
+                  top: data.benefitsBadgeTop ?? (isStateWhoBenefits ? "50%" : "31.3%"),
+                  left: data.benefitsBadgeLeft ?? (isStateWhoBenefits ? "3.3%" : "12.6%"),
                 }}
               >
                 <Image
