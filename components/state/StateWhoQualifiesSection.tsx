@@ -186,9 +186,13 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   <div className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#E8B92C] rounded-l-[10px]" />
                   <p className="font-sans text-[11.5px] sm:text-xs lg:text-[13px] font-semibold text-[#5F6B6F] leading-relaxed">
                     <span className="font-bold text-[#2E5A66] uppercase tracking-wider">
-                      {/^important\s*note/i.test(data.whoQualifiesNote) ? "IMPORTANT NOTE - " : "IMPORTANT - "}
+                      {/^important\s*note/i.test(data.whoQualifiesNote)
+                        ? "IMPORTANT NOTE - "
+                        : /^note/i.test(data.whoQualifiesNote)
+                        ? "NOTE - "
+                        : "IMPORTANT - "}
                     </span>
-                    {data.whoQualifiesNote.replace(/^(important\s*note[:\s-]*|important[:\s-]*)/i, "")}
+                    {data.whoQualifiesNote.replace(/^(important\s*note[:\s-]*|important[:\s-]*|note[:\s-]*)/i, "")}
                   </p>
                 </div>
               )}
