@@ -77,8 +77,8 @@ export const michiganSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-michigan/#webpage",
       "url": "https://myesatherapist.com/esa-letter-michigan/",
-      "name": "Legitimate Michigan ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Michigan residents.",
+      "name": "Michigan ESA Letter Online From Licensed Professionals | My ESA Therapist",
+      "description": "Need an ESA letter in Michigan? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA evaluation. Apply today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
