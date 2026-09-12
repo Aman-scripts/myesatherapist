@@ -77,8 +77,8 @@ export const kentuckySchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-kentucky/#webpage",
       "url": "https://myesatherapist.com/esa-letter-kentucky/",
-      "name": "Legitimate Kentucky ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Kentucky residents.",
+      "name": "Kentucky ESA Letter from Licensed Therapists | My ESA Therapist",
+      "description": "Looking for an ESA letter in Kentucky? My ESA Therapist connects you with licensed professionals in Kentucky for a secure online esa letter evaluation process.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
