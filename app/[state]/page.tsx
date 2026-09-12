@@ -41,14 +41,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const canonicalUrl = `https://myesatherapist.com/${data.slug}`;
+  const isEsaLetter = state.startsWith("esa-letter-");
+  const canonicalUrl = isEsaLetter
+    ? `https://myesatherapist.com/esa-letter-${data.slug}/`
+    : `https://myesatherapist.com/${data.slug}`;
+
+  const webPageSchema = data.schema?.["@graph"]?.find(
+    (item: any) => item["@type"] === "WebPage"
+  );
+
+  const title = (isEsaLetter && webPageSchema?.name) ? webPageSchema.name : data.metaTitle;
+  const description = (isEsaLetter && webPageSchema?.description) ? webPageSchema.description : data.metaDescription;
 
   return {
-    title: data.metaTitle,
-    description: data.metaDescription,
+    title,
+    description,
     openGraph: {
-      title: data.metaTitle,
-      description: data.metaDescription,
+      title,
+      description,
       url: canonicalUrl,
       type: "website",
     },
@@ -80,6 +90,14 @@ export default async function DynamicStatePage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+      {/* State JSON-LD Structured Data */}
+      {data.schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(data.schema) }}
+        />
+      )}
+
       <TopBanner />
       <Header />
 
