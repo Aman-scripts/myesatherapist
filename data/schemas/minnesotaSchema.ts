@@ -77,8 +77,8 @@ export const minnesotaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-minnesota/#webpage",
       "url": "https://myesatherapist.com/esa-letter-minnesota/",
-      "name": "Legitimate Minnesota ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Minnesota residents.",
+      "name": "Minnesota ESA Letter Evaluation Online | My ESA Therapist",
+      "description": "Looking for an ESA letter in Minnesota? My ESA Therapist offers online emotional support animal evaluations by licensed professionals.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
