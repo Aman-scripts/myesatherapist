@@ -77,8 +77,8 @@ export const illinoisSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-illinois/#webpage",
       "url": "https://myesatherapist.com/esa-letter-illinois/",
-      "name": "Legitimate Illinois ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Illinois residents.",
+      "name": "Illinois ESA Letter Evaluation by Licensed Professionals | My ESA Therapist",
+      "description": "Connect with Illinois licensed therapist for ESA evaluations. HIPAA-compliant telehealth. ESA letters in Illinois issued only when clinically appropriate.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
