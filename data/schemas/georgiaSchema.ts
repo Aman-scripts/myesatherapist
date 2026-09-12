@@ -75,8 +75,8 @@ export const georgiaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-georgia/#webpage",
       "url": "https://myesatherapist.com/esa-letter-georgia/",
-      "name": "Legitimate Georgia ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Georgia residents.",
+      "name": "Georgia ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "description": "Georgia ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },
