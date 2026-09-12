@@ -77,8 +77,8 @@ export const marylandSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-maryland/#webpage",
       "url": "https://myesatherapist.com/esa-letter-maryland/",
-      "name": "Legitimate Maryland ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Maryland residents.",
+      "name": "Maryland ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
+      "description": "My ESA Therapist connects Maryland residents with licensed mental health professionals for a simple and secure online ESA letter evaluation. Apply your maryland esa letter today!",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
