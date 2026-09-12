@@ -77,8 +77,8 @@ export const massachusettsSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-massachusetts/#webpage",
       "url": "https://myesatherapist.com/esa-letter-massachusetts/",
-      "name": "Legitimate Massachusetts ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Massachusetts residents.",
+      "name": "Massachusetts ESA Letter from Licensed Therapists | My ESA Therapist",
+      "description": "Need an ESA letter in Massachusetts? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
