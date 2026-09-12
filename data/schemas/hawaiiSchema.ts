@@ -75,8 +75,8 @@ export const hawaiiSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-hawaii/#webpage",
       "url": "https://myesatherapist.com/esa-letter-hawaii/",
-      "name": "Legitimate Hawaii ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Hawaii residents.",
+      "name": "Hawaii ESA Letter from Licensed Therapists | My ESA Therapist",
+      "description": "Need an ESA letter in Hawaii? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },
