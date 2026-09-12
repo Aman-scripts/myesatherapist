@@ -77,8 +77,8 @@ export const kansasSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-kansas/#webpage",
       "url": "https://myesatherapist.com/esa-letter-kansas/",
-      "name": "Legitimate Kansas ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Kansas residents.",
+      "name": "Kansas ESA Letter from Licensed Therapists | My ESA Therapist",
+      "description": "Need an ESA letter in Kansas? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
