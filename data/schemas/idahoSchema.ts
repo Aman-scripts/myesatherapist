@@ -77,8 +77,8 @@ export const idahoSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-idaho/#webpage",
       "url": "https://myesatherapist.com/esa-letter-idaho/",
-      "name": "Legitimate Idaho ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Idaho residents.",
+      "name": "Idaho ESA Letter Evaluation Online | My ESA Therapist",
+      "description": "Need an ESA letter in Idaho? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
