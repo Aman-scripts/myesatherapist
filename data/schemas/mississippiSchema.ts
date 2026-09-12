@@ -77,8 +77,8 @@ export const mississippiSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-mississippi/#webpage",
       "url": "https://myesatherapist.com/esa-letter-mississippi/",
-      "name": "Legitimate Mississippi ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Mississippi residents.",
+      "name": "Mississippi ESA Letter From Licensed Therapist | My ESA Therapist",
+      "description": "Searching for an ESA letter in Mississippi? My ESA Therapist connects you with licensed mental health professionals for online esa letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
