@@ -12,7 +12,7 @@ const companyLinks = [
   { label: "Meet our Therapists", href: "#therapists" },
   { label: "HIPAA Compliance", href: "#compliance" },
   { label: "Video Testimonials", href: "#testimonials" },
-  { label: "Customer Reviews", href: "#reviews" },
+  { label: "Customer Reviews", href: "/reviews" },
 ];
 
 const quickLinks = [
