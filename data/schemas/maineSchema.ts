@@ -77,8 +77,8 @@ export const maineSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-maine/#webpage",
       "url": "https://myesatherapist.com/esa-letter-maine/",
-      "name": "Legitimate Maine ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Maine residents.",
+      "name": "Maine ESA Letter from Licensed Therapists | My ESA Therapist",
+      "description": "Need an ESA letter in Maine? My ESA Therapist connects you with licensed mental health professionals in Maine for a secure conline ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
