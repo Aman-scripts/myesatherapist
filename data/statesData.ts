@@ -13,6 +13,16 @@ import { idahoSchema } from "./schemas/idahoSchema";
 import { illinoisSchema } from "./schemas/illinoisSchema";
 import { indianaSchema } from "./schemas/indianaSchema";
 import { iowaSchema } from "./schemas/iowaSchema";
+import { kansasSchema } from "./schemas/kansasSchema";
+import { kentuckySchema } from "./schemas/kentuckySchema";
+import { louisianaSchema } from "./schemas/louisianaSchema";
+import { maineSchema } from "./schemas/maineSchema";
+import { marylandSchema } from "./schemas/marylandSchema";
+import { massachusettsSchema } from "./schemas/massachusettsSchema";
+import { michiganSchema } from "./schemas/michiganSchema";
+import { minnesotaSchema } from "./schemas/minnesotaSchema";
+import { mississippiSchema } from "./schemas/mississippiSchema";
+
 
 export interface StateLawCard {
   title: string;
@@ -6363,6 +6373,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Kansas",
     residentsServed: "5,000+",
     abbreviation: "KS",
+    schema: kansasSchema,
     metaTitle: "Kansas ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Receive a customized emotional wellness assessment from licensed mental health professionals in Kansas. Every evaluation is carried out in a confidential and secure environment to ensure your privacy and protect your well-being.",
     heroTitle: "Kansas ESA Letter Evaluations by Licensed Professionals",
@@ -6769,6 +6780,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Kentucky",
     residentsServed: "6,000+",
     abbreviation: "KY",
+    schema: kentuckySchema,
     metaTitle: "Kentucky ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with licensed mental health professionals across Kentucky for personalized evaluations of your emotional health. Schedule an appointment with a qualified clinician who will carefully assess your situation and guide you step-by-step through the emotional support animal (ESA) evaluation process.",
     heroTitle: "Kentucky ESA Letter Evaluations by Licensed Professionals",
@@ -7175,6 +7187,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Louisiana",
     residentsServed: "7,300+",
     abbreviation: "LA",
+    schema: louisianaSchema,
     metaTitle: "Louisiana ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Get in touch with Louisiana-authorized clinical practitioners for mental health evaluations. Connect with a licensed clinician who will review your needs and guide you through a professional, confidential ESA assessment process.",
     heroTitle: "Louisiana ESA Letter Evaluations by Licensed Professionals",
@@ -7580,6 +7593,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Maine",
     residentsServed: "6,000+",
     abbreviation: "ME",
+    schema: maineSchema,
     metaTitle: "Maine ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with licensed mental health practitioners throughout Maine for individualized emotional wellness assessments. Book a session with a qualified clinician who will thoroughly review your circumstances and guide you through each stage of the emotional support animal (ESA) evaluation journey.",
     heroTitle: "Maine ESA Letter Evaluations by Licensed Professionals",
@@ -7986,6 +8000,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Maryland",
     residentsServed: "6,000+",
     abbreviation: "MD",
+    schema: marylandSchema,
     metaTitle: "Maryland ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
     metaDescription: "Get connected with certified Maryland medical professionals for individualized mental wellness evaluations. ESA documentation is provided solely in compliance with Fair Housing regulations and expert judgment.",
     heroTitle: "Maryland ESA Letter Evaluations by Licensed Therapists",
@@ -8389,6 +8404,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Massachusetts",
     residentsServed: "7,356+",
     abbreviation: "MA",
+    schema: massachusettsSchema,
     metaTitle: "Massachusetts ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with state-accredited mental health experts in Massachusetts to receive a comprehensive evaluation for your emotional and mental well-being. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
     heroTitle: "Massachusetts ESA Letter Evaluations by Licensed Professionals",
@@ -8793,6 +8809,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Michigan",
     residentsServed: "7,412+",
     abbreviation: "MI",
+    schema: michiganSchema,
     metaTitle: "Michigan ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Get in touch with certified mental health experts in Michigan for safe and secure ESA evaluations. Get professional support and clear guidance during every part of the assessment process.",
     heroTitle: "Michigan ESA Letter Evaluations by Licensed Professionals",
@@ -9197,6 +9214,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Minnesota",
     residentsServed: "7,421+",
     abbreviation: "MN",
+    schema: minnesotaSchema,
     metaTitle: "ESA Letter Evaluations by Minnesota Licensed Therapists | My ESA Therapist",
     metaDescription: "Speak with certified mental health professionals in Minnesota for personalized wellness evaluations. ESA letters are issued only when supported by Fair Housing rules and clinical recommendations.",
     heroTitle: "ESA Letter Evaluations\nby Minnesota\nLicensed Therapists",
@@ -9600,6 +9618,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Mississippi",
     residentsServed: "6,261+",
     abbreviation: "MS",
+    schema: mississippiSchema,
     metaTitle: "Mississippi ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Reach out to licensed mental health professionals in Mississippi for individualized wellness assessments. Schedule a private consultation with a state-licensed clinician who will evaluate your circumstances and walk you through a secure, professional ESA evaluation process.",
     heroTitle: "Mississippi ESA Letter Evaluations by Licensed Professionals",
