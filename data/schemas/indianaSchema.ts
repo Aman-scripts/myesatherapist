@@ -77,8 +77,8 @@ export const indianaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-indiana/#webpage",
       "url": "https://myesatherapist.com/esa-letter-indiana/",
-      "name": "Legitimate Indiana ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Indiana residents.",
+      "name": "Indiana ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "description": "My ESA Therapist offers a convenient way for Indiana residents to complete ESA Letter evaluations with licensed mental health professionals online.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },

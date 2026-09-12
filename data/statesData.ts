@@ -5565,7 +5565,7 @@ export const STATES_DATA: Record<string, StateData> = {
     abbreviation: "IN",
     schema: indianaSchema,
     metaTitle: "Indiana ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with certified medical practitioners in Indiana conducting one-on-one mental health wellness sessions. Any ESA letter is issued by adhering strictly to the Fair Housing Law and professional judgment.",
+    metaDescription: "My ESA Therapist offers a convenient way for Indiana residents to complete ESA Letter evaluations with licensed mental health professionals online.",
     heroTitle: "Indiana ESA Letter Evaluations by Licensed Therapists",
     heroSubtitle: "Connect with certified medical practitioners in Indiana conducting one-on-one mental health wellness sessions. Any ESA letter is issued by adhering strictly to the Fair Housing Law and professional judgment.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
