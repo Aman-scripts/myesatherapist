@@ -77,8 +77,8 @@ export const louisianaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-louisiana/#webpage",
       "url": "https://myesatherapist.com/esa-letter-louisiana/",
-      "name": "Legitimate Louisiana ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Louisiana residents.",
+      "name": "Louisiana ESA Letter From Licensed Professionals | My ESA Therapist",
+      "description": "Need an ESA letter in Louisiana? My ESA Therapist connects you with licensed therapists for a secure online ESA evaluation. Start your evaluation today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
