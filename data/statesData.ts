@@ -9,6 +9,10 @@ import { delawareSchema } from "./schemas/delawareSchema";
 import { floridaSchema } from "./schemas/floridaSchema";
 import { georgiaSchema } from "./schemas/georgiaSchema";
 import { hawaiiSchema } from "./schemas/hawaiiSchema";
+import { idahoSchema } from "./schemas/idahoSchema";
+import { illinoisSchema } from "./schemas/illinoisSchema";
+import { indianaSchema } from "./schemas/indianaSchema";
+import { iowaSchema } from "./schemas/iowaSchema";
 
 export interface StateLawCard {
   title: string;
@@ -4732,6 +4736,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Idaho",
     residentsServed: "6,000+",
     abbreviation: "ID",
+    schema: idahoSchema,
     metaTitle: "Idaho ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with licensed mental health professionals in Idaho for personalized emotional wellness evaluations. Book a confidential consultation with an Idaho-licensed clinician who will review your mental health conditions and guide you through a safe, compliant process for obtaining an ESA letter.",
     heroTitle: "Idaho ESA Letter Evaluations by Licensed Professionals",
@@ -5139,6 +5144,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Illinois",
     residentsServed: "5,700+",
     abbreviation: "IL",
+    schema: illinoisSchema,
     metaTitle: "Illinois ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with an Illinois-licensed mental health professional for a confidential emotional support animal evaluation. ESA letters are issued only when clinically appropriate, following Fair Housing Act guidelines.",
     heroTitle: "Illinois ESA Letter Evaluations by Licensed Professionals",
@@ -5547,6 +5553,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Indiana",
     residentsServed: "6,500+",
     abbreviation: "IN",
+    schema: indianaSchema,
     metaTitle: "Indiana ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
     metaDescription: "Connect with certified medical practitioners in Indiana conducting one-on-one mental health wellness sessions. Any ESA letter is issued by adhering strictly to the Fair Housing Law and professional judgment.",
     heroTitle: "Indiana ESA Letter Evaluations by Licensed Therapists",
@@ -5950,6 +5957,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Iowa",
     residentsServed: "4,000+",
     abbreviation: "IA",
+    schema: iowaSchema,
     metaTitle: "Iowa ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with Iowa-licensed mental health experts for individualized mental health and wellness evaluations. ESA documentation in Iowa is issued through a legitimate clinical assessment that aligns with federal housing guidelines.",
     heroTitle: "Iowa ESA Letter Evaluations by Licensed Professionals",
