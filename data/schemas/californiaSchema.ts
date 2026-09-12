@@ -75,8 +75,8 @@ export const californiaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-california/#webpage",
       "url": "https://myesatherapist.com/esa-letter-california/",
-      "name": "Legitimate California ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for California residents.",
+      "name": "California ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "description": "My ESA Therapist connects you with California-licensed therapists for ESA letter evaluations. AB 468 compliant, transparent pricing, secure platform.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

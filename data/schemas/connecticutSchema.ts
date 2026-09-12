@@ -75,8 +75,8 @@ export const connecticutSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-connecticut/#webpage",
       "url": "https://myesatherapist.com/esa-letter-connecticut/",
-      "name": "Legitimate Connecticut ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Connecticut residents.",
+      "name": "Connecticut ESA Letter Evaluation by Licensed Therapist- My ESA Therapist",
+      "description": "Connect with licensed therapist for ESA letter evaluations. HIPAA-compliant telehealth. ESA letter Connecticut issued only when clinically appropriate.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

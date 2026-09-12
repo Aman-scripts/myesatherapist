@@ -75,8 +75,8 @@ export const coloradoSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-colorado/#webpage",
       "url": "https://myesatherapist.com/esa-letter-colorado/",
-      "name": "Legitimate Colorado ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Colorado residents.",
+      "name": "Colorado ESA Letter Evaluation by Licensed Therapists - My ESA Therapist",
+      "description": "Get connected with licensed therapists in Colorado for a online ESA letter evaluation. Start your emotional support animal assessment today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

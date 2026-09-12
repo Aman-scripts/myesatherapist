@@ -75,8 +75,8 @@ export const floridaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-florida/#webpage",
       "url": "https://myesatherapist.com/esa-letter-florida/",
-      "name": "Legitimate Florida ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Florida residents.",
+      "name": "Florida ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "description": "Get evaluated for a Florida ESA Letter online by licensed therapists. Confidential assessments for qualified individuals. Get evaluated today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

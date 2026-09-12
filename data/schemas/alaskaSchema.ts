@@ -75,8 +75,8 @@ export const alaskaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-alaska/#webpage",
       "url": "https://myesatherapist.com/esa-letter-alaska/",
-      "name": "Legitimate Alaska ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Alaska residents.",
+      "name": "Alaska ESA Letter by Licensed Professionals | My ESA Therapist",
+      "description": "Connect with Alaska licensed therapists for ESA letter evaluations through a secure telehealth platform. Private, professional, and supportive care.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

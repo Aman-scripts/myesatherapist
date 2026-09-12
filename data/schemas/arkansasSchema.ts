@@ -75,8 +75,8 @@ export const arkansasSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-arkansas/#webpage",
       "url": "https://myesatherapist.com/esa-letter-arkansas/",
-      "name": "Legitimate Arkansas ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Arkansas residents.",
+      "name": "Arkansas ESA Letter Evaluation by Licensed Therapists - My ESA Therapist",
+      "description": "Connect with Arkansas licensed therapists for ESA letter evaluations. HIPAA-compliant telehealth. Arkansas ESA letters issued only when clinically appropriate.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

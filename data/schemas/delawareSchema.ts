@@ -75,8 +75,8 @@ export const delawareSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-delaware/#webpage",
       "url": "https://myesatherapist.com/esa-letter-delaware/",
-      "name": "Legitimate Delaware ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Delaware residents.",
+      "name": "Delaware ESA Letter From Licensed Professionals | My ESA Therapist",
+      "description": "Looking for an ESA letter in Delaware? My ESA Therapist helps you connect with licensed mental health professionals for a convenient online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

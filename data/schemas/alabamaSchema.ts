@@ -75,9 +75,9 @@ export const alabamaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-alabama/#webpage",
       "url": "https://myesatherapist.com/esa-letter-alabama/",
-      "name": "Legitimate Alabama ESA Letter Online: Quick & Seamless Process",
+      "name": "ESA Letter in Alabama From Licensed Therapists | My ESA Therapist",
       "description":
-        "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Alabama residents.",
+        "Start your ESA letter evaluation with licensed therapist. Secure telehealth process and reliable ESA documentation in Alabama for housing needs.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

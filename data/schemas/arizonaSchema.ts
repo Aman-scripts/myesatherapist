@@ -75,8 +75,8 @@ export const arizonaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-arizona/#webpage",
       "url": "https://myesatherapist.com/esa-letter-arizona/",
-      "name": "Legitimate Arizona ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Arizona residents.",
+      "name": "Arizona ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
+      "description": "Begin a legitimate ESA Letter evaluation in Arizona with licensed therapist. Secure, HIPAA-compliant, and aligned with FHA guidelines.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },

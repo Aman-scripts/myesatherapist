@@ -50,20 +50,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     (item: any) => item["@type"] === "WebPage"
   );
 
-  const title = (isEsaLetter && webPageSchema?.name) ? webPageSchema.name : data.metaTitle;
-  const description = (isEsaLetter && webPageSchema?.description) ? webPageSchema.description : data.metaDescription;
+  const title = data.metaTitle || (isEsaLetter && webPageSchema?.name ? webPageSchema.name : data.name);
+  const description = data.metaDescription || (isEsaLetter && webPageSchema?.description ? webPageSchema.description : "");
 
   return {
     title,
     description,
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
       url: canonicalUrl,
       type: "website",
     },
-    alternates: {
-      canonical: canonicalUrl,
+    twitter: {
+      card: "summary",
+      title,
+      description,
     },
   };
 }
