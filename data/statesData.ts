@@ -1,3 +1,15 @@
+import { alabamaSchema } from "./schemas/alabamaSchema";
+import { alaskaSchema } from "./schemas/alaskaSchema";
+import { arizonaSchema } from "./schemas/arizonaSchema";
+import { arkansasSchema } from "./schemas/arkansasSchema";
+import { californiaSchema } from "./schemas/californiaSchema";
+import { coloradoSchema } from "./schemas/coloradoSchema";
+import { connecticutSchema } from "./schemas/connecticutSchema";
+import { delawareSchema } from "./schemas/delawareSchema";
+import { floridaSchema } from "./schemas/floridaSchema";
+import { georgiaSchema } from "./schemas/georgiaSchema";
+import { hawaiiSchema } from "./schemas/hawaiiSchema";
+
 export interface StateLawCard {
   title: string;
   items: Array<{ title: string; description: string }>;
@@ -9,6 +21,7 @@ export interface StateData {
   abbreviation: string;
   metaTitle: string;
   metaDescription: string;
+  schema?: Record<string, any>;
   residentsServed?: string;
   trustStat5?: { value: string; label: string };
   heroTitle?: string;
@@ -137,6 +150,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Alabama",
     residentsServed: "6,400+",
     abbreviation: "AL",
+    schema: alabamaSchema,
     metaTitle: "Alabama ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
     metaDescription: "Connect with a licensed mental health professional for an Alabama ESA letter evaluation based on FHA housing guidelines. Letters are issued solely at the evaluating clinician’s discretion.",
     heroTitle: "Alabama ESA Letter Evaluations by Licensed Therapists",
@@ -541,6 +555,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Alaska",
     residentsServed: "3,400+",
     abbreviation: "AK",
+    schema: alaskaSchema,
     metaTitle: "Alaska ESA Letter by Licensed Professionals | My ESA Therapist",
     metaDescription: "Alaska ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation under FHA.",
     heroTitle: "ESA Letter\nEvaluations by Alaska\nLicensed Professionals",
@@ -930,6 +945,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Arizona",
     residentsServed: "8,200+",
     abbreviation: "AZ",
+    schema: arizonaSchema,
     metaTitle: "Arizona ESA Letter Evaluations by Licensed Professionals",
     metaDescription: "Talk with a licensed mental health professional for a legitimate online ESA letter evaluation, secure and confidential, guided by FHA guidelines.",
     heroTitle: "Arizona ESA Letter Evaluations by Licensed Professionals",
@@ -1331,6 +1347,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Arkansas",
     residentsServed: "5,200+",
     abbreviation: "AR",
+    schema: arkansasSchema,
     metaTitle: "Arkansas ESA Letter Evaluations by Licensed Professionals",
     metaDescription: "Access an emotional support animal evaluation through secure telehealth with clinicians licensed in Arkansas. Evaluations follow applicable federal housing guidance and Arkansas law HB1420 requirements.",
     heroTitle: "Arkansas ESA Letter Evaluations by Licensed Professionals",
@@ -1739,6 +1756,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "California",
     residentsServed: "6,000+",
     abbreviation: "CA",
+    schema: californiaSchema,
     metaTitle: "California ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
     metaDescription: "Connect with a California-licensed mental health professional for an online ESA evaluation from the comfort of your home. Our HIPAA-compliant, secure telehealth process follows California’s AB 468 requirements and federal housing guidelines.",
     heroTitle: "California ESA Letter Evaluations by Licensed Therapists",
@@ -2204,6 +2222,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Colorado",
     residentsServed: "7,000+",
     abbreviation: "CO",
+    schema: coloradoSchema,
     metaTitle: "ESA Letter Evaluations by Colorado Licensed Therapists | My ESA Therapist",
     metaDescription: "Connect with licensed mental health professionals in Colorado for ESA letter evaluations. Letters are issued only when clinically appropriate, based on the provider’s independent assessment and in alignment with the Fair Housing Act.",
     heroTitle: "ESA Letter Evaluations\nby Colorado\nLicensed Therapists",
@@ -2607,6 +2626,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Connecticut",
     residentsServed: "4,600+",
     abbreviation: "CT",
+    schema: connecticutSchema,
     metaTitle: "Connecticut ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
     metaDescription: "Connecticut residents can complete an emotional support animal evaluation through secure telehealth sessions with licensed mental health professionals practicing in the state. Each evaluation follows federal housing rules.",
     heroTitle: "Connecticut ESA Letter Evaluations by Licensed Therapists",
@@ -3009,6 +3029,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Delaware",
     residentsServed: "4,600+",
     abbreviation: "DE",
+    schema: delawareSchema,
     metaTitle: "Delaware ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
     metaDescription: "Get in touch with accredited Delaware mental health professionals conducting personalized emotional wellness sessions. Any ESA letter is provided by strictly adhering to the Fair Housing Law and professional judgment.",
     heroTitle: "Delaware ESA Letter Evaluations by Licensed Therapists",
@@ -3413,6 +3434,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Florida",
     residentsServed: "9,450+",
     abbreviation: "FL",
+    schema: floridaSchema,
     metaTitle: "ESA Letter Evaluations by Florida Licensed Therapists | My ESA Therapist",
     metaDescription: "Complete a legitimate ESA evaluation through our HIPAA-compliant, secure telehealth platform with Florida-licensed mental health professionals, in alignment with federal housing laws.",
     heroTitle: "ESA Letter Evaluations\nby Florida\nLicensed Therapists",
@@ -3901,6 +3923,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Georgia",
     residentsServed: "6,000+",
     abbreviation: "GA",
+    schema: georgiaSchema,
     metaTitle: "Georgia ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Connect with a licensed mental health professional for a confidential emotional wellness consultation. Our streamlined online process makes it easy to explore whether an emotional support animal may be appropriate for your individual needs.",
     heroTitle: "Georgia ESA Letter Evaluations by Licensed Professionals",
@@ -4303,6 +4326,7 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Hawaii",
     residentsServed: "6,500+",
     abbreviation: "HI",
+    schema: hawaiiSchema,
     metaTitle: "Hawaii ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
     metaDescription: "Get in touch with Hawaii mental health professionals for personalized wellness evaluations. Connect directly with a licensed clinician who will review your needs and guide you through a professional, confidential ESA assessment process.",
     heroTitle: "Hawaii ESA Letter Evaluations by Licensed Professionals",
