@@ -77,8 +77,8 @@ export const iowaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-iowa/#webpage",
       "url": "https://myesatherapist.com/esa-letter-iowa/",
-      "name": "Legitimate Iowa ESA Letter Online: Quick & Seamless Process",
-      "description": "Start your ESA letter evaluation online with a licensed therapist. Secure telehealth process and reliable ESA documentation for Iowa residents.",
+      "name": "Iowa ESA Letter From Licensed Professionals | My ESA Therapist",
+      "description": "Need an ESA letter in Iowa? My ESA Therapist connects you with licensed mental health professionals for emotional support animal evaluation online.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
