@@ -7,7 +7,6 @@ import { ContactInfoCards } from "@/components/contact/ContactInfoCards";
 import { ContactMap } from "@/components/contact/ContactMap";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "Contact Us | My ESA Therapist - 24/7 Professional Support",
@@ -32,7 +31,6 @@ export default function ContactUsPage() {
           buttonHref="#faq"
           bgColor="bg-[#FAF7F2]"
         />
-        <StateReviewerBanner />
       </main>
       <Footer bgColor="bg-[#FAF7F2]" />
     </div>

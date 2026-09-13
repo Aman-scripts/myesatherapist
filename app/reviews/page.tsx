@@ -11,7 +11,6 @@ import { ConsumerAffairsReviewsSection } from "@/components/reviews/ConsumerAffa
 
 // Shared Components
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "Client Reviews & Testimonials | My ESA Therapist",
@@ -42,12 +41,6 @@ export default function ReviewsPage() {
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
           buttonText="Start your Evaluation"
           buttonHref="#trustpilot-reviews"
-        />
-
-        {/* Section 5: Medical Reviewer Banner (Dr. Nicole) */}
-        <StateReviewerBanner
-          reviewerName="Dr. Nicole"
-          updatedDate="May 12, 2026"
         />
       </main>
 
