@@ -24,6 +24,7 @@ import { minnesotaSchema } from "./schemas/minnesotaSchema";
 import { mississippiSchema } from "./schemas/mississippiSchema";
 import { missouriSchema } from "./schemas/missouriSchema";
 import { montanaSchema } from "./schemas/montanaSchema";
+import { nebraskaSchema } from "./schemas/nebraskaSchema";
 
 
 export interface StateLawCard {
@@ -10841,8 +10842,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Nebraska",
     residentsServed: "7,410+",
     abbreviation: "NE",
-    metaTitle: "Nebraska ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Connect with licensed mental health professionals in Nebraska for personalized wellness evaluations. Book a confidential consultation with a Nebraska-licensed clinician who will assess your situation and guide you through a secure and professional ESA evaluation process.",
+    schema: nebraskaSchema,
+    metaTitle: "Nebraska ESA Letter From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Need an ESA letter in Nebraska? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
     heroTitle: "Nebraska ESA Letter Evaluations by Licensed Professionals",
     heroSubtitle: "Connect with licensed mental health professionals in Nebraska for personalized wellness evaluations. Book a confidential consultation with a Nebraska-licensed clinician who will assess your situation and guide you through a secure and professional ESA evaluation process.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
