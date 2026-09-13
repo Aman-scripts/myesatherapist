@@ -38,6 +38,7 @@ import { oregonSchema } from "./schemas/oregonSchema";
 import { pennsylvaniaSchema } from "./schemas/pennsylvaniaSchema";
 import { southCarolinaSchema } from "./schemas/southCarolinaSchema";
 import { southDakotaSchema } from "./schemas/southDakotaSchema";
+import { texasSchema } from "./schemas/texasSchema";
 
 
 export interface StateLawCard {
@@ -12106,8 +12107,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Texas",
     residentsServed: "8,940+",
     abbreviation: "TX",
-    metaTitle: "Texas ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with Texas-licensed professionals for individualized emotional health evaluations. An ESA letter is issued only based on the professional’s determination and in accordance with applicable Fair Housing Act guidance.",
+    schema: texasSchema,
+    metaTitle: "Texas ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
+    metaDescription: "Get evaluated for texas ESA letter by licensed therapists. Secure online assessments with compliant housing documentation.",
     heroTitle: "Texas ESA\nLetter Evaluations by\nLicensed Therapists",
     heroSubtitle: "Connect with Texas-licensed professionals for individualized emotional health evaluations. An ESA letter is issued only based on the professional’s determination and in accordance with applicable Fair Housing Act guidance.",
     benefitsImage: "/states/statewhobenefits-texas.png",
