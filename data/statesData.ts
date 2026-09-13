@@ -27,6 +27,7 @@ import { montanaSchema } from "./schemas/montanaSchema";
 import { nebraskaSchema } from "./schemas/nebraskaSchema";
 import { nevadaSchema } from "./schemas/nevadaSchema";
 import { newHampshireSchema } from "./schemas/newHampshireSchema";
+import { newJerseySchema } from "./schemas/newJerseySchema";
 
 
 export interface StateLawCard {
@@ -14191,8 +14192,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "New Jersey",
     residentsServed: "8,150+",
     abbreviation: "NJ",
-    metaTitle: "New Jersey ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Get in touch with New Jersey mental health experts for personalized wellness evaluations. Connect one-on-one with a licensed clinician who will review your needs and guide you through a professional, confidential ESA assessment process.",
+    schema: newJerseySchema,
+    metaTitle: "New Jersey ESA Letter From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Need an ESA letter in New Jersey? My ESA Therapist connects you with licensed mental health professionals for a secure and convenient ESA Letter evaluation online.",
     heroTitle: "New Jersey ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Get in touch with New Jersey mental health experts for personalized wellness evaluations. Connect one-on-one with a licensed clinician who will review your needs and guide you through a professional, confidential ESA assessment process.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
