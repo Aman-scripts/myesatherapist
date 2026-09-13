@@ -39,6 +39,7 @@ import { pennsylvaniaSchema } from "./schemas/pennsylvaniaSchema";
 import { southCarolinaSchema } from "./schemas/southCarolinaSchema";
 import { southDakotaSchema } from "./schemas/southDakotaSchema";
 import { texasSchema } from "./schemas/texasSchema";
+import { utahSchema } from "./schemas/utahSchema";
 
 
 export interface StateLawCard {
@@ -17868,8 +17869,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Utah",
     residentsServed: "5,400+",
     abbreviation: "UT",
-    metaTitle: "Utah ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Connect with a licensed clinician in Utah who will assess your needs and guide you through a confidential, professional process to determine eligibility for an emotional support animal.",
+    schema: utahSchema,
+    metaTitle: "Utah ESA Letter From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Looking for an ESA letter in Utah? My ESA Therapist helps you connect with licensed mental health professionals for online esa letter evaluation in Utah.",
     heroTitle: "Utah ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Connect with a licensed clinician in Utah who will assess your needs and guide you through a confidential, professional process to determine eligibility for an emotional support animal.",
     benefitsImage: "/states/statewhobenefits-uttah.png",
