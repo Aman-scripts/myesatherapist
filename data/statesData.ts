@@ -23,6 +23,7 @@ import { michiganSchema } from "./schemas/michiganSchema";
 import { minnesotaSchema } from "./schemas/minnesotaSchema";
 import { mississippiSchema } from "./schemas/mississippiSchema";
 import { missouriSchema } from "./schemas/missouriSchema";
+import { montanaSchema } from "./schemas/montanaSchema";
 
 
 export interface StateLawCard {
@@ -10430,8 +10431,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Montana",
     residentsServed: "7,395+",
     abbreviation: "MT",
-    metaTitle: "Montana ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with licensed mental health professionals in Montana for safe and confidential evaluations. Receive clear, step-by-step guidance throughout the assessment, designed to prioritize your well-being and peace of mind.",
+    schema: montanaSchema,
+    metaTitle: "Montana ESA Letter From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Looking for a Montana ESA letter? My ESA Therapist connects you with licensed professionals for quick ESA evaluations online. Start Your ESA Evaluation Today.",
     heroTitle: "Montana ESA Letter Evaluations by Licensed Therapists",
     heroSubtitle: "Connect with licensed mental health professionals in Montana for safe and confidential evaluations. Receive clear, step-by-step guidance throughout the assessment, designed to prioritize your well-being and peace of mind.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
