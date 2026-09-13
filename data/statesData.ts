@@ -35,6 +35,7 @@ import { northDakotaSchema } from "./schemas/northDakotaSchema";
 import { ohioSchema } from "./schemas/ohioSchema";
 import { oklahomaSchema } from "./schemas/oklahomaSchema";
 import { oregonSchema } from "./schemas/oregonSchema";
+import { pennsylvaniaSchema } from "./schemas/pennsylvaniaSchema";
 
 
 export interface StateLawCard {
@@ -17042,8 +17043,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Pennsylvania",
     residentsServed: "8,430+",
     abbreviation: "PA",
-    metaTitle: "Pennsylvania ESA Letter Evaluations by Licensed Therapist | My ESA Therapist",
-    metaDescription: "Connect with a Pennsylvania-licensed mental health professional (LMHP) for a confidential ESA assessment. ESA documentation is provided only when clinically appropriate, in line with federal and state guidelines.",
+    schema: pennsylvaniaSchema,
+    metaTitle: "Pennsylvania ESA Letter Evaluation by Licensed Therapists | My ESA Therapist",
+    metaDescription: "Start your Pennsylvania ESA Letter evaluation with licensed therapists. Easy online process, secure platform, and valid ESA letters for housing accommodation.",
     heroTitle: "Pennsylvania ESA\nLetter Evaluations by\nLicensed Therapist",
     heroSubtitle: "Connect with a Pennsylvania-licensed mental health professional (LMHP) for a confidential ESA assessment. ESA documentation is provided only when clinically appropriate, in line with federal and state guidelines.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
