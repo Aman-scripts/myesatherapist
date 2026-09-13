@@ -7,13 +7,15 @@ interface StateReviewerBannerProps {
   reviewerName?: string;
   updatedDate?: string;
   reviewerImage?: string;
+  reviewerLinkedin?: string;
   className?: string;
 }
 
 export function StateReviewerBanner({
-  reviewerName = "Dr. Nicole",
+  reviewerName = "Max Phillips",
   updatedDate = "May 12, 2026",
-  reviewerImage = "/blogs/dr-nicole-reviewer.jpg",
+  reviewerImage = "/author/max-phill.webp",
+  reviewerLinkedin = "https://www.linkedin.com/in/max-phillips-883485a5/",
   className = "",
 }: StateReviewerBannerProps) {
   return (
@@ -25,7 +27,12 @@ export function StateReviewerBanner({
         >
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 lg:gap-[40px] text-center sm:text-left">
             {/* Avatar with white 4px border */}
-            <div className="relative w-[76px] h-[76px] sm:w-[89px] sm:h-[89px] rounded-full border-[3.5px] sm:border-[4px] border-[#FFFFFF] overflow-hidden shrink-0 shadow-sm">
+            <a
+              href={reviewerLinkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-[76px] h-[76px] sm:w-[89px] sm:h-[89px] rounded-full border-[3.5px] sm:border-[4px] border-[#FFFFFF] overflow-hidden shrink-0 shadow-sm hover:opacity-95 transition-opacity block cursor-pointer"
+            >
               <Image
                 src={reviewerImage}
                 alt={`Content reviewed by ${reviewerName}`}
@@ -35,13 +42,27 @@ export function StateReviewerBanner({
                 className="object-cover object-center"
                 sizes="89px"
               />
-            </div>
+            </a>
 
             {/* Text details */}
             <div className="flex flex-col items-center sm:items-start space-y-1 sm:space-y-1.5">
-              <h3 className="font-heading font-bold text-xl sm:text-[22px] lg:text-[24px] leading-tight sm:leading-[32px] text-[#FAF7F2]">
-                Content reviewed by {reviewerName}
-              </h3>
+              <a
+                href={reviewerLinkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2"
+              >
+                <h3 className="font-heading font-bold text-xl sm:text-[22px] lg:text-[24px] leading-tight sm:leading-[32px] text-[#FAF7F2] group-hover:text-[#E8B92C] transition-colors">
+                  Content reviewed by {reviewerName}
+                </h3>
+                <span className="w-5 h-5 rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                  <svg className="w-3 h-3 text-[#1A3D4F]" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="4.98" cy="4.98" r="2.4" />
+                    <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
+                    <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
+                  </svg>
+                </span>
+              </a>
               <p className="font-sans font-semibold text-xs sm:text-[14px] leading-tight sm:leading-[26px] text-[#FAF7F2]">
                 Last updated: {updatedDate}
               </p>

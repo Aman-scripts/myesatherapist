@@ -22,6 +22,37 @@ export interface Therapist {
   method?: string;
   focus: string;
   avatar?: string;
+  linkedin?: string;
+}
+
+export function getTherapistAvatar(t: Therapist): string {
+  if (t.avatar && t.avatar !== "/common/therapist-avatar.png") return t.avatar;
+  const lower = t.name.toLowerCase();
+  if (lower.includes("robert") || lower.includes("staaf")) {
+    return "/doctors/robert-staaf-profile-image.webp";
+  }
+  if (lower.includes("leslie") || lower.includes("gamble")) {
+    return "/doctors/leslie-k.-gamble-licsw-image.webp";
+  }
+  if (lower.includes("gaurav") || lower.includes("patel")) {
+    return "/doctors/dr-gaurav-patel-image.webp";
+  }
+  return t.avatar || "/common/therapist-avatar.png";
+}
+
+export function getTherapistLinkedin(t: Therapist): string {
+  if (t.linkedin) return t.linkedin;
+  const lower = t.name.toLowerCase();
+  if (lower.includes("robert") || lower.includes("staaf")) {
+    return "https://www.linkedin.com/in/robert-staaf-b57b53333/";
+  }
+  if (lower.includes("leslie") || lower.includes("gamble")) {
+    return "https://www.linkedin.com/in/leslie-gamble-727571366";
+  }
+  if (lower.includes("gaurav") || lower.includes("patel")) {
+    return "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916";
+  }
+  return "https://www.linkedin.com/company/myesatherapist/";
 }
 
 const defaultTherapists: Therapist[] = [
@@ -33,7 +64,8 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety & Stress",
-    avatar: "/common/therapist-avatar.png",
+    avatar: "/doctors/robert-staaf-profile-image.webp",
+    linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   {
     id: 2,
@@ -43,7 +75,8 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression & PTSD",
-    avatar: "/common/therapist-avatar.png",
+    avatar: "/doctors/leslie-k.-gamble-licsw-image.webp",
+    linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
   },
   {
     id: 3,
@@ -53,7 +86,8 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "17 States",
     method: "Video or Phone",
     focus: "Chronic Conditions & Sleep Concerns",
-    avatar: "/common/therapist-avatar.png",
+    avatar: "/doctors/dr-gaurav-patel-image.webp",
+    linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
 ];
 
@@ -184,11 +218,12 @@ export function TherapistsSection({
                   <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
                     <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                       <Image
-                        src="/common/therapist-avatar.png"
+                        src={getTherapistAvatar(t)}
                         alt={t.name}
                         fill
+                        unoptimized
                         sizes="67px"
-                        className="object-cover"
+                        className="object-cover object-center"
                       />
                     </div>
                     <div className="min-w-0">
@@ -202,9 +237,16 @@ export function TherapistsSection({
                   </div>
 
                   {/* LinkedIn Badge */}
-                  <div className="w-8 h-8 sm:w-[32px] sm:h-[32px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-colors">
+                  <a
+                    href={getTherapistLinkedin(t)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    aria-label={`${t.name} LinkedIn Profile`}
+                    className="w-8 h-8 sm:w-[32px] sm:h-[32px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
+                  >
                     <LinkedinIcon className="w-4 h-4 text-[#184652]" />
-                  </div>
+                  </a>
                 </div>
 
                 {/* Card Body */}
@@ -224,7 +266,9 @@ export function TherapistsSection({
                   {/* View Profile CTA Button INSIDE the Card */}
                   <div className="pt-2 flex justify-center">
                     <a
-                      href="#how-it-works"
+                      href={getTherapistLinkedin(t)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       className="w-[172px] sm:w-[185px] h-[44px] sm:h-[46px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] text-[#184652] font-bold text-[15px] sm:text-[16px] transition-all flex items-center justify-between pl-6 pr-1.5 shadow-sm"
                     >

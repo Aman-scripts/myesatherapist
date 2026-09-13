@@ -71,7 +71,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-3 xl:gap-8 items-stretch">
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-center w-full min-w-0">
             <div className="sm:hidden relative w-full aspect-[390/513]">
               <Image
                 src={data.benefitsImageMobile ?? "/states/californina-benefits-mobile.png"}
@@ -115,8 +115,10 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             </div>
 
             <div
-              className="hidden lg:block relative h-full ml-auto"
-              style={{ aspectRatio: data.benefitsAspect ?? (isStateWhoBenefits ? "696/1623" : "724/1427") }}
+              className="hidden lg:block relative w-full max-w-full ml-auto"
+              style={{
+                aspectRatio: data.benefitsAspect ?? (isStateWhoBenefits ? "696/1623" : "724/1427"),
+              }}
             >
               <Image
                 src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.png"}
@@ -125,7 +127,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 priority
                 unoptimized
                 className="object-contain object-right-top pointer-events-none"
-                sizes="42vw"
+                sizes="(min-width: 1024px) 42vw, 100vw"
               />
               <div
                 className="absolute -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16"
@@ -145,7 +147,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-6 sm:pb-8 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-6 sm:pb-8 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center min-w-0">
             <div className="mb-4 lg:mb-5 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
                 {title}

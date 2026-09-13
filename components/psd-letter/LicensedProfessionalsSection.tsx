@@ -26,19 +26,22 @@ const professionals = [
     name: "Robert Staaf",
     title: "Licensed Clinical Social Worker",
     evaluations: "1,200+ evaluations",
-    avatar: "/common/licensedprofessional-section.png",
+    avatar: "/doctors/robert-staaf-profile-image.webp",
+    linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   {
     name: "Leslie K. Gamble",
     title: "Licensed Independent Clinical Social Worker",
     evaluations: "950+ evaluations",
-    avatar: "/common/therapist-avatar.png",
+    avatar: "/doctors/leslie-k.-gamble-licsw-image.webp",
+    linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
   },
   {
     name: "Gaurav Patel",
     title: "Family Medicine Physician",
     evaluations: "1,500+ evaluations",
-    avatar: "/common/licensedprofessional-section.png",
+    avatar: "/doctors/dr-gaurav-patel-image.webp",
+    linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
 ];
 
@@ -64,13 +67,28 @@ export function LicensedProfessionalsSection() {
               key={idx}
               className="relative bg-white rounded-[10px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:shadow-md transition-all duration-200"
             >
-              {/* Top-Right 3-Dot Menu Icon */}
-              <div className="absolute top-6 right-6 text-[#2E5A66]/40 hover:text-[#2E5A66] transition-colors cursor-pointer">
-                <ThreeDotsIcon className="w-1.25 h-5" />
-              </div>
+              {/* Top-Right LinkedIn Icon */}
+              <a
+                href={prof.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${prof.name} LinkedIn Profile`}
+                className="absolute top-5 right-5 w-7 h-7 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center text-[#1A3D4F] shadow-xs hover:scale-105 transition-all"
+              >
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="4.98" cy="4.98" r="2.4" />
+                  <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
+                  <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
+                </svg>
+              </a>
 
-              {/* Avatar Image (120x120 Circular) */}
-              <div className="w-[120px] h-[120px] rounded-full overflow-hidden mb-6 relative bg-[#E5ECEE] shrink-0">
+              {/* Avatar Image (120x120 Circular with gold ring) */}
+              <a
+                href={prof.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[120px] h-[120px] rounded-full overflow-hidden mb-6 relative bg-[#E5ECEE] shrink-0 border-2 border-[#E8B92C] shadow-sm hover:opacity-95 transition-opacity block"
+              >
                 <Image
                   src={prof.avatar}
                   alt={prof.name}
@@ -80,12 +98,17 @@ export function LicensedProfessionalsSection() {
                   priority
                   className="object-cover w-full h-full"
                 />
-              </div>
+              </a>
 
               {/* Professional Name */}
-              <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#313131] leading-[28px] mb-1">
+              <a
+                href={prof.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-heading text-lg sm:text-[20px] font-bold text-[#313131] hover:text-[#1D6E72] transition-colors leading-[28px] mb-1"
+              >
                 {prof.name}
-              </h3>
+              </a>
 
               {/* Title & Experience */}
               <p className="text-sm sm:text-[14px] font-semibold text-[#6B6B6B] leading-[26px] mb-4 font-sans">
