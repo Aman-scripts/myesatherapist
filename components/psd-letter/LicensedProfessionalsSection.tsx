@@ -23,21 +23,21 @@ function StarIcon({ className }: { className?: string }) {
 
 const professionals = [
   {
-    name: "Chris Evans, California",
-    title: "LCSW | 18 years Experience",
-    evaluations: "1200+ evaluations",
+    name: "Robert Staaf",
+    title: "Licensed Clinical Social Worker",
+    evaluations: "1,200+ evaluations",
     avatar: "/common/licensedprofessional-section.png",
   },
   {
-    name: "Chris Evans, California",
-    title: "LCSW | 18 years Experience",
-    evaluations: "1200+ evaluations",
-    avatar: "/common/licensedprofessional-section.png",
+    name: "Leslie K. Gamble",
+    title: "Licensed Independent Clinical Social Worker",
+    evaluations: "950+ evaluations",
+    avatar: "/common/therapist-avatar.png",
   },
   {
-    name: "Chris Evans, California",
-    title: "LCSW | 18 years Experience",
-    evaluations: "1200+ evaluations",
+    name: "Gaurav Patel",
+    title: "Family Medicine Physician",
+    evaluations: "1,500+ evaluations",
     avatar: "/common/licensedprofessional-section.png",
   },
 ];
@@ -47,13 +47,13 @@ export function LicensedProfessionalsSection() {
     <section className="py-16 sm:py-20 lg:py-24 bg-[#FAF7F2] w-full">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header (Frame 1000011783 Heading) */}
+        {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16 max-w-[760px] mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-4">
-            Licensed Professionals ready to help
+            Our Licensed Professionals for PSD Support
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
-            All 200+ professionals in our network are state-licensed and specialize in mental-health conditions relevant to service animal evaluations.
+            Our network includes state-licensed professionals who specialize in mental health conditions relevant to service animal evaluations.
           </p>
         </div>
 
