@@ -42,6 +42,7 @@ import { texasSchema } from "./schemas/texasSchema";
 import { utahSchema } from "./schemas/utahSchema";
 import { virginiaSchema } from "./schemas/virginiaSchema";
 import { washingtonSchema } from "./schemas/washingtonSchema";
+import { westVirginiaSchema } from "./schemas/westVirginiaSchema";
 
 
 export interface StateLawCard {
@@ -19117,8 +19118,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "West Virginia",
     residentsServed: "3,900+",
     abbreviation: "WV",
-    metaTitle: "West Virginia ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Get in touch with West Virginia mental health professionals for individualized wellness evaluations. Connect directly with a state-accredited clinician who will review your needs and guide you through a confidential ESA assessment process.",
+    schema: westVirginiaSchema,
+    metaTitle: "West Virginia ESA Letter from Licensed Therapists | My ESA Therapist",
+    metaDescription: "Need an ESA letter in West Virginia? My ESA Therapist connects you with licensed mental health professionals in West Virginia for online ESA letter evaluation.",
     heroTitle: "West Virginia ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Get in touch with West Virginia mental health professionals for individualized wellness evaluations. Connect directly with a state-accredited clinician who will review your needs and guide you through a confidential ESA assessment process.",
     benefitsImage: "/states/statewhobenefits-westvirginia.png",
