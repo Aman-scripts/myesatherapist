@@ -8,8 +8,9 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 type CtaBannerProps = {
   bgColor?: string;
   title?: string;
-  description?: string;
+  description?: React.ReactNode;
   note?: string;
+  disclaimer?: string;
   buttonText?: string;
   buttonHref?: string;
 };
@@ -19,6 +20,7 @@ export function CtaBanner({
   title = "Ready to Start Your ESA Evaluation?",
   description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
   note,
+  disclaimer,
   buttonText = "Start your Evaluation",
   buttonHref = "#how-it-works",
 }: CtaBannerProps) {
@@ -62,7 +64,7 @@ export function CtaBanner({
                 {title}
               </h2>
               <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
-                {description.includes("\n") ? (
+                {typeof description === "string" && description.includes("\n") ? (
                   description.split("\n").map((line, i, arr) => (
                     <React.Fragment key={i}>
                       {line}
@@ -84,16 +86,23 @@ export function CtaBanner({
             <div className="pt-2">
               <a
                 href={buttonHref}
-                className="inline-flex items-center justify-center w-[226px] h-[46px] rounded-[58px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center min-w-[226px] px-6 h-[46px] rounded-[58px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
               >
                 <span
-                  className="font-[family-name:var(--font-lato)] font-bold text-[18px] leading-[22px] bg-clip-text text-transparent"
+                  className="font-[family-name:var(--font-lato)] font-bold text-[18px] leading-[22px] bg-clip-text text-transparent whitespace-nowrap"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {buttonText}
                 </span>
               </a>
             </div>
+
+            {/* Optional Disclaimer */}
+            {disclaimer && (
+              <p className="text-[#FAF7F2]/75 text-xs sm:text-[13px] font-sans leading-relaxed pt-1 max-w-[560px]">
+                {disclaimer}
+              </p>
+            )}
           </div>
         </div>
 
