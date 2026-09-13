@@ -9,15 +9,16 @@ import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSecti
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
+import { statesSchema } from "@/data/schemas/statesSchema";
 
 export const metadata: Metadata = {
-  title: "ESA Evaluation For Every State | My ESA Therapist",
+  title: "ESA Evaluations by State | My ESA Therapist",
   description:
-    "Access professional, licensed evaluations for Emotional Support Animal (ESA) letters that comply with the Fair Housing Act (FHA) and your state's specific laws.",
+    "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
   openGraph: {
-    title: "ESA Evaluation For Every State | My ESA Therapist",
+    title: "ESA Evaluations by State | My ESA Therapist",
     description:
-      "Access professional, licensed evaluations for Emotional Support Animal (ESA) letters that comply with the Fair Housing Act (FHA) and your state's specific laws.",
+      "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
     url: "https://myesatherapist.com/states",
     type: "website",
   },
@@ -54,26 +55,13 @@ const STATES_FAQS: FaqItem[] = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: STATES_FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.a,
-    },
-  })),
-};
-
 export default function StatesDirectoryPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30">
-      {/* FAQ Schema for SEO Structured Data */}
+      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(statesSchema) }}
       />
 
       <TopBanner />
