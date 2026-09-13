@@ -28,6 +28,7 @@ import { nebraskaSchema } from "./schemas/nebraskaSchema";
 import { nevadaSchema } from "./schemas/nevadaSchema";
 import { newHampshireSchema } from "./schemas/newHampshireSchema";
 import { newJerseySchema } from "./schemas/newJerseySchema";
+import { newMexicoSchema } from "./schemas/newMexicoSchema";
 
 
 export interface StateLawCard {
@@ -14599,8 +14600,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "New Mexico",
     residentsServed: "5,800+",
     abbreviation: "NM",
-    metaTitle: "New Mexico ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Get in touch with New Mexico’s licensed mental health professionals for individualized assessments of emotional well-being. Set up a session with a licensed clinician who will thoroughly evaluate your needs and walk you through the emotional support animal evaluation procedure.",
+    schema: newMexicoSchema,
+    metaTitle: "New Mexico ESA Letter From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Need an ESA letter in New Mexico? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
     heroTitle: "New Mexico ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Get in touch with New Mexico’s licensed mental health professionals for individualized assessments of emotional well-being. Set up a session with a licensed clinician who will thoroughly evaluate your needs and walk you through the emotional support animal evaluation procedure.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
