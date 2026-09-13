@@ -37,11 +37,11 @@ export function PsdProcessSection() {
         {/* 1. Section Header (2-Column Layout on Desktop matching Frame 1000011750) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-12 lg:mb-16">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight max-w-xl">
-            A simple, secure, <br className="hidden sm:block" />
-            three-step process
+            A Simple &amp; Secure <br className="hidden sm:block" />
+            Three-Step Process
           </h2>
           <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
-            From consultation to letter delivery, everything happens online. No paperwork, no waiting rooms — just a clear path to professional documentation.
+            From ESA consultation to ESA letter delivery, everything happens online. No paperwork, no waiting rooms, just a simple path to a legitimate psychiatric service dog letter and professional documentation.
           </p>
         </div>
 

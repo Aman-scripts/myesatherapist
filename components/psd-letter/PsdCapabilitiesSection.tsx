@@ -90,7 +90,7 @@ export function PsdCapabilitiesSection() {
           {/* Section Header */}
           <div className="mb-5 sm:mb-8 text-left">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
-              What a Psychiatric Service dog can do?
+              What Can a Psychiatric Service Dog Do?
             </h2>
             <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
               Understand the legal framework behind your PSD empowers you as a handler.
