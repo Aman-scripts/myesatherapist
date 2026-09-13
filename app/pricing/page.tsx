@@ -13,11 +13,22 @@ import { PricingWhyTrustSection } from "@/components/pricing/PricingWhyTrustSect
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
+import { pricingSchema } from "@/data/schemas/pricingSchema";
 
 export const metadata: Metadata = {
-  title: "ESA & PSD Letter Plans & Pricing | My ESA Therapist",
+  title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
   description:
     "Transparent pricing for official Emotional Support Animal and Psychiatric Service Dog recommendation letters. No hidden fees, evaluations by licensed professionals.",
+  alternates: {
+    canonical: "https://myesatherapist.com/pricing/",
+  },
+  openGraph: {
+    title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
+    description:
+      "Transparent pricing for official Emotional Support Animal and Psychiatric Service Dog recommendation letters. No hidden fees, evaluations by licensed professionals.",
+    url: "https://myesatherapist.com/pricing/",
+    type: "website",
+  },
 };
 
 const PRICING_FAQS: FaqItem[] = [
@@ -51,6 +62,12 @@ const PRICING_FAQS: FaqItem[] = [
 export default function PricingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+      {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+
       {/* Top Banner & Header */}
       <TopBanner />
       <Header />
