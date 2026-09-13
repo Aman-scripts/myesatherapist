@@ -21,11 +21,22 @@ import { PsdCtaSection } from "@/components/psd-letter/PsdCtaSection";
 import { PricingSection } from "@/components/home/PricingSection";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
+import { psdLetterSchema } from "@/data/schemas/psdLetterSchema";
 
 export const metadata: Metadata = {
-  title: "Psychiatric Service Dog (PSD) Letter Assistance | My ESA Therapist",
+  title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
   description:
-    "Connect with state-licensed mental health professionals for psychiatric service dog letter evaluations under ADA and federal housing guidelines.",
+    "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",
+  alternates: {
+    canonical: "https://myesatherapist.com/psd-letter/",
+  },
+  openGraph: {
+    title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
+    description:
+      "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",
+    url: "https://myesatherapist.com/psd-letter/",
+    type: "website",
+  },
 };
 
 const PSD_FAQS: FaqItem[] = [
@@ -74,6 +85,12 @@ const PSD_FAQS: FaqItem[] = [
 export default function PsdLetterPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+      {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(psdLetterSchema) }}
+      />
+
       {/* Top Banner & Navigation */}
       <TopBanner />
       <Header />
