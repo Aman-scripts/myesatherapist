@@ -14796,22 +14796,22 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     benefitsTitle: "Benefits of Having an ESA Letter in New Mexico",
-    benefitsSubtitle: "See how an ESA letter New Mexico could support your well-being and make your daily routine with your emotional support animal manageable.",
+    benefitsSubtitle: "See how an ESA letter in New Mexico can support your emotional well-being and make daily life with your companion animal easier.",
     financialBenefitsHeading: "Financial Benefits",
     financialBenefits: [
       {
         title: "No Pet Rent or Monthly Pet Fees",
-        description: "Recurring pet-related fees are typically waived by housing providers with a valid ESA letter. This can help lower long-term housing costs by eliminating monthly pet rent and other deposits often required for companion animals, while preserving access to emotionally beneficial companionship.",
+        description: "Housing providers are typically prohibited from charging monthly pet rent or extra pet fees for a verified emotional support animal.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Avoid Costly Housing Limitations",
-        description: "Access to housing options that might normally be restricted for animals can be increased with an ESA letter. People can choose appropriate homes without being financially constrained by pet laws or having to pay excessive rental fees because of this freedom, which helps them avoid more expensive “pet-friendly” residences.",
+        description: "An ESA letter helps you secure housing in properties with pet restrictions without paying excessive pet deposits or fees.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Reduced Relocation Expenses",
-        description: "Having the right ESA paperwork could assist avoid unforeseen relocation expenses brought on by leasing agreements’ animal limitations. People might be able to avoid unforeseen fees, lease fines, or the need to look for other housing, which would increase their financial stability.",
+        description: "Valid ESA documentation helps prevent unexpected lease penalties or costly moving fees related to strict animal policies.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
@@ -14819,17 +14819,17 @@ export const STATES_DATA: Record<string, StateData> = {
     emotionalBenefits: [
       {
         title: "Improved Emotional Stability",
-        description: "By providing constant companionship, an emotional support animal can assist reduce distress. Their presence may help people manage everyday stressors more skillfully, promote a sense of calm, lessen emotional overload, and improve overall emotional balance.",
+        description: "Constant companionship from an ESA helps reduce distress, manage everyday stressors, and promote emotional balance.",
         icon: "/states/california-benefits-strongersense.svg",
       },
       {
         title: "Enhanced Sense of Security",
-        description: "An ESA nearby can foster a reassuring atmosphere that makes people feel less alone or vulnerable. This emotional support could boost one’s self-assurance in managing routine circumstances and enhance one’s capacity to handle trying times.",
+        description: "Having an ESA close by creates a comforting, reassuring environment that eases feelings of vulnerability and stress.",
         icon: "/states/california-benefits-strongersense.svg",
       },
       {
         title: "Support in Managing Symptoms",
-        description: "Emotional support animals can help people manage symptoms associated with anxiety, depression, or issues related to trauma. During times of emotional chaos, their company can offer grounding support and promote healthy practices.",
+        description: "Emotional support animals provide grounding comfort during difficult moments, aiding symptom relief for anxiety and depression.",
         icon: "/states/whomayqualifies-panicattack.svg",
       },
     ],
