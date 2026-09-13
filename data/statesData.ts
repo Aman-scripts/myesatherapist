@@ -29,6 +29,7 @@ import { nevadaSchema } from "./schemas/nevadaSchema";
 import { newHampshireSchema } from "./schemas/newHampshireSchema";
 import { newJerseySchema } from "./schemas/newJerseySchema";
 import { newMexicoSchema } from "./schemas/newMexicoSchema";
+import { newYorkSchema } from "./schemas/newYorkSchema";
 
 
 export interface StateLawCard {
@@ -11632,8 +11633,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "New York",
     residentsServed: "7,890+",
     abbreviation: "NY",
-    metaTitle: "ESA Letter Evaluations by New York Licensed Therapist | My ESA Therapist",
-    metaDescription: "Connect with New York–licensed therapist for ESA evaluations conducted under fair housing guidelines. ESA letters are issued only when clinical eligibility is confirmed.",
+    schema: newYorkSchema,
+    metaTitle: "ESA Letter Evaluations in New York by Licensed Therapists - My ESA Therapist",
+    metaDescription: "My ESA Therapist offers ESA letter evaluations in New York by licensed therapists. Secure online assessments and HUD-compliant ESA letters for housing accommodations.",
     heroTitle: "ESA Letter\nEvaluations by New York\nLicensed Therapist",
     heroSubtitle: "Connect with New York–licensed therapist for ESA evaluations conducted under fair housing guidelines. ESA letters are issued only when clinical eligibility is confirmed.",
     benefitsImage: "/states/statewhobenefits-newyork.png",
