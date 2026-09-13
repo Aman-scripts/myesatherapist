@@ -30,6 +30,7 @@ import { newHampshireSchema } from "./schemas/newHampshireSchema";
 import { newJerseySchema } from "./schemas/newJerseySchema";
 import { newMexicoSchema } from "./schemas/newMexicoSchema";
 import { newYorkSchema } from "./schemas/newYorkSchema";
+import { northCarolinaSchema } from "./schemas/northCarolinaSchema";
 
 
 export interface StateLawCard {
@@ -15010,8 +15011,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "North Carolina",
     residentsServed: "8,640+",
     abbreviation: "NC",
-    metaTitle: "North Carolina ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Get evaluated by licensed mental health experts in North Carolina who understand your emotional support needs. All assessments are carried out in a safe and confidential setting that prioritizes your privacy.",
+    schema: northCarolinaSchema,
+    metaTitle: "North Carolina ESA Letter From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Need an ESA letter in North Carolina? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA letter evaluation.",
     heroTitle: "North Carolina ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Get evaluated by licensed mental health experts in North Carolina who understand your emotional support needs. All assessments are carried out in a safe and confidential setting that prioritizes your privacy.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
