@@ -40,6 +40,7 @@ import { southCarolinaSchema } from "./schemas/southCarolinaSchema";
 import { southDakotaSchema } from "./schemas/southDakotaSchema";
 import { texasSchema } from "./schemas/texasSchema";
 import { utahSchema } from "./schemas/utahSchema";
+import { virginiaSchema } from "./schemas/virginiaSchema";
 
 
 export interface StateLawCard {
@@ -18702,8 +18703,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Virginia",
     residentsServed: "8,100+",
     abbreviation: "VA",
-    metaTitle: "Virginia ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with a Virginia-licensed mental health professional for a confidential emotional support animal evaluation conducted through a secure, HIPAA-compliant platform. ESA letters are issued only when clinically appropriate, following Fair Housing Act (FHA) guidelines and professional standards of care.",
+    schema: virginiaSchema,
+    metaTitle: "Virginia ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
+    metaDescription: "Connect with Virginia licensed therapists for ESA Letter evaluations. HIPAA-compliant telehealth. Virginia ESA letters issued only when clinically appropriate.",
     heroTitle: "Virginia ESA\nLetter Evaluations by\nLicensed Therapists",
     heroSubtitle: "Connect with a Virginia-licensed mental health professional for a confidential emotional support animal evaluation conducted through a secure, HIPAA-compliant platform. ESA letters are issued only when clinically appropriate, following Fair Housing Act (FHA) guidelines and professional standards of care.",
     benefitsImage: "/states/statewhobenefits-virginia.png",
