@@ -44,6 +44,7 @@ import { virginiaSchema } from "./schemas/virginiaSchema";
 import { washingtonSchema } from "./schemas/washingtonSchema";
 import { westVirginiaSchema } from "./schemas/westVirginiaSchema";
 import { wisconsinSchema } from "./schemas/wisconsinSchema";
+import { wyomingSchema } from "./schemas/wyomingSchema";
 
 
 export interface StateLawCard {
@@ -13391,8 +13392,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Wyoming",
     residentsServed: "6,537+",
     abbreviation: "WY",
-    metaTitle: "Wyoming ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Speak with licensed mental health professionals in Wyoming for emotional support animal evaluations. All consultations are conducted through a secure and private setting that respects your confidentiality and personal comfort.",
+    schema: wyomingSchema,
+    metaTitle: "Wyoming ESA Letter from Licensed Therapists | My ESA Therapist",
+    metaDescription: "Need an ESA letter in Wyoming? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA Letter evaluation.",
     heroTitle: "Wyoming ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Speak with licensed mental health professionals in Wyoming for emotional support animal evaluations. All consultations are conducted through a secure and private setting that respects your confidentiality and personal comfort.",
     benefitsImage: "/states/statewhobenefits-wyoming.png",
