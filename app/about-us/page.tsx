@@ -123,6 +123,7 @@ export default function AboutUsPage() {
           buttonText="Start your Evaluation"
           buttonHref="/psd-letter"
           bgColor="bg-[#FAF7F2]"
+          className="pb-12 sm:pb-16 lg:pb-24"
         />
       </main>
       <Footer bgColor="bg-[#FAF7F2]" />

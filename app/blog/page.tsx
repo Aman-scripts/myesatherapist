@@ -10,25 +10,33 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
+import { blogSchema } from "@/data/schemas/blogSchema";
+
 export const metadata: Metadata = {
-  title: "ESA & Emotional Support Animal Guides & Articles | My ESA Therapist",
+  title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
   description:
-    "Explore expert guides, legal housing rights, FHA regulations, and therapy insights for Emotional Support Animals and Psychiatric Service Dogs.",
+    "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
   openGraph: {
-    title: "Your Guide to Emotional Support Animals | My ESA Therapist",
+    title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
     description:
-      "Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.",
-    url: "https://myesatherapist.com/blog",
+      "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
+    url: "https://myesatherapist.com/blog/",
     type: "website",
   },
   alternates: {
-    canonical: "https://myesatherapist.com/blog",
+    canonical: "https://myesatherapist.com/blog/",
   },
 };
 
 export default function BlogHubPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+      {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
       <TopBanner />
       <Header />
 

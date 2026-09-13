@@ -7,6 +7,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 type CtaBannerProps = {
   bgColor?: string;
+  className?: string;
   title?: string;
   description?: React.ReactNode;
   note?: string;
@@ -17,6 +18,7 @@ type CtaBannerProps = {
 
 export function CtaBanner({
   bgColor = "bg-[#FAF7F2]",
+  className = "",
   title = "Ready to Start Your ESA Evaluation?",
   description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
   note,
@@ -25,7 +27,7 @@ export function CtaBanner({
   buttonHref = "#how-it-works",
 }: CtaBannerProps) {
   return (
-    <section className={`relative w-full ${bgColor} pt-0 lg:pt-8 xl:pt-[125px] overflow-visible`}>
+    <section className={`relative w-full ${bgColor} pt-0 lg:pt-8 xl:pt-[125px] overflow-visible ${className}`}>
       {/* Full-width Teal Gradient Banner (Edge to Edge) */}
       <div
         className="w-full relative min-h-[400px]"

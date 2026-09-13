@@ -12,15 +12,35 @@ import { ConsumerAffairsReviewsSection } from "@/components/reviews/ConsumerAffa
 // Shared Components
 import { CtaBanner } from "@/components/home/CtaBanner";
 
+import { reviewsSchema } from "@/data/schemas/reviewsSchema";
+
 export const metadata: Metadata = {
-  title: "Client Reviews & Testimonials | My ESA Therapist",
+  title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
   description:
-    "Read verified reviews from real clients who found comfort and confidence through My ESA Therapist. Legitimate, HIPAA-compliant ESA and PSD letters accepted nationwide.",
+    "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
+  alternates: {
+    canonical: "https://myesatherapist.com/reviews/",
+  },
+  openGraph: {
+    title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
+    description:
+      "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
+    url: "https://myesatherapist.com/reviews/",
+    siteName: "My ESA Therapist",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function ReviewsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+      {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
+
       {/* Top Banner & Header */}
       <TopBanner />
       <Header />
@@ -41,6 +61,7 @@ export default function ReviewsPage() {
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
           buttonText="Start your Evaluation"
           buttonHref="#trustpilot-reviews"
+          className="pb-12 sm:pb-16 lg:pb-24"
         />
       </main>
 
