@@ -22,6 +22,7 @@ import { massachusettsSchema } from "./schemas/massachusettsSchema";
 import { michiganSchema } from "./schemas/michiganSchema";
 import { minnesotaSchema } from "./schemas/minnesotaSchema";
 import { mississippiSchema } from "./schemas/mississippiSchema";
+import { missouriSchema } from "./schemas/missouriSchema";
 
 
 export interface StateLawCard {
@@ -10024,8 +10025,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Missouri",
     residentsServed: "6,736+",
     abbreviation: "MO",
-    metaTitle: "Missouri ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Connect with state-licensed mental health providers in Missouri for private and secure ESA assessments. Get clear, guided assistance at every stage of the evaluation process, carefully designed to support your emotional wellness and overall sense of reassurance.",
+    schema: missouriSchema,
+    metaTitle: "Missouri ESA Letter Online From Licensed Therapist | My ESA Therapist",
+    metaDescription: "Looking for a Missouri ESA letter? My ESA Therapist connects you with licensed professionals for quick ESA evaluations online. Start your application today.",
     heroTitle: "Missouri ESA Letter Evaluations by Licensed Professionals",
     heroSubtitle: "Connect with state-licensed mental health providers in Missouri for private and secure ESA assessments. Get clear, guided assistance at every stage of the evaluation process, carefully designed to support your emotional wellness and overall sense of reassurance.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
