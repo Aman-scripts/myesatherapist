@@ -31,6 +31,7 @@ import { newJerseySchema } from "./schemas/newJerseySchema";
 import { newMexicoSchema } from "./schemas/newMexicoSchema";
 import { newYorkSchema } from "./schemas/newYorkSchema";
 import { northCarolinaSchema } from "./schemas/northCarolinaSchema";
+import { northDakotaSchema } from "./schemas/northDakotaSchema";
 
 
 export interface StateLawCard {
@@ -15417,8 +15418,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "North Dakota",
     residentsServed: "4,800+",
     abbreviation: "ND",
-    metaTitle: "North Dakota ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Speak with licensed mental health professionals in North Dakota for emotional wellness assessments. An ESA letter is provided only if the professional determines it is appropriate and consistent with the guidelines outlined under the Fair Housing Act.",
+    schema: northDakotaSchema,
+    metaTitle: "North Dakota ESA Letter from Licensed Therapists | My ESA Therapist",
+    metaDescription: "Looking for an ESA letter in North Dakota? My ESA Therapist helps you connect with licensed mental health professionals for online esa letter evaluation.",
     heroTitle: "North Dakota ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Speak with licensed mental health professionals in North Dakota for emotional wellness assessments. An ESA letter is provided only if the professional determines it is appropriate and consistent with the guidelines outlined under the Fair Housing Act.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
