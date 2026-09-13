@@ -41,6 +41,7 @@ import { southDakotaSchema } from "./schemas/southDakotaSchema";
 import { texasSchema } from "./schemas/texasSchema";
 import { utahSchema } from "./schemas/utahSchema";
 import { virginiaSchema } from "./schemas/virginiaSchema";
+import { washingtonSchema } from "./schemas/washingtonSchema";
 
 
 export interface StateLawCard {
@@ -12553,8 +12554,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Washington",
     residentsServed: "7,395+",
     abbreviation: "WA",
-    metaTitle: "Washington ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Speak to Washington’s mental health professionals for personalized wellness evaluations. ESA documentation in Washington is issued through a legitimate clinical assessment that aligns with federal housing guidelines.",
+    schema: washingtonSchema,
+    metaTitle: "Washington ESA Letter from Licensed Therapists | My ESA Therapist",
+    metaDescription: "Need an ESA letter in Washington? My ESA Therapist connects you with licensed mental health professionals in Washington for online ESA letter evaluation.",
     heroTitle: "Washington ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Speak to Washington’s mental health professionals for personalized wellness evaluations. ESA documentation in Washington is issued through a legitimate clinical assessment that aligns with federal housing guidelines.",
     benefitsImage: "/states/statewhobenefits-washington.png",
