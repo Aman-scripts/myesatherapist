@@ -12,10 +12,12 @@ import { EsaLawsFaqSection } from "@/components/esa-laws/EsaLawsFaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
+import { esaLawsSchema } from "@/data/schemas/esaLawsSchema";
+
 export const metadata: Metadata = {
-  title: "Emotional Support Animal (ESA) Laws by State and Federal Guidelines | My ESA Therapist",
+  title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
   description:
-    "Understand federal ESA laws under the Fair Housing Act, ESA rights vs landlord rights, state-specific ESA regulations, and housing rules for apartments, colleges, landlords, and tenants.",
+    "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
   keywords: [
     "ESA Laws",
     "Emotional Support Animal Laws",
@@ -25,22 +27,27 @@ export const metadata: Metadata = {
     "ESA Housing Laws",
   ],
   openGraph: {
-    title: "Emotional Support Animal Laws by State and Federal Guidelines | My ESA Therapist",
+    title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
     description:
-      "Understand federal and state-level ESA regulations, housing rules, and evaluation requirements.",
-    url: "https://myesatherapist.com/esa-laws",
+      "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
+    url: "https://myesatherapist.com/esa-laws/",
     siteName: "My ESA Therapist",
     locale: "en_US",
     type: "website",
   },
   alternates: {
-    canonical: "https://myesatherapist.com/esa-laws",
+    canonical: "https://myesatherapist.com/esa-laws/",
   },
 };
 
 export default function EsaLawsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A]">
+      {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(esaLawsSchema) }}
+      />
       <TopBanner />
       <Header />
 
