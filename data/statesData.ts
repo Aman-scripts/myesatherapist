@@ -34,6 +34,7 @@ import { northCarolinaSchema } from "./schemas/northCarolinaSchema";
 import { northDakotaSchema } from "./schemas/northDakotaSchema";
 import { ohioSchema } from "./schemas/ohioSchema";
 import { oklahomaSchema } from "./schemas/oklahomaSchema";
+import { oregonSchema } from "./schemas/oregonSchema";
 
 
 export interface StateLawCard {
@@ -16637,8 +16638,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Oregon",
     residentsServed: "7,120+",
     abbreviation: "OR",
-    metaTitle: "Oregon ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with Oregon mental health professionals for personalized ESA evaluations. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
+    schema: oregonSchema,
+    metaTitle: "ESA Letter Oregon From Licensed Therapists | My ESA Therapist",
+    metaDescription: "Looking for an ESA letter in Oregon? Get evaluated by a state-licensed therapist online. Transparent pricing, no hidden fees.",
     heroTitle: "Oregon ESA\nLetter Evaluations by\nLicensed Therapists",
     heroSubtitle: "Connect with Oregon mental health professionals for personalized ESA evaluations. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
