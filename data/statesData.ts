@@ -33,6 +33,7 @@ import { newYorkSchema } from "./schemas/newYorkSchema";
 import { northCarolinaSchema } from "./schemas/northCarolinaSchema";
 import { northDakotaSchema } from "./schemas/northDakotaSchema";
 import { ohioSchema } from "./schemas/ohioSchema";
+import { oklahomaSchema } from "./schemas/oklahomaSchema";
 
 
 export interface StateLawCard {
@@ -16231,8 +16232,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Oklahoma",
     residentsServed: "5,950+",
     abbreviation: "OK",
-    metaTitle: "Oklahoma ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with certified mental health professionals in Oklahoma for a mental health evaluation. Receive clear guidance at every step of the evaluation process designed to support your well-being.",
+    schema: oklahomaSchema,
+    metaTitle: "ESA Letter Oklahoma – Secure Online Evaluation | My ESA Therapist",
+    metaDescription: "Start your Oklahoma ESA letter evaluation with My ESA Therapist by connecting with licensed mental health professionals through a secure online process.",
     heroTitle: "Oklahoma ESA\nLetter Evaluations by\nLicensed Therapists",
     heroSubtitle: "Connect with certified mental health professionals in Oklahoma for a mental health evaluation. Receive clear guidance at every step of the evaluation process designed to support your well-being.",
     therapistsTitle: "Our Licensed Mental Health Professionals",
