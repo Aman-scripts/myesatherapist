@@ -37,6 +37,7 @@ import { oklahomaSchema } from "./schemas/oklahomaSchema";
 import { oregonSchema } from "./schemas/oregonSchema";
 import { pennsylvaniaSchema } from "./schemas/pennsylvaniaSchema";
 import { southCarolinaSchema } from "./schemas/southCarolinaSchema";
+import { southDakotaSchema } from "./schemas/southDakotaSchema";
 
 
 export interface StateLawCard {
@@ -17449,8 +17450,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "South Dakota",
     residentsServed: "4,250+",
     abbreviation: "SD",
-    metaTitle: "South Dakota ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Get in touch with South Dakota mental health professionals for individualized wellness evaluations. Connect one-on-one with a licensed clinician who will review your needs and guide you through a professional and confidential ESA assessment process.",
+    schema: southDakotaSchema,
+    metaTitle: "South Dakota ESA Letter from Licensed Therapists | My ESA Therapist",
+    metaDescription: "Need an ESA letter in South Dakota? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA Letter evaluation.",
     heroTitle: "South Dakota ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Get in touch with South Dakota mental health professionals for individualized wellness evaluations. Connect one-on-one with a licensed clinician who will review your needs and guide you through a professional and confidential ESA assessment process.",
     benefitsImage: "/states/statewhobenefits-southdakota.png",
