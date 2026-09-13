@@ -15,44 +15,37 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     id: "faq-1",
     num: "01.",
-    question: "Is My ESA Therapist Legitimate?",
+    question: "Which States Have the Strict ESA Laws?",
     answer:
-      "Yes, 100%. My ESA Therapist connects you with fully licensed mental health professionals (LMFT, LCSW, LPC, LPCC, Clinical Psychologists) licensed specifically in your state. Every ESA evaluation meets all federal Fair Housing Act (FHA) regulations and individual state legal standards.",
+      "States like California, Montana, Arkansas, Louisiana, and Iowa require ESA owners to have at least a 30-day relationship with their mental health professional before an ESA evaluation can be conducted.",
   },
   {
     id: "faq-2",
     num: "02.",
-    question: "How Does My ESA Therapist Work?",
+    question: "Can a Landlord Deny an ESA in Any State?",
     answer:
-      "First, you complete a confidential online assessment. Next, you are paired with a state-licensed therapist for a telehealth consultation. Once approved, your official, signed ESA letter is issued with your therapist's license and direct contact information.",
+      "No. Under the Fair Housing Act (FHA), landlords cannot deny an emotional support animal (ESA) as long as you have a legitimate ESA letter based on an evaluation conducted by a licensed professional.",
   },
   {
     id: "faq-3",
     num: "03.",
-    question: "Is My Information Safe With My ESA?",
+    question: "Can an Online ESA Letter Be Valid in My State?",
     answer:
-      "Absolutely. Our entire platform is strictly HIPAA-compliant and protected with 256-bit SSL encryption. Your medical information, personal data, and consultation details remain private and confidential between you and your licensed healthcare provider.",
+      "Yes, if the letter comes from a licensed mental health professional who conducts a legitimate telehealth evaluation. Documentation generated instantly or through automated processes without a proper clinical assessment may be rejected by housing providers.",
   },
   {
     id: "faq-4",
     num: "04.",
-    question: "What Rights Does an ESA Letter Provide?",
+    question: "Do ESA Owners Need Additional Documentation in Certain States?",
     answer:
-      "An official ESA letter grants you protection under the federal Fair Housing Act (FHA). Landlords, housing authorities, and property managers must provide reasonable accommodation, allowing your emotional support animal in no-pet housing and waiving all pet fees, pet rent, and pet deposits.",
+      "Generally, a valid ESA letter is sufficient in all 50 states. However, some states require an established 30-day patient-provider relationship with the licensed mental health professional conducting the evaluation. Many states also note that ESA letters expire after 12 months and must be renewed.",
   },
   {
     id: "faq-5",
     num: "05.",
-    question: "Can Landlords Reject a Valid ESA Letter?",
+    question: "Can I Use an ESA Letter From Another State?",
     answer:
-      "Under the Fair Housing Act, landlords cannot deny legitimate ESA letters written by state-licensed healthcare providers, unless very narrow legal exemptions apply (such as an animal posing a direct safety threat or owner-occupied buildings with four or fewer units).",
-  },
-  {
-    id: "faq-6",
-    num: "06.",
-    question: "How Fast Can I Receive My ESA Letter?",
-    answer:
-      "After completing your clinical evaluation and receiving therapist approval, your digital ESA letter is typically delivered within 24 to 48 hours. Physical hard copies with clinic letterhead can also be shipped directly to your mailing address.",
+      "You generally cannot use emotional support documentation issued by a professional licensed in another state. The evaluation must be completed by a mental health professional licensed in the state where you currently reside to meet state-specific requirements and Fair Housing Act (FHA) standards. States such as California, Arkansas, Iowa, Louisiana, and Montana also require an established patient–provider relationship. If you move, a new in-state evaluation is typically needed to remain compliant.",
   },
 ];
 
@@ -68,12 +61,12 @@ export function StatesFaqSection() {
       <div className="max-w-[1260px] mx-auto">
         
         {/* Section Heading */}
-        <div className="flex flex-col items-center text-center max-w-[680px] mx-auto mb-12 lg:mb-16">
+        <div className="flex flex-col items-center text-center max-w-[780px] mx-auto mb-12 lg:mb-16">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-tight text-[#2E5A66] mb-3">
             Frequently Asked Questions
           </h2>
           <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-[#5F6B6F]">
-            Get answers to common questions about ESA letters and our service.
+            Answers to your most common questions about ESA assessment and housing rules by state.
           </p>
         </div>
 

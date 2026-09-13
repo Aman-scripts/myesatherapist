@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StatesHeroSection } from "@/components/states/StatesHeroSection";
 import { FederalHousingRulesSection } from "@/components/states/FederalHousingRulesSection";
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
-import { FaqSection } from "@/components/home/FaqSection";
+import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
@@ -26,9 +26,56 @@ export const metadata: Metadata = {
   },
 };
 
+const STATES_FAQS: FaqItem[] = [
+  {
+    num: "01.",
+    q: "Which States Have the Strict ESA Laws?",
+    a: "States like California, Montana, Arkansas, Louisiana, and Iowa require ESA owners to have at least a 30-day relationship with their mental health professional before an ESA evaluation can be conducted.",
+  },
+  {
+    num: "02.",
+    q: "Can a Landlord Deny an ESA in Any State?",
+    a: "No. Under the Fair Housing Act (FHA), landlords cannot deny an emotional support animal (ESA) as long as you have a legitimate ESA letter based on an evaluation conducted by a licensed professional.",
+  },
+  {
+    num: "03.",
+    q: "Can an Online ESA Letter Be Valid in My State?",
+    a: "Yes, if the letter comes from a licensed mental health professional who conducts a legitimate telehealth evaluation. Documentation generated instantly or through automated processes without a proper clinical assessment may be rejected by housing providers.",
+  },
+  {
+    num: "04.",
+    q: "Do ESA Owners Need Additional Documentation in Certain States?",
+    a: "Generally, a valid ESA letter is sufficient in all 50 states. However, some states require an established 30-day patient-provider relationship with the licensed mental health professional conducting the evaluation. Many states also note that ESA letters expire after 12 months and must be renewed.",
+  },
+  {
+    num: "05.",
+    q: "Can I Use an ESA Letter From Another State?",
+    a: "You generally cannot use emotional support documentation issued by a professional licensed in another state. The evaluation must be completed by a mental health professional licensed in the state where you currently reside to meet state-specific requirements and Fair Housing Act (FHA) standards. States such as California, Arkansas, Iowa, Louisiana, and Montana also require an established patient–provider relationship. If you move, a new in-state evaluation is typically needed to remain compliant.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: STATES_FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
 export default function StatesDirectoryPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30">
+      {/* FAQ Schema for SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <TopBanner />
       <Header />
 
@@ -42,8 +89,12 @@ export default function StatesDirectoryPage() {
         {/* 3. 4-Column Grid of All 50 US States */}
         <ChooseStateGridSection />
 
-        {/* 4. Common Frequently Asked Questions Section */}
-        <FaqSection />
+        {/* 4. Frequently Asked Questions Section */}
+        <FaqSection
+          title="Frequently Asked Questions"
+          subtitle="Answers to your most common questions about ESA assessment and housing rules by state."
+          faqs={STATES_FAQS}
+        />
 
         {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonHref="#choose-state-section" />
