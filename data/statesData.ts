@@ -43,6 +43,7 @@ import { utahSchema } from "./schemas/utahSchema";
 import { virginiaSchema } from "./schemas/virginiaSchema";
 import { washingtonSchema } from "./schemas/washingtonSchema";
 import { westVirginiaSchema } from "./schemas/westVirginiaSchema";
+import { wisconsinSchema } from "./schemas/wisconsinSchema";
 
 
 export interface StateLawCard {
@@ -12971,8 +12972,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "Wisconsin",
     residentsServed: "7,395+",
     abbreviation: "WI",
-    metaTitle: "Wisconsin ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Connect with licensed Wisconsin mental health professionals for trusted ESA evaluations. Book a private consultation where a certified clinician will assess your situation and guide you through a safe, professional emotional support animal evaluation.",
+    schema: wisconsinSchema,
+    metaTitle: "Wisconsin ESA Letter from Licensed Professionals | My ESA Therapist",
+    metaDescription: "Need an ESA letter in Wisconsin? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
     heroTitle: "Wisconsin ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Connect with licensed Wisconsin mental health professionals for trusted ESA evaluations. Book a private consultation where a certified clinician will assess your situation and guide you through a safe, professional emotional support animal evaluation.",
     benefitsImage: "/states/statewhobenefits-wisconsin.png",
