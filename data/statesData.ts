@@ -36,6 +36,7 @@ import { ohioSchema } from "./schemas/ohioSchema";
 import { oklahomaSchema } from "./schemas/oklahomaSchema";
 import { oregonSchema } from "./schemas/oregonSchema";
 import { pennsylvaniaSchema } from "./schemas/pennsylvaniaSchema";
+import { southCarolinaSchema } from "./schemas/southCarolinaSchema";
 
 
 export interface StateLawCard {
@@ -18280,8 +18281,9 @@ export const STATES_DATA: Record<string, StateData> = {
     name: "South Carolina",
     residentsServed: "6,800+",
     abbreviation: "SC",
-    metaTitle: "South Carolina ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-    metaDescription: "Speak with a licensed mental health professional in South Carolina to complete a confidential emotional support animal (ESA) evaluation. During the consultation, a clinician will review your mental health history and determine whether an ESA may provide supportive benefits.",
+    schema: southCarolinaSchema,
+    metaTitle: "South Carolina ESA Letter Evaluation | My ESA Therapist",
+    metaDescription: "Need an ESA letter in South Carolina? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
     heroTitle: "South Carolina ESA\nLetter Evaluations by\nLicensed Professionals",
     heroSubtitle: "Speak with a licensed mental health professional in South Carolina to complete a confidential emotional support animal (ESA) evaluation. During the consultation, a clinician will review your mental health history and determine whether an ESA may provide supportive benefits.",
     benefitsImage: "/states/statewhobenefits-southcarolina.png",
