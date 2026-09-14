@@ -61,8 +61,9 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
-  // Check if current route is PSD Letter page
+  // Check route conditions
   const isPsd = pathname === "/psd-letter";
+  const isDoctors = pathname === "/esa-doctors" || pathname === "/esa-doctors/";
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#EAE5DC] shadow-xs">
@@ -86,12 +87,14 @@ export function Header() {
 
           {/* Desktop Nav (Exact menu items matching Screenshot 1 & Screenshot 2) */}
           <nav className="hidden lg:flex items-center gap-3 lg:gap-4 xl:gap-9 font-sans shrink-0">
-            <a
-              href="#therapists"
-              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+            <Link
+              href="/esa-doctors/"
+              className={`text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
+                isDoctors ? "text-[#1D6E72] font-bold" : ""
+              }`}
             >
               Our Therapists
-            </a>
+            </Link>
             <Link
               href="/about-us"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
@@ -122,6 +125,24 @@ export function Header() {
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Start Your Consultation</span>
+                <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Image
+                    src="/common/send-icon.svg"
+                    alt=""
+                    width={19}
+                    height={21}
+                    className="w-[16px] h-[18px] xl:w-[19px] xl:h-[21px]"
+                  />
+                </span>
+              </a>
+            ) : isDoctors ? (
+              /* Doctors Page (Frame 1000011890): Single "Get Started" Button */
+              <a
+                href="#therapists"
+                className="inline-flex items-center gap-2 lg:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
+                style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              >
+                <span>Get Started</span>
                 <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                   <Image
                     src="/common/send-icon.svg"
@@ -220,13 +241,13 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
-          <a
-            href="#therapists"
+          <Link
+            href="/esa-doctors/"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             Our Therapists
-          </a>
+          </Link>
           <Link
             href="/about-us"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
