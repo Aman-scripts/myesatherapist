@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { STATES_DATA, getStateData } from "@/data/statesData";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -41,17 +41,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const isEsaLetter = state.startsWith("esa-letter-");
-  const canonicalUrl = isEsaLetter
-    ? `https://myesatherapist.com/esa-letter-${data.slug}/`
-    : `https://myesatherapist.com/${data.slug}`;
+  const canonicalUrl = `https://myesatherapist.com/esa-letter-${data.slug}/`;
 
   const webPageSchema = data.schema?.["@graph"]?.find(
     (item: any) => item["@type"] === "WebPage"
   );
 
-  const title = data.metaTitle || (isEsaLetter && webPageSchema?.name ? webPageSchema.name : data.name);
-  const description = data.metaDescription || (isEsaLetter && webPageSchema?.description ? webPageSchema.description : "");
+  const title = data.metaTitle || webPageSchema?.name || `ESA Letter in ${data.name} | My ESA Therapist`;
+  const description = data.metaDescription || webPageSchema?.description || `Get your legitimate ESA letter in ${data.name} from licensed therapists.`;
 
   return {
     title,
@@ -81,15 +78,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const paramsList: Array<{ state: string }> = [];
-
-  Object.keys(STATES_DATA).forEach((slug) => {
-    paramsList.push({ state: slug });
-    paramsList.push({ state: `esa-${slug}` });
-    paramsList.push({ state: `esa-letter-${slug}` });
-  });
-
-  return paramsList;
+  return Object.keys(STATES_DATA).map((slug) => ({
+    state: `esa-letter-${slug}`,
+  }));
 }
 
 export default async function DynamicStatePage({ params }: Props) {
@@ -98,6 +89,11 @@ export default async function DynamicStatePage({ params }: Props) {
 
   if (!data) {
     notFound();
+  }
+
+  // Redirect any legacy or non-prefixed state routes to the canonical /esa-letter-[state]/ route
+  if (state !== `esa-letter-${data.slug}`) {
+    permanentRedirect(`/esa-letter-${data.slug}/`);
   }
 
   return (
