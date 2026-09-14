@@ -128,9 +128,6 @@ export default function DoctorsPage() {
         {/* Hero Section */}
         <DoctorsHeroSection />
 
-        {/* Content Reviewer Banner */}
-        <StateReviewerBanner />
-
         {/* We're in All 50 US States Section */}
         <DoctorsAllStatesSection />
 
@@ -147,6 +144,9 @@ export default function DoctorsPage() {
           buttonText="Start your Evaluation"
           buttonHref="/pricing/"
         />
+
+        {/* State Reviewer Banner (above footer and below cta section) */}
+        <StateReviewerBanner />
       </main>
 
       {/* Global Footer */}
