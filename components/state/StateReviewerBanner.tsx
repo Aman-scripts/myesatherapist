@@ -46,23 +46,30 @@ export function StateReviewerBanner({
 
             {/* Text details */}
             <div className="flex flex-col items-center sm:items-start space-y-1 sm:space-y-1.5">
-              <a
-                href={reviewerLinkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2"
-              >
-                <h3 className="font-heading font-bold text-xl sm:text-[22px] lg:text-[24px] leading-tight sm:leading-[32px] text-[#FAF7F2] group-hover:text-[#E8B92C] transition-colors">
-                  Content reviewed by {reviewerName}
-                </h3>
-                <span className="w-5 h-5 rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
-                  <svg className="w-3 h-3 text-[#1A3D4F]" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="4.98" cy="4.98" r="2.4" />
-                    <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
-                    <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
-                  </svg>
-                </span>
-              </a>
+              <h3 className="font-heading font-bold text-xl sm:text-[22px] lg:text-[24px] leading-tight sm:leading-[32px] text-[#FAF7F2] flex flex-wrap items-center justify-center sm:justify-start gap-x-2 gap-y-1">
+                <span>Content reviewed by</span>
+                {reviewerLinkedin ? (
+                  <a
+                    href={reviewerLinkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 hover:text-[#E8B92C] transition-colors cursor-pointer"
+                  >
+                    <span className="group-hover:text-[#E8B92C] transition-colors">
+                      {reviewerName}
+                    </span>
+                    <span className="w-5 h-5 rounded-full bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                      <svg className="w-3 h-3 text-[#1A3D4F]" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="4.98" cy="4.98" r="2.4" />
+                        <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
+                        <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
+                      </svg>
+                    </span>
+                  </a>
+                ) : (
+                  <span>{reviewerName}</span>
+                )}
+              </h3>
               <p className="font-sans font-semibold text-xs sm:text-[14px] leading-tight sm:leading-[26px] text-[#FAF7F2]">
                 Last updated: {updatedDate}
               </p>
