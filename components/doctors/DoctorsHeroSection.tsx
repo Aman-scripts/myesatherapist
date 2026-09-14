@@ -141,45 +141,45 @@ export function DoctorsHeroSection() {
           {/* Header Block */}
           <div className="w-full flex flex-col items-center xl:items-start gap-3.5 sm:gap-[16px]">
             
-            {/* Top Stat Badges Row: Hidden on mobile (< sm), visible on tablet & desktop */}
-            <div className="hidden sm:flex items-center justify-center xl:justify-start gap-2.5 sm:gap-[12px] w-full max-w-[513px]">
+            {/* Top Stat Badges Row: Visible on all devices */}
+            <div className="flex items-center justify-center xl:justify-start gap-2 sm:gap-[12px] w-full max-w-[360px] sm:max-w-[513px]">
               
-              {/* Badge 1: 51,488+ ESA Evaluations */}
-              <div className="w-[140px] sm:w-[155px] xl:w-[163px] h-[48px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-3 sm:px-4 shrink-0">
+              {/* Badge 1: 50 USA States */}
+              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
-                  className="font-heading font-bold text-[20px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
+                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
-                  51,488+
+                  50
                 </span>
-                <span className="font-sans font-semibold text-[10.5px] sm:text-[12px] leading-tight text-[#949494] text-center">
-                  ESA Evaluations
+                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
+                  USA States
                 </span>
               </div>
 
-              {/* Badge 2: 5+ Years Serving */}
-              <div className="w-[130px] sm:w-[145px] xl:w-[163px] h-[48px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-3 sm:px-4 shrink-0">
+              {/* Badge 2: HIPAA Compliant */}
+              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
-                  className="font-heading font-bold text-[20px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
+                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
-                  5+
+                  HIPAA
                 </span>
-                <span className="font-sans font-semibold text-[10.5px] sm:text-[12px] leading-tight text-[#949494] text-center">
-                  Years Serving
+                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
+                  Compliant
                 </span>
               </div>
 
-              {/* Badge 3: 4.9 Verified Reviews */}
-              <div className="w-[130px] sm:w-[145px] xl:w-[163px] h-[48px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-3 sm:px-4 shrink-0">
+              {/* Badge 3: 100% Licensed Pros */}
+              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
-                  className="font-heading font-bold text-[20px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
+                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center inline-flex items-start"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
-                  4.9
+                  100<sup className="text-[11px] sm:text-[14px] leading-none ml-0.5 mt-0.5 font-bold">%</sup>
                 </span>
-                <span className="font-sans font-semibold text-[10.5px] sm:text-[12px] leading-tight text-[#949494] text-center">
-                  Verified Reviews
+                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
+                  Licensed Pros
                 </span>
               </div>
 
