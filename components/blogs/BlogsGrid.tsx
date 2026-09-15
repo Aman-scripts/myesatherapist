@@ -97,14 +97,10 @@ export function BlogsGrid() {
               >
                 {/* Section Header */}
                 <div className="mb-8 sm:mb-12 text-center max-w-3xl mx-auto">
-                  <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#2E5A66] tracking-[-0.01em]">
+                  <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-[#2E5A66] tracking-[-0.01em] leading-tight lg:leading-[52px]">
                     {category.title}
                   </h2>
-                  <div
-                    className="w-[70px] h-[4px] mx-auto mt-3 rounded-full"
-                    style={{ background: "linear-gradient(90deg, #E8B92C 0%, #1D6E72 100%)" }}
-                  />
-                  <p className="font-sans text-sm sm:text-base text-[#5F6B6F] font-semibold mt-4 leading-relaxed">
+                  <p className="font-sans text-[15px] sm:text-[17px] lg:text-[18px] text-[#5F6B6F] font-semibold mt-3 sm:mt-4 leading-relaxed lg:leading-[30px]">
                     {category.description}
                   </p>
                 </div>
