@@ -173,10 +173,10 @@ export function DoctorsHeroSection() {
               {/* Badge 3: 100% Licensed Pros */}
               <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
-                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center inline-flex items-start"
+                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
-                  100<sup className="text-[11px] sm:text-[14px] leading-none ml-0.5 mt-0.5 font-bold">%</sup>
+                  100%
                 </span>
                 <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
                   Licensed Pros

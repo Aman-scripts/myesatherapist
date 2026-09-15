@@ -13,7 +13,19 @@ const statsData = [
   { value: "4.9", label: "Verified Reviews" },
 ];
 
-export function BlogHeroSection() {
+interface BlogHeroSectionProps {
+  title?: string;
+  subtitle?: string;
+  category?: string;
+  categorySlug?: string;
+}
+
+export function BlogHeroSection({
+  title = "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist",
+  subtitle = "Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.",
+  category = "ESA Guide",
+  categorySlug = "esa-guide",
+}: BlogHeroSectionProps = {}) {
   return (
     <section className="relative w-full bg-[#FAF7F2] overflow-visible">
       {/* ---------------------------------------------------- */}
@@ -23,7 +35,7 @@ export function BlogHeroSection() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
         <Image
           src="/blogs/blog_hero-section-mobile.png"
-          alt="How to Verify If an ESA Letter Is Legitimate"
+          alt={title}
           fill
           priority
           className="object-cover object-bottom pointer-events-none"
@@ -54,13 +66,12 @@ export function BlogHeroSection() {
 
           {/* Main Headline */}
           <h1 className="font-heading text-[22px] leading-[1.25] font-bold tracking-tight max-w-[320px] text-[#2E5A66]">
-            <span>How to Verify If an ESA Letter Is Legitimate: </span>
-            <span>A Landlord &amp; Tenant Checklist.</span>
+            {title}
           </h1>
 
           {/* Subtitle */}
           <p className="font-sans text-[12.5px] text-[#5F6B6F] font-semibold leading-[20px] max-w-[290px] mt-2">
-            Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
+            {subtitle}
           </p>
 
           {/* Action Buttons Stacked */}
@@ -142,13 +153,12 @@ export function BlogHeroSection() {
 
           {/* Main Headline */}
           <h1 className="font-heading text-3xl sm:text-[34px] font-bold leading-[1.2] tracking-tight text-[#2E5A66]">
-            <span>How to Verify If an ESA Letter Is Legitimate: </span>
-            <span>A Landlord &amp; Tenant Checklist.</span>
+            {title}
           </h1>
 
           {/* Subtitle */}
           <p className="font-sans text-sm sm:text-base text-[#5F6B6F] font-semibold leading-relaxed max-w-[480px]">
-            Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
+            {subtitle}
           </p>
 
           {/* Action Buttons in a Row */}
@@ -197,7 +207,7 @@ export function BlogHeroSection() {
       <div className="hidden lg:flex relative w-full lg:min-h-[580px] xl:min-h-[792px] flex-col justify-between overflow-hidden">
         <Image
           src="/blogs/blog-hero_section.png"
-          alt="How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist"
+          alt={title}
           fill
           priority
           className="object-cover lg:object-[88%_center] xl:object-center pointer-events-none"
@@ -218,7 +228,7 @@ export function BlogHeroSection() {
                 Blog
               </Link>
               <span className="w-2 h-2 rounded-full bg-[#5F6B6F] inline-block shrink-0 opacity-70" />
-              <span className="text-[#5F6B6F]">ESA Guide</span>
+              <span className="text-[#5F6B6F]">{category}</span>
             </nav>
 
             {/* Stat Pills: Frame 1000011901 */}
@@ -243,13 +253,12 @@ export function BlogHeroSection() {
 
             {/* Main Headline: Frame 1000011902 */}
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[56px] font-bold leading-[1.15] lg:leading-[48px] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66]">
-              <span>How to Verify If an ESA Letter Is Legitimate: </span>
-              <span className="block lg:inline xl:block">A Landlord &amp; Tenant Checklist.</span>
+              {title}
             </h1>
 
             {/* Subtitle */}
             <p className="font-sans text-sm sm:text-base lg:text-[17px] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[24px] lg:leading-[28px] xl:leading-[30px]">
-              Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
+              {subtitle}
             </p>
           </div>
         </div>

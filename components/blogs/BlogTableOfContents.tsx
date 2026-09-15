@@ -16,7 +16,12 @@ const tocItems = [
   { id: "faq", label: "FAQs" },
 ];
 
-export function BlogTableOfContents() {
+interface BlogTableOfContentsProps {
+  items?: { id: string; label: string }[];
+}
+
+export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
+  const currentItems = items && items.length > 0 ? items : tocItems;
   const [activeId, setActiveId] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
@@ -52,13 +57,13 @@ export function BlogTableOfContents() {
       }
     );
 
-    tocItems.forEach((item) => {
+    currentItems.forEach((item) => {
       const el = document.getElementById(item.id);
       if (el) observer.observe(el);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [currentItems]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -96,7 +101,7 @@ export function BlogTableOfContents() {
           {/* Links List: Frame 1000011841 */}
           <nav>
             <ul className="space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-[32px]">
-              {tocItems.map((item) => {
+              {currentItems.map((item) => {
                 const isActive = activeId === item.id;
                 return (
                   <li key={item.id} className="flex items-start gap-2.5">
@@ -200,7 +205,7 @@ export function BlogTableOfContents() {
                 >
                   <nav>
                     <ul className="space-y-4 sm:space-y-6">
-                      {tocItems.map((item) => {
+                      {currentItems.map((item) => {
                         const isActive = activeId === item.id;
                         return (
                           <li key={item.id} className="flex items-start gap-2.5">
