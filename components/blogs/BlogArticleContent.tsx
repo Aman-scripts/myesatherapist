@@ -335,8 +335,8 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left"
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
-          {/* Subtle Paw Prints in Bottom Right */}
-          <div className="absolute right-0 bottom-0 w-[240px] sm:w-[300px] lg:w-[350px] h-[160px] sm:h-[200px] lg:h-[235px] pointer-events-none select-none z-0">
+          {/* Subtle Paw Prints in Bottom Right - Hidden on Mobile, visible on Tablet & Desktop */}
+          <div className="hidden sm:block absolute right-0 bottom-0 w-[300px] lg:w-[350px] h-[200px] lg:h-[235px] pointer-events-none select-none z-0">
             <Image
               src="/common/cta-section-paw.png"
               alt=""

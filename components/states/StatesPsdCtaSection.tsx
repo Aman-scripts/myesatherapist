@@ -9,8 +9,8 @@ export function StatesPsdCtaSection() {
     <section className="relative w-full bg-[#FAF7F2] py-12 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-[1320px] mx-auto rounded-[24px] lg:rounded-[32px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] relative overflow-hidden shadow-xl">
         
-        {/* Subtle Decorative Paw Prints in Background */}
-        <div className="absolute right-[30%] bottom-4 w-48 h-48 opacity-20 pointer-events-none">
+        {/* Subtle Decorative Paw Prints in Background - Hidden on mobile */}
+        <div className="hidden sm:block absolute right-[30%] bottom-4 w-48 h-48 opacity-20 pointer-events-none">
           <Image
             src="/common/cta-section-paw.png"
             alt="Paw prints decoration"
