@@ -7,11 +7,6 @@ import { ChevronRight, MapPin, ChevronDown } from "lucide-react";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
-const statsData = [
-  { value: "51,488+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
-  { value: "4.9", label: "Verified Reviews" },
-];
 
 interface BlogHeroSectionProps {
   title?: string;
@@ -44,25 +39,6 @@ export function BlogHeroSection({
 
         {/* Content Container at Top */}
         <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
-          {/* Stat Pills at top (Mobile) */}
-          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
-            {statsData.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
-              >
-                <span
-                  className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  {stat.value}
-                </span>
-                <span className="text-[9.5px] font-semibold text-[#949494] mt-0.5 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
 
           {/* Main Headline */}
           <h1 className="font-heading text-[22px] leading-[1.25] font-bold tracking-tight max-w-[320px] text-[#2E5A66]">
@@ -131,25 +107,6 @@ export function BlogHeroSection({
 
         {/* Content Container at Top */}
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 space-y-4 max-w-[620px] mx-auto">
-          {/* Top Pill Badges */}
-          <div className="flex items-center justify-center gap-3">
-            {statsData.map((stat, idx) => (
-              <div
-                key={idx}
-                className="bg-[#FAF7F2] rounded-[30px] px-4 py-2 shadow-xs flex flex-col items-center min-w-[120px]"
-              >
-                <span
-                  className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  {stat.value}
-                </span>
-                <span className="font-sans text-[11px] font-semibold text-[#949494] mt-1 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
 
           {/* Main Headline */}
           <h1 className="font-heading text-3xl sm:text-[34px] font-bold leading-[1.2] tracking-tight text-[#2E5A66]">
@@ -231,25 +188,6 @@ export function BlogHeroSection({
               <span className="text-[#5F6B6F]">{category}</span>
             </nav>
 
-            {/* Stat Pills: Frame 1000011901 */}
-            <div className="flex items-center gap-3 flex-wrap">
-              {statsData.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-5 rounded-[30px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] min-w-[140px]"
-                >
-                  <span
-                    className="font-heading text-2xl font-bold leading-none bg-clip-text text-transparent"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
-                    {stat.value}
-                  </span>
-                  <span className="text-[12px] font-semibold text-[#949494] mt-1 leading-[17px] whitespace-nowrap">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
 
             {/* Main Headline: Frame 1000011902 */}
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[56px] font-bold leading-[1.15] lg:leading-[48px] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66]">

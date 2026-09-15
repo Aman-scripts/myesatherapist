@@ -36,11 +36,6 @@ function TrustpilotStars() {
   );
 }
 
-const statsData = [
-  { value: "51,488+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
-  { value: "4.9", label: "Verified Reviews" },
-];
 
 export function BlogsHero() {
   const router = useRouter();
@@ -95,25 +90,6 @@ export function BlogsHero() {
 
         {/* Content Container at Top */}
         <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
-          {/* Stat Pills at top (Mobile) */}
-          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
-            {statsData.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
-              >
-                <span
-                  className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  {stat.value}
-                </span>
-                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
 
           {/* Headline */}
           <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em] max-w-xs mx-auto text-[#2E5A66]">
@@ -205,25 +181,6 @@ export function BlogsHero() {
 
         {/* Content Container at Top */}
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 space-y-4 max-w-[620px] mx-auto">
-          {/* Top Pill Badges */}
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            {statsData.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
-              >
-                <span
-                  className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  {stat.value}
-                </span>
-                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
 
           {/* Headline */}
           <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-2 leading-tight max-w-xl mx-auto text-[#2E5A66]">
@@ -315,25 +272,6 @@ export function BlogsHero() {
         <div className="absolute inset-0 z-10">
           <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[88%] sm:w-[60%] lg:w-[48%] xl:w-[47.05%] max-w-[640px]">
             
-            {/* Stat Pills */}
-            <div className="flex items-center gap-[10px] xl:gap-[12px] flex-wrap">
-              {statsData.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 xl:py-2 px-3.5 xl:px-5 rounded-[30px] text-center shadow-xs"
-                >
-                  <span
-                    className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
-                    {stat.value}
-                  </span>
-                  <span className="text-[10px] xl:text-xs font-semibold text-[#5F6B6F] mt-0.5 xl:mt-1 whitespace-nowrap">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
 
             {/* Headline */}
             <h1 className="font-heading text-[32px] sm:text-[40px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.015em] leading-[1.15] lg:leading-[46px] xl:leading-[64px] mt-4 xl:mt-6 text-[#2E5A66]">
