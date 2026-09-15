@@ -7,35 +7,7 @@ import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
-const TRUSTPILOT_GREEN = "#00B67A";
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
-
-function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} style={style} fill="currentColor">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
-function TrustpilotStars() {
-  return (
-    <div className="flex gap-2">
-      {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="w-6 h-6 flex items-center justify-center shrink-0" style={{ backgroundColor: TRUSTPILOT_GREEN }}>
-          <StarMark className="w-4 h-4 text-white" />
-        </div>
-      ))}
-      <div className="relative w-6 h-6 shrink-0 overflow-hidden" style={{ backgroundColor: "#CCCCCC" }}>
-        <div className="absolute inset-y-0 left-0 w-1/2" style={{ backgroundColor: TRUSTPILOT_GREEN }} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <StarMark className="w-4 h-4 text-white" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 
 export function BlogsHero() {
   const router = useRouter();
@@ -342,20 +314,6 @@ export function BlogsHero() {
                 </span>
               </a>
             </div>
-
-            {/* Trustpilot Badge */}
-            <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[210px] xl:w-[230px] px-3.5 xl:px-[18px] py-2 xl:pt-[11px] xl:pb-[9px] mt-4 xl:mt-[24px]">
-              <div className="flex items-center gap-[6px]">
-                <StarMark className="w-[18px] h-[17px] xl:w-[20px] xl:h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
-                <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
-              </div>
-              <TrustpilotStars />
-              <div className="flex items-center gap-[8px] xl:gap-[10px] text-[11px] xl:text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
-                <span className="font-semibold">Trustscore 4.4</span>
-                <span>23,900 reviews</span>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
