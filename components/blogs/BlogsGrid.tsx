@@ -92,7 +92,7 @@ export function BlogsGrid() {
                 key={category.id}
                 id={category.id}
                 className={`scroll-mt-28 ${
-                  catIndex > 0 ? "pt-12 sm:pt-16 border-t border-[#EAE5DC]" : ""
+                  catIndex > 0 ? "pt-12 sm:pt-16" : ""
                 }`}
               >
                 {/* Section Header */}
