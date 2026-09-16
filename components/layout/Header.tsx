@@ -64,6 +64,7 @@ export function Header() {
   // Check route conditions
   const isPsd = pathname === "/psd-letter";
   const isDoctors = pathname === "/esa-doctors" || pathname === "/esa-doctors/";
+  const isLegalReviewer = pathname?.includes("legal-reviewer") || pathname?.includes("reviewer");
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#EAE5DC] shadow-xs">
@@ -135,10 +136,10 @@ export function Header() {
                   />
                 </span>
               </a>
-            ) : isDoctors ? (
-              /* Doctors Page (Frame 1000011890): Single "Get Started" Button */
+            ) : isDoctors || isLegalReviewer ? (
+              /* Doctors / Legal Reviewer Page (Frame 1000011890): Single "Get Started" Button */
               <a
-                href="#therapists"
+                href={isLegalReviewer ? "/#pricing" : "#therapists"}
                 className="inline-flex items-center gap-2 lg:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
