@@ -553,7 +553,12 @@ export const BLOG_POSTS: BlogArticle[] = [
           "1. Enter their pet’s information.",
           "2. Upload a photo.",
           "3. Pay a fee.",
-          "4. Receive: A certificate, An ID card, A registration number, A badge or vest, Inclusion in a private online database",
+          "4. Receive:",
+          "   * A certificate",
+          "   * An ID card",
+          "   * A registration number",
+          "   * A badge or vest",
+          "   * Inclusion in a private online database",
         ],
         afterListParagraphs: [
           "In many cases, the registration number only exists within that company’s own system. Registering your dog, cat, rabbit, or other companion animal in one of these databases does not create any valid legal status. It also does not grant any housing protections.",

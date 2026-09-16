@@ -75,7 +75,30 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {sec.listItems && (
             <ul className="space-y-2.5 my-3 pl-1">
               {sec.listItems.map((item, liIdx) => {
-                const numberedMatch = item.match(/^(\d+)\.\s*(.*)$/);
+                const isSubItem =
+                  item.trim().startsWith("* ") ||
+                  item.trim().startsWith("- ") ||
+                  item.startsWith("  ") ||
+                  item.startsWith("\t");
+                const cleanText = isSubItem
+                  ? item.replace(/^[\s*-]+/, "").trim()
+                  : item;
+                const numberedMatch = !isSubItem
+                  ? item.match(/^(\d+)\.\s*(.*)$/)
+                  : null;
+
+                if (isSubItem) {
+                  return (
+                    <li
+                      key={liIdx}
+                      className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-[#5F6B6F]"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
+                      <span>{cleanText}</span>
+                    </li>
+                  );
+                }
+
                 if (numberedMatch) {
                   return (
                     <li
@@ -296,7 +319,30 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   {sub.listItems && (
                     <ul className="space-y-2 my-2.5 pl-1">
                       {sub.listItems.map((item, mIdx) => {
-                        const numberedMatch = item.match(/^(\d+)\.\s*(.*)$/);
+                        const isSubItem =
+                          item.trim().startsWith("* ") ||
+                          item.trim().startsWith("- ") ||
+                          item.startsWith("  ") ||
+                          item.startsWith("\t");
+                        const cleanText = isSubItem
+                          ? item.replace(/^[\s*-]+/, "").trim()
+                          : item;
+                        const numberedMatch = !isSubItem
+                          ? item.match(/^(\d+)\.\s*(.*)$/)
+                          : null;
+
+                        if (isSubItem) {
+                          return (
+                            <li
+                              key={mIdx}
+                              className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] font-medium text-[#5F6B6F]"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
+                              <span>{cleanText}</span>
+                            </li>
+                          );
+                        }
+
                         if (numberedMatch) {
                           return (
                             <li
