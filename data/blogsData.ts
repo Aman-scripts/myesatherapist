@@ -2144,6 +2144,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "qualifying-conditions",
   "url": "/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
   "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
+  "metaTitle": "Which DSM-5 Conditions May Qualify for an ESA Letter? | My ESA Therapist",
+  "metaDescription": "Explore which DSM-5 conditions may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, OCD, and other mental health conditions. Learn how eligibility works.",
   schema: conditionsThatMayQualifySchema,
   "title": "Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide",
   "shortDescription": "Anxiety, PTSD, depression, ADHD, bipolar disorder, and several other DSM-5 conditions qualify for an emotional support animal. Learn how eligibility is assessed and how licensed professionals determine eligibility for an ESA letter.",
