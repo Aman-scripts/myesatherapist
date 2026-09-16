@@ -70,7 +70,7 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
   }
 
   // Generate structured schema JSON-LD for this article
-  const articleSchema = {
+  const articleSchema = article.schema || {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "@id": `${article.canonicalUrl}#blogposting`,

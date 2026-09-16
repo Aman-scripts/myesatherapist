@@ -1,3 +1,14 @@
+import { howToVerifyAnEsaLetterSchema } from "./schemas/howToVerifyAnEsaLetterSchema";
+import { isEsaRegistrationLegitSchema } from "./schemas/isEsaRegistrationLegitSchema";
+import { hudGuidanceSchema } from "./schemas/hudGuidanceSchema";
+import { canLandlordsDenyEsaSchema } from "./schemas/canLandlordsDenyEsaSchema";
+import { whatIsAnEsaSchema } from "./schemas/whatIsAnEsaSchema";
+import { esaLetterSampleSchema } from "./schemas/esaLetterSampleSchema";
+import { esaForChildrenSchema } from "./schemas/esaForChildrenSchema";
+import { conditionsThatMayQualifySchema } from "./schemas/conditionsThatMayQualifySchema";
+import { esaForAnxietySchema } from "./schemas/esaForAnxietySchema";
+import { eightBasicObedienceCommandsSchema } from "./schemas/eightBasicObedienceCommandsSchema";
+
 export interface BlogTocItem {
   id: string;
   label: string;
@@ -117,6 +128,7 @@ export interface BlogArticle {
     paragraphs: string[];
   };
   faqs: BlogFaq[];
+  schema?: Record<string, any>;
 }
 
 export const BLOG_POSTS: BlogArticle[] = [
@@ -129,6 +141,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     categorySlug: "esa-guide",
     url: "/blog/esa-guide/how-to-verify-an-esa-letter/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/how-to-verify-an-esa-letter/",
+    schema: howToVerifyAnEsaLetterSchema,
     title: "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist",
     shortDescription:
       "The easiest way to verify an ESA letter is to review the provider’s credentials, evaluation process, and compliance with the current housing requirements. Landlords and tenants can also watch for red flags such as ESA registrations, fake certificates, or websites that guarantee approval.",
@@ -383,6 +396,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     categorySlug: "esa-guide",
     url: "/blog/esa-guide/is-esa-registration-legit/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/is-esa-registration-legit/",
+    schema: isEsaRegistrationLegitSchema,
     title: "Is ESA Registration Legit or Required? The Truth About ESA Registration",
     shortDescription:
       "No, ESA registration does not make an animal legally recognized as an emotional support animal. While many websites sell ESA registrations, certificates, and ID cards, the key factor for housing accommodations is proper documentation supporting an individual’s need for an ESA.",
@@ -696,6 +710,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     categorySlug: "esa-guide",
     url: "/blog/esa-guide/esa-for-children/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/esa-for-children/",
+    schema: esaForChildrenSchema,
     title: "ESA for Children and Minors: How It Works and Who Signs the Letter",
     shortDescription:
       "For children and minors, the ESA evaluation process includes parental or guardian consent. If the child qualifies, the emotional support animal letter is issued and signed by a licensed mental health professional, not by a parent or guardian.",
@@ -1009,6 +1024,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/esa-letter-sample/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/esa-letter-sample/",
+  schema: esaLetterSampleSchema,
   "title": "ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026",
   "shortDescription": "A legitimate ESA letter in 2026 should come from a licensed mental health professional and include essentials like provider credentials, clinical determination of a need, and a housing accommodation recommendation. This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
   "category": "ESA Guide",
@@ -1260,6 +1276,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/hud-guidance-for-emotional-support-animals/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/hud-guidance-for-emotional-support-animals/",
+  schema: hudGuidanceSchema,
   "title": "HUD ESA Guidance 2026: What Changed for Emotional Support Animal Housing?",
   "shortDescription": "HUD’s 2026 ESA guidance changes how emotional support animal housing complaints are handled, shifting greater responsibility to state laws and documentation. Learn what protections remain, what has changed, and how ESA owners can better protect their housing rights.",
   "category": "ESA Guide",
@@ -1545,6 +1562,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
+  schema: canLandlordsDenyEsaSchema,
   "title": "Can a Landlord Deny an Emotional Support Animal? Know What the Law Says",
   "shortDescription": "Emotional support animal requests are evaluated under Fair Housing Act guidelines rather than standard pet rules. Whether an accommodation is approved often depends on the supporting documentation, housing circumstances, and any relevant exemptions like health or safety issues.",
   "category": "ESA Guide",
@@ -1746,6 +1764,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/emotional-support-animal/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/emotional-support-animal/",
+  schema: whatIsAnEsaSchema,
   "title": "What is an Emotional Support Animal? Everything You Need to Know",
   "shortDescription": "This complete guide covers everything you need to know about emotional support animals, including how ESAs work, who qualifies, federal ESA laws, housing rights, and the difference between ESAs and service animals. It also explains landlord rules, common misconceptions, and how emotional support animals help improve mental well-being.",
   "category": "ESA Guide",
@@ -2067,6 +2086,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "qualifying-conditions",
   "url": "/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
   "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
+  schema: conditionsThatMayQualifySchema,
   "title": "Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide",
   "shortDescription": "Anxiety, PTSD, depression, ADHD, bipolar disorder, and several other DSM-5 conditions qualify for an emotional support animal. Learn how eligibility is assessed and how licensed professionals determine eligibility for an ESA letter.",
   "category": "Qualifying Conditions",
@@ -2274,6 +2294,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "qualifying-conditions",
   "url": "/blog/qualifying-conditions/esa-for-anxiety/",
   "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/",
+  schema: esaForAnxietySchema,
   "title": "Understanding ESA Eligibility for Anxiety and Its Benefits",
   "shortDescription": "An emotional support animal can offer comfort, companionship, and stability for people living with anxiety. For those whose anxiety affects daily life, an ESA may offer meaningful emotional support as part of their care.",
   "category": "Qualifying Conditions",
@@ -2495,6 +2516,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-training",
   "url": "/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/",
+  schema: eightBasicObedienceCommandsSchema,
   "title": "8 Basic Obedience Commands Every ESA Should Know",
   "shortDescription": "The 8 basic obedience commands every ESA should know are sit, stay, come, down, leave it, quiet, place, and heel. These commands support better behavior, safety, control, and calmer everyday interactions.",
   "category": "ESA Training",
