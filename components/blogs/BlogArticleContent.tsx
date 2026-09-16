@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BlogArticle, BLOG_POSTS } from "@/data/blogsData";
+import { BlogArticle, BlogCalloutBox, BLOG_POSTS } from "@/data/blogsData";
 
 interface BlogArticleContentProps {
   article?: BlogArticle;
@@ -12,6 +12,24 @@ interface BlogArticleContentProps {
 export function BlogArticleContent({ article: customArticle }: BlogArticleContentProps = {}) {
   // Default to the first article if none provided
   const article = customArticle || BLOG_POSTS[0];
+
+  const renderCalloutBox = (callout: BlogCalloutBox) => (
+    <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
+      <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-[#2E5A66] font-medium">
+        {callout.prefix && `${callout.prefix.trim()} `}
+        {callout.linkText && callout.linkHref ? (
+          <Link
+            href={callout.linkHref}
+            className="text-[#EFBF2F] font-semibold hover:underline transition-colors"
+          >
+            {callout.linkText}
+          </Link>
+        ) : null}
+        {callout.suffix && ` ${callout.suffix.trim()}`}
+        {callout.text && callout.text}
+      </p>
+    </div>
+  );
 
   return (
     <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-[#5F6B6F] font-sans">
@@ -380,6 +398,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                       ))}
                     </div>
                   )}
+                  {sub.calloutBox && renderCalloutBox(sub.calloutBox)}
                   {sub.image && (
                     <div className="w-full relative rounded-[16px] overflow-hidden shadow-xs my-4 bg-white border border-[#DECDBB]/40">
                       <Image
@@ -395,6 +414,9 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
               ))}
             </div>
           )}
+
+          {/* Section Callout Box */}
+          {sec.calloutBox && renderCalloutBox(sec.calloutBox)}
 
           {/* Section Banner / Content Image (Bottom position) */}
           {sec.bannerImage && sec.bannerPosition === "bottom" && (

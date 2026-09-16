@@ -14,11 +14,20 @@ export interface BlogTocItem {
   label: string;
 }
 
+export interface BlogCalloutBox {
+  prefix?: string;
+  linkText?: string;
+  linkHref?: string;
+  suffix?: string;
+  text?: string;
+}
+
 export interface BlogSubsection {
   title: string;
   paragraphs?: string[];
   listItems?: string[];
   afterListParagraphs?: string[];
+  calloutBox?: BlogCalloutBox;
   image?: {
     src: string;
     alt: string;
@@ -60,6 +69,7 @@ export interface BlogSection {
     author: string;
   };
   quoteBoxPosition?: "top" | "bottom";
+  calloutBox?: BlogCalloutBox;
   subsections?: BlogSubsection[];
   listItems?: string[];
   afterListParagraphs?: string[];
@@ -597,8 +607,13 @@ export const BLOG_POSTS: BlogArticle[] = [
             paragraphs: [
               "A licensed mental health professional who has assessed the person and found that the emotional support animal relieves symptoms associated with a mental or emotional disability is usually the one who issues a valid ESA letter. The letter is the credentialing of the ESA’s validity.",
               "The letter generally serves as the primary document supporting an accommodation request. Registration, ID cards, and certificates by themselves typically carry little weight in the absence of appropriate documentation.",
-              "Want to see what a legitimate ESA letter typically looks like? View our sample ESA letter and learn what information it should include.",
             ],
+            calloutBox: {
+              prefix: "Want to see what a legitimate ESA letter typically looks like? View our",
+              linkText: "sample ESA letter",
+              linkHref: "/blog/esa-guide/esa-letter-sample/",
+              suffix: "and learn what information it should include.",
+            },
           },
         ],
       },
