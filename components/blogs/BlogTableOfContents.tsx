@@ -6,14 +6,16 @@ import Image from "next/image";
 import { X, ChevronRight } from "lucide-react";
 
 const tocItems = [
-  { id: "what-is-a-legitimate-esa-letter", label: "What Makes an ESA Letter Legit?" },
-  { id: "why-verification-matters", label: "Why Verification Matters" },
-  { id: "tenant-checklist", label: "Tenant Checklist" },
-  { id: "landlord-checklist", label: "Landlord Checklist" },
+  { id: "what-is-a-legitimate-esa-letter", label: "What is a Legitimate ESA Letter?" },
+  { id: "why-verification-matters", label: "Why ESA Letter Verification Matters" },
+  { id: "tenant-checklist", label: "How Tenants Can Check if an ESA Letter Is Legitimate" },
+  { id: "landlord-checklist", label: "How Landlords Can Verify an ESA Letter" },
+  { id: "what-landlords-cannot-request", label: "What Landlords Cannot Request for an ESA Letter" },
   { id: "common-signs-of-a-fake-esa-letter", label: "Common Signs of a Fake ESA Letter" },
-  { id: "ensuring-compliance", label: "Ensuring Compliance" },
-  { id: "final-thoughts", label: "Key Takeaways" },
-  { id: "faq", label: "FAQs" },
+  { id: "ensuring-compliance", label: "How Does My ESA Therapist Ensure Compliance" },
+  { id: "request-housing-accommodation", label: "Request Housing Accommodation with Confidence" },
+  { id: "final-thoughts", label: "Final Thoughts" },
+  { id: "faq", label: "Frequently Asked Questions" },
 ];
 
 interface BlogTableOfContentsProps {
@@ -62,7 +64,19 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 120) {
+        if (currentItems.length > 0) {
+          setActiveId(currentItems[currentItems.length - 1].id);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [currentItems]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -88,38 +102,46 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
       {/* ---------------------------------------------------- */}
       <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start">
         <div
-          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10 lg:pt-[75px] xl:pt-[85px] pb-12 sm:pb-16 lg:pb-[100px] xl:pb-[120px] min-h-[650px] lg:min-h-[750px] xl:min-h-[820px] text-[#FAF7F2] flex flex-col justify-start"
+          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10 lg:pt-[75px] xl:pt-[85px] pb-6 sm:pb-8 lg:pb-10 max-h-[calc(100vh-105px)] text-[#FAF7F2] flex flex-col justify-start"
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
-          <h2 className="font-heading text-2xl sm:text-3xl xl:text-[28px] font-bold text-[#FAF7F2] leading-tight mb-5 tracking-[-0.00015em]">
-            Table of Contents
-          </h2>
+          {/* Fixed Header: Title & Divider */}
+          <div className="shrink-0">
+            <h2 className="font-heading text-2xl sm:text-3xl xl:text-[28px] font-bold text-[#FAF7F2] leading-tight mb-5 tracking-[-0.00015em]">
+              Table of Contents
+            </h2>
 
-          {/* Divider: Line 11 */}
-          <div className="w-full h-[1px] bg-white/30 mb-7 lg:mb-8" />
+            {/* Divider: Line 11 */}
+            <div className="w-full h-[1px] bg-white/30 mb-7 lg:mb-8" />
+          </div>
 
-          {/* Links List: Frame 1000011841 */}
-          <nav>
-            <ul className="space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-[32px]">
-              {currentItems.map((item) => {
-                const isActive = activeId === item.id;
-                return (
-                  <li key={item.id} className="flex items-start gap-2.5">
-                    <span className="text-white/70 text-lg leading-none mt-0.5">•</span>
-                    <a
-                      href={`#${item.id}`}
-                      onClick={(e) => scrollToSection(e, item.id)}
-                      className={`font-sans text-xs sm:text-[14px] leading-[22px] transition-all hover:text-[#E8B92C] ${
-                        isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
-                      }`}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          {/* Scrollable Links List: Frame 1000011841 (Like StateTableOfContents) */}
+          <div
+            className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            <nav>
+              <ul className="space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-[32px] pb-6">
+                {currentItems.map((item) => {
+                  const isActive = activeId === item.id;
+                  return (
+                    <li key={item.id} className="flex items-start gap-2.5">
+                      <span className="text-white/70 text-lg leading-none mt-0.5">•</span>
+                      <a
+                        href={`#${item.id}`}
+                        onClick={(e) => scrollToSection(e, item.id)}
+                        className={`font-sans text-xs sm:text-[14px] leading-[22px] transition-all hover:text-[#E8B92C] ${
+                          isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
+                        }`}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
         </div>
       </aside>
 

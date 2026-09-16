@@ -102,6 +102,20 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             </ul>
           )}
 
+          {/* Section After-List Paragraphs */}
+          {sec.afterListParagraphs && (
+            <div className="space-y-3">
+              {sec.afterListParagraphs.map((p, pIdx) => (
+                <p
+                  key={pIdx}
+                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+                >
+                  {p}
+                </p>
+              ))}
+            </div>
+          )}
+
           {/* Section Banner / Content Image (Top position) */}
           {sec.bannerImage && (!sec.bannerPosition || sec.bannerPosition === "top") && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
@@ -298,6 +312,18 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                       })}
                     </ul>
                   )}
+                  {sub.afterListParagraphs && (
+                    <div className="space-y-2">
+                      {sub.afterListParagraphs.map((subP, spIdx) => (
+                        <p
+                          key={spIdx}
+                          className="text-sm sm:text-base leading-[26px] font-medium text-[#5F6B6F]"
+                        >
+                          {subP}
+                        </p>
+                      ))}
+                    </div>
+                  )}
                   {sub.image && (
                     <div className="w-full relative rounded-[16px] overflow-hidden shadow-xs my-4 bg-white border border-[#DECDBB]/40">
                       <Image
@@ -332,7 +358,8 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
       {/* 4. Article CTA Box */}
       {article.cta && (
         <div
-          className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left"
+          id="request-housing-accommodation"
+          className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left scroll-mt-28"
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
           {/* Subtle Paw Prints in Bottom Right - Hidden on Mobile, visible on Tablet & Desktop */}
