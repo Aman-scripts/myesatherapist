@@ -1611,6 +1611,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
+  "metaTitle": "Can a Landlord Deny an Emotional Support Animal? | My ESA Therapist",
+  "metaDescription": "Can a landlord legally deny your emotional support animal? Learn the exceptions under the Fair Housing Act, the 2026 HUD update, and what to do if you're denied.",
   schema: canLandlordsDenyEsaSchema,
   "title": "Can a Landlord Deny an Emotional Support Animal? Know What the Law Says",
   "shortDescription": "Emotional support animal requests are evaluated under Fair Housing Act guidelines rather than standard pet rules. Whether an accommodation is approved often depends on the supporting documentation, housing circumstances, and any relevant exemptions like health or safety issues.",
