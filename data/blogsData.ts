@@ -1120,6 +1120,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/esa-letter-sample/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/esa-letter-sample/",
+  "metaTitle": "ESA Letter Sample: What a Legitimate ESA Letter Looks Like? | My ESA Therapist",
+  "metaDescription": "Looking for an ESA letter sample? See what a legitimate ESA letter looks like, what it should include, and what landlords can verify.",
   schema: esaLetterSampleSchema,
   "title": "ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026",
   "shortDescription": "A legitimate ESA letter in 2026 should come from a licensed mental health professional and include essentials like provider credentials, clinical determination of a need, and a housing accommodation recommendation. This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
