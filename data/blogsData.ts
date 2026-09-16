@@ -163,6 +163,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/how-to-verify-an-esa-letter/",
     schema: howToVerifyAnEsaLetterSchema,
     title: "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist",
+    metaTitle: "ESA Letter Verification Checklist for Landlords and Tenants | My ESA Therapist",
+    metaDescription:
+      "Not sure if an ESA letter is valid? Use this step-by-step checklist to verify ESA documentation, identify warning signs, and understand housing compliance requirements.",
     shortDescription:
       "The easiest way to verify an ESA letter is to review the provider’s credentials, evaluation process, and compliance with the current housing requirements. Landlords and tenants can also watch for red flags such as ESA registrations, fake certificates, or websites that guarantee approval.",
     category: "ESA Guide",

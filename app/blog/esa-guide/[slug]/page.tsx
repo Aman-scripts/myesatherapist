@@ -40,14 +40,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const title = article.metaTitle || `${article.title} | My ESA Therapist`;
+  const description = article.metaDescription || article.shortDescription;
+
   return {
-    title: article.metaTitle || `${article.title} | My ESA Therapist`,
-    description: article.metaDescription || article.shortDescription,
+    title,
+    description,
+    robots: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+    alternates: {
+      canonical: article.canonicalUrl,
+    },
     openGraph: {
-      title: article.metaTitle || article.title,
-      description: article.metaDescription || article.shortDescription,
+      title,
+      description,
       url: article.canonicalUrl,
       type: "article",
+      siteName: "My ESA Therapist",
+      locale: "en_US",
       images: [
         {
           url: article.cardImage,
@@ -55,8 +70,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       ],
     },
-    alternates: {
-      canonical: article.canonicalUrl,
+    twitter: {
+      card: "summary",
+      title,
+      description,
+      site: "@MyESATherapist",
+      creator: "@MyESATherapist",
     },
   };
 }
