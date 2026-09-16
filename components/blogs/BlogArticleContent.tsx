@@ -61,8 +61,8 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             </div>
           )}
 
-          {/* Quote Callout Box */}
-          {sec.quoteBox && (
+          {/* Quote Callout Box (Top position by default) */}
+          {sec.quoteBox && (!sec.quoteBoxPosition || sec.quoteBoxPosition === "top") && (
             <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
               <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
               <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
@@ -113,6 +113,16 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   {p}
                 </p>
               ))}
+            </div>
+          )}
+
+          {/* Quote Callout Box (Bottom position) */}
+          {sec.quoteBox && sec.quoteBoxPosition === "bottom" && (
+            <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
+              <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
+              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
+                {sec.quoteBox.quote} {sec.quoteBox.author && `– ${sec.quoteBox.author}`}
+              </p>
             </div>
           )}
 
@@ -358,7 +368,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
       {/* 4. Article CTA Box */}
       {article.cta && (
         <div
-          id="request-housing-accommodation"
+          id={article.cta.id || "request-housing-accommodation"}
           className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left scroll-mt-28"
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
@@ -398,7 +408,10 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
 
       {/* 5. Final Thoughts */}
       {article.finalThoughts && (
-        <section id="final-thoughts" className="space-y-4 scroll-mt-28">
+        <section
+          id={article.finalThoughts.id || "final-thoughts"}
+          className="space-y-4 scroll-mt-28"
+        >
           <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-tight">
             {article.finalThoughts.title}
           </h2>

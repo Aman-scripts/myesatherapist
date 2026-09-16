@@ -41,11 +41,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${article.title} | My ESA Therapist`,
-    description: article.shortDescription,
+    title: article.metaTitle || `${article.title} | My ESA Therapist`,
+    description: article.metaDescription || article.shortDescription,
     openGraph: {
-      title: article.title,
-      description: article.shortDescription,
+      title: article.metaTitle || article.title,
+      description: article.metaDescription || article.shortDescription,
       url: article.canonicalUrl,
       type: "article",
       images: [
@@ -160,8 +160,11 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
         {/* 7. FAQ Section (Article-specific FAQs from Google Docs) */}
         <FaqSection
-          title="Frequently Asked Questions"
-          subtitle="Get answers to common questions about ESA letters and our service."
+          title={article.faqSectionTitle || "Frequently Asked Questions"}
+          subtitle={
+            article.faqSectionSubtitle ||
+            "Get answers to common questions about ESA letters and our service."
+          }
           faqs={article.faqs}
         />
 
