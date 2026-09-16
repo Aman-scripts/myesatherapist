@@ -60,6 +60,9 @@ export const metadata: Metadata = {
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
   },
+  verification: {
+    google: "hZEn7s77TUksTd08P_-V4gKQzGdXE0dkQeF4-B7vzuY",
+  },
 };
 
 export default function HomePage() {
