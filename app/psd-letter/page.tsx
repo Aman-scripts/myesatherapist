@@ -30,12 +30,26 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://myesatherapist.com/psd-letter/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   openGraph: {
     title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
     description:
       "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",
     url: "https://myesatherapist.com/psd-letter/",
+    siteName: "My ESA Therapist",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
+    description:
+      "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",
   },
 };
 
