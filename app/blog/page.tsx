@@ -16,17 +16,30 @@ export const metadata: Metadata = {
   title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
   description:
     "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
+  alternates: {
+    canonical: "https://myesatherapist.com/blog/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+  },
   openGraph: {
     title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
     description:
       "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
     url: "https://myesatherapist.com/blog/",
-    type: "website",
+    siteName: "My ESA Therapist",
+    type: "article",
   },
-  alternates: {
-    canonical: "https://myesatherapist.com/blog/",
+  twitter: {
+    card: "summary",
+    title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
+    description:
+      "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
   },
 };
+
 
 export default function BlogHubPage() {
   return (

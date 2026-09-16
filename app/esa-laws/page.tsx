@@ -18,27 +18,32 @@ export const metadata: Metadata = {
   title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
   description:
     "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
-  keywords: [
-    "ESA Laws",
-    "Emotional Support Animal Laws",
-    "Fair Housing Act ESA",
-    "ESA Laws by State",
-    "ESA Landlord Rights",
-    "ESA Housing Laws",
-  ],
+  alternates: {
+    canonical: "https://myesatherapist.com/esa-laws/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   openGraph: {
     title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
     description:
       "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
     url: "https://myesatherapist.com/esa-laws/",
     siteName: "My ESA Therapist",
-    locale: "en_US",
     type: "website",
   },
-  alternates: {
-    canonical: "https://myesatherapist.com/esa-laws/",
+  twitter: {
+    card: "summary",
+    title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
+    description:
+      "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
   },
 };
+
 
 export default function EsaLawsPage() {
   return (

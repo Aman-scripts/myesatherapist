@@ -21,16 +21,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://myesatherapist.com/reviews/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   openGraph: {
     title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
     description:
       "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
     url: "https://myesatherapist.com/reviews/",
     siteName: "My ESA Therapist",
-    locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary",
+    title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
+    description:
+      "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
+  },
 };
+
 
 export default function ReviewsPage() {
   return (

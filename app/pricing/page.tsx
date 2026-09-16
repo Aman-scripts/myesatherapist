@@ -18,18 +18,33 @@ import { pricingSchema } from "@/data/schemas/pricingSchema";
 export const metadata: Metadata = {
   title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
   description:
-    "Transparent pricing for official Emotional Support Animal and Psychiatric Service Dog recommendation letters. No hidden fees, evaluations by licensed professionals.",
+    "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
   alternates: {
     canonical: "https://myesatherapist.com/pricing/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
   },
   openGraph: {
     title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
     description:
-      "Transparent pricing for official Emotional Support Animal and Psychiatric Service Dog recommendation letters. No hidden fees, evaluations by licensed professionals.",
+      "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
     url: "https://myesatherapist.com/pricing/",
+    siteName: "My ESA Therapist",
     type: "website",
   },
+  twitter: {
+    card: "summary",
+    title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
+    description:
+      "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
+  },
 };
+
 
 const PRICING_FAQS: FaqItem[] = [
   {

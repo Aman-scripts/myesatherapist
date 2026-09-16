@@ -21,14 +21,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://myesatherapist.com/about-us/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   openGraph: {
     title: "About My ESA Therapist | Licensed ESA Evaluations You Can Trust",
     description:
       "Learn how My ESA Therapist provides legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.",
     url: "https://myesatherapist.com/about-us/",
+    siteName: "My ESA Therapist",
     type: "website",
   },
+  twitter: {
+    card: "summary",
+    title: "About My ESA Therapist | Licensed ESA Evaluations You Can Trust",
+    description:
+      "Learn how My ESA Therapist provides legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.",
+  },
 };
+
 
 const ABOUT_FAQS: FaqItem[] = [
   {
