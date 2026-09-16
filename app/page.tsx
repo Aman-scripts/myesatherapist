@@ -1,3 +1,4 @@
+import type { Metadata, Viewport } from "next";
 import React from "react";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -21,6 +22,45 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { Footer } from "@/components/layout/Footer";
 import { homeSchema } from "@/data/schemas/homeSchema";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+export const metadata: Metadata = {
+  title: "ESA Evaluations by Licensed Therapists - My ESA Therapist",
+  description:
+    "Connect with state-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
+  alternates: {
+    canonical: "https://myesatherapist.com/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+  },
+  openGraph: {
+    title: "ESA Evaluations by Licensed Professionals - My ESA Therapist",
+    description:
+      "Connect with U.S.-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
+    type: "article",
+    url: "https://myesatherapist.com/",
+    siteName:
+      "My ESA Therapist | Licensed ESA Therapists & Emotional Support Animal Services",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "ESA Evaluations by Licensed Professionals - My ESA Therapist",
+    description:
+      "Connect with U.S.-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
+  },
+};
 
 export default function HomePage() {
   return (
