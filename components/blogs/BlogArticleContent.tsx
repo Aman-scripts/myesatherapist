@@ -223,6 +223,13 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                 height={550}
                 className="w-full h-auto object-contain rounded-[18px]"
               />
+              {sec.bannerImage.caption && (
+                <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
+                  <p className="text-sm italic text-[#5F6B6F] font-medium">
+                    {sec.bannerImage.caption}
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
@@ -474,6 +481,13 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                 height={550}
                 className="w-full h-auto object-contain rounded-[18px]"
               />
+              {sec.bannerImage.caption && (
+                <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
+                  <p className="text-sm italic text-[#5F6B6F] font-medium">
+                    {sec.bannerImage.caption}
+                  </p>
+                </div>
+              )}
             </div>
           )}
         </section>

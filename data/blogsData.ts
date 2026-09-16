@@ -66,7 +66,7 @@ export interface BlogSection {
   paragraphs?: string[];
   quoteBox?: {
     quote: string;
-    author: string;
+    author?: string;
   };
   quoteBoxPosition?: "top" | "bottom";
   calloutBox?: BlogCalloutBox;
@@ -76,6 +76,7 @@ export interface BlogSection {
   bannerImage?: {
     src: string;
     alt: string;
+    caption?: string;
   };
   bannerPosition?: "top" | "bottom";
   sampleLetter?: BlogSampleLetter;
@@ -1368,6 +1369,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/hud-guidance-for-emotional-support-animals/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/hud-guidance-for-emotional-support-animals/",
+  "metaTitle": "HUD ESA Guidelines 2026: What Changed for ESA Housing | My ESA Therapist",
+  "metaDescription": "Learn what HUD's 2026 guidance changes mean for ESA housing requests, supporting documents, and Fair Housing Act protections.",
   schema: hudGuidanceSchema,
   "title": "HUD ESA Guidance 2026: What Changed for Emotional Support Animal Housing?",
   "shortDescription": "HUD’s 2026 ESA guidance changes how emotional support animal housing complaints are handled, shifting greater responsibility to state laws and documentation. Learn what protections remain, what has changed, and how ESA owners can better protect their housing rights.",
@@ -1398,20 +1401,20 @@ export const BLOG_POSTS: BlogArticle[] = [
     "answer": "Yes. The Fair Housing Act still protects people with disabilities who need an emotional support animal as a reasonable housing accommodation. However, HUD’s 2026 enforcement approach has changed, so whether HUD will pursue a complaint involving an ESA may depend on the facts of the case and the type of assistance the animal provides."
   },
   "introParagraphs": [
-    "For years, emotional support animal (ESA) accommodations in housing followed a relatively clear path: Tenants with valid documentation could request reasonable accommodations under the Fair Housing Act (FHA), and housing providers were generally expected to comply. That changed significantly on May 22, 2026, when the U.S. Department of Housing and Urban Development (HUD) issued new enforcement guidance that reshaped how ESA-related housing complaints are handled.",
+    "For years, [emotional support animal (ESA)](/blog/esa-guide/emotional-support-animal/) accommodations in housing followed a relatively clear path: Tenants with valid documentation could request reasonable accommodations under the Fair Housing Act (FHA), and housing providers were generally expected to comply. That changed significantly on May 22, 2026, when the U.S. Department of Housing and Urban Development (HUD) issued new enforcement guidance that reshaped how ESA-related housing complaints are handled.",
     "So, what exactly changed, and what does it mean for tenants with emotional support animals?"
   ],
   "tocItems": [
     {
-      "id": "previous-guidance-withdrawn",
-      "label": "HUD Has Withdrawn Previous Guidance"
+      "id": "hud-withdrawn-esa-guidance",
+      "label": "HUD Has Withdrawn Previous ESA Guidance"
     },
     {
-      "id": "service-animal-standard",
+      "id": "hud-service-animal-standard",
       "label": "Service Animal Standard for Enforcement"
     },
     {
-      "id": "increased-scrutiny",
+      "id": "esa-housing-requests-scrutiny",
       "label": "ESA Requests May Face More Scrutiny"
     },
     {
@@ -1419,15 +1422,15 @@ export const BLOG_POSTS: BlogArticle[] = [
       "label": "What Has Not Changed?"
     },
     {
-      "id": "does-letter-still-matter",
+      "id": "does-your-esa-letter-still-matter",
       "label": "Does Your ESA Letter Still Matter?"
     },
     {
-      "id": "what-tenants-should-do",
+      "id": "what-should-tenants-do-next",
       "label": "What Should Tenants Do Next?"
     },
     {
-      "id": "if-landlord-denies",
+      "id": "landlord-denies-esa-request",
       "label": "What If Your Landlord Denies Your Request?"
     },
     {
@@ -1441,7 +1444,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "sections": [
     {
-      "id": "previous-guidance-withdrawn",
+      "id": "hud-withdrawn-esa-guidance",
       "title": "HUD Has Withdrawn Previous ESA Guidance",
       "paragraphs": [
         "One of the biggest updates is that HUD officially canceled its previous ESA guidance documents issued in 2013 and 2020. Those documents previously helped clarify how housing providers should evaluate ESA requests, generally treating emotional support animals as assistance animals rather than pets.",
@@ -1449,22 +1452,20 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "service-animal-standard",
-      "title": "HUD Is Using a Service Animal Standard for Enforcement",
+      "id": "hud-service-animal-standard",
+      "title": "HUD is Using a Service Animal Standard for Enforcement",
       "paragraphs": [
         "The new guidance shifts HUD’s enforcement approach closer to the Americans with Disabilities Act (ADA) model.",
         "Under this approach, HUD says it will focus on animals that are individually trained to perform disability-related work or tasks. Under the new guidance, untrained emotional support animals (ESAs) are no longer expected to receive the same enforcement treatment as trained service animals. Additionally, emotional support, comfort, or companionship alone are no longer considered disability-related tasks by HUD.",
-        "Moreover, this guidance changes HUD’s enforcement priorities and not the text of the Fair Housing Act (FHA). The FHA itself has not been amended, and its reasonable accommodation requirements remain in place. Instead, HUD has withdrawn earlier ESA guidance and indicated that it will generally stop pursuing FHA complaints involving untrained ESAs.",
+        "Importantly, this guidance changes HUD’s enforcement priorities and not the text of the Fair Housing Act (FHA). The FHA itself has not been amended, and its reasonable accommodation requirements remain in place. Instead, HUD has withdrawn earlier ESA guidance and indicated that it will generally stop pursuing FHA complaints involving untrained ESAs.",
         "Many states also rely on the FHA framework when examining housing discrimination disputes, while others maintain independent fair housing laws that may provide broader protections. As a result, housing rights for ESA owners may now depend more heavily on state-level laws and enforcement agencies.",
-        "This shift primarily affects federal FHA complaint enforcement. State laws, private lawsuits, and other disability protections may still apply depending on the jurisdiction.",
+        "This shift primarily affects federal FHA complaint enforcement. [State ESA laws](/esa-laws/), private lawsuits, and other disability protections may still apply depending on the jurisdiction.",
         "Emotional support animals that primarily provide comfort through companionship, without specialized task training, may no longer receive the same federal enforcement support when disputes arise."
       ]
     },
     {
-      "id": "increased-scrutiny",
+      "id": "esa-housing-requests-scrutiny",
       "title": "ESA Housing Requests May Face More Scrutiny",
-        bannerImage: {"src":"/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/living-with-an-esa-in-rental-housing-image.webp","alt":"Living with an ESA in rental housing"},
-        bannerPosition: "bottom",
       "paragraphs": [
         "Under previous guidance, many landlords assumed denying a legitimate ESA request could trigger a housing complaint. That assumption is changing.",
         "The updated policy removes the prior expectation that untrained ESAs should automatically receive accommodation consideration through HUD complaint channels. In practical terms, this could mean:"
@@ -1475,33 +1476,27 @@ export const BLOG_POSTS: BlogArticle[] = [
         "Greater variation between housing providers",
         "More reliance on state-level protections"
       ],
-      "subsections": [
-        {
-          "title": "Distinguishing Service Animals from ESAs",
-          "paragraphs": [
-            "Many landlords and housing providers will be updating their pet/animal policies to distinguish between specifically-trained disability services animals and untrained ESA, according to their state laws and jurisdictional policies.",
-            "For tenants, preparation and documentation may become even more important moving forward. Many landlords and housing providers are expected to update their pet and assistance animal policies to clarify the distinctions between specifically trained disability service animals and untrained emotional support animals, often in accordance with applicable state laws and local jurisdictional requirements.",
-            "Because enforcement standards may now differ more significantly across jurisdictions, tenants may need stronger documentation supporting both their disability-related need for accommodation and an understanding of the protections available under their state’s housing laws."
-          ]
-        }
+      "afterListParagraphs": [
+        "For tenants, preparation and documentation may become even more important moving forward. Many landlords and housing providers are expected to update their pet and assistance animal policies to clarify the distinctions between specifically trained disability service animals and untrained emotional support animals, often in accordance with applicable state laws and local jurisdictional requirements.",
+        "Because enforcement standards may now differ more significantly across jurisdictions, tenants may need stronger documentation supporting both their disability-related need for accommodation and an understanding of the protections available under their state’s housing laws."
       ],
-      "quoteBox": {
-        "quote": "“Housing accommodations can help ESA owners live with the animal that supports their emotional well-being.”",
-        "author": "HUD Housing Rights & Mental Health Resource Contributor"
-      }
+      "bannerImage": {
+        "src": "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/living-with-an-esa-in-rental-housing-image.webp",
+        "alt": "living with an esa in rental housing",
+        "caption": "Housing accommodations can help ESA owners live with the animal that supports their emotional well-being."
+      },
+      "bannerPosition": "bottom"
     },
     {
       "id": "what-has-not-changed",
       "title": "What Has Not Changed?",
-        bannerImage: {"src":"/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/hud-esa-guidance-what-has-not-changed-image.webp","alt":"HUD ESA guidance what has not changed"},
-        bannerPosition: "bottom",
       "paragraphs": [
         "Despite headlines surrounding the policy shift, several important protections remain in place:",
         "State laws still matter. Many states maintain housing protections that operate independently of HUD enforcement.",
         "Private legal options remain available. Courts can still review housing discrimination claims.",
         "Existing approvals usually stay intact. If your accommodation was already approved, this guidance does not automatically revoke it.",
         "The Fair Housing Act still exists, and disability accommodation requirements have not been removed. Congress has not changed the law, and housing providers are still subject to reasonable accommodation obligations under federal law.",
-        "Importantly, this new policy does not apply equally across all housing programs. The guidance is limited to Fair Housing Act complaints handled by HUD and does not extend to other disability protections.",
+        "Importantly, [this new policy](https://dredf.org/huds-esa-policy-reversal/) does not apply equally across all housing programs. The guidance is limited to Fair Housing Act complaints handled by HUD and does not extend to other disability protections.",
         "For example, public housing authorities and housing providers that receive federal financial assistance may also be subject to Section 504 of the Rehabilitation Act, which maintains its own reasonable accommodation requirements independent of the FHA. HUD’s guidance explicitly does not change these obligations. As a result, tenants living in public housing or HUD-assisted housing may still have stronger legal grounds to pursue accommodations or challenge denials under Section 504, even when filing an FHA complaint through HUD has become more difficult.",
         "Understanding this distinction matters because enforcement guidance and federal law are not the same thing. Any currently open ESA cases will be reviewed on a case-by-case basis."
       ],
@@ -1542,14 +1537,19 @@ export const BLOG_POSTS: BlogArticle[] = [
           }
         ],
         "footerNote": "Important: HUD's 2026 update primarily changes how the agency enforces ESA-related housing complaints. It does not repeal the Fair Housing Act or automatically eliminate all ESA housing protections."
-      }
+      },
+      "bannerImage": {
+        "src": "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/hud-esa-guidance-what-has-not-changed-image.webp",
+        "alt": "hud esa guidance what has not changed"
+      },
+      "bannerPosition": "bottom"
     },
     {
-      "id": "does-letter-still-matter",
+      "id": "does-your-esa-letter-still-matter",
       "title": "Does Your ESA Letter Still Matter?",
       "paragraphs": [
         "Yes, documentation remains important.",
-        "A letter from a licensed mental health professional still serves as evidence supporting disability-related accommodation requests. However, the quality of documentation may matter more than ever.",
+        "A [letter from a licensed mental health professional](/esa-letter-online/) still serves as evidence supporting disability-related accommodation requests. However, the quality of documentation may matter more than ever.",
         "Housing providers increasingly look for:"
       ],
       "listItems": [
@@ -1558,20 +1558,16 @@ export const BLOG_POSTS: BlogArticle[] = [
         "Clear accommodation recommendations",
         "Documentation connected to an ongoing therapeutic relationship"
       ],
-      "subsections": [
-        {
-          "title": "Prioritizing Licensed Clinicians",
-          "paragraphs": [
-            "This is one reason many applicants now prioritize working with licensed professionals rather than relying on instant approval websites or generic documentation services.",
-            "At the same time, some attorneys and housing discrimination advocates may increasingly focus their cases on disputes involving specifically trained service animals, since these claims may align more closely with HUD’s current enforcement framework.",
-            "The impact of these changes may vary significantly by state. States with limited or no state-specific ESA protections, such as Missouri, could see larger practical implications because residents may have fewer independent legal pathways outside federal enforcement. Meanwhile, states with stronger state-level housing protections, including Colorado and California, may continue offering broader protections for ESA accommodations through their own laws and enforcement agencies.",
-            "Because state protections now matter more, housing guidance and state-specific resources may require regular updates to reflect evolving local requirements and enforcement standards."
-          ]
-        }
+      "afterListParagraphs": [
+        "This is one reason many applicants now prioritize working with licensed professionals rather than relying on instant approval websites or generic documentation services.",
+        "At the same time, some attorneys and housing discrimination advocates may increasingly focus their cases on disputes involving specifically trained service animals, since these claims may align more closely with HUD’s current enforcement framework.",
+        "The impact of these changes may vary significantly by state. States with limited or no state-specific ESA protections, such as Missouri, could see larger practical implications because residents may have fewer independent legal pathways outside federal enforcement.",
+        "Meanwhile, states with stronger state-level housing protections, including Colorado and California, may continue offering broader protections for ESA accommodations through their own laws and enforcement agencies.",
+        "Because state protections now matter more, housing guidance and state-specific resources may require regular updates to reflect evolving local requirements and enforcement standards."
       ]
     },
     {
-      "id": "what-tenants-should-do",
+      "id": "what-should-tenants-do-next",
       "title": "What Should Tenants Do Next?",
       "paragraphs": [
         "If you currently have or plan to request an ESA accommodation, staying proactive is key.",
@@ -1586,7 +1582,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "if-landlord-denies",
+      "id": "landlord-denies-esa-request",
       "title": "What Should You Do If Your Landlord Denies Your ESA Request?",
       "paragraphs": [
         "If your landlord denies your request, do not assume HUD is your only or primary reporting path. Because HUD has limited its enforcement focus for untrained ESAs, many tenants may need to rely more heavily on state agencies, disability rights organizations, fair housing groups, or private legal remedies.",
@@ -1599,13 +1595,8 @@ export const BLOG_POSTS: BlogArticle[] = [
         "Review whether your housing falls under additional protections, such as public housing rules or federally assisted housing requirements",
         "Avoid immediately agreeing to pet fees or withdrawing your request before understanding your legal options"
       ],
-      "subsections": [
-        {
-          "title": "State Protections Often Offer Greater Relief",
-          "paragraphs": [
-            "State protections may now play a larger role than federal enforcement. For instance, California maintains more comprehensive housing and disability protections through state legislation and enforcement organizations, which might offer tenants who are denied accommodations more options. Other states may offer fewer independent protections, making local legal guidance especially important."
-          ]
-        }
+      "afterListParagraphs": [
+        "State protections may now play a larger role than federal enforcement. For instance, California maintains more comprehensive housing and disability protections through state legislation and enforcement organizations, which might offer tenants who are denied accommodations more options. Other states may offer fewer independent protections, making local legal guidance especially important."
       ]
     }
   ],
@@ -1613,13 +1604,14 @@ export const BLOG_POSTS: BlogArticle[] = [
     "heading": "Need Documentation for an ESA Housing Request?",
     "description": "Connect with a licensed mental health professional to determine whether an ESA letter may be appropriate for your situation and housing accommodation needs.",
     "buttonText": "Start Your ESA Evaluation",
-    "buttonHref": "/#pricing"
+    "buttonHref": "/pricing"
   },
   "finalThoughts": {
     "title": "Final Thoughts",
     "paragraphs": [
       "HUD’s 2026 ESA guidance represents a major shift in federal enforcement priorities, but it does not eliminate emotional support animal housing protections entirely.",
-      "For tenants, the landscape is becoming more documentation-focused and more dependent on state laws, private legal remedies, and properly supported accommodation requests. Understanding these changes can help applicants prepare stronger requests and avoid confusion during the housing process.",
+      "For tenants, the landscape is becoming more documentation-focused and more dependent on state laws, private legal remedies, and properly supported accommodation requests.",
+      "Understanding these changes can help applicants prepare stronger requests and avoid confusion during the housing process.",
       "Furthermore, HUD has indicated that this guidance may not be the final step. The agency has stated that it intends to pursue formal rulemaking to update assistance animal regulations and align them more closely with disability service animal standards used under the ADA. However, HUD has not provided a timeline for when proposed rules or formal updates may be released.",
       "Any future regulatory changes would likely go through the federal notice-and-comment process, which can take significant time and allows for public input, revisions, and potential legal challenges. Because of this, the regulatory landscape around ESAs and housing accommodations may continue evolving over the coming years.",
       "As policies continue changing, informed tenants who maintain strong documentation, understand their state protections, and stay updated on legal developments are often better positioned to protect their housing rights."
