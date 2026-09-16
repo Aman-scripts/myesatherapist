@@ -71,13 +71,12 @@ export function LegalReviewerContent() {
           }}
         >
           {/* =========================================================
-              1. FIXED TOP PROFILE SECTION (Frame 1000011839 + Line 11)
-              Avatar, Awais Arshad, Attorney at Law, Badges, Divider
-              This section is completely static & pinned at the top.
+              1. FIXED TOP PROFILE SECTION
+              Only Image, Name & Title are fixed/pinned at the top.
               ========================================================= */}
-          <div className="shrink-0 p-6 sm:p-8 lg:px-[31px] lg:pt-[45px] pb-0">
+          <div className="shrink-0 p-6 sm:p-8 lg:px-[31px] lg:pt-[45px] pb-3">
             {/* Avatar & Basic Identity */}
-            <div className="flex flex-col items-center lg:items-start space-y-6">
+            <div className="flex flex-col items-center lg:items-start space-y-5">
               {/* Avatar with circular white frame (Frame 1000011843) */}
               <div className="w-[138px] h-[138px] rounded-full p-[5px] bg-white shadow-[0px_4px_10px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                 <div className="relative w-[128px] h-[128px] rounded-full overflow-hidden">
@@ -115,37 +114,36 @@ export function LegalReviewerContent() {
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/* Badges: Active Now & 12 Years Experience */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
-                {/* Active Now */}
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-                  <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
-                    Active Now
-                  </span>
-                </div>
+          {/* =========================================================
+              2. SCROLLABLE BOTTOM CONTENT
+              Badges, Divider, Licensure, Authorize to Practice, Profiles
+              Everything here moves / scrolls!
+              ========================================================= */}
+          <div className="flex-1 overflow-y-auto no-scrollbar p-6 sm:p-8 lg:px-[31px] lg:pt-2 lg:pb-10 space-y-6">
+            {/* Badges: Active Now & 12 Years Experience */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+              {/* Active Now */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
+                <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+                  Active Now
+                </span>
+              </div>
 
-                {/* 12 Years Experience */}
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-                  <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
-                    12 Years Experience
-                  </span>
-                </div>
+              {/* 12 Years Experience */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
+                <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+                  12 Years Experience
+                </span>
               </div>
             </div>
 
             {/* Divider Line 11 */}
-            <div className="w-full h-[1px] bg-white/20 mt-7" />
-          </div>
-
-          {/* =========================================================
-              2. SCROLLABLE BOTTOM CONTENT (Frame 1000011841 + Frame 1000011840)
-              Licensure, Authorize to Practice, Professional Profiles
-              This is the only part that moves / scrolls!
-              ========================================================= */}
-          <div className="flex-1 overflow-y-auto no-scrollbar p-6 sm:p-8 lg:px-[31px] lg:pt-6 lg:pb-10 space-y-6">
+            <div className="w-full h-[1px] bg-white/20" />
             {/* Licensure Section (Frame 1000011837) */}
             <div className="space-y-4">
               <h3 className="font-heading font-bold text-[20px] leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
