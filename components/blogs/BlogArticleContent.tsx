@@ -16,7 +16,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
   const renderFormattedText = (content: string): React.ReactNode => {
     if (!content) return content;
 
-    const regex = /\[([^\]]+)\]\(([^)]+)\)|<a\s+(?:[^>]*?\s+)?href=["']([^"']+)["'][^>]*>(.*?)<\/a>/g;
+    const regex = /\[([^\]]+)\]\(([^)]+)\)|<a\s+(?:[^>]*?\s+)?href=["']([^"']+)["'][^>]*>(.*?)<\/a>|\*\*([^*]+)\*\*|<(?:strong|b)[^>]*>([\s\S]*?)<\/(?:strong|b)>/gi;
 
     if (!regex.test(content)) {
       return content;
@@ -32,22 +32,34 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
       const fullMatch = match[0];
       const matchIndex = match.index;
 
-      const text = match[1] || match[4];
-      const url = match[2] || match[3];
+      const linkText = match[1] || match[4];
+      const linkUrl = match[2] || match[3];
+      const boldText = match[5] || match[6];
 
       if (matchIndex > lastIndex) {
         parts.push(content.substring(lastIndex, matchIndex));
       }
 
-      parts.push(
-        <Link
-          key={`${matchIndex}-${url}`}
-          href={url}
-          className="text-[#EFBF2F] font-semibold hover:underline transition-colors"
-        >
-          {text}
-        </Link>
-      );
+      if (linkText && linkUrl) {
+        parts.push(
+          <Link
+            key={`${matchIndex}-${linkUrl}`}
+            href={linkUrl}
+            className="text-[#EFBF2F] font-semibold hover:underline transition-colors"
+          >
+            {linkText}
+          </Link>
+        );
+      } else if (boldText) {
+        parts.push(
+          <strong
+            key={`${matchIndex}-bold`}
+            className="font-bold text-[#2E5A66]"
+          >
+            {boldText}
+          </strong>
+        );
+      }
 
       lastIndex = matchIndex + fullMatch.length;
     }

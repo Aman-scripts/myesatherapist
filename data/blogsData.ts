@@ -1492,10 +1492,10 @@ export const BLOG_POSTS: BlogArticle[] = [
       "title": "What Has Not Changed?",
       "paragraphs": [
         "Despite headlines surrounding the policy shift, several important protections remain in place:",
-        "State laws still matter. Many states maintain housing protections that operate independently of HUD enforcement.",
-        "Private legal options remain available. Courts can still review housing discrimination claims.",
-        "Existing approvals usually stay intact. If your accommodation was already approved, this guidance does not automatically revoke it.",
-        "The Fair Housing Act still exists, and disability accommodation requirements have not been removed. Congress has not changed the law, and housing providers are still subject to reasonable accommodation obligations under federal law.",
+        "**State laws still matter.** Many states maintain housing protections that operate independently of HUD enforcement.",
+        "**Private legal options remain available.** Courts can still review housing discrimination claims.",
+        "**Existing approvals usually stay intact.** If your accommodation was already approved, this guidance does not automatically revoke it.",
+        "**The Fair Housing Act still exists,** and disability accommodation requirements have not been removed. Congress has not changed the law, and housing providers are still subject to reasonable accommodation obligations under federal law.",
         "Importantly, [this new policy](https://dredf.org/huds-esa-policy-reversal/) does not apply equally across all housing programs. The guidance is limited to Fair Housing Act complaints handled by HUD and does not extend to other disability protections.",
         "For example, public housing authorities and housing providers that receive federal financial assistance may also be subject to Section 504 of the Rehabilitation Act, which maintains its own reasonable accommodation requirements independent of the FHA. HUD’s guidance explicitly does not change these obligations. As a result, tenants living in public housing or HUD-assisted housing may still have stronger legal grounds to pursue accommodations or challenge denials under Section 504, even when filing an FHA complaint through HUD has become more difficult.",
         "Understanding this distinction matters because enforcement guidance and federal law are not the same thing. Any currently open ESA cases will be reviewed on a case-by-case basis."
