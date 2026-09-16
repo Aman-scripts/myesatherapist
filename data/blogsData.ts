@@ -1815,6 +1815,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "esa-guide",
   "url": "/blog/esa-guide/emotional-support-animal/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/emotional-support-animal/",
+  "metaTitle": "What is an Emotional Support Animal? Benefits & Rights Guide | My ESA Therapist",
+  "metaDescription": "Learn everything about Emotional Support Animals, including ESA letters, landlord rules, and legal protections.",
   schema: whatIsAnEsaSchema,
   "title": "What is an Emotional Support Animal? Everything You Need to Know",
   "shortDescription": "This complete guide covers everything you need to know about emotional support animals, including how ESAs work, who qualifies, federal ESA laws, housing rights, and the difference between ESAs and service animals. It also explains landlord rules, common misconceptions, and how emotional support animals help improve mental well-being.",
