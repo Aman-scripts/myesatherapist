@@ -13,6 +13,52 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
   // Default to the first article if none provided
   const article = customArticle || BLOG_POSTS[0];
 
+  const renderFormattedText = (content: string): React.ReactNode => {
+    if (!content) return content;
+
+    const regex = /\[([^\]]+)\]\(([^)]+)\)|<a\s+(?:[^>]*?\s+)?href=["']([^"']+)["'][^>]*>(.*?)<\/a>/g;
+
+    if (!regex.test(content)) {
+      return content;
+    }
+
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    regex.lastIndex = 0;
+
+    while ((match = regex.exec(content)) !== null) {
+      const fullMatch = match[0];
+      const matchIndex = match.index;
+
+      const text = match[1] || match[4];
+      const url = match[2] || match[3];
+
+      if (matchIndex > lastIndex) {
+        parts.push(content.substring(lastIndex, matchIndex));
+      }
+
+      parts.push(
+        <Link
+          key={`${matchIndex}-${url}`}
+          href={url}
+          className="text-[#EFBF2F] font-semibold hover:underline transition-colors"
+        >
+          {text}
+        </Link>
+      );
+
+      lastIndex = matchIndex + fullMatch.length;
+    }
+
+    if (lastIndex < content.length) {
+      parts.push(content.substring(lastIndex));
+    }
+
+    return parts;
+  };
+
   const renderCalloutBox = (callout: BlogCalloutBox) => (
     <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
       <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-[#2E5A66] font-medium">
@@ -53,7 +99,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             key={idx}
             className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
           >
-            {para}
+            {renderFormattedText(para)}
           </p>
         ))}
       </div>
@@ -73,7 +119,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   key={pIdx}
                   className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
                 >
-                  {p}
+                  {renderFormattedText(p)}
                 </p>
               ))}
             </div>
@@ -112,7 +158,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                       className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-[#5F6B6F]"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
-                      <span>{cleanText}</span>
+                      <span>{renderFormattedText(cleanText)}</span>
                     </li>
                   );
                 }
@@ -126,7 +172,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                       <span className="font-bold text-[#1D6E72] shrink-0 min-w-[18px]">
                         {numberedMatch[1]}.
                       </span>
-                      <span>{numberedMatch[2]}</span>
+                      <span>{renderFormattedText(numberedMatch[2])}</span>
                     </li>
                   );
                 }
@@ -136,7 +182,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                     className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-[#5F6B6F]"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
-                    <span>{item}</span>
+                    <span>{renderFormattedText(item)}</span>
                   </li>
                 );
               })}
@@ -151,7 +197,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   key={pIdx}
                   className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
                 >
-                  {p}
+                  {renderFormattedText(p)}
                 </p>
               ))}
             </div>
@@ -329,7 +375,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                           key={spIdx}
                           className="text-sm sm:text-base leading-[26px] font-medium text-[#5F6B6F]"
                         >
-                          {subP}
+                          {renderFormattedText(subP)}
                         </p>
                       ))}
                     </div>
@@ -356,7 +402,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                               className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] font-medium text-[#5F6B6F]"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
-                              <span>{cleanText}</span>
+                              <span>{renderFormattedText(cleanText)}</span>
                             </li>
                           );
                         }
@@ -370,7 +416,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                               <span className="font-bold text-[#1D6E72] shrink-0 min-w-[18px]">
                                 {numberedMatch[1]}.
                               </span>
-                              <span>{numberedMatch[2]}</span>
+                              <span>{renderFormattedText(numberedMatch[2])}</span>
                             </li>
                           );
                         }
@@ -380,7 +426,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                             className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-[#5F6B6F]"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
-                            <span>{item}</span>
+                            <span>{renderFormattedText(item)}</span>
                           </li>
                         );
                       })}
@@ -393,7 +439,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                           key={spIdx}
                           className="text-sm sm:text-base leading-[26px] font-medium text-[#5F6B6F]"
                         >
-                          {subP}
+                          {renderFormattedText(subP)}
                         </p>
                       ))}
                     </div>
@@ -489,7 +535,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                 key={idx}
                 className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
               >
-                {p}
+                {renderFormattedText(p)}
               </p>
             ))}
           </div>

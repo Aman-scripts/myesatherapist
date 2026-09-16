@@ -696,7 +696,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         title: "Can a Landlord Require ESA Registration?",
         paragraphs: [
           "Another common question is, “Can my landlord ask for ESA registration?”",
-          "When assessing an ESA accommodation request, landlords typically focus on strong proof of the animal’s need via a written letter from the mental health professional. An ESA Letter for Housing can provide documentation to support a housing accommodation request. Registration is usually not regarded as proof of eligibility because there is no official government ESA registry. In other words, there is no database that landlords or housing providers can search to determine the legitimacy of an ESA.",
+          "When assessing an ESA accommodation request, landlords typically focus on strong proof of the animal’s need via a written letter from the mental health professional. An [ESA Letter for Housing](/esa-letter-for-housing/) can provide documentation to support a housing accommodation request. Registration is usually not regarded as proof of eligibility because there is no official government ESA registry. In other words, there is no database that landlords or housing providers can search to determine the legitimacy of an ESA.",
           "Likewise, many housing providers understand that certificates and ID cards purchased online are not the same as a legitimate ESA evaluation. Landlords know to look for the mental health letter.",
         ],
       },
