@@ -20,10 +20,17 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { Footer } from "@/components/layout/Footer";
+import { homeSchema } from "@/data/schemas/homeSchema";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+      {/* Schema.org JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+      />
+
       <TopBanner />
       <Header />
       <main className="flex-1 bg-[#FAF7F2]">
