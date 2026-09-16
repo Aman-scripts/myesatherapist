@@ -806,6 +806,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     categorySlug: "esa-guide",
     url: "/blog/esa-guide/esa-for-children/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/esa-for-children/",
+    metaTitle: "ESA for Children: Who Qualifies & Who Signs the Letter",
+    metaDescription:
+      "Learn who qualifies for an ESA for children, who signs the ESA letter, parents' role, qualifying conditions, housing rights, and the evaluation process.",
     schema: esaForChildrenSchema,
     title: "ESA for Children and Minors: How It Works and Who Signs the Letter",
     shortDescription:
