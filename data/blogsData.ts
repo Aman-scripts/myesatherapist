@@ -1500,44 +1500,6 @@ export const BLOG_POSTS: BlogArticle[] = [
         "For example, public housing authorities and housing providers that receive federal financial assistance may also be subject to Section 504 of the Rehabilitation Act, which maintains its own reasonable accommodation requirements independent of the FHA. HUD’s guidance explicitly does not change these obligations. As a result, tenants living in public housing or HUD-assisted housing may still have stronger legal grounds to pursue accommodations or challenge denials under Section 504, even when filing an FHA complaint through HUD has become more difficult.",
         "Understanding this distinction matters because enforcement guidance and federal law are not the same thing. Any currently open ESA cases will be reviewed on a case-by-case basis."
       ],
-      "checklist": {
-        "title": "What Has Not Changed?",
-        "items": [
-          {
-            "title": "The Fair Housing Act (FHA) Still Exists",
-            "description": "Federal disability housing protections remain in place."
-          },
-          {
-            "title": "Disability Discrimination Is Still Illegal",
-            "description": "Housing providers cannot discriminate against qualified individuals with disabilities."
-          },
-          {
-            "title": "Reasonable Accommodation Requests Still Matter",
-            "description": "Tenants can still request accommodations related to a disability."
-          },
-          {
-            "title": "ESA Letters Are Not Automatically Invalid",
-            "description": "Existing documentation from licensed healthcare professionals has not been universally voided."
-          },
-          {
-            "title": "Blanket Denials Can Still Create Legal Risk",
-            "description": "Landlords should evaluate requests individually rather than applying one-size-fits-all policies."
-          },
-          {
-            "title": "State & Local ESA Laws May Still Apply",
-            "description": "Many states maintain their own housing protections regardless of HUD's enforcement changes."
-          },
-          {
-            "title": "Animals Must Still Be Safe & Controlled",
-            "description": "Property owners can still address animals that pose a direct threat or cause significant damage."
-          },
-          {
-            "title": "Service Animals Remain Protected",
-            "description": "HUD's 2026 changes do not remove housing protections for trained service animals."
-          }
-        ],
-        "footerNote": "Important: HUD's 2026 update primarily changes how the agency enforces ESA-related housing complaints. It does not repeal the Fair Housing Act or automatically eliminate all ESA housing protections."
-      },
       "bannerImage": {
         "src": "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/hud-esa-guidance-what-has-not-changed-image.webp",
         "alt": "hud esa guidance what has not changed"
