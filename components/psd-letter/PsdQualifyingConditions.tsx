@@ -8,6 +8,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 type Condition = {
   label: string;
   icon: string;
+  image: string;
   left: number;
   top: number;
   alignRight?: boolean;
@@ -18,6 +19,7 @@ const conditions: Condition[] = [
   {
     label: "Agoraphobia",
     icon: "/home/qualifying-conditions-agroraphobia.svg",
+    image: "/qualifyingConditions_image/agoraphobea.webp",
     left: 56.81,
     top: -0.24,
     description:
@@ -26,6 +28,7 @@ const conditions: Condition[] = [
   {
     label: "Anxiety Disorders",
     icon: "/home/qualifying-conditions-anxiety-disorder.svg",
+    image: "/qualifyingConditions_image/Anxiety Disorders.webp",
     left: 29.42,
     top: 4.55,
     description:
@@ -34,6 +37,7 @@ const conditions: Condition[] = [
   {
     label: "Panic Disorders",
     icon: "/home/qualifying-conditions-panic-disorder.svg",
+    image: "/qualifyingConditions_image/panic disoder.webp",
     left: 5.48,
     top: 15.31,
     description:
@@ -42,6 +46,7 @@ const conditions: Condition[] = [
   {
     label: "OCD",
     icon: "/home/qualifying-conditions-ocd.svg",
+    image: "/qualifyingConditions_image/ocd.webp",
     left: 80.91,
     top: 15.31,
     alignRight: true,
@@ -51,6 +56,7 @@ const conditions: Condition[] = [
   {
     label: "Bipolar Disorders",
     icon: "/home/qualifying-conditions-bipoler-disorder.svg",
+    image: "/qualifyingConditions_image/biloper disoder.webp",
     left: 28.01,
     top: 29.67,
     description:
@@ -59,6 +65,7 @@ const conditions: Condition[] = [
   {
     label: "PTSD",
     icon: "/home/qualifying-conditions-ptsd.svg",
+    image: "/qualifyingConditions_image/ptsd.webp",
     left: 67.53,
     top: 29.67,
     description:
@@ -67,6 +74,7 @@ const conditions: Condition[] = [
   {
     label: "Social Anxiety",
     icon: "/home/qualifying-conditions-social-anxiety.svg",
+    image: "/qualifyingConditions_image/socail Anxiety .webp",
     left: 1.8,
     top: 39.47,
     description:
@@ -75,6 +83,7 @@ const conditions: Condition[] = [
   {
     label: "ADHD",
     icon: "/home/qualifying-conditions-adhd.svg",
+    image: "/qualifyingConditions_image/adhd.webp",
     left: 86.15,
     top: 39.47,
     alignRight: true,
@@ -84,6 +93,7 @@ const conditions: Condition[] = [
   {
     label: "Mood Disorders",
     icon: "/home/qualifying-conditions-mood-disorder.svg",
+    image: "/qualifyingConditions_image/mood disoder.webp",
     left: 5.09,
     top: 60.29,
     description:
@@ -92,6 +102,7 @@ const conditions: Condition[] = [
   {
     label: "Other ADA Conditions",
     icon: "/home/qualifying-conditions-other-ada.svg",
+    image: "/qualifyingConditions_image/Other ADA Conditions.webp",
     left: 76.21,
     top: 60.29,
     alignRight: true,
@@ -101,6 +112,7 @@ const conditions: Condition[] = [
   {
     label: "Depression",
     icon: "/home/qualifying-conditions-depression.svg",
+    image: "/qualifyingConditions_image/Depression.webp",
     left: 0.0,
     top: 84.93,
     description:
@@ -109,6 +121,7 @@ const conditions: Condition[] = [
   {
     label: "Schizophrenia",
     icon: "/home/qualifying-conditions-schizpphrenia.svg",
+    image: "/qualifyingConditions_image/Schizpphrenia.webp",
     left: 82.24,
     top: 84.93,
     alignRight: true,
@@ -213,8 +226,8 @@ export function PsdQualifyingConditions() {
                       {/* Puppy Photo */}
                       <div className="relative w-full h-[65px] lg:h-[80px] xl:h-[95px] rounded-[6px] lg:rounded-[8px] overflow-hidden bg-slate-100">
                         <Image
-                          src="/home/qualifying-condtions-tag.png"
-                          alt="Puppy resting"
+                          src={c.image}
+                          alt={c.label}
                           fill
                           unoptimized
                           className="object-cover"
@@ -301,8 +314,8 @@ export function PsdQualifyingConditions() {
                         {/* Image */}
                         <div className="relative w-full h-[115px] rounded-[12px] overflow-hidden mb-3">
                           <Image
-                            src="/home/qualifying-condtions-tag.png"
-                            alt="Puppy resting"
+                            src={c.image}
+                            alt={c.label}
                             fill
                             unoptimized
                             className="object-cover"
