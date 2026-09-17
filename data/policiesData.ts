@@ -152,19 +152,6 @@ export const POLICIES_DATA: PolicyDocument[] = [
         "title": "Who We Are",
         "blocks": [
           {
-            "type": "field-table",
-            "fields": [
-              {
-                "label": "Brand Name",
-                "value": "My ESA Therapist"
-              },
-              {
-                "label": "Role",
-                "value": "Online platform that connects individuals with licensed mental health professionals for Emotional Support Animal (ESA) evaluations."
-              }
-            ]
-          },
-          {
             "type": "paragraph",
             "html": "My ESA Therapist does not provide medical treatment, therapy, or diagnoses, and does not guarantee ESA approval. All ESA evaluation outcomes are based solely on the independent clinical judgment of the licensed mental health professional conducting the assessment.",
             "text": "My ESA Therapist does not provide medical treatment, therapy, or diagnoses, and does not guarantee ESA approval. All ESA evaluation outcomes are based solely on the independent clinical judgment of the licensed mental health professional conducting the assessment."

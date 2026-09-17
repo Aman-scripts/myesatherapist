@@ -139,12 +139,12 @@ export function PolicyContent({ policy }: PolicyContentProps) {
 
       case "field-table":
         return (
-          <div key={bIdx} className="my-5 bg-[#FAF7F2] border border-[#EAE5DC] rounded-[16px] p-5 sm:p-6 shadow-2xs">
-            <dl className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-3 text-sm sm:text-base">
+          <div key={bIdx} className="my-5">
+            <dl className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-6 sm:gap-x-8 gap-y-3 text-sm sm:text-base font-sans items-baseline">
               {block.fields?.map((f, fIdx) => (
                 <React.Fragment key={fIdx}>
-                  <dt className="font-sans font-bold text-[#2E5A66]">{f.label}:</dt>
-                  <dd className="font-sans font-medium text-[#5F6B6F] mb-1 sm:mb-0">{f.value}</dd>
+                  <dt className="font-bold text-[#2E5A66] whitespace-nowrap">{f.label}</dt>
+                  <dd className="font-medium text-[#5F6B6F] leading-relaxed mb-1 sm:mb-0">{f.value}</dd>
                 </React.Fragment>
               ))}
             </dl>
