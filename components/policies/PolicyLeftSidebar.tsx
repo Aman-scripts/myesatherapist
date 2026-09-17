@@ -99,19 +99,25 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
       {/* Sticky sidebar with TOC and All Policies cards       */}
       {/* ---------------------------------------------------- */}
       <aside
-        className="hidden lg:block w-full lg:sticky lg:top-[148px] space-y-6 self-start [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
+        className="hidden lg:block w-full lg:sticky lg:top-[148px] space-y-6 self-start max-h-[calc(100dvh-165px)] overflow-y-auto overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* 1. Table of Contents (On this page) */}
         {policy.tocItems && policy.tocItems.length > 0 && (
-          <div
-            className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs max-h-[460px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] mb-3.5 px-1">
-              On this page
-            </p>
-            <nav aria-label="Table of contents" className="space-y-1">
+          <div className="bg-white border border-[#EAE5DC] rounded-[20px] shadow-xs flex flex-col overflow-hidden">
+            {/* Fixed Header: ON THIS PAGE (does not scroll away) */}
+            <div className="px-5 pt-5 pb-3 sm:px-6 sm:pt-6 sm:pb-3 border-b border-[#EAE5DC]/60 bg-white shrink-0">
+              <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] px-1">
+                On this page
+              </p>
+            </div>
+
+            {/* Scrollable navigation links */}
+            <nav
+              aria-label="Table of contents"
+              className="p-3.5 sm:p-4 space-y-1 max-h-[340px] overflow-y-auto overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
               {policy.tocItems.map((item) => {
                 const isActive = activeSectionId === item.id;
                 return (
