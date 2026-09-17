@@ -405,21 +405,21 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
 
           {/* Subsections */}
           {sec.subsections && (
-            <div className="space-y-6 pt-2">
+            <div className="space-y-4 pt-2">
               {sec.subsections.map((sub, sIdx) => (
-                <div key={sIdx} className="space-y-2.5">
-                  {sub.image && sub.imagePosition === "top" && (
-                    <div className="pt-2 pb-1">
+                <div key={sIdx} className="space-y-2">
+                  {sub.image && sub.imagePosition === "top" && sub.title && sub.title.trim() ? (
+                    <h3 className="flex items-center gap-2 font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
                       <Image
                         src={sub.image.src}
                         alt={sub.image.alt}
-                        width={sub.image.width || 80}
-                        height={sub.image.height || 80}
-                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                        width={sub.image.width || 24}
+                        height={sub.image.height || 24}
+                        className="w-5 h-5 sm:w-6 sm:h-6 object-contain shrink-0"
                       />
-                    </div>
-                  )}
-                  {sub.title && sub.title.trim() ? (
+                      {sub.title}
+                    </h3>
+                  ) : sub.title && sub.title.trim() ? (
                     <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
                       {sub.title}
                     </h3>
