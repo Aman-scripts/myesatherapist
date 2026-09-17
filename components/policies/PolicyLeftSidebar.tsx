@@ -47,7 +47,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
   };
 
   return (
-    <aside className="w-full lg:sticky lg:top-24 space-y-6 self-start">
+    <aside
+      className="w-full lg:sticky lg:top-24 space-y-6 self-start [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
+      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+    >
 
       {/* 1. All Policies Menu Card */}
       <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs">
@@ -91,7 +94,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
       {/* 2. Table of Contents (On this page) */}
       {policy.tocItems && policy.tocItems.length > 0 && (
-        <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs max-h-[500px] overflow-y-auto scrollbar-thin">
+        <div
+          className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs max-h-[460px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] mb-3.5 px-1">
             On this page
           </p>
