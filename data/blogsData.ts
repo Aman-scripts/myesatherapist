@@ -248,7 +248,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "tenant-checklist",
         title: "Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate",
         bannerImage: {
-          src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/tenant-checklist-to-verify-esa-letter-image.webp",
+          src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/tenant-checklist-to-verify-esa-letter-image.jpg",
           alt: "tenant checklist to verify esa letter",
         },
         bannerPosition: "bottom",
@@ -314,7 +314,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "landlord-checklist",
         title: "Landlord Checklist: How to Verify an ESA Letter?",
         bannerImage: {
-          src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/landlord-checklist-to-verify-esa-letter-image.webp",
+          src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/landlord-checklist-to-verify-esa-letter-image.jpg",
           alt: "landlord checklist to verify esa letter",
         },
         bannerPosition: "bottom",
@@ -2714,7 +2714,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
   "publishDate": "September 11, 2026",
   "lastUpdated": "September 11, 2026",
-  "cardImage": "/Blog Images/8 Basic Obedience Commands Every ESA Should Know/training-an-esa-image.webp",
+  "cardImage": "/Blog Images/8 Basic Obedience Commands Every ESA Should Know/training-an-esa-image.jpg",
   "heroImageMobile": "/blogs/blog_hero-section-mobile.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.png",
   "heroImageDesktop": "/blogs/blog-hero_section.png",
@@ -2757,7 +2757,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     {
       "id": "esa-commands",
       "title": "What Commands Should an ESA Know?",
-        bannerImage: {"src":"/Blog Images/8 Basic Obedience Commands Every ESA Should Know/basic-commands-for-esas-image.webp","alt":"8 Basic obedience commands every ESA should know"},
+        bannerImage: {"src":"/Blog Images/8 Basic Obedience Commands Every ESA Should Know/basic-commands-for-esas-image.jpg","alt":"8 Basic obedience commands every ESA should know"},
         bannerPosition: "top",
       "paragraphs": [
         "Teaching an ESA basic commands can make day-to-day routines safer and easier to manage.",
