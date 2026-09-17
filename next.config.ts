@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/policies/privacy-policy", destination: "/privacy-policy/", permanent: true },
-      { source: "/terms-of-use", destination: "/policies/terms-of-use/", permanent: true },
+      { source: "/policies/terms-of-use", destination: "/terms-of-use/", permanent: true },
       { source: "/refund-policy", destination: "/policies/refund-policy/", permanent: true },
       { source: "/consent-for-telehealth", destination: "/policies/consent-for-telehealth/", permanent: true },
       { source: "/hipaa-compliance", destination: "/policies/hipaa-compliance/", permanent: true },

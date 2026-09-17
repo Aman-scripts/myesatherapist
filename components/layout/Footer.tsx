@@ -26,7 +26,7 @@ const quickLinks = [
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy/" },
-  { label: "Terms of Service", href: "/policies/terms-of-use/" },
+  { label: "Terms of Service", href: "/terms-of-use/" },
   { label: "Medical Disclaimer", href: "/policies/disclaimer-and-policies/" },
   { label: "HIPAA Notice of Privacy Practices", href: "/policies/hipaa-compliance/" },
   { label: "Refund Policy", href: "/policies/refund-policy/" },
@@ -301,7 +301,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               <Link href="/policies/refund-policy/" className="hover:text-[#E8B92C] transition-colors">
                 Refund Policy
               </Link>
-              <Link href="/policies/terms-of-use/" className="hover:text-[#E8B92C] transition-colors">
+              <Link href="/terms-of-use/" className="hover:text-[#E8B92C] transition-colors">
                 Terms of Use
               </Link>
               <Link href="/policies/accessibility-statement/" className="hover:text-[#E8B92C] transition-colors">

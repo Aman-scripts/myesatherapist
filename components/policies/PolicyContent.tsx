@@ -14,7 +14,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/<strong>/gi, '<strong class="font-bold text-[#2E5A66]">')
       .replace(/<b>/gi, '<b class="font-bold text-[#2E5A66]">')
       .replace(/href="#"/g, 'href="/pricing/"')
-      .replace(/href="terms-of-use\.html"/g, 'href="/policies/terms-of-use/"')
+      .replace(/href="terms-of-use\.html"/g, 'href="/terms-of-use/"')
       .replace(/href="privacy-policy\.html"/g, 'href="/privacy-policy/"')
       .replace(/href="refund-policy\.html"/g, 'href="/policies/refund-policy/"')
       .replace(/href="consent-for-telehealth\.html"/g, 'href="/policies/consent-for-telehealth/"')
@@ -156,7 +156,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
           <div key={bIdx} className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 my-5">
             {block.cards?.map((card, cIdx) => {
               const slugMap: Record<string, string> = {
-                "terms of use": "/policies/terms-of-use/",
+                "terms of use": "/terms-of-use/",
                 "privacy policy": "/privacy-policy/",
                 "consent for telehealth": "/policies/consent-for-telehealth/",
                 "refund policy": "/policies/refund-policy/",

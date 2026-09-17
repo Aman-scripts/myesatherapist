@@ -3905,7 +3905,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
 
 export const ALL_POLICIES_LIST = [
   { slug: 'privacy-policy', label: 'Privacy Policy', shortLabel: 'Privacy', href: '/privacy-policy/' },
-  { slug: 'terms-of-use', label: 'Terms of Use', shortLabel: 'Terms', href: '/policies/terms-of-use/' },
+  { slug: 'terms-of-use', label: 'Terms of Use', shortLabel: 'Terms', href: '/terms-of-use/' },
   { slug: 'refund-policy', label: 'Refund Policy', shortLabel: 'Refund', href: '/policies/refund-policy/' },
   { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/policies/consent-for-telehealth/' },
   { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA', href: '/policies/hipaa-compliance/' },

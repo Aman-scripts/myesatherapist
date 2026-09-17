@@ -25,7 +25,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           Home
         </Link>
         <span className="text-[#DECDBB]">/</span>
-        {policy.slug !== "privacy-policy" && (
+        {!["privacy-policy", "terms-of-use"].includes(policy.slug) && (
           <>
             <Link href="/privacy-policy/" className="hover:text-[#2E5A66] transition-colors text-[#5F6B6F]">
               Policies
@@ -122,7 +122,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
               <span className="text-xs font-sans font-bold text-[#7C8B8E] mr-1 uppercase tracking-wider">Related Policies:</span>
               {policy.relatedLinks.map((link, idx) => {
                 const slugMap: Record<string, string> = {
-                  "terms of use": "/policies/terms-of-use/",
+                  "terms of use": "/terms-of-use/",
                   "privacy policy": "/privacy-policy/",
                   "refund policy": "/policies/refund-policy/",
                   "consent for telehealth": "/policies/consent-for-telehealth/",

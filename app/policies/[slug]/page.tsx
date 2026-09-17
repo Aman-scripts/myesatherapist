@@ -32,6 +32,17 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "terms-of-use") {
+    return {
+      title: "Terms of Use | My ESA Therapist Legal & Service Policies",
+      description:
+        "Read the Terms of Use for My ESA Therapist, including service policies, user responsibilities, payments, and ESA evaluation guidelines.",
+      alternates: {
+        canonical: "https://myesatherapist.com/terms-of-use/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -70,6 +81,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "privacy-policy") {
     permanentRedirect("/privacy-policy/");
+  }
+
+  if (slug === "terms-of-use") {
+    permanentRedirect("/terms-of-use/");
   }
 
   const policy = getPolicyBySlug(slug);
