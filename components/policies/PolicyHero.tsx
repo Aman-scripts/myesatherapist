@@ -25,7 +25,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           Home
         </Link>
         <span className="text-[#DECDBB]">/</span>
-        {!["privacy-policy", "terms-of-use"].includes(policy.slug) && (
+        {!["privacy-policy", "terms-of-use", "disclaimer", "disclaimer-and-policies"].includes(policy.slug) && (
           <>
             <Link href="/privacy-policy/" className="hover:text-[#2E5A66] transition-colors text-[#5F6B6F]">
               Policies
@@ -128,8 +128,9 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                   "consent for telehealth": "/policies/consent-for-telehealth/",
                   "hipaa compliance": "/policies/hipaa-compliance/",
                   "editorial policy": "/policies/editorial-policy/",
-                  "disclaimer & policies": "/policies/disclaimer-and-policies/",
-                  "disclaimer": "/policies/disclaimer-and-policies/",
+                  "disclaimer & policies": "/disclaimer/",
+                  "disclaimer": "/disclaimer/",
+                  "medical disclaimer": "/disclaimer/",
                   "accessibility statement": "/policies/accessibility-statement/",
                 };
                 const mappedHref = slugMap[link.text.toLowerCase()] || link.href;

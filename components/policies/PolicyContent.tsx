@@ -20,7 +20,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/href="consent-for-telehealth\.html"/g, 'href="/policies/consent-for-telehealth/"')
       .replace(/href="hipaa-compliance\.html"/g, 'href="/policies/hipaa-compliance/"')
       .replace(/href="editorial-policy\.html"/g, 'href="/policies/editorial-policy/"')
-      .replace(/href="disclaimer-and-policies\.html"/g, 'href="/policies/disclaimer-and-policies/"')
+      .replace(/href="disclaimer-and-policies\.html"/g, 'href="/disclaimer/"')
       .replace(/href="accessibility-statement\.html"/g, 'href="/policies/accessibility-statement/"');
 
     return <span dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
@@ -163,7 +163,9 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 "hipaa compliance": "/policies/hipaa-compliance/",
                 "editorial policy": "/policies/editorial-policy/",
                 "accessibility statement": "/policies/accessibility-statement/",
-                "disclaimer & policies": "/policies/disclaimer-and-policies/",
+                "disclaimer & policies": "/disclaimer/",
+                "disclaimer": "/disclaimer/",
+                "medical disclaimer": "/disclaimer/",
               };
               const mappedHref = slugMap[card.title.toLowerCase()] || card.href || "/privacy-policy/";
 

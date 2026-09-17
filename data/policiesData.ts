@@ -3910,16 +3910,23 @@ export const ALL_POLICIES_LIST = [
   { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/policies/consent-for-telehealth/' },
   { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA', href: '/policies/hipaa-compliance/' },
   { slug: 'editorial-policy', label: 'Editorial Policy', shortLabel: 'Editorial', href: '/policies/editorial-policy/' },
-  { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer', href: '/policies/disclaimer-and-policies/' },
+  { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer', href: '/disclaimer/' },
   { slug: 'accessibility-statement', label: 'Accessibility Statement', shortLabel: 'Accessibility', href: '/policies/accessibility-statement/' },
 ];
 
 export function getPolicyHref(slug: string): string {
   const item = ALL_POLICIES_LIST.find((p) => p.slug === slug);
-  return item?.href || (slug === 'privacy-policy' ? '/privacy-policy/' : `/policies/${slug}/`);
+  if (item?.href) return item.href;
+  if (slug === 'privacy-policy') return '/privacy-policy/';
+  if (slug === 'terms-of-use') return '/terms-of-use/';
+  if (slug === 'disclaimer' || slug === 'disclaimer-and-policies') return '/disclaimer/';
+  return `/policies/${slug}/`;
 }
 
 export function getPolicyBySlug(slug: string): PolicyDocument | undefined {
+  if (slug === 'disclaimer') {
+    return POLICIES_DATA.find((p) => p.slug === 'disclaimer-and-policies');
+  }
   return POLICIES_DATA.find((p) => p.slug === slug);
 }
 

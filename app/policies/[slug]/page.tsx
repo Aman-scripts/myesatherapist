@@ -43,6 +43,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "disclaimer" || slug === "disclaimer-and-policies") {
+    return {
+      title: "Disclaimer | My ESA Therapist",
+      description:
+        "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
+      robots: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+      alternates: {
+        canonical: "https://myesatherapist.com/disclaimer/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -85,6 +101,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "terms-of-use") {
     permanentRedirect("/terms-of-use/");
+  }
+
+  if (slug === "disclaimer" || slug === "disclaimer-and-policies") {
+    permanentRedirect("/disclaimer/");
   }
 
   const policy = getPolicyBySlug(slug);

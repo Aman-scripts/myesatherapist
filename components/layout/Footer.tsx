@@ -27,7 +27,7 @@ const quickLinks = [
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy/" },
   { label: "Terms of Service", href: "/terms-of-use/" },
-  { label: "Medical Disclaimer", href: "/policies/disclaimer-and-policies/" },
+  { label: "Medical Disclaimer", href: "/disclaimer/" },
   { label: "HIPAA Notice of Privacy Practices", href: "/policies/hipaa-compliance/" },
   { label: "Refund Policy", href: "/policies/refund-policy/" },
   { label: "Consent for Telehealth", href: "/policies/consent-for-telehealth/" },
