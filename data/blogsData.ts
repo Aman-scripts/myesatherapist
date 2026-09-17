@@ -142,7 +142,7 @@ export interface BlogArticle {
   introParagraphs: string[];
   tocItems: BlogTocItem[];
   sections: BlogSection[];
-  cta: {
+  cta?: {
     id?: string;
     heading: string;
     description: string;
@@ -1916,22 +1916,18 @@ export const BLOG_POSTS: BlogArticle[] = [
         label: "How to Get an Emotional Support Animal",
       },
       {
-        id: "why-esas-are-gaining-popularity-in-2026",
-        label: "Why ESAs Are Gaining Popularity in 2026",
+        id: "conclusion",
+        label: "Conclusion",
       },
       {
-        id: "final-thoughts",
-        label: "Final Thoughts",
-      },
-      {
-        id: "faq",
+        id: "frequently-asked-questions",
         label: "Frequently Asked Questions",
       },
     ],
     sections: [
       {
         id: "what-is-an-emotional-support-animal",
-        title: "What Is an Emotional Support Animal?",
+        title: "What is an Emotional Support Animal?",
         paragraphs: [
           "An Emotional Support Animal (ESA) is a companion animal that helps people with mental or emotional health problems feel better and more stable. ESAs don't need special training like service animals. Their main job is simple but important: to provide companionship that helps reduce the symptoms of anxiety, depression, PTSD, panic disorders, and other similar conditions.",
           "Emotional support animals are recognized under federal housing laws, which means qualified individuals may legally keep their ESA even in many properties that normally restrict pets.",
@@ -1968,7 +1964,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "how-emotional-support-animals-help-mental-health",
-        title: "How Emotional Support Animals Help Mental Health",
+        title: "How Emotional Support Animals Help Mental Health?",
         paragraphs: [
           "Studies and mental health professionals increasingly recognize the emotional benefits animals can provide to people facing psychological challenges. Many people find that having an emotional support animal makes them feel more at ease, secure, and capable of handling everyday stressors. For some people, an ESA becomes an important part of maintaining emotional stability and improving overall quality of life.",
           "You may qualify for an ESA if you are diagnosed with a mental or emotional health condition that significantly impacts your daily life. Some common qualifying conditions include (but are not limited to):",
@@ -1994,7 +1990,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "what-you-need-to-know-about-esa-laws",
-        title: "Emotional Support Animal Laws: What You Need to Know",
+        title: "What You Need to Know About ESA Laws",
         paragraphs: [
           "When someone types in “ESA laws US” or “emotional support animal rights,” they are usually referring to the federal housing protections and accommodation rules that apply to emotional support animals under the Fair Housing Act.",
           "Since ESA regulations can vary depending on housing situations and documentation requirements, understanding the [latest ESA laws](https://myesatherapist.com/esa-laws/) is important for both tenants and property owners.",
@@ -2033,7 +2029,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "whats-the-difference-between-esas-and-service-animals",
-        title: "ESA vs. Service Animals: What’s the Difference?",
+        title: "What’s the Difference Between ESAs & Service Animals",
         bannerImage: {
           src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/difference-between-ESA-and-service-animal-image.webp",
           alt: "Difference between ESA and service animal",
@@ -2125,37 +2121,39 @@ export const BLOG_POSTS: BlogArticle[] = [
         afterListParagraphs: [
           "It is important to avoid fake ESA certification websites or unofficial registries that promise “instant approvals” without proper mental health evaluations.",
         ],
+        ctaBox: {
+          heading: "Take the First Step Towards Better Mental Health",
+          description:
+            "Connect with our licensed professionals to learn more about how ESA therapy can support your emotional well-being.",
+          buttonText: "Schedule a Consultation",
+          buttonHref: "/#pricing",
+        },
       },
       {
-        id: "why-esas-are-gaining-popularity-in-2026",
-        title: "Why ESAs Are Gaining Popularity in 2026",
+        id: "conclusion",
+        title: "Conclusion",
+        subsections: [
+          {
+            title: "Why ESAs Are Gaining Popularity in 2026",
+            paragraphs: [
+              "More and more renters are using ESAs to help them feel better and keep their homes safe. As stress levels rise and rental rules get stricter, ESAs are a good way to:",
+            ],
+            listItems: [
+              "Maintaining mental well-being",
+              "Avoiding pet restrictions",
+              "Creating a stable home environment",
+            ],
+            afterListParagraphs: [
+              "Under federal law, ESA protections apply to everyone, no matter where they live in the entire United States, whether it's Houston, Dallas, Austin, or a smaller town.",
+            ],
+          },
+        ],
         paragraphs: [
-          "More and more renters are using ESAs to help them feel better and keep their homes safe. As stress levels rise and rental rules get stricter, ESAs are a good way to:",
-        ],
-        listItems: [
-          "Maintaining mental well-being",
-          "Avoiding pet restrictions",
-          "Creating a stable home environment",
-        ],
-        afterListParagraphs: [
-          "Under federal law, ESA protections apply to everyone, no matter where they live in the entire United States, whether it's Houston, Dallas, Austin, or a smaller town.",
+          "An emotional support animal isn’t just a pet; it’s a legitimate mental health support system backed by legal protections. For residents dealing with anxiety, depression, or stress, ESAs can make everyday life more manageable while also ensuring housing stability.",
+          "If you’ve been wondering whether your pet could qualify, it might be worth exploring your options.",
         ],
       },
     ],
-    cta: {
-      heading: "Take the First Step Towards Better Mental Health",
-      description:
-        "Connect with our licensed professionals to learn more about how ESA therapy can support your emotional well-being.",
-      buttonText: "Schedule a Consultation",
-      buttonHref: "/#pricing",
-    },
-    finalThoughts: {
-      title: "Final Thoughts",
-      paragraphs: [
-        "An emotional support animal isn’t just a pet; it’s a legitimate mental health support system backed by legal protections. For residents dealing with anxiety, depression, or stress, ESAs can make everyday life more manageable while also ensuring housing stability.",
-        "If you’ve been wondering whether your pet could qualify, it might be worth exploring your options.",
-      ],
-    },
     faqs: [
       {
         q: "What are the rules of having an emotional support animal?",

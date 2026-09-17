@@ -181,6 +181,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
         {/* 7. FAQ Section (Article-specific FAQs from Google Docs) */}
         <div id="frequently-asked-questions" className="scroll-mt-28">
+          <div id="faq" className="scroll-mt-28" />
           <FaqSection
             title={article.faqSectionTitle || "Frequently Asked Questions"}
             subtitle={
