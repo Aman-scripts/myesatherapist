@@ -2267,10 +2267,10 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "qualifying-conditions",
   "url": "/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
   "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
-  "metaTitle": "Which DSM-5 Conditions May Qualify for an ESA Letter? | My ESA Therapist",
+  "metaTitle": "Which DSM-5 Conditions May Qualifies for an ESA Letter? My ESA Therapist",
   "metaDescription": "Explore which DSM-5 conditions may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, OCD, and other mental health conditions. Learn how eligibility works.",
   schema: conditionsThatMayQualifySchema,
-  "title": "Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide",
+  "title": "Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide.",
   "shortDescription": "Anxiety, PTSD, depression, ADHD, bipolar disorder, and several other DSM-5 conditions qualify for an emotional support animal. Learn how eligibility is assessed and how licensed professionals determine eligibility for an ESA letter.",
   "category": "Qualifying Conditions",
   "author": {
@@ -2278,18 +2278,18 @@ export const BLOG_POSTS: BlogArticle[] = [
     "title": "Mental Health Writer & Research Contributor",
     "credentials": "Licensed Clinical Social Worker",
     "image": "/blogs/blogs_trustbar-author.png",
-    "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+    "bio": "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"
   },
   "reviewedBy": {
     "name": "Max Phillips",
     "credentials": "MSW, LCSW",
     "image": "/blogs/blogs_medical_reviewer.png",
-    "date": "September 05, 2026",
+    "date": "July 10, 2026",
     "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
-  "publishDate": "June 05, 2026",
-  "lastUpdated": "September 05, 2026",
+  "publishDate": "July 10, 2026",
+  "lastUpdated": "July 10, 2026",
   "cardImage": "/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
   "heroImageMobile": "/blogs/blog_hero-section-mobile.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.png",
@@ -2304,12 +2304,12 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "tocItems": [
     {
-      "id": "what-is-an-esa",
+      "id": "what-is-an-emotional-support-animal",
       "label": "What Is an Emotional Support Animal?"
     },
     {
-      "id": "what-qualifying-condition-means",
-      "label": "What Does 'Qualifying Condition' Mean?"
+      "id": "qualifying-condition-fair-housing-act",
+      "label": "What Does \"Qualifying Condition\" Mean Under the Fair Housing Act?"
     },
     {
       "id": "condition-by-condition-guide",
@@ -2317,21 +2317,17 @@ export const BLOG_POSTS: BlogArticle[] = [
     },
     {
       "id": "conditions-that-do-not-qualify",
-      "label": "Conditions That Usually Do Not Qualify"
+      "label": "Conditions That Usually Do Not Qualify and Why"
     },
     {
-      "id": "final-thoughts",
-      "label": "Final Thoughts"
-    },
-    {
-      "id": "faq",
+      "id": "faqs",
       "label": "Frequently Asked Questions"
     }
   ],
   "sections": [
     {
-      "id": "what-is-an-esa",
-      "title": "What Is an Emotional Support Animal?",
+      "id": "what-is-an-emotional-support-animal",
+      "title": "What is an Emotional Support Animal?",
       "paragraphs": [
         "To understand eligibility, it’s important to first answer: What is an emotional support animal?",
         "An ESA is specifically trained to provide emotional and physical comfort, reduce depression and anxiety, and support overall mental well-being simply through companionship. Under federal housing laws, individuals with a valid ESA letter are entitled to certain protections even in “no-pet” housing.",
@@ -2343,7 +2339,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       }
     },
     {
-      "id": "what-qualifying-condition-means",
+      "id": "qualifying-condition-fair-housing-act",
       "title": "What Does \"Qualifying Condition\" Mean Under the Fair Housing Act?",
       "paragraphs": [
         "Under the Fair Housing Act (FHA), a person qualifies for an emotional support animal if they have a disability, which is defined as a physical or mental impairment that substantially limits one or more major life activities. Mental health conditions that meet this criterion are largely drawn from the DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition), the clinical reference used by licensed mental health professionals across the United States.",
@@ -2426,7 +2422,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     },
     {
       "id": "conditions-that-do-not-qualify",
-      "title": "Conditions That Usually Do Not Qualify and Why",
+      "title": "Conditions That Usually Do Not Qualify and Why?",
         bannerImage: {"src":"/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/does-it-quealitfy-for-an-esa.webp","alt":"Infographic showing conditions that usually qualify and usually do not qualify for an Emotional Support Animal (ESA)"},
         bannerPosition: "bottom",
       "paragraphs": [
@@ -2440,13 +2436,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "heading": "See If You're Eligible for an ESA Letter",
     "description": "A licensed mental health professional can evaluate your symptoms and determine whether an ESA letter is appropriate for your needs.",
     "buttonText": "Start Your Evaluation",
-    "buttonHref": "/#pricing"
-  },
-  "finalThoughts": {
-    "title": "Final Thoughts",
-    "paragraphs": [
-      "Qualifying for an emotional support animal is not about finding a loophole; it is a legally protected health accommodation for people with genuine mental health disabilities. If you live with anxiety, depression, PTSD, ADHD, or another condition that affects your daily well-being, speaking with a licensed clinician is the right next step."
-    ]
+    "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
   },
   "faqs": [
     {
