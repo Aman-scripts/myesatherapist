@@ -483,6 +483,33 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {/* Section Callout Box */}
           {sec.calloutBox && renderCalloutBox(sec.calloutBox)}
 
+          {/* Section CTA Box */}
+          {sec.ctaBox && (
+            <div
+              className="w-full relative overflow-hidden rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 shadow-[0px_8px_24px_rgba(26,61,79,0.12)] my-8 text-left"
+              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+            >
+              <div className="relative z-10 flex flex-col items-start space-y-3 sm:space-y-4 max-w-[560px]">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FAF7F2] leading-tight">
+                  {sec.ctaBox.heading}
+                </h3>
+                <p className="font-sans font-medium text-sm sm:text-base text-[#FAF7F2]/90 leading-relaxed max-w-[520px]">
+                  {sec.ctaBox.description}
+                </p>
+                <div className="pt-2">
+                  <Link
+                    href={sec.ctaBox.buttonHref}
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-[12px] bg-[#E8B92C] hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
+                  >
+                    <span className="font-sans font-bold text-sm sm:text-base text-[#1A3D4F] group-hover:scale-[1.02] transition-transform">
+                      {sec.ctaBox.buttonText}
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Section Banner / Content Image (Bottom position) */}
           {sec.bannerImage && sec.bannerPosition === "bottom" && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
