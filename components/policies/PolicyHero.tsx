@@ -18,33 +18,37 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
   const afterAccent = accentIdx !== -1 ? policy.pageTitle.substring(accentIdx + accentWord.length) : "";
 
   return (
-    <section className="w-full pt-6 pb-2 px-4 sm:px-6 lg:px-8 max-w-[1240px] mx-auto">
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-xs sm:text-sm text-[#5F6B6F] font-sans font-medium">
-        <Link href="/" className="hover:text-[#2E5A66] transition-colors">Home</Link>
+    <section className="w-full pt-8 pb-4 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto">
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2.5 text-xs sm:text-sm text-[#5F6B6F] font-sans font-semibold">
+        <Link href="/" className="hover:text-[#2E5A66] transition-colors">
+          Home
+        </Link>
         <span className="text-[#DECDBB]">/</span>
-        <span className="text-[#7C8B8E]">Policies</span>
+        <Link href="/policies/privacy-policy/" className="hover:text-[#2E5A66] transition-colors text-[#5F6B6F]">
+          Policies
+        </Link>
         <span className="text-[#DECDBB]">/</span>
-        <span className="text-[#2E5A66] font-semibold">{policy.pageTitle}</span>
+        <span className="text-[#2E5A66] font-bold">{policy.pageTitle}</span>
       </nav>
 
-      {/* Hero Card */}
-      <div className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] bg-gradient-to-br from-[#163038] via-[#2E5A66] to-[#3B7280] p-6 sm:p-10 lg:p-12 text-[#EAF3F0] shadow-xl">
-        {/* Ambient radial glow */}
-        <div 
-          className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" 
-          aria-hidden="true" 
+      {/* Hero Card with Project Brand Theme */}
+      <div className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] bg-white border border-[#EAE5DC] p-6 sm:p-10 lg:p-12 shadow-[0px_4px_25px_rgba(26,61,79,0.06)]">
+        {/* Ambient Warm Accent Glow */}
+        <div
+          className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-[#E8B92C]/10 blur-3xl"
+          aria-hidden="true"
         />
-        <div 
-          className="pointer-events-none absolute -bottom-10 right-1/4 h-60 w-60 rounded-full bg-[#EFBF2F]/10 blur-2xl" 
-          aria-hidden="true" 
+        <div
+          className="pointer-events-none absolute -bottom-16 right-1/3 h-64 w-64 rounded-full bg-[#2E5A66]/5 blur-3xl"
+          aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[760px]">
-          {/* Eyebrow badge */}
+        <div className="relative z-10 max-w-[840px]">
+          {/* Eyebrow Badge */}
           {policy.eyebrow && (
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-white backdrop-blur-xs mb-4 sm:mb-5">
-              <svg className="w-4 h-4 text-[#EFBF2F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#FAF7F2] border border-[#EAE5DC] px-4 py-1.5 text-xs sm:text-sm font-sans font-bold text-[#2E5A66] shadow-2xs mb-4 sm:mb-5">
+              <svg className="w-4 h-4 text-[#E8B92C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -52,12 +56,12 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             </div>
           )}
 
-          {/* Heading */}
-          <h1 className="font-heading text-3xl sm:text-4xl lg:text-[46px] font-bold tracking-tight text-white leading-[1.15] mb-4">
+          {/* Main Headline H1 */}
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-bold tracking-tight text-[#2E5A66] leading-[1.15] mb-4">
             {accentIdx !== -1 ? (
               <>
                 {beforeAccent}
-                <span className="text-[#EFBF2F] italic font-serif">{matchAccent}</span>
+                <span className="text-[#E8B92C] font-heading font-bold">{matchAccent}</span>
                 {afterAccent}
               </>
             ) : (
@@ -65,50 +69,64 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             )}
           </h1>
 
-          {/* Lede / Subtitle */}
+          {/* Subtitle / Lede */}
           {policy.lede && (
-            <p className="text-sm sm:text-base lg:text-[17px] leading-relaxed text-[#D9EAE5] font-sans font-normal mb-5 max-w-[640px]">
+            <p className="font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-[#5F6B6F] font-medium mb-6 max-w-[740px]">
               {policy.lede}
             </p>
           )}
 
           {/* Hero Stats (e.g. HIPAA) */}
           {policy.heroStats && policy.heroStats.length > 0 && (
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 my-5 max-w-[500px]">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 my-6 max-w-[540px]">
               {policy.heroStats.map((st, i) => (
-                <div key={i} className="bg-white/10 border border-white/15 rounded-xl p-3 sm:p-3.5 backdrop-blur-xs text-center">
-                  <div className="font-heading text-lg sm:text-xl font-bold text-[#EFBF2F]">{st.num}</div>
-                  <div className="text-[11px] sm:text-xs text-[#D9EAE5] font-medium leading-tight mt-0.5">{st.label}</div>
+                <div key={i} className="bg-[#FAF7F2] border border-[#EAE5DC] rounded-[16px] p-3.5 sm:p-4 text-center shadow-2xs">
+                  <div className="font-heading text-xl sm:text-2xl font-bold text-[#2E5A66]">{st.num}</div>
+                  <div className="font-sans text-xs sm:text-[13px] text-[#5F6B6F] font-semibold leading-tight mt-1">{st.label}</div>
                 </div>
               ))}
             </div>
           )}
 
-          {/* Last updated pill */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-white/90 mb-5">
-            <svg className="w-3.5 h-3.5 text-[#EFBF2F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-            <span>Last updated: {policy.updatedDate}</span>
+          {/* Metadata Chips: Last updated date & Reviewer */}
+          <div className="flex flex-wrap items-center gap-3 mb-4 pt-1">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#FAF7F2] border border-[#EAE5DC] px-3.5 py-1.5 text-xs sm:text-sm font-sans font-semibold text-[#5F6B6F]">
+              <svg className="w-4 h-4 text-[#E8B92C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Last updated: {policy.updatedDate}</span>
+            </div>
+
+            {policy.reviewerLine && (
+              <Link
+                href="/legal-reviewer/awais-arshad"
+                className="inline-flex items-center gap-2 rounded-full bg-[#FAF7F2] border border-[#EAE5DC] px-3.5 py-1.5 text-xs sm:text-sm font-sans font-semibold text-[#2E5A66] hover:bg-white hover:border-[#2E5A66]/30 transition-colors"
+              >
+                <svg className="w-4 h-4 text-[#2E5A66]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>{policy.reviewerLine}</span>
+              </Link>
+            )}
           </div>
 
-          {/* Related policy links */}
+          {/* Related Policy Pills */}
           {policy.relatedLinks && policy.relatedLinks.length > 0 && (
-            <div className="flex flex-wrap items-center gap-2 pt-1">
-              <span className="text-xs font-semibold text-[#D9EAE5]/80 mr-1">Related:</span>
+            <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-[#EAE5DC]/80 mt-5">
+              <span className="text-xs font-sans font-bold text-[#7C8B8E] mr-1 uppercase tracking-wider">Related Policies:</span>
               {policy.relatedLinks.map((link, idx) => {
-                // Map link hrefs to /policies/[slug]
                 const slugMap: Record<string, string> = {
-                  "terms of use": "/policies/terms-of-use",
-                  "privacy policy": "/policies/privacy-policy",
-                  "refund policy": "/policies/refund-policy",
-                  "consent for telehealth": "/policies/consent-for-telehealth",
-                  "hipaa compliance": "/policies/hipaa-compliance",
-                  "editorial policy": "/policies/editorial-policy",
-                  "disclaimer & policies": "/policies/disclaimer-and-policies",
-                  "disclaimer": "/policies/disclaimer-and-policies",
-                  "accessibility statement": "/policies/accessibility-statement",
+                  "terms of use": "/policies/terms-of-use/",
+                  "privacy policy": "/policies/privacy-policy/",
+                  "refund policy": "/policies/refund-policy/",
+                  "consent for telehealth": "/policies/consent-for-telehealth/",
+                  "hipaa compliance": "/policies/hipaa-compliance/",
+                  "editorial policy": "/policies/editorial-policy/",
+                  "disclaimer & policies": "/policies/disclaimer-and-policies/",
+                  "disclaimer": "/policies/disclaimer-and-policies/",
+                  "accessibility statement": "/policies/accessibility-statement/",
                 };
                 const mappedHref = slugMap[link.text.toLowerCase()] || link.href;
 
@@ -116,10 +134,10 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                   <Link
                     key={idx}
                     href={mappedHref}
-                    className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-medium text-white hover:bg-white/18 hover:border-white/30 transition-all"
+                    className="inline-flex items-center gap-1 rounded-full border border-[#EAE5DC] bg-[#FAF7F2] hover:bg-white hover:border-[#2E5A66]/40 px-3 py-1 text-xs font-sans font-semibold text-[#2E5A66] transition-all"
                   >
                     <span>{link.text}</span>
-                    <svg className="w-3 h-3 text-[#EFBF2F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-3 h-3 text-[#E8B92C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="9 18 15 12 9 6" />
                     </svg>
                   </Link>

@@ -3,7 +3,7 @@ import { PolicyDocument } from "@/data/policiesData";
 import { PolicyHero } from "./PolicyHero";
 import { PolicyLeftSidebar } from "./PolicyLeftSidebar";
 import { PolicyContent } from "./PolicyContent";
-import { PolicyCtaBanner } from "./PolicyCtaBanner";
+import { CtaBanner } from "@/components/home/CtaBanner";
 
 interface PolicyPageLayoutProps {
   policy: PolicyDocument;
@@ -11,7 +11,7 @@ interface PolicyPageLayoutProps {
 
 export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
   return (
-    <div className="w-full bg-[#FDFBF7] min-h-screen">
+    <div className="w-full bg-[#FAF7F2] min-h-screen text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       {/* 1. Hero Section */}
       <PolicyHero policy={policy} />
 
@@ -28,8 +28,14 @@ export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
         </div>
       </main>
 
-      {/* 3. Pre-footer CTA */}
-      <PolicyCtaBanner />
+      {/* 3. Official Project Pre-Footer CTA Banner */}
+      <CtaBanner
+        bgColor="bg-[#FAF7F2]"
+        title="Ready to Start Your ESA Evaluation?"
+        description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
+        buttonText="Start your Evaluation"
+        buttonHref="/pricing/"
+      />
     </div>
   );
 }
