@@ -48,13 +48,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
   return (
     <aside className="w-full lg:sticky lg:top-24 space-y-6 self-start">
-      {/* Scroll Hint */}
-      <div className="hidden lg:flex items-center gap-2.5 text-xs font-semibold text-[#5F6B6F] px-1">
-        <span className="flex h-5 w-3.5 items-center justify-center rounded-full border border-[#2E5A66]/40 p-0.5">
-          <span className="h-1.5 w-1 rounded-full bg-[#2E5A66] animate-bounce" />
-        </span>
-        <span className="tracking-wide uppercase text-[11px] text-[#7C8B8E]">Scroll to explore</span>
-      </div>
 
       {/* 1. All Policies Menu Card */}
       <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 shadow-xs">
