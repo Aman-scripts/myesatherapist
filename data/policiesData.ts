@@ -3904,16 +3904,22 @@ export const POLICIES_DATA: PolicyDocument[] = [
 ];
 
 export const ALL_POLICIES_LIST = [
-  { slug: 'privacy-policy', label: 'Privacy Policy', shortLabel: 'Privacy' },
-  { slug: 'terms-of-use', label: 'Terms of Use', shortLabel: 'Terms' },
-  { slug: 'refund-policy', label: 'Refund Policy', shortLabel: 'Refund' },
-  { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth' },
-  { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA' },
-  { slug: 'editorial-policy', label: 'Editorial Policy', shortLabel: 'Editorial' },
-  { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer' },
-  { slug: 'accessibility-statement', label: 'Accessibility Statement', shortLabel: 'Accessibility' },
+  { slug: 'privacy-policy', label: 'Privacy Policy', shortLabel: 'Privacy', href: '/privacy-policy/' },
+  { slug: 'terms-of-use', label: 'Terms of Use', shortLabel: 'Terms', href: '/policies/terms-of-use/' },
+  { slug: 'refund-policy', label: 'Refund Policy', shortLabel: 'Refund', href: '/policies/refund-policy/' },
+  { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/policies/consent-for-telehealth/' },
+  { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA', href: '/policies/hipaa-compliance/' },
+  { slug: 'editorial-policy', label: 'Editorial Policy', shortLabel: 'Editorial', href: '/policies/editorial-policy/' },
+  { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer', href: '/policies/disclaimer-and-policies/' },
+  { slug: 'accessibility-statement', label: 'Accessibility Statement', shortLabel: 'Accessibility', href: '/policies/accessibility-statement/' },
 ];
+
+export function getPolicyHref(slug: string): string {
+  const item = ALL_POLICIES_LIST.find((p) => p.slug === slug);
+  return item?.href || (slug === 'privacy-policy' ? '/privacy-policy/' : `/policies/${slug}/`);
+}
 
 export function getPolicyBySlug(slug: string): PolicyDocument | undefined {
   return POLICIES_DATA.find((p) => p.slug === slug);
 }
+

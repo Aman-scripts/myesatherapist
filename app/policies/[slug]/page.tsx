@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ALL_POLICIES_LIST, getPolicyBySlug, POLICIES_DATA } from "@/data/policiesData";
 import { PolicyPageLayout } from "@/components/policies/PolicyPageLayout";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -21,6 +21,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PolicyPageProps): Promise<Metadata> {
   const { slug } = await params;
+
+  if (slug === "privacy-policy") {
+    return {
+      title: "Privacy Policy | My ESA Therapist Data Protection & Security",
+      description: "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
+      alternates: {
+        canonical: "https://myesatherapist.com/privacy-policy/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -56,6 +67,11 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
 
 export default async function PolicyPage({ params }: PolicyPageProps) {
   const { slug } = await params;
+
+  if (slug === "privacy-policy") {
+    permanentRedirect("/privacy-policy/");
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {

@@ -15,7 +15,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/<b>/gi, '<b class="font-bold text-[#2E5A66]">')
       .replace(/href="#"/g, 'href="/pricing/"')
       .replace(/href="terms-of-use\.html"/g, 'href="/policies/terms-of-use/"')
-      .replace(/href="privacy-policy\.html"/g, 'href="/policies/privacy-policy/"')
+      .replace(/href="privacy-policy\.html"/g, 'href="/privacy-policy/"')
       .replace(/href="refund-policy\.html"/g, 'href="/policies/refund-policy/"')
       .replace(/href="consent-for-telehealth\.html"/g, 'href="/policies/consent-for-telehealth/"')
       .replace(/href="hipaa-compliance\.html"/g, 'href="/policies/hipaa-compliance/"')
@@ -157,7 +157,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             {block.cards?.map((card, cIdx) => {
               const slugMap: Record<string, string> = {
                 "terms of use": "/policies/terms-of-use/",
-                "privacy policy": "/policies/privacy-policy/",
+                "privacy policy": "/privacy-policy/",
                 "consent for telehealth": "/policies/consent-for-telehealth/",
                 "refund policy": "/policies/refund-policy/",
                 "hipaa compliance": "/policies/hipaa-compliance/",
@@ -165,7 +165,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 "accessibility statement": "/policies/accessibility-statement/",
                 "disclaimer & policies": "/policies/disclaimer-and-policies/",
               };
-              const mappedHref = slugMap[card.title.toLowerCase()] || card.href || "/policies/privacy-policy/";
+              const mappedHref = slugMap[card.title.toLowerCase()] || card.href || "/privacy-policy/";
 
               return (
                 <Link

@@ -25,7 +25,7 @@ const quickLinks = [
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "/policies/privacy-policy/" },
+  { label: "Privacy Policy", href: "/privacy-policy/" },
   { label: "Terms of Service", href: "/policies/terms-of-use/" },
   { label: "Medical Disclaimer", href: "/policies/disclaimer-and-policies/" },
   { label: "HIPAA Notice of Privacy Practices", href: "/policies/hipaa-compliance/" },
@@ -295,7 +295,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               &copy; 2026 <span className="text-[#E8B92C]">myesatherapist.com</span> — All Rights Reserved
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-semibold">
-              <Link href="/policies/privacy-policy/" className="hover:text-[#E8B92C] transition-colors">
+              <Link href="/privacy-policy/" className="hover:text-[#E8B92C] transition-colors">
                 Privacy Policy
               </Link>
               <Link href="/policies/refund-policy/" className="hover:text-[#E8B92C] transition-colors">

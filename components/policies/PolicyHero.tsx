@@ -25,10 +25,14 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           Home
         </Link>
         <span className="text-[#DECDBB]">/</span>
-        <Link href="/policies/privacy-policy/" className="hover:text-[#2E5A66] transition-colors text-[#5F6B6F]">
-          Policies
-        </Link>
-        <span className="text-[#DECDBB]">/</span>
+        {policy.slug !== "privacy-policy" && (
+          <>
+            <Link href="/privacy-policy/" className="hover:text-[#2E5A66] transition-colors text-[#5F6B6F]">
+              Policies
+            </Link>
+            <span className="text-[#DECDBB]">/</span>
+          </>
+        )}
         <span className="text-[#2E5A66] font-bold">{policy.pageTitle}</span>
       </nav>
 
@@ -119,7 +123,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
               {policy.relatedLinks.map((link, idx) => {
                 const slugMap: Record<string, string> = {
                   "terms of use": "/policies/terms-of-use/",
-                  "privacy policy": "/policies/privacy-policy/",
+                  "privacy policy": "/privacy-policy/",
                   "refund policy": "/policies/refund-policy/",
                   "consent for telehealth": "/policies/consent-for-telehealth/",
                   "hipaa compliance": "/policies/hipaa-compliance/",
