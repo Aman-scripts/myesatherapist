@@ -47,6 +47,7 @@ AGENTS.md
 
 # local helper scripts & temp figma frames
 scripts/
+scratch/
 figma_frame_*.png
 *.tmp
 *_parsed.txt
