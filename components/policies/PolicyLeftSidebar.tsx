@@ -219,7 +219,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                 }`}
                 style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
-                {/* Fixed Top Header (Logo Card + Close Button + Divider) */}
+                {/* Fixed Top Header (Logo Card + Close Button + Divider + Title) */}
                 <div className="shrink-0 px-6 sm:px-8 pt-8 sm:pt-10">
                   <div className="flex items-start justify-between mb-5">
                     {/* Logo Card with Gold Border */}
@@ -246,11 +246,21 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
                   {/* Divider Line */}
                   <div className="w-full h-[0.5px] bg-white/30 mb-4" />
+
+                  {/* Fixed Title Section: Table of Contents & On this page */}
+                  <div className="space-y-1 pb-3">
+                    <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight tracking-[-0.00015em]">
+                      Table of Contents
+                    </h2>
+                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#E8B92C]">
+                      On this page
+                    </p>
+                  </div>
                 </div>
 
                 {/* Scrollable Navigation Sections */}
                 <div
-                  className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-6 sm:px-8 pb-14 space-y-7 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                  className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-6 sm:px-8 pt-1 pb-14 space-y-7 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
                   style={{
                     scrollbarWidth: "none",
                     msOverflowStyle: "none",
@@ -260,16 +270,9 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                   }}
                   onTouchMove={(e) => e.stopPropagation()}
                 >
-                  {/* 1. Table of Contents (On this page) */}
+                  {/* 1. Table of Contents Links (On this page) */}
                   {policy.tocItems && policy.tocItems.length > 0 && (
-                    <div className="space-y-3">
-                      <h2 className="font-heading text-2xl sm:text-[26px] font-bold text-[#FAF7F2] leading-tight">
-                        Table of Contents
-                      </h2>
-                      <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#E8B92C]">
-                        On this page
-                      </p>
-                      <ul className="space-y-3 font-sans pt-1">
+                    <ul className="space-y-3.5 font-sans">
                         {policy.tocItems.map((item) => {
                           const isActive = activeSectionId === item.id;
                           return (
@@ -296,7 +299,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                           );
                         })}
                       </ul>
-                    </div>
                   )}
 
                   {/* Divider */}
