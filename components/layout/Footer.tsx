@@ -10,7 +10,7 @@ const companyLinks = [
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Meet our Therapists", href: "/esa-doctors/" },
-  { label: "HIPAA Compliance", href: "#compliance" },
+  { label: "HIPAA Compliance", href: "/policies/hipaa-compliance/" },
   { label: "Video Testimonials", href: "#testimonials" },
   { label: "Customer Reviews", href: "/reviews" },
 ];
@@ -262,15 +262,18 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
             <p className="font-semibold">
               &copy; 2026 <span className="text-[#E8B92C]">myesatherapist.com</span> — All Rights Reserved
             </p>
-            <div className="flex items-center gap-8 font-semibold">
-              <Link href="#privacy" className="hover:text-[#E8B92C] transition-colors">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-semibold">
+              <Link href="/policies/privacy-policy/" className="hover:text-[#E8B92C] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#refund" className="hover:text-[#E8B92C] transition-colors">
+              <Link href="/policies/refund-policy/" className="hover:text-[#E8B92C] transition-colors">
                 Refund Policy
               </Link>
-              <Link href="#terms" className="hover:text-[#E8B92C] transition-colors">
+              <Link href="/policies/terms-of-use/" className="hover:text-[#E8B92C] transition-colors">
                 Terms of Use
+              </Link>
+              <Link href="/policies/accessibility-statement/" className="hover:text-[#E8B92C] transition-colors">
+                Accessibility Statement
               </Link>
             </div>
           </div>
