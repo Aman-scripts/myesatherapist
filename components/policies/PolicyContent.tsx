@@ -108,7 +108,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <div key={bIdx} className="mt-6 pt-5 border-t border-[#EAE5DC] space-y-3">
             {block.tag && (
-              <span className="inline-block text-xs font-sans font-bold uppercase tracking-wider bg-[#FAF7F2] text-[#2E5A66] border border-[#EAE5DC] px-3 py-1 rounded-full">
+              <span className="inline-flex items-center justify-center text-sm sm:text-base font-sans font-bold bg-[#FAF7F2] text-[#2E5A66] border border-[#EAE5DC] px-4 py-1.5 sm:px-5 sm:py-2 rounded-full shadow-2xs">
                 {block.tag}
               </span>
             )}
