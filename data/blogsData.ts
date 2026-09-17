@@ -1683,7 +1683,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       { id: "esa-request-denied", label: "If ESA Is Denied" },
       { id: "hud-policy-update-2026", label: "2026 HUD Update" },
       { id: "final-thoughts", label: "Final Thoughts" },
-      { id: "faq", label: "FAQs" },
+      { id: "faqs", label: "FAQs" },
     ],
     sections: [
       {
@@ -1761,7 +1761,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "hud-policy-update-2026",
         title: "2026 HUD Policy Update: What ESA Tenants Must Know Now",
         paragraphs: [
-          "[On May 22, 2026, HUD issued its guidelines](https://myesatherapist.com/blog/esa-guide/hud-guidance-for-emotional-support-animals/) that significantly changed how federal fair housing complaints involving emotional support animals are handled. Signed by FHEO Assistant Secretary Craig Trainor, the memo cancels HUD's prior ESA guidance from 2013 and 2020 and instructs agency staff to stop pursuing complaints from tenants whose ESAs have not been individually trained to perform disability-related tasks.",
+          "[On May 22, 2026, HUD issued its guidelines](/blog/esa-guide/hud-guidance-for-emotional-support-animals/) that significantly changed how federal fair housing complaints involving emotional support animals are handled. Signed by FHEO Assistant Secretary Craig Trainor, the memo cancels HUD's prior ESA guidance from 2013 and 2020 and instructs agency staff to stop pursuing complaints from tenants whose ESAs have not been individually trained to perform disability-related tasks.",
           "This means a denial based on an untrained ESA is no longer treated as a federal violation by HUD, though state fair housing laws may still apply separately",
         ],
         bannerImage: {
@@ -1786,10 +1786,11 @@ export const BLOG_POSTS: BlogArticle[] = [
       buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
     },
     finalThoughts: {
+      id: "final-thoughts",
       title: "Final Thoughts",
       paragraphs: [
         "A landlord cannot deny an emotional support animal simply because the property has a “no pets” policy or because they disagree with the concept of emotional support animals. However, housing providers may refuse an accommodation request when a legally recognized exception applies, such as exempt housing, insufficient documentation, or a direct threat to health and safety.",
-        "Knowing your rights, [providing a legitimate ESA letter](https://myesatherapist.com/blog/esa-guide/esa-letter-sample/), and understanding the Fair Housing Act can help you navigate the housing process with confidence. If your request is denied, review the reason carefully before deciding your next steps, as not every denial is legally justified.",
+        "Knowing your rights, [providing a legitimate ESA letter](/blog/esa-guide/esa-letter-sample/), and understanding the Fair Housing Act can help you navigate the housing process with confidence. If your request is denied, review the reason carefully before deciding your next steps, as not every denial is legally justified.",
       ],
     },
     faqs: [
@@ -1818,6 +1819,9 @@ export const BLOG_POSTS: BlogArticle[] = [
         a: "Ask for the reason in writing, review whether the denial is legally justified, gather any additional documentation if needed, and consider filing a complaint with HUD, your state fair housing agency, or consulting a fair housing attorney if you believe your rights have been violated.",
       },
     ],
+    faqSectionTitle: "Frequently Asked Questions",
+    faqSectionSubtitle: "",
+    faqSectionId: "faqs",
     bottomCta: {
       title: "Ready to Explore ESA Evaluation?",
       description:
