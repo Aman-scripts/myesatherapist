@@ -3,7 +3,6 @@ import { PolicyDocument } from "@/data/policiesData";
 import { PolicyHero } from "./PolicyHero";
 import { PolicyLeftSidebar } from "./PolicyLeftSidebar";
 import { PolicyContent } from "./PolicyContent";
-import { PolicyRightSidebar } from "./PolicyRightSidebar";
 import { PolicyCtaBanner } from "./PolicyCtaBanner";
 
 interface PolicyPageLayoutProps {
@@ -16,20 +15,15 @@ export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
       {/* 1. Hero Section */}
       <PolicyHero policy={policy} />
 
-      {/* 2. Main 3-Column Layout (Matching Ongo LegalPage_mainLayout) */}
-      <main className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] xl:grid-cols-[260px_1fr_280px] gap-8 lg:gap-10 items-start">
+      {/* 2. Main 2-Column Layout (Left sticky navigation + expanded main content) */}
+      <main className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] xl:grid-cols-[300px_1fr] gap-8 lg:gap-12 items-start">
           {/* Left Sticky Sidebar: All Policies & TOC */}
           <PolicyLeftSidebar currentSlug={policy.slug} policy={policy} />
 
-          {/* Center Main Content Area */}
+          {/* Expanded Main Content Area */}
           <div className="w-full min-w-0">
             <PolicyContent policy={policy} />
-          </div>
-
-          {/* Right Sticky Sidebar: Resources & Support (Visible on XL screens, or stacked below) */}
-          <div className="w-full lg:col-span-2 xl:col-span-1">
-            <PolicyRightSidebar />
           </div>
         </div>
       </main>
