@@ -385,6 +385,17 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             <div className="space-y-6 pt-2">
               {sec.subsections.map((sub, sIdx) => (
                 <div key={sIdx} className="space-y-2.5">
+                  {sub.image && sub.imagePosition === "top" && (
+                    <div className="pt-2 pb-1">
+                      <Image
+                        src={sub.image.src}
+                        alt={sub.image.alt}
+                        width={sub.image.width || 80}
+                        height={sub.image.height || 80}
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                      />
+                    </div>
+                  )}
                   {sub.title && sub.title.trim() ? (
                     <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
                       {sub.title}
@@ -467,7 +478,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                     </div>
                   )}
                   {sub.calloutBox && renderCalloutBox(sub.calloutBox)}
-                  {sub.image && (
+                  {sub.image && sub.imagePosition !== "top" && (
                     <div className="w-full relative rounded-[16px] overflow-hidden shadow-xs my-4 bg-white border border-[#DECDBB]/40">
                       <Image
                         src={sub.image.src}

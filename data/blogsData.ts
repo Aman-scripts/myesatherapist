@@ -31,7 +31,10 @@ export interface BlogSubsection {
   image?: {
     src: string;
     alt: string;
+    width?: number;
+    height?: number;
   };
+  imagePosition?: "top" | "bottom";
 }
 
 export interface BlogComparisonRow {
@@ -1843,9 +1846,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/emotional-support-animal/",
     metaTitle: "What is an Emotional Support Animal? Benefits & Rights Guide | My ESA Therapist",
     metaDescription:
-      "This complete guide covers everything you need to know about emotional support animals, including how ESAs work, who qualifies, federal ESA laws, housing rights, and the difference between ESAs and service animals.",
+      "Learn everything about Emotional Support Animals, including ESA letters, landlord rules, and legal protections.",
     schema: whatIsAnEsaSchema,
-    title: "What is an Emotional Support Animal? Everything You Need to Know",
+    title: "What is an Emotional Support Animal? Everything You Need to Know.",
     shortDescription:
       "This complete guide covers everything you need to know about emotional support animals, including how ESAs work, who qualifies, federal ESA laws, housing rights, and the difference between ESAs and service animals. It also explains landlord rules, common misconceptions, and how emotional support animals help improve mental well-being.",
     category: "ESA Guide",
@@ -1861,74 +1864,65 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Max Phillips",
       credentials: "MSW, LCSW",
       image: "/blogs/blogs_medical_reviewer.png",
-      date: "September 02, 2026",
+      date: "August 17, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
-    publishDate: "June 02, 2026",
-    lastUpdated: "September 02, 2026",
+    publishDate: "May 14, 2026",
+    lastUpdated: "August 17, 2026",
     cardImage:
       "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/emotional-support-animal-image.webp",
     heroImageMobile: "/blogs/blog_hero-section-mobile.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.png",
     heroImageDesktop: "/blogs/blog-hero_section.png",
-    questionCallout: {
-      question: "Can any pet be an emotional support animal?",
-      answer:
-        "Yes. Any domesticated animal, regardless of its size or breed, can be an ESA if a licensed mental health professional determines that the animal provides support for an individual’s disability-related need.",
-    },
     introParagraphs: [
       "An emotional support animal can be more than just a pet. It can be a lifeline for people navigating anxiety, depression, and other mental health challenges. For many residents, the bond with an animal brings a sense of calm, stability, and daily comfort that traditional treatments alone may not fully provide. But what exactly qualifies an animal as an emotional support animal, and what rights do you actually have?",
       "With growing awareness and a lot of misinformation, understanding how ESAs work, who qualifies, and what the law actually says has never been more important. This guide breaks it all down clearly and practically so you can make informed decisions for yourself or a loved one.",
     ],
     tocItems: [
       {
-        id: "what-is-an-emotional-support-animal",
-        label: "What is an Emotional Support Animal?",
+        id: "what-is-an-esa",
+        label: "What Is an ESA?",
       },
       {
-        id: "types-of-emotional-support-animals-and-their-benefits",
-        label: "Types of Emotional Support Animals and Their Benefits",
+        id: "types-of-esas",
+        label: "Types of ESAs",
       },
       {
-        id: "how-emotional-support-animals-help-mental-health",
-        label: "How Emotional Support Animals Help Mental Health?",
+        id: "esa-mental-health-benefits",
+        label: "ESA Mental Health Benefits",
       },
       {
-        id: "what-you-need-to-know-about-esa-laws",
-        label: "What You Need to Know About ESA Laws",
+        id: "esa-laws-explained",
+        label: "ESA Laws Explained",
       },
       {
-        id: "whats-the-difference-between-esas-and-service-animals",
-        label: "What’s the Difference Between ESAs & Service Animals",
+        id: "esa-vs-service-animals",
+        label: "ESA vs Service Animals",
       },
       {
-        id: "can-emotional-support-animals-go-anywhere",
-        label: "Can Emotional Support Animals Go Anywhere?",
+        id: "can-esas-go-anywhere",
+        label: "Can ESAs Go Anywhere?",
       },
       {
-        id: "emotional-support-animals-housing-rules",
-        label: "Emotional Support Animals Housing Rules",
+        id: "esa-housing-rules",
+        label: "ESA Housing Rules",
       },
       {
-        id: "emotional-support-animals-and-air-travel",
-        label: "Emotional Support Animals and Air Travel",
+        id: "esa-air-travel-rules",
+        label: "ESA Air Travel Rules",
       },
       {
-        id: "how-to-get-an-emotional-support-animal",
-        label: "How to Get an Emotional Support Animal",
+        id: "how-to-get-an-esa",
+        label: "How to Get an ESA",
       },
       {
-        id: "conclusion",
-        label: "Conclusion",
-      },
-      {
-        id: "frequently-asked-questions",
-        label: "Frequently Asked Questions",
+        id: "faqs",
+        label: "FAQs",
       },
     ],
     sections: [
       {
-        id: "what-is-an-emotional-support-animal",
+        id: "what-is-an-esa",
         title: "What is an Emotional Support Animal?",
         paragraphs: [
           "An Emotional Support Animal (ESA) is a companion animal that helps people with mental or emotional health problems feel better and more stable. ESAs don't need special training like service animals. Their main job is simple but important: to provide companionship that helps reduce the symptoms of anxiety, depression, PTSD, panic disorders, and other similar conditions.",
@@ -1943,29 +1937,85 @@ export const BLOG_POSTS: BlogArticle[] = [
         quoteBoxPosition: "bottom",
       },
       {
-        id: "types-of-emotional-support-animals-and-their-benefits",
+        id: "types-of-esas",
         title: "Types of Emotional Support Animals and Their Benefits",
+        subsections: [
+          {
+            title: "Dogs",
+            paragraphs: [
+              "The most common ESAs, dogs provide loyalty, companionship, and emotional security. They help with anxiety, depression, loneliness, and panic attacks, and they also encourage people to stick to a routine and be active.",
+            ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/dog-image.webp",
+              alt: "dog",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
+          },
+          {
+            title: "Cats",
+            paragraphs: [
+              "Cats are ideal for people who prefer a calm and low-maintenance companion. Their affectionate nature helps reduce stress, loneliness, and emotional anxiety, especially in apartment living.",
+            ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/cat-image.webp",
+              alt: "cat icon",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
+          },
+          {
+            title: "Rabbits",
+            paragraphs: [
+              "Quiet and gentle, rabbits are great for smaller spaces. They help create a peaceful environment and provide comfort for people dealing with stress or social anxiety.",
+            ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/rabbit-image.webp",
+              alt: "rabbit icon",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
+          },
+          {
+            title: "Birds",
+            paragraphs: [
+              "Birds offer emotional connection through interaction and playful behavior. They help lift your mood, make you feel less alone, and bring good things into your life every day.",
+            ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/bird-image.webp",
+              alt: "bird icon",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
+          },
+          {
+            title: "Small Animals",
+            paragraphs: [
+              "Hamsters, guinea pigs, and similar pets can also be ESAs. They are easy to manage and help create emotional stability through companionship and routine.",
+            ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/small-animals-image.webp",
+              alt: "small animals icon",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
+          },
+        ],
         bannerImage: {
           src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/emotional-support-animal-image.webp",
-          alt: "Types of emotional support animals and their benefits",
+          alt: "emotional support animal",
+          caption:
+            "The bond between humans and emotional support animals provides powerful therapeutic benefits",
         },
         bannerPosition: "bottom",
-        paragraphs: [
-          "The bond between humans and emotional support animals provides powerful therapeutic benefits across various types of animals:",
-        ],
-        listItems: [
-          "**Dogs:** The most common ESAs, dogs provide loyalty, companionship, and emotional security. They help with anxiety, depression, loneliness, and panic attacks, and they also encourage people to stick to a routine and be active.",
-          "**Cats:** Cats are ideal for people who prefer a calm and low-maintenance companion. Their affectionate nature helps reduce stress, loneliness, and emotional anxiety, especially in apartment living.",
-          "**Rabbits:** Quiet and gentle, rabbits are great for smaller spaces. They help create a peaceful environment and provide comfort for people dealing with stress or social anxiety.",
-          "**Birds:** Birds offer emotional connection through interaction and playful behavior. They help lift your mood, make you feel less alone, and bring good things into your life every day.",
-          "**Small Animals:** Hamsters, guinea pigs, and similar pets can also be ESAs. They are easy to manage and help create emotional stability through companionship and routine.",
-        ],
-        afterListParagraphs: [
-          "The bond between humans and emotional support animals provides powerful therapeutic benefits.",
-        ],
       },
       {
-        id: "how-emotional-support-animals-help-mental-health",
+        id: "esa-mental-health-benefits",
         title: "How Emotional Support Animals Help Mental Health?",
         paragraphs: [
           "Studies and mental health professionals increasingly recognize the emotional benefits animals can provide to people facing psychological challenges. Many people find that having an emotional support animal makes them feel more at ease, secure, and capable of handling everyday stressors. For some people, an ESA becomes an important part of maintaining emotional stability and improving overall quality of life.",
@@ -1983,19 +2033,20 @@ export const BLOG_POSTS: BlogArticle[] = [
           "To officially have an ESA, you need an ESA letter from a licensed mental health professional (LMHP), such as a therapist, psychologist, or psychiatrist.",
         ],
         ctaBox: {
-          heading: "See If You Qualify?",
+          heading: "See If you Qualify?",
           description:
             "Our team of licensed mental health professionals can help you determine if an ESA is right for you and guide you through the certification process.",
           buttonText: "Schedule a Consultation",
-          buttonHref: "/#pricing",
+          buttonHref:
+            "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
         },
       },
       {
-        id: "what-you-need-to-know-about-esa-laws",
-        title: "What You Need to Know About ESA Laws",
+        id: "esa-laws-explained",
+        title: "Emotional Support Animal Laws: What You Need to Know?",
         paragraphs: [
           "When someone types in “ESA laws US” or “emotional support animal rights,” they are usually referring to the federal housing protections and accommodation rules that apply to emotional support animals under the Fair Housing Act.",
-          "Since ESA regulations can vary depending on housing situations and documentation requirements, understanding the [latest ESA laws](https://myesatherapist.com/esa-laws/) is important for both tenants and property owners.",
+          "Since ESA regulations can vary depending on housing situations and documentation requirements, [understanding the latest ESA laws](/esa-laws/) is important for both tenants and property owners.",
         ],
         subsections: [
           {
@@ -2009,8 +2060,15 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Pet fees and deposits cannot be charged for ESAs",
             ],
             afterListParagraphs: [
-              "This is why many renters search: 'Can a landlord deny ESA?' But the answer is, in most cases, no. If you have a valid ESA letter.",
+              "This is why many renters search: “Can a landlord deny ESA?” But the answer is, in most cases, no. If you have a valid ESA letter.",
             ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/fair-housing-act-image.webp",
+              alt: "fair housing act",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
           },
           {
             title: "When Can a Landlord Deny an ESA?",
@@ -2030,11 +2088,11 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
       },
       {
-        id: "whats-the-difference-between-esas-and-service-animals",
-        title: "What’s the Difference Between ESAs & Service Animals",
+        id: "esa-vs-service-animals",
+        title: "ESA vs. Service Animals: What’s the Difference?",
         bannerImage: {
           src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/difference-between-ESA-and-service-animal-image.webp",
-          alt: "Difference between ESA and service animal",
+          alt: "difference between ESA and service animal",
         },
         bannerPosition: "bottom",
         paragraphs: [
@@ -2043,7 +2101,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
       },
       {
-        id: "can-emotional-support-animals-go-anywhere",
+        id: "can-esas-go-anywhere",
         title: "Can Emotional Support Animals Go Anywhere?",
         paragraphs: [
           "No. Emotional support animals do not automatically receive public access rights under federal law. Unlike service dogs, ESAs are generally not permitted in all public places simply because they provide emotional support.",
@@ -2060,7 +2118,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
       },
       {
-        id: "emotional-support-animals-housing-rules",
+        id: "esa-housing-rules",
         title: "Emotional Support Animals Housing Rules",
         paragraphs: [
           "Understanding “ESA housing rules” can save you from unnecessary stress, especially if you’re renting.",
@@ -2068,19 +2126,20 @@ export const BLOG_POSTS: BlogArticle[] = [
         subsections: [
           {
             title: "What Landlords Can Ask:",
-            paragraphs: [
-              "Under federal housing guidelines, landlords can ask for:",
-            ],
             listItems: [
               "A valid ESA letter from a licensed professional",
               "Confirmation that your need for the ESA is genuine",
             ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/do-image.webp",
+              alt: "do icon",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
           },
           {
             title: "What Landlords Cannot Do:",
-            paragraphs: [
-              "Under the Fair Housing Act, landlords cannot:",
-            ],
             listItems: [
               "Ask for detailed medical records",
               "Charge pet fees or deposits",
@@ -2089,11 +2148,18 @@ export const BLOG_POSTS: BlogArticle[] = [
             afterListParagraphs: [
               "This is especially helpful for renters worried about pet restrictions.",
             ],
+            image: {
+              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/dont-image.webp",
+              alt: "Don't Icon",
+              width: 200,
+              height: 200,
+            },
+            imagePosition: "top",
           },
         ],
       },
       {
-        id: "emotional-support-animals-and-air-travel",
+        id: "esa-air-travel-rules",
         title: "Emotional Support Animals and Air Travel",
         paragraphs: [
           "Air travel rules for emotional support animals have undergone significant changes in recent years, particularly after 2021. Airlines are no longer federally required to recognize ESAs as service animals under U.S. Department of Transportation regulations.",
@@ -2109,53 +2175,58 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
       },
       {
-        id: "how-to-get-an-emotional-support-animal",
+        id: "how-to-get-an-esa",
         title: "How to Get an Emotional Support Animal",
         paragraphs: [
           "If you’re wondering “how to get an emotional support animal,” the process is actually quite simple and accessible for most people:",
         ],
-        listItems: [
-          "**Step 1: Assess Your Mental Health Needs:** First, check your mental health to see if you have any problems like anxiety, depression, or stress that could use some emotional support and company.",
-          "**Step 2: Speak to a Licensed Professional:** Get in touch with a licensed therapist or mental health professional who can properly evaluate your condition and decide if an ESA is a good addition to your treatment plan.",
-          "**Step 3: Get Your ESA Letter:** If you meet the requirements, the professional will write you an ESA letter, which is an official document that proves you need an emotional support animal under housing laws.",
-          "**Step 4: Provide It to Your Landlord:** Even if the property has a \"no pets\" policy, you can still ask for accommodation by giving your ESA letter to your landlord or housing provider.",
+        subsections: [
+          {
+            title: "Step 1: Assess Your Mental Health Needs",
+            paragraphs: [
+              "First, check your mental health to see if you have any problems like anxiety, depression, or stress that could use some emotional support and company.",
+            ],
+          },
+          {
+            title: "Step 2: Speak to a Licensed Professional",
+            paragraphs: [
+              "Get in touch with a licensed therapist or mental health professional who can properly evaluate your condition and decide if an ESA is a good addition to your treatment plan.",
+            ],
+          },
+          {
+            title: "Step 3: Get Your ESA Letter",
+            paragraphs: [
+              "If you meet the requirements, the professional will write you an ESA letter, which is an official document that proves you need an emotional support animal under housing laws.",
+            ],
+          },
+          {
+            title: "Step 4: Provide It to Your Landlord",
+            paragraphs: [
+              "Even if the property has a “no pets” policy, you can still ask for accommodation by giving your ESA letter to your landlord or housing provider.",
+            ],
+          },
         ],
         afterListParagraphs: [
           "It is important to avoid fake ESA certification websites or unofficial registries that promise “instant approvals” without proper mental health evaluations.",
         ],
-        ctaBox: {
-          heading: "Take the First Step Towards Better Mental Health",
-          description:
-            "Connect with our licensed professionals to learn more about how ESA therapy can support your emotional well-being.",
-          buttonText: "Schedule a Consultation",
-          buttonHref: "/#pricing",
-        },
-      },
-      {
-        id: "conclusion",
-        title: "Conclusion",
-        subsections: [
-          {
-            title: "Why ESAs Are Gaining Popularity in 2026",
-            paragraphs: [
-              "More and more renters are using ESAs to help them feel better and keep their homes safe. As stress levels rise and rental rules get stricter, ESAs are a good way to:",
-            ],
-            listItems: [
-              "Maintaining mental well-being",
-              "Avoiding pet restrictions",
-              "Creating a stable home environment",
-            ],
-            afterListParagraphs: [
-              "Under federal law, ESA protections apply to everyone, no matter where they live in the entire United States, whether it's Houston, Dallas, Austin, or a smaller town.",
-            ],
-          },
-        ],
-        paragraphs: [
-          "An emotional support animal isn’t just a pet; it’s a legitimate mental health support system backed by legal protections. For residents dealing with anxiety, depression, or stress, ESAs can make everyday life more manageable while also ensuring housing stability.",
-          "If you’ve been wondering whether your pet could qualify, it might be worth exploring your options.",
-        ],
       },
     ],
+    cta: {
+      heading: "Take the First Step Towards Better Mental Health",
+      description:
+        "Connect with our licensed professionals to learn more about how ESA therapy can support your emotional well-being.",
+      buttonText: "Schedule a Consultation",
+      buttonHref:
+        "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
+    },
+    finalThoughts: {
+      id: "conclusion",
+      title: "Conclusion",
+      paragraphs: [
+        "Emotional Support Animal therapy represents a valuable complement to traditional mental health treatment approaches. The bond between humans and animals offers unique therapeutic benefits that can significantly improve quality of life for individuals facing mental health challenges.",
+        "If you’re considering ESA therapy, we encourage you to consult with a licensed mental health professional to explore whether this option is right for you. At My ESA Therapist, we’re committed to helping you find the support you need for your mental health journey.",
+      ],
+    },
     faqs: [
       {
         q: "What are the rules of having an emotional support animal?",
@@ -2182,6 +2253,9 @@ export const BLOG_POSTS: BlogArticle[] = [
         a: "Emotional support animals can reduce stress, anxiety, and feelings of loneliness since they offer emotional stability, comfort, and companionship.",
       },
     ],
+    faqSectionTitle: "Frequently Asked Questions",
+    faqSectionSubtitle: "",
+    faqSectionId: "faqs",
   },
 
   // =========================================================================
