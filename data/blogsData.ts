@@ -598,7 +598,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "is-there-an-official-esa-registry-in-the-united-states",
         title: "Is There an Official ESA Registry in the United States?",
         bannerImage: {
-          src: "/Blog Images/Does ESA Registration Actually Mean Anything_/esa-protection-not-registration.webp.webp",
+          src: "/Blog Images/Does ESA Registration Actually Mean Anything_/esa-protection-not-registration.webp",
           alt: "ESA protection comes from legal rights, not registration",
         },
         bannerPosition: "bottom",
