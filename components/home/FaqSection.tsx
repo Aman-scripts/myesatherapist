@@ -71,9 +71,11 @@ export function FaqSection({
           <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
             {title}
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+              {subtitle}
+            </p>
+          )}
         </div>
 
         {/* Frame 1000011803: Content Row (Image + Accordions) */}

@@ -119,6 +119,9 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
       {/* 3. Main Sections */}
       {article.sections.map((sec) => (
         <section key={sec.id} id={sec.id} className="space-y-5 scroll-mt-28">
+          {sec.id.includes("doesnt") && (
+            <div id={sec.id.replace("doesnt", "doesn't")} className="scroll-mt-28" />
+          )}
           <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-tight">
             {sec.title}
           </h2>

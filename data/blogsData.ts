@@ -164,6 +164,7 @@ export interface BlogArticle {
   faqs: BlogFaq[];
   faqSectionTitle?: string;
   faqSectionSubtitle?: string;
+  faqSectionId?: string;
   schema?: Record<string, any>;
 }
 
@@ -450,7 +451,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     url: "/blog/esa-guide/is-esa-registration-legit/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/is-esa-registration-legit/",
     schema: isEsaRegistrationLegitSchema,
-    title: "Is ESA Registration Legit or Required? The Truth About ESA Registration",
+    title: "Is ESA Registration Legit or Required? The Truth About ESA Registration.",
     metaTitle: "ESA Registration: Is It Legit & Required? | My ESA Therapist",
     metaDescription:
       "Is ESA registration required or legitimate? Learn the truth about ESA registries, ID cards, certificates, and what documentation actually matters for housing.",
@@ -478,11 +479,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     heroImageMobile: "/blogs/blog_hero-section-mobile.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.png",
     heroImageDesktop: "/blogs/blog-hero_section.png",
-    questionCallout: {
-      question: "Do I need to register my emotional support animal?",
-      answer:
-        "No. There is no official or federal registry for emotional support animals in the U.S., and buying a registration or ID card does not give any legal status to your ESA. For housing accommodation, what matters is a genuine ESA letter issued by a licensed mental health professional that supports the disability-related need for an ESA.",
-    },
     introParagraphs: [
       "If you’ve spent even five minutes searching online about emotional support animals (ESAs), you’ve probably seen websites promising instant ESA registration, official ESA certificates, registration numbers, ID cards, and even nationwide ESA databases.",
       "At first glance, these services look genuine. Many claim that registering your pet will make it a “legal ESA” or help you qualify for housing protections. But here’s the question thousands of people are asking: Does ESA registration actually mean anything legally? The short answer is no.",
@@ -534,7 +530,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         label: "Summing Everything Up: Focus on Documentation, Not Registration",
       },
       {
-        id: "faq",
+        id: "frequently-asked-questions-about-esa-registration",
         label: "Frequently Asked Questions About ESA Registration",
       },
     ],
@@ -554,7 +550,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
         afterListParagraphs: [
           "They automatically think that there must be some government system tracking emotional support animals. After all, training standards are a common topic of discussion when it comes to service animals, and registration is necessary for many other legal programs.",
-          "However, emotional support animals work differently. An ESA is not recognized through a registration database. Instead, an emotional support animal is recognized through a legitimate recommendation from a licensed mental health professional who determines that the animal helps reduce symptoms of a qualifying mental or emotional condition. An individual with a verified ESA will have a letter from a licensed mental health professional, explaining how the animal assists with their disability.",
+          "However, emotional support animals work differently. An [ESA is not recognized through a registration database](/blog/esa-guide/emotional-support-animal/). Instead, an emotional support animal is recognized through a legitimate recommendation from a licensed mental health professional who determines that the animal helps reduce symptoms of a qualifying mental or emotional condition. An individual with a verified ESA will have a letter from a licensed mental health professional, explaining how the animal assists with their disability.",
         ],
         quoteBox: {
           quote:
@@ -736,6 +732,13 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Many people search: “Will ESA registration help me get approved for housing?” Registration alone usually does not establish a legal basis for an accommodation request.",
           "Housing providers are generally concerned with whether the individual has appropriate supporting documentation showing a disability-related need for the animal. A registration certificate without supporting documentation may not address that requirement. A landlord is not obligated to grant ESA housing access without the supporting legal documentation.",
         ],
+        ctaBox: {
+          heading: "Stop Paying for Paperwork That Doesn't Protect You",
+          description:
+            "A vest, ID card, or registration number won’t secure your housing rights. A licensed legitimate ESA letter will.",
+          buttonText: "Apply My ESA Letter",
+          buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
+        },
       },
       {
         id: "the-biggest-esa-myth-registration-makes-your-pet-legal",
@@ -755,14 +758,6 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
       },
     ],
-    cta: {
-      id: "stop-paying-for-paperwork-that-doesnt-protect-you",
-      heading: "Stop Paying for Paperwork That Doesn't Protect You",
-      description:
-        "A vest, ID card, or registration number won’t secure your housing rights. A licensed legitimate ESA letter will.",
-      buttonText: "Apply My ESA Letter",
-      buttonHref: "/#pricing",
-    },
     finalThoughts: {
       id: "summing-everything-up-focus-on-documentation-not-registration",
       title: "Summing Everything Up: Focus on Documentation, Not Registration",
@@ -800,8 +795,8 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
     ],
     faqSectionTitle: "Frequently Asked Questions About ESA Registration",
-    faqSectionSubtitle:
-      "Get answers to common questions about ESA registration, official databases, certificates, and housing accommodation.",
+    faqSectionSubtitle: "",
+    faqSectionId: "frequently-asked-questions-about-esa-registration",
   },
 
   // =========================================================================
