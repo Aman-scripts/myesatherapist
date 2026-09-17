@@ -1149,7 +1149,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
 
   // =========================================================================
-  // BLOG 4: ESA Letter Sample: What a Legitimate ESA Letter Looks Like?
+  // BLOG 4: ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026
   // =========================================================================
   {
     id: "esa-letter-sample",
@@ -1157,11 +1157,11 @@ export const BLOG_POSTS: BlogArticle[] = [
     categorySlug: "esa-guide",
     url: "/blog/esa-guide/esa-letter-sample/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/esa-letter-sample/",
-    metaTitle: "ESA Letter Sample: What a Legitimate ESA Letter Looks Like? | My ESA Therapist",
-    metaDescription: "Looking for an ESA letter sample? See what a legitimate ESA letter looks like, what it should include, and what landlords can verify.",
+    metaTitle: "ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026 | My ESA Therapist",
+    metaDescription: "A legitimate ESA letter in 2026 should come from a licensed mental health professional and include essentials like provider credentials, clinical determination of a need, and a housing accommodation recommendation.",
     schema: esaLetterSampleSchema,
-    title: "ESA Letter Sample: What Does a Legitimate ESA Letter Look Like?",
-    shortDescription: "This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
+    title: "ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026",
+    shortDescription: "A legitimate ESA letter in 2026 should come from a licensed mental health professional and include essentials like provider credentials, clinical determination of a need, and a housing accommodation recommendation. This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
     category: "ESA Guide",
     author: {
       name: "Allyson Valley",
@@ -1184,6 +1184,11 @@ export const BLOG_POSTS: BlogArticle[] = [
     heroImageMobile: "/blogs/blog_hero-section-mobile.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.png",
     heroImageDesktop: "/blogs/blog-hero_section.png",
+    questionCallout: {
+      question: "Can an ESA letter sample be used as a real letter?",
+      answer:
+        "No. An ESA letter sample is only an example and cannot replace an actual ESA letter issued by a licensed mental health professional after an individual evaluation.",
+    },
     introParagraphs: [
       "If you're applying for housing accommodations with an emotional support animal, one of the most common questions is, \"What does a legitimate ESA letter actually look like?\"",
       "With thousands of websites selling instant approvals and downloadable templates, it has become increasingly difficult for tenants and landlords to differentiate a valid ESA letter from an invalid one. In 2026, a legitimate emotional support animal letter follows specific professional and legal standards, particularly for housing requests under the federal fair housing framework.",
@@ -1191,8 +1196,8 @@ export const BLOG_POSTS: BlogArticle[] = [
     ],
     tocItems: [
       {
-        id: "what-must-a-legitimate-esa-letter-include-in-2026",
-        label: "What Must a Legitimate ESA Letter Include in 2026?",
+        id: "what-should-a-legitimate-esa-letter-include",
+        label: "What Should a Legitimate ESA Letter Include?",
       },
       {
         id: "esa-letter-sample",
@@ -1200,15 +1205,15 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "what-a-legitimate-esa-letter-does-not-include",
-        label: "What a Legitimate ESA Letter Does Not Include",
+        label: "What a Legitimate ESA Letter Does Not Include?",
       },
       {
         id: "can-landlords-verify-an-esa-letter",
         label: "Can Landlords Verify an ESA Letter?",
       },
       {
-        id: "summing-everything-up",
-        label: "Bottom Line",
+        id: "summary",
+        label: "Summary",
       },
       {
         id: "frequently-asked-questions",
@@ -1217,14 +1222,14 @@ export const BLOG_POSTS: BlogArticle[] = [
     ],
     sections: [
       {
-        id: "what-must-a-legitimate-esa-letter-include-in-2026",
-        title: "What Must a Legitimate ESA Letter Include?",
+        id: "what-should-a-legitimate-esa-letter-include",
+        title: "What Must a Legitimate ESA Letter Include in 2026?",
         paragraphs: [
           "While the exact wording can vary between clinicians, a legitimate ESA letter typically includes the following components:",
         ],
         subsections: [
           {
-            title: "Licensed Mental Health Professional's Information",
+            title: "1. Licensed Mental Health Professional's Information",
             paragraphs: [
               "The letter should clearly identify the licensed professional who conducted the evaluation, including:",
             ],
@@ -1240,27 +1245,27 @@ export const BLOG_POSTS: BlogArticle[] = [
             ],
           },
           {
-            title: "Confirmation of a Qualifying Mental or Emotional Disability",
+            title: "2. Confirmation of a Qualifying Mental or Emotional Disability",
             paragraphs: [
               "A valid ESA letter should state that the individual has a mental or emotional disability recognized under applicable disability standards.",
               "The letter does not need to disclose the specific diagnosis. Housing providers generally cannot require tenants to reveal private medical details simply to request accommodation.",
             ],
           },
           {
-            title: "Clinical Determination of Need",
+            title: "3. Clinical Determination of Need",
             paragraphs: [
               "The letter should explain that the licensed professional has determined that the emotional support animal provides support or therapeutic benefit related to the individual's condition.",
               "This is one of the most important elements because the existence of a diagnosis alone does not automatically justify an ESA recommendation; there must be documented ways in which the ESA helps manage the disability.",
             ],
           },
           {
-            title: "Recommendation for Housing Accommodation",
+            title: "4. Recommendation for Housing Accommodation",
             paragraphs: [
               "The letter should specifically recommend the presence of the emotional support animal as part of the individual's treatment or symptom management plan and support the request for reasonable housing accommodation.",
             ],
           },
           {
-            title: "Signature and Date",
+            title: "5. Signature and Date",
             paragraphs: [
               "A legitimate ESA letter includes the following:",
             ],
@@ -1284,6 +1289,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "esa-letter-sample",
         title: "ESA Letter Sample",
         sampleLetter: {
+          disclaimer: "Disclaimer: The following sample is for educational purposes only and should not be copied or used as a substitute for documentation issued by a licensed mental health professional.",
           letterhead: "[Provider Letterhead]",
           date: "Date",
           recipient: "To Whom It May Concern,",
@@ -1313,7 +1319,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "what-a-legitimate-esa-letter-does-not-include",
-        title: "What a Legitimate ESA Letter Does Not Include?",
+        title: "What a Legitimate ESA Letter Does NOT Include",
         paragraphs: [
           "Many fake ESA websites continue to sell documents that look official but have little to no legal value. A legitimate ESA letter does not rely on the following:",
         ],
@@ -1356,10 +1362,10 @@ export const BLOG_POSTS: BlogArticle[] = [
         },
       },
       {
-        id: "summing-everything-up",
-        title: "Summing Everything Up",
+        id: "summary",
+        title: "Summary",
         paragraphs: [
-          "A legitimate ESA letter is relatively simple in terms of looks but significant in what it represents. It should come from a licensed mental health professional, document a disability-related need for an emotional support animal, and support a housing accommodation request.",
+          "A legitimate ESA letter in 2026 is relatively simple in terms of looks but significant in what it represents. It should come from a licensed mental health professional, document a disability-related need for an emotional support animal, and support a housing accommodation request.",
           "If a document focuses more on registration numbers, certificates, or accessories than on a professional clinical evaluation, it is likely not the type of documentation housing providers are looking for and may provide little to no housing protections.",
           "When reviewing an ESA letter, the most important question is not whether it looks official, but whether it reflects a genuine evaluation conducted by a qualified licensed professional.",
         ],
