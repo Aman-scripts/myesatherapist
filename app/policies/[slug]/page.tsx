@@ -75,6 +75,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "refund-policy") {
+    return {
+      title: "Refund & Cancellation Policy | My ESA Therapist",
+      description:
+        "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
+      robots: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+      alternates: {
+        canonical: "https://myesatherapist.com/refund-policy/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -125,6 +141,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "hipaa-compliance") {
     permanentRedirect("/hipaa-compliance/");
+  }
+
+  if (slug === "refund-policy") {
+    permanentRedirect("/refund-policy/");
   }
 
   const policy = getPolicyBySlug(slug);
