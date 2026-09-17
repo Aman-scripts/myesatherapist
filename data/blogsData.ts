@@ -144,6 +144,11 @@ export interface BlogArticle {
     answer: string;
   };
   introParagraphs: string[];
+  introImage?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
   tocItems: BlogTocItem[];
   sections: BlogSection[];
   cta?: {
@@ -488,6 +493,10 @@ export const BLOG_POSTS: BlogArticle[] = [
       "At first glance, these services look genuine. Many claim that registering your pet will make it a “legal ESA” or help you qualify for housing protections. But here’s the question thousands of people are asking: Does ESA registration actually mean anything legally? The short answer is no.",
       "Unlike what many websites suggest, there is no official federal ESA registry in the United States, and registering your animal with one of these sites does not grant any legal rights. This guide explains what ESA registration actually entails, why it’s necessary, what landlords really look for, and how to save money by avoiding services that have little to no legal value.",
     ],
+    introImage: {
+      src: "/Blog Images/Does ESA Registration Actually Mean Anything_/woman-with-emotional-support-dog.webp",
+      alt: "Woman hugging her emotional support dog at home",
+    },
     tocItems: [
       {
         id: "why-do-so-many-people-believe-esa-registration-is-a-must",

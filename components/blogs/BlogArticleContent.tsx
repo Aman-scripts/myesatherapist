@@ -119,6 +119,26 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
         ))}
       </div>
 
+      {/* Intro Image (if present) */}
+      {article.introImage && (
+        <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
+          <Image
+            src={article.introImage.src}
+            alt={article.introImage.alt}
+            width={870}
+            height={550}
+            className="w-full h-auto object-contain rounded-[18px]"
+          />
+          {article.introImage.caption && (
+            <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
+              <p className="text-sm italic text-[#5F6B6F] font-medium">
+                {article.introImage.caption}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* 3. Main Sections */}
       {article.sections.map((sec) => (
         <section key={sec.id} id={sec.id} className="space-y-5 scroll-mt-28">
