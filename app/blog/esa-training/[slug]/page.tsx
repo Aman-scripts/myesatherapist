@@ -179,6 +179,7 @@ export default async function EsaTrainingBlogPage({ params }: PageProps) {
 
         {/* 7. FAQ Section (Article-specific FAQs from Google Docs) */}
         <FaqSection
+          id={article.tocItems.find(t => t.id.toLowerCase().includes("faq"))?.id || "faq"}
           title="Frequently Asked Questions"
           subtitle="Get answers to common questions about ESA letters and our service."
           faqs={article.faqs}

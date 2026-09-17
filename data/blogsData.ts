@@ -139,6 +139,7 @@ export interface BlogArticle {
   heroImageTablet: string;
   heroImageDesktop: string;
   questionCallout?: {
+    id?: string;
     question: string;
     answer: string;
   };
@@ -2692,7 +2693,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "url": "/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/",
   schema: eightBasicObedienceCommandsSchema,
-  "title": "8 Basic Obedience Commands Every ESA Should Know",
+  "metaTitle": "8 Basic Obedience Commands Every ESA Should Know | My ESA Therapist",
+  "title": "8 Basic Obedience Commands Every ESA Should Know.",
   "shortDescription": "The 8 basic obedience commands every ESA should know are sit, stay, come, down, leave it, quiet, place, and heel. These commands support better behavior, safety, control, and calmer everyday interactions.",
   "category": "ESA Training",
   "author": {
@@ -2707,53 +2709,59 @@ export const BLOG_POSTS: BlogArticle[] = [
     "name": "Max Phillips",
     "credentials": "MSW, LCSW",
     "image": "/blogs/blogs_medical_reviewer.png",
-    "date": "September 02, 2026",
+    "date": "September 11, 2026",
     "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
-  "publishDate": "June 02, 2026",
-  "lastUpdated": "September 02, 2026",
+  "publishDate": "September 11, 2026",
+  "lastUpdated": "September 11, 2026",
   "cardImage": "/Blog Images/8 Basic Obedience Commands Every ESA Should Know/training-an-esa-image.webp",
   "heroImageMobile": "/blogs/blog_hero-section-mobile.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.png",
   "heroImageDesktop": "/blogs/blog-hero_section.png",
   "questionCallout": {
+    "id": "esa-training-mandatory",
     "question": "Is Training Mandatory for an Emotional Support Animal?",
     "answer": "No. ESA training is not a legal requirement. However, basic obedience can make an emotional support animal safer, calmer, and easier to manage in everyday situations. Commands like sit, stay, come, down, leave it, quiet, place and heel can make daily interactions more predictable and help owners handle their ESAs with greater confidence."
   },
   "introParagraphs": [
     "An ESA can do something no pill or therapy session fully covers: it sits with you, literally, when anxiety or panic hits. There's no rule saying your ESA has to complete task training the way a service animal does; but skipping training altogether isn't really doing your animal any favors either.",
-    "An ESA that knows a few basic commands is easier to have around, easier to take places, and honestly more useful in the moments where you are in distress."
+    "An ESA that knows a few basic commands is easier to have around, easier to take places, and honestly more useful in the moments where you are in distress. These recommended eight commands cover what matters the most."
   ],
   "tocItems": [
     {
-      "id": "what-commands-should-an-esa-know",
-      "label": "What Commands Should an ESA Know?"
+      "id": "esa-training-mandatory",
+      "label": "Do I Need to Train My Emotional Support Animal?"
     },
     {
-      "id": "why-training-matters",
-      "label": "Why Training Matters for an ESA?"
+      "id": "esa-commands",
+      "label": "What Commands Should I Teach My ESA?"
     },
     {
-      "id": "how-to-train-your-esa-effectively",
-      "label": "How to Train Your ESA Effectively?"
+      "id": "why-esa-training-matters",
+      "label": "Why Should I Train My ESA?"
     },
     {
-      "id": "what-makes-a-well-trained-esa",
-      "label": "So, What Makes a Well-Trained ESA?"
+      "id": "how-to-train-esa",
+      "label": "How Can I Train My ESA Effectively?"
     },
     {
-      "id": "faq",
-      "label": "Frequently Asked Questions"
+      "id": "well-trained-esa",
+      "label": "What Does a Well-Trained ESA Look Like?"
+    },
+    {
+      "id": "esa-training-faqs",
+      "label": "What Else Should I Know About ESA Training?"
     }
   ],
   "sections": [
     {
-      "id": "what-commands-should-an-esa-know",
+      "id": "esa-commands",
       "title": "What Commands Should an ESA Know?",
         bannerImage: {"src":"/Blog Images/8 Basic Obedience Commands Every ESA Should Know/basic-commands-for-esas-image.webp","alt":"8 Basic obedience commands every ESA should know"},
         bannerPosition: "top",
       "paragraphs": [
-        "Teaching an ESA basic commands can make day-to-day routines safer and easier to manage. These 8 commands can help your emotional support animal respond to you at home, outdoors, or in front of your guests."
+        "Teaching an ESA basic commands can make day-to-day routines safer and easier to manage.",
+        "These 8 commands can help your emotional support animal respond to you at home, outdoors, or in front of your guests."
       ],
       "quoteBox": {
         "quote": "“A well-trained emotional support animal can be easier to manage during stressful moments, giving owners greater confidence and helping create a calmer environment when they need support most.”",
@@ -2811,15 +2819,15 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "why-training-matters",
-      "title": "Why Training Matters for an ESA?",
+      "id": "why-esa-training-matters",
+      "title": "Why Training Matters For An ESA?",
       "paragraphs": [
         "An ESA helps just by being present, but that only works if the animal itself is calm. A dog that drags you down the street or won't stop barking adds stress instead of relieving it. Training builds the kind of communication that makes the ESA bond actually work.",
         "There's a practical angle too; ESAs don't carry the same public access rights service animals do, but plenty of housing situations, a few airlines, and most therapy offices still expect an animal that behaves. Trained animals are just easier to bring along."
       ]
     },
     {
-      "id": "how-to-train-your-esa-effectively",
+      "id": "how-to-train-esa",
       "title": "How to Train Your ESA Effectively?",
       "paragraphs": [
         "Short sessions work better than long ones, five or ten minutes is plenty. Stick to treats and praise rather than punishment as correction. Don't just train at home either, an animal that listens in your living room might ignore you completely in a parking lot. Give it time. Some animals pick things up fast, some don't, and stress can slow the process down further.",
@@ -2827,7 +2835,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "what-makes-a-well-trained-esa",
+      "id": "well-trained-esa",
       "title": "So, What Makes a Well-Trained ESA?",
       "paragraphs": [
         "A well-trained ESA should be calm, responsive, and manageable in everyday situations. It should reliably follow basic commands such as sit, stay, come, down, leave it, quiet, place, and heel, especially around guests, other animals, and unfamiliar environments. These 8 basic commands make daily life with an ESA noticeably easier at home, out running errands, or dealing with housing situations.",
@@ -2839,7 +2847,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "heading": "Ready to Take the Next Step?",
     "description": "Training your ESA is one part of creating a safe, supportive relationship. If you haven’t completed your ESA evaluation yet, My ESA Therapist can connect you with a licensed mental health professional online.",
     "buttonText": "Start Your Evaluation",
-    "buttonHref": "/#pricing"
+    "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
   },
   "faqs": [
     {

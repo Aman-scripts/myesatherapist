@@ -45,12 +45,14 @@ export interface FaqItem {
 }
 
 interface FaqSectionProps {
+  id?: string;
   title?: string;
   subtitle?: string;
   faqs?: FaqItem[];
 }
 
 export function FaqSection({
+  id = "faq",
   title = "Frequently Asked Questions",
   subtitle = "Get answers to common questions about ESA letters and our service.",
   faqs: customFaqs,
@@ -64,7 +66,8 @@ export function FaqSection({
   }));
 
   return (
-    <section id="faq" className="pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 bg-[#FAF7F2] relative">
+    <section id={id} className="pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 bg-[#FAF7F2] relative">
+      {id !== "faq" && <div id="faq" className="sr-only" />}
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">

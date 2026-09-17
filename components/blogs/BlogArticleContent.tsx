@@ -94,7 +94,10 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
       
       {/* 1. Question Callout Card (From top of doc) */}
       {article.questionCallout && (
-        <div className="w-full bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3">
+        <div
+          id={article.questionCallout.id}
+          className="w-full bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3"
+        >
           <h2 className="font-heading text-lg sm:text-xl font-bold text-[#2E5A66]">
             {article.questionCallout.question}
           </h2>
