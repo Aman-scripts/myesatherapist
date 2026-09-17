@@ -191,11 +191,16 @@ export function PolicyContent({ policy }: PolicyContentProps) {
           </div>
         );
 
-      case "button":
+      case "button": {
+        const targetHref =
+          block.href && !block.href.startsWith("mailto:")
+            ? block.href
+            : "/contact-us/";
+
         return (
           <div key={bIdx} className="my-6">
-            <a
-              href={block.href || "mailto:support@myesatherapist.com"}
+            <Link
+              href={targetHref}
               className="inline-flex items-center gap-2.5 rounded-[30px] text-white px-6 py-3 text-sm sm:text-base font-sans font-bold transition-opacity hover:opacity-90 shadow-sm"
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
@@ -204,9 +209,10 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 <path d="M4 7l8 6 8-6" />
               </svg>
               <span>{block.text}</span>
-            </a>
+            </Link>
           </div>
         );
+      }
 
       default:
         return null;

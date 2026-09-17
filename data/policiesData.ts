@@ -612,7 +612,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Contact Support",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       }
@@ -1277,7 +1277,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Contact Support",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       }
@@ -1758,7 +1758,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Contact Support",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       }
@@ -2318,7 +2318,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Contact Support",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       }
@@ -3215,7 +3215,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Contact Support",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       }
@@ -3555,7 +3555,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Contact Support",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       }
@@ -3864,7 +3864,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           {
             "type": "button",
             "text": "Report an Accessibility Issue",
-            "href": "mailto:info@myesatherapist.com"
+            "href": "/contact-us/"
           }
         ]
       },
