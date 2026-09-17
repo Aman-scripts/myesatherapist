@@ -17,7 +17,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/href="terms-of-use\.html"/g, 'href="/terms-of-use/"')
       .replace(/href="privacy-policy\.html"/g, 'href="/privacy-policy/"')
       .replace(/href="refund-policy\.html"/g, 'href="/refund-policy/"')
-      .replace(/href="consent-for-telehealth\.html"/g, 'href="/policies/consent-for-telehealth/"')
+      .replace(/href="consent-for-telehealth\.html"/g, 'href="/consent-for-telehealth/"')
       .replace(/href="hipaa-compliance\.html"/g, 'href="/hipaa-compliance/"')
       .replace(/href="editorial-policy\.html"/g, 'href="/policies/editorial-policy/"')
       .replace(/href="disclaimer-and-policies\.html"/g, 'href="/disclaimer/"')
@@ -158,7 +158,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
               const slugMap: Record<string, string> = {
                 "terms of use": "/terms-of-use/",
                 "privacy policy": "/privacy-policy/",
-                "consent for telehealth": "/policies/consent-for-telehealth/",
+                "consent for telehealth": "/consent-for-telehealth/",
                 "refund policy": "/refund-policy/",
                 "hipaa compliance": "/hipaa-compliance/",
                 "editorial policy": "/policies/editorial-policy/",

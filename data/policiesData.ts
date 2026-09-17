@@ -3907,7 +3907,7 @@ export const ALL_POLICIES_LIST = [
   { slug: 'privacy-policy', label: 'Privacy Policy', shortLabel: 'Privacy', href: '/privacy-policy/' },
   { slug: 'terms-of-use', label: 'Terms of Use', shortLabel: 'Terms', href: '/terms-of-use/' },
   { slug: 'refund-policy', label: 'Refund Policy', shortLabel: 'Refund', href: '/refund-policy/' },
-  { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/policies/consent-for-telehealth/' },
+  { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/consent-for-telehealth/' },
   { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA', href: '/hipaa-compliance/' },
   { slug: 'editorial-policy', label: 'Editorial Policy', shortLabel: 'Editorial', href: '/policies/editorial-policy/' },
   { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer', href: '/disclaimer/' },
@@ -3922,6 +3922,7 @@ export function getPolicyHref(slug: string): string {
   if (slug === 'disclaimer' || slug === 'disclaimer-and-policies') return '/disclaimer/';
   if (slug === 'hipaa-compliance') return '/hipaa-compliance/';
   if (slug === 'refund-policy') return '/refund-policy/';
+  if (slug === 'consent-for-telehealth') return '/consent-for-telehealth/';
   return `/policies/${slug}/`;
 }
 

@@ -91,6 +91,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "consent-for-telehealth") {
+    return {
+      title: "Consent for Telehealth | My ESA Therapist",
+      description:
+        "Review My ESA Therapist’s telehealth consent information, including virtual care, communication, privacy, and important considerations before receiving services online.",
+      robots: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+      alternates: {
+        canonical: "https://myesatherapist.com/consent-for-telehealth/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -145,6 +161,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "refund-policy") {
     permanentRedirect("/refund-policy/");
+  }
+
+  if (slug === "consent-for-telehealth") {
+    permanentRedirect("/consent-for-telehealth/");
   }
 
   const policy = getPolicyBySlug(slug);
