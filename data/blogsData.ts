@@ -2470,7 +2470,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "metaTitle": "ESA for Anxiety: Eligibility, Benefits & How to Qualify | My ESA Therapist",
   "metaDescription": "Wondering if anxiety qualifies for an ESA? Explore eligibility requirements, potential benefits, housing protections, and what you need to qualify.",
   schema: esaForAnxietySchema,
-  "title": "Understanding ESA Eligibility for Anxiety and Its Benefits",
+  "title": "ESA for Anxiety: Eligibility, Benefits, and How to Qualify?",
   "shortDescription": "An emotional support animal can offer comfort, companionship, and stability for people living with anxiety. For those whose anxiety affects daily life, an ESA may offer meaningful emotional support as part of their care.",
   "category": "Qualifying Conditions",
   "author": {
@@ -2485,11 +2485,11 @@ export const BLOG_POSTS: BlogArticle[] = [
     "name": "Max Phillips",
     "credentials": "MSW, LCSW",
     "image": "/blogs/blogs_medical_reviewer.png",
-    "date": "September 08, 2026",
+    "date": "August 26, 2026",
     "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
-  "publishDate": "June 08, 2026",
-  "lastUpdated": "September 08, 2026",
+  "publishDate": "August 26, 2026",
+  "lastUpdated": "August 26, 2026",
   "cardImage": "/Blog Images/ESA for Anxiety_ Eligibility, Benefits, and How to Qualify_/esas-for-anxiety-support-image.webp",
   "heroImageMobile": "/blogs/blog_hero-section-mobile.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.png",
@@ -2505,37 +2505,37 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "tocItems": [
     {
-      "id": "does-anxiety-qualify",
-      "label": "Does Anxiety Make Me Eligible for an ESA?"
+      "id": "can-anxiety-qualify",
+      "label": "Can Anxiety Qualify Me for an ESA?"
     },
     {
-      "id": "how-esa-supports-anxiety",
-      "label": "How Can an ESA Support People With Anxiety?"
+      "id": "esa-help-anxiety",
+      "label": "How Can an ESA Help With Anxiety?"
     },
     {
-      "id": "rights-provided",
+      "id": "esa-rights",
       "label": "What Rights Does an ESA Letter Provide?"
     },
     {
-      "id": "does-esa-need-training",
+      "id": "esa-training",
       "label": "Does an ESA for Anxiety Need Training?"
     },
     {
-      "id": "how-to-choose-an-esa",
-      "label": "How to Choose an ESA for Anxiety Support"
+      "id": "choosing-esa",
+      "label": "How to Choose an ESA for Anxiety?"
     },
     {
       "id": "final-thoughts",
       "label": "Final Thoughts"
     },
     {
-      "id": "faq",
+      "id": "faqs",
       "label": "Frequently Asked Questions"
     }
   ],
   "sections": [
     {
-      "id": "does-anxiety-qualify",
+      "id": "can-anxiety-qualify",
       "title": "Does an Anxiety Disorder Potentially Make Me Eligible for an ESA?",
       "paragraphs": [
         "Yes. Anxiety can be a qualifying condition for an emotional support animal when it substantially affects the daily functioning of an individual.",
@@ -2564,7 +2564,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       }
     },
     {
-      "id": "how-esa-supports-anxiety",
+      "id": "esa-help-anxiety",
       "title": "How Can an ESA Support People With Anxiety?",
         bannerImage: {"src":"/Blog Images/ESA for Anxiety_ Eligibility, Benefits, and How to Qualify_/how-can-esa-support-with-anxity-image.webp","alt":"How can ESA support with anxiety"},
         bannerPosition: "bottom",
@@ -2601,7 +2601,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "rights-provided",
+      "id": "esa-rights",
       "title": "What Rights Does an ESA Letter Provide?",
         bannerImage: {"src":"/Blog Images/ESA for Anxiety_ Eligibility, Benefits, and How to Qualify_/rights-does-an-esa-letter-provide-image.webp","alt":"Rights does an ESA letter provide"},
         bannerPosition: "bottom",
@@ -2612,7 +2612,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "does-esa-need-training",
+      "id": "esa-training",
       "title": "Does an Emotional Support Animal for Anxiety Need Training?",
       "paragraphs": [
         "No. Unlike service animals, emotional support animals are not mandated to undergo specialized task training. However, an ESA owner may choose to train their animal to respond in specific ways to different distress presentations.",
@@ -2621,8 +2621,8 @@ export const BLOG_POSTS: BlogArticle[] = [
       ]
     },
     {
-      "id": "how-to-choose-an-esa",
-      "title": "How to Choose an ESA for Anxiety Support",
+      "id": "choosing-esa",
+      "title": "How to Choose an ESA for Anxiety Support?",
         bannerImage: {"src":"/Blog Images/ESA for Anxiety_ Eligibility, Benefits, and How to Qualify_/esas-for-anxiety-support-image.webp","alt":"ESAs for anxiety support"},
         bannerPosition: "bottom",
       "paragraphs": [
@@ -2650,7 +2650,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "heading": "Get Evaluated for an ESA Letter for Anxiety",
     "description": "A licensed mental health professional can evaluate how anxiety affects your daily life and determine whether an emotional support animal may be appropriate for your needs.",
     "buttonText": "Start Your Evaluation",
-    "buttonHref": "/#pricing"
+    "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
   },
   "finalThoughts": {
     "title": "Final Thoughts",
