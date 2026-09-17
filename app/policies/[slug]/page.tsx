@@ -107,6 +107,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "editorial-policy") {
+    return {
+      title: "Editorial Policy | My ESA Therapist",
+      description:
+        "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
+      robots: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+      alternates: {
+        canonical: "https://myesatherapist.com/editorial-policy/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -165,6 +181,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "consent-for-telehealth") {
     permanentRedirect("/consent-for-telehealth/");
+  }
+
+  if (slug === "editorial-policy") {
+    permanentRedirect("/editorial-policy/");
   }
 
   const policy = getPolicyBySlug(slug);

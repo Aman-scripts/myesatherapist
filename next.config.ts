@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
       { source: "/policies/refund-policy", destination: "/refund-policy/", permanent: true },
       { source: "/policies/consent-for-telehealth", destination: "/consent-for-telehealth/", permanent: true },
       { source: "/policies/hipaa-compliance", destination: "/hipaa-compliance/", permanent: true },
-      { source: "/editorial-policy", destination: "/policies/editorial-policy/", permanent: true },
+      { source: "/policies/editorial-policy", destination: "/editorial-policy/", permanent: true },
       { source: "/policies/disclaimer-and-policies", destination: "/disclaimer/", permanent: true },
       { source: "/policies/disclaimer", destination: "/disclaimer/", permanent: true },
       { source: "/disclaimer-and-policies", destination: "/disclaimer/", permanent: true },

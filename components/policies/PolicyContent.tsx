@@ -19,7 +19,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/href="refund-policy\.html"/g, 'href="/refund-policy/"')
       .replace(/href="consent-for-telehealth\.html"/g, 'href="/consent-for-telehealth/"')
       .replace(/href="hipaa-compliance\.html"/g, 'href="/hipaa-compliance/"')
-      .replace(/href="editorial-policy\.html"/g, 'href="/policies/editorial-policy/"')
+      .replace(/href="editorial-policy\.html"/g, 'href="/editorial-policy/"')
       .replace(/href="disclaimer-and-policies\.html"/g, 'href="/disclaimer/"')
       .replace(/href="accessibility-statement\.html"/g, 'href="/policies/accessibility-statement/"');
 
@@ -161,7 +161,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 "consent for telehealth": "/consent-for-telehealth/",
                 "refund policy": "/refund-policy/",
                 "hipaa compliance": "/hipaa-compliance/",
-                "editorial policy": "/policies/editorial-policy/",
+                "editorial policy": "/editorial-policy/",
                 "accessibility statement": "/policies/accessibility-statement/",
                 "disclaimer & policies": "/disclaimer/",
                 "disclaimer": "/disclaimer/",

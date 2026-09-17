@@ -31,7 +31,7 @@ const legalLinks = [
   { label: "HIPAA Notice of Privacy Practices", href: "/hipaa-compliance/" },
   { label: "Refund Policy", href: "/refund-policy/" },
   { label: "Consent for Telehealth", href: "/consent-for-telehealth/" },
-  { label: "Editorial Policy", href: "/policies/editorial-policy/" },
+  { label: "Editorial Policy", href: "/editorial-policy/" },
   { label: "Accessibility Statement", href: "/policies/accessibility-statement/" },
 ];
 

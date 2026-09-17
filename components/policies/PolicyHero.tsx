@@ -25,7 +25,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           Home
         </Link>
         <span className="text-[#DECDBB]">/</span>
-        {!["privacy-policy", "terms-of-use", "disclaimer", "disclaimer-and-policies", "hipaa-compliance", "refund-policy", "consent-for-telehealth"].includes(policy.slug) && (
+        {!["privacy-policy", "terms-of-use", "disclaimer", "disclaimer-and-policies", "hipaa-compliance", "refund-policy", "consent-for-telehealth", "editorial-policy"].includes(policy.slug) && (
           <>
             <Link href="/privacy-policy/" className="hover:text-[#2E5A66] transition-colors text-[#5F6B6F]">
               Policies
@@ -127,7 +127,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                   "refund policy": "/refund-policy/",
                   "consent for telehealth": "/consent-for-telehealth/",
                   "hipaa compliance": "/hipaa-compliance/",
-                  "editorial policy": "/policies/editorial-policy/",
+                  "editorial policy": "/editorial-policy/",
                   "disclaimer & policies": "/disclaimer/",
                   "disclaimer": "/disclaimer/",
                   "medical disclaimer": "/disclaimer/",
