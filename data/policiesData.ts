@@ -2683,7 +2683,50 @@ export const POLICIES_DATA: PolicyDocument[] = [
         "id": "compliance-vs-legitimacy",
         "number": "10",
         "title": "HIPAA Compliance vs ESA Legitimacy",
-        "blocks": []
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "These are two different things — understanding the difference matters.",
+            "text": "These are two different things — understanding the difference matters."
+          },
+          {
+            "type": "subblock",
+            "title": "HIPAA Compliance",
+            "items": [
+              {
+                "html": "Protects your privacy",
+                "text": "Protects your privacy"
+              },
+              {
+                "html": "Supports ethical and confidential evaluations",
+                "text": "Supports ethical and confidential evaluations"
+              }
+            ]
+          },
+          {
+            "type": "subblock",
+            "title": "HIPAA Compliance Does Not",
+            "items": [
+              {
+                "html": "Guarantee ESA approval",
+                "text": "Guarantee ESA approval"
+              },
+              {
+                "html": "Replace professional judgment",
+                "text": "Replace professional judgment"
+              },
+              {
+                "html": "Override housing provider requirements",
+                "text": "Override housing provider requirements"
+              }
+            ]
+          },
+          {
+            "type": "note",
+            "html": "ESA eligibility is determined solely by the licensed mental health professional.",
+            "text": "ESA eligibility is determined solely by the licensed mental health professional."
+          }
+        ]
       },
       {
         "id": "how-this-protects-you",
