@@ -197,39 +197,32 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Max Phillips",
       credentials: "MSW, LCSW",
       image: "/blogs/blogs_medical_reviewer.png",
-      date: "August 17, 2026",
+      date: "June 19, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "June 19, 2026",
-    lastUpdated: "August 17, 2026",
+    lastUpdated: "June 19, 2026",
     cardImage: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/happily-living-with-emotional-support-animal-image.webp",
     heroImageMobile: "/blogs/blog_hero-section-mobile.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.png",
     heroImageDesktop: "/blogs/blog-hero_section.png",
-    questionCallout: {
-      question: "Is an online ESA letter legitimate?",
-      answer:
-        "Yes. An online ESA letter is legitimate. But an ESA letter should be issued by a licensed mental health professional after an appropriate evaluation. It should include verifiable provider credentials and individualized documentation, not an ESA registration or certificate.",
-    },
     introParagraphs: [
       "Emotional Support Animals (ESAs) play an important role in helping individuals manage mental and emotional health conditions. Landlords frequently receive ESA letters from tenants asking for reasonable accommodations because ESAs are eligible for housing accommodations under the Fair Housing Act (FHA). However, with the rise of online ESA services, fraudulent and invalid ESA letters have become increasingly common.",
-      "Understanding how to validate an ESA letter is crucial, whether you’re a landlord evaluating accommodation requests or a tenant looking for housing protections. This guide provides a practical checklist to help determine whether an emotional support animal letter is legitimate and compliant with current housing guidelines.",
+      "Understanding how to validate an ESA letter is crucial, whether you're a landlord evaluating accommodation requests or a tenant looking for housing protections. This guide provides a practical checklist to help determine whether an emotional support animal letter is legitimate and compliant with current housing guidelines.",
     ],
     tocItems: [
-      { id: "what-is-a-legitimate-esa-letter", label: "What is a Legitimate ESA Letter?" },
-      { id: "why-verification-matters", label: "Why ESA Letter Verification Matters" },
-      { id: "tenant-checklist", label: "How Tenants Can Check if an ESA Letter Is Legitimate" },
-      { id: "landlord-checklist", label: "How Landlords Can Verify an ESA Letter" },
-      { id: "what-landlords-cannot-request", label: "What Landlords Cannot Request for an ESA Letter" },
+      { id: "what-makes-an-esa-letter-legit", label: "What Makes an ESA Letter Legit?" },
+      { id: "why-verification-matters", label: "Why Verification Matters" },
+      { id: "tenant-checklist", label: "Tenant Checklist" },
+      { id: "landlord-checklist", label: "Landlord Checklist" },
       { id: "common-signs-of-a-fake-esa-letter", label: "Common Signs of a Fake ESA Letter" },
-      { id: "ensuring-compliance", label: "How Does My ESA Therapist Ensure Compliance" },
-      { id: "request-housing-accommodation", label: "Request Housing Accommodation with Confidence" },
-      { id: "final-thoughts", label: "Final Thoughts" },
-      { id: "faq", label: "Frequently Asked Questions" },
+      { id: "ensuring-compliance", label: "Ensuring Compliance" },
+      { id: "key-takeaways", label: "Key Takeaways" },
+      { id: "faqs", label: "FAQs" },
     ],
     sections: [
       {
-        id: "what-is-a-legitimate-esa-letter",
+        id: "what-makes-an-esa-letter-legit",
         title: "What is a Legitimate ESA Letter?",
         paragraphs: [
           "A legitimate ESA letter is a written recommendation from a licensed mental health professional (LMHP) stating that an individual has a qualifying mental or emotional health condition and benefits from the presence of an emotional support animal. The qualifying diagnosis itself does not have to be disclosed in the letter; a valid ESA letter should discuss how the ESA helps the individual with their disability.",
@@ -239,7 +232,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "why-verification-matters",
-        title: "Why ESA Letter Verification Matters",
+        title: "Why ESA Letter Verification Matters?",
         paragraphs: [
           "For tenants, having a legitimate ESA letter helps ensure housing rights are protected and reduces the risk of accommodation denials.",
           "Verification keeps landlords in compliance with fair housing laws while preventing fraud. Property owners have the right to review ESA documentation, but they must do so without violating a tenant’s privacy rights.",
@@ -251,15 +244,14 @@ export const BLOG_POSTS: BlogArticle[] = [
         title: "Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate",
         bannerImage: {
           src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/tenant-checklist-to-verify-esa-letter-image.webp",
-          alt: "Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate",
+          alt: "tenant checklist to verify esa letter",
         },
         bannerPosition: "bottom",
         subsections: [
           {
             title: "Confirm the Provider is Licensed",
             paragraphs: [
-              "The most crucial requirement is that the letter must be from a mental health professional with an active state license and a National Provider Identifier (NPI) number.",
-              "This may include:",
+              "The most crucial requirement is that the letter must be from a mental health professional with an active state license and a National Provider Identifier (NPI) number. This may include:",
             ],
             listItems: [
               "Licensed Professional Counselors (LPCs)",
@@ -278,7 +270,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "A legitimate ESA letter should contain:",
             ],
             listItems: [
-              "The provider’s full name",
+              "The provider's full name",
               "Professional license number",
               "State of licensure",
               "Contact information",
@@ -286,7 +278,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Date of mental health assessment",
             ],
             afterListParagraphs: [
-              "Missing professional credentials may raise concerns about the document’s validity.",
+              "Missing professional credentials may raise concerns about the document's validity.",
             ],
           },
           {
@@ -318,7 +310,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         title: "Landlord Checklist: How to Verify an ESA Letter?",
         bannerImage: {
           src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord & Tenant Checklist ESA Guide/landlord-checklist-to-verify-esa-letter-image.webp",
-          alt: "Landlord Checklist: How to Verify an ESA Letter?",
+          alt: "landlord checklist to verify esa letter",
         },
         bannerPosition: "bottom",
         subsections: [
@@ -342,8 +334,8 @@ export const BLOG_POSTS: BlogArticle[] = [
           {
             title: "Verify the License",
             paragraphs: [
-              "Landlords can confirm whether a mental health practitioner has an active license by using the public licensing databases kept by the majority of states. The NPI Registry Public Search is a free directory of all active National Provider Identifier (NPI) records; most licensed healthcare professionals are required to obtain an NPI number.",
-              "The provider’s license status should be active and match the state listed on the ESA letter.",
+              "Landlords can confirm whether a mental health practitioner has an active license by using the public licensing databases kept by the majority of states. The [NPI Registry Public Search](https://npiregistry.cms.hhs.gov/) is a free directory of all active National Provider Identifier (NPI) records; most licensed healthcare professionals are required to obtain an NPI number.",
+              "The provider's license status should be active and match the state listed on the ESA letter.",
             ],
           },
           {
@@ -367,22 +359,21 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Documents that appear copied, generic, or mass-produced may warrant additional review.",
             ],
           },
-        ],
-      },
-      {
-        id: "what-landlords-cannot-request",
-        title: "What Landlords Cannot Request for an ESA Letter",
-        paragraphs: [
-          "While landlords can verify documentation, they cannot ask for the following:",
-        ],
-        listItems: [
-          "Demand detailed medical records, such as progress notes, treatment plans, or entire mental health assessments",
-          "Require disclosure of a specific diagnosis or disability",
-          "Ask about treatment history for the diagnosis or disability",
-          "Charge pet fees for a valid ESA accommodation",
-        ],
-        afterListParagraphs: [
-          "Housing providers have to strike a balance between fair housing compliance and verification.",
+          {
+            title: "Understand What Landlords Cannot Request",
+            paragraphs: [
+              "While [landlords can verify documentation](/blog/esa-guide/can-landlords-deny-emotional-support-animals/), they cannot ask for the following:",
+            ],
+            listItems: [
+              "Demand detailed medical records, such as progress notes, treatment plans, or entire mental health assessments",
+              "Require disclosure of a specific diagnosis or disability",
+              "Ask about treatment history for the diagnosis or disability",
+              "Charge pet fees for a valid ESA accommodation",
+            ],
+            afterListParagraphs: [
+              "Housing providers have to strike a balance between fair housing compliance and verification.",
+            ],
+          },
         ],
       },
       {
@@ -402,12 +393,12 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Claims that registration alone grants legal rights",
         ],
         afterListParagraphs: [
-          "Remember that there is no official federal ESA registry. A legitimate ESA letter for housing from a qualified professional cannot be replaced by registration websites.",
+          "Remember that there is no official federal ESA registry. A [legitimate ESA letter for housing](/esa-letter-for-housing/) from a qualified professional cannot be replaced by registration websites.",
         ],
       },
       {
         id: "ensuring-compliance",
-        title: "How Does My ESA Therapist Ensure Compliance",
+        title: "How My ESA Therapist Helps Ensure Compliance?",
         paragraphs: [
           "At My ESA Therapist, individuals connect with licensed mental health professionals who evaluate whether an emotional support animal may be appropriate for their situation.",
           "When qualified, clients receive professionally prepared ESA documentation that includes the information commonly requested by housing providers. The approach is confidential, secure, and designed to align with the latest housing accommodation standards.",
@@ -415,17 +406,17 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
     ],
     cta: {
-      heading: "Request Housing Accommodation with Confidence",
+      heading: "Request Housing Accommodations with Confidence",
       description:
         "A valid ESA letter can help support your housing accommodation request. Connect with a licensed mental health professional to see if you qualify.",
       buttonText: "Start Your ESA Evaluation",
-      buttonHref: "/#pricing",
+      buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
     },
     finalThoughts: {
+      id: "key-takeaways",
       title: "Final Thoughts",
       paragraphs: [
-        "As ESA accommodation requests become more common, understanding how to verify an ESA letter benefits both tenants and landlords. A legitimate ESA letter should come from a licensed mental health professional, include verifiable credentials, and reflect an individualized assessment. Generic letters without information specific to the individual pursuing an ESA are a sign of a fake ESA letter.",
-        "For tenants, obtaining proper documentation can help support housing rights. For landlords, following a consistent verification process can reduce fraud concerns while ensuring compliance with fair housing obligations.",
+        "As ESA accommodation requests become more common, understanding how to verify an ESA letter benefits both tenants and landlords. A legitimate ESA letter should come from a licensed mental health professional, include verifiable credentials, and reflect an individualized assessment. Generic letters without information specific to the individual pursuing an ESA are a sign of a fake ESA letter. For tenants, obtaining proper documentation can help support housing rights. For landlords, following a consistent verification process can reduce fraud concerns while ensuring compliance with fair housing obligations.",
         "Taking a few minutes to verify an ESA letter correctly can prevent misunderstandings and create a smoother housing experience for everyone involved.",
       ],
     },
