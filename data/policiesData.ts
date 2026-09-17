@@ -3925,7 +3925,7 @@ export function getPolicyHref(slug: string): string {
   if (slug === 'consent-for-telehealth') return '/consent-for-telehealth/';
   if (slug === 'editorial-policy') return '/editorial-policy/';
   if (slug === 'accessibility-statement') return '/accessibility-statement/';
-  return `/policies/${slug}/`;
+  return item?.href || (slug === 'disclaimer' || slug === 'disclaimer-and-policies' ? '/disclaimer/' : `/${slug}/`);
 }
 
 export function getPolicyBySlug(slug: string): PolicyDocument | undefined {

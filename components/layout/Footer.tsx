@@ -298,13 +298,13 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               <Link href="/privacy-policy/" className="hover:text-[#E8B92C] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/policies/refund-policy/" className="hover:text-[#E8B92C] transition-colors">
+              <Link href="/refund-policy/" className="hover:text-[#E8B92C] transition-colors">
                 Refund Policy
               </Link>
               <Link href="/terms-of-use/" className="hover:text-[#E8B92C] transition-colors">
                 Terms of Use
               </Link>
-              <Link href="/policies/accessibility-statement/" className="hover:text-[#E8B92C] transition-colors">
+              <Link href="/accessibility-statement/" className="hover:text-[#E8B92C] transition-colors">
                 Accessibility Statement
               </Link>
             </div>

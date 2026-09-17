@@ -155,7 +155,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
               return (
                 <Link
                   key={item.slug}
-                  href={item.href || (item.slug === "privacy-policy" ? "/privacy-policy/" : `/policies/${item.slug}/`)}
+                  href={item.href}
                   className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-[13.5px] transition-all font-sans ${
                     isActive
                       ? "bg-[#FAF7F2] text-[#2E5A66] font-bold border-l-[3.5px] border-[#E8B92C] shadow-2xs pl-3"
@@ -321,7 +321,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                         return (
                           <Link
                             key={item.slug}
-                            href={item.href || (item.slug === "privacy-policy" ? "/privacy-policy/" : `/policies/${item.slug}/`)}
+                            href={item.href}
                             onClick={() => setIsOpen(false)}
                             className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-[13.5px] transition-all ${
                               isActive
