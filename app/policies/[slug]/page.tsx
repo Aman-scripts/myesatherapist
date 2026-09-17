@@ -59,6 +59,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "hipaa-compliance") {
+    return {
+      title: "HIPAA Compliance & Data Privacy | My ESA Therapist",
+      description:
+        "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
+      robots: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+      alternates: {
+        canonical: "https://myesatherapist.com/hipaa-compliance/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -105,6 +121,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "disclaimer" || slug === "disclaimer-and-policies") {
     permanentRedirect("/disclaimer/");
+  }
+
+  if (slug === "hipaa-compliance") {
+    permanentRedirect("/hipaa-compliance/");
   }
 
   const policy = getPolicyBySlug(slug);
