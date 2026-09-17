@@ -2214,10 +2214,10 @@ export const BLOG_POSTS: BlogArticle[] = [
             paragraphs: [
               "Even if the property has a “no pets” policy, you can still ask for accommodation by giving your ESA letter to your landlord or housing provider.",
             ],
+            afterListParagraphs: [
+              "It is important to avoid fake ESA certification websites or unofficial registries that promise “instant approvals” without proper mental health evaluations.",
+            ],
           },
-        ],
-        afterListParagraphs: [
-          "It is important to avoid fake ESA certification websites or unofficial registries that promise “instant approvals” without proper mental health evaluations.",
         ],
       },
     ],
