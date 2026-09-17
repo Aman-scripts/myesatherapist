@@ -642,7 +642,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         title:
           "ESA Registration, ID Cards & Certificates: What Counts as Legal Proof?",
         bannerImage: {
-          src: "/Blog Images/Does ESA Registration Actually Mean Anything_/common-esa-products-not-legal-proof.png",
+          src: "/Blog Images/Does ESA Registration Actually Mean Anything_/common-esa-products-not-legal-proof.jpg",
           alt: "Common ESA products",
         },
         bannerPosition: "bottom",
