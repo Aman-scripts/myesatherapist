@@ -167,22 +167,22 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               </ul>
             </div>
 
-            {/* Column 4: LEGAL (Matches Screenshot: Title + Accent Underline) */}
+            {/* Column 4: LEGAL (Matches Company & Quick Links styling) */}
             <div className="space-y-4">
-              <div className="space-y-1.5">
-                <h4 className="text-white font-sans font-bold text-sm tracking-wider uppercase">
-                  LEGAL
-                </h4>
-                <div className="w-10 h-[2.5px] bg-[#FF5023] rounded-full" />
-              </div>
-              <ul className="space-y-2.5 font-sans">
+              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+                LEGAL
+              </h4>
+              <ul className="space-y-3 font-sans">
                 {legalLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-xs sm:text-[13px] font-medium text-[#FAF7F2]/85 hover:text-[#E8B92C] transition-colors block py-0.5"
+                      className="group flex items-center gap-2 text-xs font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
                     >
-                      {link.label}
+                      <span className="text-[#FAF7F2]/60 group-hover:text-[#E8B92C] text-xs transition-colors">
+                        ›
+                      </span>
+                      <span>{link.label}</span>
                     </Link>
                   </li>
                 ))}
