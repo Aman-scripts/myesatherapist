@@ -74,7 +74,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
   const renderCalloutBox = (callout: BlogCalloutBox) => (
     <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
       <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-[#2E5A66] font-medium">
-        {callout.prefix && `${callout.prefix.trim()} `}
+        {callout.prefix && <>{renderFormattedText(callout.prefix)} </>}
         {callout.linkText && callout.linkHref ? (
           <Link
             href={callout.linkHref}
@@ -83,8 +83,8 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             {callout.linkText}
           </Link>
         ) : null}
-        {callout.suffix && ` ${callout.suffix.trim()}`}
-        {callout.text && callout.text}
+        {callout.suffix && <> {renderFormattedText(callout.suffix)}</>}
+        {callout.text && renderFormattedText(callout.text)}
       </p>
     </div>
   );
@@ -382,9 +382,11 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             <div className="space-y-6 pt-2">
               {sec.subsections.map((sub, sIdx) => (
                 <div key={sIdx} className="space-y-2.5">
-                  <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
-                    {sub.title}
-                  </h3>
+                  {sub.title && sub.title.trim() ? (
+                    <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                      {sub.title}
+                    </h3>
+                  ) : null}
                   {sub.paragraphs && (
                     <div className="space-y-2">
                       {sub.paragraphs.map((subP, spIdx) => (

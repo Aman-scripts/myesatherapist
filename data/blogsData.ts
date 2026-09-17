@@ -40,7 +40,7 @@ export interface BlogComparisonRow {
 }
 
 export interface BlogSampleLetter {
-  disclaimer: string;
+  disclaimer?: string;
   letterhead: string;
   date: string;
   recipient: string;
@@ -806,7 +806,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
 
   // =========================================================================
-  // BLOG 3: ESA for Children and Minors: How It Works and Who Signs the Letter
+  // BLOG 3: ESA for Children and Minors: How It Works and Who Signs the Letter?
   // =========================================================================
   {
     id: "esa-for-children",
@@ -818,7 +818,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     metaDescription:
       "Learn who qualifies for an ESA for children, who signs the ESA letter, parents' role, qualifying conditions, housing rights, and the evaluation process.",
     schema: esaForChildrenSchema,
-    title: "ESA for Children and Minors: How It Works and Who Signs the Letter",
+    title: "ESA for Children and Minors: How It Works and Who Signs the Letter?",
     shortDescription:
       "For children and minors, the ESA evaluation process includes parental or guardian consent. If the child qualifies, the emotional support animal letter is issued and signed by a licensed mental health professional, not by a parent or guardian.",
     category: "ESA Guide",
@@ -834,40 +834,63 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Max Phillips",
       credentials: "MSW, LCSW",
       image: "/blogs/blogs_medical_reviewer.png",
-      date: "August 27, 2026",
+      date: "July 30, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
-    publishDate: "July 25, 2026",
-    lastUpdated: "August 27, 2026",
-    cardImage: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/esa for children-.webp",
+    publishDate: "July 27, 2026",
+    lastUpdated: "July 30, 2026",
+    cardImage:
+      "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/esa for children-.webp",
     heroImageMobile: "/blogs/blog_hero-section-mobile.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.png",
     heroImageDesktop: "/blogs/blog-hero_section.png",
-    questionCallout: {
-      question: "Can A Pediatrician Write an ESA Letter for Children?",
-      answer:
-        "Yes, a pediatrician can write an ESA letter for children and minors if they hold the appropriate license and are qualified to evaluate the child’s mental health needs. The child must also have parental or legal guardian consent for the evaluation and a qualifying disability or mental health need for which an emotional support animal may provide support.",
-    },
     introParagraphs: [
-      "If your child seems calmer around the family dog, sleeps better with a cat nearby, or depends on a pet during moments of anxiety, you may have wondered whether that animal could qualify as an emotional support animal (ESA).",
+      "If your child seems calmer around the family dog, sleeps better with a cat nearby, or depends on a pet during moments of anxiety, you may have wondered whether that animal could qualify as an [emotional support animal (ESA)](https://myesatherapist.com/blog/esa-guide/emotional-support-animal/).",
       "The short answer is yes. A child can have an emotional support animal letter if a licensed mental health professional determines that the animal helps reduce symptoms associated with a mental or emotional health condition. Age alone does not prevent someone from qualifying for an ESA.",
       "However, the process for minors differs from that for adults. Parents or legal guardians play an active role in the evaluation, provide consent for treatment, and often help communicate accommodation requests when needed.",
       "Understanding how ESA eligibility works for children can help families make informed decisions while avoiding common misconceptions about ESA rights, school accommodations, and housing protections.",
     ],
     tocItems: [
-      { id: "can-children-qualify", label: "Can Children Qualify for an ESA?" },
-      { id: "who-signs-letter", label: "Who Signs the ESA Letter for a Minor?" },
-      { id: "qualifying-conditions", label: "Which Conditions Commonly Qualify?" },
-      { id: "school-vs-housing", label: "School vs. Housing: What Parents Should Know" },
-      { id: "what-parents-bring", label: "What Parents Should Bring to Evaluation" },
-      { id: "college-dorms", label: "ESA in College Dorms" },
-      { id: "talking-to-child", label: "How to Talk to Your Child About Evaluation" },
-      { id: "schedule-evaluation", label: "Schedule a Telehealth Evaluation" },
-      { id: "faq", label: "Frequently Asked Questions" },
+      {
+        id: "can-children-qualify-for-an-esa",
+        label: "Can Children Qualify for an ESA?",
+      },
+      {
+        id: "who-signs-the-esa-letter-for-a-minor-understanding-the-parent-and-guardian-role",
+        label: "ESA Letter for a Minor",
+      },
+      {
+        id: "which-childhood-mental-health-conditions-commonly-qualify",
+        label: "Qualifying Conditions",
+      },
+      {
+        id: "school-vs-housing-an-important-distinction-parents-often-miss",
+        label: "School vs. Housing",
+      },
+      {
+        id: "what-parents-should-bring-to-the-evaluation",
+        label: "Evaluation Checklist",
+      },
+      {
+        id: "esa-in-college-dorms-transitioning-from-a-childhood-esa",
+        label: "ESA in College Dorms",
+      },
+      {
+        id: "how-to-talk-to-your-child-about-the-evaluation-process",
+        label: "Talking to Your Child",
+      },
+      {
+        id: "schedule-a-telehealth-evaluation-for-your-child",
+        label: "Schedule an Evaluation",
+      },
+      {
+        id: "frequently-asked-questions",
+        label: "FAQs",
+      },
     ],
     sections: [
       {
-        id: "can-children-qualify",
+        id: "can-children-qualify-for-an-esa",
         title: "Can Children Qualify for an ESA?",
         paragraphs: [
           "Yes, children can qualify for an emotional support animal.",
@@ -882,10 +905,8 @@ export const BLOG_POSTS: BlogArticle[] = [
         },
       },
       {
-        id: "who-signs-letter",
+        id: "who-signs-the-esa-letter-for-a-minor-understanding-the-parent-and-guardian-role",
         title: "Who Signs the ESA Letter for a Minor? Understanding the Parent and Guardian Role",
-        bannerImage: {"src":"/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/who-signs-the-esa-letter-for-a-mino.webp","alt":"Who Signs the ESA Letter for a Minor?"},
-        bannerPosition: "bottom",
         paragraphs: [
           "One of the most common questions families ask is who actually signs an emotional support animal letter when the individual needing support is under 18.",
           "The ESA letter itself must be issued and signed by a licensed mental health professional who is legally qualified to evaluate mental and emotional health conditions.",
@@ -898,13 +919,13 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Licensed professional counselors",
           "Psychiatrists",
         ],
+        afterListParagraphs: [
+          "Parents cannot write or approve an ESA letter themselves, even if they are the child's legal guardian.",
+          "However, parents play a critical role in the process. They typically",
+        ],
         subsections: [
           {
-            title: "The Role of Parents and Legal Guardians",
-            paragraphs: [
-              "Parents cannot write or approve an ESA letter themselves, even if they are the child's legal guardian.",
-              "However, parents play a critical role in the process. They typically:",
-            ],
+            title: "",
             listItems: [
               "Provide consent for the evaluation",
               "Schedule appointments",
@@ -912,17 +933,19 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Participate in discussions with the clinician",
               "Handle housing accommodation requests on behalf of the child",
             ],
-          },
-          {
-            title: "Facilitator vs. Evaluator",
-            paragraphs: [
+            afterListParagraphs: [
               "Think of the parent as the facilitator of the process, while the licensed professional is responsible for determining eligibility and issuing the documentation.",
             ],
           },
         ],
+        bannerImage: {
+          src: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/who-signs-the-esa-letter-for-a-mino.webp",
+          alt: "Woman on a video call at a round table while a boy pets a dog at home in a bright living room.",
+        },
+        bannerPosition: "bottom",
       },
       {
-        id: "qualifying-conditions",
+        id: "which-childhood-mental-health-conditions-commonly-qualify",
         title: "Which Childhood Mental Health Conditions Commonly Qualify?",
         paragraphs: [
           "There is no list of diagnoses that automatically qualify a child for an ESA. Every evaluation is individualized. However, emotional support animals are frequently mentioned in relation to conditions like:",
@@ -959,12 +982,14 @@ export const BLOG_POSTS: BlogArticle[] = [
             ],
           },
         ],
+        afterListParagraphs: [
+          "A diagnosis alone does not guarantee ESA eligibility. A licensed mental health professional must determine whether an emotional support animal is clinically appropriate for the child's specific circumstances, and a legal parent or guardian must consent to the ESA assessment.",
+        ],
       },
       {
-        id: "school-vs-housing",
+        id: "school-vs-housing-an-important-distinction-parents-often-miss",
         title: "School vs. Housing: An Important Distinction Parents Often Miss",
         paragraphs: [
-          "A diagnosis alone does not guarantee ESA eligibility. A licensed mental health professional must determine whether an emotional support animal is clinically appropriate for the child's specific circumstances, and a legal parent or guardian must consent to the ESA assessment.",
           "Many parents assume that if their child qualifies for an ESA, the animal can automatically accompany them to school.",
           "That is not how ESA accommodations typically work. Emotional support animals are most commonly associated with housing accommodations under the Fair Housing Act (FHA). In general, schools are governed by various legal and policy frameworks, but are not moderated under the FHA.",
           "This means that an ESA letter used for housing purposes does not automatically grant permission for an animal to do the following:",
@@ -975,18 +1000,13 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Participate in school activities",
           "Accompany a student throughout the school day",
         ],
-        subsections: [
-          {
-            title: "School Policies and Public Access",
-            paragraphs: [
-              "Every school district has its own procedures and accommodation policies. Parents should contact school administrators directly to understand the school district’s policies before assuming an ESA letter provides school access.",
-              "Understanding this distinction early can help avoid confusion and unrealistic expectations. Oftentimes, for a support animal to enter a public location and provide support to an individual, it must be a service animal.",
-            ],
-          },
+        afterListParagraphs: [
+          "Every school district has its own procedures and accommodation policies. Parents should contact school administrators directly to understand the school district’s policies before assuming an ESA letter provides school access.",
+          "Understanding this distinction early can help avoid confusion and unrealistic expectations. Oftentimes, for a support animal to enter a public location and provide support to an individual, it must be a service animal. (You could provide a brief distinction between ESAs and Service Animals here).",
         ],
       },
       {
-        id: "what-parents-bring",
+        id: "what-parents-should-bring-to-the-evaluation",
         title: "What Parents Should Bring to the Evaluation?",
         paragraphs: [
           "Preparing for an ESA evaluation can help the process run more smoothly. Parents should be ready to discuss the following:",
@@ -1026,7 +1046,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         ],
       },
       {
-        id: "college-dorms",
+        id: "esa-in-college-dorms-transitioning-from-a-childhood-esa",
         title: "ESA in College Dorms: Transitioning From a Childhood ESA",
         paragraphs: [
           "Many families wonder what happens when a child with an ESA grows older and moves into college housing.",
@@ -1034,28 +1054,21 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Students who plan to live in campus housing may need to do the following:",
         ],
         listItems: [
-          "Submit updated ESA documentation once they turn 18/are their own legal guardian",
+          "Submit [updated ESA documentation](https://myesatherapist.com/esa-letter-renewal/) once they turn 18/are their own legal guardian",
           "Complete housing accommodation forms to adhere to campus policies and regulations",
           "Work directly with disability services offices to document the need for an ESA",
           "Follow university-specific deadlines prior to move-in day",
         ],
-        subsections: [
-          {
-            title: "Navigating Life Transitions",
-            paragraphs: [
-              "Starting this process early can help avoid delays when transitioning into dorm life.",
-              "For many young adults, an emotional support animal that provided comfort during childhood continues to play an important role during major life transitions. Attending college is a major life transition that can bring anxiety, depression, grief, and even trauma. Talking with your child’s therapist, or returning to a licensed mental health professional for an ESA evaluation, can bring clarity around an ESA on campus may bring health benefits.",
-            ],
-          },
+        afterListParagraphs: [
+          "Starting this process early can help avoid delays when transitioning into dorm life.",
+          "For many young adults, an emotional support animal that provided comfort during childhood continues to play an important role during major life transitions. Attending college is a major life transition that can bring anxiety, depression, grief, and even trauma. Talking with your child’s therapist, or returning to a licensed mental health professional for an ESA evaluation, can bring clarity around an ESA on campus may bring health benefits.",
         ],
       },
       {
-        id: "talking-to-child",
+        id: "how-to-talk-to-your-child-about-the-evaluation-process",
         title: "How to Talk to Your Child About the Evaluation Process",
-        bannerImage: {"src":"/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/how-to-talk-to-your-child-.webp","alt":"Parent talking with a child beside an emotional support dog at home"},
-        bannerPosition: "bottom",
         paragraphs: [
-          "Children often feel nervous when they hear the word 'evaluation' or when going to meet with a healthcare professional. Parents can help by explaining the process in simple, age-appropriate language, and attending the evaluation with them.",
+          "Children often feel nervous when they hear the word \"evaluation\" or when going to meet with a healthcare professional. Parents can help by explaining the process in simple, age-appropriate language, and attending the evaluation with them.",
         ],
         subsections: [
           {
@@ -1084,15 +1097,11 @@ export const BLOG_POSTS: BlogArticle[] = [
             ],
           },
         ],
-      },
-      {
-        id: "schedule-evaluation",
-        title: "Schedule a Telehealth Evaluation for Your Child",
-        paragraphs: [
-          "A licensed mental health professional is the best person to consult if you're unsure if your child would benefit from an emotional support animal.",
-          "Our licensed therapists are experienced in evaluating both adults and minors through secure telehealth appointments. During the evaluation, you'll have the opportunity to discuss your child's circumstances, pose inquiries, and obtain expert advice tailored to their specific requirements.",
-          "Schedule a family-friendly telehealth appointment today to learn whether an emotional support animal may be an appropriate accommodation for your child.",
-        ],
+        bannerImage: {
+          src: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/how-to-talk-to-your-child-.webp",
+          alt: "Parent talking with a child beside an emotional support dog at home",
+        },
+        bannerPosition: "bottom",
       },
     ],
     cta: {
@@ -1100,7 +1109,16 @@ export const BLOG_POSTS: BlogArticle[] = [
       description:
         "Book a confidential telehealth evaluation with a licensed mental health professional. If your child qualifies, you’ll receive an ESA letter that can be used for housing accommodations where applicable.",
       buttonText: "Book an Online ESA Evaluation",
-      buttonHref: "/#pricing",
+      buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
+    },
+    finalThoughts: {
+      id: "schedule-a-telehealth-evaluation-for-your-child",
+      title: "Schedule a Telehealth Evaluation for Your Child",
+      paragraphs: [
+        "A licensed mental health professional is the best person to consult if you're unsure if your child would benefit from an emotional support animal.",
+        "Our licensed therapists are experienced in evaluating both adults and minors through secure telehealth appointments. During the evaluation, you'll have the opportunity to discuss your child's circumstances, pose inquiries, and obtain expert advice tailored to their specific requirements.",
+        "Schedule a family-friendly telehealth appointment today to learn whether an emotional support animal may be an appropriate accommodation for your child.",
+      ],
     },
     faqs: [
       {
@@ -1123,258 +1141,251 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
 
   // =========================================================================
-  // BLOG 4: ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026
+  // BLOG 4: ESA Letter Sample: What a Legitimate ESA Letter Looks Like?
   // =========================================================================
   {
-  "id": "esa-letter-sample",
-  "slug": "esa-letter-sample",
-  "categorySlug": "esa-guide",
-  "url": "/blog/esa-guide/esa-letter-sample/",
-  "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/esa-letter-sample/",
-  "metaTitle": "ESA Letter Sample: What a Legitimate ESA Letter Looks Like? | My ESA Therapist",
-  "metaDescription": "Looking for an ESA letter sample? See what a legitimate ESA letter looks like, what it should include, and what landlords can verify.",
-  schema: esaLetterSampleSchema,
-  "title": "ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026",
-  "shortDescription": "A legitimate ESA letter in 2026 should come from a licensed mental health professional and include essentials like provider credentials, clinical determination of a need, and a housing accommodation recommendation. This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
-  "category": "ESA Guide",
-  "author": {
-    "name": "Allyson Valley",
-    "title": "Mental Health Writer & Research Contributor",
-    "credentials": "Licensed Clinical Social Worker",
-    "image": "/blogs/blogs_trustbar-author.png",
-    "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
-    "role": "Written by"
-  },
-  "reviewedBy": {
-    "name": "Max Phillips",
-    "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.png",
-    "date": "August 24, 2026",
-    "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
-  },
-  "publishDate": "June 24, 2026",
-  "lastUpdated": "August 24, 2026",
-  "cardImage": "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/emotional-support-animal-letter-sample-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.png",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.png",
-  "heroImageDesktop": "/blogs/blog-hero_section.png",
-  "questionCallout": {
-    "question": "Can an ESA letter sample be used as a real letter?",
-    "answer": "No. An ESA letter sample is only an example and cannot replace an actual ESA letter issued by a licensed mental health professional after an individual evaluation."
-  },
-  "introParagraphs": [
-    "If you're applying for housing accommodations with an emotional support animal, one of the most common questions is, \"What does a legitimate ESA letter actually look like?\"",
-    "With thousands of websites selling instant approvals and downloadable templates, it has become increasingly difficult for tenants and landlords to differentiate a valid ESA letter from an invalid one. In 2026, a legitimate emotional support animal letter follows specific professional and legal standards, particularly for housing requests under the federal fair housing framework.",
-    "This guide explains exactly what information should appear in a valid ESA letter and what should not be included, and provides a realistic ESA letter sample for educational purposes."
-  ],
-  "tocItems": [
-    {
-      "id": "what-legitimate-letter-includes",
-      "label": "What Must an ESA Letter Include?"
+    id: "esa-letter-sample",
+    slug: "esa-letter-sample",
+    categorySlug: "esa-guide",
+    url: "/blog/esa-guide/esa-letter-sample/",
+    canonicalUrl: "https://myesatherapist.com/blog/esa-guide/esa-letter-sample/",
+    metaTitle: "ESA Letter Sample: What a Legitimate ESA Letter Looks Like? | My ESA Therapist",
+    metaDescription: "Looking for an ESA letter sample? See what a legitimate ESA letter looks like, what it should include, and what landlords can verify.",
+    schema: esaLetterSampleSchema,
+    title: "ESA Letter Sample: What Does a Legitimate ESA Letter Look Like?",
+    shortDescription: "This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
+    category: "ESA Guide",
+    author: {
+      name: "Allyson Valley",
+      title: "Mental Health Writer & Research Contributor",
+      credentials: "Licensed Clinical Social Worker",
+      image: "/blogs/blogs_trustbar-author.png",
+      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      role: "Written by",
     },
-    {
-      "id": "esa-letter-sample-format",
-      "label": "ESA Letter Sample Format"
+    reviewedBy: {
+      name: "Max Phillips",
+      credentials: "MSW, LCSW",
+      image: "/blogs/blogs_medical_reviewer.png",
+      date: "August 17, 2026",
+      linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
-    {
-      "id": "what-esa-letter-does-not-include",
-      "label": "What an ESA Letter Does NOT Include"
-    },
-    {
-      "id": "can-landlords-verify",
-      "label": "Can Landlords Verify an ESA Letter?"
-    },
-    {
-      "id": "final-thoughts",
-      "label": "Summing Everything Up"
-    },
-    {
-      "id": "faq",
-      "label": "Frequently Asked Questions"
-    }
-  ],
-  "sections": [
-    {
-      "id": "what-legitimate-letter-includes",
-      "title": "What Must a Legitimate ESA Letter Include in 2026?",
-      "paragraphs": [
-        "While the exact wording can vary between clinicians, a legitimate ESA letter typically includes the following components:"
-      ],
-      "subsections": [
-        {
-          "title": "1. Licensed Mental Health Professional's Information",
-          "paragraphs": [
-            "The letter should clearly identify the licensed professional who conducted the evaluation, including:"
-          ],
-          "listItems": [
-            "Full name",
-            "Professional license type",
-            "License number",
-            "State of licensure",
-            "Practice address or contact information"
-          ]
-        },
-        {
-          "title": "State Authorization",
-          "paragraphs": [
-            "The clinician issuing the letter must be legally authorized to practice in the state where the patient resides."
-          ]
-        },
-        {
-          "title": "2. Confirmation of a Qualifying Mental or Emotional Disability",
-          "paragraphs": [
-            "A valid ESA letter should state that the individual has a mental or emotional disability recognized under applicable disability standards.",
-            "The letter does not need to disclose the specific diagnosis. Housing providers generally cannot require tenants to reveal private medical details simply to request accommodation."
-          ]
-        },
-        {
-          "title": "3. Clinical Determination of Need",
-          "paragraphs": [
-            "The letter should explain that the licensed professional has determined that the emotional support animal provides support or therapeutic benefit related to the individual's condition.",
-            "This is one of the most important elements because the existence of a diagnosis alone does not automatically justify an ESA recommendation; there must be documented ways in which the ESA helps manage the disability."
-          ]
-        },
-        {
-          "title": "4. Recommendation for Housing Accommodation",
-          "paragraphs": [
-            "The letter should specifically recommend the presence of the emotional support animal as part of the individual's treatment or symptom management plan and support the request for reasonable housing accommodation."
-          ]
-        },
-        {
-          "title": "5. Signature and Date",
-          "paragraphs": [
-            "A legitimate ESA letter includes the following:"
-          ],
-          "listItems": [
-            "The clinician's signature, not simply a typed name",
-            "Date of assessment and letter issuance",
-            "Professional letterhead for the mental health clinician’s place of employment"
-          ]
-        },
-        {
-          "title": "Unsigned Letters Warning",
-          "paragraphs": [
-            "Unsigned letters, generic certificates, or automated PDFs without provider information are major red flags."
-          ]
-        }
-      ],
-      "quoteBox": {
-        "quote": "“The value of an ESA letter comes from the professional relationship and clinical assessment behind it, not from the appearance of the document.”",
-        "author": "Leslie K. Gamble, Licensed Independent Clinical Social Worker"
-      }
-    },
-    {
-      "id": "esa-letter-sample-format",
-      "title": "ESA Letter Sample",
-        bannerImage: {"src":"/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/legitimate esa letter sample-image.jpg","alt":"Legitimate ESA letter sample"},
-        bannerPosition: "bottom",
-      "paragraphs": [
-        "Disclaimer: The following sample is for educational purposes only and should not be copied or used as a substitute for documentation issued by a licensed mental health professional."
-      ],
-      "sampleLetter": {
-        "disclaimer": "Disclaimer: The following sample is for educational purposes only and should not be copied or used as a substitute for documentation issued by a licensed mental health professional.",
-        "letterhead": "[Provider Letterhead / Clinic Name & Practice Information]",
-        "date": "Date: [MM/DD/YYYY]",
-        "recipient": "To Whom It May Concern,",
-        "paragraphs": [
-          "I am a licensed mental health professional currently providing care to [Patient Name]. I am a licensed mental health professional in the state of [STATE] with an active license to practice. I have training in ESA assessments and letters. I met with [NAME] on [ASSESSMENT DATE] to provide an ESA assessment.",
-          "Based on my professional evaluation, I have determined that this individual [NAME] has a mental or emotional health condition recognized in the DSM-5. The presence of an emotional support animal is recommended as part of their ongoing treatment and helps alleviate symptoms associated with their condition. The ESA helps this individual manage their disability by… [EXAMPLES]. I posit that this individual has the resources and means to sufficiently care for the animal.",
-          "Therefore, I recommend reasonable accommodation for this emotional support animal in housing settings for [NAME].",
-          "If additional information is required within the limits of applicable laws, please contact my office."
+    publishDate: "July 30, 2026",
+    lastUpdated: "August 17, 2026",
+    cardImage: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/legitimate esa letter sample-image.jpg",
+    heroImageMobile: "/blogs/blog_hero-section-mobile.png",
+    heroImageTablet: "/blogs/blog_hero-section-tablet.png",
+    heroImageDesktop: "/blogs/blog-hero_section.png",
+    introParagraphs: [
+      "If you're applying for housing accommodations with an emotional support animal, one of the most common questions is, \"What does a legitimate ESA letter actually look like?\"",
+      "With thousands of websites selling instant approvals and downloadable templates, it has become increasingly difficult for tenants and landlords to differentiate a valid ESA letter from an invalid one. In 2026, a legitimate emotional support animal letter follows specific professional and legal standards, particularly for housing requests under the federal fair housing framework.",
+      "This guide explains exactly what information should appear in a valid ESA letter and what should not be included, and provides a realistic ESA letter sample for educational purposes.",
+    ],
+    tocItems: [
+      {
+        id: "what-must-a-legitimate-esa-letter-include-in-2026",
+        label: "What Must a Legitimate ESA Letter Include in 2026?",
+      },
+      {
+        id: "esa-letter-sample",
+        label: "ESA Letter Sample",
+      },
+      {
+        id: "what-a-legitimate-esa-letter-does-not-include",
+        label: "What a Legitimate ESA Letter Does Not Include",
+      },
+      {
+        id: "can-landlords-verify-an-esa-letter",
+        label: "Can Landlords Verify an ESA Letter?",
+      },
+      {
+        id: "summing-everything-up",
+        label: "Bottom Line",
+      },
+      {
+        id: "frequently-asked-questions",
+        label: "Frequently Asked Questions",
+      },
+    ],
+    sections: [
+      {
+        id: "what-must-a-legitimate-esa-letter-include-in-2026",
+        title: "What Must a Legitimate ESA Letter Include?",
+        paragraphs: [
+          "While the exact wording can vary between clinicians, a legitimate ESA letter typically includes the following components:",
         ],
-        "closing": "Sincerely,",
-        "signoff": [
-          "[Provider Name, Credentials]",
-          "License: [License Number]",
-          "State of Licensure: [State]",
-          "Contact: [Practice Address / Phone / Email]"
-        ]
-      }
+        subsections: [
+          {
+            title: "Licensed Mental Health Professional's Information",
+            paragraphs: [
+              "The letter should clearly identify the licensed professional who conducted the evaluation, including:",
+            ],
+            listItems: [
+              "Full name",
+              "Professional license type",
+              "License number",
+              "State of licensure",
+              "Practice address or contact information",
+            ],
+            afterListParagraphs: [
+              "The clinician issuing the letter must be legally authorized to practice in the state where the patient resides.",
+            ],
+          },
+          {
+            title: "Confirmation of a Qualifying Mental or Emotional Disability",
+            paragraphs: [
+              "A valid ESA letter should state that the individual has a mental or emotional disability recognized under applicable disability standards.",
+              "The letter does not need to disclose the specific diagnosis. Housing providers generally cannot require tenants to reveal private medical details simply to request accommodation.",
+            ],
+          },
+          {
+            title: "Clinical Determination of Need",
+            paragraphs: [
+              "The letter should explain that the licensed professional has determined that the emotional support animal provides support or therapeutic benefit related to the individual's condition.",
+              "This is one of the most important elements because the existence of a diagnosis alone does not automatically justify an ESA recommendation; there must be documented ways in which the ESA helps manage the disability.",
+            ],
+          },
+          {
+            title: "Recommendation for Housing Accommodation",
+            paragraphs: [
+              "The letter should specifically recommend the presence of the emotional support animal as part of the individual's treatment or symptom management plan and support the request for reasonable housing accommodation.",
+            ],
+          },
+          {
+            title: "Signature and Date",
+            paragraphs: [
+              "A legitimate ESA letter includes the following:",
+            ],
+            listItems: [
+              "The clinician's signature, not simply a typed name",
+              "Date of assessment and letter issuance",
+              "Professional letterhead for the mental health clinician’s place of employment",
+            ],
+            afterListParagraphs: [
+              "Unsigned letters, generic certificates, or automated PDFs without provider information are major red flags.",
+            ],
+          },
+        ],
+        quoteBox: {
+          quote: "“The value of an ESA letter comes from the professional relationship and clinical assessment behind it, not from the appearance of the document.”",
+          author: "Leslie K. Gamble , Licensed Independent Clinical Social Worker",
+        },
+        quoteBoxPosition: "bottom",
+      },
+      {
+        id: "esa-letter-sample",
+        title: "ESA Letter Sample",
+        sampleLetter: {
+          letterhead: "[Provider Letterhead]",
+          date: "Date",
+          recipient: "To Whom It May Concern,",
+          paragraphs: [
+            "I am a licensed mental health professional currently providing care to [Patient Name]. I am a licensed mental health professional in the state of [STATE] with an active license to practice. I have training in ESA assessments and letters. I met with [NAME] on [ASSESSMENT DATE] to provide an ESA assessment.",
+            "Based on my professional evaluation, I have determined that this individual [NAME] has a mental or emotional health condition recognized in the DSM-5. The presence of an emotional support animal is recommended as part of their ongoing treatment and helps alleviate symptoms associated with their condition. The ESA helps this individual manage their disability by… [EXAMPLES]. I posit that this individual has the resources and means to sufficiently care for the animal.",
+            "Therefore, I recommend reasonable accommodation for this emotional support animal in housing settings for [NAME].",
+            "If additional information is required within the limits of applicable laws, please contact my office.",
+          ],
+          closing: "Sincerely,",
+          signoff: [
+            "[Provider Name]",
+            "[License Number]",
+            "[State]",
+            "[Contact Information]",
+          ],
+        },
+        bannerImage: {
+          src: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/emotional-support-animal-letter-sample-image.webp",
+          alt: "emotional support animal letter sample",
+        },
+        bannerPosition: "bottom",
+        calloutBox: {
+          prefix: "**Disclaimer:**",
+          text: "The following sample is for educational purposes only and should not be copied or used as a substitute for documentation issued by a licensed mental health professional.",
+        },
+      },
+      {
+        id: "what-a-legitimate-esa-letter-does-not-include",
+        title: "What a Legitimate ESA Letter Does Not Include?",
+        paragraphs: [
+          "Many fake ESA websites continue to sell documents that look official but have little to no legal value. A legitimate ESA letter does not rely on the following:",
+        ],
+        listItems: [
+          "ESA registration numbers",
+          "National ESA databases",
+          "ID cards or badges",
+          "Animal certifications",
+          "Vests or patches",
+          "Lifetime approvals",
+          "Instant approvals without evaluation",
+        ],
+        afterListParagraphs: [
+          "There is currently no federal ESA registry in the United States, and landlords cannot require registration documentation because no official government registry exists.",
+        ],
+        calloutBox: {
+          prefix: "**Wondering whether ESA registration is actually legitimate or required? Learn more in our guide:**",
+          linkText: "Does ESA Registration Actually Mean Anything?",
+          linkHref: "/blog/esa-guide/is-esa-registration-legit/",
+        },
+      },
+      {
+        id: "can-landlords-verify-an-esa-letter",
+        title: "Can Landlords Verify an ESA Letter?",
+        paragraphs: [
+          "Yes. Housing providers are generally allowed to verify the following:",
+        ],
+        listItems: [
+          "The letter was issued by a licensed professional.",
+          "The provider holds an active license.",
+          "The documentation appears authentic and was issued as part of a professional relationship following an ESA evaluation.",
+        ],
+        afterListParagraphs: [
+          "However, landlords generally cannot demand access to medical records or require disclosure of a specific diagnosis. The purpose of verification is to confirm the legitimacy of the documentation, not to inquire about an individual's private medical history.",
+        ],
+        calloutBox: {
+          prefix: "**Want to learn more about the verification process? Read our guide:**",
+          linkText: "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist",
+          linkHref: "/blog/esa-guide/how-to-verify-an-esa-letter/",
+        },
+      },
+      {
+        id: "summing-everything-up",
+        title: "Summing Everything Up",
+        paragraphs: [
+          "A legitimate ESA letter is relatively simple in terms of looks but significant in what it represents. It should come from a licensed mental health professional, document a disability-related need for an emotional support animal, and support a housing accommodation request.",
+          "If a document focuses more on registration numbers, certificates, or accessories than on a professional clinical evaluation, it is likely not the type of documentation housing providers are looking for and may provide little to no housing protections.",
+          "When reviewing an ESA letter, the most important question is not whether it looks official, but whether it reflects a genuine evaluation conducted by a qualified licensed professional.",
+        ],
+      },
+    ],
+    cta: {
+      heading: "Need a Legitimate ESA Letter?",
+      description: "Get evaluated by a licensed mental health professional. If you qualify, you’ll receive a valid ESA letter for housing accommodations.",
+      buttonText: "Book an ESA Evaluation",
+      buttonHref: "/#pricing",
     },
-    {
-      "id": "what-esa-letter-does-not-include",
-      "title": "What a Legitimate ESA Letter Does NOT Include",
-      "paragraphs": [
-        "Many fake ESA websites continue to sell documents that look official but have little to no legal value. A legitimate ESA letter does not rely on the following:"
-      ],
-      "listItems": [
-        "ESA registration numbers",
-        "National ESA databases",
-        "ID cards or badges",
-        "Animal certifications",
-        "Vests or patches",
-        "Lifetime approvals",
-        "Instant approvals without evaluation"
-      ],
-      "subsections": [
-        {
-          "title": "No Official Federal ESA Registry",
-          "paragraphs": [
-            "There is currently no federal ESA registry in the United States, and landlords cannot require registration documentation because no official government registry exists.",
-            "Wondering whether ESA registration is actually legitimate or required? Learn more in our guide: Does ESA Registration Actually Mean Anything?"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "can-landlords-verify",
-      "title": "Can Landlords Verify an ESA Letter?",
-      "paragraphs": [
-        "Yes. Housing providers are generally allowed to verify the following:"
-      ],
-      "listItems": [
-        "The letter was issued by a licensed professional.",
-        "The provider holds an active license.",
-        "The documentation appears authentic and was issued as part of a professional relationship following an ESA evaluation."
-      ],
-      "subsections": [
-        {
-          "title": "Medical Privacy Protections",
-          "paragraphs": [
-            "However, landlords generally cannot demand access to medical records or require disclosure of a specific diagnosis. The purpose of verification is to confirm the legitimacy of the documentation, not to inquire about an individual's private medical history.",
-            "Want to learn more about the verification process? Read our guide: How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist."
-          ]
-        }
-      ]
-    }
-  ],
-  "cta": {
-    "heading": "Need a Legitimate ESA Letter?",
-    "description": "Get evaluated by a licensed mental health professional. If you qualify, you’ll receive a valid ESA letter for housing accommodations.",
-    "buttonText": "Book an ESA Evaluation",
-    "buttonHref": "/#pricing"
+    faqs: [
+      {
+        q: "What does a legitimate ESA letter sample look like?",
+        a: "A legitimate ESA letter sample includes the licensed mental health professional's name along with license information and official letterhead stating that an emotional support animal is part of the individual's treatment plan. Every genuine ESA letter is individual specific and based on a clinical evaluation.",
+      },
+      {
+        q: "Can I use an ESA sample as my official ESA letter?",
+        a: "No. An ESA letter sample or template is only meant to show what a legitimate letter looks like. A valid ESA letter must be written specifically for you by a licensed mental health professional after a clinical evaluation.",
+      },
+      {
+        q: "What is the difference between an ESA letter and an ESA certificate?",
+        a: "An ESA letter is the only document generally used to support a housing accommodation request because it is issued by a licensed mental health professional. An ESA certificate or registration is not required by law and does not establish eligibility for housing accommodations and is not a replacement for a legitimate ESA letter.",
+      },
+      {
+        q: "What information should not appear in an ESA letter sample?",
+        a: "A legitimate ESA letter should not include unnecessary medical details or your complete diagnosis or sensitive treatment records. It only needs enough information to confirm that you qualify for an emotional support animal and that the letter was issued by a licensed clinician.",
+      },
+      {
+        q: "Does an ESA letter need to be renewed every year?",
+        a: "Federal law does not require annual renewal of an ESA letter. However, many housing providers prefer documentation issued within the past 12 months, so keeping your letter up to date can help avoid delays during the accommodation process.",
+      },
+    ],
   },
-  "finalThoughts": {
-    "title": "Summing Everything Up",
-    "paragraphs": [
-      "A legitimate ESA letter in 2026 is relatively simple in terms of looks but significant in what it represents. It should come from a licensed mental health professional, document a disability-related need for an emotional support animal, and support a housing accommodation request.",
-      "If a document focuses more on registration numbers, certificates, or accessories than on a professional clinical evaluation, it is likely not the type of documentation housing providers are looking for and may provide little to no housing protections.",
-      "When reviewing an ESA letter, the most important question is not whether it looks official, but whether it reflects a genuine evaluation conducted by a qualified licensed professional."
-    ]
-  },
-  "faqs": [
-    {
-      "q": "What does a legitimate ESA letter sample look like?",
-      "a": "A legitimate ESA letter sample includes the licensed mental health professional's name along with license information and official letterhead stating that an emotional support animal is part of the individual's treatment plan. Every genuine ESA letter is individual specific and based on a clinical evaluation."
-    },
-    {
-      "q": "Can I use an ESA sample as my official ESA letter?",
-      "a": "No. An ESA letter sample or template is only meant to show what a legitimate letter looks like. A valid ESA letter must be written specifically for you by a licensed mental health professional after a clinical evaluation."
-    },
-    {
-      "q": "What is the difference between an ESA letter and an ESA certificate?",
-      "a": "An ESA letter is the only document generally used to support a housing accommodation request because it is issued by a licensed mental health professional. An ESA certificate or registration is not required by law and does not establish eligibility for housing accommodations and is not a replacement for a legitimate ESA letter."
-    },
-    {
-      "q": "What information should not appear in an ESA letter sample?",
-      "a": "A legitimate ESA letter should not include unnecessary medical details or your complete diagnosis or sensitive treatment records. It only needs enough information to confirm that you qualify for an emotional support animal and that the letter was issued by a licensed clinician."
-    },
-    {
-      "q": "Does an ESA letter need to be renewed every year?",
-      "a": "Federal law does not require annual renewal of an ESA letter. However, many housing providers prefer documentation issued within the past 12 months, so keeping your letter up to date can help avoid delays during the accommodation process."
-    }
-  ]
-},
 
   // =========================================================================
   // BLOG 5: HUD ESA Guidance 2026: What Changed for Emotional Support Animal Housing?

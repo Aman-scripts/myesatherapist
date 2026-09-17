@@ -180,14 +180,16 @@ export default async function BlogDetailPage({ params }: PageProps) {
         <BlogGoogleSourceBanner />
 
         {/* 7. FAQ Section (Article-specific FAQs from Google Docs) */}
-        <FaqSection
-          title={article.faqSectionTitle || "Frequently Asked Questions"}
-          subtitle={
-            article.faqSectionSubtitle ||
-            "Get answers to common questions about ESA letters and our service."
-          }
-          faqs={article.faqs}
-        />
+        <div id="frequently-asked-questions" className="scroll-mt-28">
+          <FaqSection
+            title={article.faqSectionTitle || "Frequently Asked Questions"}
+            subtitle={
+              article.faqSectionSubtitle ||
+              "Get answers to common questions about ESA letters and our service."
+            }
+            faqs={article.faqs}
+          />
+        </div>
 
         {/* 8. Bottom CTA Banner */}
         <CtaBanner
