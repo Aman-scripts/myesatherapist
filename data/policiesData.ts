@@ -3911,7 +3911,7 @@ export const ALL_POLICIES_LIST = [
   { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA', href: '/hipaa-compliance/' },
   { slug: 'editorial-policy', label: 'Editorial Policy', shortLabel: 'Editorial', href: '/editorial-policy/' },
   { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer', href: '/disclaimer/' },
-  { slug: 'accessibility-statement', label: 'Accessibility Statement', shortLabel: 'Accessibility', href: '/policies/accessibility-statement/' },
+  { slug: 'accessibility-statement', label: 'Accessibility Statement', shortLabel: 'Accessibility', href: '/accessibility-statement/' },
 ];
 
 export function getPolicyHref(slug: string): string {
@@ -3924,6 +3924,7 @@ export function getPolicyHref(slug: string): string {
   if (slug === 'refund-policy') return '/refund-policy/';
   if (slug === 'consent-for-telehealth') return '/consent-for-telehealth/';
   if (slug === 'editorial-policy') return '/editorial-policy/';
+  if (slug === 'accessibility-statement') return '/accessibility-statement/';
   return `/policies/${slug}/`;
 }
 

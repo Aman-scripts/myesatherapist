@@ -123,6 +123,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
     };
   }
 
+  if (slug === "accessibility-statement") {
+    return {
+      title: "Accessibility Statement | My ESA Therapist",
+      description:
+        "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
+      robots: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+      alternates: {
+        canonical: "https://myesatherapist.com/accessibility-statement/",
+      },
+    };
+  }
+
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
@@ -185,6 +201,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
   if (slug === "editorial-policy") {
     permanentRedirect("/editorial-policy/");
+  }
+
+  if (slug === "accessibility-statement") {
+    permanentRedirect("/accessibility-statement/");
   }
 
   const policy = getPolicyBySlug(slug);

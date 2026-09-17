@@ -32,7 +32,7 @@ const legalLinks = [
   { label: "Refund Policy", href: "/refund-policy/" },
   { label: "Consent for Telehealth", href: "/consent-for-telehealth/" },
   { label: "Editorial Policy", href: "/editorial-policy/" },
-  { label: "Accessibility Statement", href: "/policies/accessibility-statement/" },
+  { label: "Accessibility Statement", href: "/accessibility-statement/" },
 ];
 
 function HipaaBadge() {

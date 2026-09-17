@@ -21,7 +21,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/href="hipaa-compliance\.html"/g, 'href="/hipaa-compliance/"')
       .replace(/href="editorial-policy\.html"/g, 'href="/editorial-policy/"')
       .replace(/href="disclaimer-and-policies\.html"/g, 'href="/disclaimer/"')
-      .replace(/href="accessibility-statement\.html"/g, 'href="/policies/accessibility-statement/"');
+      .replace(/href="accessibility-statement\.html"/g, 'href="/accessibility-statement/"');
 
     return <span dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
   };
@@ -162,7 +162,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 "refund policy": "/refund-policy/",
                 "hipaa compliance": "/hipaa-compliance/",
                 "editorial policy": "/editorial-policy/",
-                "accessibility statement": "/policies/accessibility-statement/",
+                "accessibility statement": "/accessibility-statement/",
                 "disclaimer & policies": "/disclaimer/",
                 "disclaimer": "/disclaimer/",
                 "medical disclaimer": "/disclaimer/",
