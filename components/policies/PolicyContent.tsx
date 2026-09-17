@@ -217,7 +217,10 @@ export function PolicyContent({ policy }: PolicyContentProps) {
     <article className="w-full space-y-10 lg:space-y-12">
       {/* 1. Summary / Highlight Block (Matching Ongo aboutBlock with Project Colors) */}
       {policy.sections.length > 0 && policy.sections[0].blocks.length > 0 && (
-        <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] border border-[#EAE5DC] bg-white p-6 sm:p-8 lg:p-10 shadow-[0px_4px_20px_rgba(26,61,79,0.06)] space-y-4">
+        <div
+          id={policy.sections[0].id}
+          className="scroll-mt-[148px] relative overflow-hidden rounded-[20px] sm:rounded-[24px] border border-[#EAE5DC] bg-white p-6 sm:p-8 lg:p-10 shadow-[0px_4px_20px_rgba(26,61,79,0.06)] space-y-4"
+        >
           <div className="flex items-center gap-3.5 mb-2">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#2E5A66] text-[#E8B92C] shadow-xs shrink-0">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -241,7 +244,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
           <section
             key={sec.id}
             id={sec.id}
-            className="scroll-mt-28 bg-white border border-[#EAE5DC] rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_2px_8px_rgba(0,0,0,0.04)] space-y-6 transition-all hover:shadow-[0px_8px_24px_rgba(46,90,102,0.08)]"
+            className="scroll-mt-[148px] bg-white border border-[#EAE5DC] rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_2px_8px_rgba(0,0,0,0.04)] space-y-6 transition-all hover:shadow-[0px_8px_24px_rgba(46,90,102,0.08)]"
           >
             {/* Section Header with Project-Style Numeral Badge */}
             <div className="flex items-center gap-4 pb-3 border-b border-[#EAE5DC]">

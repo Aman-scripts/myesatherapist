@@ -48,7 +48,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
   return (
     <aside
-      className="w-full lg:sticky lg:top-24 space-y-6 self-start [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
+      className="w-full lg:sticky lg:top-[148px] space-y-6 self-start [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
 
