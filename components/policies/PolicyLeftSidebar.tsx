@@ -198,7 +198,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
             {/* Slide-out Drawer & Backdrop */}
             <div
-              className={`fixed inset-0 z-[99999] flex transition-all duration-300 ${
+              className={`fixed inset-0 z-[99999] h-[100dvh] max-h-[100dvh] flex transition-all duration-300 ${
                 isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
               }`}
               role="dialog"
@@ -207,14 +207,14 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
               {/* Backdrop Overlay with smooth fade */}
               <div
                 onClick={() => setIsOpen(false)}
-                className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ease-in-out ${
+                className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ease-in-out touch-none ${
                   isOpen ? "opacity-100" : "opacity-0"
                 }`}
               />
 
               {/* Sliding Content Panel with smooth transform */}
               <div
-                className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
+                className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-[100dvh] max-h-[100dvh] overflow-hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
                   isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
                 style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
@@ -250,8 +250,15 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
                 {/* Scrollable Navigation Sections */}
                 <div
-                  className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 sm:px-8 pb-10 space-y-7"
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                  className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-6 sm:px-8 pb-14 space-y-7 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                  style={{
+                    scrollbarWidth: "none",
+                    msOverflowStyle: "none",
+                    WebkitOverflowScrolling: "touch",
+                    touchAction: "pan-y",
+                    overscrollBehavior: "contain",
+                  }}
+                  onTouchMove={(e) => e.stopPropagation()}
                 >
                   {/* 1. Table of Contents (On this page) */}
                   {policy.tocItems && policy.tocItems.length > 0 && (
