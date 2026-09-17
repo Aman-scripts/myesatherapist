@@ -10,7 +10,6 @@ const companyLinks = [
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Meet our Therapists", href: "/esa-doctors/" },
-  { label: "HIPAA Compliance", href: "/policies/hipaa-compliance/" },
   { label: "Video Testimonials", href: "#testimonials" },
   { label: "Customer Reviews", href: "/reviews" },
 ];
@@ -23,6 +22,17 @@ const quickLinks = [
   { label: "ESA Letter Cost", href: "/pricing" },
   { label: "ESA FAQs", href: "/faq" },
   { label: "ESA Resources", href: "/blog" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", href: "/policies/privacy-policy/" },
+  { label: "Terms of Service", href: "/policies/terms-of-use/" },
+  { label: "Medical Disclaimer", href: "/policies/disclaimer-and-policies/" },
+  { label: "HIPAA Notice of Privacy Practices", href: "/policies/hipaa-compliance/" },
+  { label: "Refund Policy", href: "/policies/refund-policy/" },
+  { label: "Consent for Telehealth", href: "/policies/consent-for-telehealth/" },
+  { label: "Editorial Policy", href: "/policies/editorial-policy/" },
+  { label: "Accessibility Statement", href: "/policies/accessibility-statement/" },
 ];
 
 function HipaaBadge() {
@@ -98,8 +108,8 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
           {/* Full-width Divider Line */}
           <div className="w-full border-t border-white/15 my-14" />
 
-          {/* 4 Navigation Columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+          {/* 5 Navigation Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 xl:gap-8">
             {/* Column 1: ABOUT US */}
             <div className="space-y-4">
               <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
@@ -157,7 +167,29 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               </ul>
             </div>
 
-            {/* Column 4: GET IN TOUCH */}
+            {/* Column 4: LEGAL (Matches Screenshot: Title + Accent Underline) */}
+            <div className="space-y-4">
+              <div className="space-y-1.5">
+                <h4 className="text-white font-sans font-bold text-sm tracking-wider uppercase">
+                  LEGAL
+                </h4>
+                <div className="w-10 h-[2.5px] bg-[#FF5023] rounded-full" />
+              </div>
+              <ul className="space-y-2.5 font-sans">
+                {legalLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-xs sm:text-[13px] font-medium text-[#FAF7F2]/85 hover:text-[#E8B92C] transition-colors block py-0.5"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 5: GET IN TOUCH */}
             <div className="space-y-4">
               <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
                 GET IN TOUCH
