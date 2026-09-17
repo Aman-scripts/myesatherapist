@@ -215,16 +215,6 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             </div>
           )}
 
-          {/* Quote Callout Box (Bottom position) */}
-          {sec.quoteBox && sec.quoteBoxPosition === "bottom" && (
-            <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
-              <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
-              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
-                {sec.quoteBox.quote} {sec.quoteBox.author && `– ${sec.quoteBox.author}`}
-              </p>
-            </div>
-          )}
-
           {/* Section Banner / Content Image (Top position) */}
           {sec.bannerImage && (!sec.bannerPosition || sec.bannerPosition === "top") && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
@@ -342,36 +332,44 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {/* Comparison Table (Article 6 Landlord Deny) */}
           {sec.comparisonTable && (
             <div className="w-full my-8 space-y-4">
-              <div className="rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
-                <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#DECDBB]">
-                  <div className="bg-rose-50/70 p-4 sm:p-5 border-b border-[#DECDBB]">
-                    <h4 className="font-heading font-bold text-base sm:text-lg text-rose-900">
-                      {sec.comparisonTable.col1Header}
-                    </h4>
-                  </div>
-                  <div className="bg-emerald-50/70 p-4 sm:p-5 border-b border-[#DECDBB]">
-                    <h4 className="font-heading font-bold text-base sm:text-lg text-emerald-900">
-                      {sec.comparisonTable.col2Header}
-                    </h4>
-                  </div>
-                </div>
-                <div className="divide-y divide-[#EAE5DC]">
-                  {sec.comparisonTable.rows.map((row, rIdx) => (
-                    <div key={rIdx} className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#EAE5DC]">
-                      <div className="p-4 sm:p-5 text-sm sm:text-[15px] font-medium text-[#5F6B6F] flex items-start gap-2.5">
-                        <span className="text-rose-500 font-bold shrink-0 mt-0.5">✕</span>
-                        <span>{row.mayDeny}</span>
-                      </div>
-                      <div className="p-4 sm:p-5 text-sm sm:text-[15px] font-medium text-[#5F6B6F] flex items-start gap-2.5">
-                        <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
-                        <span>{row.cannotDeny}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div className="w-full max-w-[900px] overflow-x-auto rounded-[8px] border border-[#d7dfe2] shadow-[0px_4px_16px_rgba(0,0,0,0.04)] bg-white">
+                <table className="w-full border-collapse font-sans text-left">
+                  <thead>
+                    <tr>
+                      <th className="bg-[#134c5f] text-center px-4 sm:px-6 py-4 sm:py-5 border-r border-b border-white/15 w-1/2">
+                        <h3 className="font-heading font-normal text-lg sm:text-[22px] lg:text-[25px] leading-tight text-white m-0">
+                          {sec.comparisonTable.col1Header}
+                        </h3>
+                        <span className="block w-9 h-[3px] bg-[#efbf2f] mx-auto mt-2 rounded-[2px]" />
+                      </th>
+                      <th className="bg-[#134c5f] text-center px-4 sm:px-6 py-4 sm:py-5 border-b border-white/15 w-1/2">
+                        <h3 className="font-heading font-normal text-lg sm:text-[22px] lg:text-[25px] leading-tight text-white m-0">
+                          {sec.comparisonTable.col2Header}
+                        </h3>
+                        <span className="block w-9 h-[3px] bg-[#efbf2f] mx-auto mt-2 rounded-[2px]" />
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sec.comparisonTable.rows.map((row, rIdx) => (
+                      <tr
+                        key={rIdx}
+                        className={rIdx % 2 === 1 ? "bg-[#f5f9fa]" : "bg-white"}
+                      >
+                        <td className="relative px-4 sm:px-6 py-4 sm:py-[18px] text-[14px] sm:text-[15px] leading-[1.5] text-[#26333a] border border-[#e3e9eb] align-top">
+                          <span className="absolute left-0 top-0 bottom-0 w-1 bg-[#efbf2f]" />
+                          {row.mayDeny}
+                        </td>
+                        <td className="px-4 sm:px-6 py-4 sm:py-[18px] text-[14px] sm:text-[15px] leading-[1.5] text-[#26333a] border border-[#e3e9eb] align-top">
+                          {row.cannotDeny}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
               {sec.comparisonTable.keyTakeaway && (
-                <div className="p-4 sm:p-5 rounded-[16px] bg-[#FAF7F2] border border-[#DECDBB] text-xs sm:text-sm font-medium text-[#5F6B6F] leading-relaxed">
+                <div className="p-4 sm:p-5 rounded-[16px] bg-[#FAF7F2] border border-[#DECDBB] text-sm sm:text-base font-medium text-[#5F6B6F] leading-relaxed">
                   <strong className="text-[#2E5A66]">Key takeaway: </strong>
                   {sec.comparisonTable.keyTakeaway}
                 </div>
@@ -500,6 +498,16 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   </p>
                 </div>
               )}
+            </div>
+          )}
+
+          {/* Quote Callout Box (Bottom position) */}
+          {sec.quoteBox && sec.quoteBoxPosition === "bottom" && (
+            <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
+              <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
+              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
+                {sec.quoteBox.quote} {sec.quoteBox.author && `– ${sec.quoteBox.author}`}
+              </p>
             </div>
           )}
         </section>

@@ -155,8 +155,10 @@ export default async function BlogDetailPage({ params }: PageProps) {
             publishDate={article.publishDate}
             lastUpdated={article.lastUpdated}
             reviewerName={article.reviewedBy.name}
+            reviewerRole={article.reviewedBy.role}
             reviewerCredentials={article.reviewedBy.credentials}
             reviewerImage={article.reviewedBy.image}
+            reviewerLinkedin={article.reviewedBy.linkedin}
           />
         </div>
 
@@ -187,12 +189,16 @@ export default async function BlogDetailPage({ params }: PageProps) {
           faqs={article.faqs}
         />
 
-        {/* 8. PSD CTA Banner */}
+        {/* 8. Bottom CTA Banner */}
         <CtaBanner
-          title="Need help with a PSD letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
-          buttonText="Start your Evaluation"
-          buttonHref="#faq"
+          title={article.bottomCta?.title || "Need help with a PSD letter?"}
+          description={
+            article.bottomCta?.description ||
+            "Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
+          }
+          buttonText={article.bottomCta?.buttonText || "Start your Evaluation"}
+          buttonHref={article.bottomCta?.buttonHref || "#faq"}
+          note={article.bottomCta?.note}
           bgColor="bg-[#FAF7F2]"
         />
 

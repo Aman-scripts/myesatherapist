@@ -119,6 +119,7 @@ export interface BlogArticle {
     image: string;
     date: string;
     linkedin?: string;
+    role?: string;
   };
   publishDate: string;
   lastUpdated: string;
@@ -126,7 +127,7 @@ export interface BlogArticle {
   heroImageMobile: string;
   heroImageTablet: string;
   heroImageDesktop: string;
-  questionCallout: {
+  questionCallout?: {
     question: string;
     answer: string;
   };
@@ -139,6 +140,13 @@ export interface BlogArticle {
     description: string;
     buttonText: string;
     buttonHref: string;
+  };
+  bottomCta?: {
+    title: string;
+    description: string;
+    buttonText: string;
+    buttonHref: string;
+    note?: string;
   };
   finalThoughts?: {
     id?: string;
@@ -1611,205 +1619,197 @@ export const BLOG_POSTS: BlogArticle[] = [
   // BLOG 6: Can a Landlord Deny an Emotional Support Animal? Know What the Law Says
   // =========================================================================
   {
-  "id": "can-landlords-deny-emotional-support-animals",
-  "slug": "can-landlords-deny-emotional-support-animals",
-  "categorySlug": "esa-guide",
-  "url": "/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
-  "canonicalUrl": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
-  "metaTitle": "Can a Landlord Deny an Emotional Support Animal? | My ESA Therapist",
-  "metaDescription": "Can a landlord legally deny your emotional support animal? Learn the exceptions under the Fair Housing Act, the 2026 HUD update, and what to do if you're denied.",
-  schema: canLandlordsDenyEsaSchema,
-  "title": "Can a Landlord Deny an Emotional Support Animal? Know What the Law Says",
-  "shortDescription": "Emotional support animal requests are evaluated under Fair Housing Act guidelines rather than standard pet rules. Whether an accommodation is approved often depends on the supporting documentation, housing circumstances, and any relevant exemptions like health or safety issues.",
-  "category": "ESA Guide",
-  "author": {
-    "name": "Allyson Valley",
-    "title": "Mental Health Writer & Research Contributor",
-    "credentials": "Licensed Clinical Social Worker",
-    "image": "/blogs/blogs_trustbar-author.png",
-    "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
-    "role": "Written by"
-  },
-  "reviewedBy": {
-    "name": "Max Phillips",
-    "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.png",
-    "date": "August 30, 2026",
-    "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
-  },
-  "publishDate": "May 30, 2026",
-  "lastUpdated": "August 30, 2026",
-  "cardImage": "/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.png",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.png",
-  "heroImageDesktop": "/blogs/blog-hero_section.png",
-  "questionCallout": {
-    "question": "Can a landlord refuse an ESA even if I have a letter?",
-    "answer": "Yes, a landlord may still deny an ESA accommodation in limited situations, such as when the housing is exempt from the Fair Housing Act, the documentation is insufficient, the animal poses a direct threat, or the accommodation creates an undue burden. Having an ESA letter does not guarantee approval."
-  },
-  "introParagraphs": [
-    "You might wonder whether a landlord may lawfully reject your request if you have a valid emotional support animal (ESA) and are moving into a rental house. The response is based on a number of factors, including the kind of housing, the paperwork you submit, and whether your request fits federal or state legislation as a reasonable accommodation.",
-    "In many scenarios, property owners have to look into an ESA request even if their building has a strict no-pets rule. However, approval is not automatically granted. Housing providers may legally deny a request when specific exceptions apply. These include invalid documentation, exempt housing, or a direct threat to the health or safety of others.",
-    "This blog covers when landlords may, cannot, and what you may do to improve your housing request."
-  ],
-  "tocItems": [
-    {
-      "id": "can-landlord-reject",
-      "label": "Can Your Landlord Reject Your ESA?"
+    id: "can-landlords-deny-emotional-support-animals",
+    slug: "can-landlords-deny-emotional-support-animals",
+    categorySlug: "esa-guide",
+    url: "/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
+    canonicalUrl: "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
+    metaTitle: "Can a Landlord Deny an Emotional Support Animal? | My ESA Therapist",
+    metaDescription:
+      "Can a landlord legally deny your emotional support animal? Learn the exceptions under the Fair Housing Act, the 2026 HUD update, and what to do if you're denied.",
+    schema: canLandlordsDenyEsaSchema,
+    title: "Can a Landlord Deny an Emotional Support Animal? Know What the Law Says",
+    shortDescription:
+      "Emotional support animal requests are evaluated under Fair Housing Act guidelines rather than standard pet rules. Whether an accommodation is approved often depends on the supporting documentation, housing circumstances, and any relevant exemptions like health or safety issues.",
+    category: "ESA Guide",
+    author: {
+      name: "Allyson Valley",
+      title: "Mental Health Writer & Research Contributor",
+      credentials: "Licensed Clinical Social Worker",
+      image: "/blogs/blogs_trustbar-author.png",
+      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      role: "Written by",
     },
-    {
-      "id": "when-landlord-can-and-cannot-deny",
-      "label": "When a Landlord Can & Cannot Deny"
+    reviewedBy: {
+      name: "Awais Arshad",
+      role: "Legally Reviewed by",
+      credentials: "Attorney at Law",
+      image: "/legal_reviewer/legal-reviwer.png",
+      date: "August 17, 2026",
+      linkedin: "https://www.linkedin.com/in/awais-arshad-a51b31113/",
     },
-    {
-      "id": "what-to-do-if-denied",
-      "label": "What to Do If Your Request Is Denied"
-    },
-    {
-      "id": "hud-policy-update-2026",
-      "label": "2026 HUD Policy Update"
-    },
-    {
-      "id": "final-thoughts",
-      "label": "Final Thoughts"
-    },
-    {
-      "id": "faq",
-      "label": "Frequently Asked Questions"
-    }
-  ],
-  "sections": [
-    {
-      "id": "can-landlord-reject",
-      "title": "Can Your Landlord Reject Your Emotional Support Animal?",
-      "paragraphs": [
-        "Quick answer: Yes. But just under particular conditions.",
-        "Many housing providers under the Fair Housing Act have to reasonably accommodate individuals who medically need an emotional support animal. A landlord usually cannot refuse an ESA only on the basis of a no pets policy or on the grounds of the animal being an ESA and not a service dog.",
-        "A landlord might reject an ESA request if:"
-      ],
-      "listItems": [
-        "The Fair Housing Act does not apply to the property.",
-        "When it is legally required, the tenant does not offer trustworthy documentation pertaining to disabilities.",
-        "The animal presents a direct danger that cannot be lowered using sensible means.",
-        "The animal has either caused damage to property or poses a continuous threat.",
-        "Allowing the ESA would place an unfair administrative or financial strain."
-      ],
-      "subsections": [
-        {
-          "title": "Individual Assessment Required",
-          "paragraphs": [
-            "Every requirement should be considered separately. When thinking about an ESA accommodation request, a landlord should not depend on assumptions, breed limits, or all-inclusive pet regulations."
-          ]
-        }
-      ],
-      "quoteBox": {
-        "quote": "“An emotional support animal is not just a pet; for many people, it is part of their emotional well-being and daily stability.”",
-        "author": "Dr. Robert Staaf"
-      }
-    },
-    {
-      "id": "when-landlord-can-and-cannot-deny",
-      "title": "Know Your Rights: When a Landlord Can and Cannot Deny an ESA",
-      "paragraphs": [
-        "Accommodation requests are evaluated under fair housing principles. Here is an overview of what grounds permit denial versus what reasons are prohibited under fair housing laws:"
-      ],
-      "comparisonTable": {
-        "col1Header": "A landlord may deny an ESA if...",
-        "col2Header": "A landlord cannot deny an ESA because...",
-        "rows": [
-          {
-            "mayDeny": "The documentation is unreliable or insufficient.",
-            "cannotDeny": "The property has a \"no pets\" policy."
-          },
-          {
-            "mayDeny": "The animal poses a direct threat to others.",
-            "cannotDeny": "The animal is a dog, cat, rabbit, or another common ESA species."
-          },
-          {
-            "mayDeny": "The property qualifies for a Fair Housing Act exemption.",
-            "cannotDeny": "The landlord prefers not to allow emotional support animals."
-          },
-          {
-            "mayDeny": "The accommodation would create an undue financial or administrative burden.",
-            "cannotDeny": "The tenant has a disability and provides valid supporting documentation."
-          },
-          {
-            "mayDeny": "The animal has a documented history of serious property damage or aggression.",
-            "cannotDeny": "The landlord charges pet rent or pet fees for an approved ESA."
-          }
+    publishDate: "May 27, 2026",
+    lastUpdated: "August 17, 2026",
+    cardImage:
+      "/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp",
+    heroImageMobile: "/blogs/blog_hero-section-mobile.png",
+    heroImageTablet: "/blogs/blog_hero-section-tablet.png",
+    heroImageDesktop: "/blogs/blog-hero_section.png",
+    introParagraphs: [
+      "You might wonder whether a landlord may lawfully deny your ESA accommodation request if you have an ESA letter and are moving into a rental home. The response is based on a number of factors, including the kind of housing, the paperwork you submit, and whether your request fits federal or state legislation as a reasonable accommodation.",
+      "In many scenarios, property owners have to look into an ESA request even if their building has a strict no pets rule. However, approval is not automatically granted. Housing providers may legally deny a request when specific exceptions apply. These include invalid documentation, exempt housing, or a direct threat to the health or safety of others.",
+      "This blog covers when landlords may, cannot, and what you may do to improve your housing request.",
+    ],
+    tocItems: [
+      { id: "landlord-reject-esa", label: "Can Landlord Reject ESA?" },
+      { id: "esa-rights", label: "ESA Tenant Rights" },
+      { id: "esa-request-denied", label: "If ESA Is Denied" },
+      { id: "hud-policy-update-2026", label: "2026 HUD Update" },
+      { id: "final-thoughts", label: "Final Thoughts" },
+      { id: "faq", label: "FAQs" },
+    ],
+    sections: [
+      {
+        id: "landlord-reject-esa",
+        title: "Can Your Landlord Reject Your Emotional Support Animal?",
+        paragraphs: [
+          "Quick answer: Yes. But just under particular conditions.",
+          "Many housing providers under the Fair Housing Act have to reasonably accommodate individuals who medically need an emotional support animal. A landlord usually cannot refuse an ESA only on the basis of a no pets policy or on the grounds of the animal being an ESA and not a service dog.",
+          "A landlord might reject an ESA request if:",
         ],
-        "keyTakeaway": "An emotional support animal accommodation request is not automatically accepted, but it also cannot be denied for random reasons. The decision must be based on applicable housing laws and the specific facts of the accommodation request."
-      }
-    },
-    {
-      "id": "what-to-do-if-denied",
-      "title": "What to Do If Your ESA Request Is Denied",
-      "paragraphs": [
-        "If a landlord denies your ESA request, don't assume it's final or automatically illegal. Start here:"
-      ],
-      "listItems": [
-        "Ask for the reason in writing. Landlords are required to give a specific basis for denial, not a generic \"no pets\" response.",
-        "Check if the denial matches a legal exception. Compare it against the table above; exempt property, insufficient documentation, direct threat, undue burden, or damage history are the only valid grounds.",
-        "Review your documentation. A large share of denials trace back to letters that don't meet legal standards, missing licensure information, no legitimate provider evaluation, or generic templates that read like registration-mill outputs.",
-        "Contact a fair housing agency. If you believe your ESA request was unfairly denied, file a complaint with your state or local fair housing agency. These agencies may investigate the issue and help resolve disputes more quickly than federal agencies. You may also submit a complaint to the U.S. Department of Justice's Civil Rights Division, if appropriate.",
-        "Seek help from a fair housing attorney for high-stakes cases. Especially useful if you're facing eviction risk or a pattern of denials across multiple applications."
-      ]
-    },
-    {
-      "id": "hud-policy-update-2026",
-      "title": "2026 HUD Policy Update: What ESA Tenants Must Know Now",
-        bannerImage: {"src":"/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp","alt":"Can Landlords Reject Emotional Support Animals?"},
+        listItems: [
+          "The Fair Housing Act does not apply to the property.",
+          "When it is legally required, the tenant does not offer trustworthy documentation pertaining to disabilities.",
+          "The animal presents a direct danger that cannot be lowered using sensible means.",
+          "The animal has either caused damage to property or poses a continuous threat.",
+          "Allowing the ESA would place an unfair administrative or financial strain.",
+        ],
+        afterListParagraphs: [
+          "Every requirement should be considered separately. When thinking about an ESA accommodation request, a landlord should not depend on assumptions, breed limits, or all-inclusive pet regulations.",
+        ],
+        quoteBox: {
+          quote:
+            "“An emotional support animal is not just a pet; for many people, it is part of their emotional well-being and daily stability.”",
+          author: "Dr. Robert Staaf",
+        },
+        quoteBoxPosition: "bottom",
+      },
+      {
+        id: "esa-rights",
+        title: "Know Your Rights: When a Landlord Can and Cannot Deny an ESA",
+        comparisonTable: {
+          col1Header: "A landlord may deny an ESA if",
+          col2Header: "A landlord cannot deny an ESA because",
+          rows: [
+            {
+              mayDeny: "The documentation is unreliable or insufficient.",
+              cannotDeny: "The property has a “no pets” policy.",
+            },
+            {
+              mayDeny: "The animal poses a direct threat to others.",
+              cannotDeny: "The animal is a dog, cat, rabbit, or another common ESA species.",
+            },
+            {
+              mayDeny: "The property qualifies for a Fair Housing Act exemption.",
+              cannotDeny: "The landlord prefers not to allow emotional support animals.",
+            },
+            {
+              mayDeny: "The accommodation would create an undue financial or administrative burden.",
+              cannotDeny: "The tenant has a disability and provides valid supporting documentation.",
+            },
+            {
+              mayDeny: "The animal has a documented history of serious property damage or aggression.",
+              cannotDeny: "The landlord charges pet rent or pet fees for an approved ESA.",
+            },
+          ],
+          keyTakeaway:
+            "An emotional support animal accommodation request is not automatically accepted, but it also cannot be denied for random reasons. The decision must be based on applicable housing laws and the specific facts of the accommodation request.",
+        },
+      },
+      {
+        id: "esa-request-denied",
+        title: "What to Do If Your ESA Request Is Denied?",
+        paragraphs: [
+          "If a landlord denies your ESA request, don’t assume it’s final or automatically illegal. Start here:",
+        ],
+        listItems: [
+          "**Ask for the reason in writing.** Landlords are required to give a specific basis for denial, not a generic “no pets” response.",
+          "**Check if the denial matches a legal exception.** Compare it against the table above; exempt property, insufficient documentation, direct threat, undue burden, or damage history are the only valid grounds.",
+          "**Review your documentation.** A large share of denials trace back to letters that don’t meet legal standards, missing licensure information, no legitimate provider evaluation, or generic templates that read like registration-mill outputs.",
+          "**Contact a fair housing agency.** If you believe your ESA request was unfairly denied, file a complaint with your state or local fair housing agency. These agencies may investigate the issue and help resolve disputes more quickly than federal agencies. You may also submit a complaint to the U.S. Department of Justice’s Civil Rights Division, if appropriate.",
+          "**Seek help from a fair housing attorney for high-stakes cases.** Especially useful if you’re facing eviction risk or a pattern of denials across multiple applications.",
+        ],
+      },
+      {
+        id: "hud-policy-update-2026",
+        title: "2026 HUD Policy Update: What ESA Tenants Must Know Now",
+        paragraphs: [
+          "[On May 22, 2026, HUD issued its guidelines](https://myesatherapist.com/blog/esa-guide/hud-guidance-for-emotional-support-animals/) that significantly changed how federal fair housing complaints involving emotional support animals are handled. Signed by FHEO Assistant Secretary Craig Trainor, the memo cancels HUD's prior ESA guidance from 2013 and 2020 and instructs agency staff to stop pursuing complaints from tenants whose ESAs have not been individually trained to perform disability-related tasks.",
+          "This means a denial based on an untrained ESA is no longer treated as a federal violation by HUD, though state fair housing laws may still apply separately",
+        ],
+        bannerImage: {
+          src: "/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp",
+          alt: "Can Landlords Reject Emotional Support Animals?",
+          caption: "Emotional support animals help create a sense of calm, security, and connection.",
+        },
         bannerPosition: "bottom",
-      "paragraphs": [
-        "On May 22, 2026, HUD issued its guidelines that significantly changed how federal fair housing complaints involving emotional support animals are handled. Signed by FHEO Assistant Secretary Craig Trainor, the memo cancels HUD's prior ESA guidance from 2013 and 2020 and instructs agency staff to stop pursuing complaints from tenants whose ESAs have not been individually trained to perform disability-related tasks.",
-        "This means a denial based on an untrained ESA is no longer treated as a federal violation by HUD, though state fair housing laws may still apply separately."
+        quoteBox: {
+          quote:
+            "“Under the Fair Housing Act, a landlord’s ‘no pets’ policy cannot override a tenant’s right to a reasonable accommodation for a documented disability. However, disputes often arise when tenants submit weak or unverifiable ESA documentation. A valid ESA letter from a licensed mental health professional is one of the most important factors in protecting housing rights.”",
+          author: "Housing rights attorney, Fair Housing advocacy practice",
+        },
+        quoteBoxPosition: "bottom",
+      },
+    ],
+    cta: {
+      heading: "Avoid ESA Housing Denials with Proper Documentation",
+      description:
+        "Make sure your ESA letter meets current housing guidelines and supports your emotional support animal request.",
+      buttonText: "Start Your ESA Assessment",
+      buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
+    },
+    finalThoughts: {
+      title: "Final Thoughts",
+      paragraphs: [
+        "A landlord cannot deny an emotional support animal simply because the property has a “no pets” policy or because they disagree with the concept of emotional support animals. However, housing providers may refuse an accommodation request when a legally recognized exception applies, such as exempt housing, insufficient documentation, or a direct threat to health and safety.",
+        "Knowing your rights, [providing a legitimate ESA letter](https://myesatherapist.com/blog/esa-guide/esa-letter-sample/), and understanding the Fair Housing Act can help you navigate the housing process with confidence. If your request is denied, review the reason carefully before deciding your next steps, as not every denial is legally justified.",
       ],
-      "quoteBox": {
-        "quote": "“Under the Fair Housing Act, a landlord’s ‘no pets’ policy cannot override a tenant’s right to a reasonable accommodation for a documented disability. However, disputes often arise when tenants submit weak or unverifiable ESA documentation. A valid ESA letter from a licensed mental health professional is one of the most important factors in protecting housing rights.”",
-        "author": "Housing Rights Attorney, Fair Housing Advocacy Practice"
-      }
-    }
-  ],
-  "cta": {
-    "heading": "Avoid ESA Housing Denials with Proper Documentation",
-    "description": "Make sure your ESA letter meets current housing guidelines and supports your emotional support animal request.",
-    "buttonText": "Start Your ESA Assessment",
-    "buttonHref": "/#pricing"
+    },
+    faqs: [
+      {
+        q: "Can a landlord deny an emotional support animal because of a no-pets policy?",
+        a: "No. In many cases, a no-pets policy does not override a tenant's right to request a reasonable accommodation for an emotional support animal under the Fair Housing Act.",
+      },
+      {
+        q: "Can landlords charge pet rent or pet fees for an ESA?",
+        a: "Generally, approved emotional support animals are not considered pets under the Fair Housing Act, so landlords typically cannot charge pet rent or pet deposits. However, tenants may still be responsible for damage caused by the animal.",
+      },
+      {
+        q: "Is an online ESA letter legally valid?",
+        a: "Yes, if it is issued by a licensed mental health professional after a legitimate clinical evaluation and complies with applicable state and federal requirements.",
+      },
+      {
+        q: "Can a landlord verify my ESA letter?",
+        a: "Yes. A landlord may verify that the documentation was issued by a licensed mental health professional but generally cannot request your diagnosis, therapy notes, or complete medical records.",
+      },
+      {
+        q: "What types of housing are exempt from ESA accommodation rules?",
+        a: "Some owner-occupied buildings with four or fewer units and certain single-family homes rented without a broker may qualify for exemptions under the Fair Housing Act.",
+      },
+      {
+        q: "What should I do if my landlord refuses to consider my ESA request?",
+        a: "Ask for the reason in writing, review whether the denial is legally justified, gather any additional documentation if needed, and consider filing a complaint with HUD, your state fair housing agency, or consulting a fair housing attorney if you believe your rights have been violated.",
+      },
+    ],
+    bottomCta: {
+      title: "Ready to Explore ESA Evaluation?",
+      description:
+        "Connect with licensed mental health professionals who can evaluate your needs and provide a legitimate ESA letter if you qualify.",
+      buttonText: "Start Your ESA Evaluation Now",
+      buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule",
+      note: "100% HIPAA compliant",
+    },
   },
-  "finalThoughts": {
-    "title": "Final Thoughts",
-    "paragraphs": [
-      "A landlord cannot deny an emotional support animal accommodation request simply because the property has a \"no pets\" policy or because they disagree with the concept of emotional support animals. However, housing providers may refuse an accommodation request when a legally recognized exception applies, such as exempt housing, insufficient documentation, or a direct threat to health and safety.",
-      "Knowing your rights, providing a legitimate ESA letter, and understanding the Fair Housing Act can help you handle the housing process with confidence. If your request is denied, review the reason carefully before deciding your next steps, as not every denial is legally justified."
-    ]
-  },
-  "faqs": [
-    {
-      "q": "Can a landlord deny an emotional support animal because of a no-pets policy?",
-      "a": "No. In many cases, a no-pets policy does not override a tenant's right to request a reasonable accommodation for an emotional support animal under the Fair Housing Act."
-    },
-    {
-      "q": "Can landlords charge pet rent or pet fees for an ESA?",
-      "a": "Generally, approved emotional support animals are not considered pets under the Fair Housing Act, so landlords typically cannot charge pet rent or pet deposits. However, tenants may still be responsible for damage caused by the animal."
-    },
-    {
-      "q": "Is an online ESA letter legally valid?",
-      "a": "Yes, if it is issued by a licensed mental health professional after a legitimate clinical evaluation and complies with applicable state and federal requirements."
-    },
-    {
-      "q": "Can a landlord verify my ESA letter?",
-      "a": "Yes. A landlord may verify that the documentation was issued by a licensed mental health professional but generally cannot request your diagnosis, therapy notes, or complete medical records."
-    },
-    {
-      "q": "What types of housing are exempt from ESA accommodation rules?",
-      "a": "Some owner-occupied buildings with four or fewer units and certain single-family homes rented without a broker may qualify for exemptions under the Fair Housing Act."
-    },
-    {
-      "q": "What should I do if my landlord refuses to consider my ESA request?",
-      "a": "Ask for the reason in writing, review whether the denial is legally justified, gather any additional documentation if needed, and consider filing a complaint with HUD, your state fair housing agency, or consulting a fair housing attorney if you believe your rights have been violated."
-    }
-  ]
-},
 
   // =========================================================================
   // BLOG 7: What is an Emotional Support Animal? Everything You Need to Know
