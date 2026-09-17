@@ -108,8 +108,8 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
           {/* Full-width Divider Line */}
           <div className="w-full border-t border-white/15 my-14" />
 
-          {/* 4 Navigation Columns (LEGAL column temporarily commented out) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 lg:gap-6 xl:gap-8">
+          {/* 5 Navigation Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 xl:gap-8">
             {/* Column 1: ABOUT US */}
             <div className="space-y-4">
               <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
@@ -167,7 +167,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               </ul>
             </div>
 
-            {/* Column 4: LEGAL (Temporarily commented out)
+            {/* Column 4: LEGAL */}
             <div className="space-y-4">
               <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
                 LEGAL
@@ -188,9 +188,8 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 ))}
               </ul>
             </div>
-            */}
 
-            {/* Column 4 (was 5): GET IN TOUCH */}
+            {/* Column 5: GET IN TOUCH */}
             <div className="space-y-4">
               <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
                 GET IN TOUCH
