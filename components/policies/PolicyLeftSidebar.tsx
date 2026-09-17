@@ -52,7 +52,43 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
 
-      {/* 1. All Policies Menu Card */}
+      {/* 1. Table of Contents (On this page) */}
+      {policy.tocItems && policy.tocItems.length > 0 && (
+        <div
+          className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs max-h-[460px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] mb-3.5 px-1">
+            On this page
+          </p>
+          <nav aria-label="Table of contents" className="space-y-1">
+            {policy.tocItems.map((item) => {
+              const isActive = activeSectionId === item.id;
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={(e) => scrollToSection(e, item.id)}
+                  className={`group flex items-start gap-2.5 px-2.5 py-2 rounded-lg text-xs sm:text-[13px] leading-snug transition-all font-sans ${
+                    isActive
+                      ? "text-[#2E5A66] font-bold bg-[#FAF7F2]"
+                      : "font-medium text-[#5F6B6F] hover:text-[#2E5A66] hover:bg-[#FAF7F2]"
+                  }`}
+                >
+                  <span
+                    className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 transition-all ${
+                      isActive ? "bg-[#E8B92C] scale-125" : "bg-[#DECDBB] group-hover:bg-[#2E5A66]"
+                    }`}
+                  />
+                  <span className="line-clamp-2">{item.label}</span>
+                </a>
+              );
+            })}
+          </nav>
+        </div>
+      )}
+
+      {/* 2. All Policies Menu Card */}
       <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs">
         <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] mb-3.5 px-1">
           All Policies
@@ -91,42 +127,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
           })}
         </nav>
       </div>
-
-      {/* 2. Table of Contents (On this page) */}
-      {policy.tocItems && policy.tocItems.length > 0 && (
-        <div
-          className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs max-h-[460px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] mb-3.5 px-1">
-            On this page
-          </p>
-          <nav aria-label="Table of contents" className="space-y-1">
-            {policy.tocItems.map((item) => {
-              const isActive = activeSectionId === item.id;
-              return (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => scrollToSection(e, item.id)}
-                  className={`group flex items-start gap-2.5 px-2.5 py-2 rounded-lg text-xs sm:text-[13px] leading-snug transition-all font-sans ${
-                    isActive
-                      ? "text-[#2E5A66] font-bold bg-[#FAF7F2]"
-                      : "font-medium text-[#5F6B6F] hover:text-[#2E5A66] hover:bg-[#FAF7F2]"
-                  }`}
-                >
-                  <span
-                    className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 transition-all ${
-                      isActive ? "bg-[#E8B92C] scale-125" : "bg-[#DECDBB] group-hover:bg-[#2E5A66]"
-                    }`}
-                  />
-                  <span className="line-clamp-2">{item.label}</span>
-                </a>
-              );
-            })}
-          </nav>
-        </div>
-      )}
     </aside>
   );
 }
