@@ -10,7 +10,7 @@ const companyLinks = [
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Meet our Therapists", href: "/esa-doctors/" },
-  { label: "Video Testimonials", href: "#testimonials" },
+  { label: "Video Testimonials", href: "/video-testimonials" },
   { label: "Customer Reviews", href: "/reviews" },
 ];
 
