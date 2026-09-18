@@ -97,15 +97,6 @@ const doctorsSchema = {
           image: "https://myesatherapist.com/doctors/dr-gaurav-patel-image.webp",
           sameAs: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
         },
-        {
-          "@type": "Person",
-          name: "Dr. Nicole",
-          jobTitle: "Clinical Reviewer & Psychologist",
-          description:
-            "Licensed psychologist and senior content reviewer ensuring clinical assessment integrity and ethical compliance.",
-          image: "https://myesatherapist.com/blogs/dr-nicole-reviewer.jpg",
-          sameAs: "https://www.linkedin.com/company/myesatherapist/",
-        },
       ],
     },
   ],
@@ -144,7 +135,7 @@ export default function DoctorsPage() {
         {/* CTA Banner Section */}
         <CtaBanner
           title={`Learn More About\nESA Evaluations`}
-          description="Explore our related pages or begin an evaluation when you're ready."
+          description="Understand how the ESA evaluation process works."
           buttonText="Start your Evaluation"
           buttonHref="/pricing/"
         />

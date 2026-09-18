@@ -125,17 +125,12 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                     key={item.id}
                     href={`#${item.id}`}
                     onClick={(e) => scrollToSection(e, item.id, false)}
-                    className={`group flex items-start gap-2.5 px-2.5 py-2 rounded-lg text-xs sm:text-[13px] leading-snug transition-all font-sans ${
+                    className={`group block px-3 py-2 rounded-lg text-xs sm:text-[13px] leading-snug transition-all font-sans ${
                       isActive
                         ? "text-[#2E5A66] font-bold bg-[#FAF7F2]"
                         : "font-medium text-[#5F6B6F] hover:text-[#2E5A66] hover:bg-[#FAF7F2]"
                     }`}
                   >
-                    <span
-                      className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 transition-all ${
-                        isActive ? "bg-[#E8B92C] scale-125" : "bg-[#DECDBB] group-hover:bg-[#2E5A66]"
-                      }`}
-                    />
                     <span className="line-clamp-2">{item.label}</span>
                   </a>
                 );
@@ -278,33 +273,26 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                 >
                   {/* 1. Table of Contents Links (On this page) */}
                   {policy.tocItems && policy.tocItems.length > 0 && (
-                    <ul className="space-y-3.5 font-sans">
-                        {policy.tocItems.map((item) => {
-                          const isActive = activeSectionId === item.id;
-                          return (
-                            <li key={item.id} className="flex items-start gap-2.5">
-                              <span
-                                className={`text-base leading-none mt-1 ${
-                                  isActive ? "text-[#E8B92C]" : "text-white/60"
-                                }`}
-                              >
-                                •
-                              </span>
-                              <a
-                                href={`#${item.id}`}
-                                onClick={(e) => scrollToSection(e, item.id, true)}
-                                className={`text-xs sm:text-[14px] leading-snug transition-all ${
-                                  isActive
-                                    ? "text-[#E8B92C] font-bold"
-                                    : "text-[#FAF7F2] font-medium hover:text-[#E8B92C]"
-                                }`}
-                              >
-                                {item.label}
-                              </a>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                    <ul className="space-y-3 font-sans">
+                      {policy.tocItems.map((item) => {
+                        const isActive = activeSectionId === item.id;
+                        return (
+                          <li key={item.id}>
+                            <a
+                              href={`#${item.id}`}
+                              onClick={(e) => scrollToSection(e, item.id, true)}
+                              className={`block text-xs sm:text-[14px] leading-snug transition-all ${
+                                isActive
+                                  ? "text-[#E8B92C] font-bold"
+                                  : "text-[#FAF7F2] font-medium hover:text-[#E8B92C]"
+                              }`}
+                            >
+                              {item.label}
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   )}
 
                   {/* Divider */}

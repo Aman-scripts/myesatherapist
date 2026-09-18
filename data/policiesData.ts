@@ -51,19 +51,19 @@ export const POLICIES_DATA: PolicyDocument[] = [
     "relatedLinks": [
       {
         "text": "About Us",
-        "href": "#"
+        "href": "/about-us/"
       },
       {
         "text": "HIPAA Compliance",
-        "href": "#"
+        "href": "/hipaa-compliance/"
       },
       {
         "text": "Our Service Areas",
-        "href": "#"
+        "href": "/states/"
       },
       {
         "text": "Refund Policy",
-        "href": "#"
+        "href": "/refund-policy/"
       }
     ],
     "tocItems": [

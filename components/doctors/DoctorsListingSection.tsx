@@ -60,17 +60,6 @@ const DOCTORS: Doctor[] = [
     avatar: "/doctors/dr-gaurav-patel-image.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
-  {
-    id: "dr-nicole",
-    name: "Dr. Nicole, Psy.D.",
-    title: "Clinical Reviewer & Psychologist",
-    bio: "Dr. Nicole is a licensed clinical psychologist and senior content reviewer at My ESA Therapist. She oversees clinical assessment guidelines, ensuring every telehealth evaluation adheres strictly to state medical boards, Fair Housing Act provisions, and ethical mental health practices.",
-    licensedIn: "Nationwide Network",
-    method: "Clinical Review",
-    focus: "ESA & Clinical Standards",
-    avatar: "/blogs/dr-nicole-reviewer.jpg",
-    linkedin: "https://www.linkedin.com/company/myesatherapist/",
-  },
 ];
 
 function DoctorStatBadge({
@@ -84,7 +73,7 @@ function DoctorStatBadge({
 }) {
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-[#E8B92C] pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
-      <div className="bg-white rounded-[8px] pt-4 sm:pt-4.5 pb-2 sm:pb-2.5 px-1.5 sm:px-2 text-center flex flex-col justify-center relative min-h-[58px]">
+      <div className="bg-white rounded-[8px] pt-4 sm:pt-4.5 pb-2 sm:pb-2.5 px-1 sm:px-1.5 text-center flex flex-col justify-center relative min-h-[58px]">
         {/* Floating circular icon badge at top center */}
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
           <Image
@@ -96,12 +85,12 @@ function DoctorStatBadge({
           />
         </div>
         <div
-          className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight truncate bg-clip-text text-transparent"
+          className="text-[10px] sm:text-[11px] xl:text-[12px] font-heading font-bold leading-tight truncate bg-clip-text text-transparent"
           style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
           {label}
         </div>
-        <div className="text-[10px] sm:text-[10.5px] font-sans font-semibold text-[#5F6B6F] mt-0.5 leading-tight truncate">
+        <div className="text-[10px] sm:text-[11px] xl:text-[12px] font-sans font-semibold text-[#5F6B6F] leading-tight truncate mt-0.5">
           {value}
         </div>
       </div>
@@ -110,13 +99,13 @@ function DoctorStatBadge({
 }
 
 export function DoctorsListingSection() {
-  const [activePage, setActivePage] = useState(1);
+  const [activePage, setActivePage] = useState<number>(0);
 
   return (
-    <section id="therapists" className="py-16 lg:py-24 bg-[#FAF7F2] w-full">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-16 sm:py-20 lg:py-24 bg-[#FAF7F2] relative">
+      <div className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Heading Header */}
         <div className="text-center mb-12 lg:mb-14 max-w-[860px] mx-auto space-y-3 sm:space-y-4">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-[#2E5A66] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em]">
             Our Licensed Mental Health Professionals
@@ -126,8 +115,8 @@ export function DoctorsListingSection() {
           </p>
         </div>
 
-        {/* 2x2 Grid of Doctor Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[42px] max-w-[1100px] mx-auto">
+        {/* 3 Grid of Doctor Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7 max-w-[1240px] mx-auto">
           {DOCTORS.map((doc) => (
             <div
               key={doc.id}

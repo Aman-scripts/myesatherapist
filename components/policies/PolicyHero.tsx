@@ -101,19 +101,6 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
               </svg>
               <span>Last updated: {policy.updatedDate}</span>
             </div>
-
-            {policy.reviewerLine && (
-              <Link
-                href="/legal-reviewer/awais-arshad"
-                className="inline-flex items-center gap-2 rounded-full bg-[#FAF7F2] border border-[#EAE5DC] px-3.5 py-1.5 text-xs sm:text-sm font-sans font-semibold text-[#2E5A66] hover:bg-white hover:border-[#2E5A66]/30 transition-colors"
-              >
-                <svg className="w-4 h-4 text-[#2E5A66]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-                <span>{policy.reviewerLine}</span>
-              </Link>
-            )}
           </div>
 
           {/* Related Policy Pills */}
@@ -132,6 +119,13 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                   "disclaimer": "/disclaimer/",
                   "medical disclaimer": "/disclaimer/",
                   "accessibility statement": "/accessibility-statement/",
+                  "about us": "/about-us/",
+                  "our service areas": "/states/",
+                  "our service area's": "/states/",
+                  "our state areas": "/states/",
+                  "our state area's": "/states/",
+                  "service areas": "/states/",
+                  "states": "/states/",
                 };
                 const mappedHref = slugMap[link.text.toLowerCase()] || link.href;
 
