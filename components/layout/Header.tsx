@@ -64,7 +64,10 @@ export function Header() {
   // Check route conditions
   const isPsd = pathname === "/psd-letter";
   const isDoctors = pathname === "/esa-doctors" || pathname === "/esa-doctors/";
-  const isLegalReviewer = pathname?.includes("legal-reviewer") || pathname?.includes("reviewer");
+  const isLegalReviewer =
+    pathname?.includes("legal-reviewer") ||
+    pathname?.includes("reviewer") ||
+    pathname?.includes("contributors");
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#EAE5DC] shadow-xs">
