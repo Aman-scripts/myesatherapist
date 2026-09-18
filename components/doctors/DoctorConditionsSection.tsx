@@ -23,7 +23,7 @@ export function DoctorConditionsSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header: eyebrow + heading on the left, description on the right */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-10 mb-10 lg:mb-14">
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 lg:gap-10 mb-10 lg:mb-14">
           <div className="space-y-2 lg:space-y-3">
             <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-[#2E5A66]">
               Areas of Focus

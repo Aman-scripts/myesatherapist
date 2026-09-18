@@ -182,7 +182,6 @@ export default async function DoctorInternalPage({ params }: PageProps) {
         {/* 5. CTA Banner */}
         <CtaBanner
           bgColor="bg-white"
-          eyebrow={doctor.ctaSection?.eyebrow}
           title={
             doctor.ctaSection?.title ||
             `Ready to Connect With a\nLicensed Professional?`
