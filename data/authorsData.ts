@@ -34,6 +34,7 @@ export interface AuthorProfile {
 }
 
 import { allysonValleySchemas } from "@/data/schemas/allysonValleySchema";
+import { mohammedZiauddinSchemas } from "@/data/schemas/mohammedZiauddinSchema";
 
 export const AUTHORS_DATA: AuthorProfile[] = [
   {
@@ -159,6 +160,7 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     metaTitle: "Mohammed Ziauddin | My ESA Therapist",
     metaDescription: "",
     avatar: "/author/mohammed-ziauddin-image.webp",
+    schemas: mohammedZiauddinSchemas,
     experienceLabel: "12 Years of Experience",
     heroTagline: "Connecting Healthcare Practice With Research-Based Education",
     bioParagraphs: [
