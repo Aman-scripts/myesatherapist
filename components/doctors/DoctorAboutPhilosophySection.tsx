@@ -34,8 +34,8 @@ export function DoctorAboutPhilosophySection({
     >
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Two simple, equal-width cards side by side — no overlap */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        {/* Two simple, equal-width cards side by side — no overlap, each sized to its own content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
 
           {/* ── About Doctor card ── */}
           <div className="bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col justify-start space-y-4 sm:space-y-5">
