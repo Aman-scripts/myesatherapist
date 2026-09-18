@@ -75,7 +75,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression, PTSD",
-    avatar: "/doctors/leslie-k.-gamble-licsw-image.webp",
+    avatar: "/doctors/leslie-gamble-hero-image.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
     trustStats: [
       {
@@ -178,7 +178,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety, Stress",
-    avatar: "/doctors/robert-staaf-profile-image.webp",
+    avatar: "/doctors/robert-staaf-hero-image.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
     trustStats: [
       {
