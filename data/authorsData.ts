@@ -5,6 +5,8 @@ export interface AuthorProfile {
   name: string;
   credentials: string;
   title: string;
+  metaTitle?: string;
+  metaDescription?: string;
   avatar: string;
   experienceLabel: string;
   heroTagline: string;
@@ -37,6 +39,9 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     name: "Allyson Valley",
     credentials: "Ph.D., LPC",
     title: "Mental Health Writer & Research Contributor",
+    metaTitle: "Allyson Valley | My ESA Therapist",
+    metaDescription:
+      "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     avatar: "/blogs/blogs_trustbar-author.png",
     experienceLabel: "11 Years of Experience",
     heroTagline:

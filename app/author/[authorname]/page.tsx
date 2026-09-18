@@ -29,29 +29,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const description = author.bioParagraphs[0];
+  const title = author.metaTitle || `${author.name} - ${author.title} | My ESA Therapist`;
+  const description = author.metaDescription || author.bioParagraphs[0];
+  const canonicalUrl = `https://myesatherapist.com/author/${author.slug}/`;
 
   return {
-    title: `${author.name} - ${author.title} | My ESA Therapist`,
+    title,
     description,
+    robots: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
     alternates: {
-      canonical: `https://myesatherapist.com/author/${author.slug}/`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${author.name} - ${author.title} | My ESA Therapist`,
+      title,
       description,
-      url: `https://myesatherapist.com/author/${author.slug}/`,
-      type: "profile",
-      images: [
-        {
-          url: author.avatar.startsWith("http")
-            ? author.avatar
-            : `https://myesatherapist.com${author.avatar}`,
-          width: 800,
-          height: 1067,
-          alt: author.name,
-        },
-      ],
+      url: canonicalUrl,
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
     },
   };
 }
@@ -72,7 +76,7 @@ export default async function AuthorProfilePage({ params }: PageProps) {
         "@id": `https://myesatherapist.com/author/${author.slug}/#webpage`,
         url: `https://myesatherapist.com/author/${author.slug}/`,
         name: `${author.name} - ${author.title}`,
-        description: author.bioParagraphs[0],
+        description: author.metaDescription || author.bioParagraphs[0],
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
