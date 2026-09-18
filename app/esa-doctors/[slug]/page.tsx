@@ -35,17 +35,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const title = doctor.metaTitle || `${doctor.name} - ${doctor.title} | My ESA Therapist`;
+  const description = doctor.metaDescription || doctor.heroBio || doctor.bio;
+  const canonicalUrl = `https://myesatherapist.com/esa-doctors/${doctor.slug}/`;
+  const robots = doctor.metaRobots || {
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  };
+
   return {
-    title: `${doctor.name} - ${doctor.title} | My ESA Therapist`,
-    description: doctor.heroBio || doctor.bio,
+    title,
+    description,
+    robots: {
+      index: true,
+      follow: true,
+      ...robots,
+    },
     alternates: {
-      canonical: `https://myesatherapist.com/esa-doctors/${doctor.slug}/`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${doctor.name} - ${doctor.title} | My ESA Therapist`,
-      description: doctor.heroBio || doctor.bio,
-      url: `https://myesatherapist.com/esa-doctors/${doctor.slug}/`,
-      type: "profile",
+      title,
+      description,
+      url: canonicalUrl,
+      type: "website",
       images: [
         {
           url: doctor.avatar.startsWith("http")
@@ -56,6 +70,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           alt: doctor.name,
         },
       ],
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
     },
   };
 }

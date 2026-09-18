@@ -5,6 +5,9 @@ export interface DoctorProfile {
   name: string;
   title: string;
   credentials: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  metaRobots?: Record<string, string | number>;
   heroBio: string;
   bio: string;
   stats: {
@@ -157,6 +160,9 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     name: "Robert Staaf, LCSW",
     title: "Licensed Clinical Social Worker",
     credentials: "LCSW, LISW",
+    metaTitle: "Robert Staaf - Licensed Clinical Social Worker | My ESA Therapist",
+    metaDescription:
+      "Consult Robert Staaf, a licensed therapist and animal advocate. Fast, secure ESA evaluations online with experienced mental health support.",
     heroBio:
       "Independent clinical social worker and therapist licensed in 30+ states, dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
     bio: "Robert Staaf is an independent clinical social worker and therapist, currently licensed to practice at the clinical level in over 30 states. With extensive experience in psychotherapy and child and family welfare, Dr. Staaf is dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
@@ -271,6 +277,10 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     name: "Gaurav Patel, MD",
     title: "Board-Certified Family Medicine Physician",
     credentials: "MD, Board-Certified Physician",
+    metaTitle: "Dr. Gaurav Patel, MD | Family Medicine Physician | My ESA Therapist",
+    metaDescription:
+      "Consult Dr. Gaurav Patel, MD, a Family Medicine Physician offering professional medical guidance and compassionate support through secure online consultations.",
+    metaRobots: { "max-image-preview": "large" },
     heroBio:
       "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
     bio: "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
