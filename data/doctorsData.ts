@@ -54,6 +54,7 @@ export interface DoctorProfile {
 }
 
 import { robertStaafSchemas } from "@/data/schemas/robertStaafSchema";
+import { leslieGambleSchemas } from "@/data/schemas/leslieGambleSchema";
 
 export const DOCTORS_DATA: DoctorProfile[] = [
   {
@@ -67,6 +68,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     metaDescription:
       "Get evaluated by Leslie K. Gamble, LICSW, an experienced therapist offering ESA assessments and compassionate mental wellness care.",
     metaRobots: { "max-image-preview": "large" },
+    schemas: leslieGambleSchemas,
     heroBio:
       "Compassionate therapist with 13+ years of experience helping individuals, couples, and families manage their mental wellness through evidence-based, patient-focused care.",
     bio: "Leslie K. Gamble has been a therapist for about 13 years, with a professional background primarily in healthcare. She has worked with individuals across all age groups, as well as couples and families, providing therapy tailored to their needs.",
