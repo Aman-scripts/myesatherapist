@@ -105,6 +105,57 @@ const CONDITION_MAP: Record<
     top: 18.0,
     description: "Clinical Social Work",
   },
+  "Anxiety": {
+    icon: "/home/qualifying-conditions-anxiety-disorder.svg",
+    image: "/qualifyingConditions_image/Anxiety Disorders.webp",
+    left: 5.48,
+    top: 4.55,
+    description: "Anxiety",
+  },
+  "Depression": {
+    icon: "/home/qualifying-conditions-depression.svg",
+    image: "/qualifyingConditions_image/Depression.webp",
+    left: 56.81,
+    top: -0.24,
+    description: "Depression",
+  },
+  "PTSD": {
+    icon: "/home/qualifying-conditions-ptsd.svg",
+    image: "/qualifyingConditions_image/ptsd.webp",
+    left: 80.91,
+    top: 20.31,
+    alignRight: true,
+    description: "PTSD",
+  },
+  "Stress Management": {
+    icon: "/home/qualifying-conditions-mood-disorder.svg",
+    image: "/qualifyingConditions_image/mood disoder.webp",
+    left: 1.80,
+    top: 42.0,
+    description: "Stress Management",
+  },
+  "Mental Wellness Support": {
+    icon: "/home/qualifying-conditions-social-anxiety.svg",
+    image: "/qualifyingConditions_image/socail Anxiety .webp",
+    left: 82.5,
+    top: 55.67,
+    alignRight: true,
+    description: "Mental Wellness Support",
+  },
+  "ESA Evaluations": {
+    icon: "/home/qualifying-conditions-other-ada.svg",
+    image: "/qualifyingConditions_image/Other ADA Conditions.webp",
+    left: 28.01,
+    top: 18.0,
+    description: "ESA Evaluations",
+  },
+  "Housing ESA Documentation": {
+    icon: "/home/qualifying-conditions-adhd.svg",
+    image: "/qualifyingConditions_image/adhd.webp",
+    left: 45.0,
+    top: 68.0,
+    description: "Housing ESA Documentation",
+  },
 };
 
 interface DoctorConditionsSectionProps {

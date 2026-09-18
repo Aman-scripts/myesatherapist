@@ -58,8 +58,8 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     title: "Licensed Independent Clinical Social Worker",
     credentials: "LICSW, LCSW",
     heroBio:
-      "Compassionate therapist with 13+ years of experience helping individuals, couples, and families navigate mental wellness through evidence-based, patient-focused care.",
-    bio: "Leslie K. Gamble, LICSW is an experienced clinical social worker and therapist licensed across multiple states. With over 13 years of clinical practice, she specializes in cognitive behavioral approaches, trauma-informed therapy, and evaluating emotional support animals for patients managing chronic emotional challenges.",
+      "Compassionate therapist with 13+ years of experience helping individuals, couples, and families manage their mental wellness through evidence-based, patient-focused care.",
+    bio: "Leslie K. Gamble has been a therapist for about 13 years, with a professional background primarily in healthcare. She has worked with individuals across all age groups, as well as couples and families, providing therapy tailored to their needs.",
     stats: {
       years: "13+",
       states: "15+",
@@ -72,51 +72,83 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
     trustStats: [
       {
-        value: "6,000+",
-        label: "Clients Evaluated",
+        value: "13+",
+        label: "Years of Experience",
       },
       {
-        value: "4.9/5.0",
-        label: "Average Verified Ratings",
+        value: "15+",
+        label: "States Licensed",
       },
       {
-        value: "13+ years",
-        label: "Clinical Experience",
+        value: "7",
+        label: "Key Condition Areas",
       },
       {
-        value: "$149",
-        label: "All inclusive, no surprises",
+        value: "LICSW",
+        label: "Medical Credential",
       },
       {
-        value: "Compliant",
-        label: "State Board & FHA Practice",
+        value: "Audio/Video",
+        label: "Availability",
       },
     ],
     aboutSection: {
-      heading: "About Leslie K. Gamble, LICSW",
+      heading: "About Leslie K. Gamble",
       paragraphs: [
-        "Leslie K. Gamble brings over a decade of dedicated clinical practice in mental health therapy, psychotherapy, and patient advocacy. She has guided hundreds of patients through comprehensive mental health assessments, helping them overcome anxiety, depression, post-traumatic stress, and situational stress.",
-        "As a certified telehealth provider and ESA clinical evaluator, Leslie ensures every assessment strictly adheres to state licensing guidelines, ethical standards, and federal Fair Housing Act (FHA) requirements.",
+        "Leslie K. Gamble has been a therapist for about 13 years, with a professional background primarily in healthcare. She has worked with individuals across all age groups, as well as couples and families, providing therapy tailored to their needs.",
+        "She values the opportunity to support people through therapy and believes in creating a flexible, patient-focused approach. Leslie identifies treatment goals early in the therapeutic process to help guide each session toward what the patient hopes to accomplish.",
+        "She also encourages patients to continue working on their treatment goals between sessions through practical \"homework\" that supports ongoing progress outside of therapy.",
       ],
     },
     philosophySection: {
-      heading: "Patient Care Philosophy",
+      heading: "My Philosophy",
       paragraphs: [
-        "Her evaluation philosophy focuses on empathetic listening, objective clinical determination, and practical mental wellness strategies to support individuals and families in their journey toward mental and emotional wellbeing.",
+        "My goal is to provide compassionate, ethical, and accessible mental health support for individuals seeking ESA evaluations.",
       ],
     },
-    education: [
-      "Master of Social Work (MSW) - Clinical Social Work",
-      "Bachelor of Arts in Psychology",
-    ],
-    licenses: [
-      "Licensed Independent Clinical Social Worker (LICSW)",
-      "Licensed Clinical Social Worker (LCSW) across 15+ US jurisdictions",
-    ],
-    aboutParagraphs: [
-      "Leslie K. Gamble brings over a decade of dedicated clinical practice in mental health therapy, psychotherapy, and patient advocacy. She has guided hundreds of patients through comprehensive mental health assessments, helping them overcome anxiety, depression, post-traumatic stress, and situational stress.",
-      "As a certified telehealth provider and ESA clinical evaluator, Leslie ensures every assessment strictly adheres to state licensing guidelines, ethical standards, and federal Fair Housing Act (FHA) requirements. Her evaluation philosophy focuses on empathetic listening, objective clinical determination, and practical mental wellness strategies.",
-    ],
+    conditionsSection: {
+      heading: "Conditions Dr. Leslie K. Gamble Reviews",
+      description:
+        "Leslie K. Gamble's clinical training and experience cover a range of mental health concerns, with a focus on the areas she most commonly supports.",
+      conditions: [
+        "Anxiety",
+        "Depression",
+        "PTSD",
+        "Stress Management",
+        "Mental Wellness Support",
+        "ESA Evaluations",
+        "Housing ESA Documentation",
+      ],
+    },
+    licensedStatesSection: {
+      heading: "States Where Dr. Leslie K. Gamble Is Licensed",
+      description:
+        "Explore the states where Dr. Leslie K. Gamble's clinical expertise is available to individuals seeking professional mental health support.",
+      states: [
+        "Arkansas",
+        "Washington",
+        "Louisiana",
+        "Maryland",
+        "Mississippi",
+        "Montana",
+        "North Carolina",
+        "North Dakota",
+        "Nebraska",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "South Dakota",
+        "Virginia",
+      ],
+    },
+    ctaSection: {
+      eyebrow: "Ready to Take the Next Step?",
+      title: "Explore Your ESA Evaluation With Dr. Leslie K. Gamble",
+      description:
+        "Take the next step with a personalized telehealth consultation. Dr. Leslie K. Gamble will review your concerns, health history, and individual circumstances as part of the evaluation process.",
+      buttonText: "Begin Your Evaluation",
+      buttonHref: "/pricing/",
+    },
   },
   {
     id: "robert-staaf",

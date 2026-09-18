@@ -45,7 +45,7 @@ const DOCTORS: Doctor[] = [
     slug: "dr-leslie-k-gamble",
     name: "Leslie K. Gamble",
     title: "Licensed Independent Clinical Social Worker",
-    bio: "Leslie K. Gamble, LICSW is an experienced clinical social worker and therapist licensed across multiple states. With over 13 years of clinical practice, she specializes in cognitive behavioral approaches, trauma-informed therapy, and evaluating emotional support animals for patients managing chronic emotional challenges.",
+    bio: "Leslie K. Gamble has been a therapist for about 13 years, with a professional background primarily in healthcare. She has worked with individuals across all age groups, as well as couples and families, providing therapy tailored to their needs.",
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression, PTSD",

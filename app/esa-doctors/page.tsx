@@ -84,7 +84,7 @@ const doctorsSchema = {
           name: "Leslie K. Gamble",
           jobTitle: "Licensed Independent Clinical Social Worker",
           description:
-            "Licensed therapist with 13 years of healthcare experience specializing in trauma, CBT, and clinical ESA evaluations.",
+            "Compassionate therapist with 13+ years of experience helping individuals, couples, and families manage their mental wellness through evidence-based, patient-focused care.",
           image: "https://myesatherapist.com/doctors/leslie-k.-gamble-licsw-image.webp",
           sameAs: "https://www.linkedin.com/in/leslie-gamble-727571366",
         },
