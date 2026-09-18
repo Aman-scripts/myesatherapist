@@ -30,7 +30,7 @@ export function DoctorAboutPhilosophySection({
   return (
     <section
       id={id}
-      className={`w-full bg-[#FAF7F2] ${className || "py-8 sm:py-12 lg:py-16"}`}
+      className={`w-full bg-white ${className || "py-8 sm:py-12 lg:py-16"}`}
     >
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
