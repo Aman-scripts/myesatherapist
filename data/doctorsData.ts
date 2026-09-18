@@ -55,6 +55,7 @@ export interface DoctorProfile {
 
 import { robertStaafSchemas } from "@/data/schemas/robertStaafSchema";
 import { leslieGambleSchemas } from "@/data/schemas/leslieGambleSchema";
+import { gauravPatelSchemas } from "@/data/schemas/gauravPatelSchema";
 
 export const DOCTORS_DATA: DoctorProfile[] = [
   {
@@ -291,6 +292,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     metaDescription:
       "Consult Dr. Gaurav Patel, MD, a Family Medicine Physician offering professional medical guidance and compassionate support through secure online consultations.",
     metaRobots: { "max-image-preview": "large" },
+    schemas: gauravPatelSchemas,
     heroBio:
       "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
     bio: "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
