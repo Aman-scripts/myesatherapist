@@ -146,10 +146,20 @@ export default async function DoctorInternalPage({ params }: PageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }}
-      />
+      {doctor.schemas && doctor.schemas.length > 0 ? (
+        doctor.schemas.map((schemaObj, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          />
+        ))
+      ) : (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }}
+        />
+      )}
 
       {/* Top Banner & Header */}
       <TopBanner />

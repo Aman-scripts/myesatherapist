@@ -8,6 +8,7 @@ export interface DoctorProfile {
   metaTitle?: string;
   metaDescription?: string;
   metaRobots?: Record<string, string | number>;
+  schemas?: any[];
   heroBio: string;
   bio: string;
   stats: {
@@ -51,6 +52,8 @@ export interface DoctorProfile {
     buttonHref: string;
   };
 }
+
+import { robertStaafSchemas } from "@/data/schemas/robertStaafSchema";
 
 export const DOCTORS_DATA: DoctorProfile[] = [
   {
@@ -167,6 +170,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     metaTitle: "Robert Staaf - Licensed Clinical Social Worker | My ESA Therapist",
     metaDescription:
       "Consult Robert Staaf, a licensed therapist and animal advocate. Fast, secure ESA evaluations online with experienced mental health support.",
+    schemas: robertStaafSchemas,
     heroBio:
       "Independent clinical social worker and therapist licensed in 30+ states, dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
     bio: "Robert Staaf is an independent clinical social worker and therapist, currently licensed to practice at the clinical level in over 30 states. With extensive experience in psychotherapy and child and family welfare, Dr. Staaf is dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
