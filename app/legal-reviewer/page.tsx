@@ -73,19 +73,16 @@ const legalReviewerSchema = {
         "alumniOf": [
           {
             "@type": "EducationalOrganization",
-            "name": "Columbia Law School, Columbia University",
-          },
-          {
-            "@type": "EducationalOrganization",
-            "name": "BPP University",
+            "name": "Columbia Law School",
           },
         ],
         "knowsAbout": [
-          "Emotional Support Animal Laws",
-          "Fair Housing Act (FHA)",
-          "U.S. Federal and State Regulatory Compliance",
-          "White Collar Criminal Defense",
-          "Administrative Law",
+          "Legal Writing",
+          "Fact-Checking & Compliance",
+          "Fair Housing Law",
+          "Federal & State Regulations",
+          "Legal Accessibility",
+          "Clear Client Communication",
         ],
       },
     },
