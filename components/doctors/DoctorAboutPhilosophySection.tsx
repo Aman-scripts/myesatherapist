@@ -38,7 +38,7 @@ export function DoctorAboutPhilosophySection({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
           {/* ── About Doctor card ── */}
-          <div className="bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col justify-center space-y-4 sm:space-y-5">
+          <div className="bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col justify-start space-y-4 sm:space-y-5">
 
             <div className="space-y-3 sm:space-y-4">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
@@ -78,7 +78,7 @@ export function DoctorAboutPhilosophySection({
           </div>
 
           {/* ── My Philosophy card ── */}
-          <div className="bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col justify-center space-y-4 sm:space-y-5">
+          <div className="bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col justify-start space-y-4 sm:space-y-5">
 
             <div className="space-y-3 sm:space-y-4">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
