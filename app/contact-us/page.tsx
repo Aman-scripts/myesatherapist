@@ -10,9 +10,31 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { contactUsSchemas } from "@/data/schemas/contactUsSchema";
 
 export const metadata: Metadata = {
-  title: "Contact Us | My ESA Therapist - 24/7 Professional Support",
+  title: "Connect With Our Customer Support Team | My ESA Therapist",
   description:
-    "Get in touch with My ESA Therapist. Contact our team 24/7 for assistance with Emotional Support Animal evaluations and Psychiatric Service Dog letters.",
+    "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+  },
+  alternates: {
+    canonical: "https://myesatherapist.com/contact-us/",
+  },
+  openGraph: {
+    title: "Connect With Our Customer Support Team | My ESA Therapist",
+    description:
+      "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",
+    url: "https://myesatherapist.com/contact-us/",
+    type: "website",
+    siteName: "My ESA Therapist",
+  },
+  twitter: {
+    card: "summary",
+    title: "Connect With Our Customer Support Team | My ESA Therapist",
+    description:
+      "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",
+  },
 };
 
 export default function ContactUsPage() {
