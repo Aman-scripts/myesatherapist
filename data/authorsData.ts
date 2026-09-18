@@ -152,6 +152,8 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     name: "Mohammed Ziauddin",
     credentials: "Health Writer",
     title: "Health Writer",
+    metaTitle: "Mohammed Ziauddin | My ESA Therapist",
+    metaDescription: "",
     avatar: "/common/therapist-avatar.png",
     experienceLabel: "12 Years of Experience",
     heroTagline: "Connecting Healthcare Practice With Research-Based Education",

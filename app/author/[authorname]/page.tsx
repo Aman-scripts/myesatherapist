@@ -30,7 +30,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const title = author.metaTitle || `${author.name} - ${author.title} | My ESA Therapist`;
-  const description = author.metaDescription || author.bioParagraphs[0];
+  const description =
+    author.metaDescription !== undefined
+      ? author.metaDescription
+      : author.bioParagraphs[0];
   const canonicalUrl = `https://myesatherapist.com/author/${author.slug}/`;
 
   return {
