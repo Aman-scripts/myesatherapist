@@ -37,12 +37,30 @@ function FigmaPinIcon({ className = "w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" }: { c
 interface ChooseStateGridSectionProps {
   className?: string;
   id?: string;
+  title?: string;
+  description?: string;
+  allowedStates?: string[];
 }
 
 export function ChooseStateGridSection({
   className = "",
   id = "choose-state-section",
+  title = "Choose Your State For ESA Evaluation",
+  description = "Learn about emotional support animal rules, welfare requirements, and housing protections in your state.",
+  allowedStates,
 }: ChooseStateGridSectionProps = {}) {
+  const statesToDisplay =
+    allowedStates && allowedStates.length > 0
+      ? ALL_STATES.filter((s) =>
+          allowedStates.some(
+            (nameOrSlug) =>
+              nameOrSlug.trim().toLowerCase() === s.name.toLowerCase() ||
+              nameOrSlug.trim().toLowerCase() === s.slug.toLowerCase() ||
+              nameOrSlug.trim().toLowerCase() === s.abbreviation.toLowerCase()
+          )
+        )
+      : ALL_STATES;
+
   return (
     <section
       id={id}
@@ -53,16 +71,16 @@ export function ChooseStateGridSection({
         {/* Heading Block */}
         <div className="flex flex-col items-center text-center max-w-[854px] gap-4">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-[-0.00015em] text-[#2E5A66] max-w-[765px]">
-            Choose Your State For ESA Evaluation
+            {title}
           </h2>
           <p className="font-sans font-semibold text-base sm:text-lg leading-[30px] text-[#5F6B6F] max-w-[854px]">
-            Learn about emotional support animal rules, welfare requirements, and housing protections in your state.
+            {description}
           </p>
         </div>
 
         {/* 2 Columns on Mobile with comfortable spacing, 4 Columns on Desktop */}
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3.5 sm:gap-6 lg:gap-x-[24px] lg:gap-y-[32px] justify-items-center">
-          {ALL_STATES.map((state) => {
+          {statesToDisplay.map((state) => {
             const stateHref = state.slug.startsWith("esa-letter-") ? `/${state.slug}/` : `/esa-letter-${state.slug}/`;
             return (
               <Link

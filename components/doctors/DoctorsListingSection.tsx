@@ -33,7 +33,7 @@ const DOCTORS: Doctor[] = [
     slug: "dr-robert-staff",
     name: "Robert Staaf",
     title: "Licensed Clinical Social Worker",
-    bio: "Robert Staaf, LCSW is an Independent Clinical Social Worker and Therapist, currently licensed to practice at the clinical level in over 30 states. Mr. Staaf has extensive experience in psychotherapy and child and family welfare. He is a pet owner and an animal lover, and an advocate for highlighting how animals can be utilized in mental health treatment.",
+    bio: "Robert Staaf is an independent clinical social worker and therapist, currently licensed to practice at the clinical level in over 30 states. With extensive experience in psychotherapy and child and family welfare, Dr. Staaf is dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety, Stress",

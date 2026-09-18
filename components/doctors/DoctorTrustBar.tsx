@@ -43,7 +43,7 @@ export function DoctorTrustBar({ doctor }: DoctorTrustBarProps) {
                 idx === 4 ? "col-span-2 sm:col-span-1" : ""
               }`}
             >
-              <div className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#2E5A66] leading-none tracking-tight">
+              <div className="font-heading text-xl sm:text-2xl lg:text-[28px] xl:text-[34px] font-bold text-[#2E5A66] leading-none tracking-tight whitespace-nowrap">
                 {stat.value}
               </div>
               <div className="font-sans text-xs sm:text-[13px] font-medium text-[#5F6B6F] mt-2.5 leading-tight">

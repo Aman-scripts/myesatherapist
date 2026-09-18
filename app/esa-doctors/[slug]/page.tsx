@@ -5,11 +5,11 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { DoctorInternalHeroSection } from "@/components/doctors/DoctorInternalHeroSection";
 import { DoctorTrustBar } from "@/components/doctors/DoctorTrustBar";
-import { BlogsFeaturedArticle } from "@/components/blogs/BlogsFeaturedArticle";
+import { DoctorAboutPhilosophySection } from "@/components/doctors/DoctorAboutPhilosophySection";
+import { DoctorConditionsSection } from "@/components/doctors/DoctorConditionsSection";
 import { QualifyingConditions } from "@/components/home/QualifyingConditions";
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { getDoctorBySlug, getAllDoctorSlugs } from "@/data/doctorsData";
 
 interface PageProps {
@@ -140,33 +140,48 @@ export default async function DoctorInternalPage({ params }: PageProps) {
         {/* 1. Doctors Internal Hero Section */}
         <DoctorInternalHeroSection doctor={doctor} />
 
-        {/* Floating Trust Stats Bar (same as State pages) */}
+        {/* Floating Trust Stats Bar */}
         <DoctorTrustBar doctor={doctor} />
 
-        {/* 2. 7 Things to Know Before Getting an ESA Letter Section */}
-        <BlogsFeaturedArticle className="pt-2 sm:pt-4 lg:pt-6 pb-8 sm:pb-12 lg:pb-14" />
+        {/* 2. Doctor About & Philosophy Section (Replaces 7 Things to Know / removed image) */}
+        <DoctorAboutPhilosophySection doctor={doctor} />
 
-        {/* 3. Common Qualifying Conditions Section */}
-        <QualifyingConditions />
+        {/* 3. Conditions Section */}
+        {doctor.conditionsSection ? (
+          <DoctorConditionsSection doctor={doctor} />
+        ) : (
+          <QualifyingConditions />
+        )}
 
-        {/* 4. Choose Your State For ESA Evaluation Section */}
-        <ChooseStateGridSection />
+        {/* 4. States Where Doctor Is Licensed Section */}
+        <ChooseStateGridSection
+          title={doctor.licensedStatesSection?.heading}
+          description={doctor.licensedStatesSection?.description}
+          allowedStates={doctor.licensedStatesSection?.states}
+        />
 
         {/* 5. CTA Banner */}
         <CtaBanner
           bgColor="bg-white"
-          title={`Ready to Connect With a\nLicensed Professional?`}
-          description="Understand how the ESA evaluation process works and begin your confidential telehealth assessment today."
-          buttonText="Start your Evaluation"
-          buttonHref="/pricing/"
+          eyebrow={doctor.ctaSection?.eyebrow}
+          title={
+            doctor.ctaSection?.title ||
+            `Ready to Connect With a\nLicensed Professional?`
+          }
+          description={
+            doctor.ctaSection?.description ||
+            "Understand how the ESA evaluation process works and begin your confidential telehealth assessment today."
+          }
+          buttonText={doctor.ctaSection?.buttonText || "Start your Evaluation"}
+          buttonHref={doctor.ctaSection?.buttonHref || "/pricing/"}
         />
 
-        {/* 6. State Reviewer Banner */}
-        <StateReviewerBanner />
+        {/* Spacing gap between CTA banner and Footer */}
+        <div className="w-full h-12 sm:h-16 lg:h-24 bg-[#FAF7F2]" />
       </main>
 
       {/* Global Footer */}
-      <Footer />
+      <Footer bgColor="bg-[#FAF7F2]" />
     </>
   );
 }

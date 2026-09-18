@@ -75,7 +75,7 @@ const doctorsSchema = {
           name: "Robert Staaf",
           jobTitle: "Licensed Clinical Social Worker",
           description:
-            "Independent Clinical Social Worker and Therapist licensed in over 30 states specializing in psychotherapy and animal-assisted mental health treatment.",
+            "Independent clinical social worker and therapist licensed in 30+ states, dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
           image: "https://myesatherapist.com/doctors/robert-staaf-profile-image.webp",
           sameAs: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
         },
