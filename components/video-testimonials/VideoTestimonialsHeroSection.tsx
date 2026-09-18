@@ -100,6 +100,7 @@ export function VideoTestimonialsHeroSection() {
     <section className="relative z-20 w-full bg-[#FAF7F2] overflow-visible">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< 640px)                     */}
+      {/* Matches user's mobile screenshot exactly             */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[660px]">
         <Image
@@ -111,69 +112,49 @@ export function VideoTestimonialsHeroSection() {
           sizes="(max-width: 639px) 100vw, 1px"
         />
 
-        {/* Content Container (Mobile) */}
-        <div className="absolute inset-x-0 top-0 pt-6 px-4 flex flex-col items-center text-center z-10">
-          {/* Stat Pills */}
-          <div className="flex items-center justify-center gap-1.5 w-full max-w-[350px] mb-3.5">
-            {TABLET_STATS.map((stat, idx) => (
-              <div
-                key={idx}
-                className="flex-1 h-[46px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-1 border border-[#EAE5DC]/60"
-              >
-                <span
-                  className="font-heading font-bold text-[17px] leading-[20px] bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  {stat.value}
-                </span>
-                <span className="font-sans font-semibold text-[9.5px] leading-tight text-[#949494] whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
+        {/* Content Container (Mobile Centered matching screenshot) */}
+        <div className="absolute inset-x-0 top-0 pt-8 px-4 flex flex-col items-center text-center z-10">
           {/* Heading */}
-          <h1 className="font-heading text-[32px] leading-[38px] font-bold text-[#2E5A66] tracking-[-0.00015em] mb-2 max-w-[340px]">
+          <h1 className="font-heading text-[32px] leading-[38px] font-bold text-[#2E5A66] tracking-[-0.00015em] mb-2.5 max-w-[340px]">
             Real Impact, Real<br />Stories
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans font-semibold text-[13px] leading-[20px] text-[#5F6B6F] mb-4 max-w-[320px]">
+          <p className="font-sans font-semibold text-[13px] leading-[21px] text-[#5F6B6F] mb-6 max-w-[325px]">
             Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
           </p>
 
-          {/* Actions (Mobile) */}
-          <div className="flex items-center justify-center gap-2.5 w-full max-w-[320px]">
+          {/* Stacked Actions (Mobile) */}
+          <div className="flex flex-col items-center gap-3 w-full max-w-[280px]">
             {/* Start your State Selector */}
-            <div className="relative flex-1" ref={dropdownRefMobile}>
+            <div className="relative w-full" ref={dropdownRefMobile}>
               <button
                 type="button"
                 onClick={() => setIsDropdownOpenMobile(!isDropdownOpenMobile)}
-                className="w-full h-[44px] px-3 rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] flex items-center justify-between cursor-pointer hover:bg-white transition-colors"
+                className="w-full h-[50px] px-5 rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] flex items-center justify-between cursor-pointer hover:bg-white transition-colors"
               >
-                <div className="flex items-center gap-1.5 min-w-0">
+                <div className="flex items-center gap-2 min-w-0">
                   <Image
                     src="/home/hero-section-map.svg"
                     alt=""
-                    width={14}
-                    height={18}
+                    width={16}
+                    height={20}
                     unoptimized
-                    className="shrink-0 object-contain w-3.5 h-4"
+                    className="shrink-0 object-contain w-4 h-5"
                   />
                   <span
-                    className="font-sans font-semibold text-[13px] bg-clip-text text-transparent truncate"
+                    className="font-sans font-semibold text-[15px] bg-clip-text text-transparent truncate"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start State" : "Start State"}
+                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </div>
-                <ChevronDown className={`w-3.5 h-3.5 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpenMobile ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpenMobile ? "rotate-180" : ""}`} />
               </button>
 
               {isDropdownOpenMobile && (
                 <div
-                  className="absolute left-0 top-full mt-2 w-[220px] max-h-[220px] overflow-y-auto bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  className="absolute left-0 top-full mt-2 w-full max-h-[240px] overflow-y-auto bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2 text-left"
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                   <div className="py-1">
@@ -182,7 +163,7 @@ export function VideoTestimonialsHeroSection() {
                         key={state.slug}
                         type="button"
                         onClick={() => handleStateSelect(state.slug)}
-                        className="w-full text-left px-2.5 py-1.5 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between"
+                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
                       >
                         <span>{state.name}</span>
                         <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
@@ -196,14 +177,14 @@ export function VideoTestimonialsHeroSection() {
             {/* Get Started Button */}
             <a
               href="/pricing"
-              className="h-[44px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-4 pr-1 text-white hover:opacity-95 transition-opacity shrink-0"
+              className="w-[190px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-6 pr-1.5 text-white hover:opacity-95 transition-opacity"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
-              <span className="font-sans font-semibold text-[13px] text-white mr-2">
+              <span className="font-sans font-semibold text-[15px] text-white">
                 Get Started
               </span>
-              <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={13} height={15} className="w-[13px] h-[15px]" />
+              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <Image src="/common/send-icon.svg" alt="" width={15} height={17} className="w-[15px] h-[17px]" />
               </span>
             </a>
           </div>
@@ -212,7 +193,7 @@ export function VideoTestimonialsHeroSection() {
 
       {/* ---------------------------------------------------- */}
       {/* 2. TABLET HERO SECTION (640px - 1023px)              */}
-      {/* Matches user's screenshot exactly                    */}
+      {/* Matches user's tablet screenshot exactly             */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[941/1480] min-h-[780px]">
         <Image
