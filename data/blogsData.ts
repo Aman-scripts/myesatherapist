@@ -198,9 +198,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
@@ -470,9 +470,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
@@ -832,9 +832,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
@@ -1165,9 +1165,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
@@ -1420,9 +1420,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
@@ -1665,9 +1665,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
@@ -1865,9 +1865,9 @@ export const BLOG_POSTS: BlogArticle[] = [
     author: {
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
-      credentials: "Licensed Clinical Social Worker",
+      credentials: "Ph.D., LPC",
       image: "/blogs/blogs_trustbar-author.png",
-      bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
