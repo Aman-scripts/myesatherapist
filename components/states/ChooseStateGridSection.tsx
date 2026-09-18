@@ -34,11 +34,19 @@ function FigmaPinIcon({ className = "w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" }: { c
   );
 }
 
-export function ChooseStateGridSection() {
+interface ChooseStateGridSectionProps {
+  className?: string;
+  id?: string;
+}
+
+export function ChooseStateGridSection({
+  className = "",
+  id = "choose-state-section",
+}: ChooseStateGridSectionProps = {}) {
   return (
     <section
-      id="choose-state-section"
-      className="w-full bg-white py-14 sm:py-16 lg:py-[68px] px-3.5 sm:px-8 lg:px-[78px] border-t border-[#EAE5DC]/60 overflow-hidden"
+      id={id}
+      className={`w-full bg-white py-14 sm:py-16 lg:py-[68px] px-3.5 sm:px-8 lg:px-[78px] overflow-hidden ${className}`}
     >
       <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center gap-10 sm:gap-14 lg:gap-[72px]">
         
@@ -54,12 +62,14 @@ export function ChooseStateGridSection() {
 
         {/* 2 Columns on Mobile with comfortable spacing, 4 Columns on Desktop */}
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-3.5 sm:gap-6 lg:gap-x-[24px] lg:gap-y-[32px] justify-items-center">
-          {ALL_STATES.map((state) => (
-            <Link
-              key={state.slug}
-              href={`/${state.slug}`}
-              className="group flex flex-col justify-center items-start px-3 sm:px-6 lg:px-[32px] py-2.5 sm:py-[15px] bg-[#FAF7F2] hover:bg-white rounded-[12px] sm:rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.12)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] min-h-[58px] sm:h-[62px]"
-            >
+          {ALL_STATES.map((state) => {
+            const stateHref = state.slug.startsWith("esa-letter-") ? `/${state.slug}/` : `/esa-letter-${state.slug}/`;
+            return (
+              <Link
+                key={state.slug}
+                href={stateHref}
+                className="group flex flex-col justify-center items-start px-3 sm:px-6 lg:px-[32px] py-2.5 sm:py-[15px] bg-[#FAF7F2] hover:bg-white rounded-[12px] sm:rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.12)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] min-h-[58px] sm:h-[62px]"
+              >
               {/* Frame 1261153688: Inner Row */}
               <div className="flex flex-row items-center gap-2 sm:gap-2.5 lg:gap-[8px] w-full overflow-hidden">
                 {/* fi_3177361: Pin Icon */}
@@ -73,7 +83,8 @@ export function ChooseStateGridSection() {
                 </span>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
 
       </div>

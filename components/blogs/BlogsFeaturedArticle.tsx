@@ -4,15 +4,25 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function BlogsFeaturedArticle() {
+interface BlogsFeaturedArticleProps {
+  className?: string;
+  id?: string;
+  ctaHref?: string;
+}
+
+export function BlogsFeaturedArticle({
+  className,
+  id = "featured",
+  ctaHref = "/blog/esa-guide/how-to-verify-an-esa-letter/",
+}: BlogsFeaturedArticleProps = {}) {
   return (
-    <section id="featured" className="w-full bg-[#FAF7F2] py-8 sm:py-12 lg:py-16">
+    <section id={id} className={`w-full bg-[#FAF7F2] ${className || "py-8 sm:py-12 lg:py-16"}`}>
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Frame 1261153609: Responsive Flex Container (Optimized for 1024px tablet & 1440px desktop) */}
+        {/* Responsive Flex Container */}
         <div className="relative flex flex-col lg:flex-row items-center justify-center min-h-[380px] lg:min-h-[463px]">
           
-          {/* Left Image: image 40 (w-full lg:w-[55%] xl:w-[628px], h-[340px] sm:h-[420px] lg:h-[463px], rounded-[20px]) */}
-          <div className="w-full lg:w-[55%] xl:w-[628px] h-[340px] sm:h-[420px] lg:h-[463px] relative rounded-[20px] overflow-hidden shrink-0 shadow-sm z-0">
+          {/* Left Image: image 40 with rounded corners */}
+          <div className="w-full lg:w-[55%] xl:w-[628px] h-[340px] sm:h-[420px] lg:h-[463px] relative rounded-[20px] lg:rounded-[24px] overflow-hidden shrink-0 shadow-sm z-0">
             <Image
               src="/blogs/blog_seven-things-to_know.png"
               alt="7 Things to Know Before Getting an ESA Letter"
@@ -23,10 +33,10 @@ export function BlogsFeaturedArticle() {
             />
           </div>
 
-          {/* Right Content Card: Frame 1261153606 */}
-          <div className="w-full lg:w-[53%] xl:w-[701px] min-h-[340px] sm:min-h-[372px] bg-white rounded-[20px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:-ml-16 xl:-ml-[49px] relative z-10 flex flex-col justify-center space-y-4 sm:space-y-5 my-auto mt-4 lg:mt-auto">
+          {/* Right Content Card */}
+          <div className="w-full lg:w-[53%] xl:w-[701px] min-h-[340px] sm:min-h-[372px] bg-white rounded-[20px] lg:rounded-[28px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] lg:-ml-16 xl:-ml-[49px] relative z-10 flex flex-col justify-center space-y-4 sm:space-y-5 my-auto mt-4 lg:mt-auto">
             
-            {/* Frame 1261153608: Title & Description */}
+            {/* Title & Description */}
             <div className="space-y-3 sm:space-y-4">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
                 7 Things to Know Before Getting an ESA Letter
@@ -37,10 +47,10 @@ export function BlogsFeaturedArticle() {
               </p>
             </div>
 
-            {/* Frame 1000011890: CTA Button */}
+            {/* CTA Button */}
             <div className="pt-1">
               <Link
-                href="/blog/esa-guide/how-to-verify-an-esa-letter/"
+                href={ctaHref}
                 className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
                 style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >

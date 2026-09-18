@@ -16,6 +16,7 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 interface Doctor {
   id: string;
+  slug: string;
   name: string;
   title: string;
   bio: string;
@@ -29,6 +30,7 @@ interface Doctor {
 const DOCTORS: Doctor[] = [
   {
     id: "robert-staaf",
+    slug: "dr-robert-staff",
     name: "Robert Staaf",
     title: "Licensed Clinical Social Worker",
     bio: "Robert Staaf, LCSW is an Independent Clinical Social Worker and Therapist, currently licensed to practice at the clinical level in over 30 states. Mr. Staaf has extensive experience in psychotherapy and child and family welfare. He is a pet owner and an animal lover, and an advocate for highlighting how animals can be utilized in mental health treatment.",
@@ -40,6 +42,7 @@ const DOCTORS: Doctor[] = [
   },
   {
     id: "leslie-gamble",
+    slug: "dr-leslie-k-gamble",
     name: "Leslie K. Gamble",
     title: "Licensed Independent Clinical Social Worker",
     bio: "Leslie K. Gamble, LICSW is an experienced clinical social worker and therapist licensed across multiple states. With over 13 years of clinical practice, she specializes in cognitive behavioral approaches, trauma-informed therapy, and evaluating emotional support animals for patients managing chronic emotional challenges.",
@@ -51,6 +54,7 @@ const DOCTORS: Doctor[] = [
   },
   {
     id: "gaurav-patel",
+    slug: "dr-gaurav-patel",
     name: "Dr. Gaurav Patel, MD",
     title: "Family Medicine Physician",
     bio: "Dr. Gaurav Patel, MD is a board-certified physician with extensive background across urgent care, outpatient clinical practice, and telehealth consultations. He is committed to empathetic, patient-centered care and evaluating emotional wellness through thorough clinical assessments.",
@@ -182,10 +186,8 @@ export function DoctorsListingSection() {
 
                 {/* Card Action Button */}
                 <div className="pt-2 flex justify-center">
-                  <a
-                    href={doc.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/esa-doctors/${doc.slug}/`}
                     className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-[#E8B92C] hover:bg-[#dba81f] text-[#2E5A66] font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
                   >
                     <span>View Profile</span>
@@ -198,7 +200,7 @@ export function DoctorsListingSection() {
                         className="w-3.5 h-3.5 object-contain"
                       />
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
