@@ -7,6 +7,7 @@ import { ContactInfoCards } from "@/components/contact/ContactInfoCards";
 import { ContactMap } from "@/components/contact/ContactMap";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { contactUsSchemas } from "@/data/schemas/contactUsSchema";
 
 export const metadata: Metadata = {
   title: "Contact Us | My ESA Therapist - 24/7 Professional Support",
@@ -17,6 +18,15 @@ export const metadata: Metadata = {
 export default function ContactUsPage() {
   return (
     <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+      {/* Schema.org Structured Data */}
+      {contactUsSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
+
       <TopBanner />
       <Header />
       <main className="flex-1 bg-[#FAF7F2]">
