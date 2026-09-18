@@ -22,17 +22,15 @@ export function DoctorConditionsSection({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header: eyebrow + heading on the left, description on the right */}
-        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 lg:gap-10 mb-10 lg:mb-14">
-          <div className="space-y-2 lg:space-y-3">
-            <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-[#2E5A66]">
-              Areas of Focus
-            </p>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
-              {conditionsData.heading}
-            </h2>
-          </div>
-          <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed lg:max-w-[480px]">
+        {/* Header: eyebrow + heading, description below */}
+        <div className="space-y-3 lg:space-y-4 mb-10 lg:mb-14 max-w-[820px]">
+          <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-[#2E5A66]">
+            Areas of Focus
+          </p>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
+            {conditionsData.heading}
+          </h2>
+          <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed">
             {conditionsData.description}
           </p>
         </div>
