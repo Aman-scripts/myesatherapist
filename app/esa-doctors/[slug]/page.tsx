@@ -155,7 +155,7 @@ export default async function DoctorInternalPage({ params }: PageProps) {
       <TopBanner />
       <Header />
 
-      <main className="min-h-screen bg-[#FAF7F2]">
+      <main className="min-h-screen bg-white">
         {/* 1. Doctors Internal Hero Section */}
         <DoctorInternalHeroSection doctor={doctor} />
 
