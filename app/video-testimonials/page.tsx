@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/Footer";
 
 // Video Testimonials Components
 import { VideoTestimonialsHeroSection } from "@/components/video-testimonials/VideoTestimonialsHeroSection";
-import { VideoTestimonialsTrustBar } from "@/components/video-testimonials/VideoTestimonialsTrustBar";
 import { VideoTestimonialsGridSection } from "@/components/video-testimonials/VideoTestimonialsGridSection";
 
 // Shared Components
@@ -68,13 +67,10 @@ export default function VideoTestimonialsPage() {
       <Header />
 
       <main className="flex-1">
-        {/* 1. Hero Section */}
+        {/* 1. Hero Section (with Trust Stats Bar positioned exactly half on hero bottom and half on section below) */}
         <VideoTestimonialsHeroSection />
 
-        {/* 2. Trust Stats Bar (Happy Clients, Average Rating, Acceptance Rate) */}
-        <VideoTestimonialsTrustBar />
-
-        {/* 3. Client Video Testimonials Grid (14 Cards with Video Modal) */}
+        {/* 2. Client Video Testimonials Grid (14 Cards with Video Modal) */}
         <VideoTestimonialsGridSection />
 
         {/* 4. Ready to Start Your ESA Evaluation? CTA Banner */}

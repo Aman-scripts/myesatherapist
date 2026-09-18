@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
 
 function RatingStarMark() {
   return (
@@ -311,6 +312,13 @@ export function VideoTestimonialsHeroSection() {
           </div>
 
         </div>
+      </div>
+
+      {/* --------------------------------------------------------------------------------------------------- */}
+      {/* 4. TRUST STATS BAR: EXACTLY 50% ON HERO SECTION BOTTOM & 50% ON AFTER HERO SECTION TOP               */}
+      {/* --------------------------------------------------------------------------------------------------- */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 w-full max-w-[965px] px-4 pointer-events-auto">
+        <VideoTestimonialsTrustBar />
       </div>
     </section>
   );
