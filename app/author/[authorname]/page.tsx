@@ -123,10 +123,20 @@ export default async function AuthorProfilePage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSchema) }}
-      />
+      {author.schemas && author.schemas.length > 0 ? (
+        author.schemas.map((schemaObj, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          />
+        ))
+      ) : (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSchema) }}
+        />
+      )}
 
       {/* Top Banner & Header */}
       <TopBanner />

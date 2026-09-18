@@ -30,7 +30,10 @@ export interface AuthorProfile {
   }>;
   disclaimerParagraphs: string[];
   articlesNote?: string;
+  schemas?: any[];
 }
+
+import { allysonValleySchemas } from "@/data/schemas/allysonValleySchema";
 
 export const AUTHORS_DATA: AuthorProfile[] = [
   {
@@ -43,6 +46,7 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     metaDescription:
       "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     avatar: "/blogs/blogs_trustbar-author.png",
+    schemas: allysonValleySchemas,
     experienceLabel: "11 Years of Experience",
     heroTagline:
       "Over a Decade of Mental Health Research and Counseling Experience",
