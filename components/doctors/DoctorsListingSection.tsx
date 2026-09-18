@@ -73,7 +73,7 @@ function DoctorStatBadge({
 }) {
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-[#E8B92C] pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
-      <div className="bg-white rounded-[8px] pt-4 sm:pt-4.5 pb-2 sm:pb-2.5 px-1 sm:px-1.5 text-center flex flex-col justify-center relative min-h-[58px]">
+      <div className="bg-white rounded-[8px] pt-4 sm:pt-4.5 pb-2 sm:pb-2.5 px-1.5 sm:px-2 text-center flex flex-col justify-center relative min-h-[58px]">
         {/* Floating circular icon badge at top center */}
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
           <Image
@@ -85,12 +85,12 @@ function DoctorStatBadge({
           />
         </div>
         <div
-          className="text-[10px] sm:text-[11px] xl:text-[12px] font-heading font-bold leading-tight truncate bg-clip-text text-transparent"
+          className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight truncate bg-clip-text text-transparent"
           style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
           {label}
         </div>
-        <div className="text-[10px] sm:text-[11px] xl:text-[12px] font-sans font-semibold text-[#5F6B6F] leading-tight truncate mt-0.5">
+        <div className="text-[11px] sm:text-[12px] font-sans font-semibold text-[#5F6B6F] leading-tight truncate mt-0.5">
           {value}
         </div>
       </div>
@@ -115,12 +115,14 @@ export function DoctorsListingSection() {
           </p>
         </div>
 
-        {/* 3 Grid of Doctor Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7 max-w-[1240px] mx-auto">
-          {DOCTORS.map((doc) => (
+        {/* 2-column Grid of Doctor Cards (Full size as with 4 cards) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[42px] max-w-[1100px] mx-auto">
+          {DOCTORS.map((doc, idx) => (
             <div
               key={doc.id}
-              className="w-full bg-white rounded-[30px] border-2 border-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg"
+              className={`w-full bg-white rounded-[30px] border-2 border-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg ${
+                idx === 2 ? "lg:col-span-2 lg:w-[calc(50%-21px)] lg:mx-auto" : ""
+              }`}
             >
               {/* Top Banner with Gradient & Doctor Identity */}
               <div
