@@ -21,7 +21,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 // Schema.org Structured Data
-import { esaTrainingSchema } from "@/data/schemas/esaTrainingSchema";
+import { esaTrainingSchemas } from "@/data/schemas/esaTrainingSchema";
 
 export const metadata: Metadata = {
   title: "Does Your ESA Actually Need Training? | My ESA Therapist",
@@ -80,10 +80,13 @@ export default function EsaTrainingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A] selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(esaTrainingSchema) }}
-      />
+      {esaTrainingSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
 
       <TopBanner />
       <Header />
