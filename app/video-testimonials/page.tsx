@@ -70,7 +70,10 @@ export default function VideoTestimonialsPage() {
         {/* 4. Ready to Start Your ESA Evaluation? CTA Banner */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
-          description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
+          description={
+            "If you believe an Emotional Support Animal may be appropriate\n" +
+            "for your situation, you can begin a professional evaluation today."
+          }
           buttonText="Start your Evaluation"
           buttonHref="/pricing"
           className="pb-0"
