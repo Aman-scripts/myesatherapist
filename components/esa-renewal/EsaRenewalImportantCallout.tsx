@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export function EsaRenewalImportantCallout() {
   return (
@@ -12,22 +13,13 @@ export function EsaRenewalImportantCallout() {
           <div className="hidden sm:block self-stretch -my-6 sm:-my-8 w-[19px] shrink-0 rounded-l-[10px] bg-[#E42529]" />
 
           {/* Warning icon (fi_3253080) */}
-          <svg
+          <Image
+            src="/esa-renewal/esa-renewal-redalerticon.svg"
+            alt=""
+            width={48}
+            height={48}
             className="h-12 w-12 shrink-0"
-            viewBox="0 0 48 48"
-            fill="none"
-            aria-hidden="true"
-          >
-            <polygon
-              points="24,6 43,40 5,40"
-              fill="#E42529"
-              stroke="#E42529"
-              strokeWidth="5"
-              strokeLinejoin="round"
-            />
-            <rect x="22" y="17" width="4" height="12" rx="2" fill="#FFFFFF" />
-            <circle cx="24" cy="34" r="2.3" fill="#FFFFFF" />
-          </svg>
+          />
 
           {/* Texts (Frame 1000012015) */}
           <div className="flex flex-1 flex-col justify-center gap-2">
