@@ -12,7 +12,7 @@ import { VideoTestimonialsGridSection } from "@/components/video-testimonials/Vi
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
-import { videoTestimonialsSchema } from "@/data/schemas/videoTestimonialsSchema";
+import { videoTestimonialsSchemas } from "@/data/schemas/videoTestimonialsSchema";
 
 export const metadata: Metadata = {
   title: "Client Video Testimonials | Real Stories, Real Impact | My ESA Therapist",
@@ -57,10 +57,13 @@ export default function VideoTestimonialsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A] selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoTestimonialsSchema) }}
-      />
+      {videoTestimonialsSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
 
       {/* Top Banner & Header */}
       <TopBanner />
