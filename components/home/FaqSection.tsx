@@ -49,6 +49,7 @@ interface FaqSectionProps {
   title?: string;
   subtitle?: string;
   faqs?: FaqItem[];
+  bg?: string;
 }
 
 export function FaqSection({
@@ -56,6 +57,7 @@ export function FaqSection({
   title = "Frequently Asked Questions",
   subtitle = "Get answers to common questions about ESA letters and our service.",
   faqs: customFaqs,
+  bg = "bg-[#FAF7F2]",
 }: FaqSectionProps = {}) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
@@ -66,7 +68,7 @@ export function FaqSection({
   }));
 
   return (
-    <section id={id} className="pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 bg-[#FAF7F2] relative">
+    <section id={id} className={`pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 ${bg} relative`}>
       {id !== "faq" && <div id="faq" className="sr-only" />}
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
