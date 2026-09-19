@@ -15,9 +15,9 @@ import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { videoTestimonialsSchemas } from "@/data/schemas/videoTestimonialsSchema";
 
 export const metadata: Metadata = {
-  title: "Client Video Testimonials | Real Stories, Real Impact | My ESA Therapist",
+  title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
   description:
-    "Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives with legitimate ESA letters.",
+    "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",
   alternates: {
     canonical: "https://myesatherapist.com/video-testimonials/",
   },
@@ -29,27 +29,18 @@ export const metadata: Metadata = {
     "max-video-preview": -1,
   },
   openGraph: {
-    title: "Client Video Testimonials | Real Stories, Real Impact | My ESA Therapist",
+    title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
     description:
-      "Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives with legitimate ESA letters.",
+      "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",
     url: "https://myesatherapist.com/video-testimonials/",
     siteName: "My ESA Therapist",
     type: "website",
-    images: [
-      {
-        url: "https://myesatherapist.com/video_testimonial/video_testimonial-herosection.png",
-        width: 1440,
-        height: 624,
-        alt: "Client Video Testimonials - My ESA Therapist",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Client Video Testimonials | Real Stories, Real Impact | My ESA Therapist",
+    card: "summary",
+    title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
     description:
-      "Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives with legitimate ESA letters.",
-    images: ["https://myesatherapist.com/video_testimonial/video_testimonial-herosection.png"],
+      "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",
   },
 };
 
