@@ -39,8 +39,8 @@ export const esaGuideSchemas = [
         {
           "@type": "ListItem",
           "position": 4,
-          "url": "https://myesatherapist.com/blog/esa-guide/how-to-verify-an-esa-letter/",
-          "name": "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist."
+          "name": "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist.",
+          "url": "https://myesatherapist.com/blog/esa-guide/how-to-verify-an-esa-letter/"
         },
         {
           "@type": "ListItem",
@@ -51,8 +51,8 @@ export const esaGuideSchemas = [
         {
           "@type": "ListItem",
           "position": 6,
-          "url": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/",
-          "name": "Can Landlords Deny Emotional Support Animals? Here's the Truth"
+          "name": "Can Landlords Deny Emotional Support Animals? Here's the Truth",
+          "url": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/"
         },
         {
           "@type": "ListItem",

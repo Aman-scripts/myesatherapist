@@ -11,24 +11,33 @@ export function EsaGuideHero() {
           </h1>
 
           <p className="mt-5 max-w-[56ch] font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] font-medium text-[#5F6B6F]">
-            Understanding emotional support animals can feel overwhelming, especially with changing housing guidelines, online information, and common misconceptions surrounding ESA documentation.
+            Understanding emotional support animals can feel overwhelming, especially with changing housing guidelines, online information, and common misconceptions surrounding ESA documentation. This resource center was created to help individuals explore trusted educational content related to emotional support animals, mental wellness support, housing accommodations, and therapist evaluations.
+          </p>
+          <p className="mt-4 max-w-[56ch] font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] font-medium text-[#5F6B6F]">
+            Instead of searching through scattered articles, this page brings together important ESA topics in one organized location. Whether you are learning about emotional support animals for the first time or looking for guidance about housing accommodations and mental health support, the resources below can help you better understand the process and responsibilities involved.
           </p>
         </div>
 
         {/* Right Column: Educational Focus Card */}
         <div className="rounded-[24px] bg-[#2E5A66] p-6 sm:p-8 text-white md:col-span-5 shadow-md">
           <p className="font-heading font-bold text-2xl leading-snug text-white">
-            Explore ESA educational resources
+            Explore ESA Educational Resources
           </p>
           <p className="mt-2.5 font-sans text-sm sm:text-base leading-relaxed text-white/85">
-            Find clear information about how emotional support animals differ from pets, how evaluations work, and the role licensed professionals play.
+            Emotional support animals provide comfort and companionship that may help individuals manage emotional or mental health challenges. Many people researching ESAs are looking for clear information about how emotional support animals differ from pets, how ESA evaluations work, and what role licensed mental health professionals play in the process.
           </p>
           <div className="mt-5 flex flex-wrap gap-2 text-xs font-sans">
             <span className="rounded-full bg-white/15 px-3.5 py-1 text-white font-semibold">
               ESA basics
             </span>
             <span className="rounded-full bg-white/15 px-3.5 py-1 text-white font-semibold">
-              Mental wellness
+              Mental wellness support
+            </span>
+            <span className="rounded-full bg-white/15 px-3.5 py-1 text-white font-semibold">
+              Emotional companionship
+            </span>
+            <span className="rounded-full bg-white/15 px-3.5 py-1 text-white font-semibold">
+              ESA misconceptions
             </span>
             <span className="rounded-full bg-[#E8B92C] px-3.5 py-1 font-bold text-[#1E3E47]">
               ESA responsibilities

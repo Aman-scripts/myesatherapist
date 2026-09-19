@@ -10,12 +10,12 @@ const TRUST_PILLARS = [
   {
     icon: Info,
     title: "No legal jargon",
-    text: "We translate complex housing laws and ESA regulations into plain language anyone can understand.",
+    text: "We translate complex housing laws and ESA regulations into plain language anyone can understand and act on.",
   },
   {
     icon: RefreshCw,
     title: "Regularly updated",
-    text: "ESA laws and policies evolve. Our resources are kept current so you have reliable guidance.",
+    text: "ESA laws and policies evolve. Our resources are kept current so you always have reliable, up-to-date guidance.",
   },
 ];
 
@@ -28,10 +28,10 @@ export function EsaGuideTrustHub() {
             Your trusted ESA resource hub
           </span>
           <h2 className="mt-3 text-balance font-heading font-bold text-2xl sm:text-3xl lg:text-[38px] leading-tight text-[#2E5A66]">
-            Guidance without confusion or unnecessary upsells
+            Your Trusted ESA Resource Hub
           </h2>
           <p className="mt-4 font-sans text-base sm:text-lg leading-relaxed text-[#5F6B6F]">
-            Our guides are written to give you clear, accurate information about emotional support animals.
+            Our guides are written to give you clear, accurate information about emotional support animals — without the confusion, misinformation, or unnecessary upsells that are common in this space.
           </p>
         </div>
 
