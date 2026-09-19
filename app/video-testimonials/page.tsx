@@ -70,7 +70,7 @@ export default function VideoTestimonialsPage() {
         {/* 1. Hero Section (with Trust Stats Bar positioned exactly half on hero bottom and half on section below) */}
         <VideoTestimonialsHeroSection />
 
-        {/* 2. Client Video Testimonials Grid (14 Cards with Video Modal) */}
+        {/* 2. Client Video Testimonials Grid (7 Cards with Video Modal) */}
         <VideoTestimonialsGridSection />
 
         {/* 4. Ready to Start Your ESA Evaluation? CTA Banner */}
