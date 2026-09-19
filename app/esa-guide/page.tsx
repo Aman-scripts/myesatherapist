@@ -18,7 +18,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 // Schema.org Structured Data
-import { esaGuideSchema } from "@/data/schemas/esaGuideSchema";
+import { esaGuideSchemas } from "@/data/schemas/esaGuideSchema";
 
 export const metadata: Metadata = {
   title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
     url: "https://myesatherapist.com/esa-guide/",
     siteName: "My ESA Therapist",
-    type: "website",
+    type: "article",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
     description:
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
@@ -54,17 +54,17 @@ const esaGuideFaqs = [
   {
     num: "01.",
     q: "Why do people have emotional support animals?",
-    a: "Many individuals find comfort, companionship, and emotional reassurance through their relationship with an emotional support animal.",
+    a: "Many individuals find comfort, companionship, and emotional reassurance through their relationship with an emotional support animal. Companion animals may help support emotional wellness routines and reduce feelings of isolation for some individuals.",
   },
   {
     num: "02.",
     q: "Are emotional support animals considered pets?",
-    a: "Although emotional support animals are companion animals, certain housing accommodations may apply when an individual has valid documentation from a licensed professional under the Fair Housing Act.",
+    a: "Although emotional support animals are companion animals, certain housing accommodations may apply when an individual has valid documentation from a licensed professional.",
   },
   {
     num: "03.",
     q: "Can emotional support animals help with emotional wellness?",
-    a: "Some individuals report that emotional support animals help create emotional stability, routine, and companionship during stressful periods.",
+    a: "Some individuals report that emotional support animals help create emotional stability, routine, and companionship during stressful or emotionally difficult periods.",
   },
   {
     num: "04.",
@@ -77,10 +77,13 @@ export default function EsaGuidePage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A] selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(esaGuideSchema) }}
-      />
+      {esaGuideSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
 
       {/* Top Banner & Header */}
       <TopBanner />
@@ -106,15 +109,15 @@ export default function EsaGuidePage() {
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
-          subtitle="Answers to common questions about Emotional Support Animals and evaluations."
+          subtitle="Answers to the most common ESA questions"
           faqs={esaGuideFaqs}
           bg="bg-white"
         />
 
         {/* 7. Standard Project CTA Banner */}
         <CtaBanner
-          title="Ready to Start Your ESA Evaluation?"
-          description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
+          title="Educational Resource Commitment"
+          description="At My ESA Therapist, educational content is designed to help individuals better understand emotional support animals, housing accommodations, and mental wellness resources through accessible and easy-to-follow information. The goal of this resource center is to support responsible education while encouraging individuals to seek guidance from qualified licensed professionals when appropriate."
           buttonText="Start your Evaluation"
           buttonHref="/pricing"
           bgColor="bg-white"
