@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
   alternates: {
-    canonical: "https://myesatherapist.com/esa-guide/",
+    canonical: "https://myesatherapist.com/blog/esa-guide/",
   },
   robots: {
     index: true,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
     description:
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
-    url: "https://myesatherapist.com/esa-guide/",
+    url: "https://myesatherapist.com/blog/esa-guide/",
     siteName: "My ESA Therapist",
     type: "article",
   },
