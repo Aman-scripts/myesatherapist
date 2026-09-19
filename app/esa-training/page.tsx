@@ -18,7 +18,6 @@ import { EsaTrainingMistakesSection } from "@/components/esa-training/EsaTrainin
 // Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 // Schema.org Structured Data
 import { esaTrainingSchemas } from "@/data/schemas/esaTrainingSchema";
@@ -133,18 +132,16 @@ export default function EsaTrainingPage() {
         {/* 13. CTA Banner */}
         <CtaBanner
           title="Training Helps. A Licensed Evaluation Makes It Official."
-          description="Training makes your ESA a better companion, but it's not what qualifies them as an ESA. That comes from a licensed mental health professional who evaluates your need and confirms the therapeutic benefit your animal provides."
+          description={
+            "Training makes your ESA a better companion, but it's not what qualifies\n" +
+            "them as an ESA. That comes from a licensed mental health professional\n" +
+            "who evaluates your need and confirms the therapeutic benefit\n" +
+            "your animal provides."
+          }
           buttonText="Start Your ESA Evaluation Now"
           buttonHref="/pricing"
           bgColor="bg-[#FAF7F2]"
-        />
-
-        {/* 14. Reviewer Banner */}
-        <StateReviewerBanner
-          reviewerName="Dr. Nicole"
-          updatedDate="May 12, 2026"
-          reviewerImage="/blogs/dr-nicole-reviewer.jpg"
-          reviewerLinkedin="https://www.linkedin.com/in/nicole-artrader/"
+          className="pb-12 sm:pb-16"
         />
       </main>
 

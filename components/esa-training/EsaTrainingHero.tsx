@@ -2,19 +2,19 @@ import React from "react";
 
 export function EsaTrainingHero() {
   return (
-    <section className="w-full bg-[#2E5A66]">
+    <section className="w-full bg-[#FAF7F2]">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 sm:pb-16 md:grid-cols-12 md:items-start">
         {/* Left Column: Heading & Description */}
         <div className="md:col-span-7">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white mb-5">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#2E5A66]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2E5A66] mb-5">
             <span className="size-1.5 rounded-full bg-[#E8B92C]" />
             ESA Training Guide
           </span>
-          <h1 className="max-w-[20ch] text-balance font-heading font-bold text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] tracking-tight leading-[1.15] text-white">
+          <h1 className="max-w-[20ch] text-balance font-heading font-bold text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] tracking-tight leading-[1.15] text-[#2E5A66]">
             Does Your ESA Actually Need{" "}
-            <span className="text-[#E8B92C]">Training?</span>
+            Training?
           </h1>
-          <p className="mt-5 max-w-[52ch] font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] font-medium text-white/90">
+          <p className="mt-5 max-w-[52ch] font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] font-medium text-[#5F6B6F]">
             Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.
           </p>
         </div>
