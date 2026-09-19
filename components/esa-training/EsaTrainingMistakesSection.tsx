@@ -42,7 +42,7 @@ export function EsaTrainingMistakesSection() {
               <h3 className="font-heading font-bold text-lg sm:text-xl text-[#1E3E47] mb-2">
                 {title}
               </h3>
-              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#1E3E47]">
+              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F]">
                 {desc}
               </p>
             </div>
