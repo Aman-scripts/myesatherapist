@@ -34,28 +34,28 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
           <div className="w-full max-w-[626px] flex flex-col items-start gap-6 sm:gap-7">
             
             {/* Doctor Name H1 */}
-            <div className="flex items-center gap-3">
+            <div>
               <h1 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] text-[#2E5A66] leading-[1.14] tracking-[-0.0002em]">
                 {doctor.name}
-              </h1>
 
-              {/* LinkedIn icon — mobile/tablet only, at the end of the name */}
-              {doctor.linkedin && (
-                <a
-                  href={doctor.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${doctor.name} on LinkedIn`}
-                  className="lg:hidden w-8 h-8 rounded-full flex items-center justify-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-[#FAF7F2] hover:opacity-90 hover:scale-105 transition-all shrink-0 cursor-pointer"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <circle cx="4.98" cy="4.98" r="2.4" />
-                    <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
-                    <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
-                  </svg>
-                </a>
-              )}
+                {/* LinkedIn icon: inline so it stays right after the last word of the name */}
+                {doctor.linkedin && (
+                  <a
+                    href={doctor.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${doctor.name} on LinkedIn`}
+                    className="inline-flex align-middle ml-3 w-8 h-8 lg:w-11 lg:h-11 rounded-full items-center justify-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-[#FAF7F2] hover:opacity-90 hover:scale-105 transition-all cursor-pointer"
+                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
+                    <svg className="w-4 h-4 lg:w-5 lg:h-5 fill-current" viewBox="0 0 24 24">
+                      <circle cx="4.98" cy="4.98" r="2.4" />
+                      <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
+                      <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
+                    </svg>
+                  </a>
+                )}
+              </h1>
             </div>
 
             {/* Hero Bio Paragraph */}
@@ -83,23 +83,6 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
                 </span>
               </Link>
 
-              {/* LinkedIn Button */}
-              {doctor.linkedin && (
-                <a
-                  href={doctor.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${doctor.name} on LinkedIn`}
-                  className="w-[48px] h-[48px] rounded-[30px] flex items-center justify-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-[#FAF7F2] hover:opacity-90 hover:scale-105 transition-all shrink-0 cursor-pointer"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <circle cx="4.98" cy="4.98" r="2.4" />
-                    <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
-                    <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
-                  </svg>
-                </a>
-              )}
             </div>
 
 
