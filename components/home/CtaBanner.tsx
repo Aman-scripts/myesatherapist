@@ -2,12 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 type CtaBannerProps = {
   bgColor?: string;
   className?: string;
+  titleClassName?: string;
   eyebrow?: string;
   title?: string;
   description?: React.ReactNode;
@@ -20,6 +22,7 @@ type CtaBannerProps = {
 export function CtaBanner({
   bgColor = "bg-[#FAF7F2]",
   className = "",
+  titleClassName = "",
   eyebrow,
   title = "Ready to Start Your ESA Evaluation?",
   description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
@@ -69,7 +72,7 @@ export function CtaBanner({
                   {eyebrow}
                 </div>
               )}
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[540px] lg:max-w-[620px] xl:max-w-[680px] whitespace-pre-line">
+              <h2 className={cn("font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em] max-w-[540px] lg:max-w-[620px] xl:max-w-[680px] whitespace-pre-line", titleClassName)}>
                 {title}
               </h2>
               <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans max-w-[380px] sm:max-w-[430px] lg:max-w-full">

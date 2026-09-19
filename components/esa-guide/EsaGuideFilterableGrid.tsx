@@ -36,17 +36,15 @@ export function EsaGuideFilterableGrid() {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {ESA_GUIDE_POSTS.map((art) => (
-          <div
+          <Link
             key={art.id}
-            className="bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between group hover:shadow-md transition-all duration-300 min-h-[580px] border border-[#EAE5DC]/60"
+            href={art.url}
+            className="group flex flex-col rounded-[24px] bg-[#FDFAF4] border border-[#E4DCCB] p-4 sm:p-[18px] shadow-[0_2px_10px_-2px_rgba(46,90,102,0.08)] hover:shadow-[0_12px_28px_-6px_rgba(46,90,102,0.18)] hover:-translate-y-1 transition-all duration-300"
           >
             {/* Card Image */}
-            <Link
-              href={art.url}
-              className="w-full h-[260px] sm:h-[280px] lg:h-[317px] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
-            >
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-[18px] bg-[#FAF7F2] shrink-0">
               <Image
                 src={art.cardImage}
                 alt={art.title}
@@ -54,51 +52,32 @@ export function EsaGuideFilterableGrid() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
-              <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-xs text-[#1D6E72] font-sans font-bold text-xs px-3 py-1 rounded-full shadow-xs border border-[#1D6E72]/20">
-                {art.category}
-              </span>
-            </Link>
+            </div>
 
             {/* Card Body */}
-            <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
-              <div className="space-y-3.5">
-                <div className="space-y-1.5">
-                  <Link href={art.url}>
-                    <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#2E5A66] leading-[1.3] group-hover:text-[#1D6E72] transition-colors cursor-pointer line-clamp-2">
-                      {art.title}
-                    </h3>
-                  </Link>
-                  <div className="text-xs sm:text-sm font-sans font-medium text-[#8E9A9F]">
-                    by {art.author.name} • {art.publishDate}
-                  </div>
-                </div>
-
-                <p className="font-sans font-semibold text-sm sm:text-[15px] leading-[24px] sm:leading-[26px] text-[#475467] line-clamp-3">
-                  {art.shortDescription}
-                </p>
+            <div className="flex flex-1 flex-col pt-4 px-1">
+              <div className="flex flex-wrap items-center gap-2.5 text-xs font-sans">
+                <span className="rounded-full bg-[#EDE0C8] px-3.5 py-1.5 font-bold text-[#1D5A4E]">
+                  {art.category}
+                </span>
               </div>
 
-              {/* Read Guide Button */}
-              <div className="pt-2">
-                <Link
-                  href={art.url}
-                  className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
-                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                >
-                  <span>Read Guide</span>
-                  <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
-                    <Image
-                      src="/common/send-icon.svg"
-                      alt=""
-                      width={18}
-                      height={18}
-                      className="w-[16px] h-[16px] object-contain"
-                    />
-                  </span>
-                </Link>
+              <h3 className="mt-4 font-heading text-xl sm:text-[22px] font-bold text-[#1A1A1A] leading-[1.3] line-clamp-3">
+                {art.title}
+              </h3>
+
+              <p className="mt-3 font-sans text-sm sm:text-[15px] leading-[26px] text-[#5F6B6F] line-clamp-3">
+                {art.shortDescription}
+              </p>
+
+              <div className="mt-auto flex items-center justify-between border-t border-[#E4DCCB] pt-4 font-sans">
+                <span className="text-sm text-[#5F6B6F]">{art.publishDate}</span>
+                <span className="inline-flex items-center gap-1.5 font-bold text-sm text-[#1D5A4E]">
+                  Read <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

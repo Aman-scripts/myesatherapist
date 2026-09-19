@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 
 // Page Components
 import { EsaGuideHero } from "@/components/esa-guide/EsaGuideHero";
-import { EsaGuideFeaturedGuide } from "@/components/esa-guide/EsaGuideFeaturedGuide";
 import { EsaGuideFilterableGrid } from "@/components/esa-guide/EsaGuideFilterableGrid";
 import { EsaGuideWhyResearch } from "@/components/esa-guide/EsaGuideWhyResearch";
 import { EsaGuideTrustHub } from "@/components/esa-guide/EsaGuideTrustHub";
@@ -15,7 +14,6 @@ import { EsaGuideTrustHub } from "@/components/esa-guide/EsaGuideTrustHub";
 // Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 // Schema.org Structured Data
 import { esaGuideSchemas } from "@/data/schemas/esaGuideSchema";
@@ -94,9 +92,6 @@ export default function EsaGuidePage() {
         {/* 1. Hero: Resource Hub & Introduction */}
         <EsaGuideHero />
 
-        {/* 2. Featured Guide Card */}
-        <EsaGuideFeaturedGuide />
-
         <EsaGuideFilterableGrid />
 
         {/* 4. Why People Research ESAs (2-column editorial context) */}
@@ -117,18 +112,19 @@ export default function EsaGuidePage() {
         {/* 7. Standard Project CTA Banner */}
         <CtaBanner
           title="Educational Resource Commitment"
-          description="At My ESA Therapist, educational content is designed to help individuals better understand emotional support animals, housing accommodations, and mental wellness resources through accessible and easy-to-follow information. The goal of this resource center is to support responsible education while encouraging individuals to seek guidance from qualified licensed professionals when appropriate."
+          titleClassName="xl:text-[38px] xl:whitespace-nowrap"
+          description={
+            "At My ESA Therapist, educational content is designed to help individuals\n" +
+            "better understand emotional support animals, housing accommodations,\n" +
+            "and mental wellness resources through accessible and easy-to-follow\n" +
+            "information. The goal of this resource center is to support responsible\n" +
+            "education while encouraging individuals to seek guidance from\n" +
+            "qualified licensed professionals when appropriate."
+          }
           buttonText="Start your Evaluation"
           buttonHref="/pricing"
           bgColor="bg-white"
-        />
-
-        {/* 8. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner
-          reviewerName="Dr. Nicole"
-          updatedDate="May 12, 2026"
-          reviewerImage="/blogs/dr-nicole-reviewer.jpg"
-          reviewerLinkedin="https://www.linkedin.com/in/nicole-artrader/"
+          className="pb-12 sm:pb-16"
         />
       </main>
 
