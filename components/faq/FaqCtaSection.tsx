@@ -8,7 +8,7 @@ export function FaqCtaSection() {
       title="Ready to Start Your ESA Evaluation?"
       description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
       buttonText="Start your Evaluation"
-      buttonHref="/pricing"
+      buttonHref="/pricing/"
     />
   );
 }

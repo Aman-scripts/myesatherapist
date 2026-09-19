@@ -122,7 +122,7 @@ export default function EsaGuidePage() {
             "qualified licensed professionals when appropriate."
           }
           buttonText="Start your Evaluation"
-          buttonHref="/pricing"
+          buttonHref="/pricing/"
           bgColor="bg-white"
           className="pb-12 sm:pb-16"
         />

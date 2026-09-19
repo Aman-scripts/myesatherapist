@@ -7,11 +7,11 @@ import Link from "next/link";
 const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #000000 100%)";
 
 const companyLinks = [
-  { label: "About Us", href: "/about-us" },
-  { label: "Contact Us", href: "/contact-us" },
+  { label: "About Us", href: "/about-us/" },
+  { label: "Contact Us", href: "/contact-us/" },
   { label: "Meet our Therapists", href: "/esa-doctors/" },
-  { label: "Video Testimonials", href: "/video-testimonials" },
-  { label: "Customer Reviews", href: "/reviews" },
+  { label: "Video Testimonials", href: "/video-testimonials/" },
+  { label: "Customer Reviews", href: "/reviews/" },
 ];
 
 const quickLinks = [
@@ -19,9 +19,9 @@ const quickLinks = [
   { label: "ESA Letter for Housing", href: "#housing" },
   { label: "ESA Letter Renewal", href: "#renewal" },
   { label: "ESA Letter by State", href: "#states" },
-  { label: "ESA Letter Cost", href: "/pricing" },
-  { label: "ESA FAQs", href: "/faq" },
-  { label: "ESA Resources", href: "/blog" },
+  { label: "ESA Letter Cost", href: "/pricing/" },
+  { label: "ESA FAQs", href: "/faq/" },
+  { label: "ESA Resources", href: "/blog/" },
 ];
 
 const legalLinks = [
@@ -97,7 +97,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
               </a>
 
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="inline-flex items-center justify-center px-8 h-[46px] rounded-full border-[1.5px] border-[#FAF7F2] text-[#FAF7F2] font-[family-name:var(--font-lato)] font-bold text-[16px] hover:bg-white/10 transition-colors"
               >
                 Contact Us

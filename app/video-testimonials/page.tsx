@@ -75,7 +75,7 @@ export default function VideoTestimonialsPage() {
             "for your situation, you can begin a professional evaluation today."
           }
           buttonText="Start your Evaluation"
-          buttonHref="/pricing"
+          buttonHref="/pricing/"
           className="pb-0"
         />
 

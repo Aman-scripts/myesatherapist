@@ -62,8 +62,8 @@ export function Header() {
   const pathname = usePathname();
 
   // Check route conditions
-  const isPsd = pathname === "/psd-letter";
-  const isDoctors = pathname === "/esa-doctors" || pathname === "/esa-doctors/";
+  const isPsd = pathname === "/psd-letter/";
+  const isDoctors = pathname === "/esa-doctors/" || pathname === "/esa-doctors/";
   const isLegalReviewer =
     pathname?.includes("legal-reviewer") ||
     pathname?.includes("reviewer") ||
@@ -100,19 +100,19 @@ export function Header() {
               Our Therapists
             </Link>
             <Link
-              href="/about-us"
+              href="/about-us/"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               About Us
             </Link>
             <Link
-              href="/blog"
+              href="/blog/"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
               Resources <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47]" />
             </Link>
             <Link
-              href="/contact-us"
+              href="/contact-us/"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Contact Us
@@ -233,7 +233,7 @@ export function Header() {
 
           {/* See All 50 States Direct Link to /states */}
           <Link
-            href="/states"
+            href="/states/"
             className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
           >
             <span>See all 50 States</span>
@@ -253,14 +253,14 @@ export function Header() {
             Our Therapists
           </Link>
           <Link
-            href="/about-us"
+            href="/about-us/"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             About Us
           </Link>
           <Link
-            href="/blog"
+            href="/blog/"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between"
             onClick={() => setMobileOpen(false)}
           >
@@ -268,7 +268,7 @@ export function Header() {
             <ChevronDown className="w-4 h-4 text-[#1E3E47]" />
           </Link>
           <Link
-            href="/contact-us"
+            href="/contact-us/"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
@@ -278,7 +278,7 @@ export function Header() {
           {/* Mobile All Available States section */}
           <div className="border-t border-[#EAE5DC] pt-4">
             <Link
-              href="/states"
+              href="/states/"
               onClick={() => setMobileOpen(false)}
               className="w-full flex items-center justify-between py-2 text-[#1E3E47] font-semibold text-base"
             >

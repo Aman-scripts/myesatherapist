@@ -12,13 +12,13 @@ const statsData = [
 ];
 
 const stateOptions = [
-  { name: "California", href: "/california" },
-  { name: "Texas", href: "/texas" },
-  { name: "New York", href: "/new-york" },
-  { name: "Florida", href: "/florida" },
-  { name: "Colorado", href: "/colorado" },
-  { name: "Illinois", href: "/illinois" },
-  { name: "Washington", href: "/washington" },
+  { name: "California", href: "/california/" },
+  { name: "Texas", href: "/texas/" },
+  { name: "New York", href: "/new-york/" },
+  { name: "Florida", href: "/florida/" },
+  { name: "Colorado", href: "/colorado/" },
+  { name: "Illinois", href: "/illinois/" },
+  { name: "Washington", href: "/washington/" },
 ];
 
 export function AboutHeroSection() {

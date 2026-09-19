@@ -137,7 +137,7 @@ export default function EsaTrainingPage() {
             "your animal provides."
           }
           buttonText="Start Your ESA Evaluation Now"
-          buttonHref="/pricing"
+          buttonHref="/pricing/"
           bgColor="bg-[#FAF7F2]"
           className="pb-12 sm:pb-16"
         />

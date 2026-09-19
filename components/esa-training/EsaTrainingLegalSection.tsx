@@ -35,7 +35,7 @@ export function EsaTrainingLegalSection() {
 
         <div className="mt-6 flex justify-center">
           <Link
-            href="/pricing"
+            href="/pricing/"
             className="inline-flex h-[46px] items-center justify-between gap-4 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] pl-6 pr-1.5 font-sans font-bold text-[15px] sm:text-[16px] text-[#184652] transition-all shadow-sm"
           >
             <span>Renew Your ESA Letter Now!</span>

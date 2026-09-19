@@ -136,7 +136,7 @@ export default function AboutUsPage() {
           title="Need help with a PSD letter?"
           description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
           buttonText="Start your Evaluation"
-          buttonHref="/psd-letter"
+          buttonHref="/psd-letter/"
           bgColor="bg-[#FAF7F2]"
           className="pb-12 sm:pb-16 lg:pb-24"
         />

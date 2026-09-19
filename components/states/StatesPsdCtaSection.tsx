@@ -33,7 +33,7 @@ export function StatesPsdCtaSection() {
             </p>
 
             <Link
-              href="/psd-letter"
+              href="/psd-letter/"
               className="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-[#E8B92C] hover:bg-[#f0c33a] rounded-xl shadow-[0px_2px_8px_rgba(232,185,44,0.4)] transition-all duration-200 group"
             >
               <span className="font-lato font-bold text-base sm:text-lg bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:scale-105 transition-transform">

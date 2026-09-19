@@ -176,7 +176,7 @@ export function VideoTestimonialsHeroSection() {
 
             {/* Get Started Button */}
             <a
-              href="/pricing"
+              href="/pricing/"
               className="w-[190px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-6 pr-1.5 text-white hover:opacity-95 transition-opacity"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
@@ -290,7 +290,7 @@ export function VideoTestimonialsHeroSection() {
 
             {/* Get Started Button */}
             <a
-              href="/pricing"
+              href="/pricing/"
               className="h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-6 pr-1.5 text-white hover:opacity-95 transition-opacity"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
