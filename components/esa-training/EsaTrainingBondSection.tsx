@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Quote } from "lucide-react";
 
 export function EsaTrainingBondSection() {
   return (
@@ -14,31 +15,35 @@ export function EsaTrainingBondSection() {
           </h2>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-12 items-center">
-          {/* Left Column: Quote & Prose */}
+        <div className="grid gap-8 lg:grid-cols-12 items-start">
+          {/* Left Column: Quote Card & Note */}
           <div className="lg:col-span-7">
-            <blockquote className="relative rounded-[22px] bg-white p-7 sm:p-9 shadow-xs border border-[#2E5A66]/08">
-              <span className="block h-7 sm:h-8 font-heading text-5xl sm:text-6xl text-[#E8B92C] leading-[0.9] mb-2 select-none">
-                “
-              </span>
-              <p className="font-sans text-base sm:text-lg leading-relaxed text-[#2E5A66] font-medium italic">
-                Training sessions build more than obedience. The repetition creates routine, and routine is genuinely therapeutic, especially on harder days.
-              </p>
-            </blockquote>
-            <p className="mt-6 font-sans text-base sm:text-[17px] leading-[1.75] text-[#5F6B6F]">
-              Teaching your animal something new, watching them learn, and building a shared language of mutual trust deepens the emotional bond in a way little else does. As your pet develops confidence in you, you gain confidence navigating your daily environment together.
+            <div className="rounded-[24px] bg-white p-7 sm:p-9 shadow-[0_4px_20px_-4px_rgba(46,90,102,0.08)] border border-[#EAE5DC] border-l-[5px] border-l-[#E8B92C]">
+              {/* Gold Quote Icon Badge */}
+              <div className="size-11 rounded-xl bg-[#E8B92C]/15 border border-[#E8B92C]/35 flex items-center justify-center text-[#E8B92C] mb-4 shadow-2xs">
+                <Quote className="size-5 text-[#E8B92C] fill-[#E8B92C]" />
+              </div>
+
+              {/* Quote Typography */}
+              <blockquote className="font-heading italic font-semibold text-lg sm:text-xl lg:text-[22px] leading-[1.55] text-[#1E3E47] relative z-10">
+                “Training sessions build more than obedience. The repetition creates routine, and routine is genuinely therapeutic, especially on harder days.”
+              </blockquote>
+            </div>
+
+            <p className="mt-5 font-sans text-base sm:text-[17px] leading-[1.75] text-[#5F6B6F]">
+              Teaching your animal something new, watching them learn, and building a shared language of trust deepens the bond in a way little else does.
             </p>
           </div>
 
-          {/* Right Column: High Quality Image */}
-          <div className="lg:col-span-5">
-            <div className="overflow-hidden rounded-[22px] shadow-md border-2 border-[#E8B92C]/40 bg-white relative h-[320px] sm:h-[360px] w-full">
+          {/* Right Column: Companion Dog Photo */}
+          <div className="lg:col-span-5 self-stretch flex">
+            <div className="relative overflow-hidden rounded-[22px] shadow-md border-2 border-[#E8B92C]/40 bg-white w-full min-h-[280px]">
               <Image
-                src="/Blog Images/woman-with-emotional-support-dog.webp"
+                src="/esa-training/esa-training-bond.webp"
                 alt="Person relaxing at home with a calm emotional support dog by their side"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                sizes="(min-width: 1024px) 380px, 100vw"
               />
             </div>
           </div>

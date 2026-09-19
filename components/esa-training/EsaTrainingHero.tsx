@@ -4,7 +4,7 @@ export function EsaTrainingHero() {
   return (
     <section className="w-full bg-[#FAF7F2]">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 sm:pb-16 md:grid-cols-12 md:items-start">
-        {/* Left Column: Heading & Description */}
+        {/* Left Column: Heading & Lead */}
         <div className="md:col-span-7">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#2E5A66]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2E5A66] mb-5">
             <span className="size-1.5 rounded-full bg-[#E8B92C]" />
@@ -12,24 +12,24 @@ export function EsaTrainingHero() {
           </span>
           <h1 className="max-w-[20ch] text-balance font-heading font-bold text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] tracking-tight leading-[1.15] text-[#2E5A66]">
             Does Your ESA Actually Need{" "}
-            Training?
+            <span className="text-[#E8B92C]">Training?</span>
           </h1>
           <p className="mt-5 max-w-[52ch] font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] font-medium text-[#5F6B6F]">
-            Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.
+            Wondering whether your emotional support animal needs training? Here&apos;s the honest, complete answer, including what changed in 2026 and what it means for your housing rights.
           </p>
         </div>
 
         {/* Right Column: Key Takeaway Card */}
-        <aside className="rounded-[20px] bg-white overflow-hidden shadow-lg border border-[#E8B92C]/35 md:col-span-5">
+        <aside className="rounded-[20px] bg-white overflow-hidden shadow-[0_4px_25px_rgba(46,90,102,0.08)] border border-[#E8B92C]/35 md:col-span-5 md:mt-4">
           <div className="bg-[#E8B92C] px-6 py-3 text-[11px] font-extrabold uppercase tracking-[1.4px] text-[#2E5A66]">
             Key Takeaway
           </div>
           <div className="px-6 py-6">
             <h2 className="font-heading font-extrabold text-[22px] leading-[1.25] text-[#2E5A66] mb-2.5">
-              No. Training isn't legally required.
+              No. Training isn&apos;t legally required.
             </h2>
             <p className="font-sans text-sm leading-[1.65] text-[#5F6B6F] mb-5">
-              The Fair Housing Act has never required ESAs to be trained. But behavior, documentation, and a current letter matter more than ever since HUD's 2026 enforcement shift.
+              The Fair Housing Act has never required ESAs to be trained. But behavior, documentation, and a current letter matter more than ever since HUD&apos;s 2026 enforcement shift.
             </p>
             <ul className="flex flex-col gap-3">
               {[

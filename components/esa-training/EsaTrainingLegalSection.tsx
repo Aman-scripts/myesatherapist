@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function EsaTrainingLegalSection() {
   return (
@@ -32,12 +33,21 @@ export function EsaTrainingLegalSection() {
           If your letter isn't current, this is a good time to renew it.
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 flex justify-center">
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 rounded-full bg-[#E8B92C] px-7 py-3.5 font-sans font-bold text-sm text-[#1E3E47] hover:bg-[#d4a826] transition-colors shadow-sm"
+            className="inline-flex h-[46px] items-center justify-between gap-4 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] pl-6 pr-1.5 font-sans font-bold text-[15px] sm:text-[16px] text-[#184652] transition-all shadow-sm"
           >
-            Renew Your ESA Letter Now!
+            <span>Renew Your ESA Letter Now!</span>
+            <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
+              <Image
+                src="/common/send-icon.svg"
+                alt=""
+                width={16}
+                height={16}
+                className="w-4 h-4 object-contain"
+              />
+            </span>
           </Link>
         </div>
       </div>

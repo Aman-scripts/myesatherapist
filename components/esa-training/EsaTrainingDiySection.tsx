@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export function EsaTrainingDiySection() {
   return (
@@ -12,47 +13,67 @@ export function EsaTrainingDiySection() {
             Can You Train Your ESA Yourself?
           </h2>
           <p className="mt-3 font-sans text-base sm:text-lg text-[#5F6B6F]">
-            Yes. Many owners successfully train their emotional support animals themselves.
+            Yes. Many owners do it themselves.
           </p>
         </div>
 
-        {/* Bento grid */}
-        <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Tile: DIY heading */}
-          <div className="col-span-full justify-self-center rounded-full bg-[#E8B92C] px-7 py-3.5 shadow-xs">
-            <h3 className="font-heading font-extrabold text-lg sm:text-xl text-white">
-              Tips for DIY Training
-            </h3>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {/* Card 1: DIY Training */}
+          <div className="overflow-hidden rounded-[20px] bg-white border border-[#EAE5DC] shadow-[0_4px_25px_rgba(46,90,102,0.08)] flex flex-col">
+            {/* Image */}
+            <div className="relative h-[200px] w-full shrink-0">
+              <Image
+                src="/esa-training/esa-training-bond.webp"
+                alt="Owner doing DIY training with their emotional support animal"
+                fill
+                className="object-cover"
+                sizes="(min-width: 640px) 50vw, 100vw"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-6 sm:p-7 flex flex-col flex-1">
+              <h3 className="font-heading font-bold text-xl sm:text-[22px] text-[#1E3E47] mb-4">
+                Tips for DIY training
+              </h3>
+              <ul className="space-y-3 flex-1">
+                {[
+                  "Keep sessions short, five to ten minutes, so neither of you gets frustrated",
+                  "Use positive reinforcement (treats, praise, play), not punishment",
+                  "Stay consistent with commands and cues",
+                  "Practice in low-distraction spaces before moving to busier ones",
+                ].map((tip) => (
+                  <li key={tip} className="flex items-start gap-2.5 font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F]">
+                    <span className="mt-1.5 shrink-0 size-1.5 rounded-full bg-[#E8B92C]" />
+                    {tip}
+                  </li>
+                ))}
+              </ul>
+
+            </div>
           </div>
 
-          {/* Tiles: individual tips */}
-          {[
-            "Keep sessions short (5 to 10 minutes) so neither of you gets frustrated or overwhelmed.",
-            "Use positive reinforcement (treats, praise, play) rather than harsh correction or punishment.",
-            "Stay completely consistent with voice cues, hand signals, and household boundaries.",
-            "Practice in quiet, low-distraction spaces before gradually moving to busier environments.",
-          ].map((tip, idx) => (
-            <div
-              key={idx}
-              className="rounded-[22px] bg-white border border-[#2E5A66]/10 p-6 sm:p-7 shadow-xs flex flex-col gap-4"
-            >
-              <span className="size-9 rounded-full bg-[#E8B92C]/20 text-[#1E3E47] flex items-center justify-center font-bold text-sm">
-                ✓
-              </span>
-              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F]">
-                {tip}
-              </p>
+          {/* Card 2: Professional Training */}
+          <div className="overflow-hidden rounded-[20px] bg-white border border-[#EAE5DC] shadow-[0_4px_25px_rgba(46,90,102,0.08)] flex flex-col">
+            {/* Image */}
+            <div className="relative h-[200px] w-full shrink-0">
+              <Image
+                src="/esa-training/esa-training-hero.webp"
+                alt="Professional trainer working with an emotional support animal"
+                fill
+                className="object-cover"
+                sizes="(min-width: 640px) 50vw, 100vw"
+              />
             </div>
-          ))}
+            {/* Content */}
+            <div className="p-6 sm:p-7 flex flex-col flex-1">
+              <h3 className="font-heading font-bold text-xl sm:text-[22px] text-[#1E3E47] mb-4">
+                When to hire a professional
+              </h3>
+              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F] flex-1">
+                If your animal shows anxiety or aggression, or progress has stalled. Costs vary by location and format (group classes vs. private sessions), so it&apos;s worth comparing a few local options.
+              </p>
 
-          {/* Tile: professional help */}
-          <div className="col-span-full rounded-[22px] bg-[#2E5A66] p-6 sm:p-8 flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-10 shadow-xs">
-            <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white lg:max-w-[34%] shrink-0">
-              When to hire a professional
-            </h3>
-            <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-white/90">
-              If your animal shows anxiety or aggression, or progress has stalled. Costs vary by location and format (group classes vs. private sessions), so it&apos;s worth comparing a few local options.
-            </p>
+            </div>
           </div>
         </div>
       </div>

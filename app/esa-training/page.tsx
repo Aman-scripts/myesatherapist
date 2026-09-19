@@ -103,24 +103,22 @@ export default function EsaTrainingPage() {
         {/* 4. Recommended Basics */}
         <EsaTrainingBasicsSection />
 
-        {/* 6. Featured Training Blog Guides Cards */}
-
-        {/* 7. Training by Animal Type */}
+        {/* 5. Training by Animal Type */}
         <EsaTrainingBySpeciesSection />
 
-        {/* 8. Can You Train Your ESA Yourself? (DIY vs Professional) */}
+        {/* 6. Can You Train Your ESA Yourself? (DIY vs Professional) */}
         <EsaTrainingDiySection />
 
-        {/* 9. Mental Health Condition-Specific Training Support */}
+        {/* 7. Mental Health Condition-Specific Training Support */}
         <EsaTrainingConditionsSection />
 
-        {/* 10. The Human-Animal Bond */}
+        {/* 8. The Human-Animal Bond */}
         <EsaTrainingBondSection />
 
-        {/* 11. Common ESA Training Mistakes to Avoid */}
+        {/* 9. Common ESA Training Mistakes to Avoid */}
         <EsaTrainingMistakesSection />
 
-        {/* 12. Frequently Asked Questions */}
+        {/* 10. Frequently Asked Questions */}
         <FaqSection
           id="faq"
           title="ESA Training FAQs"
@@ -129,7 +127,7 @@ export default function EsaTrainingPage() {
           bg="bg-[#FAF7F2]"
         />
 
-        {/* 13. CTA Banner */}
+        {/* 11. CTA Banner */}
         <CtaBanner
           title="Training Helps. A Licensed Evaluation Makes It Official."
           description={

@@ -1,22 +1,21 @@
 import React from "react";
-import { AlertTriangle } from "lucide-react";
 
 const MISTAKES = [
   {
     title: "Skipping socialization",
-    desc: "Keeping an animal sheltered from normal stimuli leads to fearful, anxious, or reactive behavior around hallway noises, neighbors, and other animals.",
+    desc: "Leads to fearful or reactive behavior around people and other animals",
   },
   {
     title: "Inconsistent commands",
-    desc: "Using different words, varied gestures, or lax boundaries each time significantly slows progress and confuses your animal's understanding.",
+    desc: "Different words or cues each time slow progress and confuse your animal",
   },
   {
     title: "Punishing instead of redirecting",
-    desc: "Harsh corrections or shouting tend to build underlying anxiety and distrust rather than true cooperative obedience and emotional calm.",
+    desc: "Punishment tends to build anxiety, not obedience",
   },
   {
-    title: "Starting training too late",
-    desc: "Habitual nuisance behaviors like jumping or incessant barking become substantially harder to unlearn the longer they go unaddressed in housing.",
+    title: "Starting too late",
+    desc: "Unwanted behaviors get harder to unlearn the longer they go unaddressed",
   },
 ];
 
@@ -31,9 +30,6 @@ export function EsaTrainingMistakesSection() {
           <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[38px] leading-tight text-[#2E5A66]">
             Common ESA Training Mistakes to Avoid
           </h2>
-          <p className="mt-4 font-sans text-base sm:text-lg text-[#5F6B6F] max-w-2xl mx-auto">
-            Steering clear of these common pitfalls ensures a calmer learning journey and protects your residential tenancy.
-          </p>
         </div>
 
         {/* 4 Cards Grid */}
@@ -41,17 +37,12 @@ export function EsaTrainingMistakesSection() {
           {MISTAKES.map(({ title, desc }) => (
             <div
               key={title}
-              className="rounded-[20px] bg-[#FAF7F2] border border-[#2E5A66]/10 p-6 sm:p-7 shadow-xs hover:shadow-md transition-all duration-300"
+              className="rounded-[20px] bg-white border border-[#EAE5DC] border-l-[5px] border-l-[#E8B92C] p-6 sm:p-7 shadow-[0_4px_25px_rgba(46,90,102,0.08)] hover:shadow-md transition-all duration-300 flex flex-col justify-start"
             >
-              <div className="flex items-center gap-3 mb-2.5">
-                <span className="size-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                  <AlertTriangle className="size-4" />
-                </span>
-                <h3 className="font-heading font-bold text-lg sm:text-xl text-[#2E5A66]">
-                  {title}
-                </h3>
-              </div>
-              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F] pl-11">
+              <h3 className="font-heading font-bold text-lg sm:text-xl text-[#1E3E47] mb-2">
+                {title}
+              </h3>
+              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#1E3E47]">
                 {desc}
               </p>
             </div>
