@@ -8,35 +8,51 @@ import { FaqAccordionSection } from "@/components/faq/FaqAccordionSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
+// Schema.org Structured Data
+import { frequentlyAskedQuestionsSchemas } from "@/data/schemas/frequentlyAskedQuestionsSchema";
+
 export const metadata: Metadata = {
-  title: "Emotional Support Animal (ESA) FAQs | My ESA Therapist",
+  title: "Frequently Asked Questions About ESA Letters | My ESA Therapist",
   description:
-    "Find clear, reliable answers to the top 20 questions about Emotional Support Animal (ESA) letters, legal housing protections under FHA, qualifications, and legitimate evaluations.",
-  keywords: [
-    "ESA FAQ",
-    "Emotional Support Animal Questions",
-    "ESA Letter Rules",
-    "Fair Housing Act ESA",
-    "How to get ESA letter",
-    "ESA qualifications",
-  ],
+    "Find answers to frequently asked questions about ESA letters, eligibility, the evaluation process, housing accommodations, and emotional support animals.",
+  alternates: {
+    canonical: "https://myesatherapist.com/frequently-asked-questions/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
   openGraph: {
-    title: "ESA Questions? We're Here to Help | My ESA Therapist",
+    title: "Frequently Asked Questions About ESA Letters | My ESA Therapist",
     description:
-      "Find simple, reliable answers to help you understand the ESA process, housing laws, and legitimate therapist evaluations.",
-    url: "https://myesatherapist.com/faq",
+      "Find answers to frequently asked questions about ESA letters, eligibility, the evaluation process, housing accommodations, and emotional support animals.",
+    url: "https://myesatherapist.com/frequently-asked-questions/",
     siteName: "My ESA Therapist",
-    locale: "en_US",
     type: "website",
   },
-  alternates: {
-    canonical: "https://myesatherapist.com/faq",
+  twitter: {
+    card: "summary",
+    title: "Frequently Asked Questions About ESA Letters | My ESA Therapist",
+    description:
+      "Find answers to frequently asked questions about ESA letters, eligibility, the evaluation process, housing accommodations, and emotional support animals.",
   },
 };
 
 export default function FaqPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A]">
+      {/* Schema.org JSON-LD */}
+      {frequentlyAskedQuestionsSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
+
       {/* Top Announcement Banner & Header */}
       <TopBanner />
       <Header />
