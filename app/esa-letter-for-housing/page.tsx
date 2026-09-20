@@ -21,6 +21,9 @@ import { QualifyingConditions } from "@/components/home/QualifyingConditions";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
+// Schema.org Structured Data
+import { esaLetterForHousingSchemas } from "@/data/schemas/esaLetterForHousingSchema";
+
 export const metadata: Metadata = {
   title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
   description:
@@ -39,25 +42,30 @@ export const metadata: Metadata = {
     title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
     description:
       "Facing 'no-pet' housing rules? Get an FHA-compliant ESA letter for housing online from a licensed therapist. Secure, confidential and pay only if approved.",
-    type: "website",
     url: "https://myesatherapist.com/esa-letter-for-housing/",
-    siteName:
-      "My ESA Therapist | Licensed ESA Therapists & Emotional Support Animal Services",
-    locale: "en_US",
+    siteName: "My ESA Therapist",
+    type: "website",
   },
   twitter: {
     card: "summary",
     title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
     description:
       "Facing 'no-pet' housing rules? Get an FHA-compliant ESA letter for housing online from a licensed therapist. Secure, confidential and pay only if approved.",
-    site: "@MyESATherapist",
-    creator: "@MyESATherapist",
   },
 };
 
 export default function EsaLetterForHousingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
+      {/* Schema.org JSON-LD */}
+      {esaLetterForHousingSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
+
       <TopBanner />
       <Header />
 
