@@ -56,10 +56,14 @@ export function FeatureCard({
   description,
   headingFont = "heading",
   dark = false,
+  iconW = 32,
+  iconH = 32,
 }: {
   icon: string;
-  title: string;
+  title?: string;
   description?: string;
+  iconW?: number;
+  iconH?: number;
   headingFont?: "heading" | "lato";
   dark?: boolean;
 }) {
@@ -72,8 +76,8 @@ export function FeatureCard({
         }`}
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
-        {headingFont === "heading" ? (
-          <h3 className={`font-heading font-bold text-xl xl:text-2xl leading-8 ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+        {!title ? null : headingFont === "heading" ? (
+          <h3 className={`font-heading font-bold text-xl xl:text-2xl leading-8 text-balance ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
             {title}
           </h3>
         ) : (
@@ -96,7 +100,7 @@ export function FeatureCard({
         }`}
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
-        <Image src={icon} alt="" width={32} height={32} className="h-8 w-8 object-contain" />
+        <Image src={icon} alt="" width={iconW} height={iconH} style={{ width: iconW, height: iconH }} className="object-contain" />
       </div>
     </div>
   );

@@ -31,13 +31,25 @@ function ReviewCard({ color, label, score }: { color: string; label: string; sco
   );
 }
 
-export function EsaOnlineHero() {
+export function EsaOnlineHero({
+  title = "Legitimate ESA Letter Online From a Licensed Therapist",
+  description = "Begin with a secure, HIPAA-compliant telehealth evaluation designed to support a legitimate ESA letter when clinically appropriate. ESA letters are issued based on a licensed clinician’s professional judgment.",
+  buttonText = "Start your ESA Evaluation",
+  image = "/esa-online/esa-letter-online_herosection.png",
+  imageAlt = "Legitimate ESA letter online from a licensed therapist",
+}: {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  image?: string;
+  imageAlt?: string;
+} = {}) {
   return (
     <section className="relative w-full bg-[#FAF7F2] overflow-hidden min-h-[580px] sm:min-h-[620px] lg:min-h-[480px] xl:min-h-[723px] flex items-center">
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <Image
-          src="/esa-online/esa-letter-online_herosection.png"
-          alt="Legitimate ESA letter online from a licensed therapist"
+          src={image}
+          alt={imageAlt}
           fill
           priority
           quality={100}
@@ -51,14 +63,14 @@ export function EsaOnlineHero() {
         <div className="max-w-[626px] lg:max-w-[420px] xl:max-w-[626px] space-y-6 sm:space-y-8 lg:space-y-4 xl:space-y-6">
           <div className="space-y-3.5 sm:space-y-6">
             <h1 className="font-heading text-3xl sm:text-5xl lg:text-[34px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.14] tracking-[-0.0002em]">
-              Legitimate ESA Letter Online From a Licensed Therapist
+              {title}
             </h1>
             <p className="font-sans text-sm sm:text-base lg:text-[13px] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.65] max-w-[626px]">
-              Begin with a secure, HIPAA-compliant telehealth evaluation designed to support a legitimate ESA letter when clinically appropriate. ESA letters are issued based on a licensed clinician’s professional judgment.
+              {description}
             </p>
           </div>
 
-          <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
+          <CtaButton href="/pricing/">{buttonText}</CtaButton>
 
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-2 xl:gap-4 pt-1">
             <ReviewCard color="#00B67A" label="Trustpilot" score="Trustscore 4.4" />

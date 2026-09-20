@@ -135,11 +135,15 @@ const conditions: Condition[] = [
 interface QualifyingConditionsProps {
   className?: string;
   id?: string;
+  title?: string;
+  description?: string;
 }
 
 export function QualifyingConditions({
   className = "",
   id = "qualifying-conditions",
+  title = "Common Qualifying Conditions",
+  description = "A licensed mental health professional will determine eligibility during your consultancy. These are some common conditions that may qualify under ADA.",
 }: QualifyingConditionsProps = {}) {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
@@ -149,10 +153,10 @@ export function QualifyingConditions({
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[709px] mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
-            Common Qualifying Conditions
+            {title}
           </h2>
           <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed">
-            A licensed mental health professional will determine eligibility during your consultancy. These are some common conditions that may qualify under ADA.
+            {description}
           </p>
         </div>
 
