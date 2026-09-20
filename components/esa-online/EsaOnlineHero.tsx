@@ -37,12 +37,14 @@ export function EsaOnlineHero({
   buttonText = "Start your ESA Evaluation",
   image = "/esa-online/esa-letter-online_herosection.png",
   imageAlt = "Legitimate ESA letter online from a licensed therapist",
+  buttonHref = "/pricing/",
 }: {
   title?: string;
   description?: string;
   buttonText?: string;
   image?: string;
   imageAlt?: string;
+  buttonHref?: string;
 } = {}) {
   return (
     <section className="relative w-full bg-[#FAF7F2] overflow-hidden min-h-[580px] sm:min-h-[620px] lg:min-h-[480px] xl:min-h-[723px] flex items-center">
@@ -70,7 +72,7 @@ export function EsaOnlineHero({
             </p>
           </div>
 
-          <CtaButton href="/pricing/">{buttonText}</CtaButton>
+          <CtaButton href={buttonHref}>{buttonText}</CtaButton>
 
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-2 xl:gap-4 pt-1">
             <ReviewCard color="#00B67A" label="Trustpilot" score="Trustscore 4.4" />
