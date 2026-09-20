@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { WaveImage } from "@/components/esa-online/EsaOnlineShared";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -36,12 +37,17 @@ export function EsaRenewalLicensedPros() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1448px] px-4 sm:px-8 lg:pl-[6vw] xl:pl-[64px] xl:pr-0 py-16 sm:py-20 lg:py-[4.5vw] xl:py-[65px]">
+      <div className="relative z-10 mx-auto max-w-[1448px] px-4 sm:px-8 lg:pl-[6vw] xl:pl-[64px] xl:pr-0 pb-16 sm:pb-20 lg:py-[4.5vw] xl:py-[65px]">
+        <WaveImage
+          alt="State licensed mental health professionals map across US"
+          mobile={{ src: "/esa-renewal/esa-renwal_licensedprofessional_mobile.png", w: 390, h: 512, crop: { x: 0, y: 109, w: 390, h: 402 } }}
+          tablet={{ src: "/esa-renewal/esa-renwal_licensedprofessional_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
+        />
         {/* Left Column: Heading + Text + 2 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[39vw] xl:max-w-[590px] flex flex-col gap-10 lg:gap-[2.8vw] xl:gap-14">
           {/* Header Text (Frame 1000011447) */}
-          <div className="flex flex-col gap-5 lg:gap-[1.9vw] xl:gap-7">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.8vw] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[3.5vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px]">
+          <div className="flex flex-col gap-5 lg:gap-[1.9vw] xl:gap-7 text-center lg:text-left">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.8vw] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[3.5vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
               Licensed Professionals Across All 50 States
             </h2>
             <p className="font-sans text-base sm:text-[18px] lg:text-[1.2vw] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.67] xl:max-w-[560px]">
@@ -90,16 +96,6 @@ export function EsaRenewalLicensedPros() {
           </div>
         </div>
 
-        {/* Illustration for smaller screens: stacked below the content */}
-        <div className="lg:hidden relative mt-10 mx-auto w-full max-w-[520px] aspect-[2291/2205]">
-          <Image
-            src="/esa-renewal/esa-renewal-all50states.png"
-            alt="State licensed mental health professionals map across US"
-            fill
-            className="object-contain"
-            sizes="520px"
-          />
-        </div>
       </div>
     </section>
   );

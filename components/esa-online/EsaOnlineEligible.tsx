@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { GoldCallout } from "./EsaOnlineShared";
+import { GoldCallout, WaveImage } from "./EsaOnlineShared";
 
 const P = "/esa-online/esa-letter-online_whatmaybeeligible-";
 
@@ -42,8 +42,13 @@ export function EsaOnlineEligible() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 py-14 sm:py-20 lg:py-[min(4.5vw,65px)]">
-        <div className="w-full max-w-[628px] lg:max-w-[min(43.6vw,628px)] flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.5vw,65px)]">
+        <WaveImage
+          alt="Woman reading her ESA letter with her pets beside her"
+          mobile={{ src: "/esa-online/esa-online-whomaybeeligible_mobile.png", w: 390, h: 512, crop: { x: 0, y: 99, w: 390, h: 412 } }}
+          tablet={{ src: "/esa-online/esa-online-whomaybeeligible_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
+        />
+        <div className="w-full max-w-[628px] lg:max-w-[min(43.6vw,628px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(32.6vw,470px)]">
               Who May Be Eligible for an ESA Letter?
@@ -83,15 +88,6 @@ export function EsaOnlineEligible() {
           </GoldCallout>
         </div>
 
-        <div className="lg:hidden relative mt-10 mx-auto w-full max-w-[380px] aspect-[687/960]">
-          <Image
-            src="/esa-online/esa-letter-online_whatmaybeeligible.png"
-            alt="Woman reading her ESA letter with her pets beside her"
-            fill
-            className="object-contain"
-            sizes="380px"
-          />
-        </div>
       </div>
     </section>
   );

@@ -38,7 +38,7 @@ export function EsaOnlineSupportAnimals() {
               <div className="relative w-full sm:w-[34%] shrink-0 aspect-[4/3] sm:aspect-auto sm:min-h-[260px]">
                 <Image src={a.image} alt={a.alt} fill className="object-cover" sizes="(min-width: 640px) 200px, 100vw" />
               </div>
-              <div className="flex flex-col items-start justify-center gap-4 p-5 sm:p-6 xl:p-8">
+              <div className="flex flex-col items-center text-center sm:items-start sm:text-left justify-center gap-4 p-5 sm:p-6 xl:p-8">
                 <h3 className="font-heading text-2xl lg:text-[24px] xl:text-[28px] font-bold text-[#2E5A66] leading-8 xl:leading-9 max-w-[300px]">{a.title}</h3>
                 <p className="font-sans text-[14px] font-semibold leading-[26px] text-[#5F6B6F]">{a.description}</p>
                 <CtaButton href="/pricing/">Apply your ESA Now</CtaButton>
@@ -47,7 +47,7 @@ export function EsaOnlineSupportAnimals() {
           ))}
         </div>
 
-        <div className="w-full max-w-[970px] flex flex-col items-start gap-4 rounded-[20px] bg-[#FAF7F2] p-6 sm:p-8 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
+        <div className="w-full max-w-[970px] flex flex-col items-center text-center sm:items-start sm:text-left gap-4 rounded-[20px] bg-[#FAF7F2] p-6 sm:p-8 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
           <h3 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-9">Have a Different Type of Support Animal?</h3>
           <p className="font-sans text-[14px] font-semibold leading-[26px] text-[#5F6B6F]">
             Emotional support animal letters are not limited to dogs and cats. A licensed mental health professional may consider other animals, such as rabbits, birds, or guinea pigs, on a case-by-case basis when appropriate.

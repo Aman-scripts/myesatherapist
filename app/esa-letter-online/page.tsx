@@ -64,7 +64,10 @@ export default function EsaLetterOnlinePage() {
       <Header />
 
       <main className="flex-1">
-        <EsaOnlineHero />
+        <EsaOnlineHero
+          imageMobile="/esa-online/esa-online-herosection_mobile.png"
+          imageTablet="/esa-online/esa-online-herosection_tablet.png"
+        />
         <EsaOnlineTrustCards />
         <EsaOnlineHowItWorks />
         <EsaOnlineWhatIs />

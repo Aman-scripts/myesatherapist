@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { CtaButton } from "./EsaOnlineShared";
+import { CtaButton, WaveImage } from "./EsaOnlineShared";
 
 /*
  * From `lg` up, type and spacing scale with the viewport (vw) and cap at their 1440px design
@@ -30,8 +30,14 @@ export function EsaOnlineWhatIs() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 py-14 sm:py-20 lg:py-[min(4.86vw,70px)]">
-        <div className="w-full max-w-[737px] lg:max-w-[min(42.4vw,610px)] flex flex-col gap-10 lg:gap-[min(3.75vw,54px)]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.86vw,70px)]">
+        <WaveImage
+          alt="Woman hugging her emotional support dog"
+          badge={false}
+          mobile={{ src: "/esa-online/esa-online-whatisesa_mobile.png", w: 390, h: 425, crop: { x: 3, y: 3, w: 384, h: 415 } }}
+          tablet={{ src: "/esa-online/esa-online-whatisesa_tablet.png", w: 834, h: 521, crop: { x: 14, y: 14, w: 806, h: 502 } }}
+        />
+        <div className="w-full max-w-[737px] lg:max-w-[min(42.4vw,610px)] text-center lg:text-left flex flex-col gap-10 lg:gap-[min(3.75vw,54px)]">
           <div className="flex flex-col gap-4">
             <h2 className={H2}>What is an ESA Letter?</h2>
             <p className={P}>
@@ -50,7 +56,7 @@ export function EsaOnlineWhatIs() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
             <a
               href="/blog/esa-guide/"
               className="inline-flex h-12 items-center rounded-[30px] bg-[#FAF7F2] px-8 font-sans font-semibold text-base text-[#2E5A66] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f1ece2] transition-colors"
@@ -61,15 +67,6 @@ export function EsaOnlineWhatIs() {
           </div>
         </div>
 
-        <div className="lg:hidden relative mt-10 mx-auto w-full max-w-[380px] aspect-[2096/3520]">
-          <Image
-            src="/esa-online/esa-letter-online_whatisanesaletter.png"
-            alt="Woman hugging her emotional support dog"
-            fill
-            className="object-contain"
-            sizes="380px"
-          />
-        </div>
       </div>
     </section>
   );

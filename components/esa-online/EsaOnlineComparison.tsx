@@ -42,7 +42,7 @@ export function EsaOnlineComparison() {
         </div>
 
         {/* Comparison table */}
-        <div className="relative w-full max-w-[1062px] rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
+        <div className="hidden lg:block relative w-full max-w-[1062px] rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
           <div className="grid grid-cols-[1fr_130px_1fr] sm:grid-cols-[1fr_180px_1fr] md:grid-cols-[1fr_260px_1fr] lg:grid-cols-[1fr_297px_1fr]">
             {/* Header row */}
             <div className="flex h-[64px] items-center justify-center text-[#2E5A66] font-bold text-lg sm:text-2xl" style={LATO}>
@@ -95,6 +95,52 @@ export function EsaOnlineComparison() {
                 </React.Fragment>
               );
             })}
+          </div>
+        </div>
+
+        {/* Mobile & tablet (< 1024px): raised center card */}
+        <div className="block lg:hidden w-full max-w-[361px] sm:max-w-[600px] md:max-w-[680px] relative mx-auto pt-6">
+          <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-4">
+            <div className="flex items-center justify-between px-2 sm:px-6 h-[64px] sm:h-[72px]">
+              <div className="w-[88px] sm:w-[150px] md:w-[170px] text-center">
+                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-[#2E5A66]">Features</h3>
+              </div>
+              <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
+              <div className="w-[96px] sm:w-[150px] md:w-[170px] text-center">
+                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-[#2E5A66]">Others</h3>
+              </div>
+            </div>
+            <div className="divide-y divide-[#C8B9A7]/40">
+              {ROWS.map((row) => (
+                <div key={row.feature} className="flex items-center justify-between h-[84px] sm:h-[92px] px-2 sm:px-6">
+                  <div className="w-[88px] sm:w-[150px] md:w-[170px] flex items-center justify-center text-center">
+                    <span className="font-heading font-bold text-[13.5px] sm:text-[15px] md:text-[16px] text-[#2E5A66] leading-tight">{row.feature}</span>
+                  </div>
+                  <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
+                  <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1 gap-1.5">
+                    <Image src={`${P}-${row.other.type}-icon.svg`} alt="" width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
+                    <span className="italic text-[11px] sm:text-[13px] text-[#5F6B6F] leading-[15px]" style={LATO}>{row.other.text}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[134px] sm:w-[214px] md:w-[234px] bg-white rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4">
+            <div className="h-[68px] sm:h-[76px] rounded-b-[20px] flex items-center justify-center px-2 text-center shadow-md" style={{ backgroundImage: TEAL_GRADIENT }}>
+              <h3 className="font-heading font-bold text-[14.5px] sm:text-[17px] text-[#FAF7F2] leading-[17px] tracking-tight">
+                MY ESA
+                <br />
+                THERAPIST
+              </h3>
+            </div>
+            <div className="divide-y divide-[#C8B9A7]/30">
+              {ROWS.map((row) => (
+                <div key={row.feature} className="flex items-center justify-center h-[84px] sm:h-[92px]">
+                  <GreenCheck />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

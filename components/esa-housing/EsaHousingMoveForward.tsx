@@ -5,7 +5,7 @@ import { LATO, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
 export function EsaHousingMoveForward() {
   return (
     <section className="relative w-full overflow-hidden" style={{ backgroundImage: TEAL_GRADIENT }}>
-      <div className="absolute right-0 bottom-0 h-[45%] sm:h-[60%] lg:h-auto lg:w-[min(17.4vw,250px)] aspect-[254/262] pointer-events-none">
+      <div className="hidden sm:block absolute right-0 bottom-0 sm:h-[60%] lg:h-auto lg:w-[min(17.4vw,250px)] aspect-[254/262] pointer-events-none">
         <Image
           src="/esa-housing/esa-letter-housing_moveforwardsection-pawicon.png"
           alt=""

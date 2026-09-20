@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { WaveImage } from "@/components/esa-online/EsaOnlineShared";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -53,12 +54,17 @@ export function EsaRenewalWhySection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[4.5vw] xl:pl-20 xl:pr-0 py-16 sm:py-20 lg:py-[4.5vw] xl:py-[65px]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[4.5vw] xl:pl-20 xl:pr-0 pb-16 sm:pb-20 lg:py-[4.5vw] xl:py-[65px]">
+        <WaveImage
+          alt="Licensed emotional support animal therapist evaluation process"
+          mobile={{ src: "/esa-renewal/esa-renwal_whyconsidering_mobile.png", w: 390, h: 512, crop: { x: 0, y: 237, w: 390, h: 274 } }}
+          tablet={{ src: "/esa-renewal/esa-renwal_whyconsidering_tablet.png", w: 834, h: 1049, crop: { x: 0, y: 449, w: 834, h: 600 } }}
+        />
         {/* Left Column: Heading + Subtitle + 3 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[46vw] xl:max-w-[626px] flex flex-col gap-10 lg:gap-[3vw] xl:gap-14">
           {/* Header Text (Frame 1000011447) */}
-          <div className="flex flex-col gap-5 lg:gap-[1.95vw] xl:gap-7">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.7vw] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[3.4vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px]">
+          <div className="flex flex-col gap-5 lg:gap-[1.95vw] xl:gap-7 text-center lg:text-left">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.7vw] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[3.4vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
               Why Consider Renewing Your ESA Letter Through Our Platform
             </h2>
             <p className="font-sans text-base sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.67]">
@@ -107,16 +113,6 @@ export function EsaRenewalWhySection() {
           </div>
         </div>
 
-        {/* Illustration for smaller screens: stacked below the content */}
-        <div className="lg:hidden relative mt-10 ml-auto w-full max-w-[340px] aspect-[681/1226]">
-          <Image
-            src="/esa-renewal/esa-renewal-whyconsiderrenew-image.png"
-            alt="Licensed emotional support animal therapist evaluation process"
-            fill
-            className="object-contain object-right"
-            sizes="340px"
-          />
-        </div>
       </div>
     </section>
   );

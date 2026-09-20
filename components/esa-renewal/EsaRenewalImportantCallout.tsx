@@ -8,7 +8,7 @@ export function EsaRenewalImportantCallout() {
     <section className="w-full bg-[#FAF7F2] py-8 sm:py-12">
       <div className="max-w-[1099px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Frame 1000012004 */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 rounded-[24px] sm:rounded-l-[10px] sm:rounded-r-[30px] bg-[#FF383C]/10 py-6 sm:py-8 px-6 sm:pl-0 sm:pr-[67px] lg:pr-10 xl:pr-[67px]">
+        <div className="flex flex-col items-center text-center sm:text-left sm:flex-row sm:items-center gap-4 sm:gap-6 rounded-[24px] sm:rounded-l-[10px] sm:rounded-r-[30px] bg-[#FF383C]/10 py-6 sm:py-8 px-6 sm:pl-0 sm:pr-[67px] lg:pr-10 xl:pr-[67px]">
           {/* Rectangle 25: red left accent bar (full height) */}
           <div className="hidden sm:block self-stretch -my-6 sm:-my-8 w-[19px] shrink-0 rounded-l-[10px] bg-[#E42529]" />
 

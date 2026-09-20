@@ -63,6 +63,8 @@ export default function ContributorsPage() {
           buttonText="Explore the Team"
           buttonHref="#authors"
           image="/contributors/contributors_herosection.png"
+          imageMobile="/contributors/contributors_herosection-mobile.png"
+          imageTablet="/contributors/contributors_herosection-tablet.png"
           imageAlt="Legal reviewers at a desk with books on disability rights and tenant protections"
         />
 

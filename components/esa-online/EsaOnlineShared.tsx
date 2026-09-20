@@ -16,10 +16,10 @@ export function CtaButton({
   return (
     <a
       href={href}
-      className={`group inline-flex h-12 items-center justify-between gap-2 rounded-[30px] pl-[34px] pr-[3px] text-white font-sans font-semibold text-base leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all ${className}`}
+      className={`group inline-flex min-h-12 max-w-full items-center justify-between gap-2 rounded-[30px] pl-6 sm:pl-[34px] pr-[3px] text-white font-sans font-semibold text-base leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all ${className}`}
       style={{ backgroundImage: TEAL_GRADIENT }}
     >
-      <span className="pr-4 whitespace-nowrap">{children}</span>
+      <span className="pr-2 sm:pr-4 py-1 text-center lg:whitespace-nowrap">{children}</span>
       <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
         <Image src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
       </span>
@@ -37,7 +37,7 @@ export function GoldCallout({
   className?: string;
 }) {
   return (
-    <div className={`flex w-full overflow-hidden rounded-[10px] rounded-r-[30px] bg-[#E8B92C]/15 ${className}`}>
+    <div className={`flex w-full overflow-hidden rounded-[10px] rounded-r-[30px] bg-[#E8B92C]/15 text-left ${className}`}>
       <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#E8B92C]" />
       <div className="flex flex-col gap-1 py-4 sm:py-5 px-4 sm:px-6">
         {title && (
@@ -102,6 +102,81 @@ export function FeatureCard({
       >
         <Image src={icon} alt="" width={iconW} height={iconH} style={{ width: iconW, height: iconH }} className="object-contain" />
       </div>
+    </div>
+  );
+}
+
+export interface WaveImageSource {
+  src: string;
+  /** Natural size of the file. */
+  w: number;
+  h: number;
+  /** Visible region of the file, for artwork exported with a large transparent canvas. */
+  crop?: { x: number; y: number; w: number; h: number };
+}
+
+function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; alt: string; priority?: boolean }) {
+  const c = img.crop;
+  if (!c) {
+    return (
+      <div className="relative w-full" style={{ aspectRatio: `${img.w} / ${img.h}` }}>
+        <Image src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
+      </div>
+    );
+  }
+  return (
+    <div className="relative w-full overflow-hidden" style={{ aspectRatio: `${c.w} / ${c.h}` }}>
+      <Image
+        src={img.src}
+        alt={alt}
+        width={img.w}
+        height={img.h}
+        priority={priority}
+        sizes="100vw"
+        className="absolute max-w-none"
+        style={{
+          width: `${(img.w / c.w) * 100}%`,
+          height: `${(img.h / c.h) * 100}%`,
+          left: `${(-c.x / c.w) * 100}%`,
+          top: `${(-c.y / c.h) * 100}%`,
+        }}
+      />
+    </div>
+  );
+}
+
+/**
+ * Full-bleed mobile (< sm) / tablet (sm to < lg) artwork with the curved bottom edge.
+ * Place it as the first child of a section container that has horizontal padding of px-4 sm:px-8.
+ */
+export function WaveImage({
+  alt,
+  mobile,
+  tablet,
+  badge = true,
+}: {
+  alt: string;
+  mobile: WaveImageSource;
+  tablet: WaveImageSource;
+  badge?: boolean;
+}) {
+  return (
+    <div className="lg:hidden relative -mx-4 sm:-mx-8 mb-12">
+      <div className="sm:hidden">
+        <WaveImageFrame img={mobile} alt={alt} />
+      </div>
+      <div className="hidden sm:block">
+        <WaveImageFrame img={tablet} alt={alt} />
+      </div>
+      {badge && (
+        <Image
+          src="/about-us/about_us-legimateesasection-hearticon.svg"
+          alt=""
+          width={64}
+          height={64}
+          className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[45%] w-14 h-14 sm:w-16 sm:h-16 z-20"
+        />
+      )}
     </div>
   );
 }

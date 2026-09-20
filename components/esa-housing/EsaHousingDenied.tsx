@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { WaveImage } from "@/components/esa-online/EsaOnlineShared";
 import { SCALED_H2 } from "./EsaHousingShared";
 
 const ICON = "/esa-housing/esa-letter-housing_housinglawssection-allcards-icon.svg";
@@ -36,9 +37,16 @@ export function EsaHousingDenied() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 py-14 sm:py-20 lg:py-[min(4.5vw,65px)] lg:flex lg:items-center lg:min-h-[inherit]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.5vw,65px)] lg:flex lg:items-center lg:min-h-[inherit]">
+        <div className="lg:hidden">
+          <WaveImage
+            alt="Woman looking worried at an ESA denied notice with legal books beside her"
+            mobile={{ src: "/esa-housing/esa-letter-housing_ifesadeniend_mobile.png", w: 390, h: 512, crop: { x: 0, y: 165, w: 390, h: 346 } }}
+            tablet={{ src: "/esa-housing/esa-letter-housing_ifesadeniend_tablet.png", w: 834, h: 1049, crop: { x: 0, y: 211, w: 834, h: 838 } }}
+          />
+        </div>
         <div className="w-full max-w-[626px] lg:max-w-[min(41vw,590px)] flex flex-col gap-8 lg:gap-[min(2.5vw,36px)]">
-          <h2 className={`${SCALED_H2} lg:max-w-[min(43.5vw,626px)]`}>What to Do If Your ESA Is Denied Without a Valid Reason?</h2>
+          <h2 className={`${SCALED_H2} text-center lg:text-left lg:max-w-[min(43.5vw,626px)]`}>What to Do If Your ESA Is Denied Without a Valid Reason?</h2>
 
           <div className="flex flex-col gap-5 lg:gap-[min(1.5vw,22px)]">
             {STEPS.map((s) => (
@@ -58,15 +66,6 @@ export function EsaHousingDenied() {
           </div>
         </div>
 
-        <div className="lg:hidden relative mt-10 mx-auto w-full max-w-[420px] aspect-[2235/2496]">
-          <Image
-            src="/esa-housing/esa-letter-housing_esaisdenied.png"
-            alt="Woman looking worried at an ESA denied notice with legal books beside her"
-            fill
-            className="object-contain"
-            sizes="420px"
-          />
-        </div>
       </div>
     </section>
   );

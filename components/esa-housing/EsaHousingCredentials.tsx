@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
+import { CtaButton, WaveImage } from "@/components/esa-online/EsaOnlineShared";
 import { SCALED_H2, SCALED_P } from "./EsaHousingShared";
 
 export function EsaHousingCredentials() {
@@ -17,8 +17,13 @@ export function EsaHousingCredentials() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 py-14 sm:py-20 lg:py-[min(4.5vw,65px)]">
-        <div className="w-full max-w-[626px] lg:max-w-[min(43.5vw,626px)] flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.5vw,65px)]">
+        <WaveImage
+          alt="Woman with her emotional support dog at home"
+          mobile={{ src: "/esa-housing/esa-letter-housing_whycredentialsmatter-mobile.png", w: 1254, h: 1254, crop: { x: 809, y: 61, w: 415, h: 532 } }}
+          tablet={{ src: "/esa-housing/esa-letter-housing_whycredentialsmatter-tablet.png", w: 1254, h: 1254, crop: { x: 28, y: 50, w: 742, h: 570 } }}
+        />
+        <div className="w-full max-w-[626px] lg:max-w-[min(43.5vw,626px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4 lg:gap-[min(1.9vw,28px)]">
             <h2 className={`${SCALED_H2} lg:max-w-[min(37.6vw,541px)]`}>Why Professional Credentials Matter?</h2>
             <p className={SCALED_P}>
@@ -26,11 +31,11 @@ export function EsaHousingCredentials() {
             </p>
           </div>
 
-          <div>
+          <div className="flex justify-center lg:justify-start">
             <CtaButton href="/pricing/">Work with Licensed Professionals</CtaButton>
           </div>
 
-          <div className="flex overflow-hidden rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
+          <div className="flex overflow-hidden text-left rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
             <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#1D6E72]" />
             <div className="flex flex-col gap-1 px-5 py-4">
               <h3 className="font-heading font-bold text-[20px] leading-7 text-[#2E5A66]">Important</h3>
@@ -41,15 +46,6 @@ export function EsaHousingCredentials() {
           </div>
         </div>
 
-        <div className="lg:hidden relative mt-10 mx-auto w-full max-w-[420px] aspect-[2097/2073]">
-          <Image
-            src="/esa-housing/esa-letter-housing_whyprofessionalcredentials.png"
-            alt="Woman with her emotional support dog at home"
-            fill
-            className="object-contain"
-            sizes="420px"
-          />
-        </div>
       </div>
     </section>
   );
