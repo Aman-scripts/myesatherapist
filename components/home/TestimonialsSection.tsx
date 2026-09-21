@@ -6,21 +6,21 @@ import Image from "next/image";
 const reviews = [
   {
     id: "vId0sRVPY0I",
-    name: "Marianne C",
+    name: "Constance",
     quote:
-      "“I received a legitimate letter that was approved by my landlord in no time. Myla gets to stay with me, and that means everything.”",
+      "“Looking for an ESA letter in Houston was stressful until I found My ESA Therapist. The process was fast, legitimate, and helped keep my emotional support dog with me.”",
   },
   {
     id: "gxdipq0J2No",
-    name: "David K",
+    name: "Leighann",
     quote:
-      "“The evaluation was simple, professional, and thorough. I felt truly listened to and supported throughout the entire process.”",
+      "“The doctor was so kind, patient, and understanding during my consultation. The entire experience was smooth, legitimate, and completely stress-free.”",
   },
   {
     id: "Mjf33Y0NvVc",
-    name: "Sarah M",
+    name: "April E",
     quote:
-      "“Having my ESA documentation gave me peace of mind in my apartment. The telehealth consultation was quick and very reassuring.”",
+      "“Customer service was responsive from the very start. The consultation was authentic, licensed, and completed quickly without any hassle.”",
   },
 ];
 
