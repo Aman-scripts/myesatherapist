@@ -7,21 +7,21 @@ import Image from "next/image";
 const steps = [
   {
     number: "1",
-    image: "/home/howworks-section-one.png",
+    image: "/esa-renewal/esa-renewal-processworks-step1.png",
     title: "Set Up Your Appointment",
     description:
       "Create your account and choose a time that works for you to connect with a licensed mental health professional.",
   },
   {
     number: "2",
-    image: "/home/howworks-section-two.png",
+    image: "/esa-renewal/esa-renewal-processworks-step2.png",
     title: "Speak With Professionals",
     description:
       "During the consultation, the professional reviews your emotional and mental health concerns and assesses whether an emotional support animal is appropriate.",
   },
   {
     number: "3",
-    image: "/home/howworks-section-three.png",
+    image: "/esa-renewal/esa-renewal-processworks-step3.png",
     title: "Clinical Determination",
     description:
       "Following the professional evaluation, if deemed appropriate by the licensed professional, emotional support animal documentation is sent directly to your email. If not, no documentation is issued.",
@@ -38,7 +38,7 @@ export function HowItWorks() {
             <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
               How Online ESA Evaluation Works?
             </h2>
-            <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-lg font-semibold max-w-xl mx-auto">
+            <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-lg font-semibold max-w-3xl mx-auto">
               A simple 3-step process to complete your emotional support animal letter evaluation
             </p>
           </div>
