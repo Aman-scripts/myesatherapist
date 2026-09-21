@@ -127,7 +127,7 @@ export default function PsdLetterPage() {
 
         {/* 6. Plans & Pricing (Warm background bg-[#FAF7F2] matching Benefits Section) */}
         <div id="pricing">
-          <PricingSection bgColor="bg-[#FAF7F2]" />
+          <PricingSection bgColor="bg-[#FAF7F2]" defaultPlan="psd" />
         </div>
 
         {/* 7. PSD vs ESA Comparison Table (Dedicated Section) */}
