@@ -192,3 +192,12 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(232, 185, 44, 0.6);
 }
+
+/*
+ * Optical centering for the paper-plane arrow used inside the round button badges.
+ * The glyph's visual weight sits ~9% right of its box (tip at the top-right), so it looked
+ * off-centre in the circle. Shift it left by that amount everywhere the icon is used.
+ */
+img[src$="/send-icon.svg"] {
+  transform: translateX(-9%);
+}
