@@ -18,6 +18,7 @@ function FeatureBadgeIcon() {
 }
 
 import { StateData } from "@/data/statesData";
+import { HelpPlanCard } from "@/components/home/PricingSection";
 
 interface StatePricingSectionProps {
   stateName?: string;
@@ -64,7 +65,7 @@ export function StatePricingSection({ stateName, data }: StatePricingSectionProp
         </div>
 
         {/* Pricing Cards Container */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-8 w-full max-w-[660px] mx-auto">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center md:items-start lg:items-center justify-center gap-6 lg:gap-4 w-full max-w-[1000px] mx-auto">
           {/* 1. Starter Plan Card: ESA Letter */}
           <div className="w-full sm:w-[300px] min-h-[466px] bg-white rounded-[24px] border border-[#E1E1E1] p-7 sm:p-8 shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col justify-between shrink-0">
             <div className="space-y-4">
@@ -162,6 +163,9 @@ export function StatePricingSection({ stateName, data }: StatePricingSectionProp
               </div>
             </div>
           </div>
+
+          {/* 3. Not sure which one? */}
+          <HelpPlanCard ctaHref="#faq" className="lg:self-stretch" />
         </div>
       </div>
     </section>

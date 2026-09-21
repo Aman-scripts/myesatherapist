@@ -153,6 +153,26 @@ function PlanButton({ href, children, compact = false }: { href: string; childre
   );
 }
 
+/** Highlighted "Not Sure Which One?" card. Shared by the home/PSD/pricing section and the state pages. */
+export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
+  return (
+    <div className={`w-full max-w-[340px] lg:max-w-none lg:w-[308px] lg:min-h-[486px] shrink-0 rounded-[28px] bg-[#E8B92C] p-1 lg:pt-[10px] shadow-[0_8px_18px_rgba(0,0,0,0.1),0_33px_33px_rgba(0,0,0,0.09),0_73px_44px_rgba(0,0,0,0.05)] flex flex-col ${className}`}>
+      <div className="flex-1 w-full bg-white rounded-[24px] px-8 pt-[30px] lg:pt-[15px] pb-8 shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12)] flex flex-col gap-8">
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-1">
+            <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">{HELP_CARD.title}</h3>
+            <p className="text-[14px] text-[#666666] font-semibold leading-[26px] font-sans">{HELP_CARD.description}</p>
+          </div>
+          <FeatureList features={HELP_CARD.features} />
+        </div>
+        <div className="flex justify-center mt-auto">
+          <PlanButton href={ctaHref} compact>{HELP_CARD.buttonText}</PlanButton>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 interface PricingSectionProps {
   bgColor?: string;
   /** Which plan set the toggle starts on. */
@@ -231,21 +251,7 @@ export function PricingSection({
               </div>
             ))}
 
-            {/* Highlighted help card */}
-            <div className="w-full max-w-[340px] lg:max-w-none lg:w-[308px] lg:min-h-[486px] shrink-0 rounded-[28px] bg-[#E8B92C] p-1 lg:pt-[10px] shadow-[0_8px_18px_rgba(0,0,0,0.1),0_33px_33px_rgba(0,0,0,0.09),0_73px_44px_rgba(0,0,0,0.05)] flex flex-col">
-              <div className="flex-1 w-full bg-white rounded-[24px] px-8 pt-[30px] lg:pt-[15px] pb-8 shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12)] flex flex-col gap-8">
-                <div className="flex flex-col gap-8">
-                  <div className="flex flex-col gap-1">
-                    <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">{HELP_CARD.title}</h3>
-                    <p className="text-[14px] text-[#666666] font-semibold leading-[26px] font-sans">{HELP_CARD.description}</p>
-                  </div>
-                  <FeatureList features={HELP_CARD.features} />
-                </div>
-                <div className="flex justify-center mt-auto">
-                  <PlanButton href={ctaHref} compact>{HELP_CARD.buttonText}</PlanButton>
-                </div>
-              </div>
-            </div>
+            <HelpPlanCard ctaHref={ctaHref} />
           </div>
 
           {/* Dog & hand artwork, bottom right of the section */}
