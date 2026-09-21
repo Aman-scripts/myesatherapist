@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { InitialsAvatar } from "@/components/common/InitialsAvatar";
+import { TRUSTPILOT_REVIEWS } from "@/data/trustpilotReviews";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -11,44 +13,7 @@ interface TestimonialItem {
   avatar?: string;
 }
 
-const TESTIMONIALS: TestimonialItem[] = [
-  {
-    quote:
-      "“Finally, a legitimate ESA service! My therapist was professional and understanding. Got my letter in under 24 hours and my landlord accepted it immediately.”",
-    name: "Jason T., Texas",
-    avatar: "/about-us/about_us-trusted-section-one.jpg",
-  },
-  {
-    quote:
-      "“The video consultation was smooth and respectful. The therapist listened to all my anxiety concerns and provided an official letter that answered every landlord requirement.”",
-    name: "Sarah M., California",
-    avatar: "/about-us/about_us-trusted-section-two.jpg",
-  },
-  {
-    quote:
-      "“Extremely transparent and HIPAA compliant. No hidden fees or fake ID card upselling like other sites. Truly professional healthcare service!”",
-    name: "David K., Florida",
-    avatar: "/about-us/about_us-trusted-section-one.jpg",
-  },
-  {
-    quote:
-      "“My housing provider accepted the recommendation letter right away and waived the pet deposit without any issues. Super grateful!”",
-    name: "Emily R., New York",
-    avatar: "/about-us/about_us-trusted-section-two.jpg",
-  },
-  {
-    quote:
-      "“Fast, legitimate, and stress-free process from start to finish. Having my ESA letter gave me real peace of mind in my apartment.”",
-    name: "Michael B., Illinois",
-    avatar: "/about-us/about_us-trusted-section-one.jpg",
-  },
-  {
-    quote:
-      "“The whole experience was compassionate, professional, and quick. Landlord approved my accommodation within a day!”",
-    name: "Jessica L., Washington",
-    avatar: "/about-us/about_us-trusted-section-two.jpg",
-  },
-];
+const TESTIMONIALS: TestimonialItem[] = TRUSTPILOT_REVIEWS.map((r) => ({ quote: r.quote, name: r.name }));
 
 interface Props {
   bgColor?: string;
@@ -143,14 +108,11 @@ export function TrustedByPetOwnersSection({
               >
                 {/* 5 Stars (24px) */}
                 <div className="flex items-center justify-center gap-1 h-[24px]">
-                  {[0, 1, 2, 3].map((s) => (
+                  {[0, 1, 2, 3, 4].map((s) => (
                     <svg key={s} width="24" height="24" viewBox="0 0 24 24" fill="#FDD264" className="w-6 h-6">
                       <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
                     </svg>
                   ))}
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFEEC1" className="w-6 h-6">
-                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-                  </svg>
                 </div>
 
                 {/* Quote Text */}
@@ -167,13 +129,11 @@ export function TrustedByPetOwnersSection({
             <div className="flex flex-col items-center gap-2">
               {/* Avatar (60px x 60px with 4px white border) */}
               <div className="w-[60px] h-[60px] rounded-full border-[4px] border-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] overflow-hidden relative bg-[#E8F0F1] shrink-0">
-                <Image
-                  src={current.avatar || "/about-us/about_us-trusted-section-one.jpg"}
-                  alt={current.name}
-                  fill
-                  className="object-cover"
-                  sizes="60px"
-                />
+                {current.avatar ? (
+                  <Image src={current.avatar} alt={current.name} fill className="object-cover" sizes="60px" />
+                ) : (
+                  <InitialsAvatar name={current.name} index={activeIdx} className="absolute inset-0 text-[20px]" />
+                )}
               </div>
 
               {/* Name */}
