@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -55,6 +56,15 @@ export function getTherapistLinkedin(t: Therapist): string {
   return "https://www.linkedin.com/company/myesatherapist/";
 }
 
+/** Internal doctor profile page for a therapist. */
+export function getTherapistProfileHref(t: Therapist): string {
+  const lower = t.name.toLowerCase();
+  if (lower.includes("robert") || lower.includes("staaf")) return "/esa-doctors/dr-robert-staff/";
+  if (lower.includes("leslie") || lower.includes("gamble")) return "/esa-doctors/dr-leslie-k-gamble/";
+  if (lower.includes("gaurav") || lower.includes("patel")) return "/esa-doctors/dr-gaurav-patel/";
+  return "/esa-doctors/";
+}
+
 const defaultTherapists: Therapist[] = [
   {
     id: 1,
@@ -106,10 +116,10 @@ function StatBadge({ label, value }: { label: string; value: string }) {
             className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4"
           />
         </div>
-        <div className="text-[11px] sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight truncate">
+        <div className="text-[11px] sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight truncate 2xl:whitespace-normal 2xl:overflow-visible 2xl:text-clip">
           {label}
         </div>
-        <div className="text-[9.5px] sm:text-[11.5px] font-semibold text-[#5F6B6F] mt-0.5 sm:mt-1 leading-tight truncate">
+        <div className="text-[9.5px] sm:text-[11.5px] font-semibold text-[#5F6B6F] mt-0.5 sm:mt-1 leading-tight truncate 2xl:whitespace-normal 2xl:overflow-visible 2xl:text-clip">
           {value}
         </div>
       </div>
@@ -165,7 +175,7 @@ export function TherapistsSection({
 
   return (
     <section className="py-16 lg:py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[950px] mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:whitespace-nowrap">
@@ -197,7 +207,7 @@ export function TherapistsSection({
         {/* Therapist Sliding Carousel Track */}
         <div
           ref={scrollRef}
-          className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-4 sm:px-6 lg:px-2"
+          className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-4 sm:px-6 lg:px-2 2xl:overflow-visible 2xl:snap-none 2xl:justify-center 2xl:px-0"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {therapists.map((t, idx) => {
@@ -207,7 +217,7 @@ export function TherapistsSection({
                 key={t.id ?? `${t.name}-${idx}`}
                 data-card
                 onClick={() => scrollToSlide(idx)}
-                className={`snap-start shrink-0 w-[86vw] sm:w-[460px] lg:w-[500px] xl:w-[520px] rounded-[28px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white ${
+                className={`snap-start shrink-0 w-[86vw] sm:w-[460px] lg:w-[500px] xl:w-[520px] 2xl:w-auto 2xl:flex-1 2xl:min-w-0 2xl:max-w-[520px] rounded-[28px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white ${
                   isActive
                     ? "shadow-[0_12px_36px_rgba(232,185,44,0.2)]"
                     : "shadow-[0_4px_20px_rgba(0,0,0,0.06)] opacity-95 hover:opacity-100"
@@ -265,10 +275,8 @@ export function TherapistsSection({
 
                   {/* View Profile CTA Button INSIDE the Card */}
                   <div className="pt-2 flex justify-center">
-                    <a
-                      href={getTherapistLinkedin(t)}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href={getTherapistProfileHref(t)}
                       onClick={(e) => e.stopPropagation()}
                       className="w-[172px] sm:w-[185px] h-[44px] sm:h-[46px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] text-[#184652] font-bold text-[15px] sm:text-[16px] transition-all flex items-center justify-between pl-6 pr-1.5 shadow-sm"
                     >
@@ -282,7 +290,7 @@ export function TherapistsSection({
                           className="w-4 h-4 object-contain"
                         />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -291,7 +299,7 @@ export function TherapistsSection({
         </div>
 
         {/* Carousel Pagination Dots */}
-        <div className="flex items-center justify-center gap-2 pt-6 sm:pt-8">
+        <div className="flex 2xl:hidden items-center justify-center gap-2 pt-6 sm:pt-8">
           {therapists.map((_, idx) => (
             <button
               key={idx}
