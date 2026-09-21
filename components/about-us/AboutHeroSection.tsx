@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Clock, Award, ChevronDown } from "lucide-react";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const statsData = [
   { value: "51,488+", label: "ESA Evaluations" },
@@ -322,41 +323,7 @@ export function AboutHeroSection() {
             </p>
 
             {/* Trustpilot Floating Badge Card */}
-            <div className="w-[195px] xl:w-[201px] h-[100px] xl:h-[105px] bg-white/75 backdrop-blur-[12px] border border-white/50 shadow-[0px_2px_8px_rgba(0,0,0,0.08)] rounded-[20px] p-3 flex flex-col items-center justify-center space-y-1.5">
-              {/* Trustpilot Logo & Text */}
-              <div className="flex items-center gap-1.5">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L14.7 8.3L21.5 9.1L16.3 13.8L17.8 20.6L12 17.1L6.2 20.6L7.7 13.8L2.5 9.1L9.3 8.3L12 2Z" fill="#00B67A"/>
-                </svg>
-                <span className="font-[family-name:var(--font-lato)] font-normal text-sm text-[#5F6B6F]">
-                  Trustpilot
-                </span>
-              </div>
-
-              {/* 5 Green Stars */}
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] bg-[#00B67A] flex items-center justify-center rounded-[2px]">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/>
-                    </svg>
-                  </div>
-                ))}
-                {/* 5th Half Star (4.4 rating) */}
-                <div className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] bg-[#CCCCCC] relative overflow-hidden flex items-center justify-center rounded-[2px]">
-                  <div className="absolute left-0 top-0 bottom-0 w-[55%] bg-[#00B67A]" />
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="white" className="relative z-10">
-                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Trustscore & Reviews */}
-              <div className="flex items-center justify-between w-full px-1 text-[11px] font-[family-name:var(--font-lato)] text-[#5F6B6F]">
-                <span>Trustscore 4.4</span>
-                <span>23,900 reviews</span>
-              </div>
-            </div>
+            <ReviewBadges />
           </div>
         </div>
       </div>

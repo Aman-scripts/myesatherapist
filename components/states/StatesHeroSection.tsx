@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
@@ -454,36 +455,7 @@ export function StatesHeroSection() {
             </div>
 
             {/* Trustpilot Review Card */}
-            <div className="mt-2 inline-flex flex-col items-start justify-center p-3.5 px-5 bg-white/75 backdrop-blur-md border border-white/60 rounded-[14px] shadow-[0px_2px_8px_rgba(0,0,0,0.06)] max-w-[210px]">
-              <div className="flex items-center gap-1.5 mb-1.5">
-                <svg className="w-4 h-4 text-[#00B67A] fill-current" viewBox="0 0 24 24">
-                  <path d="M12 0l3.708 7.514 8.292 1.205-6 5.849 1.416 8.257-7.416-3.9-7.416 3.9 1.416-8.257-6-5.849 8.292-1.205z"/>
-                </svg>
-                <span className="font-sans font-bold text-xs text-[#5F6B6F]">Trustpilot</span>
-              </div>
-
-              <div className="flex items-center gap-1 mb-1.5">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-[18px] h-[18px] bg-[#00B67A] rounded-[2px] flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
-                    </svg>
-                  </div>
-                ))}
-                <div className="w-[18px] h-[18px] bg-[#CCCCCC] rounded-[2px] relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute left-0 top-0 bottom-0 w-1/2 bg-[#00B67A]" />
-                  <svg className="w-3 h-3 text-white fill-current relative z-10" viewBox="0 0 24 24">
-                    <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
-                  </svg>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between w-full text-[11px] font-sans text-[#5F6B6F] gap-1">
-                <span>Trustscore <strong>4.4</strong></span>
-                <span>•</span>
-                <span><strong>23,900</strong> reviews</span>
-              </div>
-            </div>
+            <div className="mt-2"><ReviewBadges /></div>
 
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -117,49 +118,7 @@ export function EsaRenewalHero() {
           </div>
 
           {/* Frosted Glass Reviews (Trustpilot & ConsumerAffairs) */}
-          <div className="hidden lg:flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
-            {/* Trustpilot Card */}
-            <div className="bg-white/70 backdrop-blur-[12px] border border-white/60 rounded-[20px] px-4 sm:px-5 lg:px-3 xl:px-5 py-3 lg:py-2 xl:py-3 shadow-[0px_2px_6px_rgba(0,0,0,0.06)] flex flex-col items-center gap-1.5 min-w-[170px] sm:min-w-[190px] lg:min-w-[150px] xl:min-w-[190px]">
-              <div className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#00B67A] fill-current" viewBox="0 0 24 24">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-                <span className="font-sans font-normal text-sm sm:text-[16px] text-[#5F6B6F]">Trustpilot</span>
-              </div>
-              {/* 5 Green Star Squares */}
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <div key={s} className="w-5 h-5 bg-[#00B67A] flex items-center justify-center rounded-[2px]">
-                    <svg className="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  </div>
-                ))}
-              </div>
-              <span className="font-sans text-[12px] text-[#5F6B6F]">Trustscore 4.4</span>
-            </div>
-
-            {/* ConsumerAffairs Card */}
-            <div className="bg-white/70 backdrop-blur-[12px] border border-white/60 rounded-[20px] px-4 sm:px-5 lg:px-3 xl:px-5 py-3 lg:py-2 xl:py-3 shadow-[0px_2px_6px_rgba(0,0,0,0.06)] flex flex-col items-center gap-1.5 min-w-[170px] sm:min-w-[190px] lg:min-w-[150px] xl:min-w-[190px]">
-              <div className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#095691] fill-current" viewBox="0 0 24 24">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-                <span className="font-sans font-normal text-xs sm:text-[15px] text-[#5F6B6F]">ConsumerAffair Reviews</span>
-              </div>
-              {/* 5 Blue Star Squares */}
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <div key={s} className="w-5 h-5 bg-[#095691] flex items-center justify-center rounded-[2px]">
-                    <svg className="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  </div>
-                ))}
-              </div>
-              <span className="font-sans text-[12px] text-[#5F6B6F]">Reviews 4.4</span>
-            </div>
-          </div>
+          <div className="hidden lg:block"><ReviewBadges /></div>
         </div>
       </div>
     </section>

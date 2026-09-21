@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
@@ -386,17 +387,7 @@ export function PsdHeroSection() {
               </a>
             </div>
 
-            <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[210px] xl:w-[230px] px-3.5 xl:px-[18px] py-2 xl:pt-[11px] xl:pb-[9px] mt-4 xl:mt-[30px]">
-              <div className="flex items-center gap-[6px]">
-                <StarMark className="w-[18px] h-[17px] xl:w-[20px] xl:h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
-                <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
-              </div>
-              <TrustpilotStars />
-              <div className="flex items-center gap-[8px] xl:gap-[10px] text-[11px] xl:text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
-                <span className="font-semibold">Trustscore 4.4</span>
-                <span>23,900 reviews</span>
-              </div>
-            </div>
+            <div className="mt-4 xl:mt-[30px]"><ReviewBadges /></div>
           </div>
         </div>
       </div>

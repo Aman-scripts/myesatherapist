@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -207,18 +208,7 @@ export function ReviewsHeroSection() {
           </div>
 
           {/* Trustpilot Glass Card (Mobile) */}
-          <div className="mt-4 p-2.5 rounded-[16px] bg-white/75 backdrop-blur-[10px] border border-white/40 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] flex flex-col items-center gap-1.5 max-w-[180px]">
-            <div className="flex items-center gap-1.5">
-              <StarMark className="w-4 h-4 text-[#00B67A]" />
-              <span className="font-[family-name:var(--font-lato)] font-bold text-xs text-[#5F6B6F]">Trustpilot</span>
-            </div>
-            <TrustpilotStars />
-            <div className="flex items-center gap-1.5 text-[10px] text-[#5F6B6F] font-[family-name:var(--font-lato)] font-medium">
-              <span>Trustscore 4.4</span>
-              <span>•</span>
-              <span>23,900 reviews</span>
-            </div>
-          </div>
+          <div className="mt-4"><ReviewBadges /></div>
         </div>
       </div>
 
@@ -347,17 +337,7 @@ export function ReviewsHeroSection() {
           </div>
 
           {/* Trustpilot Glass Card (Tablet) */}
-          <div className="mt-1 p-3 rounded-[18px] bg-white/65 backdrop-blur-[11px] border border-white/30 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] flex flex-col items-center gap-1.5 w-[190px]">
-            <div className="flex items-center gap-1.5">
-              <StarMark className="w-4 h-4 text-[#00B67A]" />
-              <span className="font-[family-name:var(--font-lato)] font-normal text-sm text-[#5F6B6F]">Trustpilot</span>
-            </div>
-            <TrustpilotStars />
-            <div className="flex items-center justify-between w-full text-[11px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">
-              <span>Trustscore 4.4</span>
-              <span>23,900 reviews</span>
-            </div>
-          </div>
+          <div className="mt-1"><ReviewBadges /></div>
         </div>
       </div>
 
@@ -486,24 +466,7 @@ export function ReviewsHeroSection() {
           </div>
 
           {/* Trustpilot Frosted Glass Card (Frame 1000011802) */}
-          <div className="box-border w-[201px] h-[105px] p-[14px_24px_12px] bg-white/55 backdrop-blur-[11.7px] border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] rounded-[20px] flex flex-col items-center justify-center gap-2">
-            {/* Header: Star + Trustpilot */}
-            <div className="flex items-center gap-1.5 h-[25px]">
-              <StarMark className="w-5 h-5 text-[#00B67A]" />
-              <span className="font-[family-name:var(--font-lato)] font-normal text-[16px] leading-[20px] text-[#5F6B6F] tracking-[-0.017em]">
-                Trustpilot
-              </span>
-            </div>
-
-            {/* 5 Rating Stars */}
-            <TrustpilotStars />
-
-            {/* Footer metrics */}
-            <div className="flex items-center justify-between w-[166px] h-[20px] text-[12px] leading-[20px] text-[#5F6B6F] font-[family-name:var(--font-lato)] tracking-[-0.017em]">
-              <span>Trustscore 4.4</span>
-              <span>23,900 reviews</span>
-            </div>
-          </div>
+          <ReviewBadges />
         </div>
       </div>
     </section>

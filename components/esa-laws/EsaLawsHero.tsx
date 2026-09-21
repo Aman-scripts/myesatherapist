@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -403,25 +404,7 @@ export function EsaLawsHero() {
           </div>
 
           {/* Trustpilot Glassmorphism Box */}
-          <div
-            className="w-[201px] h-[105px] rounded-[20px] p-3 flex flex-col justify-center items-center gap-2 border border-white/40 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] mt-1"
-            style={{
-              background: "rgba(255, 255, 255, 0.55)",
-              backdropFilter: "blur(11.7px)",
-              WebkitBackdropFilter: "blur(11.7px)",
-            }}
-          >
-            <div className="flex items-center gap-1.5">
-              <StarMark className="w-5 h-5" style={{ color: TRUSTPILOT_GREEN }} />
-              <span className="font-lato text-base text-[#5F6B6F]">Trustpilot</span>
-            </div>
-            <TrustpilotStars />
-            <div className="flex items-center gap-2 text-xs font-lato text-[#5F6B6F] whitespace-nowrap">
-              <span>Trustscore 4.4</span>
-              <span>•</span>
-              <span>23,900 reviews</span>
-            </div>
-          </div>
+          <div className="mt-1"><ReviewBadges /></div>
         </div>
       </div>
     </section>

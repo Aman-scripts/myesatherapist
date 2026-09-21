@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const AVAILABLE_STATES = [
   { name: "Alabama", slug: "alabama" },
@@ -282,48 +283,7 @@ export function DoctorsHeroSection() {
           </div>
 
           {/* Trustpilot Card: ONLY on xl desktop (hidden on mobile and tablet) */}
-          <div
-            className="hidden xl:flex w-[201px] h-[105px] rounded-[20px] p-[14px_24px_12px] flex-col justify-center items-center gap-[10px]"
-            style={{
-              background: "rgba(255, 255, 255, 0.55)",
-              border: "1px solid rgba(255, 255, 255, 0.09)",
-              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-              backdropFilter: "blur(11.7px)",
-              WebkitBackdropFilter: "blur(11.7px)",
-            }}
-          >
-            <div className="w-[166px] flex flex-col items-center gap-[8px]">
-              <div className="flex items-center gap-[6px] w-[94px] h-[25px] justify-center">
-                <svg className="w-[22px] h-[22px] text-[#00B67A] shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-                <span className="font-[family-name:var(--font-lato)] font-normal text-[16px] leading-[20px] text-[#5F6B6F] tracking-[-0.017em]">
-                  Trustpilot
-                </span>
-              </div>
-
-              <div className="flex items-center gap-[8px] w-[152px] h-[24px]">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-[24px] h-[24px] bg-[#00B67A] p-[4px] flex items-center justify-center shrink-0">
-                    <svg className="w-[16px] h-[16px] text-white" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  </div>
-                ))}
-                <div className="w-[24px] h-[24px] bg-[#CCCCCC] relative overflow-hidden flex items-center justify-center shrink-0">
-                  <div className="absolute left-0 top-0 w-[12px] h-[24px] bg-[#00B67A]" />
-                  <svg className="w-[16px] h-[16px] text-white relative z-10" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between w-[166px] h-[20px] text-[12px] font-[family-name:var(--font-lato)] font-normal text-[#5F6B6F] leading-[20px] tracking-[-0.017em]">
-                <span className="text-center">Trustscore 4.4</span>
-                <span className="text-center">23,900 reviews</span>
-              </div>
-            </div>
-          </div>
+          <div className="hidden xl:block"><ReviewBadges /></div>
 
         </div>
       </div>

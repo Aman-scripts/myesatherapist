@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
 import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
@@ -366,39 +367,7 @@ export function VideoTestimonialsHeroSection() {
           </p>
 
           {/* Review Glass Cards (Desktop) */}
-          <div className="flex items-center gap-4 pt-1">
-            {/* Trustpilot Card */}
-            <div className="w-[201px] h-[105px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] rounded-[20px] px-5 py-3.5 flex flex-col items-center justify-center gap-1.5">
-              <div className="flex items-center gap-1.5">
-                <svg className="w-[18px] h-[18px] text-[#00B67A] fill-current" viewBox="0 0 24 24">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-                <span className="font-[family-name:var(--font-lato)] text-[16px] text-[#5F6B6F] font-normal">
-                  Trustpilot
-                </span>
-              </div>
-              <TrustpilotRatingStars />
-              <span className="font-[family-name:var(--font-lato)] text-[12px] text-[#5F6B6F]">
-                Trustscore 4.4
-              </span>
-            </div>
-
-            {/* ConsumerAffairs Reviews Card */}
-            <div className="w-[221px] h-[105px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] rounded-[20px] px-3.5 py-3.5 flex flex-col items-center justify-center gap-1.5">
-              <div className="flex items-center gap-1.5">
-                <svg className="w-[18px] h-[18px] text-[#095691] fill-current" viewBox="0 0 24 24">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-                <span className="font-[family-name:var(--font-lato)] text-[15px] text-[#5F6B6F] font-normal whitespace-nowrap">
-                  ConsumerAffair Reviews
-                </span>
-              </div>
-              <ConsumerAffairsRatingStars />
-              <span className="font-[family-name:var(--font-lato)] text-[12px] text-[#5F6B6F]">
-                Reviews 4.4
-              </span>
-            </div>
-          </div>
+          <ReviewBadges />
 
         </div>
       </div>

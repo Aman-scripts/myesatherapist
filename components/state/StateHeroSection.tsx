@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { StateData } from "@/data/statesData";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
-const TRUSTPILOT_GREEN = "#00B67A";
 
 function renderHeroTitle(title?: string, stateName?: string) {
   if (!title) {
@@ -48,57 +48,6 @@ function renderHeroTitle(title?: string, stateName?: string) {
   }
 
   return title;
-}
-
-function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} style={style} fill="currentColor">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
-function TrustpilotBox() {
-  return (
-    <div className="bg-white/95 backdrop-blur-sm rounded-[18px] p-3.5 sm:p-4 border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.04)] w-fit">
-      <div className="flex items-center gap-1.5 mb-1.5">
-        <StarMark className="w-4 h-4" style={{ color: TRUSTPILOT_GREEN }} />
-        <span className="text-[14px] font-bold text-[#2E5A66] tracking-tight">
-          Trustpilot
-        </span>
-      </div>
-
-      <div className="flex items-center gap-1 mb-2">
-        {[0, 1, 2, 3].map((i) => (
-          <div
-            key={i}
-            className="w-5 h-5 sm:w-5.5 sm:h-5.5 flex items-center justify-center shrink-0 rounded-[2px]"
-            style={{ backgroundColor: TRUSTPILOT_GREEN }}
-          >
-            <StarMark className="w-3.5 h-3.5 text-white" />
-          </div>
-        ))}
-        <div
-          className="relative w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0 overflow-hidden rounded-[2px]"
-          style={{ backgroundColor: "#CCCCCC" }}
-        >
-          <div
-            className="absolute inset-y-0 left-0 w-1/2"
-            style={{ backgroundColor: TRUSTPILOT_GREEN }}
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <StarMark className="w-3.5 h-3.5 text-white" />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex items-center gap-2 text-[11.5px] text-[#5F6B6F] font-sans">
-        <span className="font-semibold">TrustScore 4.4</span>
-        <span className="text-gray-300">|</span>
-        <span>23,900 reviews</span>
-      </div>
-    </div>
-  );
 }
 
 interface EvaluationFormCardProps {
@@ -324,7 +273,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
               </p>
 
               <div className="pt-0.5 xl:pt-1">
-                <TrustpilotBox />
+                <ReviewBadges />
               </div>
             </div>
 

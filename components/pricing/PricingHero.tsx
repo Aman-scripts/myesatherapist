@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
+import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -423,18 +424,7 @@ export function PricingHero() {
           </div>
 
           {/* Trustpilot Badge (Frame 1000011802) */}
-          <div className="flex flex-col items-center gap-[6px] xl:gap-[8px] bg-white/55 backdrop-blur-sm rounded-[20px] w-[201px] px-4 py-2.5 mt-2 border border-white/10 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
-            <div className="flex items-center gap-[6px]">
-              <StarMark className="w-[18px] h-[17px] xl:w-[20px] xl:h-[19px]" style={{ color: TRUSTPILOT_GREEN }} />
-              <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-[family-name:var(--font-lato)]">Trustpilot</span>
-            </div>
-            <TrustpilotStars />
-            <div className="flex items-center gap-[8px] xl:gap-[10px] text-[11px] xl:text-xs text-[#5F6B6F] font-[family-name:var(--font-lato)] whitespace-nowrap">
-              <span>Trustscore 4.9</span>
-              <span>•</span>
-              <span>Verified Reviews</span>
-            </div>
-          </div>
+          <div className="mt-2"><ReviewBadges /></div>
         </div>
       </div>
     </section>
