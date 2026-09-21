@@ -126,15 +126,18 @@ export function EsaOnlineComparison() {
             </div>
           </div>
 
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[134px] sm:w-[214px] md:w-[234px] bg-white rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4">
-            <div className="h-[68px] sm:h-[76px] rounded-b-[20px] flex items-center justify-center px-2 text-center shadow-md" style={{ backgroundImage: TEAL_GRADIENT }}>
+          <div
+            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-14px] w-[134px] sm:w-[214px] md:w-[234px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden"
+            style={{ backgroundImage: TEAL_GRADIENT }}
+          >
+            <div className="h-[68px] sm:h-[76px] rounded-b-[20px] flex items-center justify-center px-2 text-center bg-[#1A3D4F]/35">
               <h3 className="font-heading font-bold text-[14.5px] sm:text-[17px] text-[#FAF7F2] leading-[17px] tracking-tight">
                 MY ESA
                 <br />
                 THERAPIST
               </h3>
             </div>
-            <div className="divide-y divide-[#C8B9A7]/30">
+            <div className="divide-y divide-[#C8B9A7]/25">
               {ROWS.map((row) => (
                 <div key={row.feature} className="flex items-center justify-center h-[84px] sm:h-[92px]">
                   <GreenCheck />
