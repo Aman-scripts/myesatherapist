@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { InitialsAvatar } from "@/components/common/InitialsAvatar";
-import { TRUSTPILOT_REVIEWS } from "@/data/trustpilotReviews";
+import { ALL_REVIEWS } from "@/data/trustpilotReviews";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -11,9 +12,11 @@ interface TestimonialItem {
   quote: string;
   name: string;
   avatar?: string;
+  /** Star rating out of 5 (defaults to 5). */
+  rating?: number;
 }
 
-const TESTIMONIALS: TestimonialItem[] = TRUSTPILOT_REVIEWS.map((r) => ({ quote: r.quote, name: r.name }));
+const TESTIMONIALS: TestimonialItem[] = ALL_REVIEWS.map((r) => ({ quote: r.quote, name: r.name, rating: r.rating }));
 
 interface Props {
   bgColor?: string;
@@ -66,12 +69,6 @@ export function TrustedByPetOwnersSection({
     }
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
 
   const current = list[activeIdx] || list[0];
 
@@ -102,6 +99,22 @@ export function TrustedByPetOwnersSection({
           >
             {/* Text+Stars: Gradient Speech Bubble */}
             <div className="w-full relative">
+            <button
+              type="button"
+              onClick={prevSlide}
+              className="absolute top-[calc(50%-7px)] -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              aria-label="Previous Review"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+            </button>
+            <button
+              type="button"
+              onClick={nextSlide}
+              className="absolute top-[calc(50%-7px)] -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              aria-label="Next Review"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+            </button>
               <div
                 className="w-full rounded-[20px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] p-6 sm:p-[24px] flex flex-col items-center text-center gap-3 transition-all duration-300 min-h-[148px]"
                 style={{ backgroundImage: TEAL_GRADIENT }}
@@ -109,7 +122,7 @@ export function TrustedByPetOwnersSection({
                 {/* 5 Stars (24px) */}
                 <div className="flex items-center justify-center gap-1 h-[24px]">
                   {[0, 1, 2, 3, 4].map((s) => (
-                    <svg key={s} width="24" height="24" viewBox="0 0 24 24" fill="#FDD264" className="w-6 h-6">
+                    <svg key={s} width="24" height="24" viewBox="0 0 24 24" fill={s < (current.rating ?? 5) ? "#FDD264" : "#FFEEC1"} className="w-6 h-6">
                       <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
                     </svg>
                   ))}
@@ -141,8 +154,7 @@ export function TrustedByPetOwnersSection({
                 {current.name}
               </h3>
 
-              {/* Frame 1000012071: Pagination Dots */}
-              <div className="flex items-center justify-center gap-1 mt-1">
+              <div className="flex items-center justify-center gap-1 ">
                 {list.map((_, idx) => (
                   <button
                     key={idx}

@@ -1,11 +1,17 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { InitialsAvatar } from "@/components/common/InitialsAvatar";
-import { TRUSTPILOT_REVIEWS } from "@/data/trustpilotReviews";
+import { ALL_REVIEWS } from "@/data/trustpilotReviews";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const testimonials = TRUSTPILOT_REVIEWS.map((r) => ({ quote: r.quote, name: r.name, location: r.location }));
+const testimonials = ALL_REVIEWS.map((r) => ({
+  quote: r.quote,
+  name: r.name,
+  location: r.location,
+  rating: r.rating,
+  source: r.source,
+}));
 
 export function AboutTestimonialSection() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -43,12 +49,6 @@ export function AboutTestimonialSection() {
     }
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
 
   const current = testimonials[activeIdx] || testimonials[0];
 
@@ -78,20 +78,36 @@ export function AboutTestimonialSection() {
           <div className="w-full">
             {/* Gradient Speech Bubble Box */}
             <div
-              className="w-full rounded-[20px] shadow-[0px_4px_16px_rgba(26,61,79,0.12)] p-6 sm:p-7 md:p-8 flex flex-col items-start text-left space-y-3.5 transition-all duration-300"
+              className="relative w-full rounded-[20px] shadow-[0px_4px_16px_rgba(26,61,79,0.12)] p-6 sm:p-7 md:p-8 flex flex-col items-start text-left space-y-3.5 transition-all duration-300"
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
+              <button
+                type="button"
+                onClick={prevSlide}
+                className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+                aria-label="Previous Review"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+              </button>
+              <button
+                type="button"
+                onClick={nextSlide}
+                className="absolute top-1/2 -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+                aria-label="Next Review"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+              </button>
               {/* Top Row: Google Logo + 5 Golden Stars */}
               <div className="flex items-center gap-2.5">
                 {/* Google "G" Icon */}
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="#00B67A" className="shrink-0" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill={current.source === "consumeraffairs" ? "#095691" : "#00B67A"} className="shrink-0" aria-hidden="true">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                 </svg>
 
                 {/* 5 Golden Yellow Stars */}
                 <div className="flex items-center gap-0.5">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <svg key={s} width="20" height="20" viewBox="0 0 24 24" fill="#FDD264">
+                    <svg key={s} width="20" height="20" viewBox="0 0 24 24" fill={s <= current.rating ? "#FDD264" : "#FFEEC1"}>
                       <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
                     </svg>
                   ))}
@@ -127,25 +143,6 @@ export function AboutTestimonialSection() {
               </div>
             </div>
 
-            {/* Carousel Navigation Arrows */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <button
-                type="button"
-                onClick={prevSlide}
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-xs active:scale-95"
-                aria-label="Previous Review"
-              >
-                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
-              </button>
-              <button
-                type="button"
-                onClick={nextSlide}
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-xs active:scale-95"
-                aria-label="Next Review"
-              >
-                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
-              </button>
-            </div>
           </div>
 
           {/* Pagination Indicators */}

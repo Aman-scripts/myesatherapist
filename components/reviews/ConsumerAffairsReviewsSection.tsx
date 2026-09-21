@@ -1,84 +1,32 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { InitialsAvatar } from "@/components/common/InitialsAvatar";
+import { CONSUMERAFFAIRS_REVIEWS, type CustomerReview } from "@/data/trustpilotReviews";
 
-const CONSUMER_AFFAIRS_REVIEWS = [
-  {
-    id: 1,
-    name: "Jessica L., Washington",
-    state: "Washington",
-    avatar: "/about-us/about_us-trusted-section-two.jpg",
-    quote:
-      "“The whole experience was compassionate, professional, and quick. Landlord approved my accommodation within a day!”",
-  },
-  {
-    id: 2,
-    name: "Marcus W., Colorado",
-    state: "Colorado",
-    avatar: "/about-us/about_us-trusted-section-one.jpg",
-    quote:
-      "“I was skeptical of online ESA letters, but My ESA Therapist connected me with a real state-licensed psychologist. Completely legitimate and stress-free.”",
-  },
-  {
-    id: 3,
-    name: "Rachel P., Arizona",
-    state: "Arizona",
-    avatar: "/about-us/about_us-trusted-section-two.jpg",
-    quote:
-      "“Renewed my ESA letter for the second year. Process was even faster this time around. Their support team answered my questions within minutes.”",
-  },
-  {
-    id: 4,
-    name: "Anthony G., Ohio",
-    state: "Ohio",
-    avatar: "/about-us/about_us-trusted-section-one.jpg",
-    quote:
-      "“The landlord tried to reject my letter at first, but My ESA Therapist’s documentation complied with all HUD and FHA guidelines, and the landlord immediately accepted it.”",
-  },
-];
-
-function GoogleLogo({ className = "w-6 h-6" }: { className?: string }) {
+function ConsumerAffairsMark({ className = "w-6 h-6" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"
-        fill="#4285F4"
-      />
-      <path
-        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.26 21.36 7.36 24 12 24z"
-        fill="#34A853"
-      />
-      <path
-        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.94 0 12s.46 3.84 1.26 5.42l4.02-3.15z"
-        fill="#FBBC05"
-      />
-      <path
-        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.36 0 3.26 2.64 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
-        fill="#EA4335"
-      />
+    <svg className={className} viewBox="0 0 24 24" fill="#095691" aria-hidden="true">
+      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
     </svg>
   );
 }
 
-function StarRating() {
+function StarRating({ rating = 5 }: { rating?: number }) {
   return (
-    <div className="flex items-center gap-1">
-      {[0, 1, 2, 3].map((i) => (
-        <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#FDD264" className="shrink-0">
+    <div className="flex items-center gap-1" role="img" aria-label={`${rating} out of 5 stars`}>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill={i < rating ? "#FDD264" : "#FFEEC1"} className="shrink-0">
           <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
         </svg>
       ))}
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFEEC1" className="shrink-0">
-        <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-      </svg>
     </div>
   );
 }
 
 export function ConsumerAffairsReviewsSection() {
-  const rowOne = CONSUMER_AFFAIRS_REVIEWS.slice(0, 3);
-  const rowTwo = CONSUMER_AFFAIRS_REVIEWS.slice(3, 4);
+  const rowOne = CONSUMERAFFAIRS_REVIEWS.slice(0, 3);
+  const rowTwo = CONSUMERAFFAIRS_REVIEWS.slice(3, 6);
 
   return (
     <section id="consumer-affairs-reviews" className="w-full bg-[#FFFFFF] py-16 lg:py-24">
@@ -103,8 +51,8 @@ export function ConsumerAffairsReviewsSection() {
             {/* Left: Google Logo + Stars + Label */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-5 justify-center sm:justify-start">
               <div className="flex items-center gap-2.5">
-                <GoogleLogo className="w-6 h-6 shrink-0" />
-                <StarRating />
+                <ConsumerAffairsMark className="w-6 h-6 shrink-0" />
+                <StarRating rating={4} />
               </div>
               <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-[#2E5A66] whitespace-nowrap">
                 Consumer Affairs · Verified reviews
@@ -113,7 +61,7 @@ export function ConsumerAffairsReviewsSection() {
 
             {/* Right: View Source Button */}
             <a
-              href="https://www.consumeraffairs.com"
+              href="https://www.consumeraffairs.com/pets/my-esa-therapist.html"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-7 h-[44px] sm:h-[48px] rounded-[30px] text-white font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap shrink-0"
@@ -134,7 +82,7 @@ export function ConsumerAffairsReviewsSection() {
           </div>
 
           {/* Row 2: 1 card centered on desktop (or responsive) */}
-          <div className="flex justify-center w-full max-w-[1280px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-[24px] w-full max-w-[1280px] justify-items-center">
             {rowTwo.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
@@ -148,13 +96,7 @@ export function ConsumerAffairsReviewsSection() {
 function ReviewCard({
   review,
 }: {
-  review: {
-    id: number;
-    name: string;
-    state: string;
-    avatar: string;
-    quote: string;
-  };
+  review: CustomerReview;
 }) {
   return (
     <div className="flex flex-col items-start gap-5 sm:gap-6 w-full max-w-[411px]">
@@ -166,8 +108,8 @@ function ReviewCard({
         >
           {/* Top row: Google / source logo + 5 Stars */}
           <div className="flex items-center gap-3 h-[24px]">
-            <GoogleLogo className="w-[24px] h-[21px] shrink-0" />
-            <StarRating />
+            <ConsumerAffairsMark className="w-[24px] h-[24px] shrink-0" />
+            <StarRating rating={review.rating} />
           </div>
 
           {/* Quote Text */}
@@ -183,20 +125,14 @@ function ReviewCard({
       {/* Avatar + Name + State */}
       <div className="flex items-center gap-4 pl-1">
         <div className="w-[60px] h-[60px] rounded-full overflow-hidden relative shadow-sm border-2 border-white/80 shrink-0 bg-[#E8F0F1]">
-          <Image
-            src={review.avatar}
-            alt={review.name}
-            fill
-            className="object-cover"
-            sizes="60px"
-          />
+          <InitialsAvatar name={review.name} index={review.id} className="absolute inset-0 text-[20px]" />
         </div>
         <div className="flex flex-col justify-center gap-0.5">
           <h3 className="font-heading font-bold text-[19px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#2C2C2C]">
             {review.name}
           </h3>
           <span className="font-sans text-[14px] sm:text-[16px] leading-[20px] text-[#777777]">
-            {review.state}
+            {review.location} · {review.date}
           </span>
         </div>
       </div>
