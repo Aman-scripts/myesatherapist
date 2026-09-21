@@ -4,6 +4,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MaxPhillipsReviewerContent } from "@/components/legal-reviewer/MaxPhillipsReviewerContent";
 
+// Schema.org Structured Data
+import { maxPhillipsSchemas } from "@/data/schemas/maxPhillipsSchema";
+
 export const metadata: Metadata = {
   title: "Max Phillips – Medical Reviewer | My ESA Therapist",
   description:
@@ -40,75 +43,17 @@ export const metadata: Metadata = {
   },
 };
 
-const maxPhillipsSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfilePage",
-      "@id": "https://myesatherapist.com/contributors/max-phillips/#webpage",
-      "url": "https://myesatherapist.com/contributors/max-phillips/",
-      "name": "Max Phillips – Medical Reviewer | My ESA Therapist",
-      "description":
-        "Meet Max Phillips, Medical Reviewer at My ESA Therapist. Learn about his role in reviewing health and mental health content related to emotional support animals and ESA evaluations.",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://myesatherapist.com/",
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Max Phillips",
-            "item": "https://myesatherapist.com/contributors/max-phillips/",
-          },
-        ],
-      },
-      "mainEntity": {
-        "@type": "Person",
-        "@id": "https://myesatherapist.com/contributors/max-phillips/#person",
-        "name": "Max Phillips",
-        "jobTitle": "Medical Reviewer",
-        "image": "https://myesatherapist.com/author/max-phill.webp",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "My ESA Therapist",
-          "url": "https://myesatherapist.com/",
-        },
-        "alumniOf": [
-          {
-            "@type": "EducationalOrganization",
-            "name": "University of Southern California",
-          },
-          {
-            "@type": "EducationalOrganization",
-            "name": "Truman State University",
-          },
-        ],
-        "knowsAbout": [
-          "Trauma and PTSD",
-          "Anxiety and OCD",
-          "ADHD and Autism",
-          "BPD and Emotional Regulation",
-          "Suicidal Ideation and Self-Harm",
-          "Sexual Trauma and Identity",
-        ],
-      },
-    },
-  ],
-};
-
 export default function MaxPhillipsContributorPage() {
   return (
     <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
-      {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(maxPhillipsSchema) }}
-      />
+      {/* Schema.org JSON-LD */}
+      {maxPhillipsSchemas.map((schemaObj, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+        />
+      ))}
 
       {/* Top Banner & Header */}
       <TopBanner />
