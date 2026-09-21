@@ -125,7 +125,7 @@ export const statesSchema = {
       "@id": "https://myesatherapist.com/state/#state-list",
       "name": "Choose Your State For ESA Evaluation",
       "description": "Learn about emotional support animal rules, evaluation requirements, and housing protections in your state.",
-      "numberOfItems": 52,
+      "numberOfItems": 51,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -352,90 +352,84 @@ export const statesSchema = {
         {
           "@type": "ListItem",
           "position": 38,
-          "name": "ESA Letter Vermont",
-          "url": "https://myesatherapist.com/esa-letter-vermont/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 39,
           "name": "ESA Letter Puerto Rico",
           "url": "https://myesatherapist.com/esa-letter-puerto-rico/"
         },
         {
           "@type": "ListItem",
-          "position": 40,
+          "position": 39,
           "name": "ESA Letter Arkansas",
           "url": "https://myesatherapist.com/esa-letter-arkansas/"
         },
         {
           "@type": "ListItem",
-          "position": 41,
+          "position": 40,
           "name": "ESA Letter Delaware",
           "url": "https://myesatherapist.com/esa-letter-delaware/"
         },
         {
           "@type": "ListItem",
-          "position": 42,
+          "position": 41,
           "name": "ESA Letter Idaho",
           "url": "https://myesatherapist.com/esa-letter-idaho/"
         },
         {
           "@type": "ListItem",
-          "position": 43,
+          "position": 42,
           "name": "ESA Letter Kansas",
           "url": "https://myesatherapist.com/esa-letter-kansas/"
         },
         {
           "@type": "ListItem",
-          "position": 44,
+          "position": 43,
           "name": "ESA Letter Maryland",
           "url": "https://myesatherapist.com/esa-letter-maryland/"
         },
         {
           "@type": "ListItem",
-          "position": 45,
+          "position": 44,
           "name": "ESA Letter Mississippi",
           "url": "https://myesatherapist.com/esa-letter-mississippi/"
         },
         {
           "@type": "ListItem",
-          "position": 46,
+          "position": 45,
           "name": "ESA Letter Nevada",
           "url": "https://myesatherapist.com/esa-letter-nevada/"
         },
         {
           "@type": "ListItem",
-          "position": 47,
+          "position": 46,
           "name": "ESA Letter New York",
           "url": "https://myesatherapist.com/esa-letter-new-york/"
         },
         {
           "@type": "ListItem",
-          "position": 48,
+          "position": 47,
           "name": "ESA Letter Oklahoma",
           "url": "https://myesatherapist.com/esa-letter-oklahoma/"
         },
         {
           "@type": "ListItem",
-          "position": 49,
+          "position": 48,
           "name": "ESA Letter South Dakota",
           "url": "https://myesatherapist.com/esa-letter-south-dakota/"
         },
         {
           "@type": "ListItem",
-          "position": 50,
+          "position": 49,
           "name": "ESA Letter Virginia",
           "url": "https://myesatherapist.com/esa-letter-virginia/"
         },
         {
           "@type": "ListItem",
-          "position": 51,
+          "position": 50,
           "name": "ESA Letter Wyoming",
           "url": "https://myesatherapist.com/esa-letter-wyoming/"
         },
         {
           "@type": "ListItem",
-          "position": 52,
+          "position": 51,
           "name": "ESA Letter Guam",
           "url": "https://myesatherapist.com/esa-letter-guam/"
         }

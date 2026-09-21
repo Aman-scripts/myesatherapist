@@ -50,7 +50,6 @@ const AVAILABLE_STATES = [
   { name: "Tennessee", slug: "tennessee" },
   { name: "Texas", slug: "texas" },
   { name: "Utah", slug: "utah" },
-  { name: "Vermont", slug: "vermont" },
   { name: "Virginia", slug: "virginia" },
   { name: "Washington", slug: "washington" },
   { name: "West Virginia", slug: "west-virginia" },

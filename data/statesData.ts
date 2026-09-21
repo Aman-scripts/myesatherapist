@@ -19533,25 +19533,6 @@ export const STATES_DATA: Record<string, StateData> = {
       { id: "cta", label: "Start My ESA Evaluation Now!" },
     ],
   },
-  vermont: {
-    slug: "vermont",
-    name: "Vermont",
-    abbreviation: "VT",
-    metaTitle: "ESA Letter in Vermont From Licensed Therapists | My ESA Therapist",
-    metaDescription: "Connect with a licensed mental health professional for a Vermont ESA letter evaluation based on FHA housing guidelines.",
-    heroTitle: "Vermont ESA Letter Evaluations by Licensed Therapists",
-    heroSubtitle: "Connect with a licensed mental health professional for a Vermont ESA letter evaluation based on FHA housing guidelines. Letters are issued solely at the evaluating clinician's discretion.",
-    citiesTitle: "Available Everywhere in Vermont",
-    citiesSubtitle: "From Burlington to communities across the Green Mountain State, our secure telehealth platform makes ESA evaluations in Vermont accessible statewide.",
-    cities: [
-      { name: "Burlington", icon: "/states/losangeles.svg", description: "Vermont's largest city, where renters may encounter pet restrictions in apartment communities." },
-      { name: "Montpelier", icon: "/states/losangelestwo.svg", description: "Vermont's capital city, with a variety of rental housing options across the area." },
-      { name: "South Burlington", icon: "/states/losangelesfour.svg", description: "A growing community near Burlington where housing policies can vary by property." },
-      { name: "Rutland", icon: "/states/sanfrancisco.svg", description: "One of Vermont's larger cities, where renters may face pet policies in managed communities." },
-      { name: "Barre", icon: "/states/losangeles.svg", description: "A central Vermont community where ESA documentation can support housing accommodation requests." },
-      { name: "Essex", icon: "/states/losangelestwo.svg", description: "A fast-growing Vermont community where rental pet policies are common." },
-    ],
-  },
 };
 
 export function getStateSlug(rawSlug?: string): string {
