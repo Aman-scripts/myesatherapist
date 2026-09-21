@@ -106,7 +106,9 @@ export default function HomePage() {
 
         <FaqSection />
 
-        <CtaBanner />
+        <CtaBanner
+          description={"If you believe an Emotional Support Animal may be appropriate\nfor your situation, you can begin a professional evaluation today."}
+        />
 
         <StateReviewerBanner />
       </main>
