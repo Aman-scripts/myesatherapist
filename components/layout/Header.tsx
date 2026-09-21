@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -57,8 +57,85 @@ const AVAILABLE_STATES = [
   { name: "Wyoming", slug: "wyoming" },
 ];
 
+const RESOURCE_LINKS = [
+  { label: "ESA Laws By State", href: "/esa-laws/" },
+  { label: "ESA Guide", href: "/blog/esa-guide/" },
+  { label: "PSD Letter", href: "/psd-letter/" },
+  { label: "ESA Letter Online", href: "/esa-letter-online/" },
+  { label: "ESA by State", href: "/states/" },
+];
+
+/** Desktop "Resources" button that opens a dropdown of resource pages on click. */
+function ResourcesMenu() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  // close after navigating
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  // close on outside click / Escape
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        className={`flex items-center gap-1.5 whitespace-nowrap rounded-[12px] px-3 py-2 -mx-3 -my-2 text-[13px] xl:text-[15px] font-medium text-[#1E3E47] transition-colors cursor-pointer ${
+          open ? "bg-[#F6EBCB] text-[#1A3D4F]" : "hover:text-[#1D6E72]"
+        }`}
+      >
+        Resources
+        <ChevronDown
+          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-1/2 top-full z-50 mt-4 w-[260px] -translate-x-1/2 rounded-[18px] border border-[#EAE5DC] bg-white py-2 shadow-[0_12px_32px_rgba(26,61,79,0.16)]"
+        >
+          {RESOURCE_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              role="menuitem"
+              onClick={() => setOpen(false)}
+              className="block px-7 py-3.5 text-[16px] font-bold text-[#1A3D4F] hover:bg-[#FAF7F2] hover:text-[#1D6E72] transition-colors"
+              style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const pathname = usePathname();
 
   // Check route conditions
@@ -105,12 +182,7 @@ export function Header() {
             >
               About Us
             </Link>
-            <Link
-              href="/blog/"
-              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors flex items-center gap-1.5 whitespace-nowrap"
-            >
-              Resources <ChevronDown className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47]" />
-            </Link>
+            <ResourcesMenu />
             <Link
               href="/contact-us/"
               className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
@@ -259,14 +331,32 @@ export function Header() {
           >
             About Us
           </Link>
-          <Link
-            href="/blog/"
-            className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between"
-            onClick={() => setMobileOpen(false)}
+          <button
+            type="button"
+            className="w-full py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between cursor-pointer"
+            aria-expanded={mobileResourcesOpen}
+            onClick={() => setMobileResourcesOpen((v) => !v)}
           >
             <span>Resources</span>
-            <ChevronDown className="w-4 h-4 text-[#1E3E47]" />
-          </Link>
+            <ChevronDown className={`w-4 h-4 text-[#1E3E47] transition-transform duration-200 ${mobileResourcesOpen ? "rotate-180" : ""}`} />
+          </button>
+          {mobileResourcesOpen && (
+            <div className="ml-3 flex flex-col border-l-2 border-[#F6EBCB] pl-4">
+              {RESOURCE_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="py-2.5 text-[#1A3D4F] font-bold text-[15px] min-h-[44px] flex items-center"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    setMobileResourcesOpen(false);
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          )}
           <Link
             href="/contact-us/"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
