@@ -22,6 +22,8 @@ import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
+import { esaLetterOnlineSchema } from "@/data/schemas/esaLetterOnlineSchema";
 
 export const metadata: Metadata = {
   title: "ESA Letter Online From Licensed Therapist | My ESA Therapist",
@@ -46,20 +48,27 @@ export const metadata: Metadata = {
     siteName:
       "My ESA Therapist | Licensed ESA Therapists & Emotional Support Animal Services",
     locale: "en_US",
+    images: socialImage("esa-letter-online", "Cozy telehealth call with a golden retriever").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Letter Online From Licensed Therapist | My ESA Therapist",
     description:
       "Get an ESA letter online through a confidential evaluation with a licensed mental health professional. Start your ESA evaluation securely from home with My ESA Therapist.",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
+    images: socialImage("esa-letter-online", "Cozy telehealth call with a golden retriever").twitter,
   },
 };
 
 export default function EsaLetterOnlinePage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(esaLetterOnlineSchema, "esa-letter-online")) }}
+      />
       <TopBanner />
       <Header />
 

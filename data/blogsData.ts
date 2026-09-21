@@ -1190,7 +1190,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     },
     publishDate: "July 30, 2026",
     lastUpdated: "August 17, 2026",
-    cardImage: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/legitimate esa letter sample-image.jpg",
+    cardImage: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/emotional-support-animal-letter-sample-image.webp",
     heroImageMobile: "/blogs/blog_hero-section-mobile.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.png",
     heroImageDesktop: "/blogs/blog-hero_section.png",

@@ -10,6 +10,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 import { blogSchema } from "@/data/schemas/blogSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
@@ -30,12 +31,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/blog/",
     siteName: "My ESA Therapist",
     type: "article",
+    images: socialImage("blog-hub-page", "Resource hub for emotional support animals").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
     description:
       "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
+    images: socialImage("blog-hub-page", "Resource hub for emotional support animals").twitter,
   },
 };
 
@@ -46,7 +49,7 @@ export default function BlogHubPage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(blogSchema, "blog-hub-page")) }}
       />
 
       <TopBanner />

@@ -13,6 +13,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 import { esaLawsSchema } from "@/data/schemas/esaLawsSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
@@ -35,12 +36,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-laws/",
     siteName: "My ESA Therapist",
     type: "website",
+    images: socialImage("esa-laws", "Emotional support animal laws by state").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
     description:
       "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
+    images: socialImage("esa-laws", "Emotional support animal laws by state").twitter,
   },
 };
 
@@ -51,7 +54,7 @@ export default function EsaLawsPage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(esaLawsSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(esaLawsSchema, "esa-laws")) }}
       />
       <TopBanner />
       <Header />

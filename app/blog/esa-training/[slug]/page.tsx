@@ -14,6 +14,7 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
+import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
 
 interface PageProps {
   params: Promise<{
@@ -42,6 +43,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = article.metaTitle || `${article.title} | My ESA Therapist`;
   const description = article.metaDescription || article.shortDescription;
+  const imageKey = `blog-${article.slug}`;
+  const image = hasSocialImage(imageKey) ? socialImage(imageKey, article.title) : null;
   const socialDescription = article.ogDescription || description;
 
   return {
@@ -64,19 +67,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       siteName: "My ESA Therapist",
       locale: "en_US",
-      images: [
-        {
-          url: article.cardImage,
-          alt: article.title,
-        },
-      ],
+      images: image ? image.openGraph : [{ url: article.cardImage, alt: article.title }],
     },
     twitter: {
-      card: "summary",
+      card: image ? "summary_large_image" : "summary",
       title,
       description: socialDescription,
       site: "@MyESATherapist",
       creator: "@MyESATherapist",
+      ...(image && { images: image.twitter }),
     },
   };
 }
@@ -131,7 +130,7 @@ export default async function EsaTrainingBlogPage({ params }: PageProps) {
       {/* Article Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(articleSchema, `blog-${article.slug}`)) }}
       />
 
       <TopBanner />

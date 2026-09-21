@@ -22,6 +22,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 
 // Schema.org Structured Data
 import { esaRenewalSchemas } from "@/data/schemas/esaRenewalSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "ESA Letter Renewal Online by Licensed Therapists | My ESA Therapist",
@@ -44,12 +45,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-letter-renewal/",
     siteName: "My ESA Therapist",
     type: "website",
+    images: socialImage("esa-letter-renewal", "Online ESA letter renewal").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Letter Renewal Online by Licensed Therapists | My ESA Therapist",
     description:
       "Need to renew your ESA letter? My ESA Therapist offers simple online renewals with licensed therapists and quick turnaround.",
+    images: socialImage("esa-letter-renewal", "Online ESA letter renewal").twitter,
   },
 };
 
@@ -94,7 +97,7 @@ export default function EsaRenewalPage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(schemaObj, "esa-letter-renewal")) }}
         />
       ))}
 

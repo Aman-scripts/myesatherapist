@@ -23,6 +23,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 
 // Schema.org Structured Data
 import { esaLetterForHousingSchemas } from "@/data/schemas/esaLetterForHousingSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
@@ -45,12 +46,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-letter-for-housing/",
     siteName: "My ESA Therapist",
     type: "website",
+    images: socialImage("esa-letter-for-housing", "Pet-friendly home comfort").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
     description:
       "Facing 'no-pet' housing rules? Get an FHA-compliant ESA letter for housing online from a licensed therapist. Secure, confidential and pay only if approved.",
+    images: socialImage("esa-letter-for-housing", "Pet-friendly home comfort").twitter,
   },
 };
 
@@ -62,7 +65,7 @@ export default function EsaLetterForHousingPage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(schemaObj, "esa-letter-for-housing")) }}
         />
       ))}
 

@@ -24,25 +24,19 @@ export const metadata: Metadata = {
       "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",
     url: "https://myesatherapist.com/esa-doctors/",
     type: "website",
-    images: [
-      {
-        url: "/doctors/doctors_hero-section.png",
-        width: 1440,
-        height: 768,
-        alt: "Meet Our Licensed Mental Health Professionals",
-      },
-    ],
+    images: socialImage("our-therapist", "Our therapists").openGraph,
   },
   twitter: {
     card: "summary_large_image",
     title: "Meet Our Licensed Mental Health Professionals | My ESA Therapist",
     description:
       "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",
-    images: ["/doctors/doctors_hero-section.png"],
+    images: socialImage("our-therapist", "Our therapists").twitter,
   },
 };
 
 import { esaDoctorsSchema } from "@/data/schemas/esaDoctorsSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export default function DoctorsPage() {
   return (
@@ -50,7 +44,7 @@ export default function DoctorsPage() {
       {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(esaDoctorsSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(esaDoctorsSchema, "our-therapist")) }}
       />
 
       {/* Global Top Banner & Header */}

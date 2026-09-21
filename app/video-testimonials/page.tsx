@@ -13,6 +13,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 import { videoTestimonialsSchemas } from "@/data/schemas/videoTestimonialsSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
@@ -35,12 +36,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/video-testimonials/",
     siteName: "My ESA Therapist",
     type: "website",
+    images: socialImage("video-testimonials", "Customer video testimonials").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
     description:
       "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",
+    images: socialImage("video-testimonials", "Customer video testimonials").twitter,
   },
 };
 
@@ -52,7 +55,7 @@ export default function VideoTestimonialsPage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(schemaObj, "video-testimonials")) }}
         />
       ))}
 

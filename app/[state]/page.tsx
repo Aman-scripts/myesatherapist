@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
+import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
 import { STATES_DATA, getStateData } from "@/data/statesData";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -50,6 +51,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = data.metaTitle || webPageSchema?.name || `ESA Letter in ${data.name} | My ESA Therapist`;
   const description = data.metaDescription || webPageSchema?.description || `Get your legitimate ESA letter in ${data.name} from licensed therapists.`;
 
+  const imageKey = `state-${data.slug}`;
+  const image = hasSocialImage(imageKey) ? socialImage(imageKey, `ESA letter in ${data.name}`) : null;
+
   return {
     title,
     description,
@@ -68,11 +72,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
+      ...(image && { images: image.openGraph }),
     },
     twitter: {
-      card: "summary",
+      card: image ? "summary_large_image" : "summary",
       title,
       description,
+      ...(image && { images: image.twitter }),
     },
   };
 }
@@ -102,7 +108,7 @@ export default async function DynamicStatePage({ params }: Props) {
       {data.schema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data.schema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(data.schema, `state-${data.slug}`)) }}
         />
       )}
 

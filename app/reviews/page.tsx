@@ -13,6 +13,7 @@ import { ConsumerAffairsReviewsSection } from "@/components/reviews/ConsumerAffa
 import { CtaBanner } from "@/components/home/CtaBanner";
 
 import { reviewsSchema } from "@/data/schemas/reviewsSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
@@ -35,12 +36,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/reviews/",
     siteName: "My ESA Therapist",
     type: "website",
+    images: socialImage("customer-reviews", "Five-star customer reviews").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
     description:
       "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
+    images: socialImage("customer-reviews", "Five-star customer reviews").twitter,
   },
 };
 
@@ -51,7 +54,7 @@ export default function ReviewsPage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(reviewsSchema, "customer-reviews")) }}
       />
 
       {/* Top Banner & Header */}

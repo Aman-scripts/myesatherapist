@@ -22,6 +22,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { Footer } from "@/components/layout/Footer";
 import { homeSchema } from "@/data/schemas/homeSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -51,14 +52,16 @@ export const metadata: Metadata = {
     siteName:
       "My ESA Therapist | Licensed ESA Therapists & Emotional Support Animal Services",
     locale: "en_US",
+    images: socialImage("homepage", "Telehealth with a happy companion").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Evaluations by Licensed Professionals - My ESA Therapist",
     description:
       "Connect with U.S.-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
+    images: socialImage("homepage", "Telehealth with a happy companion").twitter,
   },
   verification: {
     google: "hZEn7s77TUksTd08P_-V4gKQzGdXE0dkQeF4-B7vzuY",
@@ -71,7 +74,7 @@ export default function HomePage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(homeSchema, "homepage")) }}
       />
 
       <TopBanner />

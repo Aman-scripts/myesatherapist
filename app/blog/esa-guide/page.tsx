@@ -17,6 +17,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 
 // Schema.org Structured Data
 import { esaGuideSchemas } from "@/data/schemas/esaGuideSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
@@ -39,12 +40,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/blog/esa-guide/",
     siteName: "My ESA Therapist",
     type: "article",
+    images: socialImage("esa-guide", "Couple and dog exploring ESA guidance").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
     description:
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
+    images: socialImage("esa-guide", "Couple and dog exploring ESA guidance").twitter,
   },
 };
 
@@ -79,7 +82,7 @@ export default function EsaGuidePage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(schemaObj, "esa-guide")) }}
         />
       ))}
 

@@ -14,6 +14,7 @@ import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { pricingSchema } from "@/data/schemas/pricingSchema";
+import { socialImage, withFeatureImage } from "@/data/socialImages";
 
 export const metadata: Metadata = {
   title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
@@ -36,12 +37,14 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/pricing/",
     siteName: "My ESA Therapist",
     type: "website",
+    images: socialImage("esa-letter-cost", "ESA letter cost").openGraph,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
     description:
       "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
+    images: socialImage("esa-letter-cost", "ESA letter cost").twitter,
   },
 };
 
@@ -80,7 +83,7 @@ export default function PricingPage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(pricingSchema, "esa-letter-cost")) }}
       />
 
       {/* Top Banner & Header */}
