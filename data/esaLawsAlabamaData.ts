@@ -21,8 +21,22 @@ export const ALABAMA_SECTIONS: BlogSection[] = [
   {
     id: "alabama-esa-laws-at-a-glance",
     title: "Alabama ESA Laws at a Glance",
-    paragraphs: [
-      "ESA protections in Alabama come from the Fair Housing Act (FHA) and the Alabama Assistance and Service Animal Integrity in Housing Act. Alabama has a state law (Ala. Code §§ 24-8A-1 through 24-8A-5) that provides rules for assistance animals in housing. Alabama does not require ESA registration, certification, or official ESA identification cards. Qualified tenants can request reasonable housing accommodations for ESAs, including in no-pet housing. Landlords generally cannot charge pet rent, pet deposits, or pet fees for approved ESAs. ESAs do not have public access rights like service animals under the ADA. Valid ESA requests should be supported by documentation from a licensed mental health professional. Alabama’s Act 2019-478 addresses fraudulent service animal claims but does not create ESA-specific penalties.",
+    statCards: [
+      { value: "363A", label: "Alabama’s own Statue", description: "Alabama Human Right Act - housing discrimination", variant: "teal" },
+      { value: "Moderate", label: "Effect of HUD’s May 2026 change", description: "State laws exits; how the agency treats untrained animals is still settling", variant: "white" },
+      { value: "MDHR", label: "Where to escalate", description: "Alabama Department of Human Rights", variant: "gold" },
+    ],
+    listItems: [
+      "ESA protections in Alabama come from the Fair Housing Act (FHA) and the Alabama Assistance and Service Animal Integrity in Housing Act.",
+      "Alabama has a state law (Ala. Code §§ 24-8A-1 through 24-8A-5) that provides rules for assistance animals in housing.",
+      "Alabama does not require ESA registration, certification, or official ESA identification cards.",
+      "Qualified tenants can request reasonable housing accommodations for ESAs, including in no-pet housing.",
+      "Landlords generally cannot charge pet rent, pet deposits, or pet fees for approved ESAs.",
+      "ESAs do not have public access rights like service animals under the ADA.",
+      "Valid ESA requests should be supported by documentation from a licensed mental health professional.",
+      "Alabama’s Act 2019-478 addresses fraudulent service animal claims but does not create ESA-specific penalties.",
+    ],
+    afterListParagraphs: [
       "If you’re renting in Alabama and thinking about an emotional support animal (ESA), both federal and state laws matter. The federal Fair Housing Act (FHA) requires housing providers to make reasonable accommodations for qualified individuals with disabilities, while Alabama’s Assistance and Service Animal Integrity in Housing Act provides additional state-level rules for assistance animals in housing. Understanding how these laws work together can help both tenants and landlords know their rights, responsibilities, and when an ESA request may be approved or denied.",
     ],
   },

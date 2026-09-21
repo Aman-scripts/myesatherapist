@@ -70,6 +70,13 @@ export interface BlogCtaBox {
   buttonHref: string;
 }
 
+export interface BlogStatCard {
+  value: string;
+  label: string;
+  description: string;
+  variant: "teal" | "white" | "gold";
+}
+
 export interface BlogSection {
   id: string;
   title: string;
@@ -90,6 +97,8 @@ export interface BlogSection {
     caption?: string;
   };
   bannerPosition?: "top" | "bottom";
+  /** Optional row of highlight cards shown under the section heading. */
+  statCards?: BlogStatCard[];
   sampleLetter?: BlogSampleLetter;
   checklist?: BlogChecklist;
   comparisonTable?: {

@@ -149,6 +149,40 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
             {sec.title}
           </h2>
 
+          {/* Highlight cards */}
+          {sec.statCards && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6">
+              {sec.statCards.map((card) => {
+                const v = card.variant;
+                return (
+                  <div
+                    key={card.value}
+                    className={`flex flex-col justify-center items-center sm:items-start gap-2.5 rounded-[20px] px-4 py-4 min-h-[168px] text-center sm:text-left ${
+                      v === "white" ? "bg-white" : v === "gold" ? "bg-[#E8B92C]/20" : ""
+                    }`}
+                    style={v === "teal" ? { backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" } : undefined}
+                  >
+                    <div
+                      className={`font-heading font-bold text-[32px] sm:text-[36px] leading-[44px] tracking-[-0.00015em] ${
+                        v === "teal" ? "text-[#FAF7F2]" : "text-[#5F6B6F]"
+                      }`}
+                    >
+                      {card.value}
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <p className={`font-sans font-semibold text-base leading-[26px] ${v === "teal" ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+                        {card.label}
+                      </p>
+                      <p className={`font-sans font-normal text-sm leading-[26px] ${v === "teal" ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
+                        {card.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
           {/* Section Paragraphs */}
           {sec.paragraphs && (
             <div className="space-y-3">
