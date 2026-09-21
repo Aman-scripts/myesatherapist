@@ -148,7 +148,7 @@ export function QualifyingConditions({
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section id={id} className={`py-14 sm:py-16 lg:py-20 pb-28 sm:pb-32 lg:pb-36 bg-[#FAF7F2] overflow-visible ${className}`}>
+    <section id={id} className={`py-14 sm:py-16 lg:py-20 pb-14 sm:pb-16 md:pb-0 lg:pb-0 bg-[#FAF7F2] overflow-visible ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[709px] mx-auto">
@@ -259,6 +259,8 @@ export function QualifyingConditions({
               );
             })}
           </div>
+          {/* The photo extends past the badge box; this spacer makes the section end at the photo edge (no gap) */}
+          <div aria-hidden className="pointer-events-none" style={{ paddingTop: "8.44%" }} />
         </div>
 
         {/* Mobile: stacked photo + wrapping badge grid */}
