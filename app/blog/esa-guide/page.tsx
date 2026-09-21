@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 
 // Page Components
 import { EsaGuideHero } from "@/components/esa-guide/EsaGuideHero";
+import { EsaGuideIntro } from "@/components/esa-guide/EsaGuideIntro";
 import { EsaGuideFilterableGrid } from "@/components/esa-guide/EsaGuideFilterableGrid";
 import { EsaGuideWhyResearch } from "@/components/esa-guide/EsaGuideWhyResearch";
 import { EsaGuideTrustHub } from "@/components/esa-guide/EsaGuideTrustHub";
@@ -95,13 +96,13 @@ export default function EsaGuidePage() {
         {/* 1. Hero: Resource Hub & Introduction */}
         <EsaGuideHero />
 
-        <EsaGuideFilterableGrid />
-
-        {/* 4. Why People Research ESAs (2-column editorial context) */}
-        <EsaGuideWhyResearch />
-
-        {/* 5. Your Trusted ESA Resource Hub (3 trust pillars) */}
-        <EsaGuideTrustHub />
+        {/* Content sections, 94px apart on desktop */}
+        <div className="flex flex-col gap-12 pb-12 pt-12 sm:gap-16 sm:pt-16 lg:gap-[6vw] lg:pb-[6vw] lg:pt-[5.9vw] xl:gap-[94px] xl:pb-[94px] xl:pt-[91px]">
+          <EsaGuideIntro />
+          <EsaGuideFilterableGrid />
+          <EsaGuideWhyResearch />
+          <EsaGuideTrustHub />
+        </div>
 
         {/* 6. Standard Project FAQ Section */}
         <FaqSection
@@ -109,7 +110,7 @@ export default function EsaGuidePage() {
           title="Frequently Asked Questions"
           subtitle="Answers to the most common ESA questions"
           faqs={esaGuideFaqs}
-          bg="bg-white"
+          bg="bg-[#FAF7F2]"
         />
 
         {/* 7. Standard Project CTA Banner */}
@@ -126,7 +127,7 @@ export default function EsaGuidePage() {
           }
           buttonText="Start your Evaluation"
           buttonHref="/pricing/"
-          bgColor="bg-white"
+          bgColor="bg-[#FAF7F2]"
           className="pb-12 sm:pb-16"
         />
       </main>
