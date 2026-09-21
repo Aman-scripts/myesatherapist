@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BlogsHero } from "@/components/blogs/BlogsHero";
 import { BlogsTrustBar } from "@/components/blogs/BlogsTrustBar";
-import { BlogsFeaturedArticle } from "@/components/blogs/BlogsFeaturedArticle";
 import { BlogsGrid } from "@/components/blogs/BlogsGrid";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -59,9 +58,6 @@ export default function BlogHubPage() {
 
         {/* 2. Trust Features Bar (HIPAA, Response 24-72h, Licensed in 50 states) */}
         <BlogsTrustBar />
-
-        {/* 3. Featured Article Card */}
-        <BlogsFeaturedArticle />
 
         {/* 4. 3x3 Blogs Grid (9 Articles) */}
         <BlogsGrid />
