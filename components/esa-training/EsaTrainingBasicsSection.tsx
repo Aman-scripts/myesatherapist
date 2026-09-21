@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
+import { TEAL_GRADIENT, WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
 const ICON = "/esa-training/esa-traning_basicstraining-allcardsicon.svg";
 const ART = "/esa-training/esa-traning_basicstraining.png";
@@ -31,9 +31,21 @@ export function EsaTrainingBasicsSection() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4.5vw] lg:pl-[5.9vw] lg:pr-0 xl:py-0 xl:pl-[85px]">
-        {/* Artwork for mobile / tablet */}
-        <div className="-mx-4 mb-8 sm:-mx-8 lg:hidden">
-          <Image src={ART} alt={ART_ALT} width={2160} height={2502} className="mx-auto h-auto w-full max-w-[520px]" sizes="100vw" />
+        {/* Artwork for mobile / tablet (curve and heart badge built in) */}
+        <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
+          <div className="sm:hidden">
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_mobile.png", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
+          </div>
+          <div className="hidden sm:block">
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 82, w: 834, h: 968 } }} />
+          </div>
+          <Image
+            src="/about-us/about_us-legimateesasection-hearticon.svg"
+            alt=""
+            width={64}
+            height={64}
+            className="absolute bottom-0 left-1/2 z-20 h-14 w-14 -translate-x-1/2 translate-y-[45%] sm:h-16 sm:w-16"
+          />
         </div>
 
         <div className="flex w-full max-w-[626px] flex-col gap-10 lg:max-w-[40vw] lg:gap-[3vw] xl:max-w-[626px] xl:gap-14">

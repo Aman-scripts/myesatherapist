@@ -10,8 +10,17 @@ const POINTS = [
 
 export function EsaTrainingHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#FAF7F2] lg:flex lg:min-h-[46vw] lg:items-center xl:min-h-[654px]">
-      {/* Full-bleed hero photo (desktop) */}
+    <section className="relative grid w-full grid-cols-[minmax(0,1fr)] overflow-hidden bg-[#FAF7F2] lg:flex lg:min-h-[46vw] lg:items-center xl:min-h-[654px]">
+      {/* Sizes the mobile / tablet hero to the portrait artwork */}
+      <div aria-hidden="true" className="col-start-1 row-start-1 aspect-[941/1672] lg:hidden" />
+      {/* Hero photo: portrait art on mobile / tablet, full-bleed on desktop */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[941/1672] lg:hidden"
+        style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)" }}
+      >
+        <Image src="/esa-training/esa-training-herosection_mobile.png" alt="Woman sitting on the floor at home holding her cat" fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <Image src="/esa-training/esa-training-herosection_tablet.png" alt="Woman sitting on the floor at home holding her cat" fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+      </div>
       <Image
         src="/esa-training/esa-traning_herosection.png"
         alt="Woman sitting on the floor at home holding her cat"
@@ -22,10 +31,10 @@ export function EsaTrainingHero() {
         sizes="(min-width: 1024px) 100vw, 1px"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 pb-8 pt-10 sm:px-8 sm:pt-14 lg:flex-row lg:items-center lg:justify-between lg:gap-[2vw] lg:px-[5.6vw] lg:py-[3vw] xl:gap-8 xl:px-20 xl:py-[64px]">
+      <div className="relative z-10 col-start-1 row-start-1 mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 pb-[90vw] pt-10 sm:pb-[90vw] sm:px-8 sm:pt-14 lg:flex-row lg:items-center lg:justify-between lg:gap-[2vw] lg:px-[5.6vw] lg:pb-[3vw] lg:pt-[3vw] xl:gap-8 xl:px-20 xl:py-[64px]">
         {/* Left: heading, text, button */}
         <div className="flex w-full flex-col items-center gap-6 text-center lg:w-[45%] lg:items-start lg:gap-[1.7vw] lg:text-left xl:w-[549px] xl:gap-[33px]">
-          <div className="flex flex-col gap-4 lg:gap-[1.6vw] xl:gap-6">
+          <div className="flex flex-col items-center gap-4 lg:items-start lg:gap-[1.6vw] xl:gap-6">
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-[#2E5A66] sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:max-w-[462px] xl:text-[56px] xl:leading-[64px]">
               Does Your ESA Actually Need Training?
             </h1>
@@ -65,19 +74,6 @@ export function EsaTrainingHero() {
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Photo for mobile / tablet, below the content */}
-      <div className="relative w-full lg:hidden">
-        <Image
-          src="/esa-training/esa-traning_herosection.png"
-          alt="Woman sitting on the floor at home holding her cat"
-          width={2048}
-          height={768}
-          priority
-          className="h-auto w-full"
-          sizes="100vw"
-        />
       </div>
     </section>
   );
