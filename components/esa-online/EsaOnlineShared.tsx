@@ -115,7 +115,7 @@ export interface WaveImageSource {
   crop?: { x: number; y: number; w: number; h: number };
 }
 
-function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; alt: string; priority?: boolean }) {
+export function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; alt: string; priority?: boolean }) {
   const c = img.crop;
   if (!c) {
     return (

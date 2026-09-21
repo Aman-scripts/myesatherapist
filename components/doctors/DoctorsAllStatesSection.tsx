@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
 export function DoctorsAllStatesSection() {
   const cards = [
@@ -27,18 +28,15 @@ export function DoctorsAllStatesSection() {
       {/* ========================================================================= */}
       {/* DESKTOP ARTWORK (xl: and above) - Bleeds flush right, top & bottom       */}
       {/* ========================================================================= */}
-      <div className="hidden xl:block absolute right-0 top-0 bottom-0 h-full w-[52%] max-w-[760px] min-w-[680px] pointer-events-none z-0">
-        <div className="relative w-full h-full overflow-hidden">
-          <Image
-            src="/doctors/doctors_weareinstate.png"
-            alt="We're in All 50 US States - Licensed Mental Health Professionals with Dogs and Cats"
-            fill
-            priority
-            unoptimized
-            className="object-cover object-left-top"
-            sizes="(max-width: 1440px) 52vw, 760px"
-          />
-        </div>
+      <div className="hidden xl:block absolute inset-y-0 right-0 aspect-[2291/2205] pointer-events-none z-0">
+        <Image
+          src="/esa-renewal/esa-renewal-all50states.png"
+          alt="We're in All 50 US States - Licensed Mental Health Professionals"
+          fill
+          priority
+          className="object-cover object-right"
+          sizes="780px"
+        />
       </div>
 
       {/* ========================================================================= */}
@@ -48,14 +46,10 @@ export function DoctorsAllStatesSection() {
       <div className="block xl:hidden w-full relative z-10">
         {/* Mobile View (< 640px) */}
         <div className="sm:hidden w-full relative">
-          <Image
-            src="/doctors/doctors_weareinstate_mobile.png"
-            alt="We're in All 50 US States - Licensed Mental Health Professionals with Dogs and Cats"
-            width={390}
-            height={426}
+          <WaveImageFrame
+            alt="We're in All 50 US States - Licensed Mental Health Professionals"
             priority
-            unoptimized
-            className="w-full h-auto block"
+            img={{ src: "/esa-renewal/esa-renwal_licensedprofessional_mobile.png", w: 390, h: 512, crop: { x: 0, y: 109, w: 390, h: 402 } }}
           />
           {/* Centered Circular Heart & Paw Badge right on the bottom wave dip */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[52px] h-[52px] z-20 pointer-events-none flex items-center justify-center">
@@ -72,14 +66,10 @@ export function DoctorsAllStatesSection() {
 
         {/* Tablet View (640px to 1279px) */}
         <div className="hidden sm:block w-full relative">
-          <Image
-            src="/doctors/doctors_weareinstate_tablet.png"
-            alt="We're in All 50 US States - Licensed Mental Health Professionals with Dogs and Cats"
-            width={834}
-            height={1029}
+          <WaveImageFrame
+            alt="We're in All 50 US States - Licensed Mental Health Professionals"
             priority
-            unoptimized
-            className="w-full h-auto block"
+            img={{ src: "/esa-renewal/esa-renwal_licensedprofessional_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
           />
           {/* Centered Circular Heart & Paw Badge right on the bottom wave dip */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] z-20 pointer-events-none flex items-center justify-center">
