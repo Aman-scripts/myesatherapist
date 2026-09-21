@@ -7,8 +7,17 @@ const ART_ALT = "Woman hugging her cat, surrounded by icons for anxiety, stress,
 
 export function QualifyingConditionsHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#FAF7F2] lg:min-h-[55vw] xl:min-h-[804px]">
-      {/* Full-bleed hero photo (desktop) */}
+    <section className="relative grid w-full grid-cols-[minmax(0,1fr)] overflow-hidden bg-[#FAF7F2] lg:block lg:min-h-[55vw] xl:min-h-[804px]">
+      {/* Sizes the mobile / tablet hero to the portrait artwork */}
+      <div aria-hidden="true" className="col-start-1 row-start-1 aspect-[390/782] sm:aspect-[834/1458] lg:hidden" />
+      {/* Hero photo: portrait art on mobile / tablet, full-bleed on desktop */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[390/782] sm:aspect-[834/1458] lg:hidden"
+        style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)" }}
+      >
+        <Image src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_mobile.png" alt={ART_ALT} fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <Image src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_tablet.png" alt={ART_ALT} fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+      </div>
       <Image
         src={ART}
         alt={ART_ALT}
@@ -19,7 +28,7 @@ export function QualifyingConditionsHero() {
         sizes="(min-width: 1024px) 100vw, 1px"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-5 pb-8 pt-10 sm:px-8 sm:pt-14 lg:px-[5.6vw] lg:pb-[4vw] lg:pt-[6.4vw] xl:px-20 xl:pb-16 xl:pt-[100px]">
+      <div className="relative z-10 col-start-1 row-start-1 mx-auto w-full max-w-[1440px] px-5 pb-[122vw] pt-10 sm:px-8 sm:pb-[106vw] sm:pt-14 lg:px-[5.6vw] lg:pb-[4vw] lg:pt-[6.4vw] xl:px-20 xl:pb-16 xl:pt-[100px]">
         <div className="flex w-full flex-col items-center gap-8 text-center lg:max-w-[45vw] lg:items-start lg:gap-[3.3vw] lg:text-left xl:max-w-[613px] xl:gap-12">
           <div className="flex flex-col gap-4 lg:gap-[1.6vw] xl:gap-6">
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-[#2E5A66] sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:text-[56px] xl:leading-[64px]">
@@ -43,11 +52,6 @@ export function QualifyingConditionsHero() {
           </div>
           <CtaButton href="/esa-doctors/">Explore the Team</CtaButton>
         </div>
-      </div>
-
-      {/* Photo for mobile / tablet, below the content */}
-      <div className="relative w-full lg:hidden">
-        <Image src={ART} alt={ART_ALT} width={1568} height={1003} priority className="h-auto w-full" sizes="100vw" />
       </div>
     </section>
   );

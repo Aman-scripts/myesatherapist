@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
 const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_commonreason.png";
 const ART_ALT = "Woman relaxing on her sofa with a fluffy white dog and a black cat";
@@ -13,9 +14,21 @@ export function QualifyingConditionsReasons() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4vw] lg:pl-[5.8vw] lg:pr-0 xl:py-0 xl:pl-[83px]">
-        {/* Artwork for mobile / tablet */}
-        <div className="-mx-4 mb-8 sm:-mx-8 lg:hidden">
-          <Image src={ART} alt={ART_ALT} width={1908} height={1647} className="mx-auto h-auto w-full max-w-[520px]" sizes="100vw" />
+        {/* Artwork for mobile / tablet (curve built in, heart badge added) */}
+        <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
+          <div className="sm:hidden">
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-qualifying-conditions/esa-qualifyingcondtions_commonreasons_mobile.png", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
+          </div>
+          <div className="hidden sm:block">
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-qualifying-conditions/esa-qualifyingcondtions_commonreasons_tablet.png", w: 834, h: 1049, crop: { x: 0, y: 197, w: 834, h: 852 } }} />
+          </div>
+          <Image
+            src="/about-us/about_us-legimateesasection-hearticon.svg"
+            alt=""
+            width={64}
+            height={64}
+            className="absolute bottom-0 left-1/2 z-20 h-14 w-14 -translate-x-1/2 translate-y-[45%] sm:h-16 sm:w-16"
+          />
         </div>
 
         <div className="flex w-full max-w-[626px] flex-col gap-5 text-center lg:max-w-[42vw] lg:gap-[1.9vw] lg:text-left xl:max-w-[626px] xl:gap-7">
