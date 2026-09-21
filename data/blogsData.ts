@@ -114,6 +114,8 @@ export interface BlogArticle {
   title: string;
   metaTitle?: string;
   metaDescription?: string;
+  /** Optional Open Graph / Twitter description when it differs from the meta description. */
+  ogDescription?: string;
   shortDescription: string;
   category: string;
   author: {
@@ -2703,6 +2705,8 @@ export const BLOG_POSTS: BlogArticle[] = [
   "canonicalUrl": "https://myesatherapist.com/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/",
   schema: eightBasicObedienceCommandsSchema,
   "metaTitle": "8 Basic Obedience Commands Every ESA Should Know | My ESA Therapist",
+  "metaDescription": "Explore 8 basic commands to help train your emotional support animal, improve behavior, and make everyday interactions easier and more predictable.",
+  "ogDescription": "Learn the 8 basic obedience commands every emotional support animal should know, including sit, stay, come, down, leave it, quiet, place, and heel.",
   "title": "8 Basic Obedience Commands Every ESA Should Know.",
   "shortDescription": "The 8 basic obedience commands every ESA should know are sit, stay, come, down, leave it, quiet, place, and heel. These commands support better behavior, safety, control, and calmer everyday interactions.",
   "category": "ESA Training",
