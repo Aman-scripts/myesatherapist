@@ -1,80 +1,75 @@
 import React from "react";
 import Image from "next/image";
+import { TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
+import { SectionHeader } from "./EsaTrainingShared";
+
+const CARDS = [
+  {
+    title: "Tips for DIY training",
+    image: "/esa-training/esa-traning_canyoutrain_tipstodiy.png",
+    alt: "Woman teaching her golden retriever a new trick at home",
+    items: [
+      "Keep sessions short, five to ten minutes, so neither of you gets frustrated",
+      "Use positive reinforcement (treats, praise, play), not punishment",
+      "Stay consistent with commands and cues",
+      "Practice in low-distraction spaces before moving to busier ones",
+    ],
+  },
+  {
+    title: "When to hire a professional",
+    image: "/esa-training/esa-traning_canyoutrain_whentohireprofess.png",
+    alt: "Professional trainer working with a golden retriever and its owner",
+    items: [
+      "If your animal shows anxiety or aggression, or progress has stalled. Costs vary by location and format (group classes vs. private sessions), so it's worth comparing a few local options.",
+    ],
+  },
+];
+
+function Check() {
+  return (
+    <span
+      className="mt-[5px] flex h-5 w-5 shrink-0 items-center justify-center rounded-full lg:mt-[0.3vw] lg:h-[1.4vw] lg:w-[1.4vw] xl:mt-[5px] xl:h-5 xl:w-5"
+      style={{ backgroundImage: TEAL_GRADIENT }}
+    >
+      <svg viewBox="0 0 12 12" fill="none" className="h-[55%] w-[55%]" aria-hidden="true">
+        <path d="M2.5 6.4l2.3 2.3 4.7-5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
 
 export function EsaTrainingDiySection() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12">
-          <span className="inline-block rounded-full bg-[#2E5A66]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2E5A66] mb-3">
-            Your Options
-          </span>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[38px] leading-tight text-[#2E5A66]">
-            Can You Train Your ESA Yourself?
-          </h2>
-          <p className="mt-3 font-sans text-base sm:text-lg text-[#5F6B6F]">
-            Yes. Many owners do it themselves.
-          </p>
-        </div>
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-[5vw] xl:py-[72px]">
+      <div className="mx-auto flex w-full max-w-[1293px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[3.9vw] lg:px-[5vw] xl:gap-14 xl:px-0">
+        <SectionHeader title="Can You Train Your ESA Yourself?" subtitle="Yes. Many owners do it themselves." />
 
-        <div className="grid gap-6 sm:grid-cols-2">
-          {/* Card 1: DIY Training */}
-          <div className="overflow-hidden rounded-[20px] bg-white border border-[#EAE5DC] shadow-[0_4px_25px_rgba(46,90,102,0.08)] flex flex-col">
-            {/* Image */}
-            <div className="relative h-[200px] w-full shrink-0">
-              <Image
-                src="/esa-training/esa-training-bond.webp"
-                alt="Owner doing DIY training with their emotional support animal"
-                fill
-                className="object-cover"
-                sizes="(min-width: 640px) 50vw, 100vw"
-              />
+        <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-2">
+          {CARDS.map((card) => (
+            <div
+              key={card.title}
+              className="overflow-hidden rounded-[30px] bg-[#FAF7F2] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] lg:min-h-[48vw] xl:h-[696px] xl:min-h-0"
+            >
+              <div className="relative aspect-[626/273] w-full overflow-hidden">
+                <Image src={card.image} alt={card.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 626px, (min-width: 1024px) 45vw, 100vw" />
+              </div>
+              <div className="mx-auto flex w-full max-w-[498px] flex-col items-center gap-8 px-6 pb-10 pt-8 sm:px-8 lg:max-w-none lg:gap-[2.8vw] lg:px-[4.6vw] lg:pt-[2.6vw] xl:max-w-[498px] xl:gap-10 xl:px-0 xl:pt-[37px]">
+                <h3 className="text-center font-heading text-[24px] font-bold leading-[32px] text-[#2E5A66] sm:text-[28px] sm:leading-9 lg:text-[2vw] lg:leading-[2.5vw] xl:text-[28px] xl:leading-9">
+                  {card.title}
+                </h3>
+                <ul className="flex w-full flex-col gap-5 lg:gap-[1.7vw] xl:gap-6">
+                  {card.items.map((item) => (
+                    <li key={item} className="flex items-start gap-[18px] lg:gap-[1.2vw] xl:gap-[18px]">
+                      <Check />
+                      <span className="font-sans text-base font-semibold leading-[1.65] text-[#1E3E47] sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] xl:leading-[30px]">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            {/* Content */}
-            <div className="p-6 sm:p-7 flex flex-col flex-1">
-              <h3 className="font-heading font-bold text-xl sm:text-[22px] text-[#1E3E47] mb-4">
-                Tips for DIY training
-              </h3>
-              <ul className="space-y-3 flex-1">
-                {[
-                  "Keep sessions short, five to ten minutes, so neither of you gets frustrated",
-                  "Use positive reinforcement (treats, praise, play), not punishment",
-                  "Stay consistent with commands and cues",
-                  "Practice in low-distraction spaces before moving to busier ones",
-                ].map((tip) => (
-                  <li key={tip} className="flex items-start gap-2.5 font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F]">
-                    <span className="mt-1.5 shrink-0 size-1.5 rounded-full bg-[#E8B92C]" />
-                    {tip}
-                  </li>
-                ))}
-              </ul>
-
-            </div>
-          </div>
-
-          {/* Card 2: Professional Training */}
-          <div className="overflow-hidden rounded-[20px] bg-white border border-[#EAE5DC] shadow-[0_4px_25px_rgba(46,90,102,0.08)] flex flex-col">
-            {/* Image */}
-            <div className="relative h-[200px] w-full shrink-0">
-              <Image
-                src="/esa-training/esa-training-hero.webp"
-                alt="Professional trainer working with an emotional support animal"
-                fill
-                className="object-cover"
-                sizes="(min-width: 640px) 50vw, 100vw"
-              />
-            </div>
-            {/* Content */}
-            <div className="p-6 sm:p-7 flex flex-col flex-1">
-              <h3 className="font-heading font-bold text-xl sm:text-[22px] text-[#1E3E47] mb-4">
-                When to hire a professional
-              </h3>
-              <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F] flex-1">
-                If your animal shows anxiety or aggression, or progress has stalled. Costs vary by location and format (group classes vs. private sessions), so it&apos;s worth comparing a few local options.
-              </p>
-
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

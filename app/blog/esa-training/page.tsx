@@ -94,29 +94,32 @@ export default function EsaTrainingPage() {
         {/* 1. Hero */}
         <EsaTrainingHero />
 
-        {/* 2. Legal Requirements */}
-        <EsaTrainingLegalSection />
+        {/* 2-9. Content sections, 94px apart on desktop */}
+        <div className="flex flex-col gap-12 pb-12 pt-12 sm:gap-16 sm:pt-16 lg:gap-[6vw] lg:pb-[6vw] lg:pt-[7vw] xl:gap-[94px] xl:pb-[94px] xl:pt-[100px]">
+          {/* Legal Requirements */}
+          <EsaTrainingLegalSection />
 
-        {/* 3. ESA vs Service Dog Comparison Table */}
-        <EsaTrainingVsServiceDog />
+          {/* ESA vs Service Dog comparison table */}
+          <EsaTrainingVsServiceDog />
 
-        {/* 4. Recommended Basics */}
-        <EsaTrainingBasicsSection />
+          {/* Recommended Basics */}
+          <EsaTrainingBasicsSection />
 
-        {/* 5. Training by Animal Type */}
-        <EsaTrainingBySpeciesSection />
+          {/* Training by Animal Type */}
+          <EsaTrainingBySpeciesSection />
 
-        {/* 6. Can You Train Your ESA Yourself? (DIY vs Professional) */}
-        <EsaTrainingDiySection />
+          {/* Can You Train Your ESA Yourself? */}
+          <EsaTrainingDiySection />
 
-        {/* 7. Mental Health Condition-Specific Training Support */}
-        <EsaTrainingConditionsSection />
+          {/* Mental Health Condition-Specific Training Support */}
+          <EsaTrainingConditionsSection />
 
-        {/* 8. The Human-Animal Bond */}
-        <EsaTrainingBondSection />
+          {/* The Human-Animal Bond */}
+          <EsaTrainingBondSection />
 
-        {/* 9. Common ESA Training Mistakes to Avoid */}
-        <EsaTrainingMistakesSection />
+          {/* Common ESA Training Mistakes to Avoid */}
+          <EsaTrainingMistakesSection />
+        </div>
 
         {/* 10. Frequently Asked Questions */}
         <FaqSection

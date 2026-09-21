@@ -1,53 +1,83 @@
 import React from "react";
+import Image from "next/image";
+import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
+
+const POINTS = [
+  "No pet fees for a legitimate ESA. That hasn't changed.",
+  "HUD shifted enforcement on May 22, 2026 toward trained, task-specific animals.",
+  "A current letter from a licensed professional still holds legal footing.",
+];
 
 export function EsaTrainingHero() {
   return (
-    <section className="w-full bg-[#FAF7F2]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 sm:pb-16 md:grid-cols-12 md:items-start">
-        {/* Left Column: Heading & Lead */}
-        <div className="md:col-span-7">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#2E5A66]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2E5A66] mb-5">
-            <span className="size-1.5 rounded-full bg-[#E8B92C]" />
-            ESA Training Guide
-          </span>
-          <h1 className="max-w-[20ch] text-balance font-heading font-bold text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] tracking-tight leading-[1.15] text-[#2E5A66]">
-            Does Your ESA Actually Need{" "}
-            <span className="text-[#E8B92C]">Training?</span>
-          </h1>
-          <p className="mt-5 max-w-[52ch] font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] font-medium text-[#5F6B6F]">
-            Wondering whether your emotional support animal needs training? Here&apos;s the honest, complete answer, including what changed in 2026 and what it means for your housing rights.
-          </p>
+    <section className="relative w-full overflow-hidden bg-[#FAF7F2] lg:flex lg:min-h-[46vw] lg:items-center xl:min-h-[654px]">
+      {/* Full-bleed hero photo (desktop) */}
+      <Image
+        src="/esa-training/esa-traning_herosection.png"
+        alt="Woman sitting on the floor at home holding her cat"
+        fill
+        priority
+        quality={90}
+        className="pointer-events-none hidden object-cover object-[29%_center] lg:block"
+        sizes="(min-width: 1024px) 100vw, 1px"
+      />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 pb-8 pt-10 sm:px-8 sm:pt-14 lg:flex-row lg:items-center lg:justify-between lg:gap-[2vw] lg:px-[5.6vw] lg:py-[3vw] xl:gap-8 xl:px-20 xl:py-[64px]">
+        {/* Left: heading, text, button */}
+        <div className="flex w-full flex-col items-center gap-6 text-center lg:w-[45%] lg:items-start lg:gap-[1.7vw] lg:text-left xl:w-[549px] xl:gap-[33px]">
+          <div className="flex flex-col gap-4 lg:gap-[1.6vw] xl:gap-6">
+            <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-[#2E5A66] sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:max-w-[462px] xl:text-[56px] xl:leading-[64px]">
+              Does Your ESA Actually Need Training?
+            </h1>
+            <p className="max-w-[520px] font-sans text-base font-semibold leading-[1.65] text-[#5F6B6F] sm:text-[18px] lg:max-w-[26vw] lg:text-[1.25vw] lg:leading-[2.1vw] xl:max-w-[364px] xl:text-[18px] xl:leading-[30px]">
+              Wondering whether your emotional support animal needs training? Here&apos;s the honest, complete answer,
+              including what changed in 2026 and what it means for your housing rights.
+            </p>
+          </div>
+          <CtaButton href="/esa-doctors/">Explore the Team</CtaButton>
         </div>
 
-        {/* Right Column: Key Takeaway Card */}
-        <aside className="rounded-[20px] bg-white overflow-hidden shadow-[0_4px_25px_rgba(46,90,102,0.08)] border border-[#E8B92C]/35 md:col-span-5 md:mt-4">
-          <div className="bg-[#E8B92C] px-6 py-3 text-[11px] font-extrabold uppercase tracking-[1.4px] text-[#2E5A66]">
-            Key Takeaway
-          </div>
-          <div className="px-6 py-6">
-            <h2 className="font-heading font-extrabold text-[22px] leading-[1.25] text-[#2E5A66] mb-2.5">
-              No. Training isn&apos;t legally required.
-            </h2>
-            <p className="font-sans text-sm leading-[1.65] text-[#5F6B6F] mb-5">
-              The Fair Housing Act has never required ESAs to be trained. But behavior, documentation, and a current letter matter more than ever since HUD&apos;s 2026 enforcement shift.
-            </p>
-            <ul className="flex flex-col gap-3">
-              {[
-                "No pet fees for a legitimate ESA. That hasn't changed.",
-                "HUD shifted enforcement on May 22, 2026 toward trained, task-specific animals.",
-                "A current letter from a licensed professional still holds legal footing.",
-              ].map((item) => (
+        {/* Right: frosted key-takeaway card */}
+        <div className="mx-auto flex w-full max-w-[407px] justify-center rounded-[30px] border border-[#F5A636]/[0.09] bg-[#F5A636]/[0.26] px-3 py-8 backdrop-blur-[18px] sm:max-w-[440px] lg:mx-0 lg:w-[30vw] lg:max-w-none lg:px-[0.9vw] lg:py-[2.2vw] xl:w-[407px] xl:px-3 xl:py-8">
+          <div className="flex w-full max-w-[360px] flex-col items-center gap-8 lg:max-w-none lg:gap-[2.2vw] xl:max-w-[360px] xl:gap-8">
+            <div className="flex w-full flex-col items-center gap-2">
+              <h2 className="w-full font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-[#373737] sm:text-[32px] sm:leading-10 lg:text-[2.45vw] lg:leading-[3vw] xl:text-[36px] xl:leading-[44px]">
+                No. Training isn&apos;t legally required.
+              </h2>
+              <p className="w-full font-sans text-sm font-semibold leading-[26px] text-[#5F6B6F] lg:text-[1vw] lg:leading-[1.8vw] xl:text-sm xl:leading-[26px]">
+                The Fair Housing Act has never required ESAs to be trained. But behavior, documentation, and a current
+                letter matter more than ever since HUD&apos;s 2026 enforcement shift.
+              </p>
+            </div>
+
+            <ul className="flex w-full flex-col gap-4 lg:gap-[1.5vw] xl:gap-6">
+              {POINTS.map((point) => (
                 <li
-                  key={item}
-                  className="relative pl-9 font-sans text-sm leading-[1.55] text-[#2E5A66] bg-[#E8B92C]/10 rounded-lg border-l-[3px] border-[#E8B92C] py-2.5 pr-3"
+                  key={point}
+                  className="relative flex min-h-[60px] items-center overflow-hidden rounded-[10px] bg-white py-2 pl-7 pr-5 lg:min-h-[4vw] lg:pl-[1.9vw] lg:pr-[1vw] xl:min-h-[60px] xl:pl-7 xl:pr-7"
                 >
-                  <span className="absolute left-3 top-[10px] font-extrabold text-[#E8B92C] text-[13px]">✓</span>
-                  {item}
+                  <span aria-hidden="true" className="absolute inset-y-0 left-0 w-[9px] bg-[#E8B92C]" />
+                  <span className="font-sans text-sm font-semibold leading-[22px] text-[#5F6B6F] lg:text-[0.95vw] lg:leading-[1.55vw] xl:text-sm xl:leading-[22px]">
+                    {point}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
-        </aside>
+        </div>
+      </div>
+
+      {/* Photo for mobile / tablet, below the content */}
+      <div className="relative w-full lg:hidden">
+        <Image
+          src="/esa-training/esa-traning_herosection.png"
+          alt="Woman sitting on the floor at home holding her cat"
+          width={2048}
+          height={768}
+          priority
+          className="h-auto w-full"
+          sizes="100vw"
+        />
       </div>
     </section>
   );

@@ -1,51 +1,48 @@
 import React from "react";
 import Image from "next/image";
-import { Quote } from "lucide-react";
+import { CtaButton, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
+
+const ART = "/esa-training/esa-traning_howtotraningstrengeth.png";
+const ART_ALT = "Woman hugging her golden retriever at home";
 
 export function EsaTrainingBondSection() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12">
-          <span className="inline-block rounded-full bg-[#2E5A66]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2E5A66] mb-3">
-            The Human-Animal Bond
-          </span>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[38px] leading-tight text-[#2E5A66]">
-            How Training Strengthens the ESA-Owner Bond
-          </h2>
+    <section className="relative w-full overflow-hidden bg-white lg:min-h-[46vw] xl:min-h-0 xl:h-[619px]">
+      {/* Artwork with the curved edge and heart badge built in (desktop) */}
+      <div className="absolute inset-y-0 right-0 hidden aspect-[1911/1857] lg:block">
+        <Image src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 640px, 1px" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4.5vw] lg:pl-[5.8vw] lg:pr-0 xl:py-0 xl:pl-[83px]">
+        {/* Artwork for mobile / tablet */}
+        <div className="-mx-4 mb-8 sm:-mx-8 lg:hidden">
+          <Image src={ART} alt={ART_ALT} width={1911} height={1857} className="mx-auto h-auto w-full max-w-[520px]" sizes="100vw" />
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-12 items-start">
-          {/* Left Column: Quote Card & Note */}
-          <div className="lg:col-span-7">
-            <div className="rounded-[24px] bg-white p-7 sm:p-9 shadow-[0_4px_20px_-4px_rgba(46,90,102,0.08)] border border-[#EAE5DC] border-l-[5px] border-l-[#E8B92C]">
-              {/* Gold Quote Icon Badge */}
-              <div className="size-11 rounded-xl bg-[#E8B92C]/15 border border-[#E8B92C]/35 flex items-center justify-center text-[#E8B92C] mb-4 shadow-2xs">
-                <Quote className="size-5 text-[#E8B92C] fill-[#E8B92C]" />
-              </div>
-
-              {/* Quote Typography */}
-              <blockquote className="font-heading italic font-semibold text-lg sm:text-xl lg:text-[22px] leading-[1.55] text-[#1E3E47] relative z-10">
-                “Training sessions build more than obedience. The repetition creates routine, and routine is genuinely therapeutic, especially on harder days.”
-              </blockquote>
+        <div className="flex w-full flex-col items-center gap-8 text-center lg:items-start lg:gap-[2.6vw] lg:text-left xl:gap-[37px]">
+          <div className="flex w-full max-w-[626px] flex-col items-center gap-7 lg:max-w-[40vw] lg:items-start lg:gap-[2.6vw] xl:max-w-[626px] xl:gap-14">
+            <div className="flex flex-col gap-5 lg:gap-[1.9vw] xl:gap-7">
+              <h2 className="mx-auto max-w-[541px] font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-[#2E5A66] sm:text-4xl sm:leading-[46px] lg:mx-0 lg:text-[3.05vw] lg:leading-[3.75vw] xl:text-[44px] xl:leading-[54px]">
+                How Training Strengthens the ESA-Owner Bond
+              </h2>
+              <p className="font-sans text-base font-semibold leading-[1.67] text-[#5F6B6F] sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] xl:leading-[30px]">
+                Teaching your animal something new, watching them learn, and building a shared language of trust deepens
+                the bond in a way little else does.
+              </p>
             </div>
-
-            <p className="mt-5 font-sans text-base sm:text-[17px] leading-[1.75] text-[#5F6B6F]">
-              Teaching your animal something new, watching them learn, and building a shared language of trust deepens the bond in a way little else does.
-            </p>
+            <CtaButton href="/esa-doctors/">Work with Licensed Professionals</CtaButton>
           </div>
 
-          {/* Right Column: Companion Dog Photo */}
-          <div className="lg:col-span-5 self-stretch flex">
-            <div className="relative overflow-hidden rounded-[22px] shadow-md border-2 border-[#E8B92C]/40 bg-white w-full min-h-[280px]">
-              <Image
-                src="/esa-training/esa-training-bond.webp"
-                alt="Person relaxing at home with a calm emotional support dog by their side"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 380px, 100vw"
-              />
-            </div>
+          {/* Quote */}
+          <div
+            className="flex w-full max-w-[772px] items-stretch overflow-hidden rounded-[20px] text-left shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:w-[54vw] lg:max-w-none xl:w-[772px]"
+            style={{ backgroundImage: TEAL_GRADIENT }}
+          >
+            <div className="w-[13px] shrink-0 bg-[#E8B92C]" />
+            <blockquote className="flex flex-1 items-center px-5 py-6 font-heading text-lg font-bold leading-7 text-white sm:px-8 sm:text-[20px] lg:px-[1.6vw] lg:py-[1.6vw] lg:text-[1.55vw] lg:leading-[2.2vw] xl:px-6 xl:py-[32px] xl:text-[20px] xl:leading-7">
+              “Training sessions build more than obedience. The repetition creates routine, and routine is genuinely
+              therapeutic, especially on harder days.”
+            </blockquote>
           </div>
         </div>
       </div>
