@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -74,11 +75,14 @@ export function EmotionalSupportSection() {
           {/* Action Buttons in One Line (Expanded & Proportional) */}
           <div className="flex flex-row items-center gap-3 sm:gap-4 lg:gap-5 pt-2 w-full max-w-[420px] sm:max-w-none">
             {/* Learn about ESA's Button */}
-            <button className="flex-1 sm:flex-initial sm:w-auto px-4 sm:px-7 h-[46px] sm:h-[48px] rounded-full bg-[#FAF7F2] font-semibold text-[14.5px] sm:text-base shadow-sm hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap">
+            <Link
+              href="/blog/esa-guide/emotional-support-animal/"
+              className="flex-1 sm:flex-initial sm:w-auto px-4 sm:px-7 h-[46px] sm:h-[48px] rounded-full bg-[#FAF7F2] font-semibold text-[14.5px] sm:text-base shadow-sm hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap"
+            >
               <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 Learn about ESA&apos;s
               </span>
-            </button>
+            </Link>
 
             {/* Get Started Button */}
             <a

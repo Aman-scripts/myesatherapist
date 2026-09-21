@@ -58,7 +58,7 @@ export function EsaOnlineWhatIs() {
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
             <a
-              href="/blog/esa-guide/"
+              href="/blog/esa-guide/emotional-support-animal/"
               className="inline-flex h-12 items-center rounded-[30px] bg-[#FAF7F2] px-8 font-sans font-semibold text-base text-[#2E5A66] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f1ece2] transition-colors"
             >
               Learn about ESA’s
