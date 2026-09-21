@@ -83,16 +83,19 @@ export default function QualifyingConditionsPage() {
 
       <main className="flex-1">
         <QualifyingConditionsHero />
-        <QualifyingConditionsLearnMore />
-        <QualifyingConditionsReasons />
-        <QualifyingConditionsEligibility />
+        {/* Content sections, 94px apart on desktop */}
+        <div className="flex flex-col gap-12 pb-12 pt-12 sm:gap-16 sm:pt-16 lg:gap-[6vw] lg:pb-[6vw] lg:pt-[5.9vw] xl:gap-[94px] xl:pb-[94px] xl:pt-[85px]">
+          <QualifyingConditionsLearnMore />
+          <QualifyingConditionsReasons />
+          <QualifyingConditionsEligibility />
+        </div>
 
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
           subtitle="Answers to the most common ESA questions"
           faqs={qualifyingConditionsFaqs}
-          bg="bg-white"
+          bg="bg-[#FAF7F2]"
         />
 
         <CtaBanner
@@ -106,7 +109,7 @@ export default function QualifyingConditionsPage() {
           }
           buttonText="Start Your ESA Evaluation Now"
           buttonHref="/pricing/"
-          bgColor="bg-white"
+          bgColor="bg-[#FAF7F2]"
           className="pb-12 sm:pb-16"
         />
       </main>

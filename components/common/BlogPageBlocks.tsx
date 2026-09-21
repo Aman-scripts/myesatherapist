@@ -8,12 +8,15 @@ export function SectionHeader({
   subtitleFont = "manrope",
   className = "",
   titleClassName = "",
+  subtitleMaxWidth = "max-w-[1002px]",
 }: {
   title: string;
   subtitle?: string;
   subtitleFont?: "manrope" | "lato";
   className?: string;
   titleClassName?: string;
+  /** Tailwind max-width class for the subtitle. */
+  subtitleMaxWidth?: string;
 }) {
   return (
     <div className={`flex flex-col items-center gap-2 lg:gap-[0.6vw] xl:gap-2 text-center ${className}`}>
@@ -24,11 +27,7 @@ export function SectionHeader({
       </h2>
       {subtitle && (
         <p
-          className={
-            subtitleFont === "lato"
-              ? "text-[#5F6B6F] text-base leading-7 sm:text-[20px] sm:leading-8 lg:text-[1.4vw] lg:leading-[2.2vw] xl:text-[20px] xl:leading-8 max-w-[1100px]"
-              : "font-sans font-semibold text-[#5F6B6F] text-base leading-7 sm:text-[18px] sm:leading-[30px] lg:text-[1.25vw] lg:leading-[2.1vw] xl:text-[18px] xl:leading-[30px] max-w-[1002px]"
-          }
+          className={`${subtitleFont === "lato" ? "text-[#5F6B6F] text-base leading-7 sm:text-[20px] sm:leading-8 lg:text-[1.4vw] lg:leading-[2.2vw] xl:text-[20px] xl:leading-8 max-w-[1100px]" : "font-sans font-semibold text-[#5F6B6F] text-base leading-7 sm:text-[18px] sm:leading-[30px] lg:text-[1.25vw] lg:leading-[2.1vw] xl:text-[18px] xl:leading-[30px]"} ${subtitleFont === "lato" ? "" : subtitleMaxWidth}`}
           style={subtitleFont === "lato" ? LATO : undefined}
         >
           {subtitle}
@@ -81,7 +80,7 @@ export function IconCard({
   return (
     <div className="relative mt-10 flex h-full w-full flex-col">
       <div className="absolute inset-x-0 top-0 bottom-1 rounded-[20px] bg-[#E8B92C] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
-      <div className="relative mt-2 flex flex-1 flex-col items-center rounded-[20px] bg-white px-6 pb-8 pt-[58px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:px-[1.3vw] lg:pb-[2vw] lg:pt-[4.4vw] xl:px-5 xl:pb-[37px] xl:pt-[62px]">
+      <div className="relative mt-2 flex flex-1 flex-col items-center rounded-[20px] bg-white px-6 pb-8 pt-[58px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:px-[1.3vw] lg:pb-[2vw] lg:pt-[4.4vw] xl:px-3.5 xl:pb-[37px] xl:pt-[62px]">
         <h3
           className={`font-bold leading-[29px] text-[#2E5A66] text-[22px] sm:text-2xl ${
             compact ? "lg:text-[1.75vw] lg:leading-[2.2vw]" : "lg:text-[1.9vw] lg:leading-[2.3vw]"

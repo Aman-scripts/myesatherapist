@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { GoldPill, SectionHeader } from "./EsaTrainingShared";
+import { GoldPill, SectionHeader } from "@/components/common/BlogPageBlocks";
 
 const ANIMALS = [
   {

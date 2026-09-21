@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CtaButton, LATO, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
-import { SectionHeader } from "./EsaTrainingShared";
+import { SectionHeader } from "@/components/common/BlogPageBlocks";
 
 const ICON = "/esa-training/esa-traning_esatrainingvsbasicstraining-allcardsicon.svg";
 

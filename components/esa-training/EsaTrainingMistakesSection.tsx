@@ -1,5 +1,5 @@
 import React from "react";
-import { IconCard, SectionHeader } from "./EsaTrainingShared";
+import { IconCard, SectionHeader } from "@/components/common/BlogPageBlocks";
 
 const ICON = "/esa-training/esa-traning_commonesatraining_allcardsicon.svg";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
-import { GoldPill, SectionHeader } from "./EsaTrainingShared";
+import { GoldPill, SectionHeader } from "@/components/common/BlogPageBlocks";
 
 export function EsaTrainingLegalSection() {
   return (
