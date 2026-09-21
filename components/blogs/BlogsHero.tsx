@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATES_DATA } from "@/data/statesData";
+import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
 const POPULAR_STATES = Object.values(STATES_DATA);
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
@@ -102,7 +103,7 @@ export function BlogsHero() {
 
               {isDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full mt-1.5 w-full max-h-[260px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  className={STATE_DROPDOWN_PANEL}
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                   <div className="py-1">
@@ -111,10 +112,10 @@ export function BlogsHero() {
                         key={state.slug}
                         type="button"
                         onClick={() => handleStateSelect(state.slug)}
-                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                        className={STATE_DROPDOWN_ITEM}
                       >
                         <span>{state.name}</span>
-                        <span className="text-[10px] text-neutral-400">{state.abbreviation}</span>
+                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
                       </button>
                     ))}
                   </div>
@@ -192,7 +193,7 @@ export function BlogsHero() {
 
               {isDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full mt-2 w-[260px] max-h-[280px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                  className={STATE_DROPDOWN_PANEL}
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                   <div className="py-1">
@@ -201,10 +202,10 @@ export function BlogsHero() {
                         key={state.slug}
                         type="button"
                         onClick={() => handleStateSelect(state.slug)}
-                        className="w-full text-left px-3 py-2 text-xs font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                        className={STATE_DROPDOWN_ITEM}
                       >
                         <span>{state.name}</span>
-                        <span className="text-xs text-neutral-400">{state.abbreviation}</span>
+                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
                       </button>
                     ))}
                   </div>
@@ -283,7 +284,7 @@ export function BlogsHero() {
 
                 {isDropdownOpen && (
                   <div
-                    className="absolute left-0 top-full mt-2 w-[280px] max-h-[340px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-2xl shadow-[0px_12px_32px_rgba(0,0,0,0.18)] border border-[#EAE5DC] z-[100] p-2"
+                    className={STATE_DROPDOWN_PANEL}
                     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                   >
                     <div className="py-1">
@@ -292,10 +293,10 @@ export function BlogsHero() {
                           key={state.slug}
                           type="button"
                           onClick={() => handleStateSelect(state.slug)}
-                          className="w-full text-left px-3 py-2 text-sm font-sans font-medium text-neutral-700 hover:bg-[#FAF7F2] hover:text-[#1A3D4F] rounded-lg transition-colors flex items-center justify-between cursor-pointer"
+                          className={STATE_DROPDOWN_ITEM}
                         >
                           <span>{state.name}</span>
-                          <span className="text-xs text-neutral-400 font-mono">{state.abbreviation}</span>
+                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
                         </button>
                       ))}
                     </div>

@@ -5,57 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
+import { STATES_DATA } from "@/data/statesData";
 
-const AVAILABLE_STATES = [
-  { name: "Alabama", slug: "alabama" },
-  { name: "Alaska", slug: "alaska" },
-  { name: "Arizona", slug: "arizona" },
-  { name: "Arkansas", slug: "arkansas" },
-  { name: "California", slug: "california" },
-  { name: "Colorado", slug: "colorado" },
-  { name: "Connecticut", slug: "connecticut" },
-  { name: "Delaware", slug: "delaware" },
-  { name: "Florida", slug: "florida" },
-  { name: "Georgia", slug: "georgia" },
-  { name: "Hawaii", slug: "hawaii" },
-  { name: "Idaho", slug: "idaho" },
-  { name: "Illinois", slug: "illinois" },
-  { name: "Indiana", slug: "indiana" },
-  { name: "Iowa", slug: "iowa" },
-  { name: "Kansas", slug: "kansas" },
-  { name: "Kentucky", slug: "kentucky" },
-  { name: "Louisiana", slug: "louisiana" },
-  { name: "Maine", slug: "maine" },
-  { name: "Maryland", slug: "maryland" },
-  { name: "Massachusetts", slug: "massachusetts" },
-  { name: "Michigan", slug: "michigan" },
-  { name: "Minnesota", slug: "minnesota" },
-  { name: "Mississippi", slug: "mississippi" },
-  { name: "Missouri", slug: "missouri" },
-  { name: "Montana", slug: "montana" },
-  { name: "Nebraska", slug: "nebraska" },
-  { name: "Nevada", slug: "nevada" },
-  { name: "New Hampshire", slug: "new-hampshire" },
-  { name: "New Jersey", slug: "new-jersey" },
-  { name: "New Mexico", slug: "new-mexico" },
-  { name: "New York", slug: "new-york" },
-  { name: "North Carolina", slug: "north-carolina" },
-  { name: "North Dakota", slug: "north-dakota" },
-  { name: "Ohio", slug: "ohio" },
-  { name: "Oklahoma", slug: "oklahoma" },
-  { name: "Oregon", slug: "oregon" },
-  { name: "Pennsylvania", slug: "pennsylvania" },
-  { name: "South Carolina", slug: "south-carolina" },
-  { name: "South Dakota", slug: "south-dakota" },
-  { name: "Tennessee", slug: "tennessee" },
-  { name: "Texas", slug: "texas" },
-  { name: "Utah", slug: "utah" },
-  { name: "Virginia", slug: "virginia" },
-  { name: "Washington", slug: "washington" },
-  { name: "West Virginia", slug: "west-virginia" },
-  { name: "Wisconsin", slug: "wisconsin" },
-  { name: "Wyoming", slug: "wyoming" },
-];
+const AVAILABLE_STATES = Object.values(STATES_DATA);
 
 export function DoctorsHeroSection() {
   const router = useRouter();
@@ -240,19 +193,16 @@ export function DoctorsHeroSection() {
 
               {/* State Dropdown Menu */}
               {dropdownOpen && (
-                <div className="absolute left-0 top-[56px] sm:top-[60px] z-50 w-full sm:w-[280px] max-h-[320px] overflow-y-auto rounded-[20px] bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.15)] border border-[#EAE5DC] py-2 scrollbar-thin scrollbar-thumb-[#2E5A66]/30">
-                  <div className="px-4 py-2 border-b border-[#FAF7F2] text-xs font-bold text-[#2E5A66] tracking-wider uppercase">
-                    Select Your State
-                  </div>
+                <div className={`${STATE_DROPDOWN_PANEL} !max-h-[390px]`}>
                   {AVAILABLE_STATES.map((st) => (
                     <button
                       key={st.slug}
                       type="button"
                       onClick={() => handleSelectState(st.slug, st.name)}
-                      className="w-full text-left px-4 py-2.5 text-sm font-sans font-semibold text-[#5F6B6F] hover:bg-[#FAF7F2] hover:text-[#2E5A66] transition-colors flex items-center justify-between"
+                      className={STATE_DROPDOWN_ITEM}
                     >
                       <span>{st.name}</span>
-                      <span className="text-xs text-[#E8B92C]">Choose →</span>
+                      <span className={STATE_DROPDOWN_ABBR}>{st.abbreviation}</span>
                     </button>
                   ))}
                 </div>

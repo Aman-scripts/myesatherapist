@@ -5,21 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Clock, Award, ChevronDown } from "lucide-react";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
+import { STATES_DATA } from "@/data/statesData";
 
 const statsData = [
   { value: "51,488+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
   { value: "4.9", label: "Verified Reviews" },
-];
-
-const stateOptions = [
-  { name: "California", href: "/california/" },
-  { name: "Texas", href: "/texas/" },
-  { name: "New York", href: "/new-york/" },
-  { name: "Florida", href: "/florida/" },
-  { name: "Colorado", href: "/colorado/" },
-  { name: "Illinois", href: "/illinois/" },
-  { name: "Washington", href: "/washington/" },
 ];
 
 export function AboutHeroSection() {
@@ -104,15 +96,16 @@ export function AboutHeroSection() {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute top-12 left-0 right-0 bg-white rounded-[16px] shadow-lg border border-[#EAE5DC] p-2 z-50 text-left">
-                  {stateOptions.map((st) => (
+                <div className={STATE_DROPDOWN_PANEL}>
+                  {Object.values(STATES_DATA).map((st) => (
                     <Link
-                      key={st.name}
-                      href={st.href}
+                      key={st.slug}
+                      href={`/esa-letter-${st.slug}/`}
                       onClick={() => setDropdownOpen(false)}
-                      className="block px-3 py-2 text-xs font-semibold text-[#1E3E47] hover:bg-[#FAF7F2] rounded-md transition-colors"
+                      className={STATE_DROPDOWN_ITEM}
                     >
-                      {st.name}
+                      <span>{st.name}</span>
+                      <span className={STATE_DROPDOWN_ABBR}>{st.abbreviation}</span>
                     </Link>
                   ))}
                 </div>
@@ -213,15 +206,16 @@ export function AboutHeroSection() {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute top-14 left-0 w-48 bg-white rounded-[16px] shadow-lg border border-[#EAE5DC] p-2 z-50 text-left">
-                  {stateOptions.map((st) => (
+                <div className={STATE_DROPDOWN_PANEL}>
+                  {Object.values(STATES_DATA).map((st) => (
                     <Link
-                      key={st.name}
-                      href={st.href}
+                      key={st.slug}
+                      href={`/esa-letter-${st.slug}/`}
                       onClick={() => setDropdownOpen(false)}
-                      className="block px-3 py-2 text-xs font-semibold text-[#1E3E47] hover:bg-[#FAF7F2] rounded-md transition-colors"
+                      className={STATE_DROPDOWN_ITEM}
                     >
-                      {st.name}
+                      <span>{st.name}</span>
+                      <span className={STATE_DROPDOWN_ABBR}>{st.abbreviation}</span>
                     </Link>
                   ))}
                 </div>
