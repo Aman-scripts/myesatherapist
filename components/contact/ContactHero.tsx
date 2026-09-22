@@ -45,11 +45,11 @@ export function ContactHero() {
       <div className="sm:hidden relative w-full aspect-[390/1007] overflow-hidden max-w-[480px] mx-auto">
         {/* Background Image: contact-us-hero-section-mobile.png */}
         <Image
-          src="/contact/contact-us-hero-section-mobile.png"
+            quality={90}
+          src="/contact/contact-us-hero-section-mobile.webp"
           alt="Contact Customer Support Mobile"
           fill
           priority
-          unoptimized
           className="object-cover object-top pointer-events-none"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -152,11 +152,11 @@ export function ContactHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1380] overflow-hidden max-w-[834px] mx-auto">
         {/* Background Image: contact_us-hero-section-tablet.png */}
         <Image
-          src="/contact/contact_us-hero-section-tablet.png"
+            quality={90}
+          src="/contact/contact_us-hero-section-tablet.webp"
           alt="Contact Customer Support Tablet"
           fill
           priority
-          unoptimized
           className="object-cover object-top pointer-events-none"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -276,11 +276,11 @@ export function ContactHero() {
         {/* Background Image: contact-hero-section.png */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/contact/contact-hero-section.png"
+            quality={90}
+            src="/contact/contact-hero-section.webp"
             alt="Customer service representative at desk"
             fill
             priority
-            unoptimized
             className="object-cover object-center pointer-events-none"
             sizes="(min-width: 1024px) 100vw, 1px"
           />

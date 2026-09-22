@@ -114,6 +114,7 @@ const PLANS: Record<PlanType, PlanSet> = {
 function FeatureBadgeIcon() {
   return (
     <Image
+            quality={90}
       src="/home/price-section-badge.svg"
       alt=""
       width={16}
@@ -257,11 +258,11 @@ export function PricingSection({
           {/* Dog & hand artwork, bottom right of the section */}
           <div className="hidden xl:block absolute left-[100%] bottom-[-30px] w-[245px] pointer-events-none z-0 -ml-2">
             <Image
-              src="/home/pricing-section-dog.png"
+            quality={90}
+              src="/home/pricing-section-dog.webp"
               alt="Dog giving paw to woman hand"
               width={441}
               height={376}
-              unoptimized
               className="object-contain object-left w-full h-auto"
             />
           </div>

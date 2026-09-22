@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
-const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_commonreason.png";
+const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_commonreason.webp";
 const ART_ALT = "Woman relaxing on her sofa with a fluffy white dog and a black cat";
 
 export function QualifyingConditionsReasons() {
@@ -10,19 +10,21 @@ export function QualifyingConditionsReasons() {
     <section className="relative w-full overflow-hidden bg-white lg:min-h-[42vw] xl:min-h-0 xl:h-[549px]">
       {/* Artwork with the curved edge and heart badge built in (desktop) */}
       <div className="absolute inset-y-0 right-0 hidden aspect-[1908/1647] lg:block">
-        <Image src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 636px, 1px" />
+        <Image
+            quality={90} src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 636px, 1px" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4vw] lg:pl-[5.8vw] lg:pr-0 xl:py-0 xl:pl-[83px]">
         {/* Artwork for mobile / tablet (curve built in, heart badge added) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-qualifying-conditions/esa-qualifyingcondtions_commonreasons_mobile.png", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-qualifying-conditions/esa-qualifyingcondtions_commonreasons_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
           </div>
           <div className="hidden sm:block">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-qualifying-conditions/esa-qualifyingcondtions_commonreasons_tablet.png", w: 834, h: 1049, crop: { x: 0, y: 197, w: 834, h: 852 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-qualifying-conditions/esa-qualifyingcondtions_commonreasons_tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 197, w: 834, h: 852 } }} />
           </div>
           <Image
+            quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.svg"
             alt=""
             width={64}

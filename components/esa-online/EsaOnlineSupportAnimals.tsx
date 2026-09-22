@@ -4,14 +4,14 @@ import { CtaButton } from "./EsaOnlineShared";
 
 const ANIMALS = [
   {
-    image: "/esa-online/esa-letter-online_esaletterdiffernt-emotinalsupportdog.png",
+    image: "/esa-online/esa-letter-online_esaletterdiffernt-emotinalsupportdog.webp",
     alt: "Woman with her emotional support dog",
     title: "Emotional Support Dog Letter",
     description:
       "Request a professional consultation to determine whether a dog is suitable for your emotional and mental health needs. When appropriate, a letter may be issued to support your housing accommodation request.",
   },
   {
-    image: "/esa-online/esa-letter-online_esaletterdiffernt-emotionalsupportcat.png",
+    image: "/esa-online/esa-letter-online_esaletterdiffernt-emotionalsupportcat.webp",
     alt: "Woman with her emotional support cat",
     title: "Emotional Support Cat Letter",
     description:
@@ -36,7 +36,8 @@ export function EsaOnlineSupportAnimals() {
           {ANIMALS.map((a) => (
             <div key={a.title} className="flex flex-col sm:flex-row overflow-hidden rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
               <div className="relative w-full sm:w-[34%] shrink-0 aspect-[4/3] sm:aspect-auto sm:min-h-[260px]">
-                <Image src={a.image} alt={a.alt} fill className="object-cover" sizes="(min-width: 640px) 200px, 100vw" />
+                <Image
+            quality={90} src={a.image} alt={a.alt} fill className="object-cover" sizes="(min-width: 640px) 200px, 100vw" />
               </div>
               <div className="flex flex-col items-center text-center sm:items-start sm:text-left justify-center gap-4 p-5 sm:p-6 xl:p-8">
                 <h3 className="font-heading text-2xl lg:text-[24px] xl:text-[28px] font-bold text-[#2E5A66] leading-8 xl:leading-9 max-w-[300px]">{a.title}</h3>

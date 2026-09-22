@@ -76,7 +76,8 @@ export function StatesFaqSection() {
           {/* Left Column: Forest Dog Image */}
           <div className="lg:col-span-5 w-full relative min-h-[420px] lg:min-h-[640px] rounded-[20px] overflow-hidden shadow-md">
             <Image
-              src="/common/faq-section-image.png"
+            quality={90}
+              src="/common/faq-section-image.webp"
               alt="Emotional support dog and owner in forest"
               fill
               className="object-cover object-center"

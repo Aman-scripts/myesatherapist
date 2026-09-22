@@ -13,7 +13,7 @@ interface KnowCard {
 
 const CARDS: KnowCard[] = [
   {
-    image: "/esa-renewal/esa-renewal-whattoknow-paymentcovers.png",
+    image: "/esa-renewal/esa-renewal-whattoknow-paymentcovers.webp",
     alt: "Woman with cat looking at tablet",
     position: "object-[40%_center]",
     title: "Payment Covers Professional Evaluation",
@@ -21,7 +21,7 @@ const CARDS: KnowCard[] = [
       "Your payment provides access to a licensed professional’s evaluation. Approval is not guaranteed, as all outcomes are based on the provider’s independent clinical judgment.",
   },
   {
-    image: "/esa-renewal/esa-renewal-whattoknow-supportdocumentation-photo.png",
+    image: "/esa-renewal/esa-renewal-whattoknow-supportdocumentation-photo.webp",
     alt: "Woman with golden retriever",
     position: "object-left",
     title: "Supports Documentation Integrity",
@@ -54,6 +54,7 @@ export function EsaRenewalWhatToKnow() {
               {/* Left Photo */}
               <div className="relative w-full sm:w-[193px] lg:w-[150px] xl:w-[193px] h-[220px] sm:h-auto sm:self-stretch shrink-0 overflow-hidden">
                 <Image
+            quality={90}
                   src={card.image}
                   alt={card.alt}
                   fill

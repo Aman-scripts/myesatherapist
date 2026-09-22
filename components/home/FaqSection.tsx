@@ -89,7 +89,8 @@ export function FaqSection({
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] shrink-0 self-center mx-auto lg:self-start lg:mx-0 lg:sticky lg:top-[104px]">
             <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-md">
               <Image
-                src="/common/faq-section-image.png"
+            quality={90}
+                src="/common/faq-section-image.webp"
                 alt="Person holding emotional support animal"
                 fill
                 priority
@@ -114,7 +115,7 @@ export function FaqSection({
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {/* Gold Number Block: Frame 1000011949 (#E8B92C) */}
-                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 

@@ -18,11 +18,13 @@ export function EsaTrainingHero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[941/1672] lg:hidden"
         style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)" }}
       >
-        <Image src="/esa-training/esa-training-herosection_mobile.png" alt="Woman sitting on the floor at home holding her cat" fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
-        <Image src="/esa-training/esa-training-herosection_tablet.png" alt="Woman sitting on the floor at home holding her cat" fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+        <Image
+            quality={90} src="/esa-training/esa-training-herosection_mobile.webp" alt="Woman sitting on the floor at home holding her cat" fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <Image
+            quality={90} src="/esa-training/esa-training-herosection_tablet.webp" alt="Woman sitting on the floor at home holding her cat" fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
       </div>
       <Image
-        src="/esa-training/esa-traning_herosection.png"
+        src="/esa-training/esa-traning_herosection.webp"
         alt="Woman sitting on the floor at home holding her cat"
         fill
         priority

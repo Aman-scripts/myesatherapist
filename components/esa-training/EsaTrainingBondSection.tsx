@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CtaButton, TEAL_GRADIENT, WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
-const ART = "/esa-training/esa-traning_howtotraningstrengeth.png";
+const ART = "/esa-training/esa-traning_howtotraningstrengeth.webp";
 const ART_ALT = "Woman hugging her golden retriever at home";
 
 export function EsaTrainingBondSection() {
@@ -10,19 +10,21 @@ export function EsaTrainingBondSection() {
     <section className="relative w-full overflow-hidden bg-white lg:min-h-[46vw] xl:min-h-0 xl:h-[619px]">
       {/* Artwork with the curved edge and heart badge built in (desktop) */}
       <div className="absolute inset-y-0 right-0 hidden aspect-[1911/1857] lg:block">
-        <Image src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 640px, 1px" />
+        <Image
+            quality={90} src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 640px, 1px" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4.5vw] lg:pl-[5.8vw] lg:pr-0 xl:py-0 xl:pl-[83px]">
         {/* Artwork for mobile / tablet (curve and heart badge built in) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength_mobile.png", w: 390, h: 512, crop: { x: 0, y: 144, w: 390, h: 368 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 144, w: 390, h: 368 } }} />
           </div>
           <div className="hidden sm:block">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 124, w: 834, h: 926 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 124, w: 834, h: 926 } }} />
           </div>
           <Image
+            quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.svg"
             alt=""
             width={64}

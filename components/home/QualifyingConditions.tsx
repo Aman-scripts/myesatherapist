@@ -169,7 +169,8 @@ export function QualifyingConditions({
               style={{ left: "11.50%", top: "7.89%", width: "74.49%", aspectRatio: "952 / 493" }}
             >
               <Image
-                src="/home/qualifying-conditions.png"
+            quality={90}
+                src="/home/qualifying-conditions.webp"
                 alt="Woman and dog on sofa qualifying for ESA"
                 fill
                 priority
@@ -240,10 +241,10 @@ export function QualifyingConditions({
                       {/* Condition Photo */}
                       <div className="relative w-full h-[65px] lg:h-[80px] xl:h-[95px] rounded-[6px] lg:rounded-[8px] overflow-hidden bg-slate-100">
                         <Image
+            quality={90}
                           src={c.image}
                           alt={c.label}
                           fill
-                          unoptimized
                           className="object-cover"
                           sizes="230px"
                         />
@@ -267,7 +268,8 @@ export function QualifyingConditions({
         <div className="md:hidden flex flex-col items-center gap-8">
           <div className="relative w-full max-w-sm aspect-[952/493] overflow-hidden">
             <Image
-              src="/home/qualifying-conditions.png"
+            quality={90}
+              src="/home/qualifying-conditions.webp"
               alt="Woman and dog on sofa qualifying for ESA"
               fill
               priority
@@ -330,10 +332,10 @@ export function QualifyingConditions({
                         {/* Image */}
                         <div className="relative w-full h-[115px] rounded-[12px] overflow-hidden mb-3">
                           <Image
+            quality={90}
                             src={c.image}
                             alt={c.label}
                             fill
-                            unoptimized
                             className="object-cover"
                           />
                         </div>

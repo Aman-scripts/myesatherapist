@@ -45,6 +45,7 @@ export function FederalHousingRulesSection() {
           {/* Ellipse 14 with Navigation Icon */}
           <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
             <Image
+            quality={90}
               src="/common/send-icon.svg"
               alt="Arrow icon"
               width={22}

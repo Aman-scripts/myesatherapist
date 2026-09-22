@@ -64,7 +64,8 @@ export function EsaOnlineComparison() {
                 <React.Fragment key={row.feature}>
                   <div className="flex h-[56px] sm:h-[64px] items-center gap-2 sm:gap-3 border-t border-[#C8B9A7]/50 pl-3 sm:pl-8 pr-1">
                     <span className="hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-                      <Image src={`${P}allicon.svg`} alt="" width={24} height={24} className="h-6 w-6" />
+                      <Image
+            quality={90} src={`${P}allicon.svg`} alt="" width={24} height={24} className="h-6 w-6" />
                     </span>
                     <span className="text-[#2E5A66] font-bold text-sm sm:text-xl leading-tight" style={LATO}>
                       {row.feature}
@@ -81,6 +82,7 @@ export function EsaOnlineComparison() {
                   <div className="flex h-[56px] sm:h-[64px] items-center justify-center border-t border-[#C8B9A7]/50 px-2">
                     <div className="flex w-[130px] sm:w-[160px] items-center gap-2 sm:gap-3">
                       <Image
+            quality={90}
                         src={`${P}-${row.other.type}-icon.svg`}
                         alt=""
                         width={22}
@@ -118,7 +120,8 @@ export function EsaOnlineComparison() {
                   </div>
                   <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1 gap-1.5">
-                    <Image src={`${P}-${row.other.type}-icon.svg`} alt="" width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
+                    <Image
+            quality={90} src={`${P}-${row.other.type}-icon.svg`} alt="" width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
                     <span className="italic text-[11px] sm:text-[13px] text-[#5F6B6F] leading-[15px]" style={LATO}>{row.other.text}</span>
                   </div>
                 </div>

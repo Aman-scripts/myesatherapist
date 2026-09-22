@@ -14,7 +14,7 @@ export function BlogAuthorBio({
   name = "Allyson Valley",
   title = "Mental Health Writer & Research Contributor",
   bio = "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
-  image = "/blogs/blogs_trustbar-author.png",
+  image = "/blogs/blogs_trustbar-author.webp",
   bioHref,
   linkedin,
 }: BlogAuthorBioProps = {}) {
@@ -39,6 +39,7 @@ export function BlogAuthorBio({
             <div className="flex flex-col items-center shrink-0 gap-2 w-[129px]">
               <div className="w-[110px] h-[110px] sm:w-[129px] sm:h-[129px] rounded-full overflow-hidden border-[4px] border-[#E8B92C] relative shadow-sm shrink-0">
                 <Image
+            quality={90}
                   src={image}
                   alt={name}
                   fill
@@ -59,17 +60,19 @@ export function BlogAuthorBio({
                     See Full Bio
                   </span>
                 )}
-                <a
-                  href={linkedin}
-                  target={linkedin ? "_blank" : undefined}
-                  rel={linkedin ? "noopener noreferrer" : undefined}
-                  aria-label={`${name} LinkedIn Profile`}
-                  className="w-6 h-6 rounded-full bg-[#007AB9] text-white flex items-center justify-center shrink-0"
-                >
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 0 0 1.63-1.63 1.63 1.63 0 0 0-1.63-1.63A1.63 1.63 0 0 0 4.83 7.13a1.63 1.63 0 0 0 1.63 1.63m1.4 9.74v-8.37H5.06v8.37z" />
-                  </svg>
-                </a>
+                {linkedin && (
+                  <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${name} LinkedIn Profile`}
+                    className="w-6 h-6 rounded-full bg-[#007AB9] text-white flex items-center justify-center shrink-0"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 0 0 1.63-1.63 1.63 1.63 0 0 0-1.63-1.63A1.63 1.63 0 0 0 4.83 7.13a1.63 1.63 0 0 0 1.63 1.63m1.4 9.74v-8.37H5.06v8.37z" />
+                    </svg>
+                  </a>
+                )}
               </div>
             </div>
 

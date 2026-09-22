@@ -56,6 +56,7 @@ export function DoYouNeedEsaSection() {
               <span className="font-sans">Get Started</span>
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={22}
@@ -72,6 +73,7 @@ export function DoYouNeedEsaSection() {
           {/* Background Decorative Line SVG */}
           <div className="absolute left-0 top-[12px] xl:top-[15px] w-[65px] xl:w-[81px] h-[540px] xl:h-[669px] z-0">
             <Image
+            quality={90}
               src="/home/doyouneed-emotional-support-section-line.svg"
               alt=""
               width={81}
@@ -83,11 +85,11 @@ export function DoYouNeedEsaSection() {
           {/* Main Photo (Natural aspect ratio, un-cropped) */}
           <div className="absolute right-0 top-0 w-[461px] xl:w-[571px] h-[566px] xl:h-[701px] z-10">
             <Image
-              src="/home/doyouneed-esa-perfect-v3.png"
+            quality={90}
+              src="/home/doyouneed-esa-perfect-v3.webp"
               alt="Emotional support dog and owner"
               fill
               priority
-              unoptimized
               className="object-contain object-right"
               sizes="(min-width: 1280px) 571px, 461px"
             />
@@ -96,6 +98,7 @@ export function DoYouNeedEsaSection() {
           {/* Floating Circle Badge at Curve Apex */}
           <div className="absolute left-[-11px] xl:left-[-14px] top-[270px] xl:top-[335px] w-[59px] xl:w-[73px] h-[59px] xl:h-[73px] z-20 drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)]">
             <Image
+            quality={90}
               src="/home/doyouneed-emotional-support-icon.svg"
               alt="ESA Badge"
               width={73}
@@ -114,12 +117,12 @@ export function DoYouNeedEsaSection() {
           {/* Mobile Image (< 640px) */}
           <div className="sm:hidden w-full -mt-2.5">
             <Image
-              src="/home/mobile-do-you-need-emotional-support.png"
+            quality={90}
+              src="/home/mobile-do-you-need-emotional-support.webp"
               alt="Do You Need an Emotional Support Animal"
               width={390}
               height={475}
               priority
-              unoptimized
               className="w-full h-auto block"
             />
           </div>
@@ -127,12 +130,12 @@ export function DoYouNeedEsaSection() {
           {/* Tablet Image (640px to 1023px) */}
           <div className="hidden sm:block w-full -mt-3.5">
             <Image
-              src="/home/tablet-do-you-need-emotional-support.png"
+            quality={90}
+              src="/home/tablet-do-you-need-emotional-support.webp"
               alt="Do You Need an Emotional Support Animal"
               width={834}
               height={533}
               priority
-              unoptimized
               className="w-full h-auto block"
             />
           </div>
@@ -174,7 +177,8 @@ export function DoYouNeedEsaSection() {
             >
               <span>Get Started</span>
               <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
               </span>
             </a>
           </div>

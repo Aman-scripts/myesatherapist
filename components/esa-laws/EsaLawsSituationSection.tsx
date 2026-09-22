@@ -10,7 +10,7 @@ interface SituationEntry {
 
 const SITUATIONS: SituationEntry[] = [
   {
-    image: "/esa-laws/esalaws-situation-apartments-rentals.png",
+    image: "/esa-laws/esalaws-situation-apartments-rentals.webp",
     title: "ESA Laws for Apartments & Rentals",
     description:
       "Under federal law, tenants with disabilities can request to keep an ESA in their apartment as a reasonable accommodation. This is usually done by providing an ESA letter from a licensed mental health professional who has conducted a clinical evaluation.",
@@ -20,7 +20,7 @@ const SITUATIONS: SituationEntry[] = [
     ],
   },
   {
-    image: "/esa-laws/esalaws-situation-colleges-dorms.png",
+    image: "/esa-laws/esalaws-situation-colleges-dorms.webp",
     title: "ESA Laws for Colleges & Dorms",
     description:
       "The Fair Housing Act protects the rights of students with disabilities who attend public universities that receive federal funding. It allows them to keep an ESA in college housing or dormitories. Some private universities may have more restrictive standards.",
@@ -30,7 +30,7 @@ const SITUATIONS: SituationEntry[] = [
     ],
   },
   {
-    image: "/esa-laws/esalaws-situation-landlords.png",
+    image: "/esa-laws/esalaws-situation-landlords.webp",
     title: "ESA Laws for Landlords",
     description:
       "Landlords must treat a valid ESA letter as reasonable-accommodation documentation, not as a pet request. Under the Fair Housing Act, a no-pet policy, breed restriction, or pet fee cannot be applied to a tenant's ESA once the request is properly supported.",
@@ -40,7 +40,7 @@ const SITUATIONS: SituationEntry[] = [
     ],
   },
   {
-    image: "/esa-laws/esalaws-situation-tenants.png",
+    image: "/esa-laws/esalaws-situation-tenants.webp",
     title: "ESA Laws for Tenants",
     description:
       "Tenants with a disability-related need can request to live with an ESA even in housing with a strict no-pet policy, by submitting a reasonable accommodation request along with a valid ESA letter from a licensed mental health professional.",
@@ -56,10 +56,10 @@ function SituationCard({ entry }: { entry: SituationEntry }) {
     <div className="w-full flex flex-col rounded-[20px] overflow-hidden bg-[#FAF7F2]">
       <div className="relative w-full aspect-[567/380]">
         <Image
+            quality={90}
           src={entry.image}
           alt={entry.title}
           fill
-          unoptimized
           className="object-cover"
           sizes="(min-width: 1024px) 560px, 100vw"
         />

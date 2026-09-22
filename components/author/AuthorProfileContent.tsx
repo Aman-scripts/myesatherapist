@@ -110,11 +110,11 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
               <div className="w-[138px] h-[138px] rounded-full p-[5px] bg-white shadow-[0px_4px_10px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                 <div className="relative w-[128px] h-[128px] rounded-full overflow-hidden">
                   <Image
+            quality={90}
                     src={author.avatar}
                     alt={author.name}
                     fill
                     priority
-                    unoptimized
                     className="object-cover object-top"
                     sizes="128px"
                   />
@@ -129,6 +129,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
                 <div className="flex items-center justify-center lg:justify-start gap-2.5">
                   <span className="w-6 h-6 shrink-0 relative flex items-center justify-center">
                     <Image
+            quality={90}
                       src="/legal_reviewer/legal_reviewer-bag-icon.svg"
                       alt=""
                       width={24}
@@ -188,6 +189,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
                     <div className="flex items-start justify-between mb-5 sm:mb-6">
                       <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                         <Image
+            quality={90}
                           src="/common/myesa-logo.svg"
                           alt="My ESA Therapist"
                           width={135}
@@ -217,10 +219,10 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
                       <div className="w-[128px] h-[128px] rounded-full p-[5px] bg-white shadow-[0px_4px_10px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                         <div className="relative w-[118px] h-[118px] rounded-full overflow-hidden">
                           <Image
+            quality={90}
                             src={author.avatar}
                             alt={author.name}
                             fill
-                            unoptimized
                             className="object-cover object-top"
                             sizes="118px"
                           />
@@ -235,6 +237,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
                         <div className="flex items-center justify-start gap-2.5">
                           <span className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 relative flex items-center justify-center">
                             <Image
+            quality={90}
                               src="/legal_reviewer/legal_reviewer-bag-icon.svg"
                               alt=""
                               width={24}

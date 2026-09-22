@@ -4,7 +4,7 @@ import Link from "next/link";
 import { TEAL_GRADIENT, WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
 const ICON = "/esa-training/esa-traning_basicstraining-allcardsicon.svg";
-const ART = "/esa-training/esa-traning_basicstraining.png";
+const ART = "/esa-training/esa-traning_basicstraining.webp";
 const ART_ALT = "Woman rewarding her golden retriever during a training session";
 
 const BASICS = [
@@ -27,19 +27,21 @@ export function EsaTrainingBasicsSection() {
     <section className="relative w-full overflow-hidden bg-white lg:min-h-[54vw] xl:min-h-0 xl:h-[834px]">
       {/* Artwork with the curved edge and heart badge built in (desktop) */}
       <div className="absolute inset-y-0 right-0 hidden aspect-[2160/2502] lg:block">
-        <Image src={ART} alt={ART_ALT} fill priority className="object-cover object-right" sizes="(min-width: 1024px) 720px, 1px" />
+        <Image
+            quality={90} src={ART} alt={ART_ALT} fill priority className="object-cover object-right" sizes="(min-width: 1024px) 720px, 1px" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4.5vw] lg:pl-[5.9vw] lg:pr-0 xl:py-0 xl:pl-[85px]">
         {/* Artwork for mobile / tablet (curve and heart badge built in) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_mobile.png", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
           </div>
           <div className="hidden sm:block">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 82, w: 834, h: 968 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 82, w: 834, h: 968 } }} />
           </div>
           <Image
+            quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.svg"
             alt=""
             width={64}
@@ -69,7 +71,8 @@ export function EsaTrainingBasicsSection() {
                 <div className="w-[13px] shrink-0" style={{ backgroundImage: TEAL_GRADIENT }} />
                 <div className="flex flex-1 items-center gap-4 py-4 pl-4 pr-4 sm:gap-6 sm:pl-6 lg:gap-[1.6vw] lg:py-[1vw] xl:gap-6 xl:py-3">
                   <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] sm:h-[74.56px] sm:w-[74.56px] lg:h-[5vw] lg:w-[5vw] xl:h-[74.56px] xl:w-[74.56px]">
-                    <Image src={ICON} alt="" width={32} height={32} className="h-6 w-6 object-contain sm:h-8 sm:w-8 lg:h-[2.2vw] lg:w-[2.2vw] xl:h-8 xl:w-8" />
+                    <Image
+            quality={90} src={ICON} alt="" width={32} height={32} className="h-6 w-6 object-contain sm:h-8 sm:w-8 lg:h-[2.2vw] lg:w-[2.2vw] xl:h-8 xl:w-8" />
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5">
                     <h3 className="font-heading text-lg font-bold leading-tight text-[#2E5A66] sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] xl:leading-7">

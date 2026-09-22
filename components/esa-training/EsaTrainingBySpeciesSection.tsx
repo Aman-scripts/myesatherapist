@@ -6,19 +6,19 @@ const ANIMALS = [
   {
     title: "Dogs",
     text: "The most common ESA and the easiest to train, given how many resources exist.",
-    image: "/esa-training/esa-traning_byanimamals-dogs.png",
+    image: "/esa-training/esa-traning_byanimamals-dogs.webp",
     alt: "Woman training her golden retriever",
   },
   {
     title: "Cats",
     text: "Trainable too. Litter box reliability, scratching post use, and calm behavior around guests are realistic goals.",
-    image: "/esa-training/esa-traning_byanimamals-cats.png",
+    image: "/esa-training/esa-traning_byanimamals-cats.webp",
     alt: "Woman playing with her cat",
   },
   {
     title: "Rabbits, birds, and others",
     text: "Training looks different here. It's more about handling, socialization, and predictable routines than commands.",
-    image: "/esa-training/esa-traning_byanimamals-rabbitsbirds.png",
+    image: "/esa-training/esa-traning_byanimamals-rabbitsbirds.webp",
     alt: "Woman with a rabbit, a bird and a guinea pig",
   },
 ];
@@ -43,7 +43,8 @@ export function EsaTrainingBySpeciesSection() {
                 }`}
               >
                 <div className="relative aspect-[364/221] w-full overflow-hidden">
-                  <Image src={animal.image} alt={animal.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 366px, (min-width: 640px) 50vw, 100vw" />
+                  <Image
+            quality={90} src={animal.image} alt={animal.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 366px, (min-width: 640px) 50vw, 100vw" />
                 </div>
                 <div className="flex flex-col gap-2.5 px-6 pt-4 lg:px-[1.6vw] xl:pl-[23px] xl:pr-2">
                   <h3 className="font-heading text-[26px] font-bold leading-[34px] text-[#2E5A66] lg:text-[1.95vw] lg:leading-[2.5vw] xl:whitespace-nowrap xl:text-[28px] xl:leading-9">

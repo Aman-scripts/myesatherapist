@@ -41,7 +41,8 @@ export function EsaRenewalForWhom() {
             {/* Top Photo */}
             <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
               <Image
-                src="/esa-renewal/esa-renewal-whothisrenwalsection-idealfor.png"
+            quality={90}
+                src="/esa-renewal/esa-renewal-whothisrenwalsection-idealfor.webp"
                 alt="Woman holding dog while working at desk - ideal candidate"
                 fill
                 className="object-cover object-top"
@@ -79,7 +80,8 @@ export function EsaRenewalForWhom() {
             {/* Top Photo */}
             <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
               <Image
-                src="/esa-renewal/esa-renewal-whothisrenwalsection-notintendedfor.png"
+            quality={90}
+                src="/esa-renewal/esa-renewal-whothisrenwalsection-notintendedfor.webp"
                 alt="Person looking stressed - not intended for"
                 fill
                 className="object-cover object-top"
@@ -89,7 +91,7 @@ export function EsaRenewalForWhom() {
 
             {/* Content Area */}
             <div className="p-6 sm:p-8 lg:p-10 space-y-6 flex-1 flex flex-col">
-              <h3 className="font-heading font-bold text-2xl sm:text-[28px] text-[#E42529] text-center">
+              <h3 className="font-heading font-bold text-2xl sm:text-[28px] text-[#CC191D] text-center">
                 Not Intended For
               </h3>
 
@@ -104,7 +106,7 @@ export function EsaRenewalForWhom() {
                       </svg>
                     </div>
 
-                    <p className="font-sans text-sm sm:text-[16px] lg:text-[17px] font-semibold text-[#E42529] leading-[1.5]">
+                    <p className="font-sans text-sm sm:text-[16px] lg:text-[17px] font-semibold text-[#CC191D] leading-[1.5]">
                       {point}
                     </p>
                   </div>

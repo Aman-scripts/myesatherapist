@@ -90,6 +90,7 @@ export function PsdBenefitsSection() {
                 style={item.isDark ? { backgroundImage: TEAL_GRADIENT } : {}}
               >
                 <Image
+            quality={90}
                   src={item.icon}
                   alt={item.title}
                   width={38}

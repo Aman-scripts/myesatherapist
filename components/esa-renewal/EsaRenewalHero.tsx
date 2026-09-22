@@ -13,7 +13,8 @@ export function EsaRenewalHero() {
       {/* 1. Full Hero Background Image (Woman + Golden Retriever on Right, Soft Ambient Blur on Left) */}
       <div className="absolute inset-x-0 bottom-0 aspect-[941/1672] lg:inset-0 lg:aspect-auto lg:h-full pointer-events-none z-0">
         <Image
-          src="/esa-renewal/esa-renwal-herosection_mobile.png"
+            quality={90}
+          src="/esa-renewal/esa-renwal-herosection_mobile.webp"
           alt="Renew Your ESA Letter Online with Licensed Professional"
           fill
           priority
@@ -21,7 +22,8 @@ export function EsaRenewalHero() {
           sizes="(max-width: 639px) 100vw, 1px"
         />
         <Image
-          src="/esa-renewal/esa-renwal-herosection_tablet.png"
+            quality={90}
+          src="/esa-renewal/esa-renwal-herosection_tablet.webp"
           alt="Renew Your ESA Letter Online with Licensed Professional"
           fill
           priority
@@ -29,7 +31,7 @@ export function EsaRenewalHero() {
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
         <Image
-          src="/esa-renewal/esa-renewal-herosection.png"
+          src="/esa-renewal/esa-renewal-herosection.webp"
           alt="Renew Your ESA Letter Online with Licensed Professional"
           fill
           priority
@@ -47,7 +49,7 @@ export function EsaRenewalHero() {
             {[["31,488+", "ESA Evaluations"], ["5+", "Years Serving"], ["4.9", "Verified Reviews"]].map(([v, l]) => (
               <div key={l} className="flex-1 rounded-[30px] bg-[#FAF7F2] border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center">
                 <span className="font-heading font-bold text-[15px] sm:text-[22px] leading-tight text-transparent bg-clip-text" style={{ backgroundImage: TEAL_GRADIENT }}>{v}</span>
-                <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#949494] whitespace-nowrap">{l}</span>
+                <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#707070] whitespace-nowrap">{l}</span>
               </div>
             ))}
           </div>
@@ -59,7 +61,7 @@ export function EsaRenewalHero() {
               <span className="font-heading font-bold text-xl sm:text-[24px] lg:text-[20px] xl:text-[24px] text-transparent bg-clip-text bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] leading-tight">
                 50
               </span>
-              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#949494] leading-tight mt-0.5">
+              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#707070] leading-tight mt-0.5">
                 USA States
               </span>
             </div>
@@ -69,7 +71,7 @@ export function EsaRenewalHero() {
               <span className="font-heading font-bold text-xl sm:text-[24px] lg:text-[20px] xl:text-[24px] text-transparent bg-clip-text bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] leading-tight">
                 HIPAA
               </span>
-              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#949494] leading-tight mt-0.5">
+              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#707070] leading-tight mt-0.5">
                 Compliant
               </span>
             </div>
@@ -79,7 +81,7 @@ export function EsaRenewalHero() {
               <span className="font-heading font-bold text-xl sm:text-[24px] lg:text-[20px] xl:text-[24px] text-transparent bg-clip-text bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] leading-tight">
                 100%
               </span>
-              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#949494] leading-tight mt-0.5">
+              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#707070] leading-tight mt-0.5">
                 Licensed Pros
               </span>
             </div>
@@ -107,6 +109,7 @@ export function EsaRenewalHero() {
               </span>
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] flex items-center justify-center shadow-[0px_3px_6px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={22}

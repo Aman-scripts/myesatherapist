@@ -7,7 +7,8 @@ export function EsaHousingMoveForward() {
     <section className="relative w-full overflow-hidden" style={{ backgroundImage: TEAL_GRADIENT }}>
       <div className="hidden sm:block absolute right-0 bottom-0 sm:h-[60%] lg:h-auto lg:w-[min(17.4vw,250px)] aspect-[254/262] pointer-events-none">
         <Image
-          src="/esa-housing/esa-letter-housing_moveforwardsection-pawicon.png"
+            quality={90}
+          src="/esa-housing/esa-letter-housing_moveforwardsection-pawicon.webp"
           alt=""
           fill
           className="object-contain object-right-bottom"
@@ -24,7 +25,7 @@ export function EsaHousingMoveForward() {
         </p>
         <a
           href="/pricing/"
-          className="mt-2 inline-flex h-[46px] items-center rounded-[30px] bg-[#E8B92C] px-8 text-[18px] font-bold text-[#2E5A66] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] hover:opacity-95 transition-opacity"
+          className="mt-2 inline-flex h-[46px] items-center rounded-[30px] bg-[#E8B92C] px-8 text-[18px] font-bold text-[#29515B] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] hover:opacity-95 transition-opacity"
           style={LATO}
         >
           Start your Evaluation

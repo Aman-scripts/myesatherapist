@@ -46,7 +46,8 @@ export function EsaLawsFaqSection() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 xl:gap-[60px]">
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[500px] h-[360px] sm:h-[440px] lg:h-[500px] xl:h-[540px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
             <Image
-              src="/common/faq-section-image.png"
+            quality={90}
+              src="/common/faq-section-image.webp"
               alt="Woman with her emotional support dog outdoors"
               fill
               className="object-cover"
@@ -66,7 +67,7 @@ export function EsaLawsFaqSection() {
                     style={{ backgroundImage: TEAL_GRADIENT }}
                     aria-expanded={isOpen}
                   >
-                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 

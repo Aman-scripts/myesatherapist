@@ -26,11 +26,11 @@ export function StateLawsSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/states/esalaws-fairemployment-housing.png"
+            quality={90}
+                src="/states/esalaws-fairemployment-housing.webp"
                 alt="Federal Housing Guidelines"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -83,11 +83,11 @@ export function StateLawsSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src={data.slug === "california" ? "/states/esalaws-california-state.png" : "/states/state_lawssection-secondcard.png"}
+            quality={90}
+                src={data.slug === "california" ? "/states/esalaws-california-state.webp" : "/states/state_lawssection-secondcard.webp"}
                 alt="Housing Provider Roles & Responsibilities"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

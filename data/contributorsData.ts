@@ -17,7 +17,7 @@ export const AUTHORS: ContributorCardData[] = [
     name: "Allyson Valley",
     title: "Mental Health Writer & Research Contributor",
     bio: "Over a Decade of Mental Health Research and Counseling Experience",
-    avatar: "/blogs/blogs_trustbar-author.png",
+    avatar: "/blogs/blogs_trustbar-author.webp",
     linkedin: "https://www.linkedin.com/in/allyson-valley/",
     href: "/author/allyson-valley/",
     badges: [
@@ -62,7 +62,7 @@ export const REVIEWERS: ContributorCardData[] = [
     name: "Awais Arshad",
     title: "Legal Reviewer",
     bio: "Awais Arshad is a New York-licensed attorney and legal writer with 12 years of legal experience.",
-    avatar: "/legal_reviewer/legal-reviwer.png",
+    avatar: "/legal_reviewer/legal-reviwer.webp",
     linkedin: "https://www.linkedin.com/in/awais-arshad-a51b31113/",
     href: "/contributors/awais-arshad/",
     badges: [

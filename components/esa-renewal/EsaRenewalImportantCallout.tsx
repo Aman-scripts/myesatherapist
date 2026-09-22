@@ -14,6 +14,7 @@ export function EsaRenewalImportantCallout() {
 
           {/* Warning icon (fi_3253080) */}
           <Image
+            quality={90}
             src="/esa-renewal/esa-renewal-redalerticon.svg"
             alt=""
             width={48}
@@ -24,7 +25,7 @@ export function EsaRenewalImportantCallout() {
           {/* Texts (Frame 1000012015) */}
           <div className="flex flex-1 flex-col justify-center gap-2">
             <div className="flex flex-col gap-1">
-              <h4 className="font-heading font-bold text-[20px] leading-7 text-[#E42529]">
+              <h4 className="font-heading font-bold text-[20px] leading-7 text-[#CC191D]">
                 Important
               </h4>
               <p className="font-sans text-sm font-medium leading-[22px] text-[#5F6B6F]">

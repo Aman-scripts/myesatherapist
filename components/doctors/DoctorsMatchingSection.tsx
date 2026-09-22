@@ -11,6 +11,7 @@ export function DoctorsMatchingSection() {
       desc: "Begin your secure online evaluation through our HIPAA-compliant platform.",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_howyouarematched_startevalutation.svg"
           alt=""
           width={24}
@@ -26,6 +27,7 @@ export function DoctorsMatchingSection() {
       desc: "We connect you with a licensed professional authorized to practice in your state.",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_howyouarematched_getmatchec.svg"
           alt=""
           width={24}
@@ -41,6 +43,7 @@ export function DoctorsMatchingSection() {
       desc: "Your therapist provides their independent clinical assessment.",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_howyouarematched_receivedecision.svg"
           alt=""
           width={24}
@@ -84,7 +87,7 @@ export function DoctorsMatchingSection() {
                 </div>
 
                 {/* 01 / 02 / 03 Step Number (Plus Jakarta Sans 700, 54px, 20% opacity) */}
-                <span className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-[#5F6B6F] opacity-20 select-none tracking-tight">
+                <span aria-hidden="true" className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-[#5F6B6F] opacity-20 select-none tracking-tight">
                   {step.num}
                 </span>
               </div>

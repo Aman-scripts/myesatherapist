@@ -140,11 +140,11 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                 className="bg-white rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] border border-[#E2E8F0] h-[52px] sm:h-[62px] lg:h-[72px] px-5 sm:px-6 lg:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[210px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
               >
                 <Image
+            quality={90}
                   src={logo.src}
                   alt={logo.name}
                   width={220}
                   height={65}
-                  unoptimized
                   priority={idx < 6}
                   className="max-h-[30px] sm:max-h-[38px] lg:max-h-[44px] w-auto max-w-[140px] sm:max-w-[170px] lg:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
                 />
@@ -164,11 +164,11 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                 className="bg-white rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] border border-[#E2E8F0] h-[52px] sm:h-[62px] lg:h-[72px] px-5 sm:px-6 lg:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[210px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
               >
                 <Image
+            quality={90}
                   src={logo.src}
                   alt={logo.name}
                   width={220}
                   height={65}
-                  unoptimized
                   className="max-h-[30px] sm:max-h-[38px] lg:max-h-[44px] w-auto max-w-[140px] sm:max-w-[170px] lg:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
                 />
               </a>

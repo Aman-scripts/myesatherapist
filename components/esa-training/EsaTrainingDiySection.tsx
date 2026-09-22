@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/common/BlogPageBlocks";
 const CARDS = [
   {
     title: "Tips for DIY training",
-    image: "/esa-training/esa-traning_canyoutrain_tipstodiy.png",
+    image: "/esa-training/esa-traning_canyoutrain_tipstodiy.webp",
     alt: "Woman teaching her golden retriever a new trick at home",
     items: [
       "Keep sessions short, five to ten minutes, so neither of you gets frustrated",
@@ -17,7 +17,7 @@ const CARDS = [
   },
   {
     title: "When to hire a professional",
-    image: "/esa-training/esa-traning_canyoutrain_whentohireprofess.png",
+    image: "/esa-training/esa-traning_canyoutrain_whentohireprofess.webp",
     alt: "Professional trainer working with a golden retriever and its owner",
     items: [
       "If your animal shows anxiety or aggression, or progress has stalled. Costs vary by location and format (group classes vs. private sessions), so it's worth comparing a few local options.",
@@ -51,7 +51,8 @@ export function EsaTrainingDiySection() {
               className="overflow-hidden rounded-[30px] bg-[#FAF7F2] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] lg:min-h-[48vw] xl:h-[696px] xl:min-h-0"
             >
               <div className="relative aspect-[626/273] w-full overflow-hidden">
-                <Image src={card.image} alt={card.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 626px, (min-width: 1024px) 45vw, 100vw" />
+                <Image
+            quality={90} src={card.image} alt={card.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 626px, (min-width: 1024px) 45vw, 100vw" />
               </div>
               <div className="mx-auto flex w-full max-w-[498px] flex-col items-center gap-8 px-6 pb-10 pt-8 sm:px-8 lg:max-w-none lg:gap-[2.8vw] lg:px-[4.6vw] lg:pt-[2.6vw] xl:max-w-[498px] xl:gap-10 xl:px-0 xl:pt-[37px]">
                 <h3 className="text-center font-heading text-[24px] font-bold leading-[32px] text-[#2E5A66] sm:text-[28px] sm:leading-9 lg:text-[2vw] lg:leading-[2.5vw] xl:text-[28px] xl:leading-9">

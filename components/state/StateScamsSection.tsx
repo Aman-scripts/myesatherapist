@@ -71,7 +71,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
               />
             </div>
             <div className="flex-1">
-              <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D9383A] mb-1">
+              <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D6292B] mb-1">
                 {alertTitle}
               </h3>
               <p className="font-sans text-xs sm:text-[13px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
@@ -85,11 +85,11 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="bg-[#EFF6F3] rounded-[20px] sm:rounded-[24px] lg:rounded-[26px] border border-[#E1EFE9] shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/states/california-scams-whatyouneed.png"
+            quality={90}
+                src="/states/california-scams-whatyouneed.webp"
                 alt="What You Actually Need for an ESA"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -126,18 +126,18 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="bg-[#FFF0F0] rounded-[20px] sm:rounded-[24px] lg:rounded-[26px] border border-[#FCDADA] shadow-[0_4px_25px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
-                src="/states/california-scams-commonesascams.png"
+            quality={90}
+                src="/states/california-scams-commonesascams.webp"
                 alt="Common ESA Scams to avoid"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
 
             <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-[#D9383A] text-center mb-5 sm:mb-6 leading-snug">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-[#D6292B] text-center mb-5 sm:mb-6 leading-snug">
                 {commonTitle}
               </h3>
 

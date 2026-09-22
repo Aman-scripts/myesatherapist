@@ -49,11 +49,11 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
             <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
-                src="/home/emotionalsupportnanimal.png"
+            quality={90}
+                src="/home/emotionalsupportnanimal.webp"
                 alt="Emotional Support Animals (ESA)"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, 25vw"
               />
@@ -93,11 +93,11 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
             <div className="relative w-full sm:w-[32%] lg:w-[28%] xl:w-[34%] aspect-[4/3] sm:aspect-auto shrink-0 overflow-hidden">
               <Image
-                src="/psd-letter/psychiatricservicedogs.png"
+            quality={90}
+                src="/psd-letter/psychiatricservicedogs.webp"
                 alt="Psychiatric Service Dogs (PSD)"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, 25vw"
               />

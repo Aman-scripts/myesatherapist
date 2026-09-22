@@ -45,12 +45,12 @@ export function WhoBenefitsSection() {
       <div className="sm:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psd-letter/whobenefits-section-mobile.png"
+            quality={90}
+            src="/psd-letter/whobenefits-section-mobile.webp"
             alt="People who benefitted most from the PSD Letter"
             width={390}
             height={652}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (95.1% from top) */}
@@ -72,12 +72,12 @@ export function WhoBenefitsSection() {
       <div className="hidden sm:block lg:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psd-letter/whobenefits-section-tablet.png"
+            quality={90}
+            src="/psd-letter/whobenefits-section-tablet.webp"
             alt="People who benefitted most from the PSD Letter"
             width={833}
             height={1140}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (93.9% from top) */}
@@ -157,10 +157,10 @@ export function WhoBenefitsSection() {
           {/* 1. Main Photo */}
           <div className="absolute right-0 top-0 bottom-0 w-full h-full z-10">
             <Image
-              src="/psd-letter/whobenefits-section-image.png"
+            quality={90}
+              src="/psd-letter/whobenefits-section-image.webp"
               alt="People who benefitted most from the PSD Letter"
               fill
-              unoptimized
               priority
               className="object-cover object-right h-full w-full"
               sizes="(max-width: 1280px) 42vw, 567px"

@@ -34,11 +34,11 @@ export function StateReviewerBanner({
               className="relative w-[76px] h-[76px] sm:w-[89px] sm:h-[89px] rounded-full border-[3.5px] sm:border-[4px] border-[#FFFFFF] overflow-hidden shrink-0 shadow-sm hover:opacity-95 transition-opacity block cursor-pointer"
             >
               <Image
+            quality={90}
                 src={reviewerImage}
                 alt={`Content reviewed by ${reviewerName}`}
                 fill
                 priority
-                unoptimized
                 className="object-cover object-center"
                 sizes="89px"
               />

@@ -40,10 +40,10 @@ function HipaaBadge() {
     <div className="w-[155px] h-[67px] bg-white rounded-xl border-[3.5px] border-[#E8B92C] flex items-center justify-center p-2 shadow-md">
       <div className="relative w-full h-full">
         <Image
-          src="/common/hippa_log.png"
+            quality={90}
+          src="/common/hippa_log.webp"
           alt="HIPAA Compliant"
           fill
-          unoptimized
           priority
           className="object-contain"
           sizes="155px"
@@ -68,6 +68,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
             <div className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-[#E8B92C] p-3 flex items-center justify-center shadow-xl">
               <div className="relative w-full h-full">
                 <Image
+            quality={90}
                   src="/common/myesa-logo.svg"
                   alt="My ESA Therapist"
                   fill
@@ -199,6 +200,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
+            quality={90}
                       src="/common/footer-phone-icon.svg"
                       alt=""
                       width={14}
@@ -221,6 +223,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
+            quality={90}
                       src="/common/footer-email-icon.svg"
                       alt=""
                       width={14}
@@ -243,6 +246,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
+            quality={90}
                       src="/common/footer-clock-icon.svg"
                       alt=""
                       width={14}
@@ -265,6 +269,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
+            quality={90}
                       src="/common/footer-location-icon.svg"
                       alt=""
                       width={14}

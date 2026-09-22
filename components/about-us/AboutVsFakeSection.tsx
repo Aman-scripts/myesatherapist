@@ -43,11 +43,11 @@ export function AboutVsFakeSection() {
             {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
-                src="/states/california-scams-whatyouneed.png"
+            quality={90}
+                src="/states/california-scams-whatyouneed.webp"
                 alt="My ESA Therapist Legitimate Evaluation"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -82,11 +82,11 @@ export function AboutVsFakeSection() {
             {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
-                src="/states/california-scams-commonesascams.png"
+            quality={90}
+                src="/states/california-scams-commonesascams.webp"
                 alt="Fake ESA Websites Warning"
                 fill
                 priority
-                unoptimized
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -94,7 +94,7 @@ export function AboutVsFakeSection() {
 
             {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-[#E42529] text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-[#CC191D] text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
                 Fake ESA Sites
               </h3>
 
@@ -104,7 +104,7 @@ export function AboutVsFakeSection() {
                     <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full bg-[#E42529] text-white flex items-center justify-center shrink-0 shadow-xs">
                       <X className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
                     </div>
-                    <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] xl:text-[17px] text-[#E42529] leading-snug">
+                    <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] xl:text-[17px] text-[#CC191D] leading-snug">
                       {point}
                     </span>
                   </div>

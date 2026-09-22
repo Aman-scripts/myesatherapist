@@ -34,6 +34,7 @@ export function CommunitySection() {
             <span className="font-sans">About ESA Therapist</span>
             <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
+            quality={90}
                 src="/common/send-icon.svg"
                 alt=""
                 width={22}

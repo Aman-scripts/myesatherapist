@@ -107,7 +107,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
           <div className="bg-white border border-[#EAE5DC] rounded-[20px] shadow-xs flex flex-col overflow-hidden">
             {/* Fixed Header: ON THIS PAGE (does not scroll away) */}
             <div className="px-5 pt-5 pb-3 sm:px-6 sm:pt-6 sm:pb-3 border-b border-[#EAE5DC]/60 bg-white shrink-0">
-              <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] px-1">
+              <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#6B797C] px-1">
                 On this page
               </p>
             </div>
@@ -141,7 +141,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
         {/* 2. All Policies Menu Card */}
         <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs">
-          <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#7C8B8E] mb-3.5 px-1">
+          <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#6B797C] mb-3.5 px-1">
             All Policies
           </p>
           <nav aria-label="Legal policies navigation" className="space-y-1.5">
@@ -226,6 +226,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                     {/* Logo Card with Gold Border */}
                     <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                       <Image
+            quality={90}
                         src="/common/myesa-logo.svg"
                         alt="My ESA Therapist"
                         width={135}

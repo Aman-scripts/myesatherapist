@@ -284,6 +284,7 @@ export function PsdComparisonTable() {
             <span className="font-sans mr-3">Start Your Consultation</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
+            quality={90}
                 src="/common/send-icon.svg"
                 alt=""
                 width={18}

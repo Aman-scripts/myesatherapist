@@ -33,12 +33,12 @@ export function PsdCapabilitiesSection() {
       <div className="sm:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psd-letter/psdcapabilites-section-mobile.png"
+            quality={90}
+            src="/psd-letter/psdcapabilites-section-mobile.webp"
             alt="What a Psychiatric Service Dog can do"
             width={390}
             height={680}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (88.1% from top) */}
@@ -60,12 +60,12 @@ export function PsdCapabilitiesSection() {
       <div className="hidden sm:block lg:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psd-letter/psdcapabilities-section-tablet.png"
+            quality={90}
+            src="/psd-letter/psdcapabilities-section-tablet.webp"
             alt="What a Psychiatric Service Dog can do"
             width={834}
             height={1013}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (84.7% from top) */}
@@ -138,11 +138,11 @@ export function PsdCapabilitiesSection() {
       <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[45%] xl:w-[48%] max-w-[635px] pointer-events-none z-10">
         <div className="relative w-full h-full">
           <Image
-            src="/psd-letter/psdcapabilities-new-image.png"
+            quality={90}
+            src="/psd-letter/psdcapabilities-new-image.webp"
             alt="What a Psychiatric Service Dog can do"
             fill
             priority
-            unoptimized
             className="object-cover object-right h-full w-full"
             sizes="(max-width: 1280px) 45vw, 635px"
           />

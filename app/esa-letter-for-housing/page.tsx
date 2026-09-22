@@ -77,9 +77,9 @@ export default function EsaLetterForHousingPage() {
           title="Start Your Online Evaluation For Housing ESA Letter"
           description="Connect with a licensed mental health professional for a secure online ESA evaluation. When clinically appropriate, documentation may be provided to support a housing-related accommodation request."
           buttonText="Start your Application"
-          image="/esa-housing/esa-letter-housing_herosection.png"
-          imageMobile="/esa-housing/esa-letter-housing_herosection_mobile.png"
-          imageTablet="/esa-housing/esa-letter-housing_herosection_tablet.png"
+          image="/esa-housing/esa-letter-housing_herosection.webp"
+          imageMobile="/esa-housing/esa-letter-housing_herosection_mobile.webp"
+          imageTablet="/esa-housing/esa-letter-housing_herosection_tablet.webp"
           imageAlt="Woman on a video call with a licensed therapist while sitting with her dog"
         />
         <EsaHousingBarriers />

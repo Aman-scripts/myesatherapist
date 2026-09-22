@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "https://myesatherapist.com/legal_reviewer/legal-reviwer.png",
+        url: "https://myesatherapist.com/legal_reviewer/legal-reviwer.webp",
         width: 800,
         height: 1067,
         alt: "Awais Arshad - Legal Reviewer",
@@ -60,7 +60,7 @@ const legalReviewerSchema = {
         "@id": "https://www.linkedin.com/in/awais-arshad-a51b31113/#person",
         "name": "Awais Arshad",
         "jobTitle": "Attorney at Law & Legal Reviewer",
-        "image": "https://myesatherapist.com/legal_reviewer/legal-reviwer.png",
+        "image": "https://myesatherapist.com/legal_reviewer/legal-reviwer.webp",
         "sameAs": [
           "https://www.linkedin.com/in/awais-arshad-a51b31113/",
           "https://courtingthelaw.com/",

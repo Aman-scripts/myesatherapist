@@ -46,7 +46,7 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     metaTitle: "Allyson Valley | My ESA Therapist",
     metaDescription:
       "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
-    avatar: "/blogs/blogs_trustbar-author.png",
+    avatar: "/blogs/blogs_trustbar-author.webp",
     schemas: allysonValleySchemas,
     experienceLabel: "11 Years of Experience",
     heroTagline:

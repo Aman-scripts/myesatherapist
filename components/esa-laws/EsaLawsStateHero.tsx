@@ -4,7 +4,7 @@ import Image from "next/image";
 export function EsaLawsStateHero({
   title,
   description,
-  image = "/esalawsblog/esalaws_herosection.png",
+  image = "/esalawsblog/esalaws_herosection.webp",
   imageMobile,
   imageTablet,
   imageAlt = "",
@@ -37,6 +37,7 @@ export function EsaLawsStateHero({
         {stacked ? (
           <>
             <Image
+            quality={90}
               src={imageMobile!}
               alt={imageAlt}
               fill
@@ -45,6 +46,7 @@ export function EsaLawsStateHero({
               sizes="(max-width: 639px) 100vw, 1px"
             />
             <Image
+            quality={90}
               src={imageTablet!}
               alt={imageAlt}
               fill

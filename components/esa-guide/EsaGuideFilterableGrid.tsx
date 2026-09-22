@@ -39,6 +39,7 @@ export function EsaGuideFilterableGrid() {
             >
               <Link href={art.url} className="relative block aspect-[410/317] w-full shrink-0 overflow-hidden bg-[#FAF7F2]">
                 <Image
+            quality={90}
                   src={art.cardImage}
                   alt={art.title}
                   fill
@@ -58,7 +59,7 @@ export function EsaGuideFilterableGrid() {
                         {art.title}
                       </h3>
                     </Link>
-                    <div className="font-sans text-xs font-medium text-[#8E9A9F] sm:text-sm lg:text-[0.95vw] xl:text-sm">
+                    <div className="font-sans text-xs font-medium text-[#69777C] sm:text-sm lg:text-[0.95vw] xl:text-sm">
                       by {art.author.name} • {art.publishDate}
                     </div>
                   </div>
@@ -74,7 +75,8 @@ export function EsaGuideFilterableGrid() {
                 >
                   <span>Read Guide</span>
                   <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover/btn:scale-105">
-                    <Image src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
+                    <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
                   </span>
                 </Link>
               </div>

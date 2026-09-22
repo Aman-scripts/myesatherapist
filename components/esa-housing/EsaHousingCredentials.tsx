@@ -9,7 +9,8 @@ export function EsaHousingCredentials() {
       {/* Artwork with the curve and heart badge baked in, flush right */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(47.9%,690px)]">
         <Image
-          src="/esa-housing/esa-letter-housing_whyprofessionalcredentials.png"
+            quality={90}
+          src="/esa-housing/esa-letter-housing_whyprofessionalcredentials.webp"
           alt="Woman with her emotional support dog at home"
           fill
           className="object-cover object-left-top"
@@ -20,8 +21,8 @@ export function EsaHousingCredentials() {
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.5vw,65px)]">
         <WaveImage
           alt="Woman with her emotional support dog at home"
-          mobile={{ src: "/esa-housing/esa-letter-housing_whycredentialsmatter-mobile.png", w: 1254, h: 1254, crop: { x: 809, y: 61, w: 415, h: 532 } }}
-          tablet={{ src: "/esa-housing/esa-letter-housing_whycredentialsmatter-tablet.png", w: 1254, h: 1254, crop: { x: 28, y: 50, w: 742, h: 570 } }}
+          mobile={{ src: "/esa-housing/esa-letter-housing_whycredentialsmatter-mobile.webp", w: 1254, h: 1254, crop: { x: 809, y: 61, w: 415, h: 532 } }}
+          tablet={{ src: "/esa-housing/esa-letter-housing_whycredentialsmatter-tablet.webp", w: 1254, h: 1254, crop: { x: 28, y: 50, w: 742, h: 570 } }}
         />
         <div className="w-full max-w-[626px] lg:max-w-[min(43.5vw,626px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4 lg:gap-[min(1.9vw,28px)]">

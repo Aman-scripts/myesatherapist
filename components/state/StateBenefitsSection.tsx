@@ -74,16 +74,17 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
           <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
             <div className="sm:hidden relative w-full aspect-[390/513]">
               <Image
-                src={data.benefitsImageMobile ?? "/states/californina-benefits-mobile.png"}
+            quality={90}
+                src={data.benefitsImageMobile ?? "/states/californina-benefits-mobile.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName} Mobile View`}
                 fill
                 priority
-                unoptimized
                 className="object-cover object-top"
                 sizes="(max-width: 639px) 100vw, 1px"
               />
               <div className="absolute bottom-0 left-[36.4%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
+            quality={90}
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={40}
@@ -95,16 +96,17 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1050]">
               <Image
-                src={data.benefitsImageTablet ?? "/states/californina-benefits-tablet.png"}
+            quality={90}
+                src={data.benefitsImageTablet ?? "/states/californina-benefits-tablet.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName} Tablet View`}
                 fill
                 priority
-                unoptimized
                 className="object-cover object-top"
                 sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
               />
               <div className="absolute bottom-0 left-[33.8%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
+            quality={90}
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={48}
@@ -119,11 +121,11 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               style={{ aspectRatio: data.benefitsAspect ?? (isStateWhoBenefits ? "696/1623" : "724/1427") }}
             >
               <Image
-                src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.png"}
+            quality={90}
+                src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName}`}
                 fill
                 priority
-                unoptimized
                 className="object-contain object-right-top pointer-events-none"
                 sizes="42vw"
               />
@@ -135,6 +137,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 }}
               >
                 <Image
+            quality={90}
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={64}
@@ -170,6 +173,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
                     <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
+            quality={90}
                         src={pair.financial.icon || "/states/whomayqualifies-california_chronicworry.svg"}
                         alt={pair.financial.title}
                         width={40}
@@ -191,6 +195,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
                     <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
+            quality={90}
                         src={pair.emotional.icon || "/states/whomayqualifies-panicattack.svg"}
                         alt={pair.emotional.title}
                         width={40}
@@ -220,7 +225,8 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               >
                 <span>Apply your ESA Letter Now</span>
                 <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#FAF7F2] text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
-                  <Image src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
+                  <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
                 </span>
               </a>
             </div>

@@ -49,11 +49,11 @@ export function PsdProcessSection() {
         <div className="relative w-full max-w-[1050px] mx-auto mb-16 lg:mb-20">
           <div className="relative aspect-[16/9] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
             <Image
-              src="/psd-letter/psd-three-steps.png"
+            quality={90}
+              src="/psd-letter/psd-three-steps.webp"
               alt="Woman smiling with psychiatric service dog"
               fill
               priority
-              unoptimized
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 840px"
             />
@@ -94,7 +94,7 @@ export function PsdProcessSection() {
               className="relative bg-white rounded-[20px] md:rounded-[24px] p-6 sm:p-7 lg:p-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
             >
               {/* Step Number Circle Badge at Top-Left */}
-              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-[#E8B92C] text-[#2E5A66] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0px_2px_4px_rgba(58,58,58,0.25)]">
+              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-[#E8B92C] text-[#29515B] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0px_2px_4px_rgba(58,58,58,0.25)]">
                 {step.number}
               </div>
 
@@ -138,6 +138,7 @@ export function PsdProcessSection() {
             <span className="font-sans mr-3">Start Your Consultation</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
+            quality={90}
                 src="/common/send-icon.svg"
                 alt=""
                 width={18}

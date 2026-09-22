@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "My ESA Therapist",
     images: [
       {
-        url: "https://myesatherapist.com/legal_reviewer/legal-reviwer.png",
+        url: "https://myesatherapist.com/legal_reviewer/legal-reviwer.webp",
         width: 800,
         height: 1067,
         alt: "Awais Arshad – Legal Reviewer",

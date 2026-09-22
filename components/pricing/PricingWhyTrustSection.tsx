@@ -53,6 +53,7 @@ export function PricingWhyTrustSection() {
               <div className="absolute -top-[32px] left-1/2 -translate-x-1/2 w-[74.56px] h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center p-3 z-20">
                 <div className="w-[34px] h-[34px] relative flex items-center justify-center">
                   <Image
+            quality={90}
                     src={item.icon}
                     alt={item.title}
                     width={34}

@@ -81,6 +81,7 @@ function DoctorStatBadge({
         {/* Floating circular icon badge at top center */}
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
           <Image
+            quality={90}
             src={icon || "/common/therapist-section-badge.svg"}
             alt=""
             width={16}
@@ -137,10 +138,10 @@ export function DoctorsListingSection() {
                   {/* Doctor Avatar with Gold Border */}
                   <div className="w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                     <Image
+            quality={90}
                       src={doc.avatar}
                       alt={doc.name}
                       fill
-                      unoptimized
                       priority
                       className="object-cover object-center"
                       sizes="67px"
@@ -188,11 +189,12 @@ export function DoctorsListingSection() {
                 <div className="pt-2 flex justify-center">
                   <Link
                     href={`/esa-doctors/${doc.slug}/`}
-                    className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-[#E8B92C] hover:bg-[#dba81f] text-[#2E5A66] font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
+                    className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-[#E8B92C] hover:bg-[#dba81f] text-[#29515B] font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
                   >
                     <span>View Profile</span>
                     <span className="w-7 h-7 rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-2">
                       <Image
+            quality={90}
                         src="/common/send-icon.svg"
                         alt=""
                         width={14}
@@ -213,32 +215,44 @@ export function DoctorsListingSection() {
             type="button"
             onClick={() => setActivePage(0)}
             aria-label="Slide 1"
-            className={`transition-all duration-200 ${
-              activePage === 0
-                ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
-            }`}
-          />
+            className="relative flex items-center justify-center w-6 h-6"
+          >
+            <span
+              className={`block transition-all duration-200 ${
+                activePage === 0
+                  ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
+                  : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
+              }`}
+            />
+          </button>
           <button
             type="button"
             onClick={() => setActivePage(1)}
             aria-label="Slide 2"
-            className={`transition-all duration-200 ${
-              activePage === 1
-                ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
-            }`}
-          />
+            className="relative flex items-center justify-center w-6 h-6"
+          >
+            <span
+              className={`block transition-all duration-200 ${
+                activePage === 1
+                  ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
+                  : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
+              }`}
+            />
+          </button>
           <button
             type="button"
             onClick={() => setActivePage(2)}
             aria-label="Slide 3"
-            className={`transition-all duration-200 ${
-              activePage === 2
-                ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
-            }`}
-          />
+            className="relative flex items-center justify-center w-6 h-6"
+          >
+            <span
+              className={`block transition-all duration-200 ${
+                activePage === 2
+                  ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
+                  : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
+              }`}
+            />
+          </button>
         </div>
 
         {/* Bottom CTA Pill Button (Frame 1000011742) */}
@@ -251,6 +265,7 @@ export function DoctorsListingSection() {
             <span>Book Appointment</span>
             <span className="w-8 h-8 rounded-full bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3">
               <Image
+            quality={90}
                 src="/common/send-icon.svg"
                 alt=""
                 width={16}

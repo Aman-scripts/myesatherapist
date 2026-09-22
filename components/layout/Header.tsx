@@ -203,6 +203,7 @@ export function Header() {
                 <span>Start Your Consultation</span>
                 <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                   <Image
+            quality={90}
                     src="/common/send-icon.svg"
                     alt=""
                     width={19}
@@ -221,6 +222,7 @@ export function Header() {
                 <span>Get Started</span>
                 <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                   <Image
+            quality={90}
                     src="/common/send-icon.svg"
                     alt=""
                     width={19}
@@ -246,6 +248,7 @@ export function Header() {
                   <span>Get Started</span>
                   <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
                     <Image
+            quality={90}
                       src="/common/send-icon.svg"
                       alt=""
                       width={19}
@@ -261,6 +264,8 @@ export function Header() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
             className="lg:hidden p-2 rounded-lg text-[#1E3E47] min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -396,6 +401,7 @@ export function Header() {
               <span>{isPsd ? "Start Your Consultation" : "Get Started"}</span>
               <span className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={19}

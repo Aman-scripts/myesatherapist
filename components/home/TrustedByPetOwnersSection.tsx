@@ -143,7 +143,8 @@ export function TrustedByPetOwnersSection({
               {/* Avatar (60px x 60px with 4px white border) */}
               <div className="w-[60px] h-[60px] rounded-full border-[4px] border-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] overflow-hidden relative bg-[#E8F0F1] shrink-0">
                 {current.avatar ? (
-                  <Image src={current.avatar} alt={current.name} fill className="object-cover" sizes="60px" />
+                  <Image
+            quality={90} src={current.avatar} alt={current.name} fill className="object-cover" sizes="60px" />
                 ) : (
                   <InitialsAvatar name={current.name} index={activeIdx} className="absolute inset-0 text-[20px]" />
                 )}
@@ -160,14 +161,18 @@ export function TrustedByPetOwnersSection({
                     key={idx}
                     type="button"
                     onClick={() => setActiveIdx(idx)}
-                    className={`transition-all duration-300 rounded-full cursor-pointer ${
-                      activeIdx === idx
-                        ? "w-[8px] h-[8px]"
-                        : "w-[5px] h-[5px] bg-[#D9D9D9] hover:bg-[#BDBDBD]"
-                    }`}
-                    style={activeIdx === idx ? { backgroundImage: TEAL_GRADIENT } : undefined}
+                    className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
                     aria-label={`Go to review ${idx + 1}`}
-                  />
+                  >
+                    <span
+                      className={`block transition-all duration-300 rounded-full ${
+                        activeIdx === idx
+                          ? "w-[8px] h-[8px]"
+                          : "w-[5px] h-[5px] bg-[#D9D9D9] hover:bg-[#BDBDBD]"
+                      }`}
+                      style={activeIdx === idx ? { backgroundImage: TEAL_GRADIENT } : undefined}
+                    />
+                  </button>
                 ))}
               </div>
             </div>

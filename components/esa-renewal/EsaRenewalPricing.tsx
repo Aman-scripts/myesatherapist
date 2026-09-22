@@ -148,10 +148,10 @@ export function EsaRenewalPricing() {
       {/* Dog paw illustration, bleeding off the right edge (lg and up) */}
       <div className="pointer-events-none absolute z-0 hidden lg:block right-[-110px] bottom-[70px] h-[238px] w-[280px] xl:right-[-11px] xl:bottom-auto xl:top-[465px] xl:h-[308px] xl:w-[362px]">
         <Image
-          src="/home/pricing-section-dog.png"
+            quality={90}
+          src="/home/pricing-section-dog.webp"
           alt="Dog giving paw to woman’s hand"
           fill
-          unoptimized
           className="object-contain object-left"
         />
       </div>

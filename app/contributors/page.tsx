@@ -62,9 +62,9 @@ export default function ContributorsPage() {
           description="Thoughtful, evidence-informed content starts with people who care. Get to know the authors and reviewers who help make My ESA Therapist a trusted resource."
           buttonText="Explore the Team"
           buttonHref="#authors"
-          image="/contributors/contributors_herosection.png"
-          imageMobile="/contributors/contributors_herosection-mobile.png"
-          imageTablet="/contributors/contributors_herosection-tablet.png"
+          image="/contributors/contributors_herosection.webp"
+          imageMobile="/contributors/contributors_herosection-mobile.webp"
+          imageTablet="/contributors/contributors_herosection-tablet.webp"
           imageAlt="Legal reviewers at a desk with books on disability rights and tenant protections"
         />
 

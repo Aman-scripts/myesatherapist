@@ -66,6 +66,7 @@ export function DoctorAboutPhilosophySection({
                 <span>Get Started</span>
                 <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
+            quality={90}
                     src="/common/send-icon.svg"
                     alt=""
                     width={18}

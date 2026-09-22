@@ -94,11 +94,11 @@ export function AboutWhoWeHelpSection() {
           <div className="lg:col-span-6 flex items-center justify-center order-1 lg:order-2">
             <div className="relative w-full max-w-[480px] lg:max-w-[540px] xl:max-w-[627px] aspect-[627/699] rounded-[24px] xl:rounded-[30px] overflow-hidden shadow-xl">
               <Image
-                src="/about-us/about_us-whowehelp-section.png"
+            quality={90}
+                src="/about-us/about_us-whowehelp-section.webp"
                 alt="Woman sitting on floor hugging cat"
                 fill
                 priority
-                unoptimized
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

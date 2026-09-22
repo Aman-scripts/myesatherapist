@@ -28,6 +28,7 @@ export function PricingPlansSection() {
             {/* Pet illustration icon */}
             <div className="w-[60px] sm:w-[78px] h-[60px] sm:h-[79px] shrink-0 relative flex items-center justify-center">
               <Image
+            quality={90}
                 src="/pricing/pricingsection_Addpetbutton-icon.svg"
                 alt="Add a pet"
                 width={78}
@@ -57,7 +58,8 @@ export function PricingPlansSection() {
               <span>Add a Pet</span>
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-                  src="/pricing/pricing_section_morethanonepet_tag.png"
+            quality={90}
+                  src="/pricing/pricing_section_morethanonepet_tag.webp"
                   alt=""
                   width={24}
                   height={24}

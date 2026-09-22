@@ -27,7 +27,7 @@ export interface Therapist {
 }
 
 export function getTherapistAvatar(t: Therapist): string {
-  if (t.avatar && t.avatar !== "/common/therapist-avatar.png") return t.avatar;
+  if (t.avatar && t.avatar !== "/common/therapist-avatar.webp") return t.avatar;
   const lower = t.name.toLowerCase();
   if (lower.includes("robert") || lower.includes("staaf")) {
     return "/doctors/robert-staaf-profile-image.webp";
@@ -38,7 +38,7 @@ export function getTherapistAvatar(t: Therapist): string {
   if (lower.includes("gaurav") || lower.includes("patel")) {
     return "/doctors/dr-gaurav-patel-image.webp";
   }
-  return t.avatar || "/common/therapist-avatar.png";
+  return t.avatar || "/common/therapist-avatar.webp";
 }
 
 export function getTherapistLinkedin(t: Therapist): string {
@@ -228,10 +228,10 @@ export function TherapistsSection({
                   <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
                     <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                       <Image
+            quality={90}
                         src={getTherapistAvatar(t)}
                         alt={t.name}
                         fill
-                        unoptimized
                         sizes="67px"
                         className="object-cover object-center"
                       />
@@ -283,6 +283,7 @@ export function TherapistsSection({
                       <span>View Profile</span>
                       <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
                         <Image
+            quality={90}
                           src="/common/send-icon.svg"
                           alt=""
                           width={16}
@@ -305,12 +306,16 @@ export function TherapistsSection({
               key={idx}
               onClick={() => scrollToSlide(idx)}
               aria-label={`Go to therapist ${idx + 1}`}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
-                idx === activeIndex
-                  ? "w-5 h-2.5 bg-[#184652]"
-                  : "w-2.5 h-2.5 bg-[#CBD5E1] hover:bg-slate-400"
-              }`}
-            />
+              className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
+            >
+              <span
+                className={`block transition-all duration-300 rounded-full ${
+                  idx === activeIndex
+                    ? "w-5 h-2.5 bg-[#184652]"
+                    : "w-2.5 h-2.5 bg-[#CBD5E1] hover:bg-slate-400"
+                }`}
+              />
+            </button>
           ))}
         </div>
 
@@ -324,6 +329,7 @@ export function TherapistsSection({
             <span>Book Appointment</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 shadow-sm">
               <Image
+            quality={90}
                 src="/common/send-icon.svg"
                 alt=""
                 width={18}

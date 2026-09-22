@@ -41,6 +41,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
                 className="relative w-full h-[260px] sm:h-[280px] lg:h-[300px] overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
               >
                 <Image
+            quality={90}
                   src={item.cardImage}
                   alt={item.title}
                   fill
@@ -57,7 +58,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
                       {item.title}
                     </h3>
                   </Link>
-                  <div className="text-xs sm:text-sm font-sans font-medium text-[#8E9A9F]">
+                  <div className="text-xs sm:text-sm font-sans font-medium text-[#69777C]">
                     by {item.author.name}
                   </div>
                   <p className="font-sans font-semibold text-sm leading-[24px] text-[#475467] line-clamp-3">
@@ -75,6 +76,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
                     <span>Read Article</span>
                     <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                       <Image
+            quality={90}
                         src="/common/send-icon.svg"
                         alt=""
                         width={18}

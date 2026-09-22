@@ -46,10 +46,10 @@ export function PsdCtaSection() {
         {/* Paw Prints Background Accent */}
         <div className="absolute left-[35%] lg:left-[28%] xl:left-[41%] bottom-0 w-[160px] lg:w-[175px] xl:w-[240px] h-[110px] lg:h-[120px] xl:h-[160px] pointer-events-none z-0 hidden md:block opacity-40">
           <Image
-            src="/common/cta-section-paw.png"
+            quality={90}
+            src="/common/cta-section-paw.webp"
             alt=""
             fill
-            unoptimized
             priority
             className="object-contain object-bottom"
           />
@@ -58,11 +58,11 @@ export function PsdCtaSection() {
         {/* Overlapping Woman with Dog Photo on Desktop */}
         <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[490px] xl:w-[653px] h-[390px] lg:h-[430px] xl:h-[530px] pointer-events-none z-20">
           <Image
-            src="/common/cta-banner-background.png"
+            quality={90}
+            src="/common/cta-banner-background.webp"
             alt="Woman embracing psychiatric service dog"
             fill
             priority
-            unoptimized
             className="object-contain object-right-bottom"
             sizes="(max-width: 1280px) 490px, 653px"
           />
@@ -122,10 +122,10 @@ export function PsdCtaSection() {
         {/* Mobile Photo fallback */}
         <div className="lg:hidden relative w-full h-[260px] sm:h-[320px] pointer-events-none">
           <Image
-            src="/common/cta-banner-background.png"
+            quality={90}
+            src="/common/cta-banner-background.webp"
             alt="Woman embracing psychiatric service dog"
             fill
-            unoptimized
             priority
             className="object-contain object-bottom"
             sizes="(max-width: 1023px) 100vw, 1px"

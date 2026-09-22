@@ -13,7 +13,7 @@ export function EsaOnlineHero({
   title = "Legitimate ESA Letter Online From a Licensed Therapist",
   description = "Begin with a secure, HIPAA-compliant telehealth evaluation designed to support a legitimate ESA letter when clinically appropriate. ESA letters are issued based on a licensed clinician’s professional judgment.",
   buttonText = "Start your ESA Evaluation",
-  image = "/esa-online/esa-letter-online_herosection.png",
+  image = "/esa-online/esa-letter-online_herosection.webp",
   imageAlt = "Legitimate ESA letter online from a licensed therapist",
   buttonHref = "/pricing/",
   imageMobile,
@@ -49,6 +49,7 @@ export function EsaOnlineHero({
         {stacked ? (
           <>
             <Image
+            quality={90}
               src={imageMobile!}
               alt={imageAlt}
               fill
@@ -57,6 +58,7 @@ export function EsaOnlineHero({
               sizes="(max-width: 639px) 100vw, 1px"
             />
             <Image
+            quality={90}
               src={imageTablet!}
               alt={imageAlt}
               fill
@@ -113,7 +115,7 @@ export function EsaOnlineHero({
                   >
                     {s.value}
                   </span>
-                  <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#949494] whitespace-nowrap">{s.label}</span>
+                  <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#707070] whitespace-nowrap">{s.label}</span>
                 </div>
               ))}
             </div>

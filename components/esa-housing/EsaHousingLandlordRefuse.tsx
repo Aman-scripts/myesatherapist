@@ -41,7 +41,8 @@ export function EsaHousingLandlordRefuse() {
         <div className="w-full max-w-[1062px] overflow-hidden rounded-[30px] shadow-[0px_1px_4px_rgba(0,0,0,0.06)]">
           <div className="relative w-full aspect-[1983/793]">
             <Image
-              src="/esa-housing/esa-letter-housing_landlordrefusesesa.png"
+            quality={90}
+              src="/esa-housing/esa-letter-housing_landlordrefusesesa.webp"
               alt="Tenant and her dog being refused by a landlord holding a denied notice"
               fill
               className="object-cover"
@@ -54,8 +55,8 @@ export function EsaHousingLandlordRefuse() {
               <li key={r.title} className="flex items-start gap-4">
                 <CheckCircle color="#E42529" />
                 <div className="flex flex-col">
-                  <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#E42529]">{r.title}</h3>
-                  <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-[#5F6B6F]">{r.description}</p>
+                  <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#CC191D]">{r.title}</h3>
+                  <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-[#5D686C]">{r.description}</p>
                 </div>
               </li>
             ))}

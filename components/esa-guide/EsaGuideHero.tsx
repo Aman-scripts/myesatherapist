@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
 
-const ART = "/esa-guide/esa-guide_herosection.png";
+const ART = "/esa-guide/esa-guide_herosection.webp";
 const ART_ALT = "Woman relaxing at home with her golden retriever and her cat";
 
 export function EsaGuideHero() {
@@ -15,8 +15,10 @@ export function EsaGuideHero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[1024/1536] lg:hidden"
         style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)" }}
       >
-        <Image src="/esa-guide/esa-guide-herosection_mobile.png" alt={ART_ALT} fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
-        <Image src="/esa-guide/esa-guide-herosection_tablet.png" alt={ART_ALT} fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+        <Image
+            quality={90} src="/esa-guide/esa-guide-herosection_mobile.webp" alt={ART_ALT} fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <Image
+            quality={90} src="/esa-guide/esa-guide-herosection_tablet.webp" alt={ART_ALT} fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
       </div>
       <Image
         src={ART}

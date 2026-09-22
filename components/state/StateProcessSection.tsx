@@ -92,6 +92,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   <Image
+            quality={90}
                     src={step.icon}
                     alt={step.title}
                     width={24}
@@ -101,7 +102,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 </div>
 
                 {/* Number 01 / 02 / 03 */}
-                <span className="font-[family-name:var(--font-plus-jakarta-sans)] text-[46px] sm:text-[54px] font-bold text-[#5F6B6F] opacity-20 leading-[66px] tracking-tight">
+                <span aria-hidden="true" className="font-[family-name:var(--font-plus-jakarta-sans)] text-[46px] sm:text-[54px] font-bold text-[#5F6B6F] opacity-20 leading-[66px] tracking-tight">
                   {step.number}
                 </span>
               </div>

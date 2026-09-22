@@ -168,12 +168,16 @@ export function TestimonialsSection({
                 type="button"
                 onClick={() => scrollToIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`transition-all duration-300 rounded-full ${
-                  currentIndex === idx
-                    ? "w-4 h-2.5 bg-[#1A3D4F]"
-                    : "w-2 h-2 bg-[#E8B92C] hover:opacity-80"
-                }`}
-              />
+                className="relative flex items-center justify-center w-6 h-6"
+              >
+                <span
+                  className={`block transition-all duration-300 rounded-full ${
+                    currentIndex === idx
+                      ? "w-4 h-2.5 bg-[#1A3D4F]"
+                      : "w-2 h-2 bg-[#E8B92C] hover:opacity-80"
+                  }`}
+                />
+              </button>
             ))}
           </div>
 
@@ -184,7 +188,8 @@ export function TestimonialsSection({
           >
             <span>See More Reviews</span>
             <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
+              <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
             </span>
           </a>
         </div>

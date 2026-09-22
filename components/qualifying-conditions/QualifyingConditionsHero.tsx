@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
 
-const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_herosection.png";
+const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_herosection.webp";
 const ART_ALT = "Woman hugging her cat, surrounded by icons for anxiety, stress, depression, PTSD and mood disorders";
 
 export function QualifyingConditionsHero() {
@@ -15,8 +15,10 @@ export function QualifyingConditionsHero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[390/782] sm:aspect-[834/1458] lg:hidden"
         style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)" }}
       >
-        <Image src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_mobile.png" alt={ART_ALT} fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
-        <Image src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_tablet.png" alt={ART_ALT} fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+        <Image
+            quality={90} src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_mobile.webp" alt={ART_ALT} fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <Image
+            quality={90} src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_tablet.webp" alt={ART_ALT} fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
       </div>
       <Image
         src={ART}

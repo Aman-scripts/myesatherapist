@@ -19,7 +19,8 @@ function Badge({ label, value }: { label: string; value: string }) {
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-[#E8B92C] pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
       <div className="bg-white rounded-[8px] pt-4 pb-2 px-1.5 text-center flex flex-col justify-center relative min-h-[58px] h-full">
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
-          <Image src="/common/therapist-section-badge.svg" alt="" width={16} height={16} className="w-4 h-4 object-contain" />
+          <Image
+            quality={90} src="/common/therapist-section-badge.svg" alt="" width={16} height={16} className="w-4 h-4 object-contain" />
         </div>
         <div className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight text-transparent bg-clip-text" style={{ backgroundImage: TEAL_GRADIENT }}>
           {label}
@@ -36,7 +37,8 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
       <div className="px-5 sm:px-7 py-4 flex items-center justify-between gap-3" style={{ backgroundImage: TEAL_GRADIENT }}>
         <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
           <div className="w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
-            <Image src={person.avatar} alt={person.name} fill className="object-cover object-top" sizes="67px" />
+            <Image
+            quality={90} src={person.avatar} alt={person.name} fill className="object-cover object-top" sizes="67px" />
           </div>
           <div className="min-w-0">
             <h3 className="font-heading font-bold text-lg sm:text-[20px] text-[#FAF7F2] leading-tight sm:leading-[28px]">{person.name}</h3>
@@ -64,12 +66,13 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
         <div className="pt-2 flex justify-center">
           <Link
             href={person.href}
-            className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-[#E8B92C] hover:bg-[#dba81f] text-[#2E5A66] font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
+            className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-[#E8B92C] hover:bg-[#dba81f] text-[#29515B] font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
             style={LATO}
           >
             <span>View Profile</span>
             <span className="w-7 h-7 rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-2">
-              <Image src="/common/send-icon.svg" alt="" width={14} height={14} className="w-3.5 h-3.5 object-contain" />
+              <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={14} height={14} className="w-3.5 h-3.5 object-contain" />
             </span>
           </Link>
         </div>

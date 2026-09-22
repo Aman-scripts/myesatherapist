@@ -36,7 +36,8 @@ export function EsaOnlineHousingRights() {
         <div className="w-full max-w-[850px] overflow-hidden rounded-[30px] bg-white shadow-[0px_2px_6px_rgba(0,0,0,0.08)]">
           <div className="relative w-full aspect-[1536/1024] sm:aspect-[850/460]">
             <Image
-              src="/esa-online/esa-letter-online_yourhousingright.png"
+            quality={90}
+              src="/esa-online/esa-letter-online_yourhousingright.webp"
               alt="Gavel and model house representing housing rights"
               fill
               className="object-cover"

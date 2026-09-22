@@ -12,7 +12,8 @@ export function StatesPsdCtaSection() {
         {/* Subtle Decorative Paw Prints in Background - Hidden on mobile */}
         <div className="hidden sm:block absolute right-[30%] bottom-4 w-48 h-48 opacity-20 pointer-events-none">
           <Image
-            src="/common/cta-section-paw.png"
+            quality={90}
+            src="/common/cta-section-paw.webp"
             alt="Paw prints decoration"
             fill
             className="object-contain"
@@ -46,7 +47,8 @@ export function StatesPsdCtaSection() {
           <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[340px] lg:h-[380px] flex items-end justify-center lg:justify-end">
             <div className="relative w-full h-full max-w-[440px]">
               <Image
-                src="/common/cta-banner-background.png"
+            quality={90}
+                src="/common/cta-banner-background.webp"
                 alt="Woman smiling with golden retriever"
                 fill
                 className="object-contain object-bottom drop-shadow-2xl"

@@ -86,7 +86,7 @@ export default function VideoTestimonialsPage() {
         <StateReviewerBanner
           reviewerName="Dr. Nicole"
           updatedDate="May 12, 2026"
-          reviewerImage="/blogs/dr-nicole-reviewer.jpg"
+          reviewerImage="/blogs/dr-nicole-reviewer.webp"
           reviewerLinkedin="https://www.linkedin.com/in/nicole-artrader/"
         />
       </main>

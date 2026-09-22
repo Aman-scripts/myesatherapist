@@ -21,7 +21,8 @@ export function CtaButton({
     >
       <span className="pr-2 sm:pr-4 py-1 text-center lg:whitespace-nowrap">{children}</span>
       <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
-        <Image src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
+        <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
       </span>
     </a>
   );
@@ -100,7 +101,8 @@ export function FeatureCard({
         }`}
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
-        <Image src={icon} alt="" width={iconW} height={iconH} style={{ width: iconW, height: iconH }} className="object-contain" />
+        <Image
+            quality={90} src={icon} alt="" width={iconW} height={iconH} style={{ width: iconW, height: iconH }} className="object-contain" />
       </div>
     </div>
   );
@@ -120,13 +122,15 @@ export function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; a
   if (!c) {
     return (
       <div className="relative w-full" style={{ aspectRatio: `${img.w} / ${img.h}` }}>
-        <Image src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
+        <Image
+            quality={90} src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
       </div>
     );
   }
   return (
     <div className="relative w-full overflow-hidden" style={{ aspectRatio: `${c.w} / ${c.h}` }}>
       <Image
+            quality={90}
         src={img.src}
         alt={alt}
         width={img.w}
@@ -170,6 +174,7 @@ export function WaveImage({
       </div>
       {badge && (
         <Image
+            quality={90}
           src="/about-us/about_us-legimateesasection-hearticon.svg"
           alt=""
           width={64}

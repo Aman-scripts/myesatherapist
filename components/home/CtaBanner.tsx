@@ -41,10 +41,10 @@ export function CtaBanner({
         {/* Paw Prints: Flush with the bottom edge of teal banner, centered in clear gap on 1024px */}
         <div className="absolute left-[35%] lg:left-[41%] bottom-0 w-[160px] lg:w-[16.7vw] xl:w-[240px] h-[110px] lg:h-[11.1vw] xl:h-[160px] pointer-events-none z-0 hidden md:block">
           <Image
-            src="/common/cta-section-paw.png"
+            quality={90}
+            src="/common/cta-section-paw.webp"
             alt=""
             fill
-            unoptimized
             priority
             className="object-contain object-bottom"
           />
@@ -53,11 +53,11 @@ export function CtaBanner({
         {/* Overlapping Woman with Dog Photo (Flush with bottom edge of teal banner) */}
         <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[45.3vw] xl:w-[653px] h-[390px] lg:h-[36.5vw] xl:h-[525px] pointer-events-none z-20">
           <Image
-            src="/common/cta-banner-background.png"
+            quality={90}
+            src="/common/cta-banner-background.webp"
             alt="Woman embracing emotional support dog"
             fill
             priority
-            unoptimized
             className="object-contain object-right-bottom"
             sizes="(max-width: 1280px) 490px, 653px"
           />
@@ -121,10 +121,10 @@ export function CtaBanner({
         {/* Mobile Photo fallback */}
         <div className="lg:hidden relative w-full h-[260px] sm:h-[320px] pointer-events-none">
           <Image
-            src="/common/cta-banner-background.png"
+            quality={90}
+            src="/common/cta-banner-background.webp"
             alt="Woman embracing emotional support dog"
             fill
-            unoptimized
             priority
             className="object-contain object-bottom"
             sizes="(max-width: 1023px) 100vw, 1px"

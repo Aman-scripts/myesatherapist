@@ -50,7 +50,8 @@ export function EsaTrainingVsServiceDog() {
                 <React.Fragment key={row.feature}>
                   <div className={`flex items-center gap-[2.3vw] border-t border-[#C8B9A7]/50 pl-[2vw] xl:gap-[34px] xl:pl-[30px] ${ROW_H}`}>
                     <span className="flex h-[2.5vw] w-[2.5vw] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.25)] xl:h-9 xl:w-9">
-                      <Image src={ICON} alt="" width={19} height={19} className="h-[52%] w-[52%] object-contain" />
+                      <Image
+            quality={90} src={ICON} alt="" width={19} height={19} className="h-[52%] w-[52%] object-contain" />
                     </span>
                     <span className="text-[1.4vw] font-bold leading-8 text-[#2E5A66] xl:text-[20px]">{row.feature}</span>
                   </div>
@@ -71,7 +72,8 @@ export function EsaTrainingVsServiceDog() {
               <div key={row.feature} className="overflow-hidden rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)]">
                 <div className="flex items-center gap-3 px-5 py-3.5" style={LATO}>
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.25)]">
-                    <Image src={ICON} alt="" width={19} height={19} className="h-[19px] w-[19px]" />
+                    <Image
+            quality={90} src={ICON} alt="" width={19} height={19} className="h-[19px] w-[19px]" />
                   </span>
                   <span className="text-lg font-bold text-[#2E5A66]">{row.feature}</span>
                 </div>

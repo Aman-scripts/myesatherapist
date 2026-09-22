@@ -46,6 +46,7 @@ export function ContactInfoCards() {
                 {/* Frame 13: Left Icon Circle */}
                 <div className="w-[45px] h-[45px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                   <Image
+            quality={90}
                     src={card.icon}
                     alt={card.title}
                     width={20}

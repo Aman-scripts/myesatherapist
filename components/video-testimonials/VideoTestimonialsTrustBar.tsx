@@ -12,10 +12,10 @@ export function VideoTestimonialsTrustBar() {
         <div className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-1/3 py-1.5 sm:py-0 sm:px-4">
           <div className="relative w-[65px] h-[60px] sm:w-[77px] sm:h-[71px] shrink-0">
             <Image
-              src="/video_testimonial/video_testimonial-trustsection-happyclient.png"
+            quality={90}
+              src="/video_testimonial/video_testimonial-trustsection-happyclient.webp"
               alt="Happy Clients"
               fill
-              unoptimized
               className="object-contain"
             />
           </div>
@@ -33,10 +33,10 @@ export function VideoTestimonialsTrustBar() {
         <div className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-1/3 py-1.5 sm:py-0 sm:px-4">
           <div className="relative w-[65px] h-[54px] sm:w-[77px] sm:h-[64px] shrink-0">
             <Image
-              src="/video_testimonial/video_testimonial-trustsection-rating.png"
+            quality={90}
+              src="/video_testimonial/video_testimonial-trustsection-rating.webp"
               alt="Average Rating"
               fill
-              unoptimized
               className="object-contain"
             />
           </div>
@@ -54,10 +54,10 @@ export function VideoTestimonialsTrustBar() {
         <div className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-1/3 py-1.5 sm:py-0 sm:px-4">
           <div className="relative w-[65px] h-[65px] sm:w-[77px] sm:h-[77px] shrink-0">
             <Image
-              src="/video_testimonial/video_testimonial-trustsection-acceptancerate.png"
+            quality={90}
+              src="/video_testimonial/video_testimonial-trustsection-acceptancerate.webp"
               alt="Acceptance Rate"
               fill
-              unoptimized
               className="object-contain"
             />
           </div>

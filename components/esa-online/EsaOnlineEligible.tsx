@@ -26,6 +26,7 @@ export function EsaOnlineEligible() {
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(47.7%,687px)]">
         <div className="absolute left-[2%] top-[50%] z-20 w-[min(5vw,73px)] h-[min(5vw,73px)] -translate-y-1/2">
           <Image
+            quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.svg"
             alt=""
             width={73}
@@ -34,7 +35,8 @@ export function EsaOnlineEligible() {
           />
         </div>
         <Image
-          src="/esa-online/esa-letter-online_whatmaybeeligible.png"
+            quality={90}
+          src="/esa-online/esa-letter-online_whatmaybeeligible.webp"
           alt="Woman reading her ESA letter with her pets beside her"
           fill
           className="object-cover object-left-bottom"
@@ -45,8 +47,8 @@ export function EsaOnlineEligible() {
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.5vw,65px)]">
         <WaveImage
           alt="Woman reading her ESA letter with her pets beside her"
-          mobile={{ src: "/esa-online/esa-online-whomaybeeligible_mobile.png", w: 390, h: 512, crop: { x: 0, y: 99, w: 390, h: 412 } }}
-          tablet={{ src: "/esa-online/esa-online-whomaybeeligible_tablet.png", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
+          mobile={{ src: "/esa-online/esa-online-whomaybeeligible_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 99, w: 390, h: 412 } }}
+          tablet={{ src: "/esa-online/esa-online-whomaybeeligible_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
         />
         <div className="w-full max-w-[628px] lg:max-w-[min(43.6vw,628px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4">
@@ -69,6 +71,7 @@ export function EsaOnlineEligible() {
                   className="flex items-center gap-4 lg:gap-[min(1.1vw,16px)] rounded-[14px] bg-white px-4 py-3 lg:px-[min(1.1vw,16px)] lg:py-[min(0.83vw,12px)] shadow-[0px_1px_5px_rgba(0,0,0,0.12)] border border-[#2E5A66]/5"
                 >
                   <Image
+            quality={90}
                     src={c.icon}
                     alt=""
                     width={30}

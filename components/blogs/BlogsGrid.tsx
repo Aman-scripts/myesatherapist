@@ -118,6 +118,7 @@ export function BlogsGrid() {
                         className="w-full h-[260px] sm:h-[280px] lg:h-[317px] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
                       >
                         <Image
+            quality={90}
                           src={art.cardImage}
                           alt={art.title}
                           fill
@@ -139,7 +140,7 @@ export function BlogsGrid() {
                                 {art.title}
                               </h3>
                             </Link>
-                            <div className="text-xs sm:text-sm font-sans font-medium text-[#8E9A9F]">
+                            <div className="text-xs sm:text-sm font-sans font-medium text-[#69777C]">
                               by {art.author.name} • {art.publishDate}
                             </div>
                           </div>
@@ -160,6 +161,7 @@ export function BlogsGrid() {
                             <span>Read Guide</span>
                             <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                               <Image
+            quality={90}
                                 src="/common/send-icon.svg"
                                 alt=""
                                 width={18}

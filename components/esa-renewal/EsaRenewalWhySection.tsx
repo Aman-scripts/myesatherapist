@@ -37,6 +37,7 @@ export function EsaRenewalWhySection() {
         {/* Floating Heart & Paw Circle Badge (Frame 1261153622) */}
         <div className="absolute left-[7%] top-[38.4%] z-20 w-[56px] h-[56px] xl:w-[73px] xl:h-[73px]">
           <Image
+            quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.svg"
             alt="Compassionate verified support badge"
             width={73}
@@ -45,7 +46,8 @@ export function EsaRenewalWhySection() {
           />
         </div>
         <Image
-          src="/esa-renewal/esa-renewal-whyconsiderrenew-image.png"
+            quality={90}
+          src="/esa-renewal/esa-renewal-whyconsiderrenew-image.webp"
           alt="Licensed emotional support animal therapist evaluation process"
           fill
           priority
@@ -57,8 +59,8 @@ export function EsaRenewalWhySection() {
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[4.5vw] xl:pl-20 xl:pr-0 pb-16 sm:pb-20 lg:py-[4.5vw] xl:py-[65px]">
         <WaveImage
           alt="Licensed emotional support animal therapist evaluation process"
-          mobile={{ src: "/esa-renewal/esa-renwal_whyconsidering_mobile.png", w: 390, h: 512, crop: { x: 0, y: 237, w: 390, h: 274 } }}
-          tablet={{ src: "/esa-renewal/esa-renwal_whyconsidering_tablet.png", w: 834, h: 1049, crop: { x: 0, y: 449, w: 834, h: 600 } }}
+          mobile={{ src: "/esa-renewal/esa-renwal_whyconsidering_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 237, w: 390, h: 274 } }}
+          tablet={{ src: "/esa-renewal/esa-renwal_whyconsidering_tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 449, w: 834, h: 600 } }}
         />
         {/* Left Column: Heading + Subtitle + 3 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[46vw] xl:max-w-[626px] flex flex-col gap-10 lg:gap-[3vw] xl:gap-14">
@@ -90,6 +92,7 @@ export function EsaRenewalWhySection() {
                   {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[66px] h-[66px] sm:w-[74.56px] sm:h-[74.56px] lg:w-[4.6vw] lg:h-[4.6vw] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image
+            quality={90}
                       src="/esa-renewal/esa-renewal-whyconsiderrenew-allthreecards-icon.svg"
                       alt={card.title}
                       width={32}

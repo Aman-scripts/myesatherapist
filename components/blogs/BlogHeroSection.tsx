@@ -29,7 +29,8 @@ export function BlogHeroSection({
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
         <Image
-          src="/blogs/blog_hero-section-mobile.png"
+            quality={90}
+          src="/blogs/blog_hero-section-mobile.webp"
           alt={title}
           fill
           priority
@@ -58,6 +59,7 @@ export function BlogHeroSection({
             >
               <span className="flex items-center gap-2">
                 <Image
+            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={14}
@@ -79,6 +81,7 @@ export function BlogHeroSection({
               <span className="font-sans text-sm font-semibold">Get Started</span>
               <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={16}
@@ -97,7 +100,8 @@ export function BlogHeroSection({
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
         <Image
-          src="/blogs/blog_hero-section-tablet.png"
+            quality={90}
+          src="/blogs/blog_hero-section-tablet.webp"
           alt="How to Verify If an ESA Letter Is Legitimate"
           fill
           priority
@@ -125,6 +129,7 @@ export function BlogHeroSection({
               className="h-12 px-6 bg-[#FAF7F2] rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-[#2E5A66] hover:bg-white transition-colors"
             >
               <Image
+            quality={90}
                 src="/home/hero-section-map.svg"
                 alt=""
                 width={16}
@@ -145,6 +150,7 @@ export function BlogHeroSection({
               <span className="font-sans text-base font-semibold">Get Started</span>
               <span className="w-9 h-9 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={18}
@@ -163,7 +169,8 @@ export function BlogHeroSection({
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:flex relative w-full lg:min-h-[580px] xl:min-h-[792px] flex-col justify-between overflow-hidden">
         <Image
-          src="/blogs/blog-hero_section.png"
+            quality={90}
+          src="/blogs/blog-hero_section.webp"
           alt={title}
           fill
           priority

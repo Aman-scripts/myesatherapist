@@ -133,10 +133,10 @@ export function VideoTestimonialsGridSection() {
                 }}
               >
                 <Image
+            quality={90}
                   src={review.thumbnail}
                   alt={`${review.name} Video Testimonial`}
                   fill
-                  unoptimized
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 640px) 100vw, 301px"
                 />

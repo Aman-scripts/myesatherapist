@@ -19,7 +19,7 @@ export function EsaRenewalHousingSection() {
           <p>
             Landlords or property managers may ask for a current emotional support animal letter when reviewing an accommodation request. Renewed documentation helps show that your ESA evaluation is up to date and reflects your present circumstances, when permitted by law.
           </p>
-          <p className="text-sm sm:text-base text-[#5F6B6F]/90">
+          <p className="text-sm sm:text-base text-[#5F6B6F]">
             <strong className="text-[#2E5A66]">Important:</strong> Approval from a licensed provider does not guarantee landlord acceptance, as housing decisions can vary. ESA documentation must be based on an evaluation by a state-licensed mental health professional, not self-diagnosis. Current documentation from a licensed provider may help support your request during the housing review process.
           </p>
         </div>
@@ -34,6 +34,7 @@ export function EsaRenewalHousingSection() {
             <span className="pr-8">Begin your Renewal Process</span>
             <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
               <Image
+            quality={90}
                 src="/common/send-icon.svg"
                 alt=""
                 width={22}

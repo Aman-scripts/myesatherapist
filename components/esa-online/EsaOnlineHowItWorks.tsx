@@ -5,21 +5,21 @@ import { CtaButton, LATO, TEAL_GRADIENT } from "./EsaOnlineShared";
 const STEPS = [
   {
     stepNumber: "1",
-    image: "/esa-renewal/esa-renewal-processworks-step1.png",
+    image: "/esa-renewal/esa-renewal-processworks-step1.webp",
     title: "Set Up Your Appointment",
     description:
       "Create an account and choose an available appointment time to connect with a state-licensed mental health professional.",
   },
   {
     stepNumber: "2",
-    image: "/esa-renewal/esa-renewal-processworks-step2.png",
+    image: "/esa-renewal/esa-renewal-processworks-step2.webp",
     title: "Speak With Professionals",
     description:
       "During the evaluation, the provider discusses how your emotional support animal has been supporting you and whether continued support may still be needed.",
   },
   {
     stepNumber: "3",
-    image: "/esa-renewal/esa-renewal-processworks-step3.png",
+    image: "/esa-renewal/esa-renewal-processworks-step3.webp",
     title: "Clinical Review & Documentation",
     description:
       "After your evaluation, the licensed mental health professional determines whether ESA documentation is clinically appropriate. If so, the letter may be provided by email.",
@@ -46,7 +46,8 @@ export function EsaOnlineHowItWorks() {
                 <div className="relative h-[251px] w-[228px]">
                   <div className="absolute left-0 top-0 h-[226px] w-[228px] rounded-full bg-[#EFFFF1]/80 shadow-[0px_2px_4px_rgba(0,0,0,0.25)]" />
                   <div className="absolute left-[14px] top-[13px] h-[200px] w-[200px] overflow-hidden rounded-full">
-                    <Image src={step.image} alt={`Step ${step.stepNumber}: ${step.title}`} fill className="object-cover" sizes="200px" />
+                    <Image
+            quality={90} src={step.image} alt={`Step ${step.stepNumber}: ${step.title}`} fill className="object-cover" sizes="200px" />
                   </div>
                   <div
                     className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-[#FAF7F2] font-bold text-[36px] tracking-[-0.017em]"

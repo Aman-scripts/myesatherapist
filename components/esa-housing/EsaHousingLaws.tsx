@@ -8,7 +8,7 @@ const ICON = "/esa-housing/esa-letter-housing_housinglawssection-allcards-icon.s
 const COLUMNS = [
   {
     title: "Your Rights",
-    image: "/esa-housing/esa-letter-housing_housinglawssection-yourright.png",
+    image: "/esa-housing/esa-letter-housing_housinglawssection-yourright.webp",
     alt: "Woman with her emotional support dog at home",
     items: [
       "Live with your ESA in no-pet buildings",
@@ -19,7 +19,7 @@ const COLUMNS = [
   },
   {
     title: "Your Landlord’s Obligatory Rights",
-    image: "/esa-housing/esa-letter-housing_housinglawssection-landlordobligatory.png",
+    image: "/esa-housing/esa-letter-housing_housinglawssection-landlordobligatory.webp",
     alt: "Landlord reviewing a lease agreement with a tenant and her dog",
     items: [
       "No breed, size, or weight restrictions",
@@ -48,7 +48,8 @@ export function EsaHousingLaws() {
           {COLUMNS.map((col) => (
             <div key={col.title} className="flex flex-col overflow-hidden rounded-[30px] bg-[#FAF7F2] shadow-[0px_1px_4px_rgba(0,0,0,0.06)]">
               <div className="relative w-full aspect-[1983/793]">
-                <Image src={col.image} alt={col.alt} fill className="object-cover" sizes="(min-width: 1024px) 620px, 100vw" />
+                <Image
+            quality={90} src={col.image} alt={col.alt} fill className="object-cover" sizes="(min-width: 1024px) 620px, 100vw" />
               </div>
               <div className="flex flex-col items-center gap-6 px-6 sm:px-10 pt-8 pb-10 flex-1">
                 <h3 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-9 text-center">{col.title}</h3>

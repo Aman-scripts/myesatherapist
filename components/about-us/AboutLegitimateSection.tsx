@@ -30,11 +30,11 @@ export function AboutLegitimateSection() {
       {/* 1024px+ Absolute Right-Bleed Image (Desktop only) */}
       <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[46%] lg:w-[48%] xl:w-[737px] h-full pointer-events-none z-0">
         <Image
-          src="/about-us/about_us-legimate_Esa-section.png"
+            quality={90}
+          src="/about-us/about_us-legimate_Esa-section.webp"
           alt="Legitimate ESA Evaluations"
           fill
           priority
-          unoptimized
           className="object-cover object-left-top xl:object-right-top"
           sizes="(min-width: 1280px) 737px, 50vw"
         />
@@ -48,11 +48,11 @@ export function AboutLegitimateSection() {
           {/* Tablet Image (640px - 1023px, exact 834x1050) */}
           <div className="hidden sm:block relative w-full aspect-[834/1050]">
             <Image
-              src="/about-us/about_us-legimatesection-tablet.png"
+            quality={90}
+              src="/about-us/about_us-legimatesection-tablet.webp"
               alt="Legitimate ESA Evaluations"
               fill
               priority
-              unoptimized
               className="object-cover object-top"
               sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
             />
@@ -61,11 +61,11 @@ export function AboutLegitimateSection() {
           {/* Mobile Image (< 640px, exact 390x513) */}
           <div className="block sm:hidden relative w-full aspect-[390/513]">
             <Image
-              src="/about-us/about_us-legimatesection-mobile.png"
+            quality={90}
+              src="/about-us/about_us-legimatesection-mobile.webp"
               alt="Legitimate ESA Evaluations"
               fill
               priority
-              unoptimized
               className="object-cover object-top"
               sizes="(max-width: 639px) 100vw, 1px"
             />

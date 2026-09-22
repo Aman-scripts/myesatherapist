@@ -90,11 +90,11 @@ export function LicensedProfessionalsSection() {
                 className="w-[120px] h-[120px] rounded-full overflow-hidden mb-6 relative bg-[#E5ECEE] shrink-0 border-2 border-[#E8B92C] shadow-sm hover:opacity-95 transition-opacity block"
               >
                 <Image
+            quality={90}
                   src={prof.avatar}
                   alt={prof.name}
                   width={120}
                   height={120}
-                  unoptimized
                   priority
                   className="object-cover w-full h-full"
                 />

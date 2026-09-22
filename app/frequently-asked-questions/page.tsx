@@ -76,7 +76,7 @@ export default function FaqPage() {
         <StateReviewerBanner
           reviewerName="Dr. Nicole"
           updatedDate="May 12, 2026"
-          reviewerImage="/blogs/dr-nicole-reviewer.jpg"
+          reviewerImage="/blogs/dr-nicole-reviewer.webp"
         />
       </main>
 

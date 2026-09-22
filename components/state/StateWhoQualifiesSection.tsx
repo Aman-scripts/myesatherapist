@@ -76,16 +76,17 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
           <div className="order-1 lg:order-2 lg:col-span-6 relative flex justify-end w-full lg:h-full lg:min-h-full">
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
-                src={data.whoQualifiesImageMobile ?? "/states/california-who-qualifies-mobile.png"}
+            quality={90}
+                src={data.whoQualifiesImageMobile ?? "/states/california-who-qualifies-mobile.webp"}
                 alt={`Who May Eligible For ESA Letter in ${stateName} Mobile View`}
                 fill
                 priority
-                unoptimized
                 className="object-cover object-top"
                 sizes="(max-width: 639px) 100vw, 1px"
               />
               <div className="absolute bottom-0 left-[73.8%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
+            quality={90}
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={40}
@@ -97,16 +98,17 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
             <div className="hidden sm:block lg:hidden relative w-full aspect-[834/943]">
               <Image
-                src={data.whoQualifiesImageTablet ?? "/states/california-who-qualifies-tablet.png"}
+            quality={90}
+                src={data.whoQualifiesImageTablet ?? "/states/california-who-qualifies-tablet.webp"}
                 alt={`Who May Eligible For ESA Letter in ${stateName} Tablet View`}
                 fill
                 priority
-                unoptimized
                 className="object-cover object-top"
                 sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
               />
               <div className="absolute bottom-0 left-[75.3%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
+            quality={90}
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={48}
@@ -118,16 +120,17 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
             <div className="hidden lg:block relative w-full h-full ml-auto">
               <Image
-                src={data.whoQualifiesImage ?? "/states/whomayqualifies.png"}
+            quality={90}
+                src={data.whoQualifiesImage ?? "/states/whomayqualifies.webp"}
                 alt={`Who qualifies for ${stateName} ESA Letter`}
                 fill
                 priority
-                unoptimized
                 className="object-fill pointer-events-none"
                 sizes="45vw"
               />
               <div className="absolute left-[9.2%] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
                 <Image
+            quality={90}
                   src="/states/whomayqualifies-california_icon.svg"
                   alt="Heart Icon"
                   width={64}
@@ -161,6 +164,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   >
                     <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
+            quality={90}
                         src={item.icon || "/states/whomayqualifies-moodconditions.svg"}
                         alt={item.title}
                         width={40}

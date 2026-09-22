@@ -15,21 +15,21 @@ interface Step {
 const STEPS: Step[] = [
   {
     stepNumber: "1",
-    image: "/esa-renewal/esa-renewal-processworks-step1.png",
+    image: "/esa-renewal/esa-renewal-processworks-step1.webp",
     title: "Set Up Your Appointment",
     description:
       "Create an account and choose an available appointment time to connect with a state-licensed mental health professional.",
   },
   {
     stepNumber: "2",
-    image: "/esa-renewal/esa-renewal-processworks-step2.png",
+    image: "/esa-renewal/esa-renewal-processworks-step2.webp",
     title: "Speak With Professionals",
     description:
       "During the evaluation, the provider discusses how your emotional support animal has been supporting you and whether continued support may still be needed.",
   },
   {
     stepNumber: "3",
-    image: "/esa-renewal/esa-renewal-processworks-step3.png",
+    image: "/esa-renewal/esa-renewal-processworks-step3.webp",
     title: "Provider Review and Outcome",
     description:
       "After the evaluation, the licensed professional independently determines whether renewing the documentation may be appropriate. If issued, the updated letter is delivered electronically.",
@@ -63,6 +63,7 @@ export function EsaRenewalHowItWorks() {
                   {/* Inner Round Image */}
                   <div className="absolute left-[14px] top-[13px] h-[200px] w-[200px] overflow-hidden rounded-full">
                     <Image
+            quality={90}
                       src={step.image}
                       alt={`Step ${step.stepNumber}: ${step.title}`}
                       fill
@@ -106,6 +107,7 @@ export function EsaRenewalHowItWorks() {
           <span className="pr-8">Begin your Renewal Process</span>
           <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
             <Image
+            quality={90}
               src="/common/send-icon.svg"
               alt=""
               width={22}

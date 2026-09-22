@@ -55,7 +55,8 @@ export function ContactSection() {
         {/* Background Image: contact_us_hero-section.png */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/contact/contact_us_hero-section.png"
+            quality={90}
+            src="/contact/contact_us_hero-section.webp"
             alt="Customer service representative at desk"
             fill
             priority
@@ -184,6 +185,7 @@ export function ContactSection() {
               >
                 <div className="w-14 h-14 rounded-full bg-[#FAF7F2] border border-[#2E5A66]/15 flex items-center justify-center group-hover:bg-[#E8B92C]/20 group-hover:border-[#E8B92C] transition-all shrink-0">
                   <Image
+            quality={90}
                     src={card.icon}
                     alt={card.title}
                     width={24}

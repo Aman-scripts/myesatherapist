@@ -9,6 +9,7 @@ export function DoctorsDisclosureSection() {
       text: "Providers listed are independent professionals, not employees making platform decisions",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_importantproviders_firstcards-icon.svg"
           alt=""
           width={32}
@@ -21,6 +22,7 @@ export function DoctorsDisclosureSection() {
       text: "Provider availability varies by state & ESA approval is never guaranteed",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_importantproviders_restallthreecards-icon.svg"
           alt=""
           width={32}
@@ -33,6 +35,7 @@ export function DoctorsDisclosureSection() {
       text: "Evaluations are conducted based on state licensure requirements",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_importantproviders_restallthreecards-icon.svg"
           alt=""
           width={32}
@@ -45,6 +48,7 @@ export function DoctorsDisclosureSection() {
       text: "My ESA Therapist does not influence clinical decisions or documentation outcomes",
       icon: (
         <Image
+            quality={90}
           src="/doctors/doctors_importantproviders_restallthreecards-icon.svg"
           alt=""
           width={32}

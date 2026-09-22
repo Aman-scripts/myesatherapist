@@ -21,7 +21,8 @@ export function EsaOnlineWhatIs() {
             and the empty strip overflows the section (clipped) — no gap under the image. */}
         <div className="absolute inset-x-0 top-0 h-[116.6%]">
           <Image
-            src="/esa-online/esa-letter-online_whatisanesaletter.png"
+            quality={90}
+            src="/esa-online/esa-letter-online_whatisanesaletter.webp"
             alt="Woman hugging her emotional support dog"
             fill
             className="object-cover object-left-top"
@@ -34,8 +35,8 @@ export function EsaOnlineWhatIs() {
         <WaveImage
           alt="Woman hugging her emotional support dog"
           badge={false}
-          mobile={{ src: "/esa-online/esa-online-whatisesa_mobile.png", w: 390, h: 425, crop: { x: 3, y: 3, w: 384, h: 415 } }}
-          tablet={{ src: "/esa-online/esa-online-whatisesa_tablet.png", w: 834, h: 521, crop: { x: 14, y: 14, w: 806, h: 502 } }}
+          mobile={{ src: "/esa-online/esa-online-whatisesa_mobile.webp", w: 390, h: 425, crop: { x: 3, y: 3, w: 384, h: 415 } }}
+          tablet={{ src: "/esa-online/esa-online-whatisesa_tablet.webp", w: 834, h: 521, crop: { x: 14, y: 14, w: 806, h: 502 } }}
         />
         <div className="w-full max-w-[737px] lg:max-w-[min(42.4vw,610px)] text-center lg:text-left flex flex-col gap-10 lg:gap-[min(3.75vw,54px)]">
           <div className="flex flex-col gap-4">

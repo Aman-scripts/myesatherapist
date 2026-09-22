@@ -10,12 +10,12 @@ export function WhatIsPsdSection() {
       <div className="sm:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psd-letter/whatispsd-section-mobile.png"
+            quality={90}
+            src="/psd-letter/whatispsd-section-mobile.webp"
             alt="What is a Psychiatric Service Dog Letter"
             width={390}
             height={547}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (90.5% from top) */}
@@ -37,12 +37,12 @@ export function WhatIsPsdSection() {
       <div className="hidden sm:block lg:hidden w-full">
         <div className="relative w-full">
           <Image
-            src="/psd-letter/whatispsd-section-tablet.png"
+            quality={90}
+            src="/psd-letter/whatispsd-section-tablet.webp"
             alt="What is a Psychiatric Service Dog Letter"
             width={834}
             height={654}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (93.3% from top) */}
@@ -104,11 +104,11 @@ export function WhatIsPsdSection() {
           {/* 1. Main Photo */}
           <div className="absolute right-0 top-0 bottom-0 w-full h-full z-10">
             <Image
-              src="/psd-letter/psd-dogphyscarist-section.png"
+            quality={90}
+              src="/psd-letter/psd-dogphyscarist-section.webp"
               alt="Woman smiling with psychiatric service dog"
               fill
               priority
-              unoptimized
               className="object-cover object-right h-full w-full"
               sizes="(max-width: 1280px) 48vw, 671px"
             />

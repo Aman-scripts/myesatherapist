@@ -12,14 +12,14 @@ interface DoctorInternalHeroSectionProps {
 export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden bg-[#FAF7F2] min-h-[520px] lg:min-h-[600px] flex items-center">
-      {/* Background Image from public/doctors/doctor_internal.png */}
+      {/* Background Image from public/doctors/doctor_internal.webp */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
-          src="/doctors/doctor_internal.png"
+            quality={90}
+          src="/doctors/doctor_internal.webp"
           alt="Clinical Office Background"
           fill
           priority
-          unoptimized
           className="object-cover object-[70%_center] lg:object-right-top opacity-70 lg:opacity-90 mix-blend-multiply lg:mix-blend-normal"
           sizes="100vw"
         />
@@ -74,6 +74,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
                 <span>Get Started</span>
                 <span className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
                   <Image
+            quality={90}
                     src="/common/send-icon.svg"
                     alt=""
                     width={16}
@@ -92,11 +93,11 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[426px] lg:h-[426px] rounded-full overflow-hidden border-[6px] sm:border-[8px] border-white shadow-[0px_8px_30px_rgba(26,61,79,0.16)] bg-white/40">
               <Image
+            quality={90}
                 src={doctor.avatar}
                 alt={doctor.name}
                 fill
                 priority
-                unoptimized
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 426px"
               />

@@ -14,12 +14,12 @@ export function EmotionalSupportSection() {
         {/* Mobile Image (< 640px) */}
         <div className="sm:hidden w-full -mt-2.5">
           <Image
-            src="/home/mobile-emotional-support.png"
+            quality={90}
+            src="/home/mobile-emotional-support.webp"
             alt="What is an Emotional Support Animal"
             width={390}
             height={425}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
         </div>
@@ -27,12 +27,12 @@ export function EmotionalSupportSection() {
         {/* Tablet Image (640px to 1023px) */}
         <div className="hidden sm:block w-full -mt-3.5">
           <Image
-            src="/home/tablet-emotional-support-section.png"
+            quality={90}
+            src="/home/tablet-emotional-support-section.webp"
             alt="What is an Emotional Support Animal"
             width={834}
             height={521}
             priority
-            unoptimized
             className="w-full h-auto block"
           />
         </div>
@@ -92,7 +92,8 @@ export function EmotionalSupportSection() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] sm:w-[36px] sm:h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[19px] sm:h-[21px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px] sm:w-[19px] sm:h-[21px]" />
               </span>
             </a>
           </div>
@@ -102,11 +103,11 @@ export function EmotionalSupportSection() {
         <div className="hidden lg:flex w-[44%] xl:w-[45%] absolute right-0 top-0 bottom-0 h-full pointer-events-none z-0 items-center justify-end">
           <div className="relative w-full h-full max-w-[607px] lg:max-w-none">
             <Image
-              src="/home/emotional-support-right-frame.png"
+            quality={90}
+              src="/home/emotional-support-right-frame.webp"
               alt="Emotional support dog and woman"
               fill
               priority
-              unoptimized
               className="object-cover object-right"
               sizes="607px"
             />
@@ -116,6 +117,7 @@ export function EmotionalSupportSection() {
         {/* Bottom Paw Icon */}
         <div className="hidden lg:block absolute z-20 pointer-events-none right-4 xl:right-[1.6%] bottom-6 xl:bottom-[15.28%] w-[64px] xl:w-[84px] h-[64px] xl:h-[84px]">
           <Image
+            quality={90}
             src="/home/emotional-support-section-bottom-paw-icon.svg"
             alt="Paw prints"
             fill

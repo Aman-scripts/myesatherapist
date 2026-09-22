@@ -8,6 +8,7 @@ const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 function FeatureBadgeIcon() {
   return (
     <Image
+            quality={90}
       src="/home/price-section-badge.svg"
       alt=""
       width={16}

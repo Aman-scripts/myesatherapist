@@ -181,6 +181,7 @@ export function StateTableOfContents({ stateName, data }: Props) {
               {/* Frame 1000011910: White Box with Gold Border */}
               <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                 <Image
+            quality={90}
                   src="/common/myesa-logo.svg"
                   alt="My ESA Therapist"
                   width={135}

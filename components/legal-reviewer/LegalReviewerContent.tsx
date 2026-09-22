@@ -165,11 +165,11 @@ export function LegalReviewerContent() {
               <div className="w-[138px] h-[138px] rounded-full p-[5px] bg-white shadow-[0px_4px_10px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                 <div className="relative w-[128px] h-[128px] rounded-full overflow-hidden">
                   <Image
-                    src="/legal_reviewer/legal-reviwer.png"
+            quality={90}
+                    src="/legal_reviewer/legal-reviwer.webp"
                     alt="Awais Arshad - Legal Reviewer & Attorney at Law"
                     fill
                     priority
-                    unoptimized
                     className="object-cover object-top"
                     sizes="128px"
                   />
@@ -186,6 +186,7 @@ export function LegalReviewerContent() {
                 <div className="flex items-center justify-center lg:justify-start gap-2.5">
                   <span className="w-6 h-6 shrink-0 relative flex items-center justify-center">
                     <Image
+            quality={90}
                       src="/legal_reviewer/legal_reviewer-bag-icon.svg"
                       alt=""
                       width={24}
@@ -259,6 +260,7 @@ export function LegalReviewerContent() {
                       {/* Brand Logo Card (Frame 1000011910) */}
                       <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                         <Image
+            quality={90}
                           src="/common/myesa-logo.svg"
                           alt="My ESA Therapist"
                           width={135}
@@ -292,10 +294,10 @@ export function LegalReviewerContent() {
                       <div className="w-[128px] h-[128px] rounded-full p-[5px] bg-white shadow-[0px_4px_10px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                         <div className="relative w-[118px] h-[118px] rounded-full overflow-hidden">
                           <Image
-                            src="/legal_reviewer/legal-reviwer.png"
+            quality={90}
+                            src="/legal_reviewer/legal-reviwer.webp"
                             alt="Awais Arshad - Legal Reviewer & Attorney at Law"
                             fill
-                            unoptimized
                             className="object-cover object-top"
                             sizes="118px"
                           />
@@ -310,6 +312,7 @@ export function LegalReviewerContent() {
                         <div className="flex items-center justify-start gap-2.5">
                           <span className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 relative flex items-center justify-center">
                             <Image
+            quality={90}
                               src="/legal_reviewer/legal_reviewer-bag-icon.svg"
                               alt=""
                               width={24}
@@ -411,7 +414,7 @@ export function LegalReviewerContent() {
             <div className="space-y-7 sm:space-y-8">
               {/* Step 01 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
+                <span aria-hidden="true" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
                   01
                 </span>
                 <div className="space-y-2 flex-1">
@@ -429,7 +432,7 @@ export function LegalReviewerContent() {
 
               {/* Step 02 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
+                <span aria-hidden="true" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
                   02
                 </span>
                 <div className="space-y-2 flex-1">
@@ -448,7 +451,7 @@ export function LegalReviewerContent() {
 
               {/* Step 03 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
+                <span aria-hidden="true" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
                   03
                 </span>
                 <div className="space-y-2 flex-1">
