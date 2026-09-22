@@ -22,7 +22,7 @@ export function BlogsTrustBar() {
               >
                 <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 stroke-[2.5]" />
               </div>
-              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#949494] whitespace-nowrap">
+              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#707070] whitespace-nowrap">
                 HIPAA Compliant
               </div>
             </div>
@@ -35,7 +35,7 @@ export function BlogsTrustBar() {
               >
                 <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 stroke-[2.5]" />
               </div>
-              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#949494] whitespace-nowrap">
+              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#707070] whitespace-nowrap">
                 Response Within 24-72 Hours
               </div>
             </div>
@@ -48,7 +48,7 @@ export function BlogsTrustBar() {
               >
                 <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 stroke-[2.5]" />
               </div>
-              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#949494] whitespace-nowrap">
+              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#707070] whitespace-nowrap">
                 Licensed in All 50 States
               </div>
             </div>

@@ -69,7 +69,7 @@ export function FaqAccordionSection() {
                 aria-expanded={isOpen}
               >
                 {/* Gold Number Badge (Frame 1000011949: #E8B92C) */}
-                <div className="w-[60px] sm:w-[74px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-xl sm:text-2xl xl:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
+                <div className="w-[60px] sm:w-[74px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-xl sm:text-2xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
                   {String(idx + 1).padStart(2, "0")}.
                 </div>
 

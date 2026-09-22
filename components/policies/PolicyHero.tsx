@@ -65,7 +65,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             {accentIdx !== -1 ? (
               <>
                 {beforeAccent}
-                <span className="text-[#E8B92C] font-heading font-bold">{matchAccent}</span>
+                <span className="text-[#B88F14] font-heading font-bold">{matchAccent}</span>
                 {afterAccent}
               </>
             ) : (
@@ -106,7 +106,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           {/* Related Policy Pills */}
           {policy.relatedLinks && policy.relatedLinks.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-[#EAE5DC]/80 mt-5">
-              <span className="text-xs font-sans font-bold text-[#7C8B8E] mr-1 uppercase tracking-wider">Related Policies:</span>
+              <span className="text-xs font-sans font-bold text-[#6B797C] mr-1 uppercase tracking-wider">Related Policies:</span>
               {policy.relatedLinks.map((link, idx) => {
                 const slugMap: Record<string, string> = {
                   "terms of use": "/terms-of-use/",

@@ -134,10 +134,10 @@ export function AboutTestimonialSection() {
 
               {/* Name and State */}
               <div className="flex flex-col text-left">
-                <h4 className="font-heading font-bold text-[18px] sm:text-[20px] text-[#2C2C2C] leading-tight">
+                <h3 className="font-heading font-bold text-[18px] sm:text-[20px] text-[#2C2C2C] leading-tight">
                   {current.name}
-                </h4>
-                <span className="font-sans font-normal text-[14px] sm:text-[16px] text-[#777777] mt-0.5">
+                </h3>
+                <span className="font-sans font-normal text-[14px] sm:text-[16px] text-[#747474] mt-0.5">
                   {current.location}
                 </span>
               </div>
@@ -151,13 +151,17 @@ export function AboutTestimonialSection() {
               <button
                 key={idx}
                 onClick={() => setActiveIdx(idx)}
-                className={`transition-all duration-200 rounded-full cursor-pointer ${
-                  activeIdx === idx
-                    ? "w-6 h-2 bg-[#2E5A66]"
-                    : "w-2 h-2 bg-[#D9D9D9] hover:bg-[#AEBBBE]"
-                }`}
+                className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
                 aria-label={`Go to review ${idx + 1}`}
-              />
+              >
+                <span
+                  className={`block transition-all duration-200 rounded-full ${
+                    activeIdx === idx
+                      ? "w-6 h-2 bg-[#2E5A66]"
+                      : "w-2 h-2 bg-[#D9D9D9] hover:bg-[#AEBBBE]"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
