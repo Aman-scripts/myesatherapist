@@ -116,17 +116,14 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div
-              className="hidden lg:block relative w-full ml-auto"
-              style={{ aspectRatio: data.whoQualifiesAspect ?? "698/827" }}
-            >
+            <div className="hidden lg:block relative w-full h-full ml-auto">
               <Image
                 src={data.whoQualifiesImage ?? "/states/whomayqualifies.png"}
                 alt={`Who qualifies for ${stateName} ESA Letter`}
                 fill
                 priority
                 unoptimized
-                className="object-cover object-right-top pointer-events-none"
+                className="object-fill pointer-events-none"
                 sizes="45vw"
               />
               <div className="absolute left-[9.2%] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
