@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = Object.values(STATES_DATA);
+const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -89,7 +89,8 @@ export function ReviewsHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/760] min-h-[640px]">
         <Image
-          src="/reviews/reviews_phone-hero_section.png"
+            quality={90}
+          src="/reviews/reviews_phone-hero_section.webp"
           alt="What Our Clients Are Saying"
           fill
           priority
@@ -109,7 +110,7 @@ export function ReviewsHeroSection() {
               >
                 50
               </span>
-              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#949494] whitespace-nowrap">
+              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#707070] whitespace-nowrap">
                 USA States
               </span>
             </div>
@@ -122,7 +123,7 @@ export function ReviewsHeroSection() {
               >
                 HIPAA
               </span>
-              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#949494] whitespace-nowrap">
+              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#707070] whitespace-nowrap">
                 Compliant
               </span>
             </div>
@@ -135,7 +136,7 @@ export function ReviewsHeroSection() {
               >
                 100%
               </span>
-              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#949494] whitespace-nowrap">
+              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#707070] whitespace-nowrap">
                 Licensed Pros
               </span>
             </div>
@@ -161,6 +162,7 @@ export function ReviewsHeroSection() {
                 className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-[30px] bg-[#FAF7F2] font-semibold text-xs transition-colors shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
               >
                 <Image
+            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={14}
@@ -168,7 +170,7 @@ export function ReviewsHeroSection() {
                   className="shrink-0 object-contain"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATES_DATA[selectedState]?.name || "Select your State" : "Select your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-3.5 h-3.5 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -203,7 +205,8 @@ export function ReviewsHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-7 h-7 rounded-full bg-[#FAF7F2] shadow-[0_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={14} height={14} />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={14} height={14} />
               </span>
             </a>
           </div>
@@ -218,7 +221,8 @@ export function ReviewsHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[1032/850] min-h-[640px]">
         <Image
-          src="/reviews/reviews_tablet-hero_section.png"
+            quality={90}
+          src="/reviews/reviews_tablet-hero_section.webp"
           alt="What Our Clients Are Saying"
           fill
           priority
@@ -238,7 +242,7 @@ export function ReviewsHeroSection() {
               >
                 50
               </span>
-              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#949494]">
+              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#707070]">
                 USA States
               </span>
             </div>
@@ -251,7 +255,7 @@ export function ReviewsHeroSection() {
               >
                 HIPAA
               </span>
-              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#949494]">
+              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#707070]">
                 Compliant
               </span>
             </div>
@@ -264,7 +268,7 @@ export function ReviewsHeroSection() {
               >
                 100%
               </span>
-              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#949494]">
+              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#707070]">
                 Licensed Pros
               </span>
             </div>
@@ -290,6 +294,7 @@ export function ReviewsHeroSection() {
                 className="flex items-center gap-2 px-5 py-2.5 rounded-[30px] bg-[#FAF7F2] font-semibold text-sm hover:bg-white transition-colors h-[46px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
               >
                 <Image
+            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={15}
@@ -297,7 +302,7 @@ export function ReviewsHeroSection() {
                   className="shrink-0 object-contain"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATES_DATA[selectedState]?.name || "Select your State" : "Select your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -332,7 +337,8 @@ export function ReviewsHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={16} height={16} />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} />
               </span>
             </a>
           </div>
@@ -347,7 +353,8 @@ export function ReviewsHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/743] min-h-[720px]">
         <Image
-          src="/reviews/reviews_hero-section.png"
+            quality={90}
+          src="/reviews/reviews_hero-section.webp"
           alt="What Our Clients Are Saying"
           fill
           priority
@@ -367,7 +374,7 @@ export function ReviewsHeroSection() {
               >
                 50
               </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#949494]">
+              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 USA States
               </span>
             </div>
@@ -380,7 +387,7 @@ export function ReviewsHeroSection() {
               >
                 HIPAA
               </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#949494]">
+              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 Compliant
               </span>
             </div>
@@ -393,7 +400,7 @@ export function ReviewsHeroSection() {
               >
                 100%
               </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#949494]">
+              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 Licensed Pros
               </span>
             </div>
@@ -419,6 +426,7 @@ export function ReviewsHeroSection() {
                 className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[28px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[16px] xl:text-[18px] hover:bg-white transition-colors h-[50px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
               >
                 <Image
+            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={18}
@@ -426,7 +434,7 @@ export function ReviewsHeroSection() {
                   className="shrink-0 object-contain"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATES_DATA[selectedState]?.name || "Select your State" : "Select your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -461,7 +469,8 @@ export function ReviewsHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={20} height={20} className="w-[18px] h-[18px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={20} height={20} className="w-[18px] h-[18px]" />
               </span>
             </a>
           </div>

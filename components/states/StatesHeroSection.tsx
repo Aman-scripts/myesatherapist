@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = Object.values(STATES_DATA);
+const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 export function StatesHeroSection() {
@@ -68,7 +68,8 @@ export function StatesHeroSection() {
         {/* Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <Image
-            src="/states/state_hero-section-mobile.png"
+            quality={90}
+            src="/states/state_hero-section-mobile.webp"
             alt="ESA Evaluation For Every State"
             fill
             priority
@@ -128,6 +129,7 @@ export function StatesHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
+            quality={90}
                     src="/home/hero-section-map.svg"
                     alt=""
                     width={16}
@@ -135,7 +137,7 @@ export function StatesHeroSection() {
                     className="shrink-0 object-contain w-[14px] h-[18px]"
                   />
                   <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </span>
                 <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -172,7 +174,8 @@ export function StatesHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </button>
           </div>
@@ -187,7 +190,8 @@ export function StatesHeroSection() {
         {/* Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <Image
-            src="/states/state_hero-section-tablet.png"
+            quality={90}
+            src="/states/state_hero-section-tablet.webp"
             alt="ESA Evaluation For Every State"
             fill
             priority
@@ -247,6 +251,7 @@ export function StatesHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
+            quality={90}
                     src="/home/hero-section-map.svg"
                     alt=""
                     width={16}
@@ -254,7 +259,7 @@ export function StatesHeroSection() {
                     className="shrink-0 object-contain w-[14px] h-[18px]"
                   />
                   <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </span>
                 <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -291,7 +296,8 @@ export function StatesHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
               </span>
             </button>
           </div>
@@ -307,7 +313,8 @@ export function StatesHeroSection() {
         {/* Full-width Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <Image
-            src="/states/statepage_hero-section.png"
+            quality={90}
+            src="/states/statepage_hero-section.webp"
             alt="ESA Evaluation For Every State"
             fill
             priority
@@ -327,6 +334,7 @@ export function StatesHeroSection() {
         >
           <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
             <Image
+            quality={90}
               src="/states/state_page_her-section_map-icon.svg"
               alt="Available in all 50 states"
               width={34}
@@ -403,6 +411,7 @@ export function StatesHeroSection() {
                 >
                   <div className="flex items-center gap-2.5">
                     <Image
+            quality={90}
                       src="/home/hero-section-map.svg"
                       alt="Location pin"
                       width={16}
@@ -411,7 +420,7 @@ export function StatesHeroSection() {
                     />
                     <span className="font-sans font-semibold text-base sm:text-lg bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
                       {selectedState
-                        ? STATES_DATA[selectedState]?.name || "Start your State"
+                        ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State"
                         : "Start your State"}
                     </span>
                   </div>
@@ -450,7 +459,8 @@ export function StatesHeroSection() {
               >
                 <span>Get Started</span>
                 <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[19px] h-[21px]" />
+                  <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[19px] h-[21px]" />
                 </span>
               </button>
             </div>

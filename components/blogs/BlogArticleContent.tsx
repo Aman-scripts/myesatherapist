@@ -3,15 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BlogArticle, BlogCalloutBox, BLOG_POSTS } from "@/data/blogsData";
+import { BlogArticle, BlogCalloutBox } from "@/data/blogsData";
 
 interface BlogArticleContentProps {
-  article?: BlogArticle;
+  article: BlogArticle;
 }
 
-export function BlogArticleContent({ article: customArticle }: BlogArticleContentProps = {}) {
-  // Default to the first article if none provided
-  const article = customArticle || BLOG_POSTS[0];
+export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
   const renderFormattedText = (content: string): React.ReactNode => {
     if (!content) return content;
@@ -45,7 +43,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           <Link
             key={`${matchIndex}-${linkUrl}`}
             href={linkUrl}
-            className="text-[#EFBF2F] font-semibold hover:underline transition-colors"
+            className="text-[#8A6A0B] font-semibold hover:underline transition-colors"
           >
             {linkText}
           </Link>
@@ -78,7 +76,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
         {callout.linkText && callout.linkHref ? (
           <Link
             href={callout.linkHref}
-            className="text-[#EFBF2F] font-semibold hover:underline transition-colors"
+            className="text-[#8A6A0B] font-semibold hover:underline transition-colors"
           >
             {callout.linkText}
           </Link>
@@ -123,6 +121,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
       {article.introImage && (
         <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
           <Image
+            quality={90}
             src={article.introImage.src}
             alt={article.introImage.alt}
             width={870}
@@ -279,6 +278,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {sec.bannerImage && (!sec.bannerPosition || sec.bannerPosition === "top") && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
               <Image
+            quality={90}
                 src={sec.bannerImage.src}
                 alt={sec.bannerImage.alt}
                 width={870}
@@ -299,7 +299,8 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {sec.id === "tenant-checklist" && !sec.bannerImage && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
               <Image
-                src="/blogs/blogs-tentant-checklist.png"
+            quality={90}
+                src="/blogs/blogs-tentant-checklist.webp"
                 alt="Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate"
                 width={870}
                 height={1300}
@@ -312,7 +313,8 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {sec.id === "landlord-checklist" && !sec.bannerImage && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
               <Image
-                src="/blogs/blogs-landlord-checklist.png"
+            quality={90}
+                src="/blogs/blogs-landlord-checklist.webp"
                 alt="Landlord Checklist: How to Verify an ESA Letter?"
                 width={870}
                 height={1300}
@@ -324,14 +326,14 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {/* Sample Letter Display Box (Article 4) */}
           {sec.sampleLetter && (
             <div className="w-full my-8 rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
-              <div className="bg-[#FAF7F2] border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-[#8E9A9F] italic">
+              <div className="bg-[#FAF7F2] border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-[#69777C] italic">
                 {sec.sampleLetter.disclaimer}
               </div>
               <div className="p-6 sm:p-10 font-sans text-sm sm:text-base leading-relaxed text-[#2E5A66] space-y-5">
                 <div className="border-b border-[#EAE5DC] pb-4 font-bold text-base sm:text-lg text-[#1D6E72] tracking-wide">
                   {sec.sampleLetter.letterhead}
                 </div>
-                <div className="text-xs sm:text-sm text-[#8E9A9F] font-medium">
+                <div className="text-xs sm:text-sm text-[#69777C] font-medium">
                   {sec.sampleLetter.date}
                 </div>
                 <div className="font-semibold text-slate-800">
@@ -381,7 +383,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   </div>
                 ))}
                 {sec.checklist.footerNote && (
-                  <div className="mt-6 pt-4 border-t border-[#EAE5DC] text-xs sm:text-sm font-medium text-[#8E9A9F] italic">
+                  <div className="mt-6 pt-4 border-t border-[#EAE5DC] text-xs sm:text-sm font-medium text-[#69777C] italic">
                     {sec.checklist.footerNote}
                   </div>
                 )}
@@ -445,6 +447,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   {sub.image && sub.imagePosition === "top" && sub.title && sub.title.trim() ? (
                     <h3 className="flex items-center gap-2 font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
                       <Image
+            quality={90}
                         src={sub.image.src}
                         alt={sub.image.alt}
                         width={sub.image.width || 24}
@@ -538,6 +541,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
                   {sub.image && sub.imagePosition !== "top" && (
                     <div className="w-full relative rounded-[16px] overflow-hidden shadow-xs my-4 bg-white border border-[#DECDBB]/40">
                       <Image
+            quality={90}
                         src={sub.image.src}
                         alt={sub.image.alt}
                         width={870}
@@ -585,6 +589,7 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {sec.bannerImage && sec.bannerPosition === "bottom" && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
               <Image
+            quality={90}
                 src={sec.bannerImage.src}
                 alt={sec.bannerImage.alt}
                 width={870}
@@ -623,10 +628,10 @@ export function BlogArticleContent({ article: customArticle }: BlogArticleConten
           {/* Subtle Paw Prints in Bottom Right - Hidden on Mobile, visible on Tablet & Desktop */}
           <div className="hidden sm:block absolute right-0 bottom-0 w-[300px] lg:w-[350px] h-[200px] lg:h-[235px] pointer-events-none select-none z-0">
             <Image
-              src="/common/cta-section-paw.png"
+            quality={90}
+              src="/common/cta-section-paw.webp"
               alt=""
               fill
-              unoptimized
               priority
               className="object-contain object-right-bottom"
             />

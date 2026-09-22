@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = Object.values(STATES_DATA);
+const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 const TRUSTPILOT_GREEN = "#00B67A";
 
@@ -87,7 +87,8 @@ export function PsdHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[580px] max-h-[760px] overflow-hidden">
         <Image
-          src="/psd-letter/psd-herosection-mobile.png"
+            quality={90}
+          src="/psd-letter/psd-herosection-mobile.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           priority
@@ -144,7 +145,7 @@ export function PsdHeroSection() {
                     className="shrink-0 object-contain w-[14px] h-[18px]"
                   />
                   <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -180,7 +181,8 @@ export function PsdHeroSection() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </a>
           </div>
@@ -193,7 +195,8 @@ export function PsdHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1190] min-h-[880px]">
         <Image
-          src="/psd-letter/psd-hero-section-tablet.png"
+            quality={90}
+          src="/psd-letter/psd-hero-section-tablet.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           priority
@@ -247,7 +250,7 @@ export function PsdHeroSection() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -281,7 +284,8 @@ export function PsdHeroSection() {
             >
               Get Started
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
             </a>
           </div>
@@ -294,7 +298,8 @@ export function PsdHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/814] min-h-[580px] xl:min-h-0">
         <Image
-          src="/psd-letter/psd-herosection-new.png"
+            quality={90}
+          src="/psd-letter/psd-herosection-new.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           priority
@@ -349,7 +354,7 @@ export function PsdHeroSection() {
                     style={{ width: "auto", height: "auto" }}
                   />
                   <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                   <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -383,7 +388,8 @@ export function PsdHeroSection() {
               >
                 Get Started
                 <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
+                  <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
                 </span>
               </a>
             </div>

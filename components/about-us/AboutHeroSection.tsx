@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ShieldCheck, Clock, Award, ChevronDown } from "lucide-react";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX } from "@/data/stateIndex";
 
 const statsData = [
   { value: "51,488+", label: "ESA Evaluations" },
@@ -25,11 +25,11 @@ export function AboutHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[640px] overflow-hidden">
         <Image
-          src="/about-us/about_us-mobile_hero_section.png"
+            quality={90}
+          src="/about-us/about_us-mobile_hero_section.webp"
           alt="About My ESA Therapist"
           fill
           priority
-          unoptimized
           className="object-cover object-bottom pointer-events-none"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -49,7 +49,7 @@ export function AboutHeroSection() {
                 >
                   {stat.value}
                 </span>
-                <span className="font-sans text-[9px] font-semibold text-[#949494] mt-0.5 whitespace-nowrap">
+                <span className="font-sans text-[9px] font-semibold text-[#707070] mt-0.5 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -79,6 +79,7 @@ export function AboutHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
+            quality={90}
                     src="/home/hero-section-map.svg"
                     alt=""
                     width={14}
@@ -97,7 +98,7 @@ export function AboutHeroSection() {
 
               {dropdownOpen && (
                 <div className={STATE_DROPDOWN_PANEL}>
-                  {Object.values(STATES_DATA).map((st) => (
+                  {STATE_INDEX.map((st) => (
                     <Link
                       key={st.slug}
                       href={`/esa-letter-${st.slug}/`}
@@ -121,6 +122,7 @@ export function AboutHeroSection() {
               <span className="font-sans text-sm font-semibold">Get Started</span>
               <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={16}
@@ -139,11 +141,11 @@ export function AboutHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[760px] max-h-[1050px] overflow-hidden">
         <Image
-          src="/about-us/about_us-tablet_hero_section.png"
+            quality={90}
+          src="/about-us/about_us-tablet_hero_section.webp"
           alt="About My ESA Therapist"
           fill
           priority
-          unoptimized
           className="object-cover object-bottom pointer-events-none"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -163,7 +165,7 @@ export function AboutHeroSection() {
                 >
                   {stat.value}
                 </span>
-                <span className="font-sans text-[11px] font-semibold text-[#949494] mt-1 whitespace-nowrap">
+                <span className="font-sans text-[11px] font-semibold text-[#707070] mt-1 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -190,6 +192,7 @@ export function AboutHeroSection() {
                 className="h-12 px-6 bg-white rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-[#2E5A66] hover:bg-[#FAF7F2] transition-colors border border-[#EAE5DC]"
               >
                 <Image
+            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={16}
@@ -207,7 +210,7 @@ export function AboutHeroSection() {
 
               {dropdownOpen && (
                 <div className={STATE_DROPDOWN_PANEL}>
-                  {Object.values(STATES_DATA).map((st) => (
+                  {STATE_INDEX.map((st) => (
                     <Link
                       key={st.slug}
                       href={`/esa-letter-${st.slug}/`}
@@ -231,6 +234,7 @@ export function AboutHeroSection() {
               <span className="font-sans text-base font-semibold">Get Started</span>
               <span className="w-9 h-9 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={18}
@@ -251,11 +255,11 @@ export function AboutHeroSection() {
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/about-us/hero_section-about_us.png"
+            quality={90}
+            src="/about-us/hero_section-about_us.webp"
             alt="About My ESA Therapist"
             fill
             priority
-            unoptimized
             className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
@@ -274,7 +278,7 @@ export function AboutHeroSection() {
                 >
                   50
                 </span>
-                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#949494] mt-0.5">
+                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#707070] mt-0.5">
                   USA States
                 </span>
               </div>
@@ -287,7 +291,7 @@ export function AboutHeroSection() {
                 >
                   HIPAA
                 </span>
-                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#949494] mt-0.5">
+                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#707070] mt-0.5">
                   Compliant
                 </span>
               </div>
@@ -300,7 +304,7 @@ export function AboutHeroSection() {
                 >
                   100%
                 </span>
-                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#949494] mt-0.5">
+                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#707070] mt-0.5">
                   Licensed Pros
                 </span>
               </div>
@@ -333,7 +337,7 @@ export function AboutHeroSection() {
             >
               <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
-            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#949494]">
+            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#707070]">
               HIPAA Compliant
             </span>
           </div>
@@ -346,7 +350,7 @@ export function AboutHeroSection() {
             >
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
-            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#949494]">
+            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#707070]">
               Response Within 24-72 Hours
             </span>
           </div>
@@ -359,7 +363,7 @@ export function AboutHeroSection() {
             >
               <Award className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
-            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#949494]">
+            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#707070]">
               Licensed in All 50 States
             </span>
           </div>

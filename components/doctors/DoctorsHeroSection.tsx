@@ -6,9 +6,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX } from "@/data/stateIndex";
 
-const AVAILABLE_STATES = Object.values(STATES_DATA);
+const AVAILABLE_STATES = STATE_INDEX;
 
 export function DoctorsHeroSection() {
   const router = useRouter();
@@ -41,11 +41,11 @@ export function DoctorsHeroSection() {
       {/* ========================================================================= */}
       <div className="hidden xl:block absolute inset-0 z-0">
         <Image
-          src="/doctors/doctors_hero-section.png"
+            quality={90}
+          src="/doctors/doctors_hero-section.webp"
           alt="Meet Our Licensed Mental Health Professionals"
           fill
           priority
-          unoptimized
           className="object-cover object-right"
           sizes="100vw"
         />
@@ -58,11 +58,11 @@ export function DoctorsHeroSection() {
       {/* ========================================================================= */}
       <div className="hidden sm:block xl:hidden absolute inset-0 z-0">
         <Image
-          src="/doctors/doctors_hero-section_tablet.png"
+            quality={90}
+          src="/doctors/doctors_hero-section_tablet.webp"
           alt="Meet Our Licensed Mental Health Professionals"
           fill
           priority
-          unoptimized
           className="object-cover object-top"
           sizes="100vw"
         />
@@ -73,11 +73,11 @@ export function DoctorsHeroSection() {
       {/* ========================================================================= */}
       <div className="block sm:hidden absolute inset-0 z-0">
         <Image
-          src="/doctors/doctors_hero-section_mobile.png"
+            quality={90}
+          src="/doctors/doctors_hero-section_mobile.webp"
           alt="Meet Our Licensed Mental Health Professionals"
           fill
           priority
-          unoptimized
           className="object-cover object-top"
           sizes="100vw"
         />
@@ -105,7 +105,7 @@ export function DoctorsHeroSection() {
                 >
                   50
                 </span>
-                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
+                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#707070] text-center whitespace-nowrap">
                   USA States
                 </span>
               </div>
@@ -118,7 +118,7 @@ export function DoctorsHeroSection() {
                 >
                   HIPAA
                 </span>
-                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
+                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#707070] text-center whitespace-nowrap">
                   Compliant
                 </span>
               </div>
@@ -131,7 +131,7 @@ export function DoctorsHeroSection() {
                 >
                   100%
                 </span>
-                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#949494] text-center whitespace-nowrap">
+                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#707070] text-center whitespace-nowrap">
                   Licensed Pros
                 </span>
               </div>
@@ -220,6 +220,7 @@ export function DoctorsHeroSection() {
               </span>
               <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
+            quality={90}
                   src="/common/send-icon.svg"
                   alt=""
                   width={18}

@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = Object.values(STATES_DATA);
+const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -54,7 +54,7 @@ const statsData = [
 const HEADING = "Emotional Support Animal Laws by State and Federal Guidelines";
 const DESCRIPTION =
   "Understand federal and state-level ESA regulations, housing rules, and evaluation requirements.";
-const HERO_IMAGE = "/esa-laws/esalaws-herosection-portrait.png";
+const HERO_IMAGE = "/esa-laws/esalaws-herosection-portrait.webp";
 
 export function EsaLawsHero() {
   const router = useRouter();
@@ -98,6 +98,7 @@ export function EsaLawsHero() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <Image
+            quality={90}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
@@ -121,7 +122,7 @@ export function EsaLawsHero() {
                 >
                   {stat.value}
                 </span>
-                <span className="text-[9px] text-[#949494] font-semibold mt-0.5 leading-tight font-sans whitespace-nowrap">
+                <span className="text-[9px] text-[#707070] font-semibold mt-0.5 leading-tight font-sans whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -157,7 +158,7 @@ export function EsaLawsHero() {
                     className="shrink-0 object-contain w-[14px] h-[18px]"
                   />
                   <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -193,7 +194,8 @@ export function EsaLawsHero() {
             >
               <span>Get Started</span>
               <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
               </span>
             </a>
           </div>
@@ -205,6 +207,7 @@ export function EsaLawsHero() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <Image
+            quality={90}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
@@ -228,7 +231,7 @@ export function EsaLawsHero() {
                 >
                   {stat.value}
                 </span>
-                <span className="text-[11px] text-[#949494] font-semibold mt-0.5 leading-tight font-sans whitespace-nowrap">
+                <span className="text-[11px] text-[#707070] font-semibold mt-0.5 leading-tight font-sans whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -261,7 +264,7 @@ export function EsaLawsHero() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -295,7 +298,8 @@ export function EsaLawsHero() {
             >
               Get Started
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
             </a>
           </div>
@@ -307,7 +311,8 @@ export function EsaLawsHero() {
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/797] min-h-[560px] xl:min-h-0">
         <Image
-          src="/esa-laws/esalaws-herosection.png"
+            quality={90}
+          src="/esa-laws/esalaws-herosection.webp"
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
           priority
@@ -330,7 +335,7 @@ export function EsaLawsHero() {
                   >
                     {stat.value}
                   </span>
-                  <span className="font-sans font-semibold text-[11px] xl:text-[12px] text-[#949494] leading-none mt-0.5">
+                  <span className="font-sans font-semibold text-[11px] xl:text-[12px] text-[#707070] leading-none mt-0.5">
                     {stat.label}
                   </span>
                 </div>
@@ -364,7 +369,7 @@ export function EsaLawsHero() {
                     className="shrink-0 object-contain w-[16px] h-[20px]"
                   />
                   <span className="font-sans font-semibold text-base xl:text-[18px] text-[#1A3D4F]">
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </div>
                 <ChevronDown className={`w-4 h-4 text-[#1A3D4F] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -399,7 +404,8 @@ export function EsaLawsHero() {
             >
               <span>Get Started</span>
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
               </span>
             </a>
           </div>

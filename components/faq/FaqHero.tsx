@@ -4,11 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = Object.values(STATES_DATA);
+const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -93,7 +93,8 @@ export function FaqHero() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <Image
-          src="/faq/faq_hero-section_mobile.png"
+            quality={90}
+          src="/faq/faq_hero-section_mobile.webp"
           alt="ESA Questions? We’re here to Help."
           fill
           priority
@@ -117,7 +118,7 @@ export function FaqHero() {
                   >
                     {stat.value}
                   </span>
-                  <span className="font-sans font-semibold text-[9.5px] leading-tight text-[#949494] whitespace-nowrap">
+                  <span className="font-sans font-semibold text-[9.5px] leading-tight text-[#707070] whitespace-nowrap">
                     {stat.label}
                   </span>
                 </div>
@@ -156,7 +157,7 @@ export function FaqHero() {
                       className="font-sans font-semibold text-[16px] leading-[30px] bg-clip-text text-transparent truncate max-w-[140px]"
                       style={{ backgroundImage: TEAL_GRADIENT }}
                     >
-                      {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                     </span>
                   </div>
                   <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -194,7 +195,8 @@ export function FaqHero() {
                   Get Started
                 </span>
                 <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
+                  <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
                 </span>
               </a>
             </div>
@@ -208,7 +210,8 @@ export function FaqHero() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <Image
-          src="/faq/faq_hero-section_tablet.png"
+            quality={90}
+          src="/faq/faq_hero-section_tablet.webp"
           alt="ESA Questions? We’re here to Help."
           fill
           priority
@@ -232,7 +235,7 @@ export function FaqHero() {
                   >
                     {stat.value}
                   </span>
-                  <span className="font-sans font-semibold text-[12px] leading-tight text-[#949494] whitespace-nowrap">
+                  <span className="font-sans font-semibold text-[12px] leading-tight text-[#707070] whitespace-nowrap">
                     {stat.label}
                   </span>
                 </div>
@@ -271,7 +274,7 @@ export function FaqHero() {
                       className="font-sans font-semibold text-[17px] leading-[30px] bg-clip-text text-transparent truncate max-w-[145px]"
                       style={{ backgroundImage: TEAL_GRADIENT }}
                     >
-                      {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                     </span>
                   </div>
                   <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -309,7 +312,8 @@ export function FaqHero() {
                   Get Started
                 </span>
                 <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
+                  <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
                 </span>
               </a>
             </div>
@@ -323,7 +327,8 @@ export function FaqHero() {
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/737] min-h-[640px] xl:min-h-0">
         <Image
-          src="/faq/faq_hero-section.png"
+            quality={90}
+          src="/faq/faq_hero-section.webp"
           alt="ESA Questions? We're Here to Help"
           fill
           priority
@@ -381,7 +386,7 @@ export function FaqHero() {
                     className="shrink-0 object-contain w-[16px] h-[20px]"
                   />
                   <span className="font-sans font-semibold text-base xl:text-[18px] text-[#1A3D4F]">
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </div>
                 <ChevronDown className={`w-4 h-4 text-[#1A3D4F] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -417,7 +422,8 @@ export function FaqHero() {
             >
               <span>Get Started</span>
               <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
               </span>
             </a>
           </div>

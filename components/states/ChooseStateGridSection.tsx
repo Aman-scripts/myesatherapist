@@ -2,9 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX } from "@/data/stateIndex";
 
-const ALL_STATES = Object.values(STATES_DATA).sort((a, b) =>
+const ALL_STATES = [...STATE_INDEX].sort((a, b) =>
   a.name.localeCompare(b.name)
 );
 

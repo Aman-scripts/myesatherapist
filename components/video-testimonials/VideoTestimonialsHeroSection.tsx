@@ -4,12 +4,12 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
-import { STATES_DATA } from "@/data/statesData";
+import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = Object.values(STATES_DATA);
+const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 const TABLET_STATS = [
@@ -106,7 +106,8 @@ export function VideoTestimonialsHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[660px]">
         <Image
-          src="/video_testimonial/video_testimonial-herosection_mobile.png"
+            quality={90}
+          src="/video_testimonial/video_testimonial-herosection_mobile.webp"
           alt="Real Impact, Real Stories - My ESA Therapist"
           fill
           priority
@@ -148,7 +149,7 @@ export function VideoTestimonialsHeroSection() {
                     className="font-sans font-semibold text-[15px] bg-clip-text text-transparent truncate"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </div>
                 <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpenMobile ? "rotate-180" : ""}`} />
@@ -186,7 +187,8 @@ export function VideoTestimonialsHeroSection() {
                 Get Started
               </span>
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={15} height={17} className="w-[15px] h-[17px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={15} height={17} className="w-[15px] h-[17px]" />
               </span>
             </a>
           </div>
@@ -199,7 +201,8 @@ export function VideoTestimonialsHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[941/1480] min-h-[780px]">
         <Image
-          src="/video_testimonial/video_testimonial-herosection_tablet.png"
+            quality={90}
+          src="/video_testimonial/video_testimonial-herosection_tablet.webp"
           alt="Real Impact, Real Stories - My ESA Therapist"
           fill
           priority
@@ -223,7 +226,7 @@ export function VideoTestimonialsHeroSection() {
                 >
                   {stat.value}
                 </span>
-                <span className="font-sans font-semibold text-[11px] sm:text-[12px] leading-tight text-[#949494] whitespace-nowrap">
+                <span className="font-sans font-semibold text-[11px] sm:text-[12px] leading-tight text-[#707070] whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -262,7 +265,7 @@ export function VideoTestimonialsHeroSection() {
                     className="font-sans font-semibold text-[15px] sm:text-[16px] bg-clip-text text-transparent truncate max-w-[140px]"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    {selectedState ? STATES_DATA[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </div>
                 <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpenTablet ? "rotate-180" : ""}`} />
@@ -300,7 +303,8 @@ export function VideoTestimonialsHeroSection() {
                 Get Started
               </span>
               <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image src="/common/send-icon.svg" alt="" width={16} height={18} className="w-4 h-[18px]" />
+                <Image
+            quality={90} src="/common/send-icon.svg" alt="" width={16} height={18} className="w-4 h-[18px]" />
               </span>
             </a>
           </div>
@@ -314,7 +318,8 @@ export function VideoTestimonialsHeroSection() {
       <div className="hidden lg:block relative w-full aspect-[1440/624] min-h-[624px]">
         {/* Full-bleed background artwork */}
         <Image
-          src="/video_testimonial/video_testimonial-herosection.png"
+            quality={90}
+          src="/video_testimonial/video_testimonial-herosection.webp"
           alt="Real Stories, Real Impact - My ESA Therapist"
           fill
           priority
@@ -331,7 +336,7 @@ export function VideoTestimonialsHeroSection() {
               <span className="font-heading font-bold text-[24px] leading-[30px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
                 50
               </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#949494]">
+              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 USA States
               </span>
             </div>
@@ -341,7 +346,7 @@ export function VideoTestimonialsHeroSection() {
               <span className="font-heading font-bold text-[24px] leading-[30px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
                 HIPAA
               </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#949494]">
+              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 Compliant
               </span>
             </div>
@@ -351,7 +356,7 @@ export function VideoTestimonialsHeroSection() {
               <span className="font-heading font-bold text-[24px] leading-[30px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
                 100%
               </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#949494]">
+              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 Licensed Pros
               </span>
             </div>
