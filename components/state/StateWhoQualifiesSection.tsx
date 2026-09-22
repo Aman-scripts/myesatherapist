@@ -73,7 +73,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end w-full lg:h-full lg:min-h-full lg:items-start">
+          <div className="order-1 lg:order-2 lg:col-span-6 relative flex justify-end w-full lg:h-full lg:min-h-full lg:items-start">
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
                 src={data.whoQualifiesImageMobile ?? "/states/california-who-qualifies-mobile.png"}
@@ -141,7 +141,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-4 sm:pb-6 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-6 px-4 sm:px-6 lg:px-0 pt-4 pb-4 sm:pb-6 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
             <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 {title}
