@@ -116,10 +116,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div
-              className="hidden lg:block relative h-full max-w-full ml-auto"
-              style={{ aspectRatio: data.whoQualifiesAspect ?? "698/827" }}
-            >
+            <div className="hidden lg:block relative w-full h-full ml-auto">
               <Image
                 src={data.whoQualifiesImage ?? "/states/whomayqualifies.png"}
                 alt={`Who qualifies for ${stateName} ESA Letter`}
