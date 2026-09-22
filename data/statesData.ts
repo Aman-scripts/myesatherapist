@@ -12307,7 +12307,7 @@ export const STATES_DATA: Record<string, StateData> = {
     benefitsImageMobile: "/states/statewhobenefits-texas_mobile.png",
     benefitsImageTablet: "/states/statewhobenefits-texas_tablet.png",
     whoQualifiesImage: "/states/statewhoqualifies-texas.png",
-    whoQualifiesAspect: "712/886",
+    whoQualifiesAspect: "699/1053",
     whoQualifiesImageMobile: "/states/statewhoqualifies-texas_mobile.png",
     whoQualifiesImageTablet: "/states/statewhoqualifies-texas_tablet.png",
     therapistsTitle: "Our Licensed Mental Health Professionals",
