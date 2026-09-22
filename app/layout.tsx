@@ -96,15 +96,30 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-[#2E5A66]/20 selection:text-[#2E5A66]">
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager: deferred until first interaction (or a short
+            idle timeout) so GTM and the tags it injects (GA, chat widget,
+            analytics) don't compete with the initial render for the main
+            thread. Still fires for every real visitor within a few seconds. */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            __html: `(function(w,d,s,l,i){
+function loadGtm(){
+  if (w.__gtmLoaded) return;
+  w.__gtmLoaded = true;
+  w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+}
+var events=['pointerdown','mousemove','keydown','touchstart','scroll'];
+function onInteract(){
+  events.forEach(function(e){w.removeEventListener(e,onInteract);});
+  loadGtm();
+}
+events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:true});});
+setTimeout(loadGtm,4000);
 })(window,document,'script','dataLayer','GTM-MRLDDQG');`,
           }}
         />
