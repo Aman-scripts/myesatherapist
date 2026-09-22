@@ -73,7 +73,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
       <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-8 items-stretch">
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end w-full lg:h-full lg:min-h-full">
+          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end w-full lg:h-full lg:min-h-full lg:items-start">
             <div className="sm:hidden relative w-full aspect-[390/440]">
               <Image
                 src={data.whoQualifiesImageMobile ?? "/states/california-who-qualifies-mobile.png"}
@@ -116,7 +116,10 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div className="hidden lg:block relative w-full h-full ml-auto">
+            <div
+              className="hidden lg:block relative w-full ml-auto"
+              style={{ aspectRatio: data.whoQualifiesAspect ?? "698/827" }}
+            >
               <Image
                 src={data.whoQualifiesImage ?? "/states/whomayqualifies.png"}
                 alt={`Who qualifies for ${stateName} ESA Letter`}
