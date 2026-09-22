@@ -52,3 +52,6 @@ figma_frame_*.png
 *.tmp
 *_parsed.txt
 *_raw.html
+
+# lighthouse audit output
+/lighthouse-reports/
