@@ -41,7 +41,7 @@ export function PsdProcessSection() {
             Three-Step Process
           </h2>
           <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
-            From ESA consultation to ESA letter delivery, everything happens online. No paperwork, no waiting rooms, just a simple path to a legitimate psychiatric service dog letter and professional documentation.
+            From PSD consultation to PSD letter delivery, everything happens online. No paperwork, no waiting rooms, just a simple path to a legitimate psychiatric service dog letter and professional documentation.
           </p>
         </div>
 
