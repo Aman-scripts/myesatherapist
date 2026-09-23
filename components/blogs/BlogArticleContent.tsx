@@ -119,7 +119,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
       {/* Intro Image (if present) */}
       {article.introImage && (
-        <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(article.introImage.height ?? 550) >= (article.introImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
+        <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(article.introImage.height ?? 550) > (article.introImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
           <Image
             quality={90}
             src={article.introImage.src}
@@ -276,7 +276,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
           {/* Section Banner / Content Image (Top position) */}
           {sec.bannerImage && (!sec.bannerPosition || sec.bannerPosition === "top") && (
-            <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(sec.bannerImage.height ?? 550) >= (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
+            <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(sec.bannerImage.height ?? 550) > (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
             quality={90}
                 src={sec.bannerImage.src}
@@ -600,7 +600,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
           {/* Section Banner / Content Image (Bottom position) */}
           {sec.bannerImage && sec.bannerPosition === "bottom" && (
-            <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(sec.bannerImage.height ?? 550) >= (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
+            <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(sec.bannerImage.height ?? 550) > (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
             quality={90}
                 src={sec.bannerImage.src}

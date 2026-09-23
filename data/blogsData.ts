@@ -97,7 +97,7 @@ export interface BlogSection {
     src: string;
     alt: string;
     caption?: string;
-    /** Intrinsic size; defaults to 870x550. Square and portrait images render narrower and centered. */
+    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered. */
     width?: number;
     height?: number;
   };
@@ -164,7 +164,7 @@ export interface BlogArticle {
     src: string;
     alt: string;
     caption?: string;
-    /** Intrinsic size; defaults to 870x550. Square and portrait images render narrower and centered. */
+    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered. */
     width?: number;
     height?: number;
   };
