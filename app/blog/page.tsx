@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import { BlogsHero } from "@/components/blogs/BlogsHero";
 import { BlogsTrustBar } from "@/components/blogs/BlogsTrustBar";
 import { BlogsGrid } from "@/components/blogs/BlogsGrid";
-import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
 import { blogSchema } from "@/data/schemas/blogSchema";
@@ -61,24 +60,21 @@ export default function BlogHubPage() {
         {/* 2. Trust Features Bar (HIPAA, Response 24-72h, Licensed in 50 states) */}
         <BlogsTrustBar />
 
-        {/* 4. 3x3 Blogs Grid (9 Articles) */}
+        {/* 3. 3x3 Blogs Grid (9 Articles) */}
         <BlogsGrid />
 
-        {/* 5. Frequently Asked Questions */}
-        <FaqSection />
-
-        {/* 6. ESA Letter Call to Action */}
+        {/* 4. ESA Letter Call to Action */}
         <CtaBanner
           title="Need help with an ESA letter?"
           description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
           buttonText="Start your Evaluation"
-          buttonHref="#faq"
-          bgColor="bg-[#EEEBE0]"
+          buttonHref="/pricing/"
+          bgColor="bg-[#FAF7F2]"
           className="pb-12 sm:pb-16"
         />
       </main>
 
-      <Footer bgColor="bg-[#EEEBE0]" />
+      <Footer />
     </div>
   );
 }
