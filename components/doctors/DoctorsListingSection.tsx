@@ -142,7 +142,6 @@ export function DoctorsListingSection() {
                       src={doc.avatar}
                       alt={doc.name}
                       fill
-                      priority
                       className="object-cover object-center"
                       sizes="67px"
                     />

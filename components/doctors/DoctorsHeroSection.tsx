@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
@@ -40,12 +41,12 @@ export function DoctorsHeroSection() {
       {/* 1. DESKTOP BACKGROUND GRAPHIC (xl: >= 1280px)                            */}
       {/* ========================================================================= */}
       <div className="hidden xl:block absolute inset-0 z-0">
-        <Image
-            quality={90}
+        <BreakpointImage
+          media="(min-width: 1280px)"
+          quality={90}
           src="/doctors/doctors_hero-section.webp"
           alt="Meet Our Licensed Mental Health Professionals"
           fill
-          priority
           className="object-cover object-right"
           sizes="100vw"
         />
@@ -57,12 +58,12 @@ export function DoctorsHeroSection() {
       {/* 2. TABLET BACKGROUND GRAPHIC (sm: to < xl, e.g. 640px - 1279px, 1024px)   */}
       {/* ========================================================================= */}
       <div className="hidden sm:block xl:hidden absolute inset-0 z-0">
-        <Image
-            quality={90}
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1279px)"
+          quality={90}
           src="/doctors/doctors_hero-section_tablet.webp"
           alt="Meet Our Licensed Mental Health Professionals"
           fill
-          priority
           className="object-cover object-top"
           sizes="100vw"
         />
@@ -72,12 +73,12 @@ export function DoctorsHeroSection() {
       {/* 3. MOBILE BACKGROUND GRAPHIC (< sm, < 640px)                              */}
       {/* ========================================================================= */}
       <div className="block sm:hidden absolute inset-0 z-0">
-        <Image
-            quality={90}
+        <BreakpointImage
+          media="(max-width: 639px)"
+          quality={90}
           src="/doctors/doctors_hero-section_mobile.webp"
           alt="Meet Our Licensed Mental Health Professionals"
           fill
-          priority
           className="object-cover object-top"
           sizes="100vw"
         />

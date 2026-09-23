@@ -47,7 +47,7 @@ export function BlogGoogleSourceBanner() {
                 See our articles highlighted in Google Search
               </h4>
               <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F]">
-                Add a supportive pet as a source - see results your way.
+                Add My ESA Therapist as a source - see results your way.
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export function BlogGoogleSourceBanner() {
           {/* Frame 1000011890: CTA Button */}
           <div className="shrink-0">
             <a
-              href="https://www.google.com"
+              href="https://www.google.com/preferences/source?q=myesatherapist.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-between pl-6 pr-1.5 w-[189px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"

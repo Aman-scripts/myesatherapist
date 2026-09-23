@@ -89,7 +89,6 @@ export function DoYouNeedEsaSection() {
               src="/home/doyouneed-esa-perfect-v3.webp"
               alt="Emotional support dog and owner"
               fill
-              priority
               className="object-contain object-right"
               sizes="(min-width: 1280px) 571px, 461px"
             />
@@ -122,7 +121,6 @@ export function DoYouNeedEsaSection() {
               alt="Do You Need an Emotional Support Animal"
               width={390}
               height={475}
-              priority
               className="w-full h-auto block"
             />
           </div>
@@ -135,7 +133,6 @@ export function DoYouNeedEsaSection() {
               alt="Do You Need an Emotional Support Animal"
               width={834}
               height={533}
-              priority
               className="w-full h-auto block"
             />
           </div>

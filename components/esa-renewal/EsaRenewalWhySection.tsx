@@ -50,7 +50,6 @@ export function EsaRenewalWhySection() {
           src="/esa-renewal/esa-renewal-whyconsiderrenew-image.webp"
           alt="Licensed emotional support animal therapist evaluation process"
           fill
-          priority
           className="object-cover object-right"
           sizes="681px"
         />

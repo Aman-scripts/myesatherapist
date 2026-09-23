@@ -30,7 +30,6 @@ export function StateLawsSection({ data }: { data: StateData }) {
                 src="/states/esalaws-fairemployment-housing.webp"
                 alt="Federal Housing Guidelines"
                 fill
-                priority
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -87,7 +86,6 @@ export function StateLawsSection({ data }: { data: StateData }) {
                 src={data.slug === "california" ? "/states/esalaws-california-state.webp" : "/states/state_lawssection-secondcard.webp"}
                 alt="Housing Provider Roles & Responsibilities"
                 fill
-                priority
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

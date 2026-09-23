@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
 
 const POINTS = [
@@ -18,16 +18,18 @@ export function EsaTrainingHero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[941/1672] lg:hidden"
         style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)" }}
       >
-        <Image
-            quality={90} src="/esa-training/esa-training-herosection_mobile.webp" alt="Woman sitting on the floor at home holding her cat" fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
-        <Image
-            quality={90} src="/esa-training/esa-training-herosection_tablet.webp" alt="Woman sitting on the floor at home holding her cat" fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+        <BreakpointImage
+          media="(max-width: 639px)"
+            quality={90} src="/esa-training/esa-training-herosection_mobile.webp" alt="Woman sitting on the floor at home holding her cat" fill className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
+            quality={90} src="/esa-training/esa-training-herosection_tablet.webp" alt="Woman sitting on the floor at home holding her cat" fill className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
       </div>
-      <Image
+      <BreakpointImage
+        media="(min-width: 1024px)"
         src="/esa-training/esa-traning_herosection.webp"
         alt="Woman sitting on the floor at home holding her cat"
         fill
-        priority
         quality={90}
         className="pointer-events-none hidden object-cover object-[29%_center] lg:block"
         sizes="(min-width: 1024px) 100vw, 1px"

@@ -50,7 +50,6 @@ export function WhoBenefitsSection() {
             alt="People who benefitted most from the PSD Letter"
             width={390}
             height={652}
-            priority
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (95.1% from top) */}
@@ -61,7 +60,6 @@ export function WhoBenefitsSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full"
             />
           </div>
@@ -77,7 +75,6 @@ export function WhoBenefitsSection() {
             alt="People who benefitted most from the PSD Letter"
             width={833}
             height={1140}
-            priority
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Dark Green Curved Line (93.9% from top) */}
@@ -88,7 +85,6 @@ export function WhoBenefitsSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full"
             />
           </div>
@@ -125,7 +121,6 @@ export function WhoBenefitsSection() {
                     width={20}
                     height={20}
                     unoptimized
-                    priority
                     className="object-contain"
                     style={{ width: "auto", height: "auto" }}
                   />
@@ -161,7 +156,6 @@ export function WhoBenefitsSection() {
               src="/psd-letter/whobenefits-section-image.webp"
               alt="People who benefitted most from the PSD Letter"
               fill
-              priority
               className="object-cover object-right h-full w-full"
               sizes="(max-width: 1280px) 42vw, 567px"
             />
@@ -174,7 +168,6 @@ export function WhoBenefitsSection() {
               alt=""
               fill
               unoptimized
-              priority
               className="object-contain object-left"
             />
           </div>
@@ -187,7 +180,6 @@ export function WhoBenefitsSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain"
               style={{ width: "auto", height: "auto" }}
             />

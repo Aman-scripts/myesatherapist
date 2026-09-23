@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -92,12 +93,12 @@ export function FaqHero() {
       {/* 1. MOBILE FAQ HERO SECTION (< 640px)                 */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/faq/faq_hero-section_mobile.webp"
           alt="ESA Questions? We’re here to Help."
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -209,12 +210,12 @@ export function FaqHero() {
       {/* Matches Frame 1000011884: w 678px, h 340px, top 149px */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/faq/faq_hero-section_tablet.webp"
           alt="ESA Questions? We’re here to Help."
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -326,12 +327,12 @@ export function FaqHero() {
       {/* Matches Frame 1000011884                             */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/737] min-h-[640px] xl:min-h-0">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/faq/faq_hero-section.webp"
           alt="ESA Questions? We're Here to Help"
           fill
-          priority
           className="object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

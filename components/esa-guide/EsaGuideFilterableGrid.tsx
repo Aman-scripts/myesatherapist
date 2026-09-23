@@ -32,7 +32,7 @@ export function EsaGuideFilterableGrid() {
         <SectionHeader title="Featured Guide" />
 
         <div className="grid w-full grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-y-12">
-          {ESA_GUIDE_POSTS.map((art) => (
+          {ESA_GUIDE_POSTS.map((art, i) => (
             <article
               key={art.id}
               className="group flex flex-col overflow-hidden rounded-[20px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-shadow duration-300 hover:shadow-md"
@@ -43,6 +43,7 @@ export function EsaGuideFilterableGrid() {
                   src={art.cardImage}
                   alt={art.title}
                   fill
+                  loading={i < 3 ? "eager" : "lazy"}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(min-width: 1280px) 411px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 />

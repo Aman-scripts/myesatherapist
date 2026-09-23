@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import Link from "next/link";
 import { ShieldCheck, Clock, Award, ChevronDown } from "lucide-react";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
@@ -24,12 +25,12 @@ export function AboutHeroSection() {
       {/* Uses /about_us-mobile_hero_section.png (390x768)     */}
       {/* ---------------------------------------------------- */}
       <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[640px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/about-us/about_us-mobile_hero_section.webp"
           alt="About My ESA Therapist"
           fill
-          priority
           className="object-cover object-bottom pointer-events-none"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -140,12 +141,12 @@ export function AboutHeroSection() {
       {/* Uses /about_us-tablet_hero_section.png (834x1226)    */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[760px] max-h-[1050px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/about-us/about_us-tablet_hero_section.webp"
           alt="About My ESA Therapist"
           fill
-          priority
           className="object-cover object-bottom pointer-events-none"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -254,12 +255,12 @@ export function AboutHeroSection() {
       <div className="hidden lg:flex relative w-full lg:min-h-[720px] xl:min-h-[795px] items-center overflow-hidden">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
-          <Image
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
             src="/about-us/hero_section-about_us.webp"
             alt="About My ESA Therapist"
             fill
-            priority
             className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />

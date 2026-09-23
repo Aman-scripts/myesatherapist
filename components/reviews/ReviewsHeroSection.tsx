@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -88,12 +89,12 @@ export function ReviewsHeroSection() {
       {/* 1. MOBILE REVIEWS HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/760] min-h-[640px]">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/reviews/reviews_phone-hero_section.webp"
           alt="What Our Clients Are Saying"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -220,12 +221,12 @@ export function ReviewsHeroSection() {
       {/* 2. TABLET REVIEWS HERO SECTION (640px - 1023px)      */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[1032/850] min-h-[640px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/reviews/reviews_tablet-hero_section.webp"
           alt="What Our Clients Are Saying"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -352,12 +353,12 @@ export function ReviewsHeroSection() {
       {/* 3. DESKTOP REVIEWS HERO SECTION (1024px and up)      */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/743] min-h-[720px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/reviews/reviews_hero-section.webp"
           alt="What Our Clients Are Saying"
           fill
-          priority
           className="object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -105,12 +106,12 @@ export function VideoTestimonialsHeroSection() {
       {/* Matches user's mobile screenshot exactly             */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[660px]">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/video_testimonial/video_testimonial-herosection_mobile.webp"
           alt="Real Impact, Real Stories - My ESA Therapist"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -200,12 +201,12 @@ export function VideoTestimonialsHeroSection() {
       {/* Matches user's tablet screenshot exactly             */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[941/1480] min-h-[780px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/video_testimonial/video_testimonial-herosection_tablet.webp"
           alt="Real Impact, Real Stories - My ESA Therapist"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -317,12 +318,12 @@ export function VideoTestimonialsHeroSection() {
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/624] min-h-[624px]">
         {/* Full-bleed background artwork */}
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/video_testimonial/video_testimonial-herosection.webp"
           alt="Real Stories, Real Impact - My ESA Therapist"
           fill
-          priority
           className="object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

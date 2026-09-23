@@ -34,7 +34,6 @@ export function AboutLegitimateSection() {
           src="/about-us/about_us-legimate_Esa-section.webp"
           alt="Legitimate ESA Evaluations"
           fill
-          priority
           className="object-cover object-left-top xl:object-right-top"
           sizes="(min-width: 1280px) 737px, 50vw"
         />
@@ -52,7 +51,6 @@ export function AboutLegitimateSection() {
               src="/about-us/about_us-legimatesection-tablet.webp"
               alt="Legitimate ESA Evaluations"
               fill
-              priority
               className="object-cover object-top"
               sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
             />
@@ -65,7 +63,6 @@ export function AboutLegitimateSection() {
               src="/about-us/about_us-legimatesection-mobile.webp"
               alt="Legitimate ESA Evaluations"
               fill
-              priority
               className="object-cover object-top"
               sizes="(max-width: 639px) 100vw, 1px"
             />

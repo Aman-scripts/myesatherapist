@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -86,12 +87,12 @@ export function PsdHeroSection() {
       {/* Matches Screenshot 2 (Figma iPhone 13 & 14)          */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[580px] max-h-[760px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/psd-letter/psd-herosection-mobile.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -194,12 +195,12 @@ export function PsdHeroSection() {
       {/* Matches Screenshot 2                                 */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1190] min-h-[880px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/psd-letter/psd-hero-section-tablet.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
-          priority
           className="object-cover object-top"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -297,12 +298,12 @@ export function PsdHeroSection() {
       {/* Matches Screenshot 1                                 */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/814] min-h-[580px] xl:min-h-0">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/psd-letter/psd-herosection-new.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
-          priority
           className="object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

@@ -38,7 +38,6 @@ export function StateReviewerBanner({
                 src={reviewerImage}
                 alt={`Content reviewed by ${reviewerName}`}
                 fill
-                priority
                 className="object-cover object-center"
                 sizes="89px"
               />

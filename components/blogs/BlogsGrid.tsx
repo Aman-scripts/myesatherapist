@@ -107,7 +107,7 @@ export function BlogsGrid() {
 
                 {/* 3-Column Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                  {categoryPosts.map((art) => (
+                  {categoryPosts.map((art, i) => (
                     <div
                       key={art.id}
                       className="bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between group hover:shadow-md transition-all duration-300 min-h-[580px] border border-[#EAE5DC]/60"
@@ -122,6 +122,7 @@ export function BlogsGrid() {
                           src={art.cardImage}
                           alt={art.title}
                           fill
+                          loading={catIndex === 0 && i < 3 ? "eager" : "lazy"}
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                         />

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -52,12 +53,12 @@ export function BlogsHero() {
       {/* Uses /blog_hero-section-mobile.png                   */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[600px] max-h-[760px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/blogs/blog_hero-section-mobile.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
-          priority
           className="object-cover object-bottom pointer-events-none"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -145,12 +146,12 @@ export function BlogsHero() {
       {/* Uses /blog_hero-section-tablet.png                   */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/blogs/blog_hero-section-tablet.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
-          priority
           className="object-cover object-bottom pointer-events-none"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -236,12 +237,12 @@ export function BlogsHero() {
       {/* Uses /blog-hero_section.png                          */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/blogs/blog-hero_section.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
-          priority
           className="object-cover lg:object-[82%_center] xl:object-center pointer-events-none"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

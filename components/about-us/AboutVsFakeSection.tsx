@@ -47,7 +47,6 @@ export function AboutVsFakeSection() {
                 src="/states/california-scams-whatyouneed.webp"
                 alt="My ESA Therapist Legitimate Evaluation"
                 fill
-                priority
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -86,7 +85,6 @@ export function AboutVsFakeSection() {
                 src="/states/california-scams-commonesascams.webp"
                 alt="Fake ESA Websites Warning"
                 fill
-                priority
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

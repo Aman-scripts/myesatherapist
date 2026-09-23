@@ -145,7 +145,6 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                   alt={logo.name}
                   width={220}
                   height={65}
-                  priority={idx < 6}
                   className="max-h-[30px] sm:max-h-[38px] lg:max-h-[44px] w-auto max-w-[140px] sm:max-w-[170px] lg:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
                 />
               </a>

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -86,12 +87,12 @@ export function PricingHero() {
       {/* 1. MOBILE PRICING HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px]">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/pricing/pricing_section-hero_section_mobile.webp"
           alt="Choose the Right ESA Package for You"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -203,12 +204,12 @@ export function PricingHero() {
       {/* 2. TABLET PRICING HERO SECTION (640px to 1023px)     */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/pricing/pricing_section-hero_section_tablet.webp"
           alt="Choose the Right ESA Package for You"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -315,12 +316,12 @@ export function PricingHero() {
       {/* 3. DESKTOP PRICING HERO SECTION (1024px and up)      */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/802] min-h-[760px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/pricing/pricing_section-hero_section.webp"
           alt="Choose the Right ESA Package for You"
           fill
-          priority
           className="object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

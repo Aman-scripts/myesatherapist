@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
 
 const ART = "/esa-guide/esa-guide_herosection.webp";
@@ -15,16 +15,18 @@ export function EsaGuideHero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[1024/1536] lg:hidden"
         style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 12%)" }}
       >
-        <Image
-            quality={90} src="/esa-guide/esa-guide-herosection_mobile.webp" alt={ART_ALT} fill priority className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
-        <Image
-            quality={90} src="/esa-guide/esa-guide-herosection_tablet.webp" alt={ART_ALT} fill priority className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+        <BreakpointImage
+          media="(max-width: 639px)"
+            quality={90} src="/esa-guide/esa-guide-herosection_mobile.webp" alt={ART_ALT} fill className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
+            quality={90} src="/esa-guide/esa-guide-herosection_tablet.webp" alt={ART_ALT} fill className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
       </div>
-      <Image
+      <BreakpointImage
+        media="(min-width: 1024px)"
         src={ART}
         alt={ART_ALT}
         fill
-        priority
         quality={90}
         className="pointer-events-none hidden object-cover object-[58%_center] lg:block"
         sizes="(min-width: 1024px) 100vw, 1px"

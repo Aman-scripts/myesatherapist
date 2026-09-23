@@ -80,7 +80,6 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 src={data.whoQualifiesImageMobile ?? "/states/california-who-qualifies-mobile.webp"}
                 alt={`Who May Eligible For ESA Letter in ${stateName} Mobile View`}
                 fill
-                priority
                 className="object-cover object-top"
                 sizes="(max-width: 639px) 100vw, 1px"
               />
@@ -102,7 +101,6 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 src={data.whoQualifiesImageTablet ?? "/states/california-who-qualifies-tablet.webp"}
                 alt={`Who May Eligible For ESA Letter in ${stateName} Tablet View`}
                 fill
-                priority
                 className="object-cover object-top"
                 sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
               />
@@ -124,7 +122,6 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 src={data.whoQualifiesImage ?? "/states/whomayqualifies.webp"}
                 alt={`Who qualifies for ${stateName} ESA Letter`}
                 fill
-                priority
                 className="object-fill pointer-events-none"
                 sizes="45vw"
               />

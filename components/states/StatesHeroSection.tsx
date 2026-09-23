@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -67,12 +68,12 @@ export function StatesHeroSection() {
       <div className="block sm:hidden relative w-full aspect-[390/833] min-h-[720px]">
         {/* Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
-          <Image
+          <BreakpointImage
+            media="(max-width: 639px)"
             quality={90}
             src="/states/state_hero-section-mobile.webp"
             alt="ESA Evaluation For Every State"
             fill
-            priority
             className="object-cover object-top"
             sizes="(max-width: 639px) 100vw, 1px"
           />
@@ -189,12 +190,12 @@ export function StatesHeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1385] min-h-[920px]">
         {/* Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
-          <Image
+          <BreakpointImage
+            media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
             src="/states/state_hero-section-tablet.webp"
             alt="ESA Evaluation For Every State"
             fill
-            priority
             className="object-cover object-top"
             sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
           />
@@ -312,12 +313,12 @@ export function StatesHeroSection() {
       <div className="hidden lg:flex relative w-full min-h-[787px] items-center">
         {/* Full-width Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <Image
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
             src="/states/statepage_hero-section.webp"
             alt="ESA Evaluation For Every State"
             fill
-            priority
             className="object-cover object-right-top 2xl:object-center"
             sizes="(min-width: 1024px) 100vw, 1px"
           />

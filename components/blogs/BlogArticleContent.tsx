@@ -304,7 +304,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 alt="Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate"
                 width={870}
                 height={1300}
-                priority
                 className="w-full h-auto object-contain"
               />
             </div>
@@ -632,7 +631,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               src="/common/cta-section-paw.webp"
               alt=""
               fill
-              priority
+              sizes="(min-width: 1024px) 350px, 300px"
               className="object-contain object-right-bottom"
             />
           </div>

@@ -96,10 +96,11 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-[#2E5A66]/20 selection:text-[#2E5A66]">
-        {/* Google Tag Manager: deferred until first interaction (or a short
-            idle timeout) so GTM and the tags it injects (GA, chat widget,
-            analytics) don't compete with the initial render for the main
-            thread. Still fires for every real visitor within a few seconds. */}
+        {/* Google Tag Manager: deferred until the first interaction (scroll,
+            touch, pointer or key) so GTM and the tags it injects (GA, Tawk
+            chat, Clarity: ~650 KB of JS) never compete with the initial
+            render. A fixed idle timeout made mobile Lighthouse scores flaky
+            because it sometimes fired inside the measurement window. */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -119,7 +120,6 @@ function onInteract(){
   loadGtm();
 }
 events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:true});});
-setTimeout(loadGtm,4000);
 })(window,document,'script','dataLayer','GTM-MRLDDQG');`,
           }}
         />

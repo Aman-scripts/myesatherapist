@@ -187,7 +187,6 @@ export function StateTableOfContents({ stateName, data }: Props) {
                   width={135}
                   height={56}
                   className="w-full h-full object-contain"
-                  priority
                 />
               </div>
 

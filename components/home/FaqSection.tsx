@@ -93,7 +93,6 @@ export function FaqSection({
                 src="/common/faq-section-image.webp"
                 alt="Person holding emotional support animal"
                 fill
-                priority
                 className="object-cover"
                 sizes="(min-width: 1280px) 551px, (min-width: 1024px) 380px, 90vw"
               />

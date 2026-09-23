@@ -32,7 +32,6 @@ export function EsaRenewalLicensedPros() {
           src="/esa-renewal/esa-renewal-all50states.webp"
           alt="State licensed mental health professionals map across US"
           fill
-          priority
           className="object-cover object-right"
           sizes="(min-width: 1280px) 780px, 640px"
         />

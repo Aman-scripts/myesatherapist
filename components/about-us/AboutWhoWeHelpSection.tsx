@@ -98,7 +98,6 @@ export function AboutWhoWeHelpSection() {
                 src="/about-us/about_us-whowehelp-section.webp"
                 alt="Woman sitting on floor hugging cat"
                 fill
-                priority
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

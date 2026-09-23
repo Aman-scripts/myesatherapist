@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import Link from "next/link";
 import { ChevronRight, MapPin, ChevronDown } from "lucide-react";
 
@@ -28,12 +29,12 @@ export function BlogHeroSection({
       {/* Uses /blog_hero-section-mobile.png                   */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/blogs/blog_hero-section-mobile.webp"
           alt={title}
           fill
-          priority
           className="object-cover object-bottom pointer-events-none"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -99,12 +100,12 @@ export function BlogHeroSection({
       {/* Uses /blog_hero-section-tablet.png                   */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/blogs/blog_hero-section-tablet.webp"
           alt="How to Verify If an ESA Letter Is Legitimate"
           fill
-          priority
           className="object-cover object-bottom pointer-events-none"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -168,12 +169,12 @@ export function BlogHeroSection({
       {/* Uses /blog-hero_section.png                          */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:flex relative w-full lg:min-h-[580px] xl:min-h-[792px] flex-col justify-between overflow-hidden">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/blogs/blog-hero_section.webp"
           alt={title}
           fill
-          priority
           className="object-cover lg:object-[88%_center] xl:object-center pointer-events-none"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

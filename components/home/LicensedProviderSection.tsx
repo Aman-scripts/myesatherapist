@@ -1,8 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+import { YouTubePlayIcon } from "./TestimonialsSection";
+
+const VIDEO_ID = "z139gKZv4_Y";
+const VIDEO_TITLE = "A licensed ESA provider explains how ESA evaluations work";
 
 export function LicensedProviderSection() {
+  // Click-to-load facade: the YouTube player (~1 MB of JS plus ad cookies)
+  // is only embedded once the visitor asks to play the video.
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section className="pt-2 sm:pt-4 lg:pt-16 pb-12 sm:pb-14 lg:pb-20 bg-[#FAF7F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,14 +28,34 @@ export function LicensedProviderSection() {
         {/* YouTube Video Player */}
         <div className="max-w-[920px] mx-auto">
           <div className="relative w-full aspect-[16/9] rounded-2xl sm:rounded-[28px] overflow-hidden shadow-[0_20px_50px_-15px_rgba(46,90,102,0.25)] bg-black">
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/z139gKZv4_Y?si=nUFjllSWk94YCftz"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+            {isPlaying ? (
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+                title={VIDEO_TITLE}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setIsPlaying(true)}
+                aria-label={`Play video: ${VIDEO_TITLE}`}
+                className="group absolute inset-0 w-full h-full cursor-pointer"
+              >
+                <Image
+                  src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+                  alt=""
+                  fill
+                  sizes="(max-width: 960px) 100vw, 920px"
+                  className="object-cover"
+                />
+                <span className="absolute inset-0 flex items-center justify-center">
+                  <YouTubePlayIcon className="w-[68px] h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-110" />
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </div>

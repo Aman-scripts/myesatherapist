@@ -53,7 +53,6 @@ export function PsdProcessSection() {
               src="/psd-letter/psd-three-steps.webp"
               alt="Woman smiling with psychiatric service dog"
               fill
-              priority
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 840px"
             />
@@ -67,7 +66,6 @@ export function PsdProcessSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full"
             />
           </div>
@@ -80,7 +78,6 @@ export function PsdProcessSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full"
             />
           </div>
@@ -106,7 +103,6 @@ export function PsdProcessSection() {
                   width={36}
                   height={36}
                   unoptimized
-                  priority
                   className="object-contain w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
                   style={{ width: "auto", height: "auto" }}
                 />

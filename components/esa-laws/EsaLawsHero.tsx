@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
@@ -97,12 +98,12 @@ export function EsaLawsHero() {
       {/* 1. MOBILE ESA LAWS HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -206,12 +207,12 @@ export function EsaLawsHero() {
       {/* 2. TABLET ESA LAWS HERO SECTION (640px to 1023px)    */}
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
-          priority
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -310,12 +311,12 @@ export function EsaLawsHero() {
       {/* 3. DESKTOP (>= 1024px) */}
       {/* ---------------------------------------------------- */}
       <div className="hidden lg:block relative w-full aspect-[1440/797] min-h-[560px] xl:min-h-0">
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
             quality={90}
           src="/esa-laws/esalaws-herosection.webp"
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
-          priority
           className="object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />

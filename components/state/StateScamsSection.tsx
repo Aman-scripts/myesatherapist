@@ -89,7 +89,6 @@ export function StateScamsSection({ data }: { data: StateData }) {
                 src="/states/california-scams-whatyouneed.webp"
                 alt="What You Actually Need for an ESA"
                 fill
-                priority
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -130,7 +129,6 @@ export function StateScamsSection({ data }: { data: StateData }) {
                 src="/states/california-scams-commonesascams.webp"
                 alt="Common ESA Scams to avoid"
                 fill
-                priority
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

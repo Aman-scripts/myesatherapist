@@ -196,7 +196,6 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                         width={135}
                         height={56}
                         className="w-full h-full object-contain"
-                        priority
                       />
                     </div>
 

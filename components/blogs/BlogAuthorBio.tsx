@@ -46,7 +46,6 @@ export function BlogAuthorBio({
                   src={image}
                   alt={name}
                   fill
-                  priority
                   className="object-cover"
                   sizes="129px"
                 />

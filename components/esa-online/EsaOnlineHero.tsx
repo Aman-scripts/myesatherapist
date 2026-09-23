@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { CtaButton } from "./EsaOnlineShared";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 
@@ -48,29 +49,29 @@ export function EsaOnlineHero({
       >
         {stacked ? (
           <>
-            <Image
+            <BreakpointImage
+              media="(max-width: 639px)"
             quality={90}
               src={imageMobile!}
               alt={imageAlt}
               fill
-              priority
               className="sm:hidden object-cover object-bottom"
               sizes="(max-width: 639px) 100vw, 1px"
             />
-            <Image
+            <BreakpointImage
+              media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
               src={imageTablet!}
               alt={imageAlt}
               fill
-              priority
               className="hidden sm:block lg:hidden object-cover object-bottom"
               sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
             />
-            <Image
+            <BreakpointImage
+              media="(min-width: 1024px)"
               src={image}
               alt={imageAlt}
               fill
-              priority
               quality={100}
               className="hidden lg:block object-cover lg:object-[25%_center] xl:object-center"
               sizes="(min-width: 1024px) 100vw, 1px"

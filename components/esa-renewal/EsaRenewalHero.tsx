@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
@@ -12,29 +13,29 @@ export function EsaRenewalHero() {
       <div aria-hidden className="lg:hidden col-start-1 row-start-1 aspect-[941/1672]" />
       {/* 1. Full Hero Background Image (Woman + Golden Retriever on Right, Soft Ambient Blur on Left) */}
       <div className="absolute inset-x-0 bottom-0 aspect-[941/1672] lg:inset-0 lg:aspect-auto lg:h-full pointer-events-none z-0">
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/esa-renewal/esa-renwal-herosection_mobile.webp"
           alt="Renew Your ESA Letter Online with Licensed Professional"
           fill
-          priority
           className="sm:hidden object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/esa-renewal/esa-renwal-herosection_tablet.webp"
           alt="Renew Your ESA Letter Online with Licensed Professional"
           fill
-          priority
           className="hidden sm:block lg:hidden object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
-        <Image
+        <BreakpointImage
+          media="(min-width: 1024px)"
           src="/esa-renewal/esa-renewal-herosection.webp"
           alt="Renew Your ESA Letter Online with Licensed Professional"
           fill
-          priority
           quality={100}
           className="hidden lg:block object-cover object-center"
           sizes="(min-width: 1024px) 100vw, 1px"

@@ -95,7 +95,6 @@ export function LicensedProfessionalsSection() {
                   alt={prof.name}
                   width={120}
                   height={120}
-                  priority
                   className="object-cover w-full h-full"
                 />
               </a>

@@ -15,7 +15,6 @@ export function WhatIsPsdSection() {
             alt="What is a Psychiatric Service Dog Letter"
             width={390}
             height={547}
-            priority
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (90.5% from top) */}
@@ -26,7 +25,6 @@ export function WhatIsPsdSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full"
             />
           </div>
@@ -42,7 +40,6 @@ export function WhatIsPsdSection() {
             alt="What is a Psychiatric Service Dog Letter"
             width={834}
             height={654}
-            priority
             className="w-full h-auto block"
           />
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (93.3% from top) */}
@@ -53,7 +50,6 @@ export function WhatIsPsdSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full"
             />
           </div>
@@ -108,7 +104,6 @@ export function WhatIsPsdSection() {
               src="/psd-letter/psd-dogphyscarist-section.webp"
               alt="Woman smiling with psychiatric service dog"
               fill
-              priority
               className="object-cover object-right h-full w-full"
               sizes="(max-width: 1280px) 48vw, 671px"
             />
@@ -122,7 +117,6 @@ export function WhatIsPsdSection() {
               width={230}
               height={699}
               unoptimized
-              priority
               className="object-contain w-full h-full object-left"
             />
           </div>
@@ -135,7 +129,6 @@ export function WhatIsPsdSection() {
               width={73}
               height={73}
               unoptimized
-              priority
               className="object-contain w-full h-full drop-shadow-md"
             />
           </div>

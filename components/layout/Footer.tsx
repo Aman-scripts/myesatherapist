@@ -44,7 +44,6 @@ function HipaaBadge() {
           src="/common/hippa_log.webp"
           alt="HIPAA Compliant"
           fill
-          priority
           className="object-contain"
           sizes="155px"
         />
@@ -72,7 +71,6 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                   src="/common/myesa-logo.svg"
                   alt="My ESA Therapist"
                   fill
-                  priority
                   className="object-contain"
                 />
               </div>

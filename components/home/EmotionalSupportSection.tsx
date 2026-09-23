@@ -19,7 +19,6 @@ export function EmotionalSupportSection() {
             alt="What is an Emotional Support Animal"
             width={390}
             height={425}
-            priority
             className="w-full h-auto block"
           />
         </div>
@@ -32,7 +31,6 @@ export function EmotionalSupportSection() {
             alt="What is an Emotional Support Animal"
             width={834}
             height={521}
-            priority
             className="w-full h-auto block"
           />
         </div>
@@ -107,7 +105,6 @@ export function EmotionalSupportSection() {
               src="/home/emotional-support-right-frame.webp"
               alt="Emotional support dog and woman"
               fill
-              priority
               className="object-cover object-right"
               sizes="607px"
             />

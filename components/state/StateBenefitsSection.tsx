@@ -78,7 +78,6 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 src={data.benefitsImageMobile ?? "/states/californina-benefits-mobile.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName} Mobile View`}
                 fill
-                priority
                 className="object-cover object-top"
                 sizes="(max-width: 639px) 100vw, 1px"
               />
@@ -100,7 +99,6 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 src={data.benefitsImageTablet ?? "/states/californina-benefits-tablet.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName} Tablet View`}
                 fill
-                priority
                 className="object-cover object-top"
                 sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
               />
@@ -125,7 +123,6 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName}`}
                 fill
-                priority
                 className="object-contain object-right-top pointer-events-none"
                 sizes="42vw"
               />

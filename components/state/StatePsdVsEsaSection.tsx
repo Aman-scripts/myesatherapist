@@ -53,7 +53,6 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 src="/home/emotionalsupportnanimal.webp"
                 alt="Emotional Support Animals (ESA)"
                 fill
-                priority
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, 25vw"
               />
@@ -97,7 +96,6 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 src="/psd-letter/psychiatricservicedogs.webp"
                 alt="Psychiatric Service Dogs (PSD)"
                 fill
-                priority
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, 25vw"
               />

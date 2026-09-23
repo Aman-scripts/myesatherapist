@@ -159,7 +159,6 @@ export function PsdQualifyingConditions() {
                 src="/home/qualifying-conditions.webp"
                 alt="Woman and dog on sofa qualifying for PSD letter"
                 fill
-                priority
                 className="object-contain"
                 sizes="(min-width: 1024px) 952px, 75vw"
               />
@@ -258,7 +257,6 @@ export function PsdQualifyingConditions() {
               src="/home/qualifying-conditions.webp"
               alt="Woman and dog on sofa qualifying for PSD letter"
               fill
-              priority
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 384px"
             />

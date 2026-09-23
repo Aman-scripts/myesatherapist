@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ArrowRight } from "lucide-react";
 
 export function ContactHero() {
@@ -44,12 +44,12 @@ export function ContactHero() {
       {/* ---------------------------------------------------- */}
       <div className="sm:hidden relative w-full aspect-[390/1007] overflow-hidden max-w-[480px] mx-auto">
         {/* Background Image: contact-us-hero-section-mobile.png */}
-        <Image
+        <BreakpointImage
+          media="(max-width: 639px)"
             quality={90}
           src="/contact/contact-us-hero-section-mobile.webp"
           alt="Contact Customer Support Mobile"
           fill
-          priority
           className="object-cover object-top pointer-events-none"
           sizes="(max-width: 639px) 100vw, 1px"
         />
@@ -151,12 +151,12 @@ export function ContactHero() {
       {/* ---------------------------------------------------- */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1380] overflow-hidden max-w-[834px] mx-auto">
         {/* Background Image: contact_us-hero-section-tablet.png */}
-        <Image
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
             quality={90}
           src="/contact/contact_us-hero-section-tablet.webp"
           alt="Contact Customer Support Tablet"
           fill
-          priority
           className="object-cover object-top pointer-events-none"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
@@ -275,12 +275,12 @@ export function ContactHero() {
       <div className="hidden lg:flex relative w-full min-h-[814px] items-center">
         {/* Background Image: contact-hero-section.png */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <Image
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
             src="/contact/contact-hero-section.webp"
             alt="Customer service representative at desk"
             fill
-            priority
             className="object-cover object-center pointer-events-none"
             sizes="(min-width: 1024px) 100vw, 1px"
           />

@@ -34,7 +34,6 @@ export function DoctorsAllStatesSection() {
           src="/esa-renewal/esa-renewal-all50states.webp"
           alt="We're in All 50 US States - Licensed Mental Health Professionals"
           fill
-          priority
           className="object-cover object-right"
           sizes="780px"
         />

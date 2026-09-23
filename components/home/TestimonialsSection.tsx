@@ -26,7 +26,7 @@ const reviews = [
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
-function YouTubePlayIcon({ className }: { className?: string }) {
+export function YouTubePlayIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -124,6 +124,8 @@ export function TestimonialsSection({
                       <img
                         src={`https://img.youtube.com/vi/${review.id}/hqdefault.jpg`}
                         alt={review.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-center absolute inset-0 transition-transform duration-300 group-hover:scale-105"
                       />
 
