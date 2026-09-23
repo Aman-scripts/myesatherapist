@@ -2616,7 +2616,8 @@ export const BLOG_POSTS: BlogArticle[] = [
       "id": "esa-help-anxiety",
       "title": "How Can an ESA Support People With Anxiety?",
       "paragraphs": [
-        "The link between human beings and animals has been studied for many years, especially when linked to the stress response and emotional wellness. While an emotional support animal is not a medical treatment, the relationship between an individual and their animal may offer significant emotional benefits for long-term anxiety management."
+        "The link between human beings and animals has been studied for many years, especially when linked to the stress response and emotional wellness.",
+        "While an emotional support animal is not a medical treatment, the relationship between an individual and their animal may offer significant emotional benefits for long-term anxiety management."
       ],
       "subsections": [
         {
