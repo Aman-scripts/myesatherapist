@@ -215,7 +215,7 @@ export const STATES_DATA: Record<string, StateData> = {
         id: 2,
         name: "Leslie K. Gamble",
         title: "Licensed Independent Clinical Social Worker",
-        bio: "Licensed therapist with 13 years of healthcare experience serving individuals, couples, and families with flexible, goal-focused care.",
+        bio: "LICSW with 13 years of healthcare experience serving individuals, couples, and families with flexible, goal-focused care.",
         licensedIn: "15+ States",
         method: "Video or Phone",
         focus: "Depression & PTSD",
