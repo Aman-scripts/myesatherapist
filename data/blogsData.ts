@@ -2386,9 +2386,12 @@ export const BLOG_POSTS: BlogArticle[] = [
       "title": "What Does \"Qualifying Condition\" Mean Under the Fair Housing Act?",
       "paragraphs": [
         "Under the Fair Housing Act (FHA), a person qualifies for an emotional support animal if they have a disability, which is defined as a physical or mental impairment that substantially limits one or more major life activities. Mental health conditions that meet this criterion are largely drawn from the DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition), the clinical reference used by licensed mental health professionals across the United States.",
-        "There is no official list of conditions that automatically qualify someone for an ESA. A licensed mental health professional looks at how a person’s symptoms affect daily life and whether an ESA may provide meaningful support. The ESA letter they write is the documentation that establishes this.",
-        "Important: For all conditions listed below, the documentation required is an ESA letter from a licensed mental health professional. A prior diagnosis is not needed to begin, although your ESA letter writer may request previous diagnoses and records if they exist."
-      ]
+        "There is no official list of conditions that automatically qualify someone for an ESA. A licensed mental health professional looks at how a person’s symptoms affect daily life and whether an ESA may provide meaningful support. The ESA letter they write is the documentation that establishes this."
+      ],
+      "calloutBox": {
+        "prefix": "**Important:**",
+        "text": "For all conditions listed below, the documentation required is an ESA letter from a licensed mental health professional. A prior diagnosis is not needed to begin, although your ESA letter writer may request previous diagnoses and records if they exist."
+      }
     },
     {
       "id": "condition-by-condition-guide",
