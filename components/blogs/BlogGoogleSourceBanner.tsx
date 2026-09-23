@@ -42,11 +42,11 @@ export function BlogGoogleSourceBanner() {
             </div>
 
             {/* Frame 1000012015 */}
-            <div className="space-y-0.5 max-w-[366px]">
+            <div className="space-y-0.5 max-w-[366px] lg:max-w-none">
               <h4 className="font-sans font-semibold text-sm sm:text-[16px] leading-[26px] text-[#2E5A66]">
                 See our articles highlighted in Google Search
               </h4>
-              <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F]">
+              <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F] lg:whitespace-nowrap">
                 Add My ESA Therapist as a source - see results your way.
               </p>
             </div>
