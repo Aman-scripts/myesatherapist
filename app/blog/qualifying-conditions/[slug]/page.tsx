@@ -12,7 +12,6 @@ import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
 import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -190,10 +189,8 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
           buttonText="Start your Evaluation"
           buttonHref="#faq"
           bgColor="bg-[#FAF7F2]"
+          className="pb-12 sm:pb-16"
         />
-
-        {/* 9. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner />
       </main>
 
       <Footer />
