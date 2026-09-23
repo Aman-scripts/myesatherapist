@@ -167,7 +167,7 @@ export function ReviewsHeroSection() {
                   alt=""
                   width={14}
                   height={18}
-                  className="shrink-0 object-contain"
+                  className="shrink-0 object-contain w-[14px] h-[18px]"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
@@ -206,7 +206,7 @@ export function ReviewsHeroSection() {
               <span>Get Started</span>
               <span className="w-7 h-7 rounded-full bg-[#FAF7F2] shadow-[0_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={14} height={14} />
+            quality={90} src="/common/send-icon.svg" alt="" width={14} height={14} className="w-[14px] h-[14px]" />
               </span>
             </a>
           </div>
@@ -299,7 +299,7 @@ export function ReviewsHeroSection() {
                   alt=""
                   width={15}
                   height={19}
-                  className="shrink-0 object-contain"
+                  className="shrink-0 object-contain w-[15px] h-[19px]"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
@@ -338,7 +338,7 @@ export function ReviewsHeroSection() {
               <span>Get Started</span>
               <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} />
+            quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-4 h-4" />
               </span>
             </a>
           </div>
@@ -431,7 +431,7 @@ export function ReviewsHeroSection() {
                   alt=""
                   width={18}
                   height={22}
-                  className="shrink-0 object-contain"
+                  className="shrink-0 object-contain w-[18px] h-[22px]"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}

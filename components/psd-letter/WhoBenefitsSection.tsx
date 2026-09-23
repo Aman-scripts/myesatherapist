@@ -172,11 +172,10 @@ export function WhoBenefitsSection() {
             <Image
               src="/psd-letter/whobenefits-section-line.svg"
               alt=""
-              width={83}
-              height={671}
+              fill
               unoptimized
               priority
-              className="object-contain w-full h-full object-left"
+              className="object-contain object-left"
             />
           </div>
 
