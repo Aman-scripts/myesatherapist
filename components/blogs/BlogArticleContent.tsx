@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BlogArticle, BlogCalloutBox } from "@/data/blogsData";
+import { BlogArticle, BlogCalloutBox, BlogQuoteBox } from "@/data/blogsData";
 
 interface BlogArticleContentProps {
   article: BlogArticle;
@@ -69,6 +69,15 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
     return parts;
   };
 
+  const renderQuoteBox = (quoteBox: BlogQuoteBox) => (
+    <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
+      <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
+      <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
+        {quoteBox.quote} {quoteBox.author && <>– {renderFormattedText(quoteBox.author)}</>}
+      </p>
+    </div>
+  );
+
   const renderCalloutBox = (callout: BlogCalloutBox) => (
     <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
       <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-[#2E5A66] font-medium">
@@ -116,6 +125,9 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           </p>
         ))}
       </div>
+
+      {/* Intro Quote Callout (if present) */}
+      {article.introQuoteBox && renderQuoteBox(article.introQuoteBox)}
 
       {/* Intro Image (if present) */}
       {article.introImage && (
@@ -197,14 +209,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           )}
 
           {/* Quote Callout Box (Top position by default) */}
-          {sec.quoteBox && (!sec.quoteBoxPosition || sec.quoteBoxPosition === "top") && (
-            <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
-              <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
-              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
-                {sec.quoteBox.quote} {sec.quoteBox.author && <>– {renderFormattedText(sec.quoteBox.author)}</>}
-              </p>
-            </div>
-          )}
+          {sec.quoteBox && (!sec.quoteBoxPosition || sec.quoteBoxPosition === "top") && renderQuoteBox(sec.quoteBox)}
 
           {/* Section List Items */}
           {sec.listItems && (
@@ -620,14 +625,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           )}
 
           {/* Quote Callout Box (Bottom position) */}
-          {sec.quoteBox && sec.quoteBoxPosition === "bottom" && (
-            <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
-              <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
-              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
-                {sec.quoteBox.quote} {sec.quoteBox.author && <>– {renderFormattedText(sec.quoteBox.author)}</>}
-              </p>
-            </div>
-          )}
+          {sec.quoteBox && sec.quoteBoxPosition === "bottom" && renderQuoteBox(sec.quoteBox)}
         </section>
       ))}
 

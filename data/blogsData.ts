@@ -22,6 +22,11 @@ export interface BlogCalloutBox {
   text?: string;
 }
 
+export interface BlogQuoteBox {
+  quote: string;
+  author?: string;
+}
+
 export interface BlogSubsection {
   title: string;
   paragraphs?: string[];
@@ -81,10 +86,7 @@ export interface BlogSection {
   id: string;
   title: string;
   paragraphs?: string[];
-  quoteBox?: {
-    quote: string;
-    author?: string;
-  };
+  quoteBox?: BlogQuoteBox;
   quoteBoxPosition?: "top" | "bottom";
   calloutBox?: BlogCalloutBox;
   ctaBox?: BlogCtaBox;
@@ -160,6 +162,8 @@ export interface BlogArticle {
     answer: string;
   };
   introParagraphs: string[];
+  /** Quote callout shown right after the intro paragraphs. */
+  introQuoteBox?: BlogQuoteBox;
   introImage?: {
     src: string;
     alt: string;
@@ -2771,6 +2775,10 @@ export const BLOG_POSTS: BlogArticle[] = [
     "An ESA can do something no pill or therapy session fully covers: it sits with you, literally, when anxiety or panic hits. There's no rule saying your ESA has to complete task training the way a service animal does; but skipping training altogether isn't really doing your animal any favors either.",
     "An ESA that knows a few basic commands is easier to have around, easier to take places, and honestly more useful in the moments where you are in distress. These recommended eight commands cover what matters the most."
   ],
+  "introQuoteBox": {
+    "quote": "“A well-trained emotional support animal can be easier to manage during stressful moments, giving owners greater confidence and helping create a calmer environment when they need support most.”",
+    "author": "Gaurav Patel, MD"
+  },
   "tocItems": [
     {
       "id": "esa-training-mandatory",
@@ -2807,10 +2815,6 @@ export const BLOG_POSTS: BlogArticle[] = [
         "Teaching an ESA basic commands can make day-to-day routines safer and easier to manage.",
         "These 8 commands can help your emotional support animal respond to you at home, outdoors, or in front of your guests."
       ],
-      "quoteBox": {
-        "quote": "“A well-trained emotional support animal can be easier to manage during stressful moments, giving owners greater confidence and helping create a calmer environment when they need support most.”",
-        "author": "Gaurav Patel, MD"
-      },
       "subsections": [
         {
           "title": "1. Sit",
