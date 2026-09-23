@@ -326,7 +326,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {/* Sample Letter Display Box (Article 4) */}
           {sec.sampleLetter && (
             <div className="w-full my-8 rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
-              <div className="bg-[#FAF7F2] border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-[#69777C] italic">
+              <div className="bg-[#FAF7F2] border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-[#5F6B6F] italic">
                 {sec.sampleLetter.disclaimer}
               </div>
               <div className="p-6 sm:p-10 font-sans text-sm sm:text-base leading-relaxed text-[#2E5A66] space-y-5">
