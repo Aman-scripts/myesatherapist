@@ -7,7 +7,6 @@ import { BlogsTrustBar } from "@/components/blogs/BlogsTrustBar";
 import { BlogsGrid } from "@/components/blogs/BlogsGrid";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 import { blogSchema } from "@/data/schemas/blogSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
@@ -75,13 +74,11 @@ export default function BlogHubPage() {
           buttonText="Start your Evaluation"
           buttonHref="#faq"
           bgColor="bg-[#EEEBE0]"
+          className="pb-12 sm:pb-16"
         />
-
-        {/* 7. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner />
       </main>
 
-      <Footer />
+      <Footer bgColor="bg-[#EEEBE0]" />
     </div>
   );
 }
