@@ -83,12 +83,7 @@ export default function VideoTestimonialsPage() {
         />
 
         {/* 5. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner
-          reviewerName="Dr. Nicole"
-          updatedDate="May 12, 2026"
-          reviewerImage="/blogs/dr-nicole-reviewer.webp"
-          reviewerLinkedin="https://www.linkedin.com/in/nicole-artrader/"
-        />
+        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

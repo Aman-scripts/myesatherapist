@@ -73,11 +73,7 @@ export default function FaqPage() {
         />
 
         {/* 4. Content Reviewed by Doctor Badge (Between CTA & Footer) */}
-        <StateReviewerBanner
-          reviewerName="Dr. Nicole"
-          updatedDate="May 12, 2026"
-          reviewerImage="/blogs/dr-nicole-reviewer.webp"
-        />
+        <StateReviewerBanner />
       </main>
 
       {/* Footer */}
