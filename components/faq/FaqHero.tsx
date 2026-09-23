@@ -1,15 +1,7 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { useRouter } from "next/navigation";
-import { ChevronDown } from "lucide-react";
-import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
-import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 
-const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -53,40 +45,6 @@ const statsData = [
 ];
 
 export function FaqHero() {
-  const router = useRouter();
-  const [selectedState, setSelectedState] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRefMobile = useRef<HTMLDivElement>(null);
-  const dropdownRefTablet = useRef<HTMLDivElement>(null);
-  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      const target = event.target as Node;
-      const isInside =
-        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
-        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
-        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
-
-      if (!isInside) {
-        setIsDropdownOpen(false);
-      }
-    }
-
-    if (isDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isDropdownOpen]);
-
-  const handleStateSelect = (slug: string) => {
-    setSelectedState(slug);
-    setIsDropdownOpen(false);
-    router.push(`/${slug}`);
-  };
-
   return (
     <section className="relative z-30 w-full bg-[#FAF7F2] overflow-visible">
       {/* ---------------------------------------------------- */}
@@ -135,72 +93,6 @@ export function FaqHero() {
             <p className="w-full max-w-[331px] font-sans font-semibold text-[14px] leading-[26px] text-center text-[#5F6B6F]">
               Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
             </p>
-
-            {/* Frame 7: Stacked Action Buttons (width 246px, gap 16px) */}
-            <div className="flex flex-col items-center justify-center gap-[16px] w-[246px]">
-              {/* Frame 2: Start your State (width 246px, height 54px) */}
-              <div className="relative w-[246px] z-30" ref={dropdownRefMobile}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="w-[246px] h-[54px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between px-[20px] cursor-pointer hover:bg-white transition-colors"
-                >
-                  <div className="flex items-center gap-[8px]">
-                    <Image
-                      src="/home/hero-section-map.svg"
-                      alt=""
-                      width={18}
-                      height={22}
-                      unoptimized
-                      className="shrink-0 object-contain w-[16px] h-[20px]"
-                    />
-                    <span
-                      className="font-sans font-semibold text-[16px] leading-[30px] bg-clip-text text-transparent truncate max-w-[140px]"
-                      style={{ backgroundImage: TEAL_GRADIENT }}
-                    >
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                    </span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isDropdownOpen && (
-                  <div
-                    className={STATE_DROPDOWN_PANEL}
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                  >
-                    <div className="py-1">
-                      {POPULAR_STATES.map((state) => (
-                        <button
-                          key={state.slug}
-                          type="button"
-                          onClick={() => handleStateSelect(state.slug)}
-                          className={STATE_DROPDOWN_ITEM}
-                        >
-                          <span>{state.name}</span>
-                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Frame 1000011890: Get Started (width 179px, height 48px) */}
-              <a
-                href="#faq-list"
-                className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white hover:opacity-95 transition-opacity"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                <span className="font-sans font-semibold text-[16px] leading-[26px] text-white">
-                  Get Started
-                </span>
-                <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
-                </span>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -252,72 +144,6 @@ export function FaqHero() {
             <p className="w-full max-w-[678px] font-sans font-semibold text-[16px] sm:text-[18px] leading-[30px] text-center text-[#5F6B6F]">
               Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
             </p>
-
-            {/* Frame 7: Action Row (width 450px, height 54px, gap 25px) */}
-            <div className="flex items-center justify-center gap-[25px] w-full max-w-[450px] h-[54px]">
-              {/* Frame 2: Start your State (width 246px, height 54px) */}
-              <div className="relative w-[246px] z-30" ref={dropdownRefTablet}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="w-[246px] h-[54px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between px-[22px] cursor-pointer hover:bg-white transition-colors"
-                >
-                  <div className="flex items-center gap-[8px]">
-                    <Image
-                      src="/home/hero-section-map.svg"
-                      alt=""
-                      width={18}
-                      height={22}
-                      unoptimized
-                      className="shrink-0 object-contain w-[16px] h-[20px]"
-                    />
-                    <span
-                      className="font-sans font-semibold text-[17px] leading-[30px] bg-clip-text text-transparent truncate max-w-[145px]"
-                      style={{ backgroundImage: TEAL_GRADIENT }}
-                    >
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                    </span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isDropdownOpen && (
-                  <div
-                    className={STATE_DROPDOWN_PANEL}
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                  >
-                    <div className="py-1">
-                      {POPULAR_STATES.map((state) => (
-                        <button
-                          key={state.slug}
-                          type="button"
-                          onClick={() => handleStateSelect(state.slug)}
-                          className={STATE_DROPDOWN_ITEM}
-                        >
-                          <span>{state.name}</span>
-                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Frame 1000011890: Get Started (width 179px, height 48px) */}
-              <a
-                href="#faq-list"
-                className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white hover:opacity-95 transition-opacity"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                <span className="font-sans font-semibold text-[16px] leading-[26px] text-white">
-                  Get Started
-                </span>
-                <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
-                </span>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -367,67 +193,6 @@ export function FaqHero() {
           <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[553px]">
             Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
           </p>
-
-          {/* Action Row: State Selector + Get Started (Frame 7) */}
-          <div className="flex items-center gap-4 xl:gap-[25px] flex-wrap">
-            {/* Start your State Dropdown (Frame 2) */}
-            <div className="relative z-30" ref={dropdownRefDesktop}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="h-[54px] px-6 xl:px-[34px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between gap-3 border border-[#EAE5DC] hover:bg-white transition-colors cursor-pointer"
-              >
-                <div className="flex items-center gap-2.5">
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={18}
-                    height={22}
-                    unoptimized
-                    className="shrink-0 object-contain w-[16px] h-[20px]"
-                  />
-                  <span className="font-sans font-semibold text-base xl:text-[18px] text-[#1A3D4F]">
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                </div>
-                <ChevronDown className={`w-4 h-4 text-[#1A3D4F] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Get Started CTA Button (Frame 1000011890) */}
-            <a
-              href="#faq-list"
-              className="h-[54px] pl-7 pr-1.5 rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between gap-3 text-white font-sans font-semibold text-base hover:opacity-95 transition-opacity"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-            >
-              <span>Get Started</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
-              </span>
-            </a>
-          </div>
 
           {/* Trustpilot Glassmorphism Box (Frame 1000011802) */}
           <div className="mt-1"><ReviewBadges /></div>
