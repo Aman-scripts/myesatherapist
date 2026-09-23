@@ -91,10 +91,15 @@ export interface BlogSection {
   subsections?: BlogSubsection[];
   listItems?: string[];
   afterListParagraphs?: string[];
+  /** Paragraphs rendered after the subsections (afterListParagraphs render before them). */
+  afterSubsectionsParagraphs?: string[];
   bannerImage?: {
     src: string;
     alt: string;
     caption?: string;
+    /** Intrinsic size; defaults to 870x550. Square and portrait images render narrower and centered. */
+    width?: number;
+    height?: number;
   };
   bannerPosition?: "top" | "bottom";
   /** Optional row of highlight cards shown under the section heading. */
@@ -159,6 +164,9 @@ export interface BlogArticle {
     src: string;
     alt: string;
     caption?: string;
+    /** Intrinsic size; defaults to 870x550. Square and portrait images render narrower and centered. */
+    width?: number;
+    height?: number;
   };
   tocItems: BlogTocItem[];
   sections: BlogSection[];
@@ -868,6 +876,12 @@ export const BLOG_POSTS: BlogArticle[] = [
       "However, the process for minors differs from that for adults. Parents or legal guardians play an active role in the evaluation, provide consent for treatment, and often help communicate accommodation requests when needed.",
       "Understanding how ESA eligibility works for children can help families make informed decisions while avoiding common misconceptions about ESA rights, school accommodations, and housing protections.",
     ],
+    introImage: {
+      src: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/esa for children-.webp",
+      alt: "Smiling child sitting on a sofa with a golden retriever emotional support dog",
+      width: 1081,
+      height: 1081,
+    },
     tocItems: [
       {
         id: "can-children-qualify-for-an-esa",
@@ -1000,7 +1014,7 @@ export const BLOG_POSTS: BlogArticle[] = [
             ],
           },
         ],
-        afterListParagraphs: [
+        afterSubsectionsParagraphs: [
           "A diagnosis alone does not guarantee ESA eligibility. A licensed mental health professional must determine whether an emotional support animal is clinically appropriate for the child's specific circumstances, and a legal parent or guardian must consent to the ESA assessment.",
         ],
       },
@@ -1318,8 +1332,10 @@ export const BLOG_POSTS: BlogArticle[] = [
           ],
         },
         bannerImage: {
-          src: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/emotional-support-animal-letter-sample-image.webp",
-          alt: "emotional support animal letter sample",
+          src: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/legitimate esa letter sample-image.webp",
+          alt: "Sample emotional support animal letter from a licensed mental health professional",
+          width: 1786,
+          height: 2526,
         },
         bannerPosition: "bottom",
         calloutBox: {

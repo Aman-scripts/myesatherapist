@@ -119,13 +119,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
       {/* Intro Image (if present) */}
       {article.introImage && (
-        <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
+        <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(article.introImage.height ?? 550) >= (article.introImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
           <Image
             quality={90}
             src={article.introImage.src}
             alt={article.introImage.alt}
-            width={870}
-            height={550}
+            width={article.introImage.width ?? 870}
+            height={article.introImage.height ?? 550}
             className="w-full h-auto object-contain rounded-[18px]"
           />
           {article.introImage.caption && (
@@ -276,13 +276,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
           {/* Section Banner / Content Image (Top position) */}
           {sec.bannerImage && (!sec.bannerPosition || sec.bannerPosition === "top") && (
-            <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
+            <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(sec.bannerImage.height ?? 550) >= (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
             quality={90}
                 src={sec.bannerImage.src}
                 alt={sec.bannerImage.alt}
-                width={870}
-                height={550}
+                width={sec.bannerImage.width ?? 870}
+                height={sec.bannerImage.height ?? 550}
                 className="w-full h-auto object-contain rounded-[18px]"
               />
               {sec.bannerImage.caption && (
@@ -554,6 +554,20 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
+          {/* Section Paragraphs after the subsections */}
+          {sec.afterSubsectionsParagraphs && (
+            <div className="space-y-3">
+              {sec.afterSubsectionsParagraphs.map((p, pIdx) => (
+                <p
+                  key={pIdx}
+                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+                >
+                  {renderFormattedText(p)}
+                </p>
+              ))}
+            </div>
+          )}
+
           {/* Section Callout Box */}
           {sec.calloutBox && renderCalloutBox(sec.calloutBox)}
 
@@ -586,13 +600,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
           {/* Section Banner / Content Image (Bottom position) */}
           {sec.bannerImage && sec.bannerPosition === "bottom" && (
-            <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
+            <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${(sec.bannerImage.height ?? 550) >= (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
             quality={90}
                 src={sec.bannerImage.src}
                 alt={sec.bannerImage.alt}
-                width={870}
-                height={550}
+                width={sec.bannerImage.width ?? 870}
+                height={sec.bannerImage.height ?? 550}
                 className="w-full h-auto object-contain rounded-[18px]"
               />
               {sec.bannerImage.caption && (
