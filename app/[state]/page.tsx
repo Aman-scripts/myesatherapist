@@ -156,7 +156,6 @@ export default async function DynamicStatePage({ params }: Props) {
             stateName={data.name}
             title={data.trustedReviewsTitle}
             subtitle={data.trustedReviewsSubtitle}
-            testimonials={data.trustedReviews}
           />
         </div>
         <div id="pricing"><StatePricingSection stateName={data.name} data={data} /></div>

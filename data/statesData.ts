@@ -168,7 +168,6 @@ export interface StateData {
   tableOfContents?: Array<{ id: string; label: string }>;
   trustedReviewsTitle?: string;
   trustedReviewsSubtitle?: string;
-  trustedReviews?: Array<{ name: string; quote: string; avatar?: string }>;
   pricingTitle?: string;
   pricingSubtitle?: string;
   pricingPlan1Title?: string;
@@ -522,38 +521,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ctaSubtitle: "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Alabama",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -919,38 +886,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ctaSubtitle: "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Alaska",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -1142,38 +1077,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of a Medically Approved ESA Letter in Arizona",
     benefitsSubtitle: "A clinically appropriate ESA recommendation may support reasonable housing accommodations and emotional well-being. Some key benefits include:",
     financialBenefitsHeading: "Housing and Financial Support",
@@ -1554,38 +1457,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of a Clinically Issued ESA Letter in Arkansas",
     benefitsSubtitle: "When provided after an individualized mental health evaluation, an emotional support animal letter may contribute to emotional support and, in appropriate situations, be used as part of a request for housing accommodations related to an emotional support animal.",
     financialBenefitsHeading: "Financial & Practical Considerations",
@@ -2233,38 +2104,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ctaSubtitle: "Connect with a California-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in California?" },
@@ -2547,38 +2386,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Colorado",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -2957,38 +2764,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Connecticut",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -3369,38 +3144,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Delaware",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -3780,38 +3523,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Florida",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -4157,38 +3868,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Georgia",
     benefitsSubtitle: "Look at the ways in which an emotional support letter in Georgia offers accommodation benefits and supports overall mental and emotional well-being.",
     financialBenefitsHeading: "Financial Benefits",
@@ -4567,38 +4246,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Hawaii",
     benefitsSubtitle: "Learn how an emotional support animal letter in Hawaii can help people with mental health issues live happier and more confident lives with their ESA.",
     financialBenefitsHeading: "Financial Benefits",
@@ -4981,38 +4628,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Idaho",
     benefitsSubtitle: "Look at how an ESA letter from Idaho could improve your well-being and make your daily routine with your emotional support animal easy and manageable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -5395,38 +5010,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits Of Clinically Approved ESA Letter in Illinois",
     benefitsSubtitle: "A valid ESA recommendation issued by a licensed Illinois mental health professional may help support housing-related accommodation requests under federal fair housing guidelines.",
     financialBenefitsHeading: "Housing-Related Benefits",
@@ -5811,38 +5394,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Indiana",
     benefitsSubtitle: "A properly issued emotional support animal letter in Indiana can help residents obtain housing accommodations while also promoting emotional well-being and everyday stability.",
     financialBenefitsHeading: "Financial Benefits",
@@ -6223,38 +5774,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Iowa",
     benefitsSubtitle: "Learn how a properly issued ESA letter Iowa can validate your therapeutic need for an emotional support animal and contribute to a more stable, stress-free living arrangement for both you and your companion.",
     financialBenefitsHeading: "Financial Benefits",
@@ -6635,38 +6154,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Kansas",
     benefitsSubtitle: "Discover how an emotional support animal letter in Kansas can support individuals with mental health challenges in leading happier, more confident lives alongside their ESA.",
     financialBenefitsHeading: "Financial Benefits",
@@ -7050,38 +6537,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Kentucky",
     benefitsSubtitle: "Discover how qualifying for an emotional support animal letter in Kentucky can enhance your overall well-being and make daily life with your companion more comfortable and fulfilling.",
     financialBenefitsHeading: "Financial Benefits",
@@ -7464,38 +6919,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Louisiana",
     benefitsSubtitle: "Understand how a legally valid ESA letter Louisiana not only confirms your therapeutic need for support but can also help create a smoother housing experience, giving you greater stability, peace of mind, and the freedom to share your home with your animal.",
     financialBenefitsHeading: "Financial Benefits",
@@ -7877,38 +7300,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Maine",
     benefitsSubtitle: "Explore how qualifying for an emotional support animal letter in Maine can improve your well-being and make daily life with your companion more manageable and rewarding.",
     financialBenefitsHeading: "Financial Benefits",
@@ -8289,38 +7680,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Maryland",
     benefitsSubtitle: "Learn how obtaining a valid ESA letter Maryland can confirm your disability-related need for emotional support while also simplifying housing approval processes, promoting reassurance, and safeguarding your ability to reside comfortably with your companion animal.",
     financialBenefitsHeading: "Financial Benefits",
@@ -8700,38 +8059,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Massachusetts",
     benefitsSubtitle: "Know how being eligible for a Massachusetts emotional support animal letter can improve your well-being and make living with your companion more enjoyable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -9112,38 +8439,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Michigan",
     benefitsSubtitle: "Discover how obtaining a valid emotional support animal letter in Michigan can enhance your emotional well-being while making everyday housing arrangements more manageable with your companion animal.",
     financialBenefitsHeading: "Financial Benefits",
@@ -9524,38 +8819,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Minnesota",
     benefitsSubtitle: "Understand how receiving a legitimate ESA letter in Minnesota can validate your disability-related need for support while also helping streamline housing approvals, enhance peace of mind, and protect your right to live with your animal.",
     financialBenefitsHeading: "Financial Benefits",
@@ -9936,38 +9199,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Mississippi",
     benefitsSubtitle: "Look at how an ESA letter Mississippi could support your well-being and make your daily routine with your emotional support animal manageable and smooth.",
     financialBenefitsHeading: "Financial Benefits",
@@ -10349,38 +9580,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Missouri",
     benefitsSubtitle: "Know how qualifying for an ESA letter Missouri can improve your emotional wellness and help you enjoy a more comfortable and stress-free experience with your best friend!",
     financialBenefitsHeading: "Financial Benefits",
@@ -10762,38 +9961,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Montana",
     benefitsSubtitle: "Discover how qualifying for an emotional support animal letter in Montana can enhance your emotional well-being and help you enjoy a more comfortable and stress-free living experience with your companion.",
     financialBenefitsHeading: "Financial Benefits",
@@ -11179,38 +10346,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Nebraska",
     benefitsSubtitle: "Look at how an ESA letter Nebraska could support your well-being and make your daily routine with your emotional support animal manageable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -11593,38 +10728,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Nevada",
     benefitsSubtitle: "Discover how qualifying for an ESA letter in Nevada can improve well-being and simplify living with your companion.",
     financialBenefitsHeading: "Financial Benefits",
@@ -11977,38 +11080,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of a Clinically Issued ESA Letter in New York",
     benefitsSubtitle: "When properly issued, ESA documentation may support emotional well-being and help clarify certain housing-related considerations under applicable fair housing guidance.",
     financialBenefitsHeading: "Financial Benefits",
@@ -12445,38 +11516,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "What Benefits Do You Get With an ESA Letter in Texas?",
     benefitsSubtitle: "Learn how an emotional support animal letter in Texas not only supports your emotional well-being but also helps you save money and live more comfortably with your companion.",
     financialBenefitsHeading: "Financial Benefits",
@@ -12890,38 +11929,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Washington",
     benefitsSubtitle: "Look at the ways in which an emotional support animal letter in Washington can help individuals with mental health issues live happier and more confident lives with their ESAs.",
     financialBenefitsHeading: "Financial Benefits",
@@ -13423,38 +12430,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Wisconsin",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -13839,38 +12814,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in Wyoming",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -14138,38 +13081,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in New Hampshire",
     benefitsSubtitle: "Learn how an emotional support animal letter in New Hampshire can help people with mental health problems live happier, more confident lives with their ESA.",
     financialBenefitsHeading: "Financial Benefits",
@@ -14551,38 +13462,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in New Jersey",
     benefitsSubtitle: "Learn how obtaining an ESA letter in New Jersey may support your well-being and make everyday life with your companion animal more manageable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -14966,38 +13845,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in New Mexico",
     benefitsSubtitle: "See how an ESA letter in New Mexico can support your emotional well-being and make daily life with your companion animal easier.",
     financialBenefitsHeading: "Financial Benefits",
@@ -15380,38 +14227,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in North Carolina",
     benefitsSubtitle: "Understand how an emotional support animal letter in North Carolina can improve your well-being and make living with your companion enjoyable and stress-free!",
     financialBenefitsHeading: "Financial Benefits",
@@ -15793,38 +14608,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in North Dakota",
     benefitsSubtitle: "Learn how an emotional support animal letter in North Dakota may support your mental well-being and help you live more comfortably and confidently with your companion animal.",
     financialBenefitsHeading: "Financial Benefits",
@@ -16206,38 +14989,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Ohio",
     benefitsSubtitle: "See how qualifying for an emotional support animal letter in Ohio can support your well-being and create a smoother living experience with your companion.",
     financialBenefitsHeading: "Financial Benefits",
@@ -16618,38 +15369,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Oklahoma",
     benefitsSubtitle: "Have a look at how an emotional support animal letter in Oklahoma can support your overall health and create a smoother living experience with your best friend!",
     financialBenefitsHeading: "Financial Benefits",
@@ -17030,38 +15749,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Oregon",
     benefitsSubtitle: "Learn how an emotional support animal letter in Oregon can support your emotional well-being while helping you save on housing costs as you live with your companion.",
     financialBenefitsHeading: "Financial Benefits",
@@ -17442,38 +16129,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of a Clinically Approved ESA Letter in Pennsylvania",
     benefitsSubtitle: "When issued based on clinical evaluation, an emotional support animal letter supports housing accommodation needs and emotional well-being. Some potential benefits include:",
     financialBenefitsHeading: "Housing and Financial Support",
@@ -17857,38 +16512,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter South Dakota",
     benefitsSubtitle: "Find out how an emotional support animal letter in South Dakota can improve your mental health and help you to live more easily and self-assuredly with your ESA.",
     financialBenefitsHeading: "Financial Benefits",
@@ -18274,38 +16897,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in Utah",
     benefitsSubtitle: "Know how having an ESA letter in Utah can support your well-being and make your daily routine with your companion animal stress-free and manageable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -18690,38 +17281,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "Benefits of Having an ESA Letter in South Carolina",
     benefitsSubtitle: "Know how an emotional support animal letter in South Carolina can help people with mental health issues live happier, more confident lives with their ESA.",
     financialBenefitsHeading: "Financial Benefits",
@@ -19106,38 +17665,6 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     benefitsTitle: "What Benefits You Get With an ESA Letter in Virginia?",
     benefitsSubtitle: "Understand how your emotional support animal recommendation offers you legal rights to stay with your pet and manage your emotional well-being. Additionally, it may help reduce financial burdens related to pet housing fees.",
     financialBenefitsHeading: "Financial Benefits",
@@ -19632,38 +18159,6 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
-    trustedReviews: [
-      {
-        name: "Stewart, Oakland, CA",
-        quote: "“The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Edward, Vernon Rockville, CT",
-        quote: "“I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Bryan, Plymouth, MA",
-        quote: "“I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Kerry, Decatur, IL",
-        quote: "“I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-      {
-        name: "Jimmy, Newport, PA",
-        quote: "“I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle.”",
-        avatar: "/about-us/about_us-trusted-section-one.webp",
-      },
-      {
-        name: "Todd, San Francisco, CA",
-        quote: "“What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me.”",
-        avatar: "/about-us/about_us-trusted-section-two.webp",
-      },
-    ],
     pricingTitle: "The Cost of an ESA Letter in West Virginia",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
