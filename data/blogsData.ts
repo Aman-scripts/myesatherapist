@@ -2683,13 +2683,8 @@ export const BLOG_POSTS: BlogArticle[] = [
         "Your daily schedule, work routines, and physical activity levels",
         "The type of companionship you find helpful"
       ],
-      "subsections": [
-        {
-          "title": "The Emotional Bond",
-          "paragraphs": [
-            "A strong bond between an individual and their animal is often the basis of meaningful emotional support."
-          ]
-        }
+      "afterListParagraphs": [
+        "A strong bond between an individual and their animal is often the basis of meaningful emotional support."
       ]
     }
   ],
