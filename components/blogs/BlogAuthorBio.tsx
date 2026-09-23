@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { AUTHORS } from "@/data/contributorsData";
+
+const DEFAULT_AUTHOR = AUTHORS.find((a) => a.id === "allyson-valley");
 
 interface BlogAuthorBioProps {
   name?: string;
@@ -15,8 +18,8 @@ export function BlogAuthorBio({
   title = "Mental Health Writer & Research Contributor",
   bio = "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
   image = "/blogs/blogs_trustbar-author.webp",
-  bioHref,
-  linkedin,
+  bioHref = DEFAULT_AUTHOR?.href,
+  linkedin = DEFAULT_AUTHOR?.linkedin,
 }: BlogAuthorBioProps = {}) {
   return (
     <section id="about-the-author" className="w-full bg-white py-10 sm:py-12 lg:py-[48px] px-4 sm:px-8 lg:px-12 xl:px-[165px] scroll-mt-24">
@@ -51,14 +54,10 @@ export function BlogAuthorBio({
 
               {/* Frame 1261153663: See Full Bio & LinkedIn */}
               <div className="flex items-center gap-2">
-                {bioHref ? (
+                {bioHref && (
                   <a href={bioHref} className="font-sans font-normal text-[12px] leading-[22px] text-[#E8B92C] underline hover:opacity-80 transition-opacity cursor-pointer whitespace-nowrap">
                     See Full Bio
                   </a>
-                ) : (
-                  <span className="font-sans font-normal text-[12px] leading-[22px] text-[#E8B92C] underline hover:opacity-80 transition-opacity cursor-pointer whitespace-nowrap">
-                    See Full Bio
-                  </span>
                 )}
                 {linkedin && (
                   <a
