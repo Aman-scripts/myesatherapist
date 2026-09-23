@@ -2614,7 +2614,8 @@ export const BLOG_POSTS: BlogArticle[] = [
       "quoteBox": {
         "quote": "“The consistent companionship of an emotional support animal can be a valuable source of comfort for individuals whose anxiety affects their daily emotional well-being.”",
         "author": "Dr. Robert Staaf, Licensed Clinical Social Worker"
-      }
+      },
+      "quoteBoxPosition": "bottom"
     },
     {
       "id": "esa-help-anxiety",
