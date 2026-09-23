@@ -195,10 +195,10 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
         {/* 8. Bottom CTA Banner */}
         <CtaBanner
-          title={article.bottomCta?.title || "Need help with a PSD letter?"}
+          title={article.bottomCta?.title || "Need help with an ESA letter?"}
           description={
             article.bottomCta?.description ||
-            "Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
+            "Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
           }
           buttonText={article.bottomCta?.buttonText || "Start your Evaluation"}
           buttonHref={article.bottomCta?.buttonHref || "#faq"}

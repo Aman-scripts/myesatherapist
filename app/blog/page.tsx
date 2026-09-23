@@ -68,10 +68,10 @@ export default function BlogHubPage() {
         {/* 5. Frequently Asked Questions */}
         <FaqSection />
 
-        {/* 6. PSD Letter Call to Action */}
+        {/* 6. ESA Letter Call to Action */}
         <CtaBanner
-          title="Need help with a PSD letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
+          title="Need help with an ESA letter?"
+          description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
           buttonText="Start your Evaluation"
           buttonHref="#faq"
           bgColor="bg-[#EEEBE0]"

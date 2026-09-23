@@ -184,8 +184,8 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
 
         {/* 8. PSD CTA Banner */}
         <CtaBanner
-          title="Need help with a PSD letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
+          title="Need help with an ESA letter?"
+          description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
           buttonText="Start your Evaluation"
           buttonHref="#faq"
           bgColor="bg-[#FAF7F2]"
