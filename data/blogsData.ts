@@ -2603,17 +2603,12 @@ export const BLOG_POSTS: BlogArticle[] = [
         "Current coping strategies and treatment history",
         "How an ESA may support mental well-being, emotion regulation, and physiological arousal"
       ],
-      "subsections": [
-        {
-          "title": "Personalized Assessment",
-          "paragraphs": [
-            "For instance, a person who is experiencing severe anxiety-related distress or panic symptoms may discuss whether an ESA could be a helpful enhancement to their mental health and overall quality of life."
-          ]
-        }
+      "afterListParagraphs": [
+        "For instance, a person who is experiencing severe anxiety-related distress or panic symptoms may discuss whether an ESA could be a helpful enhancement to their mental health and overall quality of life."
       ],
       "quoteBox": {
         "quote": "“The consistent companionship of an emotional support animal can be a valuable source of comfort for individuals whose anxiety affects their daily emotional well-being.”",
-        "author": "Dr. Robert Staaf, Licensed Clinical Social Worker"
+        "author": "[Dr. Robert Staaf, Licensed Clinical Social Worker](/esa-doctors/dr-robert-staff/)"
       },
       "quoteBoxPosition": "bottom"
     },

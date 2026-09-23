@@ -201,7 +201,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
               <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
               <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
-                {sec.quoteBox.quote} {sec.quoteBox.author && `– ${sec.quoteBox.author}`}
+                {sec.quoteBox.quote} {sec.quoteBox.author && <>– {renderFormattedText(sec.quoteBox.author)}</>}
               </p>
             </div>
           )}
@@ -624,7 +624,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
               <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
               <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
-                {sec.quoteBox.quote} {sec.quoteBox.author && `– ${sec.quoteBox.author}`}
+                {sec.quoteBox.quote} {sec.quoteBox.author && <>– {renderFormattedText(sec.quoteBox.author)}</>}
               </p>
             </div>
           )}
