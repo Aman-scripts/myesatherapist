@@ -1,53 +1,9 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { useRouter } from "next/navigation";
-import { ChevronDown } from "lucide-react";
-import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
-import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-
-const POPULAR_STATES = STATE_INDEX;
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 export function BlogsHero() {
-  const router = useRouter();
-  const [selectedState, setSelectedState] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRefMobile = useRef<HTMLDivElement>(null);
-  const dropdownRefTablet = useRef<HTMLDivElement>(null);
-  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      const target = event.target as Node;
-      const isInside =
-        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
-        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
-        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
-
-      if (!isInside) {
-        setIsDropdownOpen(false);
-      }
-    }
-
-    if (isDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isDropdownOpen]);
-
-  const handleStateSelect = (slug: string) => {
-    setSelectedState(slug);
-    setIsDropdownOpen(false);
-    router.push(`/${slug}`);
-  };
-
   return (
-    <section className="relative z-30 w-full bg-[#FAF7F2]">
+    <section className="relative w-full bg-[#FAF7F2]">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE BLOGS HERO SECTION (sm:hidden / < 640px)   */}
       {/* Uses /blog_hero-section-mobile.png                   */}
@@ -55,7 +11,7 @@ export function BlogsHero() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[600px] max-h-[760px] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={90}
+          quality={90}
           src="/blogs/blog_hero-section-mobile.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
@@ -77,67 +33,6 @@ export function BlogsHero() {
           <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
             Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
           </p>
-
-          {/* Stacked Action Buttons */}
-          <div className="flex flex-col items-center gap-2.5 mt-4 w-full max-w-[250px]">
-            {/* State Dropdown */}
-            <div className="relative w-full z-30" ref={dropdownRefMobile}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center justify-between px-5 h-[46px] w-full rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors border border-[#EAE5DC]"
-              >
-                <span className="flex items-center gap-2">
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={16}
-                    height={21}
-                    unoptimized
-                    className="shrink-0 object-contain w-[14px] h-[18px]"
-                  />
-                  <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Get Started CTA Button */}
-            <a
-              href="#featured"
-              className="flex items-center justify-between pl-6 pr-1.5 h-[46px] w-full rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 shadow-sm"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span>Get Started</span>
-              <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
-              </span>
-            </a>
-          </div>
         </div>
       </div>
 
@@ -148,7 +43,7 @@ export function BlogsHero() {
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+          quality={90}
           src="/blogs/blog_hero-section-tablet.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
@@ -170,65 +65,6 @@ export function BlogsHero() {
           <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto font-sans">
             Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
           </p>
-
-          {/* Action Buttons in a Row */}
-          <div className="flex items-center justify-center gap-3 flex-wrap pt-2">
-            {/* State Dropdown */}
-            <div className="relative z-30" ref={dropdownRefTablet}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
-              >
-                <Image
-                  src="/home/hero-section-map.svg"
-                  alt=""
-                  width={16}
-                  height={21}
-                  unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
-                />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <a
-              href="#featured"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-sm"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
-              </span>
-            </a>
-          </div>
         </div>
       </div>
 
@@ -239,7 +75,7 @@ export function BlogsHero() {
       <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
         <BreakpointImage
           media="(min-width: 1024px)"
-            quality={90}
+          quality={90}
           src="/blogs/blog-hero_section.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
@@ -250,7 +86,6 @@ export function BlogsHero() {
         {/* Content Container */}
         <div className="absolute inset-0 z-10">
           <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[88%] sm:w-[60%] lg:w-[48%] xl:w-[47.05%] max-w-[640px]">
-            
 
             {/* Headline */}
             <h1 className="font-heading text-[32px] sm:text-[40px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.015em] leading-[1.15] lg:leading-[46px] xl:leading-[64px] mt-4 xl:mt-6 text-[#2E5A66]">
@@ -263,65 +98,6 @@ export function BlogsHero() {
             <p className="font-sans font-semibold text-[15px] sm:text-[18px] lg:text-[18px] xl:text-[18px] leading-[24px] sm:leading-[30px] lg:leading-[30px] xl:leading-[30px] text-[#5F6B6F] max-w-[480px] xl:max-w-[540px] mt-3 xl:mt-4">
               Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
             </p>
-
-            {/* Action Buttons in a Row (Desktop) */}
-            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-4 xl:mt-6">
-              {/* State Dropdown */}
-              <div className="relative z-30" ref={dropdownRefDesktop}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 shadow-xs border border-[#EAE5DC] cursor-pointer"
-                >
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={16}
-                    height={21}
-                    unoptimized
-                    className="shrink-0 object-contain"
-                    style={{ width: "auto", height: "auto" }}
-                  />
-                  <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                  <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isDropdownOpen && (
-                  <div
-                    className={STATE_DROPDOWN_PANEL}
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                  >
-                    <div className="py-1">
-                      {POPULAR_STATES.map((state) => (
-                        <button
-                          key={state.slug}
-                          type="button"
-                          onClick={() => handleStateSelect(state.slug)}
-                          className={STATE_DROPDOWN_ITEM}
-                        >
-                          <span>{state.name}</span>
-                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <a
-                href="#featured"
-                className="flex items-center gap-2.5 xl:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-[30px] text-white font-semibold text-[14.5px] xl:text-[16px] transition-opacity hover:opacity-90 h-[46px] xl:h-[48px] shrink-0 shadow-xs"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                Get Started
-                <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
-                </span>
-              </a>
-            </div>
           </div>
         </div>
       </div>
