@@ -132,7 +132,7 @@ export function EsaRenewalPricing() {
             {/* Highlighted Plan */}
             <div className="flex w-full max-w-[416px] flex-col items-center gap-[9px] rounded-[28px] bg-[#E8B92C] px-1 pt-[10px] pb-1 shadow-[0px_130px_52px_rgba(0,0,0,0.01),0px_73px_44px_rgba(0,0,0,0.05),0px_33px_33px_rgba(0,0,0,0.09),0px_8px_18px_rgba(0,0,0,0.1)] lg:min-h-[542px]">
               <span
-                className="text-[14px] font-bold uppercase leading-[115%] tracking-[0.08em] text-[#2E5A66]"
+                className="text-[14px] font-bold uppercase leading-[115%] tracking-[0.08em] text-[#1A3D4F]"
                 style={LATO}
               >
                 Most Popular

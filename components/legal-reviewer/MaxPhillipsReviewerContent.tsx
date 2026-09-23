@@ -409,9 +409,7 @@ export function MaxPhillipsReviewerContent() {
             <div className="space-y-7 sm:space-y-8">
               {/* Step 01 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span aria-hidden="true" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
-                  01
-                </span>
+                <span aria-hidden="true" data-num="01" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
                 <div className="space-y-2 flex-1">
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Clinical Accuracy
@@ -426,9 +424,7 @@ export function MaxPhillipsReviewerContent() {
 
               {/* Step 02 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span aria-hidden="true" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
-                  02
-                </span>
+                <span aria-hidden="true" data-num="02" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
                 <div className="space-y-2 flex-1">
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Trauma-Informed Review
@@ -443,9 +439,7 @@ export function MaxPhillipsReviewerContent() {
 
               {/* Step 03 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span aria-hidden="true" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14">
-                  03
-                </span>
+                <span aria-hidden="true" data-num="03" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
                 <div className="space-y-2 flex-1">
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Mental Health Clarity

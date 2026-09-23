@@ -83,7 +83,7 @@ export function EsaTrainingVsServiceDog() {
                     <span className="italic">{row.esa}</span>
                   </div>
                   <div className="px-5 py-3.5 text-[#5F6B6F]">
-                    <span className="block text-xs font-bold uppercase tracking-wide text-[#2E5A66]/70 not-italic">Service Dog</span>
+                    <span className="block text-xs font-bold uppercase tracking-wide text-[#2E5A66] not-italic">Service Dog</span>
                     <span className="italic">{row.dog}</span>
                   </div>
                 </div>

@@ -137,7 +137,7 @@ export function AboutTestimonialSection() {
                 <h3 className="font-heading font-bold text-[18px] sm:text-[20px] text-[#2C2C2C] leading-tight">
                   {current.name}
                 </h3>
-                <span className="font-sans font-normal text-[14px] sm:text-[16px] text-[#747474] mt-0.5">
+                <span className="font-sans font-normal text-[14px] sm:text-[16px] text-[#696969] mt-0.5">
                   {current.location}
                 </span>
               </div>

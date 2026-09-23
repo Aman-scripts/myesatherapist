@@ -87,9 +87,7 @@ export function DoctorsMatchingSection() {
                 </div>
 
                 {/* 01 / 02 / 03 Step Number (Plus Jakarta Sans 700, 54px, 20% opacity) */}
-                <span aria-hidden="true" className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-[#5F6B6F] opacity-20 select-none tracking-tight">
-                  {step.num}
-                </span>
+                <span aria-hidden="true" data-num={step.num} className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-[#5F6B6F] opacity-20 select-none tracking-tight before:content-[attr(data-num)]" />
               </div>
 
               {/* Frame 1000011970 (Title + Description, gap: 8px) */}

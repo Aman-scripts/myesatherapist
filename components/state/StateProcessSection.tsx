@@ -102,9 +102,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 </div>
 
                 {/* Number 01 / 02 / 03 */}
-                <span aria-hidden="true" className="font-[family-name:var(--font-plus-jakarta-sans)] text-[46px] sm:text-[54px] font-bold text-[#5F6B6F] opacity-20 leading-[66px] tracking-tight">
-                  {step.number}
-                </span>
+                <span aria-hidden="true" data-num={step.number} className="font-[family-name:var(--font-plus-jakarta-sans)] text-[46px] sm:text-[54px] font-bold text-[#5F6B6F] opacity-20 leading-[66px] tracking-tight before:content-[attr(data-num)]" />
               </div>
 
               {/* Frame 1000011970: Title and Description */}

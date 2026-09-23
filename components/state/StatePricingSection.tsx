@@ -115,7 +115,7 @@ export function StatePricingSection({ stateName, data }: StatePricingSectionProp
 
           {/* 2. Highlight Frame Card: ESA Letter + ID Card */}
           <div className="w-full sm:w-[308px] min-h-[522px] rounded-[28px] bg-[#E8B92C] pt-2.5 px-1 pb-1 shadow-[0px_8px_18px_rgba(0,0,0,0.1),0px_33px_33px_rgba(0,0,0,0.09),0px_73px_44px_rgba(0,0,0,0.05),0px_130px_52px_rgba(0,0,0,0.01)] flex flex-col items-center shrink-0">
-            <div className="text-center text-[#2E5A66] text-[14px] font-bold tracking-[0.08em] uppercase pb-2 font-sans">
+            <div className="text-center text-[#1A3D4F] text-[14px] font-bold tracking-[0.08em] uppercase pb-2 font-sans">
               BEST VALUE
             </div>
 
