@@ -2339,6 +2339,12 @@ export const BLOG_POSTS: BlogArticle[] = [
     "More people across the U.S. are learning about different ways to support their mental health, including emotional support animals (ESAs). If you’re wondering what an emotional support animal is and whether your condition may qualify, this guide explains the basics and the conditions commonly considered.",
     "An ESA is more than just a pet. It is an animal recommended by a licensed mental health professional to provide emotional support related to a person’s mental health condition. Unlike service animals, ESAs don’t require specialized training, but their presence can significantly improve an individual’s daily functioning and emotional stability."
   ],
+  "introImage": {
+    "src": "/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
+    "alt": "Woman laughing and playing with her golden retriever on a living room rug",
+    "width": 1201,
+    "height": 901
+  },
   "tocItems": [
     {
       "id": "what-is-an-emotional-support-animal",
@@ -2366,7 +2372,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       "id": "what-is-an-emotional-support-animal",
       "title": "What is an Emotional Support Animal?",
       "paragraphs": [
-        "To understand eligibility, it’s important to first answer: What is an emotional support animal?",
+        "To understand eligibility, it’s important to first answer: [What is an emotional support animal?](/blog/esa-guide/emotional-support-animal/)",
         "An ESA is specifically trained to provide emotional and physical comfort, reduce depression and anxiety, and support overall mental well-being simply through companionship. Under federal housing laws, individuals with a valid ESA letter are entitled to certain protections even in “no-pet” housing.",
         "ESA protections are connected to federal laws, including the Fair Housing Act and Section 504, which help protect people with qualifying disabilities from housing discrimination."
       ],
