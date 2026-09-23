@@ -2546,7 +2546,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
   "introParagraphs": [
     "Everybody experiences anxiety differently. When it comes to having an anxiety disorder, some find themselves in a constant state of fear, leading to difficulty concentrating and feeling detached from daily events, even activities they enjoy. For other people, anxiety might interfere with their daily activities and sleep due to hypervigilance, alarming responses, and physiological arousal. Regardless of how it presents, an anxiety disorder can be debilitating, making it incredibly difficult to participate in and enjoy life.",
-    "Many people with anxiety find great emotional support from animals as part of their mental health care plan. When times are difficult, an emotional support animal (ESA) offers stability and consolation. An ESA can provide emotional support as well as nervous system regulation and may make mental health treatment more effective when combined with a therapist or medication.",
+    "Many people with anxiety find great emotional support from animals as part of their mental health care plan. When times are difficult, an emotional support animal (ESA) offers stability and consolation. [An ESA can provide emotional support](/blog/esa-guide/emotional-support-animal/) as well as nervous system regulation and may make mental health treatment more effective when combined with a therapist or medication.",
     "Having anxiety just by itself, though, does not automatically qualify someone for an ESA. Whether the animal offers support linked to a diagnosed mental health need and a professional assessment will help to determine an individual’s qualification for an ESA."
   ],
   "tocItems": [
