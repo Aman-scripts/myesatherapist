@@ -54,7 +54,7 @@ export function EsaGuideFilterableGrid() {
 
               <div className="flex flex-1 flex-col justify-between gap-5 px-[18px] pb-6 pt-6 lg:gap-[1.6vw] lg:px-[1.3vw] lg:pb-[1.9vw] lg:pt-[1.7vw] xl:gap-6 xl:pb-7 xl:pt-6">
                 <div className="flex flex-col gap-3.5 lg:gap-[1.1vw] xl:gap-[15px]">
-                  <div className="flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-2.5">
                     <Link href={art.url}>
                       <h3 className="line-clamp-3 font-heading text-[22px] font-bold leading-[30px] text-[#2E5A66] transition-colors group-hover:text-[#1D6E72] lg:text-[1.9vw] lg:leading-[2.4vw] xl:text-[24px] xl:leading-8">
                         {art.title}

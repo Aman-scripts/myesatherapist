@@ -135,8 +135,8 @@ export function BlogsGrid() {
                       <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
                         <div className="space-y-3.5">
                           {/* Title & Author */}
-                          <div className="space-y-1.5">
-                            <Link href={art.url}>
+                          <div className="space-y-2.5">
+                            <Link href={art.url} className="block">
                               <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#2E5A66] leading-[1.3] group-hover:text-[#1D6E72] transition-colors cursor-pointer line-clamp-2">
                                 {art.title}
                               </h3>
