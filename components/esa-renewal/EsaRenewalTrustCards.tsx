@@ -46,12 +46,12 @@ export function EsaRenewalTrustCards() {
 
               {/* White card (Frame 1000011683) */}
               <div className="relative mt-2 flex min-h-[160px] flex-1 flex-col items-center justify-center gap-2 rounded-[20px] bg-white px-4 pt-[60px] pb-[37px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
-                <h3
+                <h2
                   className="font-bold text-xl xl:text-2xl leading-[29px] tracking-[-0.017em] text-transparent bg-clip-text"
                   style={{ backgroundImage: TEAL_GRADIENT, fontFamily: "var(--font-lato), Lato, sans-serif" }}
                 >
                   {card.title}
-                </h3>
+                </h2>
                 <p className="font-sans text-sm xl:text-base font-semibold leading-[26px] text-[#5F6B6F]">
                   {card.subtitle}
                 </p>

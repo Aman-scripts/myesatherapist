@@ -54,7 +54,7 @@ export function GoldPill({
       <div className="w-[12px] sm:w-[19px] shrink-0 bg-[#E8B92C] sm:rounded-l-[10px]" />
       <div className="flex min-h-[64px] flex-1 flex-col justify-center gap-1 py-3 pl-4 pr-5 sm:pl-6 lg:pl-[2vw] lg:pr-[3vw] xl:pl-6 xl:pr-[67px]">
         {title && (
-          <h4 className="font-heading font-bold text-[18px] leading-7 sm:text-[20px] text-[#2E5A66]">{title}</h4>
+          <h3 className="font-heading font-bold text-[18px] leading-7 sm:text-[20px] text-[#2E5A66]">{title}</h3>
         )}
         <p className="font-sans font-semibold text-sm leading-[24px] sm:text-base sm:leading-[26px] lg:text-[1.15vw] lg:leading-[1.9vw] xl:text-base xl:leading-[26px] text-[#5F6B6F]">
           {children}

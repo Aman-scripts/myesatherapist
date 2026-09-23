@@ -42,7 +42,7 @@ export function GoldCallout({
       <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#E8B92C]" />
       <div className="flex flex-col gap-1 py-4 sm:py-5 px-4 sm:px-6">
         {title && (
-          <h4 className="font-heading font-bold text-[18px] sm:text-[20px] leading-7 text-[#2E5A66] uppercase">{title}</h4>
+          <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-7 text-[#2E5A66] uppercase">{title}</h3>
         )}
         <p className="font-sans text-[13px] sm:text-sm font-medium leading-[22px] text-[#5F6B6F]">{children}</p>
       </div>
@@ -57,6 +57,7 @@ export function FeatureCard({
   description,
   headingFont = "heading",
   dark = false,
+  headingAs: Heading = "h3",
   iconW = 32,
   iconH = 32,
 }: {
@@ -67,6 +68,7 @@ export function FeatureCard({
   iconH?: number;
   headingFont?: "heading" | "lato";
   dark?: boolean;
+  headingAs?: "h2" | "h3";
 }) {
   return (
     <div className="relative flex w-full flex-col">
@@ -78,16 +80,16 @@ export function FeatureCard({
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
         {!title ? null : headingFont === "heading" ? (
-          <h3 className={`font-heading font-bold text-xl xl:text-2xl leading-8 text-balance ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+          <Heading className={`font-heading font-bold text-xl xl:text-2xl leading-8 text-balance ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
             {title}
-          </h3>
+          </Heading>
         ) : (
-          <h3
+          <Heading
             className="font-bold text-xl xl:text-2xl leading-[29px] tracking-[-0.017em] text-transparent bg-clip-text"
             style={{ backgroundImage: TEAL_GRADIENT, ...LATO }}
           >
             {title}
-          </h3>
+          </Heading>
         )}
         {description && (
           <p className={`font-sans text-sm xl:text-base font-semibold leading-[26px] ${dark ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>

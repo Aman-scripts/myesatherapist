@@ -10,7 +10,7 @@ export function EsaOnlineTrustCards() {
       <div className="max-w-[1312px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14">
           {CARDS.map((title) => (
-            <FeatureCard key={title} icon={ICON} title={title} headingFont="lato" />
+            <FeatureCard key={title} icon={ICON} title={title} headingFont="lato" headingAs="h2" />
           ))}
         </div>
       </div>

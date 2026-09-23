@@ -25,9 +25,9 @@ export function EsaRenewalImportantCallout() {
           {/* Texts (Frame 1000012015) */}
           <div className="flex flex-1 flex-col justify-center gap-2">
             <div className="flex flex-col gap-1">
-              <h4 className="font-heading font-bold text-[20px] leading-7 text-[#CC191D]">
+              <h3 className="font-heading font-bold text-[20px] leading-7 text-[#CC191D]">
                 Important
-              </h4>
+              </h3>
               <p className="font-sans text-sm font-medium leading-[22px] text-[#5F6B6F]">
                 Payment provides access to a professional evaluation only. The licensed mental health professional independently determines whether ESA letters may be issued based on their clinical judgment.
               </p>

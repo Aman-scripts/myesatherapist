@@ -40,9 +40,9 @@ export function FocusCard({
   return (
     <div className="pt-[5px] bg-[#E8B92C] rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all hover:-translate-y-1 hover:shadow-md duration-200 flex-1 min-w-[200px] max-w-[260px]">
       <div className="bg-white rounded-[18px] py-4 px-5 text-center shadow-xs flex flex-col items-center justify-center min-h-[58px]">
-        <h4 className="font-sans font-semibold text-[16px] leading-[24px] text-[#2E5A66]">
+        <h3 className="font-sans font-semibold text-[16px] leading-[24px] text-[#2E5A66]">
           {title}
-        </h4>
+        </h3>
         <p className="font-sans font-normal text-[12px] leading-[18px] text-[#5F6B6F] tracking-[-0.017em] mt-0.5">
           {subtitle}
         </p>
