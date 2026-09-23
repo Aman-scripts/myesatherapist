@@ -2405,7 +2405,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           "paragraphs": [
             "Anxiety disorders involve persistent, excessive fear or worry that significantly interferes with daily life. Generalized Anxiety Disorder (GAD) produces chronic, wide-ranging anxiety about everyday situations across a variety of contexts and environments. Social anxiety disorder creates intense fear of social interaction. Panic disorder involves recurrent, unexpected panic attacks characterized by hyperventilation and a strong sense of dying, as well as ongoing fear of future panic attacks.",
             "An emotional support animal helps by lowering cortisol levels, reducing heart rate during anxiety episodes, and providing grounding during moments of acute distress. An ESA can make it easier for people with social anxiety to adjust to new situations and gradually lessen avoidance behavior. Anxiety disorders are among the most commonly cited qualifying conditions for an ESA letter. ESAs can be trained to recognize when an individual’s anxiety levels are increasing, sense heightened cortisol levels, and provide physical compression to help bring feelings of safety and security.",
-            "If you experience anxiety and are considering emotional support, learn more about whether you may qualify for an ESA for anxiety."
+            "If you experience anxiety and are considering emotional support, learn more about [whether you may qualify for an ESA for anxiety](/blog/qualifying-conditions/esa-for-anxiety/)."
           ]
         },
         {
