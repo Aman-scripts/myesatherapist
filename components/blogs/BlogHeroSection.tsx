@@ -51,47 +51,6 @@ export function BlogHeroSection({
           <p className="font-sans text-[12.5px] text-[#5F6B6F] font-semibold leading-[20px] max-w-[290px] mt-2">
             {subtitle}
           </p>
-
-          {/* Action Buttons Stacked */}
-          <div className="flex flex-col items-center gap-2.5 w-full max-w-[240px] pt-3">
-            <Link
-              href="#therapists"
-              className="w-full h-11 bg-[#FAF7F2] rounded-[30px] shadow-sm flex items-center justify-between px-5 text-sm font-sans font-bold text-[#2E5A66] hover:bg-white transition-colors"
-            >
-              <span className="flex items-center gap-2">
-                <Image
-            quality={90}
-                  src="/home/hero-section-map.svg"
-                  alt=""
-                  width={14}
-                  height={18}
-                  className="w-[14px] h-[18px] object-contain"
-                />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  Start your State
-                </span>
-              </span>
-              <ChevronDown className="w-4 h-4 text-[#2E5A66]" />
-            </Link>
-
-            <Link
-              href="#tenant-checklist"
-              className="w-full h-11 rounded-[30px] text-white flex items-center justify-between pl-5 pr-1.5 shadow-sm hover:opacity-95 transition-all group"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span className="font-sans text-sm font-semibold">Get Started</span>
-              <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={16}
-                  height={16}
-                  className="w-3.5 h-3.5 object-contain"
-                />
-              </span>
-            </Link>
-          </div>
         </div>
       </div>
 
