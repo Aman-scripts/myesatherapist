@@ -94,7 +94,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
       {article.questionCallout && (
         <div
           id={article.questionCallout.id}
-          className="w-full bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3"
+          className="w-full bg-[#EDEFEA] border border-[#1D6E72]/25 border-l-[6px] border-l-[#1D6E72] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3"
         >
           <h2 className="font-heading text-lg sm:text-xl font-bold text-[#2E5A66]">
             {article.questionCallout.question}
