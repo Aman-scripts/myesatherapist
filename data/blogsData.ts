@@ -2654,7 +2654,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         bannerPosition: "bottom",
       "paragraphs": [
         "Many people look for ESA paperwork because of issues with their homes. People with qualified impairments may ask for reasonable housing for an emotional support animal under the Fair Housing Act (FHA), even in places with pet restrictions.",
-        "An ESA letter for anxiety, though, does not give an animal endless public access privileges. Unlike service animals, ESAs often lack coverage under the Americans with Disabilities Act (ADA) for public access. This means that ESAs do not have guaranteed public access in places such as restaurants, stores, and libraries.",
+        "An ESA letter for anxiety, though, does not give an animal endless public access privileges. Unlike service animals, ESAs often lack coverage under the [Americans with Disabilities Act (ADA)](https://www.ada.gov/) for public access. This means that ESAs do not have guaranteed public access in places such as restaurants, stores, and libraries.",
         "Knowing this difference permits ESA owners to know what safeguards they do and do not have."
       ]
     },
