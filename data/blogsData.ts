@@ -2536,7 +2536,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
   "publishDate": "August 26, 2026",
   "lastUpdated": "August 26, 2026",
-  "cardImage": "/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/esas-for-anxiety-support-image.webp",
+  "cardImage": "/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/how-can-esa-support-with-anxity-image.webp",
   "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
   "heroImageDesktop": "/blogs/blog-hero_section.webp",
