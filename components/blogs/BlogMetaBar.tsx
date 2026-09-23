@@ -2,6 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { AUTHORS, REVIEWERS } from "@/data/contributorsData";
+
+// Profile page for each known author/reviewer, looked up by display name.
+const PROFILE_HREF: Record<string, string> = Object.fromEntries(
+  [...AUTHORS, ...REVIEWERS].map((p) => [p.name, p.href]),
+);
 
 interface BlogMetaBarProps {
   authorName?: string;
@@ -30,6 +37,8 @@ export function BlogMetaBar({
   reviewerImage = "/blogs/blogs_medical_reviewer.webp",
   reviewerLinkedin,
 }: BlogMetaBarProps = {}) {
+  const authorHref = PROFILE_HREF[authorName] ?? "#about-the-author";
+  const reviewerHref = PROFILE_HREF[reviewerName];
   return (
     <div className="w-full max-w-[360px] sm:max-w-[460px] md:max-w-[1069px] mx-auto bg-white rounded-[20px] sm:rounded-[24px] shadow-[0px_4px_20px_rgba(0,0,0,0.08)] border border-[#EAE5DC] p-4 sm:p-5 md:py-3.5 md:px-5 lg:py-5 lg:px-6 xl:py-[20px] xl:px-[28px] relative z-20">
       <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between divide-y divide-[#EAE5DC]/70 md:divide-y-0 gap-0 md:gap-2">
@@ -51,12 +60,12 @@ export function BlogMetaBar({
             <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-[#2E5A66] leading-tight">
               {authorRole}
             </span>
-            <a
-              href="#about-the-author"
+            <Link
+              href={authorHref}
               className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
             >
               {authorName}
-            </a>
+            </Link>
             <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-[#5F6B6F] leading-tight whitespace-nowrap mt-0.5">
               {authorCredentials}
             </span>
@@ -112,7 +121,14 @@ export function BlogMetaBar({
             <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-[#2E5A66] leading-tight">
               {reviewerRole}
             </span>
-            {reviewerLinkedin ? (
+            {reviewerHref ? (
+              <Link
+                href={reviewerHref}
+                className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
+              >
+                {reviewerName}
+              </Link>
+            ) : reviewerLinkedin ? (
               <a
                 href={reviewerLinkedin}
                 target="_blank"
