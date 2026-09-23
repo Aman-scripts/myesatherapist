@@ -2777,7 +2777,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "introQuoteBox": {
     "quote": "“A well-trained emotional support animal can be easier to manage during stressful moments, giving owners greater confidence and helping create a calmer environment when they need support most.”",
-    "author": "Gaurav Patel, MD"
+    "author": "[Gaurav Patel, MD](/esa-doctors/dr-gaurav-patel/)"
   },
   "tocItems": [
     {
