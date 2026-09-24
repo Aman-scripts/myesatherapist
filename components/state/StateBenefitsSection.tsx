@@ -215,17 +215,22 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="flex justify-center lg:justify-start pt-2">
-              <a
-                href="#faq"
-                className="inline-flex items-center gap-2.5 lg:gap-3 pl-6 pr-1.5 py-1.5 rounded-full text-white font-semibold text-xs lg:text-[13px] xl:text-[16px] transition-all shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 group"
-                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-              >
-                <span>Apply your ESA Letter Now</span>
-                <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#FAF7F2] text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
-                  <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
-                </span>
-              </a>
+              <div className="flex flex-col items-center gap-1.5 w-fit">
+                <a
+                  href="#faq"
+                  className="inline-flex items-center gap-2.5 lg:gap-3 pl-6 pr-1.5 py-1.5 rounded-full text-white font-semibold text-xs lg:text-[13px] xl:text-[16px] transition-all shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 group"
+                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                >
+                  <span>Apply your ESA Letter Now</span>
+                  <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#FAF7F2] text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
+                    <Image
+              quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
+                  </span>
+                </a>
+                <p className="font-sans font-semibold text-[12px] lg:text-[13px] text-[#5F6B6F] text-center">
+                  No hidden fees. HIPAA-secure.
+                </p>
+              </div>
             </div>
           </div>
         </div>
