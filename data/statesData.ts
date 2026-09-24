@@ -11150,14 +11150,6 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Title: "Federal & State Laws and Tenant Protections",
     card1Items: [
       {
-        title: "Fair Housing Act (FHA)",
-        description: "Under the Fair Housing Act (FHA), housing providers must consider reasonable accommodation requests for emotional support animals, even in properties with pet restrictions, subject to applicable exceptions and individualized review.",
-      },
-      {
-        title: "New York Human Rights Law (NYHRL)",
-        description: "The New York Human Rights Law reinforces statewide fair housing protections and permits housing providers to request certain animal-related documentation, such as vaccination records, when consistent with public health or safety considerations.",
-      },
-      {
         title: "No Extra Fees",
         description: "Landlords cannot charge pet rent or deposits for an approved ESA.",
       },
