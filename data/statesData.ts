@@ -10908,6 +10908,34 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/sanfranciscofour.svg",
       },
     ],
+    faqTitle: "Frequently Asked Questions About ESA Letter in Nevada",
+    faqSubtitle: "Find answers to common questions about emotional support animals, housing regulations, and the evaluation process in Nevada.",
+    faqs: [
+      {
+        q: "Can I use a Nevada ESA letter for a rental with a no-pet policy?",
+        a: "Yes. An ESA may qualify for a reasonable housing accommodation when the applicable requirements are met, even if the property has a no-pet policy.",
+      },
+      {
+        q: "Can my landlord charge pet rent for an ESA in Nevada?",
+        a: "Generally, an assistance animal that qualifies for a housing accommodation is not treated as a pet, so pet-related fees may not apply.",
+      },
+      {
+        q: "Can an ESA letter be used for more than one animal in Nevada?",
+        a: "It depends on the individual circumstances and clinical need. A licensed professional should determine whether more than one animal is appropriate.",
+      },
+      {
+        q: "Does my ESA letter give my animal access to restaurants and stores in Nevada?",
+        a: "No. An ESA letter does not provide the public-access rights given to service animals under the ADA.",
+      },
+      {
+        q: "Can my Nevada landlord ask for additional information about my ESA?",
+        a: "A housing provider may request reliable documentation when the disability-related need is not apparent or known, but the information requested should be relevant to evaluating the accommodation request.",
+      },
+      {
+        q: "What happens if my ESA accommodation request is denied in Nevada?",
+        a: "You can ask the housing provider for the reason for the decision and review whether the request was handled under applicable fair housing requirements.",
+      },
+    ],
     ctaTitle: "Ready to Start Your\nNevada ESA Evaluation?",
     ctaSubtitle: "Connect with a Nevada-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
