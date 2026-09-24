@@ -31,7 +31,7 @@ export function AboutTransparentPricingSection() {
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
-            Transparent ESA Protection
+            Our Transparent ESA Evaluation Process
           </h2>
           <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-[#5F6B6F] leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
             We believe in upfront pricing and honest policies with no surprises.

@@ -134,12 +134,12 @@ export default function AboutUsPage() {
           faqs={ABOUT_FAQS}
         />
 
-        {/* Section 10: PSD Letter CTA Banner */}
+        {/* Section 10: ESA Evaluation CTA Banner */}
         <CtaBanner
-          title="Need help with a PSD letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
-          buttonText="Start your Evaluation"
-          buttonHref="/psd-letter/"
+          title="Ready to Start Your ESA Evaluation?"
+          description={"Begin the evaluation process today and connect with a licensed\nmental health professional for a clinical assessment."}
+          buttonText="Start Evaluation"
+          buttonHref="/pricing/"
           bgColor="bg-[#FAF7F2]"
           className="pb-12 sm:pb-16 lg:pb-24"
         />
