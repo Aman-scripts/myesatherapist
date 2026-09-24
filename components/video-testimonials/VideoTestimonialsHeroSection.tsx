@@ -14,7 +14,7 @@ const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
 const TABLET_STATS = [
-  { value: "51,488+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
   { value: "4.9", label: "Verified Reviews" },
 ];

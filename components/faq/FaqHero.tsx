@@ -39,7 +39,7 @@ function TrustpilotStars() {
 }
 
 const statsData = [
-  { value: "51,488+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
   { value: "4.9", label: "Verified Reviews" },
 ];

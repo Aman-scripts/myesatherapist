@@ -103,7 +103,7 @@ export function PricingHero() {
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3">
             <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-xs">
               <span className="font-heading font-bold text-xs leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                51,488+
+                64,739+
               </span>
               <span className="text-[9px] text-[#707070] font-semibold mt-0.5 leading-tight font-sans">
                 ESA Evaluations
@@ -220,7 +220,7 @@ export function PricingHero() {
           <div className="flex items-center justify-center gap-3 w-full max-w-md mx-auto mb-4">
             <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-3 rounded-[30px] shadow-xs">
               <span className="font-heading font-bold text-base leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                51,488+
+                64,739+
               </span>
               <span className="text-[11px] text-[#707070] font-semibold mt-0.5 leading-tight font-sans">
                 ESA Evaluations
@@ -333,7 +333,7 @@ export function PricingHero() {
             {/* Pill 1 */}
             <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
               <span className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                51,488+
+                64,739+
               </span>
               <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
                 ESA Evaluations
