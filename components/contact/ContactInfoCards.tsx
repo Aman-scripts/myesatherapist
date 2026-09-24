@@ -28,7 +28,8 @@ export function ContactInfoCards() {
     },
     {
       title: "OPEN HOURS:",
-      detail: "Mon–Fri · 8am – 8pm ET",
+      detail: "Mon - Sat: 9AM - 6PM",
+      subDetail: "Sunday: Closed",
       icon: "/common/footer-clock-icon.svg",
       href: "#hours",
       isLink: false,
@@ -56,19 +57,22 @@ export function ContactInfoCards() {
                 </div>
 
                 {/* Frame 1000011796: Right Text Content Stack */}
-                <div className="min-w-0 flex-1 flex flex-col justify-center">
-                  {/* Title: Manrope 600 18px/30px with Teal Gradient text */}
-                  <div className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[26px] sm:leading-[30px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent uppercase tracking-tight truncate">
+                <div className="min-w-0 flex-1 flex flex-col justify-center gap-1.5">
+                  {/* Title: Manrope 600 with Teal Gradient text */}
+                  <div className="font-sans font-semibold text-[15px] sm:text-[16px] xl:text-[17px] leading-tight bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent uppercase tracking-tight truncate">
                     {card.title}
                   </div>
 
-                  {/* Detail: Manrope 600 16px/26px #5F6B6F */}
+                  {/* Detail */}
                   <div
-                    className={`font-sans font-semibold text-[14px] sm:text-[16px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] ${
-                      card.isLink ? "underline underline-offset-2" : ""
+                    className={`font-sans font-semibold text-[13px] sm:text-[14px] xl:text-[15px] leading-snug text-[#5F6B6F] ${
+                      card.isLink ? "underline underline-offset-4 hover:text-[#1A3D4F]" : ""
                     }`}
                   >
-                    {card.detail}
+                    <div>{card.detail}</div>
+                    {card.subDetail && (
+                      <div>{card.subDetail}</div>
+                    )}
                   </div>
                 </div>
               </>

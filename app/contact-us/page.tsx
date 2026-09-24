@@ -5,8 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactInfoCards } from "@/components/contact/ContactInfoCards";
 import { ContactMap } from "@/components/contact/ContactMap";
-import { FaqSection } from "@/components/home/FaqSection";
-import { CtaBanner } from "@/components/home/CtaBanner";
 import { contactUsSchemas } from "@/data/schemas/contactUsSchema";
 
 export const metadata: Metadata = {
@@ -55,15 +53,6 @@ export default function ContactUsPage() {
         <ContactHero />
         <ContactInfoCards />
         <ContactMap />
-        <FaqSection />
-        <CtaBanner
-          title="Need help with a PSD letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you."
-          buttonText="Start your Evaluation"
-          buttonHref="#faq"
-          bgColor="bg-[#FAF7F2]"
-          className="pb-12 sm:pb-16 lg:pb-24"
-        />
       </main>
       <Footer bgColor="bg-[#FAF7F2]" />
     </div>

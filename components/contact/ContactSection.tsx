@@ -42,7 +42,8 @@ export function ContactSection() {
     },
     {
       title: "OPEN HOURS:",
-      detail: "Mon–Fri · 8am – 8pm ET",
+      detail: "Mon - Sat: 9AM - 6PM",
+      subDetail: "Sunday: Closed",
       icon: "/common/footer-clock-icon.svg",
       href: "#hours",
     },
@@ -200,7 +201,8 @@ export function ContactSection() {
                     {card.title}
                   </div>
                   <div className="text-base font-sans font-bold text-[#1E3942] group-hover:text-[#1D6E72] transition-colors leading-snug">
-                    {card.detail}
+                    <div>{card.detail}</div>
+                    {card.subDetail && <div>{card.subDetail}</div>}
                   </div>
                 </div>
               </a>
@@ -211,7 +213,7 @@ export function ContactSection() {
           <div id="map" className="mt-12 w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-[#2E5A66]/10 h-[360px] sm:h-[450px] relative">
             <iframe
               title="Office Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.215579976378!2d-76.0825!3d36.8189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89bae9415444a7ab%3A0x2424b52b22f4cf00!2s780%20Lynnhaven%20Pkwy%20%23400%2C%20Virginia%20Beach%2C%20VA%2023452!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              src="https://maps.google.com/maps?q=780+Lynnhaven+Pkwy+%23400,+Virginia+Beach,+VA+23452&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
