@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Playfair_Display, Lato, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
+import { ThirdPartyErrorHandler } from "@/components/common/ThirdPartyErrorHandler";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -96,6 +97,45 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-[#2E5A66]/20 selection:text-[#2E5A66]">
+        <ThirdPartyErrorHandler />
+        {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}
+        <Script
+          id="tawk-logger-filter"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  if (typeof window === 'undefined') return;
+  window.Tawk_API = window.Tawk_API || {};
+  window.Tawk_LoadStart = new Date();
+  var origError = console.error;
+  if (!origError || origError.__tawkFiltered) return;
+  var filtered = function() {
+    var first = arguments[0];
+    if (typeof first === 'string' && (first.indexOf('[Tawk/Logger]') !== -1 || first.indexOf('Tawk/Logger') !== -1 || first.indexOf('tawk') !== -1)) {
+      console.warn.apply(console, arguments);
+      return;
+    }
+    origError.apply(console, arguments);
+  };
+  filtered.__tawkFiltered = true;
+  console.error = filtered;
+  window.addEventListener('error', function(e) {
+    if (e && ((e.message && (e.message.indexOf('tawk') !== -1 || e.message.indexOf('Tawk') !== -1)) || (e.filename && e.filename.indexOf('tawk') !== -1))) {
+      e.stopImmediatePropagation();
+    }
+  }, true);
+  window.addEventListener('unhandledrejection', function(e) {
+    if (e && e.reason) {
+      var str = String(e.reason.message || e.reason || '');
+      if (str.indexOf('tawk') !== -1 || str.indexOf('Tawk') !== -1) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+      }
+    }
+  }, true);
+})();`,
+          }}
+        />
         {/* Google Tag Manager: deferred until the first interaction (scroll,
             touch, pointer or key) so GTM and the tags it injects (GA, Tawk
             chat, Clarity: ~650 KB of JS) never compete with the initial
