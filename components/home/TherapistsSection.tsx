@@ -30,13 +30,13 @@ export function getTherapistAvatar(t: Therapist): string {
   if (t.avatar && t.avatar !== "/common/therapist-avatar.webp") return t.avatar;
   const lower = t.name.toLowerCase();
   if (lower.includes("robert") || lower.includes("staaf")) {
-    return "/doctors/robert-staaf-profile-image.webp";
+    return "/doctors/Robert_Staff_Dr.webp";
   }
   if (lower.includes("leslie") || lower.includes("gamble")) {
-    return "/doctors/leslie-k.-gamble-licsw-image.webp";
+    return "/doctors/Leslie_kgamble_Dr.webp";
   }
   if (lower.includes("gaurav") || lower.includes("patel")) {
-    return "/doctors/dr-gaurav-patel-image.webp";
+    return "/doctors/Gaurav_patel_Dr.webp";
   }
   return t.avatar || "/common/therapist-avatar.webp";
 }
@@ -74,7 +74,7 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety & Stress",
-    avatar: "/doctors/robert-staaf-profile-image.webp",
+    avatar: "/doctors/Robert_Staff_Dr.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   {
@@ -85,7 +85,7 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression & PTSD",
-    avatar: "/doctors/leslie-k.-gamble-licsw-image.webp",
+    avatar: "/doctors/Leslie_kgamble_Dr.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
   },
   {
@@ -96,7 +96,7 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "17 States",
     method: "Video or Phone",
     focus: "Chronic Conditions & Sleep Concerns",
-    avatar: "/doctors/dr-gaurav-patel-image.webp",
+    avatar: "/doctors/Gaurav_patel_Dr.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
 ];

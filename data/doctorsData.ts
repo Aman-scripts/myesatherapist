@@ -81,7 +81,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression, PTSD",
-    avatar: "/doctors/leslie-gamble-hero-image.webp",
+    avatar: "/doctors/Leslie_kgamble_Dr.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
     trustStats: [
       {
@@ -185,7 +185,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety, Stress",
-    avatar: "/doctors/robert-staaf-hero-image.webp",
+    avatar: "/doctors/Robert_Staff_Dr.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
     trustStats: [
       {
@@ -304,7 +304,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     licensedIn: "17 States",
     method: "Audio/Video",
     focus: "Depression, Anxiety, Chronic Health",
-    avatar: "/doctors/dr-gaurav-patel-image.webp",
+    avatar: "/doctors/Gaurav_patel_Dr.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
     trustStats: [
       {

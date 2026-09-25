@@ -115,7 +115,7 @@ export const esaDoctorsSchema = {
       "description": "Robert Staaf, LCSW is an Independent Clinical Social Worker and Therapist, currently licensed to practice at the clinical level in over 30 states. He has extensive experience in psychotherapy and child and family welfare, and is an advocate for highlighting how animals can be utilized in mental health treatment.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
+        "url": "https://myesatherapist.com/images/doctors/Robert_Staff_Dr.webp"
       },
       "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
       "sameAs": [
@@ -140,7 +140,7 @@ export const esaDoctorsSchema = {
       "description": "Leslie Gamble is a licensed therapist with 13 years of experience primarily in the healthcare field, working with individuals of all ages as well as couples and families. She values flexible, patient-focused care and implements practical homework assignments to help clients continue progress outside of sessions.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://myesatherapist.com/images/doctors/leslie-k.-gamble-licsw-image.webp"
+        "url": "https://myesatherapist.com/images/doctors/Leslie_kgamble_Dr.webp"
       },
       "url": "https://myesatherapist.com/esa-doctors/dr-leslie-k-gamble/",
       "sameAs": [
@@ -164,7 +164,7 @@ export const esaDoctorsSchema = {
       "description": "Dr. Gaurav Patel is a board-certified family medicine physician with experience providing evidence-based care across inpatient, urgent care, outpatient, and telemedicine settings, combining clinical assessment, diagnostic expertise, and patient education.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://myesatherapist.com/images/doctors/dr-gaurav-patel-image.webp"
+        "url": "https://myesatherapist.com/images/doctors/Gaurav_patel_Dr.webp"
       },
       "url": "https://myesatherapist.com/esa-doctors/dr-gaurav-patel/",
       "sameAs": [

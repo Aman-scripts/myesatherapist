@@ -37,7 +37,7 @@ const DOCTORS: Doctor[] = [
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety, Stress",
-    avatar: "/doctors/robert-staaf-profile-image.webp",
+    avatar: "/doctors/Robert_Staff_Dr.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   {
@@ -49,7 +49,7 @@ const DOCTORS: Doctor[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression, PTSD",
-    avatar: "/doctors/leslie-k.-gamble-licsw-image.webp",
+    avatar: "/doctors/Leslie_kgamble_Dr.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
   },
   {
@@ -61,7 +61,7 @@ const DOCTORS: Doctor[] = [
     licensedIn: "17 States",
     method: "Video or Phone",
     focus: "Chronic Illness, Sleep",
-    avatar: "/doctors/dr-gaurav-patel-image.webp",
+    avatar: "/doctors/Gaurav_patel_Dr.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
 ];

@@ -1,82 +1,106 @@
 import React from "react";
 
-const LATO = { fontFamily: "var(--font-lato), Lato, sans-serif" };
-const STAR_PATH = "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z";
+const STAR_POLYGON = "12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26";
 
-function Star({ className, style }: { className?: string; style?: React.CSSProperties }) {
+function StarIcon({ className = "w-4 h-4 text-white" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className={className} style={style} fill="currentColor" aria-hidden="true">
-      <path d={STAR_PATH} />
+    <svg viewBox="0 0 24 24" className={`${className} fill-current`} aria-hidden="true">
+      <polygon points={STAR_POLYGON} />
     </svg>
   );
 }
 
-/** Five rating squares: four full, the last one half filled (rating 4.4). */
-function StarRow({ color }: { color: string }) {
-  return (
-    <div className="flex items-center gap-1 min-[420px]:gap-1.5 sm:gap-2" aria-hidden="true">
-      {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center" style={{ backgroundColor: color }}>
-          <Star className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
-        </div>
-      ))}
-      <div className="relative flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center bg-[#CCCCCC]">
-        <div className="absolute inset-y-0 left-0 w-1/2" style={{ backgroundColor: color }} />
-        <Star className="relative h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
-      </div>
-    </div>
-  );
-}
-
-function ReviewCard({
-  color,
-  label,
-  score,
-  href,
-  widthClass,
-}: {
-  color: string;
-  label: string;
-  score: string;
-  href: string;
-  widthClass: string;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`${label} - ${score} (opens in a new tab)`}
-      className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-2.5 rounded-[20px] border border-white/10 bg-white/55 px-1.5 pb-3 pt-3.5 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 sm:flex-none sm:px-6 sm:h-[105px] ${widthClass}`}
-    >
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex items-center gap-1.5">
-          <Star className="h-4 w-4 min-[420px]:h-[18px] min-[420px]:w-[18px] sm:h-[22px] sm:w-[22px] shrink-0" style={{ color }} />
-          <span
-            className="text-[11.5px] min-[420px]:text-[13px] sm:text-[16px] leading-5 tracking-[-0.017em] text-[#5F6B6F] whitespace-nowrap"
-            style={LATO}
-          >
-            {label}
-          </span>
-        </div>
-        <StarRow color={color} />
-        <span className="text-[11px] sm:text-[12px] leading-5 tracking-[-0.017em] text-[#5F6B6F]" style={LATO}>
-          {score}
-        </span>
-      </div>
-    </a>
-  );
-}
-
 /**
- * Trustpilot + ConsumerAffairs rating cards shown under the hero buttons on every page.
- * Frosted-glass cards, 4.5 of 5 stars.
+ * Trustpilot + ConsumerAffairs rating cards matching exact Figma design (Frame 1261153791).
+ * Total width: 470px, Height: 105px, Gap: 16px.
+ * Frosted-glass backdrop, Manrope font, and interactive click-through links.
  */
 export function ReviewBadges({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex w-full max-w-[438px] items-stretch gap-3 sm:gap-4 ${className}`}>
-      <ReviewCard color="#00B67A" label="Trustpilot" score="Trustscore 4.4" href="https://www.trustpilot.com/review/myesatherapist.com" widthClass="sm:w-[201px]" />
-      <ReviewCard color="#095691" label="ConsumerAffair Reviews" score="Reviews 4.4" href="https://www.consumeraffairs.com/pets/my-esa-therapist.html" widthClass="sm:w-[221px]" />
+    <div className={`flex flex-wrap items-center gap-3 sm:gap-4 max-w-[470px] ${className}`}>
+      
+      {/* ─── Trustpilot Card (Frame 1000011803) ─── */}
+      <a
+        href="https://www.trustpilot.com/review/myesatherapist.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Trustpilot - Trustscore 4.0 (opens in a new tab)"
+        className="box-border flex flex-col justify-center items-center py-3 px-4 sm:px-6 w-[190px] sm:w-[201px] h-[105px] rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer"
+      >
+        {/* Header: Star + Trustpilot */}
+        <div className="flex items-center gap-1.5 mb-2">
+          <svg className="w-5 h-5 text-[#00B67A] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points={STAR_POLYGON} />
+          </svg>
+          <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F]">
+            Trustpilot
+          </span>
+        </div>
+
+        {/* 5 Stars Grid (4 Green #00B67A, 1 Grey #CCCCCC) */}
+        <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5" aria-hidden="true">
+          {[0, 1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px] bg-[#00B67A] flex items-center justify-center rounded-[2px]"
+            >
+              <StarIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </div>
+          ))}
+          {/* 5th Star: Grey */}
+          <div className="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px] bg-[#CCCCCC] flex items-center justify-center rounded-[2px]">
+            <StarIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+          </div>
+        </div>
+
+        {/* Score */}
+        <span className="font-sans font-normal text-[13px] sm:text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+          Trustscore 4.0
+        </span>
+      </a>
+
+      {/* ─── ConsumerAffairs Card (Frame 1000011802) ─── */}
+      <a
+        href="https://www.consumeraffairs.com/pets/my-esa-therapist.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="ConsumerAffair Reviews - Reviews 4.8 (opens in a new tab)"
+        className="box-border flex flex-col justify-center items-center py-3 px-4 sm:px-6 w-[220px] sm:w-[253px] h-[105px] rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer"
+      >
+        {/* Header: Star + ConsumerAffair Reviews */}
+        <div className="flex items-center gap-1.5 mb-2">
+          <svg className="w-5 h-5 text-[#095691] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points={STAR_POLYGON} />
+          </svg>
+          <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] whitespace-nowrap">
+            ConsumerAffair Reviews
+          </span>
+        </div>
+
+        {/* 5 Stars Grid (4 Blue #095691, 1 Split 75% Blue/Grey) */}
+        <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5" aria-hidden="true">
+          {[0, 1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="w-[22px] h-[22px] sm:w-[24px] sm:h-[24px] bg-[#095691] flex items-center justify-center rounded-[2px]"
+            >
+              <StarIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </div>
+          ))}
+          {/* 5th Star: 75% filled for 4.8 score (Figma Rectangle 21 18px on 24px) */}
+          <div className="relative w-[22px] h-[22px] sm:w-[24px] sm:h-[24px] bg-[#CCCCCC] rounded-[2px] overflow-hidden flex items-center justify-center">
+            <div className="absolute inset-y-0 left-0 w-[75%] bg-[#095691]" />
+            <StarIcon className="relative z-10 w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+          </div>
+        </div>
+
+        {/* Score */}
+        <span className="font-sans font-normal text-[13px] sm:text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+          Reviews 4.8
+        </span>
+      </a>
+
     </div>
   );
 }
+

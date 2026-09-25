@@ -238,7 +238,7 @@ export const connecticutSchema = {
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
+        "url": "https://myesatherapist.com/images/doctors/Robert_Staff_Dr.webp",
       },
       "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
@@ -261,7 +261,7 @@ export const connecticutSchema = {
       "description": "Licensed Independent Clinical Social Worker with 13+ years of experience providing behavioral health care and ESA evaluations.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://myesatherapist.com/images/doctors/leslie-k.-gamble-licsw-image.webp",
+        "url": "https://myesatherapist.com/images/doctors/Leslie_kgamble_Dr.webp",
       },
       "url": "https://myesatherapist.com/esa-doctors/dr-leslie-k-gamble/",
       "sameAs": ["https://www.linkedin.com/in/leslie-gamble-727571366"],
@@ -284,7 +284,7 @@ export const connecticutSchema = {
       "description": "Board-certified family medicine physician with experience providing evidence-based, patient-focused care across inpatient, urgent care, outpatient, and telemedicine settings.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://myesatherapist.com/images/doctors/dr-gaurav-patel-image.webp",
+        "url": "https://myesatherapist.com/images/doctors/Gaurav_patel_Dr.webp",
       },
       "url": "https://myesatherapist.com/esa-doctors/dr-gaurav-patel/",
       "sameAs": ["https://www.linkedin.com/in/gaurav-patel-m-d-b5565916"],

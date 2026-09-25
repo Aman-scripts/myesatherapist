@@ -4,7 +4,6 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { DoctorInternalHeroSection } from "@/components/doctors/DoctorInternalHeroSection";
-import { DoctorTrustBar } from "@/components/doctors/DoctorTrustBar";
 import { DoctorAboutPhilosophySection } from "@/components/doctors/DoctorAboutPhilosophySection";
 import { DoctorConditionsSection } from "@/components/doctors/DoctorConditionsSection";
 import { QualifyingConditions } from "@/components/home/QualifyingConditions";
@@ -168,9 +167,6 @@ export default async function DoctorInternalPage({ params }: PageProps) {
       <main className="min-h-screen bg-white">
         {/* 1. Doctors Internal Hero Section */}
         <DoctorInternalHeroSection doctor={doctor} />
-
-        {/* Floating Trust Stats Bar */}
-        <DoctorTrustBar doctor={doctor} />
 
         {/* 2. Doctor About & Philosophy Section (Replaces 7 Things to Know / removed image) */}
         <DoctorAboutPhilosophySection doctor={doctor} />

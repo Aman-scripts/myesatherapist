@@ -334,7 +334,7 @@ export function VideoTestimonialsGridSection() {
               <div className="flex-1 w-full p-6 sm:py-9 sm:pr-7 sm:pl-[18px] flex flex-col justify-between h-full min-h-[290px] sm:min-h-[350px]">
                 {/* Name & Stars */}
                 <div className="space-y-2">
-                  <h3 className="font-heading font-bold text-2xl sm:text-[28px] leading-[36px] text-[#2E5A66] tracking-[-0.00015em]">
+                  <h3 className="font-sans font-bold text-2xl sm:text-[28px] leading-[36px] text-[#2E5A66] tracking-tight">
                     {review.name}
                   </h3>
 
