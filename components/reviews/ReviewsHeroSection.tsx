@@ -22,32 +22,6 @@ function StarMark({ className, style }: { className?: string; style?: React.CSSP
   );
 }
 
-function TrustpilotStars() {
-  return (
-    <div className="flex gap-1.5 items-center">
-      {[0, 1, 2, 3].map((i) => (
-        <div
-          key={i}
-          className="w-5 h-5 xl:w-6 xl:h-6 flex items-center justify-center shrink-0 rounded-[2px]"
-          style={{ backgroundColor: TRUSTPILOT_GREEN }}
-        >
-          <StarMark className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white" />
-        </div>
-      ))}
-      {/* 5th Star: Half Green / Half Gray */}
-      <div
-        className="relative w-5 h-5 xl:w-6 xl:h-6 shrink-0 overflow-hidden rounded-[2px]"
-        style={{ backgroundColor: "#CCCCCC" }}
-      >
-        <div className="absolute inset-y-0 left-0 w-1/2" style={{ backgroundColor: TRUSTPILOT_GREEN }} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <StarMark className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function ReviewsHeroSection() {
   const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
@@ -259,19 +233,19 @@ export function ReviewsHeroSection() {
       {/* ---------------------------------------------------- */}
       {/* 3. DESKTOP REVIEWS HERO SECTION (1024px and up)      */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1440/743] min-h-[720px]">
+      <div className="hidden lg:block relative w-full aspect-[1440/743] min-h-[620px] xl:min-h-[720px]">
         <BreakpointImage
           media="(min-width: 1024px)"
             quality={90}
           src="/reviews/reviews_hero-section.webp"
           alt="What Our Clients Are Saying"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[86%_center] 2xl:object-center"
           sizes="(min-width: 1024px) 100vw, 1px"
         />
 
         {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
-        <div className="absolute left-[5%] xl:left-[82px] top-[10%] xl:top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
+        <div className="absolute left-[4%] xl:left-[82px] top-[7%] xl:top-[120px] max-w-[480px] xl:max-w-[553px] z-10 flex flex-col items-start gap-4 xl:gap-[24px]">
           {/* Stat Pills at top (Frame 1000011901) */}
           <div className="flex items-center gap-3 w-full max-w-[513px]">
             {/* Pill 1: 50 USA States */}
