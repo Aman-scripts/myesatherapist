@@ -158,12 +158,13 @@ export function ReviewsHeroSection() {
                 className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
               >
                 <Image
-                  quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={16}
                   height={21}
-                  className="shrink-0 object-contain w-4 h-5"
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
@@ -293,12 +294,13 @@ export function ReviewsHeroSection() {
                 className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[28px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[16px] xl:text-[18px] hover:bg-white transition-colors h-[50px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
               >
                 <Image
-            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={18}
                   height={22}
-                  className="shrink-0 object-contain w-[18px] h-[22px]"
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}

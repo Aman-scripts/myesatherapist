@@ -199,12 +199,13 @@ export function StatesHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
-            quality={90}
                     src="/home/hero-section-map.svg"
                     alt=""
                     width={16}
                     height={21}
-                    className="shrink-0 object-contain w-[14px] h-[18px]"
+                    unoptimized
+                    className="shrink-0 object-contain"
+                    style={{ width: "auto", height: "auto" }}
                   />
                   <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                     {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
@@ -359,12 +360,13 @@ export function StatesHeroSection() {
                 >
                   <div className="flex items-center gap-2.5">
                     <Image
-            quality={90}
                       src="/home/hero-section-map.svg"
                       alt="Location pin"
                       width={16}
                       height={21}
-                      className="w-[16px] h-[21px] object-contain shrink-0"
+                      unoptimized
+                      className="shrink-0 object-contain"
+                      style={{ width: "auto", height: "auto" }}
                     />
                     <span className="font-sans font-semibold text-base sm:text-lg bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
                       {selectedState

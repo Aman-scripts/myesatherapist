@@ -203,7 +203,8 @@ export function VideoTestimonialsHeroSection() {
                     width={16}
                     height={20}
                     unoptimized
-                    className="shrink-0 object-contain w-4 h-5"
+                    className="shrink-0 object-contain"
+                    style={{ width: "auto", height: "auto" }}
                   />
                   <span
                     className="font-sans font-semibold text-[15px] sm:text-[16px] bg-clip-text text-transparent truncate max-w-[140px]"

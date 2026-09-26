@@ -316,7 +316,8 @@ export function EsaLawsHero() {
                     width={18}
                     height={22}
                     unoptimized
-                    className="shrink-0 object-contain w-[16px] h-[20px]"
+                    className="shrink-0 object-contain"
+                    style={{ width: "auto", height: "auto" }}
                   />
                   <span className="font-sans font-semibold text-base xl:text-[18px] text-[#1A3D4F]">
                     {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}

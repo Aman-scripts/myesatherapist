@@ -74,7 +74,9 @@ export function MobileHeroActionButtons({
               alt=""
               width={20}
               height={20}
+              unoptimized
               className="w-[20px] h-[20px] shrink-0 object-contain"
+              style={{ width: "auto", height: "auto" }}
             />
             <span
               className="font-sans font-semibold text-[18px] leading-[30px] bg-clip-text text-transparent truncate max-w-[138px]"

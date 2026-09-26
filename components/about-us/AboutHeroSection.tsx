@@ -139,12 +139,13 @@ export function AboutHeroSection() {
                 className="h-12 px-6 bg-white rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-[#2E5A66] hover:bg-[#FAF7F2] transition-colors border border-[#EAE5DC]"
               >
                 <Image
-            quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
                   width={16}
                   height={20}
-                  className="w-4 h-5 object-contain"
+                  unoptimized
+                  className="shrink-0 object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <span
                   className="bg-clip-text text-transparent"
