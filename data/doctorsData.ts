@@ -20,6 +20,8 @@ export interface DoctorProfile {
   method: string;
   focus: string;
   avatar: string;
+  avatarTablet?: string;
+  avatarMobile?: string;
   linkedin: string;
   education?: string[];
   licenses?: string[];
@@ -82,6 +84,8 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     method: "Video or Phone",
     focus: "Depression, PTSD",
     avatar: "/doctors/Leslie_kgamble_Dr.webp",
+    avatarTablet: "/doctors/Leslie_kgamble_dr_tablet.webp",
+    avatarMobile: "/doctors/Leslie_kgamble_dr_mobile.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
     trustStats: [
       {
@@ -186,6 +190,8 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     method: "Video or Phone",
     focus: "Anxiety, Stress",
     avatar: "/doctors/Robert_Staff_Dr.webp",
+    avatarTablet: "/doctors/robert_staff_dr_tablet.webp",
+    avatarMobile: "/doctors/robert_staff_dr_mobile.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
     trustStats: [
       {
@@ -305,6 +311,8 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     method: "Audio/Video",
     focus: "Depression, Anxiety, Chronic Health",
     avatar: "/doctors/Gaurav_patel_Dr.webp",
+    avatarTablet: "/doctors/Gaurav_patel_dr_tablet.webp",
+    avatarMobile: "/doctors/Gaurav_patel_dr_mobile.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
     trustStats: [
       {

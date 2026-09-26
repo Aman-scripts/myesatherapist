@@ -8,6 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
+import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const POPULAR_STATES = STATE_INDEX;
 
@@ -137,65 +138,13 @@ export function HeroSection() {
           </p>
 
           {/* Stacked Action Buttons */}
-          <div className="flex flex-col items-center gap-3 mt-5 w-full max-w-[250px]">
-            {/* State Dropdown */}
-            <div className="relative w-full z-30" ref={dropdownRefMobile}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center justify-between px-5 h-[48px] w-full rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors border border-[#EAE5DC]"
-              >
-                <span className="flex items-center gap-2">
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={16}
-                    height={21}
-                    unoptimized
-                    className="shrink-0 object-contain w-[14px] h-[18px]"
-                  />
-                  <span className="bg-clip-text text-transparent truncate max-w-[140px]" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Get Started CTA Button */}
-            <a
-              href="#how-it-works"
-              className="flex items-center justify-between pl-6 pr-1.5 h-[48px] w-full rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 shadow-sm"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span>Get Started</span>
-              <span className="w-[34px] h-[34px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={17} height={19} className="w-[17px] h-[19px]" />
-              </span>
-            </a>
-          </div>
+          <MobileHeroActionButtons
+            className="mt-5"
+            selectedState={selectedState}
+            onStateSelect={handleStateSelect}
+            getStartedHref="#how-it-works"
+            placeholder="Start your State"
+          />
         </div>
       </div>
 

@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { STATE_INDEX } from "@/data/stateIndex";
+import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const AVAILABLE_STATES = STATE_INDEX;
 
@@ -151,11 +152,21 @@ export function DoctorsHeroSection() {
 
           </div>
 
-          {/* Buttons Row / Column */}
-          {/* On mobile (< sm): stacked vertically, full width up to 280px */}
-          {/* On tablet (sm to xl): horizontal row, centered */}
-          {/* On desktop (xl): horizontal row, left-aligned */}
-          <div className="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-3 sm:gap-4 xl:gap-[25px] w-full max-w-[280px] sm:max-w-none">
+          {/* Mobile Buttons (Frame 7) */}
+          <div className="sm:hidden w-full flex justify-center">
+            <MobileHeroActionButtons
+              selectedState={selectedState}
+              onStateSelect={(slug) => {
+                const st = AVAILABLE_STATES.find((s) => s.slug === slug);
+                handleSelectState(slug, st ? st.name : slug);
+              }}
+              getStartedHref="#therapists"
+              placeholder="Start your State"
+            />
+          </div>
+
+          {/* Tablet & Desktop Buttons Row */}
+          <div className="hidden sm:flex flex-row items-center justify-center xl:justify-start gap-4 xl:gap-[25px] w-full sm:max-w-none">
             
             {/* "Start your State" Dropdown Button */}
             <div className="relative w-full sm:w-auto" ref={dropdownRef}>

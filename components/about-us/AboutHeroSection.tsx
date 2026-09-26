@@ -6,8 +6,10 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import Link from "next/link";
 import { ShieldCheck, Clock, Award, ChevronDown } from "lucide-react";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { useRouter } from "next/navigation";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { STATE_INDEX } from "@/data/stateIndex";
+import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -16,6 +18,7 @@ const statsData = [
 ];
 
 export function AboutHeroSection() {
+  const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -69,70 +72,13 @@ export function AboutHeroSection() {
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
 
-          {/* Action Buttons Stacked */}
-          <div className="flex flex-col items-center gap-2.5 w-full max-w-[260px] pt-1 relative">
-            {/* Start your State Dropdown */}
-            <div className="relative w-full">
-              <button
-                type="button"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="w-full h-11 bg-white rounded-[30px] shadow-sm flex items-center justify-between px-5 text-sm font-sans font-bold text-[#2E5A66] border border-[#EAE5DC]"
-              >
-                <span className="flex items-center gap-2">
-                  <Image
-            quality={90}
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={14}
-                    height={18}
-                    className="w-[14px] h-[18px] object-contain"
-                  />
-                  <span
-                    className="bg-clip-text text-transparent"
-                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                  >
-                    Start your State
-                  </span>
-                </span>
-                <ChevronDown className="w-4 h-4 text-[#2E5A66]" />
-              </button>
-
-              {dropdownOpen && (
-                <div className={STATE_DROPDOWN_PANEL}>
-                  {STATE_INDEX.map((st) => (
-                    <Link
-                      key={st.slug}
-                      href={`/esa-letter-${st.slug}/`}
-                      onClick={() => setDropdownOpen(false)}
-                      className={STATE_DROPDOWN_ITEM}
-                    >
-                      <span>{st.name}</span>
-                      <span className={STATE_DROPDOWN_ABBR}>{st.abbreviation}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Get Started Button */}
-            <Link
-              href="#pricing"
-              className="w-full h-11 rounded-[30px] text-white flex items-center justify-between pl-5 pr-1.5 shadow-sm hover:opacity-95 transition-all group"
-              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-            >
-              <span className="font-sans text-sm font-semibold">Get Started</span>
-              <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={16}
-                  height={16}
-                  className="w-3.5 h-3.5 object-contain"
-                />
-              </span>
-            </Link>
-          </div>
+          {/* Action Buttons (Mobile - Frame 7) */}
+          <MobileHeroActionButtons
+            className="pt-1"
+            onStateSelect={(slug) => router.push(`/esa-letter-${slug}/`)}
+            getStartedHref="#pricing"
+            placeholder="Start your State"
+          />
         </div>
       </div>
 

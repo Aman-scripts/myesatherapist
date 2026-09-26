@@ -8,6 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
+import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -100,49 +101,7 @@ export function ReviewsHeroSection() {
         />
 
         {/* Mobile Content Layer */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
-          {/* Stat Pills Row */}
-          <div className="flex items-center justify-center gap-1.5 w-full max-w-[345px] mx-auto mb-3">
-            {/* Pill 1 */}
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)]">
-              <span
-                className="font-heading font-bold text-[18px] leading-[22px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                50
-              </span>
-              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#707070] whitespace-nowrap">
-                USA States
-              </span>
-            </div>
-
-            {/* Pill 2 */}
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)]">
-              <span
-                className="font-heading font-bold text-[18px] leading-[22px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                HIPAA
-              </span>
-              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#707070] whitespace-nowrap">
-                Compliant
-              </span>
-            </div>
-
-            {/* Pill 3 */}
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)]">
-              <span
-                className="font-heading font-bold text-[18px] leading-[22px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                100%
-              </span>
-              <span className="font-sans font-semibold text-[10px] leading-[13px] text-[#707070] whitespace-nowrap">
-                Licensed Pros
-              </span>
-            </div>
-          </div>
-
+        <div className="absolute inset-x-0 top-0 px-4 pt-10 text-center flex flex-col items-center z-10">
           {/* Heading */}
           <h1 className="font-heading text-[30px] leading-[36px] font-bold text-[#2E5A66] tracking-[-0.0002em] mb-2 max-w-[340px]">
             What Our Clients Are Saying
@@ -153,67 +112,15 @@ export function ReviewsHeroSection() {
             Real experiences from people who found comfort and confidence through My ESA Therapist.
           </p>
 
-          {/* Actions Stack */}
-          <div className="flex flex-col items-center gap-2.5 w-full max-w-[280px]">
-            {/* State Selector */}
-            <div className="relative w-full" ref={dropdownRefMobile}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-[30px] bg-[#FAF7F2] font-semibold text-xs transition-colors shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
-              >
-                <Image
-            quality={90}
-                  src="/home/hero-section-map.svg"
-                  alt=""
-                  width={14}
-                  height={18}
-                  className="shrink-0 object-contain w-[14px] h-[18px]"
-                />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                </span>
-                <ChevronDown className={`w-3.5 h-3.5 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
+          {/* Actions Stack (Frame 7) */}
+          <MobileHeroActionButtons
+            selectedState={selectedState}
+            onStateSelect={handleStateSelect}
+            getStartedHref="#trustpilot-reviews"
+            placeholder="Select your State"
+          />
 
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
 
-            {/* Get Started Button */}
-            <a
-              href="#trustpilot-reviews"
-              className="w-full flex items-center justify-center gap-2 pl-4 pr-1 py-1 rounded-[30px] text-white font-semibold text-xs shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span>Get Started</span>
-              <span className="w-7 h-7 rounded-full bg-[#FAF7F2] shadow-[0_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={14} height={14} className="w-[14px] h-[14px]" />
-              </span>
-            </a>
-          </div>
-
-          {/* Trustpilot Glass Card (Mobile) */}
-          <div className="mt-4"><ReviewBadges /></div>
         </div>
       </div>
 

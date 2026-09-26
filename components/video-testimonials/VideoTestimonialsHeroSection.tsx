@@ -9,6 +9,7 @@ import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
+import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
@@ -128,71 +129,13 @@ export function VideoTestimonialsHeroSection() {
             Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
           </p>
 
-          {/* Stacked Actions (Mobile) */}
-          <div className="flex flex-col items-center gap-3 w-full max-w-[280px]">
-            {/* Start your State Selector */}
-            <div className="relative w-full" ref={dropdownRefMobile}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpenMobile(!isDropdownOpenMobile)}
-                className="w-full h-[50px] px-5 rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] flex items-center justify-between cursor-pointer hover:bg-white transition-colors"
-              >
-                <div className="flex items-center gap-2 min-w-0">
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={16}
-                    height={20}
-                    unoptimized
-                    className="shrink-0 object-contain w-4 h-5"
-                  />
-                  <span
-                    className="font-sans font-semibold text-[15px] bg-clip-text text-transparent truncate"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                </div>
-                <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpenMobile ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpenMobile && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Get Started Button */}
-            <a
-              href="/pricing/"
-              className="w-[190px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-6 pr-1.5 text-white hover:opacity-95 transition-opacity"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span className="font-sans font-semibold text-[15px] text-white">
-                Get Started
-              </span>
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={15} height={17} className="w-[15px] h-[17px]" />
-              </span>
-            </a>
-          </div>
+          {/* Stacked Actions (Mobile - Frame 7) */}
+          <MobileHeroActionButtons
+            selectedState={selectedState}
+            onStateSelect={handleStateSelect}
+            getStartedHref="/pricing/"
+            placeholder="Start your State"
+          />
         </div>
       </div>
 
