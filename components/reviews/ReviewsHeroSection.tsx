@@ -101,90 +101,72 @@ export function ReviewsHeroSection() {
       {/* ---------------------------------------------------- */}
       {/* 2. TABLET REVIEWS HERO SECTION (640px - 1023px)      */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[1032/850] min-h-[640px]">
+      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1194] min-h-[880px] md:min-h-[960px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+          quality={90}
           src="/reviews/reviews_tablet-hero_section.webp"
           alt="What Our Clients Are Saying"
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-[88%_bottom]"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
-        {/* Content Container Left/Center on Tablet */}
-        <div className="absolute left-6 md:left-10 top-8 md:top-12 max-w-[460px] z-10 flex flex-col items-start gap-4">
-          {/* Stat Pills */}
-          <div className="flex items-center gap-2.5 w-full max-w-[440px]">
-            {/* Pill 1 */}
-            <div className="flex-1 h-[48px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1 px-2 border border-[#EAE5DC]/60">
-              <span
-                className="font-heading font-bold text-[20px] leading-[24px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
+        {/* Content Container (Centered) */}
+        <div className="absolute inset-x-0 top-0 px-6 pt-8 sm:pt-10 md:pt-12 text-center flex flex-col items-center z-10">
+          {/* Stat Pills at top */}
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            {[
+              { value: "51,488+", label: "ESA Evaluations" },
+              { value: "5+", label: "Years Serving" },
+              { value: "4.9", label: "Verified Reviews" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[110px] sm:min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/60"
               >
-                50
-              </span>
-              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#707070]">
-                USA States
-              </span>
-            </div>
-
-            {/* Pill 2 */}
-            <div className="flex-1 h-[48px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1 px-2 border border-[#EAE5DC]/60">
-              <span
-                className="font-heading font-bold text-[20px] leading-[24px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                HIPAA
-              </span>
-              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#707070]">
-                Compliant
-              </span>
-            </div>
-
-            {/* Pill 3 */}
-            <div className="flex-1 h-[48px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1 px-2 border border-[#EAE5DC]/60">
-              <span
-                className="font-heading font-bold text-[20px] leading-[24px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                100%
-              </span>
-              <span className="font-sans font-semibold text-[11px] leading-[14px] text-[#707070]">
-                Licensed Pros
-              </span>
-            </div>
+                <span
+                  className="font-heading text-xl sm:text-2xl font-bold leading-none bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  {stat.value}
+                </span>
+                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
+              </div>
+            ))}
           </div>
 
           {/* Heading */}
-          <h1 className="font-heading text-[38px] md:text-[44px] leading-[44px] md:leading-[50px] font-bold text-[#2E5A66] tracking-[-0.0002em]">
-            What Our Clients Are Saying
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-[44px] font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+            What Our Clients Are
+            <br />
+            Saying
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans font-semibold text-[15px] leading-[24px] text-[#5F6B6F] max-w-[420px]">
+          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-sans tracking-normal">
             Real experiences from people who found comfort and confidence through My ESA Therapist.
           </p>
 
-          {/* Actions */}
-          <div className="flex items-center gap-3 flex-wrap">
-            {/* State Selector */}
-            <div className="relative z-50" ref={dropdownRefTablet}>
+          {/* Side-by-side Action Row */}
+          <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
+            {/* State Dropdown */}
+            <div className="relative z-30" ref={dropdownRefTablet}>
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-[30px] bg-[#FAF7F2] font-semibold text-sm hover:bg-white transition-colors h-[46px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
               >
                 <Image
-            quality={90}
+                  quality={90}
                   src="/home/hero-section-map.svg"
                   alt=""
-                  width={15}
-                  height={19}
-                  className="shrink-0 object-contain w-[15px] h-[19px]"
+                  width={16}
+                  height={21}
+                  className="shrink-0 object-contain w-4 h-5"
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -214,19 +196,22 @@ export function ReviewsHeroSection() {
             {/* Get Started Button */}
             <a
               href="#trustpilot-reviews"
-              className="flex items-center gap-2.5 pl-5 pr-1.5 py-1.5 rounded-[30px] text-white font-semibold text-sm h-[46px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-8 h-8 rounded-full bg-[#FAF7F2] shadow-[0_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-4 h-4" />
+                  quality={90}
+                  src="/common/send-icon.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="w-4 h-4"
+                />
               </span>
             </a>
           </div>
-
-          {/* Trustpilot Glass Card (Tablet) */}
-          <div className="mt-1"><ReviewBadges /></div>
         </div>
       </div>
 
