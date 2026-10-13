@@ -100,13 +100,13 @@ function ResourcesMenu() {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
-        className={`flex items-center gap-1.5 whitespace-nowrap rounded-[12px] px-3 py-2 -mx-3 -my-2 text-[13px] xl:text-[15px] font-medium text-[#1E3E47] transition-colors cursor-pointer ${
-          open ? "bg-[#F6EBCB] text-[#1A3D4F]" : "hover:text-[#1D6E72]"
+        className={`flex items-center gap-1.5 whitespace-nowrap font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors cursor-pointer ${
+          open ? "text-[#1D6E72]" : ""
         }`}
       >
         Resources
         <ChevronDown
-          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#1E3E47] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#303030] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
@@ -147,12 +147,12 @@ export function Header() {
     pathname?.includes("contributors");
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-[#EAE5DC] shadow-xs">
-      {/* Main Navigation Bar */}
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
-        <div className="flex items-center justify-between h-20 lg:h-[84px]">
+    <header className="sticky top-0 z-50 bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
+      {/* Main Navigation Bar (Frame 1000011803: 1440px x 98px, padding 13px 80px) */}
+      <div className="w-full bg-white">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-0 h-20 lg:h-[84px] xl:h-[98px] flex items-center justify-between">
 
-          {/* Logo */}
+          {/* Logo (ESA LOGO FINAL-01 1: 171px x 71px) */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/common/myesa-logo.svg"
@@ -161,16 +161,15 @@ export function Header() {
               height={71}
               priority
               unoptimized
-              className="h-9 lg:h-10 xl:h-12 w-auto shrink-0"
-              style={{ width: "auto", height: "auto" }}
+              className="h-10 sm:h-12 lg:h-[48px] xl:h-[71px] w-auto shrink-0 object-contain"
             />
           </Link>
 
-          {/* Desktop Nav (Exact menu items matching Screenshot 1 & Screenshot 2) */}
-          <nav className="hidden lg:flex items-center gap-3 lg:gap-4 xl:gap-9 font-sans shrink-0">
+          {/* Desktop Nav Links (centered between Logo & Buttons, NO pill border) */}
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-[32px]">
             <Link
               href="/esa-doctors/"
-              className={`text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
+              className={`font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
                 isDoctors ? "text-[#1D6E72] font-bold" : ""
               }`}
             >
@@ -178,82 +177,90 @@ export function Header() {
             </Link>
             <Link
               href="/about-us/"
-              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+              className="font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               About Us
             </Link>
             <ResourcesMenu />
             <Link
               href="/contact-us/"
-              className="text-[#1E3E47] font-medium text-[13px] xl:text-[15px] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+              className="font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Contact Us
             </Link>
           </nav>
 
-          {/* Desktop Right Action Buttons */}
-          <div className="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-3 shrink-0">
+          {/* Desktop Right Action Buttons (Frame 1000011948: 442px x 48px, gap 8px) */}
+          <div className="hidden lg:flex items-center gap-2 xl:gap-[8px] justify-end shrink-0">
             {isPsd ? (
-              /* Screenshot 2 (PSD Letter Page): Single "Start Your Consultation" Button */
+              /* PSD Letter Page: Single "Start Your Consultation" Button */
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 lg:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
+                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] rounded-[30px] text-white font-manrope font-semibold text-[13.5px] xl:text-[15px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Start Your Consultation</span>
-                <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                   <Image
-            quality={90}
+                    quality={90}
                     src="/common/send-icon.svg"
                     alt=""
-                    width={19}
-                    height={21}
-                    className="w-[16px] h-[18px] xl:w-[19px] xl:h-[21px]"
+                    width={18}
+                    height={20}
+                    className="w-[16px] h-[18px] xl:w-[18px] xl:h-[20px]"
                   />
                 </span>
               </a>
             ) : isDoctors || isLegalReviewer ? (
-              /* Doctors / Legal Reviewer Page (Frame 1000011890): Single "Get Started" Button */
+              /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
               <a
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
-                className="inline-flex items-center gap-2 lg:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
+                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white font-manrope font-semibold text-[14px] xl:text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Get Started</span>
-                <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                   <Image
-            quality={90}
+                    quality={90}
                     src="/common/send-icon.svg"
                     alt=""
-                    width={19}
-                    height={21}
-                    className="w-[16px] h-[18px] xl:w-[19px] xl:h-[21px]"
+                    width={18}
+                    height={20}
+                    className="w-[16px] h-[18px] xl:w-[18px] xl:h-[20px]"
                   />
                 </span>
               </a>
             ) : (
-              /* Screenshot 1 (Homepage): 2 Buttons ("Free ESA Eligibility Checker" + "Get Started") */
+              /* Homepage (Frame 1000011888 & Frame 1000011890) */
               <>
+                {/* Button 1: Free ESA Eligibility Checker (255px x 48px, rounded 30px, shadow) */}
                 <a
                   href="#eligibility"
-                  className="px-3 lg:px-3.5 xl:px-5 py-2 lg:py-2.5 rounded-full bg-[#FAF7F2] hover:bg-[#F5EFE6] text-[#1E3E47] font-bold text-[12px] lg:text-[13px] xl:text-[14.5px] border border-[#EAE5DC] transition-colors whitespace-nowrap"
+                  className="px-3 xl:px-4 w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] flex items-center justify-center rounded-[30px] bg-[#FAF7F2] hover:bg-[#F5EFE6] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all whitespace-nowrap"
                 >
-                  Free ESA Eligibility Checker
+                  <span
+                    className="font-manrope font-semibold text-[13px] xl:text-[16px] leading-[26px] bg-clip-text text-transparent"
+                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  >
+                    Free ESA Eligibilty Checker
+                  </span>
                 </a>
+
+                {/* Button 2: Get Started (179px x 48px, rounded 30px, padding 0 0 0 34px, circle 42.48px) */}
                 <a
                   href="#pricing"
-                  className="inline-flex items-center gap-2 lg:gap-2.5 xl:gap-3 pl-3.5 lg:pl-4 xl:pl-5 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-full text-white font-bold text-[13px] xl:text-[15px] shadow-sm hover:shadow transition-all duration-200 whitespace-nowrap"
+                  className="inline-flex items-center justify-between pl-4 xl:pl-[34px] pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white font-manrope font-semibold text-[13.5px] xl:text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all whitespace-nowrap"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
                   <span>Get Started</span>
-                  <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-xs">
+                  <span className="w-8 h-8 xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
+                      quality={90}
                       src="/common/send-icon.svg"
                       alt=""
-                      width={19}
-                      height={21}
-                      className="w-[16px] h-[18px] xl:w-[19px] xl:h-[21px]"
+                      width={18}
+                      height={20}
+                      className="w-[16px] h-[18px] xl:w-[18px] xl:h-[20px]"
                     />
                   </span>
                 </a>
@@ -274,10 +281,11 @@ export function Header() {
         </div>
       </div>
 
-      {/* States Bar */}
-      <div className="hidden lg:block bg-[#FAF7F2] relative">
-        <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between py-2.5 text-[13px] xl:text-[14px] font-medium text-[#5F6B6F]">
-          <div className="flex items-center gap-6 xl:gap-8 overflow-x-auto no-scrollbar">
+      {/* States Bar (Frame 1000011905: 1440px x 37px, bg #FAF7F2) */}
+      <div className="hidden lg:block bg-[#FAF7F2] w-full h-[37px]">
+        <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-0 h-full flex items-center justify-between">
+          {/* Left: Frame 1000011907 (States with gap 26px) */}
+          <div className="flex items-center gap-4 lg:gap-[26px] h-[26px] overflow-x-auto no-scrollbar">
             {[
               { name: "California", slug: "california" },
               { name: "Texas", slug: "texas" },
@@ -297,10 +305,9 @@ export function Header() {
                 <Link
                   key={st.slug}
                   href={href}
-                  className={`hover:text-[#1E3E47] transition-colors whitespace-nowrap ${isActive
-                      ? "text-[#1E3E47] font-bold underline underline-offset-4 decoration-[#E8B92C]"
-                      : ""
-                    }`}
+                  className={`font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-[#5F6B6F] hover:text-[#2E5A66] transition-colors whitespace-nowrap ${
+                    isActive ? "text-[#2E5A66] font-bold" : ""
+                  }`}
                 >
                   {st.name}
                 </Link>
@@ -308,13 +315,13 @@ export function Header() {
             })}
           </div>
 
-          {/* See All 50 States Direct Link to /states */}
+          {/* Right: Frame 1000011909 (See all 50 States + Arrow) */}
           <Link
             href="/states/"
-            className="text-[#5F6B6F] hover:text-[#1E3E47] font-semibold transition-colors flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
+            className="font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-[#2E5A66] hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
             <span>See all 50 States</span>
-            <ArrowRight className="w-4 h-4 text-[#1E3E47]" />
+            <ArrowRight className="w-4 h-4 text-[#2E5A66]" strokeWidth={1.5} />
           </Link>
         </div>
       </div>

@@ -246,7 +246,7 @@ export function PsdHeroSection() {
       {/* 3. DESKTOP PSD HERO SECTION (lg: / 1024px and up)     */}
       {/* Matches Screenshot 1                                 */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1440/814] min-h-[580px] xl:min-h-0">
+      <div className="hidden lg:block relative w-full aspect-[1440/814] min-h-[600px] xl:min-h-0 overflow-hidden">
         <BreakpointImage
           media="(min-width: 1024px)"
             quality={90}
@@ -258,7 +258,7 @@ export function PsdHeroSection() {
         />
 
         <div className="absolute inset-0">
-          <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[42%] xl:w-[47.05%]">
+          <div className="absolute left-[4%] xl:left-[5.69%] top-[5%] xl:top-[12.37%] w-[48%] xl:w-[47.05%] max-w-[678px]">
             <div className="flex items-center gap-[0.83%] flex-wrap">
               {statsData.map((stat) => (
                 <div
@@ -276,17 +276,17 @@ export function PsdHeroSection() {
               ))}
             </div>
 
-            <h1 className="font-heading text-[32px] lg:text-[40px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-4 xl:mt-6 text-[#2E5A66]">
+            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-3.5 xl:mt-6 text-[#2E5A66]">
               Psychiatric Service
               <br />
               Dog Letter Assistance
             </h1>
 
-            <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-3 xl:mt-4 font-sans">
+            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[18px] leading-[1.5] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-2.5 xl:mt-4 font-sans">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
             </p>
 
-            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-4 xl:mt-6">
+            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-3.5 xl:mt-6">
               {/* State Dropdown */}
               <div className="relative z-30" ref={dropdownRefDesktop}>
                 <button
@@ -344,7 +344,7 @@ export function PsdHeroSection() {
               </a>
             </div>
 
-            <div className="mt-4 xl:mt-[30px]"><ReviewBadges /></div>
+            <div className="mt-3.5 xl:mt-[30px]"><ReviewBadges /></div>
           </div>
         </div>
       </div>

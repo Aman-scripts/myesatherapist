@@ -17,15 +17,15 @@ function LinkedinIcon({ className }: { className?: string }) {
 function Badge({ label, value }: { label: string; value: string }) {
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-[#E8B92C] pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
-      <div className="bg-white rounded-[8px] pt-4 pb-2 px-1.5 text-center flex flex-col justify-center relative min-h-[58px] h-full">
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
+      <div className="bg-white rounded-[8px] pt-[22px] sm:pt-[24px] pb-2 px-1.5 text-center flex flex-col justify-start items-center relative min-h-[62px] sm:min-h-[66px] h-full">
+        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
           <Image
             quality={90} src="/common/therapist-section-badge.svg" alt="" width={16} height={16} className="w-4 h-4 object-contain" />
         </div>
-        <div className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight text-transparent bg-clip-text" style={{ backgroundImage: TEAL_GRADIENT }}>
+        <div className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight text-transparent bg-clip-text w-full truncate" style={{ backgroundImage: TEAL_GRADIENT }}>
           {label}
         </div>
-        <div className="text-[11px] sm:text-[12px] font-sans font-semibold text-[#5F6B6F] leading-tight mt-0.5">{value}</div>
+        <div className="text-[10px] sm:text-[11px] font-sans font-semibold text-[#5F6B6F] leading-tight mt-1 w-full truncate">{value}</div>
       </div>
     </div>
   );

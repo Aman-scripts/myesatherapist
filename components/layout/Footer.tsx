@@ -77,12 +77,12 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
             </div>
 
             {/* Heading with Gold Highlight */}
-            <h3 className="font-heading text-3xl sm:text-[38px] font-bold text-white leading-tight">
+            <h3 className="font-heading text-[32px] sm:text-[36px] font-bold text-white leading-[40px] sm:leading-[44px] tracking-[-0.0003em]">
               My ESA <span className="text-[#E8B92C]">Therapist</span>
             </h3>
 
             {/* Subtitle */}
-            <p className="text-[#FAF7F2] text-sm sm:text-[16px] font-semibold leading-[26px] sm:leading-[28px] font-sans max-w-[640px] opacity-90">
+            <p className="text-[#FAF7F2] text-[16px] sm:text-[18px] font-semibold leading-[26px] sm:leading-[30px] font-sans max-w-[734px]">
               A 100% legal platform providing emotional support animal evaluations to those who suffer from any mental or emotional disability — trusted, professional &amp; confidential.
             </p>
 
@@ -90,16 +90,23 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <a
                 href="#how-it-works"
-                className="inline-flex items-center justify-center px-8 h-[46px] rounded-full bg-[#E8B92C] text-[#04161C] font-[family-name:var(--font-lato)] font-bold text-[16px] shadow-md hover:brightness-105 transition-all"
+                className="inline-flex items-center justify-center w-[227px] h-[50px] px-8 rounded-[46px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
               >
-                Apply your ESA Letter
+                <span
+                  className="font-sans font-semibold text-[16px] leading-[26px] bg-clip-text text-transparent whitespace-nowrap"
+                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                >
+                  Apply your ESA Letter
+                </span>
               </a>
 
               <Link
                 href="/contact-us/"
-                className="inline-flex items-center justify-center px-8 h-[46px] rounded-full border-[1.5px] border-[#FAF7F2] text-[#FAF7F2] font-[family-name:var(--font-lato)] font-bold text-[16px] hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center w-[151px] h-[50px] px-8 rounded-[67px] border border-[#FAF7F2] [filter:drop-shadow(0px_1px_4px_#E8B92C)] hover:bg-white/10 transition-colors"
               >
-                Contact Us
+                <span className="font-sans font-semibold text-[16px] leading-[26px] text-[#FAF7F2] whitespace-nowrap">
+                  Contact Us
+                </span>
               </Link>
             </div>
           </div>
@@ -111,10 +118,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 xl:gap-8">
             {/* Column 1: ABOUT US */}
             <div className="space-y-4">
-              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 ABOUT US
-              </h4>
-              <p className="text-[#FAF7F2]/80 text-xs font-semibold leading-relaxed font-sans pr-2">
+              </div>
+              <p className="text-[#FAF7F2] text-[14px] font-semibold leading-[26px] font-sans pr-2">
                 We connect you with licensed therapists across all 50 US states to obtain legitimate ESA letters quickly, securely, and affordably.
               </p>
               <div className="pt-2">
@@ -124,15 +131,15 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 2: COMPANY */}
             <div className="space-y-4">
-              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 COMPANY
-              </h4>
+              </div>
               <ul className="space-y-3 font-sans">
                 {companyLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="group flex items-center gap-2 text-xs font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
+                      className="group flex items-center gap-2 text-[14px] leading-[26px] font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
                     >
                       <span className="text-[#FAF7F2]/60 group-hover:text-[#E8B92C] text-xs transition-colors">
                         ›
@@ -146,15 +153,15 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 3: QUICK LINKS */}
             <div className="space-y-4">
-              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 QUICK LINKS
-              </h4>
+              </div>
               <ul className="space-y-3 font-sans">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="group flex items-center gap-2 text-xs font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
+                      className="group flex items-center gap-2 text-[14px] leading-[26px] font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
                     >
                       <span className="text-[#FAF7F2]/60 group-hover:text-[#E8B92C] text-xs transition-colors">
                         ›
@@ -168,15 +175,15 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 4: LEGAL */}
             <div className="space-y-4">
-              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 LEGAL
-              </h4>
+              </div>
               <ul className="space-y-3 font-sans">
                 {legalLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="group flex items-center gap-2 text-xs font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
+                      className="group flex items-center gap-2 text-[14px] leading-[26px] font-semibold text-[#FAF7F2] hover:text-[#E8B92C] transition-colors"
                     >
                       <span className="text-[#FAF7F2]/60 group-hover:text-[#E8B92C] text-xs transition-colors">
                         ›
@@ -190,15 +197,15 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 5: GET IN TOUCH */}
             <div className="space-y-4">
-              <h4 className="text-[#E8B92C] font-sans font-semibold text-sm tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 GET IN TOUCH
-              </h4>
+              </div>
               <div className="space-y-4 font-sans">
                 {/* Phone */}
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
+                      quality={90}
                       src="/common/footer-phone-icon.svg"
                       alt=""
                       width={14}
@@ -208,10 +215,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                     />
                   </div>
                   <div className="text-left leading-tight">
-                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                    <div className="text-[14px] leading-[26px] font-semibold text-[#FAF7F2]">
                       +1 (888) 412-4041
                     </div>
-                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                    <div className="text-[12px] leading-[26px] font-semibold text-[#FAF7F2]/75">
                       24/7 Online Support
                     </div>
                   </div>
@@ -221,7 +228,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
+                      quality={90}
                       src="/common/footer-email-icon.svg"
                       alt=""
                       width={14}
@@ -231,10 +238,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                     />
                   </div>
                   <div className="text-left leading-tight">
-                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                    <div className="text-[14px] leading-[26px] font-semibold text-[#FAF7F2]">
                       info@myesatherapist.com
                     </div>
-                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                    <div className="text-[12px] leading-[26px] font-semibold text-[#FAF7F2]/75">
                       Email us anytime
                     </div>
                   </div>
@@ -244,7 +251,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
+                      quality={90}
                       src="/common/footer-clock-icon.svg"
                       alt=""
                       width={14}
@@ -254,10 +261,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                     />
                   </div>
                   <div className="text-left leading-tight">
-                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                    <div className="text-[14px] leading-[26px] font-semibold text-[#FAF7F2]">
                       Mon - Sat: 9AM - 6PM
                     </div>
-                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                    <div className="text-[12px] leading-[26px] font-semibold text-[#FAF7F2]/75">
                       Sunday: Closed
                     </div>
                   </div>
@@ -267,7 +274,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
+                      quality={90}
                       src="/common/footer-location-icon.svg"
                       alt=""
                       width={14}
@@ -277,10 +284,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                     />
                   </div>
                   <div className="text-left leading-tight">
-                    <div className="text-xs font-semibold text-[#FAF7F2]">
+                    <div className="text-[14px] leading-[26px] font-semibold text-[#FAF7F2]">
                       Serving All 50 US States
                     </div>
-                    <div className="text-[10px] font-bold text-[#FAF7F2]/60 mt-0.5">
+                    <div className="text-[12px] leading-[26px] font-semibold text-[#FAF7F2]/75">
                       Nationwide Service
                     </div>
                   </div>
@@ -293,7 +300,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
           <div className="w-full border-t border-white/10 mt-14 mb-6" />
 
           {/* Bottom Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#FAF7F2]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px] leading-[26px] font-sans text-[#FAF7F2]">
             <p className="font-semibold">
               &copy; 2026 <span className="text-[#E8B92C]">myesatherapist.com</span> — All Rights Reserved
             </p>
