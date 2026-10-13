@@ -3,6 +3,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CtaButton } from "@/components/common/CtaButton";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -103,23 +105,30 @@ const defaultTherapists: Therapist[] = [
 
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
-    <div className="relative flex-1 min-w-0 rounded-[14px] bg-[#E8B92C] pt-[3px] px-0 pb-0 shadow-xs flex flex-col">
-      <div className="bg-white rounded-[12px] pt-4 sm:pt-4.5 pb-2.5 sm:pb-3 px-1.5 sm:px-2.5 text-center flex-1 flex flex-col justify-center relative">
+    <div className="relative flex-1 min-w-0 rounded-[7.6px] bg-[#E8B92C] pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
+      <div className="bg-white rounded-[7.6px] pt-[22px] sm:pt-[24px] pb-2 sm:pb-2.5 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
         {/* Floating badge icon at top center */}
-        <div className="absolute -top-3.5 sm:-top-4 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white border-[1.5px] border-[#E8B92C]/50 shadow-xs flex items-center justify-center">
+        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-[#FAF7F2]">
           <Image
             src="/common/therapist-section-badge.svg"
             alt=""
-            width={18}
-            height={18}
+            width={16}
+            height={16}
             unoptimized
             className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4"
           />
         </div>
-        <div className="text-[11px] sm:text-[13px] font-heading font-bold text-[#1A4D59] leading-tight truncate 2xl:whitespace-normal 2xl:overflow-visible 2xl:text-clip">
+        <div
+          className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight truncate w-full"
+          style={{
+            background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
           {label}
         </div>
-        <div className="text-[9.5px] sm:text-[11.5px] font-semibold text-[#5F6B6F] mt-0.5 sm:mt-1 leading-tight truncate 2xl:whitespace-normal 2xl:overflow-visible 2xl:text-clip">
+        <div className="text-[11px] sm:text-[12px] font-semibold text-[#5F6B6F] mt-1 leading-tight truncate w-full font-sans">
           {value}
         </div>
       </div>
@@ -142,28 +151,55 @@ export function TherapistsSection({
 }: TherapistsSectionProps) {
   const therapists = therapistsList && therapistsList.length > 0 ? therapistsList : defaultTherapists;
   const [activeIndex, setActiveIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(2);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      setCardsPerView(window.innerWidth < 640 ? 1 : 2);
+    };
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
+
+  const maxIndex = Math.max(0, therapists.length - cardsPerView);
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
     const el = scrollRef.current;
+    const card = el.querySelector("div[data-card]") as HTMLElement;
+    if (!card) return;
+    const cardWidth = card.clientWidth;
+    const style = window.getComputedStyle(el);
+    const gap = parseFloat(style.columnGap || style.gap) || 24;
     const scrollLeft = el.scrollLeft;
-    const cardWidth = el.querySelector("div[data-card]")?.clientWidth || 340;
-    const gap = 24;
     const newIdx = Math.round(scrollLeft / (cardWidth + gap));
-    setActiveIndex(Math.min(Math.max(0, newIdx), therapists.length - 1));
+    setActiveIndex(Math.min(Math.max(0, newIdx), maxIndex));
   };
 
   const scrollToSlide = (idx: number) => {
     if (!scrollRef.current) return;
     const el = scrollRef.current;
-    const cardWidth = el.querySelector("div[data-card]")?.clientWidth || 340;
-    const gap = 24;
+    const card = el.querySelector("div[data-card]") as HTMLElement;
+    if (!card) return;
+    const cardWidth = card.clientWidth;
+    const style = window.getComputedStyle(el);
+    const gap = parseFloat(style.columnGap || style.gap) || 24;
+    const clampedIdx = Math.min(Math.max(0, idx), maxIndex);
     el.scrollTo({
-      left: idx * (cardWidth + gap),
+      left: clampedIdx * (cardWidth + gap),
       behavior: "smooth",
     });
-    setActiveIndex(idx);
+    setActiveIndex(clampedIdx);
+  };
+
+  const handlePrev = () => {
+    scrollToSlide(activeIndex - 1);
+  };
+
+  const handleNext = () => {
+    scrollToSlide(activeIndex + 1);
   };
 
   useEffect(() => {
@@ -171,17 +207,17 @@ export function TherapistsSection({
     if (!el) return;
     el.addEventListener("scroll", handleScroll, { passive: true });
     return () => el.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [maxIndex]);
 
   return (
-    <section className="py-16 lg:py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl 2xl:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-20 xl:py-24 bg-white overflow-hidden">
+      <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[950px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:whitespace-nowrap">
+        <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[852px] mx-auto">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] xl:leading-[54px] font-bold text-[#2E5A66] leading-tight tracking-[-0.00015em]">
             {title}
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold max-w-[760px] mx-auto leading-relaxed">
+          <p className="text-[#5F6B6F] text-base sm:text-[17px] xl:text-[18px] xl:leading-[30px] font-semibold max-w-[813px] mx-auto leading-relaxed">
             {subtitle}
           </p>
         </div>
@@ -204,115 +240,185 @@ export function TherapistsSection({
           </div>
         )}
 
-        {/* Therapist Sliding Carousel Track */}
-        <div
-          ref={scrollRef}
-          className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-4 sm:px-6 lg:px-2 2xl:overflow-visible 2xl:snap-none 2xl:justify-center 2xl:px-0"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {therapists.map((t, idx) => {
-            const isActive = idx === activeIndex;
-            return (
-              <div
-                key={t.id ?? `${t.name}-${idx}`}
-                data-card
-                onClick={() => scrollToSlide(idx)}
-                className={`snap-start shrink-0 w-[86vw] sm:w-[460px] lg:w-[500px] xl:w-[520px] 2xl:w-auto 2xl:flex-1 2xl:min-w-0 2xl:max-w-[520px] rounded-[28px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white ${
-                  isActive
-                    ? "shadow-[0_12px_36px_rgba(232,185,44,0.2)]"
-                    : "shadow-[0_4px_20px_rgba(0,0,0,0.06)] opacity-95 hover:opacity-100"
-                }`}
-              >
-                {/* Teal Header Bar */}
-                <div className="bg-gradient-to-r from-[#184652] via-[#1A4D59] to-[#1D5E6A] px-4 sm:px-6 py-4 flex items-center justify-between gap-3 sm:gap-4">
-                  <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
-                    <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
-                      <Image
-            quality={90}
-                        src={getTherapistAvatar(t)}
-                        alt={t.name}
-                        fill
-                        sizes="67px"
-                        className="object-cover object-center"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-white font-heading font-bold text-base sm:text-[20px] leading-tight truncate">
-                        {t.name}
-                      </div>
-                      <div className="text-[#E8B92C] text-xs sm:text-[14px] font-semibold truncate mt-1">
-                        {t.title}
-                      </div>
-                    </div>
-                  </div>
+        {/* Therapist Carousel with Navigation Arrows */}
+        <div className="relative flex items-center justify-center gap-3 sm:gap-4 lg:gap-5 w-full">
+          {/* Desktop/Tablet Prev Arrow Button */}
+          <button
+            type="button"
+            onClick={handlePrev}
+            disabled={activeIndex === 0}
+            aria-label="Previous therapist"
+            className={`hidden sm:flex w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-[#FAF7F2] items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all ${
+              activeIndex === 0
+                ? "opacity-35 cursor-not-allowed"
+                : "hover:bg-[#E8B92C] hover:text-[#2E5A66] hover:shadow-[0_4px_12px_rgba(232,185,44,0.3)] hover:scale-105 cursor-pointer"
+            }`}
+          >
+            <ChevronLeft className="w-5 h-5 text-[#2E5A66]" />
+          </button>
 
-                  {/* LinkedIn Badge */}
-                  <a
-                    href={getTherapistLinkedin(t)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    aria-label={`${t.name} LinkedIn Profile`}
-                    className="w-8 h-8 sm:w-[32px] sm:h-[32px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
+          {/* Viewport Wrapper: sized so exactly 2 cards fit side-by-side */}
+          <div className="w-full max-w-[1070px] overflow-hidden">
+            <div
+              ref={scrollRef}
+              className="flex items-stretch gap-5 sm:gap-6 lg:gap-8 xl:gap-[32px] overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-1"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {therapists.map((t, idx) => {
+                return (
+                  <div
+                    key={t.id ?? `${t.name}-${idx}`}
+                    data-card
+                    onClick={() => scrollToSlide(idx)}
+                    className="snap-start shrink-0 w-[86vw] sm:w-[calc(50%-12px)] lg:w-[calc(50%-16px)] xl:w-[519px] xl:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                   >
-                    <LinkedinIcon className="w-4 h-4 text-[#184652]" />
-                  </a>
-                </div>
-
-                {/* Card Body */}
-                <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
-                  {/* Bio text */}
-                  <p className="text-[#5F6B6F] text-xs sm:text-[14px] lg:text-[15px] font-semibold leading-relaxed">
-                    {t.bio}
-                  </p>
-
-                  {/* 3 Stat Badges */}
-                  <div className="flex items-stretch gap-2 sm:gap-3.5 pt-1">
-                    <StatBadge label="Licensed In" value={t.licensedIn} />
-                    <StatBadge label="Evaluation Method" value={t.method || "Video or Phone"} />
-                    <StatBadge label="Focus Areas" value={t.focus} />
-                  </div>
-
-                  {/* View Profile CTA Button INSIDE the Card */}
-                  <div className="pt-2 flex justify-center">
-                    <Link
-                      href={getTherapistProfileHref(t)}
-                      onClick={(e) => e.stopPropagation()}
-                      className="w-[172px] sm:w-[185px] h-[44px] sm:h-[46px] rounded-full bg-[#E8B92C] hover:bg-[#dba81f] text-[#184652] font-bold text-[15px] sm:text-[16px] transition-all flex items-center justify-between pl-6 pr-1.5 shadow-sm"
+                    {/* Teal Header Bar */}
+                    <div
+                      className="px-4 sm:px-6 py-3.5 sm:py-4 xl:h-[92px] flex items-center justify-between gap-3 sm:gap-4"
+                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                     >
-                      <span>View Profile</span>
-                      <span className="w-[32px] h-[32px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-                        <Image
-            quality={90}
-                          src="/common/send-icon.svg"
-                          alt=""
-                          width={16}
-                          height={16}
-                          className="w-4 h-4 object-contain"
-                        />
-                      </span>
-                    </Link>
+                      <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
+                        <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+                          <Image
+                            quality={90}
+                            src={getTherapistAvatar(t)}
+                            alt={t.name}
+                            fill
+                            sizes="67px"
+                            className="object-cover object-center"
+                          />
+                        </div>
+                        <div className="min-w-0">
+                          <h5 className="text-[#FAF7F2] font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] truncate">
+                            {t.name}
+                          </h5>
+                          <div className="text-[#E8B92C] text-[14px] sm:text-[16px] leading-[26px] font-semibold truncate mt-0.5 font-sans">
+                            {t.title}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* LinkedIn Badge */}
+                      <a
+                        href={getTherapistLinkedin(t)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label={`${t.name} LinkedIn Profile`}
+                        className="w-8 h-8 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
+                      >
+                        <LinkedinIcon className="w-4 h-4 text-[#2E5A66]" />
+                      </a>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
+                      {/* Bio text */}
+                      <p className="text-[#5F6B6F] text-[14px] sm:text-[16px] leading-[26px] font-semibold font-sans">
+                        {t.bio}
+                      </p>
+
+                      {/* 3 Stat Badges */}
+                      <div className="flex items-stretch gap-2 sm:gap-3.5 pt-3 sm:pt-3.5">
+                        <StatBadge label="Licensed In" value={t.licensedIn} />
+                        <StatBadge label="Evaluation Method" value={t.method || "Video or Phone"} />
+                        <StatBadge label="Focus Areas" value={t.focus} />
+                      </div>
+
+                      {/* View Profile CTA Button INSIDE the Card */}
+                      <div className="pt-2 flex justify-center">
+                        <CtaButton
+                          href={getTherapistProfileHref(t)}
+                          variant="accent"
+                          className="w-[182px]"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          View Profile
+                        </CtaButton>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Desktop/Tablet Next Arrow Button */}
+          <button
+            type="button"
+            onClick={handleNext}
+            disabled={activeIndex >= maxIndex}
+            aria-label="Next therapist"
+            className={`hidden sm:flex w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-[#FAF7F2] items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all ${
+              activeIndex >= maxIndex
+                ? "opacity-35 cursor-not-allowed"
+                : "hover:bg-[#E8B92C] hover:text-[#2E5A66] hover:shadow-[0_4px_12px_rgba(232,185,44,0.3)] hover:scale-105 cursor-pointer"
+            }`}
+          >
+            <ChevronRight className="w-5 h-5 text-[#2E5A66]" />
+          </button>
         </div>
 
-        {/* Carousel Pagination Dots */}
-        <div className="flex 2xl:hidden items-center justify-center gap-2 pt-6 sm:pt-8">
-          {therapists.map((_, idx) => (
+        {/* Mobile Controls Bar (Prev + Dots + Next) */}
+        <div className="flex sm:hidden items-center justify-center gap-4 pt-4">
+          <button
+            type="button"
+            onClick={handlePrev}
+            disabled={activeIndex === 0}
+            aria-label="Previous therapist"
+            className={`w-9 h-9 rounded-full bg-[#FAF7F2] flex items-center justify-center shadow-xs transition-opacity ${
+              activeIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-[#E8B92C] cursor-pointer"
+            }`}
+          >
+            <ChevronLeft className="w-4 h-4 text-[#2E5A66]" />
+          </button>
+
+          <div className="flex items-center gap-2">
+            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => scrollToSlide(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className="w-5 h-5 flex items-center justify-center cursor-pointer"
+              >
+                <span
+                  className={`block transition-all duration-300 rounded-full ${
+                    idx === activeIndex
+                      ? "w-5 h-2 bg-[#184652]"
+                      : "w-2 h-2 bg-[#CBD5E1]"
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={handleNext}
+            disabled={activeIndex >= maxIndex}
+            aria-label="Next therapist"
+            className={`w-9 h-9 rounded-full bg-[#FAF7F2] flex items-center justify-center shadow-xs transition-opacity ${
+              activeIndex >= maxIndex ? "opacity-30 cursor-not-allowed" : "hover:bg-[#E8B92C] cursor-pointer"
+            }`}
+          >
+            <ChevronRight className="w-4 h-4 text-[#2E5A66]" />
+          </button>
+        </div>
+
+        {/* Desktop Carousel Pagination Dots */}
+        <div className="hidden sm:flex items-center justify-center gap-2.5 pt-6 sm:pt-8">
+          {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
             <button
               key={idx}
               onClick={() => scrollToSlide(idx)}
-              aria-label={`Go to therapist ${idx + 1}`}
+              aria-label={`Go to slide ${idx + 1}`}
               className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
             >
               <span
                 className={`block transition-all duration-300 rounded-full ${
                   idx === activeIndex
-                    ? "w-5 h-2.5 bg-[#184652]"
-                    : "w-2.5 h-2.5 bg-[#CBD5E1] hover:bg-slate-400"
+                    ? "w-6 h-2.5 bg-[#184652]"
+                    : "w-2.5 h-2.5 bg-[#CBD5E1] hover:bg-[#94A3B8]"
                 }`}
               />
             </button>
@@ -321,23 +427,9 @@ export function TherapistsSection({
 
         {/* Bottom Book Appointment Button */}
         <div className="flex justify-center pt-8 sm:pt-10">
-          <a
-            href="#how-it-works"
-            className="inline-flex items-center justify-between w-[225px] sm:w-[235px] h-[48px] rounded-full text-white font-bold text-[15px] sm:text-[16px] transition-opacity hover:opacity-95 pl-6 pr-1.5 shadow-md"
-            style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-          >
-            <span>Book Appointment</span>
-            <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 shadow-sm">
-              <Image
-            quality={90}
-                src="/common/send-icon.svg"
-                alt=""
-                width={18}
-                height={18}
-                className="w-[18px] h-[18px] object-contain"
-              />
-            </span>
-          </a>
+          <CtaButton href="#how-it-works" className="w-[232px]">
+            Book Appointment
+          </CtaButton>
         </div>
       </div>
     </section>
