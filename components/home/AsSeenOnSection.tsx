@@ -33,13 +33,13 @@ const mediaLogos: MediaLogo[] = [
   },
   {
     name: "Delaware Online",
-    src: "/As Seen on Images/delawareonline-logo.webp",
+    src: "/As Seen on Images/delawareonline-logo.svg",
     url: "https://www.delawareonline.com/press-release/story/127440/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
     imgClassName: "!max-w-none !h-[24px] sm:!h-[28px] lg:!h-[30px] xl:!h-[32px] !w-auto",
   },
   {
     name: "The Columbus Dispatch",
-    src: "/As Seen on Images/dispatch-logo.webp",
+    src: "/As Seen on Images/dispatch-logo.svg",
     url: "https://www.dispatch.com/press-release/story/173229/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
     imgClassName: "!max-w-none !h-[26px] sm:!h-[28px] lg:!h-[30px] xl:!h-[32px] !w-auto",
   },
@@ -65,7 +65,7 @@ const mediaLogos: MediaLogo[] = [
   },
   {
     name: "lohud",
-    src: "/As Seen on Images/lohud-logo.webp",
+    src: "/As Seen on Images/lohud-logo.svg",
     url: "https://www.lohud.com/press-release/story/162150/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
     imgClassName: "!max-w-none !h-[28px] sm:!h-[32px] lg:!h-[34px] xl:!h-[36px] !w-auto",
   },
@@ -83,11 +83,11 @@ const mediaLogos: MediaLogo[] = [
   {
     name: "PR Newswire",
     src: "/As Seen on Images/pr newswire - logo.webp",
-    url: "https://www.prnewswire.com/news-releases/why-my-esa-therapist-prioritizes-legitimate-esa-evaluations-and-refuses-instant-approvals-302821988.html",
+    url: "https://www.prnewswire.com/news-releases/why-my-esa-therapist-prioritizes-legitimate-ESA-Evaluations-and-Refuses-Instant-Approvals-302821988.html",
   },
   {
     name: "The Register-Guard",
-    src: "/As Seen on Images/registerguard logo.webp",
+    src: "/As Seen on Images/registerguard-logo.svg",
     url: "https://www.registerguard.com/press-release/story/54408/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
     imgClassName: "!max-w-none !h-[26px] sm:!h-[28px] lg:!h-[30px] xl:!h-[32px] !w-auto",
   },
