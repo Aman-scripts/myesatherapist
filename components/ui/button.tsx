@@ -56,3 +56,4 @@ function Button({
 }
 
 export { Button, buttonVariants }
+export { CtaButton, type CtaButtonProps } from "@/components/common/CtaButton"
