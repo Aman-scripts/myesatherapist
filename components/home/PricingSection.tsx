@@ -146,7 +146,9 @@ function PlanButton({ href, children, compact = false }: { href: string; childre
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center min-h-[50px] ${compact ? "px-5 whitespace-nowrap" : "px-8 w-[154px]"} py-3 rounded-[42px] text-white font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity font-sans`}
+      className={`inline-flex items-center justify-center min-h-[50px] ${
+        compact ? "px-5" : "px-6 sm:px-7 min-w-[154px]"
+      } py-3 rounded-[42px] text-white font-semibold text-[16px] leading-[26px] text-center whitespace-nowrap shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity font-sans`}
       style={{ backgroundImage: TEAL_GRADIENT }}
     >
       {children}
