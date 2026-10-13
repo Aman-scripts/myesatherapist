@@ -3,7 +3,14 @@
 import React from "react";
 import Image from "next/image";
 
-const mediaLogos = [
+interface MediaLogo {
+  name: string;
+  src: string;
+  url: string;
+  imgClassName?: string;
+}
+
+const mediaLogos: MediaLogo[] = [
   {
     name: "American Press",
     src: "/As Seen on Images/american-press-logo.webp",
@@ -28,11 +35,13 @@ const mediaLogos = [
     name: "Delaware Online",
     src: "/As Seen on Images/delawareonline-logo.webp",
     url: "https://www.delawareonline.com/press-release/story/127440/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
+    imgClassName: "!max-w-none !h-[24px] sm:!h-[28px] lg:!h-[30px] xl:!h-[32px] !w-auto",
   },
   {
     name: "The Columbus Dispatch",
     src: "/As Seen on Images/dispatch-logo.webp",
     url: "https://www.dispatch.com/press-release/story/173229/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
+    imgClassName: "!max-w-none !h-[26px] sm:!h-[28px] lg:!h-[30px] xl:!h-[32px] !w-auto",
   },
   {
     name: "dvm360",
@@ -58,6 +67,7 @@ const mediaLogos = [
     name: "lohud",
     src: "/As Seen on Images/lohud-logo.webp",
     url: "https://www.lohud.com/press-release/story/162150/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
+    imgClassName: "!max-w-none !h-[28px] sm:!h-[32px] lg:!h-[34px] xl:!h-[36px] !w-auto",
   },
   {
     name: "Muddy River News",
@@ -68,6 +78,7 @@ const mediaLogos = [
     name: "The National Law Review",
     src: "/As Seen on Images/national law review logo.webp",
     url: "https://natlawreview.com/press-releases/my-esa-therapist-simplifies-process-get-online-esa-letter-2026",
+    imgClassName: "!max-w-none !h-[24px] sm:!h-[26px] lg:!h-[28px] xl:!h-[30px] !w-auto",
   },
   {
     name: "PR Newswire",
@@ -78,6 +89,7 @@ const mediaLogos = [
     name: "The Register-Guard",
     src: "/As Seen on Images/registerguard logo.webp",
     url: "https://www.registerguard.com/press-release/story/54408/my-esa-therapist-simplifies-the-process-to-get-an-online-esa-letter-in-2026/",
+    imgClassName: "!max-w-none !h-[26px] sm:!h-[28px] lg:!h-[30px] xl:!h-[32px] !w-auto",
   },
   {
     name: "RentDeals",
@@ -140,12 +152,14 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                 className="bg-white rounded-[14px] lg:rounded-[16px] xl:rounded-[20px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] xl:shadow-[0px_1px_4.2px_rgba(0,0,0,0.25)] border border-[#E2E8F0] h-[52px] sm:h-[60px] lg:h-[62px] xl:h-[65px] px-4 sm:px-5 lg:px-6 xl:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[195px] xl:min-w-[204px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
               >
                 <Image
-                  quality={90}
+                  unoptimized
                   src={logo.src}
                   alt={logo.name}
-                  width={220}
+                  width={260}
                   height={65}
-                  className="max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] w-auto max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
+                  className={`shrink-0 grayscale contrast-125 opacity-100 hover:grayscale-0 hover:contrast-100 transition-all duration-300 ${
+                    logo.imgClassName || "max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] w-auto object-contain"
+                  }`}
                 />
               </a>
             ))}
@@ -163,12 +177,14 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                 className="bg-white rounded-[14px] lg:rounded-[16px] xl:rounded-[20px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] xl:shadow-[0px_1px_4.2px_rgba(0,0,0,0.25)] border border-[#E2E8F0] h-[52px] sm:h-[60px] lg:h-[62px] xl:h-[65px] px-4 sm:px-5 lg:px-6 xl:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[195px] xl:min-w-[204px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
               >
                 <Image
-                  quality={90}
+                  unoptimized
                   src={logo.src}
                   alt={logo.name}
-                  width={220}
+                  width={260}
                   height={65}
-                  className="max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] w-auto max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
+                  className={`shrink-0 grayscale contrast-125 opacity-100 hover:grayscale-0 hover:contrast-100 transition-all duration-300 ${
+                    logo.imgClassName || "max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] w-auto object-contain"
+                  }`}
                 />
               </a>
             ))}
