@@ -9,6 +9,7 @@ import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const POPULAR_STATES = STATE_INDEX;
 
@@ -245,17 +246,9 @@ export function HeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <a
-              href="#how-it-works"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-sm"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
+            <CtaButton href="#how-it-works" className="w-full sm:w-[179px]">
               Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
-              </span>
-            </a>
+            </CtaButton>
           </div>
         </div>
       </div>
@@ -264,7 +257,7 @@ export function HeroSection() {
       {/* 3. DESKTOP HERO SECTION (lg: / 1024px and up)        */}
       {/* Responsive Layout for 1024px to 1440px+              */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
+      <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[600px] xl:min-h-0 overflow-hidden">
         {/* Background Image: hero-section.png */}
         <BreakpointImage
           media="(min-width: 1024px)"
@@ -278,13 +271,13 @@ export function HeroSection() {
 
         {/* Content — positioned with responsive offsets for 1024px vs 1440px */}
         <div className="absolute inset-0">
-          <div className="absolute left-[4%] xl:left-[5.69%] top-[6%] xl:top-[12.37%] w-[42%] xl:w-[47.05%]">
+          <div className="absolute left-[4%] xl:left-[5.69%] top-[5%] xl:top-[12.37%] w-[48%] xl:w-[47.05%] max-w-[678px]">
             {/* Stat Pills */}
             <div className="flex items-center gap-[0.83%] flex-wrap">
               {statsData.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 xl:py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[95px] xl:min-w-[110px]"
+                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-2 xl:py-2.5 rounded-[30px] text-center w-[31%] min-h-[58px] xl:min-h-[77px] min-w-[95px] xl:min-w-[110px]"
                 >
                   <span
                     className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
@@ -292,13 +285,13 @@ export function HeroSection() {
                   >
                     {stat.value}
                   </span>
-                  <span className="text-[10px] xl:text-xs font-semibold text-[#5F6B6F] mt-0.5 xl:mt-1 whitespace-nowrap">{stat.label}</span>
+                  <span className="text-[11px] xl:text-[14px] font-semibold text-[#949494] mt-0.5 xl:mt-1 whitespace-nowrap font-sans">{stat.label}</span>
                 </div>
               ))}
             </div>
 
             {/* Headline */}
-            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[52px] font-bold tracking-[-0.011em] leading-[1.15] mt-4 xl:mt-6 text-[#2E5A66]">
+            <h1 className="font-heading text-[32px] lg:text-[36px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.15] xl:leading-[64px] mt-3.5 xl:mt-6 text-[#2E5A66]">
               Emotional Support
               <br />
               Animal Evaluations
@@ -307,18 +300,18 @@ export function HeroSection() {
             </h1>
 
             {/* Subheading */}
-            <p className="text-[13.5px] lg:text-[15px] xl:text-[18px] leading-[1.55] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-3 xl:mt-4 font-sans">
+            <p className="text-[14px] lg:text-[16px] xl:text-[18px] leading-[1.5] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-2.5 xl:mt-4 font-sans">
               Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
             </p>
 
             {/* Action Row */}
-            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-4 xl:mt-6">
+            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-3.5 xl:mt-6">
               {/* State Dropdown */}
               <div className="relative z-30" ref={dropdownRefDesktop}>
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
+                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[16px] leading-[26px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
                 >
                   <Image
                     src="/home/hero-section-map.svg"
@@ -358,21 +351,13 @@ export function HeroSection() {
               </div>
 
               {/* Get Started Button */}
-              <a
-                href="#how-it-works"
-                className="flex items-center gap-2.5 xl:gap-3 pl-4 lg:pl-5 xl:pl-6 pr-1.5 lg:pr-2 py-1.5 lg:py-2 rounded-[30px] text-white font-semibold text-[14.5px] xl:text-[16px] transition-opacity hover:opacity-90 h-[46px] xl:h-[48px] shrink-0"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
+              <CtaButton href="#how-it-works" className="w-[179px] xl:w-[192px]">
                 Get Started
-                <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
-                </span>
-              </a>
+              </CtaButton>
             </div>
 
             {/* Trustpilot Badge */}
-            <div className="mt-4 xl:mt-[30px]"><ReviewBadges /></div>
+            <div className="mt-3.5 xl:mt-[30px]"><ReviewBadges /></div>
           </div>
         </div>
       </div>

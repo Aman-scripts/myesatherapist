@@ -2,25 +2,26 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const reviews = [
   {
     id: "vId0sRVPY0I",
     name: "Constance",
     quote:
-      "“Looking for an ESA letter in Houston was stressful until I found My ESA Therapist. The process was fast, legitimate, and helped keep my emotional support dog with me.”",
+      "“Looking for an ESA letter in Houston was stressful until I found My ESA Therapist. The process was fast, legitimate, and stress-free.”",
   },
   {
     id: "gxdipq0J2No",
     name: "Leighann",
     quote:
-      "“The doctor was so kind, patient, and understanding during my consultation. The entire experience was smooth, legitimate, and completely stress-free.”",
+      "“The doctor was kind and patient during my consultation. The entire experience was smooth, legitimate, and completely stress-free.”",
   },
   {
     id: "Mjf33Y0NvVc",
     name: "April E",
     quote:
-      "“Customer service was responsive from the very start. The consultation was authentic, licensed, and completed quickly without any hassle.”",
+      "“Customer service was responsive from the start. The consultation was authentic, licensed, and completed without any hassle.”",
   },
 ];
 
@@ -77,123 +78,129 @@ export function TestimonialsSection({
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-[#FAF7F2] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-10 lg:mb-16 space-y-2.5 max-w-[850px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
+    <section className="py-16 lg:py-20 xl:py-24 bg-[#FAF7F2] overflow-hidden">
+      {/* Frame 1000011700: Section Container */}
+      <div className="max-w-[1251px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10 lg:gap-14 xl:gap-[72px]">
+        {/* Frame 1000011447: Section Header */}
+        <div className="flex flex-col items-center text-center gap-2 max-w-[512px] mx-auto">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] tracking-[-0.00015em] text-[#2E5A66]">
             {title}
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed">
+          <p className="font-manrope font-semibold text-base sm:text-[18px] leading-[30px] text-[#5F6B6F] max-w-[432px]">
             {subtitle}
           </p>
         </div>
 
-        {/* Testimonials Carousel (1 card per view on Mobile & Tablet with Touch Swipe) / 3-col Grid on LG+ */}
-        <div
-          ref={scrollRef}
-          onScroll={handleScroll}
-          className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 lg:pb-0 px-2 lg:px-0 scrollbar-none"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {reviews.map((review) => {
-            const isPlaying = activeVideo === review.id;
+        {/* Frame 1000011697: Content Wrapper (Cards + Dots + CTA Button) */}
+        <div className="flex flex-col items-center gap-8 w-full max-w-[1005px]">
+          {/* Frame 1000011695: Cards + Dots Wrapper */}
+          <div className="flex flex-col items-center gap-4 w-full max-w-[1005px]">
+            {/* Frame 1000011695: Cards Row */}
+            <div
+              ref={scrollRef}
+              onScroll={handleScroll}
+              className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-5 xl:gap-[45px] w-full max-w-[1005px] overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-2 lg:pb-0 px-2 lg:px-0 scrollbar-none justify-items-center"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {reviews.map((review) => {
+                const isPlaying = activeVideo === review.id;
 
-            return (
-              <div
-                key={review.id}
-                className="w-[85vw] sm:w-[360px] md:w-[380px] shrink-0 snap-center lg:w-auto lg:shrink bg-white rounded-[20px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.18)] border border-[#E2E8F0] flex flex-col"
-              >
-                {/* Video Area (Top) */}
-                <div
-                  className="relative w-full aspect-[9/12] sm:aspect-[9/11] bg-black cursor-pointer group overflow-hidden"
-                  onClick={() => setActiveVideo(review.id)}
+                return (
+                  <div
+                    key={review.id}
+                    className="w-[85vw] sm:w-[320px] lg:w-[300px] xl:w-[306px] h-[419px] shrink-0 snap-center bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between relative"
+                  >
+                    {/* Top Area: Video / Thumbnail (276px high to match 419px - 143px = 276px exactly) */}
+                    <div
+                      className="relative w-full h-[276px] shrink-0 bg-black cursor-pointer group overflow-hidden"
+                      onClick={() => setActiveVideo(review.id)}
+                    >
+                      {isPlaying ? (
+                        <iframe
+                          className="absolute inset-0 w-full h-full"
+                          src={`https://www.youtube.com/embed/${review.id}?autoplay=1&rel=0`}
+                          title={review.name}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <>
+                          {/* Video Thumbnail */}
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={`https://img.youtube.com/vi/${review.id}/hqdefault.jpg`}
+                            alt={review.name}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover object-center absolute inset-0 transition-transform duration-300 group-hover:scale-105"
+                          />
+
+                          {/* Frame 28: Gradient Overlay */}
+                          <div
+                            className="absolute inset-x-0 bottom-0 h-[150px] pointer-events-none"
+                            style={{
+                              background:
+                                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%)",
+                            }}
+                          />
+
+                          {/* YouTube Center Play Button */}
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <YouTubePlayIcon className="w-16 h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-110" />
+                          </div>
+
+                          {/* Client Name (Marianne C spec: Playfair Display 28px/36px, top: 229px -> bottom: 11px) */}
+                          <div className="absolute inset-x-0 bottom-[11px] text-center z-10 px-3 pointer-events-none">
+                            <h4 className="font-heading font-bold text-[28px] leading-[36px] tracking-[-0.00015em] text-white text-center drop-shadow-md">
+                              {review.name}
+                            </h4>
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Frame 29: Solid Teal Gradient Quote Box (143px high exactly) */}
+                    <div
+                      className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]"
+                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    >
+                      <p className="font-manrope font-semibold text-[16px] leading-[26px] text-[#FAF7F2] text-center w-[271px] max-w-[271px]">
+                        {review.quote}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Frame 123: Pagination Dots */}
+            <div className="flex items-center justify-center gap-[6px] h-2">
+              {reviews.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => scrollToIndex(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                  className="relative flex items-center justify-center p-0 cursor-pointer"
                 >
-                  {isPlaying ? (
-                    <iframe
-                      className="absolute inset-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${review.id}?autoplay=1&rel=0`}
-                      title={review.name}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <>
-                      {/* Video Thumbnail */}
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={`https://img.youtube.com/vi/${review.id}/hqdefault.jpg`}
-                        alt={review.name}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover object-center absolute inset-0 transition-transform duration-300 group-hover:scale-105"
-                      />
-
-                      {/* Dark Gradient Overlay for Name Readability */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
-
-                      {/* YouTube Center Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <YouTubePlayIcon className="w-16 h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-110" />
-                      </div>
-
-                      {/* Client Name at bottom of video */}
-                      <div className="absolute inset-x-0 bottom-4 text-center z-10 px-4">
-                        <span className="font-heading text-2xl sm:text-3xl font-bold text-white tracking-[-0.01em] drop-shadow-md">
-                          {review.name}
-                        </span>
-                      </div>
-                    </>
-                  )}
-                </div>
-
-                {/* Solid Teal Gradient Quote Box (Bottom) */}
-                <div
-                  className="px-6 py-6 text-center flex-1 flex items-center justify-center min-h-[143px] rounded-b-[16px]"
-                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
-                >
-                  <p className="text-[#FAF7F2] text-sm sm:text-base font-semibold leading-relaxed max-w-[271px] mx-auto font-sans">
-                    {review.quote}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Dots Pagination (Mobile & Tablet only) + See More Reviews CTA */}
-        <div className="flex flex-col items-center gap-6 mt-8 md:mt-12 lg:mt-14">
-          <div className="flex lg:hidden items-center gap-2">
-            {reviews.map((_, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => scrollToIndex(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-                className="relative flex items-center justify-center w-6 h-6"
-              >
-                <span
-                  className={`block transition-all duration-300 rounded-full ${
-                    currentIndex === idx
-                      ? "w-4 h-2.5 bg-[#1A3D4F]"
-                      : "w-2 h-2 bg-[#E8B92C] hover:opacity-80"
-                  }`}
-                />
-              </button>
-            ))}
+                  <span
+                    className={`block transition-all duration-300 rounded-full ${
+                      currentIndex === idx
+                        ? "w-[8px] h-[8px] bg-[#2E5A66]"
+                        : "w-[5px] h-[5px] bg-[#E8B92C] opacity-50 hover:opacity-100"
+                    }`}
+                  />
+                </button>
+              ))}
+            </div>
           </div>
 
-          <a
-            href="#"
-            className="flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-white font-semibold text-base transition-opacity hover:opacity-90 shadow-md min-h-[48px]"
-            style={{ backgroundImage: TEAL_GRADIENT }}
-          >
-            <span>See More Reviews</span>
-            <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
-            </span>
-          </a>
+          {/* Frame 1000011890: See More Reviews Button */}
+          <div>
+            <CtaButton href="#how-it-works" className="w-[228px]">
+              See More Reviews
+            </CtaButton>
+          </div>
         </div>
       </div>
     </section>

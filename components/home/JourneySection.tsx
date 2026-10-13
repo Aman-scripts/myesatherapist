@@ -24,14 +24,14 @@ const cards = [
 
 export function JourneySection() {
   return (
-    <section className="py-14 sm:py-16 lg:py-[72px] bg-[#FAF7F2]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 xl:py-[72px] bg-[#FAF7F2]">
+      <div className="max-w-[1033px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="mb-10 lg:mb-[72px] space-y-2 max-w-[999px] mx-auto text-center">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.0066em]">
+        <div className="mb-8 sm:mb-10 xl:mb-[72px] space-y-2 max-w-[999px] mx-auto text-center">
+          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
             Your ESA Journey Starts Here
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold">
+          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-normal xl:leading-[30px] font-sans">
             See how emotional support animals transform lives
           </p>
         </div>

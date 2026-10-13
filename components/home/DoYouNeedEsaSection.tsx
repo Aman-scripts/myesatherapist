@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -22,7 +23,7 @@ export function DoYouNeedEsaSection() {
         {/* Left Content Area */}
         <div className="w-[500px] lg:w-[490px] xl:w-[737px] pl-6 lg:pl-8 xl:pl-[78px] pr-4 my-auto py-0 z-10 flex flex-col justify-center shrink-0 space-y-3 lg:space-y-3.5 xl:space-y-5">
           <div className="space-y-2 lg:space-y-2.5 xl:space-y-4">
-            <h2 className="font-heading text-[28px] lg:text-[30px] xl:text-[44px] font-bold text-[#2E5A66] leading-[36px] lg:leading-[38px] xl:leading-[54px] tracking-[-0.0066em]">
+            <h2 className="font-heading text-[28px] lg:text-[30px] xl:text-[44px] font-bold text-[#2E5A66] leading-[36px] lg:leading-[38px] xl:leading-[54px] tracking-[-0.00015em]">
               Do You Need an Emotional Support Animal?
             </h2>
 
@@ -40,7 +41,7 @@ export function DoYouNeedEsaSection() {
                 ))}
               </ul>
 
-              <p className="pt-0.5 text-[12px] lg:text-[13px] xl:text-[18px] leading-[17px] lg:leading-[19px] xl:leading-[30px]">
+              <p className="pt-0.5">
                 It’s important to note that an ESA should only be recommended following a proper evaluation by a licensed mental health professional. Documentation obtained without professional guidance may not be valid or recognized under housing laws.
               </p>
             </div>
@@ -48,23 +49,7 @@ export function DoYouNeedEsaSection() {
 
           {/* CTA Button */}
           <div className="pt-2 xl:pt-4">
-            <a
-              href="#how-it-works"
-              className="inline-flex items-center justify-between w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 text-white font-semibold text-[16px] shadow-[0_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span className="font-sans">Get Started</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={22}
-                  height={24}
-                  className="w-[22px] h-[24px]"
-                />
-              </span>
-            </a>
+            <CtaButton href="#how-it-works">Get Started</CtaButton>
           </div>
         </div>
 
@@ -141,7 +126,7 @@ export function DoYouNeedEsaSection() {
         {/* Text & Button Container (Text SECOND) */}
         <div className="px-4 sm:px-6 max-w-3xl mx-auto py-6 sm:py-8 space-y-6 sm:space-y-8">
           <div className="space-y-4">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#2E5A66] leading-tight tracking-[-0.0066em]">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#2E5A66] leading-tight tracking-[-0.00015em]">
               Do You Need an Emotional Support Animal?
             </h2>
 
@@ -167,17 +152,7 @@ export function DoYouNeedEsaSection() {
 
           {/* Action Button */}
           <div className="flex justify-center pt-2">
-            <a
-              href="#how-it-works"
-              className="inline-flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-white font-semibold text-base transition-opacity hover:opacity-90 shadow-md min-h-[48px] w-fit shrink-0"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span>Get Started</span>
-              <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[19px] h-[21px]" />
-              </span>
-            </a>
+            <CtaButton href="#how-it-works">Get Started</CtaButton>
           </div>
         </div>
       </div>

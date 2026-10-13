@@ -107,13 +107,13 @@ interface AsSeenOnSectionProps {
 
 export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProps) {
   return (
-    <section className={`py-8 sm:py-10 lg:py-12 ${bgColor} overflow-hidden relative backdrop-blur-xs`}>
+    <section className={`py-8 sm:py-10 lg:py-8 xl:py-[39px] ${bgColor} overflow-hidden relative backdrop-blur-xs`}>
       {/* Heading */}
-      <div className="flex items-center justify-center gap-4 mb-6 sm:mb-8 px-4">
+      <div className="flex items-center justify-center gap-4 mb-6 sm:mb-8 xl:mb-[32px] px-4">
         <div className="flex-1 h-[1px] bg-[#E8B92C] max-w-[60px] sm:max-w-[80px] rounded-[10px]" />
-        <h2 className="font-heading text-lg sm:text-2xl lg:text-[28px] font-bold text-[#2E5A66] text-center shrink-0 tracking-[-0.00015em]">
+        <h4 className="font-heading text-lg sm:text-2xl lg:text-[28px] font-bold text-[#2E5A66] text-center shrink-0 tracking-[-0.00015em] leading-[36px]">
           As seen on
-        </h2>
+        </h4>
         <div className="flex-1 h-[1px] bg-[#E8B92C] max-w-[60px] sm:max-w-[80px] rounded-[10px]" />
       </div>
 
@@ -129,7 +129,7 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
           style={{ animationDuration: "50s" }}
         >
           {/* Track 1 */}
-          <div className="flex items-center gap-4 sm:gap-6 lg:gap-7 pr-4 sm:pr-6 lg:pr-7 shrink-0">
+          <div className="flex items-center gap-4 sm:gap-5 lg:gap-6 xl:gap-[25px] pr-4 sm:pr-5 lg:pr-6 xl:pr-[25px] shrink-0">
             {mediaLogos.map((logo, idx) => (
               <a
                 key={`t1-${idx}`}
@@ -137,22 +137,22 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                 target="_blank"
                 rel="noopener noreferrer"
                 title={`Read coverage on ${logo.name}`}
-                className="bg-white rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] border border-[#E2E8F0] h-[52px] sm:h-[62px] lg:h-[72px] px-5 sm:px-6 lg:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[210px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
+                className="bg-white rounded-[14px] lg:rounded-[16px] xl:rounded-[20px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] xl:shadow-[0px_1px_4.2px_rgba(0,0,0,0.25)] border border-[#E2E8F0] xl:border-0 h-[52px] sm:h-[60px] lg:h-[62px] xl:h-[65px] px-4 sm:px-5 lg:px-6 xl:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[195px] xl:min-w-[204px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
               >
                 <Image
-            quality={90}
+                  quality={90}
                   src={logo.src}
                   alt={logo.name}
                   width={220}
                   height={65}
-                  className="max-h-[30px] sm:max-h-[38px] lg:max-h-[44px] w-auto max-w-[140px] sm:max-w-[170px] lg:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
+                  className="max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] w-auto max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
                 />
               </a>
             ))}
           </div>
 
           {/* Track 2 (Identical Copy for Seamless -50% Loop) */}
-          <div className="flex items-center gap-4 sm:gap-6 lg:gap-7 pr-4 sm:pr-6 lg:pr-7 shrink-0">
+          <div className="flex items-center gap-4 sm:gap-5 lg:gap-6 xl:gap-[25px] pr-4 sm:pr-5 lg:pr-6 xl:pr-[25px] shrink-0">
             {mediaLogos.map((logo, idx) => (
               <a
                 key={`t2-${idx}`}
@@ -160,15 +160,15 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                 target="_blank"
                 rel="noopener noreferrer"
                 title={`Read coverage on ${logo.name}`}
-                className="bg-white rounded-[12px] sm:rounded-[14px] lg:rounded-[16px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] border border-[#E2E8F0] h-[52px] sm:h-[62px] lg:h-[72px] px-5 sm:px-6 lg:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[210px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
+                className="bg-white rounded-[14px] lg:rounded-[16px] xl:rounded-[20px] shadow-[0_4px_18px_rgba(0,0,0,0.06)] xl:shadow-[0px_1px_4.2px_rgba(0,0,0,0.25)] border border-[#E2E8F0] xl:border-0 h-[52px] sm:h-[60px] lg:h-[62px] xl:h-[65px] px-4 sm:px-5 lg:px-6 xl:px-7 min-w-[150px] sm:min-w-[180px] lg:min-w-[195px] xl:min-w-[204px] flex items-center justify-center shrink-0 transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_22px_rgba(0,0,0,0.09)] cursor-pointer"
               >
                 <Image
-            quality={90}
+                  quality={90}
                   src={logo.src}
                   alt={logo.name}
                   width={220}
                   height={65}
-                  className="max-h-[30px] sm:max-h-[38px] lg:max-h-[44px] w-auto max-w-[140px] sm:max-w-[170px] lg:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
+                  className="max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] w-auto max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] object-contain shrink-0 grayscale contrast-125 opacity-90 hover:grayscale-0 hover:opacity-100 hover:contrast-100 transition-all duration-300"
                 />
               </a>
             ))}

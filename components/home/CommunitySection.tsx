@@ -1,9 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+import { CtaButton } from "@/components/common/CtaButton";
 
 export function CommunitySection() {
   return (
@@ -26,23 +24,9 @@ export function CommunitySection() {
 
         {/* CTA Button */}
         <div>
-          <a
-            href="#about"
-            className="inline-flex items-center justify-between w-[248px] h-[48px] rounded-[30px] pl-8 pr-1.5 text-white font-semibold text-[16px] shadow-[0_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
-            style={{ backgroundImage: TEAL_GRADIENT }}
-          >
-            <span className="font-sans">About ESA Therapist</span>
-            <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image
-            quality={90}
-                src="/common/send-icon.svg"
-                alt=""
-                width={22}
-                height={24}
-                className="w-[22px] h-[24px]"
-              />
-            </span>
-          </a>
+          <CtaButton href="#about" className="w-[248px]">
+            About ESA Therapist
+          </CtaButton>
         </div>
       </div>
     </section>

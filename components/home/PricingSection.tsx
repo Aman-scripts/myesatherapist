@@ -146,8 +146,8 @@ function PlanButton({ href, children, compact = false }: { href: string; childre
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center min-h-[46px] ${compact ? "px-5 whitespace-nowrap" : "px-8"} py-3 rounded-[42px] text-white font-bold text-[18px] leading-[22px] tracking-[-0.017em] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity`}
-      style={{ backgroundImage: TEAL_GRADIENT, fontFamily: "var(--font-lato), Lato, sans-serif" }}
+      className={`inline-flex items-center justify-center min-h-[50px] ${compact ? "px-5 whitespace-nowrap" : "px-8 w-[154px]"} py-3 rounded-[42px] text-white font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity font-sans`}
+      style={{ backgroundImage: TEAL_GRADIENT }}
     >
       {children}
     </a>
@@ -161,8 +161,8 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       <div className="flex-1 w-full bg-white rounded-[24px] px-8 pt-[30px] lg:pt-[15px] pb-8 shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12)] flex flex-col gap-8">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-1">
-            <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">{HELP_CARD.title}</h3>
-            <p className="text-[14px] text-[#666666] font-semibold leading-[26px] font-sans">{HELP_CARD.description}</p>
+            <h5 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">{HELP_CARD.title}</h5>
+            <p className="text-[16px] text-[#666666] font-semibold leading-[26px] font-sans">{HELP_CARD.description}</p>
           </div>
           <FeatureList features={HELP_CARD.features} />
         </div>
@@ -203,7 +203,7 @@ export function PricingSection({
         </div>
 
         {/* Payment mode toggle */}
-        <div className="flex w-full max-w-[320px] rounded-full bg-white px-[7px] py-1" role="tablist" aria-label="Letter type">
+        <div className="flex w-full max-w-[320px] h-[54px] items-center rounded-full bg-white px-[7px] py-1" role="tablist" aria-label="Letter type">
           {(Object.keys(PLANS) as PlanType[]).map((key) => {
             const isActive = key === active;
             return (
@@ -213,7 +213,7 @@ export function PricingSection({
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActive(key)}
-                className={`flex-1 h-[42px] rounded-full font-sans font-semibold text-[16px] leading-[26px] transition-colors cursor-pointer ${
+                className={`flex-1 h-[46px] rounded-full font-sans font-semibold text-[18px] leading-[30px] transition-colors cursor-pointer flex items-center justify-center ${
                   isActive
                     ? "bg-[#2E5A66] text-[#FFFBF5] shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12)]"
                     : "text-[#254D3C] hover:bg-[#2E5A66]/5"
@@ -236,12 +236,12 @@ export function PricingSection({
                 <div className="flex flex-col gap-8">
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-1">
-                      <h3 className="font-heading text-[20px] font-bold text-[#2E5A66] leading-[28px]">{card.title}</h3>
-                      <p className="text-[14px] text-[#666666] font-semibold leading-[26px] font-sans">{card.description}</p>
+                      <h5 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">{card.title}</h5>
+                      <p className="text-[16px] text-[#666666] font-semibold leading-[26px] font-sans">{card.description}</p>
                     </div>
                     <div className="flex flex-wrap items-baseline gap-1">
                       <span className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">{card.price}</span>
-                      <span className="text-[14px] text-[#5F6B6F] font-semibold leading-[26px] font-sans">{card.unit}</span>
+                      <span className="text-[16px] text-[#5F6B6F] font-semibold leading-[26px] font-sans">{card.unit}</span>
                     </div>
                   </div>
                   <FeatureList features={card.features} />

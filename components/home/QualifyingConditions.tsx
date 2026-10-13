@@ -148,14 +148,14 @@ export function QualifyingConditions({
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section id={id} className={`py-14 sm:py-16 lg:py-20 pb-14 sm:pb-16 md:pb-0 lg:pb-0 bg-[#FAF7F2] overflow-visible ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id={id} className={`pt-12 sm:pt-16 xl:pt-20 pb-14 sm:pb-16 md:pb-0 bg-[#FAF7F2] overflow-visible ${className}`}>
+      <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[709px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
+        <div className="text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 max-w-[709px] mx-auto">
+          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
             {title}
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed">
+          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed xl:leading-[30px] font-sans">
             {description}
           </p>
         </div>

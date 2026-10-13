@@ -64,31 +64,26 @@ export function WhyChooseUs({
   const items = features && features.length > 0 ? features : defaultFeatures;
 
   return (
-    <section className={`py-16 lg:py-24 ${bgColor}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`py-16 lg:py-20 xl:py-24 ${bgColor}`}>
+      <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <div className="text-center mb-14 lg:mb-20 space-y-2.5">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em]">
+        <div className="text-center mb-14 lg:mb-16 space-y-2.5 max-w-[813px] mx-auto">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] xl:leading-[54px] font-bold text-[#2E5A66] leading-tight tracking-[-0.00015em]">
             {title}
           </h2>
-          <div className="text-[#5F6B6F] text-base sm:text-lg font-semibold max-w-[1050px] mx-auto leading-relaxed space-y-1">
+          <div className="text-[#5F6B6F] text-base sm:text-[17px] xl:text-[18px] xl:leading-[30px] font-semibold mx-auto leading-relaxed space-y-1">
             {subtitle ? (
-              <p className="max-w-[850px] mx-auto">{subtitle}</p>
+              <p className="max-w-[813px] mx-auto">{subtitle}</p>
             ) : (
-              <>
-                <p className="lg:whitespace-nowrap">
-                  We simplify online emotional support animal evaluations while maintaining efficiency and legal compliance.
-                </p>
-                <p className="lg:whitespace-nowrap">
-                  Here&apos;s what makes us different from other providers.
-                </p>
-              </>
+              <p className="max-w-[813px] mx-auto">
+                We simplify online emotional support animal evaluations while maintaining efficiency and legal compliance. Here&apos;s what makes us different from other providers.
+              </p>
             )}
           </div>
         </div>
 
         {/* 3-column 2-row grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14 lg:gap-y-16 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-[23px] gap-y-14 lg:gap-y-16 pt-4">
           {items.map(({ icon, title: itemTitle, description }, idx) => {
             const resolvedIcon =
               icon ||
@@ -113,9 +108,9 @@ export function WhyChooseUs({
                   </div>
 
                 {/* Title */}
-                <h3 className="font-[family-name:var(--font-lato)] text-xl sm:text-2xl lg:text-[24px] font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent mb-3 leading-[29px] tracking-[-0.017em]">
+                <h5 className="font-heading text-xl sm:text-2xl lg:text-[24px] font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent mb-3 leading-[32px]">
                   {itemTitle}
-                </h3>
+                </h5>
 
                 {/* Description */}
                 <p className="text-sm sm:text-base lg:text-[16px] text-[#5F6B6F] font-semibold leading-[26px] max-w-[320px] font-sans">

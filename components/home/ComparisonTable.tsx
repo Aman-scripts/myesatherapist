@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
@@ -107,11 +108,11 @@ export function ComparisonTable() {
     <section id="compare" className="py-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1441px] mx-auto px-3 sm:px-6 lg:px-12 flex flex-col items-center">
         {/* Section Header */}
-        <div className="text-center max-w-[758px] lg:max-w-[900px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
-          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[46px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[64px] tracking-[-0.0066em] lg:tracking-[-0.017em] lg:[font-family:Helvetica,Arial,sans-serif]">
+        <div className="text-center max-w-[758px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
+          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.00015em]">
             Compare to other ESA Letter Services
           </h2>
-          <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-[20px] font-semibold lg:font-normal lg:italic leading-relaxed sm:leading-[30px] lg:leading-[32px] lg:tracking-[-0.017em] font-sans lg:[font-family:var(--font-lato),Lato,sans-serif]">
+          <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed sm:leading-[30px] font-sans">
             We set the standard for professional care, compliance, and trust.
           </p>
         </div>
@@ -124,9 +125,9 @@ export function ComparisonTable() {
           {/* Cream frame with Features / Others columns */}
           <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-3">
             <div className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
-              <h3 className="font-heading text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Features</h3>
+              <h5 className="font-heading text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Features</h5>
               <div />
-              <h3 className="font-heading text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Others</h3>
+              <h5 className="font-heading text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Others</h5>
             </div>
 
             <div className="divide-y divide-[#C8B9A7]/60 border-t border-[#C8B9A7]/60">
@@ -136,12 +137,12 @@ export function ComparisonTable() {
                   className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[102px] sm:h-[108px]"
                 >
                   <div className="px-2 flex items-center justify-center text-center">
-                    <span className="font-heading font-bold text-[14px] sm:text-[16px] text-[#2E5A66] leading-[28px]">{row.feature}</span>
+                    <h6 className="font-heading font-bold text-[14px] sm:text-[16px] text-[#2E5A66] leading-[28px]">{row.feature}</h6>
                   </div>
                   <div />
                   <div className="px-2 flex flex-col items-center justify-center text-center gap-1.5">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[12px] sm:text-[13px] italic text-[#5F6B6F] leading-[16px] tracking-[-0.017em] font-[family-name:var(--font-lato)]">
+                    <span className="text-[12px] sm:text-[13px] text-[#5F6B6F] font-semibold leading-[16px] font-sans">
                       {row.others}
                     </span>
                   </div>
@@ -156,17 +157,17 @@ export function ComparisonTable() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[76px] sm:h-[84px] rounded-b-[20px] flex items-center justify-center px-3 text-center bg-[#1A3D4F]/35">
-              <h3 className="font-heading font-bold text-[16px] sm:text-[18px] text-[#FAF7F2] leading-[17px]">
+              <h5 className="font-heading font-bold text-[16px] sm:text-[18px] text-[#FAF7F2] leading-[17px]">
                 ESA
                 <br />
                 Therapist
-              </h3>
+              </h5>
             </div>
             <div className="divide-y divide-[#C8B9A7]/25">
               {comparisonRows.map((row, idx) => (
                 <div key={idx} className="h-[102px] sm:h-[108px] px-2.5 flex flex-col items-center justify-center text-center gap-1.5">
                   <GreenCheckIcon />
-                  <span className="text-[12px] sm:text-[13px] italic text-[#FAF7F2] leading-[16px] tracking-[-0.017em] font-[family-name:var(--font-lato)]">
+                  <span className="text-[12px] sm:text-[13px] text-[#FAF7F2] font-semibold leading-[16px] font-sans">
                     {row.myEsa}
                   </span>
                 </div>
@@ -185,21 +186,15 @@ export function ComparisonTable() {
             {/* Header Labels for FEATURES and OTHERS */}
             <div className="flex items-center justify-between pt-[25px] px-6 xl:px-12 h-[74px]">
               <div className="w-[220px] xl:w-[300px] text-center shrink-0">
-                <h3
-                  className="text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px] tracking-[-0.017em]"
-                  style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
-                >
+                <h5 className="font-heading text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   FEATURES
-                </h3>
+                </h5>
               </div>
               <div className="w-[400px] xl:w-[478px] shrink-0" />
               <div className="w-[220px] xl:w-[340px] text-center shrink-0">
-                <h3
-                  className="text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px] tracking-[-0.017em]"
-                  style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
-                >
+                <h5 className="font-heading text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   OTHERS
-                </h3>
+                </h5>
               </div>
             </div>
 
@@ -219,12 +214,9 @@ export function ComparisonTable() {
                         className="object-contain w-4 h-4 xl:w-[18px] xl:h-[18px]"
                       />
                     </div>
-                    <span
-                      className="text-[16px] xl:text-[20px] font-bold text-[#2E5A66] leading-[32px] tracking-[-0.017em]"
-                      style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
-                    >
+                    <h6 className="font-heading text-[16px] xl:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
                       {row.desktopFeature}
-                    </span>
+                    </h6>
                   </div>
 
                   {/* Empty space matching elevated column width */}
@@ -233,7 +225,7 @@ export function ComparisonTable() {
                   {/* Others Column */}
                   <div className="w-[220px] xl:w-[340px] shrink-0 flex items-center justify-start gap-2 xl:gap-3 pl-1 xl:pl-4">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[14px] xl:text-[18px] italic text-[#5F6B6F] font-normal leading-[24px] xl:leading-[32px] tracking-[-0.017em] font-[family-name:var(--font-lato)] text-left">
+                    <span className="text-[13px] xl:text-[14px] text-[#5F6B6F] font-semibold leading-[20px] xl:leading-[26px] font-sans text-left">
                       {row.others}
                     </span>
                   </div>
@@ -248,12 +240,9 @@ export function ComparisonTable() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[91px] rounded-b-[20px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
-              <h3
-                className="text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] leading-[32px] tracking-[-0.017em]"
-                style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
-              >
+              <h5 className="font-heading text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] leading-[32px]">
                 MY ESA THERAPIST
-              </h3>
+              </h5>
             </div>
 
             <div className="divide-y divide-[#C8B9A7]/25 pt-0">
@@ -262,7 +251,7 @@ export function ComparisonTable() {
                   <span className="shrink-0">
                     <GreenCheckIcon />
                   </span>
-                  <span className="min-w-0 whitespace-nowrap text-[13px] xl:text-[16px] italic text-[#FAF7F2] font-normal leading-[20px] xl:leading-[24px] tracking-[-0.017em] font-[family-name:var(--font-lato)]">
+                  <span className="min-w-0 text-[13px] xl:text-[14px] text-[#FAF7F2] font-semibold leading-[20px] xl:leading-[26px] font-sans">
                     {row.myEsa}
                   </span>
                 </div>
@@ -272,24 +261,8 @@ export function ComparisonTable() {
         </div>
 
         {/* Bottom CTA Button */}
-        <div className="mt-10 sm:mt-12">
-          <a
-            href="#how-it-works"
-            className="inline-flex items-center justify-between w-[179px] h-[48px] rounded-[30px] pl-6 pr-1.5 text-white font-semibold text-[16px] shadow-[0_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
-            style={{ backgroundImage: TEAL_GRADIENT }}
-          >
-            <span className="font-sans">Get Started</span>
-            <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image
-            quality={90}
-                src="/common/send-icon.svg"
-                alt=""
-                width={22}
-                height={24}
-                className="w-[22px] h-[24px]"
-              />
-            </span>
-          </a>
+        <div className="mt-10 sm:mt-12 flex justify-center">
+          <CtaButton href="#how-it-works">Get Started</CtaButton>
         </div>
       </div>
     </section>
