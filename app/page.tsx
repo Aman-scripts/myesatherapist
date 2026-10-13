@@ -12,7 +12,7 @@ import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { EmotionalSupportSection } from "@/components/home/EmotionalSupportSection";
 import { DoYouNeedEsaSection } from "@/components/home/DoYouNeedEsaSection";
-import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
+import { EsaDogBenefitsSection } from "@/components/home/EsaDogBenefitsSection";
 import { PricingSection } from "@/components/home/PricingSection";
 import { CommunitySection } from "@/components/home/CommunitySection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 overflow-x-clip">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -78,7 +78,7 @@ export default function HomePage() {
 
       <TopBanner />
       <Header />
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-[#FAF7F2] overflow-x-clip">
         <HeroSection />
 
         <AsSeenOnSection />
@@ -100,7 +100,7 @@ export default function HomePage() {
 
         <DoYouNeedEsaSection />
         <PricingSection />
-        <TrustedByPetOwnersSection />
+        <EsaDogBenefitsSection />
 
         <CommunitySection />
 
