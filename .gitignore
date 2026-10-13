@@ -55,3 +55,6 @@ figma_frame_*.png
 
 # lighthouse audit output
 /lighthouse-reports/
+
+# local design reference dump
+homepage.md
