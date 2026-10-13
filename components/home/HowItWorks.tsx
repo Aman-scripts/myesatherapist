@@ -68,11 +68,11 @@ export function HowItWorks() {
                 </div>
 
                 {/* Text */}
-                <div className="space-y-2 pt-5 sm:pt-6 max-w-[278px]">
-                  <h5 className="font-heading text-lg md:text-xl lg:text-[24px] font-bold leading-tight lg:leading-[32px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+                <div className="space-y-2 pt-5 sm:pt-6 max-w-[320px] w-full flex flex-col items-center">
+                  <h5 className="font-heading text-lg md:text-xl lg:text-[24px] font-bold leading-tight lg:leading-[32px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent sm:whitespace-nowrap">
                     {step.title}
                   </h5>
-                  <p className="text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-[22px] lg:leading-[26px] font-sans">
+                  <p className="text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-[22px] lg:leading-[26px] font-sans max-w-[273px]">
                     {step.description}
                   </p>
                 </div>
