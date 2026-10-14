@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BlogArticle, BlogCalloutBox, BlogQuoteBox } from "@/data/blogsData";
+import { BlogFaqSection } from "@/components/blogs/BlogFaqSection";
 
 interface BlogArticleContentProps {
   article: BlogArticle;
@@ -579,20 +580,32 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {/* Section CTA Box */}
           {sec.ctaBox && (
             <div
-              className="w-full relative overflow-hidden rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 shadow-[0px_8px_24px_rgba(26,61,79,0.12)] my-8 text-left"
+              className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-12 text-left"
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
-              <div className="relative z-10 flex flex-col items-start space-y-3 sm:space-y-4 max-w-[560px]">
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FAF7F2] leading-tight">
+              {/* Subtle Paw Prints in Bottom Right matching Figma */}
+              <div className="absolute right-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[380px] h-[190px] sm:h-[230px] lg:h-[260px] pointer-events-none select-none z-0 opacity-25">
+                <Image
+                  quality={90}
+                  src="/common/cta-section-paw.webp"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 380px, 320px"
+                  className="object-contain object-right-bottom"
+                />
+              </div>
+
+              <div className="relative z-10 flex flex-col items-start space-y-4 sm:space-y-5 max-w-[580px]">
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] xl:text-[36px] font-bold text-[#FAF7F2] leading-[1.25] tracking-tight">
                   {sec.ctaBox.heading}
                 </h3>
-                <p className="font-sans font-medium text-sm sm:text-base text-[#FAF7F2]/90 leading-relaxed max-w-[520px]">
+                <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-[#FAF7F2]/90 max-w-[540px]">
                   {sec.ctaBox.description}
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 sm:pt-3">
                   <Link
                     href={sec.ctaBox.buttonHref}
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-[12px] bg-[#E8B92C] hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
+                    className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-[12px] sm:rounded-[14px] bg-[#E8B92C] hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
                   >
                     <span className="font-sans font-bold text-sm sm:text-base text-[#1A3D4F] group-hover:scale-[1.02] transition-transform">
                       {sec.ctaBox.buttonText}
@@ -636,14 +649,14 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left scroll-mt-28"
           style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
-          {/* Subtle Paw Prints in Bottom Right - Hidden on Mobile, visible on Tablet & Desktop */}
-          <div className="hidden sm:block absolute right-0 bottom-0 w-[300px] lg:w-[350px] h-[200px] lg:h-[235px] pointer-events-none select-none z-0">
+          {/* Subtle Paw Prints in Bottom Right */}
+          <div className="absolute right-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[380px] h-[190px] sm:h-[230px] lg:h-[260px] pointer-events-none select-none z-0 opacity-25">
             <Image
-            quality={90}
+              quality={90}
               src="/common/cta-section-paw.webp"
               alt=""
               fill
-              sizes="(min-width: 1024px) 350px, 300px"
+              sizes="(min-width: 1024px) 380px, 320px"
               className="object-contain object-right-bottom"
             />
           </div>
@@ -653,7 +666,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#FAF7F2] leading-[1.25] sm:leading-[1.28] tracking-tight">
               {article.cta.heading}
             </h3>
-            <p className="font-sans font-medium text-sm sm:text-base text-[#FAF7F2]/90 leading-relaxed max-w-[520px]">
+            <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-[#FAF7F2]/90 max-w-[540px]">
               {article.cta.description}
             </p>
             <div className="pt-2 sm:pt-3">
@@ -690,6 +703,22 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             ))}
           </div>
         </section>
+      )}
+
+      {/* 6. FAQ Section (Directly Below Final Thoughts) */}
+      {article.faqs && article.faqs.length > 0 && (
+        <div id={article.faqSectionId || "faqs"} className="scroll-mt-28">
+          <div id="faq" className="scroll-mt-28" />
+          <div id="frequently-asked-questions" className="scroll-mt-28" />
+          <BlogFaqSection
+            title="Frequently Asked Questions"
+            subtitle={
+              article.faqSectionSubtitle ||
+              "Get answers to common questions about ESA letters and our service."
+            }
+            faqs={article.faqs}
+          />
+        </div>
       )}
 
     </div>
