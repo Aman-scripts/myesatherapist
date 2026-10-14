@@ -3158,6 +3158,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "title": "Can You Get an ESA for PTSD? Eligibility, Benefits & Housing Protections.",
   "metaTitle": "ESA for PTSD: Eligibility, Benefits & Housing Protections | My ESA Therapist",
   "metaDescription": "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
+  "ogDescription": "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
   "shortDescription": "PTSD can qualify someone for an emotional support animal when a licensed mental health professional determines it’s medically necessary based on symptoms and daily functioning, not just from having a diagnosis alone. The evaluation looks at how symptoms affect daily life and whether an ESA would genuinely help manage them.",
   "category": "Qualifying Conditions",
   "author": {
