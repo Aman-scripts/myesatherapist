@@ -8,6 +8,7 @@ import { esaForChildrenSchema } from "./schemas/esaForChildrenSchema";
 import { conditionsThatMayQualifySchema } from "./schemas/conditionsThatMayQualifySchema";
 import { esaForAnxietySchema } from "./schemas/esaForAnxietySchema";
 import { eightBasicObedienceCommandsSchema } from "./schemas/eightBasicObedienceCommandsSchema";
+import { esaForDepressionSchema } from "./schemas/esaForDepressionSchema";
 
 export interface BlogTocItem {
   id: string;
@@ -3142,138 +3143,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "faqSectionId": "frequently-asked-questions",
   "faqSectionTitle": "Frequently Asked Questions",
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalOrganization",
-        "@id": "https://myesatherapist.com/#organization",
-        "name": "My ESA Therapist",
-        "description": "My ESA Therapist is a trusted provider of Emotional Support Animal (ESA) and Psychiatric Service Dog (PSD) letter evaluations. Our licensed mental health professionals provide secure, compliant assessments to help qualified individuals obtain the documentation they need.",
-        "url": "https://myesatherapist.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://myesatherapist.com/wp-content/uploads/2025/07/my-esa-therapist-logo.png"
-        },
-        "image": "https://myesatherapist.com/Blog Images/ESA for Depression/emotional-support-through-canine-companionship-image.webp",
-        "email": "info@myesatherapist.com",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "email": "info@myesatherapist.com",
-            "contactType": "customer service"
-          }
-        ]
-      },
-      {
-        "@type": [
-          "WebSite",
-          "WebSite"
-        ],
-        "@id": "https://myesatherapist.com/#website",
-        "url": "https://myesatherapist.com/",
-        "name": "My ESA Therapist",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        }
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/#article",
-        "headline": "ESA for Depression: Can You Qualify for an Emotional Support Animal?",
-        "description": "Learn how to qualify for an ESA for depression, who can evaluate your eligibility, and how emotional support animals may help with daily life.",
-        "url": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/",
-        "mainEntityOfPage": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        },
-        "image": "https://myesatherapist.com/Blog Images/ESA for Depression/emotional-support-through-canine-companionship-image.webp",
-        "author": {
-          "@type": "Person",
-          "name": "Allyson Valley",
-          "url": "https://myesatherapist.com/author/allyson-valley/"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://myesatherapist.com/",
-              "name": "My ESA Therapist"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/qualifying-conditions/",
-              "name": "Qualifying Conditions"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/",
-              "name": "ESA for Depression: Can You Qualify for an Emotional Support Animal?"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Can depression qualify me for an emotional support animal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Depression can be part of what’s considered during an ESA evaluation, but having it doesn’t automatically qualify you for an ESA. A licensed mental health professional needs to look at your specific circumstances, symptoms, and impairments and decide whether an ESA actually fits your disability-related needs."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need an ESA letter if I already have a pet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Just owning a pet doesn’t give it ESA status. If you want your animal considered for an ESA accommodation, a licensed mental health professional has to evaluate whether it provides disability-related support and whether recommending it makes sense for your treatment plan."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can an ESA help with depression?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For some people, yes, an ESA can offer companionship, emotional comfort, and a bit of routine. But it’s not a replacement for therapy, medication, or whatever other treatment your mental health provider has recommended."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I take my ESA everywhere?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. ESAs don’t get the same public access rights as service animals under the ADA. The ADA draws a line between service animals trained for specific disability-related tasks and animals that support someone just through their presence like an ESA."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who can determine whether I qualify for an ESA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A licensed mental health professional evaluates your mental health needs and decides if an ESA recommendation makes clinical sense for you and your disability. It should come down to your individual situation, not an automatic yes."
-            }
-          }
-        ]
-      }
-    ]
-  }
+  schema: esaForDepressionSchema,
 },
 {
   "id": "esa-for-ptsd",
