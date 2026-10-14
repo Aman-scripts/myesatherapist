@@ -3554,6 +3554,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "title": "ESA Training Myths: What the Law Actually Requires?",
   "metaTitle": "ESA Training Myths: What the Law Actually Requires | My ESA Therapist",
   "metaDescription": "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
+  "ogDescription": "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
   "shortDescription": "ESA training is not federally required for housing protections. What matters is a legitimate disability-related need, proper documentation from a licensed mental health professional, and an animal that behaves responsibly. Certificates, registries, and paid training packages do not create legal ESA status.",
   "category": "ESA Training",
   "author": {
