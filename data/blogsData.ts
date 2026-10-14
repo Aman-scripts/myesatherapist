@@ -3150,204 +3150,209 @@ export const BLOG_POSTS: BlogArticle[] = [
   schema: esaForDepressionSchema,
 },
 {
-  "id": "esa-for-ptsd",
-  "slug": "esa-for-ptsd",
-  "categorySlug": "qualifying-conditions",
-  "url": "/blog/qualifying-conditions/esa-for-ptsd/",
-  "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/",
-  "title": "Can You Get an ESA for PTSD? Eligibility, Benefits & Housing Protections.",
-  "metaTitle": "ESA for PTSD: Eligibility, Benefits & Housing Protections | My ESA Therapist",
-  "metaDescription": "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
-  "ogDescription": "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
-  "shortDescription": "PTSD can qualify someone for an emotional support animal when a licensed mental health professional determines it’s medically necessary based on symptoms and daily functioning, not just from having a diagnosis alone. The evaluation looks at how symptoms affect daily life and whether an ESA would genuinely help manage them.",
-  "category": "Qualifying Conditions",
-  "author": {
-    "name": "Allyson Valley, Ph.D., LPC",
-    "title": "Licensed Professional Counselor",
-    "credentials": "Ph.D., LPC",
-    "image": "/blogs/blogs_trustbar-author.webp",
-    "bio": "Dr. Allyson Valley is a Licensed Professional Counselor with extensive clinical experience in mental health evaluation, emotional support animal assessments, and evidence-based psychotherapy.",
-    "role": "Written by"
+  id: "esa-for-ptsd",
+  slug: "esa-for-ptsd",
+  categorySlug: "qualifying-conditions",
+  url: "/blog/qualifying-conditions/esa-for-ptsd/",
+  canonicalUrl: "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/",
+  title: "Can You Get an ESA for PTSD? Eligibility, Benefits & Housing Protections.",
+  metaTitle: "ESA for PTSD: Eligibility, Benefits & Housing Protections | My ESA Therapist",
+  metaDescription: "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
+  ogDescription: "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
+  shortDescription: "PTSD can qualify someone for an emotional support animal when a licensed mental health professional determines it’s medically necessary based on symptoms and daily functioning, not just from having a diagnosis alone. The evaluation looks at how symptoms affect daily life and whether an ESA would genuinely help manage them.",
+  category: "Qualifying Conditions",
+  author: {
+    name: "Allyson Valley",
+    title: "Mental Health Writer & Research Contributor",
+    credentials: "Ph.D., LPC",
+    image: "/blogs/blogs_trustbar-author.webp",
+    bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
+    role: "Written by"
   },
-  "reviewedBy": {
-    "name": "Max Phillips, MSW, LCSW",
-    "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
-    "date": "October 2026",
-    "role": "Medically Reviewed by"
+  reviewedBy: {
+    name: "Max Phillips",
+    credentials: "MSW, LCSW",
+    image: "/blogs/blogs_medical_reviewer.webp",
+    date: "September 30, 2026",
+    linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
-  "publishDate": "September 30, 2026",
-  "lastUpdated": "September 30, 2026",
-  "cardImage": "/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
-  "questionCallout": {
-    "question": "Can I Get an ESA Letter If I Have PTSD?",
-    "answer": "Yes. Post-traumatic stress disorder (PTSD) is a recognized mental health condition and may qualify you for an ESA if it significantly affects your daily life. A licensed mental health professional must evaluate your condition and determine whether an emotional support animal could provide meaningful therapeutic support."
+  publishDate: "September 30, 2026",
+  lastUpdated: "September 30, 2026",
+  cardImage: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
+  heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+  heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
+  heroImageDesktop: "/blogs/blog-hero_section.webp",
+  questionCallout: {
+    question: "Can I Get an ESA Letter If I Have PTSD?",
+    answer: "Yes. Post-traumatic stress disorder (PTSD) is a recognized mental health condition and may qualify you for an ESA if it significantly affects your daily life. A licensed mental health professional must evaluate your condition and determine whether an emotional support animal could provide meaningful therapeutic support."
   },
-  "introParagraphs": [
-    "Living with PTSD not only affects your mental health but also interferes with daily life and causes distress. According to the National Institute of Mental Health (NIMH), an estimated [6% of U.S. adults will experience PTSD](https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd) at some point in their lives, with women experiencing it at more than double the rate of men.",
-    "But just having PTSD alone does not make an individual eligible for an ESA or an ESA letter. What matters is how the symptoms of PTSD interfere with everyday life and functioning and whether the animal’s presence provides meaningful relief.",
-    "A licensed mental health professional must make the decision through an independent, clinical assessment. Let’s look at how that assessment works, what it takes to qualify, and what rights an ESA letter actually gives you."
+  introParagraphs: [
+    "Living with PTSD not only affects your mental health but also interferes with daily life and causes trouble sleeping, concentrating, and in social situations. For some people, having an emotional support animal around can help reduce these negative thoughts and promote a sense of well-being and comfort in their daily lives.",
+    "But just having PTSD alone does not make an individual eligible for an ESA or an ESA letter. What matters is how the condition affects your daily life and whether the support animal provides meaningful support in your circumstances.",
+    "A licensed mental health professional must make the decision through an independent, clinical assessment. Understanding this process can help you know what to expect before requesting an ESA letter."
   ],
-  "tocItems": [
+  tocItems: [
     {
-      "id": "what-is-ptsd",
-      "label": "What Is PTSD?"
+      id: "what-is-ptsd",
+      label: "What is PTSD?"
     },
     {
-      "id": "does-ptsd-qualify-esa",
-      "label": "Does PTSD Qualify for an ESA?"
+      id: "does-ptsd-qualify-esa",
+      label: "Does PTSD Qualify for an ESA?"
     },
     {
-      "id": "how-to-get-esa-letter-ptsd",
-      "label": "How to Get an ESA Letter?"
+      id: "how-to-get-esa-letter-ptsd",
+      label: "How to Get an ESA Letter?"
     },
     {
-      "id": "what-esa-for-ptsd-helps",
-      "label": "How Can an ESA Help With PTSD?"
+      id: "what-esa-for-ptsd-helps",
+      label: "How Can an ESA Help With PTSD?"
     },
     {
-      "id": "esa-housing-rights-ptsd",
-      "label": "ESA Housing Rights for PTSD"
+      id: "esa-housing-rights-ptsd",
+      label: "ESA Housing Rights for PTSD"
     },
     {
-      "id": "questions-esa-letter-ptsd",
-      "label": "Common ESA Questions"
+      id: "questions-esa-letter-ptsd",
+      label: "Common ESA Questions"
     },
     {
-      "id": "conclusion",
-      "label": "Conclusion"
+      id: "conclusion",
+      label: "Conclusion"
     },
     {
-      "id": "frequently-asked-questions",
-      "label": "FAQs"
+      id: "frequently-asked-questions",
+      label: "FAQs"
     }
   ],
-  "sections": [
+  sections: [
     {
-      "id": "what-is-ptsd",
-      "title": "What is PTSD and How Can It Affect Daily Life?",
-      "paragraphs": [
-        "Post-traumatic stress disorder (PTSD) can develop after experiencing or witnessing a traumatic event. It often involves symptoms such as flashbacks, intrusive memories, anxiety, hypervigilance, and emotional numbness.",
-        "PTSD can make everyday things feel harder. Some people avoid certain places or situations, struggle with sleep, or feel constantly on edge. It can also interfere with work, relationships, and routines. Having an emotional support animal can bring a sense of comfort, security, and companionship to people navigating these daily challenges."
-      ]
-    },
-    {
-      "id": "does-ptsd-qualify-esa",
-      "title": "Does PTSD Qualify You for an ESA Letter?",
-      "paragraphs": [
-        "Usually, yes. If your PTSD is limiting how you function day to day, and if a licensed professional agrees that an ESA would help, it often qualifies. PTSD is one of several mental health conditions that may qualify for an emotional support animal.",
-        "PTSD looks different depending on the person, but it stems from trauma and tends to involve some combination of hypervigilance, emotional numbness, flashbacks, and sleep disruptions that make daily functioning noticeably harder. Under the Fair Housing Act, a mental health condition that significantly impacts a major life activity, like sleep, focus, or leaving the house, can serve as the basis for an ESA accommodation.",
-        "A diagnosis by itself doesn’t automatically make you eligible for an ESA, though. Someone still has to evaluate your specific situation, your symptoms, and how an animal would actually support you."
-      ]
-    },
-    {
-      "id": "how-to-get-esa-letter-ptsd",
-      "title": "How to Get an ESA Letter for PTSD?",
-      "paragraphs": [
-        "An ESA letter for PTSD is what makes everything official. It comes from a licensed mental health professional, LMHP (such as a psychologist, clinical social worker, professional counselor, or psychiatrist), and states that you have a mental health condition that limits daily life and that an ESA helps manage your symptoms.",
-        "In practice, that means completing an assessment with a licensed mental health professional first. The provider evaluates your symptoms, how PTSD affects you day to day, and whether an ESA is clinically appropriate. If it is, they provide a signed letter with their license details.",
-        "Online ESA letters are legitimate, as long as a real evaluation happens with a licensed provider. If a site hands you a letter without an evaluation, housing providers will likely reject it, and they’d be within their rights to do so. That’s why platforms like My ESA Therapist connect you directly with licensed clinicians who conduct thorough, compliant evaluations."
+      id: "what-is-ptsd",
+      title: "What is PTSD and How Can It Affect Daily Life?",
+      paragraphs: [
+        "Post-traumatic stress disorder (PTSD) can develop after experiencing or witnessing a traumatic event. It can affect how a person reacts to stress, processes memories, and responds to everyday life situations. Symptoms may include disturbing memories or flashbacks, nightmares, anxiety, avoidance, difficulty concentrating, sleep problems, emotional numbness, and feeling constantly on alert.",
+        "PTSD can make everyday things feel harder. Some people avoid certain places or situations, struggle to concentrate, or have a hard time feeling safe and relaxed. For others, symptoms may come and go depending on what triggers them. Since PTSD can affect everybody differently, what matters is how your symptoms are affecting your daily life and whether an ESA may be appropriate or not."
       ],
-      "ctaBox": {
-        "heading": "Could an ESA Support You With PTSD?",
-        "description": "PTSD can make daily life feel overwhelming, but an emotional support animal may offer the comfort and companionship you need. Connect with a licensed mental health professional through My ESA Therapist to find out if you qualify for an ESA.",
-        "buttonText": "Start Your Evaluation",
-        "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
+      quoteBox: {
+        quote: "“For some individuals with PTSD, the steady presence of an emotional support animal can offer comfort, reassurance, and a greater sense of emotional stability throughout the day.”",
+        author: "[Leslie K. Gamble, Licensed Independent Clinical Social Worker](/esa-doctors/dr-leslie-k-gamble/)"
+      },
+      quoteBoxPosition: "bottom"
+    },
+    {
+      id: "does-ptsd-qualify-esa",
+      title: "Does PTSD Qualify You for an ESA Letter?",
+      paragraphs: [
+        "Usually, yes. If your PTSD is limiting how you function day to day, and if a licensed professional agrees an ESA would help manage your symptoms.",
+        "PTSD looks different depending on the person, but it stems from trauma and tends to involve some combination of dissociation, flashbacks, anxiety responses, sleep problems, bad dreams/nightmares, emotional shutdown, avoidance, difficulties in relationships, and not feeling safe.",
+        "A diagnosis by itself doesn’t automatically make you eligible for an ESA, though. Someone still has to look at how PTSD is playing out in your life and decide if an ESA actually makes sense for you and your life circumstances."
+      ]
+    },
+    {
+      id: "how-to-get-esa-letter-ptsd",
+      title: "How to Get an ESA Letter for PTSD?",
+      paragraphs: [
+        "An ESA letter for PTSD is what makes everything official. It comes from a licensed mental health professional and states that you have a qualifying condition and that an ESA would help manage it. The ESA letter must be personalized to you, your symptoms, and your daily routines.",
+        "In practice, that means completing an assessment with a licensed mental health professional first. This will involve the healthcare professional actually asking about your symptoms and how PTSD affects your daily life. If they think an ESA would benefit you, they write the recommendations in a formal letter on official letterhead. The letter itself should include their license details and a clear statement that you have a qualifying condition for an ESA.",
+        "[Online ESA letters are legitimate](/esa-letter-online/), as long as a real evaluation happens with a licensed provider. If a website is handing out approvals with no assessment at all, skip it; that letter won't hold up when you actually need it."
+      ],
+      ctaBox: {
+        heading: "Could an ESA Support You With PTSD?",
+        description: "A licensed mental health professional can evaluate your symptoms, daily functioning, and individual needs to determine whether an emotional support animal may be appropriate for you.",
+        buttonText: "Start Your Evaluation",
+        buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
       }
     },
     {
-      "id": "what-esa-for-ptsd-helps",
-      "title": "What an ESA for PTSD Actually Helps With?",
-      "paragraphs": [
+      id: "what-esa-for-ptsd-helps",
+      title: "What an ESA for PTSD Actually Helps With?",
+      bannerImage: {
+        src: "/Blog Images/ESA for PTSD/what-an-esa-for-ptsd-actually-helps-with-image.webp",
+        alt: "what an esa for ptsd actually helps with",
+        width: 1024,
+        height: 1536
+      },
+      bannerPosition: "top",
+      paragraphs: [
         "An ESA is not going to replace therapy or medication and is often recommended in addition to mental health therapy and medication management. However, people managing PTSD often notice several ESA benefits:"
       ],
-      "listItems": [
-        "It’s calmer having the animal around during a bad moment, such as a flashback, dissociative episode, or other distress behavior. An animal can provide emotional comfort as well as nervous system co-regulation, or attunement, coaxing the individual’s nervous system back to a safe and secure state.",
+      listItems: [
+        "It's calmer having the animal around during a bad moment, such as a flashback, dissociative episode, or other distress behavior. An animal can provide emotional comfort as well as nervous system co-regulation, or attunement, coaxing the individual’s nervous system back to a safe and secure state.",
         "PTSD can also push people to isolate, and having another living being that needs you– feeding it, walking it, pulls you back into a routine you might otherwise skip entirely due to depressive symptoms or avoidance.",
-        "Some people feel safer in spaces that would normally put them on edge, simply because the animal’s there. For those who have experienced trauma at home, an ESA can provide a stronger sense of safety especially, and provide the support needed to continue living independently."
+        "Some people feel safer in spaces that would normally put them on edge, simply because the animal's there. For those who have experienced trauma at home, an ESA can provide a stronger sense of safety especially, and provide the support needed to continue living independently."
       ],
-      "afterListParagraphs": [
+      afterListParagraphs: [
         "The benefits of an ESA for PTSD may not be the same for everyone, and the same is true when considering an [ESA for anxiety](/blog/qualifying-conditions/esa-for-anxiety/), which is why a professional looks at your specific case instead of just checking a box to complete your letter."
-      ],
-      "bannerImage": {
-        "src": "/Blog Images/ESA for PTSD/what-an-esa-for-ptsd-actually-helps-with-image.webp",
-        "alt": "what an esa for ptsd actually helps with",
-        "width": 980,
-        "height": 1470
-      },
-      "bannerPosition": "bottom"
-    },
-    {
-      "id": "esa-housing-rights-ptsd",
-      "title": "ESA Housing Rights for People With PTSD",
-      "paragraphs": [
-        "If PTSD significantly limits your daily life, an emotional support animal may qualify as a reasonable accommodation under the Fair Housing Act if supported by a legitimate evaluation conducted by a licensed mental health professional. This may allow you to request accommodation without extra pet charges or deposits.",
-        "But it is important to keep in mind that you’ll still need a [valid letter to support your ESA request](/esa-letter-for-housing). A housing provider may ask for reliable disability-related information when your disability or need for the animal is not obvious. Online certifications, instant approval, sticker decals, or animal harnesses are not enough to support a true ESA request with a landlord.",
-        "Can they still say no, even with a formal assessment and letter? Sometimes. Not because of your PTSD or because the animal isn’t a “normal” pet, that’s not allowed, but if the documentation isn’t solid, if the animal is genuinely a safety risk, or if accommodating it would create a real burden, then denial is possible. It comes down to the specifics of each individual case."
       ]
     },
     {
-      "id": "questions-esa-letter-ptsd",
-      "title": "Things People Usually Ask While Getting an ESA Letter for PTSD.",
-      "paragraphs": [
+      id: "esa-housing-rights-ptsd",
+      title: "ESA Housing Rights for People With PTSD",
+      paragraphs: [
+        "If PTSD significantly limits your daily life, an emotional support animal may qualify as a reasonable accommodation under the Fair Housing Act if supported by a legitimate evaluation conducted by a licensed mental health professional. This may allow you to request accommodation without extra pet charges or deposits.",
+        "But it is important to keep in mind that you'll still need a [valid letter to support your ESA request](/esa-letter-for-housing/). A housing provider may ask for reliable disability-related information when your disability or need for the animal is not obvious. Online certifications, instant approval, sticker decals, or animal harnesses are not enough to support a true ESA request with a landlord.",
+        "Can they still say no, even with a formal assessment and letter? Sometimes. Not because of your PTSD or because the animal isn't a \"normal\" pet, that's not allowed, but if the documentation isn't solid, if the animal is genuinely a safety risk, or if accommodating it would create a real burden, then denial is possible. It comes down to the specifics of each individual case."
+      ]
+    },
+    {
+      id: "questions-esa-letter-ptsd",
+      title: "Things People Usually Ask While Getting an ESA Letter for PTSD.",
+      bannerImage: {
+        src: "/Blog Images/ESA for PTSD/things-people-ask-about-esa-letters-for-ptsd-image.webp",
+        alt: "things people ask about esa letters for ptsd",
+        width: 1254,
+        height: 1254
+      },
+      bannerPosition: "top",
+      paragraphs: [
         "People usually have doubts about the eligibility criteria, animal types, training requirements, evaluation process, registration, and others when they choose to get an ESA letter for PTSD. Let us discuss each in detail:"
       ],
-      "listItems": [
+      listItems: [
         "**Eligibility:** A PTSD diagnosis alone does not guarantee an ESA letter. A licensed mental health professional must assess your symptoms, daily functioning, and whether an ESA could provide meaningful support.",
         "**Type of animal:** Dogs and cats are the most common ESAs, but other animals may be considered depending on your individual needs and housing situation.",
-        "**Training**: ESAs do not need the specialized task training required for service animals. However, they should be manageable and appropriately cared for.",
+        "**Training:** ESAs do not need the specialized task training required for service animals. However, they should be manageable and appropriately cared for.",
         "**Online evaluation:** An ESA letter can be obtained through telehealth when a properly licensed mental health professional actually evaluates you rather than simply approving a form.",
         "**Registration:** You do not need to register or certify an ESA through an online database. An ESA ID card, certificate, vest, or online registration does not create legal status.",
         "**Treatment:** An ESA can provide comfort and emotional support, but it does not replace PTSD treatment, therapy, medication, or other care recommended by a professional."
       ],
-      "afterListParagraphs": [
-        "If you’re considering getting the emotional support animal letter, the real work is in finding a licensed professional who’ll take the evaluation seriously. Everything else; the housing protections, the legitimacy of the letter, and the overall ability to seamlessly get your ESA accepted depends on that first step being done right."
-      ],
-      "bannerImage": {
-        "src": "/Blog Images/ESA for PTSD/things-people-ask-about-esa-letters-for-ptsd-image.webp",
-        "alt": "things people ask about esa letters for ptsd",
-        "width": 980,
-        "height": 980
-      },
-      "bannerPosition": "bottom"
+      afterListParagraphs: [
+        "If you're considering getting the emotional support animal letter, the real work is in finding a licensed professional who'll take the evaluation seriously. Everything else; the housing protections, the legitimacy of the letter, and the overall ability to seamlessly get your ESA accepted depends on that first step being done right."
+      ]
+    },
+    {
+      id: "conclusion",
+      title: "Conclusion",
+      paragraphs: [
+        "PTSD doesn't just show up in scary moments. It shapes daily life in ways that are harder to see. For a lot of people, having an emotional support animal around, just being there, ends up becoming a real part of how they cope.",
+        "That said, an ESA isn't a substitute for therapy, medication, or other treatment you're getting from a professional. Whether someone qualifies for one comes down to their specific situation and whether a mental health provider determines it's actually needed as part of their care.",
+        "So if you think an ESA might help you deal with PTSD, start by talking to a licensed mental health professional. They can evaluate whether it makes sense for you, and if it does, give you the documentation you'd need for housing accommodations."
+      ]
     }
   ],
-  "finalThoughts": {
-    "id": "conclusion",
-    "title": "Conclusion",
-    "paragraphs": [
-      "PTSD doesn’t just show up in scary moments. It shapes daily life in ways that are harder to see. For a lot of people, having an emotional support animal around, just being there, ends up becoming a real part of how they cope.",
-      "That said, an ESA isn’t a substitute for therapy, medication, or other treatment you’re getting from a professional. Whether someone qualifies for one comes down to their specific situation and whether a mental health provider determines it’s actually needed as part of their care.",
-      "So if you think an ESA might help you deal with PTSD, start by talking to a licensed mental health professional. They can evaluate whether it makes sense for you, and if it does, give you the documentation you’d need for housing accommodations."
-    ]
-  },
-  "faqs": [
+  faqs: [
     {
-      "q": "Can an ESA help someone with PTSD live independently?",
-      "a": "For some individuals, the companionship and routine associated with an ESA may make daily life feel more manageable. Whether an ESA can support independent living depends on the person’s specific needs and should be evaluated on an individual basis."
+      q: "Can an ESA help someone with PTSD live independently?",
+      a: "For some individuals, the companionship and routine associated with an ESA may make daily life feel more manageable. Whether an ESA can support independent living depends on the person's specific needs and should be evaluated on an individual basis."
     },
     {
-      "q": "Can an ESA help with PTSD-related panic attacks?",
-      "a": "Some people find that having a familiar animal nearby provides comfort during periods of intense anxiety or panic. An ESA may offer companionship and help create a sense of stability, although it does not replace professional treatment for panic symptoms."
+      q: "Can an ESA help with PTSD-related panic attacks?",
+      a: "Some people find that having a familiar animal nearby provides comfort during periods of intense anxiety or panic. An ESA may offer companionship and help create a sense of stability, although it does not replace professional treatment for panic symptoms."
     },
     {
-      "q": "Can a child with PTSD have an emotional support animal?",
-      "a": "Potentially, yes. Eligibility depends on the child’s individual circumstances and an assessment by an appropriately licensed mental health professional. The professional would consider the child’s symptoms, daily functioning, and whether an ESA would provide meaningful therapeutic support."
+      q: "Can a child with PTSD have an emotional support animal?",
+      a: "Potentially, yes. Eligibility depends on the child's individual circumstances and an assessment by an appropriately licensed mental health professional. The professional would consider the child's symptoms, daily functioning, and whether an ESA would provide meaningful therapeutic support."
     },
     {
-      "q": "Can PTSD caused by a past relationship qualify for an ESA?",
-      "a": "The cause of the trauma does not by itself determine ESA eligibility. PTSD can develop following different types of traumatic experiences. What matters is the person’s current mental health condition, how it affects their functioning, and whether a qualified professional believes an ESA would be beneficial."
+      q: "Can PTSD caused by a past relationship qualify for an ESA?",
+      a: "The cause of the trauma does not by itself determine ESA eligibility. PTSD can develop following different types of traumatic experiences. What matters is the person's current mental health condition, how it affects their functioning, and whether a qualified professional believes an ESA would be beneficial."
     },
     {
-      "q": "Does my ESA for PTSD need to be a certain age?",
-      "a": "There is no universal age requirement that applies to every emotional support animal. The animal should be suitable for the individual’s needs and housing situation while also being manageable and appropriately cared for."
+      q: "Does my ESA for PTSD need to be a certain age?",
+      a: "There is no universal age requirement that applies to every emotional support animal. The animal should be suitable for the individual's needs and housing situation while also being manageable and appropriately cared for."
     }
   ],
-  "faqSectionId": "frequently-asked-questions",
-  "faqSectionTitle": "Frequently Asked Questions",
+  faqSectionTitle: "Frequently Asked Questions",
+  faqSectionId: "frequently-asked-questions",
   schema: esaForPtsdSchema,
 },
 {
