@@ -9,6 +9,7 @@ import { conditionsThatMayQualifySchema } from "./schemas/conditionsThatMayQuali
 import { esaForAnxietySchema } from "./schemas/esaForAnxietySchema";
 import { eightBasicObedienceCommandsSchema } from "./schemas/eightBasicObedienceCommandsSchema";
 import { esaForDepressionSchema } from "./schemas/esaForDepressionSchema";
+import { esaForPtsdSchema } from "./schemas/esaForPtsdSchema";
 
 export interface BlogTocItem {
   id: string;
@@ -3343,138 +3344,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "faqSectionId": "frequently-asked-questions",
   "faqSectionTitle": "Frequently Asked Questions",
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalOrganization",
-        "@id": "https://myesatherapist.com/#organization",
-        "name": "My ESA Therapist",
-        "description": "My ESA Therapist is a trusted provider of Emotional Support Animal (ESA) and Psychiatric Service Dog (PSD) letter evaluations. Our licensed mental health professionals provide secure, compliant assessments to help qualified individuals obtain the documentation they need.",
-        "url": "https://myesatherapist.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://myesatherapist.com/wp-content/uploads/2025/07/my-esa-therapist-logo.png"
-        },
-        "image": "https://myesatherapist.com/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
-        "email": "info@myesatherapist.com",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "email": "info@myesatherapist.com",
-            "contactType": "customer service"
-          }
-        ]
-      },
-      {
-        "@type": [
-          "WebSite",
-          "WebSite"
-        ],
-        "@id": "https://myesatherapist.com/#website",
-        "url": "https://myesatherapist.com/",
-        "name": "My ESA Therapist",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        }
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/#article",
-        "headline": "Can You Get an ESA For PTSD? Eligibility, Benefits & Housing Protections",
-        "description": "Wondering if PTSD qualifies for an ESA? Explore how eligibility is determined, how an emotional support animal may help, and what housing protections may be available.",
-        "url": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/",
-        "mainEntityOfPage": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        },
-        "image": "https://myesatherapist.com/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Allyson Valley",
-          "url": "https://myesatherapist.com/author/allyson-valley/"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://myesatherapist.com/",
-              "name": "My ESA Therapist"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/qualifying-conditions/",
-              "name": "Qualifying Conditions"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/",
-              "name": "Can You Get an ESA For PTSD? Eligibility, Benefits & Housing Protections"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-ptsd/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Can an ESA help someone with PTSD live independently?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For some individuals, the companionship and routine associated with an ESA may make daily life feel more manageable. Whether an ESA can support independent living depends on the person’s specific needs and should be evaluated on an individual basis."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can an ESA help with PTSD-related panic attacks?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Some people find that having a familiar animal nearby provides comfort during periods of intense anxiety or panic. An ESA may offer companionship and help create a sense of stability, although it does not replace professional treatment for panic symptoms."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can a child with PTSD have an emotional support animal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Potentially, yes. Eligibility depends on the child’s individual circumstances and an assessment by an appropriately licensed mental health professional. The professional would consider the child’s symptoms, daily functioning, and whether an ESA would provide meaningful therapeutic support."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can PTSD caused by a past relationship qualify for an ESA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The cause of the trauma does not by itself determine ESA eligibility. PTSD can develop following different types of traumatic experiences. What matters is the person’s current mental health condition, how it affects their functioning, and whether a qualified professional believes an ESA would be beneficial."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does my ESA for PTSD need to be a certain age?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "There is no universal age requirement that applies to every emotional support animal. The animal should be suitable for the individual’s needs and housing situation while also being manageable and appropriately cared for."
-            }
-          }
-        ]
-      }
-    ]
-  }
+  schema: esaForPtsdSchema,
 },
 {
   "id": "prepare-esa-for-rental-housing",
