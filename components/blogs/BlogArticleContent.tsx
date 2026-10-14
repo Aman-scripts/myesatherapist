@@ -127,9 +127,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         ))}
       </div>
 
-      {/* Intro Quote Callout (if present) */}
-      {article.introQuoteBox && renderQuoteBox(article.introQuoteBox)}
-
       {/* Intro Image (if present) */}
       {article.introImage && (
         <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${!article.introImage.fullWidth && (article.introImage.height ?? 550) > (article.introImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
@@ -150,6 +147,9 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           )}
         </div>
       )}
+
+      {/* Intro Quote Callout (if present) */}
+      {article.introQuoteBox && renderQuoteBox(article.introQuoteBox)}
 
       {/* 3. Main Sections */}
       {article.sections.map((sec) => (

@@ -3367,201 +3367,212 @@ export const BLOG_POSTS: BlogArticle[] = [
   schema: esaForPtsdSchema,
 },
 {
-  "id": "prepare-esa-for-rental-housing",
-  "slug": "prepare-esa-for-rental-housing",
-  "categorySlug": "esa-training",
-  "url": "/blog/esa-training/prepare-esa-for-rental-housing/",
-  "canonicalUrl": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
-  "title": "How to Prepare Your ESA for Rental Housing?",
-  "metaTitle": "How to Prepare Your ESA for Rental Housing? - My ESA Therapist",
-  "metaDescription": "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
-  "ogDescription": "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
-  "shortDescription": "To prepare your ESA for rental housing, focus on basic obedience, house training, barking control, and calm behavior around neighbors and other animals. Help your ESA adjust to apartment noises, hallways, elevators, and short periods alone. Keep vaccinations and veterinary records updated, and have your ESA housing documentation ready before moving.",
-  "category": "ESA Training",
-  "author": {
-    "name": "Allyson Valley, Ph.D., LPC",
-    "title": "Licensed Professional Counselor",
-    "credentials": "Ph.D., LPC",
-    "image": "/blogs/blogs_trustbar-author.webp",
-    "bio": "Dr. Allyson Valley is a Licensed Professional Counselor with extensive clinical experience in mental health evaluation, emotional support animal assessments, and evidence-based psychotherapy.",
-    "role": "Written by"
-  },
-  "reviewedBy": {
-    "name": "Max Phillips, MSW, LCSW",
-    "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
-    "date": "October 2026",
-    "role": "Medically Reviewed by"
-  },
-  "publishDate": "October 05, 2026",
-  "lastUpdated": "October 05, 2026",
-  "cardImage": "/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
-  "questionCallout": {
-    "question": "Can an ESA live in a rental with a no-pet policy?",
-    "answer": "Yes. Under the Fair Housing Act, an approved ESA may qualify as a reasonable accommodation to a no-pet policy when the tenant has a disability-related need for the animal and when reliable documentation from a qualified professional supports that need."
-  },
-  "introParagraphs": [
-    "Moving into rental housing with an emotional support animal is about more than getting the right documentation. You also want to make sure your animal is actually ready to live in a shared building where noise, shared hallways, and close neighbors are part of everyday life.",
-    "An ESA does not have to be perfectly trained. However, basic manners and obedience commands can make the transition smoother, protect your security deposit, and keep minor neighbor complaints from turning into landlord disputes.",
-    "Before moving day, focus on a few practical areas: house-training, barking, leash manners, being comfortable alone, and having your paperwork ready. Preparing ahead of time helps ensure a stress-free move for both you and your ESA."
-  ],
-  "tocItems": [
-    {
-      "id": "what-can-you-train-your-esa-to-do-before-moving",
-      "label": "What Can You Train Your ESA to Do Before Moving?"
+  id: "prepare-esa-for-rental-housing",
+    slug: "prepare-esa-for-rental-housing",
+    categorySlug: "esa-training",
+    url: "/blog/esa-training/prepare-esa-for-rental-housing/",
+    canonicalUrl: "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
+    title: "How to Prepare Your ESA for Rental Housing?",
+    metaTitle: "How to Prepare Your ESA for Rental Housing? - My ESA Therapist",
+    metaDescription: "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
+    ogDescription: "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
+    shortDescription: "To prepare your ESA for rental housing, focus on basic obedience, house training, barking control, and calm behavior around neighbors and other animals. Help your ESA adjust to apartment noises, hallways, elevators, and short periods alone. Keep vaccinations and veterinary records updated, and have your ESA housing documentation ready before moving.",
+    category: "ESA Training",
+    author: {
+      name: "Allyson Valley",
+      title: "Mental Health Writer & Research Contributor",
+      credentials: "Ph.D., LPC",
+      image: "/blogs/blogs_trustbar-author.webp",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
+      role: "Written by"
     },
-    {
-      "id": "conclusion",
-      "label": "Conclusion"
+    reviewedBy: {
+      name: "Max Phillips",
+      credentials: "MSW, LCSW",
+      image: "/blogs/blogs_medical_reviewer.webp",
+      date: "October 05, 2026",
+      linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/"
     },
-    {
-      "id": "frequently-asked-questions",
-      "label": "Frequently Asked Questions"
-    }
-  ],
-  "sections": [
-    {
-      "id": "what-can-you-train-your-esa-to-do-before-moving",
-      "title": "What Can You Train Your ESA to Do Before Moving?",
-      "paragraphs": [
-        "There are a few important areas to focus on before you move into a rental home with your ESA. Things like basic commands, house training, and staying calm in unfamiliar settings can make a big difference in preventing landlord issues or neighbor complaints.",
-        "Let us discuss all these things in detail and make your ESA prepared for the new home!"
-      ],
-      "subsections": [
-        {
-          "title": "Start with Basic ESA Training Commands",
-          "paragraphs": [
-            "You don’t have to hire a training professional just to make your emotional support animal follow the basic commands. All you need is some basic dog obedience training at home.",
-            "Remember to set aside an hour each day, start a few weeks before your moving day, and use positive reinforcement (like treats, toys, or praise) when they follow commands correctly:"
-          ],
-          "listItems": [
-            "Sit",
-            "Stay",
-            "Come",
-            "Leave it",
-            "Drop it",
-            "Quiet",
-            "Wait",
-            "Place"
-          ],
-          "afterListParagraphs": [
-            "These commands could be useful, especially when renting. Like, ‘wait’ can help during treat times to keep them calm. While ‘leave it’ and ‘drop it’ can keep your ESA away from dropped food, trash, or neighbors’ belongings in shared areas.",
-            "The goal is not to make your support animal turn into a ‘service animal,’ but just to make sure the animal is manageable and comfortable living around other people."
-          ]
-        },
-        {
-          "title": "Work on Barking Before Moving In",
-          "paragraphs": [
-            "This one is especially important for dog ESA owners. Barking is one of the top issues most landlords hear about from neighbors, and repeated complaints can put your housing in jeopardy.",
-            "For this, it is important to identify the triggers. Identifying and gradually exposing your support animal to triggers (like footsteps, door knocks, and other animals) can help desensitize them:"
-          ],
-          "listItems": [
-            "Play hallway or door sounds at a low volume.",
-            "Reward your dog for remaining calm when someone approaches the door.",
-            "Practice a “quiet” cue without yelling.",
-            "Reward calm behavior around other dogs.",
-            "Slowly increase exposure as your dog becomes more comfortable.",
-            "Avoid punishing fear-based barking, which can increase stress."
-          ],
-          "afterListParagraphs": [
-            "**Note:** If your dog becomes highly reactive, fearful, or aggressive, consider working with a qualified, force-free trainer. Excessive or aggressive barking that disturbs the peace can lead to landlord disputes or lease violations."
-          ]
-        },
-        {
-          "title": "Teach Your ESA How to Stay Calm When You Leave",
-          "paragraphs": [
-            "Your ESA may spend some time alone while you are at work, school, shopping, or doing routine tasks. Moving can temporarily increase separation-related behavior because everything around your animal has changed. Prepare for this before the move by practicing quick periods of separation.",
-            "Start with short durations and gradually increase the time if your ESA remains comfortable. Before leaving, provide a safe environment and remove anything your animal could chew, swallow, or knock over. For dogs, a food puzzle or appropriate enrichment toy may help keep them occupied.",
-            "**Note:** If your animal shows persistent signs of separation anxiety, such as destructive behavior, nonstop vocalization, escape attempts, or extreme distress, get professional help. Do not assume the behavior will disappear after the move."
-          ]
-        },
-        {
-          "title": "Ensure that Your ESA is Fully House-Trained",
-          "paragraphs": [
-            "House training is especially important in rental situations. An accident in your apartment can cause damage to the carpet, floor, or walls. Repeated accidents can also escalate to warnings and termination of the lease agreement.",
-            "To tackle this, make sure your ESA has a proper bathroom routine. Take your ESA out during predictable and specific times each day, such as after dinner, drinking water, or just before sleeping.",
-            "If your ESA is a cat, make sure the litter box is clean, accessible, and located somewhere your cat can comfortably use it.",
-            "It is also smart to learn where the closest outdoor relief area is before move-in day. Knowing the route can make those early mornings and late-night trips much easier."
-          ]
-        },
-        {
-          "title": "Make Sure to Get Your ESA Properly Vaccinated",
-          "paragraphs": [
-            "Keep your ESA’s required and veterinarian-recommended vaccinations up to date before moving into a rental. Keep copies of current veterinary and vaccination records in case your housing provider or local rules require them.",
-            "Being prepared with these records can also make the move-in process easier. Along with vaccinations, make sure your ESA is healthy, parasite-free, and ready to live safely around other people and animals.",
-            "Remember, vaccination records are different from ESA documentation. They help show that your animal meets applicable health and safety requirements, but they do not determine whether an animal qualifies for a disability-related housing accommodation."
-          ]
-        },
-        {
-          "title": "Have Your ESA Letter Ready Before Moving",
-          "paragraphs": [
-            "If you apply for housing without an ESA letter in hand, you are putting yourself in a weaker position to obtain accommodations. An ESA letter can help support your reasonable accommodation request in housing.",
-            "Online telehealth platforms like My ESA Therapist connect you with licensed mental health professionals for ESA evaluations and documentation when clinically appropriate. A valid ESA letter must:"
-          ],
-          "listItems": [
-            "Come from a licensed mental health professional (LMHP) and not from a registry or certification site",
-            "Be on the provider’s letterhead and dated within the last 12 months",
-            "Include the provider’s license number, state, and type of license",
-            "State that you have a disability-related need for the animal, without disclosing your diagnosis"
-          ],
-          "afterListParagraphs": [
-            "Have this ESA letter ready before you sign a rental agreement or submit an application. Landlords are permitted a reasonable review period (HUD’s prior guidance cited around 10 business days), and providing the letter late may delay your move-in."
-          ]
-        },
-        {
-          "title": "Submit Your Accommodation Request the Right Way",
-          "paragraphs": [
-            "Verbal requests get lost or disputed. Always provide your ESA request in writing and include a statement that you are requesting a reasonable accommodation under the Fair Housing Act, along with your ESA letter and your animal’s species. Your request can not be denied based solely on your ESA’s breed or weight.",
-            "Keep a copy of everything you send. If a dispute comes up later, this documentation is your evidence."
-          ]
-        }
-      ],
-      "ctaBox": {
-        "heading": "Getting Ready to Move With Your ESA?",
-        "description": "Make sure you have the proper documentation before moving into your rental home. A licensed mental health professional can evaluate whether an ESA is appropriate for your situation and provide documentation when clinically appropriate.",
-        "buttonText": "Start Your Evaluation",
-        "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
+    publishDate: "October 05, 2026",
+    lastUpdated: "October 05, 2026",
+    cardImage: "/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
+    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    questionCallout: {
+      question: "Can an ESA live in a rental with a no-pet policy?",
+      answer: "Yes. Under the Fair Housing Act, an approved ESA may qualify as a reasonable accommodation to a no-pet policy when the tenant has a disability-related need for the animal and when reliable documentation from a qualified professional supports that need."
+    },
+    introParagraphs: [
+      "Moving into rental housing with an emotional support animal is about more than getting the right documentation. Your ESA also needs to be comfortable in a new environment and able to live around neighbors, visitors, other animals, and the everyday noise of an apartment or rental property.",
+      "An ESA does not have to be perfectly trained. However, basic manners and obedience commands can make a major difference once you move into a building with shared hallways, elevators, entrances, parking areas, and nearby neighbors.",
+      "Before moving day, focus on a few practical areas: house-training, barking, leash manners, being comfortable around strangers and other animals, and adjusting to being alone in a new home. At the same time, make sure your [housing documentation is ready](/esa-letter-for-housing/) and understand your responsibilities as a tenant."
+    ],
+    introImage: {
+      src: "/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
+      alt: "moving in with a furry friend",
+      width: 1200,
+      height: 800,
+      fullWidth: true
+    },
+    introQuoteBox: {
+      quote: "“While ESAs do not need specialized service-animal training, responsible preparation matters. Teaching appropriate household behavior and maintaining good veterinary care can help an ESA adapt safely and comfortably to rental living”",
+      author: "[Dr. Gaurav Patel, MD](/esa-doctors/dr-gaurav-patel/)"
+    },
+    tocItems: [
+      {
+        id: "what-can-you-train-your-esa-to-do-before-moving",
+        label: "What Can You Train Your ESA to Do Before Moving?"
+      },
+      {
+        id: "conclusion",
+        label: "Conclusion"
+      },
+      {
+        id: "frequently-asked-questions",
+        label: "FAQs"
       }
-    }
-  ],
-  "finalThoughts": {
-    "id": "conclusion",
-    "title": "Conclusion",
-    "paragraphs": [
-      "A smooth ESA move-in is not about knowing the law; it is about being ready before you need it. Valid paperwork, along with a vaccinated and well-behaved animal and a clear sense of your rights and responsibilities, covers almost every ESA dispute before it starts.",
-      "Federal housing protections and enforcement can change over time, so renters should check the [current HUD guidance](/blog/esa-guide/hud-guidance-for-emotional-support-animals/) and applicable [state and local ESA housing laws](/esa-laws) when requesting an ESA accommodation. Keeping your documentation organized can help support your request and avoid unnecessary delays."
-    ]
+    ],
+    sections: [
+      {
+        id: "what-can-you-train-your-esa-to-do-before-moving",
+        title: "What Can You Train Your ESA to Do Before Moving?",
+        paragraphs: [
+          "There are a few important areas to focus on before you move into a rental home with your ESA. Things such as basic ESA commands, house-training, controlling excessive barking, and teaching your ESA to stay calm in locations when you're away will help prevent any complications later on.",
+          "Let us discuss all these things in detail and make your ESA prepared for the new home!"
+        ],
+        subsections: [
+          {
+            title: "Start with Basic ESA Training Commands",
+            paragraphs: [
+              "You don't have to hire a training professional just to make your emotional support animal follow the commands or training. It can be done without any help, by just being consistent and calm with your support animal.",
+              "Remember to set aside an hour each day, start a few weeks before your moving day, and use positive reinforcement like treats and praise. For dogs, practice [basic ESA obedience commands](/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/) such as:"
+            ],
+            listItems: [
+              "Sit",
+              "Stay",
+              "Come",
+              "Leave it",
+              "Drop it",
+              "Quiet",
+              "Wait",
+              "Place"
+            ],
+            afterListParagraphs: [
+              "These commands could be useful, especially when renting. Like, ‘wait’ can help during treat times to ensure healthy eating and build patience, while ‘leave it’ can prevent your dog from picking up something that does not belong to you.",
+              "The goal is not to make your support animal turn into a ‘service animal,’ but just to make sure the shift and transition to the rental housing is smooth for all: you, your support animal, and the people living there."
+            ]
+          },
+          {
+            title: "Work on Barking Before Moving In",
+            paragraphs: [
+              "This one is especially important for dog ESA owners. Barking is one of the top issues most landlords are worried about. A dog that barks whenever someone walks past the door, hears a neighbor, sees another dog, or hears an elevator may quickly become a problem in a building with shared walls.",
+              "For this, it is important to identify the triggers. Identifying and gradually exposing your support animal to the triggers in low intensity can teach your dog how to react calmly in such situations. For example, you can:"
+            ],
+            listItems: [
+              "Play hallway or door sounds at a low volume.",
+              "Reward your dog for remaining calm when someone approaches the door.",
+              "Practice a “quiet” cue without yelling.",
+              "Reward calm behavior around other dogs.",
+              "Slowly increase exposure as your dog becomes more comfortable.",
+              "Avoid punishing fear-based barking, which can increase stress."
+            ],
+            afterListParagraphs: [
+              "**Note:** If your dog becomes highly reactive, fearful, or aggressive, consider working with a qualified positive-reinforcement trainer or veterinary behavior professional rather than trying to correct the problem through punishment."
+            ]
+          },
+          {
+            title: "Teach Your ESA How to Stay Calm When You Leave",
+            paragraphs: [
+              "Your ESA may spend some time alone while you are at work, school, shopping, or doing routine tasks. Moving can temporarily increase separation-related behavior because everything around your animal has changed. Prepare for this before the move by practicing quick periods of separation.",
+              "Start with short durations and gradually increase the time if your ESA remains comfortable. Before leaving, provide a safe environment and remove anything your animal could chew, swallow, or knock over. For dogs, a food puzzle or appropriate enrichment toy may help keep them occupied.",
+              "**Note:** If your animal shows persistent signs of separation anxiety, such as destructive behavior, nonstop vocalization, escape attempts, or extreme distress, get professional help. Do not assume the behavior will disappear after the move."
+            ]
+          },
+          {
+            title: "Ensure that Your ESA is Fully House-Trained",
+            paragraphs: [
+              "House training is especially important in rental situations. An accident in your apartment can cause damage to the carpet, floor, or walls. Repeated accidents can also escalate to warnings and termination of the lease agreement.",
+              "To tackle this, make sure your ESA has a proper bathroom routine. Take your ESA out during predictable and specific times each day, such as after dinner, drinking water, or just before sleeping.",
+              "If your ESA is a cat, make sure the litter box is clean, accessible, and located somewhere your cat can comfortably use it.",
+              "It is also smart to learn where the closest outdoor relief area is before move-in day. Knowing the route can make those early mornings and late-night trips much easier."
+            ]
+          },
+          {
+            title: "Make Sure to Get Your ESA Properly Vaccinated",
+            paragraphs: [
+              "Keep your ESA’s required and veterinarian-recommended vaccinations up to date before moving into a rental. Keep copies of current veterinary and vaccination records in case your housing provider or local rules require them.",
+              "Being prepared with these records can also make the move-in process easier. Along with vaccinations, make sure your ESA is healthy, parasite-free, and ready to live safely around other people and animals.",
+              "Remember, vaccination records are different from ESA documentation. They help show that your animal meets applicable health and safety requirements, but they do not determine whether an animal qualifies for a disability-related housing accommodation."
+            ]
+          },
+          {
+            title: "Have Your ESA Letter Ready Before Moving",
+            paragraphs: [
+              "If you apply for housing without an ESA letter in hand, you are putting yourself in a weaker position to obtain accommodations. An ESA letter can help support your reasonable accommodation request in housing.",
+              "Online telehealth platforms like My ESA Therapist connect you with licensed mental health professionals for ESA evaluations and documentation when clinically appropriate. A valid ESA letter must:"
+            ],
+            listItems: [
+              "Come from a licensed mental health professional (LMHP) and not from a registry or certification site",
+              "Be on the provider's letterhead and dated within the last 12 months",
+              "Include the provider's license number, state, and type of license",
+              "State that you have a disability-related need for the animal, without disclosing your diagnosis"
+            ],
+            afterListParagraphs: [
+              "Have this ESA letter ready before you sign a rental agreement or submit an application. Landlords are permitted a reasonable review period (HUD's prior guidance cited around 10 business days), and providing the letter late may delay your move-in."
+            ]
+          },
+          {
+            title: "Submit Your Accommodation Request the Right Way",
+            paragraphs: [
+              "Verbal requests get lost or disputed. Always provide your ESA request in writing and include a statement that you are requesting a reasonable accommodation under the Fair Housing Act, along with your ESA letter and your animal's species. Your request can not be denied based solely on your ESA’s breed or weight.",
+              "Keep a copy of everything you send. If a dispute comes up later, this documentation is your evidence."
+            ]
+          }
+        ],
+        ctaBox: {
+          heading: "Getting Ready to Move With Your ESA?",
+          description: "Make sure you have the proper documentation before moving into your rental home. A licensed mental health professional can evaluate whether an ESA is appropriate for your situation and provide documentation when clinically appropriate.",
+          buttonText: "Start Your Evaluation",
+          buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
+        }
+      },
+      {
+        id: "conclusion",
+        title: "Conclusion",
+        paragraphs: [
+          "A smooth ESA move-in is not about knowing the law; it is about being ready before you need it. Valid paperwork, along with a vaccinated and well-behaved animal and a clear sense of your rights and responsibilities, covers almost every ESA dispute before it starts.",
+          "Federal housing protections and enforcement can change over time, so renters should check the [current HUD guidance](/blog/esa-guide/hud-guidance-for-emotional-support-animals/) and applicable [state and local ESA housing laws](/esa-laws) when requesting an ESA accommodation. Keeping your documentation organized can help support your request and avoid unnecessary delays."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: "Does an ESA need training to live in an apartment?",
+        a: "No. ESAs are not legally required to complete formal training to live in an apartment. However, basic training can help prevent barking, property damage, or behavior that creates problems for neighbors or the housing provider."
+      },
+      {
+        q: "Can a landlord charge a pet deposit for an ESA?",
+        a: "No. Under the Fair Housing Act, landlords are generally not allowed to charge pet fees, rent, and deposits. Landlords can still charge for actual, documented damage after move-out, such as urination on floors or chewing damage."
+      },
+      {
+        q: "How far in advance should I request accommodation?",
+        a: "As soon as you've chosen a unit, and ideally before signing the lease. Landlords get a reasonable review window, so requesting accommodation early avoids move-in delays."
+      },
+      {
+        q: "Can a landlord deny my ESA based on breed or weight?",
+        a: "No. Breed and weight restrictions don't apply to ESAs. Valid denial grounds are limited to a documented direct threat to safety or substantial property damage by that specific animal."
+      },
+      {
+        q: "Do I have to tell my landlord my diagnosis?",
+        a: "No. Your ESA letter only needs to confirm a disability-related need, not the specific condition. A landlord can ask for basic details but cannot request or order you to provide the complete diagnosis of your condition."
+      }
+    ],
+    faqSectionTitle: "Frequently Asked Questions",
+    faqSectionId: "frequently-asked-questions",
+    schema: prepareEsaForRentalHousingSchema,
   },
-  "faqs": [
-    {
-      "q": "Does an ESA need training to live in an apartment?",
-      "a": "No. ESAs are not legally required to complete formal training to live in an apartment. However, basic training can help prevent barking, property damage, or behavior that creates problems for neighbors or the housing provider."
-    },
-    {
-      "q": "Can a landlord charge a pet deposit for an ESA?",
-      "a": "No. Under the Fair Housing Act, landlords are generally not allowed to charge pet fees, rent, and deposits. Landlords can still charge for actual, documented damage after move-out, such as urination on floors or chewing damage."
-    },
-    {
-      "q": "How far in advance should I request accommodation?",
-      "a": "As soon as you’ve chosen a unit, and ideally before signing the lease. Landlords get a reasonable review window, so requesting accommodation early avoids move-in delays."
-    },
-    {
-      "q": "Can a landlord deny my ESA based on breed or weight?",
-      "a": "No. Breed and weight restrictions don’t apply to ESAs. Valid denial grounds are limited to a documented direct threat to safety or substantial property damage by that specific animal."
-    },
-    {
-      "q": "Do I have to tell my landlord my diagnosis?",
-      "a": "No. Your ESA letter only needs to confirm a disability-related need, not the specific condition. A landlord can ask for basic details but cannot request or order you to provide the complete diagnosis of your condition."
-    }
-  ],
-  "faqSectionId": "frequently-asked-questions",
-  "faqSectionTitle": "Frequently Asked Questions",
-  schema: prepareEsaForRentalHousingSchema,
-},
-{
+  {
   "id": "esa-training-myths",
   "slug": "esa-training-myths",
   "categorySlug": "esa-training",
