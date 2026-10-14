@@ -10,7 +10,6 @@ import { BlogArticleContent } from "@/components/blogs/BlogArticleContent";
 import { BlogAuthorBio } from "@/components/blogs/BlogAuthorBio";
 import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
 import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
-import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
@@ -144,7 +143,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
         />
 
         {/* 2. Floating Meta/Trust Bar */}
-        <div className="-mt-12 sm:-mt-16 lg:-mt-[60px] relative z-30 px-4 sm:px-6 lg:px-8">
+        <div className="-mt-8 sm:-mt-10 lg:-mt-[44px] relative z-30 px-4 sm:px-6 lg:px-8">
           <BlogMetaBar
             authorName={article.author.name}
             authorRole={article.author.role}
@@ -177,23 +176,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
         {/* 6. Google Search Highlight Banner */}
         <BlogGoogleSourceBanner />
 
-        {/* 7. FAQ Section (Article-specific FAQs from Google Docs) */}
-        <div id={article.faqSectionId || "frequently-asked-questions"} className="scroll-mt-28">
-          <div id="faq" className="scroll-mt-28" />
-          <div id="faqs" className="scroll-mt-28" />
-          <div id="frequently-asked-questions" className="scroll-mt-28" />
-          <div id="frequently-asked-questions-about-esa-registration" className="scroll-mt-28" />
-          <FaqSection
-            title={article.faqSectionTitle || "Frequently Asked Questions"}
-            subtitle={
-              article.faqSectionSubtitle ||
-              "Get answers to common questions about ESA letters and our service."
-            }
-            faqs={article.faqs}
-          />
-        </div>
-
-        {/* 8. Bottom CTA Banner */}
+        {/* 7. Bottom CTA Banner */}
         <CtaBanner
           title={article.bottomCta?.title || "Need help with an ESA letter?"}
           description={

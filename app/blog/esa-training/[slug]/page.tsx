@@ -10,7 +10,6 @@ import { BlogArticleContent } from "@/components/blogs/BlogArticleContent";
 import { BlogAuthorBio } from "@/components/blogs/BlogAuthorBio";
 import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
 import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
-import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
@@ -145,7 +144,7 @@ export default async function EsaTrainingBlogPage({ params }: PageProps) {
         />
 
         {/* 2. Floating Meta/Trust Bar */}
-        <div className="-mt-12 sm:-mt-16 lg:-mt-[60px] relative z-30 px-4 sm:px-6 lg:px-8">
+        <div className="-mt-8 sm:-mt-10 lg:-mt-[44px] relative z-30 px-4 sm:px-6 lg:px-8">
           <BlogMetaBar
             authorName={article.author.name}
             authorRole={article.author.role}
@@ -176,15 +175,7 @@ export default async function EsaTrainingBlogPage({ params }: PageProps) {
         {/* 6. Google Search Highlight Banner */}
         <BlogGoogleSourceBanner />
 
-        {/* 7. FAQ Section (Article-specific FAQs from Google Docs) */}
-        <FaqSection
-          id={article.tocItems.find(t => t.id.toLowerCase().includes("faq"))?.id || "faq"}
-          title="Frequently Asked Questions"
-          subtitle="Get answers to common questions about ESA letters and our service."
-          faqs={article.faqs}
-        />
-
-        {/* 8. PSD CTA Banner */}
+        {/* 7. PSD CTA Banner */}
         <CtaBanner
           title="Need help with an ESA letter?"
           description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
