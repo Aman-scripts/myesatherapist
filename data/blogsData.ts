@@ -3568,195 +3568,201 @@ export const BLOG_POSTS: BlogArticle[] = [
         a: "No. Your ESA letter only needs to confirm a disability-related need, not the specific condition. A landlord can ask for basic details but cannot request or order you to provide the complete diagnosis of your condition."
       }
     ],
-    faqSectionTitle: "Frequently Asked Questions",
     faqSectionId: "frequently-asked-questions",
+    faqSectionTitle: "Frequently Asked Questions",
     schema: prepareEsaForRentalHousingSchema,
   },
   {
-  "id": "esa-training-myths",
-  "slug": "esa-training-myths",
-  "categorySlug": "esa-training",
-  "url": "/blog/esa-training/esa-training-myths/",
-  "canonicalUrl": "https://myesatherapist.com/blog/esa-training/esa-training-myths/",
-  "title": "ESA Training Myths: What the Law Actually Requires?",
-  "metaTitle": "ESA Training Myths: What the Law Actually Requires | My ESA Therapist",
-  "metaDescription": "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
-  "ogDescription": "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
-  "shortDescription": "ESA training is not federally required for housing protections. What matters is a legitimate disability-related need, proper documentation from a licensed mental health professional, and an animal that behaves responsibly. Certificates, registries, and paid training packages do not create legal ESA status.",
-  "category": "ESA Training",
-  "author": {
-    "name": "Allyson Valley, Ph.D., LPC",
-    "title": "Licensed Professional Counselor",
-    "credentials": "Ph.D., LPC",
-    "image": "/blogs/blogs_trustbar-author.webp",
-    "bio": "Dr. Allyson Valley is a Licensed Professional Counselor with extensive clinical experience in mental health evaluation, emotional support animal assessments, and evidence-based psychotherapy.",
-    "role": "Written by"
-  },
-  "reviewedBy": {
-    "name": "Max Phillips, MSW, LCSW",
-    "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
-    "date": "October 2026",
-    "role": "Medically Reviewed by"
-  },
-  "publishDate": "October 12, 2026",
-  "lastUpdated": "October 12, 2026",
-  "cardImage": "/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
-  "questionCallout": {
-    "question": "Does an ESA need to be trained by law?",
-    "answer": "No. Federal law does not require an ESA to have professional or task training, but basic obedience and appropriate behavior are expected. For housing, the focus is on the person’s disability-related need and whether the animal can be safely and reasonably accommodated."
-  },
-  "introParagraphs": [
-    "Training requirements for emotional support animals are quite misunderstood, especially when people compare ESAs to service animals.",
-    "With the rise in online ESA information, misleading claims about ESA training and certifications have become common. Some websites claim that ESAs must undergo mandatory training courses or obtain official certificates to be legally recognized. However, federal housing regulations state otherwise.",
-    "Let us discuss what the law actually requires regarding ESA training, debunk common myths, and outline what really matters for legal protection."
-  ],
-  "tocItems": [
-    {
-      "id": "doesaneedtraining",
-      "label": "Do Emotional Support Animals Need Training?"
+    id: "esa-training-myths",
+    slug: "esa-training-myths",
+    categorySlug: "esa-training",
+    url: "/blog/esa-training/esa-training-myths/",
+    canonicalUrl: "https://myesatherapist.com/blog/esa-training/esa-training-myths/",
+    title: "ESA Training Myths: What the Law Actually Requires?",
+    metaTitle: "ESA Training Myths: What the Law Actually Requires | My ESA Therapist",
+    metaDescription: "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
+    ogDescription: "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
+    shortDescription: "ESA training is not federally required for housing protections. What matters is a legitimate disability-related need, proper documentation from a licensed mental health professional, and an animal that behaves responsibly. Certificates, registries, and paid training packages do not create legal ESA status.",
+    category: "ESA Training",
+    author: {
+      name: "Allyson Valley",
+      title: "Mental Health Writer & Research Contributor",
+      credentials: "Ph.D., LPC",
+      image: "/blogs/blogs_trustbar-author.webp",
+      bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
+      role: "Written by"
     },
-    {
-      "id": "commonesamythandfacts",
-      "label": "What Are Common ESA Myths and Facts?"
+    reviewedBy: {
+      name: "Max Phillips",
+      credentials: "MSW, LCSW",
+      image: "/blogs/blogs_medical_reviewer.webp",
+      date: "October 12, 2026",
+      linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/"
     },
-    {
-      "id": "misleadingesaclaims",
-      "label": "Watch Out for Misleading ESA Training Claims"
+    publishDate: "October 12, 2026",
+    lastUpdated: "October 12, 2026",
+    cardImage: "/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
+    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    questionCallout: {
+      question: "Does an ESA need to be trained by law?",
+      answer: "No. Federal law does not require an ESA to have professional or task training, but basic obedience and appropriate behavior are expected. For housing, the focus is on the person’s disability-related need and whether the animal can be safely and reasonably accommodated."
     },
-    {
-      "id": "bottomline",
-      "label": "The Bottom Line"
+    introParagraphs: [
+      "Training requirements for emotional support animals are quite misunderstood, especially when people confuse ESAs with service animals. While service dogs have to meet certain training requirements, ESAs are not required to qualify by a set standard or training guidelines. However, their behavior still matters when raising housing accommodation requests.",
+      "With the rise in online ESA information, misleading claims about ESA training and certifications have made it even more difficult for ESA owners to understand the actual legal responsibilities. Knowing what the law actually requires can help ESA owners make informed decisions about their support animals and housing rights."
+    ],
+    introImage: {
+      src: "/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
+      alt: "esa training myth vs fact",
+      width: 1200,
+      height: 800,
+      fullWidth: true
     },
-    {
-      "id": "frequently-asked-questions",
-      "label": "Frequently Asked Questions"
-    }
-  ],
-  "sections": [
-    {
-      "id": "doesaneedtraining",
-      "title": "Do Emotional Support Animals Need Training?",
-      "paragraphs": [
-        "No. Emotional support animals do not have a universal federal requirement to complete specialized training courses or pass obedience tests to qualify for housing protections under the Fair Housing Act.",
-        "HUD’s May 22, 2026, enforcement guidance changed how HUD handles animal accommodation complaints, focusing on whether a housing provider had a reasonable basis to deny an accommodation at the time the decision was made. But that change didn’t create any new training mandate for ESAs."
-      ],
-      "calloutBox": {
-        "prefix": "Want the full breakdown of what changed? Read our guide on",
-        "linkText": "HUD’s guidance for emotional support animals",
-        "linkHref": "/blog/esa-guide/hud-guidance-for-emotional-support-animals/",
-        "suffix": "to see how recent updates affect housing requests."
+    introQuoteBox: {
+      quote: "“An ESA’s role is emotional support, not performing specialized tasks.”",
+      author: "[Dr. Gaurav Patel, MD](/esa-doctors/dr-gaurav-patel/)"
+    },
+    tocItems: [
+      {
+        id: "doesaneedtraining",
+        label: "Do Emotional Support Animals Need Training?"
       },
-      "bannerImage": {
-        "src": "/Blog Images/ESA Training Myths/cozy-dog-training-at-home-image.webp",
-        "alt": "cozy dog training at home",
-        "width": 980,
-        "height": 653
+      {
+        id: "commonesamythandfacts",
+        label: "What Are Common ESA Myths and Facts?"
       },
-      "bannerPosition": "bottom"
-    },
-    {
-      "id": "commonesamythandfacts",
-      "title": "What Are Common ESA Myths and Facts?",
-      "subsections": [
-        {
-          "title": "Myth 1: All ESAs Must Be Professionally Trained By Law",
-          "paragraphs": [
-            "False. HUD updated how it handles ESA-related housing complaints back in May 2026, but that update didn’t introduce any requirement for training. The core rule hasn’t shifted: An emotional support animal doesn’t need specialized task training like a service animal does.",
-            "No federal law, HUD guidance included, requires obedience classes, certifications, or task training for an animal to qualify as an ESA. Remember, though, that basic training (including sitting, staying calm, no barking, no attempts to scratch or bite in public) is expected from all ESAs."
-          ]
-        },
-        {
-          "title": "Fact: Federal Law Doesn't Require ESA Training",
-          "paragraphs": [
-            "Training can make an animal easier to live with; But no federal law requires obedience classes or task-based training for an ESA. Their legal protection under the Fair Housing Act comes from your disability-related need for the animal, not from anything the animal has learned to do.",
-            "In other words, the presence of the ESA is the primary therapeutic support, not active tasks the ESA completes for the disabled individual. Plenty of owners choose basic obedience training anyway, as it makes everyday life easier and keeps things simple in housing situations."
-          ]
-        },
-        {
-          "title": "Myth 2: Untrained ESAs Can Be Denied Housing",
-          "paragraphs": [
-            "Partly true. But not for the reason most people think. A landlord can’t turn down a reasonable accommodation request just because your animal hasn’t been trained.",
-            "They can however deny or remove an ESA if it poses a direct threat to safety or causes serious property damage, trained or not. So while training itself isn’t required by law, how the animal actually behaves still matters in practice. It may be beneficial for your ESA to be trained in order to be safe around other people, property, and animals."
-          ]
-        },
-        {
-          "title": "Fact: Behavior Matters More than Formal Training",
-          "paragraphs": [
-            "An ESA doesn’t need a training certificate to qualify for housing protections, but it should still be reasonably well-behaved. A landlord can’t reject an ESA just because it never went to obedience school, but they can act if the animal is aggressive or a constant nuisance to other residents.",
-            "The law cares about how the animal behaves, not its training history. Teaching basic commands, proper socialization, and good manners isn’t required, but it goes a long way toward avoiding housing conflicts."
-          ]
-        },
-        {
-          "title": "Myth 3: A Certificate or Registration Proves ESA Legitimacy",
-          "paragraphs": [
-            "Plenty of sites sell “ESA certification” or registration packages and imply that you need one or that it makes your ESA more official.",
-            "That’s not how it works. HUD and the FHA recognize exactly one thing: a [legitimate ESA letter from a licensed mental health professional](/blog/esa-guide/esa-letter-sample/) who has actually evaluated your need for the animal. No registry, ID card, or certificate carries any legal weight on its own. These online certificates and registries provide no legal protections or housing protections."
-          ]
-        },
-        {
-          "title": "Fact: What Matters is the Letter, Not a Certificate",
-          "paragraphs": [
-            "Companies [selling ESA registrations](/blog/esa-guide/is-esa-registration-legit/), ID cards, or certificates often market them as legal proof. They aren’t. None of these documents carry any independent authority under federal housing law. Landlords are not legally required to honor these registries and certificates.",
-            "What actually matters is a legitimate ESA assessment and written letter from a licensed mental health professional who evaluated your disability needs for the animal.",
-            "If someone offers to make your pet an “official ESA” just by selling you a certificate or adding it to a registry, treat that as a red flag. Housing providers look for real documentation from a qualified professional, not a purchased add-on."
-          ]
-        }
-      ],
-      "ctaBox": {
-        "heading": "Don't Pay for What the Law Doesn't Require",
-        "description": "Training packages, registries, and ID cards won’t create legal ESA status. A legitimate ESA letter from a licensed mental health professional is what housing providers look for.",
-        "buttonText": "Start Your Evaluation",
-        "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
+      {
+        id: "misleadingesaclaims",
+        label: "Watch Out for Misleading ESA Training Claims"
+      },
+      {
+        id: "bottomline",
+        label: "The Bottom Line"
+      },
+      {
+        id: "frequently-asked-questions",
+        label: "FAQs"
       }
-    },
-    {
-      "id": "misleadingesaclaims",
-      "title": "Watch Out for Misleading ESA Training Claims",
-      "paragraphs": [
-        "Because so many people don’t know the actual rules, some companies push expensive “required” training packages or claim a certificate purchase grants legal ESA status. Neither is true.",
-        "Obedience training benefits both the owner and animal, but buying a training package, registration, or ID card doesn’t create legal ESA status. What actually counts is proper documentation from a licensed mental health professional affirming that the animal is part of someone’s disability treatment plan.",
-        "Knowing this upfront helps people skip unnecessary expenses and focus on what federal housing law actually requires."
-      ]
-    }
-  ],
-  "finalThoughts": {
-    "id": "bottomline",
-    "title": "The Bottom Line",
-    "paragraphs": [
-      "The idea that ESAs need professional training is one of the most persistent myths out there. Current federal guidance doesn’t require obedience school, certifications, or task training to qualify for housing accommodations.",
-      "What actually matters is a genuine need for the animal, backed by a valid evaluation and letter from a licensed mental health professional, along with an animal that behaves responsibly at home. Training isn’t required, but putting in the time for good manners tends to make life easier for everyone involved: the owner, neighbors, and the animal itself."
-    ]
-  },
-  "faqs": [
-    {
-      "q": "Does an ESA need to be professionally trained?",
-      "a": "No. Federal law does not require professional or task training for an ESA. However, basic obedience and appropriate behavior are important."
-    },
-    {
-      "q": "Can an untrained ESA qualify for housing?",
-      "a": "Yes. An ESA does not need [formal training to qualify for housing protection](/blog/esa-training/prepare-esa-for-rental-housing/). The person must have a disability-related need, and the animal must be appropriate for the housing accommodation."
-    },
-    {
-      "q": "Does an ESA need a certificate or registration?",
-      "a": "No. Federal housing law does not require an ESA certificate, registry, or vest. These documents do not independently establish ESA status."
-    },
-    {
-      "q": "Can a landlord deny an ESA because it is not trained?",
-      "a": "No, not simply because the animal lacks formal training. However, housing providers may have grounds to deny an accommodation when an animal poses a direct threat or causes substantial property damage."
-    },
-    {
-      "q": "What training should an ESA have?",
-      "a": "While specialized training is not federally required, basic obedience, socialization, and appropriate behavior can help an ESA live safely and comfortably in a shared housing environment."
-    }
-  ],
-  "faqSectionId": "frequently-asked-questions",
-  "faqSectionTitle": "Frequently Asked Questions",
-  schema: esaTrainingMythsSchema,
-}
+    ],
+    sections: [
+      {
+        id: "doesaneedtraining",
+        title: "Do Emotional Support Animals Need Training?",
+        paragraphs: [
+          "No. Emotional support animals do not have a universal federal requirement to complete specialized training. However, an ESA should be reasonably well-behaved and [follow the basic obedience commands](/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/).",
+          "HUD’s May 22, 2026, enforcement guidance changed how HUD handles animal accommodation complaints, focusing federal enforcement on animals individually trained to perform disability-related work or tasks."
+        ],
+        calloutBox: {
+          prefix: "**Related Source:** Want the full breakdown of what changed? Read our guide on",
+          linkText: "HUD's guidance for emotional support animals",
+          linkHref: "/blog/esa-guide/hud-guidance-for-emotional-support-animals/",
+          suffix: "to see how the new enforcement approach affects your housing rights."
+        }
+      },
+      {
+        id: "commonesamythandfacts",
+        title: "What Are Common ESA Myths and Facts?",
+        paragraphs: [
+          "Even though there is no legal requirement for an ESA, many myths surround them. Let us discuss all the myths and clarify the facts behind them."
+        ],
+        subsections: [
+          {
+            title: "Myth 1: All ESAs Must Be Professionally Trained By Law",
+            paragraphs: [
+              "False. HUD updated how it handles ESA-related housing complaints back in May 2026, but that update didn't add any training requirements. Under the Fair Housing Act, ESAs are recognized for the emotional support they provide simply by being present and not for performing trained tasks the way service animals do.",
+              "No federal law, HUD guidance included, requires obedience classes, certifications, or task training for an animal to qualify as an ESA. Remember, though, that basic training (including sitting, staying calm, no barking, no attempts to scratch or bite in public) is expected from all ESAs."
+            ]
+          },
+          {
+            title: "Fact: Federal Law Doesn't Require ESA Training",
+            paragraphs: [
+              "Training can make an animal easier to live with; But no federal law requires obedience classes or task-based training for an ESA. Their legal protection under the Fair Housing Act comes from your disability-related need for the animal, not from anything the animal has learned to do.",
+              "In other words, the presence of the ESA is the primary therapeutic support, not active tasks the ESA completes for the disabled individual. Plenty of owners choose basic obedience training anyway, as it makes everyday life easier and keeps things simple in housing situations."
+            ]
+          },
+          {
+            title: "Myth 2: Untrained ESAs Can Be Denied Housing",
+            paragraphs: [
+              "Partly true. But not for the reason most people think. A landlord can't turn down a reasonable accommodation request just because your animal hasn't been trained.",
+              "They can however deny or remove an ESA if it poses a direct threat to safety or causes serious property damage, trained or not. So while training itself isn't required by law, how the animal actually behaves still matters in practice. It may be beneficial for your ESA to be trained in order to be safe around other people, property, and animals."
+            ]
+          },
+          {
+            title: "Fact: Behavior Matters More than Formal Training",
+            paragraphs: [
+              "An ESA doesn't need a training certificate to qualify for housing protections, but it should still be reasonably well-behaved. A landlord can't reject an ESA just because it never went to obedience school, but they can act if the animal is aggressive or a constant nuisance to other residents.",
+              "The law cares about how the animal behaves, not its training history. Teaching basic commands, proper socialization, and good manners isn't required, but it goes a long way toward avoiding housing conflicts."
+            ]
+          },
+          {
+            title: "Myth 3: A Certificate or Registration Proves ESA Legitimacy",
+            paragraphs: [
+              "Plenty of sites sell “ESA certification” or registration packages and imply that you need one or that it makes your ESA more official.",
+              "That's not how it works. HUD and the FHA recognize exactly one thing: a [legitimate ESA letter from a licensed mental health professional](/blog/esa-guide/esa-letter-sample/) who has actually evaluated your need for the animal. No registry, ID card, or certificate carries any legal weight on its own. These online certificates and registries provide no legal protections or housing protections."
+            ]
+          },
+          {
+            title: "Fact: What Matters is the Letter, Not a Certificate",
+            paragraphs: [
+              "Companies [selling ESA registrations](/blog/esa-guide/is-esa-registration-legit/), ID cards, or certificates often market them as legal proof. They aren't. None of these documents carry any independent authority under federal housing law. Landlords are not legally required to honor these registries and certificates.",
+              "What actually matters is a legitimate ESA assessment and written letter from a licensed mental health professional who evaluated your disability needs for the animal.",
+              "If someone offers to make your pet an “official ESA” just by selling you a certificate or adding it to a registry, treat that as a red flag. Housing providers look for real documentation from a qualified professional, not a purchased add-on."
+            ]
+          }
+        ],
+        ctaBox: {
+          heading: "Don't Pay for What the Law Doesn't Require",
+          description: "Training packages, registries, and ID cards won't create legal ESA status. A legitimate ESA letter from a licensed mental health professional is what housing providers look for.",
+          buttonText: "Start Your Evaluation",
+          buttonHref: "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
+        }
+      },
+      {
+        id: "misleadingesaclaims",
+        title: "Watch Out for Misleading ESA Training Claims",
+        paragraphs: [
+          "Because so many people don't know the actual rules, some companies push expensive “required” training packages or claim a certificate purchase grants legal ESA status. Neither is true.",
+          "Obedience training benefits both the owner and animal, but buying a training package, registration, or ID card doesn't create legal ESA status. What actually counts is proper documentation from a licensed mental health professional affirming that the animal is part of someone's disability treatment plan.",
+          "Knowing this upfront helps people skip unnecessary expenses and focus on what federal housing law actually requires."
+        ]
+      },
+      {
+        id: "bottomline",
+        title: "The Bottom Line",
+        paragraphs: [
+          "The idea that ESAs need professional training is one of the most persistent myths out there. Current federal guidance doesn't require obedience school, certifications, or task training to qualify for housing accommodations.",
+          "What actually matters is a genuine need for the animal, backed by a valid evaluation and letter from a licensed mental health professional, along with an animal that behaves responsibly at home. Training isn't required, but putting in the time for good manners tends to make life easier for everyone involved: the owner, neighbors, and the animal itself."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        q: "Does an ESA need to be professionally trained?",
+        a: "No. Federal law does not require professional or task training for an ESA. However, basic obedience and appropriate behavior are important."
+      },
+      {
+        q: "Can an untrained ESA qualify for housing?",
+        a: "Yes. An ESA does not need [formal training to qualify for housing protection](/blog/esa-training/prepare-esa-for-rental-housing/). The person must have a disability-related need, and the animal must be appropriate for the housing accommodation."
+      },
+      {
+        q: "Does an ESA need a certificate or registration?",
+        a: "No. Federal housing law does not require an ESA certificate, registry, or vest. These documents do not independently establish ESA status."
+      },
+      {
+        q: "Can a landlord deny an ESA because it is not trained?",
+        a: "No, not simply because the animal lacks formal training. However, housing providers may have grounds to deny an accommodation when an animal poses a direct threat or causes substantial property damage."
+      },
+      {
+        q: "What training should an ESA have?",
+        a: "While specialized training is not federally required, basic obedience, socialization, and appropriate behavior can help an ESA live safely and comfortably in a shared housing environment."
+      }
+    ],
+    faqSectionTitle: "Frequently Asked Questions",
+    faqSectionId: "frequently-asked-questions",
+    schema: esaTrainingMythsSchema,
+  }
 ];
 
 export function getBlogBySlug(slug: string): BlogArticle | undefined {
