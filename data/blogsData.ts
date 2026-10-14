@@ -103,9 +103,10 @@ export interface BlogSection {
     src: string;
     alt: string;
     caption?: string;
-    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered. */
+    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered unless fullWidth is true. */
     width?: number;
     height?: number;
+    fullWidth?: boolean;
   };
   bannerPosition?: "top" | "bottom";
   /** Optional row of highlight cards shown under the section heading. */
@@ -172,9 +173,10 @@ export interface BlogArticle {
     src: string;
     alt: string;
     caption?: string;
-    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered. */
+    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered unless fullWidth is true. */
     width?: number;
     height?: number;
+    fullWidth?: boolean;
   };
   tocItems: BlogTocItem[];
   sections: BlogSection[];
@@ -3191,6 +3193,13 @@ export const BLOG_POSTS: BlogArticle[] = [
     "But just having PTSD alone does not make an individual eligible for an ESA or an ESA letter. What matters is how the condition affects your daily life and whether the support animal provides meaningful support in your circumstances.",
     "A licensed mental health professional must make the decision through an independent, clinical assessment. Understanding this process can help you know what to expect before requesting an ESA letter."
   ],
+  introImage: {
+    src: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
+    alt: "esa for ptsd",
+    width: 1024,
+    height: 559,
+    fullWidth: true
+  },
   tocItems: [
     {
       id: "what-is-ptsd",
@@ -3270,7 +3279,8 @@ export const BLOG_POSTS: BlogArticle[] = [
         src: "/Blog Images/ESA for PTSD/what-an-esa-for-ptsd-actually-helps-with-image.webp",
         alt: "what an esa for ptsd actually helps with",
         width: 1024,
-        height: 1536
+        height: 1536,
+        fullWidth: true
       },
       bannerPosition: "top",
       paragraphs: [
@@ -3301,7 +3311,8 @@ export const BLOG_POSTS: BlogArticle[] = [
         src: "/Blog Images/ESA for PTSD/things-people-ask-about-esa-letters-for-ptsd-image.webp",
         alt: "things people ask about esa letters for ptsd",
         width: 1254,
-        height: 1254
+        height: 1254,
+        fullWidth: true
       },
       bannerPosition: "top",
       paragraphs: [
