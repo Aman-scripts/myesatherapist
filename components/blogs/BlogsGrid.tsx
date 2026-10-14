@@ -110,12 +110,12 @@ export function BlogsGrid() {
                   {categoryPosts.map((art, i) => (
                     <div
                       key={art.id}
-                      className="bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between group hover:shadow-md transition-all duration-300 min-h-[580px] border border-[#EAE5DC]/60"
+                      className="bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between group hover:shadow-md transition-all duration-300 min-h-[520px] border border-[#EAE5DC]/60"
                     >
                       {/* Card Header Image */}
                       <Link
                         href={art.url}
-                        className="w-full h-[260px] sm:h-[280px] lg:h-[317px] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
+                        className="w-full aspect-[3/2] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
                       >
                         <Image
             quality={90}

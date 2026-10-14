@@ -38,7 +38,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
               {/* Card Image */}
               <Link
                 href={item.url}
-                className="relative w-full h-[260px] sm:h-[280px] lg:h-[300px] overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
+                className="relative w-full aspect-[3/2] overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
               >
                 <Image
             quality={90}

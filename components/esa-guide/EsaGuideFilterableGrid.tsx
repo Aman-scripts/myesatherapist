@@ -37,7 +37,7 @@ export function EsaGuideFilterableGrid() {
               key={art.id}
               className="group flex flex-col overflow-hidden rounded-[20px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-shadow duration-300 hover:shadow-md"
             >
-              <Link href={art.url} className="relative block aspect-[410/317] w-full shrink-0 overflow-hidden bg-[#FAF7F2]">
+              <Link href={art.url} className="relative block aspect-[3/2] w-full shrink-0 overflow-hidden bg-[#FAF7F2]">
                 <Image
             quality={90}
                   src={art.cardImage}
