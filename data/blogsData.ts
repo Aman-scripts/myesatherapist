@@ -11,6 +11,7 @@ import { eightBasicObedienceCommandsSchema } from "./schemas/eightBasicObedience
 import { esaForDepressionSchema } from "./schemas/esaForDepressionSchema";
 import { esaForPtsdSchema } from "./schemas/esaForPtsdSchema";
 import { prepareEsaForRentalHousingSchema } from "./schemas/prepareEsaForRentalHousingSchema";
+import { esaTrainingMythsSchema } from "./schemas/esaTrainingMythsSchema";
 
 export interface BlogTocItem {
   id: string;
@@ -3723,138 +3724,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "faqSectionId": "frequently-asked-questions",
   "faqSectionTitle": "Frequently Asked Questions",
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalOrganization",
-        "@id": "https://myesatherapist.com/#organization",
-        "name": "My ESA Therapist",
-        "description": "My ESA Therapist is a trusted provider of Emotional Support Animal (ESA) and Psychiatric Service Dog (PSD) letter evaluations. Our licensed mental health professionals provide secure, compliant assessments to help qualified individuals obtain the documentation they need.",
-        "url": "https://myesatherapist.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://myesatherapist.com/wp-content/uploads/2025/07/my-esa-therapist-logo.png"
-        },
-        "image": "https://myesatherapist.com/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
-        "email": "info@myesatherapist.com",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "email": "info@myesatherapist.com",
-            "contactType": "customer service"
-          }
-        ]
-      },
-      {
-        "@type": [
-          "WebSite",
-          "WebSite"
-        ],
-        "@id": "https://myesatherapist.com/#website",
-        "url": "https://myesatherapist.com/",
-        "name": "My ESA Therapist",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        }
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://myesatherapist.com/blog/esa-training/esa-training-myths/#article",
-        "headline": "ESA Training Myths: What the Law Actually Requires",
-        "description": "Learn whether ESA training is legally required, what the Fair Housing Act says, and how documentation and animal behavior affect housing accommodations.",
-        "url": "https://myesatherapist.com/blog/esa-training/esa-training-myths/",
-        "mainEntityOfPage": "https://myesatherapist.com/blog/esa-training/esa-training-myths/",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        },
-        "image": "https://myesatherapist.com/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
-        "author": {
-          "@type": "Person",
-          "name": "Allyson Valley",
-          "url": "https://myesatherapist.com/author/allyson-valley/"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://myesatherapist.com/blog/esa-training/esa-training-myths/",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://myesatherapist.com/",
-              "name": "My ESA Therapist"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/esa-training/",
-              "name": "ESA Training"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/esa-training/esa-training-myths/",
-              "name": "ESA Training Myths: What the Law Actually Requires"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://myesatherapist.com/blog/esa-training/esa-training-myths/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does an ESA need to be professionally trained?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Federal law does not require professional or task training for an ESA. However, basic obedience and appropriate behavior are important."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can an untrained ESA qualify for housing?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. An ESA does not need formal training to qualify for housing protection. The person must have a disability-related need, and the animal must be appropriate for the housing accommodation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does an ESA need a certificate or registration?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Federal housing law does not require an ESA certificate, registry, or vest. These documents do not independently establish ESA status."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can a landlord deny an ESA because it is not trained?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No, not simply because the animal lacks formal training. However, housing providers may have grounds to deny an accommodation when an animal poses a direct threat or causes substantial property damage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What training should an ESA have?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "While specialized training is not federally required, basic obedience, socialization, and appropriate behavior can help an ESA live safely and comfortably in a shared housing environment."
-            }
-          }
-        ]
-      }
-    ]
-  }
+  schema: esaTrainingMythsSchema,
 }
 ];
 
