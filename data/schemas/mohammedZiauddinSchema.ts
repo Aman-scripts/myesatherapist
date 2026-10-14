@@ -11,7 +11,7 @@ export const mohammedZiauddinSchemas = [
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": "https://myesatherapist.com/_next/image?url=%2Fwp-content%2Fuploads%2F2026%2F08%2Fmohammed-ziauddin-image.jpg&w=828&q=75"
+      "url": "https://myesatherapist.com/images/authors/mohammed-ziauddin-image.webp"
     },
     "mainEntity": {
       "@type": "Person",
@@ -19,7 +19,7 @@ export const mohammedZiauddinSchemas = [
       "name": "Mohammed Ziauddin",
       "jobTitle": "Legal Writer & Research Contributor",
       "url": "https://myesatherapist.com/author/mohammed-ziauddin/",
-      "image": "https://myesatherapist.com/_next/image?url=%2Fwp-content%2Fuploads%2F2026%2F08%2Fmohammed-ziauddin-image.jpg&w=828&q=75",
+      "image": "https://myesatherapist.com/images/authors/mohammed-ziauddin-image.webp",
       "sameAs": [
         "https://www.linkedin.com/in/physiozia/"
       ],

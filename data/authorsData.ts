@@ -158,7 +158,7 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     credentials: "Health Writer",
     title: "Health Writer",
     metaTitle: "Mohammed Ziauddin | My ESA Therapist",
-    metaDescription: "Meet Mohammed Ziauddin, My ESA Therapist’s health writer and medical researcher covering ESA guidance, mental health, and wellness.",
+    metaDescription: "Mohammed Ziauddin is a legal writer and research contributor at My ESA Therapist with 12 years of experience in health assessment, rehabilitation, and evidence-based healthcare research.",
     avatar: "/author/mohammed-ziauddin-image.webp",
     schemas: mohammedZiauddinSchemas,
     experienceLabel: "12 Years of Experience",
