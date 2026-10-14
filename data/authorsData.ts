@@ -43,9 +43,9 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     name: "Allyson Valley",
     credentials: "Ph.D., LPC",
     title: "Mental Health Writer & Research Contributor",
-    metaTitle: "Allyson Valley | My ESA Therapist",
+    metaTitle: "Allyson Valley, Ph.D., LPC | My ESA Therapist",
     metaDescription:
-      "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
+      "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and Licensed Professional Counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
     avatar: "/blogs/blogs_trustbar-author.webp",
     schemas: allysonValleySchemas,
     experienceLabel: "11 Years of Experience",
