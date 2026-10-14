@@ -10,6 +10,7 @@ import { esaForAnxietySchema } from "./schemas/esaForAnxietySchema";
 import { eightBasicObedienceCommandsSchema } from "./schemas/eightBasicObedienceCommandsSchema";
 import { esaForDepressionSchema } from "./schemas/esaForDepressionSchema";
 import { esaForPtsdSchema } from "./schemas/esaForPtsdSchema";
+import { prepareEsaForRentalHousingSchema } from "./schemas/prepareEsaForRentalHousingSchema";
 
 export interface BlogTocItem {
   id: string;
@@ -3538,138 +3539,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   ],
   "faqSectionId": "frequently-asked-questions",
   "faqSectionTitle": "Frequently Asked Questions",
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalOrganization",
-        "@id": "https://myesatherapist.com/#organization",
-        "name": "My ESA Therapist",
-        "description": "My ESA Therapist is a trusted provider of Emotional Support Animal (ESA) and Psychiatric Service Dog (PSD) letter evaluations. Our licensed mental health professionals provide secure, compliant assessments to help qualified individuals obtain the documentation they need.",
-        "url": "https://myesatherapist.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://myesatherapist.com/wp-content/uploads/2025/07/my-esa-therapist-logo.png"
-        },
-        "image": "https://myesatherapist.com/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
-        "email": "info@myesatherapist.com",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "email": "info@myesatherapist.com",
-            "contactType": "customer service"
-          }
-        ]
-      },
-      {
-        "@type": [
-          "WebSite",
-          "WebSite"
-        ],
-        "@id": "https://myesatherapist.com/#website",
-        "url": "https://myesatherapist.com/",
-        "name": "My ESA Therapist",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        }
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/#article",
-        "headline": "How to Prepare Your ESA for Rental Housing?",
-        "description": "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
-        "url": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
-        "mainEntityOfPage": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
-        "publisher": {
-          "@type": "Person",
-          "name": "Allyson Valley"
-        },
-        "image": "https://myesatherapist.com/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
-        "author": {
-          "@type": "Person",
-          "name": "Allyson Valley",
-          "url": "https://myesatherapist.com/author/allyson-valley/"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://myesatherapist.com/",
-              "name": "My ESA Therapist"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/esa-training/",
-              "name": "ESA Training"
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@id": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
-              "name": "How to Prepare Your ESA for Rental Housing?"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does an ESA need training to live in an apartment?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. ESAs are not legally required to complete formal training to live in an apartment. However, basic training can help prevent barking, property damage, or behavior that creates problems for neighbors or the housing provider."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can a landlord charge a pet deposit for an ESA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Under the Fair Housing Act, landlords are generally not allowed to charge pet fees, rent, and deposits. Landlords can still charge for actual, documented damage after move-out, such as urination on floors or chewing damage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How far in advance should I request accommodation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "As soon as you’ve chosen a unit, and ideally before signing the lease. Landlords get a reasonable review window, so requesting accommodation early avoids move-in delays."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can a landlord deny my ESA based on breed or weight?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Breed and weight restrictions don’t apply to ESAs. Valid denial grounds are limited to a documented direct threat to safety or substantial property damage by that specific animal."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I have to tell my landlord my diagnosis?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Your ESA letter only needs to confirm a disability-related need, not the specific condition. A landlord can ask for basic details but cannot request or order you to provide the complete diagnosis of your condition."
-            }
-          }
-        ]
-      }
-    ]
-  }
+  schema: prepareEsaForRentalHousingSchema,
 },
 {
   "id": "esa-training-myths",
