@@ -3357,8 +3357,9 @@ export const BLOG_POSTS: BlogArticle[] = [
   "url": "/blog/esa-training/prepare-esa-for-rental-housing/",
   "canonicalUrl": "https://myesatherapist.com/blog/esa-training/prepare-esa-for-rental-housing/",
   "title": "How to Prepare Your ESA for Rental Housing?",
-  "metaTitle": "How to Prepare Your ESA for Rental Housing | My ESA Therapist",
+  "metaTitle": "How to Prepare Your ESA for Rental Housing? - My ESA Therapist",
   "metaDescription": "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
+  "ogDescription": "Learn how to prepare your ESA for rental housing with basic obedience, house training, barking control, calm behavior, vaccinations, and proper ESA documentation.",
   "shortDescription": "To prepare your ESA for rental housing, focus on basic obedience, house training, barking control, and calm behavior around neighbors and other animals. Help your ESA adjust to apartment noises, hallways, elevators, and short periods alone. Keep vaccinations and veterinary records updated, and have your ESA housing documentation ready before moving.",
   "category": "ESA Training",
   "author": {
