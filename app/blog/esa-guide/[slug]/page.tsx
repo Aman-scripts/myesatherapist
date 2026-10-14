@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = article.metaDescription || article.shortDescription;
   const imageKey = `blog-${article.slug}`;
   const image = hasSocialImage(imageKey) ? socialImage(imageKey, article.title) : null;
+  const socialDescription = article.ogDescription || description;
 
   return {
     title,
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     openGraph: {
       title,
-      description,
+      description: socialDescription,
       url: article.canonicalUrl,
       type: "article",
       siteName: "My ESA Therapist",
@@ -69,7 +70,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     twitter: {
       card: image ? "summary_large_image" : "summary",
       title,
-      description,
+      description: socialDescription,
       site: "@MyESATherapist",
       creator: "@MyESATherapist",
       ...(image && { images: image.twitter }),

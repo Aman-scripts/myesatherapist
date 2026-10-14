@@ -2933,6 +2933,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "title": "ESA for Depression: Can You Qualify for an Emotional Support Animal?",
   "metaTitle": "ESA for Depression: Eligibility & How to Qualify | My ESA Therapist",
   "metaDescription": "Learn how to qualify for an ESA for depression, who can evaluate your eligibility, and how emotional support animals may help with daily life.",
+  "ogDescription": "Learn how to qualify for an ESA for depression, who can evaluate your eligibility, and how emotional support animals may help with daily life.",
   "shortDescription": "Depression may qualify you for an ESA if it affects your daily life and a state-licensed mental health professional determines that an ESA could help. The process involves an individual evaluation of your symptoms and mental health needs. If an ESA is appropriate, the professional may issue an ESA letter.",
   "category": "Qualifying Conditions",
   "author": {
