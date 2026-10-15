@@ -43,13 +43,13 @@ export function EmotionalSupportSection() {
         <div className="w-full lg:w-[54%] xl:w-[737px] z-10 py-6 sm:py-8 lg:py-16 xl:py-24 space-y-6 lg:space-y-6 xl:space-y-8">
           <div className="space-y-3 lg:space-y-3.5">
             {/* Heading */}
-            <h2 className="heading-h2 capitalize">
+            <h2 className="heading-h2 text-[#2E5A66] capitalize">
               What Is An Emotional Support Animal?
             </h2>
 
             {/* Description paragraphs */}
-            <div className="space-y-3 lg:space-y-3.5 body-large">
-              <p>
+            <div className="space-y-3 lg:space-y-3.5">
+              <p className="body-large text-[#5F6B6F]">
                 An Emotional Support Animal (ESA) is a companion animal that
                 provides comfort and emotional stability to individuals with
                 mental or emotional health conditions. ESAs are not trained to
@@ -58,7 +58,7 @@ export function EmotionalSupportSection() {
                 feelings of loneliness, and improve overall emotional
                 well-being.
               </p>
-              <p>
+              <p className="body-large text-[#5F6B6F]">
                 ESAs are recognized under certain housing laws, allowing
                 individuals to live with them in places that might otherwise have
                 pet restrictions. To qualify, a licensed mental health
@@ -79,7 +79,7 @@ export function EmotionalSupportSection() {
                 href="/blog/esa-guide/emotional-support-animal/"
                 className="flex-1 sm:flex-initial xl:w-[193px] h-[48px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap px-4"
               >
-                <span className="bg-clip-text text-transparent font-manrope font-semibold text-[16px] leading-[26px]" style={{ backgroundImage: TEAL_GRADIENT }}>
+                <span className="bg-clip-text text-transparent body-text" style={{ backgroundImage: TEAL_GRADIENT }}>
                   Learn about ESA&apos;s
                 </span>
               </Link>
@@ -89,7 +89,7 @@ export function EmotionalSupportSection() {
                 Get Started
               </CtaButton>
             </div>
-            <p className="text-[14px] leading-[26px] font-semibold text-[#5F6B6F] font-manrope">
+            <p className="body-small text-[#5F6B6F]">
               If not approved after your evaluation? You get a full refund.
             </p>
           </div>

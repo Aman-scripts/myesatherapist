@@ -68,14 +68,14 @@ export function WhyChooseUs({
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-14 lg:mb-16 space-y-2.5 max-w-[813px] mx-auto">
-          <h2 className="heading-h2 capitalize">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             {title}
           </h2>
-          <div className="text-[#5F6B6F] mx-auto space-y-1">
+          <div className="mx-auto space-y-1">
             {subtitle ? (
-              <p className="body-large max-w-[813px] mx-auto">{subtitle}</p>
+              <p className="body-large text-[#5F6B6F] max-w-[813px] mx-auto">{subtitle}</p>
             ) : (
-              <p className="body-large max-w-[813px] mx-auto">
+              <p className="body-large text-[#5F6B6F] max-w-[813px] mx-auto">
                 We simplify online emotional support animal evaluations while maintaining efficiency and legal compliance. Here&apos;s what makes us different from other providers.
               </p>
             )}
@@ -113,7 +113,7 @@ export function WhyChooseUs({
                 </h3>
 
                 {/* Description */}
-                <p className="body-text max-w-[320px]">
+                <p className="body-text text-[#5F6B6F] max-w-[320px]">
                   {description}
                 </p>
               </div>
