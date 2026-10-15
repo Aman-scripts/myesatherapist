@@ -190,17 +190,17 @@ export function PricingSection({
                     className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px]"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    <h3 className="font-playfair font-bold text-[26px] lg:text-[28px] leading-[32px] lg:leading-[36px] text-[#FAF7F2] capitalize">
+                    <h3 className="heading-h3 text-[#FAF7F2] capitalize">
                       {card.title}
                     </h3>
-                    <p className="font-manrope font-semibold text-[15px] lg:text-[17px] leading-[24px] lg:leading-[26px] text-[#FAF7F2] line-clamp-3">
+                    <p className="body-text text-[#FAF7F2] line-clamp-3">
                       {card.description}
                     </p>
                   </div>
 
                   {/* Overlapping Gold Circle with Price (Ellipse 20: 78px x 78px, #E8B92C) */}
                   <div className="w-[78px] h-[78px] rounded-full bg-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
-                    <span className="font-playfair font-bold text-[20px] lg:text-[22px] leading-[28px] text-[#2E5A66]">
+                    <span className="heading-h4 text-[#2E5A66]">
                       {card.price}
                     </span>
                   </div>
@@ -211,7 +211,7 @@ export function PricingSection({
                       {card.features.map((f) => (
                         <li key={f} className="flex items-center gap-2 text-left">
                           <CheckmarkIcon />
-                          <span className="font-manrope font-semibold text-[14px] leading-[24px] text-[#5F6B6F]">
+                          <span className="body-small text-[#5F6B6F]">
                             {f}
                           </span>
                         </li>
@@ -222,7 +222,7 @@ export function PricingSection({
                     <div className="flex justify-center mt-4">
                       <a
                         href={ctaHref}
-                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-manrope font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
+                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white body-text text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
                         style={{ backgroundImage: TEAL_GRADIENT }}
                       >
                         {card.buttonText}

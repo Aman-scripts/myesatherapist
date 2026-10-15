@@ -214,10 +214,10 @@ export function TherapistsSection({
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[852px] mx-auto">
-          <h2 className="heading-h2 capitalize">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             {title}
           </h2>
-          <p className="body-large max-w-[813px] mx-auto">
+          <p className="body-large text-[#5F6B6F] max-w-[813px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -225,7 +225,7 @@ export function TherapistsSection({
         {/* Licensure Note */}
         {licensureNote && (
           <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-[#FAF7F2] border border-[#E8B92C]/30 text-center">
-            <p className="text-[#5F6B6F] text-xs sm:text-sm font-semibold leading-relaxed font-manrope">
+            <p className="body-small text-[#5F6B6F] leading-relaxed">
               {/^A Note on Licensure Levels:?/i.test(licensureNote) ? (
                 <>
                   <strong className="font-bold text-[#2E5A66]">
@@ -289,10 +289,10 @@ export function TherapistsSection({
                           />
                         </div>
                         <div className="min-w-0">
-                          <h5 className="text-[#FAF7F2] font-playfair font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] truncate">
+                          <h3 className="heading-h4 text-[#FAF7F2] truncate">
                             {t.name}
-                          </h5>
-                          <div className="text-[#E8B92C] text-[14px] sm:text-[16px] leading-[26px] font-semibold truncate mt-0.5 font-manrope">
+                          </h3>
+                          <div className="text-[#E8B92C] body-small truncate mt-0.5">
                             {t.title}
                           </div>
                         </div>
@@ -314,7 +314,7 @@ export function TherapistsSection({
                     {/* Card Body */}
                     <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
                       {/* Bio text */}
-                      <p className="text-[#5F6B6F] text-[14px] sm:text-[16px] leading-[26px] font-semibold font-manrope">
+                      <p className="body-text text-[#5F6B6F]">
                         {t.bio}
                       </p>
 
