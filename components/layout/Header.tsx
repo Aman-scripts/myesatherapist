@@ -100,13 +100,13 @@ function ResourcesMenu() {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
-        className={`flex items-center gap-1.5 whitespace-nowrap font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors cursor-pointer ${
+        className={`flex items-center gap-1.5 whitespace-nowrap body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors cursor-pointer ${
           open ? "text-[#1D6E72]" : ""
         }`}
       >
         Resources
         <ChevronDown
-          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#303030] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#5F6B6F] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
@@ -168,7 +168,7 @@ export function Header() {
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-[32px]">
             <Link
               href="/esa-doctors/"
-              className={`font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
+              className={`body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
                 isDoctors ? "text-[#1D6E72] font-bold" : ""
               }`}
             >
@@ -176,14 +176,14 @@ export function Header() {
             </Link>
             <Link
               href="/about-us/"
-              className="font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+              className="body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               About Us
             </Link>
             <ResourcesMenu />
             <Link
               href="/contact-us/"
-              className="font-manrope font-semibold text-[13.5px] xl:text-[14px] leading-[26px] text-[#303030] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+              className="body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Contact Us
             </Link>
