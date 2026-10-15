@@ -19,7 +19,6 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { ComparisonTable } from "@/components/home/ComparisonTable";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { Footer } from "@/components/layout/Footer";
 import { homeSchema } from "@/data/schemas/homeSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
@@ -111,8 +110,6 @@ export default function HomePage() {
         <CtaBanner
           description={"If you believe an Emotional Support Animal may be appropriate\nfor your situation, you can begin a professional evaluation today."}
         />
-
-        <StateReviewerBanner />
       </main>
 
       <Footer />

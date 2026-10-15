@@ -46,9 +46,9 @@ function TrustpilotStars() {
 }
 
 const statsData = [
-  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "51,488+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
-  { value: "4.9", label: "Verified Reviews" },
+  { value: "100%", label: "Moneyback Guarantee" },
 ];
 
 export function HeroSection() {
@@ -114,18 +114,18 @@ export function HeroSection() {
                 className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
               >
                 <span
-                  className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
+                  className="font-playfair text-[16px] font-bold leading-none bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {stat.value}
                 </span>
-                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap">{stat.label}</span>
+                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap font-manrope">{stat.label}</span>
               </div>
             ))}
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[24px] leading-[1.2] font-bold tracking-[-0.011em] text-[#2E5A66]">
+          <h1 className="font-playfair text-[24px] leading-[1.2] font-bold tracking-[-0.011em] text-[#2E5A66] capitalize">
             Emotional Support
             <br />
             Animal Evaluations
@@ -134,7 +134,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-[13px] leading-[1.5] text-[#5F6B6F] font-semibold max-w-[310px] mx-auto mt-3 font-sans tracking-normal align-middle">
+          <p className="text-[13px] leading-[1.5] text-[#5F6B6F] font-semibold max-w-[310px] mx-auto mt-3 font-manrope tracking-normal align-middle">
             Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -175,18 +175,18 @@ export function HeroSection() {
                 className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
               >
                 <span
-                  className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
+                  className="font-playfair text-xl font-bold leading-none bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {stat.value}
                 </span>
-                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap font-manrope">{stat.label}</span>
               </div>
             ))}
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+          <h1 className="font-playfair text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66] capitalize">
             Emotional Support
             <br />
             Animal Evaluations
@@ -195,7 +195,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-sans tracking-normal align-middle">
+          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-manrope tracking-normal align-middle">
             Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -250,59 +250,63 @@ export function HeroSection() {
               Get Started
             </CtaButton>
           </div>
-        </div>
-      </div>
 
-      {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP HERO SECTION (lg: / 1024px and up)        */}
-      {/* Responsive Layout for 1024px to 1440px+              */}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[600px] xl:min-h-0 overflow-hidden">
-        {/* Background Image: hero-section.png */}
-        <BreakpointImage
-          media="(min-width: 1024px)"
-            quality={90}
-          src="/home/hero-section.webp"
-          alt="Woman embracing her emotional support golden retriever outdoors"
-          fill
-          className="object-cover object-center"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
-
-        {/* Content — positioned with responsive offsets for 1024px vs 1440px */}
-        <div className="absolute inset-0">
-          <div className="absolute left-[4%] xl:left-[5.69%] top-[5%] xl:top-[12.37%] w-[48%] xl:w-[47.05%] max-w-[678px]">
-            {/* Stat Pills */}
-            <div className="flex items-center gap-[0.83%] flex-wrap">
-              {statsData.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-2 xl:py-2.5 rounded-[30px] text-center w-[31%] min-h-[58px] xl:min-h-[77px] min-w-[95px] xl:min-w-[110px]"
-                >
-                  <span
-                    className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
-                    {stat.value}
-                  </span>
-                  <span className="text-[11px] xl:text-[14px] font-semibold text-[#949494] mt-0.5 xl:mt-1 whitespace-nowrap font-sans">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Headline */}
-            <h1 className="font-heading text-[32px] lg:text-[36px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.15] xl:leading-[64px] mt-3.5 xl:mt-6 text-[#2E5A66]">
-              Emotional Support
-              <br />
-              Animal Evaluations
-              <br />
-              by Licensed Professionals
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-[14px] lg:text-[16px] xl:text-[18px] leading-[1.5] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-2.5 xl:mt-4 font-sans">
-              Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
+            <p className="body-small mt-3 text-center">
+              If not approved after your evaluation? You get a full refund.
             </p>
+          </div>
+        </div>
+
+        {/* ---------------------------------------------------- */}
+        {/* 3. DESKTOP HERO SECTION (lg: / 1024px and up)        */}
+        {/* Responsive Layout for 1024px to 1440px+              */}
+        {/* ---------------------------------------------------- */}
+        <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[600px] xl:min-h-0 overflow-hidden">
+          {/* Background Image: hero-section.png */}
+          <BreakpointImage
+            media="(min-width: 1024px)"
+              quality={90}
+            src="/home/hero-section.webp"
+            alt="Woman embracing her emotional support golden retriever outdoors"
+            fill
+            className="object-cover object-center"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+
+          {/* Content — positioned with responsive offsets for 1024px vs 1440px */}
+          <div className="absolute inset-0">
+            <div className="absolute left-[4%] xl:left-[5.69%] top-[5%] xl:top-[12.37%] w-[48%] xl:w-[47.05%] max-w-[678px]">
+              {/* Stat Pills */}
+              <div className="flex items-center gap-[0.83%] flex-wrap">
+                {statsData.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex flex-col items-center justify-center bg-[#FAF7F2] py-2 xl:py-2.5 rounded-[30px] text-center w-[31%] min-h-[58px] xl:min-h-[77px] min-w-[95px] xl:min-w-[110px]"
+                  >
+                    <span
+                      className="font-playfair text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
+                      style={{ backgroundImage: TEAL_GRADIENT }}
+                    >
+                      {stat.value}
+                    </span>
+                    <span className="text-[11px] xl:text-[14px] font-semibold text-[#949494] mt-0.5 xl:mt-1 whitespace-nowrap font-manrope">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Headline */}
+              <h1 className="heading-h1 mt-3.5 xl:mt-6 capitalize">
+                Emotional Support
+                <br />
+                Animal Evaluations
+                <br />
+                by Licensed Professionals
+              </h1>
+
+              {/* Subheading */}
+              <p className="body-large max-w-none mt-2.5 xl:mt-4">
+                Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
+              </p>
 
             {/* Action Row */}
             <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-3.5 xl:mt-6">
@@ -311,7 +315,7 @@ export function HeroSection() {
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[16px] leading-[26px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
+                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[16px] leading-[26px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer font-manrope"
                 >
                   <Image
                     src="/home/hero-section-map.svg"
@@ -322,7 +326,7 @@ export function HeroSection() {
                     className="shrink-0 object-contain"
                     style={{ width: "auto", height: "auto" }}
                   />
-                  <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                  <span className="bg-clip-text text-transparent font-manrope" style={{ backgroundImage: TEAL_GRADIENT }}>
                     {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                   <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -356,8 +360,13 @@ export function HeroSection() {
               </CtaButton>
             </div>
 
+            {/* Reassurance text from homepage.md */}
+            <p className="text-[14px] leading-[26px] font-semibold text-[#5F6B6F] font-manrope mt-2">
+              If not approved after your evaluation? You get a full refund.
+            </p>
+
             {/* Trustpilot Badge */}
-            <div className="mt-3.5 xl:mt-[30px]"><ReviewBadges /></div>
+            <div className="mt-3 xl:mt-[24px]"><ReviewBadges /></div>
           </div>
         </div>
       </div>

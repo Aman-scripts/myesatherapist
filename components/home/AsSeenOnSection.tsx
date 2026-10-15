@@ -122,11 +122,11 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
     <section className={`py-8 sm:py-10 lg:py-8 xl:py-[39px] ${bgColor} overflow-hidden relative backdrop-blur-xs`}>
       {/* Heading */}
       <div className="flex items-center justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8 xl:mb-[32px] px-4">
-        <div className="w-[60px] sm:w-[80px] h-[1.5px] bg-[#E8B92C] rounded-[10px] shrink-0 translate-y-[1px]" />
-        <h4 className="font-heading text-lg sm:text-2xl lg:text-[28px] font-bold text-[#2E5A66] text-center shrink-0 tracking-[-0.00015em] leading-none">
-          As seen on
-        </h4>
-        <div className="w-[60px] sm:w-[80px] h-[1.5px] bg-[#E8B92C] rounded-[10px] shrink-0 translate-y-[1px]" />
+        <div className="w-[50px] sm:w-[80px] h-[1px] bg-[#E8B92C] rounded-[10px] shrink-0" />
+        <h2 className="heading-h2 text-center shrink-0 capitalize">
+          As Seen On
+        </h2>
+        <div className="w-[50px] sm:w-[80px] h-[1px] bg-[#E8B92C] rounded-[10px] shrink-0" />
       </div>
 
       {/* Marquee track */}
