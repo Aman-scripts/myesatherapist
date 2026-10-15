@@ -114,12 +114,14 @@ export function HeroSection() {
                 className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
               >
                 <span
-                  className="font-playfair text-[16px] font-bold leading-none bg-clip-text text-transparent"
+                  className="font-manrope text-[15px] sm:text-[18px] font-semibold leading-tight bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {stat.value}
                 </span>
-                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap font-manrope">{stat.label}</span>
+                <span className="font-manrope text-[11px] sm:text-[14px] font-semibold text-[#949494] mt-0.5 whitespace-nowrap">
+                  {stat.label}
+                </span>
               </div>
             ))}
           </div>
@@ -284,12 +286,14 @@ export function HeroSection() {
                     className="flex flex-col items-center justify-center bg-[#FAF7F2] py-2 xl:py-2.5 rounded-[30px] text-center w-[31%] min-h-[58px] xl:min-h-[77px] min-w-[95px] xl:min-w-[110px]"
                   >
                     <span
-                      className="font-playfair text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
+                      className="body-large bg-clip-text text-transparent"
                       style={{ backgroundImage: TEAL_GRADIENT }}
                     >
                       {stat.value}
                     </span>
-                    <span className="text-[11px] xl:text-[14px] font-semibold text-[#949494] mt-0.5 xl:mt-1 whitespace-nowrap font-manrope">{stat.label}</span>
+                    <span className="body-small text-[#949494] mt-0.5 xl:mt-1 whitespace-nowrap">
+                      {stat.label}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -304,7 +308,7 @@ export function HeroSection() {
               </h1>
 
               {/* Subheading */}
-              <p className="body-large max-w-none mt-2.5 xl:mt-4">
+              <p className="body-large text-[#5F6B6F] max-w-none mt-2.5 xl:mt-4">
                 Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
               </p>
 
@@ -361,7 +365,7 @@ export function HeroSection() {
             </div>
 
             {/* Reassurance text from homepage.md */}
-            <p className="text-[14px] leading-[26px] font-semibold text-[#5F6B6F] font-manrope mt-2">
+            <p className="body-small text-[#5F6B6F] mt-2">
               If not approved after your evaluation? You get a full refund.
             </p>
 
