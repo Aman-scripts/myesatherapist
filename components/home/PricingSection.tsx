@@ -31,37 +31,37 @@ const PLANS: Record<PlanType, PlanSet> = {
       {
         title: "ESA Letter - Housing",
         description:
-          "Professional ESA letter from a U.S.-licensed mental health professional for housing accommodations.",
+          "Official ESA letter from a U.S.-licensed mental health professionals.",
         price: "$149",
         isPopular: true,
         features: [
-          "Online ESA evaluation",
-          "Licensed mental health professional",
-          "ESA letter if clinically approved",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ],
         buttonText: "Get Started",
       },
       {
         title: "ESA + PSD Combo",
         description:
-          "Professional ESA and PSD letters from a U.S.-licensed mental health professional for housing and service dog needs.",
-        price: "$199",
+          "Everything in the ESA Letter package, plus an official ESA.",
+        price: "$149",
         features: [
-          "Online ESA evaluation",
-          "Licensed mental health professional",
-          "ESA & PSD letters if approved",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ],
         buttonText: "Get Started",
       },
       {
         title: "Not Sure Which One",
         description:
-          "Your needs are unique. Let's find the right option for your situation.",
+          "Official ESA letter from a U.S.-licensed mental health professionals.",
         price: "$149",
         features: [
-          "Help identifying right document",
-          "ESA and PSD needs assessed",
-          "Guidance from licensed professional",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ],
         buttonText: "Get Started",
       },
@@ -75,37 +75,37 @@ const PLANS: Record<PlanType, PlanSet> = {
       {
         title: "PSD Letter - Service Dog",
         description:
-          "Professional PSD letter from a U.S.-licensed mental health professional for service dog-related needs.",
+          "Official ESA letter from a U.S.-licensed mental health professionals.",
         price: "$149",
         isPopular: true,
         features: [
-          "Online PSD evaluation",
-          "Licensed mental health professional",
-          "PSD letter if clinically approved",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ],
         buttonText: "Get Started",
       },
       {
         title: "ESA + PSD Combo",
         description:
-          "Get both ESA and PSD letters through professional mental health evaluations for housing and service dog needs.",
-        price: "$199",
+          "Everything in the ESA Letter package, plus an official ESA.",
+        price: "$149",
         features: [
-          "Online ESA & PSD evaluation",
-          "Licensed mental health professional",
-          "ESA & PSD letters if approved",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ],
         buttonText: "Get Started",
       },
       {
         title: "Not Sure Which One",
         description:
-          "Your needs are unique. Let's find the right option for your situation.",
+          "Official ESA letter from a U.S.-licensed mental health professionals.",
         price: "$149",
         features: [
-          "Help identifying right document",
-          "ESA and PSD needs assessed",
-          "Guidance from licensed professional",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ],
         buttonText: "Get Started",
       },
@@ -115,11 +115,21 @@ const PLANS: Record<PlanType, PlanSet> = {
 
 function CheckmarkIcon() {
   return (
-    <span className="w-4 h-4 rounded-full bg-[#EDEDED] border border-primary text-primary flex items-center justify-center shrink-0 mt-0.5">
-      <svg className="w-2.5 h-2.5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 5L4 7L8 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </span>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 w-4 h-4">
+      <path
+        d="M7.01412 1.74904C7.54306 1.16829 8.45679 1.16829 8.98572 1.74904L9.66586 2.49586C9.93312 2.78937 10.3173 2.94851 10.7139 2.92997L11.7229 2.88282C12.5075 2.84615 13.1537 3.4923 13.1171 4.27695L13.0699 5.28595C13.0513 5.68251 13.2105 6.0667 13.504 6.33399L14.2508 7.01412C14.8316 7.54306 14.8316 8.45679 14.2508 8.98572L13.504 9.66586C13.2105 9.93312 13.0513 10.3173 13.0699 10.7139L13.1171 11.7229C13.1537 12.5075 12.5075 13.1537 11.7229 13.1171L10.7139 13.0699C10.3173 13.0513 9.93312 13.2105 9.66586 13.504L8.98572 14.2508C8.45679 14.8316 7.54306 14.8316 7.01412 14.2508L6.33399 13.504C6.0667 13.2105 5.68251 13.0513 5.28595 13.0699L4.27694 13.1171C3.4923 13.1537 2.84615 12.5075 2.88282 11.7229L2.92997 10.7139C2.94851 10.3173 2.78937 9.93312 2.49586 9.66586L1.74904 8.98572C1.16829 8.45679 1.16829 7.54306 1.74904 7.01412L2.49586 6.33399C2.78937 6.0667 2.94851 5.68251 2.92997 5.28595L2.88282 4.27694C2.84615 3.4923 3.4923 2.84615 4.27695 2.88282L5.28595 2.92997C5.68251 2.94851 6.0667 2.78937 6.33399 2.49586L7.01412 1.74904Z"
+        fill="#EDEDED"
+        stroke="#2E5A66"
+        strokeWidth="1.06667"
+      />
+      <path
+        d="M6 8.00033L7.33333 9.33366L10 6.66699"
+        stroke="#2E5A66"
+        strokeWidth="1.06667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
@@ -165,10 +175,10 @@ export function PricingSection({
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActive(key)}
-                className={`flex-1 h-[51px] rounded-full font-manrope font-semibold text-[18px] leading-[28px] transition-all duration-200 cursor-pointer flex items-center justify-center ${
+                className={`flex-1 h-[51px] rounded-full body-large font-semibold transition-all duration-200 cursor-pointer flex items-center justify-center ${
                   isActive
-                    ? "bg-primary text-[#FFFBF5] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.12)]"
-                    : "text-[#254D3C] hover:bg-primary/5"
+                    ? "bg-primary text-background shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.12)]"
+                    : "text-primary hover:bg-primary/5"
                 }`}
               >
                 {PLANS[key].tabLabel}
@@ -179,74 +189,114 @@ export function PricingSection({
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
         <div className="relative w-full max-w-[972px]">
-          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-6 lg:gap-4">
+          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-10 lg:gap-[16px]">
             {plan.cards.map((card, idx) => {
               const isPopular = card.isPopular;
 
-              const cardContent = (
-                <div className="w-full bg-white rounded-[24px] overflow-hidden border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col h-[500px]">
-                  {/* Teal Gradient Top Header (Frame 1261153969) */}
-                  <div
-                    className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px] color-gradient"
-                  >
-                    <h3 className="heading-h3 text-background capitalize">
-                      {card.title}
-                    </h3>
-                    <p className="body-text text-background line-clamp-3">
-                      {card.description}
-                    </p>
-                  </div>
-
-                  {/* Overlapping Gold Circle with Price (Ellipse 20: 78px x 78px, accent) */}
-                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
-                    <span className="heading-h4">
-                      {card.price}
-                    </span>
-                  </div>
-
-                  {/* White Lower Body: Features + CTA Button */}
-                  <div className="flex-1 bg-white pt-[46px] px-6 pb-6 flex flex-col justify-between">
-                    <ul className="space-y-2">
-                      {card.features.map((f) => (
-                        <li key={f} className="flex items-center gap-2 text-left">
-                          <CheckmarkIcon />
-                          <span className="body-small">
-                            {f}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Bottom CTA Button (Frame 2: 154px x 50px, border-radius 42px) */}
-                    <div className="flex justify-center mt-4">
-                      <a
-                        href={ctaHref}
-                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
-                      >
-                        {card.buttonText}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              );
-
               if (isPopular) {
                 return (
+                  /* Frame 1261153972: 310px x 534px */
                   <div
                     key={idx}
-                    className="w-full max-w-[310px] bg-accent rounded-[24px] pt-[28px] px-[5px] pb-[5px] shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col"
+                    className="w-[310px] h-[534px] relative flex flex-col justify-end shrink-0"
                   >
-                    <div className="absolute top-1 left-0 right-0 text-center body-small font-bold text-primary uppercase tracking-wider">
-                      Most Popular
+                    {/* Frame 1261153971: Gold Accent Container (310px x 515px) */}
+                    <div className="absolute top-0 left-0 w-[310px] h-[515px] bg-accent rounded-[20px]" />
+
+                    {/* MOST POPULAR banner */}
+                    <div className="absolute top-[4px] left-0 right-0 text-center font-sans font-semibold text-[14px] leading-[26px] text-body-text uppercase tracking-wider z-10">
+                      MOST POPULAR
                     </div>
-                    {cardContent}
+
+                    {/* Starter Plan: Inner White Card (300px x 477px, bottom: 6px) */}
+                    <div className="w-[300px] h-[477px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] absolute left-1/2 -translate-x-1/2 bottom-[6px] z-10 flex flex-col">
+                      {/* Frame 1261153969: Teal Header (300px x 261px) */}
+                      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
+                        <h3 className="heading-h3 text-background capitalize">
+                          {card.title}
+                        </h3>
+                        <p className="body-text text-background font-semibold">
+                          {card.description}
+                        </p>
+                      </div>
+
+                      {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 226px) */}
+                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[226px] flex items-center justify-center z-20">
+                        <span className="heading-h4 font-heading font-bold text-primary">
+                          {card.price}
+                        </span>
+                      </div>
+
+                      {/* Feature List (left: 33px, top: 323px, gap: 6px) */}
+                      <div className="absolute left-[33px] top-[323px] w-[236px] flex flex-col gap-[6px] z-10">
+                        {card.features.map((f) => (
+                          <div key={f} className="flex items-center gap-[6px] h-[26px]">
+                            <CheckmarkIcon />
+                            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+                              {f}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Button: Frame 2 (top: 448px, overhangs bottom of inner card & gold container) */}
+                      <div className="absolute left-1/2 -translate-x-1/2 top-[448px] z-20">
+                        <a
+                          href={ctaHref}
+                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+                        >
+                          {card.buttonText}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 );
               }
 
               return (
-                <div key={idx} className="w-full max-w-[300px]">
-                  {cardContent}
+                /* Starter Plan: Standard Cards (300px x 538px) */
+                <div
+                  key={idx}
+                  className="w-[300px] h-[538px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0"
+                >
+                  {/* Frame 1261153969: Teal Header (300px x 261px) */}
+                  <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
+                    <h3 className="heading-h3 text-background capitalize">
+                      {card.title}
+                    </h3>
+                    <p className="body-text text-background font-semibold">
+                      {card.description}
+                    </p>
+                  </div>
+
+                  {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 228px) */}
+                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[228px] flex items-center justify-center z-20">
+                    <span className="heading-h4 font-heading font-bold text-primary">
+                      {card.price}
+                    </span>
+                  </div>
+
+                  {/* Feature List (left: 33px, top: 323px, gap: 6px) */}
+                  <div className="absolute left-[33px] top-[323px] w-[236px] flex flex-col gap-[6px] z-10">
+                    {card.features.map((f) => (
+                      <div key={f} className="flex items-center gap-[6px] h-[26px]">
+                        <CheckmarkIcon />
+                        <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+                          {f}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Button: Frame 2 (top: 447px, inside 538px card) */}
+                  <div className="absolute left-1/2 -translate-x-1/2 top-[447px] z-20">
+                    <a
+                      href={ctaHref}
+                      className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+                    >
+                      {card.buttonText}
+                    </a>
+                  </div>
                 </div>
               );
             })}
@@ -271,51 +321,48 @@ export function PricingSection({
 
 export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
   return (
-    <div className={`w-full max-w-[300px] bg-white rounded-[24px] overflow-hidden border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col h-[500px] ${className}`}>
+    <div className={`w-[300px] h-[538px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 ${className}`}>
       {/* Teal Gradient Top Header */}
-      <div
-        className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px] color-gradient"
-      >
+      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
         <h3 className="heading-h3 text-background capitalize">
           Not Sure Which One
         </h3>
-        <p className="body-large text-background line-clamp-3">
-          Your needs are unique. Let&apos;s find the right option for your situation.
+        <p className="body-text text-background font-semibold">
+          Official ESA letter from a U.S.-licensed mental health professionals.
         </p>
       </div>
 
       {/* Overlapping Gold Circle with Price */}
-      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
-        <span className="heading-h4">
-          Free
+      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[228px] z-20">
+        <span className="heading-h4 font-heading font-bold text-primary">
+          $149
         </span>
       </div>
 
-      {/* White Lower Body: Features + CTA Button */}
-      <div className="flex-1 bg-white pt-[46px] px-6 pb-6 flex flex-col justify-between">
-        <ul className="space-y-2">
-          {[
-            "Help identifying right document",
-            "ESA and PSD needs assessed",
-            "Guidance from licensed professional",
-          ].map((f) => (
-            <li key={f} className="flex items-center gap-2 text-left">
-              <CheckmarkIcon />
-              <span className="body-small">
-                {f}
-              </span>
-            </li>
-          ))}
-        </ul>
+      {/* Feature List */}
+      <div className="absolute left-[33px] top-[323px] w-[236px] flex flex-col gap-[6px] z-10">
+        {[
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
+        ].map((f) => (
+          <div key={f} className="flex items-center gap-[6px] h-[26px]">
+            <CheckmarkIcon />
+            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+              {f}
+            </span>
+          </div>
+        ))}
+      </div>
 
-        <div className="flex justify-center mt-4">
-          <a
-            href={ctaHref}
-            className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
-          >
-            Get Started
-          </a>
-        </div>
+      {/* Button: Frame 2 (top: 447px, inside 538px card) */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-[447px] z-20">
+        <a
+          href={ctaHref}
+          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+        >
+          Get Started
+        </a>
       </div>
     </div>
   );
