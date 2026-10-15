@@ -10,7 +10,7 @@ import {
   STATE_DROPDOWN_ABBR,
 } from "@/components/common/stateDropdownClasses";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export interface MobileHeroActionButtonsProps {
   selectedState?: string;
@@ -66,7 +66,7 @@ export function MobileHeroActionButtons({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-[246px] h-[54px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 px-[18px] border border-[#EAE5DC]/60 active:scale-[0.98] transition-all"
+          className="w-[246px] h-[54px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 px-[18px] border border-[#EAE5DC]/60 active:scale-[0.98] transition-all"
         >
           <div className="flex items-center gap-2 max-w-full">
             <Image
@@ -78,14 +78,11 @@ export function MobileHeroActionButtons({
               className="w-[20px] h-[20px] shrink-0 object-contain"
               style={{ width: "auto", height: "auto" }}
             />
-            <span
-              className="font-sans font-semibold text-[18px] leading-[30px] bg-clip-text text-transparent truncate max-w-[138px]"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
+            <span className="body-large text-color-gradient truncate max-w-[138px]">
               {displayText}
             </span>
             <ChevronDown
-              className={`w-[14px] h-[14px] text-[#2E5A66] shrink-0 transition-transform duration-200 ${
+              className={`w-[14px] h-[14px] text-primary shrink-0 transition-transform duration-200 ${
                 isOpen ? "rotate-180" : ""
               }`}
             />
@@ -124,11 +121,10 @@ export function MobileHeroActionButtons({
             onGetStartedClick();
           }
         }}
-        className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white font-sans font-semibold text-[16px] leading-[26px] active:scale-[0.98] transition-all hover:opacity-95"
-        style={{ backgroundImage: TEAL_GRADIENT }}
+        className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white body-text active:scale-[0.98] transition-all hover:opacity-95 color-gradient"
       >
         <span className="truncate">{getStartedText}</span>
-        <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+        <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
           <Image
             quality={90}
             src="/common/send-icon.svg"
