@@ -46,9 +46,9 @@ function TrustpilotStars() {
 }
 
 const statsData = [
-  { value: "51,488+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
-  { value: "100%", label: "Moneyback Guarantee" },
+  { value: "4.8", label: "Verified Reviews" },
 ];
 
 export function HeroSection() {
@@ -134,7 +134,7 @@ export function HeroSection() {
 
           {/* Subheading */}
           <p className="body-text max-w-[310px] mx-auto mt-3">
-            Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
+            Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
           {/* Stacked Action Buttons */}
@@ -192,7 +192,7 @@ export function HeroSection() {
 
           {/* Subheading */}
           <p className="body-large max-w-md mx-auto mt-4">
-            Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
+            Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
           {/* Side-by-side Action Row */}
@@ -300,7 +300,7 @@ export function HeroSection() {
 
               {/* Subheading */}
               <p className="body-large max-w-none mt-2.5 xl:mt-4">
-                Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
+                Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
               </p>
 
             {/* Action Row */}

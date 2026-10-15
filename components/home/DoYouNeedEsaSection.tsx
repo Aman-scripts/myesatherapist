@@ -29,7 +29,7 @@ export function DoYouNeedEsaSection() {
 
             <div className="space-y-2 lg:space-y-2.5 xl:space-y-3">
               <p className="body-large">
-                You might consider an Emotional Support Animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
+                You might consider an emotional support animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
               </p>
 
               <ul className="body-large space-y-1 lg:space-y-1.5 list-none pl-0">
@@ -135,7 +135,7 @@ export function DoYouNeedEsaSection() {
 
             <div className="space-y-3">
               <p className="body-large">
-                You might consider an Emotional Support Animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
+                You might consider an emotional support animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
               </p>
 
               <ul className="body-large space-y-1.5 list-none pl-0">

@@ -50,23 +50,10 @@ export function EmotionalSupportSection() {
             {/* Description paragraphs */}
             <div className="space-y-3 lg:space-y-3.5">
               <p className="body-large">
-                An Emotional Support Animal (ESA) is a companion animal that
-                provides comfort and emotional stability to individuals with
-                mental or emotional health conditions. ESAs are not trained to
-                perform specific tasks but offer therapeutic benefits simply
-                through their presence. They can help reduce stress, ease
-                feelings of loneliness, and improve overall emotional
-                well-being.
+                An emotional support animal (ESA) is an assistance animal that provides emotional support that helps alleviate one or more effects of a person&apos;s disability. Unlike a service animal, an ESA does not need to be trained to perform specific tasks for a person with a disability.
               </p>
               <p className="body-large">
-                ESAs are recognized under certain housing laws, allowing
-                individuals to live with them in places that might otherwise have
-                pet restrictions. To qualify, a licensed mental health
-                professional must provide a formal recommendation explaining how
-                the animal supports your emotional health. For individuals who
-                may require additional support, evaluations for Psychiatric
-                Service Dogs (PSDs) are also available when clinically
-                appropriate.
+                ESAs are recognized under certain housing laws, allowing individuals to live with them in places that might otherwise have pet restrictions. When documentation is needed, a qualified healthcare professional may provide reliable documentation supporting the disability-related need for an assistance animal.
               </p>
             </div>
           </div>

@@ -41,64 +41,64 @@ const comparisonRows = [
     feature: "Evaluations",
     desktopFeature: "Licensed Evaluations",
     icon: "/home/comparison-evaluations.svg",
-    myEsa: "Evaluations by state licensed mental health professionals",
-    others: "Often not licensed professionals",
+    myEsa: "Evaluations by state-licensed mental health professionals",
+    others: "May not involve licensed mental health professionals",
     othersType: "cross",
   },
   {
     feature: "Determination",
     desktopFeature: "Clinical Determination",
     icon: "/home/comparison-determination.svg",
-    myEsa: "Independent clinical evaluation & professional judgement",
-    others: "Instant approval or no evaluation",
+    myEsa: "Independent clinical evaluation and professional judgment",
+    others: "May offer instant approval without a proper evaluation",
     othersType: "cross",
   },
   {
     feature: "Telehealth",
     desktopFeature: "Secure Telehealth",
     icon: "/home/comparison-telehealth.svg",
-    myEsa: "HIPAA-compliant teleheath for your privacy & secuirity",
-    others: "Privacy may be lacking",
+    myEsa: "HIPAA-compliant telehealth designed for privacy and security",
+    others: "Privacy and security practices may vary",
     othersType: "warning",
   },
   {
     feature: "Compliance",
-    desktopFeature: "Compliance-focused",
+    desktopFeature: "Compliance-Focused",
     icon: "/home/comparison-compliance.svg",
-    myEsa: "Aligned wih FHA & HUD guidance & best practices",
-    others: "Often non-compliant with guidelines",
+    myEsa: "Focused on applicable FHA, HUD, and professional requirements",
+    others: "May not follow applicable guidelines",
     othersType: "warning",
   },
   {
     feature: "Transparency",
-    desktopFeature: "Transparent process",
+    desktopFeature: "Transparent Process",
     icon: "/home/comparison-transparency.svg",
-    myEsa: "Clear steps & honest communication",
-    others: "Unclear process or hidden fees",
+    myEsa: "Clear steps and straightforward communication",
+    others: "Process or fees may not always be clear",
     othersType: "cross",
   },
   {
     feature: "Privacy",
     desktopFeature: "Privacy Protection",
     icon: "/home/comparison-privacy.svg",
-    myEsa: "Your information is encrypted and never shared",
-    others: "Privacy protections may be weak",
+    myEsa: "Personal information is protected through secure systems",
+    others: "Privacy protections may vary",
     othersType: "cross",
   },
   {
     feature: "Nationwide",
     desktopFeature: "Nationwide Access",
     icon: "/home/comparisontable-nationwide.svg",
-    myEsa: "Licensed providers in all U.S. states (where allowed)",
-    others: "Limited or regional only",
+    myEsa: "Licensed providers available across all U.S. states, where allowed",
+    others: "Availability may be limited by location",
     othersType: "warning",
   },
   {
     feature: "Trust",
-    desktopFeature: "Trsut & Legitimacy",
+    desktopFeature: "Trust & Legitimacy",
     icon: "/home/comparisontable-trust-legacy.svg",
-    myEsa: "Trusted by thousands since 2019",
-    others: "Unknown sources or reviews",
+    myEsa: "Serving clients since 2019 with licensed professionals",
+    others: "Provider credentials or reputation may be unclear",
     othersType: "cross",
   },
 ];
@@ -110,10 +110,10 @@ export function ComparisonTable() {
         {/* Section Header */}
         <div className="text-center max-w-[758px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
           <h2 className="heading-h2 capitalize">
-            Compare To Other ESA Letter Services
+            Compare Our Approach to Other ESA Letter Services
           </h2>
           <p className="body-large">
-            We set the standard for professional care, compliance, and trust.
+            See how our licensed professionals, secure process, and commitment to responsible ESA evaluations set us apart.
           </p>
         </div>
 

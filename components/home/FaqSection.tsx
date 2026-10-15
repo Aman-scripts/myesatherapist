@@ -9,7 +9,7 @@ const defaultFaqs = [
   {
     num: "01.",
     q: "Is My ESA Therapist Legitimate?",
-    a: "Yes. My ESA Therapist connects you directly with independent, state-licensed mental health professionals (LMHPs) who conduct clinical assessments in full compliance with federal Fair Housing Act (FHA) and HUD regulations. Every letter issued includes the clinician's official state license number, contact details, and clinical verification.",
+    a: "Yes. My ESA Therapist connects individuals directly with independent, state-licensed mental health professionals (LMHPs) who conduct clinical assessments designed to support applicable Fair Housing Act requirements and relevant HUD guidance.",
   },
   {
     num: "02.",
@@ -18,13 +18,13 @@ const defaultFaqs = [
   },
   {
     num: "03.",
-    q: "Is My Information Safe With My ESA?",
+    q: "Is My Information Safe With My ESA Therapist?",
     a: "Yes. We take privacy extremely seriously. All personal and clinical information is encrypted, transmitted securely, and protected under strict HIPAA-compliant protocols. We will never share or sell your private information.",
   },
   {
     num: "04.",
-    q: "What Are the Housing Protections for ESAs?",
-    a: "Under the federal Fair Housing Act (FHA), housing providers are legally required to provide reasonable accommodation for individuals with an ESA letter from a licensed healthcare provider. This includes waiving pet deposits, monthly pet fees, and pet bans or breed restrictions.",
+    q: "What are the Housing Protections for ESAs?",
+    a: "Under the Fair Housing Act, individuals with disabilities may request a reasonable accommodation to keep an assistance animal when the animal is needed because of their disability. When the disability or disability-related need is not readily apparent, reliable documentation from a healthcare professional may help support the request.",
   },
   {
     num: "05.",

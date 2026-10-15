@@ -26,11 +26,11 @@ export function CtaBanner({
   className = "",
   titleClassName = "",
   eyebrow,
-  title = "Ready To Start Your ESA Evaluation?",
-  description = "If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today.",
+  title = "Ready to Start Your ESA Evaluation?",
+  description = "If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today.",
   note,
   disclaimer,
-  buttonText = "Get Started",
+  buttonText = "Start Your Evaluation",
   buttonHref = "#how-it-works",
 }: CtaBannerProps) {
   return (

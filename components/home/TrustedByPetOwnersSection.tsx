@@ -72,8 +72,8 @@ export function TrustedByPetOwnersSection({
 
   const current = list[activeIdx] || list[0];
 
-  const displayTitle = title || (stateName ? `Trusted by Thousands of Pet Owners in ${stateName}` : "Trusted by Thousands of Pet Owners");
-  const displaySubtitle = subtitle || "See why so many clients trust MY ESA for their ESA needs. Real stories from real people who experienced our process firsthand.";
+  const displayTitle = title || (stateName ? `Trusted by Thousands of ESA Owners in ${stateName}` : "Trusted by Thousands of ESA Owners");
+  const displaySubtitle = subtitle || "See why so many clients trust My ESA Therapist for their ESA needs. Real stories from real people who experienced our process firsthand.";
 
   return (
     <section className={`w-full ${bgColor} py-14 sm:py-18 xl:py-[63px] overflow-hidden`}>

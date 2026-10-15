@@ -19,13 +19,13 @@ type Condition = {
 
 const conditions: Condition[] = [
   {
-    label: "Agroraphobia",
+    label: "Agoraphobia",
     icon: "/home/qualifying-conditions-agroraphobia.svg",
     image: "/qualifyingConditions_image/agoraphobea.webp",
     left: 56.81,
     top: -0.24,
     description:
-      "Serving as a confident, trusted companion that eases anxiety when leaving home or entering public spaces.",
+      "Staying home can feel safer than facing certain environments. An ESA may provide companionship and emotional reassurance during challenging periods.",
   },
   {
     label: "Anxiety Disorders",
@@ -34,7 +34,7 @@ const conditions: Condition[] = [
     left: 29.42,
     top: 4.55,
     description:
-      "ESAs help lower elevated stress levels and provide grounding sensory stimulation during periods of intense anxiety.",
+      "When persistent worry becomes difficult to manage, an ESA may provide companionship and a comforting presence throughout everyday routines.",
   },
   {
     label: "Panic Disorders",
@@ -43,7 +43,7 @@ const conditions: Condition[] = [
     left: 5.48,
     top: 15.31,
     description:
-      "Emotional support animals may provide comfort and a calming presence during episodes of intense anxiety or panic.",
+      "During episodes of intense fear, an ESA can offer a calming presence and emotional reassurance when distress becomes overwhelming.",
   },
   {
     label: "OCD",
@@ -53,7 +53,7 @@ const conditions: Condition[] = [
     top: 15.31,
     alignRight: true,
     description:
-      "Offering comforting distraction and reassuring sensory presence during compulsive distress cycles.",
+      "Living with intrusive thoughts or compulsive behaviors can feel exhausting. An ESA can provide steady companionship through difficult moments.",
   },
   {
     label: "Bipolar Disorders",
@@ -62,7 +62,7 @@ const conditions: Condition[] = [
     left: 28.01,
     top: 29.67,
     description:
-      "Providing consistent daily routine, emotional grounding, and a soothing presence across mood transitions.",
+      "Consistent companionship from an ESA may offer emotional comfort and a reassuring presence during challenging changes in mood.",
   },
   {
     label: "PTSD",
@@ -71,7 +71,7 @@ const conditions: Condition[] = [
     left: 67.53,
     top: 29.67,
     description:
-      "Emotional support animals offer deep grounding touch and security to help manage sudden trauma triggers and hyperarousal.",
+      "For someone coping with trauma-related distress, an ESA can offer comfort, companionship, and a familiar source of emotional reassurance.",
   },
   {
     label: "Social Anxiety",
@@ -80,7 +80,7 @@ const conditions: Condition[] = [
     left: 1.80,
     top: 39.47,
     description:
-      "An ESA can help reduce social stress, offering non-judgmental companionship that eases discomfort in public or social situations.",
+      "Having an ESA nearby may provide a sense of comfort and support when social situations feel particularly stressful or overwhelming.",
   },
   {
     label: "ADHD",
@@ -90,7 +90,7 @@ const conditions: Condition[] = [
     top: 39.47,
     alignRight: true,
     description:
-      "Helping establish grounding focus, soothing hyperactivity, and promoting emotional balance throughout the day.",
+      "Beyond companionship, an ESA can provide emotional comfort during periods of frustration, overwhelm, or difficulty managing everyday challenges.",
   },
   {
     label: "Mood Disorders",
@@ -99,17 +99,17 @@ const conditions: Condition[] = [
     left: 5.09,
     top: 60.29,
     description:
-      "Companion animals help stabilize mood swings and provide unconditional emotional support during challenging episodes.",
+      "An ESA can become a comforting part of daily life, offering companionship during periods of emotional changes or low mood.",
   },
   {
-    label: "Other ADA Conditions",
+    label: "Other Mental Health Conditions",
     icon: "/home/qualifying-conditions-other-ada.svg",
     image: "/qualifyingConditions_image/Other ADA Conditions.webp",
     left: 76.21,
     top: 60.29,
     alignRight: true,
     description:
-      "Providing clinically recognized emotional support and functional comfort tailored to individual mental health needs.",
+      "Other mental health conditions may involve emotional support needs that a licensed professional can evaluate when considering an ESA.",
   },
   {
     label: "Depression",
@@ -118,17 +118,17 @@ const conditions: Condition[] = [
     left: 0.00,
     top: 84.93,
     description:
-      "Having an ESA encourages daily routine, physical activity, and provides vital companionship that counteracts feelings of isolation and despair.",
+      "Feelings of loneliness can become especially difficult during depression. An ESA may provide companionship and a comforting presence at home.",
   },
   {
-    label: "Schizpphrenia",
+    label: "Schizophrenia",
     icon: "/home/qualifying-conditions-schizpphrenia.svg",
     image: "/qualifyingConditions_image/Schizpphrenia.webp",
     left: 82.24,
     top: 84.93,
     alignRight: true,
     description:
-      "Providing stable reality-anchoring companionship and reducing stress-induced emotional distress.",
+      "For individuals managing schizophrenia, an ESA may offer familiar companionship and emotional comfort as they navigate everyday experiences.",
   },
 ];
 
@@ -142,8 +142,8 @@ interface QualifyingConditionsProps {
 export function QualifyingConditions({
   className = "",
   id = "qualifying-conditions",
-  title = "Common Qualifying Conditions",
-  description = "Under federal law, emotional support animal letters can be written for a range of mental and emotional health conditions, including:",
+  title = "Conditions That May Be Considered During an ESA Evaluation",
+  description = "A licensed mental health professional will assess whether an emotional support animal may be appropriate based on your individual needs. These are some mental health conditions that may support the need for an ESA.",
 }: QualifyingConditionsProps = {}) {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 

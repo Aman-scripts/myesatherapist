@@ -108,7 +108,9 @@ export default function HomePage() {
         <FaqSection />
 
         <CtaBanner
-          description={"If you believe an Emotional Support Animal may be appropriate\nfor your situation, you can begin a professional evaluation today."}
+          title="Ready to Start Your ESA Evaluation?"
+          description="If you believe an emotional support animal may be appropriate for your situation, you can begin a professional evaluation today."
+          buttonText="Start Your Evaluation"
         />
       </main>
 

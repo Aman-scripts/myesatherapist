@@ -31,39 +31,44 @@ const PLANS: Record<PlanType, PlanSet> = {
       {
         title: "ESA Letter - Housing",
         description:
-          "Official ESA letter from a U.S.-licensed mental health professionals.",
+          "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
         price: "$149",
         isPopular: true,
         features: [
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Online ESA evaluation",
+          "Licensed mental health professional",
+          "Disability-related need assessment",
+          "ESA letter if clinically approved",
+          "Secure email delivery",
         ],
         buttonText: "Get Started",
       },
       {
-        title: "ESA + PSD Combo",
+        title: "ESA Letter + PSD Letter Combo",
         description:
-          "Everything in the ESA Letter package, plus an official ESA.",
-        price: "$149",
+          "Professional ESA and PSD letters from a state-licensed mental health professional for housing and service dog needs.",
+        price: "$199",
         features: [
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Online ESA evaluation",
+          "Licensed mental health professional",
+          "ESA letter if clinically approved",
+          "PSD letter if clinically approved",
+          "Secure email delivery",
         ],
-        buttonText: "Get Started",
+        buttonText: "Start Evaluation",
       },
       {
-        title: "Not Sure Which One",
+        title: "Not Sure Which One?",
         description:
-          "Official ESA letter from a U.S.-licensed mental health professionals.",
-        price: "$149",
+          "Your needs are unique. Let’s find the right option.",
+        price: "?",
         features: [
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Help identifying the right documentation",
+          "ESA and PSD needs assessed",
+          "Guidance from a licensed professional",
+          "Clear next steps after evaluation",
         ],
-        buttonText: "Get Started",
+        buttonText: "Find Your Eligibility in Minutes",
       },
     ],
   },
@@ -75,39 +80,44 @@ const PLANS: Record<PlanType, PlanSet> = {
       {
         title: "PSD Letter - Service Dog",
         description:
-          "Official ESA letter from a U.S.-licensed mental health professionals.",
+          "Professional PSD letter from a state-licensed mental health professional for service dog needs.",
         price: "$149",
         isPopular: true,
         features: [
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Online PSD evaluation",
+          "Licensed mental health professional",
+          "Disability-related need assessment",
+          "PSD letter if clinically approved",
+          "Secure email delivery",
         ],
         buttonText: "Get Started",
       },
       {
-        title: "ESA + PSD Combo",
+        title: "ESA Letter + PSD Letter Combo",
         description:
-          "Everything in the ESA Letter package, plus an official ESA.",
-        price: "$149",
+          "Professional ESA and PSD letters from a state-licensed mental health professional for housing and service dog needs.",
+        price: "$199",
         features: [
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Online ESA evaluation",
+          "Licensed mental health professional",
+          "ESA letter if clinically approved",
+          "PSD letter if clinically approved",
+          "Secure email delivery",
         ],
-        buttonText: "Get Started",
+        buttonText: "Start Evaluation",
       },
       {
-        title: "Not Sure Which One",
+        title: "Not Sure Which One?",
         description:
-          "Official ESA letter from a U.S.-licensed mental health professionals.",
-        price: "$149",
+          "Your needs are unique. Let’s find the right option.",
+        price: "?",
         features: [
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Help identifying the right documentation",
+          "ESA and PSD needs assessed",
+          "Guidance from a licensed professional",
+          "Clear next steps after evaluation",
         ],
-        buttonText: "Get Started",
+        buttonText: "Find Your Eligibility in Minutes",
       },
     ],
   },
@@ -227,23 +237,27 @@ export function PricingSection({
                         </span>
                       </div>
 
-                      {/* Feature List (left: 33px, top: 323px, gap: 6px) */}
-                      <div className="absolute left-[33px] top-[323px] w-[236px] flex flex-col gap-[6px] z-10">
+                      {/* Feature List (left: 30px, top: 310px, gap: 3px) */}
+                      <div className="absolute left-[30px] top-[310px] w-[240px] flex flex-col gap-[3px] z-10">
                         {card.features.map((f) => (
-                          <div key={f} className="flex items-center gap-[6px] h-[26px]">
+                          <div key={f} className="flex items-center gap-[6px] h-[23px]">
                             <CheckmarkIcon />
-                            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+                            <span className="font-sans font-semibold text-[13px] leading-[23px] text-body-text truncate">
                               {f}
                             </span>
                           </div>
                         ))}
                       </div>
 
-                      {/* Actions: top 448px, pt 8px -> Frame 2 (button: 154px x 50px) */}
+                      {/* Actions: top 448px, pt 8px -> Frame 2 (button: 154px or responsive x 50px) */}
                       <div className="absolute left-1/2 -translate-x-1/2 top-[448px] pt-[8px] z-20">
                         <a
                           href={ctaHref}
-                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+                          className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient ${
+                            card.buttonText.length > 18
+                              ? "w-[230px] text-[13px] leading-[18px] px-2"
+                              : "w-[154px] text-[16px] leading-[26px]"
+                          }`}
                         >
                           {card.buttonText}
                         </a>
@@ -276,12 +290,12 @@ export function PricingSection({
                     </span>
                   </div>
 
-                  {/* Feature List (left: 33px, top: 323px, gap: 6px) */}
-                  <div className="absolute left-[33px] top-[323px] w-[236px] flex flex-col gap-[6px] z-10">
+                  {/* Feature List (left: 30px, top: 312px, gap: 3px) */}
+                  <div className="absolute left-[30px] top-[312px] w-[240px] flex flex-col gap-[3px] z-10">
                     {card.features.map((f) => (
-                      <div key={f} className="flex items-center gap-[6px] h-[26px]">
+                      <div key={f} className="flex items-center gap-[6px] h-[23px]">
                         <CheckmarkIcon />
-                        <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+                        <span className="font-sans font-semibold text-[13px] leading-[23px] text-body-text truncate">
                           {f}
                         </span>
                       </div>
@@ -292,7 +306,11 @@ export function PricingSection({
                   <div className="absolute left-1/2 -translate-x-1/2 top-[447px] z-20">
                     <a
                       href={ctaHref}
-                      className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient ${
+                        card.buttonText.length > 18
+                          ? "w-[230px] text-[13px] leading-[18px] px-2"
+                          : "w-[154px] text-[16px] leading-[26px]"
+                      }`}
                     >
                       {card.buttonText}
                     </a>
@@ -325,30 +343,31 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       {/* Teal Gradient Top Header */}
       <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
         <h3 className="heading-h3 text-background capitalize">
-          Not Sure Which One
+          Not Sure Which One?
         </h3>
         <p className="body-text text-background font-semibold">
-          Official ESA letter from a U.S.-licensed mental health professionals.
+          Your needs are unique. Let’s find the right option.
         </p>
       </div>
 
       {/* Overlapping Gold Circle with Price */}
       <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[228px] z-20">
         <span className="heading-h4 font-heading font-bold text-primary">
-          $149
+          ?
         </span>
       </div>
 
       {/* Feature List */}
-      <div className="absolute left-[33px] top-[323px] w-[236px] flex flex-col gap-[6px] z-10">
+      <div className="absolute left-[30px] top-[312px] w-[240px] flex flex-col gap-[3px] z-10">
         {[
-          "Phone consultation",
-          "PSD letter if qualified",
-          "Official clinic letterhead",
+          "Help identifying the right documentation",
+          "ESA and PSD needs assessed",
+          "Guidance from a licensed professional",
+          "Clear next steps after evaluation",
         ].map((f) => (
-          <div key={f} className="flex items-center gap-[6px] h-[26px]">
+          <div key={f} className="flex items-center gap-[6px] h-[23px]">
             <CheckmarkIcon />
-            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+            <span className="font-sans font-semibold text-[13px] leading-[23px] text-body-text truncate">
               {f}
             </span>
           </div>
@@ -359,9 +378,9 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       <div className="absolute left-1/2 -translate-x-1/2 top-[447px] z-20">
         <a
           href={ctaHref}
-          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+          className="inline-flex items-center justify-center w-[230px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[13px] leading-[18px] px-2 text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
         >
-          Get Started
+          Find Your Eligibility in Minutes
         </a>
       </div>
     </div>

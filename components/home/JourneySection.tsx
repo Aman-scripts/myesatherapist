@@ -32,7 +32,7 @@ export function JourneySection() {
             Your ESA Journey Starts Here
           </h2>
           <p className="body-large">
-            See how emotional support animals transform lives
+            See how emotional support animals transform lives!
           </p>
         </div>
 

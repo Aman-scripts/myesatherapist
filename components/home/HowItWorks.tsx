@@ -37,7 +37,7 @@ export function HowItWorks() {
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-10 xl:mb-[72px] space-y-2">
             <h2 className="heading-h2 capitalize">
-              How Online ESA Evaluation Works?
+              How Does Online ESA Evaluation Work?
             </h2>
             <p className="body-large max-w-3xl mx-auto">
               A simple 3-step process to complete your emotional support animal letter evaluation
@@ -121,7 +121,7 @@ export function HowItWorks() {
           {/* Payment note */}
           <div className="mt-6 flex justify-center">
             <div className="inline-block bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 sm:py-2 body-small text-center border border-[#E76F51]/20">
-              We authorize your payment first, but only charge it after your evaluation is completed.
+              We authorize your payment first, but we will only charge it after your evaluation is completed.
             </div>
           </div>
         </div>
