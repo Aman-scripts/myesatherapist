@@ -13,11 +13,9 @@ export function CommunitySection() {
         </h2>
 
         {/* Description Paragraph */}
-        <div className="max-w-[958px] mx-auto text-[#5F6B6F] body-large mb-10">
-          <p>
-            Since 2019, My ESA Therapist has connected individuals with licensed mental health professionals for emotional support animal (ESA) evaluations. If an ESA is determined to be clinically appropriate following an independent assessment, providers may issue documentation to support housing accommodation requests under applicable federal housing laws. Our network includes state-licensed mental health professionals who conduct independent telehealth evaluations in accordance with recognized clinical standards. Available in eligible U.S. states, every evaluation is based solely on professional clinical judgment and aligns with Fair Housing Act and HUD guidance where applicable.
-          </p>
-        </div>
+        <p className="body-large text-[#5F6B6F] text-center max-w-[958px] mx-auto mb-10">
+          Since 2019, My ESA Therapist has connected individuals with licensed mental health professionals for emotional support animal (ESA) evaluations. If an ESA is determined to be clinically appropriate following an independent assessment, providers may issue documentation to support housing accommodation requests under applicable federal housing laws. Our network includes state-licensed mental health professionals who conduct independent telehealth evaluations in accordance with recognized clinical standards. Available in eligible U.S. states, every evaluation is based solely on professional clinical judgment and aligns with Fair Housing Act and HUD guidance where applicable.
+        </p>
 
         {/* CTA Button */}
         <div>
