@@ -144,9 +144,9 @@ export function StateTableOfContents({ stateName, data }: Props) {
         onClick={() => setIsOpen(true)}
         aria-label="Open Table of Contents"
         className="fixed left-0 top-[50%] -translate-y-1/2 z-[80] w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.45)] flex items-center justify-center pl-0.5 text-white transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
-        style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+        style={{ background: "var(--color-gradient)" }}
       >
-        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-[#E8B92C] transition-all" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
       </button>
 
       {/* ---------------------------------------------------- */}
@@ -169,17 +169,17 @@ export function StateTableOfContents({ stateName, data }: Props) {
 
         {/* Sliding Content Panel */}
         <div
-          className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
+          className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-background shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
-          style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          style={{ background: "var(--color-gradient)" }}
         >
           {/* Fixed Top Header (Logo + Close Button + Title + Divider) */}
           <div className="shrink-0 px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10">
             {/* Top Row: Logo Card + Close Button */}
             <div className="flex items-start justify-between mb-5 sm:mb-6">
               {/* Frame 1000011910: White Box with Gold Border */}
-              <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
+              <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                 <Image
             quality={90}
                   src="/common/myesa-logo.svg"
@@ -196,13 +196,13 @@ export function StateTableOfContents({ stateName, data }: Props) {
                 className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
                 aria-label="Close Table of Contents"
               >
-                <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#FAF7F2] stroke-[2.2]" />
+                <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-background stroke-[2.2]" />
               </button>
             </div>
 
             {/* Heading: Table of Contents */}
             <div className="space-y-2 mb-3 sm:mb-4">
-              <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight tracking-[-0.00015em]">
+              <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-background leading-tight tracking-[-0.00015em]">
                 Table of Contents
               </h2>
             </div>
@@ -226,8 +226,8 @@ export function StateTableOfContents({ stateName, data }: Props) {
                       <a
                         href={`#${item.id}`}
                         onClick={(e) => scrollToSection(e, item.id)}
-                        className={`font-sans text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-[#E8B92C] ${
-                          isActive ? "text-[#E8B92C] font-bold" : "text-[#FAF7F2] font-semibold"
+                        className={`font-sans text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-accent ${
+                          isActive ? "text-accent font-bold" : "text-background font-semibold"
                         }`}
                       >
                         {item.label}

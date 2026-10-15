@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export function StatesPsdCtaSection() {
   return (
-    <section className="relative w-full bg-[#FAF7F2] py-12 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
-      <div className="max-w-[1320px] mx-auto rounded-[24px] lg:rounded-[32px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] relative overflow-hidden shadow-xl">
+    <section className="relative w-full bg-background py-12 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
+      <div className="max-w-[1320px] mx-auto rounded-[24px] lg:rounded-[32px] color-gradient relative overflow-hidden shadow-xl">
         
         {/* Subtle Decorative Paw Prints in Background - Hidden on mobile */}
         <div className="hidden sm:block absolute right-[30%] bottom-4 w-48 h-48 opacity-20 pointer-events-none">
@@ -25,19 +25,19 @@ export function StatesPsdCtaSection() {
           
           {/* Left Text & CTA Content */}
           <div className="lg:col-span-7 flex flex-col items-start gap-6 z-10">
-            <h2 className="heading-h2 text-[#FAF7F2]">
+            <h2 className="heading-h2 text-background">
               Need help with a PSD letter?
             </h2>
             
-            <p className="body-large text-[#FAF7F2]/90 max-w-[580px]">
+            <p className="body-large text-background/90 max-w-[580px]">
               Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you.
             </p>
 
             <Link
               href="/psd-letter/"
-              className="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-[#E8B92C] hover:bg-[#f0c33a] rounded-xl shadow-[0px_2px_8px_rgba(232,185,44,0.4)] transition-all duration-200 group"
+              className="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-[#f0c33a] rounded-xl shadow-[0px_2px_8px_rgba(232,185,44,0.4)] transition-all duration-200 group"
             >
-              <span className="body-large font-bold bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+              <span className="body-large font-bold text-color-gradient group-hover:scale-105 transition-transform">
                 Start your Evaluation
               </span>
             </Link>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Check, ArrowRight } from "lucide-react";
 import { StateData } from "@/data/statesData";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function StateProcessSection({ data }: { data: StateData }) {
   const stateName = data.name;
@@ -63,16 +63,16 @@ export function StateProcessSection({ data }: { data: StateData }) {
   return (
     <section
       id="process"
-      className="w-full bg-[#FAF7F2] py-14 sm:py-18 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-mt-36 relative z-10"
+      className="w-full bg-background py-14 sm:py-18 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-mt-36 relative z-10"
     >
       {/* Frame 1000012002 */}
       <div className="max-w-[1283px] mx-auto flex flex-col items-center gap-14 sm:gap-16 lg:gap-20">
         {/* Frame 1000011447: Heading and Subtitle */}
         <div className="text-center max-w-[1030px] mx-auto space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em]">
             {title}
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[18px] text-[#5F6B6F] leading-relaxed sm:leading-[30px] max-w-[885px] mx-auto">
+          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[18px] text-body-text leading-relaxed sm:leading-[30px] max-w-[885px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -102,15 +102,15 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 </div>
 
                 {/* Number 01 / 02 / 03 */}
-                <span aria-hidden="true" data-num={step.number} className="font-[family-name:var(--font-plus-jakarta-sans)] text-[46px] sm:text-[54px] font-bold text-[#5F6B6F] opacity-20 leading-[66px] tracking-tight before:content-[attr(data-num)]" />
+                <span aria-hidden="true" data-num={step.number} className="font-manrope text-[46px] sm:text-[54px] font-bold text-body-text opacity-20 leading-[66px] tracking-tight before:content-[attr(data-num)]" />
               </div>
 
               {/* Frame 1000011970: Title and Description */}
               <div className="space-y-2 flex-1">
-                <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#2E5A66]">
+                <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
                   {step.title}
                 </h3>
-                <p className="font-sans font-semibold text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F]">
+                <p className="font-sans font-semibold text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text">
                   {step.description}
                 </p>
               </div>
@@ -120,7 +120,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
 
         {/* Frame 1000011978: Why Our Process Is Different / Unique */}
         <div className="w-full max-w-[760px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] p-6 sm:p-[25px_45px] flex flex-col items-center gap-6 shadow-xs">
-          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#2E5A66] text-center">
+          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary text-center">
             {data.processDifferentiatorsTitle || "Why Our Process Is Different"}
           </h3>
 
@@ -135,7 +135,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 >
                   <Check className="w-[11px] h-[11px] stroke-[3.5]" />
                 </div>
-                <span className="font-sans font-semibold text-[13px] sm:text-[14px] leading-relaxed text-[#5F6B6F]">
+                <span className="font-sans font-semibold text-[13px] sm:text-[14px] leading-relaxed text-body-text">
                   {item}
                 </span>
               </div>
@@ -144,8 +144,8 @@ export function StateProcessSection({ data }: { data: StateData }) {
 
           {/* Process Note if provided */}
           {data.processNote && (
-            <div className="w-full bg-white/80 rounded-[16px] p-4 border border-[#E8B92C]/40 mt-2">
-              <p className="font-sans text-xs sm:text-[13px] font-semibold text-[#5F6B6F] leading-relaxed">
+            <div className="w-full bg-white/80 rounded-[16px] p-4 border border-accent/40 mt-2">
+              <p className="font-sans text-xs sm:text-[13px] font-semibold text-body-text leading-relaxed">
                 {data.processNote}
               </p>
             </div>
@@ -162,7 +162,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
             <span>Get Started</span>
             <ArrowRight className="w-4 h-4 stroke-[2.5] text-white" />
           </a>
-          <p className="font-sans font-semibold text-[12px] leading-[26px] text-[#5F6B6F] text-center">
+          <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
             No hidden fees. HIPAA secure.
           </p>
         </div>

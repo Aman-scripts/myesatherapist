@@ -49,10 +49,10 @@ export function StateScamsSection({ data }: { data: StateData }) {
     <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1060px] mx-auto">
         <div className="text-center max-w-[840px] mx-auto mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight">
             {title}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
+          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -74,7 +74,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
               <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D6292B] mb-1">
                 {alertTitle}
               </h3>
-              <p className="font-sans text-xs sm:text-[13px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
+              <p className="font-sans text-xs sm:text-[13px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
                 {alertText}
               </p>
             </div>
@@ -95,7 +95,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="p-5 sm:p-6 lg:p-7 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-6 sm:mb-7 leading-snug">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-primary text-center mb-6 sm:mb-7 leading-snug">
                 {whatYouNeedTitle}
               </h3>
 
@@ -104,15 +104,15 @@ export function StateScamsSection({ data }: { data: StateData }) {
                   <div key={idx} className="flex items-start gap-3.5">
                     <div
                       className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      style={{ background: "var(--color-gradient)" }}
                     >
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
                     <div>
-                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-[#2E5A66] mb-1">
+                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-primary mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
+                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -140,7 +140,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
               </h3>
 
               {commonSubtitle && (
-                <h4 className="font-sans text-sm sm:text-base lg:text-[16px] font-bold text-[#2E5A66] text-left mb-4">
+                <h4 className="font-sans text-sm sm:text-base lg:text-[16px] font-bold text-primary text-left mb-4">
                   {commonSubtitle}
                 </h4>
               )}
@@ -151,7 +151,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
                     <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                       <X className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <p className="font-sans text-xs sm:text-[13.5px] lg:text-[14.5px] font-semibold text-[#5F6B6F] pt-0.5 leading-snug">
+                    <p className="font-sans text-xs sm:text-[13.5px] lg:text-[14.5px] font-semibold text-body-text pt-0.5 leading-snug">
                       {item}
                     </p>
                   </div>

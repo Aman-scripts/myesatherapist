@@ -57,15 +57,15 @@ export function StatesFaqSection() {
   };
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 border-t border-[#EAE5DC]/60">
+    <section className="w-full bg-background py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 border-t border-[#EAE5DC]/60">
       <div className="max-w-[1260px] mx-auto">
         
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center max-w-[780px] mx-auto mb-12 lg:mb-16">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-tight text-[#2E5A66] mb-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-tight text-primary mb-3">
             Frequently Asked Questions
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-[#5F6B6F]">
+          <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-body-text">
             Answers to your most common questions about ESA assessment and housing rules by state.
           </p>
         </div>
@@ -93,7 +93,7 @@ export function StatesFaqSection() {
               return (
                 <div
                   key={faq.id}
-                  className="w-full rounded-[20px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] text-white overflow-hidden shadow-md transition-all duration-300"
+                  className="w-full rounded-[20px] color-gradient text-white overflow-hidden shadow-md transition-all duration-300"
                 >
                   <button
                     type="button"
@@ -103,14 +103,14 @@ export function StatesFaqSection() {
                   >
                     <div className="flex items-center gap-4 sm:gap-6">
                       {/* Gold Number Badge */}
-                      <div className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] rounded-xl bg-[#E8B92C] flex items-center justify-center shrink-0 shadow-xs">
-                        <span className="font-sans font-extrabold text-xl sm:text-2xl text-[#2E5A66]">
+                      <div className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] rounded-xl bg-accent flex items-center justify-center shrink-0 shadow-xs">
+                        <span className="font-sans font-extrabold text-xl sm:text-2xl text-primary">
                           {faq.num}
                         </span>
                       </div>
 
                       {/* Question Text */}
-                      <h3 className="heading-h3 text-white group-hover:text-[#E8B92C] transition-colors text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
+                      <h3 className="heading-h3 text-white group-hover:text-accent transition-colors text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
                         {faq.question}
                       </h3>
                     </div>
@@ -118,16 +118,16 @@ export function StatesFaqSection() {
                     {/* Toggle Icon */}
                     <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                       {isOpen ? (
-                        <Minus className="w-5 h-5 text-[#E8B92C]" />
+                        <Minus className="w-5 h-5 text-accent" />
                       ) : (
-                        <Plus className="w-5 h-5 text-white group-hover:text-[#E8B92C] transition-colors" />
+                        <Plus className="w-5 h-5 text-white group-hover:text-accent transition-colors" />
                       )}
                     </div>
                   </button>
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-1 body-large text-[#FAF7F2] border-t border-white/10">
+                    <div className="px-6 pb-6 pt-1 body-large text-background border-t border-white/10">
                       <p>{faq.answer}</p>
                     </div>
                   )}

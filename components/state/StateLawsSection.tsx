@@ -9,13 +9,13 @@ export function StateLawsSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-background py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1060px] mx-auto">
         <div className="text-center max-w-[820px] mx-auto mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight mb-3">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight mb-3">
             {data.lawsTitle || `Understanding ${stateName} ESA Laws for Reasonable Accommodations`}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed max-w-[760px] mx-auto">
+          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed max-w-[760px] mx-auto">
             {data.lawsSubtitle ||
               `Emotional support animal housing in ${stateName} is governed by federal housing regulations that lay out the accommodation process and what landlords are required to provide.`}
           </p>
@@ -36,7 +36,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="p-4.5 sm:p-5 lg:p-6 flex flex-col flex-1">
-              <h3 className="font-heading text-lg sm:text-xl lg:text-[21px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-4 sm:mb-5 leading-snug">
+              <h3 className="font-heading text-lg sm:text-xl lg:text-[21px] xl:text-[28px] font-bold text-primary text-center mb-4 sm:mb-5 leading-snug">
                 {data.card1Title || "Federal Housing Guidelines"}
               </h3>
 
@@ -60,15 +60,15 @@ export function StateLawsSection({ data }: { data: StateData }) {
                   <div key={idx} className="flex items-start gap-3">
                     <div
                       className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      style={{ background: "var(--color-gradient)" }}
                     >
                       <Check className="w-3 h-3 stroke-[3]" />
                     </div>
                     <div>
-                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-[#2E5A66] mb-1">
+                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-primary mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
+                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -92,7 +92,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
             </div>
 
             <div className="p-4.5 sm:p-5 lg:p-6 flex flex-col flex-1">
-              <h3 className="font-heading text-lg sm:text-xl lg:text-[21px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-4 sm:mb-5 leading-snug">
+              <h3 className="font-heading text-lg sm:text-xl lg:text-[21px] xl:text-[28px] font-bold text-primary text-center mb-4 sm:mb-5 leading-snug">
                 {data.card2Title || "Housing Provider Role & Responsibilities"}
               </h3>
 
@@ -116,15 +116,15 @@ export function StateLawsSection({ data }: { data: StateData }) {
                   <div key={idx} className="flex items-start gap-3">
                     <div
                       className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      style={{ background: "var(--color-gradient)" }}
                     >
                       <Check className="w-3 h-3 stroke-[3]" />
                     </div>
                     <div>
-                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-[#2E5A66] mb-1">
+                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-primary mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
+                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -136,12 +136,12 @@ export function StateLawsSection({ data }: { data: StateData }) {
         </div>
 
         <div className="max-w-[895px] mx-auto bg-[rgba(232,185,44,0.1)] rounded-[20px] overflow-hidden flex items-stretch shadow-xs">
-          <div className="w-3 sm:w-3.5 bg-[#E8B92C] shrink-0" />
+          <div className="w-3 sm:w-3.5 bg-accent shrink-0" />
           <div className="p-4 sm:p-5 lg:p-6 flex-1">
-            <h3 className="font-heading text-sm sm:text-base lg:text-[17px] font-bold text-[#2E5A66] tracking-wider uppercase mb-1.5">
+            <h3 className="font-heading text-sm sm:text-base lg:text-[17px] font-bold text-primary tracking-wider uppercase mb-1.5">
               IMPORTANT LEGAL NOTICE
             </h3>
-            <p className="font-sans text-[11px] sm:text-xs lg:text-[14px] text-[#5F6B6F] font-semibold leading-relaxed">
+            <p className="font-sans text-[11px] sm:text-xs lg:text-[14px] text-body-text font-semibold leading-relaxed">
               {data.legalNotice ||
                 `Emotional support animals do not have public access rights like service animals under the ADA and are mainly considered for household housing accommodations in ${stateName}. Generally speaking, ESAs are not permitted in public places like restaurants or stores where pets are restricted.`}
             </p>

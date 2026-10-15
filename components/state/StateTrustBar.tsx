@@ -42,10 +42,10 @@ export function StateTrustBar({ data }: { data: StateData }) {
               key={idx}
               className="flex flex-col items-center text-center px-2 lg:px-4"
             >
-              <div className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#2E5A66] leading-none tracking-tight">
+              <div className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-primary leading-none tracking-tight">
                 {stat.value}
               </div>
-              <div className="font-sans text-xs sm:text-[13px] font-medium text-[#5F6B6F] mt-2.5 leading-tight">
+              <div className="font-sans text-xs sm:text-[13px] font-medium text-body-text mt-2.5 leading-tight">
                 {stat.label}
               </div>
             </div>

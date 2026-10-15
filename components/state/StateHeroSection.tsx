@@ -96,7 +96,7 @@ function EvaluationFormCard({
           Start Your Evaluation
         </h2>
         <p
-          className={`text-[#5F6B6F] font-semibold mt-0.5 font-sans ${
+          className={`text-body-text font-semibold mt-0.5 font-sans ${
             compact ? "text-[11.5px]" : "text-[12px] lg:text-[12.5px] xl:text-[14px]"
           }`}
         >
@@ -108,14 +108,14 @@ function EvaluationFormCard({
         <div className="py-6 text-center space-y-3 animate-fadeIn">
           <div
             className="w-12 h-12 rounded-full text-white flex items-center justify-center mx-auto shadow-md"
-            style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+            style={{ background: "var(--color-gradient)" }}
           >
-            <CheckCircle2 className="w-7 h-7 text-[#E8B92C]" />
+            <CheckCircle2 className="w-7 h-7 text-accent" />
           </div>
-          <div className="font-heading text-lg font-bold text-[#2E5A66]">
+          <div className="font-heading text-lg font-bold text-primary">
             Evaluation Request Received!
           </div>
-          <p className="text-xs text-[#5F6B6F] font-medium">
+          <p className="text-xs text-body-text font-medium">
             Our {stateName} intake specialist is reviewing your submission.
           </p>
         </div>
@@ -124,7 +124,7 @@ function EvaluationFormCard({
           <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5">
             <div>
               <label
-                className={`block font-semibold text-[#5F6B6F] mb-1 font-sans ${
+                className={`block font-semibold text-body-text mb-1 font-sans ${
                   compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
                 }`}
               >
@@ -136,14 +136,14 @@ function EvaluationFormCard({
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
+                className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
                   compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
                 }`}
               />
             </div>
             <div>
               <label
-                className={`block font-semibold text-[#5F6B6F] mb-1 font-sans ${
+                className={`block font-semibold text-body-text mb-1 font-sans ${
                   compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
                 }`}
               >
@@ -155,7 +155,7 @@ function EvaluationFormCard({
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
+                className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
                   compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
                 }`}
               />
@@ -164,7 +164,7 @@ function EvaluationFormCard({
 
           <div>
             <label
-              className={`block font-semibold text-[#5F6B6F] mb-1 font-sans ${
+              className={`block font-semibold text-body-text mb-1 font-sans ${
                 compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
               }`}
             >
@@ -176,7 +176,7 @@ function EvaluationFormCard({
               placeholder="your@email.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
+              className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
                 compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
               }`}
             />
@@ -184,7 +184,7 @@ function EvaluationFormCard({
 
           <div>
             <label
-              className={`block font-semibold text-[#5F6B6F] mb-1 font-sans ${
+              className={`block font-semibold text-body-text mb-1 font-sans ${
                 compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
               }`}
             >
@@ -196,7 +196,7 @@ function EvaluationFormCard({
               placeholder="(555) 000-0000"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className={`w-full rounded-[5px] border-[0.2px] border-[#5F6B6F] bg-[rgba(250,247,242,0.3)] text-[#5F6B6F] placeholder:text-[#5F6B6F]/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
+              className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
                 compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
               }`}
             />
@@ -208,14 +208,14 @@ function EvaluationFormCard({
               className={`w-full rounded-full text-white font-semibold shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all flex items-center justify-center gap-2 group ${
                 compact ? "h-[42px] text-[13px]" : "h-[42px] lg:h-[44px] xl:h-[48px] text-[14px] xl:text-[16px]"
               }`}
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 stroke-[2] text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 stroke-[2] text-background transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
-          <p className="text-center text-[10.5px] sm:text-[12px] text-[#5F6B6F] font-semibold pt-0.5 font-sans">
+          <p className="text-center text-[10.5px] sm:text-[12px] text-body-text font-semibold pt-0.5 font-sans">
             Your information is 100% secure and private.
           </p>
         </form>
@@ -247,7 +247,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
   return (
-    <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
+    <section className="relative w-full bg-background overflow-hidden">
       {/* 1. DESKTOP VIEW */}
       <div className="hidden lg:block relative w-full aspect-[4320/2439] min-h-[640px] lg:min-h-[680px] xl:min-h-[820px]">
         <BreakpointImage
@@ -263,11 +263,11 @@ export function StateHeroSection({ data }: { data: StateData }) {
         <div className="absolute inset-0 z-10">
           <div className="max-w-[1360px] mx-auto h-full px-6 lg:px-8 xl:px-10 flex items-start justify-between pt-6 lg:pt-7 xl:pt-14">
             <div className="flex-1 min-w-0 pr-4 xl:pr-8 space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-primary leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
                 {renderHeroTitle(data.heroTitle, stateName)}
               </h1>
 
-              <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
+              <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-body-text font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
                 {data.heroSubtitle ||
                   `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`}
               </p>
@@ -304,10 +304,10 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
-            <h1 className="font-heading text-[44px] font-bold text-[#2E5A66] leading-[54px] tracking-[-0.01em] text-center">
+            <h1 className="font-heading text-[44px] font-bold text-primary leading-[54px] tracking-[-0.01em] text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
             </h1>
-            <p className="font-sans text-[16px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
+            <p className="font-sans text-[16px] font-semibold text-body-text leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
               {data.heroSubtitle ||
                 `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`}
             </p>
@@ -339,10 +339,10 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
-            <h1 className="font-heading text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-[-0.01em] text-center">
+            <h1 className="font-heading text-[28px] font-bold text-primary leading-[36px] tracking-[-0.01em] text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
             </h1>
-            <p className="font-sans text-[14px] font-semibold text-[#5F6B6F] leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
+            <p className="font-sans text-[14px] font-semibold text-body-text leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
               {data.heroSubtitle ||
                 `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`}
             </p>

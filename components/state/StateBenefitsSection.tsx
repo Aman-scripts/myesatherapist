@@ -147,19 +147,19 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
           <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-6 sm:pb-8 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
             <div className="mb-4 lg:mb-5 xl:mb-8">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-primary leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
                 {title}
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[12px] xl:text-base text-[#5F6B6F] font-semibold leading-relaxed max-w-[520px]">
+              <p className="font-sans text-xs sm:text-sm lg:text-[12px] xl:text-base text-body-text font-semibold leading-relaxed max-w-[520px]">
                 {subtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 max-w-[650px] mb-2 lg:mb-3">
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] leading-tight whitespace-pre-line">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-body-text leading-tight whitespace-pre-line">
                 {financialHeading}
               </h3>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-[#5F6B6F] leading-tight whitespace-pre-line hidden sm:block">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-body-text leading-tight whitespace-pre-line hidden sm:block">
                 {emotionalHeading}
               </h3>
             </div>
@@ -180,10 +180,10 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-[#2E5A66] mb-0.5 lg:mb-1 leading-snug">
+                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-primary mb-0.5 lg:mb-1 leading-snug">
                         {pair.financial.title}
                       </h4>
-                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-normal font-semibold">
+                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-body-text leading-tight xl:leading-normal font-semibold">
                         {pair.financial.description}
                       </p>
                     </div>
@@ -202,10 +202,10 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-[#2E5A66] mb-0.5 lg:mb-1 leading-snug">
+                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-primary mb-0.5 lg:mb-1 leading-snug">
                         {pair.emotional.title}
                       </h4>
-                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-normal font-semibold">
+                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-body-text leading-tight xl:leading-normal font-semibold">
                         {pair.emotional.description}
                       </p>
                     </div>
@@ -219,15 +219,15 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 <a
                   href="#faq"
                   className="inline-flex items-center gap-2.5 lg:gap-3 pl-6 pr-1.5 py-1.5 rounded-full text-white font-semibold text-xs lg:text-[13px] xl:text-[16px] transition-all shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 group"
-                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ background: "var(--color-gradient)" }}
                 >
                   <span>Apply your ESA Letter Now</span>
-                  <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#FAF7F2] text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
+                  <span className="w-7 h-7 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-background text-[#1A3D4F] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:translate-x-0.5">
                     <Image
               quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4" />
                   </span>
                 </a>
-                <p className="font-sans font-semibold text-[12px] lg:text-[13px] text-[#5F6B6F] text-center">
+                <p className="font-sans font-semibold text-[12px] lg:text-[13px] text-body-text text-center">
                   No hidden fees. HIPAA-secure.
                 </p>
               </div>

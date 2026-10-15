@@ -34,13 +34,13 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
   const calloutText = data.psdCalloutText;
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1080px] mx-auto">
         <div className="text-center max-w-[840px] mx-auto mb-10 sm:mb-12 lg:mb-14">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight">
             {title}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-[#5F6B6F] font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
+          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -60,14 +60,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
 
             <div className="p-4 sm:p-4 lg:p-4.5 xl:p-5 flex flex-col justify-between flex-1 min-w-0">
               <div>
-                <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-[#2E5A66] mb-3 leading-snug">
+                <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-primary mb-3 leading-snug">
                   {esaTitle}
                 </h3>
                 <ul className="space-y-2 mb-4">
                   {esaBullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#5F6B6F] shrink-0 mt-1.5" />
-                      <span className="font-sans text-[11px] sm:text-[11.5px] lg:text-[11.5px] xl:text-[13px] text-[#5F6B6F] font-semibold leading-tight">
+                      <span className="w-1.5 h-1.5 rounded-full bg-body-text shrink-0 mt-1.5" />
+                      <span className="font-sans text-[11px] sm:text-[11.5px] lg:text-[11.5px] xl:text-[13px] text-body-text font-semibold leading-tight">
                         {bullet}
                       </span>
                     </li>
@@ -103,14 +103,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
 
             <div className="p-4 sm:p-4 lg:p-4.5 xl:p-5 flex flex-col justify-between flex-1 min-w-0">
               <div>
-                <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-[#2E5A66] mb-3 leading-snug">
+                <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-primary mb-3 leading-snug">
                   {psdTitle}
                 </h3>
                 <ul className="space-y-2 mb-4">
                   {psdBullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#5F6B6F] shrink-0 mt-1.5" />
-                      <span className="font-sans text-[11px] sm:text-[11.5px] lg:text-[11.5px] xl:text-[13px] text-[#5F6B6F] font-semibold leading-tight">
+                      <span className="w-1.5 h-1.5 rounded-full bg-body-text shrink-0 mt-1.5" />
+                      <span className="font-sans text-[11px] sm:text-[11.5px] lg:text-[11.5px] xl:text-[13px] text-body-text font-semibold leading-tight">
                         {bullet}
                       </span>
                     </li>
@@ -137,14 +137,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
         {calloutTitle && calloutText && (
           <div className="relative w-full max-w-[959px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] overflow-hidden flex flex-row items-center pr-4 sm:pr-8 md:pr-[67px] gap-3 sm:gap-[24px]">
             {/* Rectangle 25: Left Accent */}
-            <div className="w-[14px] sm:w-[19px] self-stretch min-h-[140px] sm:min-h-[181px] bg-[#E8B92C] shrink-0 rounded-l-[10px]" />
+            <div className="w-[14px] sm:w-[19px] self-stretch min-h-[140px] sm:min-h-[181px] bg-accent shrink-0 rounded-l-[10px]" />
 
             {/* Frame 1000012015: Content Area */}
             <div className="py-5 sm:py-8 flex flex-col justify-center items-start gap-1.5 max-w-[849px] flex-1">
-              <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#2E5A66]">
+              <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-primary">
                 {calloutTitle}
               </h3>
-              <p className="font-sans font-medium text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#5F6B6F] whitespace-pre-line">
+              <p className="font-sans font-medium text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-body-text whitespace-pre-line">
                 {calloutText}
               </p>
             </div>

@@ -11,7 +11,7 @@ import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const POPULAR_STATES = STATE_INDEX;
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function StatesHeroSection() {
   const router = useRouter();
@@ -60,7 +60,7 @@ export function StatesHeroSection() {
   };
 
   return (
-    <section className="relative z-30 bg-[#FAF7F2]">
+    <section className="relative z-30 bg-background">
       
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
@@ -85,37 +85,37 @@ export function StatesHeroSection() {
           
           {/* Top 3 Stat Pills */}
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-4">
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-1.5 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1.5 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="font-heading text-[18px] font-bold leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 50
               </span>
-              <span className="font-sans font-semibold text-[10px] text-[#5F6B6F] mt-0.5 whitespace-nowrap">USA States</span>
+              <span className="font-sans font-semibold text-[10px] text-body-text mt-0.5 whitespace-nowrap">USA States</span>
             </div>
 
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-1.5 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1.5 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="font-heading text-[18px] font-bold leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 HIPAA
               </span>
-              <span className="font-sans font-semibold text-[10px] text-[#5F6B6F] mt-0.5 whitespace-nowrap">Compliant</span>
+              <span className="font-sans font-semibold text-[10px] text-body-text mt-0.5 whitespace-nowrap">Compliant</span>
             </div>
 
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-1.5 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1.5 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="font-heading text-[18px] font-bold leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 100%
               </span>
-              <span className="font-sans font-semibold text-[10px] text-[#5F6B6F] mt-0.5 whitespace-nowrap">Licensed Pros</span>
+              <span className="font-sans font-semibold text-[10px] text-body-text mt-0.5 whitespace-nowrap">Licensed Pros</span>
             </div>
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[28px] sm:text-[32px] leading-[1.2] font-bold tracking-tight text-[#2E5A66]">
+          <h1 className="font-heading text-[28px] sm:text-[32px] leading-[1.2] font-bold tracking-tight text-primary">
             ESA Evaluation For
             <br />
             Every State
           </h1>
 
           {/* Subtitle */}
-          <p className="text-[13.5px] leading-[1.55] text-[#5F6B6F] font-semibold max-w-[320px] mx-auto mt-3 font-sans">
+          <p className="text-[13.5px] leading-[1.55] text-body-text font-semibold max-w-[320px] mx-auto mt-3 font-sans">
             Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
           </p>
 
@@ -153,37 +153,37 @@ export function StatesHeroSection() {
           
           {/* Stat Pills at top */}
           <div className="flex items-center justify-center gap-3 flex-wrap">
-            <div className="flex flex-col items-center justify-center bg-[#FAF7F2] px-6 py-2.5 rounded-full text-center min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
+            <div className="flex flex-col items-center justify-center bg-background px-6 py-2.5 rounded-full text-center min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 50
               </span>
-              <span className="font-sans font-semibold text-xs text-[#5F6B6F] mt-0.5 whitespace-nowrap">USA States</span>
+              <span className="font-sans font-semibold text-xs text-body-text mt-0.5 whitespace-nowrap">USA States</span>
             </div>
 
-            <div className="flex flex-col items-center justify-center bg-[#FAF7F2] px-6 py-2.5 rounded-full text-center min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
+            <div className="flex flex-col items-center justify-center bg-background px-6 py-2.5 rounded-full text-center min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 HIPAA
               </span>
-              <span className="font-sans font-semibold text-xs text-[#5F6B6F] mt-0.5 whitespace-nowrap">Compliant</span>
+              <span className="font-sans font-semibold text-xs text-body-text mt-0.5 whitespace-nowrap">Compliant</span>
             </div>
 
-            <div className="flex flex-col items-center justify-center bg-[#FAF7F2] px-6 py-2.5 rounded-full text-center min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
+            <div className="flex flex-col items-center justify-center bg-background px-6 py-2.5 rounded-full text-center min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 100%
               </span>
-              <span className="font-sans font-semibold text-xs text-[#5F6B6F] mt-0.5 whitespace-nowrap">Licensed Pros</span>
+              <span className="font-sans font-semibold text-xs text-body-text mt-0.5 whitespace-nowrap">Licensed Pros</span>
             </div>
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-[36px] sm:text-[42px] font-bold tracking-tight mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+          <h1 className="font-heading text-[36px] sm:text-[42px] font-bold tracking-tight mt-6 leading-tight max-w-xl mx-auto text-primary">
             ESA Evaluation For
             <br />
             Every State
           </h1>
 
           {/* Subheading */}
-          <p className="text-[16px] leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-3 font-sans">
+          <p className="text-[16px] leading-relaxed text-body-text font-semibold max-w-md mx-auto mt-3 font-sans">
             Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
           </p>
 
@@ -195,7 +195,7 @@ export function StatesHeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center justify-between gap-3 px-6 h-[48px] rounded-[30px] bg-[#FAF7F2] font-semibold text-sm shadow-sm hover:bg-white transition-colors border border-[#EAE5DC] min-w-[200px]"
+                className="flex items-center justify-between gap-3 px-6 h-[48px] rounded-[30px] bg-background font-semibold text-sm shadow-sm hover:bg-white transition-colors border border-[#EAE5DC] min-w-[200px]"
               >
                 <span className="flex items-center gap-2">
                   <Image
@@ -211,7 +211,7 @@ export function StatesHeroSection() {
                     {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </span>
-                <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
 
               {isDropdownOpen && (
@@ -244,7 +244,7 @@ export function StatesHeroSection() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[36px] h-[36px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
               </span>
@@ -307,29 +307,29 @@ export function StatesHeroSection() {
             
             {/* Top 3 Pill Stat Badges */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-[#FAF7F2] rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
-                <span className="font-heading font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent leading-none">
+              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
+                <span className="font-heading font-bold text-xl sm:text-2xl text-color-gradient leading-none">
                   50
                 </span>
-                <span className="font-sans font-semibold text-xs text-[#5F6B6F] mt-0.5 leading-tight">
+                <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
                   USA States
                 </span>
               </div>
 
-              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-[#FAF7F2] rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
-                <span className="font-heading font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent leading-none">
+              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
+                <span className="font-heading font-bold text-xl sm:text-2xl text-color-gradient leading-none">
                   HIPAA
                 </span>
-                <span className="font-sans font-semibold text-xs text-[#5F6B6F] mt-0.5 leading-tight">
+                <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
                   Compliant
                 </span>
               </div>
 
-              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-[#FAF7F2] rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
-                <span className="font-heading font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent leading-none">
+              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
+                <span className="font-heading font-bold text-xl sm:text-2xl text-color-gradient leading-none">
                   100%
                 </span>
-                <span className="font-sans font-semibold text-xs text-[#5F6B6F] mt-0.5 leading-tight">
+                <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
                   Licensed Pros
                 </span>
               </div>
@@ -337,12 +337,12 @@ export function StatesHeroSection() {
 
             {/* Heading */}
             <div className="flex flex-col gap-3">
-              <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[56px] lg:leading-[64px] tracking-tight text-[#2E5A66]">
+              <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[56px] lg:leading-[64px] tracking-tight text-primary">
                 ESA Evaluation For
                 <br />
                 Every State
               </h1>
-              <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-[#5F6B6F] max-w-[480px]">
+              <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-body-text max-w-[480px]">
                 Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
               </p>
             </div>
@@ -355,7 +355,7 @@ export function StatesHeroSection() {
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-[#FAF7F2] hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] transition-all duration-200 cursor-pointer text-left min-w-[210px]"
+                  className="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-background hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] transition-all duration-200 cursor-pointer text-left min-w-[210px]"
                   aria-expanded={isDropdownOpen}
                 >
                   <div className="flex items-center gap-2.5">
@@ -368,13 +368,13 @@ export function StatesHeroSection() {
                       className="shrink-0 object-contain"
                       style={{ width: "auto", height: "auto" }}
                     />
-                    <span className="font-sans font-semibold text-base sm:text-lg bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+                    <span className="font-sans font-semibold text-base sm:text-lg text-color-gradient">
                       {selectedState
                         ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State"
                         : "Start your State"}
                     </span>
                   </div>
-                  <ChevronDown className={`w-4 h-4 text-[#2E5A66] transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
 
                 {/* State Dropdown Menu */}
@@ -408,7 +408,7 @@ export function StatesHeroSection() {
                 style={{ backgroundImage: TEAL_GRADIENT }}
               >
                 <span>Get Started</span>
-                <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                   <Image
             quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[19px] h-[21px]" />
                 </span>

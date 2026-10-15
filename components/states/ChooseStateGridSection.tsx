@@ -8,7 +8,7 @@ const ALL_STATES = [...STATE_INDEX].sort((a, b) =>
   a.name.localeCompare(b.name)
 );
 
-// Exact Figma fi_3177361 Pin SVG with linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)
+// Exact Figma fi_3177361 Pin SVG with var(--color-gradient)
 function FigmaPinIcon({ className = "w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" }: { className?: string }) {
   return (
     <svg
@@ -70,10 +70,10 @@ export function ChooseStateGridSection({
         
         {/* Heading Block */}
         <div className="flex flex-col items-center text-center max-w-[854px] gap-4">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-[-0.00015em] text-[#2E5A66] max-w-[765px]">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-[-0.00015em] text-primary max-w-[765px]">
             {title}
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg leading-[30px] text-[#5F6B6F] max-w-[854px]">
+          <p className="font-sans font-semibold text-base sm:text-lg leading-[30px] text-body-text max-w-[854px]">
             {description}
           </p>
         </div>
@@ -86,7 +86,7 @@ export function ChooseStateGridSection({
               <Link
                 key={state.slug}
                 href={stateHref}
-                className="group flex flex-col justify-center items-start px-3 sm:px-6 lg:px-[32px] py-2.5 sm:py-[15px] bg-[#FAF7F2] hover:bg-white rounded-[12px] sm:rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.12)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] min-h-[58px] sm:h-[62px]"
+                className="group flex flex-col justify-center items-start px-3 sm:px-6 lg:px-[32px] py-2.5 sm:py-[15px] bg-background hover:bg-white rounded-[12px] sm:rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.12)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] min-h-[58px] sm:h-[62px]"
               >
               {/* Frame 1261153688: Inner Row */}
               <div className="flex flex-row items-center gap-2 sm:gap-2.5 lg:gap-[8px] w-full overflow-hidden">
@@ -96,7 +96,7 @@ export function ChooseStateGridSection({
                 </div>
 
                 {/* Page Description: State Text */}
-                <span className="font-sans font-semibold text-[13.5px] sm:text-[15px] lg:text-[18px] leading-snug sm:leading-[30px] bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
+                <span className="font-sans font-semibold text-[13.5px] sm:text-[15px] lg:text-[18px] leading-snug sm:leading-[30px] text-color-gradient group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
                   {state.name}
                 </span>
               </div>

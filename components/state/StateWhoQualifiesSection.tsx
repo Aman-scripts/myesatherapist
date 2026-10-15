@@ -140,16 +140,16 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
           <div className="order-2 lg:order-1 lg:col-span-6 px-4 sm:px-6 lg:px-0 pt-4 pb-4 sm:pb-6 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
             <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-primary leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 {title}
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-[#5F6B6F] font-semibold leading-relaxed xl:leading-[26px] max-w-[540px]">
+              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-body-text font-semibold leading-relaxed xl:leading-[26px] max-w-[540px]">
                 {renderTextWithLinks(subtitle)}
               </p>
             </div>
 
             <div>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-[#5F6B6F] mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-body-text mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
                 {sectionHeading}
               </h3>
 
@@ -171,10 +171,10 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     </div>
 
                     <div className="min-w-0">
-                      <h4 className="font-heading text-xs sm:text-sm lg:text-[14px] xl:text-[16px] font-bold text-[#2E5A66] mb-0.5 leading-snug">
+                      <h4 className="font-heading text-xs sm:text-sm lg:text-[14px] xl:text-[16px] font-bold text-primary mb-0.5 leading-snug">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[10px] sm:text-xs lg:text-[11px] xl:text-[13px] text-[#5F6B6F] leading-tight xl:leading-relaxed font-semibold">
+                      <p className="font-sans text-[10px] sm:text-xs lg:text-[11px] xl:text-[13px] text-body-text leading-tight xl:leading-relaxed font-semibold">
                         {item.description}
                       </p>
                     </div>
@@ -183,10 +183,10 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </div>
 
               {data.whoQualifiesNote && (
-                <div className="mt-4 max-w-[620px] relative overflow-hidden bg-[#FAF7F2] rounded-[10px] py-3 px-4 shadow-xs flex items-center pl-6 text-left border border-[#EAE5DC]/60">
-                  <div className="absolute left-0 top-0 bottom-0 w-2.5 bg-[#E8B92C] rounded-l-[10px]" />
-                  <p className="font-sans text-[11.5px] sm:text-xs lg:text-[13px] font-semibold text-[#5F6B6F] leading-relaxed">
-                    <span className="font-bold text-[#2E5A66] uppercase tracking-wider">
+                <div className="mt-4 max-w-[620px] relative overflow-hidden bg-background rounded-[10px] py-3 px-4 shadow-xs flex items-center pl-6 text-left border border-[#EAE5DC]/60">
+                  <div className="absolute left-0 top-0 bottom-0 w-2.5 bg-accent rounded-l-[10px]" />
+                  <p className="font-sans text-[11.5px] sm:text-xs lg:text-[13px] font-semibold text-body-text leading-relaxed">
+                    <span className="font-bold text-primary uppercase tracking-wider">
                       {/^important\s*note/i.test(data.whoQualifiesNote)
                         ? "IMPORTANT NOTE - "
                         : /^note/i.test(data.whoQualifiesNote)
