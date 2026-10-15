@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { LATO, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
+import { CtaButton } from "@/components/common/CtaButton";
 import type { ContributorCardData } from "@/data/contributorsData";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -64,17 +65,13 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
           ))}
         </div>
         <div className="pt-2 flex justify-center">
-          <Link
+          <CtaButton
             href={person.href}
-            className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-accent hover:bg-[#dba81f] text-[#29515B] font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
-            style={LATO}
+            variant="accent"
+            className="w-[179px]"
           >
-            <span>View Profile</span>
-            <span className="w-7 h-7 rounded-full bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-2">
-              <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={14} height={14} className="w-3.5 h-3.5 object-contain" />
-            </span>
-          </Link>
+            View Profile
+          </CtaButton>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import { CtaButton } from "@/components/common/CtaButton";
 
 
 const AVAILABLE_STATES = [
@@ -193,76 +194,39 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-2 xl:gap-[8px] justify-end shrink-0">
             {isPsd ? (
               /* PSD Letter Page: Single "Start Your Consultation" Button */
-              <a
+              <CtaButton
                 href="#pricing"
-                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
-                style={{ backgroundImage: "var(--color-gradient)" }}
+                className="w-auto px-6"
               >
-                <span>Start Your Consultation</span>
-                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-                    quality={90}
-                    src="/common/send-icon.svg"
-                    alt=""
-                    width={18}
-                    height={20}
-                    className="w-[16px] h-[18px] xl:w-[18px] xl:h-[20px]"
-                  />
-                </span>
-              </a>
+                Start Your Consultation
+              </CtaButton>
             ) : isDoctors || isLegalReviewer ? (
               /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
-              <a
+              <CtaButton
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
-                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
-                style={{ backgroundImage: "var(--color-gradient)" }}
+                className="w-[179px] xl:w-[182px]"
               >
-                <span>Get Started</span>
-                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-                    quality={90}
-                    src="/common/send-icon.svg"
-                    alt=""
-                    width={18}
-                    height={20}
-                    className="w-[16px] h-[18px] xl:w-[18px] xl:h-[20px]"
-                  />
-                </span>
-              </a>
+                Get Started
+              </CtaButton>
             ) : (
               /* Homepage (Frame 1000011888 & Frame 1000011890) */
               <>
-                {/* Button 1: Free ESA Eligibility Checker (255px x 48px, rounded 30px, shadow) */}
-                <a
+                {/* Button 1: Free ESA Eligibility Checker (Frame 1000011888) */}
+                <CtaButton
                   href="#eligibility"
-                  className="px-3 xl:px-4 w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] flex items-center justify-center rounded-[30px] bg-background hover:bg-[#F5EFE6] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all whitespace-nowrap"
+                  variant="secondary"
+                  className="w-auto h-[48px]"
                 >
-                  <span
-                    className="body-small xl:body-text bg-clip-text text-transparent"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
-                    Free ESA Eligibilty Checker
-                  </span>
-                </a>
+                  Free ESA Eligibility Checker
+                </CtaButton>
 
-                {/* Button 2: Get Started (179px x 48px, rounded 30px, padding 0 0 0 34px, circle 42.48px) */}
-                <a
+                {/* Button 2: Get Started (Frame 1000011890) */}
+                <CtaButton
                   href="#pricing"
-                  className="inline-flex items-center justify-between pl-4 xl:pl-[34px] pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all whitespace-nowrap"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
+                  className="w-[179px] xl:w-[182px] h-[48px]"
                 >
-                  <span>Get Started</span>
-                  <span className="w-8 h-8 xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                    <Image
-                      quality={90}
-                      src="/common/send-icon.svg"
-                      alt=""
-                      width={18}
-                      height={20}
-                      className="w-[16px] h-[18px] xl:w-[18px] xl:h-[20px]"
-                    />
-                  </span>
-                </a>
+                  Get Started
+                </CtaButton>
               </>
             )}
           </div>
@@ -390,32 +354,22 @@ export function Header() {
 
           <div className="pt-2 space-y-2.5">
             {!isPsd && (
-              <a
+              <CtaButton
                 href="#eligibility"
-                className="block text-center py-2.5 rounded-full bg-background text-[#1E3E47] font-bold text-sm border border-[#EAE5DC]"
+                variant="secondary"
+                className="w-full justify-center h-[48px]"
                 onClick={() => setMobileOpen(false)}
               >
                 Free ESA Eligibility Checker
-              </a>
+              </CtaButton>
             )}
-            <a
+            <CtaButton
               href="#pricing"
-              className="flex items-center justify-between pl-6 pr-2 py-2.5 rounded-full text-white font-bold text-base shadow-sm"
-              style={{ backgroundImage: "var(--color-gradient)" }}
+              className="w-full justify-between h-[48px]"
               onClick={() => setMobileOpen(false)}
             >
-              <span>{isPsd ? "Start Your Consultation" : "Get Started"}</span>
-              <span className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={19}
-                  height={21}
-                  className="w-[19px] h-[21px]"
-                />
-              </span>
-            </a>
+              {isPsd ? "Start Your Consultation" : "Get Started"}
+            </CtaButton>
           </div>
         </div>
       )}

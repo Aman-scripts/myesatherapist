@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -98,23 +99,14 @@ export function EsaRenewalHowItWorks() {
         </div>
 
         {/* Bottom CTA Button (Frame 1000011890) */}
-        <a
-          href="#pricing"
-          className="group mt-2 inline-flex h-12 items-center justify-between gap-2 rounded-[30px] pl-[34px] pr-[3px] text-white font-semibold text-base leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all"
-          style={{ backgroundImage: TEAL_GRADIENT }}
-        >
-          <span className="pr-8">Begin your Renewal Process</span>
-          <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
-            <Image
-            quality={90}
-              src="/common/send-icon.svg"
-              alt=""
-              width={22}
-              height={22}
-              className="h-[22px] w-[22px] object-contain"
-            />
-          </span>
-        </a>
+        <div className="mt-2">
+          <CtaButton
+            href="#pricing"
+            className="w-auto min-w-[270px]"
+          >
+            Begin your Renewal Process
+          </CtaButton>
+        </div>
       </div>
     </section>
   );

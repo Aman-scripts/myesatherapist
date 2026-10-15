@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blogsData";
+import { CtaButton } from "@/components/common/CtaButton";
 
 interface BlogMoreResourcesProps {
   currentSlug?: string;
@@ -68,23 +69,12 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
 
                 {/* Get Started Button */}
                 <div className="pt-2">
-                  <Link
+                  <CtaButton
                     href={item.url}
-                    className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
-                    style={{ background: "var(--color-gradient)" }}
+                    className="w-[179px]"
                   >
-                    <span>Read Article</span>
-                    <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
-                      <Image
-            quality={90}
-                        src="/common/send-icon.svg"
-                        alt=""
-                        width={18}
-                        height={18}
-                        className="w-[16px] h-[16px] object-contain"
-                      />
-                    </span>
-                  </Link>
+                    Read Article
+                  </CtaButton>
                 </div>
               </div>
             </div>

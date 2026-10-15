@@ -9,6 +9,7 @@ import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -237,18 +238,12 @@ export function StatesHeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <button
-              type="button"
+            <CtaButton
               onClick={handleGetStarted}
-              className="flex items-center gap-3 pl-6 pr-2 h-[48px] rounded-[30px] text-white font-semibold text-sm transition-opacity hover:opacity-90 shadow-sm cursor-pointer"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+              className="w-auto"
             >
-              <span>Get Started</span>
-              <span className="w-[36px] h-[36px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={18} height={20} className="w-[18px] h-[20px]" />
-              </span>
-            </button>
+              Get Started
+            </CtaButton>
           </div>
 
         </div>
@@ -401,18 +396,12 @@ export function StatesHeroSection() {
               </div>
 
               {/* Get Started Button */}
-              <button
-                type="button"
+              <CtaButton
                 onClick={handleGetStarted}
-                className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-[16px] transition-opacity hover:opacity-90 h-[48px] shrink-0 shadow-sm cursor-pointer"
-                style={{ backgroundImage: TEAL_GRADIENT }}
+                className="w-[179px] xl:w-[182px]"
               >
-                <span>Get Started</span>
-                <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                  <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[19px] h-[21px]" />
-                </span>
-              </button>
+                Get Started
+              </CtaButton>
             </div>
 
             {/* Trustpilot Review Card */}

@@ -9,6 +9,7 @@ import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -246,17 +247,9 @@ export function PricingHero() {
               )}
             </div>
 
-            <a
-              href="#plans"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-sm"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
+            <CtaButton href="#plans" className="w-[179px]">
               Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
-              </span>
-            </a>
+            </CtaButton>
           </div>
         </div>
       </div>
@@ -367,17 +360,9 @@ export function PricingHero() {
             </div>
 
             {/* Get Started CTA Button */}
-            <a
-              href="#plans"
-              className="flex items-center gap-2.5 xl:gap-3 pl-5 xl:pl-6 pr-1.5 xl:pr-2 py-1.5 xl:py-2 rounded-[30px] text-white font-semibold text-[15px] xl:text-[16px] transition-opacity hover:opacity-90 h-[48px] xl:h-[48px] shrink-0 shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span>Get Started</span>
-              <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
-              </span>
-            </a>
+            <CtaButton href="#plans" className="w-[179px] xl:w-[182px]">
+              Get Started
+            </CtaButton>
           </div>
 
           {/* Trustpilot Badge (Frame 1000011802) */}

@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -100,25 +101,12 @@ export function EsaRenewalHero() {
 
           {/* CTA Button: "Start your Renewal Online" with Circular Compass Arrow */}
           <div className="pt-1">
-            <a
+            <CtaButton
               href="#pricing"
-              className="group inline-flex items-center justify-between pl-7 pr-1.5 py-1.5 rounded-[30px] text-white font-semibold text-base shadow-[0px_2px_6px_rgba(0,0,0,0.2)] hover:opacity-95 transition-all gap-4"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+              className="w-auto min-w-[240px]"
             >
-              <span className="font-sans font-semibold text-[15px] sm:text-[16px] lg:text-[14px] xl:text-[16px] text-white tracking-wide">
-                Start your Renewal Online
-              </span>
-              <span className="w-[42px] h-[42px] rounded-full bg-background flex items-center justify-center shadow-[0px_3px_6px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={22}
-                  height={22}
-                  className="h-[22px] w-[22px] object-contain"
-                />
-              </span>
-            </a>
+              Start your Renewal Online
+            </CtaButton>
           </div>
 
           {/* Frosted Glass Reviews (Trustpilot & ConsumerAffairs) */}

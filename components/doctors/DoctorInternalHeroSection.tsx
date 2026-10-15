@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DoctorProfile } from "@/data/doctorsData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { CtaButton } from "@/components/common/CtaButton";
 
 interface DoctorInternalHeroSectionProps {
   doctor: DoctorProfile;
@@ -86,16 +87,12 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
 
             {/* CTA */}
             <div className="flex items-center pt-1">
-              <Link
+              <CtaButton
                 href={doctor.ctaSection?.buttonHref || "/pricing/"}
-                className="group inline-flex items-center justify-between h-[48px] pl-7 pr-1.5 rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white font-sans font-semibold text-[16px] hover:opacity-95 transition-all min-w-[267px]"
-                style={{ backgroundImage: "var(--color-gradient)" }}
+                className="w-auto min-w-[267px]"
               >
-                <span>Schedule Consultation</span>
-                <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
-                  <Image quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-4 h-4 object-contain" />
-                </span>
-              </Link>
+                Schedule Consultation
+              </CtaButton>
             </div>
 
             <ReviewBadges className="pt-2" />
@@ -165,16 +162,12 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
 
           {/* CTA */}
           <div className="flex items-center mb-5 sm:mb-6">
-            <Link
+            <CtaButton
               href={doctor.ctaSection?.buttonHref || "/pricing/"}
-              className="group inline-flex items-center justify-between h-[48px] pl-6 sm:pl-7 pr-1.5 rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white font-sans font-semibold text-[15px] sm:text-[16px] hover:opacity-95 transition-all min-w-[240px] sm:min-w-[267px]"
-              style={{ backgroundImage: "var(--color-gradient)" }}
+              className="w-auto min-w-[240px] sm:min-w-[267px]"
             >
-              <span>Schedule Consultation</span>
-              <span className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
-                <Image quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain" />
-              </span>
-            </Link>
+              Schedule Consultation
+            </CtaButton>
           </div>
 
           {/* Doctor Portrait — full-width, natural height */}

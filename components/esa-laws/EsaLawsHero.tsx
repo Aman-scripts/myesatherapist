@@ -9,6 +9,7 @@ import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -241,17 +242,12 @@ export function EsaLawsHero() {
               )}
             </div>
 
-            <a
+            <CtaButton
               href="#how-it-works"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-sm"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+              className="w-auto"
             >
               Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
-              </span>
-            </a>
+            </CtaButton>
           </div>
         </div>
       </div>
@@ -348,17 +344,12 @@ export function EsaLawsHero() {
               )}
             </div>
 
-            <a
+            <CtaButton
               href="#how-it-works"
-              className="h-[54px] pl-7 pr-1.5 rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between gap-3 text-white font-sans font-semibold text-base hover:opacity-95 transition-opacity"
-              style={{ background: TEAL_GRADIENT }}
+              className="w-[179px] xl:w-[182px]"
             >
-              <span>Get Started</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
-              </span>
-            </a>
+              Get Started
+            </CtaButton>
           </div>
 
           {/* Trustpilot Glassmorphism Box */}

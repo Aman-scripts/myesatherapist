@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blogsData";
 import { SectionHeader } from "@/components/common/BlogPageBlocks";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const PREFERRED_ORDER = [
   "how-to-verify-an-esa-letter",
@@ -69,17 +70,12 @@ export function EsaGuideFilterableGrid() {
                   </p>
                 </div>
 
-                <Link
+                <CtaButton
                   href={art.url}
-                  className="group/btn inline-flex h-12 w-[171px] items-center justify-between rounded-[30px] pl-6 pr-[3px] font-sans text-base font-semibold text-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all hover:opacity-95"
-                  style={{ background: "var(--color-gradient)" }}
+                  className="w-[179px]"
                 >
-                  <span>Read Guide</span>
-                  <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover/btn:scale-105">
-                    <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
-                  </span>
-                </Link>
+                  Read Guide
+                </CtaButton>
               </div>
             </article>
           ))}

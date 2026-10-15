@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 export function FederalHousingRulesSection() {
   const handleScrollToGrid = () => {
@@ -32,28 +32,12 @@ export function FederalHousingRulesSection() {
         </div>
 
         {/* Frame 1000011890: CTA Button */}
-        <button
-          type="button"
+        <CtaButton
           onClick={handleScrollToGrid}
-          className="inline-flex items-center justify-between pl-8 pr-1.5 h-[48px] min-w-[252px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity cursor-pointer group"
-          style={{ backgroundImage: "var(--color-gradient)" }}
+          className="w-auto min-w-[252px]"
         >
-          <span className="font-sans font-semibold text-[16px] leading-[26px] text-white whitespace-nowrap mr-3">
-            Learn with ESA Laws
-          </span>
-
-          {/* Ellipse 14 with Navigation Icon */}
-          <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-            <Image
-            quality={90}
-              src="/common/send-icon.svg"
-              alt="Arrow icon"
-              width={22}
-              height={24}
-              className="w-[20px] h-[22px] object-contain"
-            />
-          </span>
-        </button>
+          Learn with ESA Laws
+        </CtaButton>
 
       </div>
     </section>

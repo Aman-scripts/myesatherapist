@@ -4,29 +4,8 @@ import Image from "next/image";
 export const TEAL_GRADIENT = "var(--color-gradient)";
 export const LATO = { fontFamily: "var(--font-sans), 'Manrope', sans-serif" };
 
-export function CtaButton({
-  href = "/pricing/",
-  children,
-  className = "",
-}: {
-  href?: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <a
-      href={href}
-      className={`group inline-flex min-h-12 max-w-full items-center justify-between gap-2 rounded-[30px] pl-6 sm:pl-[34px] pr-[3px] text-white body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all ${className}`}
-      style={{ backgroundImage: TEAL_GRADIENT }}
-    >
-      <span className="pr-2 sm:pr-4 py-1 text-center lg:whitespace-nowrap">{children}</span>
-      <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
-        <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
-      </span>
-    </a>
-  );
-}
+import { CtaButton } from "@/components/common/CtaButton";
+export { CtaButton };
 
 export function GoldCallout({
   title,

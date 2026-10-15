@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { STATE_INDEX } from "@/data/stateIndex";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -174,23 +175,12 @@ export function AboutHeroSection() {
             </div>
 
             {/* Get Started */}
-            <Link
+            <CtaButton
               href="#pricing"
-              className="h-12 pl-6 pr-2 w-[165px] rounded-[30px] text-white flex items-center justify-between shadow-sm hover:opacity-95 transition-all group"
-              style={{ backgroundImage: "var(--color-gradient)" }}
+              className="w-[179px]"
             >
-              <span className="font-sans text-base font-semibold">Get Started</span>
-              <span className="w-9 h-9 rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={18}
-                  height={18}
-                  className="w-4 h-4 object-contain"
-                />
-              </span>
-            </Link>
+              Get Started
+            </CtaButton>
           </div>
         </div>
       </div>

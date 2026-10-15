@@ -9,6 +9,7 @@ import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -195,23 +196,12 @@ export function ReviewsHeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <a
+            <CtaButton
               href="#trustpilot-reviews"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-base transition-opacity hover:opacity-90 min-h-[48px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+              className="w-auto"
             >
-              <span>Get Started</span>
-              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-                  quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={20}
-                  height={20}
-                  className="w-4 h-4"
-                />
-              </span>
-            </a>
+              Get Started
+            </CtaButton>
           </div>
         </div>
       </div>
@@ -331,17 +321,12 @@ export function ReviewsHeroSection() {
             </div>
 
             {/* Get Started Button (Frame 1000011890) */}
-            <a
+            <CtaButton
               href="#trustpilot-reviews"
-              className="flex items-center gap-3 pl-6 pr-2 py-2 rounded-[30px] text-white font-semibold text-[16px] transition-opacity hover:opacity-95 h-[48px] xl:h-[50px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+              className="w-[179px] xl:w-[182px]"
             >
-              <span>Get Started</span>
-              <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={20} height={20} className="w-[18px] h-[18px]" />
-              </span>
-            </a>
+              Get Started
+            </CtaButton>
           </div>
 
           {/* Trustpilot Frosted Glass Card (Frame 1000011802) */}

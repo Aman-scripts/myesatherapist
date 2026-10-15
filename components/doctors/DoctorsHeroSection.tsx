@@ -9,6 +9,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { STATE_INDEX } from "@/data/stateIndex";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const AVAILABLE_STATES = STATE_INDEX;
 
@@ -222,25 +223,12 @@ export function DoctorsHeroSection() {
             </div>
 
             {/* "Get Started" Pill Button */}
-            <Link
+            <CtaButton
               href="#therapists"
-              className="w-full sm:w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pl-[34px] pr-[3px] flex items-center justify-between gap-[8px] hover:opacity-95 transition-all shrink-0"
-              style={{ backgroundImage: "var(--color-gradient)" }}
+              className="w-full sm:w-[179px] xl:w-[182px]"
             >
-              <span className="font-sans font-semibold text-[16px] leading-[26px] text-white whitespace-nowrap">
-                Get Started
-              </span>
-              <span className="w-[42.48px] h-[42.48px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/common/send-icon.svg"
-                  alt=""
-                  width={18}
-                  height={18}
-                  className="w-[18px] h-[18px] object-contain"
-                />
-              </span>
-            </Link>
+              Get Started
+            </CtaButton>
 
           </div>
 

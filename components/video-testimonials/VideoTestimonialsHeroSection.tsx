@@ -10,6 +10,7 @@ import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -239,19 +240,12 @@ export function VideoTestimonialsHeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <a
+            <CtaButton
               href="/pricing/"
-              className="h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-6 pr-1.5 text-white hover:opacity-95 transition-opacity"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+              className="w-auto"
             >
-              <span className="font-sans font-semibold text-[15px] sm:text-[16px] text-white mr-3.5">
-                Get Started
-              </span>
-              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90} src="/common/send-icon.svg" alt="" width={16} height={18} className="w-4 h-[18px]" />
-              </span>
-            </a>
+              Get Started
+            </CtaButton>
           </div>
 
         </div>

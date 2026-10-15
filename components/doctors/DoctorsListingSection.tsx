@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { CtaButton } from "@/components/common/CtaButton";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -186,22 +187,13 @@ export function DoctorsListingSection() {
 
                 {/* Card Action Button */}
                 <div className="pt-2 flex justify-center">
-                  <Link
+                  <CtaButton
                     href={`/esa-doctors/${doc.slug}/`}
-                    className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-accent hover:bg-[#dba81f] text-[#29515B] font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
+                    variant="accent"
+                    className="w-[179px]"
                   >
-                    <span>View Profile</span>
-                    <span className="w-7 h-7 rounded-full bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-2">
-                      <Image
-            quality={90}
-                        src="/common/send-icon.svg"
-                        alt=""
-                        width={14}
-                        height={14}
-                        className="w-3.5 h-3.5 object-contain"
-                      />
-                    </span>
-                  </Link>
+                    View Profile
+                  </CtaButton>
                 </div>
               </div>
             </div>
@@ -256,23 +248,12 @@ export function DoctorsListingSection() {
 
         {/* Bottom CTA Pill Button (Frame 1000011742) */}
         <div className="flex justify-center mt-7">
-          <Link
+          <CtaButton
             href="/pricing/"
-            className="inline-flex items-center justify-between h-[48px] pl-6 pr-2 rounded-full shadow-[0px_2px_6px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all text-white font-sans font-semibold text-[15px] sm:text-[16px] min-w-[215px]"
-            style={{ backgroundImage: "var(--color-gradient)" }}
+            className="w-auto min-w-[215px]"
           >
-            <span>Book Appointment</span>
-            <span className="w-8 h-8 rounded-full bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3">
-              <Image
-            quality={90}
-                src="/common/send-icon.svg"
-                alt=""
-                width={16}
-                height={16}
-                className="w-3.5 h-3.5 object-contain"
-              />
-            </span>
-          </Link>
+            Book Appointment
+          </CtaButton>
         </div>
 
       </div>

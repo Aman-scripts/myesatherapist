@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const stepsData = [
   {
@@ -126,23 +127,12 @@ export function PsdProcessSection() {
 
         {/* 4. Bottom CTA Pill Button */}
         <div className="flex justify-center mt-12 sm:mt-16">
-          <a
+          <CtaButton
             href="#pricing"
-            className="inline-flex items-center justify-between min-w-[220px] h-[48px] rounded-[30px] pl-6 pr-1.5 text-white font-semibold text-[15px] sm:text-[16px] shadow-[0_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
-            style={{ backgroundImage: TEAL_GRADIENT }}
+            className="w-auto min-w-[220px]"
           >
-            <span className="font-sans mr-3">Start Your Consultation</span>
-            <span className="w-[36px] h-[36px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-              <Image
-            quality={90}
-                src="/common/send-icon.svg"
-                alt=""
-                width={18}
-                height={20}
-                className="w-[18px] h-[20px]"
-              />
-            </span>
-          </a>
+            Start Your Consultation
+          </CtaButton>
         </div>
 
       </div>

@@ -9,6 +9,7 @@ import {
   STATE_DROPDOWN_ITEM,
   STATE_DROPDOWN_ABBR,
 } from "@/components/common/stateDropdownClasses";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -113,28 +114,13 @@ export function MobileHeroActionButtons({
       </div>
 
       {/* Frame 1000011890: Get Started Button */}
-      <a
+      <CtaButton
         href={getStartedHref}
-        onClick={(e) => {
-          if (onGetStartedClick) {
-            e.preventDefault();
-            onGetStartedClick();
-          }
-        }}
-        className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white font-sans font-semibold text-[16px] leading-[26px] active:scale-[0.98] transition-all hover:opacity-95 color-gradient"
+        onClick={onGetStartedClick}
+        className="w-[179px] h-[48px]"
       >
-        <span className="truncate text-white">{getStartedText}</span>
-        <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-          <Image
-            quality={90}
-            src="/common/send-icon.svg"
-            alt=""
-            width={18}
-            height={18}
-            className="w-[18px] h-[18px]"
-          />
-        </span>
-      </a>
+        {getStartedText}
+      </CtaButton>
     </div>
   );
 }
