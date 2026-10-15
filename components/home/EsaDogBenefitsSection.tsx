@@ -164,7 +164,7 @@ export function EsaDogBenefitsSection() {
                   <h3 className="heading-h3 capitalize text-[#2E5A66]">
                     {benefit.title}
                   </h3>
-                  <p className="body-small text-[#5F6B6F]">
+                  <p className="body-text text-[#5F6B6F]">
                     {benefit.description}
                   </p>
                 </div>
@@ -224,7 +224,7 @@ export function EsaDogBenefitsSection() {
                   <h3 className="heading-h4 text-[#2E5A66]">
                     {benefit.title}
                   </h3>
-                  <p className="body-small text-[#5F6B6F]">
+                  <p className="body-text text-[#5F6B6F]">
                     {benefit.description}
                   </p>
                 </div>
