@@ -73,11 +73,11 @@ export function FaqSection({
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
-          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+            <p className="body-large text-[#5F6B6F]">
               {subtitle}
             </p>
           )}
@@ -89,7 +89,7 @@ export function FaqSection({
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] shrink-0 self-center mx-auto lg:self-start lg:mx-0 lg:sticky lg:top-[104px]">
             <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-md">
               <Image
-            quality={90}
+                quality={90}
                 src="/common/faq-section-image.webp"
                 alt="Person holding emotional support animal"
                 fill
@@ -114,13 +114,13 @@ export function FaqSection({
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {/* Gold Number Block: Frame 1000011949 (#E8B92C) */}
-                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-playfair font-bold text-lg sm:text-xl xl:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
                     {/* Question Title Area & Plus Icon (+) */}
                     <div className="flex-1 py-2.5 sm:py-3 px-3.5 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
-                      <span className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-white leading-snug sm:leading-[26px] xl:leading-[30px]">
+                      <span className="font-manrope font-semibold text-sm sm:text-base xl:text-[18px] text-white leading-snug sm:leading-[26px] xl:leading-[30px]">
                         {faq.q}
                       </span>
 
@@ -151,7 +151,7 @@ export function FaqSection({
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 text-sm sm:text-[16px] text-[#5F6B6F] font-sans font-semibold leading-[24px] sm:leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 text-sm sm:text-[16px] text-[#5F6B6F] font-manrope font-semibold leading-[24px] sm:leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                       {faq.a}
                     </div>
                   )}
