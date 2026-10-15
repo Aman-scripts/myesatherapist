@@ -195,10 +195,10 @@ export function PricingSection({
 
               if (isPopular) {
                 return (
-                  /* Frame 1261153972: 310px x 534px */
+                  /* Frame 1261153972: 310px x 538px */
                   <div
                     key={idx}
-                    className="w-[310px] h-[534px] relative flex flex-col justify-end shrink-0"
+                    className="w-[310px] h-[538px] relative flex flex-col justify-end shrink-0"
                   >
                     {/* Frame 1261153971: Gold Accent Container (310px x 515px) */}
                     <div className="absolute top-0 left-0 w-[310px] h-[515px] bg-accent rounded-[20px]" />
@@ -208,8 +208,8 @@ export function PricingSection({
                       MOST POPULAR
                     </div>
 
-                    {/* Starter Plan: Inner White Card (300px x 477px, bottom: 6px) */}
-                    <div className="w-[300px] h-[477px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] absolute left-1/2 -translate-x-1/2 bottom-[6px] z-10 flex flex-col">
+                    {/* Starter Plan: Inner White Card (300px x 477px, top: 32px, bottom: 6px from gold frame) */}
+                    <div className="w-[300px] h-[477px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] absolute left-1/2 -translate-x-1/2 top-[32px] z-10 flex flex-col">
                       {/* Frame 1261153969: Teal Header (300px x 261px) */}
                       <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
                         <h3 className="heading-h3 text-background capitalize">
@@ -239,8 +239,8 @@ export function PricingSection({
                         ))}
                       </div>
 
-                      {/* Button: Frame 2 (top: 448px, overhangs bottom of inner card & gold container) */}
-                      <div className="absolute left-1/2 -translate-x-1/2 top-[448px] z-20">
+                      {/* Actions: top 448px, pt 8px -> Frame 2 (button: 154px x 50px) */}
+                      <div className="absolute left-1/2 -translate-x-1/2 top-[448px] pt-[8px] z-20">
                         <a
                           href={ctaHref}
                           className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
