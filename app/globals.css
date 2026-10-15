@@ -75,6 +75,7 @@
   font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.00015em;
+  color: #2E5A66;
 }
 
 @utility heading-h2 {
@@ -83,6 +84,7 @@
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.00015em;
+  color: #2E5A66;
 }
 
 @utility heading-h3 {
@@ -91,6 +93,7 @@
   font-size: 28px;
   line-height: 36px;
   letter-spacing: -0.0003em;
+  color: #2E5A66;
 }
 
 @utility heading-h4 {
@@ -99,6 +102,7 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.00015em;
+  color: #2E5A66;
 }
 
 @utility body-large {
@@ -106,6 +110,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  color: #5F6B6F;
 }
 
 @utility body-text {
@@ -113,6 +118,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
+  color: #5F6B6F;
 }
 
 @utility body-small {
@@ -120,6 +126,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
+  color: #5F6B6F;
 }
 
 /* Standalone CSS Class Selectors for Global Compatibility */
@@ -129,6 +136,7 @@
   font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.00015em;
+  color: #2E5A66;
 }
 
 .heading-h2 {
@@ -137,6 +145,7 @@
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.00015em;
+  color: #2E5A66;
 }
 
 .heading-h3 {
@@ -145,6 +154,7 @@
   font-size: 28px;
   line-height: 36px;
   letter-spacing: -0.0003em;
+  color: #2E5A66;
 }
 
 .heading-h4 {
@@ -153,6 +163,7 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.00015em;
+  color: #2E5A66;
 }
 
 .body-large {
@@ -160,6 +171,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  color: #5F6B6F;
 }
 
 .body-text {
@@ -167,6 +179,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
+  color: #5F6B6F;
 }
 
 .body-small {
@@ -174,27 +187,94 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
+  color: #5F6B6F;
 }
 
 
-/* Color styles */
-.color-primary {
+@utility color-primary {
   color: #2E5A66;
 }
-.bg-color-primary {
+@utility text-primary {
+  color: #2E5A66;
+}
+@utility bg-color-primary {
   background-color: #2E5A66;
 }
-.border-color-primary {
+@utility bg-primary {
+  background-color: #2E5A66;
+}
+@utility border-color-primary {
+  border-color: #2E5A66;
+}
+@utility border-primary {
   border-color: #2E5A66;
 }
 
-.color-accent {
+@utility color-accent {
   color: #E8B92C;
 }
-.bg-color-accent {
+@utility text-accent {
+  color: #E8B92C;
+}
+@utility bg-color-accent {
   background-color: #E8B92C;
 }
-.border-color-accent {
+@utility bg-accent {
+  background-color: #E8B92C;
+}
+@utility border-color-accent {
+  border-color: #E8B92C;
+}
+@utility border-accent {
+  border-color: #E8B92C;
+}
+
+@utility color-background {
+  background-color: #FAF7F2;
+}
+@utility bg-background {
+  background-color: #FAF7F2;
+}
+@utility text-background {
+  color: #FAF7F2;
+}
+
+@utility color-body-text {
+  color: #5F6B6F;
+}
+@utility text-body-text {
+  color: #5F6B6F;
+}
+
+@utility color-gradient {
+  background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
+}
+
+@utility text-color-gradient {
+  background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Standalone CSS Class Selectors for Global Compatibility */
+.color-primary, .text-primary {
+  color: #2E5A66;
+}
+.bg-color-primary, .bg-primary {
+  background-color: #2E5A66;
+}
+.border-color-primary, .border-primary {
+  border-color: #2E5A66;
+}
+
+.color-accent, .text-accent {
+  color: #E8B92C;
+}
+.bg-color-accent, .bg-accent {
+  background-color: #E8B92C;
+}
+.border-color-accent, .border-accent {
   border-color: #E8B92C;
 }
 
@@ -208,11 +288,14 @@
   background-clip: text;
 }
 
-.color-background {
+.color-background, .bg-background, .bg-color-background {
   background-color: #FAF7F2;
 }
+.text-background, .color-text-background {
+  color: #FAF7F2;
+}
 
-.color-body-text {
+.color-body-text, .text-body-text {
   color: #5F6B6F;
 }
 
