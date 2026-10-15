@@ -99,7 +99,7 @@ export function CtaBanner({
               <CtaButton
                 href={buttonHref}
                 variant="accent"
-                className="w-[248px]"
+                className="w-auto min-w-[240px]"
               >
                 {buttonText}
               </CtaButton>

@@ -329,7 +329,7 @@ export function PsdHeroSection() {
 
               <CtaButton
                 href="#pricing"
-                className="w-[179px] xl:w-[182px]"
+                className="w-[179px]"
               >
                 Get Started
               </CtaButton>

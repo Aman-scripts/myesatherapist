@@ -225,7 +225,7 @@ export function DoctorsHeroSection() {
             {/* "Get Started" Pill Button */}
             <CtaButton
               href="#therapists"
-              className="w-full sm:w-[179px] xl:w-[182px]"
+              className="w-full sm:w-[179px]"
             >
               Get Started
             </CtaButton>

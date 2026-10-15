@@ -24,7 +24,7 @@ export function CommunitySection() {
 
         {/* CTA Button */}
         <div>
-          <CtaButton href="#how-it-works" className="w-[248px]">
+          <CtaButton href="#how-it-works" className="w-[179px]">
             Get Started
           </CtaButton>
         </div>

@@ -69,14 +69,14 @@ export function CtaButton({
   }
 
   const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b/.test(className);
-  const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-[179px] xl:w-[182px]");
+  const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-[179px]");
 
   // In Figma and Screenshot 3: generous left padding and balanced right padding (8px) around the circular badge
   const paddingClass = isSecondary
     ? "px-6 xl:px-8"
-    : (shouldShowIcon ? "pl-6 xl:pl-[30px] pr-[8px] xl:pr-[8px]" : "px-6 xl:px-8");
+    : (shouldShowIcon ? "pl-6 xl:pl-[30px] pr-[8px]" : "px-6 xl:px-8");
 
-  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[48px] rounded-[30px] ${paddingClass} gap-2.5 ${bgClass} ${textColor} font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[28px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[48px] rounded-[30px] ${paddingClass} gap-2.5 ${bgClass} ${textColor} font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>

@@ -62,17 +62,16 @@ export function EmotionalSupportSection() {
           <div className="space-y-2">
             <div className="flex flex-row items-center gap-3 sm:gap-4 lg:gap-5 xl:gap-6 pt-2 w-full max-w-[420px] sm:max-w-none">
               {/* Learn about ESA's Button */}
-              <Link
+              <CtaButton
                 href="/blog/esa-guide/emotional-support-animal/"
-                className="flex-1 sm:flex-initial xl:w-[193px] h-[48px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap px-4"
+                variant="secondary"
+                className="w-auto px-6 h-[48px]"
               >
-                <span className="text-color-gradient body-text">
-                  Learn about ESA&apos;s
-                </span>
-              </Link>
+                Learn about ESA&apos;s
+              </CtaButton>
 
               {/* Get Started Button */}
-              <CtaButton href="#how-it-works" className="flex-1 sm:flex-initial">
+              <CtaButton href="#how-it-works" className="w-[179px]">
                 Get Started
               </CtaButton>
             </div>

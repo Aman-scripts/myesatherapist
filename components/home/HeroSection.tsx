@@ -350,7 +350,7 @@ export function HeroSection() {
               </div>
 
               {/* Get Started Button */}
-              <CtaButton href="#how-it-works" className="w-[179px] xl:w-[192px]">
+              <CtaButton href="#how-it-works" className="w-[179px]">
                 Get Started
               </CtaButton>
             </div>

@@ -346,7 +346,7 @@ export function EsaLawsHero() {
 
             <CtaButton
               href="#how-it-works"
-              className="w-[179px] xl:w-[182px]"
+              className="w-[179px]"
             >
               Get Started
             </CtaButton>
