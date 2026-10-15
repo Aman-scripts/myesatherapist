@@ -79,7 +79,7 @@ const PRICING_FAQS: FaqItem[] = [
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"

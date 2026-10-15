@@ -201,11 +201,11 @@ export default async function DoctorInternalPage({ params }: PageProps) {
         />
 
         {/* Spacing gap between CTA banner and Footer */}
-        <div className="w-full h-12 sm:h-16 lg:h-24 bg-[#FAF7F2]" />
+        <div className="w-full h-12 sm:h-16 lg:h-24 bg-background" />
       </main>
 
       {/* Global Footer */}
-      <Footer bgColor="bg-[#FAF7F2]" />
+      <Footer bgColor="bg-background" />
     </>
   );
 }

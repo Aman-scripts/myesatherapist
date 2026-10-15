@@ -68,7 +68,7 @@ const qualifyingConditionsFaqs = [
 
 export default function QualifyingConditionsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A] selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A] selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD */}
       {qualifyingConditionsSchemas.map((schemaObj, index) => (
         <script
@@ -95,7 +95,7 @@ export default function QualifyingConditionsPage() {
           title="Frequently Asked Questions"
           subtitle="Answers to the most common ESA questions"
           faqs={qualifyingConditionsFaqs}
-          bg="bg-[#FAF7F2]"
+          bg="bg-background"
         />
 
         <CtaBanner
@@ -109,7 +109,7 @@ export default function QualifyingConditionsPage() {
           }
           buttonText="Start Your ESA Evaluation Now"
           buttonHref="/pricing/"
-          bgColor="bg-[#FAF7F2]"
+          bgColor="bg-background"
           className="pb-12 sm:pb-16"
         />
       </main>

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function BlogHubPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -53,7 +53,7 @@ export default function BlogHubPage() {
       <TopBanner />
       <Header />
 
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-background">
         {/* 1. Hero Banner */}
         <BlogsHero />
 
@@ -69,7 +69,7 @@ export default function BlogHubPage() {
           description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
           buttonText="Start your Evaluation"
           buttonHref="/pricing/"
-          bgColor="bg-[#FAF7F2]"
+          bgColor="bg-background"
           className="pb-12 sm:pb-16"
         />
       </main>

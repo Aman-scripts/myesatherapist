@@ -101,7 +101,7 @@ const PSD_FAQS: FaqItem[] = [
 
 export default function PsdLetterPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -128,9 +128,9 @@ export default function PsdLetterPage() {
         {/* 5. Simple 3-Step Process */}
         <PsdProcessSection />
 
-        {/* 6. Plans & Pricing (Warm background bg-[#FAF7F2] matching Benefits Section) */}
+        {/* 6. Plans & Pricing (Warm background bg-background matching Benefits Section) */}
         <div id="pricing">
-          <PricingSection bgColor="bg-[#FAF7F2]" defaultPlan="psd" />
+          <PricingSection bgColor="bg-background" defaultPlan="psd" />
         </div>
 
         {/* 7. PSD vs ESA Comparison Table (Dedicated Section) */}

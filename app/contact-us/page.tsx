@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function ContactUsPage() {
   return (
-    <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen bg-background flex flex-col justify-between text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org Structured Data */}
       {contactUsSchemas.map((schemaObj, index) => (
         <script
@@ -49,12 +49,12 @@ export default function ContactUsPage() {
 
       <TopBanner />
       <Header />
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-background">
         <ContactHero />
         <ContactInfoCards />
         <ContactMap />
       </main>
-      <Footer bgColor="bg-[#FAF7F2]" />
+      <Footer bgColor="bg-background" />
     </div>
   );
 }

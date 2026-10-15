@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 overflow-x-clip">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900 overflow-x-clip">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -77,7 +77,7 @@ export default function HomePage() {
 
       <TopBanner />
       <Header />
-      <main className="flex-1 bg-[#FAF7F2] overflow-x-clip">
+      <main className="flex-1 bg-background overflow-x-clip">
         <HeroSection />
 
         <AsSeenOnSection />

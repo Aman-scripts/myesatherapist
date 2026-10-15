@@ -52,7 +52,7 @@ export default function DoctorsPage() {
       <Header />
 
       {/* Main Content Area */}
-      <main className="min-h-screen bg-[#FAF7F2]">
+      <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <DoctorsHeroSection />
 

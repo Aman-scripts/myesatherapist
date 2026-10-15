@@ -63,7 +63,7 @@ const article = {
 
 export default function AlabamaEsaLawsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD */}
       {esaLawsAlabamaSchemas.map((schemaObj, index) => (
         <script
@@ -76,7 +76,7 @@ export default function AlabamaEsaLawsPage() {
       <TopBanner />
       <Header />
 
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-background">
         <EsaLawsStateHero
           title={ALABAMA_HERO.title}
           description={ALABAMA_HERO.description}
@@ -108,9 +108,9 @@ export default function AlabamaEsaLawsPage() {
 
         <BlogMoreResources />
 
-        <FaqSection id="faq" bg="bg-[#FAF7F2]" />
+        <FaqSection id="faq" bg="bg-background" />
 
-        <CtaBanner buttonHref="/pricing/" bgColor="bg-[#FAF7F2]" className="pb-12 sm:pb-16" />
+        <CtaBanner buttonHref="/pricing/" bgColor="bg-background" className="pb-12 sm:pb-16" />
       </main>
 
       <Footer />

@@ -83,7 +83,7 @@ export default function TermsOfUsePage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

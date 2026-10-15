@@ -77,7 +77,7 @@ const esaTrainingFaqs = [
 
 export default function EsaTrainingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1A1A1A] selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A] selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD */}
       {esaTrainingSchemas.map((schemaObj, index) => (
         <script
@@ -127,7 +127,7 @@ export default function EsaTrainingPage() {
           title="ESA Training FAQs"
           subtitle="Common Questions"
           faqs={esaTrainingFaqs}
-          bg="bg-[#FAF7F2]"
+          bg="bg-background"
         />
 
         {/* 11. CTA Banner */}
@@ -141,7 +141,7 @@ export default function EsaTrainingPage() {
           }
           buttonText="Start Your ESA Evaluation Now"
           buttonHref="/pricing/"
-          bgColor="bg-[#FAF7F2]"
+          bgColor="bg-background"
           className="pb-12 sm:pb-16"
         />
       </main>

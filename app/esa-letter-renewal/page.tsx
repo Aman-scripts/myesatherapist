@@ -91,7 +91,7 @@ const esaRenewalFaqs = [
 
 export default function EsaRenewalPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Schema.org JSON-LD */}
       {esaRenewalSchemas.map((schemaObj, index) => (
         <script
@@ -145,13 +145,13 @@ export default function EsaRenewalPage() {
           title="Frequently Asked Questions"
           subtitle="Answers to the most common ESA renewal questions"
           faqs={esaRenewalFaqs}
-          bg="bg-[#FAF7F2]"
+          bg="bg-background"
         />
 
         {/* Pre-Footer Call to Action Banner */}
         <CtaBanner
           buttonHref="#pricing"
-          bgColor="bg-[#FAF7F2]"
+          bgColor="bg-background"
           className="pb-12 sm:pb-16"
         />
       </main>

@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 
 export default function EsaLetterForHousingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Schema.org JSON-LD */}
       {esaLetterForHousingSchemas.map((schemaObj, index) => (
         <script
@@ -95,8 +95,8 @@ export default function EsaLetterForHousingPage() {
         <EsaHousingCredentials />
         <EsaHousingLandlordRefuse />
         <EsaHousingDenied />
-        <FaqSection id="faq" bg="bg-[#FAF7F2]" />
-        <CtaBanner buttonHref="/pricing/" bgColor="bg-[#FAF7F2]" className="pb-12 sm:pb-16" />
+        <FaqSection id="faq" bg="bg-background" />
+        <CtaBanner buttonHref="/pricing/" bgColor="bg-background" className="pb-12 sm:pb-16" />
       </main>
 
       <Footer />

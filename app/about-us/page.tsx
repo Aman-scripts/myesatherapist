@@ -93,7 +93,7 @@ const ABOUT_FAQS: FaqItem[] = [
 
 export default function AboutUsPage() {
   return (
-    <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen bg-background flex flex-col justify-between text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -102,7 +102,7 @@ export default function AboutUsPage() {
 
       <TopBanner />
       <Header />
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-background">
         {/* Section 1: Hero */}
         <AboutHeroSection />
 
@@ -140,11 +140,11 @@ export default function AboutUsPage() {
           description={"Begin the evaluation process today and connect with a licensed\nmental health professional for a clinical assessment."}
           buttonText="Start Evaluation"
           buttonHref="/pricing/"
-          bgColor="bg-[#FAF7F2]"
+          bgColor="bg-background"
           className="pb-12 sm:pb-16 lg:pb-24"
         />
       </main>
-      <Footer bgColor="bg-[#FAF7F2]" />
+      <Footer bgColor="bg-background" />
     </div>
   );
 }

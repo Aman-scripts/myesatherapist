@@ -103,7 +103,7 @@ export default async function DynamicStatePage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-slate-900">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900">
       {/* State JSON-LD Structured Data */}
       {data.schema && (
         <script
@@ -118,10 +118,10 @@ export default async function DynamicStatePage({ params }: Props) {
       {/* State Table of Contents Drawer & Left Edge Toggle */}
       <StateTableOfContents stateName={data.name} data={data} />
 
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-background">
         <StateHeroSection data={data} />
         <StateTrustBar data={data} />
-        <AsSeenOnSection bgColor="bg-[#FAF7F2]" />
+        <AsSeenOnSection bgColor="bg-background" />
         <div id="therapists">
           <TherapistsSection
             title={data.therapistsTitle}

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function MaxPhillipsContributorPage() {
   return (
-    <div className="min-h-screen bg-[#FAF7F2] flex flex-col justify-between text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen bg-background flex flex-col justify-between text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* Schema.org JSON-LD */}
       {maxPhillipsSchemas.map((schemaObj, index) => (
         <script
@@ -60,7 +60,7 @@ export default function MaxPhillipsContributorPage() {
       <Header />
 
       {/* Main Reviewer Content Area */}
-      <main className="flex-1 bg-[#FAF7F2]">
+      <main className="flex-1 bg-background">
         <MaxPhillipsReviewerContent />
       </main>
 

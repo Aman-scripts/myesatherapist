@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function ContributorsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Schema.org JSON-LD */}
       {contributorsSchemas.map((schemaObj, index) => (
         <script
@@ -83,13 +83,13 @@ export default function ContributorsPage() {
           bg="bg-white"
         />
 
-        <FaqSection id="faq" bg="bg-[#FAF7F2]" />
+        <FaqSection id="faq" bg="bg-background" />
 
         <CtaBanner
           title="Ready to Explore ESA Evaluation?"
           description="Connect with licensed mental health professionals who can evaluate your needs and provide a legitimate ESA letter if you qualify."
           buttonHref="/pricing/"
-          bgColor="bg-[#FAF7F2]"
+          bgColor="bg-background"
           className="pb-12 sm:pb-16"
         />
       </main>
