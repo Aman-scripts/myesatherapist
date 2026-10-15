@@ -197,7 +197,7 @@ export function QualifyingConditions({
                   {/* Badge */}
                   <div
                     onClick={() => setHoveredCondition(c.label)}
-                    className="flex items-center gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-3 bg-white rounded-[6px] md:rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] pl-1 md:pl-1 lg:pl-1.5 xl:pl-2 pr-2.5 md:pr-2.5 lg:pr-3.5 xl:pr-4 h-[28px] md:h-[28px] lg:h-[36px] xl:h-12 shadow-[0_4px_12px_-6px_rgba(46,90,102,0.35)] lg:shadow-[0_6px_18px_-8px_rgba(46,90,102,0.35)] xl:shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit text-[10.5px] md:text-[10.5px] lg:text-[13px] xl:text-[16px] font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+                    className="flex items-center gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-3 bg-white rounded-[6px] md:rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] pl-1 md:pl-1 lg:pl-1.5 xl:pl-2 pr-2.5 md:pr-2.5 lg:pr-3.5 xl:pr-4 h-[28px] md:h-[28px] lg:h-[36px] xl:h-12 shadow-[0_4px_12px_-6px_rgba(46,90,102,0.35)] lg:shadow-[0_6px_18px_-8px_rgba(46,90,102,0.35)] xl:shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit body-small xl:body-text whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
                   >
                     <span className="w-[20px] h-[20px] md:w-[20px] md:h-[20px] lg:w-[26px] lg:h-[26px] xl:w-[35px] xl:h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
                       <Image
@@ -250,7 +250,7 @@ export function QualifyingConditions({
                       </div>
 
                       {/* Description */}
-                      <p className="text-[#5F6B6F] text-[10.5px] lg:text-[12px] font-medium leading-[15px] lg:leading-[17px] font-manrope mt-2 text-left">
+                      <p className="body-small text-[#5F6B6F] mt-2 text-left">
                         {c.description}
                       </p>
                     </div>
@@ -283,7 +283,7 @@ export function QualifyingConditions({
                 <div key={c.label} className="relative">
                   <button
                     onClick={() => setHoveredCondition(isVisible ? null : c.label)}
-                    className="flex items-center gap-3 bg-white rounded-[10px] pl-2 pr-4 h-12 shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit text-[15px] font-semibold whitespace-nowrap"
+                    className="flex items-center gap-3 bg-white rounded-[10px] pl-2 pr-4 h-12 shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit body-text whitespace-nowrap"
                   >
                     <span className="w-[32px] h-[32px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
                       <Image
@@ -339,7 +339,7 @@ export function QualifyingConditions({
                         </div>
 
                         {/* Description text matching mockup */}
-                        <p className="text-[#5F6B6F] text-[13px] leading-[19px] font-manrope font-medium text-left">
+                        <p className="body-small text-[#5F6B6F] text-left">
                           {c.description}
                         </p>
                       </div>

@@ -69,7 +69,7 @@ export function CtaBanner({
           <div className="relative z-10 max-w-[575px] lg:max-w-[50vw] xl:max-w-[737px] space-y-6 lg:space-y-[1.7vw] xl:space-y-6 text-left">
             <div className="space-y-4">
               {eyebrow && (
-                <div className="text-[#E8B92C] font-manrope font-bold text-sm sm:text-base tracking-wider uppercase">
+                <div className="text-[#E8B92C] body-small font-bold tracking-wider uppercase">
                   {eyebrow}
                 </div>
               )}
@@ -89,7 +89,7 @@ export function CtaBanner({
                 )}
               </p>
               {note && (
-                <p className="text-[#E8B92C] text-sm sm:text-[15px] lg:text-[16px] font-semibold leading-relaxed font-manrope pt-1">
+                <p className="text-[#E8B92C] body-text pt-1">
                   {note}
                 </p>
               )}
@@ -108,7 +108,7 @@ export function CtaBanner({
 
             {/* Optional Disclaimer */}
             {disclaimer && (
-              <p className="text-[#FAF7F2]/75 text-xs sm:text-[13px] font-manrope leading-relaxed pt-1 max-w-[560px]">
+              <p className="text-[#FAF7F2] body-small pt-1 max-w-[560px]">
                 {disclaimer}
               </p>
             )}

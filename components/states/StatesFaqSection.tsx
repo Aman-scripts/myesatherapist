@@ -127,7 +127,7 @@ export function StatesFaqSection() {
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-1 text-[#FAF7F2]/90 font-sans font-medium text-sm sm:text-base leading-relaxed border-t border-white/10">
+                    <div className="px-6 pb-6 pt-1 body-large text-[#FAF7F2] border-t border-white/10">
                       <p>{faq.answer}</p>
                     </div>
                   )}

@@ -88,7 +88,7 @@ export function EsaLawsFaqSection() {
                   </button>
 
                   {isOpen && (
-                    <div className="bg-white px-5 sm:px-7 py-4 sm:py-5 text-sm sm:text-[16px] text-[#5F6B6F] font-sans font-medium leading-[24px] sm:leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn">
+                    <div className="bg-white px-5 sm:px-7 py-4 sm:py-5 body-large text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn">
                       {faq.a}
                     </div>
                   )}

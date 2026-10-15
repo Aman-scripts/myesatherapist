@@ -151,7 +151,7 @@ export function FaqSection({
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 body-text text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 body-large text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                       {faq.a}
                     </div>
                   )}

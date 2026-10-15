@@ -238,7 +238,7 @@ export function PricingSection({
                     key={idx}
                     className="w-full max-w-[310px] bg-[#E8B92C] rounded-[24px] pt-[28px] px-[5px] pb-[5px] shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col"
                   >
-                    <div className="absolute top-1 left-0 right-0 text-center font-manrope font-bold text-[13px] text-[#2E5A66] uppercase tracking-wider">
+                    <div className="absolute top-1 left-0 right-0 text-center body-small font-bold text-[#2E5A66] uppercase tracking-wider">
                       Most Popular
                     </div>
                     {cardContent}
@@ -279,17 +279,17 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
         className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px]"
         style={{ backgroundImage: TEAL_GRADIENT }}
       >
-        <h3 className="font-playfair font-bold text-[26px] lg:text-[28px] leading-[32px] lg:leading-[36px] text-[#FAF7F2] capitalize">
+        <h3 className="heading-h3 text-[#FAF7F2] capitalize">
           Not Sure Which One
         </h3>
-        <p className="font-manrope font-semibold text-[15px] lg:text-[17px] leading-[24px] lg:leading-[26px] text-[#FAF7F2] line-clamp-3">
+        <p className="body-large text-[#FAF7F2] line-clamp-3">
           Your needs are unique. Let&apos;s find the right option for your situation.
         </p>
       </div>
 
       {/* Overlapping Gold Circle with Price */}
       <div className="w-[78px] h-[78px] rounded-full bg-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
-        <span className="font-playfair font-bold text-[20px] lg:text-[22px] leading-[28px] text-[#2E5A66]">
+        <span className="heading-h4 text-[#2E5A66]">
           Free
         </span>
       </div>

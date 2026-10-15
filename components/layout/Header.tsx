@@ -195,7 +195,7 @@ export function Header() {
               /* PSD Letter Page: Single "Start Your Consultation" Button */
               <a
                 href="#pricing"
-                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] rounded-[30px] text-white font-manrope font-semibold text-[13.5px] xl:text-[15px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
+                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Start Your Consultation</span>
@@ -214,7 +214,7 @@ export function Header() {
               /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
               <a
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
-                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white font-manrope font-semibold text-[14px] xl:text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
+                className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
                 style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
               >
                 <span>Get Started</span>
@@ -238,7 +238,7 @@ export function Header() {
                   className="px-3 xl:px-4 w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] flex items-center justify-center rounded-[30px] bg-[#FAF7F2] hover:bg-[#F5EFE6] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all whitespace-nowrap"
                 >
                   <span
-                    className="font-manrope font-semibold text-[13px] xl:text-[16px] leading-[26px] bg-clip-text text-transparent"
+                    className="body-small xl:body-text bg-clip-text text-transparent"
                     style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                   >
                     Free ESA Eligibilty Checker
@@ -248,7 +248,7 @@ export function Header() {
                 {/* Button 2: Get Started (179px x 48px, rounded 30px, padding 0 0 0 34px, circle 42.48px) */}
                 <a
                   href="#pricing"
-                  className="inline-flex items-center justify-between pl-4 xl:pl-[34px] pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white font-manrope font-semibold text-[13.5px] xl:text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all whitespace-nowrap"
+                  className="inline-flex items-center justify-between pl-4 xl:pl-[34px] pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all whitespace-nowrap"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
                   <span>Get Started</span>

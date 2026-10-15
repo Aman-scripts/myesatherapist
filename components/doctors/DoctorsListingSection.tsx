@@ -90,12 +90,12 @@ function DoctorStatBadge({
           />
         </div>
         <div
-          className="font-manrope font-semibold text-[12px] sm:text-[14px] leading-tight sm:leading-[26px] bg-clip-text text-transparent truncate w-full"
+          className="body-small bg-clip-text text-transparent truncate w-full"
           style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
           {label}
         </div>
-        <div className="font-manrope font-semibold text-[11px] sm:text-[12px] text-[#5F6B6F] leading-tight mt-0.5 truncate w-full">
+        <div className="body-small text-[#5F6B6F] truncate w-full">
           {value}
         </div>
       </div>

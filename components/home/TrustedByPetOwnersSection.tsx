@@ -129,7 +129,7 @@ export function TrustedByPetOwnersSection({
                 </div>
 
                 {/* Quote Text */}
-                <p className="font-sans font-semibold text-[15px] sm:text-[16px] text-[#FAF7F2] leading-[24px] sm:leading-[26px] max-w-[750px] mx-auto">
+                <p className="body-large text-[#FAF7F2] max-w-[750px] mx-auto">
                   {current.quote}
                 </p>
               </div>
@@ -151,7 +151,7 @@ export function TrustedByPetOwnersSection({
               </div>
 
               {/* Name */}
-              <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#2E5A66] text-center">
+              <h3 className="heading-h4 text-[#2E5A66] text-center">
                 {current.name}
               </h3>
 

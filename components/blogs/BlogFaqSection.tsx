@@ -157,7 +157,7 @@ export function BlogFaqSection({
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-5 sm:px-6 py-4 sm:py-5 text-sm sm:text-[15px] text-[#5F6B6F] font-sans font-medium leading-[24px] sm:leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                    <div className="bg-[#FAF7F2] px-5 sm:px-6 py-4 sm:py-5 body-large text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                       {faq.a}
                     </div>
                   )}

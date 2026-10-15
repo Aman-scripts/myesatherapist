@@ -106,7 +106,7 @@ export function FaqAccordionSection() {
 
               {/* Accordion Body */}
               {isOpen && (
-                <div className="bg-[#FAF7F2] px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-[16px] text-[#5F6B6F] font-sans font-medium leading-[26px] sm:leading-[28px] border border-[#2E5A66]/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                <div className="bg-[#FAF7F2] px-6 sm:px-8 py-5 sm:py-6 body-large text-[#5F6B6F] border border-[#2E5A66]/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                   {faq.answer}
                 </div>
               )}

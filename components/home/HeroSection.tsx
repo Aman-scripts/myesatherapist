@@ -114,12 +114,12 @@ export function HeroSection() {
                 className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
               >
                 <span
-                  className="font-manrope text-[15px] sm:text-[18px] font-semibold leading-tight bg-clip-text text-transparent"
+                  className="body-large bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {stat.value}
                 </span>
-                <span className="font-manrope text-[11px] sm:text-[14px] font-semibold text-[#949494] mt-0.5 whitespace-nowrap">
+                <span className="body-small text-[#5F6B6F] mt-0.5 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -127,7 +127,7 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-playfair text-[24px] leading-[1.2] font-bold tracking-[-0.011em] text-[#2E5A66] capitalize">
+          <h1 className="heading-h3 sm:heading-h2 text-[#2E5A66] capitalize">
             Emotional Support
             <br />
             Animal Evaluations
@@ -136,7 +136,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-[13px] leading-[1.5] text-[#5F6B6F] font-semibold max-w-[310px] mx-auto mt-3 font-manrope tracking-normal align-middle">
+          <p className="body-text text-[#5F6B6F] max-w-[310px] mx-auto mt-3">
             Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -177,18 +177,18 @@ export function HeroSection() {
                 className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
               >
                 <span
-                  className="font-playfair text-xl font-bold leading-none bg-clip-text text-transparent"
+                  className="body-large bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {stat.value}
                 </span>
-                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap font-manrope">{stat.label}</span>
+                <span className="body-small text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
 
           {/* Headline */}
-          <h1 className="font-playfair text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66] capitalize">
+          <h1 className="heading-h2 mt-6 max-w-xl mx-auto text-[#2E5A66] capitalize">
             Emotional Support
             <br />
             Animal Evaluations
@@ -197,7 +197,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-manrope tracking-normal align-middle">
+          <p className="body-large text-[#5F6B6F] max-w-md mx-auto mt-4">
             Connect with US licensed mental health professionals for ESA evaluation conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -319,7 +319,7 @@ export function HeroSection() {
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[16px] leading-[26px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer font-manrope"
+                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] body-text hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
                 >
                   <Image
                     src="/home/hero-section-map.svg"

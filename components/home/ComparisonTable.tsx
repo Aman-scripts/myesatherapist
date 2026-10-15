@@ -142,7 +142,7 @@ export function ComparisonTable() {
                   <div />
                   <div className="px-2 flex flex-col items-center justify-center text-center gap-1.5">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[12px] sm:text-[13px] text-[#5F6B6F] font-semibold leading-[16px] font-manrope">
+                    <span className="body-small text-[#5F6B6F]">
                       {row.others}
                     </span>
                   </div>
@@ -167,7 +167,7 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div key={idx} className="h-[102px] sm:h-[108px] px-2.5 flex flex-col items-center justify-center text-center gap-1.5">
                   <GreenCheckIcon />
-                  <span className="text-[12px] sm:text-[13px] text-[#FAF7F2] font-semibold leading-[16px] font-manrope">
+                  <span className="body-small text-[#FAF7F2]">
                     {row.myEsa}
                   </span>
                 </div>
@@ -225,7 +225,7 @@ export function ComparisonTable() {
                   {/* Others Column */}
                   <div className="w-[220px] xl:w-[340px] shrink-0 flex items-center justify-start gap-2 xl:gap-3 pl-1 xl:pl-4">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[22px] xl:leading-[26px] font-manrope text-left">
+                    <span className="body-small xl:body-text text-[#5F6B6F] text-left">
                       {row.others}
                     </span>
                   </div>
@@ -251,7 +251,7 @@ export function ComparisonTable() {
                   <span className="shrink-0">
                     <GreenCheckIcon />
                   </span>
-                  <span className="min-w-0 text-[14px] xl:text-[16px] text-[#FAF7F2] font-semibold leading-[22px] xl:leading-[26px] font-manrope">
+                  <span className="min-w-0 body-small xl:body-text text-[#FAF7F2]">
                     {row.myEsa}
                   </span>
                 </div>
@@ -263,7 +263,7 @@ export function ComparisonTable() {
         {/* Bottom CTA Button */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton href="#how-it-works">Get Started</CtaButton>
-          <p className="font-manrope font-semibold text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+          <p className="body-small text-[#5F6B6F] text-center">
             If not approved after your evaluation? You get a full refund.
           </p>
         </div>
