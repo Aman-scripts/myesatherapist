@@ -62,11 +62,11 @@ export function CtaButton({
   const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b/.test(className);
   const defaultWidthClass = hasExplicitWidth ? "" : "w-[179px]";
 
-  const baseClasses = `inline-flex items-center justify-between h-[48px] rounded-[30px] pl-[34px] pr-[3px] gap-2 ${textColor} font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const baseClasses = `inline-flex items-center justify-between h-[48px] rounded-[30px] pl-[34px] pr-[3px] gap-2 ${textColor} body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>
-      <span className="truncate">{children}</span>
+      <span className="truncate body-text">{children}</span>
       {showIcon && (
         <span className="w-[42.5px] h-[42.5px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
           <SendIcon className={`w-[22px] h-[24px] ${iconClassName}`} />
