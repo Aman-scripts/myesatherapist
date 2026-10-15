@@ -75,7 +75,6 @@
   font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.00015em;
-  color: #2E5A66;
 }
 
 @utility heading-h2 {
@@ -84,7 +83,6 @@
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.00015em;
-  color: #2E5A66;
 }
 
 @utility heading-h3 {
@@ -93,7 +91,6 @@
   font-size: 28px;
   line-height: 36px;
   letter-spacing: -0.0003em;
-  color: #2E5A66;
 }
 
 @utility heading-h4 {
@@ -102,7 +99,6 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.00015em;
-  color: #2E5A66;
 }
 
 @utility body-large {
@@ -110,7 +106,6 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #5F6B6F;
 }
 
 @utility body-text {
@@ -118,7 +113,6 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
-  color: #5F6B6F;
 }
 
 @utility body-small {
@@ -126,7 +120,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
-  color: #5F6B6F;
 }
 
 /* Standalone CSS Class Selectors for Global Compatibility */
@@ -136,7 +129,6 @@
   font-size: 48px;
   line-height: 58px;
   letter-spacing: -0.00015em;
-  color: #2E5A66;
 }
 
 .heading-h2 {
@@ -145,7 +137,6 @@
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.00015em;
-  color: #2E5A66;
 }
 
 .heading-h3 {
@@ -154,7 +145,6 @@
   font-size: 28px;
   line-height: 36px;
   letter-spacing: -0.0003em;
-  color: #2E5A66;
 }
 
 .heading-h4 {
@@ -163,7 +153,6 @@
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.00015em;
-  color: #2E5A66;
 }
 
 .body-large {
@@ -171,7 +160,6 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  color: #5F6B6F;
 }
 
 .body-text {
@@ -179,7 +167,6 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 26px;
-  color: #5F6B6F;
 }
 
 .body-small {
@@ -187,7 +174,22 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 26px;
+}
+
+/* Default Colors: Headings are #2E5A66 and Body is #5F6B6F by default,
+   using :where() so that ANY utility (like text-white, text-accent, text-background)
+   or explicit color immediately overrides it without specificity battles. */
+:where(.heading-h1, .heading-h2, .heading-h3, .heading-h4) {
+  color: #2E5A66;
+}
+
+:where(.body-large, .body-text, .body-small) {
   color: #5F6B6F;
+}
+
+/* High-priority color utilities to guarantee clear readability on dark backgrounds */
+.text-white {
+  color: #FFFFFF !important;
 }
 
 

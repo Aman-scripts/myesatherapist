@@ -221,7 +221,7 @@ export function PricingSection({
                     <div className="flex justify-center mt-4">
                       <a
                         href={ctaHref}
-                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white body-text text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
                       >
                         {card.buttonText}
                       </a>
@@ -311,7 +311,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
         <div className="flex justify-center mt-4">
           <a
             href={ctaHref}
-            className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white body-text text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
+            className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
           >
             Get Started
           </a>

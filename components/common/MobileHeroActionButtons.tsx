@@ -121,9 +121,9 @@ export function MobileHeroActionButtons({
             onGetStartedClick();
           }
         }}
-        className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white body-text active:scale-[0.98] transition-all hover:opacity-95 color-gradient"
+        className="w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-[28px] pr-[3px] text-white font-sans font-semibold text-[16px] leading-[26px] active:scale-[0.98] transition-all hover:opacity-95 color-gradient"
       >
-        <span className="truncate">{getStartedText}</span>
+        <span className="truncate text-white">{getStartedText}</span>
         <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
           <Image
             quality={90}
