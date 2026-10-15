@@ -83,10 +83,10 @@ export function TestimonialsSection({
       <div className="max-w-[1251px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10 lg:gap-14 xl:gap-[72px]">
         {/* Frame 1000011447: Section Header */}
         <div className="flex flex-col items-center text-center gap-2 max-w-[512px] mx-auto">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] tracking-[-0.00015em] text-[#2E5A66]">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             {title}
           </h2>
-          <p className="font-manrope font-semibold text-base sm:text-[18px] leading-[30px] text-[#5F6B6F] max-w-[432px]">
+          <p className="body-large text-[#5F6B6F] max-w-[432px]">
             {subtitle}
           </p>
         </div>
@@ -149,9 +149,9 @@ export function TestimonialsSection({
                             <YouTubePlayIcon className="w-16 h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-110" />
                           </div>
 
-                          {/* Client Name (Marianne C spec: Playfair Display 28px/36px, top: 229px -> bottom: 11px) */}
+                          {/* Client Name (Playfair Display 28px/36px) */}
                           <div className="absolute inset-x-0 bottom-[11px] text-center z-10 px-3 pointer-events-none">
-                            <h4 className="font-heading font-bold text-[28px] leading-[36px] tracking-[-0.00015em] text-white text-center drop-shadow-md">
+                            <h4 className="heading-h3 text-white text-center drop-shadow-md">
                               {review.name}
                             </h4>
                           </div>
@@ -164,7 +164,7 @@ export function TestimonialsSection({
                       className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]"
                       style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                     >
-                      <p className="font-manrope font-semibold text-[16px] leading-[26px] text-[#FAF7F2] text-center w-[271px] max-w-[271px]">
+                      <p className="body-text text-[#FAF7F2] text-center w-[271px] max-w-[271px]">
                         {review.quote}
                       </p>
                     </div>
@@ -195,11 +195,14 @@ export function TestimonialsSection({
             </div>
           </div>
 
-          {/* Frame 1000011890: See More Reviews Button */}
-          <div>
-            <CtaButton href="#how-it-works" className="w-[228px]">
-              See More Reviews
+          {/* Frame 1000011890: CTA Button & Refund Reassurance */}
+          <div className="flex flex-col items-center gap-2">
+            <CtaButton href="#how-it-works">
+              Get Started
             </CtaButton>
+            <p className="body-small text-[#5F6B6F] text-center">
+              If not approved after your evaluation? You get a full refund.
+            </p>
           </div>
         </div>
       </div>

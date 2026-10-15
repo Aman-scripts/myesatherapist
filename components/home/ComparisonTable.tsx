@@ -109,10 +109,10 @@ export function ComparisonTable() {
       <div className="max-w-[1441px] mx-auto px-3 sm:px-6 lg:px-12 flex flex-col items-center">
         {/* Section Header */}
         <div className="text-center max-w-[758px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
-          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.00015em]">
-            Compare to other ESA Letter Services
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+            Compare To Other ESA Letter Services
           </h2>
-          <p className="text-[#5F6B6F] text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed sm:leading-[30px] font-sans">
+          <p className="body-large text-[#5F6B6F]">
             We set the standard for professional care, compliance, and trust.
           </p>
         </div>
@@ -125,9 +125,9 @@ export function ComparisonTable() {
           {/* Cream frame with Features / Others columns */}
           <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-3">
             <div className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
-              <h5 className="font-heading text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Features</h5>
+              <h5 className="font-playfair text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Features</h5>
               <div />
-              <h5 className="font-heading text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Others</h5>
+              <h5 className="font-playfair text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Others</h5>
             </div>
 
             <div className="divide-y divide-[#C8B9A7]/60 border-t border-[#C8B9A7]/60">
@@ -137,12 +137,12 @@ export function ComparisonTable() {
                   className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[102px] sm:h-[108px]"
                 >
                   <div className="px-2 flex items-center justify-center text-center">
-                    <h6 className="font-heading font-bold text-[14px] sm:text-[16px] text-[#2E5A66] leading-[28px]">{row.feature}</h6>
+                    <h6 className="font-playfair font-bold text-[14px] sm:text-[16px] text-[#2E5A66] leading-[28px]">{row.feature}</h6>
                   </div>
                   <div />
                   <div className="px-2 flex flex-col items-center justify-center text-center gap-1.5">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[12px] sm:text-[13px] text-[#5F6B6F] font-semibold leading-[16px] font-sans">
+                    <span className="text-[12px] sm:text-[13px] text-[#5F6B6F] font-semibold leading-[16px] font-manrope">
                       {row.others}
                     </span>
                   </div>
@@ -157,7 +157,7 @@ export function ComparisonTable() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[76px] sm:h-[84px] rounded-b-[20px] flex items-center justify-center px-3 text-center bg-[#1A3D4F]/35">
-              <h5 className="font-heading font-bold text-[16px] sm:text-[18px] text-[#FAF7F2] leading-[17px]">
+              <h5 className="font-playfair font-bold text-[16px] sm:text-[18px] text-[#FAF7F2] leading-[17px]">
                 ESA
                 <br />
                 Therapist
@@ -167,7 +167,7 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div key={idx} className="h-[102px] sm:h-[108px] px-2.5 flex flex-col items-center justify-center text-center gap-1.5">
                   <GreenCheckIcon />
-                  <span className="text-[12px] sm:text-[13px] text-[#FAF7F2] font-semibold leading-[16px] font-sans">
+                  <span className="text-[12px] sm:text-[13px] text-[#FAF7F2] font-semibold leading-[16px] font-manrope">
                     {row.myEsa}
                   </span>
                 </div>
@@ -186,13 +186,13 @@ export function ComparisonTable() {
             {/* Header Labels for FEATURES and OTHERS */}
             <div className="flex items-center justify-between pt-[25px] px-6 xl:px-12 h-[74px]">
               <div className="w-[220px] xl:w-[300px] text-center shrink-0">
-                <h5 className="font-heading text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                <h5 className="font-playfair text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   FEATURES
                 </h5>
               </div>
               <div className="w-[400px] xl:w-[478px] shrink-0" />
               <div className="w-[220px] xl:w-[340px] text-center shrink-0">
-                <h5 className="font-heading text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                <h5 className="font-playfair text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
                   OTHERS
                 </h5>
               </div>
@@ -214,7 +214,7 @@ export function ComparisonTable() {
                         className="object-contain w-4 h-4 xl:w-[18px] xl:h-[18px]"
                       />
                     </div>
-                    <h6 className="font-heading text-[16px] xl:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                    <h6 className="font-playfair text-[16px] xl:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
                       {row.desktopFeature}
                     </h6>
                   </div>
@@ -225,7 +225,7 @@ export function ComparisonTable() {
                   {/* Others Column */}
                   <div className="w-[220px] xl:w-[340px] shrink-0 flex items-center justify-start gap-2 xl:gap-3 pl-1 xl:pl-4">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[13px] xl:text-[14px] text-[#5F6B6F] font-semibold leading-[20px] xl:leading-[26px] font-sans text-left">
+                    <span className="text-[13px] xl:text-[14px] text-[#5F6B6F] font-semibold leading-[20px] xl:leading-[26px] font-manrope text-left">
                       {row.others}
                     </span>
                   </div>
@@ -240,7 +240,7 @@ export function ComparisonTable() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[91px] rounded-b-[20px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
-              <h5 className="font-heading text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] leading-[32px]">
+              <h5 className="font-playfair text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] leading-[32px]">
                 MY ESA THERAPIST
               </h5>
             </div>
@@ -251,7 +251,7 @@ export function ComparisonTable() {
                   <span className="shrink-0">
                     <GreenCheckIcon />
                   </span>
-                  <span className="min-w-0 text-[13px] xl:text-[14px] text-[#FAF7F2] font-semibold leading-[20px] xl:leading-[26px] font-sans">
+                  <span className="min-w-0 text-[13px] xl:text-[14px] text-[#FAF7F2] font-semibold leading-[20px] xl:leading-[26px] font-manrope">
                     {row.myEsa}
                   </span>
                 </div>
@@ -261,8 +261,11 @@ export function ComparisonTable() {
         </div>
 
         {/* Bottom CTA Button */}
-        <div className="mt-10 sm:mt-12 flex justify-center">
+        <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton href="#how-it-works">Get Started</CtaButton>
+          <p className="font-manrope font-semibold text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+            If not approved after your evaluation? You get a full refund.
+          </p>
         </div>
       </div>
     </section>
