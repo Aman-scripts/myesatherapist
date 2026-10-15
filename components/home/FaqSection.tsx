@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 const defaultFaqs = [
   {
@@ -57,7 +57,7 @@ export function FaqSection({
   title = "Frequently Asked Questions",
   subtitle = "Get answers to common questions about ESA letters and our service.",
   faqs: customFaqs,
-  bg = "bg-[#FAF7F2]",
+  bg = "bg-background",
 }: FaqSectionProps = {}) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
@@ -73,11 +73,11 @@ export function FaqSection({
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
           {subtitle && (
-            <p className="body-large text-[#5F6B6F]">
+            <p className="body-large">
               {subtitle}
             </p>
           )}
@@ -110,11 +110,10 @@ export function FaqSection({
                 >
                   <button
                     onClick={() => setOpenIdx(isOpen ? null : idx)}
-                    className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
+                    className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative color-gradient"
                   >
-                    {/* Gold Number Block: Frame 1000011949 (#E8B92C) */}
-                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-playfair font-bold text-lg sm:text-xl xl:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
+                    {/* Gold Number Block: Frame 1000011949 (accent) */}
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center font-playfair font-bold text-lg sm:text-xl xl:text-[28px] text-primary leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
@@ -139,7 +138,7 @@ export function FaqSection({
                         >
                           <path
                             d="M9 3V15M3 9H15"
-                            stroke="#FAF7F2"
+                            stroke="var(--color-background)"
                             strokeWidth="2.2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -151,7 +150,7 @@ export function FaqSection({
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 body-large text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                    <div className="bg-background px-5 sm:px-7 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                       {faq.a}
                     </div>
                   )}

@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-// Figma: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+// Figma: var(--color-gradient)
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 type Condition = {
   label: string;
@@ -148,14 +148,14 @@ export function QualifyingConditions({
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section id={id} className={`pt-12 sm:pt-16 xl:pt-20 pb-14 sm:pb-16 md:pb-0 bg-[#FAF7F2] overflow-visible ${className}`}>
+    <section id={id} className={`pt-12 sm:pt-16 xl:pt-20 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible ${className}`}>
       <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 max-w-[709px] mx-auto">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
-          <p className="body-large text-[#5F6B6F]">
+          <p className="body-large">
             {description}
           </p>
         </div>
@@ -250,7 +250,7 @@ export function QualifyingConditions({
                       </div>
 
                       {/* Description */}
-                      <p className="body-small text-[#5F6B6F] mt-2 text-left">
+                      <p className="body-small mt-2 text-left">
                         {c.description}
                       </p>
                     </div>
@@ -319,7 +319,7 @@ export function QualifyingConditions({
                             type="button"
                             onClick={() => setHoveredCondition(null)}
                             aria-label="Close"
-                            className="p-1 -mr-1 text-[#5F6B6F] hover:text-slate-900 transition-colors cursor-pointer"
+                            className="p-1 -mr-1 text-body-text hover:text-slate-900 transition-colors cursor-pointer"
                           >
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12.5 1.5L1.5 12.5M1.5 1.5L12.5 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -339,7 +339,7 @@ export function QualifyingConditions({
                         </div>
 
                         {/* Description text matching mockup */}
-                        <p className="body-small text-[#5F6B6F] text-left">
+                        <p className="body-small text-left">
                           {c.description}
                         </p>
                       </div>

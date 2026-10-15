@@ -31,15 +31,15 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="pt-10 sm:pt-14 lg:pt-16 xl:pt-20 pb-8 sm:pb-10 lg:pb-16 xl:pb-20 bg-[#FAF7F2]">
+    <section id="how-it-works" className="pt-10 sm:pt-14 lg:pt-16 xl:pt-20 pb-8 sm:pb-10 lg:pb-16 xl:pb-20 bg-background">
       <div className="max-w-[1276px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-6 lg:px-10 xl:px-[142px] lg:py-12 xl:py-[60px]">
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-10 xl:mb-[72px] space-y-2">
-            <h2 className="heading-h2 text-[#2E5A66] capitalize">
+            <h2 className="heading-h2 capitalize">
               How Online ESA Evaluation Works?
             </h2>
-            <p className="body-large text-[#5F6B6F] max-w-3xl mx-auto">
+            <p className="body-large max-w-3xl mx-auto">
               A simple 3-step process to complete your emotional support animal letter evaluation
             </p>
           </div>
@@ -49,16 +49,16 @@ export function HowItWorks() {
             {/* Arrow 1 -> 2 (Desktop / Tablet) */}
             <div className="hidden md:block absolute top-[90px] lg:top-[113px] left-[33.33%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 12H54" stroke="#2E5A66" strokeWidth="3" strokeLinecap="round" />
-                <path d="M44 4L56 12L44 20" stroke="#2E5A66" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M2 12H54" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
+                <path d="M44 4L56 12L44 20" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
 
             {/* Arrow 2 -> 3 (Desktop / Tablet) */}
             <div className="hidden md:block absolute top-[90px] lg:top-[113px] left-[66.66%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 12H54" stroke="#2E5A66" strokeWidth="3" strokeLinecap="round" />
-                <path d="M44 4L56 12L44 20" stroke="#2E5A66" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M2 12H54" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
+                <path d="M44 4L56 12L44 20" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
 
@@ -80,17 +80,17 @@ export function HowItWorks() {
                         />
                       </div>
                       {/* Number badge */}
-                      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:w-[65px] lg:h-[65px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-[#FAF7F2] font-bold text-xl md:text-2xl lg:text-[36px] flex items-center justify-center shadow-md font-playfair">
+                      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:w-[65px] lg:h-[65px] rounded-full color-gradient text-background font-bold text-xl md:text-2xl lg:text-[36px] flex items-center justify-center shadow-md font-playfair">
                         {step.number}
                       </div>
                     </div>
 
-                    {/* Text (Figma: Title 28px Playfair gradient, Description 18px Manrope #5F6B6F) */}
+                    {/* Text (Figma: Title 28px Playfair gradient, Description 18px Manrope body-text) */}
                     <div className="space-y-2.5 pt-5 sm:pt-6 max-w-[340px] w-full flex flex-col items-center">
                       <h3 className="heading-h3 text-color-gradient capitalize">
                         {step.title}
                       </h3>
-                      <p className="body-large text-[#5F6B6F] max-w-[320px]">
+                      <p className="body-large max-w-[320px]">
                         {step.description}
                       </p>
                     </div>
@@ -100,8 +100,8 @@ export function HowItWorks() {
                   {idx < steps.length - 1 && (
                     <div className="md:hidden flex justify-center py-2" aria-hidden="true">
                       <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2V30" stroke="#2E5A66" strokeWidth="3" strokeLinecap="round" />
-                        <path d="M4 22L12 32L20 22" stroke="#2E5A66" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M12 2V30" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
+                        <path d="M4 22L12 32L20 22" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   )}
@@ -113,14 +113,14 @@ export function HowItWorks() {
           {/* Get Started Button + Refund reassurance */}
           <div className="flex flex-col items-center mt-10 lg:mt-12 gap-2">
             <CtaButton href="#how-it-works">Get Started</CtaButton>
-            <p className="body-small text-[#5F6B6F] text-center">
+            <p className="body-small text-center">
               If not approved after your evaluation? You get a full refund.
             </p>
           </div>
 
           {/* Payment note */}
           <div className="mt-6 flex justify-center">
-            <div className="inline-block bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 sm:py-2 body-small text-[#5F6B6F] text-center border border-[#E76F51]/20">
+            <div className="inline-block bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 sm:py-2 body-small text-center border border-[#E76F51]/20">
               We authorize your payment first, but only charge it after your evaluation is completed.
             </div>
           </div>

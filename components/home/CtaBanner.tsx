@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 import { CtaButton } from "@/components/common/CtaButton";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 type CtaBannerProps = {
   bgColor?: string;
@@ -22,7 +22,7 @@ type CtaBannerProps = {
 };
 
 export function CtaBanner({
-  bgColor = "bg-[#FAF7F2]",
+  bgColor = "bg-background",
   className = "",
   titleClassName = "",
   eyebrow,
@@ -37,8 +37,7 @@ export function CtaBanner({
     <section className={`relative w-full ${bgColor} pt-0 lg:pt-[8.7vw] xl:pt-[125px] pb-16 sm:pb-20 lg:pb-24 xl:pb-[96px] overflow-visible ${className}`}>
       {/* Full-width Teal Gradient Banner (Edge to Edge) */}
       <div
-        className="w-full relative min-h-[404px] lg:min-h-[28vw] xl:min-h-[404px]"
-        style={{ backgroundImage: TEAL_GRADIENT }}
+        className="w-full relative min-h-[404px] lg:min-h-[28vw] xl:min-h-[404px] color-gradient"
       >
         {/* Paw Prints: Flush with the bottom edge of teal banner, centered in clear gap on 1024px */}
         <div className="absolute left-[35%] lg:left-[41%] bottom-0 w-[160px] lg:w-[16.7vw] xl:w-[240px] h-[110px] lg:h-[11.1vw] xl:h-[160px] pointer-events-none z-0 hidden md:block">
@@ -69,14 +68,14 @@ export function CtaBanner({
           <div className="relative z-10 max-w-[575px] lg:max-w-[50vw] xl:max-w-[737px] space-y-6 lg:space-y-[1.7vw] xl:space-y-6 text-left">
             <div className="space-y-4">
               {eyebrow && (
-                <div className="text-[#E8B92C] body-small font-bold tracking-wider uppercase">
+                <div className="text-accent body-small font-bold tracking-wider uppercase">
                   {eyebrow}
                 </div>
               )}
-              <h2 className={cn("heading-h2 text-[#FAF7F2] capitalize max-w-[540px] lg:max-w-[47vw] xl:max-w-[680px] whitespace-pre-line", titleClassName)}>
+              <h2 className={cn("heading-h2 text-background capitalize max-w-[540px] lg:max-w-[47vw] xl:max-w-[680px] whitespace-pre-line", titleClassName)}>
                 {title}
               </h2>
-              <p className="text-[#FAF7F2] body-large max-w-[380px] sm:max-w-[430px] lg:max-w-full">
+              <p className="text-background body-large max-w-[380px] sm:max-w-[430px] lg:max-w-full">
                 {typeof description === "string" && description.includes("\n") ? (
                   description.split("\n").map((line, i, arr) => (
                     <React.Fragment key={i}>
@@ -89,7 +88,7 @@ export function CtaBanner({
                 )}
               </p>
               {note && (
-                <p className="text-[#E8B92C] body-text pt-1">
+                <p className="text-accent body-text pt-1">
                   {note}
                 </p>
               )}
@@ -108,7 +107,7 @@ export function CtaBanner({
 
             {/* Optional Disclaimer */}
             {disclaimer && (
-              <p className="text-[#FAF7F2] body-small pt-1 max-w-[560px]">
+              <p className="text-background body-small pt-1 max-w-[560px]">
                 {disclaimer}
               </p>
             )}

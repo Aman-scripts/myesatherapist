@@ -25,7 +25,7 @@ const reviews = [
   },
 ];
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function YouTubePlayIcon({ className }: { className?: string }) {
   return (
@@ -78,15 +78,15 @@ export function TestimonialsSection({
   };
 
   return (
-    <section className="py-16 lg:py-20 xl:py-24 bg-[#FAF7F2] overflow-hidden">
+    <section className="py-16 lg:py-20 xl:py-24 bg-background overflow-hidden">
       {/* Frame 1000011700: Section Container */}
       <div className="max-w-[1251px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10 lg:gap-14 xl:gap-[72px]">
         {/* Frame 1000011447: Section Header */}
         <div className="flex flex-col items-center text-center gap-2 max-w-[512px] mx-auto">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
-          <p className="body-large text-[#5F6B6F] max-w-[432px]">
+          <p className="body-large max-w-[432px]">
             {subtitle}
           </p>
         </div>
@@ -161,10 +161,9 @@ export function TestimonialsSection({
 
                     {/* Frame 29: Solid Teal Gradient Quote Box (143px high exactly) */}
                     <div
-                      className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] color-gradient"
                     >
-                      <p className="body-text text-[#FAF7F2] text-center w-[271px] max-w-[271px]">
+                      <p className="body-text text-background text-center w-[271px] max-w-[271px]">
                         {review.quote}
                       </p>
                     </div>
@@ -186,8 +185,8 @@ export function TestimonialsSection({
                   <span
                     className={`block transition-all duration-300 rounded-full ${
                       currentIndex === idx
-                        ? "w-[8px] h-[8px] bg-[#2E5A66]"
-                        : "w-[5px] h-[5px] bg-[#E8B92C] opacity-50 hover:opacity-100"
+                        ? "w-[8px] h-[8px] bg-primary"
+                        : "w-[5px] h-[5px] bg-accent opacity-50 hover:opacity-100"
                     }`}
                   />
                 </button>
@@ -200,7 +199,7 @@ export function TestimonialsSection({
             <CtaButton href="#how-it-works">
               Get Started
             </CtaButton>
-            <p className="body-small text-[#5F6B6F] text-center">
+            <p className="body-small text-center">
               If not approved after your evaluation? You get a full refund.
             </p>
           </div>

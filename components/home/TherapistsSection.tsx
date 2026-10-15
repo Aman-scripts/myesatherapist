@@ -105,10 +105,10 @@ const defaultTherapists: Therapist[] = [
 
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
-    <div className="relative flex-1 min-w-0 rounded-[7.6px] bg-[#E8B92C] pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
+    <div className="relative flex-1 min-w-0 rounded-[7.6px] bg-accent pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
       <div className="bg-white rounded-[7.6px] pt-[20px] sm:pt-[22px] pb-2 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
         {/* Floating badge icon at top center */}
-        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-[#FAF7F2]">
+        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
           <Image
             src="/common/therapist-section-badge.svg"
             alt=""
@@ -118,15 +118,10 @@ function StatBadge({ label, value }: { label: string; value: string }) {
             className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4"
           />
         </div>
-        <div
-          className="body-small bg-clip-text text-transparent truncate w-full"
-          style={{
-            backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)",
-          }}
-        >
+        <div className="body-small text-color-gradient truncate w-full">
           {label}
         </div>
-        <div className="body-small text-[#5F6B6F] truncate w-full">
+        <div className="body-small truncate w-full">
           {value}
         </div>
       </div>
@@ -212,21 +207,21 @@ export function TherapistsSection({
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[852px] mx-auto">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
-          <p className="body-large text-[#5F6B6F] max-w-[813px] mx-auto">
+          <p className="body-large max-w-[813px] mx-auto">
             {subtitle}
           </p>
         </div>
 
         {/* Licensure Note */}
         {licensureNote && (
-          <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-[#FAF7F2] border border-[#E8B92C]/30 text-center">
-            <p className="body-small text-[#5F6B6F] leading-relaxed">
+          <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-background border border-accent/30 text-center">
+            <p className="body-small leading-relaxed">
               {/^A Note on Licensure Levels:?/i.test(licensureNote) ? (
                 <>
-                  <strong className="font-bold text-[#2E5A66]">
+                  <strong className="font-bold text-primary">
                     {licensureNote.match(/^A Note on Licensure Levels:?/i)?.[0]}
                   </strong>{" "}
                   {licensureNote.replace(/^A Note on Licensure Levels:?\s*/i, "")}
@@ -246,13 +241,13 @@ export function TherapistsSection({
             onClick={handlePrev}
             disabled={activeIndex === 0}
             aria-label="Previous therapist"
-            className={`hidden sm:flex w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-[#FAF7F2] items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all ${
+            className={`hidden sm:flex w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-background items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all ${
               activeIndex === 0
                 ? "opacity-35 cursor-not-allowed"
-                : "hover:bg-[#E8B92C] hover:text-[#2E5A66] hover:shadow-[0_4px_12px_rgba(232,185,44,0.3)] hover:scale-105 cursor-pointer"
+                : "hover:bg-accent hover:text-primary hover:shadow-[0_4px_12px_rgba(232,185,44,0.3)] hover:scale-105 cursor-pointer"
             }`}
           >
-            <ChevronLeft className="w-5 h-5 text-[#2E5A66]" />
+            <ChevronLeft className="w-5 h-5 text-primary" />
           </button>
 
           {/* Viewport Wrapper: sized so exactly 2 cards fit side-by-side */}
@@ -268,15 +263,14 @@ export function TherapistsSection({
                     key={t.id ?? `${t.name}-${idx}`}
                     data-card
                     onClick={() => scrollToSlide(idx)}
-                    className="snap-start shrink-0 w-[86vw] sm:w-[calc(50%-12px)] lg:w-[calc(50%-16px)] xl:w-[519px] xl:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-[#E8B92C] bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                    className="snap-start shrink-0 w-[86vw] sm:w-[calc(50%-12px)] lg:w-[calc(50%-16px)] xl:w-[519px] xl:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                   >
                     {/* Teal Header Bar */}
                     <div
-                      className="px-4 sm:px-6 py-3.5 sm:py-4 xl:h-[92px] flex items-center justify-between gap-3 sm:gap-4"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      className="px-4 sm:px-6 py-3.5 sm:py-4 xl:h-[92px] flex items-center justify-between gap-3 sm:gap-4 color-gradient"
                     >
                       <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
-                        <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+                        <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                           <Image
                             quality={90}
                             src={getTherapistAvatar(t)}
@@ -287,10 +281,10 @@ export function TherapistsSection({
                           />
                         </div>
                         <div className="min-w-0">
-                          <h3 className="heading-h3 text-[#FAF7F2] truncate">
+                          <h3 className="heading-h3 text-background truncate">
                             {t.name}
                           </h3>
-                          <div className="text-[#E8B92C] body-large truncate mt-0.5">
+                          <div className="text-accent body-large truncate mt-0.5">
                             {t.title}
                           </div>
                         </div>
@@ -303,16 +297,16 @@ export function TherapistsSection({
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
                         aria-label={`${t.name} LinkedIn Profile`}
-                        className="w-8 h-8 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
+                        className="w-8 h-8 rounded-full bg-accent hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
                       >
-                        <LinkedinIcon className="w-4 h-4 text-[#2E5A66]" />
+                        <LinkedinIcon className="w-4 h-4 text-primary" />
                       </a>
                     </div>
 
                     {/* Card Body */}
                     <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
                       {/* Bio text */}
-                      <p className="body-text text-[#5F6B6F]">
+                      <p className="body-text">
                         {t.bio}
                       </p>
 
@@ -347,13 +341,13 @@ export function TherapistsSection({
             onClick={handleNext}
             disabled={activeIndex >= maxIndex}
             aria-label="Next therapist"
-            className={`hidden sm:flex w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-[#FAF7F2] items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all ${
+            className={`hidden sm:flex w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-background items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all ${
               activeIndex >= maxIndex
                 ? "opacity-35 cursor-not-allowed"
-                : "hover:bg-[#E8B92C] hover:text-[#2E5A66] hover:shadow-[0_4px_12px_rgba(232,185,44,0.3)] hover:scale-105 cursor-pointer"
+                : "hover:bg-accent hover:text-primary hover:shadow-[0_4px_12px_rgba(232,185,44,0.3)] hover:scale-105 cursor-pointer"
             }`}
           >
-            <ChevronRight className="w-5 h-5 text-[#2E5A66]" />
+            <ChevronRight className="w-5 h-5 text-primary" />
           </button>
         </div>
 
@@ -364,11 +358,11 @@ export function TherapistsSection({
             onClick={handlePrev}
             disabled={activeIndex === 0}
             aria-label="Previous therapist"
-            className={`w-9 h-9 rounded-full bg-[#FAF7F2] flex items-center justify-center shadow-xs transition-opacity ${
-              activeIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-[#E8B92C] cursor-pointer"
+            className={`w-9 h-9 rounded-full bg-background flex items-center justify-center shadow-xs transition-opacity ${
+              activeIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-accent cursor-pointer"
             }`}
           >
-            <ChevronLeft className="w-4 h-4 text-[#2E5A66]" />
+            <ChevronLeft className="w-4 h-4 text-primary" />
           </button>
 
           <div className="flex items-center gap-2">
@@ -395,11 +389,11 @@ export function TherapistsSection({
             onClick={handleNext}
             disabled={activeIndex >= maxIndex}
             aria-label="Next therapist"
-            className={`w-9 h-9 rounded-full bg-[#FAF7F2] flex items-center justify-center shadow-xs transition-opacity ${
-              activeIndex >= maxIndex ? "opacity-30 cursor-not-allowed" : "hover:bg-[#E8B92C] cursor-pointer"
+            className={`w-9 h-9 rounded-full bg-background flex items-center justify-center shadow-xs transition-opacity ${
+              activeIndex >= maxIndex ? "opacity-30 cursor-not-allowed" : "hover:bg-accent cursor-pointer"
             }`}
           >
-            <ChevronRight className="w-4 h-4 text-[#2E5A66]" />
+            <ChevronRight className="w-4 h-4 text-primary" />
           </button>
         </div>
 

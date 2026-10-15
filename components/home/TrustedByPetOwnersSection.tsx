@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { InitialsAvatar } from "@/components/common/InitialsAvatar";
 import { ALL_REVIEWS } from "@/data/trustpilotReviews";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 interface TestimonialItem {
   quote: string;
@@ -82,10 +82,10 @@ export function TrustedByPetOwnersSection({
         <div className="max-w-[798px] mx-auto flex flex-col items-center gap-10">
           {/* Heading Container (709px x 130px) */}
           <div className="text-center max-w-[709px] mx-auto space-y-4">
-            <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
+            <h2 className="heading-h2">
               {displayTitle}
             </h2>
-            <p className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-[#5F6B6F] leading-relaxed xl:leading-[30px]">
+            <p className="body-large">
               {displaySubtitle}
             </p>
           </div>
@@ -102,7 +102,7 @@ export function TrustedByPetOwnersSection({
             <button
               type="button"
               onClick={prevSlide}
-              className="absolute top-[calc(50%-7px)] -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              className="absolute top-[calc(50%-7px)] -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
               aria-label="Previous Review"
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
@@ -110,14 +110,13 @@ export function TrustedByPetOwnersSection({
             <button
               type="button"
               onClick={nextSlide}
-              className="absolute top-[calc(50%-7px)] -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              className="absolute top-[calc(50%-7px)] -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
               aria-label="Next Review"
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
             </button>
               <div
-                className="w-full rounded-[20px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] p-6 sm:p-[24px] flex flex-col items-center text-center gap-3 transition-all duration-300 min-h-[148px]"
-                style={{ backgroundImage: TEAL_GRADIENT }}
+                className="w-full rounded-[20px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] p-6 sm:p-[24px] flex flex-col items-center text-center gap-3 transition-all duration-300 min-h-[148px] color-gradient"
               >
                 {/* 5 Stars (24px) */}
                 <div className="flex items-center justify-center gap-1 h-[24px]">
@@ -129,7 +128,7 @@ export function TrustedByPetOwnersSection({
                 </div>
 
                 {/* Quote Text */}
-                <p className="body-large text-[#FAF7F2] max-w-[750px] mx-auto">
+                <p className="body-large text-background max-w-[750px] mx-auto">
                   {current.quote}
                 </p>
               </div>
@@ -151,7 +150,7 @@ export function TrustedByPetOwnersSection({
               </div>
 
               {/* Name */}
-              <h3 className="heading-h4 text-[#2E5A66] text-center">
+              <h3 className="heading-h4 text-center">
                 {current.name}
               </h3>
 

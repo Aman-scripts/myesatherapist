@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 type PlanType = "esa" | "psd";
 
@@ -115,9 +115,9 @@ const PLANS: Record<PlanType, PlanSet> = {
 
 function CheckmarkIcon() {
   return (
-    <span className="w-4 h-4 rounded-full bg-[#EDEDED] border border-[#2E5A66] flex items-center justify-center shrink-0 mt-0.5">
+    <span className="w-4 h-4 rounded-full bg-[#EDEDED] border border-primary text-primary flex items-center justify-center shrink-0 mt-0.5">
       <svg className="w-2.5 h-2.5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 5L4 7L8 3" stroke="#2E5A66" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 5L4 7L8 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
   );
@@ -130,7 +130,7 @@ interface PricingSectionProps {
 }
 
 export function PricingSection({
-  bgColor = "bg-[#FAF7F2]",
+  bgColor = "bg-background",
   defaultPlan = "esa",
   ctaHref = "#how-it-works",
 }: PricingSectionProps) {
@@ -142,10 +142,10 @@ export function PricingSection({
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10">
         {/* Heading */}
         <div className="text-center max-w-[709px] mx-auto space-y-3">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             Plans &amp; Pricing
           </h2>
-          <p className="body-large text-[#5F6B6F]">
+          <p className="body-large">
             {plan.description}
           </p>
         </div>
@@ -167,8 +167,8 @@ export function PricingSection({
                 onClick={() => setActive(key)}
                 className={`flex-1 h-[51px] rounded-full font-manrope font-semibold text-[18px] leading-[28px] transition-all duration-200 cursor-pointer flex items-center justify-center ${
                   isActive
-                    ? "bg-[#2E5A66] text-[#FFFBF5] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.12)]"
-                    : "text-[#254D3C] hover:bg-[#2E5A66]/5"
+                    ? "bg-primary text-[#FFFBF5] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.12)]"
+                    : "text-[#254D3C] hover:bg-primary/5"
                 }`}
               >
                 {PLANS[key].tabLabel}
@@ -187,20 +187,19 @@ export function PricingSection({
                 <div className="w-full bg-white rounded-[24px] overflow-hidden border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col h-[500px]">
                   {/* Teal Gradient Top Header (Frame 1261153969) */}
                   <div
-                    className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px]"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
+                    className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px] color-gradient"
                   >
-                    <h3 className="heading-h3 text-[#FAF7F2] capitalize">
+                    <h3 className="heading-h3 text-background capitalize">
                       {card.title}
                     </h3>
-                    <p className="body-text text-[#FAF7F2] line-clamp-3">
+                    <p className="body-text text-background line-clamp-3">
                       {card.description}
                     </p>
                   </div>
 
-                  {/* Overlapping Gold Circle with Price (Ellipse 20: 78px x 78px, #E8B92C) */}
-                  <div className="w-[78px] h-[78px] rounded-full bg-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
-                    <span className="heading-h4 text-[#2E5A66]">
+                  {/* Overlapping Gold Circle with Price (Ellipse 20: 78px x 78px, accent) */}
+                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
+                    <span className="heading-h4">
                       {card.price}
                     </span>
                   </div>
@@ -211,7 +210,7 @@ export function PricingSection({
                       {card.features.map((f) => (
                         <li key={f} className="flex items-center gap-2 text-left">
                           <CheckmarkIcon />
-                          <span className="body-small text-[#5F6B6F]">
+                          <span className="body-small">
                             {f}
                           </span>
                         </li>
@@ -222,8 +221,7 @@ export function PricingSection({
                     <div className="flex justify-center mt-4">
                       <a
                         href={ctaHref}
-                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white body-text text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
-                        style={{ backgroundImage: TEAL_GRADIENT }}
+                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white body-text text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
                       >
                         {card.buttonText}
                       </a>
@@ -236,9 +234,9 @@ export function PricingSection({
                 return (
                   <div
                     key={idx}
-                    className="w-full max-w-[310px] bg-[#E8B92C] rounded-[24px] pt-[28px] px-[5px] pb-[5px] shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col"
+                    className="w-full max-w-[310px] bg-accent rounded-[24px] pt-[28px] px-[5px] pb-[5px] shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col"
                   >
-                    <div className="absolute top-1 left-0 right-0 text-center body-small font-bold text-[#2E5A66] uppercase tracking-wider">
+                    <div className="absolute top-1 left-0 right-0 text-center body-small font-bold text-primary uppercase tracking-wider">
                       Most Popular
                     </div>
                     {cardContent}
@@ -276,20 +274,19 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
     <div className={`w-full max-w-[300px] bg-white rounded-[24px] overflow-hidden border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col h-[500px] ${className}`}>
       {/* Teal Gradient Top Header */}
       <div
-        className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px]"
-        style={{ backgroundImage: TEAL_GRADIENT }}
+        className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px] color-gradient"
       >
-        <h3 className="heading-h3 text-[#FAF7F2] capitalize">
+        <h3 className="heading-h3 text-background capitalize">
           Not Sure Which One
         </h3>
-        <p className="body-large text-[#FAF7F2] line-clamp-3">
+        <p className="body-large text-background line-clamp-3">
           Your needs are unique. Let&apos;s find the right option for your situation.
         </p>
       </div>
 
       {/* Overlapping Gold Circle with Price */}
-      <div className="w-[78px] h-[78px] rounded-full bg-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
-        <span className="heading-h4 text-[#2E5A66]">
+      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
+        <span className="heading-h4">
           Free
         </span>
       </div>
@@ -304,7 +301,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
           ].map((f) => (
             <li key={f} className="flex items-center gap-2 text-left">
               <CheckmarkIcon />
-              <span className="font-manrope font-semibold text-[14px] leading-[24px] text-[#5F6B6F]">
+              <span className="body-small">
                 {f}
               </span>
             </li>
@@ -314,8 +311,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
         <div className="flex justify-center mt-4">
           <a
             href={ctaHref}
-            className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-manrope font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
-            style={{ backgroundImage: TEAL_GRADIENT }}
+            className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white body-text text-center shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
           >
             Get Started
           </a>

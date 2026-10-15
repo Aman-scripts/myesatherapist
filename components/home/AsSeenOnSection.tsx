@@ -122,19 +122,19 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
     <section className={`py-8 sm:py-10 lg:py-8 xl:py-[39px] ${bgColor} overflow-hidden relative backdrop-blur-xs`}>
       {/* Heading */}
       <div className="flex items-center justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8 xl:mb-[32px] px-4">
-        <div className="w-[50px] sm:w-[80px] h-[1px] bg-[#E8B92C] rounded-[10px] shrink-0" />
-        <h2 className="heading-h2 text-[#2E5A66] text-center shrink-0 capitalize">
+        <div className="w-[50px] sm:w-[80px] h-[1px] bg-accent rounded-[10px] shrink-0" />
+        <h2 className="heading-h2 text-center shrink-0 capitalize">
           As Seen On
         </h2>
-        <div className="w-[50px] sm:w-[80px] h-[1px] bg-[#E8B92C] rounded-[10px] shrink-0" />
+        <div className="w-[50px] sm:w-[80px] h-[1px] bg-accent rounded-[10px] shrink-0" />
       </div>
 
       {/* Marquee track */}
       <div className="relative w-full overflow-hidden py-3 sm:py-4 xl:py-[14px]">
         {/* Subtle left fade */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-16 lg:w-24 z-10 bg-gradient-to-r from-[#FAF7F2] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-16 lg:w-24 z-10 bg-gradient-to-r from-background to-transparent" />
         {/* Subtle right fade */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-16 lg:w-24 z-10 bg-gradient-to-l from-[#FAF7F2] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-16 lg:w-24 z-10 bg-gradient-to-l from-background to-transparent" />
 
         <div
           className="flex w-max animate-marquee items-center py-1"

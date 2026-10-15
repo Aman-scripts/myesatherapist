@@ -132,10 +132,10 @@ export function EsaDogBenefitsSection() {
         <div className="absolute left-[81px] top-[70px] w-[628px] h-[1266px] flex flex-col items-start gap-[40px] z-10">
           {/* Header Block (Frame 1000011447: 628px x 172px, gap 16px) */}
           <div className="flex flex-col items-start gap-[16px] w-[628px]">
-            <h2 className="heading-h2 text-[#2E5A66] max-w-[590px]">
+            <h2 className="heading-h2 max-w-[590px]">
               Benefits Of Having An Emotional Support Dog
             </h2>
-            <p className="body-large text-[#5F6B6F] max-w-[568px]">
+            <p className="body-large max-w-[568px]">
               Dogs provide steady comfort and structure. Here&apos;s how an ESA dog can support your daily life.
             </p>
           </div>
@@ -161,10 +161,10 @@ export function EsaDogBenefitsSection() {
 
                 {/* Text Container */}
                 <div className="flex flex-col items-start gap-[6px] w-full">
-                  <h3 className="heading-h3 capitalize text-[#2E5A66]">
+                  <h3 className="heading-h3 capitalize">
                     {benefit.title}
                   </h3>
-                  <p className="body-text text-[#5F6B6F]">
+                  <p className="body-text">
                     {benefit.description}
                   </p>
                 </div>
@@ -181,10 +181,10 @@ export function EsaDogBenefitsSection() {
       <div className="lg:hidden w-full px-4 sm:px-6 py-12 sm:py-16">
         <div className="w-full max-w-[628px] mx-auto flex flex-col items-start gap-6 sm:gap-8">
           <div className="flex flex-col items-start gap-3 sm:gap-4">
-            <h2 className="heading-h2 text-[#2E5A66]">
+            <h2 className="heading-h2">
               Benefits Of Having An Emotional Support Dog
             </h2>
-            <p className="body-large text-[#5F6B6F]">
+            <p className="body-large">
               Dogs provide steady comfort and structure. Here&apos;s how an ESA dog can support your daily life.
             </p>
           </div>
@@ -221,10 +221,10 @@ export function EsaDogBenefitsSection() {
                   />
                 </div>
                 <div className="flex flex-col items-start gap-1 w-full">
-                  <h3 className="heading-h4 text-[#2E5A66]">
+                  <h3 className="heading-h4">
                     {benefit.title}
                   </h3>
-                  <p className="body-text text-[#5F6B6F]">
+                  <p className="body-text">
                     {benefit.description}
                   </p>
                 </div>

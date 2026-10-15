@@ -13,14 +13,14 @@ export function LicensedProviderSection() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="pt-4 sm:pt-6 lg:pt-12 xl:pt-16 pb-12 sm:pb-14 lg:pb-16 xl:pb-20 bg-[#FAF7F2]">
+    <section className="pt-4 sm:pt-6 lg:pt-12 xl:pt-16 pb-12 sm:pb-14 lg:pb-16 xl:pb-20 bg-background">
       <div className="max-w-[999px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-6 sm:mb-8 lg:mb-10 xl:mb-12 space-y-2.5 max-w-[999px] mx-auto">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             Hear From A Licensed ESA Provider
           </h2>
-          <p className="body-large text-[#5F6B6F] max-w-[850px] mx-auto">
+          <p className="body-large max-w-[850px] mx-auto">
             Nervous about your first evaluation? A licensed provider explains how ESA evaluations work, what questions you may be asked, and how the process helps you feel comfortable and supported.
           </p>
         </div>

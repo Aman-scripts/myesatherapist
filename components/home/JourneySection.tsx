@@ -24,14 +24,14 @@ const cards = [
 
 export function JourneySection() {
   return (
-    <section className="py-12 sm:py-16 xl:py-[72px] bg-[#FAF7F2]">
+    <section className="py-12 sm:py-16 xl:py-[72px] bg-background">
       <div className="max-w-[1033px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="mb-8 sm:mb-10 xl:mb-[72px] space-y-2 max-w-[999px] mx-auto text-center">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             Your ESA Journey Starts Here
           </h2>
-          <p className="body-large text-[#5F6B6F]">
+          <p className="body-large">
             See how emotional support animals transform lives
           </p>
         </div>
@@ -69,22 +69,21 @@ export function JourneySection() {
                       height={38}
                       className="w-[36px] h-[36px] object-contain"
                     />
-                    <span className="heading-h3 text-[#2E5A66] leading-[32px] lg:leading-[36px]">
+                    <span className="heading-h3 leading-[32px] lg:leading-[36px]">
                       {card.stat}
                     </span>
                   </div>
 
-                  {/* Gold Divider (Rectangle 6: width 80px, height 1px, #E8B92C) */}
-                  <div className="w-20 h-[1px] bg-[#E8B92C] rounded-[10px] mt-2.5" />
+                  {/* Gold Divider (Rectangle 6: width 80px, height 1px, accent) */}
+                  <div className="w-20 h-[1px] bg-accent rounded-[10px] mt-2.5" />
                 </div>
               </div>
 
-              {/* Bottom Teal Gradient Block (Frame 29: 87px height, text 18px Manrope #FAF7F2) */}
+              {/* Bottom Teal Gradient Block (Frame 29: 87px height, text 18px Manrope background) */}
               <div
-                className="px-5 py-4 text-center flex-1 flex items-center justify-center min-h-[87px]"
-                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                className="px-5 py-4 text-center flex-1 flex items-center justify-center min-h-[87px] color-gradient"
               >
-                <p className="body-large text-[#FAF7F2] max-w-[325px] mx-auto">
+                <p className="body-large text-background max-w-[325px] mx-auto">
                   {card.text}
                 </p>
               </div>
