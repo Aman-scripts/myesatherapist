@@ -106,7 +106,7 @@ const defaultTherapists: Therapist[] = [
 function StatBadge({ label, value }: { label: string; value: string }) {
   return (
     <div className="relative flex-1 min-w-0 rounded-[7.6px] bg-[#E8B92C] pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
-      <div className="bg-white rounded-[7.6px] pt-[22px] sm:pt-[24px] pb-2 sm:pb-2.5 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
+      <div className="bg-white rounded-[7.6px] pt-[20px] sm:pt-[22px] pb-2 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
         {/* Floating badge icon at top center */}
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-[#FAF7F2]">
           <Image
@@ -119,16 +119,14 @@ function StatBadge({ label, value }: { label: string; value: string }) {
           />
         </div>
         <div
-          className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight truncate w-full"
+          className="font-manrope font-semibold text-[12px] sm:text-[14px] leading-tight sm:leading-[26px] bg-clip-text text-transparent truncate w-full"
           style={{
-            background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)",
           }}
         >
           {label}
         </div>
-        <div className="text-[11px] sm:text-[12px] font-semibold text-[#5F6B6F] mt-1 leading-tight truncate w-full font-manrope">
+        <div className="text-[11px] sm:text-[12px] font-semibold text-[#5F6B6F] mt-0.5 leading-tight sm:leading-[20px] truncate w-full font-manrope">
           {value}
         </div>
       </div>
@@ -289,10 +287,10 @@ export function TherapistsSection({
                           />
                         </div>
                         <div className="min-w-0">
-                          <h3 className="heading-h4 text-[#FAF7F2] truncate">
+                          <h3 className="heading-h3 text-[#FAF7F2] truncate">
                             {t.name}
                           </h3>
-                          <div className="text-[#E8B92C] body-small truncate mt-0.5">
+                          <div className="text-[#E8B92C] body-large truncate mt-0.5">
                             {t.title}
                           </div>
                         </div>

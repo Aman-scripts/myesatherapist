@@ -90,12 +90,12 @@ function DoctorStatBadge({
           />
         </div>
         <div
-          className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight truncate bg-clip-text text-transparent w-full"
+          className="font-manrope font-semibold text-[12px] sm:text-[14px] leading-tight sm:leading-[26px] bg-clip-text text-transparent truncate w-full"
           style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
         >
           {label}
         </div>
-        <div className="text-[10px] sm:text-[11px] font-sans font-semibold text-[#5F6B6F] leading-tight truncate mt-1 w-full">
+        <div className="font-manrope font-semibold text-[11px] sm:text-[12px] text-[#5F6B6F] leading-tight mt-0.5 truncate w-full">
           {value}
         </div>
       </div>
@@ -112,10 +112,10 @@ export function DoctorsListingSection() {
         
         {/* Section Heading Header */}
         <div className="text-center mb-12 lg:mb-14 max-w-[860px] mx-auto space-y-3 sm:space-y-4">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-[#2E5A66] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             Our Licensed Mental Health Professionals
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-[#5F6B6F] leading-relaxed lg:leading-[30px] max-w-[813px] mx-auto">
+          <p className="body-large text-[#5F6B6F] max-w-[813px] mx-auto">
             We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.
           </p>
         </div>
@@ -149,10 +149,10 @@ export function DoctorsListingSection() {
 
                   {/* Name and Title */}
                   <div className="min-w-0">
-                    <h3 className="font-heading font-bold text-lg sm:text-[20px] text-[#FAF7F2] leading-tight sm:leading-[28px] truncate">
+                    <h3 className="heading-h3 text-[#FAF7F2] truncate">
                       {doc.name}
                     </h3>
-                    <p className="font-sans font-semibold text-xs sm:text-[14px] text-[#E8B92C] leading-snug truncate mt-0.5">
+                    <p className="body-large text-[#E8B92C] truncate mt-0.5">
                       {doc.title}
                     </p>
                   </div>
