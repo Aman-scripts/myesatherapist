@@ -68,14 +68,14 @@ export function WhyChooseUs({
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-14 lg:mb-16 space-y-2.5 max-w-[813px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] xl:leading-[54px] font-bold text-[#2E5A66] leading-tight tracking-[-0.00015em]">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
-          <div className="text-[#5F6B6F] text-base sm:text-[17px] xl:text-[18px] xl:leading-[30px] font-semibold mx-auto leading-relaxed space-y-1">
+          <div className="text-[#5F6B6F] mx-auto space-y-1">
             {subtitle ? (
-              <p className="max-w-[813px] mx-auto">{subtitle}</p>
+              <p className="body-large max-w-[813px] mx-auto">{subtitle}</p>
             ) : (
-              <p className="max-w-[813px] mx-auto">
+              <p className="body-large max-w-[813px] mx-auto">
                 We simplify online emotional support animal evaluations while maintaining efficiency and legal compliance. Here&apos;s what makes us different from other providers.
               </p>
             )}
@@ -108,12 +108,12 @@ export function WhyChooseUs({
                   </div>
 
                 {/* Title */}
-                <h5 className="font-heading text-xl sm:text-2xl lg:text-[24px] font-bold bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent mb-3 leading-[32px]">
+                <h3 className="heading-h3 text-color-gradient mb-3">
                   {itemTitle}
-                </h5>
+                </h3>
 
                 {/* Description */}
-                <p className="text-sm sm:text-base lg:text-[16px] text-[#5F6B6F] font-semibold leading-[26px] max-w-[320px] font-sans">
+                <p className="body-text max-w-[320px]">
                   {description}
                 </p>
               </div>

@@ -43,12 +43,12 @@ export function EmotionalSupportSection() {
         <div className="w-full lg:w-[54%] xl:w-[737px] z-10 py-6 sm:py-8 lg:py-16 xl:py-24 space-y-6 lg:space-y-6 xl:space-y-8">
           <div className="space-y-3 lg:space-y-3.5">
             {/* Heading */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[42px] xl:leading-[54px] tracking-[-0.00015em]">
-              What is an Emotional Support Animal?
+            <h2 className="heading-h2 capitalize">
+              What Is An Emotional Support Animal?
             </h2>
 
             {/* Description paragraphs */}
-            <div className="space-y-3 lg:space-y-3.5 text-[#5F6B6F] text-base sm:text-[17px] lg:text-[16px] xl:text-[18px] font-semibold leading-relaxed lg:leading-[26px] xl:leading-[30px]">
+            <div className="space-y-3 lg:space-y-3.5 body-large">
               <p>
                 An Emotional Support Animal (ESA) is a companion animal that
                 provides comfort and emotional stability to individuals with
@@ -71,22 +71,27 @@ export function EmotionalSupportSection() {
             </div>
           </div>
 
-          {/* Action Buttons in One Line */}
-          <div className="flex flex-row items-center gap-3 sm:gap-4 lg:gap-5 xl:gap-6 pt-2 w-full max-w-[420px] sm:max-w-none">
-            {/* Learn about ESA's Button */}
-            <Link
-              href="/blog/esa-guide/emotional-support-animal/"
-              className="flex-1 sm:flex-initial xl:w-[193px] h-[48px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap px-4"
-            >
-              <span className="bg-clip-text text-transparent font-sans font-semibold text-[16px] leading-[26px]" style={{ backgroundImage: TEAL_GRADIENT }}>
-                Learn about ESA&apos;s
-              </span>
-            </Link>
+          {/* Action Buttons & Refund Reassurance */}
+          <div className="space-y-2">
+            <div className="flex flex-row items-center gap-3 sm:gap-4 lg:gap-5 xl:gap-6 pt-2 w-full max-w-[420px] sm:max-w-none">
+              {/* Learn about ESA's Button */}
+              <Link
+                href="/blog/esa-guide/emotional-support-animal/"
+                className="flex-1 sm:flex-initial xl:w-[193px] h-[48px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f3efe6] transition-colors flex items-center justify-center shrink-0 whitespace-nowrap px-4"
+              >
+                <span className="bg-clip-text text-transparent font-manrope font-semibold text-[16px] leading-[26px]" style={{ backgroundImage: TEAL_GRADIENT }}>
+                  Learn about ESA&apos;s
+                </span>
+              </Link>
 
-            {/* Get Started Button */}
-            <CtaButton href="#how-it-works" className="flex-1 sm:flex-initial">
-              Get Started
-            </CtaButton>
+              {/* Get Started Button */}
+              <CtaButton href="#how-it-works" className="flex-1 sm:flex-initial">
+                Get Started
+              </CtaButton>
+            </div>
+            <p className="text-[14px] leading-[26px] font-semibold text-[#5F6B6F] font-manrope">
+              If not approved after your evaluation? You get a full refund.
+            </p>
           </div>
         </div>
 

@@ -128,7 +128,7 @@ function StatBadge({ label, value }: { label: string; value: string }) {
         >
           {label}
         </div>
-        <div className="text-[11px] sm:text-[12px] font-semibold text-[#5F6B6F] mt-1 leading-tight truncate w-full font-sans">
+        <div className="text-[11px] sm:text-[12px] font-semibold text-[#5F6B6F] mt-1 leading-tight truncate w-full font-manrope">
           {value}
         </div>
       </div>
@@ -214,10 +214,10 @@ export function TherapistsSection({
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[852px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] xl:leading-[54px] font-bold text-[#2E5A66] leading-tight tracking-[-0.00015em]">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[17px] xl:text-[18px] xl:leading-[30px] font-semibold max-w-[813px] mx-auto leading-relaxed">
+          <p className="body-large max-w-[813px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -225,7 +225,7 @@ export function TherapistsSection({
         {/* Licensure Note */}
         {licensureNote && (
           <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-[#FAF7F2] border border-[#E8B92C]/30 text-center">
-            <p className="text-[#5F6B6F] text-xs sm:text-sm font-semibold leading-relaxed font-sans">
+            <p className="text-[#5F6B6F] text-xs sm:text-sm font-semibold leading-relaxed font-manrope">
               {/^A Note on Licensure Levels:?/i.test(licensureNote) ? (
                 <>
                   <strong className="font-bold text-[#2E5A66]">
@@ -289,10 +289,10 @@ export function TherapistsSection({
                           />
                         </div>
                         <div className="min-w-0">
-                          <h5 className="text-[#FAF7F2] font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] truncate">
+                          <h5 className="text-[#FAF7F2] font-playfair font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] truncate">
                             {t.name}
                           </h5>
-                          <div className="text-[#E8B92C] text-[14px] sm:text-[16px] leading-[26px] font-semibold truncate mt-0.5 font-sans">
+                          <div className="text-[#E8B92C] text-[14px] sm:text-[16px] leading-[26px] font-semibold truncate mt-0.5 font-manrope">
                             {t.title}
                           </div>
                         </div>
@@ -314,7 +314,7 @@ export function TherapistsSection({
                     {/* Card Body */}
                     <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
                       {/* Bio text */}
-                      <p className="text-[#5F6B6F] text-[14px] sm:text-[16px] leading-[26px] font-semibold font-sans">
+                      <p className="text-[#5F6B6F] text-[14px] sm:text-[16px] leading-[26px] font-semibold font-manrope">
                         {t.bio}
                       </p>
 
