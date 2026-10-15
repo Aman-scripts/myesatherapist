@@ -25,11 +25,11 @@ export function StatesPsdCtaSection() {
           
           {/* Left Text & CTA Content */}
           <div className="lg:col-span-7 flex flex-col items-start gap-6 z-10">
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] text-[#FAF7F2] tracking-tight">
+            <h2 className="heading-h2 text-[#FAF7F2]">
               Need help with a PSD letter?
             </h2>
             
-            <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-[#FAF7F2]/90 max-w-[580px]">
+            <p className="body-large text-[#FAF7F2]/90 max-w-[580px]">
               Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you.
             </p>
 
@@ -37,7 +37,7 @@ export function StatesPsdCtaSection() {
               href="/psd-letter/"
               className="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-[#E8B92C] hover:bg-[#f0c33a] rounded-xl shadow-[0px_2px_8px_rgba(232,185,44,0.4)] transition-all duration-200 group"
             >
-              <span className="font-lato font-bold text-base sm:text-lg bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+              <span className="body-large font-bold bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent group-hover:scale-105 transition-transform">
                 Start your Evaluation
               </span>
             </Link>

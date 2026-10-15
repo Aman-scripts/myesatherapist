@@ -98,7 +98,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
   );
 
   return (
-    <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-[#5F6B6F] font-sans">
+    <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-[#5F6B6F] font-manrope">
       
       {/* 1. Question Callout Card (From top of doc) */}
       {article.questionCallout && (
@@ -106,10 +106,10 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           id={article.questionCallout.id}
           className="w-full bg-[#EDEFEA] border border-[#1D6E72]/25 border-l-[6px] border-l-[#1D6E72] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3"
         >
-          <h2 className="font-heading text-lg sm:text-xl font-bold text-[#2E5A66]">
+          <h2 className="heading-h4 text-[#2E5A66]">
             {article.questionCallout.question}
           </h2>
-          <p className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]">
+          <p className="body-text text-[#5F6B6F]">
             {article.questionCallout.answer}
           </p>
         </div>
@@ -120,7 +120,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         {article.introParagraphs.map((para, idx) => (
           <p
             key={idx}
-            className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+            className="body-text text-[#5F6B6F]"
           >
             {renderFormattedText(para)}
           </p>
@@ -140,7 +140,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           />
           {article.introImage.caption && (
             <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
-              <p className="text-sm italic text-[#5F6B6F] font-medium">
+              <p className="body-small italic text-[#5F6B6F]">
                 {article.introImage.caption}
               </p>
             </div>
@@ -157,7 +157,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {sec.id.includes("doesnt") && (
             <div id={sec.id.replace("doesnt", "doesn't")} className="scroll-mt-28" />
           )}
-          <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-tight">
+          <h2 className="heading-h3 text-[#2E5A66]">
             {sec.title}
           </h2>
 
@@ -182,10 +182,10 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {card.value}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className={`font-sans font-semibold text-base leading-[26px] ${v === "teal" ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+                      <p className={`body-text ${v === "teal" ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
                         {card.label}
                       </p>
-                      <p className={`font-sans font-normal text-sm leading-[26px] ${v === "teal" ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
+                      <p className={`body-small ${v === "teal" ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
                         {card.description}
                       </p>
                     </div>
@@ -201,7 +201,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.paragraphs.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+                  className="body-text text-[#5F6B6F]"
                 >
                   {renderFormattedText(p)}
                 </p>

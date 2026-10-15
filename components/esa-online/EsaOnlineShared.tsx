@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 export const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
-export const LATO = { fontFamily: "var(--font-lato), Lato, sans-serif" };
+export const LATO = { fontFamily: "var(--font-sans), 'Manrope', sans-serif" };
 
 export function CtaButton({
   href = "/pricing/",
@@ -16,7 +16,7 @@ export function CtaButton({
   return (
     <a
       href={href}
-      className={`group inline-flex min-h-12 max-w-full items-center justify-between gap-2 rounded-[30px] pl-6 sm:pl-[34px] pr-[3px] text-white font-sans font-semibold text-base leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all ${className}`}
+      className={`group inline-flex min-h-12 max-w-full items-center justify-between gap-2 rounded-[30px] pl-6 sm:pl-[34px] pr-[3px] text-white body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all ${className}`}
       style={{ backgroundImage: TEAL_GRADIENT }}
     >
       <span className="pr-2 sm:pr-4 py-1 text-center lg:whitespace-nowrap">{children}</span>
@@ -42,9 +42,9 @@ export function GoldCallout({
       <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#E8B92C]" />
       <div className="flex flex-col gap-1 py-4 sm:py-5 px-4 sm:px-6">
         {title && (
-          <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-7 text-[#2E5A66] uppercase">{title}</h3>
+          <h3 className="heading-h4 text-[#2E5A66] uppercase">{title}</h3>
         )}
-        <p className="font-sans text-[13px] sm:text-sm font-medium leading-[22px] text-[#5F6B6F]">{children}</p>
+        <p className="body-small text-[#5F6B6F]">{children}</p>
       </div>
     </div>
   );
@@ -80,19 +80,18 @@ export function FeatureCard({
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
         {!title ? null : headingFont === "heading" ? (
-          <Heading className={`font-heading font-bold text-xl xl:text-2xl leading-8 text-balance ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+          <Heading className={`heading-h4 text-balance ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
             {title}
           </Heading>
         ) : (
           <Heading
-            className="font-bold text-xl xl:text-2xl leading-[29px] tracking-[-0.017em] text-transparent bg-clip-text"
-            style={{ backgroundImage: TEAL_GRADIENT, ...LATO }}
+            className="heading-h4 text-color-gradient"
           >
             {title}
           </Heading>
         )}
         {description && (
-          <p className={`font-sans text-sm xl:text-base font-semibold leading-[26px] ${dark ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
+          <p className={`body-small ${dark ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
             {description}
           </p>
         )}

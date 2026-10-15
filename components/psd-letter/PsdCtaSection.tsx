@@ -71,10 +71,10 @@ export function PsdCtaSection() {
           {/* Left Text & CTA Area */}
           <div className="relative z-10 max-w-[580px] lg:max-w-[650px] xl:max-w-[720px] space-y-6 text-left">
             <div className="space-y-3">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-bold text-[#FAF7F2] leading-[44px] xl:leading-[54px] tracking-[-0.0066em]">
+              <h2 className="heading-h2 text-[#FAF7F2]">
                 Need Help with a PSD Letter?
               </h2>
-              <p className="text-[#FAF7F2] text-base lg:text-[16px] xl:text-[18px] font-semibold leading-[26px] xl:leading-[30px] font-sans">
+              <p className="body-large text-[#FAF7F2]">
                 Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you.
               </p>
             </div>
@@ -86,7 +86,7 @@ export function PsdCtaSection() {
                   <span className="shrink-0 flex items-center justify-center">
                     <CheckmarkIcon />
                   </span>
-                  <span className="text-[#FAF7F2] text-sm sm:text-[15px] font-medium font-sans">
+                  <span className="body-small text-[#FAF7F2]">
                     {point}
                   </span>
                 </div>
@@ -100,7 +100,7 @@ export function PsdCtaSection() {
                 className="inline-flex items-center justify-center min-w-[240px] px-6 h-[48px] rounded-[58px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
               >
                 <span
-                  className="font-[family-name:var(--font-lato)] font-bold text-[17px] sm:text-[18px] leading-[22px] bg-clip-text text-transparent whitespace-nowrap"
+                  className="body-large font-bold bg-clip-text text-transparent whitespace-nowrap"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   Schedule Consultation Now

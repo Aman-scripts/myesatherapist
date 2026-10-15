@@ -43,10 +43,10 @@ export function EsaRenewalHowItWorks() {
         <div className="w-full max-w-[999px] flex flex-col items-center gap-14 lg:gap-[72px]">
           {/* Section Header (Frame 5) */}
           <div className="flex flex-col items-center gap-2 text-center">
-            <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[42px] xl:leading-[54px] tracking-[-0.00015em]">
+            <h2 className="heading-h2 text-[#2E5A66]">
               How the ESA Letter Renewal Process Works?
             </h2>
-            <p className="font-sans text-base sm:text-[18px] lg:text-[16px] xl:text-[18px] font-semibold text-[#5F6B6F] leading-[30px] lg:leading-[27px] xl:leading-[30px]">
+            <p className="body-large text-[#5F6B6F]">
               Complete a simple three-step online process to request an emotional support animal letter renewal conducted by a licensed mental health professional.
             </p>
           </div>
@@ -74,8 +74,8 @@ export function EsaRenewalHowItWorks() {
 
                   {/* Step Number Badge */}
                   <div
-                    className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-[#FAF7F2] font-bold text-[36px] tracking-[-0.017em]"
-                    style={{ backgroundImage: TEAL_GRADIENT, fontFamily: "Helvetica, Arial, sans-serif" }}
+                    className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-[#FAF7F2] font-bold font-heading text-[32px] leading-none"
+                    style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {step.stepNumber}
                   </div>
@@ -84,12 +84,11 @@ export function EsaRenewalHowItWorks() {
                 {/* Title and Description */}
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">
                   <h3
-                    className="font-bold text-2xl lg:text-[20px] xl:text-2xl leading-[29px] tracking-[-0.017em] text-transparent bg-clip-text"
-                    style={{ backgroundImage: TEAL_GRADIENT, fontFamily: "var(--font-lato), Lato, sans-serif" }}
+                    className="heading-h3 text-color-gradient"
                   >
                     {step.title}
                   </h3>
-                  <p className="font-sans text-base lg:text-[14px] xl:text-base text-[#5F6B6F] font-semibold leading-[26px] lg:leading-[23px] xl:leading-[26px]">
+                  <p className="body-text text-[#5F6B6F]">
                     {step.description}
                   </p>
                 </div>
