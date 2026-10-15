@@ -11,8 +11,8 @@ export function PolicyContent({ policy }: PolicyContentProps) {
   const renderInlineHtml = (htmlContent: string) => {
     // Rewrite any links to # or relative links, and style bold text
     const cleanHtml = htmlContent
-      .replace(/<strong>/gi, '<strong class="font-bold text-[#2E5A66]">')
-      .replace(/<b>/gi, '<b class="font-bold text-[#2E5A66]">')
+      .replace(/<strong>/gi, '<strong class="font-bold text-primary">')
+      .replace(/<b>/gi, '<b class="font-bold text-primary">')
       .replace(/href="#"/g, 'href="/pricing/"')
       .replace(/href="terms-of-use\.html"/g, 'href="/terms-of-use/"')
       .replace(/href="privacy-policy\.html"/g, 'href="/privacy-policy/"')
@@ -32,7 +32,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <p
             key={bIdx}
-            className="text-base sm:text-[17px] leading-[28px] sm:leading-[30px] text-[#5F6B6F] font-sans font-medium"
+            className="text-base sm:text-[17px] leading-[28px] sm:leading-[30px] text-body-text font-sans font-medium"
           >
             {block.html ? renderInlineHtml(block.html) : block.text}
           </p>
@@ -42,9 +42,9 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <div
             key={bIdx}
-            className="w-full bg-[#FEF8EC] border-l-[5px] border-[#E8B92C] rounded-[12px] p-4 sm:p-5 my-5 shadow-2xs"
+            className="w-full bg-[#FEF8EC] border-l-[5px] border-accent rounded-[12px] p-4 sm:p-5 my-5 shadow-2xs"
           >
-            <p className="text-sm sm:text-base leading-[24px] sm:leading-[26px] text-[#2E5A66] font-sans font-medium">
+            <p className="text-sm sm:text-base leading-[24px] sm:leading-[26px] text-primary font-sans font-medium">
               {block.html ? renderInlineHtml(block.html) : block.text}
             </p>
           </div>
@@ -54,9 +54,9 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <ul key={bIdx} className="space-y-3 my-4 pl-1">
             {block.items?.map((item, iIdx) => (
-              <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-sans font-medium">
+              <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-body-text font-sans font-medium">
                 <svg
-                  className="w-5 h-5 text-[#2E5A66] shrink-0 mt-0.5"
+                  className="w-5 h-5 text-primary shrink-0 mt-0.5"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -81,9 +81,9 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             {block.columns?.map((col, cIdx) => (
               <ul key={cIdx} className="space-y-3">
                 {col.map((item, iIdx) => (
-                  <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-[15px] leading-relaxed text-[#5F6B6F] font-sans font-medium">
+                  <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-[15px] leading-relaxed text-body-text font-sans font-medium">
                     <svg
-                      className="w-5 h-5 text-[#2E5A66] shrink-0 mt-0.5"
+                      className="w-5 h-5 text-primary shrink-0 mt-0.5"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -108,25 +108,25 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <div key={bIdx} className="mt-6 pt-5 border-t border-[#EAE5DC] space-y-3">
             {block.tag && (
-              <span className="inline-flex items-center justify-center text-sm sm:text-base font-sans font-bold bg-[#FAF7F2] text-[#2E5A66] border border-[#EAE5DC] px-4 py-1.5 sm:px-5 sm:py-2 rounded-full shadow-2xs">
+              <span className="inline-flex items-center justify-center text-sm sm:text-base font-sans font-bold bg-background text-primary border border-[#EAE5DC] px-4 py-1.5 sm:px-5 sm:py-2 rounded-full shadow-2xs">
                 {block.tag}
               </span>
             )}
             {block.title && (
-              <h3 className="font-heading text-lg sm:text-xl lg:text-[22px] font-bold text-[#2E5A66] leading-snug tracking-tight">
+              <h3 className="font-heading text-lg sm:text-xl lg:text-[22px] font-bold text-primary leading-snug tracking-tight">
                 {block.title}
               </h3>
             )}
             {block.paragraphs?.map((p, pIdx) => (
-              <p key={pIdx} className="text-sm sm:text-base leading-[26px] sm:leading-[28px] text-[#5F6B6F] font-sans font-medium">
+              <p key={pIdx} className="text-sm sm:text-base leading-[26px] sm:leading-[28px] text-body-text font-sans font-medium">
                 {p.html ? renderInlineHtml(p.html) : p.text}
               </p>
             ))}
             {block.items && block.items.length > 0 && (
               <ul className="space-y-2.5 pl-1 my-3">
                 {block.items.map((item, iIdx) => (
-                  <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-sans font-medium">
-                    <span className="w-2 h-2 rounded-full bg-[#E8B92C] mt-2.5 shrink-0" />
+                  <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-body-text font-sans font-medium">
+                    <span className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
                     <div className="flex-1">
                       {item.html ? renderInlineHtml(item.html) : item.text}
                     </div>
@@ -143,8 +143,8 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             <dl className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-6 sm:gap-x-8 gap-y-3 text-sm sm:text-base font-sans items-baseline">
               {block.fields?.map((f, fIdx) => (
                 <React.Fragment key={fIdx}>
-                  <dt className="font-bold text-[#2E5A66] whitespace-nowrap">{f.label}</dt>
-                  <dd className="font-medium text-[#5F6B6F] leading-relaxed mb-1 sm:mb-0">{f.value}</dd>
+                  <dt className="font-bold text-primary whitespace-nowrap">{f.label}</dt>
+                  <dd className="font-medium text-body-text leading-relaxed mb-1 sm:mb-0">{f.value}</dd>
                 </React.Fragment>
               ))}
             </dl>
@@ -173,11 +173,11 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 <Link
                   key={cIdx}
                   href={mappedHref}
-                  className="group flex items-center justify-between p-4 sm:p-5 rounded-[16px] border border-[#EAE5DC] bg-white hover:border-[#2E5A66] hover:shadow-md transition-all font-sans font-bold text-sm sm:text-base text-[#2E5A66]"
+                  className="group flex items-center justify-between p-4 sm:p-5 rounded-[16px] border border-[#EAE5DC] bg-white hover:border-primary hover:shadow-md transition-all font-sans font-bold text-sm sm:text-base text-primary"
                 >
                   <span>{card.title}</span>
                   <svg
-                    className="w-4 h-4 text-[#E8B92C] group-hover:translate-x-1 transition-transform shrink-0"
+                    className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform shrink-0"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -204,9 +204,9 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             <Link
               href={targetHref}
               className="inline-flex items-center gap-2.5 rounded-[30px] text-white px-6 py-3 text-sm sm:text-base font-sans font-bold transition-opacity hover:opacity-90 shadow-sm"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
-              <svg className="w-4 h-4 text-[#E8B92C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 6h16v12H4z" />
                 <path d="M4 7l8 6 8-6" />
               </svg>
@@ -230,13 +230,13 @@ export function PolicyContent({ policy }: PolicyContentProps) {
           className="scroll-mt-[148px] relative overflow-hidden rounded-[20px] sm:rounded-[24px] border border-[#EAE5DC] bg-white p-6 sm:p-8 lg:p-10 shadow-[0px_4px_20px_rgba(26,61,79,0.06)] space-y-4"
         >
           <div className="flex items-center gap-3.5 mb-2">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#2E5A66] text-[#E8B92C] shadow-xs shrink-0">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-accent shadow-xs shrink-0">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" />
                 <circle cx="12" cy="12" r="3" />
               </svg>
             </div>
-            <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-tight">
+            <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-primary leading-tight">
               {policy.sections[0].title}
             </h2>
           </div>
@@ -257,11 +257,11 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             {/* Section Header with Project-Style Numeral Badge */}
             <div className="flex items-center gap-4 pb-3 border-b border-[#EAE5DC]">
               <div className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
-                <span className="font-heading font-bold text-xl sm:text-2xl text-[#2E5A66]">
+                <span className="font-heading font-bold text-xl sm:text-2xl text-primary">
                   {sec.number}
                 </span>
               </div>
-              <h2 className="font-heading text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#2E5A66] leading-snug tracking-tight">
+              <h2 className="font-heading text-2xl sm:text-[28px] lg:text-[32px] font-bold text-primary leading-snug tracking-tight">
                 {sec.title}
               </h2>
             </div>
@@ -278,10 +278,10 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       {policy.takeaways && policy.takeaways.length > 0 && (
         <section id="key-takeaways" className="scroll-mt-28 space-y-5 pt-4">
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#2E5A66] text-[#E8B92C] font-heading font-bold text-base shadow-xs">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-accent font-heading font-bold text-base shadow-xs">
               ✓
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#2E5A66] tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-primary tracking-tight">
               Key Takeaways
             </h2>
           </div>
@@ -290,12 +290,12 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             {policy.takeaways.map((point, tIdx) => (
               <div
                 key={tIdx}
-                className="flex items-start gap-3.5 p-5 rounded-[18px] bg-white border border-[#EAE5DC] shadow-xs hover:border-[#2E5A66]/30 transition-colors"
+                className="flex items-start gap-3.5 p-5 rounded-[18px] bg-white border border-[#EAE5DC] shadow-xs hover:border-primary/30 transition-colors"
               >
-                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E8B92C]/20 text-[#2E5A66] mt-0.5 font-bold text-xs">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/20 text-primary mt-0.5 font-bold text-xs">
                   ✓
                 </div>
-                <p className="font-sans text-sm sm:text-[15px] font-semibold text-[#2E5A66] leading-relaxed">
+                <p className="font-sans text-sm sm:text-[15px] font-semibold text-primary leading-relaxed">
                   {point}
                 </p>
               </div>
@@ -307,11 +307,11 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       {/* 4. Reviewer Line Card */}
       {policy.reviewerLine && (
         <div className="flex items-center gap-4 p-5 sm:p-6 rounded-[20px] bg-white border border-[#EAE5DC] shadow-xs">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#2E5A66] text-[#E8B92C] font-bold text-sm">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-accent font-bold text-sm">
             ✓
           </div>
-          <p className="font-sans text-sm sm:text-base text-[#5F6B6F] font-medium leading-relaxed">
-            <span className="font-bold text-[#2E5A66]">{policy.reviewerLine}</span>
+          <p className="font-sans text-sm sm:text-base text-body-text font-medium leading-relaxed">
+            <span className="font-bold text-primary">{policy.reviewerLine}</span>
           </p>
         </div>
       )}

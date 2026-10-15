@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { FAQ_DATA, FAQ_FILTERS, type FaqFilter } from "./faqData";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function FaqAccordionSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
@@ -24,7 +24,7 @@ export function FaqAccordionSection() {
   };
 
   return (
-    <section id="faq-list" className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20">
+    <section id="faq-list" className="w-full bg-background py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20">
       <div className="max-w-[1016px] mx-auto space-y-4 sm:space-y-6">
         {/* Topic Filters */}
         <div
@@ -44,7 +44,7 @@ export function FaqAccordionSection() {
                 }}
                 aria-pressed={active}
                 className={`shrink-0 whitespace-nowrap px-4 sm:px-6 lg:px-5 py-2 sm:py-2.5 lg:py-3 rounded-full font-sans font-semibold text-sm sm:text-base lg:text-sm xl:text-base shadow-sm transition-colors cursor-pointer ${
-                  active ? "bg-[#2E5A66] text-white" : "bg-white text-[#2E5A66] hover:bg-[#2E5A66]/10"
+                  active ? "bg-primary text-white" : "bg-white text-primary hover:bg-primary/10"
                 }`}
               >
                 {f}
@@ -68,8 +68,8 @@ export function FaqAccordionSection() {
                 style={{ backgroundImage: TEAL_GRADIENT }}
                 aria-expanded={isOpen}
               >
-                {/* Gold Number Badge (Frame 1000011949: #E8B92C) */}
-                <div className="w-[60px] sm:w-[74px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-xl sm:text-2xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
+                {/* Gold Number Badge (Frame 1000011949: accent) */}
+                <div className="w-[60px] sm:w-[74px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center font-sans font-extrabold text-xl sm:text-2xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
                   {String(idx + 1).padStart(2, "0")}.
                 </div>
 
@@ -94,7 +94,7 @@ export function FaqAccordionSection() {
                     >
                       <path
                         d="M9 3V15M3 9H15"
-                        stroke="#FAF7F2"
+                        stroke="var(--color-background)"
                         strokeWidth="2.2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -106,7 +106,7 @@ export function FaqAccordionSection() {
 
               {/* Accordion Body */}
               {isOpen && (
-                <div className="bg-[#FAF7F2] px-6 sm:px-8 py-5 sm:py-6 body-large text-[#5F6B6F] border border-[#2E5A66]/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large border border-primary/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                   {faq.answer}
                 </div>
               )}

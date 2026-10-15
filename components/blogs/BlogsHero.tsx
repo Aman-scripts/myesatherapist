@@ -15,7 +15,7 @@ export function BlogsHero() {
   };
 
   return (
-    <section className="relative w-full bg-[#FAF7F2]">
+    <section className="relative w-full bg-background">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE BLOGS HERO SECTION (sm:hidden / < 640px)   */}
       {/* ---------------------------------------------------- */}
@@ -34,7 +34,7 @@ export function BlogsHero() {
         <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
           {/* Frame 1000011902: Headline & Subtitle */}
           <div className="flex flex-col items-center gap-3 max-w-[340px]">
-            <h1 className="font-heading text-[28px] leading-[34px] font-bold tracking-[-0.0002em] text-[#2E5A66]">
+            <h1 className="font-heading text-[28px] leading-[34px] font-bold tracking-[-0.0002em] text-primary">
               Your Guide to
               <br />
               Emotional Support
@@ -42,7 +42,7 @@ export function BlogsHero() {
               Animals
             </h1>
 
-            <p className="font-sans font-semibold text-[13px] leading-[22px] text-[#5F6B6F] max-w-[300px]">
+            <p className="font-sans font-semibold text-[13px] leading-[22px] text-body-text max-w-[300px]">
               Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
             </p>
           </div>
@@ -50,7 +50,7 @@ export function BlogsHero() {
           {/* Search Bar */}
           <form
             onSubmit={handleSearch}
-            className="w-full max-w-[340px] h-[50px] bg-[#FAF7F2] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-4 pr-1.5 py-1 mt-5"
+            className="w-full max-w-[340px] h-[50px] bg-background rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-4 pr-1.5 py-1 mt-5"
           >
             <div className="flex items-center flex-1 min-w-0 gap-2.5">
               <svg
@@ -84,7 +84,7 @@ export function BlogsHero() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search anything...."
-                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[15px] text-[#2E5A66] placeholder:text-black/60"
+                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[15px] text-primary placeholder:text-black/60"
               />
             </div>
 
@@ -92,7 +92,7 @@ export function BlogsHero() {
               type="submit"
               aria-label="Filter or Search"
               className="w-[42px] h-[42px] rounded-full shrink-0 flex items-center justify-center text-white shadow-xs hover:opacity-95 transition-all"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <svg
                 width="18"
@@ -132,7 +132,7 @@ export function BlogsHero() {
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 max-w-[620px] mx-auto">
           {/* Headline & Subtitle */}
           <div className="flex flex-col items-center gap-4 max-w-xl mx-auto">
-            <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.0002em] leading-tight text-[#2E5A66]">
+            <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.0002em] leading-tight text-primary">
               Your Guide to
               <br />
               Emotional Support
@@ -140,7 +140,7 @@ export function BlogsHero() {
               Animals
             </h1>
 
-            <p className="font-sans font-semibold text-sm sm:text-base leading-relaxed text-[#5F6B6F] max-w-md mx-auto">
+            <p className="font-sans font-semibold text-sm sm:text-base leading-relaxed text-body-text max-w-md mx-auto">
               Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
             </p>
           </div>
@@ -148,7 +148,7 @@ export function BlogsHero() {
           {/* Search Bar on Tablet */}
           <form
             onSubmit={handleSearch}
-            className="w-full max-w-[422px] h-[54px] bg-[#FAF7F2] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-5 pr-1.5 py-1 mt-6"
+            className="w-full max-w-[422px] h-[54px] bg-background rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-5 pr-1.5 py-1 mt-6"
           >
             <div className="flex items-center flex-1 min-w-0 gap-3">
               <svg
@@ -182,7 +182,7 @@ export function BlogsHero() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search anything...."
-                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] text-[#2E5A66] placeholder:text-black/60"
+                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] text-primary placeholder:text-black/60"
               />
             </div>
 
@@ -190,7 +190,7 @@ export function BlogsHero() {
               type="submit"
               aria-label="Filter or Search"
               className="w-[46px] h-[46px] rounded-full shrink-0 flex items-center justify-center text-white shadow-xs hover:opacity-95 transition-all"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <svg
                 width="20"
@@ -233,7 +233,7 @@ export function BlogsHero() {
               {/* Frame 1000011884 / Frame 1000011902 */}
               <div className="flex flex-col items-start gap-[24px] w-full max-w-[512px]">
                 {/* Heading: Your Guide to Emotional Support Animals */}
-                <h1 className="font-heading text-[40px] lg:text-[46px] xl:text-[56px] font-bold text-[#2E5A66] leading-[48px] lg:leading-[54px] xl:leading-[64px] tracking-[-0.0002em]">
+                <h1 className="font-heading text-[40px] lg:text-[46px] xl:text-[56px] font-bold text-primary leading-[48px] lg:leading-[54px] xl:leading-[64px] tracking-[-0.0002em]">
                   Your Guide to
                   <br />
                   Emotional Support
@@ -242,7 +242,7 @@ export function BlogsHero() {
                 </h1>
 
                 {/* Subtitle: Connect ESA letters, emotional well-being... */}
-                <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[492px]">
+                <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[492px]">
                   Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
                 </p>
               </div>
@@ -250,7 +250,7 @@ export function BlogsHero() {
               {/* Search Bar 2 */}
               <form
                 onSubmit={handleSearch}
-                className="w-full max-w-[422px] h-[54px] bg-[#FAF7F2] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-5 pr-1.5 py-1"
+                className="w-full max-w-[422px] h-[54px] bg-background rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-5 pr-1.5 py-1"
               >
                 <div className="flex items-center flex-1 min-w-0 gap-3">
                   {/* Iconsax/Linear/searchnormal1 */}
@@ -285,7 +285,7 @@ export function BlogsHero() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search anything...."
-                    className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] xl:text-[18px] leading-[30px] text-[#2E5A66] placeholder:text-black/60"
+                    className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] xl:text-[18px] leading-[30px] text-primary placeholder:text-black/60"
                   />
                 </div>
 
@@ -294,7 +294,7 @@ export function BlogsHero() {
                   type="submit"
                   aria-label="Filter or Search"
                   className="w-[46px] h-[46px] rounded-full shrink-0 flex items-center justify-center text-white shadow-xs hover:opacity-95 transition-all group cursor-pointer"
-                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ background: "var(--color-gradient)" }}
                 >
                   <svg
                     width="20"

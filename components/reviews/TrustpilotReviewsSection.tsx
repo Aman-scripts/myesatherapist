@@ -29,11 +29,11 @@ export function TrustpilotReviewsSection() {
   const rowTwo = TRUSTPILOT_REVIEWS.slice(3, 6);
 
   return (
-    <section id="trustpilot-reviews" className="w-full bg-[#FAF7F2] py-16 lg:py-24">
+    <section id="trustpilot-reviews" className="w-full bg-background py-16 lg:py-24">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] font-bold text-[#2E5A66] tracking-[-0.00015em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] font-bold text-primary tracking-[-0.00015em]">
             Trustpilot Reviews
           </h2>
         </div>
@@ -70,7 +70,7 @@ function ReviewCard({
       <div className="relative w-full">
         <div
           className="w-full rounded-[20px] p-6 flex flex-col gap-3 min-h-[222px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-200 hover:shadow-lg"
-          style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          style={{ backgroundImage: "var(--color-gradient)" }}
         >
           {/* Top row: Google / source logo + 5 Stars */}
           <div className="flex items-center gap-3 h-[24px]">
@@ -79,7 +79,7 @@ function ReviewCard({
           </div>
 
           {/* Quote Text */}
-          <p className="font-sans font-semibold text-[15px] sm:text-[16px] text-[#FAF7F2] leading-[26px]">
+          <p className="font-sans font-semibold text-[15px] sm:text-[16px] text-background leading-[26px]">
             {review.quote}
           </p>
         </div>

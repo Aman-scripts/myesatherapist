@@ -12,7 +12,7 @@ import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionBut
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -59,7 +59,7 @@ export function ReviewsHeroSection() {
   };
 
   return (
-    <section className="relative z-30 w-full bg-[#FAF7F2] overflow-visible">
+    <section className="relative z-30 w-full bg-background overflow-visible">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE REVIEWS HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
@@ -77,12 +77,12 @@ export function ReviewsHeroSection() {
         {/* Mobile Content Layer */}
         <div className="absolute inset-x-0 top-0 px-4 pt-10 text-center flex flex-col items-center z-10">
           {/* Heading */}
-          <h1 className="font-heading text-[30px] leading-[36px] font-bold text-[#2E5A66] tracking-[-0.0002em] mb-2 max-w-[340px]">
+          <h1 className="font-heading text-[30px] leading-[36px] font-bold text-primary tracking-[-0.0002em] mb-2 max-w-[340px]">
             What Our Clients Are Saying
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans font-semibold text-[13px] leading-[20px] text-[#5F6B6F] mb-4 max-w-[330px]">
+          <p className="font-sans font-semibold text-[13px] leading-[20px] text-body-text mb-4 max-w-[330px]">
             Real experiences from people who found comfort and confidence through My ESA Therapist.
           </p>
 
@@ -123,7 +123,7 @@ export function ReviewsHeroSection() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[110px] sm:min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/60"
+                className="flex flex-col items-center justify-center bg-background px-4 py-2 rounded-[30px] text-center min-w-[110px] sm:min-w-[120px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/60"
               >
                 <span
                   className="font-heading text-xl sm:text-2xl font-bold leading-none bg-clip-text text-transparent"
@@ -131,20 +131,20 @@ export function ReviewsHeroSection() {
                 >
                   {stat.value}
                 </span>
-                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="text-[11px] font-semibold text-body-text mt-1 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
 
           {/* Heading */}
-          <h1 className="font-heading text-3xl sm:text-4xl md:text-[44px] font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-[44px] font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-primary">
             What Our Clients Are
             <br />
             Saying
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-4 font-sans tracking-normal">
+          <p className="text-sm sm:text-base leading-relaxed text-body-text font-semibold max-w-md mx-auto mt-4 font-sans tracking-normal">
             Real experiences from people who found comfort and confidence through My ESA Therapist.
           </p>
 
@@ -155,7 +155,7 @@ export function ReviewsHeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -201,7 +201,7 @@ export function ReviewsHeroSection() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
                   quality={90}
                   src="/common/send-icon.svg"
@@ -235,7 +235,7 @@ export function ReviewsHeroSection() {
           {/* Stat Pills at top (Frame 1000011901) */}
           <div className="flex items-center gap-3 w-full max-w-[513px]">
             {/* Pill 1: 50 USA States */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
               <span
                 className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
                 style={{ backgroundImage: TEAL_GRADIENT }}
@@ -248,7 +248,7 @@ export function ReviewsHeroSection() {
             </div>
 
             {/* Pill 2: HIPAA Compliant */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
               <span
                 className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
                 style={{ backgroundImage: TEAL_GRADIENT }}
@@ -261,7 +261,7 @@ export function ReviewsHeroSection() {
             </div>
 
             {/* Pill 3: 100% Licensed Pros */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
               <span
                 className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
                 style={{ backgroundImage: TEAL_GRADIENT }}
@@ -275,12 +275,12 @@ export function ReviewsHeroSection() {
           </div>
 
           {/* Heading (Playfair Display 56px/64px - Frame 1000011902) */}
-          <h1 className="font-heading text-[44px] xl:text-[56px] leading-[50px] xl:leading-[64px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[513px]">
+          <h1 className="font-heading text-[44px] xl:text-[56px] leading-[50px] xl:leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[513px]">
             What Our Clients Are Saying
           </h1>
 
-          {/* Subtitle (Manrope 18px/30px #5F6B6F) */}
-          <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[553px]">
+          {/* Subtitle (Manrope 18px/30px body-text) */}
+          <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[553px]">
             Real experiences from people who found comfort and confidence through My ESA Therapist.
           </p>
 
@@ -291,7 +291,7 @@ export function ReviewsHeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[28px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[16px] xl:text-[18px] hover:bg-white transition-colors h-[50px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[28px] py-2.5 xl:py-3 rounded-[30px] bg-background font-semibold text-[16px] xl:text-[18px] hover:bg-white transition-colors h-[50px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -337,7 +337,7 @@ export function ReviewsHeroSection() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={20} height={20} className="w-[18px] h-[18px]" />
               </span>

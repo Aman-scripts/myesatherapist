@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export function BlogGoogleSourceBanner() {
   return (
-    <section className="w-full bg-[#FAF7F2] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-background pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
       {/* Frame 1000012004: Container */}
       <div className="max-w-[1065px] mx-auto bg-white/40 sm:bg-white/20 backdrop-blur-xs rounded-[15px] shadow-[0px_1px_4px_rgba(103,103,103,0.1)] overflow-hidden flex flex-col sm:flex-row items-stretch min-h-[100px]">
         
         {/* Rectangle 25: Left Teal Accent Bar */}
         <div
           className="w-full sm:w-[17px] h-2 sm:h-auto shrink-0 rounded-t-[10px] sm:rounded-t-none sm:rounded-l-[10px]"
-          style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          style={{ background: "var(--color-gradient)" }}
         />
 
         {/* Frame 1261153667: Content Area */}
@@ -43,10 +43,10 @@ export function BlogGoogleSourceBanner() {
 
             {/* Frame 1000012015 */}
             <div className="space-y-0.5 max-w-[366px] lg:max-w-none">
-              <h4 className="font-sans font-semibold text-sm sm:text-[16px] leading-[26px] text-[#2E5A66]">
+              <h4 className="font-sans font-semibold text-sm sm:text-[16px] leading-[26px] text-primary">
                 See our articles highlighted in Google Search
               </h4>
-              <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F] lg:whitespace-nowrap">
+              <p className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-body-text lg:whitespace-nowrap">
                 Add My ESA Therapist as a source - see results your way.
               </p>
             </div>
@@ -59,10 +59,10 @@ export function BlogGoogleSourceBanner() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-between pl-6 pr-1.5 w-[189px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <span>Add a Source</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform p-2">
+              <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform p-2">
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
                     fill="#4285F4"

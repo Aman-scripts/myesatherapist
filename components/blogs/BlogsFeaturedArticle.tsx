@@ -16,7 +16,7 @@ export function BlogsFeaturedArticle({
   ctaHref = "/blog/esa-guide/how-to-verify-an-esa-letter/",
 }: BlogsFeaturedArticleProps = {}) {
   return (
-    <section id={id} className={`w-full bg-[#FAF7F2] ${className || "py-8 sm:py-12 lg:py-16"}`}>
+    <section id={id} className={`w-full bg-background ${className || "py-8 sm:py-12 lg:py-16"}`}>
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Responsive Flex Container */}
         <div className="relative flex flex-col lg:flex-row items-center justify-center min-h-[380px] lg:min-h-[463px]">
@@ -39,11 +39,11 @@ export function BlogsFeaturedArticle({
             
             {/* Title & Description */}
             <div className="space-y-3 sm:space-y-4">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em]">
                 7 Things to Know Before Getting an ESA Letter
               </h2>
 
-              <p className="font-sans font-semibold text-[15px] sm:text-[18px] text-[#5F6B6F] leading-[24px] sm:leading-[30px] max-w-[541px]">
+              <p className="font-sans font-semibold text-[15px] sm:text-[18px] text-body-text leading-[24px] sm:leading-[30px] max-w-[541px]">
                 Thinking about getting an ESA letter? Here are important things to understand before beginning the process.
               </p>
             </div>
@@ -53,10 +53,10 @@ export function BlogsFeaturedArticle({
               <Link
                 href={ctaHref}
                 className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
-                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ background: "var(--color-gradient)" }}
               >
                 <span>Get Started</span>
-                <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
             quality={90}
                     src="/common/send-icon.svg"

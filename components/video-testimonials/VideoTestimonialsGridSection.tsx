@@ -275,15 +275,15 @@ export function VideoTestimonialsGridSection() {
   const [activeVideo, setActiveVideo] = useState<VideoReviewItem | null>(null);
 
   return (
-    <section className="relative w-full bg-[#FAF7F2] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 lg:pb-32">
+    <section className="relative w-full bg-background pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 lg:pb-32">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-[820px] mx-auto mb-10 sm:mb-14">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] leading-tight sm:leading-[54px] text-[#2E5A66] tracking-[-0.00015em] mb-3 sm:mb-4">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] leading-tight sm:leading-[54px] text-primary tracking-[-0.00015em] mb-3 sm:mb-4">
             Client Video Testimonials
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] leading-relaxed sm:leading-[30px] text-[#5F6B6F]">
+          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] leading-relaxed sm:leading-[30px] text-body-text">
             Watch our clients share their personal experiences and success stories
           </p>
         </div>
@@ -334,7 +334,7 @@ export function VideoTestimonialsGridSection() {
               <div className="flex-1 w-full p-6 sm:py-9 sm:pr-7 sm:pl-[18px] flex flex-col justify-between h-full min-h-[290px] sm:min-h-[350px]">
                 {/* Name & Stars */}
                 <div className="space-y-2">
-                  <h3 className="font-sans font-bold text-2xl sm:text-[28px] leading-[36px] text-[#2E5A66] tracking-tight">
+                  <h3 className="font-sans font-bold text-2xl sm:text-[28px] leading-[36px] text-primary tracking-tight">
                     {review.name}
                   </h3>
 
@@ -343,7 +343,7 @@ export function VideoTestimonialsGridSection() {
                     {[...Array(review.rating)].map((_, i) => (
                       <svg
                         key={i}
-                        className="w-5 sm:w-6 h-5 sm:h-6 text-[#E8B92C] fill-current"
+                        className="w-5 sm:w-6 h-5 sm:h-6 text-accent fill-current"
                         viewBox="0 0 24 24"
                       >
                         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -353,13 +353,13 @@ export function VideoTestimonialsGridSection() {
                 </div>
 
                 {/* Review Quote */}
-                <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[25px] sm:leading-[26px] text-[#5F6B6F] my-4">
+                <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[25px] sm:leading-[26px] text-body-text my-4">
                   {review.quote}
                 </p>
 
                 {/* Date */}
                 <div className="text-right pt-2 border-t border-slate-100 sm:border-0">
-                  <span className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-[#5F6B6F]">
+                  <span className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-body-text">
                     {review.date}
                   </span>
                 </div>

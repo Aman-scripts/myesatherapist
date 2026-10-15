@@ -53,7 +53,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         parts.push(
           <strong
             key={`${matchIndex}-bold`}
-            className="font-bold text-[#2E5A66]"
+            className="font-bold text-primary"
           >
             {boldText}
           </strong>
@@ -71,9 +71,9 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
   };
 
   const renderQuoteBox = (quoteBox: BlogQuoteBox) => (
-    <div className="w-full bg-[#E8B92C]/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
-      <div className="w-[14px] sm:w-[17px] self-stretch bg-[#E8B92C] rounded-l-[10px] shrink-0 min-h-[69px]" />
-      <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] py-3 sm:py-3.5">
+    <div className="w-full bg-accent/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
+      <div className="w-[14px] sm:w-[17px] self-stretch bg-accent rounded-l-[10px] shrink-0 min-h-[69px]" />
+      <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text py-3 sm:py-3.5">
         {quoteBox.quote} {quoteBox.author && <>– {renderFormattedText(quoteBox.author)}</>}
       </p>
     </div>
@@ -81,7 +81,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
   const renderCalloutBox = (callout: BlogCalloutBox) => (
     <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
-      <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-[#2E5A66] font-medium">
+      <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-primary font-medium">
         {callout.prefix && <>{renderFormattedText(callout.prefix)} </>}
         {callout.linkText && callout.linkHref ? (
           <Link
@@ -98,7 +98,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
   );
 
   return (
-    <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-[#5F6B6F] font-manrope">
+    <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-body-text font-manrope">
       
       {/* 1. Question Callout Card (From top of doc) */}
       {article.questionCallout && (
@@ -106,10 +106,10 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           id={article.questionCallout.id}
           className="w-full bg-[#EDEFEA] border border-[#1D6E72]/25 border-l-[6px] border-l-[#1D6E72] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3"
         >
-          <h2 className="heading-h4 text-[#2E5A66]">
+          <h2 className="heading-h4">
             {article.questionCallout.question}
           </h2>
-          <p className="body-text text-[#5F6B6F]">
+          <p className="body-text">
             {article.questionCallout.answer}
           </p>
         </div>
@@ -120,7 +120,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         {article.introParagraphs.map((para, idx) => (
           <p
             key={idx}
-            className="body-text text-[#5F6B6F]"
+            className="body-text"
           >
             {renderFormattedText(para)}
           </p>
@@ -140,7 +140,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           />
           {article.introImage.caption && (
             <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
-              <p className="body-small italic text-[#5F6B6F]">
+              <p className="body-small italic text-body-text">
                 {article.introImage.caption}
               </p>
             </div>
@@ -157,7 +157,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {sec.id.includes("doesnt") && (
             <div id={sec.id.replace("doesnt", "doesn't")} className="scroll-mt-28" />
           )}
-          <h2 className="heading-h3 text-[#2E5A66]">
+          <h2 className="heading-h3">
             {sec.title}
           </h2>
 
@@ -170,22 +170,22 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   <div
                     key={card.value}
                     className={`flex flex-col justify-center items-center sm:items-start gap-2.5 rounded-[20px] px-4 py-4 min-h-[168px] text-center sm:text-left ${
-                      v === "white" ? "bg-white" : v === "gold" ? "bg-[#E8B92C]/20" : ""
+                      v === "white" ? "bg-white" : v === "gold" ? "bg-accent/20" : ""
                     }`}
-                    style={v === "teal" ? { backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" } : undefined}
+                    style={v === "teal" ? { backgroundImage: "var(--color-gradient)" } : undefined}
                   >
                     <div
                       className={`font-heading font-bold text-[32px] sm:text-[36px] leading-[44px] tracking-[-0.00015em] ${
-                        v === "teal" ? "text-[#FAF7F2]" : "text-[#5F6B6F]"
+                        v === "teal" ? "text-background" : "text-body-text"
                       }`}
                     >
                       {card.value}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className={`body-text ${v === "teal" ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+                      <p className={`body-text ${v === "teal" ? "text-background" : "text-primary"}`}>
                         {card.label}
                       </p>
-                      <p className={`body-small ${v === "teal" ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
+                      <p className={`body-small ${v === "teal" ? "text-background" : "text-body-text"}`}>
                         {card.description}
                       </p>
                     </div>
@@ -201,7 +201,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.paragraphs.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="body-text text-[#5F6B6F]"
+                  className="body-text"
                 >
                   {renderFormattedText(p)}
                 </p>
@@ -232,7 +232,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   return (
                     <li
                       key={liIdx}
-                      className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-[#5F6B6F]"
+                      className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-body-text"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                       <span>{renderFormattedText(cleanText)}</span>
@@ -244,7 +244,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   return (
                     <li
                       key={liIdx}
-                      className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-[#5F6B6F]"
+                      className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-body-text"
                     >
                       <span className="font-bold text-[#1D6E72] shrink-0 min-w-[18px]">
                         {numberedMatch[1]}.
@@ -256,7 +256,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 return (
                   <li
                     key={liIdx}
-                    className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-[#5F6B6F]"
+                    className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-body-text"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                     <span>{renderFormattedText(item)}</span>
@@ -272,7 +272,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.afterListParagraphs.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-body-text"
                 >
                   {renderFormattedText(p)}
                 </p>
@@ -293,7 +293,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               />
               {sec.bannerImage.caption && (
                 <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
-                  <p className="text-sm italic text-[#5F6B6F] font-medium">
+                  <p className="text-sm italic text-body-text font-medium">
                     {sec.bannerImage.caption}
                   </p>
                 </div>
@@ -331,10 +331,10 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {/* Sample Letter Display Box (Article 4) */}
           {sec.sampleLetter && (
             <div className="w-full my-8 rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
-              <div className="bg-[#FAF7F2] border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-[#5F6B6F] italic">
+              <div className="bg-background border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-body-text italic">
                 {sec.sampleLetter.disclaimer}
               </div>
-              <div className="p-6 sm:p-10 font-sans text-sm sm:text-base leading-relaxed text-[#2E5A66] space-y-5">
+              <div className="p-6 sm:p-10 font-sans text-sm sm:text-base leading-relaxed text-primary space-y-5">
                 <div className="border-b border-[#EAE5DC] pb-4 font-bold text-base sm:text-lg text-[#1D6E72] tracking-wide">
                   {sec.sampleLetter.letterhead}
                 </div>
@@ -354,7 +354,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 <div className="pt-4 border-t border-[#EAE5DC] space-y-1">
                   <p className="font-semibold text-slate-800">{sec.sampleLetter.closing}</p>
                   {sec.sampleLetter.signoff.map((s, sIdx) => (
-                    <p key={sIdx} className="text-xs sm:text-sm text-[#5F6B6F] font-medium">
+                    <p key={sIdx} className="text-xs sm:text-sm text-body-text font-medium">
                       {s}
                     </p>
                   ))}
@@ -366,7 +366,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {/* Checklist Box (Article 5 HUD Guidance) */}
           {sec.checklist && (
             <div className="w-full my-8 rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
-              <div className="bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] px-6 sm:px-8 py-5 text-white">
+              <div className="color-gradient px-6 sm:px-8 py-5 text-white">
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
                   {sec.checklist.title}
                 </h3>
@@ -378,10 +378,10 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       ✓
                     </span>
                     <div className="space-y-0.5">
-                      <h4 className="font-sans font-bold text-sm sm:text-base text-[#2E5A66]">
+                      <h4 className="font-sans font-bold text-sm sm:text-base text-primary">
                         {item.title}
                       </h4>
-                      <p className="text-xs sm:text-sm text-[#5F6B6F] font-medium leading-relaxed">
+                      <p className="text-xs sm:text-sm text-body-text font-medium leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -436,8 +436,8 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 </table>
               </div>
               {sec.comparisonTable.keyTakeaway && (
-                <div className="p-4 sm:p-5 rounded-[16px] bg-[#FAF7F2] border border-[#DECDBB] text-sm sm:text-base font-medium text-[#5F6B6F] leading-relaxed">
-                  <strong className="text-[#2E5A66]">Key takeaway: </strong>
+                <div className="p-4 sm:p-5 rounded-[16px] bg-background border border-[#DECDBB] text-sm sm:text-base font-medium text-body-text leading-relaxed">
+                  <strong className="text-primary">Key takeaway: </strong>
                   {sec.comparisonTable.keyTakeaway}
                 </div>
               )}
@@ -450,7 +450,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.subsections.map((sub, sIdx) => (
                 <div key={sIdx} className="space-y-2">
                   {sub.image && sub.imagePosition === "top" && sub.title && sub.title.trim() ? (
-                    <h3 className="flex items-center gap-2 font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                    <h3 className="flex items-center gap-2 font-heading text-lg sm:text-[20px] font-bold text-primary leading-[28px]">
                       <Image
             quality={90}
                         src={sub.image.src}
@@ -462,7 +462,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {sub.title}
                     </h3>
                   ) : sub.title && sub.title.trim() ? (
-                    <h3 className="font-heading text-lg sm:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                    <h3 className="font-heading text-lg sm:text-[20px] font-bold text-primary leading-[28px]">
                       {sub.title}
                     </h3>
                   ) : null}
@@ -471,7 +471,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {sub.paragraphs.map((subP, spIdx) => (
                         <p
                           key={spIdx}
-                          className="text-sm sm:text-base leading-[26px] font-medium text-[#5F6B6F]"
+                          className="text-sm sm:text-base leading-[26px] font-medium text-body-text"
                         >
                           {renderFormattedText(subP)}
                         </p>
@@ -497,7 +497,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                           return (
                             <li
                               key={mIdx}
-                              className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] font-medium text-[#5F6B6F]"
+                              className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] font-medium text-body-text"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                               <span>{renderFormattedText(cleanText)}</span>
@@ -509,7 +509,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                           return (
                             <li
                               key={mIdx}
-                              className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-[#5F6B6F]"
+                              className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-body-text"
                             >
                               <span className="font-bold text-[#1D6E72] shrink-0 min-w-[18px]">
                                 {numberedMatch[1]}.
@@ -521,7 +521,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                         return (
                           <li
                             key={mIdx}
-                            className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-[#5F6B6F]"
+                            className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-body-text"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                             <span>{renderFormattedText(item)}</span>
@@ -535,7 +535,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {sub.afterListParagraphs.map((subP, spIdx) => (
                         <p
                           key={spIdx}
-                          className="text-sm sm:text-base leading-[26px] font-medium text-[#5F6B6F]"
+                          className="text-sm sm:text-base leading-[26px] font-medium text-body-text"
                         >
                           {renderFormattedText(subP)}
                         </p>
@@ -566,7 +566,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.afterSubsectionsParagraphs.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-body-text"
                 >
                   {renderFormattedText(p)}
                 </p>
@@ -581,7 +581,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {sec.ctaBox && (
             <div
               className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-12 text-left"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               {/* Subtle Paw Prints in Bottom Right matching Figma */}
               <div className="absolute right-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[380px] h-[190px] sm:h-[230px] lg:h-[260px] pointer-events-none select-none z-0 opacity-25">
@@ -596,16 +596,16 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               </div>
 
               <div className="relative z-10 flex flex-col items-start space-y-4 sm:space-y-5 max-w-[580px]">
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] xl:text-[36px] font-bold text-[#FAF7F2] leading-[1.25] tracking-tight">
+                <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] xl:text-[36px] font-bold text-background leading-[1.25] tracking-tight">
                   {sec.ctaBox.heading}
                 </h3>
-                <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-[#FAF7F2]/90 max-w-[540px]">
+                <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-background/90 max-w-[540px]">
                   {sec.ctaBox.description}
                 </p>
                 <div className="pt-2 sm:pt-3">
                   <Link
                     href={sec.ctaBox.buttonHref}
-                    className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-[12px] sm:rounded-[14px] bg-[#E8B92C] hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
+                    className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-[12px] sm:rounded-[14px] bg-accent hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
                   >
                     <span className="font-sans font-bold text-sm sm:text-base text-[#1A3D4F] group-hover:scale-[1.02] transition-transform">
                       {sec.ctaBox.buttonText}
@@ -629,7 +629,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               />
               {sec.bannerImage.caption && (
                 <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
-                  <p className="text-sm italic text-[#5F6B6F] font-medium">
+                  <p className="text-sm italic text-body-text font-medium">
                     {sec.bannerImage.caption}
                   </p>
                 </div>
@@ -647,7 +647,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         <div
           id={article.cta.id || "request-housing-accommodation"}
           className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left scroll-mt-28"
-          style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          style={{ background: "var(--color-gradient)" }}
         >
           {/* Subtle Paw Prints in Bottom Right */}
           <div className="absolute right-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[380px] h-[190px] sm:h-[230px] lg:h-[260px] pointer-events-none select-none z-0 opacity-25">
@@ -663,16 +663,16 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
           {/* Left Text & Action */}
           <div className="relative z-10 flex flex-col items-start space-y-4 sm:space-y-5 max-w-[560px]">
-            <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#FAF7F2] leading-[1.25] sm:leading-[1.28] tracking-tight">
+            <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-background leading-[1.25] sm:leading-[1.28] tracking-tight">
               {article.cta.heading}
             </h3>
-            <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-[#FAF7F2]/90 max-w-[540px]">
+            <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-background/90 max-w-[540px]">
               {article.cta.description}
             </p>
             <div className="pt-2 sm:pt-3">
               <Link
                 href={article.cta.buttonHref}
-                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-[12px] bg-[#E8B92C] hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-[12px] bg-accent hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
               >
                 <span className="font-sans font-bold text-sm sm:text-base text-[#1A3D4F] group-hover:scale-[1.02] transition-transform">
                   {article.cta.buttonText}
@@ -689,14 +689,14 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           id={article.finalThoughts.id || "final-thoughts"}
           className="space-y-4 scroll-mt-28"
         >
-          <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-primary leading-[36px] tracking-tight">
             {article.finalThoughts.title}
           </h2>
           <div className="space-y-3">
             {article.finalThoughts.paragraphs.map((p, idx) => (
               <p
                 key={idx}
-                className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-[#5F6B6F]"
+                className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-body-text"
               >
                 {renderFormattedText(p)}
               </p>

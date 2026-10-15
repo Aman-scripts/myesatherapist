@@ -26,21 +26,21 @@ export function BlogAuthorBio({
       <div className="max-w-[1117px] mx-auto space-y-4 sm:space-y-6">
         
         {/* Section Heading: Frame 1261153657 */}
-        <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-[36px] tracking-[-0.00015em] text-center sm:text-left">
+        <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-primary leading-[36px] tracking-[-0.00015em] text-center sm:text-left">
           About the Author
         </h2>
 
         {/* Author Card: Frame 1261153657 */}
         <div
-          className="rounded-[30px] p-6 sm:p-8 lg:py-[32px] lg:px-[70px] text-[#FAF7F2] shadow-sm"
-          style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          className="rounded-[30px] p-6 sm:p-8 lg:py-[32px] lg:px-[70px] text-background shadow-sm"
+          style={{ background: "var(--color-gradient)" }}
         >
           {/* Frame 1261153665 */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 lg:gap-[64px]">
             
             {/* Left Column: Frame 1261153664 */}
             <div className="flex flex-col items-center shrink-0 gap-2 w-[129px]">
-              <div className="w-[110px] h-[110px] sm:w-[129px] sm:h-[129px] rounded-full overflow-hidden border-[4px] border-[#E8B92C] relative shadow-sm shrink-0">
+              <div className="w-[110px] h-[110px] sm:w-[129px] sm:h-[129px] rounded-full overflow-hidden border-[4px] border-accent relative shadow-sm shrink-0">
                 <Image
             quality={90}
                   src={image}
@@ -54,7 +54,7 @@ export function BlogAuthorBio({
               {/* Frame 1261153663: See Full Bio & LinkedIn */}
               <div className="flex items-center gap-2">
                 {bioHref && (
-                  <a href={bioHref} className="font-sans font-normal text-[12px] leading-[22px] text-[#E8B92C] underline hover:opacity-80 transition-opacity cursor-pointer whitespace-nowrap">
+                  <a href={bioHref} className="font-sans font-normal text-[12px] leading-[22px] text-accent underline hover:opacity-80 transition-opacity cursor-pointer whitespace-nowrap">
                     See Full Bio
                   </a>
                 )}
@@ -78,16 +78,16 @@ export function BlogAuthorBio({
             <div className="flex-1 max-w-[741px] text-center sm:text-left space-y-4">
               {/* Frame 1261153660 */}
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-[17px]">
-                <h3 className="font-heading font-bold text-[20px] leading-[28px] text-[#FAF7F2]">
+                <h3 className="font-heading font-bold text-[20px] leading-[28px] text-background">
                   {name}
                 </h3>
-                <span className="font-sans font-semibold text-sm sm:text-[16px] leading-[26px] text-[#FAF7F2]">
+                <span className="font-sans font-semibold text-sm sm:text-[16px] leading-[26px] text-background">
                   {title}
                 </span>
               </div>
 
               {/* Frame 1261153662: Bio text */}
-              <p className="font-sans font-normal text-[14px] leading-[22px] text-[#FAF7F2]">
+              <p className="font-sans font-normal text-[14px] leading-[22px] text-background">
                 {bio}
               </p>
             </div>

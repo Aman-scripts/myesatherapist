@@ -33,7 +33,7 @@ export function ConsumerAffairsReviewsSection() {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-10 lg:mb-12">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] font-bold text-[#2E5A66] tracking-[-0.00015em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] font-bold text-primary tracking-[-0.00015em]">
             Consumer Affairs Reviews
           </h2>
         </div>
@@ -43,7 +43,7 @@ export function ConsumerAffairsReviewsSection() {
           {/* Left accent strip (Rectangle 25: 17px wide) */}
           <div
             className="w-[14px] sm:w-[17px] h-full self-stretch shrink-0 rounded-l-[15px]"
-            style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+            style={{ backgroundImage: "var(--color-gradient)" }}
           />
 
           {/* Inner Content (Frame 1261153667) */}
@@ -54,7 +54,7 @@ export function ConsumerAffairsReviewsSection() {
                 <ConsumerAffairsMark className="w-6 h-6 shrink-0" />
                 <StarRating rating={4} />
               </div>
-              <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-[#2E5A66] whitespace-nowrap">
+              <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-primary whitespace-nowrap">
                 Consumer Affairs · Verified reviews
               </span>
             </div>
@@ -65,7 +65,7 @@ export function ConsumerAffairsReviewsSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-7 h-[44px] sm:h-[48px] rounded-[30px] text-white font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap shrink-0"
-              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ backgroundImage: "var(--color-gradient)" }}
             >
               View Source
             </a>
@@ -104,7 +104,7 @@ function ReviewCard({
       <div className="relative w-full">
         <div
           className="w-full rounded-[20px] p-6 flex flex-col gap-3 min-h-[222px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-200 hover:shadow-lg"
-          style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          style={{ backgroundImage: "var(--color-gradient)" }}
         >
           {/* Top row: Google / source logo + 5 Stars */}
           <div className="flex items-center gap-3 h-[24px]">
@@ -113,7 +113,7 @@ function ReviewCard({
           </div>
 
           {/* Quote Text */}
-          <p className="font-sans font-semibold text-[15px] sm:text-[16px] text-[#FAF7F2] leading-[26px]">
+          <p className="font-sans font-semibold text-[15px] sm:text-[16px] text-background leading-[26px]">
             {review.quote}
           </p>
         </div>

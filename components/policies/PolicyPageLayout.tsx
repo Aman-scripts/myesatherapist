@@ -11,7 +11,7 @@ interface PolicyPageLayoutProps {
 
 export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
   return (
-    <div className="w-full bg-[#FAF7F2] min-h-screen text-slate-900 selection:bg-[#E8B92C]/30 selection:text-[#1E3E47]">
+    <div className="w-full bg-background min-h-screen text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
       {/* 1. Hero Section */}
       <PolicyHero policy={policy} />
 
@@ -30,7 +30,7 @@ export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
 
       {/* 3. Official Project Pre-Footer CTA Banner */}
       <CtaBanner
-        bgColor="bg-[#FAF7F2]"
+        bgColor="bg-background"
         title="Ready to Start Your ESA Evaluation?"
         description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
         buttonText="Start your Evaluation"

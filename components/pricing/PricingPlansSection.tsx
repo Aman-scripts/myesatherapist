@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { PricingSection } from "@/components/home/PricingSection";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function PricingPlansSection() {
   return (
@@ -12,7 +12,7 @@ export function PricingPlansSection() {
       {/* Shared three-card Plans & Pricing section (same as the home page) */}
       <PricingSection ctaHref="#evaluation" />
 
-      <section className="pb-16 sm:pb-20 lg:pb-24 bg-[#FAF7F2] relative z-10 overflow-visible">
+      <section className="pb-16 sm:pb-20 lg:pb-24 bg-background relative z-10 overflow-visible">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* ==================================================== */}
         {/* ADD-ON BANNER: More Than One Pet? (Frame 1000012004) */}
@@ -39,10 +39,10 @@ export function PricingPlansSection() {
 
             {/* Text description */}
             <div className="flex flex-col justify-center">
-              <h4 className="text-[16px] font-semibold text-[#2E5A66] font-sans leading-[26px]">
+              <h4 className="text-[16px] font-semibold text-primary font-sans leading-[26px]">
                 More Than One Pet?
               </h4>
-              <p className="text-[13px] sm:text-[14px] text-[#5F6B6F] font-semibold leading-[20px] sm:leading-[26px] font-sans max-w-[658px]">
+              <p className="text-[13px] sm:text-[14px] text-body-text font-semibold leading-[20px] sm:leading-[26px] font-sans max-w-[658px]">
                 Each additional animal requires its own clinical evaluation and documentation. Select this add-on at checkout to cover a second or additional pet.
               </p>
             </div>
@@ -56,7 +56,7 @@ export function PricingPlansSection() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Add a Pet</span>
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90}
                   src="/pricing/pricing_section_morethanonepet_tag.webp"

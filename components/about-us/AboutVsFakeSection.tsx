@@ -24,14 +24,14 @@ const fakePoints = [
 
 export function AboutVsFakeSection() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[920px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
             My ESA Therapist vs Fake ESA Sites
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] text-[#5F6B6F] leading-relaxed max-w-[760px] mx-auto">
+          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] text-body-text leading-relaxed max-w-[760px] mx-auto">
             See how legitimate, licensed evaluations differ from automated approval mills.
           </p>
         </div>
@@ -54,7 +54,7 @@ export function AboutVsFakeSection() {
 
             {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-[#2E5A66] text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
+              <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-primary text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
                 My ESA Therapist
               </h3>
 
@@ -63,11 +63,11 @@ export function AboutVsFakeSection() {
                   <div key={idx} className="flex items-center gap-3 sm:gap-3.5 xl:gap-4">
                     <div
                       className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full text-white flex items-center justify-center shrink-0 shadow-xs"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      style={{ background: "var(--color-gradient)" }}
                     >
                       <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
                     </div>
-                    <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] xl:text-[17px] text-[#2E5A66] leading-snug">
+                    <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] xl:text-[17px] text-primary leading-snug">
                       {point}
                     </span>
                   </div>

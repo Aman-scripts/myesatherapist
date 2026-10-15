@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export interface BlogFaqItem {
   q: string;
@@ -74,11 +74,11 @@ export function BlogFaqSection({
 
       {/* Frame 1000011447: Section Header */}
       <div className="w-full max-w-[945px] flex flex-col items-start gap-2 mb-8 sm:mb-10">
-        <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em] sm:whitespace-nowrap">
+        <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em] sm:whitespace-nowrap">
           Frequently Asked Questions
         </h2>
         {subtitle && (
-          <p className="font-sans font-semibold text-[15px] sm:text-[18px] leading-[26px] sm:leading-[30px] text-[#5F6B6F] max-w-[588px]">
+          <p className="font-sans font-semibold text-[15px] sm:text-[18px] leading-[26px] sm:leading-[30px] text-body-text max-w-[588px]">
             {subtitle}
           </p>
         )}
@@ -118,8 +118,8 @@ export function BlogFaqSection({
                     className="w-full min-h-[64px] sm:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative cursor-pointer"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    {/* Gold Number Badge: Frame 1000011949 (#E8B92C) */}
-                    <div className="w-[64px] sm:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-xl sm:text-[28px] text-[#2E5A66] leading-none rounded-l-[20px] self-stretch">
+                    {/* Gold Number Badge: Frame 1000011949 (accent) */}
+                    <div className="w-[64px] sm:w-[78px] shrink-0 bg-accent flex items-center justify-center font-sans font-extrabold text-xl sm:text-[28px] text-primary leading-none rounded-l-[20px] self-stretch">
                       {numStr}
                     </div>
 
@@ -145,7 +145,7 @@ export function BlogFaqSection({
                         >
                           <path
                             d="M9 3V15M3 9H15"
-                            stroke="#FAF7F2"
+                            stroke="var(--color-background)"
                             strokeWidth="2.2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -157,7 +157,7 @@ export function BlogFaqSection({
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-5 sm:px-6 py-4 sm:py-5 body-large text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                    <div className="bg-background px-5 sm:px-6 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                       {faq.a}
                     </div>
                   )}

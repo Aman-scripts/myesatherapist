@@ -15,15 +15,15 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
   const displayPosts = otherPosts.length > 0 ? otherPosts : BLOG_POSTS;
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 lg:py-24">
+    <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
         <div className="text-center space-y-2 max-w-[640px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em]">
             More ESA Resources
           </h2>
-          <p className="font-sans text-sm sm:text-base lg:text-[18px] font-semibold text-[#5F6B6F] leading-[30px]">
+          <p className="font-sans text-sm sm:text-base lg:text-[18px] font-semibold text-body-text leading-[30px]">
             Get answers to common questions about ESA letters and our service.
           </p>
         </div>
@@ -38,7 +38,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
               {/* Card Image */}
               <Link
                 href={item.url}
-                className="relative w-full aspect-[3/2] overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
+                className="relative w-full aspect-[3/2] overflow-hidden bg-background shrink-0 block cursor-pointer"
               >
                 <Image
             quality={90}
@@ -54,7 +54,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
                 <div className="space-y-3.5">
                   <Link href={item.url} className="block">
-                    <h3 className="font-heading text-lg sm:text-[22px] font-bold text-[#2E5A66] leading-[1.3] group-hover:text-[#1D6E72] transition-colors line-clamp-3">
+                    <h3 className="font-heading text-lg sm:text-[22px] font-bold text-primary leading-[1.3] group-hover:text-[#1D6E72] transition-colors line-clamp-3">
                       {item.title}
                     </h3>
                   </Link>
@@ -71,10 +71,10 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
                   <Link
                     href={item.url}
                     className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
-                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ background: "var(--color-gradient)" }}
                   >
                     <span>Read Article</span>
-                    <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
+                    <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                       <Image
             quality={90}
                         src="/common/send-icon.svg"

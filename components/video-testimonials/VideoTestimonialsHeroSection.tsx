@@ -12,7 +12,7 @@ import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const POPULAR_STATES = STATE_INDEX;
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 const TABLET_STATS = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -101,7 +101,7 @@ export function VideoTestimonialsHeroSection() {
   };
 
   return (
-    <section className="relative z-20 w-full bg-[#FAF7F2] overflow-visible">
+    <section className="relative z-20 w-full bg-background overflow-visible">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< 640px)                     */}
       {/* Matches user's mobile screenshot exactly             */}
@@ -120,12 +120,12 @@ export function VideoTestimonialsHeroSection() {
         {/* Content Container (Mobile Centered matching screenshot) */}
         <div className="absolute inset-x-0 top-0 pt-8 px-4 flex flex-col items-center text-center z-10">
           {/* Heading */}
-          <h1 className="font-heading text-[32px] leading-[38px] font-bold text-[#2E5A66] tracking-[-0.00015em] mb-2.5 max-w-[340px]">
+          <h1 className="font-heading text-[32px] leading-[38px] font-bold text-primary tracking-[-0.00015em] mb-2.5 max-w-[340px]">
             Real Impact, Real<br />Stories
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans font-semibold text-[13px] leading-[21px] text-[#5F6B6F] mb-6 max-w-[325px]">
+          <p className="font-sans font-semibold text-[13px] leading-[21px] text-body-text mb-6 max-w-[325px]">
             Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
           </p>
 
@@ -162,7 +162,7 @@ export function VideoTestimonialsHeroSection() {
             {TABLET_STATS.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex-1 max-w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-3 border border-[#EAE5DC]/60"
+                className="flex-1 max-w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-3 border border-[#EAE5DC]/60"
               >
                 <span
                   className="font-heading font-bold text-[22px] sm:text-[24px] leading-[28px] sm:leading-[32px] bg-clip-text text-transparent"
@@ -178,12 +178,12 @@ export function VideoTestimonialsHeroSection() {
           </div>
 
           {/* Row 2: Heading (Real Impact, Real Stories) */}
-          <h1 className="font-heading font-bold text-[40px] sm:text-[46px] leading-[48px] sm:leading-[54px] text-[#2E5A66] tracking-[-0.00015em] mb-3 max-w-[480px]">
+          <h1 className="font-heading font-bold text-[40px] sm:text-[46px] leading-[48px] sm:leading-[54px] text-primary tracking-[-0.00015em] mb-3 max-w-[480px]">
             Real Impact, Real<br />Stories
           </h1>
 
           {/* Row 3: Subtitle */}
-          <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] mb-6 max-w-[500px]">
+          <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-body-text mb-6 max-w-[500px]">
             Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
           </p>
 
@@ -194,7 +194,7 @@ export function VideoTestimonialsHeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpenTablet(!isDropdownOpenTablet)}
-                className="h-[48px] px-5 sm:px-6 rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] flex items-center justify-between gap-2.5 cursor-pointer hover:bg-white transition-colors"
+                className="h-[48px] px-5 sm:px-6 rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] flex items-center justify-between gap-2.5 cursor-pointer hover:bg-white transition-colors"
               >
                 <div className="flex items-center gap-2">
                   <Image
@@ -213,7 +213,7 @@ export function VideoTestimonialsHeroSection() {
                     {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
                   </span>
                 </div>
-                <ChevronDown className={`w-4 h-4 text-[#2E5A66] shrink-0 transition-transform ${isDropdownOpenTablet ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpenTablet ? "rotate-180" : ""}`} />
               </button>
 
               {isDropdownOpenTablet && (
@@ -247,7 +247,7 @@ export function VideoTestimonialsHeroSection() {
               <span className="font-sans font-semibold text-[15px] sm:text-[16px] text-white mr-3.5">
                 Get Started
               </span>
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={16} height={18} className="w-4 h-[18px]" />
               </span>
@@ -277,8 +277,8 @@ export function VideoTestimonialsHeroSection() {
           {/* Stat Pills Row (Frame 1000011901) */}
           <div className="flex items-center gap-3 w-full max-w-[513px]">
             {/* Pill 1: 50 USA States */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span className="font-heading font-bold text-[24px] leading-[30px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+              <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
                 50
               </span>
               <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
@@ -287,8 +287,8 @@ export function VideoTestimonialsHeroSection() {
             </div>
 
             {/* Pill 2: HIPAA Compliant */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span className="font-heading font-bold text-[24px] leading-[30px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+              <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
                 HIPAA
               </span>
               <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
@@ -297,8 +297,8 @@ export function VideoTestimonialsHeroSection() {
             </div>
 
             {/* Pill 3: 100% Licensed Pros */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span className="font-heading font-bold text-[24px] leading-[30px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+              <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
                 100%
               </span>
               <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
@@ -308,12 +308,12 @@ export function VideoTestimonialsHeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-heading text-[44px] xl:text-[56px] leading-[50px] xl:leading-[64px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[624px]">
+          <h1 className="font-heading text-[44px] xl:text-[56px] leading-[50px] xl:leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[624px]">
             Real Stories, Real Impact
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[579px]">
+          <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[579px]">
             Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
           </p>
 

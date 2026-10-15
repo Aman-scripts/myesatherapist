@@ -12,7 +12,7 @@ import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionBut
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -83,7 +83,7 @@ export function PricingHero() {
   };
 
   return (
-    <section className="relative z-30 w-full bg-[#FAF7F2] overflow-visible">
+    <section className="relative z-30 w-full bg-background overflow-visible">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PRICING HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
@@ -102,7 +102,7 @@ export function PricingHero() {
         <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
           {/* Stat Pills at top (Mobile) */}
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3">
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-xs">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-1 px-1.5 rounded-[24px] text-center shadow-xs">
               <span className="font-heading font-bold text-xs leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 64,739+
               </span>
@@ -110,7 +110,7 @@ export function PricingHero() {
                 ESA Evaluations
               </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-xs">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-1 px-1.5 rounded-[24px] text-center shadow-xs">
               <span className="font-heading font-bold text-xs leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 5+
               </span>
@@ -118,7 +118,7 @@ export function PricingHero() {
                 Years Serving
               </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-xs">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-1 px-1.5 rounded-[24px] text-center shadow-xs">
               <span className="font-heading font-bold text-xs leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 4.9
               </span>
@@ -129,12 +129,12 @@ export function PricingHero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-heading text-[26px] leading-[32px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[320px]">
+          <h1 className="font-heading text-[26px] leading-[32px] font-bold text-primary tracking-[-0.0002em] max-w-[320px]">
             Choose the Right ESA Package for You
           </h1>
 
           {/* Subtitle */}
-          <p className="text-[12px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[300px] mx-auto mt-2 font-sans">
+          <p className="text-[12px] leading-relaxed text-body-text font-semibold max-w-[300px] mx-auto mt-2 font-sans">
             No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed.
           </p>
 
@@ -167,7 +167,7 @@ export function PricingHero() {
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
           {/* Stat Pills */}
           <div className="flex items-center justify-center gap-3 w-full max-w-md mx-auto mb-4">
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-3 rounded-[30px] shadow-xs">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-3 rounded-[30px] shadow-xs">
               <span className="font-heading font-bold text-base leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 64,739+
               </span>
@@ -175,7 +175,7 @@ export function PricingHero() {
                 ESA Evaluations
               </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-3 rounded-[30px] shadow-xs">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-3 rounded-[30px] shadow-xs">
               <span className="font-heading font-bold text-base leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 5+
               </span>
@@ -183,7 +183,7 @@ export function PricingHero() {
                 Years Serving
               </span>
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-3 rounded-[30px] shadow-xs">
+            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-3 rounded-[30px] shadow-xs">
               <span className="font-heading font-bold text-base leading-none bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 4.9
               </span>
@@ -193,11 +193,11 @@ export function PricingHero() {
             </div>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-[42px] leading-tight font-bold text-[#2E5A66] max-w-lg">
+          <h1 className="font-heading text-4xl sm:text-[42px] leading-tight font-bold text-primary max-w-lg">
             Choose the Right ESA Package for You
           </h1>
 
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-3 font-sans">
+          <p className="text-sm sm:text-base leading-relaxed text-body-text font-semibold max-w-md mx-auto mt-3 font-sans">
             No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.
           </p>
 
@@ -207,7 +207,7 @@ export function PricingHero() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -252,7 +252,7 @@ export function PricingHero() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
@@ -280,7 +280,7 @@ export function PricingHero() {
           {/* Stat Pills at top (Frame 1000011901) */}
           <div className="flex items-center gap-3 w-full max-w-[513px]">
             {/* Pill 1 */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
               <span className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 64,739+
               </span>
@@ -290,7 +290,7 @@ export function PricingHero() {
             </div>
 
             {/* Pill 2 */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
               <span className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 5+
               </span>
@@ -300,7 +300,7 @@ export function PricingHero() {
             </div>
 
             {/* Pill 3 */}
-            <div className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
+            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3">
               <span className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
                 4.9
               </span>
@@ -311,12 +311,12 @@ export function PricingHero() {
           </div>
 
           {/* Heading (Playfair Display 56px/64px) */}
-          <h1 className="font-heading text-[42px] xl:text-[56px] leading-[48px] xl:leading-[64px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[553px]">
+          <h1 className="font-heading text-[42px] xl:text-[56px] leading-[48px] xl:leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[553px]">
             Choose the Right ESA Package for You
           </h1>
 
-          {/* Description (Manrope 18px/30px #5F6B6F) */}
-          <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[553px]">
+          {/* Description (Manrope 18px/30px body-text) */}
+          <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[553px]">
             No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.
           </p>
 
@@ -327,7 +327,7 @@ export function PricingHero() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[15px] xl:text-[18px] hover:bg-white transition-colors h-[48px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-background font-semibold text-[15px] xl:text-[18px] hover:bg-white transition-colors h-[48px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -373,7 +373,7 @@ export function PricingHero() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
               </span>

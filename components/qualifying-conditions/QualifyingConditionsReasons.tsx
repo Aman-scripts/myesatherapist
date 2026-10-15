@@ -34,10 +34,10 @@ export function QualifyingConditionsReasons() {
         </div>
 
         <div className="flex w-full max-w-[626px] flex-col gap-5 text-center lg:max-w-[42vw] lg:gap-[1.9vw] lg:text-left xl:max-w-[626px] xl:gap-7">
-          <h2 className="mx-auto max-w-[541px] font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-[#2E5A66] sm:text-4xl sm:leading-[46px] lg:mx-0 lg:text-[3.05vw] lg:leading-[3.75vw] xl:text-[44px] xl:leading-[54px]">
+          <h2 className="mx-auto max-w-[541px] font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-primary sm:text-4xl sm:leading-[46px] lg:mx-0 lg:text-[3.05vw] lg:leading-[3.75vw] xl:text-[44px] xl:leading-[54px]">
             Common Reasons People Explore ESAs
           </h2>
-          <div className="flex flex-col gap-[22px] font-sans text-base font-semibold leading-[1.67] text-[#5F6B6F] sm:text-[18px] lg:gap-[2vw] lg:text-[1.25vw] xl:gap-[30px] xl:text-[18px] xl:leading-[30px]">
+          <div className="flex flex-col gap-[22px] font-sans text-base font-semibold leading-[1.67] text-body-text sm:text-[18px] lg:gap-[2vw] lg:text-[1.25vw] xl:gap-[30px] xl:text-[18px] xl:leading-[30px]">
             <p>
               People often explore emotional support animals to understand whether the companionship of an animal may
               provide meaningful emotional support during periods of stress, anxiety, loneliness, or other mental

@@ -57,23 +57,23 @@ export function BlogMetaBar({
             />
           </div>
           <div className="flex flex-col items-start min-w-0">
-            <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-[#2E5A66] leading-tight">
+            <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-primary leading-tight">
               {authorRole}
             </span>
             <Link
               href={authorHref}
-              className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
+              className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text color-gradient underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
             >
               {authorName}
             </Link>
-            <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-[#5F6B6F] leading-tight whitespace-nowrap mt-0.5">
+            <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-body-text leading-tight whitespace-nowrap mt-0.5">
               {authorCredentials}
             </span>
           </div>
         </div>
 
         {/* Desktop Divider 1 */}
-        <div className="hidden md:block w-[1px] h-[40px] lg:h-[48px] xl:h-[54px] bg-[#5F6B6F]/20 shrink-0 mx-1 md:mx-1.5 lg:mx-3" />
+        <div className="hidden md:block w-[1px] h-[40px] lg:h-[48px] xl:h-[54px] bg-body-text/20 shrink-0 mx-1 md:mx-1.5 lg:mx-3" />
 
         {/* 2. Published */}
         <div className="flex items-center gap-3.5 sm:gap-4 md:gap-2.5 lg:gap-3.5 flex-1 min-w-0 justify-start py-3 md:py-0">
@@ -89,20 +89,20 @@ export function BlogMetaBar({
             />
           </div>
           <div className="flex flex-col items-start min-w-0">
-            <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-[#2E5A66] leading-tight">
+            <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-primary leading-tight">
               Published
             </span>
-            <span className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] whitespace-nowrap mt-0.5">
+            <span className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text color-gradient whitespace-nowrap mt-0.5">
               {publishDate}
             </span>
-            <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-[#5F6B6F] leading-tight whitespace-nowrap mt-0.5">
+            <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-body-text leading-tight whitespace-nowrap mt-0.5">
               Last updated: {lastUpdated}
             </span>
           </div>
         </div>
 
         {/* Desktop Divider 2 */}
-        <div className="hidden md:block w-[1px] h-[40px] lg:h-[48px] xl:h-[54px] bg-[#5F6B6F]/20 shrink-0 mx-1 md:mx-1.5 lg:mx-3" />
+        <div className="hidden md:block w-[1px] h-[40px] lg:h-[48px] xl:h-[54px] bg-body-text/20 shrink-0 mx-1 md:mx-1.5 lg:mx-3" />
 
         {/* 3. Reviewer */}
         <div className="flex items-center gap-3.5 sm:gap-4 md:gap-2.5 lg:gap-3.5 flex-1 min-w-0 justify-start py-3 last:pb-0 md:py-0">
@@ -118,13 +118,13 @@ export function BlogMetaBar({
             />
           </div>
           <div className="flex flex-col items-start min-w-0">
-            <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-[#2E5A66] leading-tight">
+            <span className="font-sans font-semibold text-xs sm:text-sm md:text-[13px] lg:text-[15px] xl:text-[16px] text-primary leading-tight">
               {reviewerRole}
             </span>
             {reviewerHref ? (
               <Link
                 href={reviewerHref}
-                className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
+                className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text color-gradient underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
               >
                 {reviewerName}
               </Link>
@@ -133,16 +133,16 @@ export function BlogMetaBar({
                 href={reviewerLinkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
+                className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text color-gradient underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
               >
                 {reviewerName}
               </a>
             ) : (
-              <span className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] underline whitespace-nowrap mt-0.5">
+              <span className="font-sans font-bold text-xs sm:text-sm md:text-[13px] lg:text-[14px] xl:text-[15px] text-transparent bg-clip-text color-gradient underline whitespace-nowrap mt-0.5">
                 {reviewerName}
               </span>
             )}
-            <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-[#5F6B6F] leading-tight whitespace-nowrap mt-0.5">
+            <span className="font-sans font-medium text-[11px] sm:text-xs md:text-[10px] lg:text-[11px] xl:text-[12px] text-body-text leading-tight whitespace-nowrap mt-0.5">
               {reviewerCredentials}
             </span>
           </div>

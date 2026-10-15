@@ -22,7 +22,7 @@ export function AboutHeroSection() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
+    <section className="relative w-full bg-background overflow-hidden">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE VIEW (< 640px)                             */}
       {/* Uses /about_us-mobile_hero_section.png (390x768)     */}
@@ -45,11 +45,11 @@ export function AboutHeroSection() {
             {statsData.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex-1 bg-[#FAF7F2] rounded-[24px] py-1.5 px-1 shadow-xs flex flex-col items-center border border-white/80"
+                className="flex-1 bg-background rounded-[24px] py-1.5 px-1 shadow-xs flex flex-col items-center border border-white/80"
               >
                 <span
                   className="font-heading text-[15px] font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   {stat.value}
                 </span>
@@ -61,14 +61,14 @@ export function AboutHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-[26px] font-bold tracking-tight leading-[1.2] max-w-[280px] text-[#2E5A66]">
+          <h1 className="font-heading text-[26px] font-bold tracking-tight leading-[1.2] max-w-[280px] text-primary">
             About
             <br />
             My ESA Therapist
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-[12.5px] text-[#5F6B6F] font-semibold leading-[20px] max-w-[310px]">
+          <p className="font-sans text-[12.5px] text-body-text font-semibold leading-[20px] max-w-[310px]">
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
 
@@ -104,11 +104,11 @@ export function AboutHeroSection() {
             {statsData.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAF7F2] rounded-[30px] px-4 py-2 shadow-xs flex flex-col items-center min-w-[120px] border border-white/80"
+                className="bg-background rounded-[30px] px-4 py-2 shadow-xs flex flex-col items-center min-w-[120px] border border-white/80"
               >
                 <span
                   className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   {stat.value}
                 </span>
@@ -120,12 +120,12 @@ export function AboutHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-3xl sm:text-[38px] font-bold leading-[1.2] tracking-tight text-[#2E5A66]">
+          <h1 className="font-heading text-3xl sm:text-[38px] font-bold leading-[1.2] tracking-tight text-primary">
             About My ESA Therapist
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-sm sm:text-base text-[#5F6B6F] font-semibold leading-relaxed max-w-[480px]">
+          <p className="font-sans text-sm sm:text-base text-body-text font-semibold leading-relaxed max-w-[480px]">
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
 
@@ -136,7 +136,7 @@ export function AboutHeroSection() {
               <button
                 type="button"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="h-12 px-6 bg-white rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-[#2E5A66] hover:bg-[#FAF7F2] transition-colors border border-[#EAE5DC]"
+                className="h-12 px-6 bg-white rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-primary hover:bg-background transition-colors border border-[#EAE5DC]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -149,11 +149,11 @@ export function AboutHeroSection() {
                 />
                 <span
                   className="bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   Start your State
                 </span>
-                <ChevronDown className="w-4 h-4 text-[#2E5A66]" />
+                <ChevronDown className="w-4 h-4 text-primary" />
               </button>
 
               {dropdownOpen && (
@@ -177,10 +177,10 @@ export function AboutHeroSection() {
             <Link
               href="#pricing"
               className="h-12 pl-6 pr-2 w-[165px] rounded-[30px] text-white flex items-center justify-between shadow-sm hover:opacity-95 transition-all group"
-              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ backgroundImage: "var(--color-gradient)" }}
             >
               <span className="font-sans text-base font-semibold">Get Started</span>
-              <span className="w-9 h-9 rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-9 h-9 rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90}
                   src="/common/send-icon.svg"
@@ -219,10 +219,10 @@ export function AboutHeroSection() {
             {/* Top 3 Pill Stats */}
             <div className="flex flex-wrap items-center gap-3 xl:gap-3.5">
               {/* Stat 1 */}
-              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
+              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
                 <span
                   className="font-heading font-bold text-xl lg:text-2xl leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   50
                 </span>
@@ -232,10 +232,10 @@ export function AboutHeroSection() {
               </div>
 
               {/* Stat 2 */}
-              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
+              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
                 <span
                   className="font-heading font-bold text-xl lg:text-2xl leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   HIPAA
                 </span>
@@ -245,10 +245,10 @@ export function AboutHeroSection() {
               </div>
 
               {/* Stat 3 */}
-              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
+              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
                 <span
                   className="font-heading font-bold text-xl lg:text-2xl leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   100%
                 </span>
@@ -259,12 +259,12 @@ export function AboutHeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading text-4xl lg:text-[46px] xl:text-[56px] font-bold leading-tight lg:leading-[52px] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66]">
+            <h1 className="font-heading text-4xl lg:text-[46px] xl:text-[56px] font-bold leading-tight lg:leading-[52px] xl:leading-[64px] tracking-[-0.0002em] text-primary">
               About My ESA Therapist
             </h1>
 
             {/* Subtitle Description */}
-            <p className="font-sans font-semibold text-base lg:text-[16px] xl:text-[18px] text-[#5F6B6F] leading-[26px] xl:leading-[30px] max-w-[480px]">
+            <p className="font-sans font-semibold text-base lg:text-[16px] xl:text-[18px] text-body-text leading-[26px] xl:leading-[30px] max-w-[480px]">
               Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
             </p>
 
@@ -275,13 +275,13 @@ export function AboutHeroSection() {
       </div>
 
       {/* Bottom Trust Bar (Desktop) */}
-      <div className="w-full bg-[#FAF7F2] py-6 sm:py-8 lg:py-9 border-t border-b border-[#EAE5DC]">
+      <div className="w-full bg-background py-6 sm:py-8 lg:py-9 border-t border-b border-[#EAE5DC]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center lg:justify-between gap-6 sm:gap-8 lg:gap-6 xl:gap-12">
           {/* Trust Item 1 */}
           <div className="flex items-center gap-2.5 sm:gap-3">
             <div
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-xs shrink-0"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
@@ -294,7 +294,7 @@ export function AboutHeroSection() {
           <div className="flex items-center gap-2.5 sm:gap-3">
             <div
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-xs shrink-0"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
@@ -307,7 +307,7 @@ export function AboutHeroSection() {
           <div className="flex items-center gap-2.5 sm:gap-3">
             <div
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-xs shrink-0"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <Award className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>

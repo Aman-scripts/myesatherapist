@@ -37,7 +37,7 @@ export function ContactHero() {
   };
 
   return (
-    <section className="relative w-full bg-[#FAF7F2] overflow-hidden">
+    <section className="relative w-full bg-background overflow-hidden">
       
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE VIEW (< 640px)                             */}
@@ -62,17 +62,17 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1">
-              <h1 className="font-heading text-[26px] font-bold text-[#2E5A66] leading-[32px] tracking-[-0.00015em]">
+              <h1 className="font-heading text-[26px] font-bold text-primary leading-[32px] tracking-[-0.00015em]">
                 Request Info
               </h1>
-              <p className="font-sans font-semibold text-[11px] leading-[18px] text-[#5F6B6F] text-center">
+              <p className="font-sans font-semibold text-[11px] leading-[18px] text-body-text text-center">
                 Feel Free To Connect With Us! (24×7 Available At Your Service)
               </p>
             </div>
 
             {submitted ? (
-              <div className="bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-white p-5 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
-                <div className="w-8 h-8 rounded-full bg-[#E8B92C] text-[#04161C] font-bold text-lg flex items-center justify-center mx-auto">
+              <div className="color-gradient text-white p-5 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
+                <div className="w-8 h-8 rounded-full bg-accent text-[#04161C] font-bold text-lg flex items-center justify-center mx-auto">
                   ✓
                 </div>
                 <h3 className="font-heading text-lg font-bold">Thank You!</h3>
@@ -82,7 +82,7 @@ export function ContactHero() {
               <form onSubmit={handleSubmit} className="space-y-2.5">
                 {/* Full Name */}
                 <div className="space-y-1">
-                  <label className="block font-sans font-semibold text-[12px] leading-[18px] text-[#5F6B6F]">
+                  <label className="block font-sans font-semibold text-[12px] leading-[18px] text-body-text">
                     Full Name
                   </label>
                   <input
@@ -91,13 +91,13 @@ export function ContactHero() {
                     placeholder="your@email.com"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full h-[38px] px-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[12px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                    className="w-full h-[38px] px-3.5 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[12px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                   />
                 </div>
 
                 {/* Email Address */}
                 <div className="space-y-1">
-                  <label className="block font-sans font-semibold text-[12px] leading-[18px] text-[#5F6B6F]">
+                  <label className="block font-sans font-semibold text-[12px] leading-[18px] text-body-text">
                     Email Address
                   </label>
                   <input
@@ -106,13 +106,13 @@ export function ContactHero() {
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full h-[38px] px-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[12px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                    className="w-full h-[38px] px-3.5 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[12px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="space-y-1">
-                  <label className="block font-sans font-semibold text-[12px] leading-[18px] text-[#5F6B6F]">
+                  <label className="block font-sans font-semibold text-[12px] leading-[18px] text-body-text">
                     Message
                   </label>
                   <textarea
@@ -121,7 +121,7 @@ export function ContactHero() {
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full min-h-[78px] p-2.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[12px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
+                    className="w-full min-h-[78px] p-2.5 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[12px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
                   />
                 </div>
 
@@ -130,13 +130,13 @@ export function ContactHero() {
                   <button
                     type="submit"
                     className="w-full max-w-[210px] h-[40px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-[14px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
-                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ background: "var(--color-gradient)" }}
                   >
                     <span>SEND</span>
-                    <ArrowRight className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 text-background transition-transform group-hover:translate-x-1" />
                   </button>
 
-                  <p className="font-sans font-semibold text-[10.5px] leading-[18px] text-[#5F6B6F] text-center">
+                  <p className="font-sans font-semibold text-[10.5px] leading-[18px] text-body-text text-center">
                     Your information is 100% secure and private.
                   </p>
                 </div>
@@ -169,17 +169,17 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1.5">
-              <h1 className="font-heading text-[30px] sm:text-[34px] font-bold text-[#2E5A66] leading-[38px] sm:leading-[42px] tracking-[-0.00015em]">
+              <h1 className="font-heading text-[30px] sm:text-[34px] font-bold text-primary leading-[38px] sm:leading-[42px] tracking-[-0.00015em]">
                 Request Info
               </h1>
-              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] text-center">
+              <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text text-center">
                 Feel Free To Connect With Us! (24×7 Available At Your Service)
               </p>
             </div>
 
             {submitted ? (
-              <div className="bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
-                <div className="w-10 h-10 rounded-full bg-[#E8B92C] text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
+              <div className="color-gradient text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
+                <div className="w-10 h-10 rounded-full bg-accent text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
                   ✓
                 </div>
                 <h3 className="font-heading text-xl font-bold">Thank You!</h3>
@@ -190,7 +190,7 @@ export function ContactHero() {
                 {/* First Name & Last Name */}
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   <div className="space-y-1">
-                    <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F]">
+                    <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text">
                       First Name
                     </label>
                     <input
@@ -199,12 +199,12 @@ export function ContactHero() {
                       placeholder="First Name"
                       value={formData.firstName}
                       onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] sm:text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[13px] sm:text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                     />
                   </div>
 
                   <div className="space-y-1">
-                    <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F]">
+                    <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text">
                       Last Name
                     </label>
                     <input
@@ -213,14 +213,14 @@ export function ContactHero() {
                       placeholder="Last Name"
                       value={formData.lastName}
                       onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] sm:text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[13px] sm:text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Email Address */}
                 <div className="space-y-1">
-                  <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F]">
+                  <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text">
                     Email Address
                   </label>
                   <input
@@ -229,13 +229,13 @@ export function ContactHero() {
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] sm:text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                    className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[13px] sm:text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="space-y-1">
-                  <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-[#5F6B6F]">
+                  <label className="block font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text">
                     Message
                   </label>
                   <textarea
@@ -244,7 +244,7 @@ export function ContactHero() {
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full min-h-[90px] sm:min-h-[100px] p-3 sm:p-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[13px] sm:text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
+                    className="w-full min-h-[90px] sm:min-h-[100px] p-3 sm:p-3.5 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[13px] sm:text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
                   />
                 </div>
 
@@ -253,13 +253,13 @@ export function ContactHero() {
                   <button
                     type="submit"
                     className="w-full max-w-[240px] h-[44px] sm:h-[46px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-[15px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
-                    style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ background: "var(--color-gradient)" }}
                   >
                     <span>SEND</span>
-                    <ArrowRight className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 text-background transition-transform group-hover:translate-x-1" />
                   </button>
 
-                  <p className="font-sans font-semibold text-[11.5px] sm:text-[12px] leading-[22px] sm:leading-[26px] text-[#5F6B6F] text-center">
+                  <p className="font-sans font-semibold text-[11.5px] sm:text-[12px] leading-[22px] sm:leading-[26px] text-body-text text-center">
                     Your information is 100% secure and private.
                   </p>
                 </div>
@@ -295,17 +295,17 @@ export function ContactHero() {
             >
               {/* Centered Header */}
               <div className="text-center space-y-2">
-                <h1 className="font-heading text-[36px] font-bold text-[#2E5A66] leading-[44px] tracking-[-0.00015em]">
+                <h1 className="font-heading text-[36px] font-bold text-primary leading-[44px] tracking-[-0.00015em]">
                   Request Info
                 </h1>
-                <p className="font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F] text-center">
+                <p className="font-sans font-semibold text-[14px] leading-[26px] text-body-text text-center">
                   Feel Free To Connect With Us! (24×7 Available At Your Service)
                 </p>
               </div>
 
               {submitted ? (
-                <div className="bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
-                  <div className="w-10 h-10 rounded-full bg-[#E8B92C] text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
+                <div className="color-gradient text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-accent text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
                     ✓
                   </div>
                   <h3 className="font-heading text-xl font-bold">Thank You!</h3>
@@ -316,7 +316,7 @@ export function ContactHero() {
                   {/* First Name & Last Name */}
                   <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-1">
-                      <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                      <label className="block font-sans font-semibold text-[14px] leading-[26px] text-body-text">
                         First Name
                       </label>
                       <input
@@ -325,12 +325,12 @@ export function ContactHero() {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                        className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                        className="w-full h-[44px] px-4 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                       />
                     </div>
 
                     <div className="space-y-1">
-                      <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                      <label className="block font-sans font-semibold text-[14px] leading-[26px] text-body-text">
                         Last Name
                       </label>
                       <input
@@ -339,14 +339,14 @@ export function ContactHero() {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                        className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                        className="w-full h-[44px] px-4 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                       />
                     </div>
                   </div>
 
                   {/* Email Address */}
                   <div className="space-y-1">
-                    <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                    <label className="block font-sans font-semibold text-[14px] leading-[26px] text-body-text">
                       Email Address
                     </label>
                     <input
@@ -355,13 +355,13 @@ export function ContactHero() {
                       placeholder="your@email.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full h-[44px] px-4 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
+                      className="w-full h-[44px] px-4 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all"
                     />
                   </div>
 
                   {/* Message */}
                   <div className="space-y-1">
-                    <label className="block font-sans font-semibold text-[14px] leading-[26px] text-[#5F6B6F]">
+                    <label className="block font-sans font-semibold text-[14px] leading-[26px] text-body-text">
                       Message
                     </label>
                     <textarea
@@ -370,7 +370,7 @@ export function ContactHero() {
                       placeholder="Your Message"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full min-h-[127px] p-3.5 rounded-[5px] bg-[#FAF7F2]/30 border border-[#5F6B6F]/40 font-sans font-normal text-[14px] text-[#5F6B6F] placeholder-[#5F6B6F]/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
+                      className="w-full min-h-[127px] p-3.5 rounded-[5px] bg-background/30 border border-body-text/40 font-sans font-normal text-[14px] text-body-text placeholder-body-text/70 focus:outline-none focus:border-[#1A3D4F] transition-all resize-none"
                     />
                   </div>
 
@@ -379,13 +379,13 @@ export function ContactHero() {
                     <button
                       type="submit"
                       className="w-full max-w-[356px] h-[48px] rounded-[30px] hover:opacity-95 text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
-                      style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                      style={{ background: "var(--color-gradient)" }}
                     >
                       <span>SEND</span>
-                      <ArrowRight className="w-4 h-4 text-[#FAF7F2] transition-transform group-hover:translate-x-1" />
+                      <ArrowRight className="w-4 h-4 text-background transition-transform group-hover:translate-x-1" />
                     </button>
 
-                    <p className="font-sans font-semibold text-[12px] leading-[26px] text-[#5F6B6F] text-center">
+                    <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
                       Your information is 100% secure and private.
                     </p>
                   </div>

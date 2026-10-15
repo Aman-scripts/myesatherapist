@@ -57,10 +57,10 @@ export function AboutTestimonialSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
             Trusted by Thousands of Pet Owners
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-[#5F6B6F] leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
+          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-body-text leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
             See how our legitimate ESA evaluations have helped pet owners across the nation.
           </p>
         </div>
@@ -79,12 +79,12 @@ export function AboutTestimonialSection() {
             {/* Gradient Speech Bubble Box */}
             <div
               className="relative w-full rounded-[20px] shadow-[0px_4px_16px_rgba(26,61,79,0.12)] p-6 sm:p-7 md:p-8 flex flex-col items-start text-left space-y-3.5 transition-all duration-300"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
               <button
                 type="button"
                 onClick={prevSlide}
-                className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+                className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
                 aria-label="Previous Review"
               >
                 <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
@@ -92,7 +92,7 @@ export function AboutTestimonialSection() {
               <button
                 type="button"
                 onClick={nextSlide}
-                className="absolute top-1/2 -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-[#2E5A66] hover:bg-[#FAF7F2] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+                className="absolute top-1/2 -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
                 aria-label="Next Review"
               >
                 <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
@@ -115,7 +115,7 @@ export function AboutTestimonialSection() {
               </div>
 
               {/* Quote Text */}
-              <p className="font-sans font-semibold text-[15px] sm:text-[16px] md:text-[17px] text-[#FAF7F2] leading-[25px] sm:leading-[26px]">
+              <p className="font-sans font-semibold text-[15px] sm:text-[16px] md:text-[17px] text-background leading-[25px] sm:leading-[26px]">
                 {current.quote}
               </p>
             </div>
@@ -157,7 +157,7 @@ export function AboutTestimonialSection() {
                 <span
                   className={`block transition-all duration-200 rounded-full ${
                     activeIdx === idx
-                      ? "w-6 h-2 bg-[#2E5A66]"
+                      ? "w-6 h-2 bg-primary"
                       : "w-2 h-2 bg-[#D9D9D9] hover:bg-[#AEBBBE]"
                   }`}
                 />

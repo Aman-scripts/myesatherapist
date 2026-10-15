@@ -50,7 +50,7 @@ export function ContactSection() {
   ];
 
   return (
-    <div className="w-full bg-[#FAF7F2]">
+    <div className="w-full bg-background">
       {/* 1. HERO SECTION WITH FIGMA BACKGROUND & OVERLAY CARD (Frame 1261153618) */}
       <section className="relative w-full min-h-[640px] sm:min-h-[720px] lg:min-h-[780px] bg-[#F7EAD6] overflow-hidden flex items-center">
         {/* Background Image: contact_us_hero-section.png */}
@@ -84,7 +84,7 @@ export function ContactSection() {
 
               {submitted ? (
                 <div className="bg-[#1D6E72] text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn">
-                  <div className="w-10 h-10 rounded-full bg-[#E8B92C] text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
+                  <div className="w-10 h-10 rounded-full bg-accent text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
                     ✓
                   </div>
                   <h3 className="font-heading text-xl font-bold">Thank You!</h3>
@@ -175,16 +175,16 @@ export function ContactSection() {
       </section>
 
       {/* 2. CONTACT INFO CARDS SECTION (4 Cards Grid) */}
-      <section className="w-full py-12 sm:py-16 bg-[#FAF7F2]">
+      <section className="w-full py-12 sm:py-16 bg-background">
         <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactCards.map((card, idx) => (
               <a
                 key={idx}
                 href={card.href}
-                className="bg-white rounded-[24px] p-6 shadow-sm border border-[#2E5A66]/10 hover:shadow-md hover:border-[#E8B92C] transition-all group flex flex-col items-center text-center space-y-4"
+                className="bg-white rounded-[24px] p-6 shadow-sm border border-primary/10 hover:shadow-md hover:border-accent transition-all group flex flex-col items-center text-center space-y-4"
               >
-                <div className="w-14 h-14 rounded-full bg-[#FAF7F2] border border-[#2E5A66]/15 flex items-center justify-center group-hover:bg-[#E8B92C]/20 group-hover:border-[#E8B92C] transition-all shrink-0">
+                <div className="w-14 h-14 rounded-full bg-background border border-primary/15 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent transition-all shrink-0">
                   <Image
             quality={90}
                     src={card.icon}
@@ -197,7 +197,7 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <div className="text-xs font-sans font-bold text-[#E8B92C] tracking-wider uppercase mb-1">
+                  <div className="text-xs font-sans font-bold text-accent tracking-wider uppercase mb-1">
                     {card.title}
                   </div>
                   <div className="text-base font-sans font-bold text-[#1E3942] group-hover:text-[#1D6E72] transition-colors leading-snug">
@@ -210,7 +210,7 @@ export function ContactSection() {
           </div>
 
           {/* 3. INTERACTIVE MAP CONTAINER */}
-          <div id="map" className="mt-12 w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-[#2E5A66]/10 h-[360px] sm:h-[450px] relative">
+          <div id="map" className="mt-12 w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-primary/10 h-[360px] sm:h-[450px] relative">
             <iframe
               title="Office Location Map"
               src="https://maps.google.com/maps?q=780+Lynnhaven+Pkwy+%23400,+Virginia+Beach,+VA+23452&t=&z=15&ie=UTF8&iwloc=&output=embed"

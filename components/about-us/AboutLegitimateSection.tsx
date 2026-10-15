@@ -85,10 +85,10 @@ export function AboutLegitimateSection() {
         <div className="w-full lg:w-[540px] xl:w-[617px] px-5 sm:px-8 lg:pl-8 xl:pl-[84px] lg:pr-4 xl:pr-0 pt-10 sm:pt-14 pb-12 sm:pb-16 lg:py-16 xl:py-20 space-y-6 sm:space-y-8 xl:space-y-10 shrink-0 max-w-[620px] lg:max-w-none mx-auto lg:mx-0">
           {/* Header Block */}
           <div className="space-y-3 sm:space-y-4 max-w-[559px] text-center lg:text-left">
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] text-[#2E5A66] leading-tight lg:leading-[44px] xl:leading-[54px] tracking-[-0.00015em]">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] text-primary leading-tight lg:leading-[44px] xl:leading-[54px] tracking-[-0.00015em]">
               Legitimate ESA Letter Evaluations You Can Trust
             </h2>
-            <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-[#5F6B6F] leading-relaxed lg:leading-[26px] xl:leading-[30px]">
+            <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-body-text leading-relaxed lg:leading-[26px] xl:leading-[30px]">
               Our mission is to make the ESA evaluation process clear, ethical, and accessible. We connect individuals with licensed mental health professionals through a secure ESA evaluation process, with all outcomes determined solely through an independent clinical assessment by the provider.
             </p>
           </div>
@@ -102,7 +102,7 @@ export function AboutLegitimateSection() {
               >
                 {/* Circular Gray Number Badge (Frame 1000011767) */}
                 <div className="w-[48px] h-[48px] sm:w-[54px] sm:h-[54px] xl:w-[59px] xl:h-[59px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
-                  <span className="font-heading font-bold text-2xl sm:text-3xl xl:text-[36px] leading-none text-[#5F6B6F]">
+                  <span className="font-heading font-bold text-2xl sm:text-3xl xl:text-[36px] leading-none text-body-text">
                     {item.number}
                   </span>
                 </div>
@@ -111,11 +111,11 @@ export function AboutLegitimateSection() {
                 <div className="flex-1 min-w-0">
                   <h3
                     className="font-sans font-semibold text-base sm:text-[17px] xl:text-[18px] leading-snug sm:leading-[26px] xl:leading-[30px] bg-clip-text text-transparent"
-                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ backgroundImage: "var(--color-gradient)" }}
                   >
                     {item.title}
                   </h3>
-                  <p className="font-sans font-semibold text-xs sm:text-[13px] xl:text-[14px] leading-relaxed xl:leading-[26px] text-[#5F6B6F] mt-0.5 sm:mt-1">
+                  <p className="font-sans font-semibold text-xs sm:text-[13px] xl:text-[14px] leading-relaxed xl:leading-[26px] text-body-text mt-0.5 sm:mt-1">
                     {item.description}
                   </p>
                 </div>

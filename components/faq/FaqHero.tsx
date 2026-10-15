@@ -3,7 +3,7 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 
 const TRUSTPILOT_GREEN = "#00B67A";
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -46,7 +46,7 @@ const statsData = [
 
 export function FaqHero() {
   return (
-    <section className="relative z-30 w-full bg-[#FAF7F2] overflow-visible">
+    <section className="relative z-30 w-full bg-background overflow-visible">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE FAQ HERO SECTION (< 640px)                 */}
       {/* ---------------------------------------------------- */}
@@ -69,7 +69,7 @@ export function FaqHero() {
               {statsData.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="flex-1 h-[44px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-1"
+                  className="flex-1 h-[44px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-1"
                 >
                   <span
                     className="font-heading font-bold text-[15px] leading-tight bg-clip-text text-transparent"
@@ -84,13 +84,13 @@ export function FaqHero() {
               ))}
             </div>
 
-            {/* Heading (Playfair Display 28px, line-height 36px, color #2E5A66) */}
-            <h1 className="w-full max-w-[376px] heading-h2 text-center text-[#2E5A66]">
+            {/* Heading (Playfair Display 28px, line-height 36px, color primary) */}
+            <h1 className="w-full max-w-[376px] heading-h2 text-center text-primary">
               ESA Questions? We’re here to Help.
             </h1>
 
-            {/* Subheading (Manrope 14px, line-height 26px, color #5F6B6F) */}
-            <p className="w-full max-w-[331px] body-small text-center text-[#5F6B6F]">
+            {/* Subheading (Manrope 14px, line-height 26px, color body-text) */}
+            <p className="w-full max-w-[331px] body-small text-center text-body-text">
               Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
             </p>
           </div>
@@ -120,7 +120,7 @@ export function FaqHero() {
               {statsData.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="w-[163px] h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-[10px]"
+                  className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col justify-center items-center px-[10px]"
                 >
                   <span
                     className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
@@ -135,13 +135,13 @@ export function FaqHero() {
               ))}
             </div>
 
-            {/* Heading (Playfair Display 44px, line-height 54px, color #2E5A66) */}
-            <h1 className="w-full max-w-[470px] heading-h2 text-center text-[#2E5A66]">
+            {/* Heading (Playfair Display 44px, line-height 54px, color primary) */}
+            <h1 className="w-full max-w-[470px] heading-h2 text-center text-primary">
               ESA Questions? We’re here to Help.
             </h1>
 
-            {/* Subheading (Manrope 18px, line-height 30px, color #5F6B6F) */}
-            <p className="w-full max-w-[678px] body-large text-center text-[#5F6B6F]">
+            {/* Subheading (Manrope 18px, line-height 30px, color body-text) */}
+            <p className="w-full max-w-[678px] body-large text-center text-body-text">
               Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
             </p>
           </div>
@@ -170,12 +170,12 @@ export function FaqHero() {
             {statsData.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex-1 h-[53px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center px-2 py-1 border border-white/60"
+                className="flex-1 h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center px-2 py-1 border border-white/60"
               >
                 <span className="font-heading font-bold text-[22px] xl:text-[24px] leading-tight text-[#1A3D4F]">
                   {stat.value}
                 </span>
-                <span className="font-sans font-semibold text-[11px] xl:text-[12px] text-[#5F6B6F] leading-none mt-0.5">
+                <span className="font-sans font-semibold text-[11px] xl:text-[12px] text-body-text leading-none mt-0.5">
                   {stat.label}
                 </span>
               </div>
@@ -183,14 +183,14 @@ export function FaqHero() {
           </div>
 
           {/* Heading (Playfair Display 56px, leading 64px) */}
-          <h1 className="heading-h1 text-[#2E5A66]">
+          <h1 className="heading-h1">
             ESA Questions?
             <br />
             We’re here to Help.
           </h1>
 
           {/* Subtitle (Manrope 18px, leading 30px) */}
-          <p className="body-large text-[#5F6B6F] max-w-[553px]">
+          <p className="body-large max-w-[553px]">
             Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
           </p>
 

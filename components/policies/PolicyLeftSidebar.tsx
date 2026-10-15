@@ -127,8 +127,8 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                     onClick={(e) => scrollToSection(e, item.id, false)}
                     className={`group block px-3 py-2 rounded-lg text-xs sm:text-[13px] leading-snug transition-all font-sans ${
                       isActive
-                        ? "text-[#2E5A66] font-bold bg-[#FAF7F2]"
-                        : "font-medium text-[#5F6B6F] hover:text-[#2E5A66] hover:bg-[#FAF7F2]"
+                        ? "text-primary font-bold bg-background"
+                        : "font-medium text-body-text hover:text-primary hover:bg-background"
                     }`}
                   >
                     <span className="line-clamp-2">{item.label}</span>
@@ -153,16 +153,16 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                   href={item.href}
                   className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-[13.5px] transition-all font-sans ${
                     isActive
-                      ? "bg-[#FAF7F2] text-[#2E5A66] font-bold border-l-[3.5px] border-[#E8B92C] shadow-2xs pl-3"
-                      : "font-semibold text-[#5F6B6F] hover:bg-[#FAF7F2] hover:text-[#2E5A66]"
+                      ? "bg-background text-primary font-bold border-l-[3.5px] border-accent shadow-2xs pl-3"
+                      : "font-semibold text-body-text hover:bg-background hover:text-primary"
                   }`}
                 >
                   <span>{item.label}</span>
                   <svg
                     className={`w-3.5 h-3.5 transition-transform ${
                       isActive
-                        ? "text-[#2E5A66] translate-x-0.5"
-                        : "text-[#DECDBB] group-hover:text-[#2E5A66] group-hover:translate-x-0.5"
+                        ? "text-primary translate-x-0.5"
+                        : "text-[#DECDBB] group-hover:text-primary group-hover:translate-x-0.5"
                     }`}
                     viewBox="0 0 24 24"
                     fill="none"
@@ -192,9 +192,9 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
               onClick={() => setIsOpen(true)}
               aria-label="Open Policy Navigation & Table of Contents"
               className="lg:hidden fixed left-0 top-[50%] -translate-y-1/2 z-[80] w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.45)] flex items-center justify-center pl-0.5 text-white transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
-              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ background: "var(--color-gradient)" }}
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-[#E8B92C] transition-all" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
             </button>
 
             {/* Slide-out Drawer & Backdrop */}
@@ -215,16 +215,16 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
               {/* Sliding Content Panel with smooth transform */}
               <div
-                className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-[100dvh] max-h-[100dvh] overflow-hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
+                className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-[100dvh] max-h-[100dvh] overflow-hidden z-[100000] text-background shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
                   isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
-                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ background: "var(--color-gradient)" }}
               >
                 {/* Fixed Top Header (Logo Card + Close Button + Divider + Title) */}
                 <div className="shrink-0 px-6 sm:px-8 pt-8 sm:pt-10">
                   <div className="flex items-start justify-between mb-5">
                     {/* Logo Card with Gold Border */}
-                    <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
+                    <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                       <Image
             quality={90}
                         src="/common/myesa-logo.svg"
@@ -241,7 +241,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                       className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
                       aria-label="Close Sidebar"
                     >
-                      <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#FAF7F2] stroke-[2.2]" />
+                      <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-background stroke-[2.2]" />
                     </button>
                   </div>
 
@@ -250,10 +250,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
                   {/* Fixed Title Section: Table of Contents & On this page */}
                   <div className="space-y-1 pb-3">
-                    <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-[#FAF7F2] leading-tight tracking-[-0.00015em]">
+                    <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-background leading-tight tracking-[-0.00015em]">
                       Table of Contents
                     </h2>
-                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#E8B92C]">
+                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-accent">
                       On this page
                     </p>
                   </div>
@@ -283,8 +283,8 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                               onClick={(e) => scrollToSection(e, item.id, true)}
                               className={`block text-xs sm:text-[14px] leading-snug transition-all ${
                                 isActive
-                                  ? "text-[#E8B92C] font-bold"
-                                  : "text-[#FAF7F2] font-medium hover:text-[#E8B92C]"
+                                  ? "text-accent font-bold"
+                                  : "text-background font-medium hover:text-accent"
                               }`}
                             >
                               {item.label}
@@ -300,7 +300,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
                   {/* 2. All Policies Navigation */}
                   <div className="space-y-3">
-                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#E8B92C]">
+                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-accent">
                       All Policies
                     </p>
                     <nav className="space-y-1.5 font-sans">
@@ -313,14 +313,14 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                             onClick={() => setIsOpen(false)}
                             className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-[13.5px] transition-all ${
                               isActive
-                                ? "bg-white/20 text-[#E8B92C] font-bold border-l-[3.5px] border-[#E8B92C]"
-                                : "text-[#FAF7F2]/80 font-semibold hover:bg-white/10 hover:text-white"
+                                ? "bg-white/20 text-accent font-bold border-l-[3.5px] border-accent"
+                                : "text-background/80 font-semibold hover:bg-white/10 hover:text-white"
                             }`}
                           >
                             <span>{item.label}</span>
                             <ChevronRight
                               className={`w-4 h-4 transition-transform ${
-                                isActive ? "text-[#E8B92C] translate-x-0.5" : "text-white/40"
+                                isActive ? "text-accent translate-x-0.5" : "text-white/40"
                               }`}
                             />
                           </Link>

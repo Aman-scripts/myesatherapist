@@ -37,7 +37,7 @@ export function ContactInfoCards() {
   ];
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-8 sm:py-10 lg:py-12">
+    <section className="w-full bg-background py-8 sm:py-10 lg:py-12">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Frame 1000011803: Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
@@ -45,7 +45,7 @@ export function ContactInfoCards() {
             const Content = (
               <>
                 {/* Frame 13: Left Icon Circle */}
-                <div className="w-[45px] h-[45px] rounded-full bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                <div className="w-[45px] h-[45px] rounded-full color-gradient flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                   <Image
             quality={90}
                     src={card.icon}
@@ -59,13 +59,13 @@ export function ContactInfoCards() {
                 {/* Frame 1000011796: Right Text Content Stack */}
                 <div className="min-w-0 flex-1 flex flex-col justify-center gap-1.5">
                   {/* Title: Manrope 600 with Teal Gradient text */}
-                  <div className="font-sans font-semibold text-[15px] sm:text-[16px] xl:text-[17px] leading-tight bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent uppercase tracking-tight truncate">
+                  <div className="font-sans font-semibold text-[15px] sm:text-[16px] xl:text-[17px] leading-tight text-color-gradient uppercase tracking-tight truncate">
                     {card.title}
                   </div>
 
                   {/* Detail */}
                   <div
-                    className={`font-sans font-semibold text-[13px] sm:text-[14px] xl:text-[15px] leading-snug text-[#5F6B6F] ${
+                    className={`font-sans font-semibold text-[13px] sm:text-[14px] xl:text-[15px] leading-snug text-body-text ${
                       card.isLink ? "underline underline-offset-4 hover:text-[#1A3D4F]" : ""
                     }`}
                   >

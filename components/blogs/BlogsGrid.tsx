@@ -48,7 +48,7 @@ const PREFERRED_ESA_GUIDE_ORDER = [
 
 export function BlogsGrid() {
   return (
-    <div className="w-full bg-[#FAF7F2] pb-16 sm:pb-24 pt-4 sm:pt-6">
+    <div className="w-full bg-background pb-16 sm:pb-24 pt-4 sm:pt-6">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Category Navigation Pills */}
         <nav
@@ -59,7 +59,7 @@ export function BlogsGrid() {
             <a
               key={cat.id}
               href={`#${cat.id}`}
-              className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white border border-[#EAE5DC] text-[#2E5A66] hover:bg-[#1D6E72] hover:text-white hover:border-[#1D6E72] font-semibold text-sm sm:text-base shadow-xs transition-all duration-200"
+              className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white border border-[#EAE5DC] text-primary hover:bg-[#1D6E72] hover:text-white hover:border-[#1D6E72] font-semibold text-sm sm:text-base shadow-xs transition-all duration-200"
             >
               {cat.title}
             </a>
@@ -97,10 +97,10 @@ export function BlogsGrid() {
               >
                 {/* Section Header */}
                 <div className="mb-8 sm:mb-12 text-center max-w-3xl mx-auto">
-                  <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-[#2E5A66] tracking-[-0.01em] leading-tight lg:leading-[52px]">
+                  <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-primary tracking-[-0.01em] leading-tight lg:leading-[52px]">
                     {category.title}
                   </h2>
-                  <p className="font-sans text-[15px] sm:text-[17px] lg:text-[18px] text-[#5F6B6F] font-semibold mt-3 sm:mt-4 leading-relaxed lg:leading-[30px]">
+                  <p className="font-sans text-[15px] sm:text-[17px] lg:text-[18px] text-body-text font-semibold mt-3 sm:mt-4 leading-relaxed lg:leading-[30px]">
                     {category.description}
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export function BlogsGrid() {
                       {/* Card Header Image */}
                       <Link
                         href={art.url}
-                        className="w-full aspect-[3/2] relative overflow-hidden bg-[#FAF7F2] shrink-0 block cursor-pointer"
+                        className="w-full aspect-[3/2] relative overflow-hidden bg-background shrink-0 block cursor-pointer"
                       >
                         <Image
             quality={90}
@@ -137,7 +137,7 @@ export function BlogsGrid() {
                           {/* Title & Author */}
                           <div className="space-y-2.5">
                             <Link href={art.url} className="block">
-                              <h3 className="font-heading text-xl sm:text-[22px] font-bold text-[#2E5A66] leading-[1.3] group-hover:text-[#1D6E72] transition-colors cursor-pointer line-clamp-2">
+                              <h3 className="font-heading text-xl sm:text-[22px] font-bold text-primary leading-[1.3] group-hover:text-[#1D6E72] transition-colors cursor-pointer line-clamp-2">
                                 {art.title}
                               </h3>
                             </Link>
@@ -157,10 +157,10 @@ export function BlogsGrid() {
                           <Link
                             href={art.url}
                             className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group/btn"
-                            style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                            style={{ background: "var(--color-gradient)" }}
                           >
                             <span>Read Guide</span>
-                            <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
+                            <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover/btn:scale-105 transition-transform">
                               <Image
             quality={90}
                                 src="/common/send-icon.svg"
