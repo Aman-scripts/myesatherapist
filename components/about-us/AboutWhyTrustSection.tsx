@@ -32,10 +32,10 @@ export function AboutWhyTrustSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[860px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-[#2E5A66]">
             Why Pet Owners Trust MY ESA Therapist?
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-[#5F6B6F] leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
+          <p className="body-large text-[#5F6B6F] max-w-[700px] mx-auto">
             We stand apart by providing legitimate, professional ESA evaluations conducted by licensed clinicians.
           </p>
         </div>
@@ -59,12 +59,11 @@ export function AboutWhyTrustSection() {
               {/* Card Body with Gold Top Accent Bar */}
               <div className="w-full min-h-[175px] sm:min-h-[185px] lg:min-h-[195px] bg-white rounded-[20px] shadow-[0px_4px_12px_rgba(0,0,0,0.06)] border-t-[6px] border-t-[#E8B92C] pt-12 sm:pt-14 pb-6 px-3 sm:px-4 xl:px-5 flex flex-col items-center justify-center text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
                 <h3
-                  className="font-[family-name:var(--font-lato)] font-bold text-base sm:text-lg lg:text-[19px] xl:text-[22px] leading-snug sm:leading-tight bg-clip-text text-transparent mb-2"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  className="heading-h4 text-color-gradient mb-2"
                 >
                   {card.title}
                 </h3>
-                <p className="font-sans font-semibold text-xs sm:text-sm lg:text-[13px] xl:text-[14px] text-[#5F6B6F] leading-relaxed max-w-[220px]">
+                <p className="body-small text-[#5F6B6F] max-w-[220px]">
                   {card.description}
                 </p>
               </div>

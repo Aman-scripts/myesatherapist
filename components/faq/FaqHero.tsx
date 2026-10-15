@@ -85,12 +85,12 @@ export function FaqHero() {
             </div>
 
             {/* Heading (Playfair Display 28px, line-height 36px, color #2E5A66) */}
-            <h1 className="w-full max-w-[376px] font-heading font-bold text-[28px] leading-[36px] text-center tracking-[-0.00015em] text-[#2E5A66]">
+            <h1 className="w-full max-w-[376px] heading-h2 text-center text-[#2E5A66]">
               ESA Questions? We’re here to Help.
             </h1>
 
             {/* Subheading (Manrope 14px, line-height 26px, color #5F6B6F) */}
-            <p className="w-full max-w-[331px] font-sans font-semibold text-[14px] leading-[26px] text-center text-[#5F6B6F]">
+            <p className="w-full max-w-[331px] body-small text-center text-[#5F6B6F]">
               Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
             </p>
           </div>
@@ -136,12 +136,12 @@ export function FaqHero() {
             </div>
 
             {/* Heading (Playfair Display 44px, line-height 54px, color #2E5A66) */}
-            <h1 className="w-full max-w-[470px] font-heading font-bold text-[40px] sm:text-[44px] leading-[54px] text-center tracking-[-0.00015em] text-[#2E5A66]">
+            <h1 className="w-full max-w-[470px] heading-h2 text-center text-[#2E5A66]">
               ESA Questions? We’re here to Help.
             </h1>
 
             {/* Subheading (Manrope 18px, line-height 30px, color #5F6B6F) */}
-            <p className="w-full max-w-[678px] font-sans font-semibold text-[16px] sm:text-[18px] leading-[30px] text-center text-[#5F6B6F]">
+            <p className="w-full max-w-[678px] body-large text-center text-[#5F6B6F]">
               Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
             </p>
           </div>
@@ -183,14 +183,14 @@ export function FaqHero() {
           </div>
 
           {/* Heading (Playfair Display 56px, leading 64px) */}
-          <h1 className="font-heading font-bold text-[36px] lg:text-[44px] xl:text-[56px] leading-[1.14] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66]">
+          <h1 className="heading-h1 text-[#2E5A66]">
             ESA Questions?
             <br />
             We’re here to Help.
           </h1>
 
           {/* Subtitle (Manrope 18px, leading 30px) */}
-          <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[553px]">
+          <p className="body-large text-[#5F6B6F] max-w-[553px]">
             Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
           </p>
 

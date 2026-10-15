@@ -141,12 +141,12 @@ export function DoctorsHeroSection() {
             </div>
 
             {/* Heading: Meet Our Licensed Mental Health Professionals */}
-            <h1 className="w-full font-heading font-bold text-[28px] sm:text-4xl md:text-[44px] xl:text-[56px] text-[#2E5A66] leading-[1.18] sm:leading-[1.18] xl:leading-[64px] tracking-[-0.0002em] max-w-[340px] sm:max-w-[580px] xl:max-w-[624px] mx-auto xl:mx-0">
+            <h1 className="w-full heading-h1 text-[#2E5A66] max-w-[340px] sm:max-w-[580px] xl:max-w-[624px] mx-auto xl:mx-0">
               Meet Our Licensed Mental Health Professionals
             </h1>
 
             {/* Subtitle */}
-            <p className="w-full font-sans font-semibold text-[13.5px] sm:text-base md:text-[17px] xl:text-[18px] text-[#5F6B6F] leading-[22px] sm:leading-[26px] xl:leading-[30px] max-w-[340px] sm:max-w-[600px] xl:max-w-[626px] mx-auto xl:mx-0">
+            <p className="w-full body-large text-[#5F6B6F] max-w-[340px] sm:max-w-[600px] xl:max-w-[626px] mx-auto xl:mx-0">
               My ESA Therapist works with a network of independent, state-licensed mental health professionals who conduct emotional support animal (ESA) evaluations through secure telehealth sessions.
             </p>
 

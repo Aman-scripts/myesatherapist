@@ -34,10 +34,10 @@ export function PricingWhyTrustSection() {
       <div className="max-w-[1446px] mx-auto px-4 sm:px-8 xl:px-[80px]">
         {/* Section Heading */}
         <div className="text-center max-w-[854px] mx-auto mb-16 sm:mb-20 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-[#2E5A66]">
             You Only Pay After Your Evaluation
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-[#5F6B6F] leading-relaxed xl:leading-[30px] max-w-[854px] mx-auto">
+          <p className="body-large text-[#5F6B6F] max-w-[854px] mx-auto">
             Our transparent 4-step process ensures you are only charged once your telehealth evaluation is complete and approved.
           </p>
         </div>
@@ -67,14 +67,13 @@ export function PricingWhyTrustSection() {
               <div className="w-full min-h-[202px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-12 pb-5 px-4 flex flex-col items-center justify-center text-center">
                 {/* Title with Teal Gradient */}
                 <h3
-                  className="font-[family-name:var(--font-lato)] font-bold text-[19px] sm:text-[20px] xl:text-[22px] leading-[28px] tracking-[-0.017em] bg-clip-text text-transparent mb-2"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
+                  className="heading-h4 text-color-gradient mb-2"
                 >
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans font-semibold text-[13px] sm:text-[14px] xl:text-[15px] leading-[22px] xl:leading-[25px] text-[#5F6B6F] max-w-[250px]">
+                <p className="body-small text-[#5F6B6F] max-w-[250px]">
                   {item.description}
                 </p>
               </div>
