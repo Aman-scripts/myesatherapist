@@ -87,10 +87,10 @@ export function HowItWorks() {
 
                     {/* Text (Figma: Title 28px Playfair gradient, Description 18px Manrope #5F6B6F) */}
                     <div className="space-y-2.5 pt-5 sm:pt-6 max-w-[340px] w-full flex flex-col items-center">
-                      <h3 className="font-playfair text-xl md:text-2xl lg:text-[28px] font-bold leading-tight lg:leading-[36px] bg-gradient-to-br from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+                      <h3 className="heading-h3 text-color-gradient capitalize">
                         {step.title}
                       </h3>
-                      <p className="text-sm sm:text-base lg:text-[18px] text-[#5F6B6F] font-semibold leading-[24px] lg:leading-[28px] font-manrope max-w-[320px]">
+                      <p className="body-large text-[#5F6B6F] max-w-[320px]">
                         {step.description}
                       </p>
                     </div>
@@ -113,14 +113,14 @@ export function HowItWorks() {
           {/* Get Started Button + Refund reassurance */}
           <div className="flex flex-col items-center mt-10 lg:mt-12 gap-2">
             <CtaButton href="#how-it-works">Get Started</CtaButton>
-            <p className="text-[14px] leading-[26px] font-semibold text-[#5F6B6F] font-manrope text-center">
+            <p className="body-small text-[#5F6B6F] text-center">
               If not approved after your evaluation? You get a full refund.
             </p>
           </div>
 
           {/* Payment note */}
           <div className="mt-6 flex justify-center">
-            <div className="inline-block bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 sm:py-2 text-[14px] leading-[26px] font-semibold text-[#5F6B6F] text-center font-manrope border border-[#E76F51]/20">
+            <div className="inline-block bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 sm:py-2 body-small text-[#5F6B6F] text-center border border-[#E76F51]/20">
               We authorize your payment first, but only charge it after your evaluation is completed.
             </div>
           </div>

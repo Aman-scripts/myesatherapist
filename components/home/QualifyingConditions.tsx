@@ -152,10 +152,10 @@ export function QualifyingConditions({
       <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 max-w-[709px] mx-auto">
-          <h2 className="heading-h2 capitalize">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             {title}
           </h2>
-          <p className="body-large">
+          <p className="body-large text-[#5F6B6F]">
             {description}
           </p>
         </div>
@@ -250,7 +250,7 @@ export function QualifyingConditions({
                       </div>
 
                       {/* Description */}
-                      <p className="text-[#5F6B6F] text-[10.5px] lg:text-[12px] font-medium leading-[15px] lg:leading-[17px] font-sans mt-2 text-left">
+                      <p className="text-[#5F6B6F] text-[10.5px] lg:text-[12px] font-medium leading-[15px] lg:leading-[17px] font-manrope mt-2 text-left">
                         {c.description}
                       </p>
                     </div>
@@ -339,7 +339,7 @@ export function QualifyingConditions({
                         </div>
 
                         {/* Description text matching mockup */}
-                        <p className="text-[#5F6B6F] text-[13px] leading-[19px] font-sans font-medium text-left">
+                        <p className="text-[#5F6B6F] text-[13px] leading-[19px] font-manrope font-medium text-left">
                           {c.description}
                         </p>
                       </div>

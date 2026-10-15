@@ -28,10 +28,10 @@ export function JourneySection() {
       <div className="max-w-[1033px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="mb-8 sm:mb-10 xl:mb-[72px] space-y-2 max-w-[999px] mx-auto text-center">
-          <h2 className="heading-h2 capitalize">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             Your ESA Journey Starts Here
           </h2>
-          <p className="body-large">
+          <p className="body-large text-[#5F6B6F]">
             See how emotional support animals transform lives
           </p>
         </div>
@@ -69,7 +69,7 @@ export function JourneySection() {
                       height={38}
                       className="w-[36px] h-[36px] object-contain"
                     />
-                    <span className="heading-h3 leading-[32px] lg:leading-[36px]">
+                    <span className="heading-h3 text-[#2E5A66] leading-[32px] lg:leading-[36px]">
                       {card.stat}
                     </span>
                   </div>
