@@ -96,10 +96,10 @@ export function DoctorsAllStatesSection() {
             
             {/* Frame 1000011698 (Heading + Subtitle, gap: 28px) */}
             <div className="flex flex-col items-start gap-3.5 sm:gap-5 lg:gap-6 xl:gap-[28px] max-w-[560px] xl:max-w-[626px] w-full">
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] text-[#2E5A66] leading-[1.18] sm:leading-[1.2] lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] text-primary leading-[1.18] sm:leading-[1.2] lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
                 We&apos;re in All 50 US States
               </h2>
-              <p className="font-sans font-semibold text-base sm:text-lg lg:text-[17px] xl:text-[18px] text-[#5F6B6F] leading-[1.65] lg:leading-[28px] xl:leading-[30px]">
+              <p className="font-sans font-semibold text-base sm:text-lg lg:text-[17px] xl:text-[18px] text-body-text leading-[1.65] lg:leading-[28px] xl:leading-[30px]">
                 Our licensed therapists are available across the entire United States, providing professional ESA evaluations no matter where you live.
               </p>
             </div>
@@ -109,12 +109,12 @@ export function DoctorsAllStatesSection() {
               {cards.map((card, idx) => (
                 <div
                   key={idx}
-                  className="w-full h-[88px] sm:h-[94px] xl:h-[99px] rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center overflow-hidden transition-transform duration-200 hover:-translate-y-0.5"
+                  className="w-full h-[88px] sm:h-[94px] xl:h-[99px] rounded-[20px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center overflow-hidden transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   {/* Frame 13 - Left Accent Strip */}
                   <div
                     className="w-[10px] xl:w-[13px] h-full shrink-0"
-                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ backgroundImage: "var(--color-gradient)" }}
                   />
 
                   {/* Frame 1000011444 - Circular Icon Badge */}
@@ -131,10 +131,10 @@ export function DoctorsAllStatesSection() {
 
                   {/* Frame 14 - Card Text Area */}
                   <div className="flex flex-col justify-center min-w-0 pl-3 sm:pl-4 xl:pl-6 pr-3 sm:pr-4">
-                    <h3 className="font-heading font-bold text-[16px] sm:text-[18px] xl:text-[20px] leading-[22px] sm:leading-[26px] xl:leading-[28px] text-[#2E5A66] truncate">
+                    <h3 className="font-heading font-bold text-[16px] sm:text-[18px] xl:text-[20px] leading-[22px] sm:leading-[26px] xl:leading-[28px] text-primary truncate">
                       {card.title}
                     </h3>
-                    <p className="font-sans font-semibold text-[12px] sm:text-[13px] xl:text-[14px] leading-[18px] sm:leading-[22px] xl:leading-[26px] text-[#5F6B6F] truncate mt-0.5">
+                    <p className="font-sans font-semibold text-[12px] sm:text-[13px] xl:text-[14px] leading-[18px] sm:leading-[22px] xl:leading-[26px] text-body-text truncate mt-0.5">
                       {card.subtitle}
                     </p>
                   </div>

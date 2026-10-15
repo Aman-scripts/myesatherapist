@@ -65,10 +65,10 @@ export function DoctorsDisclosureSection() {
         
         {/* Frame: Heading (gap: 16px, height: 100px) */}
         <div className="flex flex-col items-center text-center gap-3 sm:gap-[16px] max-w-[854px] mx-auto mb-14 lg:mb-[67px]">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-[#2E5A66] leading-[1.18] sm:leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] max-w-[624px]">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-primary leading-[1.18] sm:leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] max-w-[624px]">
             Important Provider Disclosure
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-[#5F6B6F] leading-[1.65] lg:leading-[30px] max-w-[854px]">
+          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-body-text leading-[1.65] lg:leading-[30px] max-w-[854px]">
             How our network of independent professionals operates.
           </p>
         </div>
@@ -82,7 +82,7 @@ export function DoctorsDisclosureSection() {
             >
               {/* Frame 1000011684 - Gold Accent Backing Card */}
               <div
-                className="absolute inset-x-0 top-0 h-[142px] bg-[#E8B92C] rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                className="absolute inset-x-0 top-0 h-[142px] bg-accent rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                 style={{ zIndex: 0 }}
               />
 
@@ -92,7 +92,7 @@ export function DoctorsDisclosureSection() {
                 style={{ zIndex: 1 }}
               >
                 {/* Frame 1000011458 - Card Text */}
-                <p className={`font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] text-center ${idx === 0 ? 'max-w-[250px]' : 'max-w-[238px]'}`}>
+                <p className={`font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-body-text text-center ${idx === 0 ? 'max-w-[250px]' : 'max-w-[238px]'}`}>
                   {card.text}
                 </p>
               </div>

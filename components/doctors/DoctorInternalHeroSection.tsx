@@ -20,7 +20,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
   const desktopSrc = doctor.avatar;
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#FAF7F2]">
+    <section className="relative w-full overflow-hidden bg-background">
       {/* Background Image */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
@@ -32,7 +32,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
           className="object-cover object-[75%_center] lg:object-right-top opacity-75 lg:opacity-95"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 to-transparent lg:via-[#FAF7F2]/50 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent lg:via-background/50 lg:to-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,8 +48,8 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
                 { value: states, label: "States" },
                 { value: focusAreas, label: "Focus Areas" },
               ].map((pill) => (
-                <div key={pill.label} className="w-[163px] h-[53px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center text-center shrink-0">
-                  <span className="font-heading font-bold text-[24px] leading-tight bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+                <div key={pill.label} className="w-[163px] h-[53px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center text-center shrink-0">
+                  <span className="font-heading font-bold text-[24px] leading-tight text-color-gradient">
                     {pill.value}
                   </span>
                   <span className="font-sans font-semibold text-[12px] leading-tight text-[#949494]">
@@ -60,7 +60,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
             </div>
 
             {/* Name + LinkedIn */}
-            <h1 className="font-heading font-bold text-5xl lg:text-[56px] text-[#2E5A66] leading-[1.14] tracking-[-0.0002em]">
+            <h1 className="font-heading font-bold text-5xl lg:text-[56px] text-primary leading-[1.14] tracking-[-0.0002em]">
               {doctor.name}
               {doctor.linkedin && (
                 <a
@@ -68,8 +68,8 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${doctor.name} on LinkedIn`}
-                  className="inline-flex items-center justify-center ml-3.5 w-11 h-11 rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-[#FAF7F2] hover:opacity-90 hover:scale-105 transition-all cursor-pointer align-middle relative -top-2 shrink-0"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  className="inline-flex items-center justify-center ml-3.5 w-11 h-11 rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-background hover:opacity-90 hover:scale-105 transition-all cursor-pointer align-middle relative -top-2 shrink-0"
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   <svg className="w-[22px] h-[22px] fill-current" viewBox="0 0 24 24">
                     <circle cx="4.98" cy="4.98" r="2.4" />
@@ -80,7 +80,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               )}
             </h1>
 
-            <p className="font-sans font-semibold text-lg lg:text-[18px] text-[#5F6B6F] leading-[30px] max-w-[626px]">
+            <p className="font-sans font-semibold text-lg lg:text-[18px] text-body-text leading-[30px] max-w-[626px]">
               {doctor.heroBio || doctor.bio}
             </p>
 
@@ -89,10 +89,10 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               <Link
                 href={doctor.ctaSection?.buttonHref || "/pricing/"}
                 className="group inline-flex items-center justify-between h-[48px] pl-7 pr-1.5 rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white font-sans font-semibold text-[16px] hover:opacity-95 transition-all min-w-[267px]"
-                style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ backgroundImage: "var(--color-gradient)" }}
               >
                 <span>Schedule Consultation</span>
-                <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
+                <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
                   <Image quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-4 h-4 object-contain" />
                 </span>
               </Link>
@@ -126,8 +126,8 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               { value: states, label: "States" },
               { value: focusAreas, label: "Focus Areas" },
             ].map((pill) => (
-              <div key={pill.label} className="w-[125px] min-[420px]:w-[140px] sm:w-[163px] h-[53px] rounded-[30px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center text-center shrink-0">
-                <span className="font-heading font-bold text-[22px] sm:text-[24px] leading-tight bg-gradient-to-r from-[#1A3D4F] to-[#1D6E72] bg-clip-text text-transparent">
+              <div key={pill.label} className="w-[125px] min-[420px]:w-[140px] sm:w-[163px] h-[53px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center text-center shrink-0">
+                <span className="font-heading font-bold text-[22px] sm:text-[24px] leading-tight text-color-gradient">
                   {pill.value}
                 </span>
                 <span className="font-sans font-semibold text-[11px] sm:text-[12px] leading-tight text-[#949494]">
@@ -138,7 +138,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
           </div>
 
           {/* Name + LinkedIn */}
-          <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#2E5A66] leading-[1.14] tracking-[-0.0002em] mb-5 sm:mb-6">
+          <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-primary leading-[1.14] tracking-[-0.0002em] mb-5 sm:mb-6">
             {doctor.name}
             {doctor.linkedin && (
               <a
@@ -146,8 +146,8 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${doctor.name} on LinkedIn`}
-                className="inline-flex items-center justify-center ml-2.5 sm:ml-3.5 w-9 h-9 sm:w-10 sm:h-10 rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-[#FAF7F2] hover:opacity-90 hover:scale-105 transition-all cursor-pointer align-middle relative -top-1 sm:-top-1.5 shrink-0"
-                style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                className="inline-flex items-center justify-center ml-2.5 sm:ml-3.5 w-9 h-9 sm:w-10 sm:h-10 rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-background hover:opacity-90 hover:scale-105 transition-all cursor-pointer align-middle relative -top-1 sm:-top-1.5 shrink-0"
+                style={{ backgroundImage: "var(--color-gradient)" }}
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                   <circle cx="4.98" cy="4.98" r="2.4" />
@@ -159,7 +159,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
           </h1>
 
           {/* Bio */}
-          <p className="font-sans font-semibold text-base sm:text-lg text-[#5F6B6F] leading-[28px] sm:leading-[30px] max-w-[626px] mb-5 sm:mb-6">
+          <p className="font-sans font-semibold text-base sm:text-lg text-body-text leading-[28px] sm:leading-[30px] max-w-[626px] mb-5 sm:mb-6">
             {doctor.heroBio || doctor.bio}
           </p>
 
@@ -168,10 +168,10 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
             <Link
               href={doctor.ctaSection?.buttonHref || "/pricing/"}
               className="group inline-flex items-center justify-between h-[48px] pl-6 sm:pl-7 pr-1.5 rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] text-white font-sans font-semibold text-[15px] sm:text-[16px] hover:opacity-95 transition-all min-w-[240px] sm:min-w-[267px]"
-              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ backgroundImage: "var(--color-gradient)" }}
             >
               <span>Schedule Consultation</span>
-              <span className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
+              <span className="w-[38px] h-[38px] sm:w-[42px] sm:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3 transition-transform group-hover:scale-105">
                 <Image quality={90} src="/common/send-icon.svg" alt="" width={16} height={16} className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain" />
               </span>
             </Link>

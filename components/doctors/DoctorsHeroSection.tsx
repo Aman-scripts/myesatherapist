@@ -36,7 +36,7 @@ export function DoctorsHeroSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#FAF7F2] overflow-hidden min-h-[760px] sm:min-h-[1050px] md:min-h-[1150px] xl:min-h-[768px] flex items-start xl:items-center">
+    <section className="relative w-full bg-background overflow-hidden min-h-[760px] sm:min-h-[1050px] md:min-h-[1150px] xl:min-h-[768px] flex items-start xl:items-center">
       
       {/* ========================================================================= */}
       {/* 1. DESKTOP BACKGROUND GRAPHIC (xl: >= 1280px)                            */}
@@ -52,7 +52,7 @@ export function DoctorsHeroSection() {
           sizes="100vw"
         />
         {/* Soft gradient wash on left for contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/80 to-transparent w-[52%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent w-[52%] pointer-events-none" />
       </div>
 
       {/* ========================================================================= */}
@@ -100,10 +100,10 @@ export function DoctorsHeroSection() {
             <div className="flex items-center justify-center xl:justify-start gap-2 sm:gap-[12px] w-full max-w-[360px] sm:max-w-[513px]">
               
               {/* Badge 1: 50 USA States */}
-              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
+              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
                   className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   50
                 </span>
@@ -113,10 +113,10 @@ export function DoctorsHeroSection() {
               </div>
 
               {/* Badge 2: HIPAA Compliant */}
-              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
+              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
                   className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   HIPAA
                 </span>
@@ -126,10 +126,10 @@ export function DoctorsHeroSection() {
               </div>
 
               {/* Badge 3: 100% Licensed Pros */}
-              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
+              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
                 <span
                   className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   100%
                 </span>
@@ -141,12 +141,12 @@ export function DoctorsHeroSection() {
             </div>
 
             {/* Heading: Meet Our Licensed Mental Health Professionals */}
-            <h1 className="w-full heading-h1 text-[#2E5A66] max-w-[340px] sm:max-w-[580px] xl:max-w-[624px] mx-auto xl:mx-0">
+            <h1 className="w-full heading-h1 max-w-[340px] sm:max-w-[580px] xl:max-w-[624px] mx-auto xl:mx-0">
               Meet Our Licensed Mental Health Professionals
             </h1>
 
             {/* Subtitle */}
-            <p className="w-full body-large text-[#5F6B6F] max-w-[340px] sm:max-w-[600px] xl:max-w-[626px] mx-auto xl:mx-0">
+            <p className="w-full body-large max-w-[340px] sm:max-w-[600px] xl:max-w-[626px] mx-auto xl:mx-0">
               My ESA Therapist works with a network of independent, state-licensed mental health professionals who conduct emotional support animal (ESA) evaluations through secure telehealth sessions.
             </p>
 
@@ -173,23 +173,23 @@ export function DoctorsHeroSection() {
               <button
                 type="button"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="w-full sm:min-w-[220px] xl:min-w-[246px] h-[48px] sm:h-[54px] rounded-[30px] bg-white sm:bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 sm:px-6 flex items-center justify-between gap-[10px] hover:bg-white transition-all cursor-pointer border border-[#FAF7F2]"
+                className="w-full sm:min-w-[220px] xl:min-w-[246px] h-[48px] sm:h-[54px] rounded-[30px] bg-white sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 sm:px-6 flex items-center justify-between gap-[10px] hover:bg-white transition-all cursor-pointer border border-background"
                 aria-haspopup="listbox"
                 aria-expanded={dropdownOpen}
               >
                 <div className="flex items-center gap-[8px] shrink-0">
-                  <svg className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] text-[#2E5A66] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] text-primary shrink-0" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
                   </svg>
                   <span
                     className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[30px] bg-clip-text text-transparent whitespace-nowrap shrink-0"
-                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ backgroundImage: "var(--color-gradient)" }}
                   >
                     {selectedState || "Start your State"}
                   </span>
                 </div>
                 <svg
-                  className={`w-[12px] h-[10px] text-[#2E5A66] transition-transform duration-200 shrink-0 ml-1 ${
+                  className={`w-[12px] h-[10px] text-primary transition-transform duration-200 shrink-0 ml-1 ${
                     dropdownOpen ? "rotate-180" : ""
                   }`}
                   viewBox="0 0 12 10"
@@ -225,12 +225,12 @@ export function DoctorsHeroSection() {
             <Link
               href="#therapists"
               className="w-full sm:w-[179px] h-[48px] rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pl-[34px] pr-[3px] flex items-center justify-between gap-[8px] hover:opacity-95 transition-all shrink-0"
-              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ backgroundImage: "var(--color-gradient)" }}
             >
               <span className="font-sans font-semibold text-[16px] leading-[26px] text-white whitespace-nowrap">
                 Get Started
               </span>
-              <span className="w-[42.48px] h-[42.48px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[42.48px] h-[42.48px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90}
                   src="/common/send-icon.svg"

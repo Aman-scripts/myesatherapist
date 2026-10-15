@@ -15,7 +15,7 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
         {/* Active Now */}
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-primary tracking-[-0.017em]">
             Active Now
           </span>
         </div>
@@ -23,7 +23,7 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
         {/* 12 Years Experience */}
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-primary tracking-[-0.017em]">
             12 Years Experience
           </span>
         </div>
@@ -34,16 +34,16 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
 
       {/* Licensure Section */}
       <div className="space-y-4">
-        <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
+        <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-background/40 tracking-[-0.017em]">
           Licensure
         </h3>
-        <ul className="space-y-3 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <ul className="space-y-3 font-manrope text-[14px] leading-[22px] text-background tracking-[-0.017em]">
           <li className="flex items-center justify-between gap-4">
             <span>New York</span>
           </li>
           <li className="flex items-center justify-between gap-4">
             <span>England &amp; Wales</span>
-            <span className="font-medium text-[#FAF7F2]/90">2016</span>
+            <span className="font-medium text-background/90">2016</span>
           </li>
           <li className="flex items-center justify-between gap-4">
             <span>Pakistan</span>
@@ -56,20 +56,20 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
 
       {/* Professional Profiles */}
       <div className="space-y-3.5">
-        <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
+        <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-background/40 tracking-[-0.017em]">
           Professional Profiles
         </h3>
-        <div className="space-y-2.5 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <div className="space-y-2.5 font-manrope text-[14px] leading-[22px] text-background tracking-[-0.017em]">
           {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/awais-arshad-a51b31113/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={onLinkClick}
-            className="flex items-center gap-2.5 hover:text-[#E8B92C] transition-colors group cursor-pointer"
+            className="flex items-center gap-2.5 hover:text-accent transition-colors group cursor-pointer"
           >
             <svg
-              className="w-4 h-4 fill-current shrink-0 text-[#FAF7F2] group-hover:text-[#E8B92C] transition-colors"
+              className="w-4 h-4 fill-current shrink-0 text-background group-hover:text-accent transition-colors"
               viewBox="0 0 24 24"
             >
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 0 0 1.63-1.63 1.63 1.63 0 0 0-1.63-1.63A1.63 1.63 0 0 0 4.83 7.13a1.63 1.63 0 0 0 1.63 1.63m1.4 9.74v-8.37H5.06v8.37z" />
@@ -85,10 +85,10 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={onLinkClick}
-            className="flex items-center gap-2.5 hover:text-[#E8B92C] transition-colors group cursor-pointer"
+            className="flex items-center gap-2.5 hover:text-accent transition-colors group cursor-pointer"
           >
             <svg
-              className="w-4 h-4 fill-none stroke-current stroke-2 shrink-0 text-[#FAF7F2] group-hover:text-[#E8B92C] transition-colors"
+              className="w-4 h-4 fill-none stroke-current stroke-2 shrink-0 text-background group-hover:text-accent transition-colors"
               viewBox="0 0 24 24"
             >
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -139,7 +139,7 @@ export function LegalReviewerContent() {
   }, [isOpen]);
 
   return (
-    <section className="w-full bg-[#FAF7F2] relative pb-16 lg:pb-24">
+    <section className="w-full bg-background relative pb-16 lg:pb-24">
       <div className="w-full flex flex-col lg:flex-row items-start justify-start">
         {/* =========================================================================
             LEFT COLUMN (Profile Sidebar) - DESKTOP VIEW (>= 1024px)
@@ -148,9 +148,9 @@ export function LegalReviewerContent() {
             Sticky / Fixed on desktop, aligned with top: 126px
             ========================================================================= */}
         <aside
-          className="hidden lg:flex w-[382px] shrink-0 sticky top-[126px] z-20 self-start text-[#FAF7F2] flex-col max-h-[calc(100vh-140px)] rounded-none mb-0 overflow-hidden"
+          className="hidden lg:flex w-[382px] shrink-0 sticky top-[126px] z-20 self-start text-background flex-col max-h-[calc(100vh-140px)] rounded-none mb-0 overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)",
+            background: "var(--color-gradient)",
             borderRadius: "0px",
           }}
         >
@@ -178,7 +178,7 @@ export function LegalReviewerContent() {
 
               {/* Name & Title */}
               <div className="text-center lg:text-left space-y-2">
-                <h1 className="font-heading font-bold text-3xl sm:text-[38px] lg:text-[44px] leading-[1.15] text-[#FAF7F2] tracking-[-0.00015em]">
+                <h1 className="font-heading font-bold text-3xl sm:text-[38px] lg:text-[44px] leading-[1.15] text-background tracking-[-0.00015em]">
                   Awais Arshad
                 </h1>
 
@@ -194,7 +194,7 @@ export function LegalReviewerContent() {
                       className="w-6 h-6 object-contain"
                     />
                   </span>
-                  <span className="font-heading font-bold text-[20px] leading-[28px] text-[#FAF7F2]">
+                  <span className="font-heading font-bold text-[20px] leading-[28px] text-background">
                     Attorney at Law
                   </span>
                 </div>
@@ -225,9 +225,9 @@ export function LegalReviewerContent() {
                 onClick={() => setIsOpen(true)}
                 aria-label="Open Legal Reviewer Profile"
                 className="lg:hidden fixed left-0 top-[55%] sm:top-[50%] -translate-y-1/2 z-[80] w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.45)] flex items-center justify-center pl-0.5 text-white transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
-                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ background: "var(--color-gradient)" }}
               >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#FAF7F2] stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-[#E8B92C] transition-all" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
               </button>
 
               {/* Sliding Drawer & Backdrop */}
@@ -249,16 +249,16 @@ export function LegalReviewerContent() {
 
                 {/* Sliding Content Panel */}
                 <div
-                  className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-[#FAF7F2] shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
+                  className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-background shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
                     isOpen ? "translate-x-0" : "-translate-x-full"
                   }`}
-                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ background: "var(--color-gradient)" }}
                 >
                   {/* Fixed Top Header (Logo + Close Button + Divider) */}
                   <div className="shrink-0 px-6 sm:px-8 pt-8 sm:pt-10">
                     <div className="flex items-start justify-between mb-5 sm:mb-6">
                       {/* Brand Logo Card (Frame 1000011910) */}
-                      <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-[#E8B92C] rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
+                      <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                         <Image
             quality={90}
                           src="/common/myesa-logo.svg"
@@ -275,7 +275,7 @@ export function LegalReviewerContent() {
                         className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
                         aria-label="Close Profile Drawer"
                       >
-                        <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#FAF7F2] stroke-[2.2]" />
+                        <X className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-background stroke-[2.2]" />
                       </button>
                     </div>
 
@@ -304,7 +304,7 @@ export function LegalReviewerContent() {
                       </div>
 
                       <div className="text-left space-y-1.5">
-                        <h2 className="font-heading font-bold text-2xl sm:text-3xl leading-[1.15] text-[#FAF7F2] tracking-[-0.00015em]">
+                        <h2 className="font-heading font-bold text-2xl sm:text-3xl leading-[1.15] text-background tracking-[-0.00015em]">
                           Awais Arshad
                         </h2>
 
@@ -319,7 +319,7 @@ export function LegalReviewerContent() {
                               className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
                             />
                           </span>
-                          <span className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]">
+                          <span className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-background">
                             Attorney at Law
                           </span>
                         </div>
@@ -344,11 +344,11 @@ export function LegalReviewerContent() {
           <div className="space-y-6 lg:space-y-7">
             <SectionBadge title="About" />
 
-            <h2 className="font-heading font-bold text-3xl sm:text-[38px] lg:text-[32px] xl:text-[36px] leading-[1.22] text-[#2E5A66] tracking-[-0.00015em] lg:whitespace-nowrap">
+            <h2 className="font-heading font-bold text-3xl sm:text-[38px] lg:text-[32px] xl:text-[36px] leading-[1.22] text-primary tracking-[-0.00015em] lg:whitespace-nowrap">
               Legal Insight Behind the Information You Read
             </h2>
 
-            <p className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[28px] sm:leading-[30px] text-[#5F6B6F]">
+            <p className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[28px] sm:leading-[30px] text-body-text">
               Awais Arshad is a New York-licensed attorney and legal writer
               with 12 years of legal experience. He holds an LL.M. from
               Columbia Law School, where he was a Fulbright Scholar and
@@ -359,7 +359,7 @@ export function LegalReviewerContent() {
               fact-checking U.S. legal content.
             </p>
 
-            <p className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[28px] sm:leading-[30px] text-[#5F6B6F]">
+            <p className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[28px] sm:leading-[30px] text-body-text">
               At My ESA Therapist, he reviews legal content related to
               emotional support animals, checking claims for accuracy,
               currentness, reliable source support, and compliance with
@@ -379,7 +379,7 @@ export function LegalReviewerContent() {
           </div>
 
           {/* Divider Line 14 */}
-          <hr className="border-t border-[#5F6B6F]/25" />
+          <hr className="border-t border-body-text/25" />
 
           {/* SECTION 2: EDUCATION */}
           <div className="space-y-8 lg:space-y-10">
@@ -387,10 +387,10 @@ export function LegalReviewerContent() {
 
             {/* Degree: LL.M. */}
             <div className="space-y-4">
-              <h3 className="font-heading font-bold text-xl sm:text-[24px] leading-[32px] text-[#2E5A66]">
+              <h3 className="font-heading font-bold text-xl sm:text-[24px] leading-[32px] text-primary">
                 LL.M.
               </h3>
-              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-body-text tracking-[-0.017em]">
                 Columbia Law School
               </p>
 
@@ -403,7 +403,7 @@ export function LegalReviewerContent() {
           </div>
 
           {/* Divider Line 16 */}
-          <hr className="border-t border-[#5F6B6F]/25" />
+          <hr className="border-t border-body-text/25" />
 
           {/* SECTION 4: CONTENT REVIEW RESPONSIBILITIES */}
           <div className="space-y-9">
@@ -413,12 +413,12 @@ export function LegalReviewerContent() {
             <div className="space-y-7 sm:space-y-8">
               {/* Step 01 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span aria-hidden="true" data-num="01" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
+                <span aria-hidden="true" data-num="01" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-body-text/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
                 <div className="space-y-2 flex-1">
-                  <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
+                  <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-primary">
                     Types of legal content I review
                   </h3>
-                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text tracking-[-0.017em]">
                     I review public-facing legal content, including website copy,
                     articles, blog posts, FAQs, legal explainers, compliance
                     summaries, client guides, and educational materials intended
@@ -429,12 +429,12 @@ export function LegalReviewerContent() {
 
               {/* Step 02 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span aria-hidden="true" data-num="02" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
+                <span aria-hidden="true" data-num="02" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-body-text/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
                 <div className="space-y-2 flex-1">
-                  <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
+                  <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-primary">
                     Legal review process
                   </h3>
-                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text tracking-[-0.017em]">
                     I identify the legal claims being made and assess whether
                     they are accurate, current, properly qualified, and
                     supported by reliable authority. I flag overbroad,
@@ -446,12 +446,12 @@ export function LegalReviewerContent() {
 
               {/* Step 03 */}
               <div className="flex items-start gap-4 sm:gap-6">
-                <span aria-hidden="true" data-num="03" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-[#5F6B6F]/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
+                <span aria-hidden="true" data-num="03" className="font-heading font-bold text-3xl sm:text-[44px] leading-[1.15] text-body-text/45 shrink-0 w-10 sm:w-14 before:content-[attr(data-num)]" />
                 <div className="space-y-2 flex-1">
-                  <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
+                  <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-primary">
                     How I verify legal accuracy
                   </h3>
-                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text tracking-[-0.017em]">
                     I verify legal information using statutes, regulations,
                     agency guidance, case law, and reputable secondary legal
                     sources. I also use Westlaw and LexisNexis to research
@@ -465,16 +465,16 @@ export function LegalReviewerContent() {
           </div>
 
           {/* Divider Line */}
-          <hr className="border-t border-[#5F6B6F]/25" />
+          <hr className="border-t border-body-text/25" />
 
           {/* SECTION 5: REVIEWER DISCLOSURE CARD */}
           <div
-            className="rounded-[30px] p-6 sm:p-8 lg:p-[37px] text-[#FAF7F2] shadow-sm space-y-5"
+            className="rounded-[30px] p-6 sm:p-8 lg:p-[37px] text-background shadow-sm space-y-5"
             style={{
-              background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)",
+              background: "var(--color-gradient)",
             }}
           >
-            <h3 className="font-heading font-bold text-lg sm:text-[20px] leading-[28px] text-[#FAF7F2] tracking-[0.05em] uppercase">
+            <h3 className="font-heading font-bold text-lg sm:text-[20px] leading-[28px] text-background tracking-[0.05em] uppercase">
               Reviewer Disclosure
             </h3>
 
@@ -483,7 +483,7 @@ export function LegalReviewerContent() {
               <div className="flex items-start gap-3.5">
                 <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
                   <svg
-                    className="w-3 h-3 text-[#FAF7F2]"
+                    className="w-3 h-3 text-background"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -496,7 +496,7 @@ export function LegalReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-background tracking-[-0.017em]">
                   I authorize My ESA Therapist to display my name, photo,
                   biography, credentials, and professional information on its
                   website.
@@ -507,7 +507,7 @@ export function LegalReviewerContent() {
               <div className="flex items-start gap-3.5">
                 <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
                   <svg
-                    className="w-3 h-3 text-[#FAF7F2]"
+                    className="w-3 h-3 text-background"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -520,7 +520,7 @@ export function LegalReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-background tracking-[-0.017em]">
                   I have reviewed and approved the information provided.
                 </p>
               </div>
@@ -529,7 +529,7 @@ export function LegalReviewerContent() {
               <div className="flex items-start gap-3.5">
                 <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
                   <svg
-                    className="w-3 h-3 text-[#FAF7F2]"
+                    className="w-3 h-3 text-background"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -542,7 +542,7 @@ export function LegalReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-background tracking-[-0.017em]">
                   I understand that my review of website content does not
                   establish an attorney-client relationship with website
                   visitors.

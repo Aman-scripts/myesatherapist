@@ -76,10 +76,10 @@ function DoctorStatBadge({
   icon?: string;
 }) {
   return (
-    <div className="relative flex-1 min-w-0 rounded-[10px] bg-[#E8B92C] pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
+    <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
       <div className="bg-white rounded-[8px] pt-[22px] sm:pt-[24px] pb-2 sm:pb-2.5 px-1.5 sm:px-2 text-center flex flex-col justify-start items-center relative min-h-[62px] sm:min-h-[66px]">
         {/* Floating circular icon badge at top center */}
-        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-[#FAF7F2]">
+        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
           <Image
             quality={90}
             src={icon || "/common/therapist-section-badge.svg"}
@@ -91,11 +91,11 @@ function DoctorStatBadge({
         </div>
         <div
           className="body-small bg-clip-text text-transparent truncate w-full"
-          style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+          style={{ backgroundImage: "var(--color-gradient)" }}
         >
           {label}
         </div>
-        <div className="body-small text-[#5F6B6F] truncate w-full">
+        <div className="body-small truncate w-full">
           {value}
         </div>
       </div>
@@ -107,15 +107,15 @@ export function DoctorsListingSection() {
   const [activePage, setActivePage] = useState<number>(0);
 
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-24 bg-[#FAF7F2] relative">
+    <section className="w-full py-16 sm:py-20 lg:py-24 bg-background relative">
       <div className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading Header */}
         <div className="text-center mb-12 lg:mb-14 max-w-[860px] mx-auto space-y-3 sm:space-y-4">
-          <h2 className="heading-h2 text-[#2E5A66] capitalize">
+          <h2 className="heading-h2 capitalize">
             Our Licensed Mental Health Professionals
           </h2>
-          <p className="body-large text-[#5F6B6F] max-w-[813px] mx-auto">
+          <p className="body-large max-w-[813px] mx-auto">
             We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.
           </p>
         </div>
@@ -125,18 +125,18 @@ export function DoctorsListingSection() {
           {DOCTORS.map((doc, idx) => (
             <div
               key={doc.id}
-              className={`w-full bg-white rounded-[30px] border-2 border-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg ${
+              className={`w-full bg-white rounded-[30px] border-2 border-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg ${
                 idx === 2 ? "lg:col-span-2 lg:w-[calc(50%-21px)] lg:mx-auto" : ""
               }`}
             >
               {/* Top Banner with Gradient & Doctor Identity */}
               <div
                 className="px-5 sm:px-7 py-4 sm:py-4.5 flex items-center justify-between gap-3 relative"
-                style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ backgroundImage: "var(--color-gradient)" }}
               >
                 <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                   {/* Doctor Avatar with Gold Border */}
-                  <div className="w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-[#E8B92C] overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+                  <div className="w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                     <Image
             quality={90}
                       src={doc.avatar}
@@ -149,10 +149,10 @@ export function DoctorsListingSection() {
 
                   {/* Name and Title */}
                   <div className="min-w-0">
-                    <h3 className="heading-h3 text-[#FAF7F2] truncate">
+                    <h3 className="heading-h3 text-background truncate">
                       {doc.name}
                     </h3>
-                    <p className="body-large text-[#E8B92C] truncate mt-0.5">
+                    <p className="body-large text-accent truncate mt-0.5">
                       {doc.title}
                     </p>
                   </div>
@@ -164,7 +164,7 @@ export function DoctorsListingSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${doc.name} LinkedIn Profile`}
-                  className="w-8 h-8 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
+                  className="w-8 h-8 rounded-full bg-accent hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105 cursor-pointer"
                 >
                   <LinkedinIcon className="w-4 h-4 text-[#1A3D4F]" />
                 </a>
@@ -173,7 +173,7 @@ export function DoctorsListingSection() {
               {/* Card Body */}
               <div className="p-5 sm:p-7 flex flex-col justify-between flex-1 gap-6">
                 {/* Clinical Bio */}
-                <p className="font-sans font-semibold text-sm sm:text-[14px] text-[#5F6B6F] leading-[24px] sm:leading-[26px]">
+                <p className="font-sans font-semibold text-sm sm:text-[14px] text-body-text leading-[24px] sm:leading-[26px]">
                   {doc.bio}
                 </p>
 
@@ -188,10 +188,10 @@ export function DoctorsListingSection() {
                 <div className="pt-2 flex justify-center">
                   <Link
                     href={`/esa-doctors/${doc.slug}/`}
-                    className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-[#E8B92C] hover:bg-[#dba81f] text-[#29515B] font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
+                    className="inline-flex items-center justify-between h-[46px] sm:h-[48px] px-6 rounded-[30px] bg-accent hover:bg-[#dba81f] text-[#29515B] font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-all min-w-[170px]"
                   >
                     <span>View Profile</span>
-                    <span className="w-7 h-7 rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-2">
+                    <span className="w-7 h-7 rounded-full bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-2">
                       <Image
             quality={90}
                         src="/common/send-icon.svg"
@@ -220,7 +220,7 @@ export function DoctorsListingSection() {
               className={`block transition-all duration-200 ${
                 activePage === 0
                   ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                  : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
+                  : "w-2.5 h-2.5 rounded-full bg-primary/20 hover:bg-primary/40"
               }`}
             />
           </button>
@@ -234,7 +234,7 @@ export function DoctorsListingSection() {
               className={`block transition-all duration-200 ${
                 activePage === 1
                   ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                  : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
+                  : "w-2.5 h-2.5 rounded-full bg-primary/20 hover:bg-primary/40"
               }`}
             />
           </button>
@@ -248,7 +248,7 @@ export function DoctorsListingSection() {
               className={`block transition-all duration-200 ${
                 activePage === 2
                   ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                  : "w-2.5 h-2.5 rounded-full bg-[#2E5A66]/20 hover:bg-[#2E5A66]/40"
+                  : "w-2.5 h-2.5 rounded-full bg-primary/20 hover:bg-primary/40"
               }`}
             />
           </button>
@@ -259,7 +259,7 @@ export function DoctorsListingSection() {
           <Link
             href="/pricing/"
             className="inline-flex items-center justify-between h-[48px] pl-6 pr-2 rounded-full shadow-[0px_2px_6px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all text-white font-sans font-semibold text-[15px] sm:text-[16px] min-w-[215px]"
-            style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+            style={{ backgroundImage: "var(--color-gradient)" }}
           >
             <span>Book Appointment</span>
             <span className="w-8 h-8 rounded-full bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 ml-3">

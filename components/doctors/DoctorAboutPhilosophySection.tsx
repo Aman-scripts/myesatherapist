@@ -41,14 +41,14 @@ export function DoctorAboutPhilosophySection({
           <div className="lg:col-span-2 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] space-y-4 sm:space-y-5">
 
             <div className="space-y-3 sm:space-y-4">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] font-bold text-[#2E5A66] leading-tight lg:leading-[50px] tracking-[-0.00015em]">
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] font-bold text-primary leading-tight lg:leading-[50px] tracking-[-0.00015em]">
                 {aboutHeading}
               </h2>
               <div className="space-y-3">
                 {aboutParagraphs.map((para, idx) => (
                   <p
                     key={idx}
-                    className="font-sans font-semibold text-[15px] sm:text-[18px] text-[#5F6B6F] leading-[24px] sm:leading-[30px]"
+                    className="font-sans font-semibold text-[15px] sm:text-[18px] text-body-text leading-[24px] sm:leading-[30px]"
                   >
                     {para}
                   </p>
@@ -61,10 +61,10 @@ export function DoctorAboutPhilosophySection({
               <Link
                 href={ctaHref}
                 className="inline-flex items-center justify-between pl-6 pr-1.5 w-[171px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-base shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
-                style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ background: "var(--color-gradient)" }}
               >
                 <span>Get Started</span>
-                <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <span className="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
             quality={90}
                     src="/common/send-icon.svg"
@@ -80,14 +80,14 @@ export function DoctorAboutPhilosophySection({
 
           {/* ── My Philosophy card (narrow tile) ── */}
           <div className="lg:col-span-1 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] space-y-3 sm:space-y-4">
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#2E5A66] leading-tight lg:leading-[40px] tracking-[-0.00015em]">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] font-bold text-primary leading-tight lg:leading-[40px] tracking-[-0.00015em]">
               {philosophyHeading}
             </h2>
             <div className="space-y-3">
               {philosophyParagraphs.map((para, idx) => (
                 <p
                   key={idx}
-                  className="font-sans font-semibold text-[15px] sm:text-[18px] text-[#5F6B6F] leading-[24px] sm:leading-[30px]"
+                  className="font-sans font-semibold text-[15px] sm:text-[18px] text-body-text leading-[24px] sm:leading-[30px]"
                 >
                   {para}
                 </p>

@@ -56,15 +56,15 @@ export function DoctorsMatchingSection() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-[#FAF7F2] w-full overflow-hidden">
+    <section className="py-16 lg:py-24 bg-background w-full overflow-hidden">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Frame 1000011447 (Header, gap: 8px) */}
         <div className="text-center mb-12 lg:mb-[80px] max-w-[987px] mx-auto flex flex-col items-center gap-[8px]">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-[#2E5A66] leading-[1.18] sm:leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] max-w-[742px]">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-primary leading-[1.18] sm:leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] max-w-[742px]">
             How You&apos;re Matched With a Provider
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-[#5F6B6F] leading-relaxed lg:leading-[30px] max-w-[987px]">
+          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-body-text leading-relaxed lg:leading-[30px] max-w-[987px]">
             When you begin an evaluation, you are matched with a licensed mental health professional authorized in your state.
           </p>
         </div>
@@ -81,21 +81,21 @@ export function DoctorsMatchingSection() {
                 {/* Frame 1000011969 - 46px Gradient Icon Badge */}
                 <div
                   className="w-[46px] h-[46px] rounded-full flex items-center justify-center shrink-0 shadow-xs"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   {step.icon}
                 </div>
 
                 {/* 01 / 02 / 03 Step Number (Plus Jakarta Sans 700, 54px, 20% opacity) */}
-                <span aria-hidden="true" data-num={step.num} className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-[#5F6B6F] opacity-20 select-none tracking-tight before:content-[attr(data-num)]" />
+                <span aria-hidden="true" data-num={step.num} className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-body-text opacity-20 select-none tracking-tight before:content-[attr(data-num)]" />
               </div>
 
               {/* Frame 1000011970 (Title + Description, gap: 8px) */}
               <div className="flex flex-col items-start gap-[8px] w-full pt-3">
-                <h3 className="font-heading font-bold text-[22px] sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
+                <h3 className="font-heading font-bold text-[22px] sm:text-[24px] leading-[30px] sm:leading-[32px] text-primary">
                   {step.title}
                 </h3>
-                <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F]">
+                <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text">
                   {step.desc}
                 </p>
               </div>
