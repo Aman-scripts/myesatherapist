@@ -12,51 +12,77 @@
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
   --font-playfair: var(--font-heading);
-  --font-lato: var(--font-lato);
-  --font-space-grotesk: var(--font-space-grotesk);
+  --font-lato: var(--font-sans);
+  --font-space-grotesk: var(--font-sans);
 
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary-dark: var(--primary-dark);
-  --color-primary-light: var(--primary-light);
+  /* Exact Figma Design System Color Tokens */
+  --color-primary: #2E5A66;
+  --color-primary-foreground: #FAF7F2;
+  --color-primary-dark: #1A3D4F;
+  --color-primary-light: #1D6E72;
 
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: #E8B92C;
+  --color-accent-foreground: #2E5A66;
 
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
+  --color-body-text: #5F6B6F;
+  --color-muted: #FAF7F2;
+  --color-muted-foreground: #5F6B6F;
 
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: #F1F5F9;
+  --color-secondary-foreground: #1A1A1A;
 
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1A1A1A;
 
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+  --color-border: #E2E8F0;
+  --color-input: #E2E8F0;
+  --color-ring: #2E5A66;
 
-  --color-warm-bg: var(--warm-bg);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
+  --color-warm-bg: #FAF7F2;
+  --color-gold: #E8B92C;
+  --color-gold-light: #FDF6DF;
+
+  /* Strict Typography Font Sizes & Line Heights */
+  --text-heading-h1: 48px;
+  --text-heading-h1--line-height: 58px;
+
+  --text-heading-h2: 40px;
+  --text-heading-h2--line-height: 48px;
+
+  --text-heading-h3: 28px;
+  --text-heading-h3--line-height: 36px;
+
+  --text-heading-h4: 20px;
+  --text-heading-h4--line-height: 28px;
+
+  --text-body-large: 18px;
+  --text-body-large--line-height: 28px;
+
+  --text-body-text: 16px;
+  --text-body-text--line-height: 26px;
+
+  --text-body-small: 14px;
+  --text-body-small--line-height: 26px;
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #1A1A1A;
+  --background: #FAF7F2;
+  --foreground: #5F6B6F;
   --warm-bg: #FAF7F2;
   --card: #FFFFFF;
   --card-foreground: #1A1A1A;
   --popover: #FFFFFF;
   --popover-foreground: #1A1A1A;
 
-  /* Brand Deep Teal */
+  /* Brand Deep Teal (#2E5A66) */
   --primary: #2E5A66;
-  --primary-dark: #1E3E47;
-  --primary-light: #E8F0F1;
-  --primary-foreground: #FFFFFF;
+  --primary-dark: #1A3D4F;
+  --primary-light: #1D6E72;
+  --primary-foreground: #FAF7F2;
 
-  /* Accent Gold */
+  /* Accent Gold (#E8B92C) */
+  --accent: #E8B92C;
+  --accent-foreground: #2E5A66;
   --gold: #E8B92C;
   --gold-light: #FDF6DF;
   --gold-foreground: #8C5230;
@@ -64,11 +90,10 @@
   --secondary: #F1F5F9;
   --secondary-foreground: #1A1A1A;
 
+  /* Body Text (#5F6B6F) */
   --muted: #FAF7F2;
   --muted-foreground: #5F6B6F;
-
-  --accent: #EFFFF1;
-  --accent-foreground: #2E5A66;
+  --body-text: #5F6B6F;
 
   --destructive: #FF5023;
   --border: #E2E8F0;
@@ -76,7 +101,7 @@
   --ring: #2E5A66;
   --radius: 0.75rem;
 
-  /* Section tints (from Figma) */
+  /* Section tints */
   --tint-peach: #FCE4DC;
   --tint-mint: #EFFFF1;
   --tint-rose: #FFF5F5;
@@ -84,6 +109,200 @@
   --ink-soft: #475467;
   --clay: #A75E31;
   --clay-dark: #8C5230;
+}
+
+/* ==========================================================================
+   STRICT GLOBAL TYPOGRAPHY UTILITIES (FIGMA DESIGN SYSTEM)
+   Text Styles:
+   - heading-h1:  Playfair Display 700, 48px / line-height 58px
+   - heading-h2:  Playfair Display 700, 40px / line-height 48px
+   - heading-h3:  Playfair Display 700, 28px / line-height 36px
+   - heading-h4:  Playfair Display 700, 20px / line-height 28px
+   - body-large:   Manrope 600, 18px / line-height 28px
+   - body-text:    Manrope 600, 16px / line-height 26px
+   - body-small:   Manrope 600, 14px / line-height 26px
+   ========================================================================== */
+
+@utility heading-h1 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.00015em;
+}
+
+@utility heading-h2 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.00015em;
+}
+
+@utility heading-h3 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.0003em;
+}
+
+@utility heading-h4 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.00015em;
+}
+
+@utility body-large {
+  font-family: var(--font-sans), 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@utility body-text {
+  font-family: var(--font-sans), 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@utility body-small {
+  font-family: var(--font-sans), 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/* Standalone CSS Class Selectors for Global Compatibility */
+.heading-h1 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.00015em;
+}
+
+.heading-h2 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.00015em;
+}
+
+.heading-h3 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.0003em;
+}
+
+.heading-h4 {
+  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.00015em;
+}
+
+.body-large {
+  font-family: var(--font-sans), 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.body-text {
+  font-family: var(--font-sans), 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.body-small {
+  font-family: var(--font-sans), 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.font-lato {
+  font-family: var(--font-sans), 'Manrope', sans-serif !important;
+}
+
+/* Color styles */
+.color-primary {
+  color: #2E5A66;
+}
+.bg-color-primary {
+  background-color: #2E5A66;
+}
+.border-color-primary {
+  border-color: #2E5A66;
+}
+
+.color-accent {
+  color: #E8B92C;
+}
+.bg-color-accent {
+  background-color: #E8B92C;
+}
+.border-color-accent {
+  border-color: #E8B92C;
+}
+
+.color-gradient {
+  background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
+}
+.text-color-gradient {
+  background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.color-background {
+  background-color: #FAF7F2;
+}
+
+.color-body-text {
+  color: #5F6B6F;
+}
+
+/* Responsive adjustments for mobile typography */
+@media (max-width: 768px) {
+  .heading-h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .heading-h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .heading-h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .heading-h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .body-large {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .body-text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .body-small {
+    font-size: 13px;
+    line-height: 22px;
+  }
 }
 
 @layer base {
@@ -98,8 +317,77 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+    font-family: var(--font-sans), 'Manrope', sans-serif;
+    font-weight: 600;
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.00015em;
+    color: #2E5A66;
+  }
+
+  h2 {
+    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.00015em;
+    color: #2E5A66;
+  }
+
+  h3 {
+    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.0003em;
+    color: #2E5A66;
+  }
+
+  h4 {
+    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.00015em;
+    color: #2E5A66;
+  }
+
+  p {
+    font-family: var(--font-sans), 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #5F6B6F;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    h2 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    h3 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    h4 {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
 
   button:not(:disabled),
