@@ -120,9 +120,9 @@ export function FaqSection({
 
                     {/* Question Title Area & Plus Icon (+) */}
                     <div className="flex-1 py-2.5 sm:py-3 px-3.5 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
-                      <span className="font-manrope font-semibold text-sm sm:text-base xl:text-[18px] text-white leading-snug sm:leading-[26px] xl:leading-[30px]">
+                      <h3 className="heading-h3 text-white text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
                         {faq.q}
-                      </span>
+                      </h3>
 
                       {/* Figma Plus Icon (+) */}
                       <span
@@ -151,7 +151,7 @@ export function FaqSection({
 
                   {/* Accordion Answer Content */}
                   {isOpen && (
-                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 text-sm sm:text-[16px] text-[#5F6B6F] font-manrope font-semibold leading-[24px] sm:leading-[26px] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                    <div className="bg-[#FAF7F2] px-5 sm:px-7 py-4 sm:py-5 body-text text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
                       {faq.a}
                     </div>
                   )}

@@ -110,9 +110,9 @@ export function StatesFaqSection() {
                       </div>
 
                       {/* Question Text */}
-                      <span className="font-sans font-semibold text-base sm:text-lg text-white group-hover:text-[#E8B92C] transition-colors leading-snug">
+                      <h3 className="heading-h3 text-white group-hover:text-[#E8B92C] transition-colors text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
                         {faq.question}
-                      </span>
+                      </h3>
                     </div>
 
                     {/* Toggle Icon */}

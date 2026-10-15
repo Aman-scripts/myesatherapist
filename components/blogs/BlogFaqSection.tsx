@@ -125,9 +125,9 @@ export function BlogFaqSection({
 
                     {/* Question Title & Plus Icon */}
                     <div className="flex-1 py-3 px-3.5 sm:px-5 flex items-center justify-between gap-3">
-                      <span className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-white leading-snug sm:leading-[26px]">
+                      <h3 className="heading-h3 text-white text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
                         {faq.q}
-                      </span>
+                      </h3>
 
                       {/* Plus (+) Icon that rotates 45deg to (x) when open */}
                       <span

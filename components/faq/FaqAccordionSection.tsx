@@ -75,9 +75,9 @@ export function FaqAccordionSection() {
 
                 {/* Question Title & Plus/Minus Icon */}
                 <div className="flex-1 py-3 sm:py-4 px-4 sm:px-6 xl:px-7 flex items-center justify-between gap-3 sm:gap-4">
-                  <span className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] text-white leading-snug sm:leading-[26px] xl:leading-[30px] pr-2">
+                  <h3 className="heading-h3 text-white text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] pr-2 m-0 capitalize">
                     {faq.question}
-                  </span>
+                  </h3>
 
                   {/* Plus Icon (+) with smooth rotate */}
                   <span
