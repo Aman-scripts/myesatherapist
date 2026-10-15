@@ -121,8 +121,7 @@ function ResourcesMenu() {
               href={item.href}
               role="menuitem"
               onClick={() => setOpen(false)}
-              className="block px-7 py-3.5 text-[16px] font-bold text-[#1A3D4F] hover:bg-[#FAF7F2] hover:text-[#1D6E72] transition-colors"
-              style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
+              className="block px-7 py-3.5 body-text font-semibold text-[#1A3D4F] hover:bg-[#FAF7F2] hover:text-[#1D6E72] transition-colors font-manrope"
             >
               {item.label}
             </Link>

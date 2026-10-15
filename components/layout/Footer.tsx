@@ -10,6 +10,7 @@ const companyLinks = [
   { label: "About Us", href: "/about-us/" },
   { label: "Contact Us", href: "/contact-us/" },
   { label: "Meet our Therapists", href: "/esa-doctors/" },
+  { label: "HIPAA Compliance", href: "/hipaa-compliance/" },
   { label: "Video Testimonials", href: "/video-testimonials/" },
   { label: "Customer Reviews", href: "/reviews/" },
 ];
@@ -54,7 +55,7 @@ function HipaaBadge() {
 
 export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
   return (
-    <footer className={`w-full ${bgColor} pt-0`}>
+    <footer className={`w-full ${bgColor} pt-4 sm:pt-6 lg:pt-8`}>
       {/* 100% Full-Width Dark Gradient Container with Rounded Top Corners */}
       <div
         className="w-full rounded-t-[40px] sm:rounded-t-[60px] pt-16 pb-10 text-white relative overflow-hidden"
@@ -77,12 +78,12 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
             </div>
 
             {/* Heading with Gold Highlight */}
-            <h3 className="font-heading text-[32px] sm:text-[36px] font-bold text-white leading-[40px] sm:leading-[44px] tracking-[-0.0003em]">
+            <h3 className="heading-h2 text-[#FAF7F2] capitalize text-center">
               My ESA <span className="text-[#E8B92C]">Therapist</span>
             </h3>
 
             {/* Subtitle */}
-            <p className="text-[#FAF7F2] text-[16px] sm:text-[18px] font-semibold leading-[26px] sm:leading-[30px] font-sans max-w-[734px]">
+            <p className="text-[#FAF7F2] body-large text-center max-w-[734px]">
               A 100% legal platform providing emotional support animal evaluations to those who suffer from any mental or emotional disability — trusted, professional &amp; confidential.
             </p>
 
@@ -93,7 +94,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 className="inline-flex items-center justify-center w-[227px] h-[50px] px-8 rounded-[46px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
               >
                 <span
-                  className="font-sans font-semibold text-[16px] leading-[26px] bg-clip-text text-transparent whitespace-nowrap"
+                  className="body-text bg-clip-text text-transparent whitespace-nowrap"
                   style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
                 >
                   Apply your ESA Letter
@@ -104,7 +105,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
                 href="/contact-us/"
                 className="inline-flex items-center justify-center w-[151px] h-[50px] px-8 rounded-[67px] border border-[#FAF7F2] [filter:drop-shadow(0px_1px_4px_#E8B92C)] hover:bg-white/10 transition-colors"
               >
-                <span className="font-sans font-semibold text-[16px] leading-[26px] text-[#FAF7F2] whitespace-nowrap">
+                <span className="font-manrope font-semibold text-[16px] leading-[26px] text-[#FAF7F2] whitespace-nowrap">
                   Contact Us
                 </span>
               </Link>
@@ -118,10 +119,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6 xl:gap-8">
             {/* Column 1: ABOUT US */}
             <div className="space-y-4">
-              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-manrope font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 ABOUT US
               </div>
-              <p className="text-[#FAF7F2] text-[14px] font-semibold leading-[26px] font-sans pr-2">
+              <p className="text-[#FAF7F2] text-[14px] font-semibold leading-[26px] font-manrope pr-2">
                 We connect you with licensed therapists across all 50 US states to obtain legitimate ESA letters quickly, securely, and affordably.
               </p>
               <div className="pt-2">
@@ -131,10 +132,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 2: COMPANY */}
             <div className="space-y-4">
-              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-manrope font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 COMPANY
               </div>
-              <ul className="space-y-3 font-sans">
+              <ul className="space-y-3 font-manrope">
                 {companyLinks.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -153,10 +154,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 3: QUICK LINKS */}
             <div className="space-y-4">
-              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-manrope font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 QUICK LINKS
               </div>
-              <ul className="space-y-3 font-sans">
+              <ul className="space-y-3 font-manrope">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -175,10 +176,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 4: LEGAL */}
             <div className="space-y-4">
-              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-manrope font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 LEGAL
               </div>
-              <ul className="space-y-3 font-sans">
+              <ul className="space-y-3 font-manrope">
                 {legalLinks.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -197,10 +198,10 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
 
             {/* Column 5: GET IN TOUCH */}
             <div className="space-y-4">
-              <div className="text-[#E8B92C] font-sans font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
+              <div className="text-[#E8B92C] font-manrope font-semibold text-[16px] leading-[26px] tracking-wider uppercase">
                 GET IN TOUCH
               </div>
-              <div className="space-y-4 font-sans">
+              <div className="space-y-4 font-manrope">
                 {/* Phone */}
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#E8B92C]/20 border border-[#E8B92C]/40 flex items-center justify-center shrink-0">
@@ -300,7 +301,7 @@ export function Footer({ bgColor = "bg-[#FAF7F2]" }: { bgColor?: string }) {
           <div className="w-full border-t border-white/10 mt-14 mb-6" />
 
           {/* Bottom Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px] leading-[26px] font-sans text-[#FAF7F2]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[14px] leading-[26px] font-manrope text-[#FAF7F2]">
             <p className="font-semibold">
               &copy; 2026 <span className="text-[#E8B92C]">myesatherapist.com</span> — All Rights Reserved
             </p>
