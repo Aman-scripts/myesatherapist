@@ -27,7 +27,7 @@ const stepsData = [
   },
 ];
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function PsdProcessSection() {
   return (
@@ -36,11 +36,11 @@ export function PsdProcessSection() {
         
         {/* 1. Section Header (2-Column Layout on Desktop matching Frame 1000011750) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-12 lg:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight max-w-xl">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight max-w-xl">
             A Simple &amp; Secure <br className="hidden sm:block" />
             Three-Step Process
           </h2>
-          <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
+          <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
             From PSD consultation to PSD letter delivery, everything happens online. No paperwork, no waiting rooms, just a simple path to a legitimate psychiatric service dog letter and professional documentation.
           </p>
         </div>
@@ -91,7 +91,7 @@ export function PsdProcessSection() {
               className="relative bg-white rounded-[20px] md:rounded-[24px] p-6 sm:p-7 lg:p-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
             >
               {/* Step Number Circle Badge at Top-Left */}
-              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-[#E8B92C] text-[#29515B] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0px_2px_4px_rgba(58,58,58,0.25)]">
+              <div className="absolute top-4 left-4 sm:top-5 sm:left-5 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-accent text-[#29515B] font-heading font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center shadow-[0px_2px_4px_rgba(58,58,58,0.25)]">
                 {step.number}
               </div>
 
@@ -117,7 +117,7 @@ export function PsdProcessSection() {
               </h3>
 
               {/* Step Description */}
-              <p className="text-sm sm:text-[16px] text-[#5F6B6F] font-semibold leading-[24px] sm:leading-[26px] font-sans">
+              <p className="text-sm sm:text-[16px] text-body-text font-semibold leading-[24px] sm:leading-[26px] font-sans">
                 {step.description}
               </p>
             </div>
@@ -132,7 +132,7 @@ export function PsdProcessSection() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <span className="font-sans mr-3">Start Your Consultation</span>
-            <span className="w-[36px] h-[36px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+            <span className="w-[36px] h-[36px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
               <Image
             quality={90}
                 src="/common/send-icon.svg"

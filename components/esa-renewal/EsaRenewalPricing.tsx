@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 const LATO = { fontFamily: "var(--font-sans), 'Manrope', sans-serif" } as const;
 
@@ -67,14 +67,14 @@ function PlanBody({ plan, ctaClassName }: { plan: Plan; ctaClassName?: string })
         {/* Plan header + price */}
         <div className="flex flex-col items-start gap-4 self-stretch">
           <div className="flex flex-col items-start gap-1 self-stretch">
-            <h3 className="heading-h4 text-[#2E5A66]">{plan.name}</h3>
+            <h3 className="heading-h4">{plan.name}</h3>
             <p className="body-small text-[#666666]">{plan.description}</p>
           </div>
           <div className="flex flex-wrap items-end gap-0.5 self-stretch">
-            <span className="heading-h2 text-[#2E5A66]">
+            <span className="heading-h2">
               {plan.price}
             </span>
-            <span className="body-small text-[#5F6B6F]">{plan.unit}</span>
+            <span className="body-small">{plan.unit}</span>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ function PlanBody({ plan, ctaClassName }: { plan: Plan; ctaClassName?: string })
             <li key={feature} className="flex items-start gap-[6px] self-stretch">
               <CheckBadge />
               <span
-                className="flex-1 italic body-small text-[#5F6B6F]"
+                className="flex-1 italic body-small"
               >
                 {feature}
               </span>
@@ -96,7 +96,7 @@ function PlanBody({ plan, ctaClassName }: { plan: Plan; ctaClassName?: string })
       {/* CTA */}
       <a
         href="#how-it-works"
-        className={`inline-flex h-[46px] items-center justify-center rounded-[42px] px-8 py-3 text-white font-bold body-large shadow-[0px_1px_4px_#E8B92C] hover:opacity-95 transition-opacity ${ctaClassName ?? ""}`}
+        className={`inline-flex h-[46px] items-center justify-center rounded-[42px] px-8 py-3 text-white font-bold body-large shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity ${ctaClassName ?? ""}`}
         style={{ backgroundImage: TEAL_GRADIENT }}
       >
         {plan.cta}
@@ -113,10 +113,10 @@ export function EsaRenewalPricing() {
         <div className="relative z-10 mx-auto lg:mx-0 lg:ml-4 xl:ml-[13.16%] flex w-full max-w-[894px] flex-col items-center gap-14">
           {/* Heading */}
           <div className="flex w-full max-w-[709px] flex-col items-center gap-4 text-center">
-            <h2 className="heading-h2 text-[#2E5A66]">
+            <h2 className="heading-h2">
               ESA Renewal Pricing
             </h2>
-            <p className="body-large text-[#5F6B6F]">
+            <p className="body-large">
               Understand your evaluation options and pricing before getting started
             </p>
           </div>
@@ -129,7 +129,7 @@ export function EsaRenewalPricing() {
             </div>
 
             {/* Highlighted Plan */}
-            <div className="flex w-full max-w-[416px] flex-col items-center gap-[9px] rounded-[28px] bg-[#E8B92C] px-1 pt-[10px] pb-1 shadow-[0px_130px_52px_rgba(0,0,0,0.01),0px_73px_44px_rgba(0,0,0,0.05),0px_33px_33px_rgba(0,0,0,0.09),0px_8px_18px_rgba(0,0,0,0.1)] lg:min-h-[542px]">
+            <div className="flex w-full max-w-[416px] flex-col items-center gap-[9px] rounded-[28px] bg-accent px-1 pt-[10px] pb-1 shadow-[0px_130px_52px_rgba(0,0,0,0.01),0px_73px_44px_rgba(0,0,0,0.05),0px_33px_33px_rgba(0,0,0,0.09),0px_8px_18px_rgba(0,0,0,0.1)] lg:min-h-[542px]">
               <span
                 className="text-[14px] font-bold uppercase leading-[115%] tracking-[0.08em] text-[#1A3D4F]"
                 style={LATO}

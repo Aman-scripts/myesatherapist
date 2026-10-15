@@ -47,15 +47,15 @@ const professionals = [
 
 export function LicensedProfessionalsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#FAF7F2] w-full">
+    <section className="py-16 sm:py-20 lg:py-24 bg-background w-full">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16 max-w-[760px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-4">
             Our Licensed Professionals for PSD Support
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
+          <p className="text-body-text text-base sm:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
             Our network includes state-licensed professionals who specialize in mental health conditions relevant to service animal evaluations.
           </p>
         </div>
@@ -73,7 +73,7 @@ export function LicensedProfessionalsSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${prof.name} LinkedIn Profile`}
-                className="absolute top-5 right-5 w-7 h-7 rounded-full bg-[#E8B92C] hover:bg-[#dba81f] flex items-center justify-center text-[#1A3D4F] shadow-xs hover:scale-105 transition-all"
+                className="absolute top-5 right-5 w-7 h-7 rounded-full bg-accent hover:bg-[#dba81f] flex items-center justify-center text-[#1A3D4F] shadow-xs hover:scale-105 transition-all"
               >
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
                   <circle cx="4.98" cy="4.98" r="2.4" />
@@ -87,7 +87,7 @@ export function LicensedProfessionalsSection() {
                 href={prof.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[120px] h-[120px] rounded-full overflow-hidden mb-6 relative bg-[#E5ECEE] shrink-0 border-2 border-[#E8B92C] shadow-sm hover:opacity-95 transition-opacity block"
+                className="w-[120px] h-[120px] rounded-full overflow-hidden mb-6 relative bg-[#E5ECEE] shrink-0 border-2 border-accent shadow-sm hover:opacity-95 transition-opacity block"
               >
                 <Image
             quality={90}
@@ -121,7 +121,7 @@ export function LicensedProfessionalsSection() {
                     <StarIcon key={i} className="w-4 h-4" />
                   ))}
                 </div>
-                <span className="text-xs text-[#2E5A66] font-normal font-sans">
+                <span className="text-xs text-primary font-normal font-sans">
                   {prof.evaluations}
                 </span>
               </div>

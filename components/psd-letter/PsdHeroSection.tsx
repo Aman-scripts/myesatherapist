@@ -11,7 +11,7 @@ import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 
 const POPULAR_STATES = STATE_INDEX;
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 const TRUSTPILOT_GREEN = "#00B67A";
 
 const statsData = [
@@ -82,7 +82,7 @@ export function PsdHeroSection() {
   };
 
   return (
-    <section className="relative z-30 w-full bg-[#FAF7F2]">
+    <section className="relative z-30 w-full bg-background">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PSD HERO SECTION (sm:hidden / < 640px)     */}
       {/* Matches Screenshot 2 (Figma iPhone 13 & 14)          */}
@@ -105,7 +105,7 @@ export function PsdHeroSection() {
             {statsData.map((stat) => (
               <div
                 key={stat.label}
-                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 px-1 rounded-[24px] text-center shadow-xs"
+                className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1 rounded-[24px] text-center shadow-xs"
               >
                 <span
                   className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
@@ -113,18 +113,18 @@ export function PsdHeroSection() {
                 >
                   {stat.value}
                 </span>
-                <span className="text-[9.5px] font-semibold text-[#5F6B6F] mt-0.5 whitespace-nowrap">{stat.label}</span>
+                <span className="text-[9.5px] font-semibold text-body-text mt-0.5 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <h1 className="font-heading text-[24px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto text-[#2E5A66]">
+          <h1 className="font-heading text-[24px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto text-primary">
             Psychiatric Service
             <br />
             Dog Letter Assistance
           </h1>
 
-          <p className="text-[12.5px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
+          <p className="text-[12.5px] leading-relaxed text-body-text font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
           </p>
 
@@ -159,7 +159,7 @@ export function PsdHeroSection() {
             {statsData.map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center bg-[#FAF7F2] px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
+                className="flex flex-col items-center justify-center bg-background px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
               >
                 <span
                   className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
@@ -167,18 +167,18 @@ export function PsdHeroSection() {
                 >
                   {stat.value}
                 </span>
-                <span className="text-[11px] font-semibold text-[#5F6B6F] mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="text-[11px] font-semibold text-body-text mt-1 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-[#2E5A66]">
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-primary">
             Psychiatric Service
             <br />
             Dog Letter Assistance
           </h1>
 
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-md mx-auto mt-4 font-sans">
+          <p className="text-sm sm:text-base leading-relaxed text-body-text font-semibold tracking-normal align-middle max-w-md mx-auto mt-4 font-sans">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
           </p>
 
@@ -188,7 +188,7 @@ export function PsdHeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -233,7 +233,7 @@ export function PsdHeroSection() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
@@ -263,7 +263,7 @@ export function PsdHeroSection() {
               {statsData.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex flex-col items-center justify-center bg-[#FAF7F2] py-1.5 xl:py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[95px] xl:min-w-[110px]"
+                  className="flex flex-col items-center justify-center bg-background py-1.5 xl:py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[95px] xl:min-w-[110px]"
                 >
                   <span
                     className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
@@ -271,18 +271,18 @@ export function PsdHeroSection() {
                   >
                     {stat.value}
                   </span>
-                  <span className="text-[10px] xl:text-xs font-semibold text-[#5F6B6F] mt-0.5 xl:mt-1 whitespace-nowrap">{stat.label}</span>
+                  <span className="text-[10px] xl:text-xs font-semibold text-body-text mt-0.5 xl:mt-1 whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-3.5 xl:mt-6 text-[#2E5A66]">
+            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-3.5 xl:mt-6 text-primary">
               Psychiatric Service
               <br />
               Dog Letter Assistance
             </h1>
 
-            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[18px] leading-[1.5] xl:leading-[30px] text-[#5F6B6F] font-semibold tracking-normal align-middle max-w-none mt-2.5 xl:mt-4 font-sans">
+            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[18px] leading-[1.5] xl:leading-[30px] text-body-text font-semibold tracking-normal align-middle max-w-none mt-2.5 xl:mt-4 font-sans">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
             </p>
 
@@ -292,7 +292,7 @@ export function PsdHeroSection() {
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
+                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-background font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
                 >
                   <Image
                     src="/home/hero-section-map.svg"
@@ -337,7 +337,7 @@ export function PsdHeroSection() {
                 style={{ backgroundImage: TEAL_GRADIENT }}
               >
                 Get Started
-                <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <span className="w-[36px] h-[36px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                   <Image
             quality={90} src="/common/send-icon.svg" alt="" width={22} height={24} className="w-[19px] h-[21px] xl:w-[22px] xl:h-[24px]" />
                 </span>

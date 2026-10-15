@@ -3,11 +3,11 @@
 import React from "react";
 import { Check } from "lucide-react";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function PsdTrustBarSection() {
   return (
-    <div className="w-full bg-[#FAF7F2] overflow-hidden">
+    <div className="w-full bg-background overflow-hidden">
       {/* Frame 24: Responsive Trust Features Bar */}
       <div className="w-full py-6 sm:py-8 lg:py-10 xl:py-12">
         <div className="max-w-[1446px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">

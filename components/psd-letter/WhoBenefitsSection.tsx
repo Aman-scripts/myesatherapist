@@ -36,7 +36,7 @@ const benefitsData = [
   },
 ];
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function WhoBenefitsSection() {
   return (
@@ -97,11 +97,11 @@ export function WhoBenefitsSection() {
 
           {/* Header */}
           <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
               People who benefitted most <br className="hidden sm:inline" />
               from the PSD Letter
             </h2>
-            <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
+            <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
               If any of these describes you, a PSD letter may be exactly what you need.
             </p>
           </div>
@@ -134,7 +134,7 @@ export function WhoBenefitsSection() {
                   >
                     {item.title}
                   </h3>
-                  <p className="font-sans italic font-normal text-[12px] lg:text-[13px] xl:text-[14px] leading-[18px] lg:leading-[20px] text-[#5F6B6F] mt-0.5">
+                  <p className="font-sans italic font-normal text-[12px] lg:text-[13px] xl:text-[14px] leading-[18px] lg:leading-[20px] text-body-text mt-0.5">
                     {item.description}
                   </p>
                 </div>

@@ -24,7 +24,7 @@ const capabilitiesData = [
   },
 ];
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function PsdCapabilitiesSection() {
   return (
@@ -85,10 +85,10 @@ export function PsdCapabilitiesSection() {
 
           {/* Section Header */}
           <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
               What Can a Psychiatric Service Dog Do?
             </h2>
-            <p className="text-[#5F6B6F] text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
+            <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
               Understand the legal framework behind your PSD empowers you as a handler.
             </p>
           </div>
@@ -101,7 +101,7 @@ export function PsdCapabilitiesSection() {
                 className="bg-white rounded-[16px] p-4 lg:p-4 xl:p-6 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center gap-3.5 lg:gap-4 xl:gap-6 border-0"
               >
                 {/* Number Circle Badge */}
-                <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#AEBBBE33] text-[#5F6B6F] font-heading font-bold text-xl lg:text-[30px] flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#AEBBBE33] text-body-text font-heading font-bold text-xl lg:text-[30px] flex items-center justify-center shrink-0">
                   {item.number}
                 </div>
 
@@ -115,11 +115,11 @@ export function PsdCapabilitiesSection() {
                       {item.title}
                     </h3>
                     {/* Dark Teal Pill Tag */}
-                    <span className="bg-[#2E5A66] text-[#FAF7F2] font-sans italic font-normal text-[12px] lg:text-[13px] px-3 py-0.5 rounded-[16px] shrink-0">
+                    <span className="bg-primary text-background font-sans italic font-normal text-[12px] lg:text-[13px] px-3 py-0.5 rounded-[16px] shrink-0">
                       {item.framework}
                     </span>
                   </div>
-                  <p className="text-xs sm:text-[14px] font-semibold text-[#5F6B6F] font-sans leading-[22px] sm:leading-[26px]">
+                  <p className="text-xs sm:text-[14px] font-semibold text-body-text font-sans leading-[22px] sm:leading-[26px]">
                     {item.description}
                   </p>
                 </div>

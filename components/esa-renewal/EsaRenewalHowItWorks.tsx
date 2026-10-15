@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 interface Step {
   stepNumber: string;
@@ -38,15 +38,15 @@ const STEPS: Step[] = [
 
 export function EsaRenewalHowItWorks() {
   return (
-    <section id="how-it-works" className="w-full bg-[#FAF7F2] py-16 sm:py-20 lg:py-24 relative">
+    <section id="how-it-works" className="w-full bg-background py-16 sm:py-20 lg:py-24 relative">
       <div className="max-w-[1054px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-[18px]">
         <div className="w-full max-w-[999px] flex flex-col items-center gap-14 lg:gap-[72px]">
           {/* Section Header (Frame 5) */}
           <div className="flex flex-col items-center gap-2 text-center">
-            <h2 className="heading-h2 text-[#2E5A66]">
+            <h2 className="heading-h2">
               How the ESA Letter Renewal Process Works?
             </h2>
-            <p className="body-large text-[#5F6B6F]">
+            <p className="body-large">
               Complete a simple three-step online process to request an emotional support animal letter renewal conducted by a licensed mental health professional.
             </p>
           </div>
@@ -74,7 +74,7 @@ export function EsaRenewalHowItWorks() {
 
                   {/* Step Number Badge */}
                   <div
-                    className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-[#FAF7F2] font-bold font-heading text-[32px] leading-none"
+                    className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-background font-bold font-heading text-[32px] leading-none"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {step.stepNumber}
@@ -88,7 +88,7 @@ export function EsaRenewalHowItWorks() {
                   >
                     {step.title}
                   </h3>
-                  <p className="body-text text-[#5F6B6F]">
+                  <p className="body-text">
                     {step.description}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export function EsaRenewalHowItWorks() {
           style={{ backgroundImage: TEAL_GRADIENT }}
         >
           <span className="pr-8">Begin your Renewal Process</span>
-          <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
+          <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
             <Image
             quality={90}
               src="/common/send-icon.svg"

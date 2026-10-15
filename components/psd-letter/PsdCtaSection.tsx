@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 const BULLET_POINTS = [
   "100% HIPAA Compliant & Confidential",
@@ -15,7 +15,7 @@ const BULLET_POINTS = [
 function CheckmarkIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="9" cy="9" r="9" fill="#E8B92C" />
+      <circle cx="9" cy="9" r="9" fill="var(--color-accent)" />
       <path
         d="M5.5 9.2L7.8 11.5L12.5 6.5"
         stroke="#1A3D4F"
@@ -37,7 +37,7 @@ function PhoneIcon() {
 
 export function PsdCtaSection() {
   return (
-    <section className="relative w-full bg-[#FAF7F2] pt-0 lg:pt-8 xl:pt-[125px] overflow-visible">
+    <section className="relative w-full bg-background pt-0 lg:pt-8 xl:pt-[125px] overflow-visible">
       {/* Full-width Teal Gradient Banner */}
       <div
         className="w-full relative min-h-[440px]"
@@ -71,10 +71,10 @@ export function PsdCtaSection() {
           {/* Left Text & CTA Area */}
           <div className="relative z-10 max-w-[580px] lg:max-w-[650px] xl:max-w-[720px] space-y-6 text-left">
             <div className="space-y-3">
-              <h2 className="heading-h2 text-[#FAF7F2]">
+              <h2 className="heading-h2 text-background">
                 Need Help with a PSD Letter?
               </h2>
-              <p className="body-large text-[#FAF7F2]">
+              <p className="body-large text-background">
                 Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you.
               </p>
             </div>
@@ -86,7 +86,7 @@ export function PsdCtaSection() {
                   <span className="shrink-0 flex items-center justify-center">
                     <CheckmarkIcon />
                   </span>
-                  <span className="body-small text-[#FAF7F2]">
+                  <span className="body-small text-background">
                     {point}
                   </span>
                 </div>
@@ -97,7 +97,7 @@ export function PsdCtaSection() {
             <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#pricing"
-                className="inline-flex items-center justify-center min-w-[240px] px-6 h-[48px] rounded-[58px] bg-[#E8B92C] shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center min-w-[240px] px-6 h-[48px] rounded-[58px] bg-accent shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
               >
                 <span
                   className="body-large font-bold bg-clip-text text-transparent whitespace-nowrap"
@@ -109,7 +109,7 @@ export function PsdCtaSection() {
 
               <a
                 href="tel:+18884124041"
-                className="inline-flex items-center justify-center gap-2 px-5 h-[48px] rounded-[58px] border border-[#FAF7F2]/40 bg-white/10 backdrop-blur-xs text-[#FAF7F2] hover:bg-white/20 transition-all font-sans font-semibold text-[15px] sm:text-[16px]"
+                className="inline-flex items-center justify-center gap-2 px-5 h-[48px] rounded-[58px] border border-background/40 bg-white/10 backdrop-blur-xs text-background hover:bg-white/20 transition-all font-sans font-semibold text-[15px] sm:text-[16px]"
               >
                 <PhoneIcon />
                 <span>Call +1 (888) 412-4041</span>

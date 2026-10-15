@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 type Condition = {
   label: string;
@@ -134,14 +134,14 @@ export function PsdQualifyingConditions() {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section className="pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 md:pb-0 bg-[#FAF7F2] overflow-visible">
+    <section className="pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[1100px] mx-auto">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight tracking-[-0.006em] whitespace-normal sm:whitespace-nowrap">
+          <h2 className="heading-h2 capitalize whitespace-normal sm:whitespace-nowrap">
             Common Qualifying Conditions for a PSD Letter
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-lg font-semibold leading-relaxed max-w-[760px] mx-auto">
+          <p className="body-large max-w-[760px] mx-auto">
             A licensed mental health professional will determine eligibility during your consultation. These are some common conditions that may qualify under ADA.
           </p>
         </div>
@@ -236,7 +236,7 @@ export function PsdQualifyingConditions() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-[#5F6B6F] text-[10.5px] lg:text-[12px] font-medium leading-[15px] lg:leading-[17px] font-sans mt-2 text-left">
+                      <p className="body-small mt-2 text-left">
                         {c.description}
                       </p>
                     </div>
@@ -305,7 +305,7 @@ export function PsdQualifyingConditions() {
                             type="button"
                             onClick={() => setHoveredCondition(null)}
                             aria-label="Close"
-                            className="p-1 -mr-1 text-[#5F6B6F] hover:text-slate-900 transition-colors cursor-pointer"
+                            className="p-1 -mr-1 text-body-text hover:text-slate-900 transition-colors cursor-pointer"
                           >
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12.5 1.5L1.5 12.5M1.5 1.5L12.5 12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -325,7 +325,7 @@ export function PsdQualifyingConditions() {
                         </div>
 
                         {/* Description text matching mockup */}
-                        <p className="text-[#5F6B6F] text-[13px] leading-[19px] font-sans font-medium text-left">
+                        <p className="body-small text-left">
                           {c.description}
                         </p>
                       </div>

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { WaveImage } from "@/components/esa-online/EsaOnlineShared";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 interface ProFeature {
   title: string;
@@ -47,10 +47,10 @@ export function EsaRenewalLicensedPros() {
         <div className="w-full max-w-[626px] lg:max-w-[39vw] xl:max-w-[590px] flex flex-col gap-10 lg:gap-[2.8vw] xl:gap-14">
           {/* Header Text (Frame 1000011447) */}
           <div className="flex flex-col gap-5 lg:gap-[1.9vw] xl:gap-7 text-center lg:text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.8vw] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[3.5vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.8vw] xl:text-[44px] font-bold text-primary leading-[1.2] lg:leading-[3.5vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
               Licensed Professionals Across All 50 States
             </h2>
-            <p className="font-sans text-base sm:text-[18px] lg:text-[1.2vw] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.67] xl:max-w-[560px]">
+            <p className="font-sans text-base sm:text-[18px] lg:text-[1.2vw] xl:text-[18px] text-body-text font-semibold leading-[1.67] xl:max-w-[560px]">
               Each ESA letter renewal on our platform is completed by an independent, licensed mental health professional authorized to practice in your state. Providers evaluate DSM-recognized mental health conditions such as anxiety, depression, PTSD, and similar emotional health concerns when reviewing renewal requests. All determinations are made independently based on professional judgment and applicable clinical guidelines.
             </p>
           </div>
@@ -60,7 +60,7 @@ export function EsaRenewalLicensedPros() {
             {FEATURES.map((feat, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex items-stretch"
+                className="bg-background rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex items-stretch"
               >
                 {/* Left 13px Teal Gradient Stripe (Frame 13) */}
                 <div
@@ -84,10 +84,10 @@ export function EsaRenewalLicensedPros() {
 
                   {/* Text (Frame 14) */}
                   <div className="flex flex-1 flex-col gap-1.5">
-                    <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] text-[#2E5A66] leading-tight xl:leading-7">
+                    <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] text-primary leading-tight xl:leading-7">
                       {feat.title}
                     </h3>
-                    <p className="font-sans text-xs sm:text-[14px] lg:text-[1.1vw] xl:text-[14px] text-[#5F6B6F] font-semibold leading-[1.6] sm:leading-[26px] lg:leading-[1.6] xl:leading-[26px]">
+                    <p className="font-sans text-xs sm:text-[14px] lg:text-[1.1vw] xl:text-[14px] text-body-text font-semibold leading-[1.6] sm:leading-[26px] lg:leading-[1.6] xl:leading-[26px]">
                       {feat.subtitle}
                     </p>
                   </div>

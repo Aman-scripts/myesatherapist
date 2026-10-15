@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { WaveImage } from "@/components/esa-online/EsaOnlineShared";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 interface WhyCard {
   title: string;
@@ -65,10 +65,10 @@ export function EsaRenewalWhySection() {
         <div className="w-full max-w-[626px] lg:max-w-[46vw] xl:max-w-[626px] flex flex-col gap-10 lg:gap-[3vw] xl:gap-14">
           {/* Header Text (Frame 1000011447) */}
           <div className="flex flex-col gap-5 lg:gap-[1.95vw] xl:gap-7 text-center lg:text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.7vw] xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[3.4vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.7vw] xl:text-[44px] font-bold text-primary leading-[1.2] lg:leading-[3.4vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
               Why Consider Renewing Your ESA Letter Through Our Platform
             </h2>
-            <p className="font-sans text-base sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.67]">
+            <p className="font-sans text-base sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] text-body-text font-semibold leading-[1.67]">
               Housing providers may ask for current emotional support animal letters when reviewing accommodation requests. If the document is outdated, it may no longer be accepted in certain housing situations. Our platform is designed to help individuals reconnect with a licensed mental health professional who can review their current emotional needs through an evaluation.
             </p>
           </div>
@@ -78,7 +78,7 @@ export function EsaRenewalWhySection() {
             {CARDS.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex items-stretch"
+                className="bg-background rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex items-stretch"
               >
                 {/* Left 13px Teal Gradient Stripe (Frame 13) */}
                 <div
@@ -102,10 +102,10 @@ export function EsaRenewalWhySection() {
 
                   {/* Text Details */}
                   <div className="flex flex-col gap-1.5 flex-1">
-                    <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.4vw] xl:text-[20px] text-[#2E5A66] leading-tight xl:leading-7">
+                    <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.4vw] xl:text-[20px] text-primary leading-tight xl:leading-7">
                       {card.title}
                     </h3>
-                    <p className="font-sans text-[13px] sm:text-[14px] lg:text-[1.1vw] xl:text-[14px] text-[#5F6B6F] font-semibold leading-[1.75] sm:leading-[26px] lg:leading-[1.8] xl:leading-[26px]">
+                    <p className="font-sans text-[13px] sm:text-[14px] lg:text-[1.1vw] xl:text-[14px] text-body-text font-semibold leading-[1.75] sm:leading-[26px] lg:leading-[1.8] xl:leading-[26px]">
                       {card.description}
                     </p>
                   </div>

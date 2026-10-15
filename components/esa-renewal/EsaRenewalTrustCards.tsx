@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 interface TrustCard {
   icon: string;
@@ -36,13 +36,13 @@ const CARDS: TrustCard[] = [
 
 export function EsaRenewalTrustCards() {
   return (
-    <section className="w-full bg-[#FAF7F2] pt-14 pb-8 sm:pb-12 lg:pb-16">
+    <section className="w-full bg-background pt-14 pb-8 sm:pb-12 lg:pb-16">
       <div className="max-w-[1312px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14">
           {CARDS.map((card, idx) => (
             <div key={idx} className="relative flex w-full flex-col">
               {/* Gold accent layer (Frame 1000011684) */}
-              <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-[#E8B92C] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
+              <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
 
               {/* White card (Frame 1000011683) */}
               <div className="relative mt-2 flex min-h-[160px] flex-1 flex-col items-center justify-center gap-2 rounded-[20px] bg-white px-4 pt-[60px] pb-[37px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
@@ -51,7 +51,7 @@ export function EsaRenewalTrustCards() {
                 >
                   {card.title}
                 </h3>
-                <p className="body-small text-[#5F6B6F]">
+                <p className="body-small">
                   {card.subtitle}
                 </p>
               </div>

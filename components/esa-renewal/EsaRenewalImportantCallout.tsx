@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function EsaRenewalImportantCallout() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-8 sm:py-12">
+    <section className="w-full bg-background py-8 sm:py-12">
       <div className="max-w-[1099px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Frame 1000012004 */}
         <div className="flex flex-col items-center text-center sm:text-left sm:flex-row sm:items-center gap-4 sm:gap-6 rounded-[24px] sm:rounded-l-[10px] sm:rounded-r-[30px] bg-[#FF383C]/10 py-6 sm:py-8 px-6 sm:pl-0 sm:pr-[67px] lg:pr-10 xl:pr-[67px]">
@@ -28,11 +28,11 @@ export function EsaRenewalImportantCallout() {
               <h3 className="font-heading font-bold text-[20px] leading-7 text-[#CC191D]">
                 Important
               </h3>
-              <p className="font-sans text-sm font-medium leading-[22px] text-[#5F6B6F]">
+              <p className="font-sans text-sm font-medium leading-[22px] text-body-text">
                 Payment provides access to a professional evaluation only. The licensed mental health professional independently determines whether ESA letters may be issued based on their clinical judgment.
               </p>
             </div>
-            <p className="font-sans text-sm font-medium leading-[22px] text-[#5F6B6F]">
+            <p className="font-sans text-sm font-medium leading-[22px] text-body-text">
               Disclaimer: We authorize your payment first, but only charge it after your evaluation is completed.
             </p>
           </div>
