@@ -11,7 +11,7 @@ interface PlanCard {
   title: string;
   description: string;
   price: string;
-  unit: string;
+  isPopular?: boolean;
   features: string[];
   buttonText: string;
 }
@@ -19,20 +19,8 @@ interface PlanCard {
 interface PlanSet {
   tabLabel: string;
   description: string;
-  cards: [PlanCard, PlanCard];
+  cards: [PlanCard, PlanCard, PlanCard];
 }
-
-const HELP_CARD = {
-  title: "Not Sure Which One?",
-  description: "Your needs are unique. Let’s find the right option.",
-  features: [
-    "Help identifying the right documentation",
-    "ESA and PSD needs assessed",
-    "Guidance from a licensed professional",
-    "Clear next steps after evaluation",
-  ],
-  buttonText: "Get Evaluated For Free!",
-};
 
 const PLANS: Record<PlanType, PlanSet> = {
   esa: {
@@ -45,30 +33,37 @@ const PLANS: Record<PlanType, PlanSet> = {
         description:
           "Professional ESA letter from a U.S.-licensed mental health professional for housing accommodations.",
         price: "$149",
-        unit: "/ one-time",
+        isPopular: true,
         features: [
           "Online ESA evaluation",
           "Licensed mental health professional",
-          "Disability-related need assessment",
           "ESA letter if clinically approved",
-          "Secure email delivery",
         ],
         buttonText: "Get Started",
       },
       {
-        title: "ESA Letter + PSD Letter Combo",
+        title: "ESA + PSD Combo",
         description:
           "Professional ESA and PSD letters from a U.S.-licensed mental health professional for housing and service dog needs.",
         price: "$199",
-        unit: "/ one-time",
         features: [
           "Online ESA evaluation",
           "Licensed mental health professional",
-          "ESA letter if clinically approved",
-          "PSD letter if clinically approved",
-          "Secure email delivery",
+          "ESA & PSD letters if approved",
         ],
-        buttonText: "Start Evaluation",
+        buttonText: "Get Started",
+      },
+      {
+        title: "Not Sure Which One",
+        description:
+          "Your needs are unique. Let's find the right option for your situation.",
+        price: "$149",
+        features: [
+          "Help identifying right document",
+          "ESA and PSD needs assessed",
+          "Guidance from licensed professional",
+        ],
+        buttonText: "Get Started",
       },
     ],
   },
@@ -82,103 +77,54 @@ const PLANS: Record<PlanType, PlanSet> = {
         description:
           "Professional PSD letter from a U.S.-licensed mental health professional for service dog-related needs.",
         price: "$149",
-        unit: "/ one-time",
+        isPopular: true,
         features: [
           "Online PSD evaluation",
           "Licensed mental health professional",
-          "Disability-related need assessment",
           "PSD letter if clinically approved",
-          "Secure email delivery",
         ],
         buttonText: "Get Started",
       },
       {
-        title: "ESA + PSD Letter Combo",
+        title: "ESA + PSD Combo",
         description:
-          "Get both ESA and PSD letters through professional mental health evaluations for housing and service dog-related needs.",
+          "Get both ESA and PSD letters through professional mental health evaluations for housing and service dog needs.",
         price: "$199",
-        unit: "/ one-time",
         features: [
           "Online ESA & PSD evaluation",
           "Licensed mental health professional",
-          "ESA letter if clinically approved",
-          "PSD letter if clinically approved",
-          "Secure email delivery",
+          "ESA & PSD letters if approved",
         ],
-        buttonText: "Start Evaluation",
+        buttonText: "Get Started",
+      },
+      {
+        title: "Not Sure Which One",
+        description:
+          "Your needs are unique. Let's find the right option for your situation.",
+        price: "$149",
+        features: [
+          "Help identifying right document",
+          "ESA and PSD needs assessed",
+          "Guidance from licensed professional",
+        ],
+        buttonText: "Get Started",
       },
     ],
   },
 };
 
-function FeatureBadgeIcon() {
+function CheckmarkIcon() {
   return (
-    <Image
-            quality={90}
-      src="/home/price-section-badge.svg"
-      alt=""
-      width={16}
-      height={16}
-      className="shrink-0 w-4 h-4 mt-px"
-    />
-  );
-}
-
-function FeatureList({ features }: { features: string[] }) {
-  return (
-    <ul className="flex flex-col gap-2.5">
-      {features.map((f) => (
-        <li key={f} className="flex items-start gap-1.5">
-          <FeatureBadgeIcon />
-          <span
-            className="text-[14px] italic font-normal leading-[120%] tracking-[-0.03em] text-[#5F6B6F]"
-            style={{ fontFamily: "var(--font-lato), Lato, sans-serif" }}
-          >
-            {f}
-          </span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function PlanButton({ href, children, compact = false }: { href: string; children: React.ReactNode; compact?: boolean }) {
-  return (
-    <a
-      href={href}
-      className={`inline-flex items-center justify-center min-h-[50px] ${
-        compact ? "px-5" : "px-6 sm:px-7 min-w-[154px]"
-      } py-3 rounded-[42px] text-white font-semibold text-[16px] leading-[26px] text-center whitespace-nowrap shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity font-sans`}
-      style={{ backgroundImage: TEAL_GRADIENT }}
-    >
-      {children}
-    </a>
-  );
-}
-
-/** Highlighted "Not Sure Which One?" card. Shared by the home/PSD/pricing section and the state pages. */
-export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
-  return (
-    <div className={`w-full max-w-[340px] lg:max-w-none lg:w-[308px] lg:min-h-[486px] shrink-0 rounded-[28px] bg-[#E8B92C] p-1 lg:pt-[10px] shadow-[0_8px_18px_rgba(0,0,0,0.1),0_33px_33px_rgba(0,0,0,0.09),0_73px_44px_rgba(0,0,0,0.05)] flex flex-col ${className}`}>
-      <div className="flex-1 w-full bg-white rounded-[24px] px-8 pt-[30px] lg:pt-[15px] pb-8 shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12)] flex flex-col gap-8">
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <h5 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">{HELP_CARD.title}</h5>
-            <p className="text-[16px] text-[#666666] font-semibold leading-[26px] font-sans">{HELP_CARD.description}</p>
-          </div>
-          <FeatureList features={HELP_CARD.features} />
-        </div>
-        <div className="flex justify-center mt-auto">
-          <PlanButton href={ctaHref} compact>{HELP_CARD.buttonText}</PlanButton>
-        </div>
-      </div>
-    </div>
+    <span className="w-4 h-4 rounded-full bg-[#EDEDED] border border-[#2E5A66] flex items-center justify-center shrink-0 mt-0.5">
+      <svg className="w-2.5 h-2.5" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 5L4 7L8 3" stroke="#2E5A66" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
   );
 }
 
 interface PricingSectionProps {
   bgColor?: string;
-  /** Which plan set the toggle starts on. */
   defaultPlan?: PlanType;
   ctaHref?: string;
 }
@@ -195,17 +141,21 @@ export function PricingSection({
     <section id="pricing" className={`py-16 lg:py-24 ${bgColor} relative overflow-hidden`}>
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10">
         {/* Heading */}
-        <div className="text-center max-w-[709px] mx-auto space-y-4">
-          <h2 className="font-heading text-2xl sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.00015em]">
+        <div className="text-center max-w-[709px] mx-auto space-y-3">
+          <h2 className="heading-h2 text-[#2E5A66] capitalize">
             Plans &amp; Pricing
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-[30px] font-sans">
+          <p className="body-large text-[#5F6B6F]">
             {plan.description}
           </p>
         </div>
 
-        {/* Payment mode toggle */}
-        <div className="flex w-full max-w-[320px] h-[54px] items-center rounded-full bg-white px-[7px] py-1" role="tablist" aria-label="Letter type">
+        {/* Payment mode toggle (Frame: Payment Mode in Figma, w: 386px, h: 59px) */}
+        <div
+          className="flex w-full max-w-[386px] h-[59px] items-center rounded-full bg-white p-[4px_7px] shadow-sm"
+          role="tablist"
+          aria-label="Letter type"
+        >
           {(Object.keys(PLANS) as PlanType[]).map((key) => {
             const isActive = key === active;
             return (
@@ -215,9 +165,9 @@ export function PricingSection({
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActive(key)}
-                className={`flex-1 h-[46px] rounded-full font-sans font-semibold text-[18px] leading-[30px] transition-colors cursor-pointer flex items-center justify-center ${
+                className={`flex-1 h-[51px] rounded-full font-manrope font-semibold text-[18px] leading-[28px] transition-all duration-200 cursor-pointer flex items-center justify-center ${
                   isActive
-                    ? "bg-[#2E5A66] text-[#FFFBF5] shadow-[0_2px_4px_-2px_rgba(0,0,0,0.12)]"
+                    ? "bg-[#2E5A66] text-[#FFFBF5] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.12)]"
                     : "text-[#254D3C] hover:bg-[#2E5A66]/5"
                 }`}
               >
@@ -227,40 +177,87 @@ export function PricingSection({
           })}
         </div>
 
-        {/* Plan cards */}
+        {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
         <div className="relative w-full max-w-[972px]">
-          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-6 lg:gap-4">
-            {plan.cards.map((card) => (
-              <div
-                key={card.title}
-                className="relative w-full max-w-[340px] lg:max-w-none lg:w-[300px] lg:min-h-[486px] shrink-0 bg-white rounded-[24px] border border-[#E1E1E1] px-8 pt-[30px] pb-8 shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col justify-between gap-8"
-              >
-                <div className="flex flex-col gap-8">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-1">
-                      <h5 className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">{card.title}</h5>
-                      <p className="text-[16px] text-[#666666] font-semibold leading-[26px] font-sans">{card.description}</p>
-                    </div>
-                    <div className="flex flex-wrap items-baseline gap-1">
-                      <span className="font-heading text-[24px] font-bold text-[#2E5A66] leading-[32px]">{card.price}</span>
-                      <span className="text-[16px] text-[#5F6B6F] font-semibold leading-[26px] font-sans">{card.unit}</span>
+          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-6 lg:gap-4">
+            {plan.cards.map((card, idx) => {
+              const isPopular = card.isPopular;
+
+              const cardContent = (
+                <div className="w-full bg-white rounded-[24px] overflow-hidden border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col h-[500px]">
+                  {/* Teal Gradient Top Header (Frame 1261153969) */}
+                  <div
+                    className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px]"
+                    style={{ backgroundImage: TEAL_GRADIENT }}
+                  >
+                    <h3 className="font-playfair font-bold text-[26px] lg:text-[28px] leading-[32px] lg:leading-[36px] text-[#FAF7F2] capitalize">
+                      {card.title}
+                    </h3>
+                    <p className="font-manrope font-semibold text-[15px] lg:text-[17px] leading-[24px] lg:leading-[26px] text-[#FAF7F2] line-clamp-3">
+                      {card.description}
+                    </p>
+                  </div>
+
+                  {/* Overlapping Gold Circle with Price (Ellipse 20: 78px x 78px, #E8B92C) */}
+                  <div className="w-[78px] h-[78px] rounded-full bg-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
+                    <span className="font-playfair font-bold text-[20px] lg:text-[22px] leading-[28px] text-[#2E5A66]">
+                      {card.price}
+                    </span>
+                  </div>
+
+                  {/* White Lower Body: Features + CTA Button */}
+                  <div className="flex-1 bg-white pt-[46px] px-6 pb-6 flex flex-col justify-between">
+                    <ul className="space-y-2">
+                      {card.features.map((f) => (
+                        <li key={f} className="flex items-center gap-2 text-left">
+                          <CheckmarkIcon />
+                          <span className="font-manrope font-semibold text-[14px] leading-[24px] text-[#5F6B6F]">
+                            {f}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Bottom CTA Button (Frame 2: 154px x 50px, border-radius 42px) */}
+                    <div className="flex justify-center mt-4">
+                      <a
+                        href={ctaHref}
+                        className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-manrope font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
+                        style={{ backgroundImage: TEAL_GRADIENT }}
+                      >
+                        {card.buttonText}
+                      </a>
                     </div>
                   </div>
-                  <FeatureList features={card.features} />
                 </div>
-                <div className="flex justify-center mt-auto">
-                  <PlanButton href={ctaHref}>{card.buttonText}</PlanButton>
-                </div>
-              </div>
-            ))}
+              );
 
-            <HelpPlanCard ctaHref={ctaHref} />
+              if (isPopular) {
+                return (
+                  <div
+                    key={idx}
+                    className="w-full max-w-[310px] bg-[#E8B92C] rounded-[24px] pt-[28px] px-[5px] pb-[5px] shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col"
+                  >
+                    <div className="absolute top-1 left-0 right-0 text-center font-manrope font-bold text-[13px] text-[#2E5A66] uppercase tracking-wider">
+                      Most Popular
+                    </div>
+                    {cardContent}
+                  </div>
+                );
+              }
+
+              return (
+                <div key={idx} className="w-full max-w-[300px]">
+                  {cardContent}
+                </div>
+              );
+            })}
           </div>
 
           {/* Dog & hand artwork, bottom right of the section */}
           <div className="hidden xl:block absolute left-[100%] bottom-[-30px] w-[245px] pointer-events-none z-0 -ml-2">
             <Image
-            quality={90}
+              quality={90}
               src="/home/pricing-section-dog.webp"
               alt="Dog giving paw to woman hand"
               width={441}
@@ -273,3 +270,58 @@ export function PricingSection({
     </section>
   );
 }
+
+export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
+  return (
+    <div className={`w-full max-w-[300px] bg-white rounded-[24px] overflow-hidden border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col h-[500px] ${className}`}>
+      {/* Teal Gradient Top Header */}
+      <div
+        className="h-[235px] shrink-0 p-[28px_24px_16px] flex flex-col justify-start gap-2 relative text-left rounded-t-[20px]"
+        style={{ backgroundImage: TEAL_GRADIENT }}
+      >
+        <h3 className="font-playfair font-bold text-[26px] lg:text-[28px] leading-[32px] lg:leading-[36px] text-[#FAF7F2] capitalize">
+          Not Sure Which One
+        </h3>
+        <p className="font-manrope font-semibold text-[15px] lg:text-[17px] leading-[24px] lg:leading-[26px] text-[#FAF7F2] line-clamp-3">
+          Your needs are unique. Let&apos;s find the right option for your situation.
+        </p>
+      </div>
+
+      {/* Overlapping Gold Circle with Price */}
+      <div className="w-[78px] h-[78px] rounded-full bg-[#E8B92C] shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-10 shrink-0">
+        <span className="font-playfair font-bold text-[20px] lg:text-[22px] leading-[28px] text-[#2E5A66]">
+          Free
+        </span>
+      </div>
+
+      {/* White Lower Body: Features + CTA Button */}
+      <div className="flex-1 bg-white pt-[46px] px-6 pb-6 flex flex-col justify-between">
+        <ul className="space-y-2">
+          {[
+            "Help identifying right document",
+            "ESA and PSD needs assessed",
+            "Guidance from licensed professional",
+          ].map((f) => (
+            <li key={f} className="flex items-center gap-2 text-left">
+              <CheckmarkIcon />
+              <span className="font-manrope font-semibold text-[14px] leading-[24px] text-[#5F6B6F]">
+                {f}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex justify-center mt-4">
+          <a
+            href={ctaHref}
+            className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-manrope font-semibold text-[16px] leading-[26px] text-center shadow-[0_1px_4px_#E8B92C] hover:opacity-95 transition-opacity"
+            style={{ backgroundImage: TEAL_GRADIENT }}
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
