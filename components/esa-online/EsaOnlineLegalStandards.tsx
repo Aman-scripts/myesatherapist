@@ -26,10 +26,10 @@ export function EsaOnlineLegalStandards() {
     <section className="w-full bg-white py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <div className="flex flex-col items-center gap-4 text-center">
-          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] xl:leading-[54px] tracking-[-0.00015em] max-w-[662px]">
+          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em] max-w-[662px]">
             How Does My ESA Therapist Meet Legal Standards?
           </h2>
-          <p className="font-sans text-base sm:text-[18px] text-[#5F6B6F] font-semibold leading-[30px] max-w-[1018px]">
+          <p className="font-sans text-base sm:text-[18px] text-body-text font-semibold leading-[30px] max-w-[1018px]">
             Your ESA letter is issued by a state-authorized mental health professional only after a clinically guided online evaluation, in alignment with applicable federal law. Evaluations also account for applicable state-specific requirements, which may include minimum therapeutic relationship periods in certain jurisdictions.
           </p>
         </div>

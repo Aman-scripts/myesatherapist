@@ -8,9 +8,9 @@ import { CtaButton, WaveImage } from "./EsaOnlineShared";
  * the artwork (fixed proportional width) from overlapping at any width.
  */
 const H2 =
-  "font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-[#2E5A66] leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(28.4vw,409px)]";
+  "font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-primary leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(28.4vw,409px)]";
 const P =
-  "font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-[#5F6B6F] font-semibold leading-[1.67]";
+  "font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-body-text font-semibold leading-[1.67]";
 
 export function EsaOnlineWhatIs() {
   return (
@@ -60,7 +60,7 @@ export function EsaOnlineWhatIs() {
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
             <a
               href="/blog/esa-guide/emotional-support-animal/"
-              className="inline-flex h-12 items-center rounded-[30px] bg-[#FAF7F2] px-8 font-sans font-semibold text-base text-[#2E5A66] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f1ece2] transition-colors"
+              className="inline-flex h-12 items-center rounded-[30px] bg-background px-8 font-sans font-semibold text-base text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f1ece2] transition-colors"
             >
               Learn about ESA’s
             </a>

@@ -43,13 +43,13 @@ const CARDS = [
 
 export function EsaOnlineWhatComes() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 lg:py-24">
+    <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <div className="flex flex-col items-center gap-3 text-center max-w-[714px]">
-          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-[1.2] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em]">
             What Comes With Your ESA Recommendation Letter?
           </h2>
-          <p className="font-sans text-base sm:text-[18px] text-[#5F6B6F] font-semibold leading-[30px] max-w-[661px]">
+          <p className="font-sans text-base sm:text-[18px] text-body-text font-semibold leading-[30px] max-w-[661px]">
             When issued, the letter provides you with the professional details typically requested by housing providers.
           </p>
         </div>

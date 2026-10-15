@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 const FAQS = [
   {
@@ -32,13 +32,13 @@ export function EsaLawsFaqSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-background py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1178px] mx-auto">
         <div className="text-center max-w-[900px] mx-auto mb-10 sm:mb-14 space-y-2">
-          <h2 className="font-heading text-[28px] sm:text-4xl lg:text-[44px] font-bold text-[#2E5A66] leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
+          <h2 className="font-heading text-[28px] sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight sm:leading-[46px] lg:leading-[54px] tracking-[-0.0066em]">
             Common Questions About ESA Laws
           </h2>
-          <p className="text-[#5F6B6F] text-[15px] sm:text-[18px] font-semibold leading-[26px] sm:leading-[30px] font-sans">
+          <p className="text-body-text text-[15px] sm:text-[18px] font-semibold leading-[26px] sm:leading-[30px] font-sans">
             Get clear answers to the most frequently asked questions about emotional support animal regulations.
           </p>
         </div>
@@ -67,7 +67,7 @@ export function EsaLawsFaqSection() {
                     style={{ backgroundImage: TEAL_GRADIENT }}
                     aria-expanded={isOpen}
                   >
-                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-[#E8B92C] flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center font-sans font-extrabold text-lg sm:text-xl xl:text-[28px] text-[#29515B] leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
@@ -81,14 +81,14 @@ export function EsaLawsFaqSection() {
                         }`}
                       >
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9 3V15M3 9H15" stroke="#FAF7F2" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M9 3V15M3 9H15" stroke="var(--color-background)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
                     </div>
                   </button>
 
                   {isOpen && (
-                    <div className="bg-white px-5 sm:px-7 py-4 sm:py-5 body-large text-[#5F6B6F] border border-[#2E5A66]/10 border-t-0 rounded-b-[20px] animate-fadeIn">
+                    <div className="bg-white px-5 sm:px-7 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn">
                       {faq.a}
                     </div>
                   )}

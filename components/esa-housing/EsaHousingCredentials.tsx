@@ -36,11 +36,11 @@ export function EsaHousingCredentials() {
             <CtaButton href="/pricing/">Work with Licensed Professionals</CtaButton>
           </div>
 
-          <div className="flex overflow-hidden text-left rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
+          <div className="flex overflow-hidden text-left rounded-[20px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">
             <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#1D6E72]" />
             <div className="flex flex-col gap-1 px-5 py-4">
-              <h3 className="font-heading font-bold text-[20px] leading-7 text-[#2E5A66]">Important</h3>
-              <p className="font-sans text-[14px] font-semibold leading-[26px] text-[#5F6B6F]">
+              <h3 className="font-heading font-bold text-[20px] leading-7 text-primary">Important</h3>
+              <p className="font-sans text-[14px] font-semibold leading-[26px] text-body-text">
                 ESA registrations, certificates, or ID cards purchased online do not replace a professional evaluation and are not considered valid documentation.
               </p>
             </div>

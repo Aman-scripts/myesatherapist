@@ -46,18 +46,18 @@ export function EsaHousingLaws() {
 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
           {COLUMNS.map((col) => (
-            <div key={col.title} className="flex flex-col overflow-hidden rounded-[30px] bg-[#FAF7F2] shadow-[0px_1px_4px_rgba(0,0,0,0.06)]">
+            <div key={col.title} className="flex flex-col overflow-hidden rounded-[30px] bg-background shadow-[0px_1px_4px_rgba(0,0,0,0.06)]">
               <div className="relative w-full aspect-[1983/793]">
                 <Image
             quality={90} src={col.image} alt={col.alt} fill className="object-cover" sizes="(min-width: 1024px) 620px, 100vw" />
               </div>
               <div className="flex flex-col items-center gap-6 px-6 sm:px-10 pt-8 pb-10 flex-1">
-                <h3 className="font-heading text-2xl sm:text-[28px] font-bold text-[#2E5A66] leading-9 text-center">{col.title}</h3>
+                <h3 className="font-heading text-2xl sm:text-[28px] font-bold text-primary leading-9 text-center">{col.title}</h3>
                 <ul className="w-full flex flex-col gap-3">
                   {col.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle />
-                      <span className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#2E5A66]">{item}</span>
+                      <span className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-primary">{item}</span>
                     </li>
                   ))}
                 </ul>

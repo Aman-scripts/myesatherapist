@@ -20,7 +20,7 @@ const CONDITIONS = [
 
 export function EsaTrainingConditionsSection() {
   return (
-    <section className="w-full bg-[#FAF7F2]">
+    <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1439px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[3.2vw] lg:px-[5vw] xl:gap-[72px] xl:px-0">
         <SectionHeader
           title="ESA Training for Specific Mental Health Conditions"

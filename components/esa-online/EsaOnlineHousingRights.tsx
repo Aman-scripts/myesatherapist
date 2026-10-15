@@ -31,7 +31,7 @@ function CheckCircle() {
 
 export function EsaOnlineHousingRights() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 lg:py-24">
+    <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-12">
         <div className="w-full max-w-[850px] overflow-hidden rounded-[30px] bg-white shadow-[0px_2px_6px_rgba(0,0,0,0.08)]">
           <div className="relative w-full aspect-[1536/1024] sm:aspect-[850/460]">
@@ -46,7 +46,7 @@ export function EsaOnlineHousingRights() {
           </div>
 
           <div className="flex flex-col items-center gap-6 px-5 sm:px-10 pt-8 pb-10">
-            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-[#2E5A66] leading-[1.2] sm:leading-[44px] text-center">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary leading-[1.2] sm:leading-[44px] text-center">
               Your Housing Rights With an ESA Letter
             </h2>
 
@@ -55,8 +55,8 @@ export function EsaOnlineHousingRights() {
                 <li key={p.title} className="flex items-start gap-3">
                   <CheckCircle />
                   <div className="flex flex-col">
-                    <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#2E5A66]">{p.title}</h3>
-                    <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-[#5F6B6F]">{p.description}</p>
+                    <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-primary">{p.title}</h3>
+                    <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-body-text">{p.description}</p>
                   </div>
                 </li>
               ))}

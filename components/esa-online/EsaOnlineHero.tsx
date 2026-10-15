@@ -35,7 +35,7 @@ export function EsaOnlineHero({
 
   return (
     <section
-      className={`relative w-full bg-[#FAF7F2] overflow-hidden ${
+      className={`relative w-full bg-background overflow-hidden ${
         stacked
           ? "grid lg:flex lg:items-center lg:min-h-[480px] xl:min-h-[723px]"
           : "flex items-center min-h-[580px] sm:min-h-[620px] lg:min-h-[480px] xl:min-h-[723px]"
@@ -88,7 +88,7 @@ export function EsaOnlineHero({
               className="object-cover object-[75%_center] sm:object-right md:object-center lg:object-[25%_center] xl:object-center"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/95 via-[#FAF7F2]/80 to-transparent lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent lg:hidden" />
           </>
         )}
       </div>
@@ -108,11 +108,11 @@ export function EsaOnlineHero({
               {MOBILE_STATS.map((s) => (
                 <div
                   key={s.label}
-                  className="flex-1 rounded-[30px] bg-[#FAF7F2] border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center"
+                  className="flex-1 rounded-[30px] bg-background border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center"
                 >
                   <span
                     className="font-heading font-bold text-[15px] sm:text-[22px] leading-tight text-transparent bg-clip-text"
-                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ backgroundImage: "var(--color-gradient)" }}
                   >
                     {s.value}
                   </span>
@@ -123,10 +123,10 @@ export function EsaOnlineHero({
           )}
 
           <div className="space-y-3.5 sm:space-y-6">
-            <h1 className="font-heading text-[26px] sm:text-5xl lg:text-[34px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.14] tracking-[-0.0002em]">
+            <h1 className="font-heading text-[26px] sm:text-5xl lg:text-[34px] xl:text-[56px] font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
               {title}
             </h1>
-            <p className="font-sans text-[12.5px] sm:text-base lg:text-[13px] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.65] max-w-[626px]">
+            <p className="font-sans text-[12.5px] sm:text-base lg:text-[13px] xl:text-[18px] text-body-text font-semibold leading-[1.65] max-w-[626px]">
               {description}
             </p>
           </div>

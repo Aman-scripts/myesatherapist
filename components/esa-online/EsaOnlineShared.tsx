@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+export const TEAL_GRADIENT = "var(--color-gradient)";
 export const LATO = { fontFamily: "var(--font-sans), 'Manrope', sans-serif" };
 
 export function CtaButton({
@@ -20,7 +20,7 @@ export function CtaButton({
       style={{ backgroundImage: TEAL_GRADIENT }}
     >
       <span className="pr-2 sm:pr-4 py-1 text-center lg:whitespace-nowrap">{children}</span>
-      <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
+      <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-0.5">
         <Image
             quality={90} src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
       </span>
@@ -38,13 +38,13 @@ export function GoldCallout({
   className?: string;
 }) {
   return (
-    <div className={`flex w-full overflow-hidden rounded-[10px] rounded-r-[30px] bg-[#E8B92C]/15 text-left ${className}`}>
-      <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#E8B92C]" />
+    <div className={`flex w-full overflow-hidden rounded-[10px] rounded-r-[30px] bg-accent/15 text-left ${className}`}>
+      <div className="w-[10px] sm:w-[13px] shrink-0 bg-accent" />
       <div className="flex flex-col gap-1 py-4 sm:py-5 px-4 sm:px-6">
         {title && (
-          <h3 className="heading-h4 text-[#2E5A66] uppercase">{title}</h3>
+          <h3 className="heading-h4 uppercase">{title}</h3>
         )}
-        <p className="body-small text-[#5F6B6F]">{children}</p>
+        <p className="body-small">{children}</p>
       </div>
     </div>
   );
@@ -72,7 +72,7 @@ export function FeatureCard({
 }) {
   return (
     <div className="relative flex w-full flex-col">
-      <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-[#E8B92C] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
+      <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
       <div
         className={`relative mt-2 flex flex-1 flex-col items-center justify-center gap-2 rounded-[20px] px-5 pt-[56px] pb-8 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
           dark ? "" : "bg-white"
@@ -80,7 +80,7 @@ export function FeatureCard({
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
         {!title ? null : headingFont === "heading" ? (
-          <Heading className={`heading-h4 text-balance ${dark ? "text-[#FAF7F2]" : "text-[#2E5A66]"}`}>
+          <Heading className={`heading-h4 text-balance ${dark ? "text-background" : "text-primary"}`}>
             {title}
           </Heading>
         ) : (
@@ -91,7 +91,7 @@ export function FeatureCard({
           </Heading>
         )}
         {description && (
-          <p className={`body-small ${dark ? "text-[#FAF7F2]" : "text-[#5F6B6F]"}`}>
+          <p className={`body-small ${dark ? "text-background" : "text-body-text"}`}>
             {description}
           </p>
         )}

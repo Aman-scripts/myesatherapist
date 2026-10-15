@@ -13,7 +13,7 @@ const STATS = [
 
 export function EsaHousingBarriers() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 lg:py-24">
+    <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <SectionHeader title="Housing Barriers for Renters Who Rely on Emotional Support Animals">
           Renters who rely on emotional support animals face fewer housing options, higher costs, and added stress. These barriers aren’t minor inconveniences, they can directly undermine emotional well-being and housing stability.

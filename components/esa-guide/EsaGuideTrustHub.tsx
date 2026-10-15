@@ -20,7 +20,7 @@ const TRUST_PILLARS = [
 
 export function EsaGuideTrustHub() {
   return (
-    <section className="w-full bg-[#FAF7F2]">
+    <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1288px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[3.2vw] lg:px-[5vw] xl:gap-[72px] xl:px-0">
         <SectionHeader
           title="Your Trusted ESA Resource Hub"

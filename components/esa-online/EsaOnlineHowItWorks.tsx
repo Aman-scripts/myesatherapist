@@ -28,14 +28,14 @@ const STEPS = [
 
 export function EsaOnlineHowItWorks() {
   return (
-    <section id="how-it-works" className="w-full bg-[#FAF7F2] py-16 sm:py-20 lg:py-24">
+    <section id="how-it-works" className="w-full bg-background py-16 sm:py-20 lg:py-24">
       <div className="max-w-[1054px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6">
         <div className="w-full max-w-[999px] flex flex-col items-center gap-14 lg:gap-[72px]">
           <div className="flex flex-col items-center gap-2 text-center">
-            <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
+            <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-primary leading-tight xl:leading-[54px] tracking-[-0.00015em]">
               How the ESA Letter Renewal Process Works?
             </h2>
-            <p className="font-sans text-base sm:text-[18px] font-semibold text-[#5F6B6F] leading-[30px]">
+            <p className="font-sans text-base sm:text-[18px] font-semibold text-body-text leading-[30px]">
               Complete a simple three-step online process to request an emotional support animal letter renewal conducted by a licensed mental health professional.
             </p>
           </div>
@@ -50,7 +50,7 @@ export function EsaOnlineHowItWorks() {
             quality={90} src={step.image} alt={`Step ${step.stepNumber}: ${step.title}`} fill className="object-cover" sizes="200px" />
                   </div>
                   <div
-                    className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-[#FAF7F2] font-bold text-[36px] tracking-[-0.017em]"
+                    className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-background font-bold text-[36px] tracking-[-0.017em]"
                     style={{ backgroundImage: TEAL_GRADIENT, fontFamily: "Helvetica, Arial, sans-serif" }}
                   >
                     {step.stepNumber}
@@ -64,7 +64,7 @@ export function EsaOnlineHowItWorks() {
                   >
                     {step.title}
                   </h3>
-                  <p className="font-sans text-base text-[#5F6B6F] font-semibold leading-[26px]">{step.description}</p>
+                  <p className="font-sans text-base text-body-text font-semibold leading-[26px]">{step.description}</p>
                 </div>
               </div>
             ))}

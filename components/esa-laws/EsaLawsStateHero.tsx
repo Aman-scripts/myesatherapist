@@ -23,7 +23,7 @@ export function EsaLawsStateHero({
 
   return (
     <section
-      className={`relative w-full bg-[#FAF7F2] overflow-hidden ${
+      className={`relative w-full bg-background overflow-hidden ${
         stacked
           ? "grid lg:flex lg:items-center lg:min-h-[480px] xl:min-h-[619px]"
           : "flex items-center min-h-[560px] lg:min-h-[480px] xl:min-h-[619px]"
@@ -76,7 +76,7 @@ export function EsaLawsStateHero({
               className="object-cover object-[75%_center] sm:object-right lg:object-[35%_center] xl:object-center"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/95 via-[#FAF7F2]/80 to-transparent lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent lg:hidden" />
           </>
         )}
       </div>
@@ -91,10 +91,10 @@ export function EsaLawsStateHero({
             stacked ? "mx-auto lg:mx-0 text-center lg:text-left" : ""
           }`}
         >
-          <h1 className="font-heading text-[26px] sm:text-5xl lg:text-[34px] xl:text-[56px] font-bold text-[#2E5A66] leading-[1.14] tracking-[-0.0002em]">
+          <h1 className="font-heading text-[26px] sm:text-5xl lg:text-[34px] xl:text-[56px] font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
             {title}
           </h1>
-          <p className="font-sans text-[12.5px] sm:text-base lg:text-[13px] xl:text-[18px] text-[#5F6B6F] font-semibold leading-[1.65] max-w-[626px]">
+          <p className="font-sans text-[12.5px] sm:text-base lg:text-[13px] xl:text-[18px] text-body-text font-semibold leading-[1.65] max-w-[626px]">
             {description}
           </p>
         </div>

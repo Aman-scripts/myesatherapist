@@ -12,7 +12,7 @@ import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionBut
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
@@ -94,7 +94,7 @@ export function EsaLawsHero() {
   };
 
   return (
-    <section className="relative z-30 w-full bg-[#FAF7F2] overflow-visible">
+    <section className="relative z-30 w-full bg-background overflow-visible">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE ESA LAWS HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
@@ -116,7 +116,7 @@ export function EsaLawsHero() {
             {statsData.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-1 px-1.5 rounded-[24px] text-center shadow-xs"
+                className="flex-1 flex flex-col items-center justify-center bg-background py-1 px-1.5 rounded-[24px] text-center shadow-xs"
               >
                 <span
                   className="font-heading font-bold text-xs leading-none bg-clip-text text-transparent"
@@ -132,12 +132,12 @@ export function EsaLawsHero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-heading text-[26px] leading-[32px] font-bold text-[#2E5A66] tracking-[-0.0002em] max-w-[340px]">
+          <h1 className="font-heading text-[26px] leading-[32px] font-bold text-primary tracking-[-0.0002em] max-w-[340px]">
             {HEADING}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-[12px] leading-relaxed text-[#5F6B6F] font-semibold max-w-[300px] mx-auto mt-2 font-sans">
+          <p className="text-[12px] leading-relaxed text-body-text font-semibold max-w-[300px] mx-auto mt-2 font-sans">
             {DESCRIPTION}
           </p>
 
@@ -173,7 +173,7 @@ export function EsaLawsHero() {
             {statsData.map((stat, idx) => (
               <div
                 key={idx}
-                className="flex-1 flex flex-col items-center justify-center bg-[#FAF7F2] py-2 px-3 rounded-[30px] shadow-xs"
+                className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-3 rounded-[30px] shadow-xs"
               >
                 <span
                   className="font-heading font-bold text-base leading-none bg-clip-text text-transparent"
@@ -188,11 +188,11 @@ export function EsaLawsHero() {
             ))}
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-[38px] leading-tight font-bold text-[#2E5A66] max-w-xl">
+          <h1 className="font-heading text-4xl sm:text-[38px] leading-tight font-bold text-primary max-w-xl">
             {HEADING}
           </h1>
 
-          <p className="text-sm sm:text-base leading-relaxed text-[#5F6B6F] font-semibold max-w-md mx-auto mt-3 font-sans">
+          <p className="text-sm sm:text-base leading-relaxed text-body-text font-semibold max-w-md mx-auto mt-3 font-sans">
             {DESCRIPTION}
           </p>
 
@@ -202,7 +202,7 @@ export function EsaLawsHero() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-[#FAF7F2] font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -247,7 +247,7 @@ export function EsaLawsHero() {
               style={{ backgroundImage: TEAL_GRADIENT }}
             >
               Get Started
-              <span className="w-[38px] h-[38px] rounded-full bg-[#FAF7F2] shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={20} height={22} className="w-[20px] h-[22px]" />
               </span>
@@ -277,7 +277,7 @@ export function EsaLawsHero() {
               {statsData.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="h-[53px] px-4 xl:px-[42px] bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center whitespace-nowrap"
+                  className="h-[53px] px-4 xl:px-[42px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center whitespace-nowrap"
                 >
                   <span
                     className="font-heading font-bold text-[22px] xl:text-[24px] leading-[32px] bg-clip-text text-transparent"
@@ -292,11 +292,11 @@ export function EsaLawsHero() {
               ))}
             </div>
 
-            <h1 className="font-heading font-bold text-[36px] lg:text-[44px] xl:text-[56px] leading-[1.14] xl:leading-[64px] tracking-[-0.0002em] text-[#2E5A66] max-w-[626px]">
+            <h1 className="font-heading font-bold text-[36px] lg:text-[44px] xl:text-[56px] leading-[1.14] xl:leading-[64px] tracking-[-0.0002em] text-primary max-w-[626px]">
               {HEADING}
             </h1>
 
-            <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-[#5F6B6F] max-w-[560px] xl:max-w-[625px]">
+            <p className="font-sans font-semibold text-[15px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[560px] xl:max-w-[625px]">
               {DESCRIPTION}
             </p>
           </div>
@@ -307,7 +307,7 @@ export function EsaLawsHero() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="h-[54px] px-6 xl:px-[34px] rounded-full bg-[#FAF7F2] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between gap-3 border border-[#EAE5DC] hover:bg-white transition-colors cursor-pointer"
+                className="h-[54px] px-6 xl:px-[34px] rounded-full bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between gap-3 border border-[#EAE5DC] hover:bg-white transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-2.5">
                   <Image
@@ -354,7 +354,7 @@ export function EsaLawsHero() {
               style={{ background: TEAL_GRADIENT }}
             >
               <span>Get Started</span>
-              <span className="w-[42px] h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+              <span className="w-[42px] h-[42px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                 <Image
             quality={90} src="/common/send-icon.svg" alt="" width={19} height={21} className="w-[18px] h-[20px]" />
               </span>

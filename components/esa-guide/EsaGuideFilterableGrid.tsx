@@ -27,7 +27,7 @@ const ESA_GUIDE_POSTS = [...BLOG_POSTS.filter(
 
 export function EsaGuideFilterableGrid() {
   return (
-    <section className="w-full bg-[#FAF7F2]">
+    <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1288px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[3.3vw] lg:px-[5vw] xl:gap-12 xl:px-0">
         <SectionHeader title="Featured Guide" />
 
@@ -37,7 +37,7 @@ export function EsaGuideFilterableGrid() {
               key={art.id}
               className="group flex flex-col overflow-hidden rounded-[20px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-shadow duration-300 hover:shadow-md"
             >
-              <Link href={art.url} className="relative block aspect-[3/2] w-full shrink-0 overflow-hidden bg-[#FAF7F2]">
+              <Link href={art.url} className="relative block aspect-[3/2] w-full shrink-0 overflow-hidden bg-background">
                 <Image
             quality={90}
                   src={art.cardImage}
@@ -56,7 +56,7 @@ export function EsaGuideFilterableGrid() {
                 <div className="flex flex-col gap-3.5 lg:gap-[1.1vw] xl:gap-[15px]">
                   <div className="flex flex-col gap-2.5">
                     <Link href={art.url}>
-                      <h3 className="line-clamp-3 font-heading text-[22px] font-bold leading-[30px] text-[#2E5A66] transition-colors group-hover:text-[#1D6E72] lg:text-[1.9vw] lg:leading-[2.4vw] xl:text-[24px] xl:leading-8">
+                      <h3 className="line-clamp-3 font-heading text-[22px] font-bold leading-[30px] text-primary transition-colors group-hover:text-[#1D6E72] lg:text-[1.9vw] lg:leading-[2.4vw] xl:text-[24px] xl:leading-8">
                         {art.title}
                       </h3>
                     </Link>
@@ -64,7 +64,7 @@ export function EsaGuideFilterableGrid() {
                       by {art.author.name} • {art.publishDate}
                     </div>
                   </div>
-                  <p className="line-clamp-3 font-sans text-[15px] font-semibold leading-[26px] text-[#5F6B6F] lg:text-[1.1vw] lg:leading-[1.8vw] xl:text-base xl:leading-[26px]">
+                  <p className="line-clamp-3 font-sans text-[15px] font-semibold leading-[26px] text-body-text lg:text-[1.1vw] lg:leading-[1.8vw] xl:text-base xl:leading-[26px]">
                     {art.shortDescription}
                   </p>
                 </div>
@@ -72,10 +72,10 @@ export function EsaGuideFilterableGrid() {
                 <Link
                   href={art.url}
                   className="group/btn inline-flex h-12 w-[171px] items-center justify-between rounded-[30px] pl-6 pr-[3px] font-sans text-base font-semibold text-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all hover:opacity-95"
-                  style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ background: "var(--color-gradient)" }}
                 >
                   <span>Read Guide</span>
-                  <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover/btn:scale-105">
+                  <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] transition-transform group-hover/btn:scale-105">
                     <Image
             quality={90} src="/common/send-icon.svg" alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
                   </span>

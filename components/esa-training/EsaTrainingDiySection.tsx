@@ -48,14 +48,14 @@ export function EsaTrainingDiySection() {
           {CARDS.map((card) => (
             <div
               key={card.title}
-              className="overflow-hidden rounded-[30px] bg-[#FAF7F2] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] lg:min-h-[48vw] xl:h-[696px] xl:min-h-0"
+              className="overflow-hidden rounded-[30px] bg-background shadow-[0px_1px_4px_rgba(0,0,0,0.1)] lg:min-h-[48vw] xl:h-[696px] xl:min-h-0"
             >
               <div className="relative aspect-[626/273] w-full overflow-hidden">
                 <Image
             quality={90} src={card.image} alt={card.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 626px, (min-width: 1024px) 45vw, 100vw" />
               </div>
               <div className="mx-auto flex w-full max-w-[498px] flex-col items-center gap-8 px-6 pb-10 pt-8 sm:px-8 lg:max-w-none lg:gap-[2.8vw] lg:px-[4.6vw] lg:pt-[2.6vw] xl:max-w-[498px] xl:gap-10 xl:px-0 xl:pt-[37px]">
-                <h3 className="text-center font-heading text-[24px] font-bold leading-[32px] text-[#2E5A66] sm:text-[28px] sm:leading-9 lg:text-[2vw] lg:leading-[2.5vw] xl:text-[28px] xl:leading-9">
+                <h3 className="text-center font-heading text-[24px] font-bold leading-[32px] text-primary sm:text-[28px] sm:leading-9 lg:text-[2vw] lg:leading-[2.5vw] xl:text-[28px] xl:leading-9">
                   {card.title}
                 </h3>
                 <ul className="flex w-full flex-col gap-5 lg:gap-[1.7vw] xl:gap-6">

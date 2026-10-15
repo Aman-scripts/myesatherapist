@@ -25,7 +25,7 @@ const ANIMALS = [
 
 export function EsaTrainingBySpeciesSection() {
   return (
-    <section className="w-full bg-[#FAF7F2]">
+    <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1448px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[2.8vw] lg:px-[5vw] xl:gap-10 xl:px-0">
         <div className="flex w-full flex-col items-center gap-10 lg:gap-[4.4vw] xl:gap-16">
           <SectionHeader
@@ -47,10 +47,10 @@ export function EsaTrainingBySpeciesSection() {
             quality={90} src={animal.image} alt={animal.alt} fill className="object-cover object-center" sizes="(min-width: 1280px) 366px, (min-width: 640px) 50vw, 100vw" />
                 </div>
                 <div className="flex flex-col gap-2.5 px-6 pt-4 lg:px-[1.6vw] xl:pl-[23px] xl:pr-2">
-                  <h3 className="font-heading text-[26px] font-bold leading-[34px] text-[#2E5A66] lg:text-[1.95vw] lg:leading-[2.5vw] xl:whitespace-nowrap xl:text-[28px] xl:leading-9">
+                  <h3 className="font-heading text-[26px] font-bold leading-[34px] text-primary lg:text-[1.95vw] lg:leading-[2.5vw] xl:whitespace-nowrap xl:text-[28px] xl:leading-9">
                     {animal.title}
                   </h3>
-                  <p className="font-sans text-sm font-semibold leading-[26px] text-[#5F6B6F] lg:text-[0.97vw] lg:leading-[1.8vw] xl:text-sm xl:leading-[26px]">
+                  <p className="font-sans text-sm font-semibold leading-[26px] text-body-text lg:text-[0.97vw] lg:leading-[1.8vw] xl:text-sm xl:leading-[26px]">
                     {animal.text}
                   </p>
                 </div>

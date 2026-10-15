@@ -4,7 +4,7 @@ import { GoldPill, SectionHeader } from "@/components/common/BlogPageBlocks";
 
 export function EsaTrainingLegalSection() {
   return (
-    <section className="w-full bg-[#FAF7F2]">
+    <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1065px] flex-col items-center gap-8 px-4 sm:px-8 lg:px-[5vw] xl:gap-8 xl:px-0">
         <div className="flex w-full flex-col items-center gap-8">
           <SectionHeader title="Is ESA Training Required by Law?" />
@@ -14,7 +14,7 @@ export function EsaTrainingLegalSection() {
           </GoldPill>
         </div>
 
-        <div className="font-sans text-base font-semibold leading-[28px] text-[#5F6B6F] text-center sm:text-[18px] sm:leading-[30px] lg:text-[1.25vw] lg:leading-[2.1vw] xl:text-[18px] xl:leading-[30px]">
+        <div className="font-sans text-base font-semibold leading-[28px] text-body-text text-center sm:text-[18px] sm:leading-[30px] lg:text-[1.25vw] lg:leading-[2.1vw] xl:text-[18px] xl:leading-[30px]">
           <p>
             No, and that part hasn&apos;t changed. The Fair Housing Act has never required emotional support animals to
             have specialized training.

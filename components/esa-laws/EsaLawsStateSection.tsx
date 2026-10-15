@@ -235,21 +235,21 @@ const STATE_LAWS: StateLawEntry[] = [
 function StateCard({ entry }: { entry: StateLawEntry }) {
   return (
     <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)]">
-      <div className="w-[17px] shrink-0 bg-[#E8B92C] rounded-l-[10px]" />
+      <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
         <div className="relative w-[57px] h-[57px] shrink-0">
           <Image
             quality={90} src={entry.icon} alt={`${entry.name} state map`} fill className="object-contain" sizes="57px" />
         </div>
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
-          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#2E5A66]">
+          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
             {entry.name}
           </h3>
           <ul className="flex flex-col gap-2.5 sm:gap-3">
             {entry.bullets.map((bullet, idx) => (
               <li
                 key={idx}
-                className="relative pl-5 font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-[#5F6B6F] before:content-['•'] before:absolute before:left-0 before:top-0 before:text-[#2E5A66]"
+                className="relative pl-5 font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text before:content-['•'] before:absolute before:left-0 before:top-0 before:text-primary"
               >
                 {bullet}
               </li>
@@ -263,19 +263,19 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
 
 export function EsaLawsStateSection() {
   return (
-    <section className="w-full bg-[#FAF7F2] py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-background py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1178px] mx-auto flex flex-col items-center gap-14 sm:gap-[72px]">
         <div className="flex flex-col items-center gap-4 sm:gap-5 max-w-[1178px] text-center">
-          <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-[#2E5A66]">
+          <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-primary">
             ESA Laws by State
           </h2>
-          <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-[#5F6B6F] max-w-[1156px]">
+          <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text max-w-[1156px]">
             Some states have additional ESA-specific laws, but all states must still follow federal rules that allow ESA accommodations in housing. Under federal law, ESAs do not have public access rights, so businesses are not required to allow them inside. An ESA letter must clearly explain the individual's clinical eligibility for an ESA as a housing accommodation. Housing providers also cannot require a specific form or method for submitting an ESA request. In some states, a 30-day or longer clinical relationship between the mental health professional and the person requesting the ESA letter is required. Other states require the provider to be licensed or based in the same state as the individual. A few states have penalties for falsely claiming an animal as a service animal. These penalties can include eviction or financial liability for damages. Since ESA laws can change at both state and federal levels, it is important to stay updated on current requirements.
           </p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-10 sm:gap-14">
-          <h3 className="font-heading font-bold text-[22px] sm:text-[28px] leading-[1.3] text-[#2E5A66] text-center">
+          <h3 className="font-heading font-bold text-[22px] sm:text-[28px] leading-[1.3] text-primary text-center">
             Additional ESA laws by state include
           </h3>
           <div className="w-full grid grid-cols-1 gap-6 sm:gap-8">

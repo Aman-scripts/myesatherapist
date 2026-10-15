@@ -31,30 +31,30 @@ export function EsaOnlineComparison() {
       <div className="max-w-[1100px] mx-auto px-3 sm:px-6 lg:px-8 flex flex-col items-center gap-10">
         <div className="text-center flex flex-col gap-3 max-w-[944px]">
           <h2
-            className="text-2xl sm:text-4xl lg:text-[38px] xl:text-[46px] font-bold text-[#2E5A66] leading-tight lg:leading-[64px]"
+            className="text-2xl sm:text-4xl lg:text-[38px] xl:text-[46px] font-bold text-primary leading-tight lg:leading-[64px]"
             style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
           >
             How My ESA Therapist Compare to Other ESA Letter Services
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[20px] leading-8 italic" style={LATO}>
+          <p className="text-body-text text-base sm:text-[20px] leading-8 italic" style={LATO}>
             We set the standard for professional care, compliance, and trust.
           </p>
         </div>
 
         {/* Comparison table */}
-        <div className="hidden lg:block relative w-full max-w-[1062px] rounded-[20px] bg-[#FAF7F2] shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
+        <div className="hidden lg:block relative w-full max-w-[1062px] rounded-[20px] bg-background shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
           <div className="grid grid-cols-[1fr_130px_1fr] sm:grid-cols-[1fr_180px_1fr] md:grid-cols-[1fr_260px_1fr] lg:grid-cols-[1fr_297px_1fr]">
             {/* Header row */}
-            <div className="flex h-[64px] items-center justify-center text-[#2E5A66] font-bold text-lg sm:text-2xl" style={LATO}>
+            <div className="flex h-[64px] items-center justify-center text-primary font-bold text-lg sm:text-2xl" style={LATO}>
               FEATURES
             </div>
             <div
-              className="-mt-3 flex h-[76px] items-center justify-center rounded-t-[20px] text-center text-[#FAF7F2] font-bold text-sm sm:text-xl md:text-2xl leading-tight px-2 shadow-[0px_4px_12px_rgba(0,0,0,0.2)] relative z-10"
+              className="-mt-3 flex h-[76px] items-center justify-center rounded-t-[20px] text-center text-background font-bold text-sm sm:text-xl md:text-2xl leading-tight px-2 shadow-[0px_4px_12px_rgba(0,0,0,0.2)] relative z-10"
               style={{ backgroundImage: TEAL_GRADIENT, ...LATO }}
             >
               MY ESA THERAPIST
             </div>
-            <div className="flex h-[64px] items-center justify-center text-[#2E5A66] font-bold text-lg sm:text-2xl" style={LATO}>
+            <div className="flex h-[64px] items-center justify-center text-primary font-bold text-lg sm:text-2xl" style={LATO}>
               OTHERS
             </div>
 
@@ -67,7 +67,7 @@ export function EsaOnlineComparison() {
                       <Image
             quality={90} src={`${P}allicon.svg`} alt="" width={24} height={24} className="h-6 w-6" />
                     </span>
-                    <span className="text-[#2E5A66] font-bold text-sm sm:text-xl leading-tight" style={LATO}>
+                    <span className="text-primary font-bold text-sm sm:text-xl leading-tight" style={LATO}>
                       {row.feature}
                     </span>
                   </div>
@@ -89,7 +89,7 @@ export function EsaOnlineComparison() {
                         height={22}
                         className="h-[22px] w-[22px] shrink-0"
                       />
-                      <span className="text-[#5F6B6F] italic text-sm sm:text-lg" style={LATO}>
+                      <span className="text-body-text italic text-sm sm:text-lg" style={LATO}>
                         {row.other.text}
                       </span>
                     </div>
@@ -102,27 +102,27 @@ export function EsaOnlineComparison() {
 
         {/* Mobile & tablet (< 1024px): raised center card */}
         <div className="block lg:hidden w-full max-w-[361px] sm:max-w-[600px] md:max-w-[680px] relative mx-auto pt-6">
-          <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-4">
+          <div className="w-full bg-background rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-4">
             <div className="flex items-center justify-between px-2 sm:px-6 h-[64px] sm:h-[72px]">
               <div className="w-[88px] sm:w-[150px] md:w-[170px] text-center">
-                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-[#2E5A66]">Features</h3>
+                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-primary">Features</h3>
               </div>
               <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
               <div className="w-[96px] sm:w-[150px] md:w-[170px] text-center">
-                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-[#2E5A66]">Others</h3>
+                <h3 className="font-heading text-[15px] sm:text-lg md:text-xl font-bold text-primary">Others</h3>
               </div>
             </div>
             <div className="divide-y divide-[#C8B9A7]/40">
               {ROWS.map((row) => (
                 <div key={row.feature} className="flex items-center justify-between h-[84px] sm:h-[92px] px-2 sm:px-6">
                   <div className="w-[88px] sm:w-[150px] md:w-[170px] flex items-center justify-center text-center">
-                    <span className="font-heading font-bold text-[13.5px] sm:text-[15px] md:text-[16px] text-[#2E5A66] leading-tight">{row.feature}</span>
+                    <span className="font-heading font-bold text-[13.5px] sm:text-[15px] md:text-[16px] text-primary leading-tight">{row.feature}</span>
                   </div>
                   <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1 gap-1.5">
                     <Image
             quality={90} src={`${P}-${row.other.type}-icon.svg`} alt="" width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
-                    <span className="italic text-[11px] sm:text-[13px] text-[#5F6B6F] leading-[15px]" style={LATO}>{row.other.text}</span>
+                    <span className="italic text-[11px] sm:text-[13px] text-body-text leading-[15px]" style={LATO}>{row.other.text}</span>
                   </div>
                 </div>
               ))}
@@ -134,7 +134,7 @@ export function EsaOnlineComparison() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[68px] sm:h-[76px] rounded-b-[20px] flex items-center justify-center px-2 text-center bg-[#1A3D4F]/35">
-              <h3 className="font-heading font-bold text-[14.5px] sm:text-[17px] text-[#FAF7F2] leading-[17px] tracking-tight">
+              <h3 className="font-heading font-bold text-[14.5px] sm:text-[17px] text-background leading-[17px] tracking-tight">
                 MY ESA
                 <br />
                 THERAPIST

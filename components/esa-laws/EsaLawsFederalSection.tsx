@@ -1,7 +1,7 @@
 import React from "react";
 import { Home, X } from "lucide-react";
 
-const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
+const TEAL_GRADIENT = "var(--color-gradient)";
 
 const DENIAL_REASONS = [
   "Put an unfair financial and administrative burden on the landlord (e.g., a landlord can’t insure their rental properties because of the ESA)",
@@ -27,14 +27,14 @@ function LawCard({
 }) {
   return (
     <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)]">
-      <div className="w-[17px] shrink-0 bg-[#E8B92C] rounded-l-[10px]" />
+      <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
         <CardIcon />
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
-          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-[#2E5A66]">
+          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
             {title}
           </h3>
-          <div className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-[#5F6B6F] flex flex-col gap-4">
+          <div className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text flex flex-col gap-4">
             {children}
           </div>
         </div>
@@ -48,10 +48,10 @@ export function EsaLawsFederalSection() {
     <section className="w-full bg-white py-14 sm:py-20 px-4 sm:px-8 lg:px-[132px]">
       <div className="max-w-[1178px] mx-auto flex flex-col items-center gap-10 sm:gap-14">
         <div className="flex flex-col items-center gap-3 sm:gap-4 max-w-[764px] text-center">
-          <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-[#2E5A66]">
+          <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-primary">
             Federal Laws Governing Emotional Support Animals
           </h2>
-          <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-[#5F6B6F] max-w-[1052px]">
+          <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text max-w-[1052px]">
             Two primary federal laws have historically governed ESA rights in the United States. Understanding their scope is essential for both ESA owners and housing providers.
           </p>
         </div>
@@ -95,7 +95,7 @@ export function EsaLawsFederalSection() {
               {DENIAL_REASONS.map((reason, idx) => (
                 <div key={idx} className="flex items-start gap-4">
                   <span className="w-6 h-6 rounded-full bg-[#E42529] flex items-center justify-center shrink-0 mt-0.5">
-                    <X className="w-3.5 h-3.5 text-[#FAF7F2]" strokeWidth={3} />
+                    <X className="w-3.5 h-3.5 text-background" strokeWidth={3} />
                   </span>
                   <span>{reason}</span>
                 </div>
