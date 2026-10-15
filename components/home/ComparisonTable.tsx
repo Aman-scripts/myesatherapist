@@ -125,9 +125,9 @@ export function ComparisonTable() {
           {/* Cream frame with Features / Others columns */}
           <div className="w-full bg-[#FAF7F2] rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-3">
             <div className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
-              <h5 className="font-playfair text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Features</h5>
+              <h3 className="heading-h4 text-[#2E5A66] text-center">Features</h3>
               <div />
-              <h5 className="font-playfair text-[16px] sm:text-lg font-bold text-[#2E5A66] leading-[28px] text-center">Others</h5>
+              <h3 className="heading-h4 text-[#2E5A66] text-center">Others</h3>
             </div>
 
             <div className="divide-y divide-[#C8B9A7]/60 border-t border-[#C8B9A7]/60">
@@ -137,7 +137,7 @@ export function ComparisonTable() {
                   className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[102px] sm:h-[108px]"
                 >
                   <div className="px-2 flex items-center justify-center text-center">
-                    <h6 className="font-playfair font-bold text-[14px] sm:text-[16px] text-[#2E5A66] leading-[28px]">{row.feature}</h6>
+                    <h4 className="heading-h4 text-[#2E5A66] text-center text-xs sm:text-sm">{row.feature}</h4>
                   </div>
                   <div />
                   <div className="px-2 flex flex-col items-center justify-center text-center gap-1.5">
@@ -157,11 +157,11 @@ export function ComparisonTable() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[76px] sm:h-[84px] rounded-b-[20px] flex items-center justify-center px-3 text-center bg-[#1A3D4F]/35">
-              <h5 className="font-playfair font-bold text-[16px] sm:text-[18px] text-[#FAF7F2] leading-[17px]">
+              <h3 className="heading-h4 text-[#FAF7F2] text-center leading-tight">
                 ESA
                 <br />
                 Therapist
-              </h5>
+              </h3>
             </div>
             <div className="divide-y divide-[#C8B9A7]/25">
               {comparisonRows.map((row, idx) => (
@@ -186,15 +186,15 @@ export function ComparisonTable() {
             {/* Header Labels for FEATURES and OTHERS */}
             <div className="flex items-center justify-between pt-[25px] px-6 xl:px-12 h-[74px]">
               <div className="w-[220px] xl:w-[300px] text-center shrink-0">
-                <h5 className="font-playfair text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                <h3 className="heading-h3 text-[#2E5A66]">
                   FEATURES
-                </h5>
+                </h3>
               </div>
               <div className="w-[400px] xl:w-[478px] shrink-0" />
               <div className="w-[220px] xl:w-[340px] text-center shrink-0">
-                <h5 className="font-playfair text-[20px] xl:text-[24px] font-bold text-[#2E5A66] leading-[32px]">
+                <h3 className="heading-h3 text-[#2E5A66]">
                   OTHERS
-                </h5>
+                </h3>
               </div>
             </div>
 
@@ -214,9 +214,9 @@ export function ComparisonTable() {
                         className="object-contain w-4 h-4 xl:w-[18px] xl:h-[18px]"
                       />
                     </div>
-                    <h6 className="font-playfair text-[16px] xl:text-[20px] font-bold text-[#2E5A66] leading-[28px]">
+                    <h4 className="heading-h4 text-[#2E5A66]">
                       {row.desktopFeature}
-                    </h6>
+                    </h4>
                   </div>
 
                   {/* Empty space matching elevated column width */}
@@ -225,7 +225,7 @@ export function ComparisonTable() {
                   {/* Others Column */}
                   <div className="w-[220px] xl:w-[340px] shrink-0 flex items-center justify-start gap-2 xl:gap-3 pl-1 xl:pl-4">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="text-[13px] xl:text-[14px] text-[#5F6B6F] font-semibold leading-[20px] xl:leading-[26px] font-manrope text-left">
+                    <span className="text-[14px] xl:text-[16px] text-[#5F6B6F] font-semibold leading-[22px] xl:leading-[26px] font-manrope text-left">
                       {row.others}
                     </span>
                   </div>
@@ -240,9 +240,9 @@ export function ComparisonTable() {
             style={{ backgroundImage: TEAL_GRADIENT }}
           >
             <div className="h-[91px] rounded-b-[20px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
-              <h5 className="font-playfair text-[20px] xl:text-[24px] font-bold text-[#FAF7F2] leading-[32px]">
+              <h3 className="heading-h3 text-[#FAF7F2]">
                 MY ESA THERAPIST
-              </h5>
+              </h3>
             </div>
 
             <div className="divide-y divide-[#C8B9A7]/25 pt-0">
@@ -251,7 +251,7 @@ export function ComparisonTable() {
                   <span className="shrink-0">
                     <GreenCheckIcon />
                   </span>
-                  <span className="min-w-0 text-[13px] xl:text-[14px] text-[#FAF7F2] font-semibold leading-[20px] xl:leading-[26px] font-manrope">
+                  <span className="min-w-0 text-[14px] xl:text-[16px] text-[#FAF7F2] font-semibold leading-[22px] xl:leading-[26px] font-manrope">
                     {row.myEsa}
                   </span>
                 </div>
