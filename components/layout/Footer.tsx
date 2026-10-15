@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #000000 100%)";
 
@@ -89,17 +90,13 @@ export function Footer({ bgColor = "bg-background" }: { bgColor?: string }) {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <a
+              <CtaButton
                 href="#how-it-works"
-                className="inline-flex items-center justify-center w-[227px] h-[50px] px-8 rounded-[46px] bg-accent shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
+                variant="accent"
+                className="w-[253px] h-[48px]"
               >
-                <span
-                  className="body-text bg-clip-text text-transparent whitespace-nowrap"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  Apply your ESA Letter
-                </span>
-              </a>
+                Apply Your ESA Letter
+              </CtaButton>
 
               <Link
                 href="/contact-us/"
