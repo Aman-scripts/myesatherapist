@@ -23,16 +23,16 @@ export function DoYouNeedEsaSection() {
         {/* Left Content Area */}
         <div className="w-[500px] lg:w-[490px] xl:w-[737px] pl-6 lg:pl-8 xl:pl-[78px] pr-4 my-auto py-0 z-10 flex flex-col justify-center shrink-0 space-y-3 lg:space-y-3.5 xl:space-y-5">
           <div className="space-y-2 lg:space-y-2.5 xl:space-y-4">
-            <h2 className="font-heading text-[28px] lg:text-[30px] xl:text-[44px] font-bold text-[#2E5A66] leading-[36px] lg:leading-[38px] xl:leading-[54px] tracking-[-0.00015em]">
-              Do You Need an Emotional Support Animal?
+            <h2 className="heading-h2 capitalize">
+              Do You Need An Emotional Support Animal?
             </h2>
 
-            <div className="text-[#5F6B6F] text-[13px] lg:text-[14px] xl:text-[18px] font-semibold leading-[20px] lg:leading-[22px] xl:leading-[30px] font-sans space-y-2 lg:space-y-2.5 xl:space-y-3.5">
+            <div className="body-large space-y-2 lg:space-y-2.5 xl:space-y-3">
               <p>
                 You might consider an Emotional Support Animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
               </p>
 
-              <ul className="space-y-0.5 lg:space-y-1 xl:space-y-1.5 list-none pl-0">
+              <ul className="space-y-1 lg:space-y-1.5 list-none pl-0">
                 {points.map((point, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="mr-2 text-[#2E5A66] font-bold">•</span>
@@ -47,9 +47,12 @@ export function DoYouNeedEsaSection() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-2 xl:pt-4">
+          {/* CTA Button & Refund Reassurance */}
+          <div className="pt-2 xl:pt-4 space-y-2">
             <CtaButton href="#how-it-works">Get Started</CtaButton>
+            <p className="body-small text-[#5F6B6F]">
+              If not approved after your evaluation? You get a full refund.
+            </p>
           </div>
         </div>
 
@@ -126,11 +129,11 @@ export function DoYouNeedEsaSection() {
         {/* Text & Button Container (Text SECOND) */}
         <div className="px-4 sm:px-6 max-w-3xl mx-auto py-6 sm:py-8 space-y-6 sm:space-y-8">
           <div className="space-y-4">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#2E5A66] leading-tight tracking-[-0.00015em]">
-              Do You Need an Emotional Support Animal?
+            <h2 className="heading-h2 capitalize">
+              Do You Need An Emotional Support Animal?
             </h2>
 
-            <div className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed space-y-3 font-sans">
+            <div className="body-large space-y-3">
               <p>
                 You might consider an Emotional Support Animal if you face challenges that affect your emotional or mental well-being. Situations that could indicate a need for an ESA include:
               </p>
@@ -150,9 +153,12 @@ export function DoYouNeedEsaSection() {
             </div>
           </div>
 
-          {/* Action Button */}
-          <div className="flex justify-center pt-2">
+          {/* Action Button & Refund Reassurance */}
+          <div className="flex flex-col items-center gap-2 pt-2">
             <CtaButton href="#how-it-works">Get Started</CtaButton>
+            <p className="body-small text-center">
+              If not approved after your evaluation? You get a full refund.
+            </p>
           </div>
         </div>
       </div>

@@ -143,7 +143,7 @@ export function QualifyingConditions({
   className = "",
   id = "qualifying-conditions",
   title = "Common Qualifying Conditions",
-  description = "A licensed mental health professional will determine eligibility during your consultancy. These are some common conditions that may qualify under ADA.",
+  description = "Under federal law, emotional support animal letters can be written for a range of mental and emotional health conditions, including:",
 }: QualifyingConditionsProps = {}) {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
@@ -152,10 +152,10 @@ export function QualifyingConditions({
       <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 max-w-[709px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-[#2E5A66] leading-tight xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 capitalize">
             {title}
           </h2>
-          <p className="text-[#5F6B6F] text-base sm:text-[18px] font-semibold leading-relaxed xl:leading-[30px] font-sans">
+          <p className="body-large">
             {description}
           </p>
         </div>
