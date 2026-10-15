@@ -15,7 +15,7 @@ function ProfileDetails() {
         {/* Active Now */}
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
             Active Now
           </span>
         </div>
@@ -23,7 +23,7 @@ function ProfileDetails() {
         {/* 16 Years Experience */}
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
             16 Years Experience
           </span>
         </div>
@@ -37,7 +37,7 @@ function ProfileDetails() {
         <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
           Educational Qualifications
         </h3>
-        <ul className="space-y-3 font-lato text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <ul className="space-y-3 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
           <li className="flex items-center justify-between gap-4">
             <span>Master of Social Work (MSW)</span>
             <span className="font-medium text-[#FAF7F2]/90">2020</span>
@@ -61,7 +61,7 @@ function ProfileDetails() {
         <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
           Authorized to Practice
         </h3>
-        <p className="font-lato text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <p className="font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
           Missouri
         </p>
       </div>
@@ -332,7 +332,7 @@ export function MaxPhillipsReviewerContent() {
               <h3 className="font-heading font-bold text-xl sm:text-[24px] leading-[32px] text-[#2E5A66]">
                 Master of Social Work (MSW)
               </h3>
-              <p className="font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                 University of Southern California, 2020
               </p>
             </div>
@@ -342,7 +342,7 @@ export function MaxPhillipsReviewerContent() {
               <h3 className="font-heading font-bold text-xl sm:text-[24px] leading-[32px] text-[#2E5A66]">
                 Bachelor of Science in Justice Systems, Pre-Law
               </h3>
-              <p className="font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                 Truman State University, 2017
               </p>
             </div>
@@ -352,7 +352,7 @@ export function MaxPhillipsReviewerContent() {
               <h3 className="font-heading font-bold text-xl sm:text-[24px] leading-[32px] text-[#2E5A66]">
                 Licensed Clinical Social Worker (LCSW)
               </h3>
-              <p className="font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                 Missouri, License #2023001049
               </p>
             </div>
@@ -365,7 +365,7 @@ export function MaxPhillipsReviewerContent() {
           <div className="space-y-6">
             <SectionBadge title="Focus Areas" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2.5 gap-x-8 lg:gap-x-16 font-lato text-[15px] sm:text-[16px] leading-[30px] sm:leading-[32px] text-[#5F6B6F] tracking-[-0.017em]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2.5 gap-x-8 lg:gap-x-16 font-manrope text-[15px] sm:text-[16px] leading-[30px] sm:leading-[32px] text-[#5F6B6F] tracking-[-0.017em]">
               <ul className="space-y-2.5">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#5F6B6F] shrink-0" />
@@ -413,7 +413,7 @@ export function MaxPhillipsReviewerContent() {
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Clinical Accuracy
                   </h3>
-                  <p className="font-lato text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     Reviews mental health content for clinical accuracy,
                     ensuring information reflects established therapeutic
                     principles, terminology, and evidence-informed practices.
@@ -428,7 +428,7 @@ export function MaxPhillipsReviewerContent() {
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Trauma-Informed Review
                   </h3>
-                  <p className="font-lato text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     Evaluates content involving trauma, PTSD, anxiety, and
                     related concerns through a trauma-informed lens that
                     prioritizes accuracy and appropriate context.
@@ -443,7 +443,7 @@ export function MaxPhillipsReviewerContent() {
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Mental Health Clarity
                   </h3>
-                  <p className="font-lato text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     Helps ensure complex mental health topics are presented
                     clearly, responsibly, and in language that is accessible
                     to a general audience.
@@ -489,7 +489,7 @@ export function MaxPhillipsReviewerContent() {
                 </svg>
               </div>
 
-              <p className="font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                 My role is to review mental health content for clinical
                 accuracy, clarity, appropriate terminology, and responsible
                 presentation. I evaluate mental health information through my
@@ -532,7 +532,7 @@ export function MaxPhillipsReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
                   I authorize My ESA Therapist to display my name, photo,
                   biography, credentials, and professional information on its
                   website.
@@ -556,7 +556,7 @@ export function MaxPhillipsReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
                   I have reviewed and approved the information provided.
                 </p>
               </div>
@@ -578,7 +578,7 @@ export function MaxPhillipsReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
                   I understand that my review of website content does not
                   establish a therapist-client relationship with website
                   visitors or constitute individual mental health treatment or

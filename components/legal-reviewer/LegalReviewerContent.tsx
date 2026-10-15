@@ -15,7 +15,7 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
         {/* Active Now */}
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
             Active Now
           </span>
         </div>
@@ -23,7 +23,7 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
         {/* 12 Years Experience */}
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
             12 Years Experience
           </span>
         </div>
@@ -37,7 +37,7 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
         <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
           Licensure
         </h3>
-        <ul className="space-y-3 font-lato text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <ul className="space-y-3 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
           <li className="flex items-center justify-between gap-4">
             <span>New York</span>
           </li>
@@ -59,7 +59,7 @@ function ProfileDetails({ onLinkClick }: { onLinkClick?: () => void }) {
         <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
           Professional Profiles
         </h3>
-        <div className="space-y-2.5 font-lato text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <div className="space-y-2.5 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
           {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/awais-arshad-a51b31113/"
@@ -390,7 +390,7 @@ export function LegalReviewerContent() {
               <h3 className="font-heading font-bold text-xl sm:text-[24px] leading-[32px] text-[#2E5A66]">
                 LL.M.
               </h3>
-              <p className="font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+              <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                 Columbia Law School
               </p>
 
@@ -418,7 +418,7 @@ export function LegalReviewerContent() {
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Types of legal content I review
                   </h3>
-                  <p className="font-lato text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     I review public-facing legal content, including website copy,
                     articles, blog posts, FAQs, legal explainers, compliance
                     summaries, client guides, and educational materials intended
@@ -434,7 +434,7 @@ export function LegalReviewerContent() {
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     Legal review process
                   </h3>
-                  <p className="font-lato text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     I identify the legal claims being made and assess whether
                     they are accurate, current, properly qualified, and
                     supported by reliable authority. I flag overbroad,
@@ -451,7 +451,7 @@ export function LegalReviewerContent() {
                   <h3 className="font-heading font-bold text-lg sm:text-[24px] leading-[30px] sm:leading-[32px] text-[#2E5A66]">
                     How I verify legal accuracy
                   </h3>
-                  <p className="font-lato text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <p className="font-manrope text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     I verify legal information using statutes, regulations,
                     agency guidance, case law, and reputable secondary legal
                     sources. I also use Westlaw and LexisNexis to research
@@ -496,7 +496,7 @@ export function LegalReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
                   I authorize My ESA Therapist to display my name, photo,
                   biography, credentials, and professional information on its
                   website.
@@ -520,7 +520,7 @@ export function LegalReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
                   I have reviewed and approved the information provided.
                 </p>
               </div>
@@ -542,7 +542,7 @@ export function LegalReviewerContent() {
                     />
                   </svg>
                 </span>
-                <p className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
+                <p className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]">
                   I understand that my review of website content does not
                   establish an attorney-client relationship with website
                   visitors.

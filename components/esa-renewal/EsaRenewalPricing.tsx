@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TEAL_GRADIENT = "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)";
 
-const LATO = { fontFamily: "var(--font-lato), Lato, sans-serif" } as const;
+const LATO = { fontFamily: "var(--font-sans), 'Manrope', sans-serif" } as const;
 
 interface Plan {
   name: string;

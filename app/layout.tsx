@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Playfair_Display, Lato, Space_Grotesk } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { ThirdPartyErrorHandler } from "@/components/common/ThirdPartyErrorHandler";
 import "./globals.css";
@@ -20,19 +20,6 @@ const manrope = Manrope({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
-  display: "swap",
-});
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-lato",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
   display: "swap",
 });
 
@@ -91,8 +78,6 @@ export default function RootLayout({
         "h-full antialiased",
         manrope.variable,
         playfair.variable,
-        lato.variable,
-        spaceGrotesk.variable,
         "font-sans"
       )}
     >

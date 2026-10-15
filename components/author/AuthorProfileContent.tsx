@@ -14,14 +14,14 @@ function ProfileDetails({ author }: { author: AuthorProfile }) {
       <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
             Active Now
           </span>
         </div>
 
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11px]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#00BA00] shadow-[0_0_6px_rgba(0,186,0,0.5)] shrink-0" />
-          <span className="font-lato font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
+          <span className="font-manrope font-bold text-[13px] sm:text-[14px] leading-[20px] text-[#2E5A66] tracking-[-0.017em]">
             {author.experienceLabel}
           </span>
         </div>
@@ -35,7 +35,7 @@ function ProfileDetails({ author }: { author: AuthorProfile }) {
         <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
           Education
         </h3>
-        <ul className="space-y-3 font-lato text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <ul className="space-y-3 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
           {author.sidebarEducation.map((item) => (
             <li key={item.label} className="flex items-center justify-between gap-4">
               <span>{item.label}</span>
@@ -53,7 +53,7 @@ function ProfileDetails({ author }: { author: AuthorProfile }) {
         <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-[#FAF7F2]/40 tracking-[-0.017em]">
           Focus Areas
         </h3>
-        <ul className="space-y-2 font-lato text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
+        <ul className="space-y-2 font-manrope text-[14px] leading-[22px] text-[#FAF7F2] tracking-[-0.017em]">
           {author.sidebarFocusAreas.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -310,7 +310,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
                   {edu.degree}
                   {edu.field ? `, ${edu.field}` : ""}
                 </h3>
-                <p className="font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                <p className="font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                   {edu.institution}, {edu.year}
                 </p>
               </div>
@@ -323,7 +323,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
           <div className="space-y-6">
             <SectionBadge title="Focus Areas" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2.5 gap-x-8 lg:gap-x-16 font-lato text-[15px] sm:text-[16px] leading-[30px] sm:leading-[32px] text-[#5F6B6F] tracking-[-0.017em]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2.5 gap-x-8 lg:gap-x-16 font-manrope text-[15px] sm:text-[16px] leading-[30px] sm:leading-[32px] text-[#5F6B6F] tracking-[-0.017em]">
               <ul className="space-y-2.5">
                 {author.focusAreas
                   .slice(0, Math.ceil(author.focusAreas.length / 2))
@@ -359,7 +359,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
                   </p>
                 )}
                 {section.bullets && (
-                  <ul className="space-y-2.5 font-lato text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
+                  <ul className="space-y-2.5 font-manrope text-[15px] sm:text-[16px] leading-[26px] text-[#5F6B6F] tracking-[-0.017em]">
                     {section.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#5F6B6F] shrink-0 mt-2.5" />
@@ -392,7 +392,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
             {author.disclaimerParagraphs.map((para, idx) => (
               <p
                 key={idx}
-                className="font-lato text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]"
+                className="font-manrope text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-[#FAF7F2] tracking-[-0.017em]"
               >
                 {para}
               </p>
