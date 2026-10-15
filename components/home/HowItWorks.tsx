@@ -80,9 +80,9 @@ export function HowItWorks() {
                         />
                       </div>
                       {/* Number badge */}
-                      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:w-[65px] lg:h-[65px] rounded-full color-gradient text-background font-bold text-xl md:text-2xl lg:text-[36px] flex items-center justify-center shadow-md font-playfair">
+                      {/* <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:w-[65px] lg:h-[65px] rounded-full color-gradient text-background font-bold text-xl md:text-2xl lg:text-[36px] flex items-center justify-center shadow-md font-playfair">
                         {step.number}
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* Text (Figma: Title 28px Playfair gradient, Description 18px Manrope body-text) */}
