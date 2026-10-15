@@ -100,13 +100,13 @@ function ResourcesMenu() {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
-        className={`flex items-center gap-1.5 whitespace-nowrap body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors cursor-pointer ${
+        className={`flex items-center gap-1.5 whitespace-nowrap body-small hover:text-[#1D6E72] transition-colors cursor-pointer ${
           open ? "text-[#1D6E72]" : ""
         }`}
       >
         Resources
         <ChevronDown
-          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#5F6B6F] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-body-text transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
@@ -121,7 +121,7 @@ function ResourcesMenu() {
               href={item.href}
               role="menuitem"
               onClick={() => setOpen(false)}
-              className="block px-7 py-3.5 body-text font-semibold text-[#1A3D4F] hover:bg-[#FAF7F2] hover:text-[#1D6E72] transition-colors font-manrope"
+              className="block px-7 py-3.5 body-text font-semibold text-[#1A3D4F] hover:bg-background hover:text-[#1D6E72] transition-colors font-manrope"
             >
               {item.label}
             </Link>
@@ -168,7 +168,7 @@ export function Header() {
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-6 xl:gap-[32px]">
             <Link
               href="/esa-doctors/"
-              className={`body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
+              className={`body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap ${
                 isDoctors ? "text-[#1D6E72] font-bold" : ""
               }`}
             >
@@ -176,14 +176,14 @@ export function Header() {
             </Link>
             <Link
               href="/about-us/"
-              className="body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               About Us
             </Link>
             <ResourcesMenu />
             <Link
               href="/contact-us/"
-              className="body-small text-[#5F6B6F] hover:text-[#1D6E72] transition-colors whitespace-nowrap"
+              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap"
             >
               Contact Us
             </Link>
@@ -196,10 +196,10 @@ export function Header() {
               <a
                 href="#pricing"
                 className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
-                style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ backgroundImage: "var(--color-gradient)" }}
               >
                 <span>Start Your Consultation</span>
-                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                   <Image
                     quality={90}
                     src="/common/send-icon.svg"
@@ -215,10 +215,10 @@ export function Header() {
               <a
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
                 className="inline-flex items-center justify-between gap-3 pl-5 xl:pl-6 pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap"
-                style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                style={{ backgroundImage: "var(--color-gradient)" }}
               >
                 <span>Get Started</span>
-                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                <span className="w-[38px] h-[38px] xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                   <Image
                     quality={90}
                     src="/common/send-icon.svg"
@@ -235,11 +235,11 @@ export function Header() {
                 {/* Button 1: Free ESA Eligibility Checker (255px x 48px, rounded 30px, shadow) */}
                 <a
                   href="#eligibility"
-                  className="px-3 xl:px-4 w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] flex items-center justify-center rounded-[30px] bg-[#FAF7F2] hover:bg-[#F5EFE6] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all whitespace-nowrap"
+                  className="px-3 xl:px-4 w-[215px] xl:w-[255px] h-[44px] xl:h-[48px] flex items-center justify-center rounded-[30px] bg-background hover:bg-[#F5EFE6] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all whitespace-nowrap"
                 >
                   <span
                     className="body-small xl:body-text bg-clip-text text-transparent"
-                    style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                    style={{ backgroundImage: "var(--color-gradient)" }}
                   >
                     Free ESA Eligibilty Checker
                   </span>
@@ -249,10 +249,10 @@ export function Header() {
                 <a
                   href="#pricing"
                   className="inline-flex items-center justify-between pl-4 xl:pl-[34px] pr-[3px] w-[155px] xl:w-[179px] h-[44px] xl:h-[48px] rounded-[30px] text-white body-small xl:body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all whitespace-nowrap"
-                  style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+                  style={{ backgroundImage: "var(--color-gradient)" }}
                 >
                   <span>Get Started</span>
-                  <span className="w-8 h-8 xl:w-[42px] xl:h-[42px] rounded-full bg-[#FAF7F2] shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+                  <span className="w-8 h-8 xl:w-[42px] xl:h-[42px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
                     <Image
                       quality={90}
                       src="/common/send-icon.svg"
@@ -280,8 +280,8 @@ export function Header() {
         </div>
       </div>
 
-      {/* States Bar (Frame 1000011905: 1440px x 37px, bg #FAF7F2) */}
-      <div className="hidden lg:block bg-[#FAF7F2] w-full h-[37px]">
+      {/* States Bar (Frame 1000011905: 1440px x 37px, bg background) */}
+      <div className="hidden lg:block bg-background w-full h-[37px]">
         <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-0 h-full flex items-center justify-between">
           {/* Left: Frame 1000011907 (States with gap 26px) */}
           <div className="flex items-center gap-4 lg:gap-[26px] h-[26px] overflow-x-auto no-scrollbar">
@@ -304,8 +304,8 @@ export function Header() {
                 <Link
                   key={st.slug}
                   href={href}
-                  className={`font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-[#5F6B6F] hover:text-[#2E5A66] transition-colors whitespace-nowrap ${
-                    isActive ? "text-[#2E5A66] font-bold" : ""
+                  className={`font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:text-primary transition-colors whitespace-nowrap ${
+                    isActive ? "text-primary font-bold" : ""
                   }`}
                 >
                   {st.name}
@@ -317,10 +317,10 @@ export function Header() {
           {/* Right: Frame 1000011909 (See all 50 States + Arrow) */}
           <Link
             href="/states/"
-            className="font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-[#2E5A66] hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
+            className="font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-primary hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
             <span>See all 50 States</span>
-            <ArrowRight className="w-4 h-4 text-[#2E5A66]" strokeWidth={1.5} />
+            <ArrowRight className="w-4 h-4 text-primary" strokeWidth={1.5} />
           </Link>
         </div>
       </div>
@@ -392,7 +392,7 @@ export function Header() {
             {!isPsd && (
               <a
                 href="#eligibility"
-                className="block text-center py-2.5 rounded-full bg-[#FAF7F2] text-[#1E3E47] font-bold text-sm border border-[#EAE5DC]"
+                className="block text-center py-2.5 rounded-full bg-background text-[#1E3E47] font-bold text-sm border border-[#EAE5DC]"
                 onClick={() => setMobileOpen(false)}
               >
                 Free ESA Eligibility Checker
@@ -401,7 +401,7 @@ export function Header() {
             <a
               href="#pricing"
               className="flex items-center justify-between pl-6 pr-2 py-2.5 rounded-full text-white font-bold text-base shadow-sm"
-              style={{ backgroundImage: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
+              style={{ backgroundImage: "var(--color-gradient)" }}
               onClick={() => setMobileOpen(false)}
             >
               <span>{isPsd ? "Start Your Consultation" : "Get Started"}</span>
