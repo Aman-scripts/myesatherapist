@@ -122,28 +122,32 @@ export function ComparisonTable() {
         {/* 1. MOBILE & TABLET 3-COLUMN LAYOUT (< 1024px)       */}
         {/* Matches Frame 1000012119 / Frame 1000011728 exactly */}
         {/* ---------------------------------------------------- */}
-        <div className="block lg:hidden w-full max-w-[361px] sm:max-w-[600px] md:max-w-[680px] relative mx-auto pt-[14px]">
+        {/* ---------------------------------------------------- */}
+        {/* 1. MOBILE & TABLET 3-COLUMN LAYOUT (< 1024px)       */}
+        {/* Matches Frame 1000012119 / Frame 1000011728 exactly */}
+        {/* ---------------------------------------------------- */}
+        <div className="block lg:hidden w-full max-w-[370px] sm:max-w-[620px] md:max-w-[700px] relative mx-auto pt-[14px]">
           {/* Cream frame with Features / Others columns */}
           <div className="w-full bg-background rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-3">
-            <div className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
-              <h3 className="heading-h4 text-center">Features</h3>
+            <div className="grid grid-cols-[1fr_130px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
+              <h3 className="heading-h4 text-center text-sm sm:text-base">Features</h3>
               <div />
-              <h3 className="heading-h4 text-center">Others</h3>
+              <h3 className="heading-h4 text-center text-sm sm:text-base">Others</h3>
             </div>
 
             <div className="divide-y divide-[#C8B9A7]/60 border-t border-[#C8B9A7]/60">
               {comparisonRows.map((row, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[102px] sm:h-[108px]"
+                  className="grid grid-cols-[1fr_130px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[116px] sm:h-[114px]"
                 >
-                  <div className="px-2 flex items-center justify-center text-center">
-                    <h4 className="heading-h4 text-center text-xs sm:text-sm">{row.feature}</h4>
+                  <div className="px-1.5 sm:px-2 flex items-center justify-center text-center">
+                    <h4 className="heading-h4 text-center text-[11px] sm:text-[13px] md:text-sm leading-tight">{row.feature}</h4>
                   </div>
                   <div />
-                  <div className="px-2 flex flex-col items-center justify-center text-center gap-1.5">
+                  <div className="px-1.5 sm:px-2 flex flex-col items-center justify-center text-center gap-1">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="body-small">
+                    <span className="font-sans font-medium text-[10.5px] sm:text-[12px] md:text-[13px] leading-[14px] sm:leading-[17px] text-body-text">
                       {row.others}
                     </span>
                   </div>
@@ -154,10 +158,10 @@ export function ComparisonTable() {
 
           {/* Raised center card: ESA Therapist */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-14px] w-[124px] sm:w-[214px] md:w-[234px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
+            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-14px] w-[130px] sm:w-[214px] md:w-[234px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
           >
             <div className="h-[76px] sm:h-[84px] rounded-b-[20px] flex items-center justify-center px-3 text-center bg-[#1A3D4F]/35">
-              <h3 className="heading-h4 text-background text-center leading-tight">
+              <h3 className="heading-h4 text-background text-center leading-tight text-sm sm:text-base">
                 ESA
                 <br />
                 Therapist
@@ -165,9 +169,9 @@ export function ComparisonTable() {
             </div>
             <div className="divide-y divide-[#C8B9A7]/25">
               {comparisonRows.map((row, idx) => (
-                <div key={idx} className="h-[102px] sm:h-[108px] px-2.5 flex flex-col items-center justify-center text-center gap-1.5">
+                <div key={idx} className="h-[116px] sm:h-[114px] px-1.5 sm:px-2.5 flex flex-col items-center justify-center text-center gap-1">
                   <GreenCheckIcon />
-                  <span className="body-small text-background">
+                  <span className="font-sans font-medium text-[10.5px] sm:text-[12px] md:text-[13px] leading-[14px] sm:leading-[17px] text-background">
                     {row.myEsa}
                   </span>
                 </div>
