@@ -315,8 +315,9 @@ export function PricingSection({
             })}
           </div>
 
-          {/* Dog & hand artwork (Figma: width 245px, height 209px, left: 1207px, top: 494px, z-index: 3) */}
-          <div className="hidden lg:block absolute left-[calc(100%-14px)] top-[207px] w-[245px] h-[209px] pointer-events-none z-20">
+          {/* Dog & hand artwork (Figma: width 245px, height 209px, left: 1207px, top: 494px, z-index: 3).
+              Starts exactly at the last card's right edge and sits level with the price circles. */}
+          <div className="hidden lg:block absolute left-[calc(100%+1px)] top-[279px] w-[245px] h-[209px] pointer-events-none z-20">
             <Image
               quality={95}
               src="/home/pricing-section-dog.webp"
