@@ -156,21 +156,36 @@ export function WhoBenefitsSection() {
             ))}
           </div>
 
-          {/* Right Visual Group: Exactly positioned from Frame 1000011773 */}
-          {/* Vector 5 (decorative curve line): left 845.5px (80 + 765.5), top -16px, width 81px, height 1258px */}
-          <div className="absolute left-[845.5px] top-[-16px] w-[81px] h-[1258px] z-20 pointer-events-none select-none">
+          {/* Vector 5 (decorative curve line: psd_benefits_sectionline.svg) */}
+          <div
+            className="absolute z-20 pointer-events-none select-none"
+            style={{
+              left: "845.5px",
+              top: "-16px",
+              width: "83px",
+              height: "1241px",
+            }}
+          >
             <Image
-              src="/psd-letter/whobenefits-section-line.svg"
+              src="/psd-letter/psd_benefits_sectionline.svg"
               alt=""
-              width={81}
-              height={1258}
+              width={83}
+              height={1241}
               unoptimized
               className="object-contain w-full h-full object-left"
             />
           </div>
 
-          {/* Mask group (Image psd_benefits_section.png): left 867px (80 + 787), top -24px, width 578px, height 1266px */}
-          <div className="absolute left-[867px] top-[-24px] w-[578px] h-[1266px] z-10 pointer-events-none select-none">
+          {/* Mask group (Image psd_benefits_section.png) */}
+          <div
+            className="absolute z-10 pointer-events-none select-none"
+            style={{
+              left: "867.4px",
+              top: "-24px",
+              width: "578px",
+              height: "1266px",
+            }}
+          >
             <Image
               quality={95}
               src="/psd-letter/psd_benefits_section.png"
@@ -182,8 +197,16 @@ export function WhoBenefitsSection() {
             />
           </div>
 
-          {/* Frame 1000011731 (Floating Heart-Paw Badge): left 812.5px (80 + 732.5), top 326px, width 73px, height 73px */}
-          <div className="absolute left-[812.5px] top-[326px] w-[73px] h-[73px] z-30 pointer-events-none drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]">
+          {/* Frame 1000011731 (Floating Heart-Paw Badge) */}
+          <div
+            className="absolute z-30 pointer-events-none drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]"
+            style={{
+              left: "812.5px",
+              top: "326px",
+              width: "73px",
+              height: "73px",
+            }}
+          >
             <Image
               src="/psd-letter/whobenefits-section-icon.svg"
               alt="Heart Paw Badge"
