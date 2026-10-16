@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -37,55 +38,91 @@ export function EmotionalSupportSection() {
         </div>
       </div>
 
-      {/* Main Container */}
-      <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8 xl:pl-[78px] xl:pr-0 relative min-h-0 lg:min-h-[640px] xl:min-h-[760px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0">
-        {/* Left Content Area (Renders AFTER image on Mobile/Tablet) */}
-        <div className="w-full lg:w-[54%] xl:w-[737px] z-10 py-6 sm:py-8 lg:py-16 xl:py-24 space-y-6 lg:space-y-6 xl:space-y-8">
-          <div className="space-y-3 lg:space-y-3.5">
-            {/* Heading */}
-            <h2 className="heading-h2 capitalize">
-              What Is An Emotional Support Animal?
-            </h2>
-
-            {/* Description paragraphs */}
-            <div className="space-y-3 lg:space-y-3.5">
-              <p className="body-large">
-                An emotional support animal (ESA) is an assistance animal that provides emotional support that helps alleviate one or more effects of a person&apos;s disability. Unlike a service animal, an ESA does not need to be trained to perform specific tasks for a person with a disability.
-              </p>
-              <p className="body-large">
-                ESAs are recognized under certain housing laws, allowing individuals to live with them in places that might otherwise have pet restrictions. When documentation is needed, a qualified healthcare professional may provide reliable documentation supporting the disability-related need for an assistance animal.
-              </p>
-            </div>
-          </div>
-
-          {/* Action Buttons & Refund Reassurance */}
-          <div className="space-y-2">
-            <div className="flex flex-row items-center gap-3 sm:gap-4 lg:gap-5 xl:gap-6 pt-2 w-full max-w-[420px] sm:max-w-none">
-              {/* Learn about ESA's Button */}
-              <CtaButton
-                href="/blog/esa-guide/emotional-support-animal/"
-                variant="secondary"
-                className="w-auto px-6"
-              >
-                Learn about ESA&apos;s
-              </CtaButton>
-
-              {/* Get Started Button */}
-              <CtaButton href="#how-it-works" className="w-[192px]">
-                Get Started
-              </CtaButton>
-            </div>
-            <p className="body-small">
-              If not approved after your evaluation? You get a full refund.
+      {/* Mobile & Tablet Content Area (Renders AFTER image on Mobile/Tablet) */}
+      <div className="lg:hidden w-full px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+        <div className="space-y-3">
+          <h2 className="heading-h2 capitalize">
+            What Is An Emotional Support Animal?
+          </h2>
+          <div className="space-y-3">
+            <p className="body-large">
+              An emotional support animal (ESA) is an assistance animal that provides emotional support that helps alleviate one or more effects of a person&apos;s disability. Unlike a service animal, an ESA does not need to be trained to perform specific tasks for a person with a disability.
+            </p>
+            <p className="body-large">
+              ESAs are recognized under certain housing laws, allowing individuals to live with them in places that might otherwise have pet restrictions. When documentation is needed, a qualified healthcare professional may provide reliable documentation supporting the disability-related need for an assistance animal.
             </p>
           </div>
         </div>
 
-        {/* Desktop Right Graphics (Hidden on mobile/tablet) */}
-        <div className="hidden lg:flex w-[44%] xl:w-[45%] absolute right-0 top-0 bottom-0 h-full pointer-events-none z-0 items-center justify-end">
-          <div className="relative w-full h-full max-w-[607px] lg:max-w-none">
+        {/* Action Buttons & Refund Reassurance */}
+        <div className="space-y-2">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-2 w-full">
+            <CtaButton
+              href="/blog/esa-guide/emotional-support-animal/"
+              variant="secondary"
+              className="w-full sm:w-auto px-6"
+            >
+              Learn about ESA&apos;s
+            </CtaButton>
+            <CtaButton href="#how-it-works" className="w-full sm:w-[192px]">
+              Get Started
+            </CtaButton>
+          </div>
+          <p className="body-small">
+            If not approved after your evaluation? You get a full refund.
+          </p>
+        </div>
+      </div>
+
+      {/* Desktop Container (>= 1024px) scaled proportionally to match 1440px design */}
+      <DesktopScaleWrapper
+        designWidth={1440}
+        designHeight={760}
+        className="hidden lg:block relative"
+      >
+        <div className="relative w-[1440px] h-[760px] flex items-center justify-between">
+          {/* Left Content Area (Exact 737px Figma Frame) */}
+          <div className="w-[737px] pl-[78px] pr-4 z-10 space-y-8 my-auto">
+            <div className="space-y-3.5">
+              <h2 className="heading-h2 capitalize">
+                What Is An Emotional Support Animal?
+              </h2>
+
+              <div className="space-y-3.5">
+                <p className="body-large">
+                  An emotional support animal (ESA) is an assistance animal that provides emotional support that helps alleviate one or more effects of a person&apos;s disability. Unlike a service animal, an ESA does not need to be trained to perform specific tasks for a person with a disability.
+                </p>
+                <p className="body-large">
+                  ESAs are recognized under certain housing laws, allowing individuals to live with them in places that might otherwise have pet restrictions. When documentation is needed, a qualified healthcare professional may provide reliable documentation supporting the disability-related need for an assistance animal.
+                </p>
+              </div>
+            </div>
+
+            {/* Action Buttons & Refund Reassurance */}
+            <div className="space-y-2">
+              <div className="flex flex-row items-center gap-6 pt-2">
+                <CtaButton
+                  href="/blog/esa-guide/emotional-support-animal/"
+                  variant="secondary"
+                  className="w-auto px-6"
+                >
+                  Learn about ESA&apos;s
+                </CtaButton>
+
+                <CtaButton href="#how-it-works" className="w-[192px]">
+                  Get Started
+                </CtaButton>
+              </div>
+              <p className="body-small">
+                If not approved after your evaluation? You get a full refund.
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop Right Graphics (607px natural curved frame) */}
+          <div className="w-[607px] absolute right-0 top-0 bottom-0 h-full pointer-events-none z-0">
             <Image
-            quality={90}
+              quality={90}
               src="/home/emotional-support-right-frame.webp"
               alt="Emotional support dog and woman"
               fill
@@ -93,19 +130,19 @@ export function EmotionalSupportSection() {
               sizes="607px"
             />
           </div>
-        </div>
 
-        {/* Bottom Paw Icon */}
-        <div className="hidden lg:block absolute z-20 pointer-events-none right-4 xl:right-[1.6%] bottom-6 xl:bottom-[15.28%] w-[64px] xl:w-[84px] h-[64px] xl:h-[84px]">
-          <Image
-            quality={90}
-            src="/home/emotional-support-section-bottom-paw-icon.svg"
-            alt="Paw prints"
-            fill
-            className="object-contain"
-          />
+          {/* Bottom Paw Icon */}
+          <div className="absolute z-20 pointer-events-none right-[23px] bottom-[116px] w-[84px] h-[84px]">
+            <Image
+              quality={90}
+              src="/home/emotional-support-section-bottom-paw-icon.svg"
+              alt="Paw prints"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -177,86 +178,96 @@ export function ComparisonTable() {
 
         {/* ---------------------------------------------------- */}
         {/* 2. DESKTOP VIEW (>= 1024px)                          */}
-        {/* Full Spacious Horizontal Row Layout                  */}
         {/* ---------------------------------------------------- */}
-        <div className="hidden lg:block w-full max-w-[1210px] relative">
-          {/* Main Background Frame */}
-          <div className="w-full bg-background rounded-[20px] shadow-[0_2px_5.2px_rgba(0,0,0,0.15)] pb-[27px] relative z-0">
-            {/* Header Labels for FEATURES and OTHERS */}
-            <div className="flex items-center justify-between pt-[25px] px-6 xl:px-12 h-[74px]">
-              <div className="w-[220px] xl:w-[300px] text-center shrink-0">
-                <h3 className="heading-h3">
-                  FEATURES
-                </h3>
-              </div>
-              <div className="w-[400px] xl:w-[478px] shrink-0" />
-              <div className="w-[220px] xl:w-[340px] text-center shrink-0">
-                <h3 className="heading-h3">
-                  OTHERS
-                </h3>
-              </div>
-            </div>
+        {/* 2. DESKTOP VIEW (>= 1024px)                          */}
+        {/* Full Spacious Horizontal Row Layout with scaling     */}
+        {/* ---------------------------------------------------- */}
+        <DesktopScaleWrapper
+          designWidth={1440}
+          designHeight={665}
+          className="hidden lg:block relative"
+        >
+          <div className="relative w-[1440px] pt-[17px] pb-[28px] flex justify-center">
+            <div className="w-[1210px] relative">
+              {/* Main Background Frame */}
+              <div className="w-full bg-background rounded-[20px] shadow-[0_2px_5.2px_rgba(0,0,0,0.15)] pb-[27px] relative z-0">
+                {/* Header Labels for FEATURES and OTHERS */}
+                <div className="flex items-center justify-between pt-[25px] px-12 h-[74px]">
+                  <div className="w-[300px] text-center shrink-0">
+                    <h3 className="heading-h3">
+                      FEATURES
+                    </h3>
+                  </div>
+                  <div className="w-[478px] shrink-0" />
+                  <div className="w-[340px] text-center shrink-0">
+                    <h3 className="heading-h3">
+                      OTHERS
+                    </h3>
+                  </div>
+                </div>
 
-            {/* Table Rows */}
-            <div className="divide-y divide-[#C8B9A7]/60 mx-4 xl:mx-[18px] border-t border-[#C8B9A7]/60">
-              {comparisonRows.map((row, idx) => (
-                <div key={idx} className="flex items-center justify-between h-[61px] px-3 xl:px-[10px]">
-                  {/* Features Column */}
-                  <div className="w-[220px] xl:w-[280px] shrink-0 flex items-center gap-3 xl:gap-[26px]">
-                    <div className="w-[30px] h-[30px] xl:w-[36px] xl:h-[36px] rounded-full bg-white shadow-[0_1px_1.5px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
-                      <Image
-                        src={row.icon}
-                        alt=""
-                        width={18}
-                        height={18}
-                        unoptimized
-                        className="object-contain w-4 h-4 xl:w-[18px] xl:h-[18px]"
-                      />
+                {/* Table Rows */}
+                <div className="divide-y divide-[#C8B9A7]/60 mx-[18px] border-t border-[#C8B9A7]/60">
+                  {comparisonRows.map((row, idx) => (
+                    <div key={idx} className="flex items-center justify-between h-[61px] px-[10px]">
+                      {/* Features Column */}
+                      <div className="w-[280px] shrink-0 flex items-center gap-[26px]">
+                        <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_1.5px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
+                          <Image
+                            src={row.icon}
+                            alt=""
+                            width={18}
+                            height={18}
+                            unoptimized
+                            className="object-contain w-[18px] h-[18px]"
+                          />
+                        </div>
+                        <h4 className="heading-h4">
+                          {row.desktopFeature}
+                        </h4>
+                      </div>
+
+                      {/* Empty space matching elevated column width */}
+                      <div className="w-[478px] shrink-0" />
+
+                      {/* Others Column */}
+                      <div className="w-[340px] shrink-0 flex items-center justify-start gap-3 pl-4">
+                        {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
+                        <span className="body-text text-left">
+                          {row.others}
+                        </span>
+                      </div>
                     </div>
-                    <h4 className="heading-h4">
-                      {row.desktopFeature}
-                    </h4>
-                  </div>
-
-                  {/* Empty space matching elevated column width */}
-                  <div className="w-[400px] xl:w-[478px] shrink-0" />
-
-                  {/* Others Column */}
-                  <div className="w-[220px] xl:w-[340px] shrink-0 flex items-center justify-start gap-2 xl:gap-3 pl-1 xl:pl-4">
-                    {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="body-small xl:body-text text-left">
-                      {row.others}
-                    </span>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Elevated Center Card: MY ESA THERAPIST (teal, extends above and below the frame) */}
+              <div
+                className="absolute left-1/2 -translate-x-1/2 top-[-17px] bottom-[-28px] w-[478px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
+              >
+                <div className="h-[91px] rounded-b-[20px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
+                  <h3 className="heading-h3 text-background">
+                    MY ESA THERAPIST
+                  </h3>
+                </div>
+
+                <div className="divide-y divide-[#C8B9A7]/25 pt-0">
+                  {comparisonRows.map((row, idx) => (
+                    <div key={idx} className="flex items-center gap-3 h-[61px] px-5 text-left">
+                      <span className="shrink-0">
+                        <GreenCheckIcon />
+                      </span>
+                      <span className="min-w-0 body-text text-background">
+                        {row.myEsa}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Elevated Center Card: MY ESA THERAPIST (teal, extends above and below the frame) */}
-          <div
-            className="absolute left-1/2 -translate-x-1/2 top-[-17px] bottom-[-28px] w-[400px] xl:w-[478px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
-          >
-            <div className="h-[91px] rounded-b-[20px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
-              <h3 className="heading-h3 text-background">
-                MY ESA THERAPIST
-              </h3>
-            </div>
-
-            <div className="divide-y divide-[#C8B9A7]/25 pt-0">
-              {comparisonRows.map((row, idx) => (
-                <div key={idx} className="flex items-center gap-2.5 xl:gap-3 h-[61px] px-4 xl:px-5 text-left">
-                  <span className="shrink-0">
-                    <GreenCheckIcon />
-                  </span>
-                  <span className="min-w-0 body-small xl:body-text text-background">
-                    {row.myEsa}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        </DesktopScaleWrapper>
 
         {/* Bottom CTA Button */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">

@@ -76,7 +76,7 @@ export function CtaButton({
     ? "px-6 xl:px-8"
     : (shouldShowIcon ? "pl-[34px] pr-[5px]" : "px-6 xl:px-8");
 
-  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[54px] rounded-[30px] ${paddingClass} gap-2 ${bgClass} ${textColor} font-sans font-semibold text-[18px] leading-[28px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[54px] rounded-[30px] ${paddingClass} gap-2 ${bgClass} ${textColor} font-sans font-semibold text-[16px] leading-[24px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>
