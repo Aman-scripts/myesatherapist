@@ -199,16 +199,16 @@ export function PricingSection({
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
         <div className="relative w-full max-w-[972px] pb-10">
-          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-12 lg:gap-[16px]">
+          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-12 lg:gap-[16px]">
             {plan.cards.map((card, idx) => {
               const isPopular = card.isPopular;
 
               if (isPopular) {
                 return (
-                  /* Frame 1261153972: 310px wide Popular Card */
+                  /* Frame 1261153972: 310px wide Popular Card with Yellow Accent Frame */
                   <div
                     key={idx}
-                    className="w-[310px] bg-accent rounded-[24px] pt-[6px] pb-[6px] px-[5px] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 self-end overflow-visible"
+                    className="w-[310px] bg-accent rounded-[24px] pt-[8px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-visible"
                   >
                     {/* MOST POPULAR banner */}
                     <div className="text-center font-sans font-bold text-[14px] leading-[26px] text-body-text uppercase tracking-wider py-1 shrink-0">
@@ -216,9 +216,9 @@ export function PricingSection({
                     </div>
 
                     {/* Starter Plan: Inner White Card */}
-                    <div className="w-[300px] bg-white rounded-[20px] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 pb-[36px] overflow-visible">
+                    <div className="w-[300px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 pb-[36px] overflow-visible">
                       {/* Frame 1261153969: Teal Header */}
-                      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
+                      <div className="w-[300px] h-[250px] rounded-t-[20px] color-gradient p-[36px_24px_0px] flex flex-col gap-2 relative text-left shrink-0">
                         <h3 className="heading-h3 text-background capitalize">
                           {card.title}
                         </h3>
@@ -227,19 +227,19 @@ export function PricingSection({
                         </p>
                       </div>
 
-                      {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 226px) */}
-                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[226px] flex items-center justify-center z-20">
+                      {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 211px) */}
+                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[211px] flex items-center justify-center z-20">
                         <span className="heading-h4 font-heading font-bold text-primary">
                           {card.price}
                         </span>
                       </div>
 
-                      {/* Feature List (left: 30px, top: 310px) */}
-                      <div className="pt-[44px] px-[26px] pb-[20px] flex flex-col gap-[6px]">
+                      {/* Feature List (3 items per Figma) */}
+                      <div className="pt-[52px] px-[26px] pb-[20px] flex flex-col gap-[12px]">
                         {card.features.map((f) => (
-                          <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
+                          <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
                             <CheckmarkIcon />
-                            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
+                            <span className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
                               {f}
                             </span>
                           </div>
@@ -250,11 +250,7 @@ export function PricingSection({
                       <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
                         <a
                           href={ctaHref}
-                          className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient ${
-                            card.buttonText.length > 18
-                              ? "w-[260px] px-3 whitespace-nowrap"
-                              : "w-[154px]"
-                          }`}
+                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
                         >
                           {card.buttonText}
                         </a>
@@ -268,10 +264,10 @@ export function PricingSection({
                 /* Starter Plan: Standard Cards */
                 <div
                   key={idx}
-                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 pb-[36px] overflow-visible"
+                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 overflow-hidden lg:mt-[36px]"
                 >
-                  {/* Frame 1261153969: Teal Header (300px x 261px) */}
-                  <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
+                  {/* Frame 1261153969: Teal Header (300px x 250px) */}
+                  <div className="w-[300px] h-[250px] rounded-t-[24px] color-gradient p-[36px_24px_0px] flex flex-col gap-2 relative text-left shrink-0">
                     <h3 className="heading-h3 text-background capitalize">
                       {card.title}
                     </h3>
@@ -280,34 +276,30 @@ export function PricingSection({
                     </p>
                   </div>
 
-                  {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 228px) */}
-                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[228px] flex items-center justify-center z-20">
+                  {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 211px) */}
+                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[211px] flex items-center justify-center z-20">
                     <span className="heading-h4 font-heading font-bold text-primary">
                       {card.price}
                     </span>
                   </div>
 
-                  {/* Feature List */}
-                  <div className="pt-[44px] px-[26px] pb-[20px] flex flex-col gap-[6px]">
+                  {/* Feature List (3 items per Figma) */}
+                  <div className="pt-[52px] px-[26px] pb-[16px] flex flex-col gap-[12px]">
                     {card.features.map((f) => (
-                      <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
+                      <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
                         <CheckmarkIcon />
-                        <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
+                        <span className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
                           {f}
                         </span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Button: Centered on bottom border (-bottom-[25px]) */}
-                  <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
+                  {/* Button: Inside the card, centered with padding below per Figma Screenshot */}
+                  <div className="pt-4 pb-7 flex justify-center">
                     <a
                       href={ctaHref}
-                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient ${
-                        card.buttonText.length > 18
-                          ? "w-[260px] px-3 whitespace-nowrap"
-                          : "w-[154px]"
-                      }`}
+                      className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
                     >
                       {card.buttonText}
                     </a>
@@ -317,8 +309,8 @@ export function PricingSection({
             })}
           </div>
 
-          {/* Dog & hand artwork, bottom right of the section */}
-          <div className="hidden xl:block absolute left-[100%] bottom-[-30px] w-[245px] pointer-events-none z-0 -ml-2">
+          {/* Dog & hand artwork: only on extra-large screens so it never covers Card 3 */}
+          <div className="hidden 2xl:block absolute left-[100%] bottom-[-30px] w-[245px] pointer-events-none z-0 -ml-2">
             <Image
               quality={90}
               src="/home/pricing-section-dog.webp"
@@ -336,48 +328,47 @@ export function PricingSection({
 
 export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
   return (
-    <div className={`w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 pb-[36px] overflow-visible ${className}`}>
+    <div className={`w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 overflow-hidden ${className}`}>
       {/* Teal Gradient Top Header */}
-      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
+      <div className="w-[300px] h-[250px] rounded-t-[24px] color-gradient p-[36px_24px_0px] flex flex-col gap-2 relative text-left shrink-0">
         <h3 className="heading-h3 text-background capitalize">
-          Not Sure Which One?
+          Not Sure Which One
         </h3>
         <p className="body-text text-background font-semibold">
-          Your needs are unique. Let’s find the right option.
+          Official ESA letter from a U.S.-licensed mental health professionals.
         </p>
       </div>
 
       {/* Overlapping Gold Circle with Price */}
-      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[228px] z-20">
+      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[211px] z-20">
         <span className="heading-h4 font-heading font-bold text-primary">
-          ?
+          $149
         </span>
       </div>
 
-      {/* Feature List */}
-      <div className="pt-[44px] px-[26px] pb-[20px] flex flex-col gap-[6px]">
+      {/* Feature List (3 items per Figma, no truncate) */}
+      <div className="pt-[52px] px-[26px] pb-[16px] flex flex-col gap-[12px]">
         {[
-          "Help identifying the right documentation",
-          "ESA and PSD needs assessed",
-          "Guidance from a licensed professional",
-          "Clear next steps after evaluation",
+          "Phone consultation",
+          "PSD letter if qualified",
+          "Official clinic letterhead",
         ].map((f) => (
-          <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
+          <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
             <CheckmarkIcon />
-            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
+            <span className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
               {f}
             </span>
           </div>
         ))}
       </div>
 
-      {/* Button: Centered on bottom border (-bottom-[25px]) */}
-      <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
+      {/* Button: Inside the card, centered with padding below per Figma Screenshot */}
+      <div className="pt-4 pb-7 flex justify-center">
         <a
           href={ctaHref}
-          className="inline-flex items-center justify-center w-[260px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] px-3 whitespace-nowrap text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
+          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
         >
-          Find Your Eligibility in Minutes
+          Get Started
         </a>
       </div>
     </div>
