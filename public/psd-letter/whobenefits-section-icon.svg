@@ -3,7 +3,7 @@
 <circle cx="36.5" cy="36.5" r="36.5" fill="#D9D9D9"/>
 </mask>
 <g mask="url(#mask0_3637_818)">
-<rect x="-38" y="-337" width="595" height="811" fill="url(#pattern0_3637_818)"/>
+<rect x="-37.5" y="-337.5" width="595" height="811" fill="url(#pattern0_3637_818)"/>
 </g>
 <defs>
 <pattern id="pattern0_3637_818" patternContentUnits="objectBoundingBox" width="1" height="1">

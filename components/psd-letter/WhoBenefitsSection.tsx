@@ -201,7 +201,7 @@ export function WhoBenefitsSection() {
           <div
             className="absolute z-30 pointer-events-none drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]"
             style={{
-              left: "812.5px",
+              left: "850px",
               top: "326px",
               width: "73px",
               height: "73px",
