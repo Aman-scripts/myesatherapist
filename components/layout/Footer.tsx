@@ -74,9 +74,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
         </div>
 
         {/* Heading with Gold Highlight */}
-        <h3 className="heading-h2 text-background capitalize text-center">
+        <h2 className="heading-h2 text-background capitalize text-center">
           My ESA <span className="text-accent">Therapist</span>
-        </h3>
+        </h2>
 
         {/* Subtitle */}
         <p className="text-background body-large text-center max-w-[734px]">
