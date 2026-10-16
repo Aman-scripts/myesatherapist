@@ -60,7 +60,7 @@ export function DoctorAboutPhilosophySection({
             <div className="pt-1">
               <CtaButton
                 href={ctaHref}
-                className="w-[179px]"
+                className="w-[192px]"
               >
                 Get Started
               </CtaButton>

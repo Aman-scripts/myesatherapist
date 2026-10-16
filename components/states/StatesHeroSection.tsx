@@ -398,7 +398,7 @@ export function StatesHeroSection() {
               {/* Get Started Button */}
               <CtaButton
                 onClick={handleGetStarted}
-                className="w-[179px]"
+                className="w-[192px]"
               >
                 Get Started
               </CtaButton>

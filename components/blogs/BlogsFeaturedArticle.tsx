@@ -53,7 +53,7 @@ export function BlogsFeaturedArticle({
             <div className="pt-1">
               <CtaButton
                 href={ctaHref}
-                className="w-[179px]"
+                className="w-[192px]"
               >
                 Get Started
               </CtaButton>

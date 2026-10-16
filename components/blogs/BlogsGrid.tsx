@@ -157,7 +157,7 @@ export function BlogsGrid() {
                         <div className="pt-2">
                           <CtaButton
                             href={art.url}
-                            className="w-[179px]"
+                            className="w-[192px]"
                           >
                             Read Guide
                           </CtaButton>

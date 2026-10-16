@@ -2,13 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export function SendIcon({ className = "w-[22px] h-[22px] xl:w-[24px] xl:h-[24px]" }: { className?: string }) {
+export function SendIcon({ className = "w-[22px] h-[22px]" }: { className?: string }) {
   return (
     <Image
       src="/common/send-icon.svg"
       alt=""
-      width={24}
-      height={24}
+      width={22}
+      height={22}
       unoptimized
       className={`object-contain ${className}`}
     />
@@ -27,15 +27,15 @@ export interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
 }
 
 /**
- * Common Figma Frame 1000011890 CTA Pill Button
- * - Dimensions: w-[179px] default (or custom w-[...]), h-[48px]
- * - Background: var(--color-gradient) (primary) / var(--color-background) (secondary) / var(--color-accent) (accent)
- * - Radius: 30px
- * - Shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
- * - Padding: pl-6 xl:pl-[30px] pr-[8px] xl:pr-[8px] (balanced right padding around circular badge per Screenshot 3)
- * - Typography: Manrope, 600, 16px (mobile) / 18px (desktop body-large) - NEVER 14px
- * - Circular badge: 38px-40px, bg-background, shadow 0px 3px 6px rgba(0, 0, 0, 0.15)
- * - Vector: Paper airplane send icon with gold accent shadow, prominent 22px-24px
+ * Exact Figma Frame 1000011890 CTA Pill Button
+ * - Dimensions: width: 192px, height: 54px
+ * - Background: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%) (color-gradient)
+ * - Border-radius: 30px
+ * - Box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+ * - Layout: display flex, pl-[34px] pr-[5px], gap: 8px, items-center, justify-between
+ * - Typography: Manrope 600, 18px / 28px (body-large), color: #FFFFFF
+ * - Badge (Ellipse 14): 42.48px x 42.48px, background: #FAF7F2, shadow: 0px 3.03px 6.07px rgba(0,0,0,0.15)
+ * - Vector (Send Icon): 21.62px x 21.62px
  */
 export function CtaButton({
   href,
@@ -69,21 +69,21 @@ export function CtaButton({
   }
 
   const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b/.test(className);
-  const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-[179px]");
+  const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-[192px]");
 
-  // In Figma and Screenshot 3: generous left padding and balanced right padding (8px) around the circular badge
+  // In Figma Frame 1000011890: padding 0 0 0 34px with 8px gap and 42.5px badge inside 192px button
   const paddingClass = isSecondary
     ? "px-6 xl:px-8"
-    : (shouldShowIcon ? "pl-6 xl:pl-[30px] pr-[8px]" : "px-6 xl:px-8");
+    : (shouldShowIcon ? "pl-[34px] pr-[5px]" : "px-6 xl:px-8");
 
-  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[48px] rounded-[30px] ${paddingClass} gap-2.5 ${bgClass} ${textColor} font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[54px] rounded-[30px] ${paddingClass} gap-2 ${bgClass} ${textColor} font-sans font-semibold text-[18px] leading-[28px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>
       <span className="truncate text-inherit">{children}</span>
       {shouldShowIcon && (
-        <span className="w-[38px] h-[38px] xl:w-[40px] xl:h-[40px] rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-          <SendIcon className={`w-[22px] h-[22px] xl:w-[24px] xl:h-[24px] ${iconClassName}`} />
+        <span className="w-[42.5px] h-[42.5px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+          <SendIcon className={`w-[22px] h-[22px] ${iconClassName}`} />
         </span>
       )}
     </>

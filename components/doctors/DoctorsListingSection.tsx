@@ -190,7 +190,7 @@ export function DoctorsListingSection() {
                   <CtaButton
                     href={`/esa-doctors/${doc.slug}/`}
                     variant="accent"
-                    className="w-[179px]"
+                    className="w-[192px]"
                   >
                     View Profile
                   </CtaButton>

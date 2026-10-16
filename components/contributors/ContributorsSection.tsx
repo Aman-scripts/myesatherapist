@@ -68,7 +68,7 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
           <CtaButton
             href={person.href}
             variant="accent"
-            className="w-[179px]"
+            className="w-[192px]"
           >
             View Profile
           </CtaButton>

@@ -322,7 +322,7 @@ export function TherapistsSection({
                         <CtaButton
                           href={getTherapistProfileHref(t)}
                           variant="accent"
-                          className="w-[179px]"
+                          className="w-[192px]"
                           onClick={(e) => e.stopPropagation()}
                         >
                           View Profile

@@ -71,7 +71,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
                 <div className="pt-2">
                   <CtaButton
                     href={item.url}
-                    className="w-[179px]"
+                    className="w-[192px]"
                   >
                     Read Article
                   </CtaButton>

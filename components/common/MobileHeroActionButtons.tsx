@@ -117,7 +117,7 @@ export function MobileHeroActionButtons({
       <CtaButton
         href={getStartedHref}
         onClick={onGetStartedClick}
-        className="w-[179px] h-[48px]"
+        className="w-[192px]"
       >
         {getStartedText}
       </CtaButton>

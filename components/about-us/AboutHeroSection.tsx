@@ -177,7 +177,7 @@ export function AboutHeroSection() {
             {/* Get Started */}
             <CtaButton
               href="#pricing"
-              className="w-[179px]"
+              className="w-[192px]"
             >
               Get Started
             </CtaButton>

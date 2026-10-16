@@ -204,7 +204,7 @@ export function Header() {
               /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
               <CtaButton
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
-                className="w-[179px]"
+                className="w-[192px]"
               >
                 Get Started
               </CtaButton>
@@ -215,7 +215,7 @@ export function Header() {
                 <CtaButton
                   href="#eligibility"
                   variant="secondary"
-                  className="w-auto h-[48px]"
+                  className="w-auto"
                 >
                   Free ESA Eligibility Checker
                 </CtaButton>
@@ -223,7 +223,7 @@ export function Header() {
                 {/* Button 2: Get Started (Frame 1000011890) */}
                 <CtaButton
                   href="#pricing"
-                  className="w-[179px] h-[48px]"
+                  className="w-[192px]"
                 >
                   Get Started
                 </CtaButton>

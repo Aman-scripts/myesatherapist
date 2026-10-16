@@ -65,13 +65,13 @@ export function EmotionalSupportSection() {
               <CtaButton
                 href="/blog/esa-guide/emotional-support-animal/"
                 variant="secondary"
-                className="w-auto px-6 h-[48px]"
+                className="w-auto px-6"
               >
                 Learn about ESA&apos;s
               </CtaButton>
 
               {/* Get Started Button */}
-              <CtaButton href="#how-it-works" className="w-[179px]">
+              <CtaButton href="#how-it-works" className="w-[192px]">
                 Get Started
               </CtaButton>
             </div>

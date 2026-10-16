@@ -247,7 +247,7 @@ export function PricingHero() {
               )}
             </div>
 
-            <CtaButton href="#plans" className="w-[179px]">
+            <CtaButton href="#plans" className="w-[192px]">
               Get Started
             </CtaButton>
           </div>
@@ -360,7 +360,7 @@ export function PricingHero() {
             </div>
 
             {/* Get Started CTA Button */}
-            <CtaButton href="#plans" className="w-[179px]">
+            <CtaButton href="#plans" className="w-[192px]">
               Get Started
             </CtaButton>
           </div>

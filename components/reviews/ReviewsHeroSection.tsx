@@ -323,7 +323,7 @@ export function ReviewsHeroSection() {
             {/* Get Started Button (Frame 1000011890) */}
             <CtaButton
               href="#trustpilot-reviews"
-              className="w-[179px]"
+              className="w-[192px]"
             >
               Get Started
             </CtaButton>
