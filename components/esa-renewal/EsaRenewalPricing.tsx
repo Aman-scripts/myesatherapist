@@ -96,7 +96,7 @@ function PlanBody({ plan, ctaClassName }: { plan: Plan; ctaClassName?: string })
       {/* CTA */}
       <a
         href="#how-it-works"
-        className={`inline-flex h-[46px] items-center justify-center rounded-[42px] px-8 py-3 text-white font-bold body-large shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity ${ctaClassName ?? ""}`}
+        className={`inline-flex h-[46px] items-center justify-center rounded-[42px] px-8 py-3 text-white font-sans font-semibold text-[16px] leading-[26px] shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity ${ctaClassName ?? ""}`}
         style={{ backgroundImage: TEAL_GRADIENT }}
       >
         {plan.cta}

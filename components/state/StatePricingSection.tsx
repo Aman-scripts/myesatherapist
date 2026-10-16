@@ -105,7 +105,7 @@ export function StatePricingSection({ stateName, data }: StatePricingSectionProp
             <div className="pt-6 text-center">
               <a
                 href="#faq"
-                className="inline-flex items-center justify-center w-[153px] h-[46px] rounded-[42px] text-white font-bold text-[18px] shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
+                className="inline-flex items-center justify-center w-[153px] h-[46px] rounded-[42px] text-white font-semibold text-[16px] leading-[26px] shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
                 style={{ backgroundImage: TEAL_GRADIENT }}
               >
                 Get Started
@@ -156,7 +156,7 @@ export function StatePricingSection({ stateName, data }: StatePricingSectionProp
               <div className="pt-6 text-center">
                 <a
                   href="#faq"
-                  className="inline-flex items-center justify-center w-[153px] h-[46px] rounded-[42px] text-white font-bold text-[18px] shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
+                  className="inline-flex items-center justify-center w-[153px] h-[46px] rounded-[42px] text-white font-semibold text-[16px] leading-[26px] shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   Get Started
