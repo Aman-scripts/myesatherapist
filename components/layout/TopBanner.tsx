@@ -12,9 +12,9 @@ export function TopBanner() {
         <span className="w-[9px] h-[9px] rounded-full bg-[#30D158] shrink-0 inline-block animate-pulse" />
 
         {/* 3 licensed therapists online now Next opening today at 9:00 AM */}
-        <span className="body-small text-background tracking-normal whitespace-nowrap flex items-center gap-2">
+        <span className="body-small text-background tracking-normal whitespace-nowrap flex items-center gap-2 text-xs sm:text-sm">
           <span>3 licensed therapists online now</span>
-          <span className="text-background/80">Next opening today at 9:00 AM</span>
+          <span className="hidden sm:inline text-background/80">Next opening today at 9:00 AM</span>
         </span>
       </div>
     </div>

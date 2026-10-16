@@ -138,7 +138,7 @@ export function PsdQualifyingConditions() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[1100px] mx-auto">
-          <h2 className="heading-h2 capitalize whitespace-normal sm:whitespace-nowrap">
+          <h2 className="heading-h2 capitalize max-w-[850px] mx-auto">
             Common Qualifying Conditions for a PSD Letter
           </h2>
           <p className="body-large max-w-[760px] mx-auto">
