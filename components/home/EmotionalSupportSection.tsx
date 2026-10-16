@@ -55,20 +55,20 @@ export function EmotionalSupportSection() {
         </div>
 
         {/* Action Buttons & Refund Reassurance */}
-        <div className="space-y-2">
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-2 w-full">
+        <div className="space-y-2 flex flex-col items-center sm:items-start w-full">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
             <CtaButton
               href="/blog/esa-guide/emotional-support-animal/"
               variant="secondary"
-              className="w-full sm:w-auto px-6"
+              className="w-auto px-6"
             >
               Learn about ESA&apos;s
             </CtaButton>
-            <CtaButton href="#how-it-works" className="w-full sm:w-[192px]">
+            <CtaButton href="#how-it-works" className="w-[192px]">
               Get Started
             </CtaButton>
           </div>
-          <p className="body-small">
+          <p className="body-small text-center sm:text-left">
             If not approved after your evaluation? You get a full refund.
           </p>
         </div>

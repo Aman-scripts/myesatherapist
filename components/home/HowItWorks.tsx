@@ -47,29 +47,29 @@ export function HowItWorks() {
           {/* 3 Step Cards with connecting arrows (Arrow 3 & Arrow 4 in Figma) */}
           <div className="relative">
             {/* Arrow 1 -> 2 (Desktop / Tablet) */}
-            <div className="hidden md:block absolute top-[90px] lg:top-[113px] left-[33.33%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
-              <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden md:block absolute top-[85px] lg:top-[113px] left-[33.33%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+              <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[30px] lg:w-[60px] h-auto">
                 <path d="M2 12H54" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
                 <path d="M44 4L56 12L44 20" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
 
             {/* Arrow 2 -> 3 (Desktop / Tablet) */}
-            <div className="hidden md:block absolute top-[90px] lg:top-[113px] left-[66.66%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
-              <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden md:block absolute top-[85px] lg:top-[113px] left-[66.66%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+              <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[30px] lg:w-[60px] h-auto">
                 <path d="M2 12H54" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
                 <path d="M44 4L56 12L44 20" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-6 lg:gap-x-11 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-4 lg:gap-x-11 relative z-10">
               {steps.map((step, idx) => (
                 <React.Fragment key={step.number}>
                   <div className="flex flex-col items-center text-center">
                     {/* Circular Image with number badge */}
-                    <div className="relative w-[180px] h-[180px] md:w-[190px] md:h-[190px] lg:w-[228px] lg:h-[226px] shrink-0 flex items-center justify-center">
+                    <div className="relative w-[180px] h-[180px] md:w-[170px] md:h-[170px] lg:w-[228px] lg:h-[226px] shrink-0 flex items-center justify-center">
                       <div className="absolute inset-0 rounded-full bg-[#EFFFF1] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]" />
-                      <div className="relative w-[156px] h-[156px] md:w-[166px] md:h-[166px] lg:w-[200px] lg:h-[200px] rounded-full overflow-hidden">
+                      <div className="relative w-[156px] h-[156px] md:w-[148px] md:h-[148px] lg:w-[200px] lg:h-[200px] rounded-full overflow-hidden">
                         <Image
                           quality={90}
                           src={step.image}

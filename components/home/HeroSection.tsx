@@ -108,16 +108,16 @@ export function HeroSection() {
         {/* Content Container (Centered) */}
         <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
           {/* Stat Pills at top (Mobile) */}
-          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
+          <div className="flex items-center justify-center gap-1.5 sm:gap-2 w-full max-w-[350px] mx-auto mb-3.5">
             {statsData.map((stat) => (
               <div
                 key={stat.label}
-                className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1 rounded-[24px] text-center shadow-xs"
+                className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1.5 rounded-[24px] text-center shadow-xs min-w-0"
               >
-                <span className="body-large text-color-gradient">
+                <span className="body-large text-color-gradient text-[17px]">
                   {stat.value}
                 </span>
-                <span className="body-small mt-0.5 whitespace-nowrap">
+                <span className="body-small text-[11px] min-[375px]:text-xs mt-0.5 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
