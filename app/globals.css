@@ -183,8 +183,12 @@
   color: #2E5A66;
 }
 
-:where(.body-large, .body-text, .body-small) {
-  color: #5F6B6F;
+/* Default body text color. Kept in the base layer so Tailwind color utilities
+   (e.g. text-background on dark cards) can override it. */
+@layer base {
+  :where(.body-large, .body-text, .body-small) {
+    color: var(--color-body-text);
+  }
 }
 
 /* High-priority color utilities to guarantee clear readability on dark backgrounds */
