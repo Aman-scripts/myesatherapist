@@ -299,20 +299,20 @@ export function Footer({ bgColor = "bg-background" }: { bgColor?: string }) {
 
           {/* Bottom Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 body-small text-background">
-            <p>
+            <p className="body-small text-background">
               &copy; 2026 <span className="text-accent">myesatherapist.com</span> — All Rights Reserved
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              <Link href="/privacy-policy/" className="hover:text-accent transition-colors">
+              <Link href="/privacy-policy/" className="body-small text-background hover:text-accent transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/refund-policy/" className="hover:text-accent transition-colors">
+              <Link href="/refund-policy/" className="body-small text-background hover:text-accent transition-colors">
                 Refund Policy
               </Link>
-              <Link href="/terms-of-use/" className="hover:text-accent transition-colors">
+              <Link href="/terms-of-use/" className="body-small text-background hover:text-accent transition-colors">
                 Terms of Use
               </Link>
-              <Link href="/accessibility-statement/" className="hover:text-accent transition-colors">
+              <Link href="/accessibility-statement/" className="body-small text-background hover:text-accent transition-colors">
                 Accessibility Statement
               </Link>
             </div>
