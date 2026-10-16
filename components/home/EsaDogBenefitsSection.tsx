@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 
 interface BenefitCard {
@@ -61,48 +61,15 @@ const BENEFITS: BenefitCard[] = [
 ];
 
 export function EsaDogBenefitsSection() {
-  const [scale, setScale] = useState(1);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-    const updateScale = () => {
-      const w = window.innerWidth;
-      if (w >= 1024 && w < 1440) {
-        setScale(w / 1440);
-      } else {
-        setScale(1);
-      }
-    };
-
-    updateScale();
-    window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
-  }, []);
-
   return (
-    <section
-      className="relative w-full bg-white overflow-hidden min-h-0"
-      style={{
-        height: isMounted && scale < 1 ? `${Math.round(1409 * scale)}px` : undefined,
-      }}
-    >
+    <section className="relative w-full bg-white overflow-hidden">
       {/* ======================================================== */}
       {/* DESKTOP & LAPTOP (>= 1024px)                             */}
       {/* Exactly matches 1440px Figma Frame 1000012003 at 1440px, */}
-      {/* and scales proportionally on 1024px-1439px screen sizes  */}
-      {/* so 1024px looks 100% identical to 1440px.                */}
+      {/* and scales globally via GlobalDesktopScaler on 1024-1440px*/}
       {/* ======================================================== */}
-      <div
-        className="hidden lg:block relative origin-top-left"
-        style={{
-          width: "1440px",
-          height: "1409px",
-          transform: isMounted && scale < 1 ? `scale(${scale})` : undefined,
-          marginLeft: !isMounted || scale === 1 ? "auto" : 0,
-          marginRight: !isMounted || scale === 1 ? "auto" : 0,
-        }}
-      >
+      <div className="hidden lg:block relative w-full overflow-hidden">
+        <div className="relative w-[1440px] h-[1409px] mx-auto">
         {/* Right Curved Image (Frame 1000012003 mask: left 745px, top 0px, width 695px, height 1409px) */}
         <div className="absolute right-0 top-0 bottom-0 w-[695px] h-[1409px] pointer-events-none select-none z-10">
           <Image
@@ -173,6 +140,7 @@ export function EsaDogBenefitsSection() {
           </div>
         </div>
       </div>
+    </div>
 
       {/* ======================================================== */}
       {/* MOBILE / TABLET (< 1024px)                               */}

@@ -223,7 +223,7 @@ export function Header() {
                 {/* Button 2: Get Started (Frame 1000011890) */}
                 <CtaButton
                   href="#pricing"
-                  className="w-[160px] xl:w-[192px] h-[46px] xl:h-[54px] text-[14px] xl:text-[16px]"
+                  className="w-auto min-w-[172px] xl:w-[192px] h-[46px] xl:h-[54px] text-[14px] xl:text-[16px] pl-4 xl:pl-[34px] pr-[5px]"
                 >
                   Get Started
                 </CtaButton>
