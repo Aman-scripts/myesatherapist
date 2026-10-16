@@ -144,47 +144,47 @@ export function EsaDogBenefitsSection() {
 
       {/* ======================================================== */}
       {/* MOBILE / TABLET (< 1024px)                               */}
-      {/* Clean responsive layout for smaller screens               */}
+      {/* Clean responsive layout matching EmotionalSupportSection */}
       {/* ======================================================== */}
-      <div className="lg:hidden w-full px-4 sm:px-6 py-12 sm:py-16">
-        <div className="w-full max-w-[628px] mx-auto flex flex-col items-start gap-6 sm:gap-8">
-          <div className="flex flex-col items-start gap-3 sm:gap-4">
-            <h2 className="heading-h2">
+      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet, Full Width) */}
+      <div className="lg:hidden w-full overflow-hidden">
+        {/* Mobile Image (< 640px) */}
+        <div className="sm:hidden w-full">
+          <Image
+            quality={95}
+            src="/home/homepage_benefits_section_mobile.png"
+            alt="Benefits Of Having An Emotional Support Dog"
+            width={390}
+            height={512}
+            className="w-full h-auto block"
+            priority
+          />
+        </div>
+
+        {/* Tablet Image (640px to 1023px) */}
+        <div className="hidden sm:block w-full">
+          <Image
+            quality={95}
+            src="/home/homepage_benefits_section_tablet.png"
+            alt="Benefits Of Having An Emotional Support Dog"
+            width={834}
+            height={1050}
+            className="w-full h-auto block"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Mobile & Tablet Content Area (Renders AFTER image on Mobile/Tablet) */}
+      <div className="lg:hidden w-full px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+        <div className="w-full max-w-[628px] mx-auto space-y-6 sm:space-y-8">
+          <div className="space-y-3 sm:space-y-4">
+            <h2 className="heading-h2 capitalize">
               Benefits Of Having An Emotional Support Dog
             </h2>
             <p className="body-large">
               Dogs provide steady comfort and structure. Here&apos;s how an ESA dog can support your daily life.
             </p>
-          </div>
-
-          {/* Dedicated Dog Illustration for Mobile (< 640px) */}
-          <div className="sm:hidden w-full max-w-[390px] mx-auto overflow-hidden my-1">
-            <div className="relative w-full aspect-[390/363] overflow-hidden">
-              <Image
-                quality={90}
-                src="/home/homepage_benefits_section_mobile.png"
-                alt="Woman with emotional support dog"
-                fill
-                className="object-cover object-bottom"
-                sizes="(max-width: 639px) 100vw, 390px"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Dedicated Dog Illustration for Tablet (640px to 1023px) */}
-          <div className="hidden sm:block lg:hidden w-full max-w-[628px] mx-auto overflow-hidden my-2">
-            <div className="relative w-full aspect-[834/833] overflow-hidden">
-              <Image
-                quality={90}
-                src="/home/homepage_benefits_section_tablet.png"
-                alt="Woman with emotional support dog"
-                fill
-                className="object-cover object-bottom"
-                sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 628px"
-                priority
-              />
-            </div>
           </div>
 
           {/* 8 Cards Grid (Single / 2-col on Tablet) */}
@@ -205,7 +205,7 @@ export function EsaDogBenefitsSection() {
                   />
                 </div>
                 <div className="flex flex-col items-start gap-1 w-full">
-                  <h3 className="heading-h4">
+                  <h3 className="heading-h3 capitalize">
                     {benefit.title}
                   </h3>
                   <p className="body-text">
