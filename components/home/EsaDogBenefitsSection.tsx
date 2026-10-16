@@ -146,37 +146,59 @@ export function EsaDogBenefitsSection() {
       {/* MOBILE / TABLET (< 1024px)                               */}
       {/* Clean responsive layout matching EmotionalSupportSection */}
       {/* ======================================================== */}
-      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet, Full Width) */}
-      <div className="lg:hidden w-full overflow-hidden">
+      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet, Full Width, Zero Top Gap) */}
+      <div className="lg:hidden relative w-full overflow-visible">
         {/* Mobile Image (< 640px) */}
-        <div className="sm:hidden w-full">
+        <div className="relative sm:hidden w-full">
           <Image
             quality={95}
             src="/home/homepage_benefits_section_mobile.png"
             alt="Benefits Of Having An Emotional Support Dog"
             width={390}
-            height={512}
+            height={363}
             className="w-full h-auto block"
             priority
           />
+          {/* Heart Paw Circle Badge: Centered on bottom curve dip (matching Figma) */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[44px] h-[44px] z-20 pointer-events-none drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]">
+            <Image
+              quality={95}
+              src="/home/doyouneed-emotional-support-icon.svg"
+              alt="ESA Heart Paw Badge"
+              width={44}
+              height={44}
+              className="w-full h-full object-contain rounded-full bg-[#FDFBF7]"
+            />
+          </div>
         </div>
 
         {/* Tablet Image (640px to 1023px) */}
-        <div className="hidden sm:block w-full">
+        <div className="relative hidden sm:block w-full">
           <Image
             quality={95}
             src="/home/homepage_benefits_section_tablet.png"
             alt="Benefits Of Having An Emotional Support Dog"
             width={834}
-            height={1050}
+            height={833}
             className="w-full h-auto block"
             priority
           />
+          {/* Heart Paw Circle Badge: Centered on bottom curve dip (matching Figma) */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[60px] h-[60px] z-20 pointer-events-none drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]">
+            <Image
+              quality={95}
+              src="/home/doyouneed-emotional-support-icon.svg"
+              alt="ESA Heart Paw Badge"
+              width={60}
+              height={60}
+              className="w-full h-full object-contain rounded-full bg-[#FDFBF7]"
+            />
+          </div>
         </div>
       </div>
 
       {/* Mobile & Tablet Content Area (Renders AFTER image on Mobile/Tablet) */}
-      <div className="lg:hidden w-full px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+      <div className="lg:hidden w-full px-4 sm:px-6 pt-8 sm:pt-10 pb-6 sm:pb-8 space-y-6">
         <div className="w-full max-w-[628px] mx-auto space-y-6 sm:space-y-8">
           <div className="space-y-3 sm:space-y-4">
             <h2 className="heading-h2 capitalize">
