@@ -42,6 +42,7 @@ export function DesktopScaleWrapper({
       <div
         className={`relative z-10 mx-auto ${className}`}
         style={{
+          width: `${designWidth}px`,
           maxWidth: `${designWidth}px`,
         }}
       >

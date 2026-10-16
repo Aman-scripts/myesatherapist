@@ -150,7 +150,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
       {/* Main Navigation Bar (Frame 1000011803: 1440px x 98px, padding 13px 80px) */}
       <div className="w-full bg-white">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-[80px] h-20 lg:h-[84px] xl:h-[98px] flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] h-20 lg:h-[98px] flex items-center justify-between">
 
           {/* Logo (ESA LOGO FINAL-01 1: 171px x 71px) */}
           <Link href="/" className="flex items-center shrink-0">
@@ -161,15 +161,15 @@ export function Header() {
               height={71}
               priority
               unoptimized
-              className="h-10 sm:h-12 lg:h-[46px] xl:h-[71px] w-auto shrink-0 object-contain"
+              className="h-10 sm:h-12 lg:h-[71px] w-auto shrink-0 object-contain"
             />
           </Link>
 
           {/* Desktop Nav Links (clean spacing, no overlap with logo) */}
-          <nav className="hidden lg:flex items-center gap-3 xl:gap-[28px] mx-2 xl:mx-6 shrink-0">
+          <nav className="hidden lg:flex items-center gap-[28px] mx-6 shrink-0">
             <Link
               href="/esa-doctors/"
-              className={`body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[13px] xl:text-[16px] ${
+              className={`body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px] ${
                 isDoctors ? "text-[#1D6E72] font-bold" : ""
               }`}
             >
@@ -177,26 +177,26 @@ export function Header() {
             </Link>
             <Link
               href="/about-us/"
-              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[13px] xl:text-[16px]"
+              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
             >
               About Us
             </Link>
             <ResourcesMenu />
             <Link
               href="/contact-us/"
-              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[13px] xl:text-[16px]"
+              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
             >
               Contact Us
             </Link>
           </nav>
 
           {/* Desktop Right Action Buttons (Frame 1000011948: 442px x 48px, gap 8px) */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-[8px] justify-end shrink-0">
+          <div className="hidden lg:flex items-center gap-[8px] justify-end shrink-0">
             {isPsd ? (
               /* PSD Letter Page: Single "Start Your Consultation" Button */
               <CtaButton
                 href="#pricing"
-                className="w-auto px-4 xl:px-6 h-[46px] xl:h-[54px] text-[13px] xl:text-[16px]"
+                className="w-auto px-6 h-[54px] text-[16px]"
               >
                 Start Your Consultation
               </CtaButton>
@@ -204,7 +204,7 @@ export function Header() {
               /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
               <CtaButton
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
-                className="w-[160px] xl:w-[192px] h-[46px] xl:h-[54px] text-[14px] xl:text-[16px]"
+                className="w-[192px] h-[54px] text-[16px]"
               >
                 Get Started
               </CtaButton>
@@ -215,7 +215,7 @@ export function Header() {
                 <CtaButton
                   href="#eligibility"
                   variant="secondary"
-                  className="w-auto px-3.5 xl:px-6 h-[46px] xl:h-[54px] text-[13px] xl:text-[16px]"
+                  className="w-auto px-6 h-[54px] text-[16px]"
                 >
                   Free ESA Eligibility Checker
                 </CtaButton>
@@ -223,7 +223,7 @@ export function Header() {
                 {/* Button 2: Get Started (Frame 1000011890) */}
                 <CtaButton
                   href="#pricing"
-                  className="w-auto min-w-[172px] xl:w-[192px] h-[46px] xl:h-[54px] text-[14px] xl:text-[16px] pl-4 xl:pl-[34px] pr-[5px]"
+                  className="w-auto min-w-[192px] h-[54px] text-[16px] pl-[34px] pr-[5px]"
                 >
                   Get Started
                 </CtaButton>
