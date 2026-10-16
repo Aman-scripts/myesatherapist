@@ -17,7 +17,7 @@ export function DoYouNeedEsaSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
+    <section className="relative overflow-hidden bg-white w-full pt-0 pb-0 lg:py-0">
       {/* Desktop & Laptop Container */}
       <DesktopScaleWrapper
         designWidth={1440}
@@ -132,7 +132,7 @@ export function DoYouNeedEsaSection() {
         </div>
 
         {/* Text & Button Container (Text SECOND) */}
-        <div className="px-4 sm:px-6 max-w-3xl mx-auto py-6 sm:py-8 space-y-6 sm:space-y-8">
+        <div className="px-4 sm:px-6 max-w-3xl mx-auto pt-6 sm:pt-8 pb-3 sm:pb-4 space-y-6 sm:space-y-8">
           <div className="space-y-4">
             <h2 className="heading-h2 capitalize">
               Do You Need An Emotional Support Animal?

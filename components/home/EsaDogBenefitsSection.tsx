@@ -152,7 +152,7 @@ export function EsaDogBenefitsSection() {
         <div className="relative sm:hidden w-full">
           <Image
             quality={95}
-            src="/home/homepage_benefits_section_mobile.png"
+            src="/home/benefits_section_mobile.png"
             alt="Benefits Of Having An Emotional Support Dog"
             width={390}
             height={363}
@@ -176,7 +176,7 @@ export function EsaDogBenefitsSection() {
         <div className="relative hidden sm:block w-full">
           <Image
             quality={95}
-            src="/home/homepage_benefits_section_tablet.png"
+            src="/home/benefits_section_tablet.png"
             alt="Benefits Of Having An Emotional Support Dog"
             width={834}
             height={833}
