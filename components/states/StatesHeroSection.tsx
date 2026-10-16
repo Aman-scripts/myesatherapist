@@ -10,6 +10,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -253,9 +254,11 @@ export function StatesHeroSection() {
       {/* 3. DESKTOP HERO SECTION (lg: / 1024px+)               */}
       {/* Matches statepage_hero-section.png                   */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:flex relative w-full min-h-[787px] items-center">
-        {/* Full-width Background Artwork */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
+      <DesktopScaleWrapper
+        designHeight={787}
+        designWidth={1440}
+        wrapperClassName="bg-background"
+        background={
           <BreakpointImage
             media="(min-width: 1024px)"
             quality={90}
@@ -265,152 +268,167 @@ export function StatesHeroSection() {
             className="object-cover object-right-top 2xl:object-center"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
-        </div>
-
-        {/* Floating "Available in All 50 states" Glassmorphism Badge */}
-        <div
-          className="hidden lg:flex items-center gap-3.5 absolute left-[47%] xl:left-[49%] 2xl:left-[51%] top-[62%] -translate-y-1/2 z-20 px-5 py-3 rounded-[18px] border border-white/40 shadow-[0px_8px_24px_rgba(0,0,0,0.15)] hover:scale-105 transition-transform"
-          style={{
-            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(30, 70, 85, 0.65) 100%)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-          }}
-        >
-          <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
-            <Image
-            quality={90}
-              src="/states/state_page_her-section_map-icon.svg"
-              alt="Available in all 50 states"
-              width={34}
-              height={34}
-              className="w-[34px] h-[34px] object-contain"
+        }
+      >
+        <div className="relative w-[1440px] h-[787px] flex items-center">
+          {/* Full-width Background Artwork inside 1440px Canvas */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <BreakpointImage
+              media="(min-width: 1024px)"
+              quality={90}
+              src="/states/statepage_hero-section.webp"
+              alt="ESA Evaluation For Every State"
+              fill
+              className="object-cover object-right-top"
+              sizes="1440px"
             />
           </div>
-          <div className="flex flex-col text-left">
-            <span className="font-sans font-medium text-[14px] text-white drop-shadow-sm leading-tight">
-              Available in
-            </span>
-            <span className="font-sans font-bold text-[16px] text-white drop-shadow-md leading-tight">
-              All 50 states
-            </span>
+
+          {/* Floating "Available in All 50 states" Glassmorphism Badge */}
+          <div
+            className="flex items-center gap-3.5 absolute left-[705px] top-[488px] -translate-y-1/2 z-20 px-5 py-3 rounded-[18px] border border-white/40 shadow-[0px_8px_24px_rgba(0,0,0,0.15)] hover:scale-105 transition-transform"
+            style={{
+              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(30, 70, 85, 0.65) 100%)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+          >
+            <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
+              <Image
+                quality={90}
+                src="/states/state_page_her-section_map-icon.svg"
+                alt="Available in all 50 states"
+                width={34}
+                height={34}
+                className="w-[34px] h-[34px] object-contain"
+              />
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="font-sans font-medium text-[14px] text-white drop-shadow-sm leading-tight">
+                Available in
+              </span>
+              <span className="font-sans font-bold text-[16px] text-white drop-shadow-md leading-tight">
+                All 50 states
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Inner Desktop Container */}
-        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-14 xl:px-16 py-16">
-          <div className="max-w-[540px] flex flex-col gap-8">
-            
-            {/* Top 3 Pill Stat Badges */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
-                <span className="font-heading font-bold text-xl sm:text-2xl text-color-gradient leading-none">
-                  50
-                </span>
-                <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
-                  USA States
-                </span>
-              </div>
-
-              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
-                <span className="font-heading font-bold text-xl sm:text-2xl text-color-gradient leading-none">
-                  HIPAA
-                </span>
-                <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
-                  Compliant
-                </span>
-              </div>
-
-              <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
-                <span className="font-heading font-bold text-xl sm:text-2xl text-color-gradient leading-none">
-                  100%
-                </span>
-                <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
-                  Licensed Pros
-                </span>
-              </div>
-            </div>
-
-            {/* Heading */}
-            <div className="flex flex-col gap-3">
-              <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-[56px] lg:leading-[64px] tracking-tight text-primary">
-                ESA Evaluation For
-                <br />
-                Every State
-              </h1>
-              <p className="font-sans font-semibold text-base sm:text-lg leading-relaxed text-body-text max-w-[480px]">
-                Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
-              </p>
-            </div>
-
-            {/* Action CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-1">
+          {/* Inner Desktop Container */}
+          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-16 py-16">
+            <div className="max-w-[540px] flex flex-col gap-8">
               
-              {/* Start your State Selector Dropdown Button */}
-              <div className="relative z-30" ref={dropdownRefDesktop}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-background hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] transition-all duration-200 cursor-pointer text-left min-w-[210px]"
-                  aria-expanded={isDropdownOpen}
-                >
-                  <div className="flex items-center gap-2.5">
-                    <Image
-                      src="/home/hero-section-map.svg"
-                      alt="Location pin"
-                      width={16}
-                      height={21}
-                      unoptimized
-                      className="shrink-0 object-contain"
-                      style={{ width: "auto", height: "auto" }}
-                    />
-                    <span className="font-sans font-semibold text-base sm:text-lg text-color-gradient">
-                      {selectedState
-                        ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State"
-                        : "Start your State"}
-                    </span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
-                </button>
+              {/* Top 3 Pill Stat Badges */}
+              <div className="flex items-center gap-4">
+                <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
+                  <span className="font-heading font-bold text-2xl text-color-gradient leading-none">
+                    50
+                  </span>
+                  <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
+                    USA States
+                  </span>
+                </div>
 
-                {/* State Dropdown Menu */}
-                {isDropdownOpen && (
-                  <div
-                    className={STATE_DROPDOWN_PANEL}
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                  >
-                    <div className="py-1">
-                      {POPULAR_STATES.map((state) => (
-                        <button
-                          key={state.slug}
-                          type="button"
-                          onClick={() => handleStateSelect(state.slug)}
-                          className={STATE_DROPDOWN_ITEM}
-                        >
-                          <span>{state.name}</span>
-                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
+                  <span className="font-heading font-bold text-2xl text-color-gradient leading-none">
+                    HIPAA
+                  </span>
+                  <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
+                    Compliant
+                  </span>
+                </div>
+
+                <div className="inline-flex flex-col items-center justify-center px-6 py-2.5 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 min-w-[100px]">
+                  <span className="font-heading font-bold text-2xl text-color-gradient leading-none">
+                    100%
+                  </span>
+                  <span className="font-sans font-semibold text-xs text-body-text mt-0.5 leading-tight">
+                    Licensed Pros
+                  </span>
+                </div>
               </div>
 
-              {/* Get Started Button */}
-              <CtaButton
-                onClick={handleGetStarted}
-                className="w-[192px]"
-              >
-                Get Started
-              </CtaButton>
+              {/* Heading */}
+              <div className="flex flex-col gap-3">
+                <h1 className="font-heading font-bold text-[56px] leading-[64px] tracking-tight text-primary">
+                  ESA Evaluation For
+                  <br />
+                  Every State
+                </h1>
+                <p className="font-sans font-semibold text-lg leading-relaxed text-body-text max-w-[480px]">
+                  Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
+                </p>
+              </div>
+
+              {/* Action CTAs */}
+              <div className="flex items-center gap-4 pt-1">
+                
+                {/* Start your State Selector Dropdown Button */}
+                <div className="relative z-30" ref={dropdownRefDesktop}>
+                  <button
+                    type="button"
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="inline-flex items-center justify-between gap-3 px-6 py-3.5 bg-background hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] transition-all duration-200 cursor-pointer text-left min-w-[210px]"
+                    aria-expanded={isDropdownOpen}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Image
+                        src="/home/hero-section-map.svg"
+                        alt="Location pin"
+                        width={16}
+                        height={21}
+                        unoptimized
+                        className="shrink-0 object-contain"
+                        style={{ width: "auto", height: "auto" }}
+                      />
+                      <span className="font-sans font-semibold text-lg text-color-gradient">
+                        {selectedState
+                          ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State"
+                          : "Start your State"}
+                      </span>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  {/* State Dropdown Menu */}
+                  {isDropdownOpen && (
+                    <div
+                      className={STATE_DROPDOWN_PANEL}
+                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
+                      <div className="py-1">
+                        {POPULAR_STATES.map((state) => (
+                          <button
+                            key={state.slug}
+                            type="button"
+                            onClick={() => handleStateSelect(state.slug)}
+                            className={STATE_DROPDOWN_ITEM}
+                          >
+                            <span>{state.name}</span>
+                            <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Get Started Button */}
+                <CtaButton
+                  onClick={handleGetStarted}
+                  className="w-[192px]"
+                >
+                  Get Started
+                </CtaButton>
+              </div>
+
+              {/* Trustpilot Review Card */}
+              <div className="mt-2"><ReviewBadges /></div>
+
             </div>
-
-            {/* Trustpilot Review Card */}
-            <div className="mt-2"><ReviewBadges /></div>
-
           </div>
-        </div>
 
-      </div>
+        </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }

@@ -10,6 +10,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
 const TRUSTPILOT_GREEN = "#00B67A";
@@ -209,130 +210,147 @@ export function ReviewsHeroSection() {
       {/* ---------------------------------------------------- */}
       {/* 3. DESKTOP REVIEWS HERO SECTION (1024px and up)      */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1440/743] min-h-[620px] xl:min-h-[720px]">
-        <BreakpointImage
-          media="(min-width: 1024px)"
+      <DesktopScaleWrapper
+        designHeight={743}
+        designWidth={1440}
+        wrapperClassName="bg-background"
+        background={
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
-          src="/reviews/reviews_hero-section.webp"
-          alt="What Our Clients Are Saying"
-          fill
-          className="object-cover object-[86%_center] 2xl:object-center"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
+            src="/reviews/reviews_hero-section.webp"
+            alt="What Our Clients Are Saying"
+            fill
+            className="object-cover object-center"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[743px]">
+          <BreakpointImage
+            media="(min-width: 1024px)"
+            quality={90}
+            src="/reviews/reviews_hero-section.webp"
+            alt="What Our Clients Are Saying"
+            fill
+            className="object-cover object-[86%_center]"
+            sizes="1440px"
+          />
 
-        {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
-        <div className="absolute left-[4%] xl:left-[82px] top-[7%] xl:top-[120px] max-w-[480px] xl:max-w-[553px] z-10 flex flex-col items-start gap-4 xl:gap-[24px]">
-          {/* Stat Pills at top (Frame 1000011901) */}
-          <div className="flex items-center gap-3 w-full max-w-[513px]">
-            {/* Pill 1: 50 USA States */}
-            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span
-                className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                50
-              </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
-                USA States
-              </span>
-            </div>
-
-            {/* Pill 2: HIPAA Compliant */}
-            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span
-                className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                HIPAA
-              </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
-                Compliant
-              </span>
-            </div>
-
-            {/* Pill 3: 100% Licensed Pros */}
-            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span
-                className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                100%
-              </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
-                Licensed Pros
-              </span>
-            </div>
-          </div>
-
-          {/* Heading (Playfair Display 56px/64px - Frame 1000011902) */}
-          <h1 className="font-heading text-[44px] xl:text-[56px] leading-[50px] xl:leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[513px]">
-            What Our Clients Are Saying
-          </h1>
-
-          {/* Subtitle (Manrope 18px/30px body-text) */}
-          <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[553px]">
-            Real experiences from people who found comfort and confidence through My ESA Therapist.
-          </p>
-
-          {/* Action Row (Frame 7) */}
-          <div className="flex items-center gap-4 flex-wrap mt-1">
-            {/* State Dropdown (Frame 2) */}
-            <div className="relative z-50" ref={dropdownRefDesktop}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2 xl:gap-2.5 px-5 xl:px-[28px] py-2.5 xl:py-3 rounded-[30px] bg-background font-semibold text-[16px] xl:text-[18px] hover:bg-white transition-colors h-[50px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-              >
-                <Image
-                  src="/home/hero-section-map.svg"
-                  alt=""
-                  width={18}
-                  height={22}
-                  unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
-                />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
+          <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
+            {/* Stat Pills at top (Frame 1000011901) */}
+            <div className="flex items-center gap-3 w-full max-w-[513px]">
+              {/* Pill 1: 50 USA States */}
+              <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+                <span
+                  className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
                 >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
+                  50
+                </span>
+                <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
+                  USA States
+                </span>
+              </div>
+
+              {/* Pill 2: HIPAA Compliant */}
+              <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+                <span
+                  className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  HIPAA
+                </span>
+                <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
+                  Compliant
+                </span>
+              </div>
+
+              {/* Pill 3: 100% Licensed Pros */}
+              <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+                <span
+                  className="font-heading font-bold text-[24px] leading-[32px] bg-clip-text text-transparent"
+                  style={{ backgroundImage: TEAL_GRADIENT }}
+                >
+                  100%
+                </span>
+                <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
+                  Licensed Pros
+                </span>
+              </div>
             </div>
 
-            {/* Get Started Button (Frame 1000011890) */}
-            <CtaButton
-              href="#trustpilot-reviews"
-              className="w-[192px]"
-            >
-              Get Started
-            </CtaButton>
-          </div>
+            {/* Heading (Playfair Display 56px/64px - Frame 1000011902) */}
+            <h1 className="font-heading text-[56px] leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[513px]">
+              What Our Clients Are Saying
+            </h1>
 
-          {/* Trustpilot Frosted Glass Card (Frame 1000011802) */}
-          <ReviewBadges />
+            {/* Subtitle (Manrope 18px/30px body-text) */}
+            <p className="font-sans font-semibold text-[18px] leading-[30px] text-body-text max-w-[553px]">
+              Real experiences from people who found comfort and confidence through My ESA Therapist.
+            </p>
+
+            {/* Action Row (Frame 7) */}
+            <div className="flex items-center gap-4 flex-wrap mt-1">
+              {/* State Dropdown (Frame 2) */}
+              <div className="relative z-50" ref={dropdownRefDesktop}>
+                <button
+                  type="button"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="flex items-center gap-2.5 px-[28px] py-3 rounded-[30px] bg-background font-semibold text-[18px] hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                >
+                  <Image
+                    src="/home/hero-section-map.svg"
+                    alt=""
+                    width={18}
+                    height={22}
+                    unoptimized
+                    className="shrink-0 object-contain"
+                    style={{ width: "auto", height: "auto" }}
+                  />
+                  <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {isDropdownOpen && (
+                  <div
+                    className={STATE_DROPDOWN_PANEL}
+                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                  >
+                    <div className="py-1">
+                      {POPULAR_STATES.map((state) => (
+                        <button
+                          key={state.slug}
+                          type="button"
+                          onClick={() => handleStateSelect(state.slug)}
+                          className={STATE_DROPDOWN_ITEM}
+                        >
+                          <span>{state.name}</span>
+                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Get Started Button (Frame 1000011890) */}
+              <CtaButton
+                href="#trustpilot-reviews"
+                className="w-[192px]"
+              >
+                Get Started
+              </CtaButton>
+            </div>
+
+            {/* Trustpilot Frosted Glass Card (Frame 1000011802) */}
+            <ReviewBadges />
+          </div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }

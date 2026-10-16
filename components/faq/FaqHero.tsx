@@ -1,6 +1,7 @@
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const TRUSTPILOT_GREEN = "#00B67A";
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -152,52 +153,69 @@ export function FaqHero() {
       {/* 3. DESKTOP FAQ HERO SECTION (>= 1024px)              */}
       {/* Matches Frame 1000011884                             */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1440/737] min-h-[640px] xl:min-h-0">
-        <BreakpointImage
-          media="(min-width: 1024px)"
+      <DesktopScaleWrapper
+        designHeight={737}
+        designWidth={1440}
+        wrapperClassName="bg-background"
+        background={
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
-          src="/faq/faq_hero-section.webp"
-          alt="ESA Questions? We're Here to Help"
-          fill
-          className="object-cover object-center"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
+            src="/faq/faq_hero-section.webp"
+            alt="ESA Questions? We're Here to Help"
+            fill
+            className="object-cover object-center"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[737px]">
+          <BreakpointImage
+            media="(min-width: 1024px)"
+            quality={90}
+            src="/faq/faq_hero-section.webp"
+            alt="ESA Questions? We're Here to Help"
+            fill
+            className="object-cover object-center"
+            sizes="1440px"
+          />
 
-        {/* Content Container Left-Aligned (Frame 1000011884: left 82px, top 136px) */}
-        <div className="absolute left-[5%] xl:left-[82px] top-[10%] xl:top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
-          {/* Stat Pills (Frame 1000011901) */}
-          <div className="flex items-center gap-3 w-full max-w-[513px]">
-            {statsData.map((stat, idx) => (
-              <div
-                key={idx}
-                className="flex-1 h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center px-2 py-1 border border-white/60"
-              >
-                <span className="font-heading font-bold text-[22px] xl:text-[24px] leading-tight text-[#1A3D4F]">
-                  {stat.value}
-                </span>
-                <span className="font-sans font-semibold text-[11px] xl:text-[12px] text-body-text leading-none mt-0.5">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+          {/* Content Container Left-Aligned (Frame 1000011884: left 82px, top 120px) */}
+          <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
+            {/* Stat Pills (Frame 1000011901) */}
+            <div className="flex items-center gap-3 w-full max-w-[513px]">
+              {statsData.map((stat, idx) => (
+                <div
+                  key={idx}
+                  className="flex-1 h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center px-2 py-1 border border-white/60"
+                >
+                  <span className="font-heading font-bold text-[24px] leading-tight text-[#1A3D4F]">
+                    {stat.value}
+                  </span>
+                  <span className="font-sans font-semibold text-[12px] text-body-text leading-none mt-0.5">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Heading (Playfair Display 56px, leading 64px) */}
+            <h1 className="heading-h1">
+              ESA Questions?
+              <br />
+              We’re here to Help.
+            </h1>
+
+            {/* Subtitle (Manrope 18px, leading 30px) */}
+            <p className="body-large max-w-[553px]">
+              Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
+            </p>
+
+            {/* Trustpilot Glassmorphism Box (Frame 1000011802) */}
+            <div className="mt-1"><ReviewBadges /></div>
           </div>
-
-          {/* Heading (Playfair Display 56px, leading 64px) */}
-          <h1 className="heading-h1">
-            ESA Questions?
-            <br />
-            We’re here to Help.
-          </h1>
-
-          {/* Subtitle (Manrope 18px, leading 30px) */}
-          <p className="body-large max-w-[553px]">
-            Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
-          </p>
-
-          {/* Trustpilot Glassmorphism Box (Frame 1000011802) */}
-          <div className="mt-1"><ReviewBadges /></div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }

@@ -11,6 +11,7 @@ import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "
 import { STATE_INDEX } from "@/data/stateIndex";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -187,11 +188,13 @@ export function AboutHeroSection() {
 
       {/* ---------------------------------------------------- */}
       {/* 3. DESKTOP VIEW (>= 1024px)                          */}
-      {/* Uses /hero_section-about_us.png                      */}
+      {/* Uses /hero_section-about_us.webp                     */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:flex relative w-full lg:min-h-[720px] xl:min-h-[795px] items-center overflow-hidden">
-        {/* Background Image Layer */}
-        <div className="absolute inset-0 z-0">
+      <DesktopScaleWrapper
+        designWidth={1440}
+        designHeight={795}
+        className="hidden lg:block relative"
+        fullBleedBackground={
           <BreakpointImage
             media="(min-width: 1024px)"
             quality={90}
@@ -201,68 +204,70 @@ export function AboutHeroSection() {
             className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
-        </div>
+        }
+      >
+        <div className="relative w-[1440px] h-[795px] flex items-center">
+          {/* Content Container */}
+          <div className="relative z-10 px-[82px] py-[100px] w-full">
+            <div className="max-w-[540px] space-y-8">
+              {/* Top 3 Pill Stats */}
+              <div className="flex flex-wrap items-center gap-3.5">
+                {/* Stat 1 */}
+                <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
+                  <span
+                    className="font-heading font-bold text-2xl leading-none bg-clip-text text-transparent"
+                    style={{ backgroundImage: "var(--color-gradient)" }}
+                  >
+                    50
+                  </span>
+                  <span className="font-sans font-semibold text-[12px] text-[#707070] mt-0.5">
+                    USA States
+                  </span>
+                </div>
 
-        {/* Content Container */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-8 xl:px-[82px] py-20 xl:py-[100px] w-full">
-          <div className="max-w-[500px] xl:max-w-[540px] space-y-7 xl:space-y-8">
-            {/* Top 3 Pill Stats */}
-            <div className="flex flex-wrap items-center gap-3 xl:gap-3.5">
-              {/* Stat 1 */}
-              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
-                <span
-                  className="font-heading font-bold text-xl lg:text-2xl leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  50
-                </span>
-                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#707070] mt-0.5">
-                  USA States
-                </span>
+                {/* Stat 2 */}
+                <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
+                  <span
+                    className="font-heading font-bold text-2xl leading-none bg-clip-text text-transparent"
+                    style={{ backgroundImage: "var(--color-gradient)" }}
+                  >
+                    HIPAA
+                  </span>
+                  <span className="font-sans font-semibold text-[12px] text-[#707070] mt-0.5">
+                    Compliant
+                  </span>
+                </div>
+
+                {/* Stat 3 */}
+                <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
+                  <span
+                    className="font-heading font-bold text-2xl leading-none bg-clip-text text-transparent"
+                    style={{ backgroundImage: "var(--color-gradient)" }}
+                  >
+                    100%
+                  </span>
+                  <span className="font-sans font-semibold text-[12px] text-[#707070] mt-0.5">
+                    Licensed Pros
+                  </span>
+                </div>
               </div>
 
-              {/* Stat 2 */}
-              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
-                <span
-                  className="font-heading font-bold text-xl lg:text-2xl leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  HIPAA
-                </span>
-                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#707070] mt-0.5">
-                  Compliant
-                </span>
-              </div>
+              {/* Main Heading */}
+              <h1 className="font-heading text-[56px] font-bold leading-[64px] tracking-[-0.0002em] text-primary">
+                About My ESA Therapist
+              </h1>
 
-              {/* Stat 3 */}
-              <div className="w-[140px] xl:w-[163px] h-[50px] xl:h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
-                <span
-                  className="font-heading font-bold text-xl lg:text-2xl leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  100%
-                </span>
-                <span className="font-sans font-semibold text-[11px] lg:text-[12px] text-[#707070] mt-0.5">
-                  Licensed Pros
-                </span>
-              </div>
+              {/* Subtitle Description */}
+              <p className="font-sans font-semibold text-[18px] text-body-text leading-[30px] max-w-[480px]">
+                Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
+              </p>
+
+              {/* Trustpilot Floating Badge Card */}
+              <ReviewBadges />
             </div>
-
-            {/* Main Heading */}
-            <h1 className="font-heading text-4xl lg:text-[46px] xl:text-[56px] font-bold leading-tight lg:leading-[52px] xl:leading-[64px] tracking-[-0.0002em] text-primary">
-              About My ESA Therapist
-            </h1>
-
-            {/* Subtitle Description */}
-            <p className="font-sans font-semibold text-base lg:text-[16px] xl:text-[18px] text-body-text leading-[26px] xl:leading-[30px] max-w-[480px]">
-              Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
-            </p>
-
-            {/* Trustpilot Floating Badge Card */}
-            <ReviewBadges />
           </div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
 
       {/* Bottom Trust Bar (Desktop) */}
       <div className="w-full bg-background py-6 sm:py-8 lg:py-9 border-t border-b border-[#EAE5DC]">

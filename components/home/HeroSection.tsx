@@ -10,6 +10,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
 
@@ -255,34 +256,48 @@ export function HeroSection() {
 
         {/* ---------------------------------------------------- */}
         {/* 3. DESKTOP HERO SECTION (lg: / 1024px and up)        */}
-        {/* Responsive Layout for 1024px to 1440px+              */}
         {/* ---------------------------------------------------- */}
-        <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[600px] xl:min-h-0 overflow-hidden">
-          {/* Background Image: hero-section.png */}
-          <BreakpointImage
-            media="(min-width: 1024px)"
+        <DesktopScaleWrapper
+          designHeight={744}
+          designWidth={1440}
+          wrapperClassName="bg-background"
+          background={
+            <BreakpointImage
+              media="(min-width: 1024px)"
               quality={90}
-            src="/home/hero-section.webp"
-            alt="Woman embracing her emotional support golden retriever outdoors"
-            fill
-            className="object-cover object-center"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
+              src="/home/hero-section.webp"
+              alt="Woman embracing her emotional support golden retriever outdoors"
+              fill
+              className="object-cover object-center"
+              sizes="(min-width: 1024px) 100vw, 1px"
+            />
+          }
+        >
+          <div className="relative w-[1440px] h-[744px]">
+            {/* Background Image: hero-section.png inside 1440px canvas */}
+            <BreakpointImage
+              media="(min-width: 1024px)"
+              quality={90}
+              src="/home/hero-section.webp"
+              alt="Woman embracing her emotional support golden retriever outdoors"
+              fill
+              className="object-cover object-center"
+              sizes="1440px"
+            />
 
-          {/* Content — positioned with responsive offsets for 1024px vs 1440px */}
-          <div className="absolute inset-0">
-            <div className="absolute left-[4%] xl:left-[5.69%] top-[5%] xl:top-[12.37%] w-[48%] xl:w-[47.05%] max-w-[678px]">
+            {/* Content — exact 1440px coordinates from Figma Frame 1000011884 */}
+            <div className="absolute left-[82px] top-[92px] w-[678px] z-10">
               {/* Stat Pills */}
-              <div className="flex items-center gap-[0.83%] flex-wrap">
+              <div className="flex items-center gap-3">
                 {statsData.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex flex-col items-center justify-center bg-background py-2 xl:py-2.5 rounded-[30px] text-center w-[31%] min-h-[58px] xl:min-h-[77px] min-w-[95px] xl:min-w-[110px]"
+                    className="flex flex-col items-center justify-center bg-background py-2.5 rounded-[30px] text-center w-[163px] h-[77px]"
                   >
                     <span className="body-large text-color-gradient">
                       {stat.value}
                     </span>
-                    <span className="body-small text-[#949494] mt-0.5 xl:mt-1 whitespace-nowrap">
+                    <span className="body-small text-[#949494] mt-1 whitespace-nowrap">
                       {stat.label}
                     </span>
                   </div>
@@ -290,7 +305,7 @@ export function HeroSection() {
               </div>
 
               {/* Headline */}
-              <h1 className="heading-h1 mt-3.5 xl:mt-6 capitalize">
+              <h1 className="heading-h1 mt-6 capitalize">
                 Emotional Support
                 <br />
                 Animal Evaluations
@@ -299,72 +314,72 @@ export function HeroSection() {
               </h1>
 
               {/* Subheading */}
-              <p className="body-large max-w-none mt-2.5 xl:mt-4">
+              <p className="body-large max-w-none mt-4">
                 Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
               </p>
 
-            {/* Action Row */}
-            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-3.5 xl:mt-6">
-              {/* State Dropdown */}
-              <div className="relative z-30" ref={dropdownRefDesktop}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
-                >
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={16}
-                    height={21}
-                    unoptimized
-                    className="shrink-0 object-contain"
-                    style={{ width: "auto", height: "auto" }}
-                  />
-                  <span className="text-color-gradient font-manrope">
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                  <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isDropdownOpen && (
-                  <div
-                    className={STATE_DROPDOWN_PANEL}
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              {/* Action Row */}
+              <div className="flex items-center gap-3 flex-wrap mt-6">
+                {/* State Dropdown */}
+                <div className="relative z-30" ref={dropdownRefDesktop}>
+                  <button
+                    type="button"
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
-                    <div className="py-1">
-                      {POPULAR_STATES.map((state) => (
-                        <button
-                          key={state.slug}
-                          type="button"
-                          onClick={() => handleStateSelect(state.slug)}
-                          className={STATE_DROPDOWN_ITEM}
-                        >
-                          <span>{state.name}</span>
-                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                        </button>
-                      ))}
+                    <Image
+                      src="/home/hero-section-map.svg"
+                      alt=""
+                      width={16}
+                      height={21}
+                      unoptimized
+                      className="shrink-0 object-contain"
+                      style={{ width: "auto", height: "auto" }}
+                    />
+                    <span className="text-color-gradient font-manrope">
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                    </span>
+                    <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  {isDropdownOpen && (
+                    <div
+                      className={STATE_DROPDOWN_PANEL}
+                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
+                      <div className="py-1">
+                        {POPULAR_STATES.map((state) => (
+                          <button
+                            key={state.slug}
+                            type="button"
+                            onClick={() => handleStateSelect(state.slug)}
+                            className={STATE_DROPDOWN_ITEM}
+                          >
+                            <span>{state.name}</span>
+                            <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
+
+                {/* Get Started Button */}
+                <CtaButton href="#how-it-works" className="w-[192px]">
+                  Get Started
+                </CtaButton>
               </div>
 
-              {/* Get Started Button */}
-              <CtaButton href="#how-it-works" className="w-[192px]">
-                Get Started
-              </CtaButton>
+              {/* Reassurance text from homepage.md */}
+              <p className="body-small mt-2">
+                If not approved after your evaluation? You get a full refund.
+              </p>
+
+              {/* Trustpilot Badge */}
+              <div className="mt-[24px]"><ReviewBadges /></div>
             </div>
-
-            {/* Reassurance text from homepage.md */}
-            <p className="body-small mt-2">
-              If not approved after your evaluation? You get a full refund.
-            </p>
-
-            {/* Trustpilot Badge */}
-            <div className="mt-3 xl:mt-[24px]"><ReviewBadges /></div>
           </div>
-        </div>
-      </div>
+        </DesktopScaleWrapper>
     </section>
   );
 }

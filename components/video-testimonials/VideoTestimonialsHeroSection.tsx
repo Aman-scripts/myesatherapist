@@ -11,6 +11,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -254,68 +255,74 @@ export function VideoTestimonialsHeroSection() {
       {/* ---------------------------------------------------- */}
       {/* 3. DESKTOP HERO SECTION (1024px and up)              */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1440/624] min-h-[624px]">
-        {/* Full-bleed background artwork */}
-        <BreakpointImage
-          media="(min-width: 1024px)"
+      <DesktopScaleWrapper
+        designWidth={1440}
+        designHeight={624}
+        className="hidden lg:block relative"
+        fullBleedBackground={
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
-          src="/video_testimonial/video_testimonial-herosection.webp"
-          alt="Real Stories, Real Impact - My ESA Therapist"
-          fill
-          className="object-cover object-center"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
+            src="/video_testimonial/video_testimonial-herosection.webp"
+            alt="Real Stories, Real Impact - My ESA Therapist"
+            fill
+            className="object-cover object-center"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[624px]">
+          {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
+          <div className="absolute left-[80px] top-[57px] max-w-[579px] z-10 flex flex-col items-start gap-[24px]">
+            {/* Stat Pills Row (Frame 1000011901) */}
+            <div className="flex items-center gap-3 w-full max-w-[513px]">
+              {/* Pill 1: 50 USA States */}
+              <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+                <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
+                  50
+                </span>
+                <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
+                  USA States
+                </span>
+              </div>
 
-        {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
-        <div className="absolute left-[5%] xl:left-[80px] top-[8%] xl:top-[57px] max-w-[579px] z-10 flex flex-col items-start gap-[24px]">
-          {/* Stat Pills Row (Frame 1000011901) */}
-          <div className="flex items-center gap-3 w-full max-w-[513px]">
-            {/* Pill 1: 50 USA States */}
-            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
-                50
-              </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
-                USA States
-              </span>
+              {/* Pill 2: HIPAA Compliant */}
+              <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+                <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
+                  HIPAA
+                </span>
+                <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
+                  Compliant
+                </span>
+              </div>
+
+              {/* Pill 3: 100% Licensed Pros */}
+              <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
+                <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
+                  100%
+                </span>
+                <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
+                  Licensed Pros
+                </span>
+              </div>
             </div>
 
-            {/* Pill 2: HIPAA Compliant */}
-            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
-                HIPAA
-              </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
-                Compliant
-              </span>
-            </div>
+            {/* Heading */}
+            <h1 className="font-heading text-[56px] leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[624px]">
+              Real Stories, Real Impact
+            </h1>
 
-            {/* Pill 3: 100% Licensed Pros */}
-            <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] rounded-[30px] flex flex-col items-center justify-center py-1.5 px-3 border border-[#EAE5DC]/50">
-              <span className="font-heading font-bold text-[24px] leading-[30px] text-color-gradient">
-                100%
-              </span>
-              <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#707070]">
-                Licensed Pros
-              </span>
-            </div>
+            {/* Subtitle */}
+            <p className="font-sans font-semibold text-[18px] leading-[30px] text-body-text max-w-[579px]">
+              Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
+            </p>
+
+            {/* Review Glass Cards (Desktop) */}
+            <ReviewBadges />
+
           </div>
-
-          {/* Heading */}
-          <h1 className="font-heading text-[44px] xl:text-[56px] leading-[50px] xl:leading-[64px] font-bold text-primary tracking-[-0.0002em] max-w-[624px]">
-            Real Stories, Real Impact
-          </h1>
-
-          {/* Subtitle */}
-          <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[579px]">
-            Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
-          </p>
-
-          {/* Review Glass Cards (Desktop) */}
-          <ReviewBadges />
-
         </div>
-      </div>
+      </DesktopScaleWrapper>
 
       {/* --------------------------------------------------------------------------------------------------- */}
       {/* 4. TRUST STATS BAR: EXACTLY 50% ON HERO SECTION BOTTOM & 50% ON AFTER HERO SECTION TOP               */}

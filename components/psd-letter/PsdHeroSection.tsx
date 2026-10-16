@@ -10,6 +10,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -242,53 +243,68 @@ export function PsdHeroSection() {
       {/* 3. DESKTOP PSD HERO SECTION (lg: / 1024px and up)     */}
       {/* Matches Screenshot 1                                 */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1440/814] min-h-[600px] xl:min-h-0 overflow-hidden">
-        <BreakpointImage
-          media="(min-width: 1024px)"
+      <DesktopScaleWrapper
+        designHeight={814}
+        designWidth={1440}
+        wrapperClassName="bg-background"
+        background={
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
-          src="/psd-letter/psd-herosection-new.webp"
-          alt="Psychiatric Service Dog Letter Assistance"
-          fill
-          className="object-cover object-center"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
+            src="/psd-letter/psd-herosection-new.webp"
+            alt="Psychiatric Service Dog Letter Assistance"
+            fill
+            className="object-cover object-center"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[814px]">
+          <BreakpointImage
+            media="(min-width: 1024px)"
+            quality={90}
+            src="/psd-letter/psd-herosection-new.webp"
+            alt="Psychiatric Service Dog Letter Assistance"
+            fill
+            className="object-cover object-center"
+            sizes="1440px"
+          />
 
-        <div className="absolute inset-0">
-          <div className="absolute left-[4%] xl:left-[5.69%] top-[5%] xl:top-[12.37%] w-[48%] xl:w-[47.05%] max-w-[678px]">
-            <div className="flex items-center gap-[0.83%] flex-wrap">
+          <div className="absolute left-[82px] top-[100px] w-[678px] z-10">
+            <div className="flex items-center gap-3">
               {statsData.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex flex-col items-center justify-center bg-background py-1.5 xl:py-2 rounded-[30px] text-center w-[31%] aspect-[163/53] min-w-[95px] xl:min-w-[110px]"
+                  className="flex flex-col items-center justify-center bg-background py-2 rounded-[30px] text-center w-[163px] h-[53px]"
                 >
                   <span
-                    className="font-heading text-lg lg:text-xl xl:text-2xl font-bold leading-none bg-clip-text text-transparent"
+                    className="font-heading text-2xl font-bold leading-none bg-clip-text text-transparent"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {stat.value}
                   </span>
-                  <span className="text-[10px] xl:text-xs font-semibold text-body-text mt-0.5 xl:mt-1 whitespace-nowrap">{stat.label}</span>
+                  <span className="text-xs font-semibold text-body-text mt-1 whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-            <h1 className="font-heading text-[32px] lg:text-[38px] xl:text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-3.5 xl:mt-6 text-primary">
+            <h1 className="font-heading text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-6 text-primary">
               Psychiatric Service
               <br />
               Dog Letter Assistance
             </h1>
 
-            <p className="text-[13.5px] lg:text-[14.5px] xl:text-[18px] leading-[1.5] xl:leading-[30px] text-body-text font-semibold tracking-normal align-middle max-w-none mt-2.5 xl:mt-4 font-sans">
+            <p className="text-[18px] leading-[30px] text-body-text font-semibold tracking-normal align-middle max-w-none mt-4 font-sans">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
             </p>
 
-            <div className="flex items-center gap-2.5 xl:gap-3 flex-wrap mt-3.5 xl:mt-6">
+            <div className="flex items-center gap-3 flex-wrap mt-6">
               {/* State Dropdown */}
               <div className="relative z-30" ref={dropdownRefDesktop}>
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 xl:gap-2.5 px-4 xl:px-[29px] py-2.5 xl:py-3 rounded-[30px] bg-background font-semibold text-[14.5px] xl:text-[18px] hover:bg-white transition-colors h-[46px] xl:h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer"
+                  className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background font-semibold text-[18px] hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                 >
                   <Image
                     src="/home/hero-section-map.svg"
@@ -335,10 +351,10 @@ export function PsdHeroSection() {
               </CtaButton>
             </div>
 
-            <div className="mt-3.5 xl:mt-[30px]"><ReviewBadges /></div>
+            <div className="mt-[30px]"><ReviewBadges /></div>
           </div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }
