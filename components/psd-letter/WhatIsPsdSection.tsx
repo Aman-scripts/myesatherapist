@@ -60,18 +60,18 @@ export function WhatIsPsdSection() {
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-6 xl:py-16">
         <div className="w-full lg:w-[48%] xl:w-[52%] max-w-[680px] lg:max-w-[460px] xl:max-w-[680px]">
           {/* Heading */}
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-3 sm:mb-6">
+          <h2 className="heading-h2 capitalize mb-3 sm:mb-6">
             What is a Psychiatric
             <br className="hidden sm:inline" />
             {" "}Service Dog Letter?
           </h2>
 
           {/* Paragraphs */}
-          <div className="space-y-3 text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans mb-5 sm:mb-8">
-            <p>
+          <div className="space-y-3.5 mb-5 sm:mb-8">
+            <p className="body-large">
               A Psychiatric Service Dog (PSD) letter is an official document from a licensed mental health professional that confirms you have a qualifying mental health condition under the Americans with Disabilities Act (ADA). This letter serves as important backup documentation for your psychiatric service dog.
             </p>
-            <p>
+            <p className="body-large">
               Your PSD letter will include a statement that you have an ADA-eligible mental health condition, be signed and dated by a state-licensed healthcare professional, and include the provider&apos;s license details and contact information for verification purposes.
             </p>
           </div>
@@ -83,10 +83,10 @@ export function WhatIsPsdSection() {
               style={{ backgroundImage: "var(--color-gradient)" }}
             />
             <div className="pl-3 sm:pl-4 space-y-1.5">
-              <h3 className="font-heading text-base sm:text-[20px] font-bold text-primary leading-tight">
+              <h3 className="heading-h3 capitalize">
                 Is a PSD Letter Required?
               </h3>
-              <p className="text-xs sm:text-[14px] text-body-text leading-[22px] sm:leading-[26px] font-semibold font-sans">
+              <p className="body-text">
                 While not legally required by the ADA for public access, a PSD letter is highly recommended as backup documentation. Many airlines, landlords, and housing providers request this documentation to verify your legitimate need for a service dog.
               </p>
             </div>

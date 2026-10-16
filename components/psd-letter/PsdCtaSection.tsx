@@ -109,7 +109,7 @@ export function PsdCtaSection() {
 
               <a
                 href="tel:+18884124041"
-                className="inline-flex items-center justify-center gap-2 px-5 h-[48px] rounded-[58px] border border-background/40 bg-white/10 backdrop-blur-xs text-background hover:bg-white/20 transition-all font-sans font-semibold text-[15px] sm:text-[16px]"
+                className="inline-flex items-center justify-center gap-2 px-5 h-[48px] rounded-[58px] border border-background/40 bg-white/10 backdrop-blur-xs text-background hover:bg-white/20 transition-all body-text"
               >
                 <PhoneIcon />
                 <span>Call +1 (888) 412-4041</span>

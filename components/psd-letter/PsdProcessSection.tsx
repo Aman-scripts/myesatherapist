@@ -37,11 +37,11 @@ export function PsdProcessSection() {
         
         {/* 1. Section Header (2-Column Layout on Desktop matching Frame 1000011750) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-12 lg:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight max-w-xl">
+          <h2 className="heading-h2 capitalize max-w-xl">
             A Simple &amp; Secure <br className="hidden sm:block" />
             Three-Step Process
           </h2>
-          <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
+          <p className="body-large max-w-xl lg:mt-2">
             From PSD consultation to PSD letter delivery, everything happens online. No paperwork, no waiting rooms, just a simple path to a legitimate psychiatric service dog letter and professional documentation.
           </p>
         </div>
@@ -50,7 +50,7 @@ export function PsdProcessSection() {
         <div className="relative w-full max-w-[1050px] mx-auto mb-16 lg:mb-20">
           <div className="relative aspect-[16/9] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
             <Image
-            quality={90}
+              quality={90}
               src="/psd-letter/psd-three-steps.webp"
               alt="Woman smiling with psychiatric service dog"
               fill
@@ -110,15 +110,12 @@ export function PsdProcessSection() {
               </div>
 
               {/* Step Title */}
-              <h3
-                className="font-heading text-lg sm:text-xl lg:text-[24px] font-bold mb-2 sm:mb-3 bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
+              <h3 className="heading-h3 capitalize text-color-gradient mb-2 sm:mb-3">
                 {step.title}
               </h3>
 
               {/* Step Description */}
-              <p className="text-sm sm:text-[16px] text-body-text font-semibold leading-[24px] sm:leading-[26px] font-sans">
+              <p className="body-text">
                 {step.description}
               </p>
             </div>

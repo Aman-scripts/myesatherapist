@@ -83,24 +83,21 @@ export function PsdHeroSection() {
                 key={stat.label}
                 className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1 rounded-[24px] text-center shadow-xs"
               >
-                <span
-                  className="font-heading text-[15px] font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
+                <span className="body-large text-color-gradient leading-none">
                   {stat.value}
                 </span>
-                <span className="text-[9px] font-semibold text-body-text mt-0.5 whitespace-nowrap">{stat.label}</span>
+                <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap !text-[11px] leading-tight">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <h1 className="font-heading text-[24px] font-bold tracking-[-0.011em] leading-[1.2] max-w-xs mx-auto text-primary">
+          <h1 className="heading-h1 capitalize max-w-xs mx-auto">
             Psychiatric Service
             <br />
             Dog Letter Assistance
           </h1>
 
-          <p className="text-[12.5px] leading-relaxed text-body-text font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
+          <p className="body-large max-w-[290px] mx-auto mt-2.5">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
           </p>
 
@@ -113,7 +110,7 @@ export function PsdHeroSection() {
             placeholder="Start your State"
           />
 
-          <p className="text-[12px] text-body-text font-semibold text-center mt-2.5 font-sans max-w-[300px]">
+          <p className="body-small text-center mt-2.5 max-w-[300px]">
             If not approved after your evaluation? You get a full refund.
           </p>
         </div>
@@ -141,24 +138,21 @@ export function PsdHeroSection() {
                 key={stat.label}
                 className="flex flex-col items-center justify-center bg-background px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
               >
-                <span
-                  className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
+                <span className="body-large text-color-gradient leading-none">
                   {stat.value}
                 </span>
-                <span className="text-[11px] font-semibold text-body-text mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="body-small text-[#949494] mt-1 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.011em] mt-6 leading-tight max-w-xl mx-auto text-primary">
+          <h1 className="heading-h1 capitalize mt-6 max-w-xl mx-auto">
             Psychiatric Service
             <br />
             Dog Letter Assistance
           </h1>
 
-          <p className="text-sm sm:text-base leading-relaxed text-body-text font-semibold tracking-normal align-middle max-w-md mx-auto mt-4 font-sans">
+          <p className="body-large max-w-md mx-auto mt-4">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
           </p>
 
@@ -215,7 +209,7 @@ export function PsdHeroSection() {
             </CtaButton>
           </div>
 
-          <p className="text-[13px] text-body-text font-semibold text-center mt-3 font-sans">
+          <p className="body-small text-center mt-3">
             If not approved after your evaluation? You get a full refund.
           </p>
         </div>
@@ -259,24 +253,21 @@ export function PsdHeroSection() {
                   key={stat.label}
                   className="flex flex-col items-center justify-center bg-background py-2 rounded-[30px] text-center w-[176px] h-[77px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                 >
-                  <span
-                    className="font-heading text-[18px] font-semibold leading-[28px] bg-clip-text text-transparent"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
+                  <span className="body-large text-color-gradient">
                     {stat.value}
                   </span>
-                  <span className="text-[14px] font-semibold text-[#949494] mt-0.5 whitespace-nowrap">{stat.label}</span>
+                  <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-            <h1 className="font-heading text-[48px] font-bold tracking-[-0.0002em] leading-[58px] mt-6 text-primary capitalize">
+            <h1 className="heading-h1 capitalize mt-6">
               Psychiatric Service Dog
               <br />
               Letter Assistance
             </h1>
 
-            <p className="text-[18px] leading-[28px] text-body-text font-semibold tracking-normal align-middle max-w-[588px] mt-4 font-sans">
+            <p className="body-large max-w-[588px] mt-4">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
             </p>
 
@@ -287,7 +278,7 @@ export function PsdHeroSection() {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2.5 px-[24px] py-3 rounded-[30px] bg-background font-semibold text-[16px] hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                    className="flex items-center gap-2.5 px-[24px] py-3 rounded-[30px] bg-background font-semibold body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
                     <Image
                       src="/home/hero-section-map.svg"
@@ -335,7 +326,7 @@ export function PsdHeroSection() {
               </div>
 
               {/* Refund guarantee note */}
-              <p className="text-[14px] text-body-text font-semibold text-center w-[463px] pt-1 font-sans">
+              <p className="body-small text-center w-[463px] pt-1">
                 If not approved after your evaluation? You get a full refund.
               </p>
             </div>

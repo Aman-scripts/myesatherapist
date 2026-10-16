@@ -97,11 +97,11 @@ export function WhoBenefitsSection() {
 
           {/* Header */}
           <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
+            <h2 className="heading-h2 capitalize mb-2 sm:mb-3">
               Why Choose My ESA Therapist <br className="hidden sm:inline" />
               for Your Online PSD Letter
             </h2>
-            <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
+            <p className="body-large">
               Get your PSD evaluation online with licensed professionals, clear pricing, secure consultations, and support throughout the process.
             </p>
           </div>
@@ -127,15 +127,12 @@ export function WhoBenefitsSection() {
                     />
                   </div>
 
-                  <h3
-                    className="font-sans font-semibold text-[14px] lg:text-[14.5px] xl:text-[16px] leading-snug bg-clip-text text-transparent flex-1"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
+                  <h3 className="heading-h4 text-color-gradient flex-1">
                     {item.title}
                   </h3>
                 </div>
 
-                <p className="font-sans font-normal text-[12px] lg:text-[12.5px] xl:text-[13px] leading-[18px] lg:leading-[20px] text-body-text">
+                <p className="body-small">
                   {item.description}
                 </p>
               </div>

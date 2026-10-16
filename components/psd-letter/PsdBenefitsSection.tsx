@@ -58,12 +58,12 @@ export function PsdBenefitsSection() {
         
         {/* Section Header (Figma Frame 1000011754: 2-column layout on Desktop) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-16 lg:mb-20">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight max-w-xl">
+          <h2 className="heading-h2 capitalize max-w-xl">
             Understanding Your
             <br className="hidden sm:block" />
             {" "}PSD Letter Benefits
           </h2>
-          <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] max-w-xl lg:mt-2 font-sans">
+          <p className="body-large max-w-xl lg:mt-2">
             Learn about the potential advantages of having professional documentation for your psychiatric service dog and how it supports your needs across housing, travel, and daily life.
           </p>
         </div>
@@ -90,7 +90,7 @@ export function PsdBenefitsSection() {
                 style={item.isDark ? { backgroundImage: TEAL_GRADIENT } : {}}
               >
                 <Image
-            quality={90}
+                  quality={90}
                   src={item.icon}
                   alt={item.title}
                   width={38}
@@ -102,25 +102,24 @@ export function PsdBenefitsSection() {
 
               {/* Top-Right "Most Requested" Pill Badge */}
               {item.badge && (
-                <div className="absolute -top-3.5 right-3 sm:right-4 md:right-5 bg-background border-[0.2px] border-primary text-primary text-[12px] sm:text-[13px] font-bold px-3.5 sm:px-4 py-1 rounded-[12px] shadow-xs tracking-tight font-sans z-10 whitespace-nowrap">
+                <div className="absolute -top-3.5 right-3 sm:right-4 md:right-5 bg-background border-[0.2px] border-primary text-primary body-small px-3.5 sm:px-4 py-1 rounded-[12px] shadow-xs tracking-tight z-10 whitespace-nowrap">
                   {item.badge}
                 </div>
               )}
 
               {/* Card Title */}
               <h3
-                className={`font-heading text-xl sm:text-[24px] font-bold mb-3 mt-2 leading-tight ${
-                  item.isDark ? "text-background" : "bg-clip-text text-transparent"
+                className={`heading-h3 capitalize mb-3 mt-2 ${
+                  item.isDark ? "text-background" : "text-color-gradient"
                 }`}
-                style={!item.isDark ? { backgroundImage: TEAL_GRADIENT } : {}}
               >
                 {item.title}
               </h3>
 
               {/* Card Description */}
               <p
-                className={`text-sm sm:text-[16px] font-semibold leading-[24px] sm:leading-[26px] font-sans ${
-                  item.isDark ? "text-background/90" : "text-body-text"
+                className={`body-text ${
+                  item.isDark ? "text-background/90" : ""
                 }`}
               >
                 {item.description}

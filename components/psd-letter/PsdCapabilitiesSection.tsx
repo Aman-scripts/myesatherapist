@@ -85,10 +85,10 @@ export function PsdCapabilitiesSection() {
 
           {/* Section Header */}
           <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
+            <h2 className="heading-h2 capitalize mb-2 sm:mb-3">
               What Can a Psychiatric Service Dog Do?
             </h2>
-            <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
+            <p className="body-large">
               Understand the legal framework behind your PSD empowers you as a handler.
             </p>
           </div>
@@ -101,25 +101,22 @@ export function PsdCapabilitiesSection() {
                 className="bg-white rounded-[16px] p-4 lg:p-4 xl:p-6 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center gap-3.5 lg:gap-4 xl:gap-6 border-0"
               >
                 {/* Number Circle Badge */}
-                <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#AEBBBE33] text-body-text font-heading font-bold text-xl lg:text-[30px] flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#AEBBBE33] text-primary heading-h3 flex items-center justify-center shrink-0">
                   {item.number}
                 </div>
 
                 {/* Card Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 lg:gap-2.5 mb-1 sm:mb-1.5">
-                    <h3
-                      className="font-sans font-semibold text-base lg:text-[16px] bg-clip-text text-transparent"
-                      style={{ backgroundImage: TEAL_GRADIENT }}
-                    >
+                    <h3 className="heading-h4 text-color-gradient">
                       {item.title}
                     </h3>
                     {/* Dark Teal Pill Tag */}
-                    <span className="bg-primary text-background font-sans italic font-normal text-[12px] lg:text-[13px] px-3 py-0.5 rounded-[16px] shrink-0">
+                    <span className="bg-primary text-background body-small italic px-3 py-0.5 rounded-[16px] shrink-0">
                       {item.framework}
                     </span>
                   </div>
-                  <p className="text-xs sm:text-[14px] font-semibold text-body-text font-sans leading-[22px] sm:leading-[26px]">
+                  <p className="body-text">
                     {item.description}
                   </p>
                 </div>

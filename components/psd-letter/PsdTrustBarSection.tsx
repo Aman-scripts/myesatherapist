@@ -98,10 +98,10 @@ export function PsdTrustBarSection() {
         
         {/* Section Heading & Subtitle matching Figma Frame 1261153977 */}
         <div className="text-center max-w-[854px] mx-auto mb-16 lg:mb-20 space-y-3">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] font-bold text-primary leading-tight lg:leading-[48px] capitalize tracking-[-0.00015em]">
+          <h2 className="heading-h2 capitalize">
             Licensed Mental Health Professionals
           </h2>
-          <p className="text-body-text text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[28px] font-sans max-w-[620px] mx-auto">
+          <p className="body-large max-w-[620px] mx-auto">
             Connect with state-licensed mental health professionals for confidential and legally compliant evaluations.
           </p>
         </div>
@@ -119,15 +119,12 @@ export function PsdTrustBarSection() {
               </div>
 
               {/* Card Title H3 */}
-              <h3
-                className="font-heading text-[22px] sm:text-[24px] lg:text-[28px] font-bold mb-2 leading-[34px] sm:leading-[36px] tracking-[-0.0003em] capitalize bg-clip-text text-transparent"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
+              <h3 className="heading-h3 capitalize text-color-gradient mb-2">
                 {card.title}
               </h3>
 
               {/* Card Description */}
-              <p className="text-body-text text-sm sm:text-[16px] font-semibold leading-[24px] sm:leading-[26px] font-sans max-w-[260px]">
+              <p className="body-text max-w-[260px]">
                 {card.description}
               </p>
             </div>
