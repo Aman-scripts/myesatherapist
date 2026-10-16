@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { ThirdPartyErrorHandler } from "@/components/common/ThirdPartyErrorHandler";
+import { GlobalDesktopScaler } from "@/components/common/GlobalDesktopScaler";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -159,6 +160,20 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        {/* Instant desktop zoom calculation for 1024px-1440px to prevent layout shift */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+              try {
+                var w = window.innerWidth;
+                if (w >= 1024 && w < 1440) {
+                  document.documentElement.style.zoom = (w / 1440);
+                }
+              } catch(e) {}
+            })();`,
+          }}
+        />
+        <GlobalDesktopScaler />
         {children}
       </body>
     </html>

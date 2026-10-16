@@ -198,8 +198,8 @@ export function PricingSection({
         </div>
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
-        <div className="relative w-full max-w-[972px]">
-          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-10 lg:gap-[16px]">
+        <div className="relative w-full max-w-[972px] pb-10">
+          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-between gap-12 lg:gap-[16px]">
             {plan.cards.map((card, idx) => {
               const isPopular = card.isPopular;
 
@@ -208,17 +208,17 @@ export function PricingSection({
                   /* Frame 1261153972: 310px wide Popular Card */
                   <div
                     key={idx}
-                    className="w-[310px] bg-accent rounded-[24px] pt-[6px] pb-[6px] px-[5px] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 self-end"
+                    className="w-[310px] bg-accent rounded-[24px] pt-[6px] pb-[6px] px-[5px] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 self-end overflow-visible"
                   >
                     {/* MOST POPULAR banner */}
-                    <div className="text-center font-sans font-semibold text-[14px] leading-[26px] text-body-text uppercase tracking-wider py-1 shrink-0">
+                    <div className="text-center font-sans font-bold text-[14px] leading-[26px] text-body-text uppercase tracking-wider py-1 shrink-0">
                       MOST POPULAR
                     </div>
 
                     {/* Starter Plan: Inner White Card */}
-                    <div className="w-[300px] bg-white rounded-[20px] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col justify-between overflow-hidden relative flex-1 min-h-[560px]">
-                      {/* Frame 1261153969: Teal Header with generous bottom padding */}
-                      <div className="w-[300px] min-h-[268px] rounded-t-[20px] color-gradient pt-[36px] px-[26px] pb-[44px] flex flex-col gap-2 relative text-left shrink-0">
+                    <div className="w-[300px] bg-white rounded-[20px] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 pb-[36px] overflow-visible">
+                      {/* Frame 1261153969: Teal Header */}
+                      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
                         <h3 className="heading-h3 text-background capitalize">
                           {card.title}
                         </h3>
@@ -227,40 +227,37 @@ export function PricingSection({
                         </p>
                       </div>
 
-                      {/* Ellipse 20: Gold Price Circle (78px x 78px) */}
-                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-20 shrink-0">
+                      {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 226px) */}
+                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[226px] flex items-center justify-center z-20">
                         <span className="heading-h4 font-heading font-bold text-primary">
                           {card.price}
                         </span>
                       </div>
 
-                      {/* Feature List + Action Button */}
-                      <div className="pt-[48px] px-[26px] pb-[24px] flex flex-col justify-between flex-1">
-                        {/* Feature List (body-small: 14px / 26px per globals.css) */}
-                        <div className="flex flex-col gap-[6px]">
-                          {card.features.map((f) => (
-                            <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
-                              <CheckmarkIcon />
-                              <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
-                                {f}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
+                      {/* Feature List (left: 30px, top: 310px) */}
+                      <div className="pt-[44px] px-[26px] pb-[20px] flex flex-col gap-[6px]">
+                        {card.features.map((f) => (
+                          <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
+                            <CheckmarkIcon />
+                            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
+                              {f}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
 
-                        {/* Actions (strict 16px font-size for all buttons) */}
-                        <div className="pt-6 flex justify-center">
-                          <a
-                            href={ctaHref}
-                            className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient ${
-                              card.buttonText.length > 18
-                                ? "w-[260px] px-3 whitespace-nowrap"
-                                : "w-[154px]"
-                            }`}
-                          >
-                            {card.buttonText}
-                          </a>
-                        </div>
+                      {/* Button: Centered on bottom border (-bottom-[25px]) */}
+                      <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
+                        <a
+                          href={ctaHref}
+                          className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient ${
+                            card.buttonText.length > 18
+                              ? "w-[260px] px-3 whitespace-nowrap"
+                              : "w-[154px]"
+                          }`}
+                        >
+                          {card.buttonText}
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -271,10 +268,10 @@ export function PricingSection({
                 /* Starter Plan: Standard Cards */
                 <div
                   key={idx}
-                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col justify-between overflow-hidden relative shrink-0 min-h-[560px]"
+                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 pb-[36px] overflow-visible"
                 >
-                  {/* Frame 1261153969: Teal Header with generous bottom padding */}
-                  <div className="w-[300px] min-h-[268px] rounded-t-[20px] color-gradient pt-[36px] px-[26px] pb-[44px] flex flex-col gap-2 relative text-left shrink-0">
+                  {/* Frame 1261153969: Teal Header (300px x 261px) */}
+                  <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
                     <h3 className="heading-h3 text-background capitalize">
                       {card.title}
                     </h3>
@@ -283,40 +280,37 @@ export function PricingSection({
                     </p>
                   </div>
 
-                  {/* Ellipse 20: Gold Price Circle (78px x 78px) */}
-                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-20 shrink-0">
+                  {/* Ellipse 20: Gold Price Circle (78px x 78px, top: 228px) */}
+                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[228px] flex items-center justify-center z-20">
                     <span className="heading-h4 font-heading font-bold text-primary">
                       {card.price}
                     </span>
                   </div>
 
-                  {/* Feature List + Action Button */}
-                  <div className="pt-[48px] px-[26px] pb-[24px] flex flex-col justify-between flex-1">
-                    {/* Feature List (body-small: 14px / 26px per globals.css) */}
-                    <div className="flex flex-col gap-[6px]">
-                      {card.features.map((f) => (
-                        <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
-                          <CheckmarkIcon />
-                          <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
-                            {f}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                  {/* Feature List */}
+                  <div className="pt-[44px] px-[26px] pb-[20px] flex flex-col gap-[6px]">
+                    {card.features.map((f) => (
+                      <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
+                        <CheckmarkIcon />
+                        <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
+                          {f}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
 
-                    {/* Button: Frame 2 (strict 16px font-size for all buttons) */}
-                    <div className="pt-6 flex justify-center">
-                      <a
-                        href={ctaHref}
-                        className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient ${
-                          card.buttonText.length > 18
-                            ? "w-[260px] px-3 whitespace-nowrap"
-                            : "w-[154px]"
-                        }`}
-                      >
-                        {card.buttonText}
-                      </a>
-                    </div>
+                  {/* Button: Centered on bottom border (-bottom-[25px]) */}
+                  <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
+                    <a
+                      href={ctaHref}
+                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient ${
+                        card.buttonText.length > 18
+                          ? "w-[260px] px-3 whitespace-nowrap"
+                          : "w-[154px]"
+                      }`}
+                    >
+                      {card.buttonText}
+                    </a>
                   </div>
                 </div>
               );
@@ -342,9 +336,9 @@ export function PricingSection({
 
 export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
   return (
-    <div className={`w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] flex flex-col justify-between overflow-hidden relative shrink-0 min-h-[560px] ${className}`}>
-      {/* Teal Gradient Top Header with generous bottom padding */}
-      <div className="w-[300px] min-h-[268px] rounded-t-[20px] color-gradient pt-[36px] px-[26px] pb-[44px] flex flex-col gap-2 relative text-left shrink-0">
+    <div className={`w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 pb-[36px] overflow-visible ${className}`}>
+      {/* Teal Gradient Top Header */}
+      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient p-[48px_26px_0px] flex flex-col gap-2 relative text-left shrink-0">
         <h3 className="heading-h3 text-background capitalize">
           Not Sure Which One?
         </h3>
@@ -354,40 +348,37 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       </div>
 
       {/* Overlapping Gold Circle with Price */}
-      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center -my-[39px] mx-auto z-20 shrink-0">
+      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[228px] z-20">
         <span className="heading-h4 font-heading font-bold text-primary">
           ?
         </span>
       </div>
 
-      {/* Feature List + Action Button */}
-      <div className="pt-[48px] px-[26px] pb-[24px] flex flex-col justify-between flex-1">
-        {/* Feature List (body-small: 14px / 26px per globals.css) */}
-        <div className="flex flex-col gap-[6px]">
-          {[
-            "Help identifying the right documentation",
-            "ESA and PSD needs assessed",
-            "Guidance from a licensed professional",
-            "Clear next steps after evaluation",
-          ].map((f) => (
-            <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
-              <CheckmarkIcon />
-              <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
-                {f}
-              </span>
-            </div>
-          ))}
-        </div>
+      {/* Feature List */}
+      <div className="pt-[44px] px-[26px] pb-[20px] flex flex-col gap-[6px]">
+        {[
+          "Help identifying the right documentation",
+          "ESA and PSD needs assessed",
+          "Guidance from a licensed professional",
+          "Clear next steps after evaluation",
+        ].map((f) => (
+          <div key={f} className="flex items-center gap-[6px] min-h-[26px]">
+            <CheckmarkIcon />
+            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text truncate">
+              {f}
+            </span>
+          </div>
+        ))}
+      </div>
 
-        {/* Button: Frame 2 (strict 16px font-size for all buttons) */}
-        <div className="pt-6 flex justify-center">
-          <a
-            href={ctaHref}
-            className="inline-flex items-center justify-center w-[260px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] px-3 whitespace-nowrap text-center shadow-[0px_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity color-gradient"
-          >
-            Find Your Eligibility in Minutes
-          </a>
-        </div>
+      {/* Button: Centered on bottom border (-bottom-[25px]) */}
+      <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
+        <a
+          href={ctaHref}
+          className="inline-flex items-center justify-center w-[260px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] px-3 whitespace-nowrap text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
+        >
+          Find Your Eligibility in Minutes
+        </a>
       </div>
     </div>
   );

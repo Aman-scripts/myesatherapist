@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 // Figma: var(--color-gradient)
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -150,25 +149,20 @@ export function QualifyingConditions({
 
   return (
     <section id={id} className={`pt-12 sm:pt-16 xl:pt-20 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible ${className}`}>
-      {/* Desktop view (>= 1024px) scaled proportionally */}
-      <DesktopScaleWrapper
-        designWidth={1440}
-        designHeight={660}
-        className="hidden lg:block relative"
-      >
-        <div className="relative w-[1440px] pt-4 flex flex-col items-center">
-          {/* Heading */}
-          <div className="text-center mb-10 space-y-2.5 max-w-[709px] mx-auto">
-            <h2 className="heading-h2 capitalize">
-              {title}
-            </h2>
-            <p className="body-large">
-              {description}
-            </p>
-          </div>
+      <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 max-w-[709px] mx-auto">
+          <h2 className="heading-h2 capitalize">
+            {title}
+          </h2>
+          <p className="body-large">
+            {description}
+          </p>
+        </div>
 
-          {/* 1278px Frame */}
-          <div className="relative w-[1278px] h-[418px]">
+        {/* Desktop / tablet: dog photo with hover-enabled floating badges */}
+        <div className="hidden md:block relative mx-auto" style={{ maxWidth: 1278 }}>
+          <div className="relative w-full" style={{ aspectRatio: "1278 / 418" }}>
             {/* Photo: frf 1 from Figma */}
             <div
               className="absolute overflow-hidden pointer-events-none"
@@ -180,7 +174,7 @@ export function QualifyingConditions({
                 alt="Woman and dog on sofa qualifying for ESA"
                 fill
                 className="object-contain"
-                sizes="952px"
+                sizes="(min-width: 1024px) 952px, 75vw"
               />
             </div>
 
@@ -203,16 +197,16 @@ export function QualifyingConditions({
                   {/* Badge */}
                   <div
                     onClick={() => setHoveredCondition(c.label)}
-                    className="flex items-center gap-3 bg-white rounded-[10px] pl-2 pr-4 h-12 shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
+                    className="flex items-center gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-3 bg-white rounded-[6px] md:rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] pl-1 md:pl-1 lg:pl-1.5 xl:pl-2 pr-2.5 md:pr-2.5 lg:pr-3.5 xl:pr-4 h-[28px] md:h-[28px] lg:h-[36px] xl:h-12 shadow-[0_4px_12px_-6px_rgba(46,90,102,0.35)] lg:shadow-[0_6px_18px_-8px_rgba(46,90,102,0.35)] xl:shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
                   >
-                    <span className="w-[35px] h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
+                    <span className="w-[20px] h-[20px] md:w-[20px] md:h-[20px] lg:w-[26px] lg:h-[26px] xl:w-[35px] xl:h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
                       <Image
                         src={c.icon}
                         alt=""
                         width={20}
                         height={20}
                         unoptimized
-                        className="object-contain w-5 h-5"
+                        className="object-contain w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5"
                       />
                     </span>
                     <span
@@ -230,7 +224,7 @@ export function QualifyingConditions({
                         c.top > 55 ? "bottom-full mb-2" : "top-full mt-2"
                       } ${
                         c.alignRight ? "right-0" : "left-0"
-                      } w-[230px] bg-white rounded-[14px] p-3 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
+                      } w-[170px] lg:w-[210px] xl:w-[230px] bg-white rounded-[10px] lg:rounded-[14px] p-2.5 lg:p-3 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
                     >
                       {/* Arrow Pointer */}
                       <div
@@ -240,11 +234,11 @@ export function QualifyingConditions({
                             : "-top-1.5 border-l border-t"
                         } ${
                           c.alignRight ? "right-6" : "left-6"
-                        } w-3.5 h-3.5 bg-white rotate-45 border-[#E2E8F0]`}
+                        } w-3 h-3 lg:w-3.5 lg:h-3.5 bg-white rotate-45 border-[#E2E8F0]`}
                       />
 
                       {/* Condition Photo */}
-                      <div className="relative w-full h-[95px] rounded-[8px] overflow-hidden bg-slate-100">
+                      <div className="relative w-full h-[65px] lg:h-[80px] xl:h-[95px] rounded-[6px] lg:rounded-[8px] overflow-hidden bg-slate-100">
                         <Image
                           quality={90}
                           src={c.image}
@@ -265,21 +259,12 @@ export function QualifyingConditions({
               );
             })}
           </div>
+          {/* The photo extends past the badge box; this spacer makes the section end at the photo edge (no gap) */}
+          <div aria-hidden className="pointer-events-none" style={{ paddingTop: "8.44%" }} />
         </div>
-      </DesktopScaleWrapper>
 
-      {/* Mobile & Tablet (< 1024px): stacked photo + wrapping badge grid */}
-      <div className="lg:hidden max-w-[1278px] mx-auto px-4 sm:px-6">
-        {/* Heading */}
-        <div className="text-center mb-8 space-y-2.5 max-w-[709px] mx-auto">
-          <h2 className="heading-h2 capitalize">
-            {title}
-          </h2>
-          <p className="body-large">
-            {description}
-          </p>
-        </div>
-        <div className="flex flex-col items-center gap-8">
+        {/* Mobile: stacked photo + wrapping badge grid */}
+        <div className="md:hidden flex flex-col items-center gap-8">
           <div className="relative w-full max-w-sm aspect-[952/493] overflow-hidden">
             <Image
             quality={90}
