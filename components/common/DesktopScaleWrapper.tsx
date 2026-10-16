@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface DesktopScaleWrapperProps {
   children: React.ReactNode;
@@ -15,11 +15,10 @@ interface DesktopScaleWrapperProps {
 /**
  * DesktopScaleWrapper
  * 
- * Ensures that any desktop section designed for 1440px in Figma maintains
- * its exact 1440px visual proportions on laptop/desktop screen sizes from 1024px up to 1439px.
- *
- * Scales the inner 1440px canvas to fit 100% of the available screen width,
- * preserving all exact absolute coordinates, typography, images, badges, and curves without clipping.
+ * Container for 1440px desktop layouts that allows full-bleed backgrounds while
+ * keeping content centered and overflow-visible. Global proportional scaling
+ * between 1024px and 1440px is handled globally by GlobalDesktopScaler on <body>,
+ * guaranteeing an exact 1:1 match with the 1440px Figma design.
  */
 export function DesktopScaleWrapper({
   children,
@@ -31,42 +30,8 @@ export function DesktopScaleWrapper({
 }: DesktopScaleWrapperProps) {
   const bg = background ?? fullBleedBackground;
 
-  const [scale, setScale] = useState<number>(() => {
-    if (typeof window !== "undefined") {
-      const isDesktop =
-        (typeof window.matchMedia === "function" &&
-          window.matchMedia("(min-width: 1024px)").matches) ||
-        window.innerWidth >= 990;
-      if (isDesktop && window.innerWidth < designWidth) {
-        return window.innerWidth / designWidth;
-      }
-    }
-    return 1;
-  });
-
-  useEffect(() => {
-    function updateScale() {
-      const isDesktop =
-        (typeof window.matchMedia === "function" &&
-          window.matchMedia("(min-width: 1024px)").matches) ||
-        window.innerWidth >= 990;
-      if (isDesktop && window.innerWidth < designWidth) {
-        setScale(window.innerWidth / designWidth);
-      } else {
-        setScale(1);
-      }
-    }
-
-    updateScale();
-    window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
-  }, [designWidth]);
-
   return (
-    <div
-      className={`hidden lg:block relative w-full overflow-hidden ${wrapperClassName}`}
-      style={{ maxWidth: "100vw" }}
-    >
+    <div className={`hidden lg:block relative w-full overflow-visible ${wrapperClassName}`}>
       {/* Optional full-bleed background for screens wider than designWidth */}
       {bg && (
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
@@ -80,7 +45,6 @@ export function DesktopScaleWrapper({
         style={{
           width: `${designWidth}px`,
           maxWidth: `${designWidth}px`,
-          ...(scale < 1 ? { zoom: scale } : {}),
         }}
       >
         {children}

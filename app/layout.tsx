@@ -163,7 +163,24 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        {/* Scale the 1440px desktop design to fit 1024px-1439px screens before first paint.
+            Must stay in sync with GlobalDesktopScaler, which keeps it updated on resize. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  try {
+    var vw = window.innerWidth;
+    if (vw < 1024 || vw >= 1440) return;
+    var style = document.createElement('style');
+    style.id = 'desktop-scaler-css';
+    style.textContent = 'html{overflow-y:scroll;overflow-x:hidden}';
+    document.head.appendChild(style);
+    var scale = document.documentElement.clientWidth / 1440;
+    style.textContent += 'body{zoom:' + scale + ';width:1440px!important;min-width:1440px;overflow-x:hidden}';
+  } catch(e) {}
+})();`,
+          }}
+        />
         <GlobalDesktopScaler />
         {children}
       </body>

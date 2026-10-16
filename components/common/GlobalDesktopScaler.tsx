@@ -2,27 +2,66 @@
 
 import { useEffect } from "react";
 
+const SCALER_STYLE_ID = "desktop-scaler-css";
+const DESIGN_WIDTH = 1440;
+const MIN_DESKTOP_WIDTH = 1024;
+
 /**
  * GlobalDesktopScaler
  *
- * Cleanup helper: removes any legacy style tags or root styles previously set on html/body.
- * Desktop scaling is now handled directly by DesktopScaleWrapper per component.
+ * Keeps the 1440px desktop design scaled to fit screens between 1024px and
+ * 1439px on every page. The inline script in app/layout.tsx applies the same
+ * <style> before first paint; this component only keeps it in sync on resize.
+ *
+ * Zoom is applied to <body>, never <html>, so html.clientWidth always reports
+ * the real usable viewport width (excluding the scrollbar) and the measurement
+ * never feeds back into itself.
  */
 export function GlobalDesktopScaler() {
   useEffect(() => {
-    if (typeof document === "undefined") return;
-    const styleEl = document.getElementById("desktop-scaler-css");
-    if (styleEl) styleEl.remove();
+    const root = document.documentElement;
+    let lastCss = "";
 
-    if (document.documentElement.style.zoom) {
-      document.documentElement.style.zoom = "";
-      document.documentElement.style.width = "";
-      document.documentElement.style.overflowX = "";
+    function update() {
+      // Breakpoint decision uses innerWidth so it matches CSS media queries (lg = 1024px).
+      const viewport = window.innerWidth;
+      let styleEl = document.getElementById(SCALER_STYLE_ID) as HTMLStyleElement | null;
+
+      if (viewport < MIN_DESKTOP_WIDTH || viewport >= DESIGN_WIDTH) {
+        if (styleEl) styleEl.remove();
+        lastCss = "";
+        return;
+      }
+
+      if (!styleEl) {
+        styleEl = document.createElement("style");
+        styleEl.id = SCALER_STYLE_ID;
+        styleEl.textContent = "html{overflow-y:scroll;overflow-x:hidden}";
+        document.head.appendChild(styleEl);
+      }
+
+      const scale = root.clientWidth / DESIGN_WIDTH;
+      const css =
+        "html{overflow-y:scroll;overflow-x:hidden}" +
+        `body{zoom:${scale};width:${DESIGN_WIDTH}px!important;min-width:${DESIGN_WIDTH}px;overflow-x:hidden}`;
+      if (css !== lastCss || styleEl.textContent !== css) {
+        styleEl.textContent = css;
+        lastCss = css;
+      }
     }
-    if (document.body && document.body.style.width) {
-      document.body.style.width = "";
-      document.body.style.overflowX = "";
-    }
+
+    update();
+    window.addEventListener("resize", update);
+    const observer = new ResizeObserver(update);
+    observer.observe(root);
+
+    // Intentionally does not remove the style on cleanup: the root layout never
+    // unmounts, and removing it (e.g. during React Strict Mode re-runs) would
+    // flash the unscaled 1440px layout.
+    return () => {
+      window.removeEventListener("resize", update);
+      observer.disconnect();
+    };
   }, []);
 
   return null;
