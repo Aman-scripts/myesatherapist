@@ -157,16 +157,32 @@ export function EsaDogBenefitsSection() {
             </p>
           </div>
 
-          {/* Dog Image Preview on Mobile */}
-          <div className="w-full max-w-[480px] mx-auto rounded-[24px] overflow-hidden my-2">
-            <div className="relative w-full aspect-[696/600]">
+          {/* Dedicated Dog Illustration for Mobile (< 640px) */}
+          <div className="sm:hidden w-full max-w-[390px] mx-auto overflow-hidden my-1">
+            <div className="relative w-full aspect-[390/363] overflow-hidden">
               <Image
                 quality={90}
-                src="/home/homepage_benefitsofhavingesa_section.png"
+                src="/home/homepage_benefits_section_mobile.png"
                 alt="Woman with emotional support dog"
                 fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 100vw, 480px"
+                className="object-cover object-bottom"
+                sizes="(max-width: 639px) 100vw, 390px"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Dedicated Dog Illustration for Tablet (640px to 1023px) */}
+          <div className="hidden sm:block lg:hidden w-full max-w-[628px] mx-auto overflow-hidden my-2">
+            <div className="relative w-full aspect-[834/833] overflow-hidden">
+              <Image
+                quality={90}
+                src="/home/homepage_benefits_section_tablet.png"
+                alt="Woman with emotional support dog"
+                fill
+                className="object-cover object-bottom"
+                sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 628px"
+                priority
               />
             </div>
           </div>
