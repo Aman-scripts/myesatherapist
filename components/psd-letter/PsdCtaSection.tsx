@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { CtaButton } from "@/components/common/CtaButton";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -95,21 +96,17 @@ export function PsdCtaSection() {
 
             {/* CTA Buttons: Schedule Consultation + Phone */}
             <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
-              <a
+              <CtaButton
                 href="#pricing"
-                className="inline-flex items-center justify-center min-w-[240px] px-6 h-[48px] rounded-[58px] bg-accent shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity"
+                variant="accent"
+                className="w-auto min-w-[240px]"
               >
-                <span
-                  className="body-large font-bold bg-clip-text text-transparent whitespace-nowrap"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  Schedule Consultation Now
-                </span>
-              </a>
+                Schedule Consultation Now
+              </CtaButton>
 
               <a
                 href="tel:+18884124041"
-                className="inline-flex items-center justify-center gap-2 px-5 h-[48px] rounded-[58px] border border-background/40 bg-white/10 backdrop-blur-xs text-background hover:bg-white/20 transition-all body-text"
+                className="inline-flex items-center justify-center gap-2 px-5 h-[54px] rounded-[58px] border border-background/40 bg-white/10 backdrop-blur-xs text-background hover:bg-white/20 transition-all body-text"
               >
                 <PhoneIcon />
                 <span>Call +1 (888) 412-4041</span>
