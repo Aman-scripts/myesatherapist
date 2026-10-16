@@ -134,6 +134,8 @@ interface TherapistsSectionProps {
   subtitle?: string;
   licensureNote?: string;
   therapistsList?: Therapist[];
+  bgColor?: string;
+  className?: string;
 }
 
 export function TherapistsSection({
@@ -141,6 +143,8 @@ export function TherapistsSection({
   subtitle = "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
   licensureNote = "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
   therapistsList,
+  bgColor = "bg-white",
+  className = "",
 }: TherapistsSectionProps) {
   const therapists = therapistsList && therapistsList.length > 0 ? therapistsList : defaultTherapists;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -203,7 +207,7 @@ export function TherapistsSection({
   }, [maxIndex]);
 
   return (
-    <section className="py-16 lg:py-20 xl:py-24 bg-white overflow-hidden">
+    <section className={`py-16 lg:py-20 xl:py-24 ${bgColor} overflow-hidden ${className}`}>
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[852px] mx-auto">
@@ -263,7 +267,7 @@ export function TherapistsSection({
                     key={t.id ?? `${t.name}-${idx}`}
                     data-card
                     onClick={() => scrollToSlide(idx)}
-                    className="snap-start shrink-0 w-[86vw] sm:w-[calc(50%-12px)] lg:w-[calc(50%-16px)] xl:w-[519px] xl:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                    className="snap-start shrink-0 w-[86vw] sm:w-[calc(50%-12px)] lg:w-[519px] lg:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                   >
                     {/* Teal Header Bar */}
                     <div
