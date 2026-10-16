@@ -18,11 +18,31 @@ export function GlobalDesktopScaler() {
       if (typeof window === "undefined") return;
       const width = window.innerWidth;
 
-      if (width >= 1024 && width < 1440) {
+      const isDesktop =
+        (typeof window.matchMedia === "function" &&
+          window.matchMedia("(min-width: 1024px)").matches) ||
+        width >= 1000;
+      const isWide =
+        typeof window.matchMedia === "function" &&
+        window.matchMedia("(min-width: 1440px)").matches;
+
+      if (isDesktop && !isWide) {
         const scale = width / 1440;
         document.documentElement.style.zoom = `${scale}`;
+        document.documentElement.style.width = "1440px";
+        document.documentElement.style.overflowX = "hidden";
+        if (document.body) {
+          document.body.style.width = "1440px";
+          document.body.style.overflowX = "hidden";
+        }
       } else {
         document.documentElement.style.zoom = "";
+        document.documentElement.style.width = "";
+        document.documentElement.style.overflowX = "";
+        if (document.body) {
+          document.body.style.width = "";
+          document.body.style.overflowX = "";
+        }
       }
     }
 
@@ -32,6 +52,12 @@ export function GlobalDesktopScaler() {
       window.removeEventListener("resize", updateDesktopScale);
       if (typeof document !== "undefined") {
         document.documentElement.style.zoom = "";
+        document.documentElement.style.width = "";
+        document.documentElement.style.overflowX = "";
+        if (document.body) {
+          document.body.style.width = "";
+          document.body.style.overflowX = "";
+        }
       }
     };
   }, []);

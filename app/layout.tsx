@@ -166,8 +166,17 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
             __html: `(function(){
               try {
                 var w = window.innerWidth;
-                if (w >= 1024 && w < 1440) {
-                  document.documentElement.style.zoom = (w / 1440);
+                var isDesktop = (window.matchMedia && window.matchMedia('(min-width: 1024px)').matches) || w >= 1000;
+                var isWide = window.matchMedia && window.matchMedia('(min-width: 1440px)').matches;
+                if (isDesktop && !isWide) {
+                  var scale = w / 1440;
+                  document.documentElement.style.zoom = scale;
+                  document.documentElement.style.width = '1440px';
+                  document.documentElement.style.overflowX = 'hidden';
+                  if (document.body) {
+                    document.body.style.width = '1440px';
+                    document.body.style.overflowX = 'hidden';
+                  }
                 }
               } catch(e) {}
             })();`,
