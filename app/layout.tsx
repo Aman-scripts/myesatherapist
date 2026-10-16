@@ -74,6 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       data-scroll-behavior="smooth"
       className={cn(
         "h-full antialiased",
@@ -82,7 +83,10 @@ export default function RootLayout({
         "font-sans"
       )}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary"
+      >
         <ThirdPartyErrorHandler />
         {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}
         <Script
@@ -160,7 +164,7 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        {/* Instant desktop zoom calculation for 1024px-1440px to prevent layout shift */}
+        {/* Instant desktop zoom calculation for 1024px-1440px via dedicated <style> element to avoid React hydration attribute mismatches */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){
@@ -170,13 +174,10 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
                 var isWide = window.matchMedia && window.matchMedia('(min-width: 1440px)').matches;
                 if (isDesktop && !isWide) {
                   var scale = w / 1440;
-                  document.documentElement.style.zoom = scale;
-                  document.documentElement.style.width = '1440px';
-                  document.documentElement.style.overflowX = 'hidden';
-                  if (document.body) {
-                    document.body.style.width = '1440px';
-                    document.body.style.overflowX = 'hidden';
-                  }
+                  var style = document.createElement('style');
+                  style.id = 'desktop-scaler-css';
+                  style.textContent = 'html { zoom: ' + scale + '; width: 1440px !important; overflow-x: hidden !important; } body { width: 1440px !important; overflow-x: hidden !important; }';
+                  document.head.appendChild(style);
                 }
               } catch(e) {}
             })();`,
