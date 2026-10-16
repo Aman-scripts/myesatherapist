@@ -2,29 +2,28 @@
 
 import React from "react";
 import Image from "next/image";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const capabilitiesData = [
   {
     number: "01",
     title: "Housing Access",
     framework: "Fair Housing Act",
-    description: "May support housing approval for your psychiatric service dog in pet-restricted properties, subject to landlord approval.",
+    description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
     number: "02",
     title: "Public Access",
     framework: "Americans with Disabilities Act",
-    description: "Offers documentation for public spaces when accompanied by your trained psychiatric service dog.",
+    description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
   {
     number: "03",
     title: "Air Travel",
     framework: "Air Carrier Access Act",
-    description: "Provides documentation that may support your air travel needs, subject to airline policies and approval.",
+    description: "If any of these describes you, a PSD letter may be exactly what you need.",
   },
 ];
-
-const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function PsdCapabilitiesSection() {
   return (
@@ -35,7 +34,7 @@ export function PsdCapabilitiesSection() {
           <Image
             quality={90}
             src="/psd-letter/psdcapabilites-section-mobile.webp"
-            alt="What a Psychiatric Service Dog can do"
+            alt="What A Psychiatric Service Dog Can Do"
             width={390}
             height={680}
             className="w-full h-auto block"
@@ -60,7 +59,7 @@ export function PsdCapabilitiesSection() {
           <Image
             quality={90}
             src="/psd-letter/psdcapabilities-section-tablet.webp"
-            alt="What a Psychiatric Service Dog can do"
+            alt="What A Psychiatric Service Dog Can Do"
             width={834}
             height={1013}
             className="w-full h-auto block"
@@ -79,67 +78,124 @@ export function PsdCapabilitiesSection() {
         </div>
       </div>
 
-      {/* Text Content Container (Renders AFTER image on Mobile/Tablet) */}
-      <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-10 xl:py-16">
-        <div className="w-full lg:w-[50%] xl:w-[52%] max-w-[640px]">
-
+      {/* Mobile & Tablet Text Content Container (< 1024px) */}
+      <div className="lg:hidden max-w-[680px] mx-auto px-4 sm:px-6 relative z-10 py-6 sm:py-8">
+        <div className="w-full">
           {/* Section Header */}
-          <div className="mb-5 sm:mb-8 text-left">
-            <h2 className="heading-h2 capitalize mb-2 sm:mb-3">
-              What Can a Psychiatric Service Dog Do?
+          <div className="mb-6 text-left">
+            <h2 className="heading-h2 text-primary capitalize mb-3">
+              What A Psychiatric Service <br className="hidden sm:inline" />
+              Dog Can Do?
             </h2>
-            <p className="body-large">
+            <p className="body-large text-body-text">
               Understand the legal framework behind your PSD empowers you as a handler.
             </p>
           </div>
 
           {/* 3 Capabilities Cards Stack */}
-          <div className="space-y-3.5 lg:space-y-3 xl:space-y-5 lg:max-w-[490px] xl:max-w-[640px]">
+          <div className="space-y-4 w-full">
             {capabilitiesData.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[16px] p-4 lg:p-4 xl:p-6 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center gap-3.5 lg:gap-4 xl:gap-6 border-0"
+                className="bg-white rounded-[10px] p-4 sm:p-5 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-start gap-4"
               >
                 {/* Number Circle Badge */}
-                <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#AEBBBE33] text-primary heading-h3 flex items-center justify-center shrink-0">
-                  {item.number}
+                <div className="w-[50px] h-[50px] sm:w-[59px] sm:h-[59px] rounded-full bg-[#AEBBBE33] flex items-center justify-center shrink-0">
+                  <span className="heading-h3 text-[#5F6B6F] font-bold text-[22px] sm:text-[28px] leading-[30px] sm:leading-[36px]">
+                    {item.number}
+                  </span>
                 </div>
 
                 {/* Card Content */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2 lg:gap-2.5 mb-1 sm:mb-1.5">
-                    <h3 className="heading-h4 text-color-gradient">
+                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                    <h3 className="heading-h3 text-color-gradient capitalize text-[20px] sm:text-[24px] leading-tight">
                       {item.title}
                     </h3>
-                    {/* Dark Teal Pill Tag */}
-                    <span className="bg-primary text-background body-small italic px-3 py-0.5 rounded-[16px] shrink-0">
+                    <span className="bg-primary text-[#FAF7F2] font-semibold text-[12px] sm:text-[14px] px-3 h-[24px] sm:h-[26px] rounded-[16px] flex items-center justify-center shrink-0">
                       {item.framework}
                     </span>
                   </div>
-                  <p className="body-text">
+                  <p className="body-text text-body-text text-[14px] sm:text-[16px] leading-[22px] sm:leading-[26px]">
                     {item.description}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-
         </div>
       </div>
 
-      {/* Desktop Image Frame (1024px and up) */}
-      <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[45%] xl:w-[48%] max-w-[635px] pointer-events-none z-10">
-        <div className="relative w-full h-full">
-          <Image
-            quality={90}
-            src="/psd-letter/psdcapabilities-new-image.webp"
-            alt="What a Psychiatric Service Dog can do"
-            fill
-            className="object-cover object-right h-full w-full"
-            sizes="(max-width: 1280px) 45vw, 635px"
-          />
+      {/* Desktop View (>= 1024px) - Matches 1440px Figma Frame 1000011784 */}
+      <DesktopScaleWrapper
+        designWidth={1440}
+        designHeight={652}
+        className="hidden lg:block relative"
+      >
+        <div className="relative w-[1440px] h-[652px] mx-auto overflow-hidden bg-white flex items-center">
+          {/* Frame 1000011791: Left Content (width: 704px, left: 84px) */}
+          <div className="absolute left-[84px] top-1/2 -translate-y-1/2 w-[704px] z-20 flex flex-col items-start">
+            {/* Heading */}
+            <div className="text-left mb-8 flex flex-col gap-4">
+              <h2 className="heading-h2 text-primary capitalize max-w-[559px] leading-[48px]">
+                What A Psychiatric Service <br />
+                Dog Can Do?
+              </h2>
+              <p className="body-large text-body-text max-w-[525px]">
+                Understand the legal framework behind your PSD empowers you as a handler.
+              </p>
+            </div>
+
+            {/* 3 Capabilities Cards (Frame 1000011790: 704px x 331px, gap 32px) */}
+            <div className="flex flex-col gap-8 w-[704px]">
+              {capabilitiesData.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="w-[704px] min-h-[89px] bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 py-[15px] flex items-center gap-[15px] transition-transform duration-200 hover:-translate-y-0.5"
+                >
+                  {/* Number Circle Badge (Frame 1000011767: 59px x 59px, bg: rgba(174,187,190,0.2)) */}
+                  <div className="w-[59px] h-[59px] rounded-full bg-[#AEBBBE33] flex items-center justify-center shrink-0">
+                    <span className="heading-h3 text-[#5F6B6F] font-bold text-[28px] leading-[36px]">
+                      {item.number}
+                    </span>
+                  </div>
+
+                  {/* Card Content (Frame 1000011789) */}
+                  <div className="flex flex-col justify-center items-start gap-1 flex-1 min-w-0">
+                    {/* Row 1: Title + Framework Tag */}
+                    <div className="flex items-center gap-3">
+                      <h3 className="heading-h3 text-color-gradient capitalize text-[28px] leading-[36px]">
+                        {item.title}
+                      </h3>
+                      <span className="bg-primary text-[#FAF7F2] font-semibold text-[14px] leading-[26px] px-[13px] h-[26px] rounded-[16px] flex items-center justify-center shrink-0">
+                        {item.framework}
+                      </span>
+                    </div>
+
+                    {/* Row 2: Description */}
+                    <p className="body-text text-body-text text-[16px] leading-[26px]">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Visual Frame (Frame 1000011787: width 641px, height 761px) */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[641px] h-[761px] pointer-events-none select-none z-10">
+            <Image
+              quality={95}
+              src="/psd-letter/psdcapabilities-new-image.webp"
+              alt="What A Psychiatric Service Dog Can Do"
+              fill
+              className="object-contain object-right"
+              sizes="641px"
+              priority
+            />
+          </div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }
