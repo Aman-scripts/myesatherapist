@@ -159,7 +159,7 @@ export function PricingSection({
 
   return (
     <section id="pricing" className={`py-16 lg:py-24 ${bgColor} relative overflow-hidden`}>
-      <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10">
+      <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-0 flex flex-col items-center gap-10">
         {/* Heading */}
         <div className="text-center max-w-[709px] mx-auto space-y-3">
           <h2 className="heading-h2 capitalize">
@@ -315,15 +315,16 @@ export function PricingSection({
             })}
           </div>
 
-          {/* Dog & hand artwork: only on extra-large screens so it never covers Card 3 */}
-          <div className="hidden 2xl:block absolute left-[100%] bottom-[-30px] w-[245px] pointer-events-none z-0 -ml-2">
+          {/* Dog & hand artwork (Figma: width 245px, height 209px, left: 1207px, top: 494px, z-index: 3) */}
+          <div className="hidden lg:block absolute left-[calc(100%-14px)] top-[207px] w-[245px] h-[209px] pointer-events-none z-20">
             <Image
-              quality={90}
+              quality={95}
               src="/home/pricing-section-dog.webp"
               alt="Dog giving paw to woman hand"
-              width={441}
-              height={376}
-              className="object-contain object-left w-full h-auto"
+              width={245}
+              height={209}
+              className="w-[245px] h-[209px] object-contain object-left pointer-events-none"
+              priority
             />
           </div>
         </div>
