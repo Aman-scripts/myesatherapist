@@ -164,25 +164,6 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        {/* Instant desktop zoom calculation for 1024px-1440px via dedicated <style> element to avoid React hydration attribute mismatches */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-              try {
-                var w = window.innerWidth;
-                var isDesktop = (window.matchMedia && window.matchMedia('(min-width: 1024px)').matches) || w >= 1000;
-                var isWide = window.matchMedia && window.matchMedia('(min-width: 1440px)').matches;
-                if (isDesktop && !isWide) {
-                  var scale = w / 1440;
-                  var style = document.createElement('style');
-                  style.id = 'desktop-scaler-css';
-                  style.textContent = 'html { zoom: ' + scale + '; width: 1440px !important; overflow-x: hidden !important; } body { width: 1440px !important; overflow-x: hidden !important; }';
-                  document.head.appendChild(style);
-                }
-              } catch(e) {}
-            })();`,
-          }}
-        />
         <GlobalDesktopScaler />
         {children}
       </body>
