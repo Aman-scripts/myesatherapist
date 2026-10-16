@@ -5,34 +5,34 @@ import Image from "next/image";
 
 const benefitsData = [
   {
-    icon: "/psd-letter/whobenefits-section-livingnopet.svg",
-    title: "Living in No-Pet Housing",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/whobenefits-section-backupdocumentation.svg",
+    title: "HIPAA-Compliant Online Process",
+    description: "Complete your PSD letter evaluation through a secure telehealth platform built to protect your personal information and privacy.",
   },
   {
     icon: "/psd-letter/whobenefits-section-newservicedog.svg",
-    title: "Getting a new Service Dog",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Licensed Mental Health Professionals",
+    description: "Connect with qualified, state-licensed professionals (LCSWs, LICSWs, LPCs) who assess your needs and determine whether a PSD letter is clinically appropriate.",
   },
   {
     icon: "/psd-letter/whobenefits-section-frequentflayers.svg",
-    title: "Frequent Flyers",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Convenient Virtual Evaluations",
+    description: "Schedule your evaluation online and speak with a licensed professional without taking time out to visit an office.",
   },
   {
     icon: "/psd-letter/whobenefits-section-upgradingform.svg",
-    title: "Upgrading from ESA",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Transparent Pricing",
+    description: "With no hidden fees or surprise charges, you’ll know the entire cost upfront before starting your PSD letter evaluation.",
+  },
+  {
+    icon: "/psd-letter/whobenefits-section-livingnopet.svg",
+    title: "Private and Confidential Care",
+    description: "Discuss your mental health needs in a confidential setting designed to make your online PSD evaluation comfortable and secure.",
   },
   {
     icon: "/psd-letter/whobenefits-section-veteranspsd.svg",
-    title: "Veterans with PTSD",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
-  },
-  {
-    icon: "/psd-letter/whobenefits-section-backupdocumentation.svg",
-    title: "Need Backup Documentation",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Serving All 50 U.S. States",
+    description: "Get connected with a professional licensed in your state, making PSD evaluations accessible to individuals nationwide.",
   },
 ];
 
@@ -47,7 +47,7 @@ export function WhoBenefitsSection() {
           <Image
             quality={90}
             src="/psd-letter/whobenefits-section-mobile.webp"
-            alt="People who benefitted most from the PSD Letter"
+            alt="Why Choose My ESA Therapist for Your Online PSD Letter"
             width={390}
             height={652}
             className="w-full h-auto block"
@@ -72,7 +72,7 @@ export function WhoBenefitsSection() {
           <Image
             quality={90}
             src="/psd-letter/whobenefits-section-tablet.webp"
-            alt="People who benefitted most from the PSD Letter"
+            alt="Why Choose My ESA Therapist for Your Online PSD Letter"
             width={833}
             height={1140}
             className="w-full h-auto block"
@@ -98,11 +98,11 @@ export function WhoBenefitsSection() {
           {/* Header */}
           <div className="mb-5 sm:mb-8 text-left">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-tight mb-2 sm:mb-3">
-              People who benefitted most <br className="hidden sm:inline" />
-              from the PSD Letter
+              Why Choose My ESA Therapist <br className="hidden sm:inline" />
+              for Your Online PSD Letter
             </h2>
             <p className="text-body-text text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[30px] font-sans">
-              If any of these describes you, a PSD letter may be exactly what you need.
+              Get your PSD evaluation online with licensed professionals, clear pricing, secure consultations, and support throughout the process.
             </p>
           </div>
 
@@ -111,33 +111,33 @@ export function WhoBenefitsSection() {
             {benefitsData.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[10px] p-3 lg:p-2.5 xl:pt-[15px] xl:pr-[20px] xl:pb-[15px] xl:pl-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center gap-2.5 lg:gap-2 xl:gap-[10px] min-h-[72px] lg:min-h-[68px] xl:min-h-[88px]"
+                className="bg-white rounded-[10px] p-3 lg:p-2.5 xl:pt-[15px] xl:pr-[20px] xl:pb-[15px] xl:pl-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center min-h-[92px] lg:min-h-[88px] xl:min-h-[110px]"
               >
-                {/* Circular Icon Container */}
-                <div className="w-[38px] h-[38px] lg:w-[34px] lg:h-[34px] xl:w-[44px] xl:h-[44px] rounded-full bg-[#AEBBBE33] flex items-center justify-center shrink-0">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={20}
-                    height={20}
-                    unoptimized
-                    className="object-contain"
-                    style={{ width: "auto", height: "auto" }}
-                  />
-                </div>
+                <div className="flex items-center gap-2.5 mb-1.5">
+                  {/* Circular Icon Container */}
+                  <div className="w-[34px] h-[34px] xl:w-[38px] xl:h-[38px] rounded-full bg-[#AEBBBE33] flex items-center justify-center shrink-0">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={18}
+                      height={18}
+                      unoptimized
+                      className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
+                    />
+                  </div>
 
-                {/* Card Content */}
-                <div className="flex-1 min-w-0">
                   <h3
-                    className="font-sans font-semibold text-[13.5px] lg:text-[14px] xl:text-[16px] leading-snug bg-clip-text text-transparent"
+                    className="font-sans font-semibold text-[14px] lg:text-[14.5px] xl:text-[16px] leading-snug bg-clip-text text-transparent flex-1"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {item.title}
                   </h3>
-                  <p className="font-sans italic font-normal text-[12px] lg:text-[13px] xl:text-[14px] leading-[18px] lg:leading-[20px] text-body-text mt-0.5">
-                    {item.description}
-                  </p>
                 </div>
+
+                <p className="font-sans font-normal text-[12px] lg:text-[12.5px] xl:text-[13px] leading-[18px] lg:leading-[20px] text-body-text">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -148,43 +148,41 @@ export function WhoBenefitsSection() {
       {/* Desktop Image Frame (1024px and up) */}
       <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-full w-[42%] xl:w-[45%] max-w-[567px] pointer-events-none z-10">
         <div className="relative w-full h-full">
-
           {/* 1. Main Photo */}
           <div className="absolute right-0 top-0 bottom-0 w-full h-full z-10">
             <Image
-            quality={90}
+              quality={90}
               src="/psd-letter/whobenefits-section-image.webp"
-              alt="People who benefitted most from the PSD Letter"
+              alt="Why Choose My ESA Therapist for Your Online PSD Letter"
               fill
               className="object-cover object-right h-full w-full"
               sizes="(max-width: 1280px) 42vw, 567px"
             />
           </div>
 
-          {/* 2. Organic Wavy S-Curve SVG Line */}
-          <div className="absolute left-[-20px] top-0 bottom-0 w-[83px] h-full z-20 pointer-events-none">
+          {/* 2. Dark Green Decorative Curve Line SVG */}
+          <div className="absolute left-[-20px] top-0 bottom-0 w-[35%] max-w-[200px] h-full z-20 pointer-events-none">
             <Image
               src="/psd-letter/whobenefits-section-line.svg"
               alt=""
-              fill
+              width={200}
+              height={701}
               unoptimized
-              className="object-contain object-left"
+              className="object-contain w-full h-full object-left"
             />
           </div>
 
-          {/* 3. Floating Paw/Heart Badge Icon */}
-          <div className="absolute left-[-16px] top-[49%] -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
+          {/* 3. Floating Heart-Paw Badge Icon - Centered in curve dip at 6.7% width, 50% height */}
+          <div className="absolute left-[6.7%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[52px] h-[52px] xl:w-[73px] xl:h-[73px] z-30 pointer-events-none">
             <Image
               src="/psd-letter/whobenefits-section-icon.svg"
-              alt="Paw Heart Icon"
+              alt="Heart Paw Badge"
               width={73}
               height={73}
               unoptimized
-              className="object-contain"
-              style={{ width: "auto", height: "auto" }}
+              className="object-contain w-full h-full drop-shadow-md"
             />
           </div>
-
         </div>
       </div>
     </section>

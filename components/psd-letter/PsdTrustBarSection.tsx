@@ -1,61 +1,140 @@
 "use client";
 
 import React from "react";
-import { Check } from "lucide-react";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
+interface TrustCard {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+function ShieldCheckIcon() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+        fill="url(#teal-grad-shield)"
+      />
+      <path
+        d="M9 12l2 2 4-4"
+        stroke="#FAF7F2"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <defs>
+        <linearGradient id="teal-grad-shield" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1A3D4F" />
+          <stop offset="1" stopColor="#1D6E72" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="10" fill="url(#teal-grad-clock)" />
+      <path
+        d="M12 6v6l4 2"
+        stroke="#FAF7F2"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <defs>
+        <linearGradient id="teal-grad-clock" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1A3D4F" />
+          <stop offset="1" stopColor="#1D6E72" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+function MapFlagIcon() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+        fill="url(#teal-grad-map)"
+      />
+      <circle cx="12" cy="9" r="2.5" fill="#FAF7F2" />
+      <defs>
+        <linearGradient id="teal-grad-map" x1="5" y1="2" x2="19" y2="22" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1A3D4F" />
+          <stop offset="1" stopColor="#1D6E72" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+const trustCards: TrustCard[] = [
+  {
+    title: "HIPAA Compliant",
+    description: "Your information stays private and confidential.",
+    icon: <ShieldCheckIcon />,
+  },
+  {
+    title: "Response Within 24–72 Hours",
+    description: "Timely responses, subject to provider availability.",
+    icon: <ClockIcon />,
+  },
+  {
+    title: "Licensed In All 50 States",
+    description: "Access providers licensed in your state.",
+    icon: <MapFlagIcon />,
+  },
+];
+
 export function PsdTrustBarSection() {
   return (
-    <div className="w-full bg-background overflow-hidden">
-      {/* Frame 24: Responsive Trust Features Bar */}
-      <div className="w-full py-6 sm:py-8 lg:py-10 xl:py-12">
-        <div className="max-w-[1446px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          {/* Centered container: vertical left-aligned on mobile, horizontal on tablet/desktop */}
-          <div className="w-fit sm:w-full mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-center gap-3.5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-16 2xl:gap-[110px]">
-
-            {/* Frame 1000011751: HIPAA Compliant */}
-            <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 shrink-0">
-              <div
-                className="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 rounded-full text-white flex items-center justify-center shrink-0 shadow-xs"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 stroke-[2.5]" />
-              </div>
-              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#707070] whitespace-nowrap">
-                HIPAA Compliant
-              </div>
-            </div>
-
-            {/* Frame 1000011752: Response Within 24-72 Hours */}
-            <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 shrink-0">
-              <div
-                className="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 rounded-full text-white flex items-center justify-center shrink-0 shadow-xs"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 stroke-[2.5]" />
-              </div>
-              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#707070] whitespace-nowrap">
-                Response Within 24-72 Hours
-              </div>
-            </div>
-
-            {/* Frame 1000011753: Licensed in All 50 States */}
-            <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 shrink-0">
-              <div
-                className="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 rounded-full text-white flex items-center justify-center shrink-0 shadow-xs"
-                style={{ backgroundImage: TEAL_GRADIENT }}
-              >
-                <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 stroke-[2.5]" />
-              </div>
-              <div className="font-heading font-bold text-[14px] sm:text-[15px] md:text-base lg:text-[18px] xl:text-[21px] 2xl:text-[24px] lg:leading-tight 2xl:leading-[32px] text-[#707070] whitespace-nowrap">
-                Licensed in All 50 States
-              </div>
-            </div>
-
-          </div>
+    <section className="w-full bg-background pt-14 pb-12 sm:pt-16 sm:pb-16 lg:pt-20 lg:pb-20 overflow-hidden">
+      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Heading & Subtitle matching Figma Frame 1261153977 */}
+        <div className="text-center max-w-[854px] mx-auto mb-16 lg:mb-20 space-y-3">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] font-bold text-primary leading-tight lg:leading-[48px] capitalize tracking-[-0.00015em]">
+            Licensed Mental Health Professionals
+          </h2>
+          <p className="text-body-text text-sm sm:text-base lg:text-[18px] font-semibold leading-relaxed lg:leading-[28px] font-sans max-w-[620px] mx-auto">
+            Connect with state-licensed mental health professionals for confidential and legally compliant evaluations.
+          </p>
         </div>
+
+        {/* 3 Elevated Cards in Grid (Figma Frame 1261153636) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-10 lg:gap-6 max-w-[1280px] mx-auto pt-4">
+          {trustCards.map((card, idx) => (
+            <div
+              key={idx}
+              className="relative bg-white rounded-[20px] pt-14 pb-8 px-6 sm:px-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border-t-[5px] border-t-accent hover:shadow-md transition-shadow"
+            >
+              {/* Floating Top Circular Badge (Figma Frame 1000011685) */}
+              <div className="absolute -top-[37px] left-1/2 -translate-x-1/2 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_1.88px_3.77px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
+                {card.icon}
+              </div>
+
+              {/* Card Title H3 */}
+              <h3
+                className="font-heading text-[22px] sm:text-[24px] lg:text-[28px] font-bold mb-2 leading-[34px] sm:leading-[36px] tracking-[-0.0003em] capitalize bg-clip-text text-transparent"
+                style={{ backgroundImage: TEAL_GRADIENT }}
+              >
+                {card.title}
+              </h3>
+
+              {/* Card Description */}
+              <p className="text-body-text text-sm sm:text-[16px] font-semibold leading-[24px] sm:leading-[26px] font-sans max-w-[260px]">
+                {card.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 }

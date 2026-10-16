@@ -17,36 +17,10 @@ const TEAL_GRADIENT = "var(--color-gradient)";
 const TRUSTPILOT_GREEN = "#00B67A";
 
 const statsData = [
-  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "51,488+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
-  { value: "4.9", label: "Verified Reviews" },
+  { value: "100%", label: "Moneyback Guarantee" },
 ];
-
-function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} style={style} fill="currentColor">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
-function TrustpilotStars() {
-  return (
-    <div className="flex gap-1.5">
-      {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="w-5 h-5 xl:w-6 xl:h-6 flex items-center justify-center shrink-0 rounded-[2px]" style={{ backgroundColor: TRUSTPILOT_GREEN }}>
-          <StarMark className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white" />
-        </div>
-      ))}
-      <div className="relative w-5 h-5 xl:w-6 xl:h-6 shrink-0 overflow-hidden rounded-[2px]" style={{ backgroundColor: "#CCCCCC" }}>
-        <div className="absolute inset-y-0 left-0 w-1/2" style={{ backgroundColor: TRUSTPILOT_GREEN }} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <StarMark className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export function PsdHeroSection() {
   const router = useRouter();
@@ -92,7 +66,7 @@ export function PsdHeroSection() {
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[580px] max-h-[760px] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={90}
+          quality={90}
           src="/psd-letter/psd-herosection-mobile.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
@@ -110,12 +84,12 @@ export function PsdHeroSection() {
                 className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1 rounded-[24px] text-center shadow-xs"
               >
                 <span
-                  className="font-heading text-[16px] font-bold leading-none bg-clip-text text-transparent"
+                  className="font-heading text-[15px] font-bold leading-none bg-clip-text text-transparent"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 >
                   {stat.value}
                 </span>
-                <span className="text-[9.5px] font-semibold text-body-text mt-0.5 whitespace-nowrap">{stat.label}</span>
+                <span className="text-[9px] font-semibold text-body-text mt-0.5 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -127,7 +101,7 @@ export function PsdHeroSection() {
           </h1>
 
           <p className="text-[12.5px] leading-relaxed text-body-text font-semibold max-w-[290px] mx-auto mt-2.5 font-sans">
-            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
+            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
           </p>
 
           {/* Stacked Action Buttons (Mobile - Frame 7) */}
@@ -138,6 +112,10 @@ export function PsdHeroSection() {
             getStartedHref="#pricing"
             placeholder="Start your State"
           />
+
+          <p className="text-[12px] text-body-text font-semibold text-center mt-2.5 font-sans max-w-[300px]">
+            If not approved after your evaluation? You get a full refund.
+          </p>
         </div>
       </div>
 
@@ -148,7 +126,7 @@ export function PsdHeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1190] min-h-[880px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+          quality={90}
           src="/psd-letter/psd-hero-section-tablet.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
@@ -181,7 +159,7 @@ export function PsdHeroSection() {
           </h1>
 
           <p className="text-sm sm:text-base leading-relaxed text-body-text font-semibold tracking-normal align-middle max-w-md mx-auto mt-4 font-sans">
-            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
+            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
@@ -236,6 +214,10 @@ export function PsdHeroSection() {
               Get Started
             </CtaButton>
           </div>
+
+          <p className="text-[13px] text-body-text font-semibold text-center mt-3 font-sans">
+            If not approved after your evaluation? You get a full refund.
+          </p>
         </div>
       </div>
 
@@ -275,83 +257,90 @@ export function PsdHeroSection() {
               {statsData.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex flex-col items-center justify-center bg-background py-2 rounded-[30px] text-center w-[163px] h-[53px]"
+                  className="flex flex-col items-center justify-center bg-background py-2 rounded-[30px] text-center w-[176px] h-[77px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                 >
                   <span
-                    className="font-heading text-2xl font-bold leading-none bg-clip-text text-transparent"
+                    className="font-heading text-[18px] font-semibold leading-[28px] bg-clip-text text-transparent"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {stat.value}
                   </span>
-                  <span className="text-xs font-semibold text-body-text mt-1 whitespace-nowrap">{stat.label}</span>
+                  <span className="text-[14px] font-semibold text-[#949494] mt-0.5 whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-            <h1 className="font-heading text-[56px] font-bold tracking-[-0.0002em] leading-[1.14] mt-6 text-primary">
-              Psychiatric Service
+            <h1 className="font-heading text-[48px] font-bold tracking-[-0.0002em] leading-[58px] mt-6 text-primary capitalize">
+              Psychiatric Service Dog
               <br />
-              Dog Letter Assistance
+              Letter Assistance
             </h1>
 
-            <p className="text-[18px] leading-[30px] text-body-text font-semibold tracking-normal align-middle max-w-none mt-4 font-sans">
-              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
+            <p className="text-[18px] leading-[28px] text-body-text font-semibold tracking-normal align-middle max-w-[588px] mt-4 font-sans">
+              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
             </p>
 
-            <div className="flex items-center gap-3 flex-wrap mt-6">
-              {/* State Dropdown */}
-              <div className="relative z-30" ref={dropdownRefDesktop}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background font-semibold text-[18px] hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-                >
-                  <Image
-                    src="/home/hero-section-map.svg"
-                    alt=""
-                    width={16}
-                    height={21}
-                    unoptimized
-                    className="shrink-0 object-contain"
-                    style={{ width: "auto", height: "auto" }}
-                  />
-                  <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
-                  </span>
-                  <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isDropdownOpen && (
-                  <div
-                    className={STATE_DROPDOWN_PANEL}
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            <div className="mt-6 flex flex-col items-start gap-2">
+              <div className="flex items-center gap-[25px]">
+                {/* State Dropdown */}
+                <div className="relative z-30" ref={dropdownRefDesktop}>
+                  <button
+                    type="button"
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="flex items-center gap-2.5 px-[24px] py-3 rounded-[30px] bg-background font-semibold text-[16px] hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
-                    <div className="py-1">
-                      {POPULAR_STATES.map((state) => (
-                        <button
-                          key={state.slug}
-                          type="button"
-                          onClick={() => handleStateSelect(state.slug)}
-                          className={STATE_DROPDOWN_ITEM}
-                        >
-                          <span>{state.name}</span>
-                          <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                        </button>
-                      ))}
+                    <Image
+                      src="/home/hero-section-map.svg"
+                      alt=""
+                      width={16}
+                      height={21}
+                      unoptimized
+                      className="shrink-0 object-contain"
+                      style={{ width: "auto", height: "auto" }}
+                    />
+                    <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                    </span>
+                    <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  {isDropdownOpen && (
+                    <div
+                      className={STATE_DROPDOWN_PANEL}
+                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
+                      <div className="py-1">
+                        {POPULAR_STATES.map((state) => (
+                          <button
+                            key={state.slug}
+                            type="button"
+                            onClick={() => handleStateSelect(state.slug)}
+                            className={STATE_DROPDOWN_ITEM}
+                          >
+                            <span>{state.name}</span>
+                            <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
+
+                <CtaButton
+                  href="#pricing"
+                  className="w-[192px]"
+                >
+                  Get Started
+                </CtaButton>
               </div>
 
-              <CtaButton
-                href="#pricing"
-                className="w-[192px]"
-              >
-                Get Started
-              </CtaButton>
+              {/* Refund guarantee note */}
+              <p className="text-[14px] text-body-text font-semibold text-center w-[463px] pt-1 font-sans">
+                If not approved after your evaluation? You get a full refund.
+              </p>
             </div>
 
-            <div className="mt-[30px]"><ReviewBadges /></div>
+            <div className="mt-[24px]"><ReviewBadges /></div>
           </div>
         </div>
       </DesktopScaleWrapper>

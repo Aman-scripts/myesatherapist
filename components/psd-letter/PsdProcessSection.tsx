@@ -129,9 +129,9 @@ export function PsdProcessSection() {
         <div className="flex justify-center mt-12 sm:mt-16">
           <CtaButton
             href="#pricing"
-            className="w-auto min-w-[220px]"
+            className="w-auto min-w-[200px]"
           >
-            Start Your Consultation
+            Get Started
           </CtaButton>
         </div>
 

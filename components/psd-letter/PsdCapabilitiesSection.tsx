@@ -8,19 +8,19 @@ const capabilitiesData = [
     number: "01",
     title: "Housing Access",
     framework: "Fair Housing Act",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    description: "May support housing approval for your psychiatric service dog in pet-restricted properties, subject to landlord approval.",
   },
   {
     number: "02",
     title: "Public Access",
     framework: "Americans with Disabilities Act",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    description: "Offers documentation for public spaces when accompanied by your trained psychiatric service dog.",
   },
   {
     number: "03",
     title: "Air Travel",
     framework: "Air Carrier Access Act",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    description: "Provides documentation that may support your air travel needs, subject to airline policies and approval.",
   },
 ];
 
