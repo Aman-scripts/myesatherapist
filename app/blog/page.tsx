@@ -3,7 +3,6 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BlogsHero } from "@/components/blogs/BlogsHero";
-import { BlogsTrustBar } from "@/components/blogs/BlogsTrustBar";
 import { BlogsGrid } from "@/components/blogs/BlogsGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
@@ -57,20 +56,17 @@ export default function BlogHubPage() {
         {/* 1. Hero Banner */}
         <BlogsHero />
 
-        {/* 2. Trust Features Bar (HIPAA, Response 24-72h, Licensed in 50 states) */}
-        <BlogsTrustBar />
-
-        {/* 3. 3x3 Blogs Grid (9 Articles) */}
+        {/* 2. Categorized Blogs Grid (ESA Guide, Qualifying Conditions, ESA Training) */}
         <BlogsGrid />
 
-        {/* 4. ESA Letter Call to Action */}
+        {/* 3. Can ESA Be Right For You Call to Action */}
         <CtaBanner
-          title="Need help with an ESA letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
-          buttonText="Start your Evaluation"
+          title="Can ESA be Right for you"
+          description="Learning about emotional support animals is the first step. When you're ready, speak with a licensed mental health professional to determine whether an ESA is appropriate for your individual needs."
+          buttonText="Start Your Evaluation"
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
+          className="pb-0"
         />
       </main>
 
