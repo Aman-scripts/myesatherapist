@@ -65,7 +65,16 @@ const esaRenewalFaqs = [
   {
     num: "02.",
     q: "How Does My ESA Therapist Work?",
-    a: "Our process is simple and transparent: 1) Complete a confidential online pre-screening questionnaire; 2) Schedule a telehealth consultation with a licensed clinician in your state; 3) If qualified, receive your official ESA recommendation letter delivered securely via email.",
+    a: (
+      <div>
+        <p className="mb-2 body-large text-[18px] leading-[28px]">Our process is simple and transparent:</p>
+        <ol className="list-decimal list-outside pl-5 space-y-1.5 body-large text-[18px] leading-[28px]">
+          <li>Complete a confidential online pre-screening questionnaire</li>
+          <li>Schedule a telehealth consultation with a licensed clinician in your state</li>
+          <li>If qualified, receive your official ESA recommendation letter delivered securely via email.</li>
+        </ol>
+      </div>
+    ),
   },
   {
     num: "03.",
