@@ -21,10 +21,10 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
         
         {/* Section Header */}
         <div className="text-center space-y-2 max-w-[640px] mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-primary">
             More ESA Resources
           </h2>
-          <p className="font-sans text-sm sm:text-base lg:text-[18px] font-semibold text-body-text leading-[30px]">
+          <p className="body-large text-body-text">
             Get answers to common questions about ESA letters and our service.
           </p>
         </div>
@@ -39,10 +39,10 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
               {/* Card Image */}
               <Link
                 href={item.url}
-                className="relative w-full aspect-[3/2] overflow-hidden bg-background shrink-0 block cursor-pointer"
+                className="relative w-full h-[280px] sm:h-[317px] overflow-hidden bg-background shrink-0 block cursor-pointer"
               >
                 <Image
-            quality={90}
+                  quality={90}
                   src={item.cardImage}
                   alt={item.title}
                   fill
@@ -55,14 +55,14 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
                 <div className="space-y-3.5">
                   <Link href={item.url} className="block">
-                    <h3 className="font-heading text-lg sm:text-[22px] font-bold text-primary leading-[1.3] group-hover:text-[#1D6E72] transition-colors line-clamp-3">
+                    <h3 className="heading-h4 text-primary group-hover:text-[#1D6E72] transition-colors line-clamp-3">
                       {item.title}
                     </h3>
                   </Link>
-                  <div className="text-xs sm:text-sm font-sans font-medium text-[#69777C]">
+                  <div className="body-small text-body-text">
                     by {item.author.name}
                   </div>
-                  <p className="font-sans font-semibold text-sm leading-[24px] text-[#475467] line-clamp-3">
+                  <p className="body-text text-body-text line-clamp-3">
                     {item.shortDescription}
                   </p>
                 </div>

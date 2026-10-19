@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -67,13 +66,9 @@ export function BlogFaqSection({
   subtitle = "Get answers to common questions about ESA letters and our service.",
   faqs: customFaqs,
 }: BlogFaqSectionProps) {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
-  const rawList = customFaqs && customFaqs.length > 0 ? customFaqs : DEFAULT_BLOG_FAQS;
-  const items = rawList.map((f, i) => ({
-    ...f,
-    num: f.num || `${String(i + 1).padStart(2, "0")}.`,
-  }));
+  const items = customFaqs && customFaqs.length > 0 ? customFaqs : DEFAULT_BLOG_FAQS;
 
   return (
     <section id={id} className="w-full pt-10 sm:pt-14 pb-12 sm:pb-16 scroll-mt-28">
@@ -82,99 +77,73 @@ export function BlogFaqSection({
       {id !== "frequently-asked-questions" && <div id="frequently-asked-questions" className="sr-only" />}
 
       {/* Frame 1000011447: Section Header */}
-      <div className="w-full max-w-[945px] flex flex-col items-start gap-2 mb-8 sm:mb-10">
-        <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em] sm:whitespace-nowrap">
-          Frequently Asked Questions
+      <div className="w-full max-w-[951px] flex flex-col items-start gap-2 mb-8 sm:mb-10">
+        <h2 className="heading-h2 text-primary">
+          {title}
         </h2>
         {subtitle && (
-          <p className="font-sans font-semibold text-[15px] sm:text-[18px] leading-[26px] sm:leading-[30px] text-body-text max-w-[588px]">
+          <p className="body-large text-body-text max-w-[588px]">
             {subtitle}
           </p>
         )}
       </div>
 
-      {/* Frame 1261153828: Auto Layout Row (image 35 + FAQ Accordions) */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-[34px] w-full max-w-[950px]">
-        {/* Left: image 35 (width: 349.93px, height: 612px, border-radius: 30.297px) */}
-        <div className="w-full max-w-[350px] lg:w-[350px] h-[400px] sm:h-[480px] lg:h-[612px] shrink-0 relative rounded-[30px] overflow-hidden shadow-sm">
-          <Image
-            quality={90}
-            src="/common/faq-section-image.webp"
-            alt="Person with emotional support animal"
-            fill
-            className="object-cover"
-            sizes="(min-width: 1024px) 350px, 90vw"
-          />
-        </div>
+      {/* Full-width FAQ Accordions: Frame 1000011828 (width: 951px) */}
+      <div className="w-full max-w-[951px] space-y-4 sm:space-y-5">
+        {items.map((faq, idx) => {
+          const isOpen = openIdx === idx;
 
-        {/* Right: Frame 1000011717 (FAQ Accordions) */}
-        <div className="w-full max-w-[566px] flex-1 flex flex-col justify-center">
-          {/* FAQ Accordions List */}
-          <div className="space-y-3.5 sm:space-y-[18px] w-full">
-            {items.map((faq, idx) => {
-              const isOpen = openIdx === idx;
-              const numStr = faq.num || `${String(idx + 1).padStart(2, "0")}.`;
+          return (
+            <div
+              key={`${faq.q}-${idx}`}
+              className="w-full rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.08)] transition-all duration-200"
+            >
+              {/* Question Header Card */}
+              <button
+                type="button"
+                onClick={() => setOpenIdx(isOpen ? null : idx)}
+                className="w-full min-h-[64px] sm:min-h-[74px] px-6 sm:px-8 py-4 sm:py-[19px] flex items-center justify-between text-left rounded-[20px] transition-all duration-200 cursor-pointer group"
+                style={{ backgroundImage: TEAL_GRADIENT }}
+              >
+                {/* Question Title in heading-h3 (Playfair Display 28px/36px) */}
+                <h3 className="heading-h3 text-white m-0 pr-4 flex-1">
+                  {faq.q}
+                </h3>
 
-              return (
-                <div
-                  key={`${faq.q}-${idx}`}
-                  className="w-full rounded-[20px] overflow-hidden shadow-sm transition-all duration-200"
+                {/* Plus (+) Icon that rotates 45deg to (x) when open */}
+                <span
+                  className={`w-6 h-6 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                    isOpen ? "rotate-45" : "group-hover:scale-110"
+                  }`}
                 >
-                  {/* Question Header Card */}
-                  <button
-                    type="button"
-                    onClick={() => setOpenIdx(isOpen ? null : idx)}
-                    className="w-full min-h-[64px] sm:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative cursor-pointer"
-                    style={{ backgroundImage: TEAL_GRADIENT }}
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    {/* Gold Number Badge: Frame 1000011949 (accent) */}
-                    <div className="w-[64px] sm:w-[78px] shrink-0 bg-accent flex items-center justify-center font-sans font-extrabold text-xl sm:text-[28px] text-primary leading-none rounded-l-[20px] self-stretch">
-                      {numStr}
-                    </div>
+                    <path
+                      d="M9 3V15M3 9H15"
+                      stroke="#FAF7F2"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
 
-                    {/* Question Title & Plus Icon */}
-                    <div className="flex-1 py-3 px-3.5 sm:px-5 flex items-center justify-between gap-3">
-                      <h3 className="heading-h3 text-white text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
-                        {faq.q}
-                      </h3>
-
-                      {/* Plus (+) Icon that rotates 45deg to (x) when open */}
-                      <span
-                        className={`w-5 h-5 flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                          isOpen ? "rotate-45" : ""
-                        }`}
-                      >
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M9 3V15M3 9H15"
-                            stroke="var(--color-background)"
-                            strokeWidth="2.2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </button>
-
-                  {/* Accordion Answer Content */}
-                  {isOpen && (
-                    <div className="bg-background px-5 sm:px-6 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
-                      {faq.a}
-                    </div>
-                  )}
+              {/* Accordion Answer Content */}
+              {isOpen && (
+                <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large text-body-text border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
+                  {faq.a}
                 </div>
-              );
-            })}
-          </div>
-        </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

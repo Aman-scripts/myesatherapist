@@ -9,7 +9,6 @@ import { BlogTableOfContents } from "@/components/blogs/BlogTableOfContents";
 import { BlogArticleContent } from "@/components/blogs/BlogArticleContent";
 import { BlogAuthorBio } from "@/components/blogs/BlogAuthorBio";
 import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
-import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
@@ -143,28 +142,33 @@ export default async function BlogDetailPage({ params }: PageProps) {
           categorySlug={article.categorySlug}
         />
 
-        {/* 2. Floating Meta/Trust Bar */}
-        <div className="-mt-8 sm:-mt-10 lg:-mt-[44px] relative z-30 px-4 sm:px-6 lg:px-8">
-          <BlogMetaBar
-            authorName={article.author.name}
-            authorRole={article.author.role}
-            authorCredentials={article.author.credentials}
-            authorImage={article.author.image}
-            publishDate={article.publishDate}
-            lastUpdated={article.lastUpdated}
-            reviewerName={article.reviewedBy.name}
-            reviewerRole={article.reviewedBy.role}
-            reviewerCredentials={article.reviewedBy.credentials}
-            reviewerImage={article.reviewedBy.image}
-            reviewerLinkedin={article.reviewedBy.linkedin}
-          />
-        </div>
+        {/* 2. Floating Meta/Trust Bar & Main Article Content */}
+        <div className="relative w-full">
+          {/* Floating Meta/Trust Bar: sits across seam of hero and content without pushing down desktop TOC */}
+          <div className="relative lg:absolute lg:left-0 lg:right-0 lg:-top-[62px] z-30 px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-10 lg:mt-0 pointer-events-none">
+            <div className="pointer-events-auto">
+              <BlogMetaBar
+                authorName={article.author.name}
+                authorRole={article.author.role}
+                authorCredentials={article.author.credentials}
+                authorImage={article.author.image}
+                publishDate={article.publishDate}
+                lastUpdated={article.lastUpdated}
+                reviewerName={article.reviewedBy.name}
+                reviewerRole={article.reviewedBy.role}
+                reviewerCredentials={article.reviewedBy.credentials}
+                reviewerImage={article.reviewedBy.image}
+                reviewerLinkedin={article.reviewedBy.linkedin}
+              />
+            </div>
+          </div>
 
-        {/* 3. Main Article Content with Left-Aligned Sticky Table of Contents */}
-        <div className="w-full relative flex flex-col lg:flex-row items-start justify-start -mt-12 sm:-mt-16 lg:-mt-[60px] z-10">
-          <BlogTableOfContents items={article.tocItems} />
-          <div className="flex-1 min-w-0 max-w-[960px] xl:max-w-[1020px] px-4 sm:px-8 lg:pl-10 xl:pl-16 lg:pr-8 xl:pr-16 pt-20 sm:pt-24 lg:pt-28 xl:pt-32 pb-16 sm:pb-20">
-            <BlogArticleContent article={article} />
+          {/* Main Article Content with Left-Aligned Sticky Table of Contents */}
+          <div className="w-full relative flex flex-col lg:flex-row items-start justify-start z-10">
+            <BlogTableOfContents items={article.tocItems} />
+            <div className="flex-1 min-w-0 max-w-[960px] xl:max-w-[1020px] px-4 sm:px-8 lg:pl-10 xl:pl-16 lg:pr-8 xl:pr-16 pt-8 sm:pt-10 lg:pt-[84px] xl:pt-[94px] pb-16 sm:pb-20">
+              <BlogArticleContent article={article} />
+            </div>
           </div>
         </div>
 
@@ -174,10 +178,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
         {/* 5. More ESA Resources (Other Blog Cards) */}
         <BlogMoreResources currentSlug={article.slug} />
 
-        {/* 6. Google Search Highlight Banner */}
-        <BlogGoogleSourceBanner />
-
-        {/* 7. Bottom CTA Banner */}
+        {/* 6. Bottom CTA Banner */}
         <CtaBanner
           title={article.bottomCta?.title || "Need help with an ESA letter?"}
           description={

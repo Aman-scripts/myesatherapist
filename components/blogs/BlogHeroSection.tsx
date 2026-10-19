@@ -45,7 +45,7 @@ export function BlogHeroSection({
         {/* Auto layout: row, align-items: center, gap: 12px */}
         <nav
           aria-label="Breadcrumb"
-          className="flex items-center justify-center flex-wrap gap-3 text-sm sm:text-[16px] leading-[26px] font-sans font-semibold text-body-text mb-6 sm:mb-7 lg:mb-[30px]"
+          className="flex items-center justify-center flex-wrap gap-3 body-text text-body-text mb-6 sm:mb-7 lg:mb-[30px]"
         >
           <Link href="/" className="hover:text-primary transition-colors">
             Home
@@ -88,13 +88,13 @@ export function BlogHeroSection({
         {/* Auto layout: column, align-items: center, gap: 24px */}
         <div className="w-full flex flex-col items-center text-center gap-4 sm:gap-5 lg:gap-[24px]">
           {/* Main Headline */}
-          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[46px] xl:text-[56px] font-bold leading-[1.2] lg:leading-[54px] xl:leading-[64px] tracking-[-0.0002em] text-primary text-center max-w-[839px] mx-auto">
+          <h1 className="heading-h1 text-primary text-center max-w-[839px] mx-auto capitalize">
             {title}
           </h1>
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="font-sans text-xs sm:text-sm md:text-base lg:text-[18px] font-semibold leading-[20px] sm:leading-[26px] lg:leading-[30px] text-body-text text-center max-w-[574px] sm:max-w-[620px] lg:max-w-[680px] xl:max-w-[720px] mx-auto">
+            <p className="body-large text-body-text text-center max-w-[574px] mx-auto">
               {subtitle}
             </p>
           )}

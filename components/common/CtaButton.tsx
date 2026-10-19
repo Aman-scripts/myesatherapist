@@ -68,19 +68,19 @@ export function CtaButton({
     textColor = "text-primary";
   }
 
-  const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b/.test(className);
-  const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-[192px]");
+  const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b|\bmin-w-\[\S+\]/.test(className);
+  const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-auto min-w-[192px]");
 
-  // In Figma Frame 1000011890: padding 0 0 0 34px with 8px gap and 42.5px badge inside 192px button
+  // In Figma Frame 1000011890: padding with 8px gap and 42.5px badge inside button
   const paddingClass = isSecondary
     ? "px-6 xl:px-8"
-    : (shouldShowIcon ? "pl-[34px] pr-[5px]" : "px-6 xl:px-8");
+    : (shouldShowIcon ? "pl-6 sm:pl-[28px] pr-[5px]" : "px-6 xl:px-8");
 
-  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[54px] rounded-[30px] ${paddingClass} gap-2 ${bgClass} ${textColor} font-sans font-semibold text-[16px] leading-[24px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const baseClasses = `inline-flex items-center ${isSecondary ? "justify-center" : "justify-between"} h-[54px] rounded-[30px] ${paddingClass} gap-2.5 sm:gap-3 ${bgClass} ${textColor} font-sans font-semibold text-[16px] leading-[24px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>
-      <span className="truncate text-inherit">{children}</span>
+      <span className="whitespace-nowrap text-inherit">{children}</span>
       {shouldShowIcon && (
         <span className="w-[42.5px] h-[42.5px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
           <SendIcon className={`w-[22px] h-[22px] ${iconClassName}`} />

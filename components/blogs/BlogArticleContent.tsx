@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { BlogArticle, BlogCalloutBox, BlogQuoteBox } from "@/data/blogsData";
 import { BlogFaqSection } from "@/components/blogs/BlogFaqSection";
+import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
+import { CtaButton } from "@/components/common/CtaButton";
 
 interface BlogArticleContentProps {
   article: BlogArticle;
@@ -73,7 +75,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
   const renderQuoteBox = (quoteBox: BlogQuoteBox) => (
     <div className="w-full bg-accent/20 rounded-[15px] flex flex-row items-center overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 lg:pr-[67px] min-h-[69px] my-5">
       <div className="w-[14px] sm:w-[17px] self-stretch bg-accent rounded-l-[10px] shrink-0 min-h-[69px]" />
-      <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] text-body-text py-3 sm:py-3.5">
+      <p className="body-text font-semibold text-body-text py-3 sm:py-3.5">
         {quoteBox.quote} {quoteBox.author && <>– {renderFormattedText(quoteBox.author)}</>}
       </p>
     </div>
@@ -81,7 +83,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
   const renderCalloutBox = (callout: BlogCalloutBox) => (
     <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
-      <p className="font-sans text-sm sm:text-base leading-[24px] sm:leading-[26px] text-primary font-medium">
+      <p className="body-text text-primary font-medium">
         {callout.prefix && <>{renderFormattedText(callout.prefix)} </>}
         {callout.linkText && callout.linkHref ? (
           <Link
@@ -104,14 +106,18 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
       {article.questionCallout && (
         <div
           id={article.questionCallout.id}
-          className="w-full bg-[#EDEFEA] border border-[#1D6E72]/25 border-l-[6px] border-l-[#1D6E72] rounded-[20px] p-5 sm:p-7 shadow-xs space-y-3"
+          className="w-full bg-accent/20 rounded-[15px] flex flex-row items-stretch overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 min-h-[69px] my-5"
         >
-          <h2 className="heading-h4">
-            {article.questionCallout.question}
-          </h2>
-          <p className="body-text">
-            {article.questionCallout.answer}
-          </p>
+          <div className="w-[14px] sm:w-[17px] self-stretch bg-accent rounded-l-[10px] shrink-0" />
+          <div className="py-4 sm:py-5 space-y-2">
+            <span className="heading-h3 text-primary block">Quick Answer:</span>
+            <h2 className="body-large font-bold text-primary">
+              {article.questionCallout.question}
+            </h2>
+            <p className="body-text text-body-text">
+              {article.questionCallout.answer}
+            </p>
+          </div>
         </div>
       )}
 
@@ -157,7 +163,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {sec.id.includes("doesnt") && (
             <div id={sec.id.replace("doesnt", "doesn't")} className="scroll-mt-28" />
           )}
-          <h2 className="heading-h3">
+          <h2 className="heading-h2 text-primary">
             {sec.title}
           </h2>
 
@@ -232,7 +238,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   return (
                     <li
                       key={liIdx}
-                      className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-body-text"
+                      className="flex items-start gap-2.5 ml-6 sm:ml-8 body-text text-body-text"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                       <span>{renderFormattedText(cleanText)}</span>
@@ -244,7 +250,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   return (
                     <li
                       key={liIdx}
-                      className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-body-text"
+                      className="flex items-start gap-2.5 body-text text-body-text"
                     >
                       <span className="font-bold text-[#1D6E72] shrink-0 min-w-[18px]">
                         {numberedMatch[1]}.
@@ -256,7 +262,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 return (
                   <li
                     key={liIdx}
-                    className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] sm:leading-[26px] font-medium text-body-text"
+                    className="flex items-start gap-2.5 body-text text-body-text"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                     <span>{renderFormattedText(item)}</span>
@@ -272,7 +278,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.afterListParagraphs.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-body-text"
+                  className="body-text"
                 >
                   {renderFormattedText(p)}
                 </p>
@@ -450,9 +456,9 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.subsections.map((sub, sIdx) => (
                 <div key={sIdx} className="space-y-2">
                   {sub.image && sub.imagePosition === "top" && sub.title && sub.title.trim() ? (
-                    <h3 className="flex items-center gap-2 font-heading text-lg sm:text-[20px] font-bold text-primary leading-[28px]">
+                    <h3 className="flex items-center gap-2 heading-h3 text-primary">
                       <Image
-            quality={90}
+                        quality={90}
                         src={sub.image.src}
                         alt={sub.image.alt}
                         width={sub.image.width || 24}
@@ -462,7 +468,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {sub.title}
                     </h3>
                   ) : sub.title && sub.title.trim() ? (
-                    <h3 className="font-heading text-lg sm:text-[20px] font-bold text-primary leading-[28px]">
+                    <h3 className="heading-h3 text-primary">
                       {sub.title}
                     </h3>
                   ) : null}
@@ -471,7 +477,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {sub.paragraphs.map((subP, spIdx) => (
                         <p
                           key={spIdx}
-                          className="text-sm sm:text-base leading-[26px] font-medium text-body-text"
+                          className="body-text"
                         >
                           {renderFormattedText(subP)}
                         </p>
@@ -497,7 +503,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                           return (
                             <li
                               key={mIdx}
-                              className="flex items-start gap-2.5 ml-6 sm:ml-8 text-sm sm:text-base leading-[24px] font-medium text-body-text"
+                              className="flex items-start gap-2.5 ml-6 sm:ml-8 body-text text-body-text"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                               <span>{renderFormattedText(cleanText)}</span>
@@ -509,7 +515,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                           return (
                             <li
                               key={mIdx}
-                              className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-body-text"
+                              className="flex items-start gap-2.5 body-text text-body-text"
                             >
                               <span className="font-bold text-[#1D6E72] shrink-0 min-w-[18px]">
                                 {numberedMatch[1]}.
@@ -521,7 +527,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                         return (
                           <li
                             key={mIdx}
-                            className="flex items-start gap-2.5 text-sm sm:text-base leading-[24px] font-medium text-body-text"
+                            className="flex items-start gap-2.5 body-text text-body-text"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-[#1D6E72] mt-2 shrink-0" />
                             <span>{renderFormattedText(item)}</span>
@@ -535,7 +541,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {sub.afterListParagraphs.map((subP, spIdx) => (
                         <p
                           key={spIdx}
-                          className="text-sm sm:text-base leading-[26px] font-medium text-body-text"
+                          className="body-text"
                         >
                           {renderFormattedText(subP)}
                         </p>
@@ -546,7 +552,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   {sub.image && sub.imagePosition !== "top" && (
                     <div className="w-full relative rounded-[16px] overflow-hidden shadow-xs my-4 bg-white border border-[#DECDBB]/40">
                       <Image
-            quality={90}
+                        quality={90}
                         src={sub.image.src}
                         alt={sub.image.alt}
                         width={870}
@@ -566,7 +572,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               {sec.afterSubsectionsParagraphs.map((p, pIdx) => (
                 <p
                   key={pIdx}
-                  className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-body-text"
+                  className="body-text"
                 >
                   {renderFormattedText(p)}
                 </p>
@@ -596,21 +602,19 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               </div>
 
               <div className="relative z-10 flex flex-col items-start space-y-4 sm:space-y-5 max-w-[580px]">
-                <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] xl:text-[36px] font-bold text-background leading-[1.25] tracking-tight">
+                <h3 className="heading-h3 text-background">
                   {sec.ctaBox.heading}
                 </h3>
-                <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-background/90 max-w-[540px]">
+                <p className="body-large text-background/90 max-w-[540px]">
                   {sec.ctaBox.description}
                 </p>
                 <div className="pt-2 sm:pt-3">
-                  <Link
+                  <CtaButton
                     href={sec.ctaBox.buttonHref}
-                    className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-[12px] sm:rounded-[14px] bg-accent hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
+                    variant="accent"
                   >
-                    <span className="font-sans font-bold text-sm sm:text-base text-[#1A3D4F] group-hover:scale-[1.02] transition-transform">
-                      {sec.ctaBox.buttonText}
-                    </span>
-                  </Link>
+                    {sec.ctaBox.buttonText}
+                  </CtaButton>
                 </div>
               </div>
             </div>
@@ -620,16 +624,16 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           {sec.bannerImage && sec.bannerPosition === "bottom" && (
             <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${!sec.bannerImage.fullWidth && (sec.bannerImage.height ?? 550) > (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
-            quality={90}
+                quality={90}
                 src={sec.bannerImage.src}
                 alt={sec.bannerImage.alt}
-                width={sec.bannerImage.width ?? 870}
-                height={sec.bannerImage.height ?? 550}
+                width={870}
+                height={550}
                 className="w-full h-auto object-contain rounded-[18px]"
               />
               {sec.bannerImage.caption && (
                 <div className="p-3 bg-white text-center border-t border-[#DECDBB]/30">
-                  <p className="text-sm italic text-body-text font-medium">
+                  <p className="body-small italic text-body-text">
                     {sec.bannerImage.caption}
                   </p>
                 </div>
@@ -663,21 +667,19 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
           {/* Left Text & Action */}
           <div className="relative z-10 flex flex-col items-start space-y-4 sm:space-y-5 max-w-[560px]">
-            <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-background leading-[1.25] sm:leading-[1.28] tracking-tight">
+            <h3 className="heading-h3 text-background">
               {article.cta.heading}
             </h3>
-            <p className="font-sans font-semibold text-[16px] leading-[26px] tracking-normal text-background/90 max-w-[540px]">
+            <p className="body-large text-background/90 max-w-[540px]">
               {article.cta.description}
             </p>
             <div className="pt-2 sm:pt-3">
-              <Link
+              <CtaButton
                 href={article.cta.buttonHref}
-                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-[12px] bg-accent hover:bg-[#F0C33A] shadow-[0px_4px_14px_rgba(232,185,44,0.35)] transition-all group duration-200"
+                variant="accent"
               >
-                <span className="font-sans font-bold text-sm sm:text-base text-[#1A3D4F] group-hover:scale-[1.02] transition-transform">
-                  {article.cta.buttonText}
-                </span>
-              </Link>
+                {article.cta.buttonText}
+              </CtaButton>
             </div>
           </div>
         </div>
@@ -689,14 +691,14 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
           id={article.finalThoughts.id || "final-thoughts"}
           className="space-y-4 scroll-mt-28"
         >
-          <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-primary leading-[36px] tracking-tight">
+          <h2 className="heading-h2 text-primary">
             {article.finalThoughts.title}
           </h2>
           <div className="space-y-3">
             {article.finalThoughts.paragraphs.map((p, idx) => (
               <p
                 key={idx}
-                className="text-sm sm:text-base leading-[26px] sm:leading-[28px] font-medium text-body-text"
+                className="body-text"
               >
                 {renderFormattedText(p)}
               </p>
@@ -707,7 +709,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
       {/* 6. FAQ Section (Directly Below Final Thoughts) */}
       {article.faqs && article.faqs.length > 0 && (
-        <div id={article.faqSectionId || "faqs"} className="scroll-mt-28">
+        <div id={article.faqSectionId || "faqs"} className="scroll-mt-28 space-y-6 sm:space-y-8">
           <div id="faq" className="scroll-mt-28" />
           <div id="frequently-asked-questions" className="scroll-mt-28" />
           <BlogFaqSection
@@ -718,6 +720,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             }
             faqs={article.faqs}
           />
+          <BlogGoogleSourceBanner />
         </div>
       )}
 
