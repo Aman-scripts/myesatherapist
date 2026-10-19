@@ -93,6 +93,7 @@ export function ReviewsHeroSection() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="#trustpilot-reviews"
+            getStartedText="See More Reviews"
             placeholder="Select your State"
           />
 
@@ -169,7 +170,7 @@ export function ReviewsHeroSection() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -201,7 +202,7 @@ export function ReviewsHeroSection() {
               href="#trustpilot-reviews"
               className="w-auto"
             >
-              Get Started
+              See More Reviews
             </CtaButton>
           </div>
         </div>
@@ -340,9 +341,9 @@ export function ReviewsHeroSection() {
               {/* Get Started Button (Frame 1000011890) */}
               <CtaButton
                 href="#trustpilot-reviews"
-                className="w-[192px]"
+                className="w-auto"
               >
-                Get Started
+                See More Reviews
               </CtaButton>
             </div>
 

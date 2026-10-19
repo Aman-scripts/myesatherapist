@@ -131,8 +131,19 @@ export function EmotionalSupportSection() {
             />
           </div>
 
-          {/* Bottom Paw Icon */}
-          <div className="absolute z-20 pointer-events-none right-[23px] bottom-[116px] w-[84px] h-[84px]">
+          {/* Bottom-right teal wave (Figma: 423 x 110, flush to the section's bottom-right corner) */}
+          <div className="absolute z-10 pointer-events-none right-0 bottom-0 w-[423px] h-[110px]">
+            <Image
+              quality={90}
+              src="/home/emotional-support-section-bottom.svg"
+              alt=""
+              fill
+              className="object-fill"
+            />
+          </div>
+
+          {/* Bottom Paw Icon: sits on the teal wave in the bottom-right corner */}
+          <div className="absolute z-20 pointer-events-none right-[20px] bottom-[2px] w-[84px] h-[84px]">
             <Image
               quality={90}
               src="/home/emotional-support-section-bottom-paw-icon.svg"

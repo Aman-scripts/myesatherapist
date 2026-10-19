@@ -42,11 +42,15 @@ export function YouTubePlayIcon({ className }: { className?: string }) {
 interface TestimonialsSectionProps {
   title?: string;
   subtitle?: string;
+  buttonText?: string;
+  buttonHref?: string;
 }
 
 export function TestimonialsSection({
   title = "See What Our Clients Say",
   subtitle = "Here’s what our clients say about their experience.",
+  buttonText = "See More Reviews",
+  buttonHref = "/reviews",
 }: TestimonialsSectionProps = {}) {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -194,14 +198,11 @@ export function TestimonialsSection({
             </div>
           </div>
 
-          {/* Frame 1000011890: CTA Button & Refund Reassurance */}
-          <div className="flex flex-col items-center gap-2">
-            <CtaButton href="#how-it-works">
-              Get Started
+          {/* Frame 1000011890: CTA Button */}
+          <div className="flex flex-col items-center">
+            <CtaButton href={buttonHref} className="w-auto">
+              {buttonText}
             </CtaButton>
-            <p className="body-small text-center">
-              If not approved after your evaluation? You get a full refund.
-            </p>
           </div>
         </div>
       </div>
