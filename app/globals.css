@@ -179,13 +179,12 @@
 /* Default Colors: Headings are #2E5A66 and Body is #5F6B6F by default,
    using :where() so that ANY utility (like text-white, text-accent, text-background)
    or explicit color immediately overrides it without specificity battles. */
-:where(.heading-h1, .heading-h2, .heading-h3, .heading-h4) {
-  color: #2E5A66;
-}
-
-/* Default body text color. Kept in the base layer so Tailwind color utilities
-   (e.g. text-background on dark cards) can override it. */
+/* Default heading and body text colors. Kept in the base layer so Tailwind
+   color utilities (e.g. text-background, text-background/40) can override them. */
 @layer base {
+  :where(.heading-h1, .heading-h2, .heading-h3, .heading-h4) {
+    color: var(--color-primary);
+  }
   :where(.body-large, .body-text, .body-small) {
     color: var(--color-body-text);
   }
