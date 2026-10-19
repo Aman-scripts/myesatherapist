@@ -6,16 +6,14 @@ import Image from "next/image";
 import { X, ChevronRight } from "lucide-react";
 
 const tocItems = [
-  { id: "what-is-a-legitimate-esa-letter", label: "What is a Legitimate ESA Letter?" },
-  { id: "why-verification-matters", label: "Why ESA Letter Verification Matters" },
-  { id: "tenant-checklist", label: "How Tenants Can Check if an ESA Letter Is Legitimate" },
-  { id: "landlord-checklist", label: "How Landlords Can Verify an ESA Letter" },
-  { id: "what-landlords-cannot-request", label: "What Landlords Cannot Request for an ESA Letter" },
+  { id: "what-makes-an-esa-letter-legit", label: "What Makes an ESA Letter Legit?" },
+  { id: "why-verification-matters", label: "Why Verification Matters" },
+  { id: "tenant-checklist", label: "Tenant Checklist" },
+  { id: "landlord-checklist", label: "Landlord Checklist" },
   { id: "common-signs-of-a-fake-esa-letter", label: "Common Signs of a Fake ESA Letter" },
-  { id: "ensuring-compliance", label: "How Does My ESA Therapist Ensure Compliance" },
-  { id: "request-housing-accommodation", label: "Request Housing Accommodation with Confidence" },
-  { id: "final-thoughts", label: "Final Thoughts" },
-  { id: "faq", label: "Frequently Asked Questions" },
+  { id: "ensuring-compliance", label: "Ensuring Compliance" },
+  { id: "key-takeaways", label: "Key Takeaways" },
+  { id: "faqs", label: "FAQs" },
 ];
 
 interface BlogTableOfContentsProps {
@@ -98,50 +96,47 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
     <>
       {/* ---------------------------------------------------- */}
       {/* 1. DESKTOP VIEW (>= 1024px)                          */}
-      {/* Persistent Left-Aligned Sticky Sidebar               */}
+      {/* Persistent Left-Aligned Sticky Sidebar: Frame 1000011828 */}
       {/* ---------------------------------------------------- */}
-      <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start">
+      <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start lg:-mt-[1px]">
         <div
-          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10 lg:pt-[75px] xl:pt-[85px] pb-6 sm:pb-8 lg:pb-10 max-h-[calc(100vh-105px)] text-background flex flex-col justify-start"
+          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-10 lg:pt-[115px] xl:pt-[130px] pb-10 min-h-[850px] xl:min-h-[1132px] text-background flex flex-col justify-start"
           style={{ background: "var(--color-gradient)" }}
         >
-          {/* Fixed Header: Title & Divider */}
-          <div className="shrink-0">
-            <h2 className="font-heading text-2xl sm:text-3xl xl:text-[28px] font-bold text-background leading-tight mb-5 tracking-[-0.00015em]">
-              Table of Contents
+          {/* Frame 1000011830: Fixed Header with Title & Edge-to-Edge Line 11 Divider */}
+          <div className="shrink-0 mb-6 lg:mb-7">
+            <h2 className="heading-h2 text-background max-w-[283px] leading-[1.15] mb-5 sm:mb-6">
+              Table Of<br />Contents
             </h2>
 
-            {/* Divider: Line 11 */}
-            <div className="w-full h-[1px] bg-white/30 mb-7 lg:mb-8" />
+            {/* Line 11: Full-bleed divider across entire 382px width */}
+            <div className="-mx-6 sm:-mx-8 xl:-mx-[41px] h-[1px] bg-white/20" />
           </div>
 
-          {/* Scrollable Links List: Frame 1000011841 (Like StateTableOfContents) */}
-          <div
-            className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            <nav>
-              <ul className="space-y-4 sm:space-y-5 lg:space-y-6 xl:space-y-[32px] pb-6">
-                {currentItems.map((item) => {
-                  const isActive = activeId === item.id;
-                  return (
-                    <li key={item.id} className="flex items-start gap-2.5">
-                      <span className="text-white/70 text-lg leading-none mt-0.5">•</span>
-                      <a
-                        href={`#${item.id}`}
-                        onClick={(e) => scrollToSection(e, item.id)}
-                        className={`font-sans text-xs sm:text-[14px] leading-[22px] transition-all hover:text-accent ${
-                          isActive ? "text-accent font-bold" : "text-background font-semibold"
-                        }`}
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-          </div>
+          {/* Scrollable Links List: Frame 1000011841 */}
+          <nav className="w-full">
+            <ul className="space-y-3.5 sm:space-y-4 lg:space-y-[16px]">
+              {currentItems.map((item) => {
+                const isActive = activeId === item.id;
+                return (
+                  <li key={item.id} className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-[9px] shrink-0 select-none" />
+                    <a
+                      href={`#${item.id}`}
+                      onClick={(e) => scrollToSection(e, item.id)}
+                      className={`body-text transition-colors leading-[26px] ${
+                        isActive
+                          ? "text-white font-bold"
+                          : "text-background/85 hover:text-white font-medium"
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </div>
       </aside>
 
@@ -184,13 +179,13 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                 style={{ background: "var(--color-gradient)" }}
               >
                 {/* Fixed Top Header (Logo + Close Button + Title + Divider) */}
-                <div className="shrink-0 px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10">
+                <div className="shrink-0 px-6 sm:px-8 pt-8 sm:pt-10">
                   {/* Top Row: Logo Card + Close Button */}
                   <div className="flex items-start justify-between mb-5 sm:mb-6">
                     {/* Frame 1000011910: White Box with Gold Border */}
                     <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                       <Image
-            quality={90}
+                        quality={90}
                         src="/common/myesa-logo.svg"
                         alt="My ESA Therapist"
                         width={135}
@@ -209,34 +204,36 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                     </button>
                   </div>
 
-                  {/* Heading: Table of Contents */}
-                  <div className="space-y-2 mb-3 sm:mb-4">
-                    <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-background leading-tight tracking-[-0.00015em]">
-                      Table of Contents
+                  {/* Heading: Table Of Contents */}
+                  <div className="mb-4 sm:mb-5">
+                    <h2 className="heading-h2 text-background leading-[1.15]">
+                      Table Of<br />Contents
                     </h2>
                   </div>
 
-                  {/* Line 11 Divider (Placed directly at boundary) */}
-                  <div className="w-full h-[0.5px] bg-white/30" />
+                  {/* Line 11 Divider (Edge-to-Edge) */}
+                  <div className="-mx-6 sm:-mx-8 h-[1px] bg-white/20" />
                 </div>
 
                 {/* Scrollable Links List: Frame 1000011841 */}
                 <div
-                  className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 sm:px-8 xl:px-[41px] pt-5 sm:pt-6 pb-10"
+                  className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 sm:px-8 pt-5 sm:pt-6 pb-10"
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                   <nav>
-                    <ul className="space-y-4 sm:space-y-6">
+                    <ul className="space-y-3.5 sm:space-y-4">
                       {currentItems.map((item) => {
                         const isActive = activeId === item.id;
                         return (
                           <li key={item.id} className="flex items-start gap-2.5">
-                            <span className="text-white/70 text-base sm:text-lg leading-none mt-1 shrink-0">•</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-[9px] shrink-0 select-none" />
                             <a
                               href={`#${item.id}`}
                               onClick={(e) => scrollToSection(e, item.id)}
-                              className={`font-sans text-[13px] sm:text-[14px] leading-[22px] sm:leading-[26px] transition-all hover:text-accent ${
-                                isActive ? "text-accent font-bold" : "text-background font-semibold"
+                              className={`body-text transition-colors leading-[26px] ${
+                                isActive
+                                  ? "text-white font-bold"
+                                  : "text-background/85 hover:text-white font-medium"
                               }`}
                             >
                               {item.label}
