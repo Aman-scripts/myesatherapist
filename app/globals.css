@@ -155,7 +155,11 @@
   letter-spacing: -0.00015em;
 }
 
-.body-large {
+.body-large,
+.body-large p,
+.body-large ol,
+.body-large ul,
+.body-large li {
   font-family: var(--font-sans), 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -322,7 +326,11 @@
     font-size: 18px;
     line-height: 26px;
   }
-  .body-large {
+  .body-large,
+  .body-large p,
+  .body-large ol,
+  .body-large ul,
+  .body-large li {
     font-size: 16px;
     line-height: 26px;
   }
