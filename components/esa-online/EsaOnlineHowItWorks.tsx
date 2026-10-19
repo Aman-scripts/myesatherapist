@@ -59,7 +59,7 @@ export function EsaOnlineHowItWorks() {
 
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">
                   <h3
-                    className="font-bold text-2xl lg:text-[20px] xl:text-2xl leading-[29px] tracking-[-0.017em] text-transparent bg-clip-text"
+                    className="font-bold text-2xl lg:text-[20px] xl:text-2xl leading-[29px] tracking-[-0.017em] text-transparent bg-clip-text lg:whitespace-nowrap"
                     style={{ backgroundImage: TEAL_GRADIENT, ...LATO }}
                   >
                     {step.title}

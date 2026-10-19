@@ -28,7 +28,7 @@ export function MobileHeroActionButtons({
   onStateSelect,
   getStartedHref = "#how-it-works",
   getStartedText = "Get Started",
-  placeholder = "Start your State",
+  placeholder = "Select your State",
   className = "",
   onGetStartedClick,
 }: MobileHeroActionButtonsProps) {

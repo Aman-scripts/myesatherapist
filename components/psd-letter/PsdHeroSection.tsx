@@ -107,7 +107,7 @@ export function PsdHeroSection() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="#pricing"
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
 
           <p className="body-small text-center mt-2.5 max-w-[300px]">
@@ -174,7 +174,7 @@ export function PsdHeroSection() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -290,7 +290,7 @@ export function PsdHeroSection() {
                       style={{ width: "auto", height: "auto" }}
                     />
                     <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                     </span>
                     <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                   </button>

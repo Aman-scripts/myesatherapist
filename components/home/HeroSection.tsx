@@ -88,7 +88,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative z-30 bg-warm-bg">
+    <section className="relative z-30 bg-background overflow-hidden">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
       {/* Matches Screenshot 2                                 */}
@@ -144,7 +144,7 @@ export function HeroSection() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="#how-it-works"
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
         </div>
       </div>
@@ -215,7 +215,7 @@ export function HeroSection() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="text-color-gradient">
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -260,7 +260,7 @@ export function HeroSection() {
         <DesktopScaleWrapper
           designHeight={744}
           designWidth={1440}
-          wrapperClassName="bg-background"
+          wrapperClassName="bg-background overflow-hidden"
           background={
             <BreakpointImage
               media="(min-width: 1024px)"
@@ -268,23 +268,12 @@ export function HeroSection() {
               src="/home/hero-section.webp"
               alt="Woman embracing her emotional support golden retriever outdoors"
               fill
-              className="object-cover object-center"
+              className="object-cover object-right"
               sizes="(min-width: 1024px) 100vw, 1px"
             />
           }
         >
           <div className="relative w-[1440px] h-[744px]">
-            {/* Background Image: hero-section.png inside 1440px canvas */}
-            <BreakpointImage
-              media="(min-width: 1024px)"
-              quality={90}
-              src="/home/hero-section.webp"
-              alt="Woman embracing her emotional support golden retriever outdoors"
-              fill
-              className="object-cover object-center"
-              sizes="1440px"
-            />
-
             {/* Content — exact 1440px coordinates from Figma Frame 1000011884 */}
             <div className="absolute left-[82px] top-[92px] w-[678px] z-10">
               {/* Stat Pills */}
@@ -337,7 +326,7 @@ export function HeroSection() {
                       style={{ width: "auto", height: "auto" }}
                     />
                     <span className="text-color-gradient font-manrope">
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                     </span>
                     <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                   </button>

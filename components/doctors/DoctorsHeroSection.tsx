@@ -162,14 +162,14 @@ export function DoctorsHeroSection() {
                 handleSelectState(slug, st ? st.name : slug);
               }}
               getStartedHref="#therapists"
-              placeholder="Start your State"
+              placeholder="Select your State"
             />
           </div>
 
           {/* Tablet & Desktop Buttons Row */}
           <div className="hidden sm:flex flex-row items-center justify-center xl:justify-start gap-4 xl:gap-[25px] w-full sm:max-w-none">
             
-            {/* "Start your State" Dropdown Button */}
+            {/* "Select your State" Dropdown Button */}
             <div className="relative w-full sm:w-auto" ref={dropdownRef}>
               <button
                 type="button"
@@ -186,7 +186,7 @@ export function DoctorsHeroSection() {
                     className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[30px] bg-clip-text text-transparent whitespace-nowrap shrink-0"
                     style={{ backgroundImage: "var(--color-gradient)" }}
                   >
-                    {selectedState || "Start your State"}
+                    {selectedState || "Select your State"}
                   </span>
                 </div>
                 <svg

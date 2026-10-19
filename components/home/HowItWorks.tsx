@@ -33,7 +33,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="pt-10 sm:pt-14 lg:pt-16 xl:pt-20 pb-8 sm:pb-10 lg:pb-16 xl:pb-20 bg-background">
       <div className="max-w-[1276px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-6 lg:px-10 xl:px-[142px] lg:py-12 xl:py-[60px]">
+        <div className="bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-6 lg:px-10 xl:px-[100px] lg:py-12 xl:py-[60px]">
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-10 xl:mb-[72px] space-y-2">
             <h2 className="heading-h2 capitalize">
@@ -87,7 +87,7 @@ export function HowItWorks() {
 
                     {/* Text (Figma: Title 28px Playfair gradient, Description 18px Manrope body-text) */}
                     <div className="space-y-2.5 pt-5 sm:pt-6 max-w-[340px] w-full flex flex-col items-center">
-                      <h3 className="heading-h3 text-color-gradient capitalize">
+                      <h3 className="heading-h3 text-color-gradient capitalize lg:whitespace-nowrap">
                         {step.title}
                       </h3>
                       <p className="body-large max-w-[320px]">

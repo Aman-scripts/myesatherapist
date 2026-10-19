@@ -53,9 +53,9 @@ export function EsaRenewalHowItWorks() {
           </div>
 
           {/* 3 Steps: circle graphic + title + description */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-10 lg:gap-x-[90px] justify-items-center">
+          <div className="w-full lg:w-[1200px] lg:max-w-none shrink-0 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-10 justify-items-center">
             {STEPS.map((step) => (
-              <div key={step.stepNumber} className="flex w-full max-w-[273px] flex-col items-center">
+              <div key={step.stepNumber} className="flex w-full max-w-[273px] lg:max-w-[360px] flex-col items-center">
                 {/* Circular Graphic with Number Badge (Frame 1000011454) */}
                 <div className="relative h-[251px] w-[228px]">
                   {/* Mint Glow Circle */}
@@ -85,7 +85,7 @@ export function EsaRenewalHowItWorks() {
                 {/* Title and Description */}
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">
                   <h3
-                    className="heading-h3 text-color-gradient"
+                    className="heading-h3 text-color-gradient lg:whitespace-nowrap"
                   >
                     {step.title}
                   </h3>

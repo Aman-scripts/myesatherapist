@@ -1,4 +1,4 @@
-/** Shared look of the "Start your State" dropdown list, used by every hero. */
+/** Shared look of the "Select your State" dropdown list, used by every hero. */
 export const STATE_DROPDOWN_PANEL =
   "absolute left-0 top-full mt-2 w-full min-w-[280px] max-h-[430px] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-white rounded-2xl shadow-[0px_10px_30px_rgba(0,0,0,0.12)] z-[9999] p-2 text-left";
 

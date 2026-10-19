@@ -146,7 +146,7 @@ export function PricingHero() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="#plans"
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
         </div>
       </div>
@@ -221,7 +221,7 @@ export function PricingHero() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -352,7 +352,7 @@ export function PricingHero() {
                     style={{ width: "auto", height: "auto" }}
                   />
                   <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                   </span>
                   <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
                 </button>

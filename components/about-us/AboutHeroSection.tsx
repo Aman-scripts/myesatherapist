@@ -79,7 +79,7 @@ export function AboutHeroSection() {
             className="pt-1"
             onStateSelect={(slug) => router.push(`/esa-letter-${slug}/`)}
             getStartedHref="#pricing"
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
         </div>
       </div>
@@ -133,7 +133,7 @@ export function AboutHeroSection() {
 
           {/* Action Buttons in a Row */}
           <div className="flex items-center justify-center gap-4 pt-1 relative">
-            {/* Start your State */}
+            {/* Select your State */}
             <div className="relative">
               <button
                 type="button"
@@ -153,7 +153,7 @@ export function AboutHeroSection() {
                   className="bg-clip-text text-transparent"
                   style={{ backgroundImage: "var(--color-gradient)" }}
                 >
-                  Start your State
+                  Select your State
                 </span>
                 <ChevronDown className="w-4 h-4 text-primary" />
               </button>

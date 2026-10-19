@@ -136,7 +136,7 @@ export function VideoTestimonialsHeroSection() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="/pricing/"
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
         </div>
       </div>
@@ -189,9 +189,9 @@ export function VideoTestimonialsHeroSection() {
             Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.
           </p>
 
-          {/* Row 4: Action Buttons (Start your State & Get Started) */}
+          {/* Row 4: Action Buttons (Select your State & Get Started) */}
           <div className="flex items-center justify-center gap-4 w-full max-w-[480px]">
-            {/* Start your State Selector */}
+            {/* Select your State Selector */}
             <div className="relative z-40" ref={dropdownRefTablet}>
               <button
                 type="button"
@@ -212,7 +212,7 @@ export function VideoTestimonialsHeroSection() {
                     className="font-sans font-semibold text-[15px] sm:text-[16px] bg-clip-text text-transparent truncate max-w-[140px]"
                     style={{ backgroundImage: TEAL_GRADIENT }}
                   >
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                   </span>
                 </div>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpenTablet ? "rotate-180" : ""}`} />

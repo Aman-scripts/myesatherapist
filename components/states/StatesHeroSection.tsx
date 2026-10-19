@@ -127,7 +127,7 @@ export function StatesHeroSection() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             onGetStartedClick={handleGetStarted}
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
         </div>
       </div>
@@ -192,7 +192,7 @@ export function StatesHeroSection() {
           {/* Action Row */}
           <div className="flex items-center justify-center gap-4 mt-6">
             
-            {/* Start your State Dropdown */}
+            {/* Select your State Dropdown */}
             <div className="relative z-30" ref={dropdownRefTablet}>
               <button
                 type="button"
@@ -210,7 +210,7 @@ export function StatesHeroSection() {
                     style={{ width: "auto", height: "auto" }}
                   />
                   <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                   </span>
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -362,7 +362,7 @@ export function StatesHeroSection() {
               {/* Action CTAs */}
               <div className="flex items-center gap-4 pt-1">
                 
-                {/* Start your State Selector Dropdown Button */}
+                {/* Select your State Selector Dropdown Button */}
                 <div className="relative z-30" ref={dropdownRefDesktop}>
                   <button
                     type="button"
@@ -382,8 +382,8 @@ export function StatesHeroSection() {
                       />
                       <span className="font-sans font-semibold text-lg text-color-gradient">
                         {selectedState
-                          ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State"
-                          : "Start your State"}
+                          ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
+                          : "Select your State"}
                       </span>
                     </div>
                     <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />

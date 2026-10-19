@@ -149,7 +149,7 @@ export function EsaLawsHero() {
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="#how-it-works"
-            placeholder="Start your State"
+            placeholder="Select your State"
           />
         </div>
       </div>
@@ -216,7 +216,7 @@ export function EsaLawsHero() {
                   style={{ width: "auto", height: "auto" }}
                 />
                 <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
@@ -333,7 +333,7 @@ export function EsaLawsHero() {
                       style={{ width: "auto", height: "auto" }}
                     />
                     <span className="font-sans font-semibold text-[18px] text-[#1A3D4F]">
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Start your State" : "Start your State"}
+                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                     </span>
                   </div>
                   <ChevronDown className={`w-4 h-4 text-[#1A3D4F] shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
