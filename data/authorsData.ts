@@ -13,13 +13,15 @@ export interface AuthorProfile {
   bioParagraphs: string[];
   skillTags?: string[];
   focusCards?: Array<{ title: string; subtitle: string }>;
+  /** Sidebar heading above sidebarEducation (defaults to "Education") */
+  sidebarEducationTitle?: string;
   sidebarEducation: Array<{ label: string; year: string }>;
-  sidebarFocusAreas: string[];
+  sidebarFocusAreas?: string[];
   educationDetails: Array<{
     degree: string;
     field?: string;
     institution: string;
-    year: string;
+    year?: string;
   }>;
   focusAreas: string[];
   contentSections: Array<{
@@ -67,7 +69,7 @@ export const AUTHORS_DATA: AuthorProfile[] = [
     sidebarEducation: [
       { label: "Doctor of Philosophy (Ph.D.)", year: "2026" },
       { label: "Master of Science (MS)", year: "2019" },
-      { label: "Bachelor's of Arts (BA)", year: "2016" },
+      { label: "Bachelor’s of Arts (BA)", year: "2016" },
     ],
     sidebarFocusAreas: [
       "ESA Education",
@@ -173,37 +175,27 @@ export const AUTHORS_DATA: AuthorProfile[] = [
       { title: "Health Research", subtitle: "Evidence-Based Writing" },
       { title: "Patient Care", subtitle: "Health Assessment" },
     ],
+    sidebarEducationTitle: "Education & Academic Background",
     sidebarEducation: [
       { label: "Master of Physiotherapy (MPT)", year: "2026" },
       { label: "Postgraduate Diploma (PG Diploma)", year: "2019" },
       { label: "Medical Writing", year: "2014" },
-    ],
-    sidebarFocusAreas: [
-      "Emotional Support Animal Education",
-      "ESA Laws & Regulatory Information",
-      "ESA Housing & Accommodation Guidance",
-      "Mental Health & Emotional Wellness",
-      "ESA Eligibility & Documentation",
-      "Healthcare Research & Evidence-Based Information",
     ],
     educationDetails: [
       {
         degree: "Master of Physiotherapy (MPT)",
         field: "Sports Physiotherapy",
         institution: "Jamia Hamdard University",
-        year: "2026",
       },
       {
         degree: "Postgraduate Diploma (PG Diploma)",
         field: "Exercise and Sports Medicine",
         institution: "Asia College of Exercise & Sports Medicine",
-        year: "2019",
       },
       {
         degree: "Medical Writing",
         field: "Professional Training",
         institution: "University of Chicago",
-        year: "2014",
       },
     ],
     focusAreas: [
