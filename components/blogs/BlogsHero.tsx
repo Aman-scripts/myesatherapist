@@ -34,16 +34,12 @@ export function BlogsHero() {
         <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
           {/* Frame 1000011902: Headline & Subtitle */}
           <div className="flex flex-col items-center gap-3 max-w-[340px]">
-            <h1 className="font-heading text-[28px] leading-[34px] font-bold tracking-[-0.0002em] text-primary">
-              Your Guide to
-              <br />
-              Emotional Support
-              <br />
-              Animals
+            <h1 className="heading-h2 text-primary capitalize text-center">
+              Your Go-to-Resource Hub for Emotional Support Animals
             </h1>
 
-            <p className="font-sans font-semibold text-[13px] leading-[22px] text-body-text max-w-[300px]">
-              Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
+            <p className="body-text text-body-text text-center max-w-[320px]">
+              Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics.
             </p>
           </div>
 
@@ -132,16 +128,12 @@ export function BlogsHero() {
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 max-w-[620px] mx-auto">
           {/* Headline & Subtitle */}
           <div className="flex flex-col items-center gap-4 max-w-xl mx-auto">
-            <h1 className="font-heading text-3xl sm:text-4xl font-bold tracking-[-0.0002em] leading-tight text-primary">
-              Your Guide to
-              <br />
-              Emotional Support
-              <br />
-              Animals
+            <h1 className="heading-h1 text-primary capitalize text-center text-3xl sm:text-4xl">
+              Your Go-to-Resource Hub for Emotional Support Animals
             </h1>
 
-            <p className="font-sans font-semibold text-sm sm:text-base leading-relaxed text-body-text max-w-md mx-auto">
-              Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
+            <p className="body-large text-body-text text-center max-w-lg mx-auto">
+              Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics and help you better understand your rights.
             </p>
           </div>
 
@@ -232,18 +224,14 @@ export function BlogsHero() {
             <div className="w-full max-w-[519px] flex flex-col items-start gap-[32px]">
               {/* Frame 1000011884 / Frame 1000011902 */}
               <div className="flex flex-col items-start gap-[24px] w-full max-w-[512px]">
-                {/* Heading: Your Guide to Emotional Support Animals */}
-                <h1 className="font-heading text-[40px] lg:text-[46px] xl:text-[56px] font-bold text-primary leading-[48px] lg:leading-[54px] xl:leading-[64px] tracking-[-0.0002em]">
-                  Your Guide to
-                  <br />
-                  Emotional Support
-                  <br />
-                  Animals
+                {/* Heading: Your Go-to-Resource Hub for Emotional Support Animals */}
+                <h1 className="heading-h1 text-primary capitalize max-w-[512px]">
+                  Your Go-to-Resource Hub for Emotional Support Animals
                 </h1>
 
-                {/* Subtitle: Connect ESA letters, emotional well-being... */}
-                <p className="font-sans font-semibold text-[16px] xl:text-[18px] leading-[26px] xl:leading-[30px] text-body-text max-w-[492px]">
-                  Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.
+                {/* Subtitle from blog.md */}
+                <p className="body-large text-body-text max-w-[512px]">
+                  Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics and help you better understand your rights, responsibilities, and the role of emotional support animals in everyday life.
                 </p>
               </div>
 
