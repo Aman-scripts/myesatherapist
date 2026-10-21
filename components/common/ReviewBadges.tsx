@@ -32,7 +32,7 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
           <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#00B67A] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <polygon points={STAR_POLYGON} />
           </svg>
-          <span className="font-sans font-semibold text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[26px] text-body-text">
+          <span className="body-text text-body-text">
             Trustpilot
           </span>
         </div>
@@ -54,7 +54,7 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
         </div>
 
         {/* Score */}
-        <span className="font-sans font-normal text-[12px] sm:text-[13px] xl:text-[14px] leading-[20px] xl:leading-[26px] text-body-text text-center">
+        <span className="body-small text-body-text text-center">
           Trustscore 4.0
         </span>
       </a>
@@ -72,7 +72,7 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
           <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#095691] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <polygon points={STAR_POLYGON} />
           </svg>
-          <span className="font-sans font-semibold text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[26px] text-body-text whitespace-nowrap">
+          <span className="body-text text-body-text whitespace-nowrap">
             ConsumerAffair Reviews
           </span>
         </div>
@@ -95,7 +95,7 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
         </div>
 
         {/* Score */}
-        <span className="font-sans font-normal text-[12px] sm:text-[13px] xl:text-[14px] leading-[20px] xl:leading-[26px] text-body-text text-center">
+        <span className="body-small text-body-text text-center">
           Reviews 4.8
         </span>
       </a>

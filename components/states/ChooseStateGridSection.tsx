@@ -46,7 +46,7 @@ export function ChooseStateGridSection({
   className = "",
   id = "choose-state-section",
   title = "Choose Your State For ESA Evaluation",
-  description = "Learn about emotional support animal rules, welfare requirements, and housing protections in your state.",
+  description = "Learn about your emotional support animal rights, evaluation requirements, and find a licensed professional in your state.",
   allowedStates,
 }: ChooseStateGridSectionProps = {}) {
   const statesToDisplay =
@@ -70,10 +70,10 @@ export function ChooseStateGridSection({
         
         {/* Heading Block */}
         <div className="flex flex-col items-center text-center max-w-[854px] gap-4">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-[-0.00015em] text-primary max-w-[765px]">
+          <h2 className="heading-h2 text-primary max-w-[765px]">
             {title}
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg leading-[30px] text-body-text max-w-[854px]">
+          <p className="body-large text-body-text max-w-[854px]">
             {description}
           </p>
         </div>
@@ -96,7 +96,7 @@ export function ChooseStateGridSection({
                 </div>
 
                 {/* Page Description: State Text */}
-                <span className="font-sans font-semibold text-[13.5px] sm:text-[15px] lg:text-[18px] leading-snug sm:leading-[30px] text-color-gradient group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
+                <span className="body-large text-color-gradient group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
                   {state.name}
                 </span>
               </div>

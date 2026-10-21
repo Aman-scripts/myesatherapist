@@ -8,7 +8,6 @@ import { FederalHousingRulesSection } from "@/components/states/FederalHousingRu
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { statesSchema } from "@/data/schemas/statesSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -97,15 +96,12 @@ export default function StatesDirectoryPage() {
         {/* 4. Frequently Asked Questions Section */}
         <FaqSection
           title="Frequently Asked Questions"
-          subtitle="Answers to your most common questions about ESA assessment and housing rules by state."
+          subtitle="Get answers to common questions about ESA letters and our service."
           faqs={STATES_FAQS}
         />
 
         {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonHref="#choose-state-section" />
-
-        {/* 6. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner />
       </main>
 
       <Footer />

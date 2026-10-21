@@ -16,8 +16,8 @@ const defaultFaqs = [
     q: "How Does My ESA Therapist Work?",
     a: (
       <div>
-        <p className="mb-2 body-large text-[18px] leading-[28px]">Our process is simple and transparent:</p>
-        <ol className="list-decimal list-outside pl-5 space-y-1.5 body-large text-[18px] leading-[28px]">
+        <p className="mb-2 body-large">Our process is simple and transparent:</p>
+        <ol className="list-decimal list-outside pl-5 space-y-1.5 body-large">
           <li>Complete a confidential online pre-screening questionnaire</li>
           <li>Schedule a telehealth consultation with a licensed clinician in your state</li>
           <li>If qualified, receive your official ESA recommendation letter delivered securely via email.</li>
@@ -122,13 +122,13 @@ export function FaqSection({
                     className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative color-gradient"
                   >
                     {/* Gold Number Block: Frame 1000011949 (accent) */}
-                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center font-playfair font-bold text-lg sm:text-xl xl:text-[28px] text-primary leading-none rounded-l-[20px] self-stretch">
+                    <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center heading-h3 text-primary leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
                     {/* Question Title Area & Plus Icon (+) */}
                     <div className="flex-1 py-2.5 sm:py-3 px-3.5 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
-                      <h3 className="heading-h3 text-white text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
+                      <h3 className="heading-h3 text-white m-0 capitalize">
                         {faq.q}
                       </h3>
 

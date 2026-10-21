@@ -17,12 +17,12 @@ export function FederalHousingRulesSection() {
       <div className="max-w-[1254px] mx-auto flex flex-col items-center text-center gap-2">
         
         {/* Federal Housing Protections & State ESA Rules */}
-        <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-[-0.00015em] text-primary max-w-[955px] mb-2">
+        <h2 className="heading-h2 text-primary max-w-[955px] mb-2">
           Federal Housing Protections & State ESA Rules
         </h2>
 
         {/* Body Description Text */}
-        <div className="max-w-[1044px] flex flex-col gap-3 font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-body-text text-center mb-8">
+        <div className="max-w-[1044px] flex flex-col gap-3 body-large text-body-text text-center mb-8">
           <p>
             The Fair Housing Act (FHA) ensures your right to live with an emotional support animal in housing. Valid documentation must come from a licensed healthcare professional who can assess your need for an emotional support animal. Certain states have additional requirements.
           </p>
@@ -31,12 +31,12 @@ export function FederalHousingRulesSection() {
           </p>
         </div>
 
-        {/* Frame 1000011890: CTA Button */}
+        {/* Frame 1000011891: CTA Button */}
         <CtaButton
           onClick={handleScrollToGrid}
-          className="w-auto min-w-[252px]"
+          className="w-auto min-w-[246px]"
         >
-          Learn with ESA Laws
+          Get Started
         </CtaButton>
 
       </div>
