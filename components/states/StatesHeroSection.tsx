@@ -311,7 +311,7 @@ export function StatesHeroSection() {
               />
             </div>
             <div className="flex flex-col text-left">
-              <span className="body-small text-white drop-shadow-sm leading-tight">
+              <span className="body-large text-white drop-shadow-sm leading-tight">
                 Available in
               </span>
               <span className="body-large font-bold text-white drop-shadow-md leading-tight">
