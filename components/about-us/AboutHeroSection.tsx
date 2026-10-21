@@ -63,14 +63,14 @@ export function AboutHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-[26px] font-bold tracking-tight leading-[1.2] max-w-[280px] text-primary">
+          <h1 className="heading-h3 sm:heading-h2 text-primary max-w-[280px]">
             About
             <br />
             My ESA Therapist
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-[12.5px] text-body-text font-semibold leading-[20px] max-w-[310px]">
+          <p className="body-small text-body-text max-w-[310px]">
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
 
@@ -109,12 +109,11 @@ export function AboutHeroSection() {
                 className="bg-background rounded-[30px] px-4 py-2 shadow-xs flex flex-col items-center min-w-[120px] border border-white/80"
               >
                 <span
-                  className="font-heading text-xl font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
+                  className="heading-h4 text-color-gradient leading-none"
                 >
                   {stat.value}
                 </span>
-                <span className="font-sans text-[11px] font-semibold text-[#707070] mt-1 whitespace-nowrap">
+                <span className="body-small text-[#707070] mt-1 whitespace-nowrap">
                   {stat.label}
                 </span>
               </div>
@@ -122,12 +121,12 @@ export function AboutHeroSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-3xl sm:text-[38px] font-bold leading-[1.2] tracking-tight text-primary">
+          <h1 className="heading-h2 text-primary">
             About My ESA Therapist
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-sm sm:text-base text-body-text font-semibold leading-relaxed max-w-[480px]">
+          <p className="body-large text-body-text max-w-[480px]">
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
 
@@ -253,12 +252,12 @@ export function AboutHeroSection() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="font-heading text-[56px] font-bold leading-[64px] tracking-[-0.0002em] text-primary">
+              <h1 className="heading-h1 text-primary">
                 About My ESA Therapist
               </h1>
 
               {/* Subtitle Description */}
-              <p className="font-sans font-semibold text-[18px] text-body-text leading-[30px] max-w-[480px]">
+              <p className="body-large text-body-text max-w-[480px]">
                 Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
               </p>
 
@@ -280,7 +279,7 @@ export function AboutHeroSection() {
             >
               <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
-            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#707070]">
+            <span className="heading-h4 text-[#707070]">
               HIPAA Compliant
             </span>
           </div>
@@ -293,7 +292,7 @@ export function AboutHeroSection() {
             >
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
-            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#707070]">
+            <span className="heading-h4 text-[#707070]">
               Response Within 24-72 Hours
             </span>
           </div>
@@ -306,7 +305,7 @@ export function AboutHeroSection() {
             >
               <Award className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
             </div>
-            <span className="font-heading font-bold text-base sm:text-lg lg:text-[20px] xl:text-[24px] text-[#707070]">
+            <span className="heading-h4 text-[#707070]">
               Licensed in All 50 States
             </span>
           </div>

@@ -32,10 +32,10 @@ export function AboutWhyTrustSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[860px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
-          <h2 className="heading-h2">
+          <h2 className="heading-h2 text-primary">
             Why Do Individuals Trust My ESA Therapist?
           </h2>
-          <p className="body-large max-w-[700px] mx-auto">
+          <p className="body-large text-body-text max-w-[700px] mx-auto">
             We stand apart by providing legitimate, professional ESA evaluations conducted by licensed clinicians.
           </p>
         </div>
@@ -58,12 +58,10 @@ export function AboutWhyTrustSection() {
 
               {/* Card Body with Gold Top Accent Bar */}
               <div className="w-full min-h-[175px] sm:min-h-[185px] lg:min-h-[195px] bg-white rounded-[20px] shadow-[0px_4px_12px_rgba(0,0,0,0.06)] border-t-[6px] border-t-accent pt-12 sm:pt-14 pb-6 px-3 sm:px-4 xl:px-5 flex flex-col items-center justify-center text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-                <h3
-                  className="heading-h4 text-color-gradient mb-2"
-                >
+                <h3 className="heading-h3 text-color-gradient mb-2 text-center">
                   {card.title}
                 </h3>
-                <p className="body-small max-w-[220px]">
+                <p className="body-text text-body-text max-w-[220px]">
                   {card.description}
                 </p>
               </div>

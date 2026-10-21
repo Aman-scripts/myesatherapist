@@ -57,10 +57,10 @@ export function AboutTestimonialSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-primary">
             Trusted by Thousands of ESA Owners
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-body-text leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
+          <p className="body-large text-body-text max-w-[700px] mx-auto">
             See how our legitimate ESA evaluations have helped individuals across the nation.
           </p>
         </div>
@@ -115,7 +115,7 @@ export function AboutTestimonialSection() {
               </div>
 
               {/* Quote Text */}
-              <p className="font-sans font-semibold text-[15px] sm:text-[16px] md:text-[17px] text-background leading-[25px] sm:leading-[26px]">
+              <p className="body-large text-background">
                 {current.quote}
               </p>
             </div>
@@ -134,10 +134,10 @@ export function AboutTestimonialSection() {
 
               {/* Name and State */}
               <div className="flex flex-col text-left">
-                <h3 className="font-heading font-bold text-[18px] sm:text-[20px] text-[#2C2C2C] leading-tight">
+                <h3 className="heading-h4 text-[#2C2C2C] leading-tight">
                   {current.name}
                 </h3>
-                <span className="font-sans font-normal text-[14px] sm:text-[16px] text-[#696969] mt-0.5">
+                <span className="body-small text-[#696969] mt-0.5">
                   {current.location}
                 </span>
               </div>

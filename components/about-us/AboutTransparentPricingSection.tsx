@@ -30,10 +30,10 @@ export function AboutTransparentPricingSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
-          <h2 className="heading-h2">
+          <h2 className="heading-h2 text-primary">
             Clear Policies & Transparent Pricing for ESA Evaluations
           </h2>
-          <p className="body-large max-w-[700px] mx-auto">
+          <p className="body-large text-body-text max-w-[700px] mx-auto">
             We believe in upfront pricing and honest policies with no surprises.
           </p>
         </div>
@@ -56,12 +56,10 @@ export function AboutTransparentPricingSection() {
 
               {/* Card Body with Gold Top Accent Bar */}
               <div className="w-full min-h-[200px] sm:min-h-[215px] lg:min-h-[225px] bg-white rounded-[20px] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] border-t-[7px] border-t-accent pt-12 sm:pt-14 lg:pt-15 pb-6 sm:pb-7 px-4 sm:px-5 lg:px-5 xl:px-7 flex flex-col items-center justify-center text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-                <h3
-                  className="heading-h4 text-color-gradient mb-2.5"
-                >
+                <h3 className="heading-h3 text-color-gradient mb-2.5">
                   {card.title}
                 </h3>
-                <p className="body-small max-w-[320px]">
+                <p className="body-text text-body-text max-w-[320px]">
                   {card.description}
                 </p>
               </div>

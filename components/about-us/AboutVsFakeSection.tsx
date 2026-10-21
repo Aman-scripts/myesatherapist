@@ -28,10 +28,10 @@ export function AboutVsFakeSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[920px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-primary">
             My ESA Therapist vs. Automated ESA Sites
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] text-body-text leading-relaxed max-w-[760px] mx-auto">
+          <p className="body-large text-body-text max-w-[760px] mx-auto">
             See how a professional, provider-led evaluation differs from automated or unlicensed ESA services.
           </p>
         </div>
@@ -54,7 +54,7 @@ export function AboutVsFakeSection() {
 
             {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-primary text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
+              <h3 className="heading-h3 text-primary text-center mb-5 sm:mb-6 lg:mb-8">
                 My ESA Therapist
               </h3>
 
@@ -67,7 +67,7 @@ export function AboutVsFakeSection() {
                     >
                       <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
                     </div>
-                    <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] xl:text-[17px] text-primary leading-snug">
+                    <span className="body-large text-primary leading-snug">
                       {point}
                     </span>
                   </div>
@@ -92,7 +92,7 @@ export function AboutVsFakeSection() {
 
             {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
-              <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-[#CC191D] text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
+              <h3 className="heading-h3 text-[#CC191D] text-center mb-5 sm:mb-6 lg:mb-8">
                 Deceptive ESA Sites
               </h3>
 
@@ -102,7 +102,7 @@ export function AboutVsFakeSection() {
                     <div className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full bg-[#E42529] text-white flex items-center justify-center shrink-0 shadow-xs">
                       <X className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
                     </div>
-                    <span className="font-sans font-semibold text-xs sm:text-sm lg:text-[15px] xl:text-[17px] text-[#CC191D] leading-snug">
+                    <span className="body-large text-[#CC191D] leading-snug">
                       {point}
                     </span>
                   </div>

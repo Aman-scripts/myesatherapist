@@ -42,10 +42,10 @@ export function AboutWhoWeHelpSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-primary">
             Who We Help?
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-body-text leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
+          <p className="body-large text-body-text max-w-[700px] mx-auto">
             We serve individuals across the U.S. seeking emotional support animals for mental wellness. Our platform supports a clear, secure, and professional ESA evaluation process.
           </p>
         </div>
@@ -76,13 +76,10 @@ export function AboutWhoWeHelpSection() {
 
                 {/* Text */}
                 <div className="flex-1 min-w-0">
-                  <h3
-                    className="font-sans font-semibold text-sm sm:text-base xl:text-[18px] leading-snug sm:leading-[24px] xl:leading-[28px] bg-clip-text text-transparent"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
+                  <h3 className="heading-h3 text-color-gradient">
                     {group.title}
                   </h3>
-                  <p className="font-sans font-semibold text-xs sm:text-[13px] xl:text-[14px] text-body-text leading-snug sm:leading-[18px] xl:leading-[22px] mt-0.5">
+                  <p className="body-text text-body-text mt-0.5">
                     {group.description}
                   </p>
                 </div>

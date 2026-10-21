@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const items = [
   {
@@ -27,27 +28,16 @@ const items = [
 export function AboutLegitimateSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      {/* 1024px+ Absolute Right-Bleed Image (Desktop only) */}
-      <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[46%] lg:w-[48%] xl:w-[737px] h-full pointer-events-none z-0">
-        <Image
-            quality={90}
-          src="/about-us/about_us-legimate_Esa-section.webp"
-          alt="Legitimate ESA Evaluations"
-          fill
-          className="object-cover object-left-top xl:object-right-top"
-          sizes="(min-width: 1280px) 737px, 50vw"
-        />
-      </div>
-
-      {/* Main Content Area */}
-      <div className="relative z-10 max-w-[1446px] mx-auto min-h-auto lg:min-h-[780px] xl:min-h-[938px] flex flex-col lg:flex-row items-center justify-between">
-        
-        {/* Mobile & Tablet View (<1024px): Image is FIRST with full width and ZERO top/left/right space */}
-        <div className="lg:hidden w-full relative">
-          {/* Tablet Image (640px - 1023px, exact 834x1050) */}
+      {/* ---------------------------------------------------- */}
+      {/* 1. MOBILE & TABLET VIEW (< 1024px)                   */}
+      {/* ---------------------------------------------------- */}
+      <div className="lg:hidden w-full">
+        {/* Full-width Responsive Image on Top */}
+        <div className="relative w-full">
+          {/* Tablet Image (640px - 1023px) */}
           <div className="hidden sm:block relative w-full aspect-[834/1050]">
             <Image
-            quality={90}
+              quality={90}
               src="/about-us/about_us-legimatesection-tablet.webp"
               alt="Legitimate ESA Evaluations"
               fill
@@ -56,10 +46,10 @@ export function AboutLegitimateSection() {
             />
           </div>
 
-          {/* Mobile Image (< 640px, exact 390x513) */}
+          {/* Mobile Image (< 640px) */}
           <div className="block sm:hidden relative w-full aspect-[390/513]">
             <Image
-            quality={90}
+              quality={90}
               src="/about-us/about_us-legimatesection-mobile.webp"
               alt="Legitimate ESA Evaluations"
               fill
@@ -68,7 +58,7 @@ export function AboutLegitimateSection() {
             />
           </div>
 
-          {/* Floating Heart & Paw Badge centered right on the bottom wave dip */}
+          {/* Floating Heart & Paw Badge centered at bottom curve */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.15)] p-3 sm:p-3.5 flex items-center justify-center z-20 border border-[#EAE5DC]">
             <Image
               src="/about-us/about_us-legimateesasection-hearticon.svg"
@@ -81,41 +71,38 @@ export function AboutLegitimateSection() {
           </div>
         </div>
 
-        {/* Left Column / Text Area (Desktop left side, Mobile/Tablet second) */}
-        <div className="w-full lg:w-[540px] xl:w-[617px] px-5 sm:px-8 lg:pl-8 xl:pl-[84px] lg:pr-4 xl:pr-0 pt-10 sm:pt-14 pb-12 sm:pb-16 lg:py-16 xl:py-20 space-y-6 sm:space-y-8 xl:space-y-10 shrink-0 max-w-[620px] lg:max-w-none mx-auto lg:mx-0">
+        {/* Content Area */}
+        <div className="w-full px-5 sm:px-8 pt-10 sm:pt-14 pb-12 sm:pb-16 space-y-6 sm:space-y-8 max-w-[620px] mx-auto">
           {/* Header Block */}
-          <div className="space-y-3 sm:space-y-4 max-w-[559px] text-center lg:text-left">
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] text-primary leading-tight lg:leading-[44px] xl:leading-[54px] tracking-[-0.00015em]">
+          <div className="space-y-3 sm:space-y-4 text-center">
+            <h2 className="heading-h2 text-primary">
               Legitimate ESA Letter Evaluations You Can Trust
             </h2>
-            <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-body-text leading-relaxed lg:leading-[26px] xl:leading-[30px]">
+            <p className="body-large text-body-text">
               Our mission is to make the ESA evaluation process clear, ethical, and accessible. We connect individuals with licensed mental health professionals through a secure ESA evaluation process, with all outcomes determined solely through an independent clinical assessment by the provider.
             </p>
           </div>
 
-          {/* 3 Step / Feature Cards (Frame 1000011790) */}
-          <div className="space-y-3 sm:space-y-4 max-w-[617px]">
+          {/* 3 Feature Cards */}
+          <div className="space-y-3 sm:space-y-4">
             {items.map((item) => (
               <div
                 key={item.number}
-                className="w-full bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 p-3.5 sm:p-4 xl:p-[15px_20px] flex items-center gap-3.5 sm:gap-4 xl:gap-[15px] transition-all duration-200 hover:shadow-md text-left"
+                className="w-full bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 p-3.5 sm:p-4 flex items-center gap-3.5 sm:gap-4 text-left transition-all duration-200 hover:shadow-md"
               >
-                {/* Circular Gray Number Badge (Frame 1000011767) */}
-                <div className="w-[48px] h-[48px] sm:w-[54px] sm:h-[54px] xl:w-[59px] xl:h-[59px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
-                  <span className="font-heading font-bold text-2xl sm:text-3xl xl:text-[36px] leading-none text-body-text">
+                {/* Number Badge */}
+                <div className="w-[48px] h-[48px] sm:w-[54px] sm:h-[54px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
+                  <span className="heading-h3 leading-none text-body-text">
                     {item.number}
                   </span>
                 </div>
 
-                {/* Text Content (Frame 1000011789) */}
+                {/* Text Content */}
                 <div className="flex-1 min-w-0">
-                  <h3
-                    className="font-sans font-semibold text-base sm:text-[17px] xl:text-[18px] leading-snug sm:leading-[26px] xl:leading-[30px] bg-clip-text text-transparent"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
+                  <h3 className="heading-h3 text-color-gradient">
                     {item.title}
                   </h3>
-                  <p className="font-sans font-semibold text-xs sm:text-[13px] xl:text-[14px] leading-relaxed xl:leading-[26px] text-body-text mt-0.5 sm:mt-1">
+                  <p className="body-text text-body-text mt-0.5 sm:mt-1">
                     {item.description}
                   </p>
                 </div>
@@ -123,8 +110,70 @@ export function AboutLegitimateSection() {
             ))}
           </div>
         </div>
-
       </div>
+
+      {/* ---------------------------------------------------- */}
+      {/* 2. DESKTOP VIEW (>= 1024px, Figma Frame 1000011784)  */}
+      {/* ---------------------------------------------------- */}
+      <DesktopScaleWrapper
+        designWidth={1440}
+        designHeight={938}
+        className="hidden lg:block relative"
+      >
+        <div className="relative w-[1440px] h-[938px] flex items-center bg-white overflow-hidden">
+          {/* Left Content Column (Figma Frame 1000011791) */}
+          <div className="absolute left-[84px] top-[58px] w-[651px] flex flex-col items-start gap-10 z-10">
+            {/* Heading Block */}
+            <div className="w-[525px] flex flex-col items-start gap-4 text-left">
+              <h2 className="heading-h2 text-primary">
+                Legitimate ESA Letter Evaluations You Can Trust
+              </h2>
+              <p className="body-large text-body-text">
+                Our mission is to make the ESA evaluation process clear, ethical, and accessible. We connect individuals with licensed mental health professionals through a secure ESA evaluation process, with all outcomes determined solely through an independent clinical assessment by the provider.
+              </p>
+            </div>
+
+            {/* 3 Feature Cards (Figma Frame 1000011790) */}
+            <div className="w-[651px] flex flex-col items-start gap-4">
+              {items.map((item) => (
+                <div
+                  key={item.number}
+                  className="w-[651px] min-h-[140px] bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 px-5 py-4 flex items-center gap-4 text-left transition-all duration-200 hover:shadow-md"
+                >
+                  {/* Number Badge (Figma Frame 1000011767) */}
+                  <div className="w-[59px] h-[59px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
+                    <span className="heading-h3 leading-none text-body-text">
+                      {item.number}
+                    </span>
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="heading-h3 text-color-gradient">
+                      {item.title}
+                    </h3>
+                    <p className="body-text text-body-text mt-1">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Image (Figma Frame 1000011787) */}
+          <div className="absolute right-0 top-0 bottom-0 w-[737px] h-[938px] pointer-events-none z-0">
+            <Image
+              quality={90}
+              src="/about-us/about_us-legimate_Esa-section.webp"
+              alt="Legitimate ESA Evaluations"
+              fill
+              className="object-cover object-right-top"
+              sizes="737px"
+            />
+          </div>
+        </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }
