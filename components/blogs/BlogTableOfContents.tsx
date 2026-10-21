@@ -98,9 +98,9 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
       {/* 1. DESKTOP VIEW (>= 1024px)                          */}
       {/* Persistent Left-Aligned Sticky Sidebar: Frame 1000011828 */}
       {/* ---------------------------------------------------- */}
-      <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start lg:-mt-[1px]">
+      <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start lg:-mt-[1px] max-h-[calc(100vh-120px)] overflow-hidden rounded-none flex flex-col shadow-sm">
         <div
-          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-10 lg:pt-[115px] xl:pt-[130px] pb-10 min-h-[850px] xl:min-h-[1132px] text-background flex flex-col justify-start"
+          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-10 lg:pt-[115px] xl:pt-[130px] pb-10 max-h-[calc(100vh-120px)] overflow-y-auto no-scrollbar text-background flex flex-col justify-start"
           style={{ background: "var(--color-gradient)" }}
         >
           {/* Frame 1000011830: Fixed Header with Title & Edge-to-Edge Line 11 Divider */}

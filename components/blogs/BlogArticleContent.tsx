@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { BlogArticle, BlogCalloutBox, BlogQuoteBox } from "@/data/blogsData";
 import { BlogFaqSection } from "@/components/blogs/BlogFaqSection";
-import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
 import { CtaButton } from "@/components/common/CtaButton";
 
 interface BlogArticleContentProps {
@@ -720,7 +719,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             }
             faqs={article.faqs}
           />
-          <BlogGoogleSourceBanner />
         </div>
       )}
 

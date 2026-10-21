@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function BlogGoogleSourceBanner({ className = "" }: { className?: string }) {
   return (
-    <div className={`w-full max-w-[951px] bg-white/40 sm:bg-white/20 backdrop-blur-xs rounded-[15px] shadow-[0px_1px_4px_rgba(103,103,103,0.1)] overflow-hidden flex flex-col sm:flex-row items-stretch min-h-[90px] sm:min-h-[100px] mt-6 sm:mt-8 ${className}`}>
+    <div className={`w-full max-w-[1065px] bg-white rounded-[15px] shadow-[0px_1px_4px_rgba(103,103,103,0.1)] overflow-hidden flex flex-col sm:flex-row items-stretch min-h-[90px] sm:min-h-[100px] ${className}`}>
       
       {/* Rectangle 25: Left Teal Accent Bar */}
       <div
@@ -13,13 +13,13 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
         style={{ background: "var(--color-gradient)" }}
       />
 
-      {/* Frame 1261153667: Content Area */}
-      <div className="flex-1 p-4 sm:py-3.5 sm:pl-5 sm:pr-6 lg:pr-8 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+      {/* Frame 1261153667: Content Area (padding: 0px 67px 0px 0px on desktop) */}
+      <div className="flex-1 p-4 sm:py-3.5 sm:pl-6 sm:pr-8 lg:pr-[67px] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
         
         {/* Frame 1261153666: Google Logo & Text */}
-        <div className="flex items-center gap-3 sm:gap-4 text-center sm:text-left">
-          <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[48px] shrink-0 flex items-center justify-center">
-            <svg className="w-9 h-9 sm:w-11 sm:h-11" viewBox="0 0 24 24">
+        <div className="flex items-center gap-4 sm:gap-[22px] text-center sm:text-left">
+          <div className="w-[48px] h-[48px] sm:w-[58px] sm:h-[52px] shrink-0 flex items-center justify-center">
+            <svg className="w-10 h-10 sm:w-[52px] sm:h-[48px]" viewBox="0 0 24 24">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -40,11 +40,11 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
           </div>
 
           {/* Frame 1000012015 */}
-          <div className="space-y-0.5 max-w-[366px] lg:max-w-none">
-            <h4 className="heading-h4 text-primary">
+          <div className="space-y-0.5">
+            <h4 className="heading-h4 text-primary text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] tracking-[-0.00015em]">
               See our articles highlighted in Google Search
             </h4>
-            <p className="body-text text-body-text lg:whitespace-nowrap">
+            <p className="body-text text-[#5F6B6F] text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] lg:whitespace-nowrap">
               Add My ESA Therapist as a source - see results your way.
             </p>
           </div>
@@ -56,7 +56,7 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
             href="https://www.google.com/preferences/source?q=myesatherapist.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-between pl-5 pr-1.5 w-auto min-w-[178px] h-[48px] rounded-[30px] text-white body-large shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group gap-2.5"
+            className="inline-flex items-center justify-between pl-6 sm:pl-[28px] pr-1.5 w-[189px] h-[48px] rounded-[30px] text-white font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all group"
             style={{ background: "var(--color-gradient)" }}
           >
             <span className="whitespace-nowrap">Add a Source</span>

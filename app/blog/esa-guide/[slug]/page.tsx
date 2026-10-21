@@ -7,6 +7,7 @@ import { BlogHeroSection } from "@/components/blogs/BlogHeroSection";
 import { BlogMetaBar } from "@/components/blogs/BlogMetaBar";
 import { BlogTableOfContents } from "@/components/blogs/BlogTableOfContents";
 import { BlogArticleContent } from "@/components/blogs/BlogArticleContent";
+import { BlogGoogleSourceBanner } from "@/components/blogs/BlogGoogleSourceBanner";
 import { BlogAuthorBio } from "@/components/blogs/BlogAuthorBio";
 import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -164,13 +165,18 @@ export default async function BlogDetailPage({ params }: PageProps) {
           </div>
 
           {/* Main Article Content with Left-Aligned Sticky Table of Contents */}
-          <div className="w-full relative flex flex-col lg:flex-row items-start justify-start z-10">
+          <div className="w-full relative flex flex-col lg:flex-row items-start justify-start z-10 pb-8 lg:pb-12">
             <BlogTableOfContents items={article.tocItems} />
-            <div className="flex-1 min-w-0 max-w-[960px] xl:max-w-[1020px] px-4 sm:px-8 lg:pl-10 xl:pl-16 lg:pr-8 xl:pr-16 pt-8 sm:pt-10 lg:pt-[84px] xl:pt-[94px] pb-16 sm:pb-20">
+            <div className="flex-1 min-w-0 max-w-[960px] xl:max-w-[1020px] px-4 sm:px-8 lg:pl-10 xl:pl-16 lg:pr-8 xl:pr-16 pt-8 sm:pt-10 lg:pt-[84px] xl:pt-[94px]">
               <BlogArticleContent article={article} />
             </div>
           </div>
         </div>
+
+        {/* 3. Google Source Highlight Banner (Separate from blogs content, centered below) */}
+        <section className="w-full bg-background flex justify-center px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 pb-14 sm:pb-20 relative z-30">
+          <BlogGoogleSourceBanner />
+        </section>
 
         {/* 4. About the Author */}
         <BlogAuthorBio />
