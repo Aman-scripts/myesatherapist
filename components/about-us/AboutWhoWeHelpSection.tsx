@@ -12,9 +12,9 @@ const groups = [
   },
   {
     icon: "/about-us/about_us-whowehelp-individuals_anxiety-icon.svg",
-    title: "Individuals with Anxiety, Depression, or PTSD",
+    title: "Individuals with Mental Health Conditions",
     description:
-      "Receive a professional assessment from licensed mental health professionals to evaluate emotional support needs.",
+      "Discuss your mental health concerns with a licensed mental health professional who will independently assess whether an ESA may be clinically appropriate.",
   },
   {
     icon: "/about-us/about_us-whowehelp-remotetelepath-icon.svg",

@@ -16,7 +16,7 @@ const cards = [
   },
   {
     icon: "/about-us/about_us-whypetowners-hippa_compliance-icon.svg",
-    title: "HIPAA Compliant",
+    title: "HIPAA-Compliant",
     description: "Secure handling of personal information",
   },
   {
@@ -33,7 +33,7 @@ export function AboutWhyTrustSection() {
         {/* Section Header */}
         <div className="text-center max-w-[860px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
           <h2 className="heading-h2">
-            Why Pet Owners Trust MY ESA Therapist?
+            Why Do Individuals Trust My ESA Therapist?
           </h2>
           <p className="body-large max-w-[700px] mx-auto">
             We stand apart by providing legitimate, professional ESA evaluations conducted by licensed clinicians.

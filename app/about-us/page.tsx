@@ -7,7 +7,7 @@ import { AboutLegitimateSection } from "@/components/about-us/AboutLegitimateSec
 import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection";
 import { AboutWhoWeHelpSection } from "@/components/about-us/AboutWhoWeHelpSection";
 import { AboutVsFakeSection } from "@/components/about-us/AboutVsFakeSection";
-import { HowItWorks } from "@/components/home/HowItWorks";
+import { AboutProcessSection } from "@/components/about-us/AboutProcessSection";
 import { AboutTransparentPricingSection } from "@/components/about-us/AboutTransparentPricingSection";
 import { AboutTestimonialSection } from "@/components/about-us/AboutTestimonialSection";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
@@ -56,37 +56,37 @@ const ABOUT_FAQS: FaqItem[] = [
   },
   {
     num: "02.",
-    q: "Who conducts the ESA evaluations?",
+    q: "Who Conducts the ESA Evaluations?",
     a: "All evaluations are conducted exclusively by state-licensed mental health professionals. Eligibility is determined solely through professional clinical review, with clinical conclusions made independently by the provider without platform influence.",
   },
   {
     num: "03.",
-    q: "Does My ESA Therapist provide nationwide coverage?",
-    a: "Yes. The platform offers ESA evaluations in all 50 states, providing accessible telehealth services while ensuring evaluations meet local licensing requirements.",
+    q: "Does My ESA Therapist Provide Nationwide Coverage?",
+    a: "Yes. My ESA Therapist offers ESA evaluations in all 50 states, providing accessible telehealth services while ensuring evaluations meet local licensing requirements.",
   },
   {
     num: "04.",
-    q: "Who does My ESA Therapist help?",
-    a: "The platform serves renters facing housing restrictions on pets, individuals with anxiety, depression, or PTSD, remote or telehealth users, first-time and returning ESA applicants, and emotional wellness-focused pet owners seeking a professional assessment of their needs.",
+    q: "Who Does My ESA Therapist Help?",
+    a: "My ESA Therapist serves renters facing housing restrictions on pets, individuals experiencing mental health concerns, remote or telehealth users, first-time and returning ESA applicants, and people seeking a professional assessment of whether an emotional support animal may be clinically appropriate.",
   },
   {
     num: "05.",
-    q: "How is My ESA Therapist different from fake ESA sites?",
-    a: "My ESA Therapist uses state-licensed mental health professionals, bases outcomes on professional assessment, conducts audio/video consultations on a secure platform, follows federal housing guidelines, and is confidential and HIPAA-compliant. This differs from automated approval-mill sites that often skip evaluation entirely, may lack privacy protections, and can be non-compliant with applicable guidelines.",
+    q: "How Is My ESA Therapist Different From Automated ESA Services?",
+    a: "The difference is a professional, evaluation-based process. My ESA Therapist works with state-licensed professionals, secure consultations, confidential systems, and guidelines relevant to ESA housing accommodations.",
   },
   {
     num: "06.",
-    q: "What does the ESA evaluation process involve?",
-    a: "The clinical process includes a comprehensive mental health screening by licensed professionals, a review of symptoms and relevant mental health history, an individualized assessment based on clinical judgment, and documentation prepared in line with applicable legal guidelines.",
+    q: "What Does the ESA Evaluation Process Involve?",
+    a: "The clinical process includes a review of relevant mental health concerns, symptoms, and history, followed by an individualized assessment by a licensed mental health professional. If documentation is clinically appropriate, it is prepared in line with applicable legal requirements.",
   },
   {
     num: "07.",
-    q: "What happens if a refund is needed?",
-    a: "If a licensed mental health professional determines an ESA letter is not clinically appropriate, a refund may be provided according to the platform's refund policy.",
+    q: "What Happens If a Refund is Needed?",
+    a: "If a licensed mental health professional determines an ESA letter is not clinically appropriate, after the evaluation is completed, a 100% refund will be issued.",
   },
   {
     num: "08.",
-    q: "Are there hidden fees?",
+    q: "Are There Hidden Fees?",
     a: "No. Pricing is upfront and transparent, with no surprise charges or recurring fees. One payment covers the complete evaluation, and all payments are processed securely through encrypted systems.",
   },
 ];
@@ -115,16 +115,16 @@ export default function AboutUsPage() {
         {/* Section 4: Who We Help */}
         <AboutWhoWeHelpSection />
 
-        {/* Section 5: My ESA Therapist vs Fake ESA Sites */}
+        {/* Section 5: My ESA Therapist vs. Automated ESA Sites */}
         <AboutVsFakeSection />
 
-        {/* Section 6: How Online ESA Evaluation Works */}
-        <HowItWorks />
+        {/* Section 6: How Does Our Online ESA Evaluation Work? */}
+        <AboutProcessSection />
 
-        {/* Section 7: Transparent, Honest ESA Evaluations */}
+        {/* Section 7: Clear Policies & Transparent Pricing for ESA Evaluations */}
         <AboutTransparentPricingSection />
 
-        {/* Section 8: What Our Clients Say */}
+        {/* Section 8: Trusted by Thousands of ESA Owners */}
         <AboutTestimonialSection />
 
         {/* Section 9: FAQ */}
@@ -137,7 +137,7 @@ export default function AboutUsPage() {
         {/* Section 10: ESA Evaluation CTA Banner */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
-          description={"Begin the evaluation process today and connect with a licensed\nmental health professional for a clinical assessment."}
+          description="Begin the evaluation process today and connect with your state-licensed mental health professional for a clinical assessment."
           buttonText="Start Evaluation"
           buttonHref="/pricing/"
           bgColor="bg-background"

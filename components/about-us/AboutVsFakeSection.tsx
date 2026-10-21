@@ -7,15 +7,15 @@ import { Check, X } from "lucide-react";
 const legitimatePoints = [
   "State-licensed mental health professionals",
   "Based on professional assessment",
-  "Audio / video consultation on secure platform",
-  "Follows federal housing guidelines",
+  "Audio/video consultation on a secure platform",
+  "Provides documentation based on applicable federal and state requirements",
   "Clear steps and guidance",
   "Confidential, HIPAA-compliant",
 ];
 
 const fakePoints = [
-  "Often automated / unlicensed",
-  "Instant approval, no evaluation",
+  "Automated or unlicensed services",
+  "Approval without a professional evaluation",
   "Privacy may be lacking",
   "Often non-compliant",
   "Hidden fees / process unclear",
@@ -29,10 +29,10 @@ export function AboutVsFakeSection() {
         {/* Section Header */}
         <div className="text-center max-w-[920px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
-            My ESA Therapist vs Fake ESA Sites
+            My ESA Therapist vs. Automated ESA Sites
           </h2>
           <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] text-body-text leading-relaxed max-w-[760px] mx-auto">
-            See how legitimate, licensed evaluations differ from automated approval mills.
+            See how a professional, provider-led evaluation differs from automated or unlicensed ESA services.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export function AboutVsFakeSection() {
             {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
               <h3 className="font-heading text-xl sm:text-2xl lg:text-[25px] xl:text-[28px] font-bold text-[#CC191D] text-center mb-5 sm:mb-6 lg:mb-8 leading-tight">
-                Fake ESA Sites
+                Deceptive ESA Sites
               </h3>
 
               <div className="space-y-3.5 sm:space-y-4 xl:space-y-5 flex-1">

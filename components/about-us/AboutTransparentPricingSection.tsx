@@ -8,7 +8,7 @@ const cards = [
     icon: "/about-us/about_us-transparetesa-refund_policy-icon.svg",
     title: "Refund Policy",
     description:
-      "If a licensed mental health professional determines an ESA letter is not clinically appropriate, a refund may be provided according to our policy.",
+      "If a licensed mental health professional determines an ESA letter is not clinically appropriate, a 100% refund will be provided.",
   },
   {
     icon: "/about-us/about_us-transparetesa-secure_payment-icon.svg",
@@ -31,7 +31,7 @@ export function AboutTransparentPricingSection() {
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
           <h2 className="heading-h2">
-            Our Transparent ESA Evaluation Process
+            Clear Policies & Transparent Pricing for ESA Evaluations
           </h2>
           <p className="body-large max-w-[700px] mx-auto">
             We believe in upfront pricing and honest policies with no surprises.

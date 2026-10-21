@@ -58,10 +58,10 @@ export function AboutTestimonialSection() {
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-tight lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
-            Trusted by Thousands of Pet Owners
+            Trusted by Thousands of ESA Owners
           </h2>
           <p className="font-sans font-semibold text-sm sm:text-base lg:text-[16px] xl:text-[18px] text-body-text leading-relaxed lg:leading-[26px] xl:leading-[30px] max-w-[700px] mx-auto">
-            See how our legitimate ESA evaluations have helped pet owners across the nation.
+            See how our legitimate ESA evaluations have helped individuals across the nation.
           </p>
         </div>
 
