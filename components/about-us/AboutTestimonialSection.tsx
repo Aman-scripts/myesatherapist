@@ -156,7 +156,7 @@ export function AboutTestimonialSection() {
               </div>
 
               {/* Quote Text */}
-              <p className="body-large text-background max-w-[760px] mx-auto leading-relaxed">
+              <p className="body-text text-background max-w-[760px] mx-auto leading-relaxed">
                 {current.quote}
               </p>
             </div>
