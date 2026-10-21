@@ -49,7 +49,7 @@ export function PsdTrustBarSection() {
           {trustCards.map((card, idx) => (
             <div
               key={idx}
-              className="relative bg-white rounded-[20px] pt-14 pb-8 px-6 sm:px-8 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border-t-[5px] border-t-accent hover:shadow-md transition-shadow"
+              className="relative bg-white rounded-[20px] pt-14 pb-8 px-3 sm:px-5 lg:px-3 xl:px-6 flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border-t-[5px] border-t-accent hover:shadow-md transition-shadow"
             >
               {/* Floating Top Circular Badge (Figma Frame 1000011685) */}
               <div className="absolute -top-[37px] left-1/2 -translate-x-1/2 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_1.88px_3.77px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
@@ -64,7 +64,7 @@ export function PsdTrustBarSection() {
               </div>
 
               {/* Card Title H3 */}
-              <h3 className="heading-h3 capitalize text-color-gradient mb-2">
+              <h3 className="heading-h3 capitalize text-color-gradient mb-2 text-center whitespace-nowrap">
                 {card.title}
               </h3>
 
