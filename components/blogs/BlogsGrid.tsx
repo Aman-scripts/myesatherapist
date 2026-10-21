@@ -49,7 +49,7 @@ export function BlogsGrid() {
       {/* ---------------------------------------------------- */}
       {/* Category Navigation Pills (Frame 1261153994)         */}
       {/* ---------------------------------------------------- */}
-      <div className="w-full bg-background pt-10 sm:pt-14 pb-12 sm:pb-16">
+      <div className="w-full bg-background pt-8 sm:pt-12 pb-0">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <nav
             aria-label="Blog category filters"
@@ -72,7 +72,7 @@ export function BlogsGrid() {
       {/* 3 Category Sections (Original Articles Only)        */}
       {/* ---------------------------------------------------- */}
       <div>
-        {BLOG_CATEGORIES.map((category) => {
+        {BLOG_CATEGORIES.map((category, index) => {
           // Filter strictly original posts from BLOG_POSTS
           const categoryPosts = BLOG_POSTS.filter(
             (art: BlogArticle) =>
@@ -80,13 +80,19 @@ export function BlogsGrid() {
               art.category.toLowerCase() === category.title.toLowerCase()
           );
 
+          const isFirst = index === 0;
+
           return (
             <section
               key={category.id}
               id={category.id}
-              className={`w-full ${category.bgColor} py-14 sm:py-18 lg:py-[72px] scroll-mt-24`}
+              className={`w-full ${category.bgColor} ${
+                isFirst
+                  ? "pt-8 sm:pt-10 lg:pt-12 pb-14 sm:pb-18 lg:pb-[72px]"
+                  : "py-14 sm:py-18 lg:py-[72px]"
+              } scroll-mt-24`}
             >
-              <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center gap-12 sm:gap-16 lg:gap-[72px]">
+              <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center gap-10 sm:gap-14 lg:gap-[56px]">
                 {/* Section Header (Heading Frame) */}
                 <div className="flex flex-col items-center gap-4 text-center max-w-[978px] mx-auto">
                   <h2 className="heading-h2 text-primary capitalize text-center">
