@@ -119,7 +119,7 @@ interface AsSeenOnSectionProps {
 
 export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProps) {
   return (
-    <section className={`py-8 sm:py-10 lg:py-8 xl:py-[39px] ${bgColor} overflow-hidden relative backdrop-blur-xs`}>
+    <section className={`py-8 sm:py-10 lg:py-8 xl:py-[39px] ${bgColor} overflow-hidden relative z-10 backdrop-blur-xs`}>
       {/* Heading */}
       <div className="flex items-center justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8 xl:mb-[32px] px-4">
         <div className="w-[50px] sm:w-[80px] h-[1px] bg-accent rounded-[10px] shrink-0" />

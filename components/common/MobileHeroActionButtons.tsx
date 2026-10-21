@@ -63,7 +63,7 @@ export function MobileHeroActionButtons({
       className={`flex flex-col justify-center items-center gap-[16px] w-[246px] mx-auto ${className}`}
     >
       {/* Frame 2: State Selector */}
-      <div className="relative w-[246px]" ref={dropdownRef}>
+      <div className="relative w-[246px] z-50" ref={dropdownRef}>
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}

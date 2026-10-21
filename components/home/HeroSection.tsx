@@ -88,7 +88,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative z-30 bg-background overflow-hidden">
+    <section className="relative z-40 bg-background">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
       {/* Matches Screenshot 2                                 */}
@@ -166,7 +166,7 @@ export function HeroSection() {
         />
 
         {/* Content Container (Centered) */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-12 text-center flex flex-col items-center z-10">
+        <div className="absolute inset-x-0 top-0 px-6 pt-12 text-center flex flex-col items-center z-30">
           {/* Stat Pills at top */}
           <div className="flex items-center justify-center gap-3 flex-wrap">
             {statsData.map((stat) => (
@@ -197,9 +197,9 @@ export function HeroSection() {
           </p>
 
           {/* Side-by-side Action Row */}
-          <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
+          <div className="flex items-center justify-center gap-3 flex-wrap mt-6 relative z-50">
             {/* State Dropdown */}
-            <div className="relative z-30" ref={dropdownRefTablet}>
+            <div className="relative z-50" ref={dropdownRefTablet}>
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -260,7 +260,7 @@ export function HeroSection() {
         <DesktopScaleWrapper
           designHeight={744}
           designWidth={1440}
-          wrapperClassName="bg-background overflow-hidden"
+          wrapperClassName="bg-background"
           background={
             <BreakpointImage
               media="(min-width: 1024px)"
@@ -275,7 +275,7 @@ export function HeroSection() {
         >
           <div className="relative w-[1440px] h-[744px]">
             {/* Content — exact 1440px coordinates from Figma Frame 1000011884 */}
-            <div className="absolute left-[82px] top-[92px] w-[678px] z-10">
+            <div className="absolute left-[82px] top-[92px] w-[678px] z-30">
               {/* Stat Pills */}
               <div className="flex items-center gap-3">
                 {statsData.map((stat) => (
@@ -308,9 +308,9 @@ export function HeroSection() {
               </p>
 
               {/* Action Row */}
-              <div className="flex items-center gap-3 flex-wrap mt-6">
+              <div className="flex items-center gap-3 flex-wrap mt-6 relative z-50">
                 {/* State Dropdown */}
-                <div className="relative z-30" ref={dropdownRefDesktop}>
+                <div className="relative z-50" ref={dropdownRefDesktop}>
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}

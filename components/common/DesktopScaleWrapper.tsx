@@ -34,7 +34,7 @@ export function DesktopScaleWrapper({
     <div className={`hidden lg:block relative w-full overflow-visible ${wrapperClassName}`}>
       {/* Optional full-bleed background for screens wider than designWidth */}
       {bg && (
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
           {bg}
         </div>
       )}
