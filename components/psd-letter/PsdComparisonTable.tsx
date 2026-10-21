@@ -160,7 +160,7 @@ export function PsdComparisonTable() {
                   {/* Right Column: ESA Letter (Icon on Top + Text Below) */}
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1">
                     <StatusIcon type={row.esa.type} />
-                    <span className="body-small italic text-center mt-1.5">
+                    <span className="body-small text-center mt-1.5">
                       {row.esa.text}
                     </span>
                   </div>
@@ -191,7 +191,7 @@ export function PsdComparisonTable() {
                   className="flex flex-col items-center justify-center text-center min-h-[94px] sm:min-h-[102px] px-2"
                 >
                   <StatusIcon type={row.psd.type} />
-                  <span className="body-small italic text-center mt-1.5">
+                  <span className="body-small text-center mt-1.5">
                     {row.psd.text}
                   </span>
                 </div>
@@ -228,13 +228,13 @@ export function PsdComparisonTable() {
                   <div className="col-span-4" />
                   <div className="col-span-4 flex items-center justify-start gap-2.5 px-6 lg:px-8">
                     <StatusIcon type={row.psd.type} />
-                    <span className="body-text italic leading-snug">
+                    <span className="body-text leading-snug">
                       {row.psd.text}
                     </span>
                   </div>
                   <div className="col-span-4 flex items-center justify-start gap-2.5 px-6 lg:px-8">
                     <StatusIcon type={row.esa.type} />
-                    <span className="body-text italic leading-snug">
+                    <span className="body-text leading-snug">
                       {row.esa.text}
                     </span>
                   </div>
