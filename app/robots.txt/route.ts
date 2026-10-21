@@ -1,15 +1,11 @@
 const SITE_URL = "https://myesatherapist.com";
 
-// Paths crawlers should not visit.
-const DISALLOW = ["/api/", "/admin/", "/_next/", "/private/"];
-
 export const revalidate = 3600;
 
 export function GET() {
   const body = [
     "User-agent: *",
-    "Allow: /",
-    ...DISALLOW.map((path) => `Disallow: ${path}`),
+    "Disallow: /",
     "",
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     "",
