@@ -111,7 +111,7 @@ export function PsdHeroSection() {
           />
 
           <p className="body-small text-center mt-2.5 max-w-[300px]">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your PSD evaluation? You get a full refund!
           </p>
         </div>
       </div>
@@ -210,7 +210,7 @@ export function PsdHeroSection() {
           </div>
 
           <p className="body-small text-center mt-3">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your PSD evaluation? You get a full refund!
           </p>
         </div>
       </div>
@@ -317,7 +317,7 @@ export function PsdHeroSection() {
 
               {/* Refund guarantee note */}
               <p className="body-small text-center w-[463px] pt-1">
-                If not approved after your evaluation? You get a full refund.
+                Not approved after your PSD evaluation? You get a full refund!
               </p>
             </div>
 

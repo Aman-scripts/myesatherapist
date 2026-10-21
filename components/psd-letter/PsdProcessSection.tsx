@@ -46,21 +46,21 @@ export function PsdProcessSection() {
           </p>
         </div>
 
-        {/* 2. Main Center Photo Container with Floating Heart-Paw Badges */}
-        <div className="relative w-full max-w-[1050px] mx-auto mb-16 lg:mb-20">
-          <div className="relative aspect-[16/9] w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
+        {/* 2. Main Center Photo Container with Floating Heart-Paw Badges (Figma: 768x384, rounded-30px) */}
+        <div className="relative w-full max-w-[768px] mx-auto mb-16 lg:mb-20">
+          <div className="relative aspect-[2/1] w-full rounded-[20px] sm:rounded-[30px] overflow-hidden shadow-lg border border-gray-100">
             <Image
-              quality={90}
+              quality={95}
               src="/psd-letter/psd-three-steps.webp"
               alt="Woman smiling with psychiatric service dog"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 840px"
+              sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
 
           {/* Floating Circle Badge - Top Right Edge */}
-          <div className="absolute top-[18%] right-[-14px] sm:top-[20%] sm:right-[-18px] md:top-[22%] md:right-[-20px] lg:right-[-34px] w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
+          <div className="absolute top-[18%] -right-3.5 sm:-right-5 lg:-right-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
               src="/psd-letter/psdprocess-section-icon.svg"
               alt=""
@@ -72,7 +72,7 @@ export function PsdProcessSection() {
           </div>
 
           {/* Floating Circle Badge - Bottom Left Edge */}
-          <div className="absolute bottom-[18%] left-[-14px] sm:bottom-[20%] sm:left-[-18px] md:bottom-[22%] md:left-[-20px] lg:left-[-34px] w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
+          <div className="absolute bottom-[18%] -left-3.5 sm:-left-5 lg:-left-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
               src="/psd-letter/psdprocess-section-icon.svg"
               alt=""
@@ -128,7 +128,7 @@ export function PsdProcessSection() {
             href="#pricing"
             className="w-auto min-w-[200px]"
           >
-            Get Started
+            Start Your Consultation
           </CtaButton>
         </div>
 

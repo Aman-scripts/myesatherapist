@@ -76,17 +76,17 @@ function MapFlagIcon() {
 const trustCards: TrustCard[] = [
   {
     title: "HIPAA Compliant",
-    description: "Your information stays private and confidential.",
+    description: "Your health information stays just between you and your provider",
     icon: <ShieldCheckIcon />,
   },
   {
-    title: "Response Within 24–72 Hours",
-    description: "Timely responses, subject to provider availability.",
+    title: "Response Within 24-72 Hours",
+    description: "Get timely updates throughout your evaluation journey",
     icon: <ClockIcon />,
   },
   {
-    title: "Licensed In All 50 States",
-    description: "Access providers licensed in your state.",
+    title: "Licensed in All 50 States",
+    description: "State-specific expertise for your PSD letter evaluation",
     icon: <MapFlagIcon />,
   },
 ];
@@ -96,13 +96,13 @@ export function PsdTrustBarSection() {
     <section className="w-full bg-background pt-14 pb-12 sm:pt-16 sm:pb-16 lg:pt-20 lg:pb-20 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading & Subtitle matching Figma Frame 1261153977 */}
+        {/* Section Heading & Subtitle */}
         <div className="text-center max-w-[854px] mx-auto mb-16 lg:mb-20 space-y-3">
           <h2 className="heading-h2 capitalize">
-            Licensed Mental Health Professionals
+            Your PSD Letter Evaluation Starts with Trust
           </h2>
-          <p className="body-large max-w-[620px] mx-auto">
-            Connect with state-licensed mental health professionals for confidential and legally compliant evaluations.
+          <p className="body-large max-w-[700px] mx-auto">
+            With My ESA Therapist, get complete guidance on your PSD letter evaluation based on your specific needs and circumstances.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export function PsdTrustBarSection() {
               </h3>
 
               {/* Card Description */}
-              <p className="body-text max-w-[260px]">
+              <p className="body-text max-w-[280px]">
                 {card.description}
               </p>
             </div>
