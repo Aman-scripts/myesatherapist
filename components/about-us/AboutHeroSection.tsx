@@ -1,38 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import Link from "next/link";
-import { ShieldCheck, Clock, Award, ChevronDown } from "lucide-react";
-import { ReviewBadges } from "@/components/common/ReviewBadges";
-import { useRouter } from "next/navigation";
-import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-import { STATE_INDEX } from "@/data/stateIndex";
-import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
-import { CtaButton } from "@/components/common/CtaButton";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const statsData = [
-  { value: "64,739+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
-  { value: "4.9", label: "Verified Reviews" },
-];
-
 export function AboutHeroSection() {
-  const router = useRouter();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   return (
     <section className="relative w-full bg-background overflow-hidden">
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE VIEW (< 640px)                             */}
-      {/* Uses /about_us-mobile_hero_section.png (390x768)     */}
+      {/* Uses /about_us-mobile_hero_section.webp (390x768)     */}
       {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[640px] overflow-hidden">
+      <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[580px] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={90}
+          quality={90}
           src="/about-us/about_us-mobile_hero_section.webp"
           alt="About My ESA Therapist"
           fill
@@ -41,57 +23,24 @@ export function AboutHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10 space-y-3">
-          {/* Top 3 Stat Pills */}
-          <div className="flex items-center justify-center gap-1.5 sm:gap-2 w-full max-w-[350px]">
-            {statsData.map((stat, idx) => (
-              <div
-                key={idx}
-                className="flex-1 bg-background rounded-[24px] py-1.5 px-1 shadow-xs flex flex-col items-center border border-white/80"
-              >
-                <span
-                  className="font-heading text-[15px] font-bold leading-none bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  {stat.value}
-                </span>
-                <span className="font-sans text-[9px] font-semibold text-[#707070] mt-0.5 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="heading-h3 sm:heading-h2 text-primary max-w-[280px]">
-            About
-            <br />
-            My ESA Therapist
+        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 space-y-3">
+          <h1 className="heading-h2 text-primary max-w-[320px]">
+            About My ESA Therapist
           </h1>
-
-          {/* Subtitle */}
-          <p className="body-small text-body-text max-w-[310px]">
+          <p className="body-large text-body-text max-w-[320px]">
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
-
-          {/* Action Buttons (Mobile - Frame 7) */}
-          <MobileHeroActionButtons
-            className="pt-1"
-            onStateSelect={(slug) => router.push(`/esa-letter-${slug}/`)}
-            getStartedHref="#pricing"
-            placeholder="Select your State"
-          />
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
       {/* 2. TABLET VIEW (640px - 1023px)                      */}
-      {/* Uses /about_us-tablet_hero_section.png (834x1226)    */}
+      {/* Uses /about_us-tablet_hero_section.webp (834x1226)    */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[760px] max-h-[1050px] overflow-hidden">
+      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[720px] max-h-[960px] overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+          quality={90}
           src="/about-us/about_us-tablet_hero_section.webp"
           alt="About My ESA Therapist"
           fill
@@ -100,98 +49,23 @@ export function AboutHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 space-y-4 max-w-[620px] mx-auto">
-          {/* Top Pill Badges */}
-          <div className="flex items-center justify-center gap-3">
-            {statsData.map((stat, idx) => (
-              <div
-                key={idx}
-                className="bg-background rounded-[30px] px-4 py-2 shadow-xs flex flex-col items-center min-w-[120px] border border-white/80"
-              >
-                <span
-                  className="heading-h4 text-color-gradient leading-none"
-                >
-                  {stat.value}
-                </span>
-                <span className="body-small text-[#707070] mt-1 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="heading-h2 text-primary">
+        <div className="absolute inset-x-0 top-0 px-8 pt-16 text-center flex flex-col items-center z-10 space-y-4 max-w-[620px] mx-auto">
+          <h1 className="heading-h1 text-primary">
             About My ESA Therapist
           </h1>
-
-          {/* Subtitle */}
-          <p className="body-large text-body-text max-w-[480px]">
+          <p className="body-large text-body-text max-w-[500px]">
             Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
           </p>
-
-          {/* Action Buttons in a Row */}
-          <div className="flex items-center justify-center gap-4 pt-1 relative">
-            {/* Select your State */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="h-12 px-6 bg-white rounded-[30px] shadow-sm flex items-center gap-2 text-sm font-sans font-bold text-primary hover:bg-background transition-colors border border-[#EAE5DC]"
-              >
-                <Image
-                  src="/home/hero-section-map.svg"
-                  alt=""
-                  width={16}
-                  height={20}
-                  unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
-                />
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  Select your State
-                </span>
-                <ChevronDown className="w-4 h-4 text-primary" />
-              </button>
-
-              {dropdownOpen && (
-                <div className={STATE_DROPDOWN_PANEL}>
-                  {STATE_INDEX.map((st) => (
-                    <Link
-                      key={st.slug}
-                      href={`/esa-letter-${st.slug}/`}
-                      onClick={() => setDropdownOpen(false)}
-                      className={STATE_DROPDOWN_ITEM}
-                    >
-                      <span>{st.name}</span>
-                      <span className={STATE_DROPDOWN_ABBR}>{st.abbreviation}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Get Started */}
-            <CtaButton
-              href="#pricing"
-              className="w-[192px]"
-            >
-              Get Started
-            </CtaButton>
-          </div>
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
       {/* 3. DESKTOP VIEW (>= 1024px)                          */}
-      {/* Uses /hero_section-about_us.webp                     */}
+      {/* Uses /hero_section-about_us.webp (Figma 1440x751)     */}
       {/* ---------------------------------------------------- */}
       <DesktopScaleWrapper
         designWidth={1440}
-        designHeight={795}
+        designHeight={751}
         className="hidden lg:block relative"
         fullBleedBackground={
           <BreakpointImage
@@ -200,117 +74,25 @@ export function AboutHeroSection() {
             src="/about-us/hero_section-about_us.webp"
             alt="About My ESA Therapist"
             fill
-            className="object-cover object-right"
+              className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[795px] flex items-center">
-          {/* Content Container */}
-          <div className="relative z-10 px-[82px] py-[100px] w-full">
-            <div className="max-w-[540px] space-y-8">
-              {/* Top 3 Pill Stats */}
-              <div className="flex flex-wrap items-center gap-3.5">
-                {/* Stat 1 */}
-                <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
-                  <span
-                    className="font-heading font-bold text-2xl leading-none bg-clip-text text-transparent"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
-                    50
-                  </span>
-                  <span className="font-sans font-semibold text-[12px] text-[#707070] mt-0.5">
-                    USA States
-                  </span>
-                </div>
-
-                {/* Stat 2 */}
-                <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
-                  <span
-                    className="font-heading font-bold text-2xl leading-none bg-clip-text text-transparent"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
-                    HIPAA
-                  </span>
-                  <span className="font-sans font-semibold text-[12px] text-[#707070] mt-0.5">
-                    Compliant
-                  </span>
-                </div>
-
-                {/* Stat 3 */}
-                <div className="w-[163px] h-[53px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.12)] rounded-[30px] flex flex-col items-center justify-center px-2.5 py-1 border border-white/80">
-                  <span
-                    className="font-heading font-bold text-2xl leading-none bg-clip-text text-transparent"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
-                    100%
-                  </span>
-                  <span className="font-sans font-semibold text-[12px] text-[#707070] mt-0.5">
-                    Licensed Pros
-                  </span>
-                </div>
-              </div>
-
-              {/* Main Heading */}
-              <h1 className="heading-h1 text-primary">
+        <div className="relative w-[1440px] h-[751px] flex items-center">
+          {/* Content Container (Figma Frame 1000011884 / Frame 1000011902) */}
+          <div className="relative z-10 px-[82px] py-[185px] w-full">
+            <div className="w-[513px] flex flex-col items-start gap-4 text-left">
+              <h1 className="heading-h1 text-primary capitalize leading-[58px]">
                 About My ESA Therapist
               </h1>
-
-              {/* Subtitle Description */}
-              <p className="body-large text-body-text max-w-[480px]">
+              <p className="body-large text-body-text max-w-[470px]">
                 Providing legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.
               </p>
-
-              {/* Trustpilot Floating Badge Card */}
-              <ReviewBadges />
             </div>
           </div>
         </div>
       </DesktopScaleWrapper>
-
-      {/* Bottom Trust Bar (Desktop) */}
-      <div className="w-full bg-background py-6 sm:py-8 lg:py-9 border-t border-b border-[#EAE5DC]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center lg:justify-between gap-6 sm:gap-8 lg:gap-6 xl:gap-12">
-          {/* Trust Item 1 */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <div
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-xs shrink-0"
-              style={{ background: "var(--color-gradient)" }}
-            >
-              <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
-            </div>
-            <span className="heading-h4 text-[#707070]">
-              HIPAA Compliant
-            </span>
-          </div>
-
-          {/* Trust Item 2 */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <div
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-xs shrink-0"
-              style={{ background: "var(--color-gradient)" }}
-            >
-              <Clock className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
-            </div>
-            <span className="heading-h4 text-[#707070]">
-              Response Within 24-72 Hours
-            </span>
-          </div>
-
-          {/* Trust Item 3 */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            <div
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white shadow-xs shrink-0"
-              style={{ background: "var(--color-gradient)" }}
-            >
-              <Award className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
-            </div>
-            <span className="heading-h4 text-[#707070]">
-              Licensed in All 50 States
-            </span>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

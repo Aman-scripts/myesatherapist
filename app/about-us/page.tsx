@@ -3,6 +3,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AboutHeroSection } from "@/components/about-us/AboutHeroSection";
+import { AboutTrustBySection } from "@/components/about-us/AboutTrustBySection";
 import { AboutLegitimateSection } from "@/components/about-us/AboutLegitimateSection";
 import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection";
 import { AboutWhoWeHelpSection } from "@/components/about-us/AboutWhoWeHelpSection";
@@ -106,7 +107,10 @@ export default function AboutUsPage() {
         {/* Section 1: Hero */}
         <AboutHeroSection />
 
-        {/* Section 2: Legitimate ESA Letter Evaluations You Can Trust */}
+        {/* Section 2: Trust / Why Choose My ESA Therapist */}
+        <AboutTrustBySection />
+
+        {/* Section 3: Legitimate ESA Letter Evaluations You Can Trust */}
         <AboutLegitimateSection />
 
         {/* Section 3: Why Pet Owners Trust MY ESA Therapist */}
