@@ -387,7 +387,7 @@ export function StatesHeroSection() {
                           className="shrink-0 object-contain"
                           style={{ width: "auto", height: "auto" }}
                         />
-                        <span className="body-large text-color-gradient">
+                        <span className="body-text text-color-gradient">
                           {selectedState
                             ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
                             : "Select your State"}

@@ -79,7 +79,7 @@ export function MobileHeroActionButtons({
               className="w-[20px] h-[20px] shrink-0 object-contain"
               style={{ width: "auto", height: "auto" }}
             />
-            <span className="body-large text-color-gradient truncate max-w-[138px]">
+            <span className="body-text text-color-gradient truncate max-w-[138px]">
               {displayText}
             </span>
             <ChevronDown
