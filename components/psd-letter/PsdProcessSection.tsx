@@ -123,13 +123,16 @@ export function PsdProcessSection() {
         </div>
 
         {/* 4. Bottom CTA Pill Button */}
-        <div className="flex justify-center mt-12 sm:mt-16">
+        <div className="flex flex-col items-center gap-2 mt-12 sm:mt-16">
           <CtaButton
             href="#pricing"
             className="w-auto min-w-[200px]"
           >
             Start Your Consultation
           </CtaButton>
+          <p className="body-small text-center">
+            If not approved after your evaluation? You get a full refund.
+          </p>
         </div>
 
       </div>

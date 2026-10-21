@@ -133,6 +133,7 @@ interface TherapistsSectionProps {
   title?: string;
   subtitle?: string;
   licensureNote?: string;
+  refundText?: string | null;
   therapistsList?: Therapist[];
   bgColor?: string;
   className?: string;
@@ -142,6 +143,7 @@ export function TherapistsSection({
   title = "Our Licensed Mental Health Professionals",
   subtitle = "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
   licensureNote = "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
+  refundText = "If not approved after your evaluation? You get a full refund.",
   therapistsList,
   bgColor = "bg-white",
   className = "",
@@ -422,10 +424,15 @@ export function TherapistsSection({
         </div>
 
         {/* Bottom Book Appointment Button */}
-        <div className="flex justify-center pt-8 sm:pt-10">
+        <div className="flex flex-col items-center gap-2 pt-8 sm:pt-10">
           <CtaButton href="#how-it-works" className="w-[232px]">
             Book Appointment
           </CtaButton>
+          {refundText && (
+            <p className="body-small text-center">
+              {refundText}
+            </p>
+          )}
         </div>
       </div>
     </section>

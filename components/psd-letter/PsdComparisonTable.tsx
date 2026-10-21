@@ -276,13 +276,16 @@ export function PsdComparisonTable() {
         </div>
 
         {/* Bottom CTA Button */}
-        <div className="mt-10 sm:mt-12">
+        <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton
             href="#pricing"
             className="w-auto min-w-[210px]"
           >
             Start Your Consultation
           </CtaButton>
+          <p className="body-small text-center">
+            If not approved after your evaluation? You get a full refund.
+          </p>
         </div>
       </div>
     </section>
