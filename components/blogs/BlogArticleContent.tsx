@@ -105,17 +105,21 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
       {article.questionCallout && (
         <div
           id={article.questionCallout.id}
-          className="w-full bg-accent/20 rounded-[15px] flex flex-row items-stretch overflow-hidden gap-3.5 sm:gap-[16px] pr-4 sm:pr-8 min-h-[69px] my-5"
+          className="w-full bg-[rgba(232,185,44,0.2)] rounded-[15px] flex flex-row items-stretch overflow-hidden gap-4 sm:gap-5 pr-5 sm:pr-8 lg:pr-10 min-h-[69px] my-6 sm:my-8"
         >
-          <div className="w-[14px] sm:w-[17px] self-stretch bg-accent rounded-l-[10px] shrink-0" />
-          <div className="py-4 sm:py-5 space-y-2">
-            <span className="heading-h3 text-primary block">Quick Answer:</span>
-            <h2 className="body-large font-bold text-primary">
-              {article.questionCallout.question}
+          <div className="w-[14px] sm:w-[17px] self-stretch bg-accent rounded-l-[15px] shrink-0" />
+          <div className="py-5 sm:py-6 space-y-3 sm:space-y-3.5 flex-1 min-w-0">
+            <h2 className="heading-h2 text-primary">
+              Quick Answer:
             </h2>
-            <p className="body-text text-body-text">
-              {article.questionCallout.answer}
-            </p>
+            <div className="space-y-2">
+              <h3 className="body-large font-bold text-primary">
+                {article.questionCallout.question}
+              </h3>
+              <p className="body-text text-body-text">
+                {article.questionCallout.answer}
+              </p>
+            </div>
           </div>
         </div>
       )}
