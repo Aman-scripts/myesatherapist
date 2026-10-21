@@ -12,19 +12,19 @@ const groups = [
   },
   {
     icon: "/about-us/about_us-whowehelp-individuals_anxiety-icon.svg",
-    title: "Individuals with Mental Health Conditions",
+    title: "Individuals With Anxiety Or Depression",
     description:
-      "Discuss your mental health concerns with a licensed mental health professional who will independently assess whether an ESA may be clinically appropriate.",
+      "Receive a professional assessment from licensed mental health professionals to evaluate emotional support needs.",
   },
   {
     icon: "/about-us/about_us-whowehelp-remotetelepath-icon.svg",
-    title: "Remote or Telehealth Users",
+    title: "Remote Or Telehealth Users",
     description:
       "Complete secure, HIPAA-compliant telehealth ESA evaluations from anywhere, with scheduling flexibility to suit your needs.",
   },
   {
     icon: "/about-us/about_us-whowehelp-firsttimereturning-icon.svg",
-    title: "First-Time and Returning ESA Applicants",
+    title: "First-Time And Existing ESA Applicants",
     description:
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
@@ -51,13 +51,13 @@ export function AboutWhoWeHelpSection() {
         </div>
 
         {/* 2 Columns: 5 Cards on Left & Photo on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-8 items-stretch">
           {/* Left Column: 5 Cards (Order 2 on mobile/tablet, Order 1 on desktop) */}
-          <div className="lg:col-span-6 space-y-3 sm:space-y-3.5 xl:space-y-4 order-2 lg:order-1">
+          <div className="flex flex-col justify-between gap-3 sm:gap-3.5 xl:gap-4 order-2 lg:order-1">
             {groups.map((group, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[10px] shadow-[0px_2px_6px_rgba(0,0,0,0.06)] border border-[#EAE5DC]/60 p-3 sm:p-4 xl:p-4.5 flex items-center gap-3.5 sm:gap-4 xl:gap-4.5 transition-all duration-200 hover:shadow-md"
+                className="bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 p-3 sm:p-4 xl:p-4.5 flex items-center gap-3.5 sm:gap-4 xl:gap-5 transition-all duration-200 hover:shadow-md"
               >
                 {/* Gradient Teal Icon Badge */}
                 <div
@@ -88,10 +88,10 @@ export function AboutWhoWeHelpSection() {
           </div>
 
           {/* Right Column: Photo (Order 1 on mobile/tablet, Order 2 on desktop) */}
-          <div className="lg:col-span-6 flex items-center justify-center order-1 lg:order-2">
-            <div className="relative w-full max-w-[480px] lg:max-w-[540px] xl:max-w-[627px] aspect-[627/699] rounded-[24px] xl:rounded-[30px] overflow-hidden shadow-xl">
+          <div className="order-1 lg:order-2 flex flex-col w-full h-full min-h-[360px] sm:min-h-[440px] lg:min-h-0">
+            <div className="relative w-full flex-1 min-h-[360px] sm:min-h-[440px] lg:min-h-0 rounded-[24px] xl:rounded-[30px] overflow-hidden shadow-xl">
               <Image
-            quality={90}
+                quality={90}
                 src="/about-us/about_us-whowehelp-section.webp"
                 alt="Woman sitting on floor hugging cat"
                 fill
