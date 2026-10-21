@@ -25,6 +25,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
   title: "My ESA Therapist | Official Emotional Support Animal Letters Online",
   description:
     "Get legitimate ESA letters online certified by licensed mental health professionals in your state. 100% compliant with Fair Housing Act (FHA) & 100% Money-Back Guarantee.",
