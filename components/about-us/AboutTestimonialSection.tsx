@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { InitialsAvatar } from "@/components/common/InitialsAvatar";
 
 interface TestimonialItem {
   id: number;
   name: string;
   rating: number;
   quote: string;
-  avatar: string;
 }
 
 const TESTIMONIALS: TestimonialItem[] = [
@@ -18,7 +18,6 @@ const TESTIMONIALS: TestimonialItem[] = [
     rating: 5,
     quote:
       "“Finally, a legitimate ESA service! My therapist was professional and understanding. Got my letter in under 24 hours and my landlord accepted it immediately.”",
-    avatar: "/about-us/jason-avatar.jpg",
   },
   {
     id: 2,
@@ -26,7 +25,6 @@ const TESTIMONIALS: TestimonialItem[] = [
     rating: 5,
     quote:
       "“Quick consultation, professional licensed therapist, and my landlord accepted the letter immediately with zero complications.”",
-    avatar: "/about-us/jason-avatar.jpg",
   },
   {
     id: 3,
@@ -34,7 +32,6 @@ const TESTIMONIALS: TestimonialItem[] = [
     rating: 5,
     quote:
       "“The evaluation felt respectful and thorough. Having a licensed clinician in my state assess my situation gave me complete confidence.”",
-    avatar: "/about-us/jason-avatar.jpg",
   },
   {
     id: 4,
@@ -42,7 +39,6 @@ const TESTIMONIALS: TestimonialItem[] = [
     rating: 5,
     quote:
       "“Transparent pricing, no hidden recurring fees, and excellent support throughout property manager verification. Truly life-changing!”",
-    avatar: "/about-us/jason-avatar.jpg",
   },
   {
     id: 5,
@@ -50,7 +46,6 @@ const TESTIMONIALS: TestimonialItem[] = [
     rating: 5,
     quote:
       "“The telehealth session was simple and comfortable. Received my official ESA recommendation securely and on time as promised.”",
-    avatar: "/about-us/jason-avatar.jpg",
   },
 ];
 
@@ -126,8 +121,28 @@ export function AboutTestimonialSection() {
           onTouchEnd={onTouchEnd}
           className="max-w-[808px] mx-auto flex flex-col items-center select-none"
         >
-          {/* Main Speech Bubble Wrapper */}
-          <div className="w-full">
+          {/* Main Speech Bubble Wrapper with Navigation Chevrons */}
+          <div className="relative w-full">
+            {/* Left Chevron Button */}
+            <button
+              type="button"
+              onClick={prevSlide}
+              className="absolute -left-3 sm:-left-6 md:-left-12 lg:-left-14 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              aria-label="Previous Review"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+            </button>
+
+            {/* Right Chevron Button */}
+            <button
+              type="button"
+              onClick={nextSlide}
+              className="absolute -right-3 sm:-right-6 md:-right-12 lg:-right-14 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              aria-label="Next Review"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+            </button>
+
             {/* Gradient Card (Union / Rectangle 68) */}
             <div
               className="relative w-full rounded-[20px] p-6 sm:py-7 sm:px-8 md:py-8 md:px-12 flex flex-col items-center text-center shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-300"
@@ -154,16 +169,14 @@ export function AboutTestimonialSection() {
             </div>
           </div>
 
-          {/* Reviewer Profile: Avatar + Name */}
+          {/* Reviewer Profile: Initials Avatar + Name */}
           <div className="flex flex-col items-center text-center mt-3.5 sm:mt-4">
-            {/* Circular Avatar */}
-            <div className="w-[60px] h-[60px] rounded-full shadow-md overflow-hidden relative border-[3px] border-white shrink-0 bg-[#E8F0F1]">
-              <Image
-                src={current.avatar}
-                alt={current.name}
-                fill
-                className="object-cover object-center"
-                sizes="60px"
+            {/* Circular Initials Avatar */}
+            <div className="w-[60px] h-[60px] rounded-full shadow-md overflow-hidden relative border-[3px] border-white shrink-0 flex items-center justify-center bg-[#E8F0F1]">
+              <InitialsAvatar
+                name={current.name}
+                index={activeIdx}
+                className="w-full h-full heading-h4"
               />
             </div>
 
