@@ -1,93 +1,31 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
 interface TrustCard {
   title: string;
   description: string;
-  icon: React.ReactNode;
-}
-
-function ShieldCheckIcon() {
-  return (
-    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-        fill="url(#teal-grad-shield)"
-      />
-      <path
-        d="M9 12l2 2 4-4"
-        stroke="#FAF7F2"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <defs>
-        <linearGradient id="teal-grad-shield" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#1A3D4F" />
-          <stop offset="1" stopColor="#1D6E72" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="10" fill="url(#teal-grad-clock)" />
-      <path
-        d="M12 6v6l4 2"
-        stroke="#FAF7F2"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <defs>
-        <linearGradient id="teal-grad-clock" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#1A3D4F" />
-          <stop offset="1" stopColor="#1D6E72" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-function MapFlagIcon() {
-  return (
-    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-        fill="url(#teal-grad-map)"
-      />
-      <circle cx="12" cy="9" r="2.5" fill="#FAF7F2" />
-      <defs>
-        <linearGradient id="teal-grad-map" x1="5" y1="2" x2="19" y2="22" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#1A3D4F" />
-          <stop offset="1" stopColor="#1D6E72" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
+  icon: string;
 }
 
 const trustCards: TrustCard[] = [
   {
     title: "HIPAA Compliant",
     description: "Your health information stays just between you and your provider",
-    icon: <ShieldCheckIcon />,
+    icon: "/psd-letter/psd_trust_hippacomplaince_icon.svg",
   },
   {
     title: "Response Within 24-72 Hours",
     description: "Get timely updates throughout your evaluation journey",
-    icon: <ClockIcon />,
+    icon: "/psd-letter/psd_trust_responsetime_icon.svg",
   },
   {
     title: "Licensed in All 50 States",
     description: "State-specific expertise for your PSD letter evaluation",
-    icon: <MapFlagIcon />,
+    icon: "/psd-letter/psd_trust_licenses_icon.svg",
   },
 ];
 
@@ -115,7 +53,14 @@ export function PsdTrustBarSection() {
             >
               {/* Floating Top Circular Badge (Figma Frame 1000011685) */}
               <div className="absolute -top-[37px] left-1/2 -translate-x-1/2 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_1.88px_3.77px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
-                {card.icon}
+                <Image
+                  src={card.icon}
+                  alt={card.title}
+                  width={34}
+                  height={34}
+                  unoptimized
+                  className="w-[34px] h-[34px] object-contain"
+                />
               </div>
 
               {/* Card Title H3 */}
