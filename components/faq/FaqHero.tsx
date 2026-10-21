@@ -156,7 +156,7 @@ export function FaqHero() {
       <DesktopScaleWrapper
         designHeight={737}
         designWidth={1440}
-        wrapperClassName="bg-background"
+        wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
@@ -170,16 +170,6 @@ export function FaqHero() {
         }
       >
         <div className="relative w-[1440px] h-[737px]">
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/faq/faq_hero-section.webp"
-            alt="ESA Questions? We're Here to Help"
-            fill
-            className="object-cover object-center"
-            sizes="1440px"
-          />
-
           {/* Content Container Left-Aligned (Frame 1000011884: left 82px, top 120px) */}
           <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
             {/* Stat Pills (Frame 1000011901) */}

@@ -259,7 +259,7 @@ export function EsaLawsHero() {
       <DesktopScaleWrapper
         designHeight={797}
         designWidth={1440}
-        wrapperClassName="bg-background"
+        wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
@@ -273,16 +273,6 @@ export function EsaLawsHero() {
         }
       >
         <div className="relative w-[1440px] h-[797px]">
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/esa-laws/esalaws-herosection.webp"
-            alt="Woman reading ESA Laws guide with her emotional support dog"
-            fill
-            className="object-cover object-center"
-            sizes="1440px"
-          />
-
           <div className="absolute left-[82px] top-[113px] w-[626px] z-10 flex flex-col items-start gap-[30px]">
             <div className="flex flex-col gap-6">
               {/* Stat Pills */}

@@ -214,7 +214,7 @@ export function ReviewsHeroSection() {
       <DesktopScaleWrapper
         designHeight={743}
         designWidth={1440}
-        wrapperClassName="bg-background"
+        wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
@@ -222,22 +222,12 @@ export function ReviewsHeroSection() {
             src="/reviews/reviews_hero-section.webp"
             alt="What Our Clients Are Saying"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[86%_center]"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
         <div className="relative w-[1440px] h-[743px]">
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/reviews/reviews_hero-section.webp"
-            alt="What Our Clients Are Saying"
-            fill
-            className="object-cover object-[86%_center]"
-            sizes="1440px"
-          />
-
           {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
           <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
             {/* Stat Pills at top (Frame 1000011901) */}

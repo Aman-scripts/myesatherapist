@@ -264,7 +264,7 @@ export function PricingHero() {
       <DesktopScaleWrapper
         designHeight={802}
         designWidth={1440}
-        wrapperClassName="bg-background"
+        wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
@@ -278,16 +278,6 @@ export function PricingHero() {
         }
       >
         <div className="relative w-[1440px] h-[802px]">
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/pricing/pricing_section-hero_section.webp"
-            alt="Choose the Right ESA Package for You"
-            fill
-            className="object-cover object-center"
-            sizes="1440px"
-          />
-
           {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
           <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
             {/* Stat Pills at top (Frame 1000011901) */}

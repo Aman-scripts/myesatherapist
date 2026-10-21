@@ -222,7 +222,7 @@ export function PsdHeroSection() {
       <DesktopScaleWrapper
         designHeight={814}
         designWidth={1440}
-        wrapperClassName="bg-background"
+        wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
@@ -236,16 +236,6 @@ export function PsdHeroSection() {
         }
       >
         <div className="relative w-[1440px] h-[814px]">
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/psd-letter/psd-herosection-new.webp"
-            alt="Psychiatric Service Dog Letter Assistance"
-            fill
-            className="object-cover object-center"
-            sizes="1440px"
-          />
-
           <div className="absolute left-[82px] top-[100px] w-[678px] z-10">
             <div className="flex items-center gap-3">
               {statsData.map((stat) => (

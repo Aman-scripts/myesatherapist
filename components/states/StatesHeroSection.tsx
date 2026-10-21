@@ -257,7 +257,7 @@ export function StatesHeroSection() {
       <DesktopScaleWrapper
         designHeight={787}
         designWidth={1440}
-        wrapperClassName="bg-background"
+        wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
@@ -271,19 +271,6 @@ export function StatesHeroSection() {
         }
       >
         <div className="relative w-[1440px] h-[787px] flex items-center">
-          {/* Full-width Background Artwork inside 1440px Canvas */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
-            <BreakpointImage
-              media="(min-width: 1024px)"
-              quality={90}
-              src="/states/statepage_hero-section.webp"
-              alt="ESA Evaluation For Every State"
-              fill
-              className="object-cover object-right-top"
-              sizes="1440px"
-            />
-          </div>
-
           {/* Floating "Available in All 50 states" Glassmorphism Badge */}
           <div
             className="flex items-center gap-3.5 absolute left-[705px] top-[488px] -translate-y-1/2 z-20 px-5 py-3 rounded-[18px] border border-white/40 shadow-[0px_8px_24px_rgba(0,0,0,0.15)] hover:scale-105 transition-transform"
