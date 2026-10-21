@@ -36,7 +36,7 @@ export function FederalHousingRulesSection() {
           onClick={handleScrollToGrid}
           className="w-auto min-w-[246px]"
         >
-          Get Started
+          Learn With ESA Laws
         </CtaButton>
 
       </div>
