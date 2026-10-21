@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactInfoCards } from "@/components/contact/ContactInfoCards";
 import { ContactMap } from "@/components/contact/ContactMap";
+import { CtaBanner } from "@/components/home/CtaBanner";
 import { contactUsSchemas } from "@/data/schemas/contactUsSchema";
 
 export const metadata: Metadata = {
@@ -53,6 +54,13 @@ export default function ContactUsPage() {
         <ContactHero />
         <ContactInfoCards />
         <ContactMap />
+        <CtaBanner
+          title="Ready To Start Your ESA Evaluation?"
+          description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
+          buttonText="Start Your Evaluation"
+          buttonHref="/pricing/"
+          bgColor="bg-background"
+        />
       </main>
       <Footer bgColor="bg-background" />
     </div>

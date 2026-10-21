@@ -21,15 +21,14 @@ export function ContactInfoCards() {
     },
     {
       title: "REACH US AT:",
-      detail: "780 Lynnhaven Pkwy #400, Virginia Beach,VA",
+      detail: "780 Lynnhaven Pkwy #400, Virginia Beach, VA",
       icon: "/contact/contact_us-map-icon.svg",
       href: "#map",
       isLink: false,
     },
     {
       title: "OPEN HOURS:",
-      detail: "Mon - Sat: 9AM - 6PM",
-      subDetail: "Sunday: Closed",
+      detail: "Mon–Fri · 8am – 8pm ET",
       icon: "/common/footer-clock-icon.svg",
       href: "#hours",
       isLink: false,
@@ -39,15 +38,18 @@ export function ContactInfoCards() {
   return (
     <section className="w-full bg-background py-8 sm:py-10 lg:py-12">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Frame 1000011803: Responsive Grid */}
+        {/* Frame 1000011803: Responsive Grid (1280px x 88px, gap 24px) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {cards.map((card, idx) => {
             const Content = (
               <>
-                {/* Frame 13: Left Icon Circle */}
-                <div className="w-[45px] h-[45px] rounded-full color-gradient flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                {/* Frame 13: Left Icon Circle (45px x 45px) */}
+                <div
+                  className="w-[45px] h-[45px] rounded-full flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform"
+                  style={{ background: "var(--color-gradient)" }}
+                >
                   <Image
-            quality={90}
+                    quality={90}
                     src={card.icon}
                     alt={card.title}
                     width={20}
@@ -57,22 +59,19 @@ export function ContactInfoCards() {
                 </div>
 
                 {/* Frame 1000011796: Right Text Content Stack */}
-                <div className="min-w-0 flex-1 flex flex-col justify-center gap-1.5">
-                  {/* Title: Manrope 600 with Teal Gradient text */}
-                  <div className="font-sans font-semibold text-[15px] sm:text-[16px] xl:text-[17px] leading-tight text-color-gradient uppercase tracking-tight truncate">
+                <div className="min-w-0 flex-1 flex flex-col justify-center gap-0.5">
+                  {/* Title: body-large with text-color-gradient */}
+                  <div className="body-large text-color-gradient uppercase tracking-tight">
                     {card.title}
                   </div>
 
-                  {/* Detail */}
+                  {/* Detail: body-text with text-body-text */}
                   <div
-                    className={`font-sans font-semibold text-[13px] sm:text-[14px] xl:text-[15px] leading-snug text-body-text ${
-                      card.isLink ? "underline underline-offset-4 hover:text-[#1A3D4F]" : ""
+                    className={`body-text text-body-text leading-snug ${
+                      card.isLink ? "hover:underline hover:text-primary transition-colors" : ""
                     }`}
                   >
-                    <div>{card.detail}</div>
-                    {card.subDetail && (
-                      <div>{card.subDetail}</div>
-                    )}
+                    {card.detail}
                   </div>
                 </div>
               </>
