@@ -1,17 +1,69 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import { InitialsAvatar } from "@/components/common/InitialsAvatar";
-import { ALL_REVIEWS } from "@/data/trustpilotReviews";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
-const testimonials = ALL_REVIEWS.map((r) => ({
-  quote: r.quote,
-  name: r.name,
-  location: r.location,
-  rating: r.rating,
-  source: r.source,
-}));
+interface TestimonialItem {
+  id: number;
+  name: string;
+  rating: number;
+  quote: string;
+  avatar: string;
+}
+
+const TESTIMONIALS: TestimonialItem[] = [
+  {
+    id: 1,
+    name: "Jason T., Texas",
+    rating: 5,
+    quote:
+      "“Finally, a legitimate ESA service! My therapist was professional and understanding. Got my letter in under 24 hours and my landlord accepted it immediately.”",
+    avatar: "/about-us/jason-avatar.jpg",
+  },
+  {
+    id: 2,
+    name: "Laura P., Florida",
+    rating: 5,
+    quote:
+      "“Quick consultation, professional licensed therapist, and my landlord accepted the letter immediately with zero complications.”",
+    avatar: "/about-us/jason-avatar.jpg",
+  },
+  {
+    id: 3,
+    name: "Michael R., California",
+    rating: 5,
+    quote:
+      "“The evaluation felt respectful and thorough. Having a licensed clinician in my state assess my situation gave me complete confidence.”",
+    avatar: "/about-us/jason-avatar.jpg",
+  },
+  {
+    id: 4,
+    name: "Sarah W., Illinois",
+    rating: 5,
+    quote:
+      "“Transparent pricing, no hidden recurring fees, and excellent support throughout property manager verification. Truly life-changing!”",
+    avatar: "/about-us/jason-avatar.jpg",
+  },
+  {
+    id: 5,
+    name: "David K., New York",
+    rating: 5,
+    quote:
+      "“The telehealth session was simple and comfortable. Received my official ESA recommendation securely and on time as promised.”",
+    avatar: "/about-us/jason-avatar.jpg",
+  },
+];
+
+function GoldStarIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
+        fill="#FDD264"
+      />
+    </svg>
+  );
+}
 
 export function AboutTestimonialSection() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -21,11 +73,11 @@ export function AboutTestimonialSection() {
   const minSwipeDistance = 45;
 
   const nextSlide = useCallback(() => {
-    setActiveIdx((prev) => (prev + 1) % testimonials.length);
+    setActiveIdx((prev) => (prev + 1) % TESTIMONIALS.length);
   }, []);
 
   const prevSlide = useCallback(() => {
-    setActiveIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setActiveIdx((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   }, []);
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -49,122 +101,101 @@ export function AboutTestimonialSection() {
     }
   };
 
-
-  const current = testimonials[activeIdx] || testimonials[0];
+  const current = TESTIMONIALS[activeIdx] || TESTIMONIALS[0];
 
   return (
-    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
-      <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-[800px] mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
+    <section className="w-full bg-white py-14 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Frame 1261153623: Section Header */}
+        <div className="text-center max-w-[709px] mx-auto mb-10 sm:mb-12 space-y-3 sm:space-y-4">
           <h2 className="heading-h2 text-primary">
-            Trusted by Thousands of ESA Owners
+            Trusted By Thousands Of Pet Owners
           </h2>
-          <p className="body-large text-body-text max-w-[700px] mx-auto">
-            See how our legitimate ESA evaluations have helped individuals across the nation.
+          <p className="body-large text-body-text">
+            See why so many clients trust MY ESA for their ESA needs.
+            <br className="hidden sm:inline" />{" "}
+            Real stories from real people who experienced our process firsthand.
           </p>
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* Carousel Container (with Touch Swipe)               */}
-        {/* ---------------------------------------------------- */}
+        {/* Carousel Container */}
         <div
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
-          className="max-w-[360px] sm:max-w-[500px] md:max-w-[620px] lg:max-w-[720px] mx-auto flex flex-col items-center select-none cursor-grab active:cursor-grabbing"
+          className="max-w-[808px] mx-auto flex flex-col items-center select-none"
         >
-          {/* Main Card Wrapper */}
+          {/* Main Speech Bubble Wrapper */}
           <div className="w-full">
-            {/* Gradient Speech Bubble Box */}
+            {/* Gradient Card (Union / Rectangle 68) */}
             <div
-              className="relative w-full rounded-[20px] shadow-[0px_4px_16px_rgba(26,61,79,0.12)] p-6 sm:p-7 md:p-8 flex flex-col items-start text-left space-y-3.5 transition-all duration-300"
-              style={{ background: "var(--color-gradient)" }}
+              className="relative w-full rounded-[20px] p-6 sm:py-7 sm:px-8 md:py-8 md:px-12 flex flex-col items-center text-center shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-300"
+              style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
-              <button
-                type="button"
-                onClick={prevSlide}
-                className="absolute top-1/2 -translate-y-1/2 -left-3 sm:-left-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
-                aria-label="Previous Review"
-              >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
-              </button>
-              <button
-                type="button"
-                onClick={nextSlide}
-                className="absolute top-1/2 -translate-y-1/2 -right-3 sm:-right-14 z-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5CEC4] bg-white text-primary hover:bg-background flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
-                aria-label="Next Review"
-              >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
-              </button>
-              {/* Top Row: Google Logo + 5 Golden Stars */}
-              <div className="flex items-center gap-2.5">
-                {/* Google "G" Icon */}
-                <svg width="22" height="22" viewBox="0 0 24 24" fill={current.source === "consumeraffairs" ? "#095691" : "#00B67A"} className="shrink-0" aria-hidden="true">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-
-                {/* 5 Golden Yellow Stars */}
-                <div className="flex items-center gap-0.5">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <svg key={s} width="20" height="20" viewBox="0 0 24 24" fill={s <= current.rating ? "#FDD264" : "#FFEEC1"}>
-                      <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-                    </svg>
-                  ))}
-                </div>
+              {/* 5 Centered Golden Stars */}
+              <div className="flex items-center justify-center gap-1 mb-2.5 sm:mb-3">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <GoldStarIcon key={s} />
+                ))}
               </div>
 
               {/* Quote Text */}
-              <p className="body-large text-background">
+              <p className="body-large text-background max-w-[760px] mx-auto leading-relaxed">
                 {current.quote}
               </p>
             </div>
 
-            {/* Bubble Triangle Tail on the Left Edge (pointing to avatar) */}
-            <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[12px] border-t-[#1D6E72] ml-[34px] sm:ml-[42px]" />
+            {/* Bubble Triangle Tail Pointing Down toward Avatar */}
+            <div className="flex justify-center -mt-[1px]">
+              <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 14L4 0H32L18 14Z" fill="#1D6E72" />
+              </svg>
+            </div>
           </div>
 
-          {/* Author Details Row: Avatar on Left + Name & State on Right */}
-          <div className="w-full flex items-center justify-between mt-3 px-1">
-            <div className="flex items-center gap-3.5 sm:gap-4">
-              {/* Circular Avatar */}
-              <div className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] rounded-full shadow-md overflow-hidden relative bg-[#E8F0F1] shrink-0 border-2 border-white">
-                <InitialsAvatar name={current.name} index={activeIdx} className="absolute inset-0 text-[18px] sm:text-[20px]" />
-              </div>
-
-              {/* Name and State */}
-              <div className="flex flex-col text-left">
-                <h3 className="heading-h4 text-[#2C2C2C] leading-tight">
-                  {current.name}
-                </h3>
-                <span className="body-small text-[#696969] mt-0.5">
-                  {current.location}
-                </span>
-              </div>
+          {/* Reviewer Profile: Avatar + Name */}
+          <div className="flex flex-col items-center text-center mt-3.5 sm:mt-4">
+            {/* Circular Avatar */}
+            <div className="w-[60px] h-[60px] rounded-full shadow-md overflow-hidden relative border-[3px] border-white shrink-0 bg-[#E8F0F1]">
+              <Image
+                src={current.avatar}
+                alt={current.name}
+                fill
+                className="object-cover object-center"
+                sizes="60px"
+              />
             </div>
 
+            {/* Name, State */}
+            <h3 className="heading-h4 text-primary mt-2">
+              {current.name}
+            </h3>
           </div>
 
-          {/* Pagination Indicators */}
-          <div className="flex items-center gap-1.5 mt-5">
-            {testimonials.map((_, idx) => (
+          {/* Carousel Pagination Dots */}
+          <div className="flex items-center justify-center gap-1.5 mt-4">
+            {TESTIMONIALS.map((_, idx) => (
               <button
                 key={idx}
+                type="button"
                 onClick={() => setActiveIdx(idx)}
-                className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
-                aria-label={`Go to review ${idx + 1}`}
+                className="flex items-center justify-center p-1 cursor-pointer"
+                aria-label={`Go to slide ${idx + 1}`}
               >
                 <span
-                  className={`block transition-all duration-200 rounded-full ${
+                  className={`block rounded-full transition-all duration-200 ${
                     activeIdx === idx
-                      ? "w-6 h-2 bg-primary"
-                      : "w-2 h-2 bg-[#D9D9D9] hover:bg-[#AEBBBE]"
+                      ? "w-2 h-2 color-gradient"
+                      : "w-1.5 h-1.5 bg-[#D9D9D9] hover:bg-[#AEBBBE]"
                   }`}
                 />
               </button>
             ))}
           </div>
+
         </div>
+
       </div>
     </section>
   );
