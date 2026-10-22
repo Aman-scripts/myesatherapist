@@ -9,26 +9,32 @@ const benefitsData = [
   {
     title: "Living In No-Pet Housing",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/psd_whobenefits_Living_No-Pet_Housing-icon.svg",
   },
   {
     title: "Getting A New Service Dog",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/psd_whobenefits_getting_new_Service_dog-icon.svg",
   },
   {
     title: "Frequent Flyers",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/psd_whobenefits_Frequent_Flyers-icon.svg",
   },
   {
     title: "Upgrading From ESA",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/psd_whobenefits_Upgrading_Esa-icon.svg",
   },
   {
     title: "Veterans With PTSD",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/psd_whobenefits_Veterans_PSD-icon.svg",
   },
   {
     title: "Need Backup Documentation",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    icon: "/psd-letter/psd_whobenefits_Need_backup_doc-icon.svg",
   },
 ];
 
@@ -84,7 +90,7 @@ export function WhoBenefitsSection() {
                 <div className="w-[54px] h-[54px] shrink-0 relative flex items-center justify-center">
                   <Image
                     quality={95}
-                    src="/psd-letter/psd_benefits_section_commonicon.svg"
+                    src={item.icon}
                     alt={item.title}
                     width={54}
                     height={54}
@@ -135,7 +141,7 @@ export function WhoBenefitsSection() {
                 <div className="w-[54px] h-[54px] shrink-0 relative flex items-center justify-center">
                   <Image
                     quality={95}
-                    src="/psd-letter/psd_benefits_section_commonicon.svg"
+                    src={item.icon}
                     alt={item.title}
                     width={54}
                     height={54}
