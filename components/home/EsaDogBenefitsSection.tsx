@@ -32,7 +32,7 @@ const BENEFITS: BenefitCard[] = [
     title: "Encourages Activity",
     description:
       "Daily walks mean more movement, fresh air, and better physical health.",
-    icon: "/states/california-benefits-bettercopping.svg",
+    icon: "/home/benefits-section_encourage_activite-icon.svg",
   },
   {
     title: "Better Sleep",
@@ -44,19 +44,19 @@ const BENEFITS: BenefitCard[] = [
     title: "Social Connection",
     description:
       "Dogs make it easier to meet neighbors and rebuild confidence around others.",
-    icon: "/states/california-benefits-bettercopping.svg",
+    icon: "/home/benefits-section_social_connection-icon.svg",
   },
   {
     title: "Sense Of Purpose",
     description:
       "Caring for another living being restores meaning and responsibility.",
-    icon: "/states/california-benefits-strongersense.svg",
+    icon: "/home/benefits-section_sense_purpose-icon.svg",
   },
   {
     title: "Unconditional Support",
     description:
       "Constant, non-judgmental companionship during hard moments and panic episodes.",
-    icon: "/states/california-benefits-workplaceconsideration.svg",
+    icon: "/home/benefits-section_unconditional_support-icon.svg",
   },
 ];
 
