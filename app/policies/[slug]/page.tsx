@@ -259,7 +259,7 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-current">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

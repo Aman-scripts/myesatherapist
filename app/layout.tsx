@@ -93,7 +93,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary"
+        className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-accent/35 selection:text-current"
       >
         <ThirdPartyErrorHandler />
         {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}

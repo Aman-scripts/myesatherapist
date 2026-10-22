@@ -91,7 +91,7 @@ const legalReviewerSchema = {
 
 export default function LegalReviewerPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col justify-between text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen bg-background flex flex-col justify-between text-slate-900 selection:bg-accent/30 selection:text-current">
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"

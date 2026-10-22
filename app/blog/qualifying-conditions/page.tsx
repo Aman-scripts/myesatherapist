@@ -68,7 +68,7 @@ const qualifyingConditionsFaqs = [
 
 export default function QualifyingConditionsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A] selection:bg-accent/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A] selection:bg-accent/30 selection:text-current">
       {/* Schema.org JSON-LD */}
       {qualifyingConditionsSchemas.map((schemaObj, index) => (
         <script

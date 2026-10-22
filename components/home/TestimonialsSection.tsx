@@ -165,9 +165,9 @@ export function TestimonialsSection({
 
                     {/* Frame 29: Solid Teal Gradient Quote Box (143px high exactly) */}
                     <div
-                      className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] color-gradient"
+                      className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] color-gradient selection:bg-white/30 selection:text-white"
                     >
-                      <p className="body-text text-background text-center w-[271px] max-w-[271px]">
+                      <p className="body-text text-background text-center w-[271px] max-w-[271px] selection:bg-white/30 selection:text-white">
                         {review.quote}
                       </p>
                     </div>

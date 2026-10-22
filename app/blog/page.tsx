@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function BlogHubPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-[#1E3E47]">
+    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-current">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"

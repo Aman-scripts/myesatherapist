@@ -145,7 +145,7 @@ export function AboutTestimonialSection() {
 
             {/* Gradient Card (Union / Rectangle 68) */}
             <div
-              className="relative w-full rounded-[20px] p-6 sm:py-7 sm:px-8 md:py-8 md:px-12 flex flex-col items-center text-center shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-300"
+              className="relative w-full rounded-[20px] p-6 sm:py-7 sm:px-8 md:py-8 md:px-12 flex flex-col items-center text-center shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-300 selection:bg-white/30 selection:text-white"
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
               {/* 5 Centered Golden Stars */}
@@ -156,7 +156,7 @@ export function AboutTestimonialSection() {
               </div>
 
               {/* Quote Text */}
-              <p className="body-text text-background max-w-[760px] mx-auto leading-relaxed">
+              <p className="body-text text-background max-w-[760px] mx-auto leading-relaxed selection:bg-white/30 selection:text-white">
                 {current.quote}
               </p>
             </div>

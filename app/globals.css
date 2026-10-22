@@ -199,6 +199,32 @@
   color: #FFFFFF !important;
 }
 
+/* ==========================================================================
+   GLOBAL SELECTION STYLES (High-contrast, accessible text selection)
+   ========================================================================== */
+::selection {
+  background-color: rgba(232, 185, 44, 0.35); /* Accent gold highlight */
+  color: inherit;
+}
+
+/* On dark gradient, primary, or inverted backgrounds, ensure selected/copied text remains bright white */
+.color-gradient ::selection,
+.color-gradient::selection,
+.bg-primary ::selection,
+.bg-primary::selection,
+.bg-color-primary ::selection,
+.bg-color-primary::selection,
+[style*="linear-gradient"] ::selection,
+[style*="linear-gradient"]::selection,
+.text-background ::selection,
+.text-background::selection,
+.text-white ::selection,
+.text-white::selection {
+  background-color: rgba(255, 255, 255, 0.28) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
 
 @utility color-primary {
   color: #2E5A66;
