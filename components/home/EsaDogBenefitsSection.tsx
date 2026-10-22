@@ -38,7 +38,7 @@ const BENEFITS: BenefitCard[] = [
     title: "Better Sleep",
     description:
       "Many owners feel safer and more settled at night with their dog nearby.",
-    icon: "/states/california-benefits-expandhousing.svg",
+    icon: "/home/benefits-section_better_sleep-icon.svg",
   },
   {
     title: "Social Connection",
