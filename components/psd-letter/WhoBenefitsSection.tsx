@@ -89,11 +89,11 @@ export function WhoBenefitsSection() {
               >
                 <div className="w-[54px] h-[54px] shrink-0 relative flex items-center justify-center">
                   <Image
-                    quality={95}
                     src={item.icon}
                     alt={item.title}
                     width={54}
                     height={54}
+                    unoptimized
                     className="w-[54px] h-[54px] object-contain shrink-0"
                   />
                 </div>
@@ -140,11 +140,11 @@ export function WhoBenefitsSection() {
                 {/* Common Card Icon (54px x 54px, fi_12807496) */}
                 <div className="w-[54px] h-[54px] shrink-0 relative flex items-center justify-center">
                   <Image
-                    quality={95}
                     src={item.icon}
                     alt={item.title}
                     width={54}
                     height={54}
+                    unoptimized
                     className="w-[54px] h-[54px] object-contain shrink-0"
                   />
                 </div>

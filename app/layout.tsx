@@ -106,17 +106,23 @@ export default function RootLayout({
   window.Tawk_API = window.Tawk_API || {};
   window.Tawk_LoadStart = new Date();
   var origError = console.error;
+  var origWarn = console.warn;
   if (!origError || origError.__tawkFiltered) return;
-  var filtered = function() {
-    var first = arguments[0];
-    if (typeof first === 'string' && (first.indexOf('[Tawk/Logger]') !== -1 || first.indexOf('Tawk/Logger') !== -1 || first.indexOf('tawk') !== -1)) {
-      console.warn.apply(console, arguments);
-      return;
-    }
+  var isTawk = function(first) {
+    if (typeof first !== 'string') first = String(first || '');
+    return first.indexOf('[Tawk/Logger]') !== -1 || first.indexOf('Tawk/Logger') !== -1 || first.indexOf('tawk') !== -1;
+  };
+  var filteredError = function() {
+    if (isTawk(arguments[0])) return;
     origError.apply(console, arguments);
   };
-  filtered.__tawkFiltered = true;
-  console.error = filtered;
+  filteredError.__tawkFiltered = true;
+  console.error = filteredError;
+  var filteredWarn = function() {
+    if (isTawk(arguments[0])) return;
+    origWarn.apply(console, arguments);
+  };
+  console.warn = filteredWarn;
   window.addEventListener('error', function(e) {
     if (e && ((e.message && (e.message.indexOf('tawk') !== -1 || e.message.indexOf('Tawk') !== -1)) || (e.filename && e.filename.indexOf('tawk') !== -1))) {
       e.stopImmediatePropagation();

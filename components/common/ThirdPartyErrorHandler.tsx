@@ -22,31 +22,42 @@ export function ThirdPartyErrorHandler() {
     win.Tawk_API = win.Tawk_API || {};
     win.Tawk_LoadStart = win.Tawk_LoadStart || new Date();
 
-    const patchConsoleError = () => {
+    const patchConsoleLogs = () => {
       const origError = console.error;
-      if ((origError as unknown as { __tawkFiltered?: boolean }).__tawkFiltered) {
-        return;
+      const origWarn = console.warn;
+
+      if (!(origError as unknown as { __tawkFiltered?: boolean }).__tawkFiltered) {
+        const isTawkMessage = (...args: unknown[]) => {
+          const first = args && args[0];
+          const firstStr = typeof first === "string" ? first : String(first || "");
+          return (
+            firstStr.includes("[Tawk/Logger]") ||
+            firstStr.includes("Tawk/Logger") ||
+            firstStr.includes("tawk.to") ||
+            firstStr.includes("tawk")
+          );
+        };
+
+        const filteredError = (...args: unknown[]) => {
+          if (isTawkMessage(...args)) {
+            return;
+          }
+          origError.apply(console, args);
+        };
+        (filteredError as unknown as { __tawkFiltered?: boolean }).__tawkFiltered = true;
+        console.error = filteredError;
+
+        const filteredWarn = (...args: unknown[]) => {
+          if (isTawkMessage(...args)) {
+            return;
+          }
+          origWarn.apply(console, args);
+        };
+        console.warn = filteredWarn;
       }
-
-      const filteredError = (...args: unknown[]) => {
-        const first = args && args[0];
-        const firstStr = typeof first === "string" ? first : "";
-        if (
-          firstStr.includes("[Tawk/Logger]") ||
-          firstStr.includes("Tawk/Logger") ||
-          firstStr.includes("tawk.to")
-        ) {
-          console.warn(...args);
-          return;
-        }
-        origError.apply(console, args);
-      };
-
-      (filteredError as unknown as { __tawkFiltered?: boolean }).__tawkFiltered = true;
-      console.error = filteredError;
     };
 
-    patchConsoleError();
+    patchConsoleLogs();
 
     const onError = (e: ErrorEvent) => {
       if (
