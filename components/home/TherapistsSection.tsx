@@ -103,14 +103,32 @@ const defaultTherapists: Therapist[] = [
   },
 ];
 
-function StatBadge({ label, value }: { label: string; value: string }) {
+function StatBadge({
+  label,
+  value,
+  icon,
+}: {
+  label: string;
+  value: string;
+  icon?: string;
+}) {
+  const iconSrc =
+    icon ||
+    (label.toLowerCase().includes("licensed")
+      ? "/home/doctor_professionals_licensedin_icon.svg"
+      : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
+      ? "/home/doctor_professionals_evaluationmethod_icon.svg"
+      : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
+      ? "/home/doctor_professionals_focusarea_icon.svg"
+      : "/common/therapist-section-badge.svg");
+
   return (
     <div className="relative flex-1 min-w-0 rounded-[7.6px] bg-accent pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
       <div className="bg-white rounded-[7.6px] pt-[20px] sm:pt-[22px] pb-2 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
         {/* Floating badge icon at top center */}
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
           <Image
-            src="/common/therapist-section-badge.svg"
+            src={iconSrc}
             alt=""
             width={16}
             height={16}
@@ -318,9 +336,21 @@ export function TherapistsSection({
 
                       {/* 3 Stat Badges */}
                       <div className="flex items-stretch gap-2 sm:gap-3.5 pt-3 sm:pt-3.5">
-                        <StatBadge label="Licensed In" value={t.licensedIn} />
-                        <StatBadge label="Evaluation Method" value={t.method || "Video or Phone"} />
-                        <StatBadge label="Focus Areas" value={t.focus} />
+                        <StatBadge
+                          label="Licensed In"
+                          value={t.licensedIn}
+                          icon="/home/doctor_professionals_licensedin_icon.svg"
+                        />
+                        <StatBadge
+                          label="Evaluation Method"
+                          value={t.method || "Video or Phone"}
+                          icon="/home/doctor_professionals_evaluationmethod_icon.svg"
+                        />
+                        <StatBadge
+                          label="Focus Areas"
+                          value={t.focus}
+                          icon="/home/doctor_professionals_focusarea_icon.svg"
+                        />
                       </div>
 
                       {/* View Profile CTA Button INSIDE the Card */}

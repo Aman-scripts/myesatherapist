@@ -15,13 +15,29 @@ function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
-function Badge({ label, value }: { label: string; value: string }) {
+function Badge({ label, value, icon }: { label: string; value: string; icon?: string }) {
+  const iconSrc =
+    icon ||
+    (label.toLowerCase().includes("licensed")
+      ? "/home/doctor_professionals_licensedin_icon.svg"
+      : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
+      ? "/home/doctor_professionals_evaluationmethod_icon.svg"
+      : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
+      ? "/home/doctor_professionals_focusarea_icon.svg"
+      : "/common/therapist-section-badge.svg");
+
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
       <div className="bg-white rounded-[8px] pt-[22px] sm:pt-[24px] pb-2 px-1.5 text-center flex flex-col justify-start items-center relative min-h-[62px] sm:min-h-[66px] h-full">
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
           <Image
-            quality={90} src="/common/therapist-section-badge.svg" alt="" width={16} height={16} className="w-4 h-4 object-contain" />
+            quality={90}
+            src={iconSrc}
+            alt=""
+            width={16}
+            height={16}
+            className="w-4 h-4 object-contain"
+          />
         </div>
         <div className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight text-transparent bg-clip-text w-full truncate" style={{ backgroundImage: TEAL_GRADIENT }}>
           {label}

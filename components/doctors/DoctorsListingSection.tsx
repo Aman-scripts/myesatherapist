@@ -76,6 +76,16 @@ function DoctorStatBadge({
   value: string;
   icon?: string;
 }) {
+  const iconSrc =
+    icon ||
+    (label.toLowerCase().includes("licensed")
+      ? "/home/doctor_professionals_licensedin_icon.svg"
+      : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
+      ? "/home/doctor_professionals_evaluationmethod_icon.svg"
+      : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
+      ? "/home/doctor_professionals_focusarea_icon.svg"
+      : "/common/therapist-section-badge.svg");
+
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
       <div className="bg-white rounded-[8px] pt-[22px] sm:pt-[24px] pb-2 sm:pb-2.5 px-1.5 sm:px-2 text-center flex flex-col justify-start items-center relative min-h-[62px] sm:min-h-[66px]">
@@ -83,7 +93,7 @@ function DoctorStatBadge({
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
           <Image
             quality={90}
-            src={icon || "/common/therapist-section-badge.svg"}
+            src={iconSrc}
             alt=""
             width={16}
             height={16}
@@ -180,9 +190,21 @@ export function DoctorsListingSection() {
 
                 {/* 3 Stat Badges Row */}
                 <div className="flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
-                  <DoctorStatBadge label="Licensed In" value={doc.licensedIn} />
-                  <DoctorStatBadge label="Evaluation Method" value={doc.method} />
-                  <DoctorStatBadge label="Focus Areas" value={doc.focus} />
+                  <DoctorStatBadge
+                    label="Licensed In"
+                    value={doc.licensedIn}
+                    icon="/home/doctor_professionals_licensedin_icon.svg"
+                  />
+                  <DoctorStatBadge
+                    label="Evaluation Method"
+                    value={doc.method}
+                    icon="/home/doctor_professionals_evaluationmethod_icon.svg"
+                  />
+                  <DoctorStatBadge
+                    label="Focus Areas"
+                    value={doc.focus}
+                    icon="/home/doctor_professionals_focusarea_icon.svg"
+                  />
                 </div>
 
                 {/* Card Action Button */}
