@@ -11,15 +11,31 @@
   --font-sans: var(--font-sans), 'Manrope', sans-serif;
   --font-manrope: var(--font-sans), 'Manrope', sans-serif;
 
-  /* Colors: Only Design System Colors */
+  /* Figma Foundations colour roles */
+  --color-teal-900: #1A3D4F;
+  --color-teal-700: #2E5A66;
+  --color-teal-500: #1D6E72;
+  --color-gold-600: #DBA81F;
+  --color-gold-500: #E8B92C;
+  --color-gold-100: #FBF1D4;
+  --color-cream-50: #FAF7F2;
+  --color-cream-100: #F5EFE6;
+  --color-ink-700: #5F6B6F;
+  --color-ink-500: #6B6B6B;
+  --color-line-200: #EAE5DC;
+  --color-line-500: #8A7F70;
+  --color-green-800: #0F5B4C;
+  --color-green-50: #E7F5EE;
+  --color-red-600: #CC191D;
+
   --color-primary: #2E5A66;
   --color-accent: #E8B92C;
   --color-background: #FAF7F2;
   --color-body-text: #5F6B6F;
 
-  /* Strict Typography Font Sizes & Line Heights */
+
   --text-heading-h1: 48px;
-  --text-heading-h1--line-height: 58px;
+  --text-heading-h1--line-height: 56px;
 
   --text-heading-h2: 40px;
   --text-heading-h2--line-height: 48px;
@@ -30,184 +46,295 @@
   --text-heading-h4: 20px;
   --text-heading-h4--line-height: 28px;
 
+  --text-lead: 18px;
+  --text-lead--line-height: 28px;
+
   --text-body-large: 18px;
   --text-body-large--line-height: 28px;
+
+  --text-body: 16px;
+  --text-body--line-height: 26px;
 
   --text-body-text: 16px;
   --text-body-text--line-height: 26px;
 
+  --text-small: 14px;
+  --text-small--line-height: 22px;
+
   --text-body-small: 14px;
-  --text-body-small--line-height: 26px;
+  --text-body-small--line-height: 22px;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+
+  --text-button: 16px;
+  --text-button--line-height: 20px;
+
+  --text-button-small: 14px;
+  --text-button-small--line-height: 20px;
 }
 
 :root {
-  /* Exact Design System Colors Only */
-  --color-primary: #2E5A66;
-  --color-accent: #E8B92C;
-  --color-background: #FAF7F2;
-  --color-body-text: #5F6B6F;
-  --color-gradient: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
+  /* Figma Foundations. Roles are on the swatches in that file. */
+  --teal-900: #1A3D4F;
+  --teal-700: #2E5A66;
+  --teal-500: #1D6E72;
+  --gold-600: #DBA81F;
+  --gold-500: #E8B92C;
+  --gold-100: #FBF1D4;
+  --cream-50: #FAF7F2;
+  --cream-100: #F5EFE6;
+  --ink-700: #5F6B6F;
+  --ink-500: #6B6B6B;
+  --line-200: #EAE5DC;
+  --line-500: #8A7F70;
+  --green-800: #0F5B4C;
+  --green-50: #E7F5EE;
+  --red-600: #CC191D;
 
-  /* Framework Base Mappings */
-  --background: #FAF7F2;
-  --foreground: #5F6B6F;
-  --primary: #2E5A66;
-  --accent: #E8B92C;
-  --border: #2E5A66;
-  --ring: #2E5A66;
+  --color-primary: var(--teal-700);
+  --color-accent: var(--gold-500);
+  --color-background: var(--cream-50);
+  --color-body-text: var(--ink-700);
+  --color-gradient: linear-gradient(135deg, var(--teal-900) 0%, var(--teal-500) 100%);
+
+  --background: var(--cream-50);
+  --foreground: var(--ink-700);
+  --primary: var(--teal-700);
+  --accent: var(--gold-500);
+  --border: var(--line-200);
+  --ring: var(--teal-700);
 }
 
-/* ==========================================================================
-   STRICT GLOBAL TYPOGRAPHY UTILITIES (FIGMA DESIGN SYSTEM)
-   Text Styles:
-   - heading-h1:  Playfair Display 700, 48px / line-height 58px
-   - heading-h2:  Playfair Display 700, 40px / line-height 48px
-   - heading-h3:  Playfair Display 700, 28px / line-height 36px
-   - heading-h4:  Playfair Display 700, 20px / line-height 28px
-   - body-large:   Manrope 600, 18px / line-height 28px
-   - body-text:    Manrope 600, 16px / line-height 26px
-   - body-small:   Manrope 600, 14px / line-height 26px
-   ========================================================================== */
-
-@utility heading-h1 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+h1,
+.heading-h1 {
+  font-family: var(--font-heading), "Playfair Display", Georgia, serif;
   font-weight: 700;
   font-size: 48px;
-  line-height: 58px;
-  letter-spacing: -0.00015em;
+  line-height: 56px;
+  letter-spacing: 0;
 }
 
-@utility heading-h2 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+h2,
+.heading-h2 {
+  font-family: var(--font-heading), "Playfair Display", Georgia, serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
-  letter-spacing: -0.00015em;
+  letter-spacing: 0;
 }
 
-@utility heading-h3 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+h3,
+.heading-h3 {
+  font-family: var(--font-heading), "Playfair Display", Georgia, serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 36px;
-  letter-spacing: -0.0003em;
+  letter-spacing: 0;
 }
 
-@utility heading-h4 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
+h4,
+h5,
+h6,
+.heading-h4 {
+  font-family: var(--font-heading), "Playfair Display", Georgia, serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
-  letter-spacing: -0.00015em;
+  letter-spacing: 0;
 }
 
-@utility body-large {
-  font-family: var(--font-sans), 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
+.type-stat {
+  font-family: var(--font-heading), "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0;
 }
 
-@utility body-text {
-  font-family: var(--font-sans), 'Manrope', sans-serif;
-  font-weight: 600;
+p,
+li,
+dd,
+dt,
+.body,
+.body-text {
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 26px;
+  letter-spacing: 0;
 }
 
-@utility body-small {
-  font-family: var(--font-sans), 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 26px;
-}
-
-/* Standalone CSS Class Selectors for Global Compatibility */
-.heading-h1 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-  letter-spacing: -0.00015em;
-}
-
-.heading-h2 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: -0.00015em;
-}
-
-.heading-h3 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: -0.0003em;
-}
-
-.heading-h4 {
-  font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: -0.00015em;
-}
-
+.lead,
 .body-large,
 .body-large p,
 .body-large ol,
 .body-large ul,
 .body-large li {
-  font-family: var(--font-sans), 'Manrope', sans-serif;
-  font-weight: 600;
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+  letter-spacing: 0;
 }
 
-.body-text {
-  font-family: var(--font-sans), 'Manrope', sans-serif;
-  font-weight: 600;
+strong,
+b {
+  font-weight: 700;
+}
+
+.body-strong {
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 26px;
 }
 
+small,
+.type-small,
 .body-small {
-  font-family: var(--font-sans), 'Manrope', sans-serif;
-  font-weight: 600;
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 500;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 22px;
+  letter-spacing: 0;
 }
 
-/* Default Colors: Headings are #2E5A66 and Body is #5F6B6F by default,
-   using :where() so that ANY utility (like text-white, text-accent, text-background)
-   or explicit color immediately overrides it without specificity battles. */
-/* Default heading and body text colors. Kept in the base layer so Tailwind
-   color utilities (e.g. text-background, text-background/40) can override them. */
+.caption {
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.button-text {
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.button-text-small {
+  font-family: var(--font-sans), "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1023px) {
+
+  h1,
+  .heading-h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h2,
+  .heading-h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h3,
+  .heading-h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  h4,
+  h5,
+  h6,
+  .heading-h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .type-stat {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  h1,
+  .heading-h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h2,
+  .heading-h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h3,
+  .heading-h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h4,
+  h5,
+  h6,
+  .heading-h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .type-stat {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .lead,
+  .body-large,
+  .body-large p,
+  .body-large ol,
+  .body-large ul,
+  .body-large li {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
 @layer base {
-  :where(.heading-h1, .heading-h2, .heading-h3, .heading-h4) {
+  :where(h1, h2, h3, h4, h5, h6, .heading-h1, .heading-h2, .heading-h3, .heading-h4, .type-stat) {
     color: var(--color-primary);
   }
-  :where(.body-large, .body-text, .body-small) {
-    color: var(--color-body-text);
+
+  :where(p, li, .lead, .body, .body-large, .body-text, .body-strong, .body-small, .type-small) {
+    color: var(--ink-700);
+  }
+
+  :where(.caption, .eyebrow) {
+    color: var(--ink-500);
   }
 }
 
-/* High-priority color utilities to guarantee clear readability on dark backgrounds */
 .text-white {
   color: #FFFFFF !important;
 }
 
-/* ==========================================================================
-   GLOBAL SELECTION STYLES (High-contrast, accessible text selection)
-   ========================================================================== */
 ::selection {
-  background-color: rgba(232, 185, 44, 0.35); /* Accent gold highlight */
+  background-color: rgba(232, 185, 44, 0.35);
+  /* Accent gold highlight */
   color: inherit;
 }
 
-/* On dark gradient, primary, or inverted backgrounds, ensure selected/copied text remains bright white */
 .color-gradient ::selection,
 .color-gradient::selection,
 .bg-primary ::selection,
@@ -229,18 +356,23 @@
 @utility color-primary {
   color: #2E5A66;
 }
+
 @utility text-primary {
   color: #2E5A66;
 }
+
 @utility bg-color-primary {
   background-color: #2E5A66;
 }
+
 @utility bg-primary {
   background-color: #2E5A66;
 }
+
 @utility border-color-primary {
   border-color: #2E5A66;
 }
+
 @utility border-primary {
   border-color: #2E5A66;
 }
@@ -248,18 +380,23 @@
 @utility color-accent {
   color: #E8B92C;
 }
+
 @utility text-accent {
   color: #E8B92C;
 }
+
 @utility bg-color-accent {
   background-color: #E8B92C;
 }
+
 @utility bg-accent {
   background-color: #E8B92C;
 }
+
 @utility border-color-accent {
   border-color: #E8B92C;
 }
+
 @utility border-accent {
   border-color: #E8B92C;
 }
@@ -267,9 +404,11 @@
 @utility color-background {
   background-color: #FAF7F2;
 }
+
 @utility bg-background {
   background-color: #FAF7F2;
 }
+
 @utility text-background {
   color: #FAF7F2;
 }
@@ -277,6 +416,7 @@
 @utility color-body-text {
   color: #5F6B6F;
 }
+
 @utility text-body-text {
   color: #5F6B6F;
 }
@@ -293,29 +433,40 @@
 }
 
 /* Standalone CSS Class Selectors for Global Compatibility */
-.color-primary, .text-primary {
+.color-primary,
+.text-primary {
   color: #2E5A66;
 }
-.bg-color-primary, .bg-primary {
+
+.bg-color-primary,
+.bg-primary {
   background-color: #2E5A66;
 }
-.border-color-primary, .border-primary {
+
+.border-color-primary,
+.border-primary {
   border-color: #2E5A66;
 }
 
-.color-accent, .text-accent {
+.color-accent,
+.text-accent {
   color: #E8B92C;
 }
-.bg-color-accent, .bg-accent {
+
+.bg-color-accent,
+.bg-accent {
   background-color: #E8B92C;
 }
-.border-color-accent, .border-accent {
+
+.border-color-accent,
+.border-accent {
   border-color: #E8B92C;
 }
 
 .color-gradient {
   background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
 }
+
 .text-color-gradient {
   background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
   -webkit-background-clip: text;
@@ -323,52 +474,22 @@
   background-clip: text;
 }
 
-.color-background, .bg-background, .bg-color-background {
+.color-background,
+.bg-background,
+.bg-color-background {
   background-color: #FAF7F2;
 }
-.text-background, .color-text-background {
+
+.text-background,
+.color-text-background {
   color: #FAF7F2;
 }
 
-.color-body-text, .text-body-text {
+.color-body-text,
+.text-body-text {
   color: #5F6B6F;
 }
 
-/* Responsive adjustments for mobile typography */
-@media (max-width: 768px) {
-  .heading-h1 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  .heading-h2 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  .heading-h3 {
-    font-size: 22px;
-    line-height: 30px;
-  }
-  .heading-h4 {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  .body-large,
-  .body-large p,
-  .body-large ol,
-  .body-large ul,
-  .body-large li {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  .body-text {
-    font-size: 15px;
-    line-height: 24px;
-  }
-  .body-small {
-    font-size: 13px;
-    line-height: 22px;
-  }
-}
 
 @layer base {
   html[data-scroll-behavior="smooth"] {
@@ -383,76 +504,11 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans), 'Manrope', sans-serif;
-    font-weight: 600;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  h1 {
-    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    letter-spacing: -0.00015em;
-    color: #2E5A66;
-  }
-
-  h2 {
-    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.00015em;
-    color: #2E5A66;
-  }
-
-  h3 {
-    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -0.0003em;
-    color: #2E5A66;
-  }
-
-  h4 {
-    font-family: var(--font-heading), 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: -0.00015em;
-    color: #2E5A66;
-  }
-
-  p {
-    font-family: var(--font-sans), 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    color: #5F6B6F;
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 32px;
-      line-height: 40px;
-    }
-    h2 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    h3 {
-      font-size: 22px;
-      line-height: 30px;
-    }
-    h4 {
-      font-size: 18px;
-      line-height: 26px;
-    }
-    p {
-      font-size: 15px;
-      line-height: 24px;
-    }
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
   }
 
   button:not(:disabled),
@@ -492,6 +548,7 @@
 
 /* Prevent iOS Safari auto-zoom on input focus */
 @media screen and (max-width: 767px) {
+
   input,
   select,
   textarea {
@@ -503,6 +560,7 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -511,22 +569,45 @@
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(232, 185, 44, 0.6);
 }
 
-/*
- * Optical centering for the paper-plane arrow used inside the round button badges.
- * The glyph's visual weight sits ~9% right of its box (tip at the top-right), so it looked
- * off-centre in the circle. Shift it left by that amount everywhere the icon is used.
- */
+
 img[src$="/send-icon.svg"] {
   transform: translateX(-9%);
+}
+
+.icon-lg,
+.icon-large {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.icon-md,
+.icon-medium {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.icon-sm,
+.icon-small {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
 }

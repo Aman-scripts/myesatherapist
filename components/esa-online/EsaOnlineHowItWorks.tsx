@@ -51,7 +51,7 @@ export function EsaOnlineHowItWorks() {
                   </div>
                   <div
                     className="absolute bottom-0 left-1/2 flex h-[65px] w-[65px] -translate-x-1/2 items-center justify-center rounded-full text-background font-bold text-[36px] tracking-[-0.017em]"
-                    style={{ backgroundImage: TEAL_GRADIENT, fontFamily: "Helvetica, Arial, sans-serif" }}
+                    style={{ backgroundImage: TEAL_GRADIENT }}
                   >
                     {step.stepNumber}
                   </div>

@@ -199,12 +199,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
                 <Image
                   quality={90}
-                  src="/common/footer-phone-icon.svg"
+                  src="/ESA ICons/Icon-36.svg"
                   alt=""
-                  width={14}
-                  height={14}
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
               <div className="text-left leading-tight">
@@ -222,12 +219,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
                 <Image
                   quality={90}
-                  src="/common/footer-email-icon.svg"
+                  src="/ESA ICons/Icon-35.svg"
                   alt=""
-                  width={14}
-                  height={14}
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
               <div className="text-left leading-tight">
@@ -245,12 +239,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
                 <Image
                   quality={90}
-                  src="/common/footer-clock-icon.svg"
+                  src="/ESA ICons/Icon-38.svg"
                   alt=""
-                  width={14}
-                  height={14}
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
               <div className="text-left leading-tight">
@@ -268,12 +259,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
                 <Image
                   quality={90}
-                  src="/common/footer-location-icon.svg"
+                  src="/ESA ICons/Icon-37.svg"
                   alt=""
-                  width={14}
-                  height={14}
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
               <div className="text-left leading-tight">

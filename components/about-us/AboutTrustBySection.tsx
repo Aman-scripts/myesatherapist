@@ -5,17 +5,17 @@ import Image from "next/image";
 
 const trustCards = [
   {
-    icon: "/psd-letter/psd_trust_hippacomplaince_icon.svg",
+    icon: "/ESA ICons/Glyph-3.svg",
     title: "HIPAA Compliant",
     description: "Your information stays private and confidential.",
   },
   {
-    icon: "/psd-letter/psd_trust_responsetime_icon.svg",
+    icon: "/ESA ICons/Icon-38.svg",
     title: "Response Within 24–72 Hours",
     description: "Timely responses, subject to provider availability.",
   },
   {
-    icon: "/psd-letter/psd_trust_licenses_icon.svg",
+    icon: "/ESA ICons/Icon-24.svg",
     title: "Licensed In All 50 States",
     description: "Access providers licensed in your state.",
   },

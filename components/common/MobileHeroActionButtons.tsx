@@ -67,7 +67,7 @@ export function MobileHeroActionButtons({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-[246px] h-[54px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 px-[18px] border border-[#EAE5DC]/60 active:scale-[0.98] transition-all"
+          className="w-[246px] h-[54px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 px-[18px] border border-primary active:scale-[0.98] transition-all"
         >
           <div className="flex items-center gap-2 max-w-full">
             <Image
@@ -79,7 +79,7 @@ export function MobileHeroActionButtons({
               className="w-[20px] h-[20px] shrink-0 object-contain"
               style={{ width: "auto", height: "auto" }}
             />
-            <span className="body-text text-color-gradient truncate max-w-[138px]">
+            <span className="body-text text-primary truncate max-w-[138px]">
               {displayText}
             </span>
             <ChevronDown
@@ -117,6 +117,7 @@ export function MobileHeroActionButtons({
       <CtaButton
         href={getStartedHref}
         onClick={onGetStartedClick}
+        variant="accent"
         className="w-[192px]"
       >
         {getStartedText}
