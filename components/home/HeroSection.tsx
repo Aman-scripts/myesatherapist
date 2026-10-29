@@ -206,13 +206,12 @@ export function HeroSection() {
                 className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
               >
                 <Image
-                  src="/home/hero-section-map.svg"
+                  src="/ESA ICons/Icon-37.svg"
                   alt=""
-                  width={16}
-                  height={21}
+                  width={20}
+                  height={20}
                   unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="icon-sm shrink-0 object-contain"
                 />
                 <span className="text-primary">
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
@@ -317,13 +316,12 @@ export function HeroSection() {
                     className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
                     <Image
-                      src="/home/hero-section-map.svg"
+                      src="/ESA ICons/Icon-37.svg"
                       alt=""
-                      width={16}
-                      height={21}
+                      width={20}
+                      height={20}
                       unoptimized
-                      className="shrink-0 object-contain"
-                      style={{ width: "auto", height: "auto" }}
+                      className="icon-sm shrink-0 object-contain"
                     />
                     <span className="text-primary font-manrope">
                       {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}

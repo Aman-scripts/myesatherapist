@@ -111,7 +111,7 @@ export function EsaDogBenefitsSection() {
       {/* Bottom Full-Width Banner Image with Floating Badge at top center */}
       <div className="relative w-full mt-14 sm:mt-16 lg:mt-20">
         {/* Floating Top Badge with ESA Paw Heart Icon */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.12)] border border-[#E2E8F0] flex items-center justify-center p-2.5">
+        <div className="absolute left-[26.4%] top-[11%] z-20 flex h-[64px] w-[64px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#E2E8F0] bg-white p-2.5 shadow-[0_4px_16px_rgba(0,0,0,0.12)] sm:h-[72px] sm:w-[72px]">
           <Image
             quality={90}
             src="/home/doyouneed-emotional-support-icon.svg"

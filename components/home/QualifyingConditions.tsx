@@ -206,7 +206,7 @@ export function QualifyingConditions({
                         width={20}
                         height={20}
                         unoptimized
-                        className="object-contain w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5"
+                        className="icon-sm object-contain"
                       />
                     </span>
                     <span
@@ -289,11 +289,10 @@ export function QualifyingConditions({
                       <Image
                         src={c.icon}
                         alt=""
-                        width={18}
-                        height={18}
+                        width={20}
+                        height={20}
                         unoptimized
-                        className="object-contain"
-                        style={{ width: "auto", height: "auto" }}
+                        className="icon-sm object-contain"
                       />
                     </span>
                     <span

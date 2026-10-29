@@ -20,7 +20,7 @@ const cards = [
   {
     stat: "66%",
     image: "/home/journey-section-three.webp",
-    icon: "/ESA ICons/Icon-21.svg",
+    icon: "/ESA ICons/Icon.svg",
     text: "Believe their pets help reduce stress and promote calm.",
   },
 ];

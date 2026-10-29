@@ -115,11 +115,11 @@ function StatBadge({
   const iconSrc =
     icon ||
     (label.toLowerCase().includes("licensed")
-      ? "/home/doctor_professionals_licensedin_icon.svg"
+      ? "/ESA ICons/Icon-37.svg"
       : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/home/doctor_professionals_evaluationmethod_icon.svg"
+      ? "/ESA ICons/Icon-15.svg"
       : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/home/doctor_professionals_focusarea_icon.svg"
+      ? "/ESA ICons/Icon.svg"
       : "/common/therapist-section-badge.svg");
 
   return (
@@ -130,10 +130,10 @@ function StatBadge({
           <Image
             src={iconSrc}
             alt=""
-            width={16}
-            height={16}
+            width={20}
+            height={20}
             unoptimized
-            className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4"
+            className="icon-sm object-contain"
           />
         </div>
         <div className="body-small text-color-gradient truncate w-full">
@@ -339,17 +339,17 @@ export function TherapistsSection({
                         <StatBadge
                           label="Licensed In"
                           value={t.licensedIn}
-                          icon="/home/doctor_professionals_licensedin_icon.svg"
+                          icon="/ESA ICons/Icon-37.svg"
                         />
                         <StatBadge
                           label="Evaluation Method"
                           value={t.method || "Video or Phone"}
-                          icon="/home/doctor_professionals_evaluationmethod_icon.svg"
+                          icon="/ESA ICons/Icon-15.svg"
                         />
                         <StatBadge
                           label="Focus Areas"
                           value={t.focus}
-                          icon="/home/doctor_professionals_focusarea_icon.svg"
+                          icon="/ESA ICons/Icon.svg"
                         />
                       </div>
 

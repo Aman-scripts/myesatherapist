@@ -71,13 +71,12 @@ export function MobileHeroActionButtons({
         >
           <div className="flex items-center gap-2 max-w-full">
             <Image
-              src="/home/hero-section-map.svg"
+              src="/ESA ICons/Icon-37.svg"
               alt=""
               width={20}
               height={20}
               unoptimized
-              className="w-[20px] h-[20px] shrink-0 object-contain"
-              style={{ width: "auto", height: "auto" }}
+              className="icon-sm shrink-0 object-contain"
             />
             <span className="body-text text-primary truncate max-w-[138px]">
               {displayText}
