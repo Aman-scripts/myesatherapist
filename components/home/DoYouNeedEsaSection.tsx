@@ -54,7 +54,7 @@ export function DoYouNeedEsaSection() {
 
             {/* CTA Button & Refund Reassurance */}
             <div className="pt-4 space-y-2">
-              <CtaButton href="#how-it-works">Get Started</CtaButton>
+              <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
               <p className="body-small">
                 If not approved after your evaluation? You get a full refund.
               </p>
@@ -88,7 +88,7 @@ export function DoYouNeedEsaSection() {
             </div>
 
             {/* Floating Circle Badge at Curve Apex */}
-            <div className="absolute left-[-14px] top-[335px] w-[73px] h-[73px] z-20 drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)]">
+            <div className="absolute left-[1px] top-[359px] -translate-x-1/2 -translate-y-1/2 w-[73px] h-[73px] z-20 drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)]">
               <Image
                 quality={90}
                 src="/home/doyouneed-emotional-support-icon.svg"
@@ -160,7 +160,7 @@ export function DoYouNeedEsaSection() {
 
           {/* Action Button & Refund Reassurance */}
           <div className="flex flex-col items-center gap-2 pt-2">
-            <CtaButton href="#how-it-works">Get Started</CtaButton>
+            <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
             <p className="body-small text-center">
               If not approved after your evaluation? You get a full refund.
             </p>
