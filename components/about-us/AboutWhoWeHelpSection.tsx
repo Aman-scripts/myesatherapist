@@ -5,31 +5,31 @@ import Image from "next/image";
 
 const groups = [
   {
-    icon: "/about-us/about_us-whowehelp-renterfacing-icon.svg",
+    icon: "/ESA ICons/Icon-20.svg",
     title: "Renters Facing Housing Restrictions",
     description:
       "An ESA letter, issued after evaluation by a licensed professional, may help you live with your ESA in no-pet housing.",
   },
   {
-    icon: "/about-us/about_us-whowehelp-individuals_anxiety-icon.svg",
+    icon: "/ESA ICons/Icon.svg",
     title: "Individuals With Anxiety Or Depression",
     description:
       "Receive a professional assessment from licensed mental health professionals to evaluate emotional support needs.",
   },
   {
-    icon: "/about-us/about_us-whowehelp-remotetelepath-icon.svg",
+    icon: "/ESA ICons/Icon-15.svg",
     title: "Remote Or Telehealth Users",
     description:
       "Complete secure, HIPAA-compliant telehealth ESA evaluations from anywhere, with scheduling flexibility to suit your needs.",
   },
   {
-    icon: "/about-us/about_us-whowehelp-firsttimereturning-icon.svg",
+    icon: "/ESA ICons/Icon-17.svg",
     title: "First-Time And Existing ESA Applicants",
     description:
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
   {
-    icon: "/about-us/about_us-whowehelp-emotionalwellness-icon.svg",
+    icon: "/ESA ICons/Icon-1.svg",
     title: "Emotional Wellness-Focused Pet Owners",
     description:
       "Discuss with licensed professionals the potential role of a companion animal in emotional support.",
@@ -60,17 +60,14 @@ export function AboutWhoWeHelpSection() {
                 className="bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 p-3 sm:p-4 xl:p-4.5 flex items-center gap-3.5 sm:gap-4 xl:gap-5 transition-all duration-200 hover:shadow-md"
               >
                 {/* Gradient Teal Icon Badge */}
-                <div
-                  className="w-[46px] h-[46px] sm:w-[52px] sm:h-[52px] xl:w-[59px] xl:h-[59px] rounded-full flex items-center justify-center shrink-0 p-2.5 sm:p-3 shadow-xs"
-                  style={{ background: "var(--color-gradient)" }}
-                >
+                <div className="w-[46px] h-[46px] sm:w-[52px] sm:h-[52px] xl:w-[59px] xl:h-[59px] rounded-full flex items-center justify-center shrink-0 bg-background border border-[#EAE5DC]">
                   <Image
                     src={group.icon}
-                    alt={group.title}
-                    width={30}
-                    height={30}
+                    alt=""
+                    width={24}
+                    height={24}
                     unoptimized
-                    className="object-contain w-5 h-5 sm:w-6 sm:h-6 xl:w-7 xl:h-7 brightness-0 invert"
+                    className="icon-md object-contain"
                   />
                 </div>
 

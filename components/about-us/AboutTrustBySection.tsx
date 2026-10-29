@@ -7,17 +7,17 @@ const trustCards = [
   {
     icon: "/ESA ICons/Glyph-3.svg",
     title: "HIPAA Compliant",
-    description: "Your information stays private and confidential.",
+    description: "Your information stays private and confidential, handled through secure, HIPAA-compliant systems throughout your ESA evaluation with a licensed clinician.",
   },
   {
     icon: "/ESA ICons/Icon-38.svg",
     title: "Response Within 24–72 Hours",
-    description: "Timely responses, subject to provider availability.",
+    description: "Expect a timely response within 24–72 hours of completing your evaluation, subject to provider availability in your state.",
   },
   {
     icon: "/ESA ICons/Icon-24.svg",
     title: "Licensed In All 50 States",
-    description: "Access providers licensed in your state.",
+    description: "Access mental health professionals licensed in your state, with secure phone or video evaluations available wherever you live in the U.S.",
   },
 ];
 
@@ -38,7 +38,7 @@ export function AboutTrustBySection() {
         {/* 3 Trust Cards (Figma Frame 1261153636) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 sm:gap-12 lg:gap-6 pt-2 max-w-[1280px] mx-auto">
           {trustCards.map((card, idx) => (
-            <div key={idx} className="relative flex flex-col items-center">
+            <div key={idx} className="relative flex h-full flex-col items-center">
               {/* Top Floating White Badge (Figma Frame 1000011685, 74.56x74.56px) */}
               <div className="absolute -top-9 z-10 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_2px_6px_rgba(0,0,0,0.18)] flex items-center justify-center p-4 border border-[#EAE5DC]/60">
                 <Image
@@ -47,12 +47,12 @@ export function AboutTrustBySection() {
                   width={34}
                   height={34}
                   unoptimized
-                  className="object-contain w-[32px] h-[32px]"
+                  className="icon-lg object-contain"
                 />
               </div>
 
               {/* Card Body with Gold Top Accent Bar (Figma Frame 1000011684 + 1000011683) */}
-              <div className="w-full min-h-[175px] sm:min-h-[185px] lg:min-h-[195px] bg-white rounded-[20px] shadow-[0px_2px_8px_rgba(0,0,0,0.08)] border-t-[7px] border-t-accent pt-14 pb-7 px-3 sm:px-4 lg:px-3 xl:px-5 flex flex-col items-center justify-center text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+              <div className="flex h-full w-full min-h-[175px] flex-col items-center justify-center rounded-[20px] border-t-[7px] border-t-accent bg-white px-3 pb-7 pt-14 text-center shadow-[0px_2px_8px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-lg sm:min-h-[185px] sm:px-4 lg:min-h-[195px] lg:px-3 xl:px-5">
                 <h3 className="heading-h3 text-color-gradient mb-2 text-center whitespace-nowrap">
                   {card.title}
                 </h3>
