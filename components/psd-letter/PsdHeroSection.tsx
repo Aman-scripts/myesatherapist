@@ -86,7 +86,7 @@ export function PsdHeroSection() {
                 <span className="body-large text-color-gradient leading-none">
                   {stat.value}
                 </span>
-                <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap !text-[11px] leading-tight">{stat.label}</span>
+                <span className="body-small text-[#6B6B6B] mt-0.5 whitespace-nowrap !text-[11px] leading-tight">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -111,7 +111,7 @@ export function PsdHeroSection() {
           />
 
           <p className="body-small text-center mt-2.5 max-w-[300px]">
-            Not approved after your PSD evaluation? You get a full refund!
+            If not approved after your evaluation? You get a full refund.
           </p>
         </div>
       </div>
@@ -141,7 +141,7 @@ export function PsdHeroSection() {
                 <span className="body-large text-color-gradient leading-none">
                   {stat.value}
                 </span>
-                <span className="body-small text-[#949494] mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="body-small text-[#6B6B6B] mt-1 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -162,18 +162,17 @@ export function PsdHeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
               >
                 <Image
-                  src="/home/hero-section-map.svg"
+                  src="/ESA ICons/Icon-37.svg"
                   alt=""
-                  width={16}
-                  height={21}
+                  width={20}
+                  height={20}
                   unoptimized
-                  className="shrink-0 object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="icon-sm shrink-0 object-contain"
                 />
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                <span className="text-primary">
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -203,6 +202,7 @@ export function PsdHeroSection() {
 
             <CtaButton
               href="#pricing"
+              variant="accent"
               className="w-auto"
             >
               Get Started
@@ -210,7 +210,7 @@ export function PsdHeroSection() {
           </div>
 
           <p className="body-small text-center mt-3">
-            Not approved after your PSD evaluation? You get a full refund!
+            If not approved after your evaluation? You get a full refund.
           </p>
         </div>
       </div>
@@ -246,7 +246,7 @@ export function PsdHeroSection() {
                   <span className="body-large text-color-gradient">
                     {stat.value}
                   </span>
-                  <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">{stat.label}</span>
+                  <span className="body-small text-[#6B6B6B] mt-0.5 whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
@@ -268,18 +268,17 @@ export function PsdHeroSection() {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2.5 px-[24px] py-3 rounded-[30px] bg-background font-semibold body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                    className="flex items-center gap-2.5 px-[24px] py-3 rounded-[30px] bg-background font-semibold body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
                     <Image
-                      src="/home/hero-section-map.svg"
+                      src="/ESA ICons/Icon-37.svg"
                       alt=""
-                      width={16}
-                      height={21}
+                      width={20}
+                      height={20}
                       unoptimized
-                      className="shrink-0 object-contain"
-                      style={{ width: "auto", height: "auto" }}
+                      className="icon-sm shrink-0 object-contain"
                     />
-                    <span className="bg-clip-text text-transparent" style={{ backgroundImage: TEAL_GRADIENT }}>
+                    <span className="text-primary">
                       {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                     </span>
                     <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -309,6 +308,7 @@ export function PsdHeroSection() {
 
                 <CtaButton
                   href="#pricing"
+                  variant="accent"
                   className="w-[192px]"
                 >
                   Get Started
@@ -317,7 +317,7 @@ export function PsdHeroSection() {
 
               {/* Refund guarantee note */}
               <p className="body-small text-center w-[463px] pt-1">
-                Not approved after your PSD evaluation? You get a full refund!
+                If not approved after your evaluation? You get a full refund.
               </p>
             </div>
 

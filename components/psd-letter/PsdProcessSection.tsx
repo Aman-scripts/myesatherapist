@@ -38,11 +38,11 @@ export function PsdProcessSection() {
         {/* 1. Section Header (2-Column Layout on Desktop matching Frame 1000011750) */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-12 lg:mb-16">
           <h2 className="heading-h2 capitalize max-w-xl">
-            A Simple &amp; Secure <br className="hidden sm:block" />
+            A Simple, Secure, <br className="hidden sm:block" />
             Three-Step Process
           </h2>
           <p className="body-large max-w-xl lg:mt-2">
-            From PSD consultation to PSD letter delivery, everything happens online. No paperwork, no waiting rooms, just a simple path to a legitimate psychiatric service dog letter and professional documentation.
+            From consultation to letter delivery, everything happens online. No paperwork, no waiting rooms — just a clear path to professional documentation.
           </p>
         </div>
 

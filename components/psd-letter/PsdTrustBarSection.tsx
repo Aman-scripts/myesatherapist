@@ -14,17 +14,17 @@ interface TrustCard {
 const trustCards: TrustCard[] = [
   {
     title: "HIPAA Compliant",
-    description: "Your health information stays just between you and your provider",
+    description: "Your health information stays just between you and your provider, handled on a HIPAA-compliant platform throughout your evaluation.",
     icon: "/ESA ICons/Glyph-3.svg",
   },
   {
-    title: "Response Within 24-72 Hours",
-    description: "Get timely updates throughout your evaluation journey",
+    title: "Response Within 24–72 Hours",
+    description: "Get timely updates from our team at every step of your PSD letter evaluation journey, from first request to final decision.",
     icon: "/ESA ICons/Icon-38.svg",
   },
   {
     title: "Licensed in All 50 States",
-    description: "State-specific expertise for your PSD letter evaluation",
+    description: "State-specific expertise for your PSD letter evaluation from a network of mental health professionals licensed across all 50 states.",
     icon: "/ESA ICons/Icon-24.svg",
   },
 ];

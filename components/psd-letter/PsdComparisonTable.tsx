@@ -70,7 +70,7 @@ const psdComparisonRows: ComparisonRow[] = [
   },
   {
     feature: "Dog Training",
-    icon: "/ESA ICons/Icon-19.svg",
+    icon: "/ESA ICons/Icon-40.svg",
     psd: { text: "Must perform tasks", type: "check" },
     esa: { text: "Not Required", type: "cross" },
   },
@@ -82,13 +82,13 @@ const psdComparisonRows: ComparisonRow[] = [
   },
   {
     feature: "Therapist Letter",
-    icon: "/ESA ICons/Icon-33.svg",
+    icon: "/ESA ICons/Icon-17.svg",
     psd: { text: "Recommended", type: "check" },
     esa: { text: "Required for Housing", type: "check" },
   },
   {
     feature: "Animal Allowed",
-    icon: "/ESA ICons/Icon-30.svg",
+    icon: "/ESA ICons/Icon-29.svg",
     psd: { text: "Dogs only", type: "cross" },
     esa: { text: "Most animals", type: "check" },
   },

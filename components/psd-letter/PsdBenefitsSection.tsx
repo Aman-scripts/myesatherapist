@@ -34,7 +34,7 @@ const benefitsData = [
     isDark: false,
   },
   {
-    icon: "/ESA ICons/Icon-1.svg",
+    icon: "/ESA ICons/Icon-12.svg",
     title: "Supportive Documentation",
     description:
       "Backup documentation regarding your condition to help support your needs as a service dog handler.",
@@ -44,7 +44,7 @@ const benefitsData = [
     icon: "/ESA ICons/Glyph-2.svg",
     title: "Mental Health Consultation",
     description:
-      "Professional assessment and consultation from licensed therapists who understand service dogs",
+      "Professional assessment and consultation from licensed therapists who understand service dog considerations.",
     isDark: false,
   },
 ];
@@ -93,10 +93,10 @@ export function PsdBenefitsSection() {
                   quality={90}
                   src={item.icon}
                   alt={item.title}
-                  width={38}
-                  height={38}
-                  className="object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  width={32}
+                  height={32}
+                  unoptimized
+                  className="icon-lg object-contain"
                 />
               </div>
 

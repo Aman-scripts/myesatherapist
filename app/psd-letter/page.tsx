@@ -15,7 +15,7 @@ import { WhoBenefitsSection } from "@/components/psd-letter/WhoBenefitsSection";
 import { LicensedProfessionalsSection } from "@/components/psd-letter/LicensedProfessionalsSection";
 import { PsdCapabilitiesSection } from "@/components/psd-letter/PsdCapabilitiesSection";
 import { PsdComparisonTable } from "@/components/psd-letter/PsdComparisonTable";
-import { PsdCtaSection } from "@/components/psd-letter/PsdCtaSection";
+import { CtaBanner } from "@/components/home/CtaBanner";
 
 // Reused Common Components from Homepage
 import { PricingSection } from "@/components/home/PricingSection";
@@ -151,12 +151,16 @@ export default function PsdLetterPage() {
         {/* 12. Frequently Asked Questions */}
         <FaqSection
           title="Frequently Asked Questions"
-          subtitle="Everything you need to know about psychiatric service dog letters, the consultation process, and what to expect."
+          subtitle="Get answers to common questions about ESA letters and our service."
           faqs={PSD_FAQS}
         />
 
-        {/* 13. Call to Action Banner (PSD Letter Specific Content) */}
-        <PsdCtaSection />
+        <CtaBanner
+          title="Ready To Start Your ESA Evaluation?"
+          description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
+          buttonText="Get Started"
+          buttonHref="#pricing"
+        />
 
         {/* 14. Content Reviewed by Doctor Badge */}
         <StateReviewerBanner />
