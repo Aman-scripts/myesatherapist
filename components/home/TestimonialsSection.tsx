@@ -7,7 +7,7 @@ import { CtaButton } from "@/components/common/CtaButton";
 const reviews = [
   {
     id: "vId0sRVPY0I",
-    name: "Constance",
+    name: "Marianne C",
     quote:
       "“Looking for an ESA letter in Houston was stressful until I found My ESA Therapist. The process was fast, legitimate, and stress-free.”",
   },
@@ -200,7 +200,7 @@ export function TestimonialsSection({
 
           {/* Frame 1000011890: CTA Button */}
           <div className="flex flex-col items-center">
-            <CtaButton href={buttonHref} className="w-auto">
+            <CtaButton href={buttonHref} variant="accent" className="w-auto">
               {buttonText}
             </CtaButton>
           </div>

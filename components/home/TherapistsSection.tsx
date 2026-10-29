@@ -455,7 +455,7 @@ export function TherapistsSection({
 
         {/* Bottom Book Appointment Button */}
         <div className="flex flex-col items-center gap-2 pt-8 sm:pt-10">
-          <CtaButton href="#how-it-works" className="w-[232px]">
+          <CtaButton href="#how-it-works" variant="accent" className="w-[232px]">
             Book Appointment
           </CtaButton>
           {refundText && (

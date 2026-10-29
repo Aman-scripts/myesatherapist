@@ -49,7 +49,7 @@ function TrustpilotStars() {
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
-  { value: "4.8", label: "Verified Reviews" },
+  { value: "100%", label: "Moneyback Guarantee" },
 ];
 
 export function HeroSection() {
@@ -125,7 +125,7 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="heading-h3 sm:heading-h2 capitalize">
+          <h1 className="heading-h1 capitalize">
             Emotional Support
             <br />
             Animal Evaluations
@@ -177,13 +177,13 @@ export function HeroSection() {
                 <span className="body-large text-color-gradient">
                   {stat.value}
                 </span>
-                <span className="body-small mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="body-small text-[#6B6B6B] mt-1 whitespace-nowrap">{stat.label}</span>
               </div>
             ))}
           </div>
 
           {/* Headline */}
-          <h1 className="heading-h2 mt-6 max-w-xl mx-auto capitalize">
+          <h1 className="heading-h1 mt-6 max-w-xl mx-auto capitalize">
             Emotional Support
             <br />
             Animal Evaluations
@@ -203,7 +203,7 @@ export function HeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-[#EAE5DC]"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
               >
                 <Image
                   src="/home/hero-section-map.svg"
@@ -214,7 +214,7 @@ export function HeroSection() {
                   className="shrink-0 object-contain"
                   style={{ width: "auto", height: "auto" }}
                 />
-                <span className="text-color-gradient">
+                <span className="text-primary">
                   {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                 </span>
                 <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -243,7 +243,7 @@ export function HeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <CtaButton href="#how-it-works" className="w-full sm:w-[192px]">
+            <CtaButton href="#how-it-works" variant="accent" className="w-full sm:w-[192px]">
               Get Started
             </CtaButton>
           </div>
@@ -281,12 +281,12 @@ export function HeroSection() {
                 {statsData.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex flex-col items-center justify-center bg-background py-2.5 rounded-[30px] text-center w-[163px] h-[77px]"
+                    className="flex flex-col items-center justify-center bg-background py-2.5 px-4 rounded-[30px] text-center min-w-[163px] h-[77px]"
                   >
                     <span className="body-large text-color-gradient">
                       {stat.value}
                     </span>
-                    <span className="body-small text-[#949494] mt-1 whitespace-nowrap">
+                    <span className="body-small text-[#6B6B6B] mt-1 whitespace-nowrap">
                       {stat.label}
                     </span>
                   </div>
@@ -314,7 +314,7 @@ export function HeroSection() {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-[#EAE5DC] cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                    className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
                     <Image
                       src="/home/hero-section-map.svg"
@@ -325,7 +325,7 @@ export function HeroSection() {
                       className="shrink-0 object-contain"
                       style={{ width: "auto", height: "auto" }}
                     />
-                    <span className="text-color-gradient font-manrope">
+                    <span className="text-primary font-manrope">
                       {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
                     </span>
                     <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
@@ -354,7 +354,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Get Started Button */}
-                <CtaButton href="#how-it-works" className="w-[192px]">
+                <CtaButton href="#how-it-works" variant="accent" className="w-[192px]">
                   Get Started
                 </CtaButton>
               </div>

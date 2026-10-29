@@ -8,16 +8,19 @@ const cards = [
   {
     stat: "80%",
     image: "/home/journey-section-one.webp",
+    icon: "/ESA ICons/Icon-1.svg",
     text: "Pet owners say their pets bring them happiness and emotional support.",
   },
   {
     stat: "84%",
     image: "/home/journey-section-two.webp",
+    icon: "/ESA ICons/Icon-4.svg",
     text: "Report a mostly positive impact on their mental health.",
   },
   {
     stat: "66%",
     image: "/home/journey-section-three.webp",
+    icon: "/ESA ICons/Icon-21.svg",
     text: "Believe their pets help reduce stress and promote calm.",
   },
 ];
@@ -63,11 +66,11 @@ export function JourneySection() {
                   <div className="w-[103px] h-[103px] rounded-full bg-[rgba(239,255,241,0.85)] shadow-md flex flex-col items-center justify-center p-1.5 backdrop-blur-[2px]">
                     <Image
                       quality={90}
-                      src="/home/journey-section-icon.svg"
+                      src={card.icon}
                       alt=""
-                      width={38}
-                      height={38}
-                      className="w-[36px] h-[36px] object-contain"
+                      width={32}
+                      height={32}
+                      className="icon-lg object-contain"
                     />
                     <span className="heading-h3 leading-[32px] lg:leading-[36px]">
                       {card.stat}

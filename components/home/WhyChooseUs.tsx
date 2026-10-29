@@ -11,40 +11,40 @@ export interface WhyChooseFeature {
 
 const defaultFeatures: WhyChooseFeature[] = [
   {
-    icon: "/home/whychoose-section-license-professional.svg",
+    icon: "/ESA ICons/Icon-33.svg",
     title: "Licensed Professionals",
     description:
       "Evaluations are conducted by independent U.S.-licensed mental health professionals authorized to assess ESA eligibility.",
   },
   {
-    icon: "/home/whychoose-section-secure-thealth.svg",
+    icon: "/ESA ICons/Icon-15.svg",
     title: "Secure Telehealth Platform",
     description:
-      "HIPAA-compliant systems ensure your information remains confidential and protected.",
+      "HIPAA-compliant systems help ensure your personal and health information remains confidential and protected throughout your evaluation.",
   },
   {
-    icon: "/home/whychoose-section-clinical-integrity.svg",
+    icon: "/ESA ICons/Glyph-2.svg",
     title: "Clinical Integrity First",
     description:
-      "We do not guarantee ESA approval. Recommendations are based solely on clinical judgment.",
+      "We do not guarantee ESA approval. Recommendations are based solely on the licensed clinician's independent clinical judgment.",
   },
   {
-    icon: "/home/whychoose-section-legimate-documentation.svg",
+    icon: "/ESA ICons/Icon-17.svg",
     title: "Legitimate ESA Documentation",
     description:
       "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
   },
   {
-    icon: "/home/whychoose-section-nationwide-access.svg",
+    icon: "/ESA ICons/Icon-24.svg",
     title: "Nationwide Access",
     description:
       "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
   },
   {
-    icon: "/home/whychoose-section-transparent-process.svg",
+    icon: "/ESA ICons/Icon-26.svg",
     title: "Transparent Process",
     description:
-      "Clear steps, clear expectations, no misleading claims.",
+      "Clear steps and clear expectations at every stage, with no misleading claims or promises of automatic approval.",
   },
 ];
 
@@ -88,7 +88,7 @@ export function WhyChooseUs({
             const resolvedIcon =
               icon ||
               defaultFeatures[idx % defaultFeatures.length]?.icon ||
-              "/home/whychoose-section-license-professional.svg";
+              "/ESA ICons/Icon-10.svg";
             return (
               <div
                 key={itemTitle}
@@ -103,21 +103,21 @@ export function WhyChooseUs({
                       width={32}
                       height={32}
                       unoptimized
-                      className="object-contain w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[32px] lg:h-[32px]"
+                      className="icon-lg object-contain"
                     />
                   </div>
 
-                {/* Title */}
-                <h3 className="heading-h3 text-color-gradient mb-3">
-                  {itemTitle}
-                </h3>
+                  {/* Title */}
+                  <h3 className="heading-h3 text-color-gradient mb-3">
+                    {itemTitle}
+                  </h3>
 
-                {/* Description */}
-                <p className="body-text max-w-[320px]">
-                  {description}
-                </p>
+                  {/* Description */}
+                  <p className="body-text max-w-[320px]">
+                    {description}
+                  </p>
+                </div>
               </div>
-            </div>
             );
           })}
         </div>

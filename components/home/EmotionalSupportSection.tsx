@@ -62,9 +62,9 @@ export function EmotionalSupportSection() {
               variant="secondary"
               className="w-auto px-6"
             >
-              Learn about ESA&apos;s
+              Learn About ESA
             </CtaButton>
-            <CtaButton href="#how-it-works" className="w-[192px]">
+            <CtaButton href="#how-it-works" variant="accent" className="w-[192px]">
               Get Started
             </CtaButton>
           </div>
@@ -106,10 +106,10 @@ export function EmotionalSupportSection() {
                   variant="secondary"
                   className="w-auto px-6"
                 >
-                  Learn about ESA&apos;s
+                  Learn About ESA
                 </CtaButton>
 
-                <CtaButton href="#how-it-works" className="w-[192px]">
+                <CtaButton href="#how-it-works" variant="accent" className="w-[192px]">
                   Get Started
                 </CtaButton>
               </div>

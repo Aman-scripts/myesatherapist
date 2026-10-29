@@ -7,21 +7,21 @@ import { CtaButton } from "@/components/common/CtaButton";
 const stepsData = [
   {
     number: "1",
-    icon: "/psd-letter/psdprocess-section-schedule.svg",
+    icon: "/ESA ICons/Icon-38.svg",
     title: "Schedule Consultation",
     description:
       "Complete our simple online form to request a consultation with a licensed mental health professional in your state.",
   },
   {
     number: "2",
-    icon: "/psd-letter/psdprocess-section-meetyourtherapist.svg",
+    icon: "/ESA ICons/Icon-15.svg",
     title: "Meet Your Therapist",
     description:
       "Connect with a licensed professional via secure video or phone. They'll assess whether a PSD letter may be appropriate for you.",
   },
   {
     number: "3",
-    icon: "/psd-letter/psdprocess-section-letterqualified.svg",
+    icon: "/ESA ICons/Icon-17.svg",
     title: "Letter if Qualified",
     description:
       "If you qualify, you may receive your PSD letter within 24-72 hours via email, signed by your licensed professional.",
@@ -101,10 +101,10 @@ export function PsdProcessSection() {
                 <Image
                   src={step.icon}
                   alt={step.title}
-                  width={36}
-                  height={36}
+                  width={32}
+                  height={32}
                   unoptimized
-                  className="object-contain w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9"
+                  className="icon-lg object-contain"
                   style={{ width: "auto", height: "auto" }}
                 />
               </div>

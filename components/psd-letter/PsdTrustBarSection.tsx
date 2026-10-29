@@ -15,17 +15,17 @@ const trustCards: TrustCard[] = [
   {
     title: "HIPAA Compliant",
     description: "Your health information stays just between you and your provider",
-    icon: "/psd-letter/psd_trust_hippacomplaince_icon.svg",
+    icon: "/ESA ICons/Glyph-3.svg",
   },
   {
     title: "Response Within 24-72 Hours",
     description: "Get timely updates throughout your evaluation journey",
-    icon: "/psd-letter/psd_trust_responsetime_icon.svg",
+    icon: "/ESA ICons/Icon-38.svg",
   },
   {
     title: "Licensed in All 50 States",
     description: "State-specific expertise for your PSD letter evaluation",
-    icon: "/psd-letter/psd_trust_licenses_icon.svg",
+    icon: "/ESA ICons/Icon-24.svg",
   },
 ];
 
@@ -55,11 +55,11 @@ export function PsdTrustBarSection() {
               <div className="absolute -top-[37px] left-1/2 -translate-x-1/2 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_1.88px_3.77px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
                 <Image
                   src={card.icon}
-                  alt={card.title}
-                  width={34}
-                  height={34}
+                  alt=""
+                  width={32}
+                  height={32}
                   unoptimized
-                  className="w-[34px] h-[34px] object-contain"
+                  className="icon-lg object-contain"
                 />
               </div>
 

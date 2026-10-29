@@ -52,43 +52,43 @@ interface ComparisonRow {
 const psdComparisonRows: ComparisonRow[] = [
   {
     feature: "Public Access Rights",
-    icon: "/psd-letter/psdletter-comparisiontable-pubicaccess.svg",
+    icon: "/ESA ICons/Icon-30.svg",
     psd: { text: "Yes - ADA Protected", type: "check" },
     esa: { text: "No public access", type: "cross" },
   },
   {
     feature: "Housing Rights (FHA)",
-    icon: "/psd-letter/psdletter-comparisiontable-housingrights.svg",
+    icon: "/ESA ICons/Icon-20.svg",
     psd: { text: "Yes", type: "check" },
     esa: { text: "Yes", type: "check" },
   },
   {
     feature: "Airline Travel",
-    icon: "/psd-letter/psd-benfit-section-airtravel.svg",
+    icon: "/ESA ICons/Icon-3.svg",
     psd: { text: "Airline Dependent", type: "warning" },
     esa: { text: "Airline Dependent", type: "warning" },
   },
   {
     feature: "Dog Training",
-    icon: "/psd-letter/psdletter-comparisiontable-dogtraining.svg",
+    icon: "/ESA ICons/Icon-19.svg",
     psd: { text: "Must perform tasks", type: "check" },
     esa: { text: "Not Required", type: "cross" },
   },
   {
     feature: "Restaurant & Stores",
-    icon: "/psd-letter/psdletter-comparisiontable-restaurant.svg",
+    icon: "/ESA ICons/Icon-8.svg",
     psd: { text: "Allowed", type: "check" },
     esa: { text: "Not Allowed", type: "cross" },
   },
   {
     feature: "Therapist Letter",
-    icon: "/psd-letter/psdletter-comparisiontable-therapistletter.svg",
+    icon: "/ESA ICons/Icon-33.svg",
     psd: { text: "Recommended", type: "check" },
     esa: { text: "Required for Housing", type: "check" },
   },
   {
     feature: "Animal Allowed",
-    icon: "/psd-letter/psdletter-comparisiontable-animalallowed.svg",
+    icon: "/ESA ICons/Icon-30.svg",
     psd: { text: "Dogs only", type: "cross" },
     esa: { text: "Most animals", type: "check" },
   },
@@ -260,10 +260,10 @@ export function PsdComparisonTable() {
                     <Image
                       src={row.icon}
                       alt=""
-                      width={18}
-                      height={18}
+                      width={24}
+                      height={24}
                       unoptimized
-                      className="object-contain w-4 h-4 lg:w-[18px] lg:h-[18px]"
+                      className="icon-md object-contain"
                     />
                   </div>
                   <span className="heading-h4 text-primary leading-tight">

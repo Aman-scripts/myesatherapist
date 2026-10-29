@@ -9,32 +9,32 @@ const benefitsData = [
   {
     title: "Living In No-Pet Housing",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
-    icon: "/psd-letter/psd_whobenefits_Living_No-Pet_Housing-icon.svg",
+    icon: "/ESA ICons/Icon-20.svg",
   },
   {
     title: "Getting A New Service Dog",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
-    icon: "/psd-letter/psd_whobenefits_getting_new_Service_dog-icon.svg",
+    icon: "/ESA ICons/Icon-30.svg",
   },
   {
     title: "Frequent Flyers",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
-    icon: "/psd-letter/psd_whobenefits_Frequent_Flyers-icon.svg",
+    icon: "/ESA ICons/Icon-3.svg",
   },
   {
     title: "Upgrading From ESA",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
-    icon: "/psd-letter/psd_whobenefits_Upgrading_Esa-icon.svg",
+    icon: "/ESA ICons/Glyph-1.svg",
   },
   {
     title: "Veterans With PTSD",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
-    icon: "/psd-letter/psd_whobenefits_Veterans_PSD-icon.svg",
+    icon: "/ESA ICons/Icon-28.svg",
   },
   {
     title: "Need Backup Documentation",
     description: "If any of these describes you, a PSD letter may be exactly what you need.",
-    icon: "/psd-letter/psd_whobenefits_Need_backup_doc-icon.svg",
+    icon: "/ESA ICons/Icon-31.svg",
   },
 ];
 
@@ -91,10 +91,10 @@ export function WhoBenefitsSection() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={54}
-                    height={54}
+                    width={32}
+                    height={32}
                     unoptimized
-                    className="w-[54px] h-[54px] object-contain shrink-0"
+                    className="icon-lg object-contain shrink-0"
                   />
                 </div>
 
@@ -142,10 +142,10 @@ export function WhoBenefitsSection() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={54}
-                    height={54}
+                    width={32}
+                    height={32}
                     unoptimized
-                    className="w-[54px] h-[54px] object-contain shrink-0"
+                    className="icon-lg object-contain shrink-0"
                   />
                 </div>
 

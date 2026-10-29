@@ -18,7 +18,7 @@ type Condition = {
 const conditions: Condition[] = [
   {
     label: "Agoraphobia",
-    icon: "/home/qualifying-conditions-agroraphobia.svg",
+    icon: "/ESA ICons/Glyph.svg",
     image: "/qualifyingConditions_image/agoraphobea.webp",
     left: 56.81,
     top: -0.24,
@@ -27,7 +27,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Anxiety Disorders",
-    icon: "/home/qualifying-conditions-anxiety-disorder.svg",
+    icon: "/ESA ICons/Icon-21.svg",
     image: "/qualifyingConditions_image/Anxiety Disorders.webp",
     left: 29.42,
     top: 4.55,
@@ -36,7 +36,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Panic Disorders",
-    icon: "/home/qualifying-conditions-panic-disorder.svg",
+    icon: "/ESA ICons/Icon-1.svg",
     image: "/qualifyingConditions_image/panic disoder.webp",
     left: 5.48,
     top: 15.31,
@@ -45,7 +45,7 @@ const conditions: Condition[] = [
   },
   {
     label: "OCD",
-    icon: "/home/qualifying-conditions-ocd.svg",
+    icon: "/ESA ICons/Icon-6.svg",
     image: "/qualifyingConditions_image/ocd.webp",
     left: 80.91,
     top: 15.31,
@@ -55,7 +55,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Bipolar Disorders",
-    icon: "/home/qualifying-conditions-bipoler-disorder.svg",
+    icon: "/ESA ICons/Icon-4.svg",
     image: "/qualifyingConditions_image/biloper disoder.webp",
     left: 28.01,
     top: 29.67,
@@ -64,7 +64,7 @@ const conditions: Condition[] = [
   },
   {
     label: "PTSD",
-    icon: "/home/qualifying-conditions-ptsd.svg",
+    icon: "/ESA ICons/Icon-2.svg",
     image: "/qualifyingConditions_image/ptsd.webp",
     left: 67.53,
     top: 29.67,
@@ -73,7 +73,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Social Anxiety",
-    icon: "/home/qualifying-conditions-social-anxiety.svg",
+    icon: "/ESA ICons/Icon-8.svg",
     image: "/qualifyingConditions_image/socail Anxiety .webp",
     left: 1.8,
     top: 39.47,
@@ -82,7 +82,7 @@ const conditions: Condition[] = [
   },
   {
     label: "ADHD",
-    icon: "/home/qualifying-conditions-adhd.svg",
+    icon: "/ESA ICons/Icon-5.svg",
     image: "/qualifyingConditions_image/adhd.webp",
     left: 86.15,
     top: 39.47,
@@ -92,7 +92,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Mood Disorders",
-    icon: "/home/qualifying-conditions-mood-disorder.svg",
+    icon: "/ESA ICons/Icon-4.svg",
     image: "/qualifyingConditions_image/mood disoder.webp",
     left: 5.09,
     top: 60.29,
@@ -101,7 +101,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Other ADA Conditions",
-    icon: "/home/qualifying-conditions-other-ada.svg",
+    icon: "/ESA ICons/Icon-18.svg",
     image: "/qualifyingConditions_image/Other ADA Conditions.webp",
     left: 76.21,
     top: 60.29,
@@ -111,7 +111,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Depression",
-    icon: "/home/qualifying-conditions-depression.svg",
+    icon: "/ESA ICons/Icon-3.svg",
     image: "/qualifyingConditions_image/Depression.webp",
     left: 0.0,
     top: 84.93,
@@ -120,7 +120,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Schizophrenia",
-    icon: "/home/qualifying-conditions-schizpphrenia.svg",
+    icon: "/ESA ICons/Icon-21.svg",
     image: "/qualifyingConditions_image/Schizpphrenia.webp",
     left: 82.24,
     top: 84.93,

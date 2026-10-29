@@ -87,7 +87,7 @@ export function HowItWorks() {
 
                     {/* Text (Figma: Title 28px Playfair gradient, Description 18px Manrope body-text) */}
                     <div className="space-y-2.5 pt-5 sm:pt-6 max-w-[340px] w-full flex flex-col items-center">
-                      <h3 className="heading-h3 text-color-gradient capitalize lg:whitespace-nowrap">
+                      <h3 className="heading-h3 text-primary capitalize lg:whitespace-nowrap">
                         {step.title}
                       </h3>
                       <p className="body-large max-w-[320px]">
@@ -112,7 +112,7 @@ export function HowItWorks() {
 
           {/* Get Started Button + Refund reassurance */}
           <div className="flex flex-col items-center mt-10 lg:mt-12 gap-2">
-            <CtaButton href="#how-it-works">Get Started</CtaButton>
+            <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
             <p className="body-small text-center">
               If not approved after your evaluation? You get a full refund.
             </p>
