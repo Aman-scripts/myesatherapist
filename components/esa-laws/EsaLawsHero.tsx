@@ -13,12 +13,12 @@ export function EsaLawsHero() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={70}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
           className="object-cover object-bottom"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="(max-width: 639px) 430px, 1px"
         />
         <div className="absolute inset-0 z-10 flex items-center px-5">
           <div className="flex flex-col items-start gap-3 max-w-[300px]">
@@ -31,12 +31,12 @@ export function EsaLawsHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={75}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
           className="object-cover object-bottom"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
+          sizes="(min-width: 640px) and (max-width: 1023px) 834px, 1px"
         />
         <div className="absolute inset-0 z-10 flex items-center px-10">
           <div className="flex flex-col items-start gap-4 max-w-[520px]">
@@ -53,7 +53,7 @@ export function EsaLawsHero() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={80}
             src="/esa-laws/esalaws-herosection.webp"
             alt="Woman reading ESA Laws guide with her emotional support dog"
             fill

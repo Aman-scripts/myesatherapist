@@ -11414,7 +11414,7 @@ export const STATES_DATA: Record<string, StateData> = {
     metaTitle: "ESA Letter Evaluations in New York by Licensed Therapists - My ESA Therapist",
     metaDescription: "My ESA Therapist offers ESA letter evaluations in New York by licensed therapists. Secure online assessments and HUD-compliant ESA letters for housing accommodations.",
     heroTitle: "ESA Letter\nEvaluations by New York\nLicensed Therapist",
-    heroSubtitle: "Connect with New York–licensed therapist for ESA evaluations conducted under fair housing guidelines. ESA letters are issued only when clinical eligibility is confirmed.",
+    heroSubtitle: "Connect with a New York-licensed therapist for ESA evaluations conducted under fair housing guidelines. ESA letters are issued only when clinical eligibility is confirmed.",
     benefitsImage: "/states/statewhobenefits-newyork.webp",
     benefitsImageMobile: "/states/statewhobenefits-newyork_mobile.webp",
     benefitsImageTablet: "/states/statewhobenefits-newyork_tablet.webp",
@@ -11461,7 +11461,7 @@ export const STATES_DATA: Record<string, StateData> = {
         number: "01",
         icon: "/states/californina-esa-evalutation_schedule.svg",
         title: "Book Your Appointment",
-        description: "Schedule an appointment to speak with a psychiatrist authorized to practice in New York.",
+        description: "Schedule an appointment to speak with a licensed mental health professional authorized to practice in New York.",
       },
       {
         number: "02",
@@ -11483,10 +11483,10 @@ export const STATES_DATA: Record<string, StateData> = {
       "No fake registries or certifications",
       "HIPAA-compliant, secure telehealth platform",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they do need to affirm that you have an applicable diagnosis.",
+    processNote: "Note: An ESA letter should be based on an individualized mental health evaluation conducted by a licensed professional. The recommendation should reflect your individual circumstances and disability-related need. This is not an instant-approval process.",
     whoQualifiesTitle: "Who Qualifies For an Emotional Support Animal in New York?",
     whoQualifiesSubtitle: "People experiencing emotional or mental health concerns that substantially affect their day-to-day life may qualify for an ESA after being evaluated by a licensed mental health professional. The assessment may include conditions such as:",
-    whoQualifiesSectionHeading: "Qualifying Conditions",
+    whoQualifiesSectionHeading: "Mental Health Conditions Considered During an ESA Evaluation",
     whoQualifiesConditions: [
       {
         title: "Chronic Stress or Burnout",
@@ -11516,7 +11516,6 @@ export const STATES_DATA: Record<string, StateData> = {
       "Have a mental or emotional health condition that is assessed by a licensed professional during the evaluation.",
       "Experience symptoms that may affect daily functioning or overall well-being, as evaluated clinically.",
       "A licensed professional determines that an ESA may provide emotional benefit.",
-      "Reside in New York or plan to move there.",
     ],
     requirementsNote: "Important: Only a professional authorized to practice in New York can conduct an ESA evaluation and, if clinically appropriate, issue documentation.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in New York?",
@@ -11557,18 +11556,27 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of a Clinically Issued ESA Letter in New York",
     benefitsSubtitle: "When properly issued, ESA documentation may support emotional well-being and help clarify certain housing-related considerations under applicable fair housing guidance.",
-    financialBenefitsHeading: "Financial Benefits",
+    financialBenefitsHeading: "Housing Benefits",
     financialBenefits: [
       {
         title: "Reasonable Accommodation Considerations",
-        description: "Under the Fair Housing Act, housing providers must provide reasonable accommodations when supported by an appropriate ESA recommendation, ensuring you aren’t turned away because of your animal.",
+        description: "Under the Fair Housing Act, eligible individuals may request reasonable accommodations for assistance animals. Housing providers must consider qualifying requests in accordance with applicable fair housing requirements and exceptions.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "No Pet Fees",
-        description: "Under the Fair Housing Act (FHA), housing providers cannot charge pet deposits or pet rent for approved Emotional Support Animals.",
+        description: "When an assistance animal is approved as a reasonable accommodation, housing providers generally may not charge pet deposits, pet rent, or other pet fees. Tenants may still be responsible for actual damage caused by the animal.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
@@ -11595,43 +11603,43 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/whomayqualifies-panicattack.svg",
       },
     ],
-    lawsTitle: "Understanding ESA Laws in New York for Housing Right",
-    lawsSubtitle: "Discover how New York’s emotional support animal laws protect your right to live with an ESA and what landlords are allowed to do under federal and state regulations.",
-    card1Title: "Federal & State Laws and Tenant Protections",
+    lawsTitle: "Understanding ESA Laws in New York for Housing Rights",
+    lawsSubtitle: "Learn about ESA housing rights in New York under the FHA, NYSHRL, and NYC HRL, including reasonable accommodations and what tenants and landlords can request.",
+    card1Title: "NYSHRL, NYC HRL & Federal FHA",
     card1Items: [
       {
-        title: "No Extra Fees",
-        description: "Landlords cannot charge pet rent or deposits for an approved ESA.",
+        title: "Fair Housing Act (FHA)",
+        description: "Qualifying ESAs are considered assistance animals, allowing eligible tenants to request reasonable housing accommodations, including exceptions to no-pet policies.",
       },
       {
-        title: "No Discrimination",
-        description: "Landlords cannot deny an ESA based on breed, size, or weight and must review each accommodation request fairly.",
+        title: "New York State Human Rights Law",
+        description: "NYSHRL protects tenants with disabilities from housing discrimination and may require reasonable accommodations for disability-related emotional support animals.",
       },
       {
-        title: "Medical Privacy Protection",
-        description: "Landlords cannot ask for your diagnosis, medical records, or details about your condition; all they can ask for is an ESA recommendation letter issued by a licensed provider.",
+        title: "New York City Human Rights Law",
+        description: "NYC HRL provides additional disability protections and may require housing providers to accommodate qualifying ESAs without standard pet fees.",
       },
     ],
-    card2Title: "Landlord Rights",
+    card2Title: "Landlord & Tenant Rights",
     card2Items: [
       {
-        title: "ESA Recommendation Letter Verification",
-        description: "Housing providers may verify ESA recommendation letters by confirming the issuing professional’s license status, credentials, and required attestations.",
+        title: "ESA Letter Verification",
+        description: "Landlords may verify an ESA letter by confirming the provider’s license, credentials, and required professional attestations.",
       },
       {
-        title: "Maintain Property Rules",
-        description: "Standard property rules related to noise, cleanliness, and behavior continue to apply, provided they do not unreasonably interfere with approved ESA accommodations.",
+        title: "Follow Property Rules",
+        description: "Tenants must follow reasonable rules on noise, cleanliness, and conduct, as long as they accommodate the ESA.",
       },
       {
-        title: "ESA Removal for Safety",
-        description: "If an ESA poses a direct threat or causes major damage, landlords can deny or request removal.",
+        title: "ESA Removal for Legitimate Concerns",
+        description: "Landlords may address an ESA that creates a direct safety threat or causes substantial property damage.",
       },
     ],
     legalNotice: "Under the Fair Housing Act, emotional support animals are permitted in New York homes as a reasonable accommodation for those with qualifying disabilities. Since the Americans with Disabilities Act does not recognize ESAs as service animals, they are generally not permitted in restaurants, shops, and other public areas where pets are forbidden.",
     scamsTitle: "New York ESA Scams: What’s Real vs. Fake",
     scamsSubtitle: "If you are seeking an ESA evaluation in New York, it is important to understand the difference between legitimate clinical requirements and misleading commercial claims. A little awareness can save you money, stress, and potential housing problems.",
     scamsAlertTitle: "Important: New York Has No Official ESA Registry",
-    scamsAlertText: "There is no government-backed system for emotional support animal registration in New York and the entire U.S. Any service claiming to “register your ESA,” “add your pet to a national ESA list,” or “provide official ESA certification” is a scam. These documents hold no legal value and are not recognized by landlords or housing authorities.",
+    scamsAlertText: "There is no government-backed system for emotional support animal registration in New York and the entire U.S. Any service claiming to “register your ESA,” “add your pet to a national ESA list,” or “provide official ESA certification” is a scam. These documents do not by themselves establish an entitlement to a housing accommodation.",
     scamsWhatYouNeedTitle: "What You Actually Need",
     scamsWhatYouNeedItems: [
       {
@@ -11640,10 +11648,10 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Mental Health Evaluation",
-        description: "An ESA documentation can only be issued after a proper assessment, either in person or via a compliant telehealth appointment with a licensed provider.",
+        description: "ESA documentation can only be issued after a proper assessment, either in person or via a compliant telehealth appointment with a licensed provider.",
       },
       {
-        title: "Ongoing Therapeutic Relationship",
+        title: "Genuine Medical Attention",
         description: "Continued care with your mental health provider",
       },
     ],
@@ -11661,7 +11669,7 @@ export const STATES_DATA: Record<string, StateData> = {
     esaCardTitle: "Emotional Support Animals (ESAs)",
     esaCardBullets: [
       "Provide emotional comfort and help reduce symptoms of anxiety, depression, trauma, and more. Do not require special training.",
-      "Protected for housing under the Fair Housing Act (FHA), with a valid ESA recommendation letter from a licensed provider.",
+      "May qualify for housing accommodations under the Fair Housing Act when the applicable requirements for an assistance animal are met.",
     ],
     psdCardTitle: "Psychiatric Service Dogs",
     psdCardBullets: [
@@ -11669,9 +11677,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Covered under the Americans with Disabilities Act (ADA), which gives them full public access.",
     ],
     pricingTitle: "The Cost of an ESA Letter in New York",
-    pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
-    pricingPlan1Title: "ESA Letter",
-    pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in New York.",
+    pricingSubtitle: "Choose the ESA package that fits your needs. Get a professional ESA evaluation and letter, with an ID card option for added convenience.",
     pricingPlan1Price: "$149",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
@@ -11748,7 +11754,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Is ESA documentation valid across all of New York?",
-        a: "Yes. ESA documentation is valid statewide once it is issued following a clinical evaluation by a New York–licensed mental health professional. This includes apartments, co-ops, and condos. Landlords are required to review ESA requests that are supported by a valid evaluation.",
+        a: "Yes. ESA documentation may be used to support housing accommodation requests across New York when the applicable federal, state, and local requirements are met. Housing providers may review reliable documentation supporting the disability-related need for an assistance animal when that need is not apparent.",
       },
       {
         q: "Can landlords in New York verify the provider who conducted the ESA evaluation?",
@@ -11756,11 +11762,11 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Can I use an out-of-state licensed professional for my ESA evaluation in NY?",
-        a: "Typically, no. For housing in New York, ESA documentation must result from an evaluation by a mental health professional licensed in New York State. This ensures that landlords recognize the legitimacy of your ESA letter.",
+        a: "It depends. Licensure requirements vary based on where the professional and patient are located and the applicable telehealth rules. For evaluations conducted for individuals located in New York, the professional should be authorized to practice in New York.",
       },
       {
         q: "Does New York allow ESAs in college dorms or university housing?",
-        a: "Yes. Students can request ESA accommodations after a licensed mental health professional evaluates their mental or emotional health and determines an ESA may be clinically appropriate. Colleges and universities must review requests fairly and cannot deny an ESA based on breed, size, or weight unless there is a valid safety concern.",
+        a: "Yes. Students may request an ESA accommodation through their college or university's disability accommodation process. The institution will review the request under applicable disability and housing requirements, which may include documentation and reasonable restrictions.",
       },
       {
         q: "Can I have more than one ESA in NY?",
@@ -11796,7 +11802,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Specific Information Should A Valid New York ESA Letter Include?",
-        a: "A valid ESA letter should be written by a licensed mental health professional and typically include their licensing information, confirmation of a qualifying mental or emotional health condition, and a recommendation for an emotional support animal as part of treatment.",
+        a: "ESA documentation should identify the licensed professional providing the documentation and explain the professional's recommendation regarding the individual's need for an assistance animal. The specific information included may vary depending on the applicable housing requirements and circumstances.",
       },
       {
         q: "Does New York State Have Any Additional ESA Protections Beyond The Federal Fair Housing Act?",
@@ -11812,7 +11818,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nNew York ESA Evaluation?",
-    ctaSubtitle: "Connect with a New York-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a New York-licensed mental health professional today for an individualized ESA evaluation.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in New York?" },
@@ -14257,7 +14263,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Secure telehealth appointments aligned with state and federal privacy standards.",
       "ESA documentation issued only after a personalized clinical review.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they do need to affirm that you have an applicable diagnosis.",
+    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. All our audio-video ESA assessments are conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. Your documentation should explain your disability-related need for an assistance animal when supporting information is necessary. It generally does not need to disclose a specific diagnosis or include detailed medical records.",
     whoQualifiesTitle: "Who Could Be Eligible for an ESA Letter New Mexico?",
     whoQualifiesSubtitle: "A professional mental health assessment should be the first step for anyone in New Mexico thinking about getting an emotional support animal when emotional or psychological issues start to interfere with daily functioning, focus, or general wellness. Commonly reviewed conditions may include, but are not limited to:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -14293,7 +14299,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "The clinician evaluates whether an emotional support animal offers meaningful therapeutic benefit for the individual’s specific needs.",
       "The individual must currently reside in New Mexico or plan to live there.",
     ],
-    requirementsNote: "Important: Before ESA paperwork can be issued, New Mexico requires a customized assessment by a mental health professional with a state license.",
+    requirementsNote: "Important: Before ESA paperwork can be issued, New Mexico requires a customized assessment by a mental health professional with a state license. HUD’s May 22, 2026, enforcement guidance directs its Fair Housing and Equal Opportunity office to focus reasonable-cause findings on assistance animals individually trained to perform disability-related work or tasks. This changes HUD’s enforcement approach to requests involving untrained emotional support animals, but does not amend the Fair Housing Act itself.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in New Mexico?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in New Mexico while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -14332,23 +14338,32 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in New Mexico",
     benefitsSubtitle: "See how an ESA letter New Mexico could support your well-being and make your daily routine with your emotional support animal manageable.",
     financialBenefitsHeading: "Financial Benefits",
     financialBenefits: [
       {
         title: "No Pet Rent or Monthly Pet Fees",
-        description: "Recurring pet-related fees are typically waived by housing providers with a valid ESA letter. This can help lower long-term housing costs by eliminating monthly pet rent and other deposits often required for companion animals, while preserving access to emotionally beneficial companionship.",
+        description: "When an assistance animal is approved as a reasonable accommodation, applicable fair housing requirements generally prohibit pet-related fees or deposits. Approval depends on the circumstances and applicable law. Residents may remain responsible for damage caused by their animal, and an ESA letter does not guarantee a fee waiver.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Avoid Costly Housing Limitations",
-        description: "Access to housing options that might normally be restricted for animals can be increased with an ESA letter. People can choose appropriate homes without being financially constrained by pet laws or having to pay excessive rental fees because of this freedom, which helps them avoid more expensive \"pet-friendly\" residences.",
+        description: "An approved reasonable accommodation may allow a qualifying resident to keep an assistance animal in housing that otherwise restricts pets. However, approval depends on the circumstances and applicable protections. An ESA letter does not guarantee access to a particular property or eliminate every housing-related restriction.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Reduced Relocation Expenses",
-        description: "Having the right ESA paperwork could assist avoid unforeseen relocation expenses brought on by leasing agreements' animal limitations. People might be able to avoid unforeseen fees, lease fines, or the need to look for other housing, which would increase their financial stability.",
+        description: "Appropriate assistance-animal documentation may support a housing accommodation request when required information is necessary. However, approval is not guaranteed, and an ESA letter does not automatically prevent relocation expenses, lease penalties, or the need to find alternative housing.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
@@ -14376,15 +14391,15 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Items: [
       {
         title: "Reasonable Accommodation Requirement",
-        description: "When requests for appropriate accommodations for emotional support animals are backed by reliable clinical documentation, housing providers are bound to take them into consideration. This makes it easier to guarantee that people with qualifying emotional or psychological needs have an equal chance to find and keep a stable home free from unnecessary limitations.",
+        description: "Housing accommodation requests should be assessed individually. Supporting information may be requested when the disability-related need is not apparent and the information is necessary. HUD’s May 22, 2026, enforcement guidance narrows its enforcement approach for untrained emotional support animals but does not amend the Fair Housing Act.",
       },
       {
-        title: "Exemption from Standard Pet Policies",
-        description: "When an ESA letter is submitted, properties are required to make exceptions to standard pet rules. Breed, size, and weight restrictions that are typically applied to pets under housing agreements may be waived in this way.",
+        title: "Exceptions to Standard Pet Policies",
+        description: "An approved reasonable accommodation may require exceptions to ordinary pet policies. Breed, size, and weight restrictions should not automatically determine the outcome; the specific animal and circumstances must be considered.",
       },
       {
         title: "Equal Housing Access",
-        description: "Housing providers should refrain from actions that unjustly deny someone housing because they require emotional support. People should be granted equal opportunities to rent or stay in housing without prejudice based on their need for a supportive animal, provided they have the necessary documents.",
+        description: "Applicable fair housing protections may allow qualifying individuals to request reasonable accommodations for assistance animals. An ESA letter does not guarantee approval, and applicable state or local protections may also matter.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
@@ -14402,7 +14417,7 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "Housing providers are required to practice discretion while handling ESA-related data. Requests should be handled without needlessly disclosing sensitive information, and personal mental health information should be kept private.",
       },
     ],
-    legalNotice: "Important Legal Notice: Under the Fair Housing Act, emotional support animals are permitted in New Mexico homes as a reasonable accommodation for those with qualifying disabilities. Since the Americans with Disabilities Act does not recognize ESAs as service animals, they are generally not permitted in restaurants, shops, and other public areas where dogs are forbidden.",
+    legalNotice: "Under the Fair Housing Act, emotional support animals are permitted in New Mexico homes as a reasonable accommodation for those with qualifying disabilities. Since the Americans with Disabilities Act does not recognize ESAs as service animals, they are generally not permitted in restaurants, shops, and other public areas where dogs are forbidden.",
     scamsTitle: "ESA Letters in New Mexico: Truths and Misunderstandings",
     scamsSubtitle: "Residents of New Mexico can steer clear of fraudulent ads and suspicious online services by being aware of how emotional support animal (ESA) regulations operate under federal law. Understanding the appropriate legal requirements guarantees that documentation complies with the Fair Housing Act’s housing protections.",
     scamsAlertTitle: "Important Notice: No Official ESA Registry Exists",
@@ -14411,15 +14426,15 @@ export const STATES_DATA: Record<string, StateData> = {
     scamsWhatYouNeedItems: [
       {
         title: "Assessment by a State-Licensed Mental Health Provider",
-        description: "To determine whether an emotional or psychological disorder substantially affects a person’s main life activities and supports the possible need for an ESA, a clinician licensed to practice in New Mexico must do a professional examination.",
+        description: "An appropriately qualified professional may assess an individual’s circumstances and disability-related need for an assistance animal. Federal fair housing law does not establish one universal professional credential or require every housing request to follow the same assessment process.",
       },
       {
         title: "Established Professional Relationship",
-        description: "Only after a true provider-client connection has been established may an ESA letter be issued, guaranteeing that the suggestion is founded on a customized assessment rather than a quick or automated procedure.",
+        description: "Documentation should be based on an individualized assessment rather than automatic approval. Applicable professional licensing rules and provider requirements may vary, so a specific relationship duration should not be presented as a universal federal housing requirement.",
       },
       {
         title: "Aligned with Federal Housing Requirements",
-        description: "According to the Fair Housing Act, the documentation must attest to the emotional support animal’s necessity as a component of a housing arrangement for the person’s condition.",
+        description: "When supporting information is necessary, it should help establish the disability-related need for an assistance animal. A particular letter format or disclosure of a specific diagnosis should not be presented as a universal federal requirement.",
       },
     ],
     scamsCommonTitle: "Common ESA Scams to Watch For",
@@ -14437,7 +14452,7 @@ export const STATES_DATA: Record<string, StateData> = {
     esaCardBullets: [
       "Offer companionship and emotional reassurance to individuals coping with anxiety, depression, PTSD, or similar challenges.",
       "Do not require specialized task-based training.",
-      "Must be supported by a legitimate ESA letter from a licensed New Mexico mental health provider for housing-related accommodations.",
+      "Supporting documentation may be relevant to housing accommodation requests when the disability-related need for an assistance animal is not apparent. Applicable requirements depend on the circumstances.",
       "Are recognized under the Fair Housing Act, enabling eligible individuals to request reasonable housing adjustments.",
       "Do not have public access privileges outside of housing.",
     ],
@@ -14519,7 +14534,7 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "How Long Is An ESA Letter Valid In New Mexico?",
-        a: "Although there is no expiration date for an ESA letter New Mexico, homeowners may ask for updated documentation (issued within the last 12 months) to confirm the most updated requirements.",
+        a: "There is no universal federal expiration date for ESA documentation. A housing provider may request updated reliable information when permitted and reasonably necessary to assess an accommodation request. An automatic annual renewal is not universally required by federal fair housing law.",
       },
       {
         q: "Can More Than One Animal Be Considered For Emotional Support?",
@@ -14535,7 +14550,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Are There Specific Animal Types Allowed As ESAs?",
-        a: "There is no fixed list of eligible ESA types in New Mexico, as various domesticated animals may qualify. Suitability depends on the emotional support they provide.",
+        a: "Assistance-animal requests are assessed individually. Animals commonly kept in households may qualify in appropriate circumstances, while requests involving other animals may require additional consideration. The decision depends on the disability-related need, the animal, and the circumstances of the request.",
       },
       {
         q: "Do I Need To Train My ESA Formally?",
@@ -14639,7 +14654,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Evaluations conducted by licensed North Carolina mental health professionals.",
       "ESA documentation issued only after a clinical determination by the provider.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they do need to affirm that you have an applicable diagnosis.",
+    processNote: "Note: ESA documentation should be based on an individualized evaluation by an appropriately qualified professional. All our audio-video ESA assessments are conducted on a HIPAA-compliant platform. This is not an instant-approval process; documentation must reflect your individual circumstances and disability-related need for an assistance animal when supporting information is necessary. A specific diagnosis or detailed medical records generally do not need to be disclosed to a housing provider.",
     whoQualifiesTitle: "Who May Qualify for an ESA Letter in North Carolina?",
     whoQualifiesSubtitle: "All consultations are conducted through secure telehealth systems that follow HIPAA privacy standards. During an evaluation, a licensed clinician may consider various mental health conditions that impact daily functioning. Examples may include:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -14665,17 +14680,17 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/whomayqualifies-california_posttrauma.svg",
       },
     ],
-    whoQualifiesNote: "Note: Having the above-mentioned disorders is not enough to qualify for ESA documentation. A North Carolina licensed mental health provider has to diagnose the condition and confirm the need for an emotional support animal.",
+    whoQualifiesNote: "Note: Having one of the above-mentioned disorders does not automatically qualify someone for ESA documentation. A qualified professional should assess the individual’s circumstances and determine whether an assistance animal may be appropriate to support a disability-related need.",
     requirementsTitle: "Basic Requirements for an ESA Letter North Carolina",
     requirementsIntro: "Before requesting emotional support animal documentation in North Carolina, several factors are typically considered during the evaluation process. Some of these include:",
     requirementsItems: [
-      "The individual must be 18 years or older, or have consent from a parent or legal guardian if they are a minor.",
-      "A licensed mental health professional in North Carolina must perform a clinical assessment.",
-      "The condition should meaningfully impact daily functioning, emotional stability, or mental health.",
-      "The clinician must determine that an emotional support animal may provide therapeutic support for the individual’s condition.",
-      "The individual should currently live in North Carolina or intend to reside in the state.",
+      "Age and consent requirements may depend on the provider’s policies and applicable rules.",
+      "The assessment should be conducted by a professional appropriately qualified and authorized to provide the service.",
+      "The assessment considers whether the individual has a qualifying disability and a disability-related need for an assistance animal.",
+      "The clinician evaluates whether an assistance animal may be appropriate for the individual’s circumstances.",
+      "Residency and clinician availability requirements may depend on the provider’s service policies.",
     ],
-    requirementsNote: "Important: ESA documentation in North Carolina can be issued only after a genuine mental health evaluation by a licensed mental health professional in North Carolina.",
+    requirementsNote: "Important: ESA documentation in North Carolina should be based on an individualized mental health evaluation by an appropriately qualified professional. HUD’s May 22, 2026, enforcement guidance directs its Fair Housing and Equal Opportunity office to focus reasonable-cause findings on assistance animals individually trained to perform disability-related work or tasks. This significantly changes HUD’s enforcement approach to requests involving untrained emotional support animals, although the guidance itself does not amend the Fair Housing Act.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in North Carolina?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in North Carolina while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -14714,23 +14729,32 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in North Carolina",
     benefitsSubtitle: "Understand how an emotional support animal letter in North Carolina can improve your well-being and make living with your companion enjoyable and stress-free!",
     financialBenefitsHeading: "Financial Benefits",
     financialBenefits: [
       {
         title: "No Pet Rent or Additional Housing Fees",
-        description: "Landlords in North Carolina are typically prohibited from charging pet rent, deposits, or other pet-related costs if they have a valid ESA letter. By doing this, residents may be able to avoid the regular monthly expenses that come with renting a pet.",
+        description: "When an assistance animal is approved as a reasonable accommodation, applicable fair housing requirements generally prohibit pet-related fees or deposits. Approval depends on the circumstances and applicable law. Residents may remain responsible for damage caused by their animal, and an ESA letter does not guarantee a fee waiver.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Reduced Housing Relocation Costs",
-        description: "Even in “no-pet” houses, people can live with their support animal according to ESA rights under the Fair Housing Act. This reduces the cost of constantly relocating in search of pet-friendly housing.",
+        description: "An approved reasonable accommodation may allow a qualifying resident to keep an assistance animal in housing that otherwise restricts pets. However, approval depends on the circumstances and applicable protections. An ESA letter does not guarantee access to a particular property or eliminate every housing-related restriction.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Lower Stress-Related Expenses",
-        description: "For some people, the emotional stability that an ESA offers can eventually lower stress-related expenses like frequent therapy sessions, medication modifications, or other costs associated with mental health care.",
+        description: "For some people, an emotional support animal may provide companionship and emotional comfort. However, its effects vary by individual, and having an ESA does not guarantee lower therapy costs, fewer medication changes, or reduced mental health care expenses.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
@@ -14753,38 +14777,38 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     lawsTitle: "North Carolina Emotional Support Animal Housing Laws",
-    lawsSubtitle: "Under the Fair Housing Act, residents of North Carolina may request reasonable housing accommodations if they have a valid ESA letter. The rights and responsibilities of both tenants and housing providers regarding emotional support animals are outlined in these rules.",
+    lawsSubtitle: "The Fair Housing Act provides a framework for requesting reasonable housing accommodations related to disability. HUD’s May 22, 2026, enforcement guidance significantly narrows its approach to complaints involving untrained emotional support animals. The guidance does not itself amend the Fair Housing Act, and an ESA letter does not guarantee approval of a housing request.",
     card1Title: "Federal Housing Guidelines",
     card1Items: [
       {
         title: "Recognition of Assistance Animals in Housing",
-        description: "Rather than being considered typical pets, emotional support animals are recognized as assistance animals under federal housing regulations. This designation allows people with a qualifying mental health condition to find accommodations for their ESA, even in buildings where regular pet ownership may be limited or prohibited.",
+        description: "Assistance animals may be considered in disability-related housing accommodation requests. However, HUD’s May 22, 2026, enforcement guidance directs its enforcement office to focus reasonable-cause findings on animals individually trained to perform disability-related work or tasks. The guidance does not itself amend the Fair Housing Act.",
       },
       {
         title: "Reasonable Accommodation Requests",
-        description: "In North Carolina, tenants can formally request a reasonable accommodation from their housing provider if they have a legitimate ESA letter. When an animal serves a tenant’s mental health needs, landlords are required to fairly evaluate the request and take into account changing the current pet restrictions.",
+        description: "Tenants may request a reasonable accommodation from their housing provider. Requests should be assessed in light of the individual circumstances and applicable law. An ESA letter alone does not guarantee approval, particularly under HUD’s revised enforcement approach.",
       },
       {
         title: "Verification and Documentation Process",
-        description: "Housing providers may ask for the necessary paperwork to verify that an emotional support animal is required. A genuine ESA letter from a certified mental health practitioner helps in confirming that the accommodation request is related to a recognized mental or emotional health condition.",
+        description: "Housing providers may request relevant supporting information when the disability-related need is not apparent and the information is necessary. Documentation should address the relevant need without unnecessarily disclosing private medical details. A letter does not guarantee acceptance.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
     card2Items: [
       {
-        title: "Bias-Free Review Accommodation Requests",
-        description: "In North Carolina, housing providers are required to assess ESA accommodation requests impartially and fairly. Every request should be evaluated separately, with an emphasis on the tenant’s need and the supporting documents rather than broad pet regulations or presumptions regarding assistance animals.",
+        title: "Bias-Free Review of Accommodation Requests",
+        description: "Housing providers should assess accommodation requests individually and consistently with applicable law. The animal, the disability-related need, available supporting information, and relevant circumstances may affect the outcome of a request.",
       },
       {
         title: "Avoid Unnecessary Barriers",
-        description: "When a tenant files a legitimate ESA request, landlords shouldn’t cause needless delays or barriers. Housing providers are encouraged to promptly process the request and make reasonable modifications to current pet-related regulations once the necessary evidence is submitted.",
+        description: "Housing providers should handle accommodation requests within a reasonable timeframe and explain any necessary follow-up. Whether an accommodation must be granted depends on applicable law and the circumstances of the request.",
       },
       {
         title: "Protect Tenant Privacy",
-        description: "Information associated with ESA must be handled carefully by housing providers. Details about a tenant’s mental health condition or any supporting paperwork should be kept private and used exclusively to evaluate the request for accommodations.",
+        description: "Housing providers should handle any disability-related information they receive with appropriate care and use it for the accommodation process as permitted by applicable law. Applicants generally do not need to disclose a specific diagnosis when requesting housing accommodation.",
       },
     ],
-    legalNotice: "Important Legal Notice: Emotional support animals are primarily recognized for housing accommodations. ESAs typically do not have guaranteed access to public areas like eateries or retail establishments, in contrast to service animals covered under the Americans with Disabilities Act (ADA). Travelers should check with their airline directly before boarding a flight because airline policies regarding emotional support animals have changed as well.",
+    legalNotice: "Emotional support animals do not have the same public-access rights as service animals under the Americans with Disabilities Act (ADA). Airlines are not required to treat ESAs as service animals, so travelers should check the airline’s current pet policies, fees, and transport requirements before flying.",
     scamsTitle: "ESA Letters in North Carolina: Facts vs. False Promises",
     scamsSubtitle: "Understanding the difference between legitimate ESA documentation and misleading claims helps ensure your rights are secured and protected.",
     scamsAlertTitle: "Important: No Official ESA Registry Exists in North Carolina",
@@ -14793,15 +14817,15 @@ export const STATES_DATA: Record<string, StateData> = {
     scamsWhatYouNeedItems: [
       {
         title: "Evaluation by a Licensed Professional",
-        description: "A valid ESA letter must be issued by a licensed mental health professional practicing in North Carolina.",
+        description: "An appropriately qualified professional may assess an individual’s circumstances and, when clinically appropriate, provide supporting documentation. Applicable licensing requirements depend on the service and relevant rules.",
       },
       {
         title: "Established Provider Relationship",
-        description: "The clinician must conduct an evaluation and determine whether the animal supports the individual’s mental health needs.",
+        description: "Documentation should be based on an individualized evaluation rather than automatic approval. Any applicable professional requirements should be followed, but a specific relationship duration should not be presented as a universal federal housing requirement.",
       },
       {
         title: "Compliance with Housing Laws",
-        description: "Documentation must meet requirements outlined under federal housing regulations, such as the Fair Housing Act.",
+        description: "When supporting information is necessary, it should help establish the disability-related need for an assistance animal. Federal housing law does not prescribe one universal letter format or require disclosure of a specific diagnosis in every case.",
       },
     ],
     scamsCommonTitle: "Common ESA Scams to Watch For",
@@ -14811,16 +14835,16 @@ export const STATES_DATA: Record<string, StateData> = {
       "Sell ID cards or certificates as proof of ESA status.",
       "Offer instant ESA approval without a live consultation.",
       "Provide documentation without establishing a professional client relationship.",
-      "Charge extra fees for “ESA registration numbers” or “lifetime certification.”",
+      "Charge extra fees for “ESA registration numbers” or “lifetime certification.”.",
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in North Carolina",
     psdVsEsaSubtitle: "Although both support individuals with mental health challenges, ESAs and psychiatric service dogs differ in training requirements and legal protections.",
     esaCardTitle: "Emotional Support Animals (ESAs)",
     esaCardBullets: [
       "Provide emotional support and companionship to people dealing with mental health issues like PTSD, anxiety, depression, and related difficulties.",
-      "Specialized task training is not required for ESAs. When a qualified mental health professional in North Carolina provides a valid ESA letter, housing accommodations are usually granted.",
-      "Protected under the Fair Housing Act, allowing qualified inhabitants to live with their ESA even in establishments that often prohibit pets.",
-      "Standard pet-related expenses like pet rent, deposits, or additional pet fees are typically waived for ESA accommodations after they are approved.",
+      "ESAs do not require specialized task training. Supporting documentation may be relevant to a housing accommodation request, but a letter does not guarantee approval.",
+      "Protected under the Fair Housing Act, allowing qualified individuals to live with their ESA even in establishments that often prohibit pets.",
+      "Pet-related fees and deposits are generally prohibited for approved assistance-animal accommodations where applicable fair housing requirements apply. Residents may remain responsible for damage caused by their animal.",
     ],
     psdCardTitle: "Psychiatric Service Dogs",
     psdCardBullets: [
@@ -14908,7 +14932,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Can Landlords Ask About The Type Of Animal Listed In An ESA Letter?",
-        a: "Yes. Housing providers may ask what type of animal will be living in the unit to assess reasonable accommodation. However, they cannot request medical details about your condition or demand specialized training documentation.",
+        a: "Yes. Housing providers may ask for information about the animal and, when necessary, reliable information supporting the accommodation request. Applicants generally do not need to disclose a specific diagnosis or provide detailed medical records. Requests should be assessed individually under applicable law and current HUD enforcement guidance.",
       },
       {
         q: "What Happens If A Landlord Questions The Authenticity Of An ESA Letter?",
@@ -14924,7 +14948,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nNorth Carolina ESA Evaluation?",
-    ctaSubtitle: "Connect with a North Carolina-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a qualified mental health professional for an individualized ESA evaluation and supporting documentation when clinically appropriate.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in North Carolina?" },
@@ -15020,7 +15044,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Assessments completed by North Dakota–licensed mental health professionals.",
       "ESA letter issued only when a clinician determines it is clinically appropriate.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they do need to affirm that you have an applicable diagnosis.",
+    processNote: "Note: ESA documentation should be based on an individualized evaluation by an appropriately qualified professional. These audio-visual assessments are conducted on a HIPAA-compliant platform. This is not an instant-approval process; documentation should reflect your circumstances and disability-related need for an assistance animal. A specific diagnosis or detailed medical records generally do not need to be disclosed to a housing provider.",
     whoQualifiesTitle: "Who Could Be Eligible for an ESA Letter North Dakota?",
     whoQualifiesSubtitle: "All consultations are conducted using HIPAA-compliant, secure telemedicine systems. A certified clinician can go over various mental health issues that may interfere with day-to-day functioning during the assessment. Here are a few instances:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -15048,15 +15072,15 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     whoQualifiesNote: "Note: Experiencing any of the conditions listed above does not automatically qualify someone for ESA documentation. A North Dakota licensed mental health professional must diagnose the condition and determine whether an emotional support animal is clinically appropriate.",
     requirementsTitle: "Basic Requirements for an ESA Letter North Dakota",
-    requirementsIntro: "When applying for an Emotional Support Animal letter in North Dakota, several considerations are generally reviewed during the evaluation process:",
+    requirementsIntro: "When applying for an emotional support animal letter in North Dakota, several considerations are generally reviewed during the evaluation process:",
     requirementsItems: [
-      "The individual is at least 18 years old, or a minor with permission from a parent or guardian.",
-      "A mental or emotional health condition is identified during the professional assessment.",
-      "The symptoms significantly impact one or more aspects of everyday life.",
-      "The clinician evaluates whether an animal could provide meaningful emotional support based on the person’s situation.",
-      "The individual lives in North Dakota or intends to move to the state.",
+      "Age and consent requirements may depend on the provider’s policies and applicable rules.",
+      "The assessment should be conducted by a professional appropriately qualified and authorized to provide the service.",
+      "The assessment considers whether the individual has a disability and a disability-related need for an assistance animal.",
+      "The clinician evaluates whether an assistance animal may be appropriate for the individual’s circumstances.",
+      "Residency and clinician availability requirements may depend on the provider’s service policies.",
     ],
-    requirementsNote: "Important: An assessment must be completed by a North Dakota licensed mental health professional (LMHP) to determine whether issuing an ESA letter is appropriate based on the individual’s circumstances.",
+    requirementsNote: "Important: An assessment must be completed by a North Dakota-licensed mental health professional (LMHP) to determine whether issuing an ESA letter is appropriate based on the individual’s circumstances. HUD’s May 22, 2026, enforcement guidance directs its Fair Housing and Equal Opportunity office to focus reasonable-cause findings on assistance animals individually trained to perform disability-related work or tasks. This significantly changes HUD’s enforcement approach to requests involving untrained emotional support animals, although the guidance itself does not amend the Fair Housing Act.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in North Dakota?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in North Dakota while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -15095,23 +15119,32 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in North Dakota",
     benefitsSubtitle: "Learn how an emotional support animal letter in North Dakota may support your mental well-being and help you live more comfortably and confidently with your companion animal.",
     financialBenefitsHeading: "Financial Benefits",
     financialBenefits: [
       {
         title: "Savings on Monthly Pet Rent",
-        description: "Tenants in North Dakota who have a valid ESA certificate may avoid ongoing pet rent fees, which can lower their overall housing costs while they live with their emotional support animal.",
+        description: "When an assistance animal is approved as a reasonable accommodation, applicable fair housing requirements may prohibit pet-related fees. However, outcomes depend on the circumstances and applicable law. An ESA letter does not guarantee that pet rent will be waived, particularly under HUD’s revised enforcement approach.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "No Additional Pet Security Deposits",
-        description: "When appropriate ESA documentation is submitted, housing providers are usually not allowed to charge additional pet deposits for emotional support animals, which helps residents save money on upfront housing expenses.",
+        description: "North Dakota law provides for an exception to pet security deposits for a companion animal required as a reasonable accommodation under fair housing laws. However, the application of housing protections depends on the circumstances and applicable law. An ESA letter alone does not guarantee approval or a deposit waiver.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "Lower Housing Transition Expenses",
-        description: "Finding suitable housing in North Dakota can be made simpler with an ESA letter, which may lower relocation costs brought on by pet restrictions or a lack of pet-friendly housing options.",
+        description: "Appropriate assistance-animal documentation may support a housing accommodation request when relevant information is necessary. However, approval is not guaranteed, and an ESA letter does not automatically prevent relocation expenses or eliminate the need to find alternative housing.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
@@ -15134,20 +15167,20 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     lawsTitle: "Housing Rules for Emotional Support Animals in North Dakota",
-    lawsSubtitle: "The Fair Housing Act in North Dakota recognizes emotional support animals and mandates that housing providers take reasonable accommodation requests into account. This may even apply to properties with no-pet policies. To guarantee fair and legal housing practices, both landlords and tenants should be aware of their rights and responsibilities.",
+    lawsSubtitle: "The Fair Housing Act provides a framework for requesting reasonable housing accommodations related to disability. HUD’s May 22, 2026, enforcement guidance significantly narrows its enforcement approach for untrained emotional support animals. The guidance does not itself amend the Fair Housing Act, and an ESA letter does not guarantee approval of a housing request.",
     card1Title: "Federal Housing Guidelines",
     card1Items: [
       {
         title: "Reasonable Accommodation Requirement",
-        description: "According to guidance issued by the U.S. Department of Housing and Urban Development (HUD), housing providers must evaluate accommodation requests under the Fair Housing Act (FHA) when tenants provide reliable documentation from a licensed healthcare professional confirming a disability-related need for the animal.",
+        description: "Housing providers may assess reasonable accommodation requests under applicable law. Relevant supporting information may be requested when the disability-related need is not apparent, and the information is necessary. HUD’s May 2026 guidance directs its enforcement office to focus reasonable-cause findings on animals individually trained to perform disability-related work or tasks.",
       },
       {
         title: "Valid ESA Documentation",
-        description: "Reliable proof from a qualified mental health professional confirming the support animal’s disability-related need may be required of tenants asking for accommodations for an emotional support animal.",
+        description: "North Dakota law allows housing providers to request reliable supporting documentation in applicable circumstances. The documentation should confirm the disability and the relationship between the disability and the requested accommodation. Supporting documentation may not be required when the disability or disability-related need is readily apparent or already known.",
       },
       {
         title: "Protection From Pet Fees",
-        description: "Housing providers are typically prohibited from charging pet rent, extra pet deposits, or other pet-related costs since emotional support animals are classified as assistance animals rather than pets.",
+        description: "Pet-related fees and deposits may be prohibited for approved assistance-animal accommodations under applicable fair housing requirements. However, HUD’s revised enforcement approach affects complaints involving untrained ESAs, and an ESA letter does not guarantee that a housing provider will waive fees.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
@@ -15162,45 +15195,45 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Assess Safety and Property Concerns",
-        description: "Before granting or rejecting an accommodation request, housing providers may consider whether an emotional support animal directly threatens people’s safety or results in a major threat to property.",
+        description: "Housing providers may consider reliable, individualized evidence that a specific animal poses a direct threat to health or safety or is likely to cause substantial physical damage to property. Relevant risks should be assessed to determine whether reasonable measures could reduce or eliminate them.",
       },
     ],
-    legalNotice: "Important Legal Notice: Emotional support animals are primarily recognized for housing accommodations in North Dakota. ESAs usually do not have public access rights to eateries, shops, or other comparable places, in contrast to service animals covered by the Americans with Disabilities Act. Additionally, under updated rules from the Air Carrier Access Act (ACAA), airlines are no longer required to recognize emotional support animals as service animals, and many airlines now treat ESAs as regular pets. It is advisable to review airline policy before flying.",
+    legalNotice: "Emotional support animals are primarily recognized for housing accommodations in North Dakota. ESAs usually do not have public access rights to eateries, shops, or other comparable places, in contrast to service animals covered by the Americans with Disabilities Act. Additionally, under updated rules from the Air Carrier Access Act (ACAA), airlines are no longer required to recognize emotional support animals as service animals, and many airlines now treat ESAs as regular pets. It is advisable to review airline policy before flying.",
     scamsTitle: "ESA Letters in North Dakota: Facts vs. Misleading Claims",
     scamsSubtitle: "People can identify misleading claims and separate them from acceptable ESA documentation procedures by being aware of the actual rules regarding emotional support animals in North Dakota.",
     scamsAlertTitle: "Important Clarification: No Official ESA Registry",
-    scamsAlertText: "In North Dakota and the United States, there is no formal ESA register, certification, or identification system; only certified mental health providers can provide valid ESA documentation.",
+    scamsAlertText: "There is no government-approved ESA registry or universal certification system in North Dakota or the United States. Reliable supporting documentation may be provided by an appropriately qualified medical professional under applicable law; an ID card or registration certificate alone does not establish a disability-related need for an assistance animal.",
     scamsWhatYouNeedTitle: "What You Actually Need",
     scamsWhatYouNeedItems: [
       {
         title: "ESA Letter Issued by a North Dakota-Licensed Clinician",
-        description: "Only after a thorough examination conducted in accordance with Fair Housing Act housing accommodation criteria by a mental health professional licensed in North Dakota could an emotional support animal letter be granted.",
+        description: "A housing provider may request reliable supporting documentation when permitted by North Dakota law. The documentation may be provided by a physician or medical professional who does not operate in the state solely to provide animal certifications. A North Dakota license should not be presented as a universal legal requirement for every supporting professional.",
       },
       {
         title: "Comprehensive Mental Health Assessment",
-        description: "A thorough evaluation examines everyday difficulties, emotional or psychiatric symptoms, and whether an emotional support animal could offer the person significant therapeutic support.",
+        description: "An individualized evaluation considers the person’s circumstances, disability-related needs, and whether an assistance animal may be appropriate. The required supporting information depends on the circumstances and applicable rules.",
       },
       {
         title: "Established Provider-Client Relationship",
-        description: "A legitimate ESA recommendation is built on a genuine clinical relationship established during the evaluation process, verifying that the assessment was carried out by a licensed, qualified mental health practitioner.",
+        description: "A legitimate ESA recommendation should be based on an appropriate assessment rather than automatic approval. Applicable professional requirements should be followed, but a specific relationship duration should not be presented as a universal North Dakota requirement.",
       },
     ],
     scamsCommonTitle: "Common ESA Scams to Watch For",
     scamsCommonSubtitle: "Be aware of platforms or services that:",
     scamsCommonItems: [
-      "Claim your ESA can be “registered” in an official North Dakota database, or suggest that a state-recognized certification system exists.",
-      "Promote laminated ID cards, online certificates, or branded accessories as valid legal proof of ESA status.",
-      "Offer same-day approval letters without a proper clinical evaluation by a North Dakota-licensed professional.",
-      "Issue ESA letters without establishing a legitimate provider-client relationship or conducting a thorough assessment.",
-      "Guarantee landlord acceptance without considering Fair Housing Act requirements or performing a compliant evaluation.",
+      "Claim your ESA can be “registered” in an official North Dakota database, or suggest that a state-recognized certification system exists",
+      "Promote laminated ID cards, online certificates, or branded accessories as valid legal proof of ESA status",
+      "Offer same-day approval letters without a proper clinical evaluation by a North Dakota-licensed professional",
+      "Issue ESA letters without establishing a legitimate provider-client relationship or conducting a thorough assessment",
+      "Guarantee landlord acceptance without considering Fair Housing Act requirements or performing a compliant evaluation",
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in North Dakota",
     psdVsEsaSubtitle: "Understanding the difference between psychiatric service dogs (PSDs) and emotional support animals (ESAs) is crucial in North Dakota. Although they both support people with mental health issues, they have different functions and are subject to different legal protections.",
     esaCardTitle: "Emotional Support Animals (ESAs)",
     esaCardBullets: [
       "Offer companionship and emotional comfort to individuals experiencing mental health challenges such as anxiety, depression, PTSD, or similar conditions.",
-      "They are not required to perform trained tasks. Housing accommodations generally require a valid ESA letter from a North Dakota-licensed mental health professional.",
-      "Recognized under the Fair Housing Act, allowing qualified individuals to live with their ESA even in housing communities that normally enforce no-pet policies.",
+      "Supporting documentation may be relevant to a housing accommodation request when the disability-related need is not apparent. North Dakota law does not categorically require every supporting professional to hold a North Dakota license.",
+      "An assistance-animal accommodation may be requested under applicable housing law, but approval depends on the circumstances and current legal requirements. HUD’s 2026 guidance narrows its enforcement approach for untrained ESAs.",
       "Once approved as a housing accommodation, ESA owners are typically not charged pet-related fees such as pet rent or additional pet deposits.",
     ],
     psdCardTitle: "Psychiatric Service Dogs",
@@ -15281,11 +15314,11 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "Can An ESA Letter Issued In North Dakota Be Used After Moving To Another State?",
-        a: "No. If you are moving out, it is important to consult a mental health provider licensed in that state and request an ESA letter issued within that state. For instance, Texas ESA letters won’t be accepted in North Dakota and vice versa.",
+        a: "It depends. Usually moving to another state does not automatically invalidate existing ESA documentation. Whether the documentation supports a housing request depends on the new state’s applicable laws, the professional’s qualifications, and the circumstances. Check the requirements before assuming a new letter is necessary.",
       },
       {
         q: "How Long Is An ESA Letter Typically Considered Valid In North Dakota?",
-        a: "Although there is no validity limit for the North Dakota ESA letter, many housing providers prefer recent documentation (issued within the last 12 months) to confirm that the mental health evaluation and recommendation remain relevant.",
+        a: "There is no general North Dakota statutory rule requiring every ESA letter to be renewed annually. A housing provider may request updated reliable information when permitted and reasonably necessary. Whether an update is appropriate depends on the circumstances and applicable law.",
       },
       {
         q: "How Much Does An ESA Letter Cost In North Dakota?",
@@ -15293,7 +15326,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Can Housing Providers Verify An ESA Letter In North Dakota?",
-        a: "Yes. A housing provider may verify that the letter was issued by a licensed mental health professional. However, they generally cannot request detailed medical records or personal health information.",
+        a: "Yes. Housing providers may request reliable supporting information when permitted by law and when the disability-related need is not apparent or already known. They generally should not require detailed medical records or unnecessary disclosure of a specific diagnosis.",
       },
       {
         q: "Can Roommates Or Neighbors Challenge An ESA Request?",
@@ -15305,7 +15338,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nNorth Dakota ESA Evaluation?",
-    ctaSubtitle: "Connect with a North Dakota-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a North Dakota-licensed mental health professional today for a legitimate, FHA-compliant ESA letter evaluation.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in North Dakota?" },

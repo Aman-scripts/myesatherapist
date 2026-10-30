@@ -248,7 +248,7 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
         <div className="relative w-[57px] h-[57px] shrink-0">
           <Image
-            quality={90} src={entry.icon} alt={`${entry.name} state map`} fill className="object-contain" sizes="57px" />
+            quality={75} loading="lazy" src={entry.icon} alt={`${entry.name} state map`} fill className="object-contain" sizes="57px" />
         </div>
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
           <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">

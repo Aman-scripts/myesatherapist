@@ -62,12 +62,13 @@ function SituationCard({ entry }: { entry: SituationEntry }) {
     <div className="w-full flex flex-col rounded-[20px] overflow-hidden bg-background">
       <div className="relative w-full aspect-[567/380]">
         <Image
-            quality={90}
+            quality={75}
           src={entry.image}
           alt={entry.title}
           fill
           className="object-cover"
-          sizes="(min-width: 1024px) 560px, 100vw"
+          loading="lazy"
+          sizes="(min-width: 1024px) 560px, (max-width: 639px) 430px, 100vw"
         />
       </div>
       <div className="flex flex-col gap-3 sm:gap-4 p-5 sm:p-7">
