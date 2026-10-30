@@ -17,6 +17,7 @@ import { EsaHousingLandlordRefuse } from "@/components/esa-housing/EsaHousingLan
 import { EsaHousingDenied } from "@/components/esa-housing/EsaHousingDenied";
 
 // Shared Site Components
+import { PricingPlansSection } from "@/components/pricing/PricingPlansSection";
 import { QualifyingConditions } from "@/components/home/QualifyingConditions";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -96,6 +97,7 @@ export default function EsaLetterForHousingPage() {
         <EsaHousingCredentials />
         <EsaHousingLandlordRefuse />
         <EsaHousingDenied />
+        <PricingPlansSection ctaHref="/pricing/#evaluation" addPetHref="/pricing/#add-pet" />
         <FaqSection id="faq" bg="bg-background" />
         <CtaBanner buttonHref="/pricing/" bgColor="bg-background" className="pb-12 sm:pb-16" />
       </main>

@@ -18,6 +18,7 @@ import { EsaOnlineSupportAnimals } from "@/components/esa-online/EsaOnlineSuppor
 import { EsaOnlineAllStates } from "@/components/esa-online/EsaOnlineAllStates";
 
 // Shared Site Components
+import { PricingPlansSection } from "@/components/pricing/PricingPlansSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
@@ -90,6 +91,7 @@ export default function EsaLetterOnlinePage() {
         <EsaOnlineHousingRights />
         <EsaOnlineSupportAnimals />
         <EsaOnlineAllStates />
+        <PricingPlansSection ctaHref="/pricing/#evaluation" addPetHref="/pricing/#add-pet" />
         <FaqSection id="faq" bg="bg-background" />
         <CtaBanner buttonHref="/pricing/" bgColor="bg-background" className="pb-12 sm:pb-16" />
       </main>

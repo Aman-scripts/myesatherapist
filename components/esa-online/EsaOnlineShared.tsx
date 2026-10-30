@@ -75,12 +75,7 @@ export function FeatureCard({
           </p>
         )}
       </div>
-      <div
-        className={`absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] ${
-          dark ? "" : "bg-white"
-        }`}
-        style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
-      >
+      <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
         <Image
             src={icon} alt="" width={iconW} height={iconH} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
       </div>

@@ -1,20 +1,21 @@
 import React from "react";
 import { IconCard, SectionHeader } from "@/components/common/BlogPageBlocks";
 
-const ICON = "/esa-guide/esa-guide-youtrustedesa_allcardsicon.svg";
-
 const TRUST_PILLARS = [
   {
-    title: "Clinician-informed content",
+    title: "Clinician-Informed Content",
     text: "Every guide is grounded in current federal law and reviewed for accuracy by licensed mental health professionals.",
+    icon: "/ESA ICons/Glyph-2.svg",
   },
   {
-    title: "No legal jargon",
+    title: "No Legal Jargon",
     text: "We translate complex housing laws and ESA regulations into plain language anyone can understand and act on.",
+    icon: "/ESA ICons/Icon-25.svg",
   },
   {
-    title: "Regularly updated",
+    title: "Regularly Updated",
     text: "ESA laws and policies evolve. Our resources are kept current so you always have reliable, up-to-date guidance.",
+    icon: "/ESA ICons/Icon-27.svg",
   },
 ];
 
@@ -33,7 +34,7 @@ export function EsaGuideTrustHub() {
               key={item.title}
               className={`h-full ${index === 2 ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-12px)] lg:col-span-1 lg:mx-0 lg:w-full" : ""}`}
             >
-              <IconCard icon={ICON} title={item.title} text={item.text} />
+              <IconCard icon={item.icon} title={item.title} text={item.text} />
             </div>
           ))}
         </div>

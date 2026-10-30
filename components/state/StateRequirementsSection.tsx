@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Check } from "lucide-react";
+import Image from "next/image";
 import { StateData } from "@/data/statesData";
 
 export function StateRequirementsSection({ data }: { data: StateData }) {
@@ -40,12 +40,14 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
           <div className="space-y-3.5 sm:space-y-4 max-w-[720px] mx-auto text-left mb-8">
             {requirements.map((req, index) => (
               <div key={index} className="flex items-start gap-3">
-                <div
-                  className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                  style={{ background: "var(--color-gradient)" }}
-                >
-                  <Check className="w-3 h-3 stroke-[3]" />
-                </div>
+                <Image
+                  src="/ESA ICons/Icon-46.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  unoptimized
+                  className="mt-0.5 h-5 w-5 shrink-0 object-contain"
+                />
                 <span className="font-sans text-xs sm:text-sm lg:text-[14px] font-semibold text-body-text leading-relaxed">
                   {req}
                 </span>

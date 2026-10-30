@@ -53,7 +53,7 @@ export function EsaGuideHero() {
               </p>
             </div>
           </div>
-          <CtaButton href="/pricing/">Get Started</CtaButton>
+          <CtaButton href="/esa-doctors/">Explore The Team</CtaButton>
         </div>
       </div>
     </section>

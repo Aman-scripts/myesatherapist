@@ -30,7 +30,7 @@ export function BlogCard({ article, priority = false }: BlogCardProps) {
           quality={75}
           loading={priority ? "eager" : "lazy"}
           className="object-cover group-hover:scale-105 transition-transform duration-500 rounded-t-[20px]"
-          sizes="(min-width: 1024px) 411px, (min-width: 768px) 50vw, 100vw"
+          sizes="(max-width: 639px) 380px, (max-width: 1023px) 50vw, 411px"
         />
       </Link>
 

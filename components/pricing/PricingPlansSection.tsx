@@ -7,11 +7,17 @@ import { PricingSection } from "@/components/home/PricingSection";
 const PLAN_INTRO =
   "Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.";
 
-export function PricingPlansSection() {
+export function PricingPlansSection({
+  ctaHref = "#evaluation",
+  addPetHref = "#add-pet",
+}: {
+  ctaHref?: string;
+  addPetHref?: string;
+} = {}) {
   return (
     <div id="plans">
       <PricingSection
-        ctaHref="#evaluation"
+        ctaHref={ctaHref}
         heading="Emotional Support Animal"
         descriptionOverride={PLAN_INTRO}
         showTabs={false}
@@ -23,7 +29,7 @@ export function PricingPlansSection() {
       <PricingSection
         sectionId="pricing-psd"
         defaultPlan="psd"
-        ctaHref="#evaluation"
+        ctaHref={ctaHref}
         heading="Psychiatric Service Dog"
         descriptionOverride={PLAN_INTRO}
         showTabs={false}
@@ -63,7 +69,7 @@ export function PricingPlansSection() {
               </div>
             </div>
             <a
-              href="#add-pet"
+              href={addPetHref}
               className="inline-flex items-center justify-center h-[48px] px-8 rounded-full border border-primary bg-white text-primary font-sans font-semibold text-[16px] leading-[22px] shrink-0 hover:bg-background transition-colors"
             >
               Add A Pet

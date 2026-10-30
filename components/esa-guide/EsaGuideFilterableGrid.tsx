@@ -74,7 +74,7 @@ export function EsaGuideFilterableGrid() {
                   href={art.url}
                   className="w-[192px]"
                 >
-                  Read Guide
+                  Read More
                 </CtaButton>
               </div>
             </article>

@@ -2,10 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
-import { Check, ArrowRight } from "lucide-react";
 import { StateData } from "@/data/statesData";
+import { CtaButton } from "@/components/common/CtaButton";
 
-const TEAL_GRADIENT = "var(--color-gradient)";
+function processIcon(src: string) {
+  if (src.includes("schedule")) return "/ESA ICons/Icon-16.svg";
+  if (src.includes("clinicalevaluation")) return "/ESA ICons/Icon-18.svg";
+  if (src.includes("clinicaldetermination")) return "/ESA ICons/Glyph-2.svg";
+  return src;
+}
 
 export function StateProcessSection({ data }: { data: StateData }) {
   const stateName = data.name;
@@ -85,24 +90,18 @@ export function StateProcessSection({ data }: { data: StateData }) {
               className={`w-full max-w-[410px] mx-auto bg-white rounded-[30px] p-[24px_22px] border border-[#EAE5DC]/60 shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-between transition-all duration-300 hover:shadow-[0_16px_45px_rgba(26,61,79,0.08)] min-h-[303px] ${step.offsetClass}`}
             >
               {/* Frame 1000011971: Top row with Icon and Number */}
-              <div className="flex items-center justify-between w-full mb-4">
-                {/* Frame 1000011969: Icon Badge */}
-                <div
-                  className="w-[46px] h-[46px] rounded-[53px] flex items-center justify-center shrink-0 shadow-xs"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
+              <div className="flex items-center w-full mb-4">
+                <div className="flex h-[46px] w-[46px] items-center justify-center rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.15)]">
                   <Image
-            quality={90}
-                    src={step.icon}
-                    alt={step.title}
+                    quality={90}
+                    src={processIcon(step.icon)}
+                    alt=""
                     width={24}
                     height={24}
-                    className="w-6 h-6 object-contain"
+                    unoptimized
+                    className="h-6 w-6 object-contain"
                   />
                 </div>
-
-                {/* Number 01 / 02 / 03 */}
-                <span aria-hidden="true" data-num={step.number} className="font-manrope text-[46px] sm:text-[54px] font-bold text-body-text opacity-20 leading-[66px] tracking-tight before:content-[attr(data-num)]" />
               </div>
 
               {/* Frame 1000011970: Title and Description */}
@@ -129,12 +128,14 @@ export function StateProcessSection({ data }: { data: StateData }) {
             {differentiators.map((item, idx) => (
               <div key={idx} className="flex items-start gap-3.5 w-full">
                 {/* Frame 1000011979: Gradient Check Icon */}
-                <div
-                  className="w-5 h-5 rounded-[10px] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                  style={{ backgroundImage: TEAL_GRADIENT }}
-                >
-                  <Check className="w-[11px] h-[11px] stroke-[3.5]" />
-                </div>
+                <Image
+                  src="/ESA ICons/Icon-46.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  unoptimized
+                  className="mt-0.5 h-5 w-5 shrink-0 object-contain"
+                />
                 <span className="font-sans font-semibold text-[13px] sm:text-[14px] leading-relaxed text-body-text">
                   {item}
                 </span>
@@ -154,16 +155,9 @@ export function StateProcessSection({ data }: { data: StateData }) {
 
         {/* Frame 1000011961: CTA Button and Subtitle */}
         <div className="flex flex-col items-center gap-2">
-          <a
-            href="#faq"
-            className="w-full sm:w-[356px] h-[48px] rounded-[30px] text-white font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 transition-opacity hover:opacity-95"
-            style={{ backgroundImage: TEAL_GRADIENT }}
-          >
-            <span>Get Started</span>
-            <ArrowRight className="w-4 h-4 stroke-[2.5] text-white" />
-          </a>
+          <CtaButton href="/pricing/">Start Your Free Evaluation</CtaButton>
           <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
-            No hidden fees. HIPAA secure.
+            If not approved after your evaluation? You get a full refund.
           </p>
         </div>
       </div>

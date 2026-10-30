@@ -108,24 +108,13 @@ export default function EsaGuidePage() {
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
-          subtitle="Answers to the most common ESA questions"
+          subtitle="Get answers to common questions about ESA letters and our service."
           faqs={esaGuideFaqs}
           bg="bg-background"
         />
 
         {/* 7. Standard Project CTA Banner */}
         <CtaBanner
-          title="Educational Resource Commitment"
-          titleClassName="xl:text-[38px] xl:whitespace-nowrap"
-          description={
-            "At My ESA Therapist, educational content is designed to help individuals\n" +
-            "better understand emotional support animals, housing accommodations,\n" +
-            "and mental wellness resources through accessible and easy-to-follow\n" +
-            "information. The goal of this resource center is to support responsible\n" +
-            "education while encouraging individuals to seek guidance from\n" +
-            "qualified licensed professionals when appropriate."
-          }
-          buttonText="Start your Evaluation"
           buttonHref="/pricing/"
           bgColor="bg-background"
           className="pb-12 sm:pb-16"

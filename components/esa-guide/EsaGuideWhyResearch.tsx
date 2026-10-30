@@ -37,12 +37,17 @@ export function EsaGuideWhyResearch() {
           <h2 className="mx-auto max-w-[626px] font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-primary sm:text-4xl sm:leading-[46px] lg:mx-0 lg:text-[3.05vw] lg:leading-[3.75vw] xl:text-[44px] xl:leading-[54px]">
             Why People Research Emotional Support Animals?
           </h2>
-          <p className="font-sans text-base font-semibold leading-[1.67] text-body-text sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] xl:leading-[30px]">
-            People explore emotional support animal resources for many different reasons. Some individuals are seeking
-            information about housing accommodations, while others are interested in learning how emotional companionship
-            may support emotional well-being. Educational ESA content can help people make informed decisions while
-            encouraging responsible ownership and professional guidance.
-          </p>
+          <div className="flex flex-col gap-[22px] font-sans text-base font-semibold leading-[1.67] text-body-text sm:text-[18px] lg:gap-[1.6vw] lg:text-[1.25vw] xl:gap-[22px] xl:text-[18px] xl:leading-[30px]">
+            <p>
+              People explore emotional support animal resources for many different reasons. Some individuals are seeking
+              information about housing accommodations, while others are interested in learning how emotional companionship
+              may support emotional well-being.
+            </p>
+            <p>
+              Educational ESA content can help people make informed decisions while encouraging responsible ownership and
+              professional guidance.
+            </p>
+          </div>
         </div>
       </div>
     </section>

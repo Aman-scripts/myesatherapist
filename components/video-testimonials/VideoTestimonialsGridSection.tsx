@@ -25,7 +25,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "January 28, 2026",
     videoId: "5sBiyUaGksg",
     videoUrl: "https://www.youtube.com/embed/5sBiyUaGksg?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/5sBiyUaGksg/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/5sBiyUaGksg/oardefault.jpg",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "February 03, 2026",
     videoId: "AniVHEkqaCk",
     videoUrl: "https://www.youtube.com/embed/AniVHEkqaCk?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/AniVHEkqaCk/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/AniVHEkqaCk/oardefault.jpg",
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "February 23, 2026",
     videoId: "FzcTbPNUUNM",
     videoUrl: "https://www.youtube.com/embed/FzcTbPNUUNM?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/FzcTbPNUUNM/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/FzcTbPNUUNM/oardefault.jpg",
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "February 26, 2026",
     videoId: "E1jQU196Amo",
     videoUrl: "https://www.youtube.com/embed/E1jQU196Amo?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/E1jQU196Amo/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/E1jQU196Amo/oardefault.jpg",
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "February 24, 2026",
     videoId: "rxXFfiX0M4c",
     videoUrl: "https://www.youtube.com/embed/rxXFfiX0M4c?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/rxXFfiX0M4c/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/rxXFfiX0M4c/oardefault.jpg",
   },
   {
     id: 7,
@@ -91,7 +91,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "February 27, 2026",
     videoId: "-w4R3O-oF-4",
     videoUrl: "https://www.youtube.com/embed/-w4R3O-oF-4?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/-w4R3O-oF-4/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/-w4R3O-oF-4/oardefault.jpg",
   },
   {
     id: 8,
@@ -102,7 +102,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "March 10, 2026",
     videoId: "0gL8FyERXa4",
     videoUrl: "https://www.youtube.com/embed/0gL8FyERXa4?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/0gL8FyERXa4/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/0gL8FyERXa4/oardefault.jpg",
   },
   {
     id: 9,
@@ -113,7 +113,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "March 24, 2026",
     videoId: "RIqLkitZFFs",
     videoUrl: "https://www.youtube.com/embed/RIqLkitZFFs?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/RIqLkitZFFs/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/RIqLkitZFFs/oardefault.jpg",
   },
   {
     id: 10,
@@ -124,7 +124,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "March 31, 2026",
     videoId: "rIiqLFA3_VI",
     videoUrl: "https://www.youtube.com/embed/rIiqLFA3_VI?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/rIiqLFA3_VI/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/rIiqLFA3_VI/oardefault.jpg",
   },
   {
     id: 11,
@@ -135,7 +135,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "April 13, 2026",
     videoId: "hAvoKepvym4",
     videoUrl: "https://www.youtube.com/embed/hAvoKepvym4?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/hAvoKepvym4/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/hAvoKepvym4/oardefault.jpg",
   },
   {
     id: 12,
@@ -146,7 +146,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "April 17, 2026",
     videoId: "fjRpV_fm_lI",
     videoUrl: "https://www.youtube.com/embed/fjRpV_fm_lI?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/fjRpV_fm_lI/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/fjRpV_fm_lI/oardefault.jpg",
   },
   {
     id: 13,
@@ -157,7 +157,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "April 21, 2026",
     videoId: "fwyYFwp9oFk",
     videoUrl: "https://www.youtube.com/embed/fwyYFwp9oFk?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/fwyYFwp9oFk/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/fwyYFwp9oFk/oardefault.jpg",
   },
   {
     id: 14,
@@ -179,7 +179,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "May 01, 2026",
     videoId: "rxQ0qQycIwI",
     videoUrl: "https://www.youtube.com/embed/rxQ0qQycIwI?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/rxQ0qQycIwI/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/rxQ0qQycIwI/oardefault.jpg",
   },
   {
     id: 16,
@@ -190,7 +190,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "May 02, 2026",
     videoId: "FAs98teKzUk",
     videoUrl: "https://www.youtube.com/embed/FAs98teKzUk?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/FAs98teKzUk/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/FAs98teKzUk/oardefault.jpg",
   },
   {
     id: 17,
@@ -201,7 +201,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "May 14, 2026",
     videoId: "rPtmxr05tsc",
     videoUrl: "https://www.youtube.com/embed/rPtmxr05tsc?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/rPtmxr05tsc/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/rPtmxr05tsc/oardefault.jpg",
   },
   {
     id: 18,
@@ -223,7 +223,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "May 27, 2026",
     videoId: "figN4V7ThbM",
     videoUrl: "https://www.youtube.com/embed/figN4V7ThbM?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/figN4V7ThbM/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/figN4V7ThbM/oardefault.jpg",
   },
   {
     id: 20,
@@ -234,7 +234,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "June 03, 2026",
     videoId: "CybsnJUGzTM",
     videoUrl: "https://www.youtube.com/embed/CybsnJUGzTM?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/CybsnJUGzTM/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/CybsnJUGzTM/oardefault.jpg",
   },
   {
     id: 21,
@@ -245,7 +245,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "June 05, 2026",
     videoId: "Mjf33Y0NvVc",
     videoUrl: "https://www.youtube.com/embed/Mjf33Y0NvVc?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/Mjf33Y0NvVc/hqdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Mjf33Y0NvVc/oardefault.jpg",
   },
   {
     id: 22,
@@ -256,7 +256,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "June 22, 2026",
     videoId: "gxdipq0J2No",
     videoUrl: "https://www.youtube.com/embed/gxdipq0J2No?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/gxdipq0J2No/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/gxdipq0J2No/oardefault.jpg",
   },
   {
     id: 23,
@@ -267,7 +267,7 @@ const VIDEO_REVIEWS: VideoReviewItem[] = [
     date: "July 08, 2026",
     videoId: "vId0sRVPY0I",
     videoUrl: "https://www.youtube.com/embed/vId0sRVPY0I?autoplay=1&rel=0",
-    thumbnail: "https://img.youtube.com/vi/vId0sRVPY0I/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/vId0sRVPY0I/oardefault.jpg",
   },
 ];
 
@@ -293,12 +293,12 @@ export function VideoTestimonialsGridSection() {
           {VIDEO_REVIEWS.map((review) => (
             <div
               key={review.id}
-              className="bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-center transition-transform hover:-translate-y-1 duration-200 lg:last:col-span-2 lg:last:max-w-[616px] lg:last:w-full lg:last:mx-auto"
+              className="bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-stretch transition-transform hover:-translate-y-1 duration-200 lg:last:col-span-2 lg:last:max-w-[616px] lg:last:w-full lg:last:mx-auto"
             >
-              {/* Left Video Thumbnail (301px x 370px) */}
+              {/* Left Video Thumbnail fills the card height so the photo meets the rounded corners */}
               <div
                 onClick={() => setActiveVideo(review)}
-                className="w-full sm:w-[301px] h-[340px] sm:h-[370px] relative shrink-0 cursor-pointer group overflow-hidden bg-slate-900"
+                className="w-full sm:w-[301px] h-[340px] sm:h-auto sm:min-h-[370px] relative shrink-0 cursor-pointer group overflow-hidden bg-slate-900"
                 role="button"
                 tabIndex={0}
                 aria-label={`Play testimonial video from ${review.name}`}

@@ -86,9 +86,9 @@ export function WhyChooseUs({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-[23px] gap-y-14 lg:gap-y-16 pt-4">
           {items.map(({ icon, title: itemTitle, description }, idx) => {
             const resolvedIcon =
-              icon ||
-              defaultFeatures[idx % defaultFeatures.length]?.icon ||
-              "/ESA ICons/Icon-10.svg";
+              icon && !icon.includes("/home/whychoose")
+                ? icon
+                : defaultFeatures[idx % defaultFeatures.length]?.icon || "/ESA ICons/Icon-10.svg";
             return (
               <div
                 key={itemTitle}
