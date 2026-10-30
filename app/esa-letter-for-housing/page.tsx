@@ -17,7 +17,6 @@ import { EsaHousingLandlordRefuse } from "@/components/esa-housing/EsaHousingLan
 import { EsaHousingDenied } from "@/components/esa-housing/EsaHousingDenied";
 
 // Shared Site Components
-import { PricingSection } from "@/components/home/PricingSection";
 import { QualifyingConditions } from "@/components/home/QualifyingConditions";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -97,17 +96,6 @@ export default function EsaLetterForHousingPage() {
         <EsaHousingCredentials />
         <EsaHousingLandlordRefuse />
         <EsaHousingDenied />
-        <PricingSection
-          sectionId="pricing"
-          ctaHref="/pricing/#evaluation"
-          heading="Emotional Support Animal"
-          descriptionOverride="Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime."
-          showTabs={false}
-          maxCards={2}
-          popularCardIndex={1}
-          showDog={false}
-          sectionClassName="pt-16 lg:pt-24 pb-16 lg:pb-24"
-        />
         <FaqSection id="faq" bg="bg-background" />
         <CtaBanner buttonHref="/pricing/" bgColor="bg-background" className="pb-12 sm:pb-16" />
       </main>

@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LATO, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
-import { CtaButton } from "@/components/common/CtaButton";
+import { TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
 import type { ContributorCardData } from "@/data/contributorsData";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -24,7 +23,7 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
       : key.includes("evaluation") || key.includes("method")
       ? "/ESA ICons/Icon-15.svg"
       : key.includes("focus") || key.includes("area")
-      ? "/ESA ICons/Icon-1.svg"
+      ? "/ESA ICons/Icon-2.svg"
       : key.includes("based") || key.includes("location")
       ? "/ESA ICons/Icon-37.svg"
       : key.includes("experience")
@@ -45,10 +44,10 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
             className="w-4 h-4 object-contain"
           />
         </div>
-        <div className="text-[11px] sm:text-[12px] font-heading font-bold leading-tight text-transparent bg-clip-text w-full truncate" style={{ backgroundImage: TEAL_GRADIENT }}>
+        <div className="font-heading font-bold text-[14px] leading-[18px] text-primary w-full">
           {label}
         </div>
-        <div className="text-[10px] sm:text-[11px] font-sans font-semibold text-body-text leading-tight mt-1 w-full truncate">{value}</div>
+        <div className="font-sans font-medium text-[13px] leading-[18px] text-body-text mt-1 w-full">{value}</div>
       </div>
     </div>
   );
@@ -64,8 +63,8 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
             quality={90} src={person.avatar} alt={person.name} fill className="object-cover object-top" sizes="67px" />
           </div>
           <div className="min-w-0">
-            <h3 className="font-heading font-bold text-lg sm:text-[20px] text-background leading-tight sm:leading-[28px]">{person.name}</h3>
-            <p className="font-sans font-semibold text-xs sm:text-[14px] text-accent leading-snug mt-0.5">{person.title}</p>
+            <h3 className="heading-h4 text-background">{person.name}</h3>
+            <p className="body-small text-accent mt-0.5">{person.title}</p>
           </div>
         </div>
         <a
@@ -80,20 +79,19 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
       </div>
 
       <div className="p-5 sm:p-7 flex flex-col flex-1 justify-between gap-6">
-        <p className="font-sans font-semibold text-sm text-body-text leading-[26px]">{person.bio}</p>
+        <p className="body-text text-body-text">{person.bio}</p>
         <div className="flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
           {person.badges.map((b) => (
             <Badge key={b.label} {...b} />
           ))}
         </div>
         <div className="pt-2 flex justify-center">
-          <CtaButton
+          <Link
             href={person.href}
-            variant="accent"
-            className="w-[192px]"
+            className="inline-flex items-center justify-center h-[44px] px-8 rounded-full bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#dba81f] transition-colors"
           >
             View Profile
-          </CtaButton>
+          </Link>
         </div>
       </div>
     </div>

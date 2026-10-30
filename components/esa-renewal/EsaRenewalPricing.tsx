@@ -42,7 +42,7 @@ export function EsaRenewalPricing() {
       headingClassName="heading-h2"
       descriptionOverride="Understand your evaluation options and pricing before getting started"
       showTabs={false}
-      showDog
+      showDog={false}
       popularCardIndex={1}
       cards={RENEWAL_CARDS}
       ctaHref="/pricing/#evaluation"
