@@ -22,12 +22,12 @@ export function BlogsHero() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={75}
+          quality={70}
           src="/blogs/blog_hero-section-mobile.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
           className="object-cover object-bottom pointer-events-none"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="(max-width: 639px) 430px, 1px"
         />
 
         {/* Content Container at Top */}
