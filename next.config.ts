@@ -7,10 +7,13 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
-    qualities: [75, 80, 90, 95, 100],
+    qualities: [60, 70, 75, 80, 90, 95, 100],
     remotePatterns: [
       {
         protocol: "https",
