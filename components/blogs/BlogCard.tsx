@@ -64,7 +64,9 @@ export function BlogCard({ article, priority = false }: BlogCardProps) {
         <div className="pt-1">
           <CtaButton
             href={article.url}
-            className="w-[171px] !h-[48px] pl-6 pr-1 text-[16px] leading-[26px]"
+            variant="accent"
+            showIcon={false}
+            className="w-[171px] !h-[48px] justify-center px-6 text-[16px] leading-[26px] font-semibold"
           >
             Read More
           </CtaButton>
