@@ -7,15 +7,15 @@ import { Check, X } from "lucide-react";
 const legitimatePoints = [
   "State-licensed mental health professionals",
   "Based on professional assessment",
-  "Audio/video consultation on a secure platform",
-  "Provides documentation based on applicable federal and state requirements",
+  "Audio / video consultation on secure platform",
+  "Follows federal housing guidelines",
   "Clear steps and guidance",
   "Confidential, HIPAA-compliant",
 ];
 
 const fakePoints = [
-  "Automated or unlicensed services",
-  "Approval without a professional evaluation",
+  "Often automated / unlicensed",
+  "Instant approval, no evaluation",
   "Privacy may be lacking",
   "Often non-compliant",
   "Hidden fees / process unclear",
