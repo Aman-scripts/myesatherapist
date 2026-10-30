@@ -2,7 +2,8 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
 
-const HEADING = "Real Stories, Real Impact";
+const HEADING_LINE_1 = "Real Stories,";
+const HEADING_LINE_2 = "Real Impact";
 const DESCRIPTION =
   "Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.";
 
@@ -14,14 +15,18 @@ export function VideoTestimonialsHeroSection() {
           media="(max-width: 639px)"
           quality={90}
           src="/video_testimonial/video_testimonial-herosection_mobile.webp"
-          alt={HEADING}
+          alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
           fill
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
         <div className="absolute inset-0 z-10 flex items-center px-5 pb-16">
           <div className="flex flex-col items-start gap-3 max-w-[300px]">
-            <h1 className="heading-h2 text-primary">{HEADING}</h1>
+            <h1 className="heading-h2 text-primary">
+              {HEADING_LINE_1}
+              <br />
+              {HEADING_LINE_2}
+            </h1>
             <p className="body-text text-body-text">{DESCRIPTION}</p>
           </div>
         </div>
@@ -32,14 +37,18 @@ export function VideoTestimonialsHeroSection() {
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={90}
           src="/video_testimonial/video_testimonial-herosection_tablet.webp"
-          alt={HEADING}
+          alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
           fill
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
         <div className="absolute inset-0 z-10 flex items-center px-10 pb-16">
           <div className="flex flex-col items-start gap-4 max-w-[480px]">
-            <h1 className="heading-h1 text-primary">{HEADING}</h1>
+            <h1 className="heading-h1 text-primary">
+              {HEADING_LINE_1}
+              <br />
+              {HEADING_LINE_2}
+            </h1>
             <p className="body-large text-body-text">{DESCRIPTION}</p>
           </div>
         </div>
@@ -55,7 +64,7 @@ export function VideoTestimonialsHeroSection() {
             media="(min-width: 1024px)"
             quality={90}
             src="/video_testimonial/video_testimonial-herosection.webp"
-            alt={HEADING}
+            alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
             fill
             className="object-cover object-center"
             sizes="(min-width: 1024px) 100vw, 1px"
@@ -64,7 +73,11 @@ export function VideoTestimonialsHeroSection() {
       >
         <div className="relative w-[1440px] h-[680px] flex items-center">
           <div className="pl-[82px] max-w-[620px] z-10 flex flex-col items-start gap-5 pb-10">
-            <h1 className="heading-h1 text-primary max-w-[400px]">{HEADING}</h1>
+            <h1 className="heading-h1 text-primary">
+              {HEADING_LINE_1}
+              <br />
+              {HEADING_LINE_2}
+            </h1>
             <p className="body-large text-body-text max-w-[520px]">{DESCRIPTION}</p>
           </div>
         </div>

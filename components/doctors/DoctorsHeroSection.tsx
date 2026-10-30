@@ -20,8 +20,8 @@ export function DoctorsHeroSection() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-5">
           <div className="flex flex-col items-start gap-3 max-w-[320px]">
-            <h1 className="heading-h2 text-primary">{HEADING}</h1>
-            <p className="body-text text-body-text">{DESCRIPTION}</p>
+            <h1 className="heading-h2 text-[#1A3D4F]">{HEADING}</h1>
+            <p className="body-text text-[#1A3D4F]">{DESCRIPTION}</p>
           </div>
         </div>
       </div>
@@ -38,8 +38,8 @@ export function DoctorsHeroSection() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-10">
           <div className="flex flex-col items-start gap-4 max-w-[520px]">
-            <h1 className="heading-h1 text-primary">{HEADING}</h1>
-            <p className="body-large text-body-text">{DESCRIPTION}</p>
+            <h1 className="heading-h1 text-[#1A3D4F]">{HEADING}</h1>
+            <p className="body-large text-[#1A3D4F]">{DESCRIPTION}</p>
           </div>
         </div>
       </div>
@@ -62,8 +62,8 @@ export function DoctorsHeroSection() {
       >
         <div className="relative w-[1440px] h-[720px] flex items-center">
           <div className="pl-[82px] max-w-[760px] z-10 flex flex-col items-start gap-5">
-            <h1 className="heading-h1 text-primary max-w-[640px]">{HEADING}</h1>
-            <p className="body-large text-body-text max-w-[620px]">{DESCRIPTION}</p>
+            <h1 className="heading-h1 text-[#1A3D4F] max-w-[640px]">{HEADING}</h1>
+            <p className="body-large text-[#1A3D4F] max-w-[560px]">{DESCRIPTION}</p>
           </div>
         </div>
       </DesktopScaleWrapper>

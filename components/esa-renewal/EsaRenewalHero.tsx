@@ -1,118 +1,115 @@
-"use client";
-
-import React from "react";
-import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { CtaButton } from "@/components/common/CtaButton";
 
-const TEAL_GRADIENT = "var(--color-gradient)";
+const HEADING_LINE_1 = "Renew Your ESA";
+const HEADING_LINE_2 = "Letter Online";
+const DESCRIPTION =
+  "Connect with a state-licensed mental health professional to request an ESA letter renewal that reflects your current emotional and mental health–related needs.";
+
+const PILLS = [
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "5+", label: "Years Serving" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
+
+function StatPills() {
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      {PILLS.map((pill) => (
+        <div
+          key={pill.label}
+          className="min-w-[148px] rounded-[24px] bg-background/95 border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] px-5 py-2.5 flex flex-col items-center"
+        >
+          <span className="font-heading font-bold text-[22px] leading-tight text-[#1A3D4F]">{pill.value}</span>
+          <span className="font-sans font-semibold text-[12px] leading-[16px] text-[#6B6B6B]">{pill.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function HeroCopy() {
+  return (
+    <div className="flex flex-col items-start gap-5">
+      <StatPills />
+      <h1 className="heading-h1 text-[#1A3D4F] max-w-[560px]">
+        {HEADING_LINE_1}
+        <br />
+        {HEADING_LINE_2}
+      </h1>
+      <p className="body-large text-[#1A3D4F] max-w-[560px]">{DESCRIPTION}</p>
+      <CtaButton href="#pricing" variant="accent" className="w-auto min-w-[280px]">
+        Start Your Renewal Online
+      </CtaButton>
+      <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+        If not approved after your evaluation? You get a full refund.
+      </p>
+      <ReviewBadges />
+    </div>
+  );
+}
 
 export function EsaRenewalHero() {
   return (
-    <section className="relative w-full bg-background overflow-hidden grid lg:flex lg:items-center lg:min-h-[560px] xl:min-h-[660px]">
-      <div aria-hidden className="lg:hidden col-start-1 row-start-1 aspect-[941/1672]" />
-      {/* 1. Full Hero Background Image (Woman + Golden Retriever on Right, Soft Ambient Blur on Left) */}
-      <div className="absolute inset-x-0 bottom-0 aspect-[941/1672] lg:inset-0 lg:aspect-auto lg:h-full pointer-events-none z-0">
+    <section className="relative z-30 w-full bg-background overflow-visible">
+      <div className="sm:hidden relative w-full min-h-[820px]">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={90}
+          quality={90}
           src="/esa-renewal/esa-renwal-herosection_mobile.webp"
-          alt="Renew Your ESA Letter Online with Licensed Professional"
+          alt="Renew Your ESA Letter Online"
           fill
-          className="sm:hidden object-cover object-bottom"
+          className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
-          src="/esa-renewal/esa-renwal-herosection_tablet.webp"
-          alt="Renew Your ESA Letter Online with Licensed Professional"
-          fill
-          className="hidden sm:block lg:hidden object-cover object-bottom"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-        <BreakpointImage
-          media="(min-width: 1024px)"
-          src="/esa-renewal/esa-renewal-herosection.webp"
-          alt="Renew Your ESA Letter Online with Licensed Professional"
-          fill
-          quality={100}
-          className="hidden lg:block object-cover object-center"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
-      </div>
-
-      {/* 2. Hero Content Container (Aligned to the Left half) */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-20 py-10 sm:py-14 lg:py-12 xl:py-16 col-start-1 row-start-1 pb-[80vw] sm:pb-[80vw] lg:pb-12 xl:pb-16">
-        <div className="max-w-[626px] lg:max-w-[480px] xl:max-w-[626px] space-y-6 sm:space-y-8 lg:space-y-5 xl:space-y-8 mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start">
-          {/* Mobile / tablet stat pills */}
-          <div className="lg:hidden flex items-center justify-center gap-2 sm:gap-3 w-full max-w-[360px] sm:max-w-[513px]">
-            {[["31,488+", "ESA Evaluations"], ["5+", "Years Serving"], ["4.9", "Verified Reviews"]].map(([v, l]) => (
-              <div key={l} className="flex-1 rounded-[30px] bg-background border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center">
-                <span className="font-heading font-bold text-[15px] sm:text-[22px] leading-tight text-transparent bg-clip-text" style={{ backgroundImage: TEAL_GRADIENT }}>{v}</span>
-                <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#707070] whitespace-nowrap">{l}</span>
-              </div>
-            ))}
+        <div className="absolute inset-0 z-10 flex items-center px-5 pb-16">
+          <div className="max-w-[340px]">
+            <HeroCopy />
           </div>
-
-          {/* 3 Metric Pills */}
-          <div className="hidden lg:flex flex-wrap items-center gap-2.5 sm:gap-3.5">
-            {/* 50 USA States */}
-            <div className="bg-background/95 backdrop-blur-sm shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-white/70 rounded-[30px] px-5 sm:px-6 lg:px-4 xl:px-6 py-2 sm:py-2.5 lg:py-1.5 xl:py-2.5 flex flex-col items-center justify-center min-w-[100px] sm:min-w-[115px]">
-              <span className="font-heading font-bold text-xl sm:text-[24px] lg:text-[20px] xl:text-[24px] text-transparent bg-clip-text color-gradient leading-tight">
-                50
-              </span>
-              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#707070] leading-tight mt-0.5">
-                USA States
-              </span>
-            </div>
-
-            {/* HIPAA Compliant */}
-            <div className="bg-background/95 backdrop-blur-sm shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-white/70 rounded-[30px] px-5 sm:px-6 lg:px-4 xl:px-6 py-2 sm:py-2.5 lg:py-1.5 xl:py-2.5 flex flex-col items-center justify-center min-w-[110px] sm:min-w-[125px]">
-              <span className="font-heading font-bold text-xl sm:text-[24px] lg:text-[20px] xl:text-[24px] text-transparent bg-clip-text color-gradient leading-tight">
-                HIPAA
-              </span>
-              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#707070] leading-tight mt-0.5">
-                Compliant
-              </span>
-            </div>
-
-            {/* 100% Licensed Pros */}
-            <div className="bg-background/95 backdrop-blur-sm shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-white/70 rounded-[30px] px-5 sm:px-6 lg:px-4 xl:px-6 py-2 sm:py-2.5 lg:py-1.5 xl:py-2.5 flex flex-col items-center justify-center min-w-[115px] sm:min-w-[130px]">
-              <span className="font-heading font-bold text-xl sm:text-[24px] lg:text-[20px] xl:text-[24px] text-transparent bg-clip-text color-gradient leading-tight">
-                100%
-              </span>
-              <span className="font-sans text-[11px] sm:text-[12px] font-semibold text-[#707070] leading-tight mt-0.5">
-                Licensed Pros
-              </span>
-            </div>
-          </div>
-
-          {/* Heading & Subtext */}
-          <div className="space-y-3.5 sm:space-y-4">
-            <h1 className="font-heading text-3xl sm:text-5xl lg:text-[40px] xl:text-[56px] font-bold text-primary leading-[1.12] tracking-[-0.0002em]">
-              Renew Your ESA Letter<br className="hidden sm:inline" /> Online
-            </h1>
-            <p className="font-sans text-sm sm:text-base lg:text-[14px] xl:text-[18px] text-body-text font-semibold leading-[1.65] max-w-[580px]">
-              Connect with a state-licensed mental health professional to request an ESA letter renewal that reflects your current emotional and mental health–related needs.
-            </p>
-          </div>
-
-          {/* CTA Button: "Start your Renewal Online" with Circular Compass Arrow */}
-          <div className="pt-1">
-            <CtaButton
-              href="#pricing"
-              className="w-auto min-w-[240px]"
-            >
-              Start your Renewal Online
-            </CtaButton>
-          </div>
-
-          {/* Frosted Glass Reviews (Trustpilot & ConsumerAffairs) */}
-          <div className="hidden lg:block"><ReviewBadges /></div>
         </div>
       </div>
+
+      <div className="hidden sm:block lg:hidden relative w-full min-h-[860px]">
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
+          quality={90}
+          src="/esa-renewal/esa-renwal-herosection_tablet.webp"
+          alt="Renew Your ESA Letter Online"
+          fill
+          className="object-cover object-bottom"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
+        />
+        <div className="absolute inset-0 z-10 flex items-center px-10 pb-10">
+          <div className="max-w-[520px]">
+            <HeroCopy />
+          </div>
+        </div>
+      </div>
+
+      <DesktopScaleWrapper
+        designWidth={1440}
+        designHeight={780}
+        wrapperClassName="bg-background overflow-hidden"
+        background={
+          <BreakpointImage
+            media="(min-width: 1024px)"
+            quality={90}
+            src="/esa-renewal/esa-renewal-herosection.webp"
+            alt="Renew Your ESA Letter Online"
+            fill
+            className="object-cover object-right"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[780px] flex items-center">
+          <div className="pl-[82px] max-w-[760px] z-10">
+            <HeroCopy />
+          </div>
+        </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }

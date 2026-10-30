@@ -45,7 +45,7 @@ export function EsaRenewalHowItWorks() {
           {/* Section Header (Frame 5) */}
           <div className="flex flex-col items-center gap-2 text-center">
             <h2 className="heading-h2">
-              How the ESA Letter Renewal Process Works?
+              How The ESA Letter Renewal Process Works
             </h2>
             <p className="body-large">
               Complete a simple three-step online process to request an emotional support animal letter renewal conducted by a licensed mental health professional.
@@ -99,13 +99,16 @@ export function EsaRenewalHowItWorks() {
         </div>
 
         {/* Bottom CTA Button (Frame 1000011890) */}
-        <div className="mt-2">
-          <CtaButton
-            href="#pricing"
-            className="w-auto min-w-[270px]"
-          >
-            Begin your Renewal Process
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <CtaButton href="#pricing" variant="accent" className="w-auto min-w-[180px]">
+            Get Started
           </CtaButton>
+          <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text text-center">
+            If not approved after your evaluation? You get a full refund.
+          </p>
+          <p className="mt-1 rounded-full bg-[#FDECEC] px-5 py-2 text-center font-sans font-medium text-[14px] leading-[22px] text-[#8A3A3A]">
+            We authorize your payment first, but only charge it after your evaluation is completed.
+          </p>
         </div>
       </div>
     </section>

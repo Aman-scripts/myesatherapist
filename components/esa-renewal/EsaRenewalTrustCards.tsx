@@ -13,22 +13,22 @@ interface TrustCard {
 
 const CARDS: TrustCard[] = [
   {
-    icon: "/esa-renewal/esa-renewal-afterherosection-secure-icon.svg",
+    icon: "/ESA ICons/Glyph-3.svg",
     title: "Secure & Compliant",
     subtitle: "HIPAA-Aligned Platform",
   },
   {
-    icon: "/esa-renewal/esa-renewal-afterherosection-evaluation-icon.svg",
+    icon: "/ESA ICons/Icon-18.svg",
     title: "Flexible Evaluations",
     subtitle: "Phone or Video Sessions",
   },
   {
-    icon: "/esa-renewal/esa-renewal-afterherosection-scheduling-icon.svg",
+    icon: "/ESA ICons/Icon-16.svg",
     title: "Fast Scheduling",
     subtitle: "Same-Day Appointments",
   },
   {
-    icon: "/esa-renewal/esa-renewal-afterherosection-online-icon.svg",
+    icon: "/ESA ICons/Icon-15.svg",
     title: "Fully Online",
     subtitle: "No In-Person Visits Required",
   },
@@ -59,11 +59,11 @@ export function EsaRenewalTrustCards() {
               {/* Floating Top Circular Badge (Frame 1000011444) */}
               <div className="absolute left-[calc(50%-37.28px-1px)] -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
                 <Image
-            quality={90}
                   src={card.icon}
-                  alt={card.title}
+                  alt=""
                   width={32}
                   height={32}
+                  unoptimized
                   className="h-8 w-8 object-contain"
                 />
               </div>

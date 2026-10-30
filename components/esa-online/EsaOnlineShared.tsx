@@ -82,7 +82,7 @@ export function FeatureCard({
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
         <Image
-            quality={90} src={icon} alt="" width={iconW} height={iconH} style={{ width: iconW, height: iconH }} className="object-contain" />
+            src={icon} alt="" width={iconW} height={iconH} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
       </div>
     </div>
   );

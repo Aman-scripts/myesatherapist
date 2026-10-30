@@ -5,21 +5,38 @@ import { CtaButton } from "./EsaOnlineShared";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const MOBILE_STATS = [
-  { value: "31,488+", label: "ESA Evaluations" },
+const STATS = [
+  { value: "64,739+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
-  { value: "4.9", label: "Verified Reviews" },
+  { value: "100%", label: "Moneyback Guarantee" },
 ];
 
+function StatPills() {
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      {STATS.map((pill) => (
+        <div
+          key={pill.label}
+          className="min-w-[140px] rounded-[24px] bg-background/95 border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] px-4 py-2 flex flex-col items-center"
+        >
+          <span className="font-heading font-bold text-[20px] sm:text-[22px] leading-tight text-[#1A3D4F]">{pill.value}</span>
+          <span className="font-sans font-semibold text-[11px] sm:text-[12px] leading-[16px] text-[#6B6B6B]">{pill.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function EsaOnlineHero({
-  title = "Legitimate ESA Letter Online From a Licensed Therapist",
+  title = "Legitimate ESA Letter Online From A Licensed Therapist",
   description = "Begin with a secure, HIPAA-compliant telehealth evaluation designed to support a legitimate ESA letter when clinically appropriate. ESA letters are issued based on a licensed clinician’s professional judgment.",
-  buttonText = "Start your ESA Evaluation",
+  buttonText = "Start Your ESA Evaluation",
   image = "/esa-online/esa-letter-online_herosection.webp",
   imageAlt = "Legitimate ESA letter online from a licensed therapist",
   buttonHref = "/pricing/",
   imageMobile,
   imageTablet,
+  showStats = false,
 }: {
   title?: string;
   description?: string;
@@ -31,6 +48,8 @@ export function EsaOnlineHero({
   imageMobile?: string;
   /** Portrait artwork for sm to < lg. */
   imageTablet?: string;
+  /** Stat pills, gold button, refund line, and review badges from the Figma heroes. */
+  showStats?: boolean;
 } = {}) {
   const stacked = Boolean(imageMobile && imageTablet);
 
@@ -95,44 +114,60 @@ export function EsaOnlineHero({
           }`}
         >
           <div
-            className={`max-w-[626px] space-y-6 sm:space-y-8 ${
-              stacked ? "mx-auto text-center flex flex-col items-center" : ""
+            className={`max-w-[640px] ${
+              showStats
+                ? "flex flex-col items-start gap-5 text-left"
+                : `space-y-6 sm:space-y-8 ${stacked ? "mx-auto text-center flex flex-col items-center" : ""}`
             }`}
           >
-            {stacked && (
-              <div className="flex items-center justify-center gap-2 sm:gap-3 w-full max-w-[360px] sm:max-w-[513px]">
-                {MOBILE_STATS.map((s) => (
-                  <div
-                    key={s.label}
-                    className="flex-1 rounded-[30px] bg-background border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center"
-                  >
-                    <span
-                      className="font-heading font-bold text-[15px] sm:text-[22px] leading-tight text-transparent bg-clip-text"
-                      style={{ backgroundImage: "var(--color-gradient)" }}
-                    >
-                      {s.value}
-                    </span>
-                    <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#707070] whitespace-nowrap">{s.label}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            <div className="space-y-3.5 sm:space-y-6">
-              <h1 className="font-heading text-[26px] sm:text-5xl font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
-                {title}
-              </h1>
-              <p className="font-sans text-[12.5px] sm:text-base text-body-text font-semibold leading-[1.65] max-w-[626px]">
-                {description}
-              </p>
-            </div>
-
-            <CtaButton href={buttonHref}>{buttonText}</CtaButton>
-
-            {!stacked && (
-              <div className="pt-1">
+            {showStats ? (
+              <>
+                <StatPills />
+                <h1 className="heading-h1 text-[#1A3D4F]">{title}</h1>
+                <p className="body-text sm:body-large text-[#1A3D4F]">{description}</p>
+                <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
+                  {buttonText}
+                </CtaButton>
+                <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+                  If not approved after your evaluation? You get a full refund.
+                </p>
                 <ReviewBadges />
-              </div>
+              </>
+            ) : (
+              <>
+                {stacked && (
+                  <div className="flex items-center justify-center gap-2 sm:gap-3 w-full max-w-[360px] sm:max-w-[513px]">
+                    {STATS.map((s) => (
+                      <div
+                        key={s.label}
+                        className="flex-1 rounded-[30px] bg-background border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center"
+                      >
+                        <span className="font-heading font-bold text-[15px] sm:text-[22px] leading-tight text-[#1A3D4F]">
+                          {s.value}
+                        </span>
+                        <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#707070] whitespace-nowrap">{s.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="space-y-3.5 sm:space-y-6">
+                  <h1 className="font-heading text-[26px] sm:text-5xl font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
+                    {title}
+                  </h1>
+                  <p className="font-sans text-[12.5px] sm:text-base text-body-text font-semibold leading-[1.65] max-w-[626px]">
+                    {description}
+                  </p>
+                </div>
+
+                <CtaButton href={buttonHref}>{buttonText}</CtaButton>
+
+                {!stacked && (
+                  <div className="pt-1">
+                    <ReviewBadges />
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>
@@ -158,24 +193,33 @@ export function EsaOnlineHero({
           />
         }
       >
-        <div className="relative w-[1440px] h-[723px] flex items-center">
-          <div className="relative z-10 w-full px-20 py-16">
-            <div className="max-w-[626px] space-y-6">
-              <div className="space-y-6">
-                <h1 className="font-heading text-[56px] font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
-                  {title}
-                </h1>
-                <p className="font-sans text-[18px] text-body-text font-semibold leading-[1.65] max-w-[626px]">
-                  {description}
+        <div className={`relative w-[1440px] ${showStats ? "h-[820px]" : "h-[723px]"} flex items-center`}>
+          <div className="relative z-10 w-full pl-[82px] pr-20 py-16">
+            {showStats ? (
+              <div className="max-w-[640px] flex flex-col items-start gap-5">
+                <StatPills />
+                <h1 className="heading-h1 text-[#1A3D4F] max-w-[620px]">{title}</h1>
+                <p className="body-large text-[#1A3D4F] max-w-[560px]">{description}</p>
+                <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[260px]">
+                  {buttonText}
+                </CtaButton>
+                <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+                  If not approved after your evaluation? You get a full refund.
                 </p>
-              </div>
-
-              <CtaButton href={buttonHref}>{buttonText}</CtaButton>
-
-              <div className="pt-1">
                 <ReviewBadges />
               </div>
-            </div>
+            ) : (
+              <div className="max-w-[626px] space-y-6">
+                <div className="space-y-6">
+                  <h1 className="heading-h1 text-[#1A3D4F]">{title}</h1>
+                  <p className="body-large text-[#1A3D4F] max-w-[626px]">{description}</p>
+                </div>
+                <CtaButton href={buttonHref}>{buttonText}</CtaButton>
+                <div className="pt-1">
+                  <ReviewBadges />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </DesktopScaleWrapper>

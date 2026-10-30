@@ -9,23 +9,27 @@ const TEAL_GRADIENT = "var(--color-gradient)";
 interface WhyCard {
   title: string;
   description: string;
+  icon: string;
 }
 
 const CARDS: WhyCard[] = [
   {
     title: "Legitimate Process",
     description:
-      "Renewal evaluations are conducted by licensed professionals and are not issued automatically. Each provider independently reviews the information shared during the evaluation and determines whether updated documentation may be appropriate based on their professional judgment.",
+      "Renewals are never issued automatically. A licensed professional independently reviews your evaluation and decides whether updated documentation may be appropriate.",
+    icon: "/ESA ICons/Icon-46.svg",
   },
   {
     title: "Remote Evaluation",
     description:
-      "The renewal process is completed online and is intended for individuals seeking a genuine evaluation experience. Sessions are designed to fit into everyday schedules, allowing you to participate from home rather than attending in-person appointments.",
+      "The renewal process is completed online, with sessions designed to fit everyday schedules so you can take part from home instead of in person.",
+    icon: "/ESA ICons/Icon-15.svg",
   },
   {
     title: "Licensed Professionals",
     description:
-      "Licensed mental health professionals evaluate whether an individual’s emotional or mental health condition aligns with recognized DSM standards. ESA documentation is only considered when emotional support is found clinically appropriate through professional assessment.",
+      "Licensed mental health professionals assess whether your condition aligns with recognized DSM standards. ESA documentation is considered only when clinically appropriate.",
+    icon: "/ESA ICons/Icon-33.svg",
   },
 ];
 
@@ -65,10 +69,10 @@ export function EsaRenewalWhySection() {
         <div className="w-full max-w-[626px] lg:max-w-[46vw] xl:max-w-[626px] flex flex-col gap-10 lg:gap-[3vw] xl:gap-14">
           {/* Header Text (Frame 1000011447) */}
           <div className="flex flex-col gap-5 lg:gap-[1.95vw] xl:gap-7 text-center lg:text-left">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.7vw] xl:text-[44px] font-bold text-primary leading-[1.2] lg:leading-[3.4vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
+            <h2 className="heading-h2 text-primary max-w-[541px] mx-auto lg:mx-0">
               Why Consider Renewing Your ESA Letter Through Our Platform
             </h2>
-            <p className="font-sans text-base sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] text-body-text font-semibold leading-[1.67]">
+            <p className="body-large text-body-text">
               Housing providers may ask for current emotional support animal letters when reviewing accommodation requests. If the document is outdated, it may no longer be accepted in certain housing situations. Our platform is designed to help individuals reconnect with a licensed mental health professional who can review their current emotional needs through an evaluation.
             </p>
           </div>
@@ -91,11 +95,11 @@ export function EsaRenewalWhySection() {
                   {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[66px] h-[66px] sm:w-[74.56px] sm:h-[74.56px] lg:w-[4.6vw] lg:h-[4.6vw] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
-                      src="/esa-renewal/esa-renewal-whyconsiderrenew-allthreecards-icon.svg"
-                      alt={card.title}
+                      src={card.icon}
+                      alt=""
                       width={32}
                       height={32}
+                      unoptimized
                       className="object-contain"
                     />
                   </div>

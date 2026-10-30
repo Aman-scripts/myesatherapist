@@ -3,8 +3,6 @@
 import React from "react";
 import Image from "next/image";
 
-const TEAL_GRADIENT = "var(--color-gradient)";
-
 const LATO = { fontFamily: "var(--font-sans), 'Manrope', sans-serif" } as const;
 
 interface Plan {
@@ -51,12 +49,7 @@ const RENEWAL: Plan = {
 
 function CheckBadge() {
   return (
-    <span className="flex h-[18px] w-4 shrink-0 items-center">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <circle cx="8" cy="8" r="6.7" fill="#EDEDED" stroke="#1A1A1A" strokeWidth="1.07" />
-        <path d="M5.4 8.1l1.8 1.8 3.4-3.6" stroke="#1A1A1A" strokeWidth="1.07" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </span>
+    <Image src="/ESA ICons/Icon-46.svg" alt="" width={18} height={18} unoptimized className="h-[18px] w-[18px] shrink-0 object-contain" />
   );
 }
 
@@ -96,8 +89,7 @@ function PlanBody({ plan, ctaClassName }: { plan: Plan; ctaClassName?: string })
       {/* CTA */}
       <a
         href="#how-it-works"
-        className={`inline-flex h-[46px] items-center justify-center rounded-[42px] px-8 py-3 text-white font-sans font-semibold text-[16px] leading-[26px] shadow-[0_1px_4px_var(--color-accent)] hover:opacity-95 transition-opacity ${ctaClassName ?? ""}`}
-        style={{ backgroundImage: TEAL_GRADIENT }}
+        className={`inline-flex h-[46px] items-center justify-center rounded-[42px] bg-accent px-8 py-3 text-primary font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${ctaClassName ?? ""}`}
       >
         {plan.cta}
       </a>
