@@ -101,7 +101,7 @@ export default function StatesDirectoryPage() {
         />
 
         {/* 5. Common CTA Banner Section */}
-        <CtaBanner buttonHref="#choose-state-section" />
+        <CtaBanner buttonText="Get Started" buttonHref="/pricing/" />
       </main>
 
       <Footer />

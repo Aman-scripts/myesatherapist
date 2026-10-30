@@ -89,7 +89,7 @@ export function StatesHeroSection() {
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-4">
             <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="body-large text-color-gradient leading-none">
-                51,488+
+                64,739+
               </span>
               <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">ESA Evaluations</span>
             </div>
@@ -167,7 +167,7 @@ export function StatesHeroSection() {
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[130px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
               <span className="body-large text-color-gradient leading-none">
-                51,488+
+                64,739+
               </span>
               <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">ESA Evaluations</span>
             </div>
@@ -211,13 +211,12 @@ export function StatesHeroSection() {
               >
                 <span className="flex items-center gap-2">
                   <Image
-                    src="/home/hero-section-map.svg"
+                    src="/ESA ICons/Icon-37.svg"
                     alt=""
-                    width={16}
-                    height={21}
+                    width={20}
+                    height={20}
                     unoptimized
-                    className="shrink-0 object-contain"
-                    style={{ width: "auto", height: "auto" }}
+                    className="icon-sm shrink-0 object-contain"
                   />
                   <span className="body-text text-color-gradient">
                     {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
@@ -251,6 +250,7 @@ export function StatesHeroSection() {
             {/* Get Started Button */}
             <CtaButton
               onClick={handleGetStarted}
+              variant="accent"
               className="w-auto"
             >
               Get Started
@@ -303,11 +303,12 @@ export function StatesHeroSection() {
             <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
               <Image
                 quality={90}
-                src="/states/state_page_her-section_map-icon.svg"
+                src="/ESA ICons/Icon-37.svg"
                 alt="Available in all 50 states"
-                width={34}
-                height={34}
-                className="w-[34px] h-[34px] object-contain"
+                width={28}
+                height={28}
+                unoptimized
+                className="w-[28px] h-[28px] object-contain"
               />
             </div>
             <div className="flex flex-col text-left">
@@ -328,7 +329,7 @@ export function StatesHeroSection() {
               <div className="flex items-center gap-3">
                 <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
                   <span className="body-large text-color-gradient leading-none">
-                    51,488+
+                    64,739+
                   </span>
                   <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">
                     ESA Evaluations
@@ -379,13 +380,12 @@ export function StatesHeroSection() {
                     >
                       <div className="flex items-center gap-2.5">
                         <Image
-                          src="/home/hero-section-map.svg"
+                          src="/ESA ICons/Icon-37.svg"
                           alt="Location pin"
-                          width={16}
-                          height={21}
+                          width={20}
+                          height={20}
                           unoptimized
-                          className="shrink-0 object-contain"
-                          style={{ width: "auto", height: "auto" }}
+                          className="icon-sm shrink-0 object-contain"
                         />
                         <span className="body-text text-color-gradient">
                           {selectedState
@@ -422,6 +422,7 @@ export function StatesHeroSection() {
                   {/* Get Started Button */}
                   <CtaButton
                     onClick={handleGetStarted}
+                    variant="accent"
                     className="w-[192px]"
                   >
                     Get Started

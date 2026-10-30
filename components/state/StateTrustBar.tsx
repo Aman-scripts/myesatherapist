@@ -15,7 +15,7 @@ export function StateTrustBar({ data }: { data: StateData }) {
   const stats = [
     {
       value: residentsCount,
-      label: `${stateName} residents served`,
+      label: `${stateName} Residents served`,
     },
     {
       value: "4.9/5.0",
@@ -33,21 +33,14 @@ export function StateTrustBar({ data }: { data: StateData }) {
   ];
 
   return (
-    <div className="hidden lg:block relative z-30 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto mb-8 sm:mb-12 lg:mb-16">
-      {/* Floating Trust Banner Card centered between Hero and Process Section */}
-      <div className="bg-white rounded-[24px] lg:rounded-[32px] border border-[#EAE5DC] shadow-[0_16px_48px_rgba(26,61,79,0.09)] py-6 sm:py-7 px-4 sm:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 lg:gap-0 items-center lg:divide-x lg:divide-[#EAE5DC]">
+    <div className="hidden lg:block relative z-30 -mt-[62px] mb-[58px] px-8 pointer-events-auto">
+      {/* Figma: 1146px floating stat card overlapping the hero's bottom edge */}
+      <div className="max-w-[1146px] mx-auto bg-white rounded-[30px] shadow-[0px_2px_14px_rgba(0,0,0,0.08)] py-[26px] px-6">
+        <div className="grid grid-cols-5 items-center divide-x divide-line-200">
           {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center text-center px-2 lg:px-4"
-            >
-              <div className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-primary leading-none tracking-tight">
-                {stat.value}
-              </div>
-              <div className="font-sans text-xs sm:text-[13px] font-medium text-body-text mt-2.5 leading-tight">
-                {stat.label}
-              </div>
+            <div key={idx} className="flex flex-col items-center text-center px-4">
+              <div className="heading-h3 text-primary capitalize">{stat.value}</div>
+              <div className="body-text text-body-text mt-1 max-w-[170px]">{stat.label}</div>
             </div>
           ))}
         </div>

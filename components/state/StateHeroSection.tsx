@@ -2,9 +2,18 @@
 
 import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ChevronDown } from "lucide-react";
 import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { STATE_INDEX } from "@/data/stateIndex";
+
+const statsData = [
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "5+", label: "Years Serving" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
 
 
 function renderHeroTitle(title?: string, stateName?: string) {
@@ -50,26 +59,26 @@ function renderHeroTitle(title?: string, stateName?: string) {
   return title;
 }
 
+type HeroFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  state: string;
+};
+
 interface EvaluationFormCardProps {
-  formData: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-  };
-  setFormData: React.Dispatch<
-    React.SetStateAction<{
-      firstName: string;
-      lastName: string;
-      email: string;
-      phone: string;
-    }>
-  >;
+  formData: HeroFormData;
+  setFormData: React.Dispatch<React.SetStateAction<HeroFormData>>;
   handleSubmit: (e: React.FormEvent) => void;
   isSubmitted: boolean;
   compact?: boolean;
   stateName: string;
 }
+
+// Figma: 44px fields, 5px radius, 0.2px body-text border on a translucent cream fill
+const INPUT_CLASS =
+  "w-full h-[44px] rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] px-3.5 text-[16px] lg:text-[14px] font-medium text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary transition-all font-sans";
 
 function EvaluationFormCard({
   formData,
@@ -79,143 +88,110 @@ function EvaluationFormCard({
   compact = false,
   stateName,
 }: EvaluationFormCardProps) {
+  const labelClass = `block text-body-text mb-2 ${compact ? "body-small" : "body-text"}`;
+
   return (
     <div
       className={`w-full bg-[rgba(245,166,54,0.26)] backdrop-blur-[18px] border border-[rgba(245,166,54,0.09)] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
-        compact
-          ? "rounded-[22px] p-4 sm:p-5"
-          : "rounded-[24px] lg:rounded-[26px] xl:rounded-[30px] px-5 lg:px-5 xl:px-8 py-4 lg:py-5 xl:py-8"
+        compact ? "rounded-[22px] p-4 sm:p-5" : "rounded-[30px] px-[18px] pt-[30px] pb-[34px]"
       }`}
     >
-      <div className={`${compact ? "mb-3 text-center" : "mb-3 lg:mb-4 xl:mb-6 text-center"}`}>
-        <h2
-          className={`font-heading font-bold text-[#373737] leading-tight ${
-            compact ? "text-[20px] sm:text-[22px]" : "text-[24px] lg:text-[26px] xl:text-[36px] xl:leading-[44px]"
-          } tracking-[-0.00015em]`}
-        >
+      <div className={`text-center ${compact ? "mb-4" : "mb-[30px]"}`}>
+        <h2 className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
           Start Your Evaluation
         </h2>
-        <p
-          className={`text-body-text font-semibold mt-0.5 font-sans ${
-            compact ? "text-[11.5px]" : "text-[12px] lg:text-[12.5px] xl:text-[14px]"
-          }`}
-        >
+        <p className={`text-body-text mt-1 ${compact ? "body-small" : "body-large"}`}>
           Free consultation - takes less than 5 minutes.
         </p>
       </div>
 
       {isSubmitted ? (
         <div className="py-6 text-center space-y-3 animate-fadeIn">
-          <div
-            className="w-12 h-12 rounded-full text-white flex items-center justify-center mx-auto shadow-md"
-            style={{ background: "var(--color-gradient)" }}
-          >
+          <div className="w-12 h-12 rounded-full color-gradient flex items-center justify-center mx-auto shadow-md">
             <CheckCircle2 className="w-7 h-7 text-accent" />
           </div>
-          <div className="font-heading text-lg font-bold text-primary">
-            Evaluation Request Received!
-          </div>
-          <p className="text-xs text-body-text font-medium">
+          <div className="heading-h4 text-primary">Evaluation Request Received!</div>
+          <p className="body-small text-body-text">
             Our {stateName} intake specialist is reviewing your submission.
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className={compact ? "space-y-2.5" : "space-y-2.5 lg:space-y-3 xl:space-y-4"}>
-          <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+        <form onSubmit={handleSubmit} className={compact ? "space-y-3" : "space-y-[19px]"}>
+          <div className="grid grid-cols-2 gap-3 sm:gap-6">
             <div>
-              <label
-                className={`block font-semibold text-body-text mb-1 font-sans ${
-                  compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
-                }`}
-              >
-                First Name
-              </label>
+              <label className={labelClass}>First Name</label>
               <input
                 type="text"
                 required
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                  compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
-                }`}
+                className={INPUT_CLASS}
               />
             </div>
             <div>
-              <label
-                className={`block font-semibold text-body-text mb-1 font-sans ${
-                  compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
-                }`}
-              >
-                Last Name
-              </label>
+              <label className={labelClass}>Last Name</label>
               <input
                 type="text"
                 required
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                  compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
-                }`}
+                className={INPUT_CLASS}
               />
             </div>
           </div>
 
           <div>
-            <label
-              className={`block font-semibold text-body-text mb-1 font-sans ${
-                compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
-              }`}
-            >
-              Email Address
-            </label>
+            <label className={labelClass}>Email Address</label>
             <input
               type="email"
               required
               placeholder="your@email.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
-              }`}
+              className={INPUT_CLASS}
             />
           </div>
 
           <div>
-            <label
-              className={`block font-semibold text-body-text mb-1 font-sans ${
-                compact ? "text-[11px]" : "text-[11.5px] xl:text-[14px]"
-              }`}
-            >
-              Phone Number
-            </label>
+            <label className={labelClass}>Phone Number</label>
             <input
               type="tel"
               required
               placeholder="(555) 000-0000"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className={`w-full rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-[#1A3D4F]/25 focus:border-[#1A3D4F] transition-all font-sans ${
-                compact ? "h-[38px] px-2.5 text-[16px] sm:text-[12px]" : "h-[38px] lg:h-[40px] xl:h-[44px] px-3.5 text-[16px] lg:text-[13px] xl:text-[14px]"
-              }`}
+              className={INPUT_CLASS}
             />
           </div>
 
-          <div className={compact ? "pt-1" : "pt-1 xl:pt-2"}>
-            <button
-              type="submit"
-              className={`w-full rounded-full text-white font-semibold shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-all flex items-center justify-center gap-2 group ${
-                compact ? "h-[42px] text-[13px]" : "h-[42px] lg:h-[44px] xl:h-[48px] text-[14px] xl:text-[16px]"
-              }`}
-              style={{ background: "var(--color-gradient)" }}
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 stroke-[2] text-background transition-transform group-hover:translate-x-1" />
-            </button>
+          <div>
+            <label className={labelClass}>Select your State</label>
+            <div className="relative">
+              <select
+                required
+                value={formData.state}
+                onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                className={`${INPUT_CLASS} appearance-none pr-10 cursor-pointer`}
+              >
+                {STATE_INDEX.map((s) => (
+                  <option key={s.slug} value={s.name}>
+                    {s.name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-body-text" />
+            </div>
           </div>
 
-          <p className="text-center text-[10.5px] sm:text-[12px] text-body-text font-semibold pt-0.5 font-sans">
+          <div className={`flex justify-center ${compact ? "pt-2" : "pt-[21px]"}`}>
+            <CtaButton type="submit" variant="accent" className={compact ? "w-full" : "w-[290px]"}>
+              Start Your Free Evaluation
+            </CtaButton>
+          </div>
+
+          <p className="body-small text-center text-body-text !mt-2">
             Your information is 100% secure and private.
           </p>
         </form>
@@ -225,11 +201,13 @@ function EvaluationFormCard({
 }
 
 export function StateHeroSection({ data }: { data: StateData }) {
-  const [formData, setFormData] = useState({
+  const stateName = data.name;
+  const [formData, setFormData] = useState<HeroFormData>({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
+    state: stateName,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -244,57 +222,73 @@ export function StateHeroSection({ data }: { data: StateData }) {
     }, 1500);
   };
 
-  const stateName = data.name;
+  const subtitle =
+    data.heroSubtitle ||
+    `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`;
+
+  // Desktop lets the headline wrap naturally inside the 560px Figma text column
+  const desktopTitle = data.heroTitle
+    ? data.heroTitle.replace(/\n/g, " ")
+    : `${stateName} ESA Letter Evaluations by Licensed Therapists`;
 
   return (
     <section className="relative w-full bg-background overflow-hidden">
-      {/* 1. DESKTOP VIEW */}
-      <div className="hidden lg:block relative w-full aspect-[4320/2439] min-h-[640px] lg:min-h-[680px] xl:min-h-[820px]">
-        <BreakpointImage
-          media="(min-width: 1024px)"
+      {/* 1. DESKTOP VIEW — 1440px coordinates from the Figma "ESA - California" hero */}
+      <DesktopScaleWrapper
+        wrapperClassName="bg-background"
+        background={
+          <BreakpointImage
+            media="(min-width: 1024px)"
             quality={90}
-          src="/states/california-hero-section.webp"
-          alt={`${stateName} ESA Evaluations with Licensed Therapists`}
-          fill
-          className="object-cover object-top pointer-events-none"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
-
-        <div className="absolute inset-0 z-10">
-          <div className="max-w-[1360px] mx-auto h-full px-6 lg:px-8 xl:px-10 flex items-start justify-between pt-6 lg:pt-7 xl:pt-14">
-            <div className="flex-1 min-w-0 pr-4 xl:pr-8 space-y-3 lg:space-y-4 xl:space-y-6 pt-1">
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-[34px] xl:text-[56px] font-bold text-primary leading-[1.14] xl:leading-[64px] tracking-[-0.011em]">
-                {renderHeroTitle(data.heroTitle, stateName)}
-              </h1>
-
-              <p className="text-[13px] lg:text-[13px] xl:text-[16px] text-body-text font-semibold leading-[1.5] xl:leading-[26px] max-w-[340px] xl:max-w-[460px] font-sans">
-                {data.heroSubtitle ||
-                  `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`}
-              </p>
-
-              <div className="pt-0.5 xl:pt-1">
-                <ReviewBadges />
-              </div>
+            src="/states/california-hero-section.webp"
+            alt={`${stateName} ESA Evaluations with Licensed Therapists`}
+            fill
+            className="object-cover object-top pointer-events-none"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[808px]">
+          <div className="absolute left-[82px] top-[82px] w-[560px] z-20">
+            {/* Stat Pills */}
+            <div className="flex items-center gap-3">
+              {statsData.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col items-center justify-center bg-background py-2.5 px-4 rounded-[30px] text-center min-w-[177px] h-[77px]"
+                >
+                  <span className="body-large text-color-gradient">{stat.value}</span>
+                  <span className="body-small text-[#6B6B6B] mt-0.5 whitespace-nowrap">{stat.label}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="shrink-0 w-full max-w-[360px] xl:max-w-[430px] flex justify-end">
-              <EvaluationFormCard
-                formData={formData}
-                setFormData={setFormData}
-                handleSubmit={handleSubmit}
-                isSubmitted={isSubmitted}
-                stateName={stateName}
-              />
+            <h1 className="heading-h1 text-primary capitalize mt-6">{desktopTitle}</h1>
+
+            <p className="body-large text-body-text mt-4 max-w-[460px]">{subtitle}</p>
+
+            <div className="mt-6">
+              <ReviewBadges />
             </div>
           </div>
+
+          <div className="absolute right-[81px] top-[31px] w-[464px] z-20">
+            <EvaluationFormCard
+              formData={formData}
+              setFormData={setFormData}
+              handleSubmit={handleSubmit}
+              isSubmitted={isSubmitted}
+              stateName={stateName}
+            />
+          </div>
         </div>
-      </div>
+      </DesktopScaleWrapper>
 
       {/* 2. TABLET VIEW */}
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1774] max-w-[834px] mx-auto overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+          quality={90}
           src="/states/california-hero-section-tablet.webp"
           alt={`${stateName} ESA Evaluations Tablet View`}
           fill
@@ -304,17 +298,14 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
-            <h1 className="font-heading text-[44px] font-bold text-primary leading-[54px] tracking-[-0.01em] text-center">
+            <h1 className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
             </h1>
-            <p className="font-sans text-[16px] font-semibold text-body-text leading-[26px] tracking-normal text-center max-w-[560px] mx-auto">
-              {data.heroSubtitle ||
-                `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`}
-            </p>
+            <p className="body-text text-body-text text-center max-w-[560px] mx-auto">{subtitle}</p>
           </div>
         </div>
 
-        <div className="absolute top-[58.5%] left-1/2 -translate-x-1/2 z-10 w-full max-w-[460px] px-6 sm:px-10">
+        <div className="absolute top-[56%] left-1/2 -translate-x-1/2 z-10 w-full max-w-[480px] px-6 sm:px-10">
           <EvaluationFormCard
             formData={formData}
             setFormData={setFormData}
@@ -326,10 +317,10 @@ export function StateHeroSection({ data }: { data: StateData }) {
       </div>
 
       {/* 3. MOBILE VIEW */}
-      <div className="sm:hidden relative w-full aspect-[390/1298] overflow-hidden">
+      <div className="sm:hidden relative w-full aspect-[390/1380] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={90}
+          quality={90}
           src="/states/california-hero-section-mobile.webp"
           alt={`${stateName} ESA Evaluations Mobile View`}
           fill
@@ -339,17 +330,14 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
-            <h1 className="font-heading text-[28px] font-bold text-primary leading-[36px] tracking-[-0.01em] text-center">
+            <h1 className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
             </h1>
-            <p className="font-sans text-[14px] font-semibold text-body-text leading-[26px] tracking-normal text-center max-w-[330px] mx-auto">
-              {data.heroSubtitle ||
-                `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`}
-            </p>
+            <p className="body-small text-body-text text-center max-w-[330px] mx-auto">{subtitle}</p>
           </div>
         </div>
 
-        <div className="absolute top-[54.5%] left-1/2 -translate-x-1/2 z-10 w-full max-w-[340px] px-4">
+        <div className="absolute top-[52%] left-1/2 -translate-x-1/2 z-10 w-full max-w-[350px] px-4">
           <EvaluationFormCard
             formData={formData}
             setFormData={setFormData}

@@ -4,13 +4,6 @@ import React from "react";
 import { CtaButton } from "@/components/common/CtaButton";
 
 export function FederalHousingRulesSection() {
-  const handleScrollToGrid = () => {
-    const section = document.getElementById("choose-state-section");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="w-full bg-background py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#EAE5DC]/60 overflow-hidden">
       {/* Frame 1000011447 */}
@@ -33,10 +26,10 @@ export function FederalHousingRulesSection() {
 
         {/* Frame 1000011891: CTA Button */}
         <CtaButton
-          onClick={handleScrollToGrid}
+          href="/pricing/"
           className="w-auto min-w-[246px]"
         >
-          Learn With ESA Laws
+          Get Started
         </CtaButton>
 
       </div>

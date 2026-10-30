@@ -1,38 +1,13 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { STATE_INDEX } from "@/data/stateIndex";
 
 const ALL_STATES = [...STATE_INDEX].sort((a, b) =>
   a.name.localeCompare(b.name)
 );
-
-// Exact Figma fi_3177361 Pin SVG with var(--color-gradient)
-function FigmaPinIcon({ className = "w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`shrink-0 ${className}`}
-    >
-      <defs>
-        <linearGradient id="figma-pin-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#1A3D4F" />
-          <stop offset="100%" stopColor="#1D6E72" />
-        </linearGradient>
-      </defs>
-      {/* 24px wide inside 32px box (left 12.5% = 4px, right 12.5% = 28px) */}
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 2C10.4772 2 6 6.47715 6 12C6 18.5 16 30 16 30C16 30 26 18.5 26 12C26 6.47715 21.5228 2 16 2ZM16 16.5C13.5147 16.5 11.5 14.4853 11.5 12C11.5 9.51472 13.5147 7.5 16 7.5C18.4853 7.5 20.5 9.51472 20.5 12C20.5 14.4853 18.4853 16.5 16 16.5Z"
-        fill="url(#figma-pin-grad)"
-      />
-    </svg>
-  );
-}
 
 interface ChooseStateGridSectionProps {
   className?: string;
@@ -92,7 +67,14 @@ export function ChooseStateGridSection({
               <div className="flex flex-row items-center gap-2 sm:gap-2.5 lg:gap-[8px] w-full overflow-hidden">
                 {/* fi_3177361: Pin Icon */}
                 <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[32px] lg:h-[32px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                  <FigmaPinIcon />
+                  <Image
+                    src="/ESA ICons/Icon-37.svg"
+                    alt=""
+                    width={32}
+                    height={32}
+                    unoptimized
+                    className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[28px] lg:h-[28px] object-contain"
+                  />
                 </div>
 
                 {/* Page Description: State Text */}
