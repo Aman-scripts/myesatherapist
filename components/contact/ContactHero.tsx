@@ -141,7 +141,7 @@ export function ContactHero() {
 
                 {/* Centered Button & Security Note */}
                 <div className="pt-1 flex flex-col items-center justify-center space-y-1">
-                  <CtaButton type="submit">
+                  <CtaButton type="submit" variant="accent">
                     Get Started
                   </CtaButton>
 
@@ -259,7 +259,7 @@ export function ContactHero() {
 
                 {/* Centered Button & Security Note */}
                 <div className="pt-1.5 flex flex-col items-center justify-center space-y-1.5">
-                  <CtaButton type="submit">
+                  <CtaButton type="submit" variant="accent">
                     Get Started
                   </CtaButton>
 
@@ -382,7 +382,7 @@ export function ContactHero() {
 
                   {/* Centered Button & Security Note */}
                   <div className="pt-2 flex flex-col items-center justify-center space-y-2">
-                    <CtaButton type="submit">
+                    <CtaButton type="submit" variant="accent">
                       Get Started
                     </CtaButton>
 

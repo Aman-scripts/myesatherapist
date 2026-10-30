@@ -8,28 +8,28 @@ export function ContactInfoCards() {
     {
       title: "CALL US AT:",
       detail: "+1 (888) 412-4041",
-      icon: "/contact/contact_us-call-icon.svg",
+      icon: "/ESA ICons/Icon-36.svg",
       href: "tel:+18884124041",
       isLink: true,
     },
     {
       title: "EMAIL US AT:",
       detail: "info@myesatherapist.com",
-      icon: "/contact/contact_us-call-message-icon.svg",
+      icon: "/ESA ICons/Icon-35.svg",
       href: "mailto:info@myesatherapist.com",
       isLink: true,
     },
     {
       title: "REACH US AT:",
       detail: "780 Lynnhaven Pkwy #400, Virginia Beach, VA",
-      icon: "/contact/contact_us-map-icon.svg",
+      icon: "/ESA ICons/Icon-37.svg",
       href: "#map",
       isLink: false,
     },
     {
       title: "OPEN HOURS:",
       detail: "Mon–Fri · 8am – 8pm ET",
-      icon: "/common/footer-clock-icon.svg",
+      icon: "/ESA ICons/Icon-38.svg",
       href: "#hours",
       isLink: false,
     },
@@ -44,17 +44,15 @@ export function ContactInfoCards() {
             const Content = (
               <>
                 {/* Frame 13: Left Icon Circle (45px x 45px) */}
-                <div
-                  className="w-[45px] h-[45px] rounded-full flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform"
-                  style={{ background: "var(--color-gradient)" }}
-                >
+                <div className="w-[45px] h-[45px] rounded-full bg-white border border-[#EAE5DC] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
                     quality={90}
                     src={card.icon}
                     alt={card.title}
-                    width={20}
-                    height={20}
-                    className="w-4 h-4 sm:w-[18px] sm:h-[18px] object-contain filter brightness-0 invert"
+                    width={22}
+                    height={22}
+                    unoptimized
+                    className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] object-contain"
                   />
                 </div>
 

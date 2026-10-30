@@ -25,26 +25,26 @@ export function ContactSection() {
     {
       title: "CALL US AT:",
       detail: "+1 (888) 412-4041",
-      icon: "/contact/contact_us-call-icon.svg",
+      icon: "/ESA ICons/Icon-36.svg",
       href: "tel:+18884124041",
     },
     {
       title: "EMAIL US AT:",
       detail: "info@myesatherapist.com",
-      icon: "/contact/contact_us-call-message-icon.svg",
+      icon: "/ESA ICons/Icon-35.svg",
       href: "mailto:info@myesatherapist.com",
     },
     {
       title: "REACH US AT:",
       detail: "780 Lynnhaven Pkwy #400, Virginia Beach, VA",
-      icon: "/contact/contact_us-map-icon.svg",
+      icon: "/ESA ICons/Icon-37.svg",
       href: "#map",
     },
     {
       title: "OPEN HOURS:",
       detail: "Mon - Sat: 9AM - 6PM",
       subDetail: "Sunday: Closed",
-      icon: "/common/footer-clock-icon.svg",
+      icon: "/ESA ICons/Icon-38.svg",
       href: "#hours",
     },
   ];
