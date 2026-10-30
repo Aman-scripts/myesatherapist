@@ -105,12 +105,10 @@ export function AboutTestimonialSection() {
         {/* Frame 1261153623: Section Header */}
         <div className="text-center max-w-[709px] mx-auto mb-10 sm:mb-12 space-y-3 sm:space-y-4">
           <h2 className="heading-h2 text-primary">
-            Trusted By Thousands Of Pet Owners
+            Trusted by Thousands of ESA Owners
           </h2>
           <p className="body-large text-body-text">
-            See why so many clients trust MY ESA for their ESA needs.
-            <br className="hidden sm:inline" />{" "}
-            Real stories from real people who experienced our process firsthand.
+            See how our legitimate ESA evaluations have helped individuals across the nation.
           </p>
         </div>
 

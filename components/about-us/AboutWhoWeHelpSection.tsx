@@ -12,19 +12,19 @@ const groups = [
   },
   {
     icon: "/ESA ICons/Icon.svg",
-    title: "Individuals With Anxiety Or Depression",
+    title: "Individuals with Mental Health Conditions",
     description:
-      "Receive a professional assessment from licensed mental health professionals to evaluate emotional support needs.",
+      "Discuss your mental health concerns with a licensed mental health professional who will independently assess whether an ESA may be clinically appropriate.",
   },
   {
     icon: "/ESA ICons/Icon-15.svg",
-    title: "Remote Or Telehealth Users",
+    title: "Remote or Telehealth Users",
     description:
       "Complete secure, HIPAA-compliant telehealth ESA evaluations from anywhere, with scheduling flexibility to suit your needs.",
   },
   {
     icon: "/ESA ICons/Icon-17.svg",
-    title: "First-Time And Existing ESA Applicants",
+    title: "First-Time and Returning ESA Applicants",
     description:
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
