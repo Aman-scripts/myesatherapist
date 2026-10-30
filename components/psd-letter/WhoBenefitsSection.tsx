@@ -5,34 +5,39 @@ import Image from "next/image";
 
 const benefitsData = [
   {
-    title: "Living In\nNo-Pet Housing",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Individuals with Psychiatric Disabilities",
+    description: "People whose mental health condition substantially affects daily activities and who benefit from a trained service dog.",
     icon: "/ESA ICons/Icon-20.svg",
   },
   {
-    title: "Getting A\nNew Service Dog",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Renters & Housing Applicants",
+    description: "Those seeking housing accommodations for a psychiatric service dog.",
     icon: "/ESA ICons/Icon-29.svg",
   },
   {
-    title: "Frequent\nFlyers",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Frequent Travelers",
+    description: "People who regularly travel with a psychiatric service dog and may need professional documentation related to their PSD.",
     icon: "/ESA ICons/Icon-28.svg",
   },
   {
-    title: "Upgrading\nFrom ESA",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Existing Service Dog Handlers",
+    description: "People who already work with a trained psychiatric service dog and need professional documentation related to their disability.",
     icon: "/ESA ICons/Icon-30.svg",
   },
   {
-    title: "Veterans\nWith PTSD",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "Individuals With Functional Limitations",
+    description: "People whose psychiatric disability makes certain everyday activities more difficult and may require task-based assistance.",
     icon: "/ESA ICons/Icon-40.svg",
   },
   {
-    title: "Need Backup\nDocumentation",
-    description: "If any of these describes you, a PSD letter may be exactly what you need.",
+    title: "People Seeking Professional Guidance",
+    description: "Individuals who want a licensed mental health professional to assess whether a psychiatric service dog may be appropriate for their needs.",
     icon: "/ESA ICons/Icon-17.svg",
+  },
+  {
+    title: "People Seeking Workplace Support",
+    description: "Individuals who may need professional PSD documentation when discussing disability-related accommodations with an employer.",
+    icon: "/ESA ICons/Icon-12.svg",
   },
 ];
 
@@ -42,10 +47,10 @@ export function WhoBenefitsSection() {
       <div className="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 space-y-3 text-center sm:mb-12 lg:mb-14">
           <h2 className="heading-h2 text-primary">
-            People Who Benefitted Most From The PSD Letter
+            People Who Benefit Most From a PSD Letter
           </h2>
-          <p className="body-large mx-auto max-w-[460px]">
-            If any of these describes you, a PSD letter may be exactly what you need.
+          <p className="body-large mx-auto max-w-[760px]">
+            See how a PSD letter can support different needs, from managing daily challenges to documenting the role of a psychiatric service dog.
           </p>
         </div>
 

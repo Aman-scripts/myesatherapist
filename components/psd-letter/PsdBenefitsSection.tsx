@@ -44,7 +44,7 @@ const benefitsData = [
     icon: "/ESA ICons/Glyph-2.svg",
     title: "Mental Health Consultation",
     description:
-      "Professional assessment and consultation from licensed therapists who understand service dog considerations.",
+      "Professional assessment and consultation from licensed therapists who understand service dogs",
     isDark: false,
   },
 ];

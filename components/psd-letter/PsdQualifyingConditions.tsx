@@ -60,7 +60,7 @@ const conditions: Condition[] = [
     left: 28.01,
     top: 29.67,
     description:
-      "A PSD provides consistent daily routine, emotional grounding, and a soothing presence across unpredictable mood transitions.",
+      "A PSD provides a consistent daily routine, emotional grounding, and a soothing presence across unpredictable mood transitions.",
   },
   {
     label: "PTSD",
@@ -141,9 +141,6 @@ export function PsdQualifyingConditions() {
           <h2 className="heading-h2 capitalize max-w-[850px] mx-auto">
             Common Qualifying Conditions for a PSD Letter
           </h2>
-          <p className="body-large max-w-[760px] mx-auto">
-            A licensed mental health professional will determine eligibility during your consultation. These are some common conditions that may qualify under ADA.
-          </p>
         </div>
 
         {/* Desktop / tablet: dog photo with hover-enabled floating badges */}

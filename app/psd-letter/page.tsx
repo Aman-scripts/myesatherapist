@@ -13,9 +13,8 @@ import { PsdProcessSection } from "@/components/psd-letter/PsdProcessSection";
 import { PsdQualifyingConditions } from "@/components/psd-letter/PsdQualifyingConditions";
 import { WhoBenefitsSection } from "@/components/psd-letter/WhoBenefitsSection";
 import { LicensedProfessionalsSection } from "@/components/psd-letter/LicensedProfessionalsSection";
-import { PsdCapabilitiesSection } from "@/components/psd-letter/PsdCapabilitiesSection";
-import { PsdComparisonTable } from "@/components/psd-letter/PsdComparisonTable";
-import { CtaBanner } from "@/components/home/CtaBanner";
+import { PsdWhyChooseSection } from "@/components/psd-letter/PsdWhyChooseSection";
+import { PsdCtaSection } from "@/components/psd-letter/PsdCtaSection";
 
 // Reused Common Components from Homepage
 import { PricingSection } from "@/components/home/PricingSection";
@@ -133,10 +132,7 @@ export default function PsdLetterPage() {
           <PricingSection bgColor="bg-background" defaultPlan="psd" />
         </div>
 
-        {/* 7. PSD vs ESA Comparison Table (Dedicated Section) */}
-        <PsdComparisonTable />
-
-        {/* 8. Common Qualifying Conditions for a PSD Letter */}
+        {/* 7. Common Qualifying Conditions for a PSD Letter */}
         <PsdQualifyingConditions />
 
         {/* 9. Who Benefits Most From PSD Letter */}
@@ -145,22 +141,15 @@ export default function PsdLetterPage() {
         {/* 10. Our Licensed Professionals for PSD Support */}
         <LicensedProfessionalsSection />
 
-        {/* 11. What Can a Psychiatric Service Dog Do? */}
-        <PsdCapabilitiesSection />
+        <PsdWhyChooseSection />
 
-        {/* 12. Frequently Asked Questions */}
         <FaqSection
           title="Frequently Asked Questions"
-          subtitle="Get answers to common questions about ESA letters and our service."
+          subtitle="Everything you need to know about psychiatric service dog letters, the consultation process, and what to expect."
           faqs={PSD_FAQS}
         />
 
-        <CtaBanner
-          title="Ready To Start Your ESA Evaluation?"
-          description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
-          buttonText="Get Started"
-          buttonHref="#pricing"
-        />
+        <PsdCtaSection />
 
         {/* 14. Content Reviewed by Doctor Badge */}
         <StateReviewerBanner />
