@@ -5,7 +5,7 @@ export const revalidate = 3600;
 export function GET() {
   const body = [
     "User-agent: *",
-    "Disallow: /",
+    "Allow: /",
     "",
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     "",
