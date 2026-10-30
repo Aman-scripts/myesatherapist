@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -65,7 +66,7 @@ export default function EsaLetterOnlinePage() {
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(esaLetterOnlineSchema, "esa-letter-online")) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(esaLetterOnlineSchema, "esa-letter-online")) }}
       />
       <TopBanner />
       <Header />

@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -104,7 +105,7 @@ export default function PsdLetterPage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(psdLetterSchema, "psd-letter")) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(psdLetterSchema, "psd-letter")) }}
       />
 
       {/* Top Banner & Navigation */}

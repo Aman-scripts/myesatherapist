@@ -135,6 +135,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
           </div>
         </div>
 
+        {data.legalNotice !== "" && (
         <div className="max-w-[895px] mx-auto bg-[rgba(232,185,44,0.1)] rounded-[20px] overflow-hidden flex items-stretch shadow-xs">
           <div className="w-3 sm:w-3.5 bg-accent shrink-0" />
           <div className="p-4 sm:p-5 lg:p-6 flex-1">
@@ -147,6 +148,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
             </p>
           </div>
         </div>
+        )}
       </div>
     </section>
   );

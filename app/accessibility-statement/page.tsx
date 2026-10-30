@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPolicyBySlug } from "@/data/policiesData";
@@ -86,7 +87,7 @@ export default function AccessibilityStatementPage() {
     <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-current">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(jsonLd) }}
       />
       {/* Top Announcement Banner & Header */}
       <TopBanner />

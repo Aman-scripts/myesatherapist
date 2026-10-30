@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -44,7 +45,7 @@ export default function ContactUsPage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          dangerouslySetInnerHTML={{ __html: serializeLd(schemaObj) }}
         />
       ))}
 

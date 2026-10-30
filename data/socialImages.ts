@@ -111,7 +111,7 @@ const PATHS: Record<string, string> = {
   "blog-esa-for-children": "/images/blog/minor-with-emotional-support-animal.webp",
   "blog-conditions-that-may-qualify-for-an-esa": "/images/blog/who-qualifing-for-emotional-support-animal.webp",
   "blog-esa-for-anxiety": "/images/blog/how-can-esa-support-with-anxity-image.webp",
-  "blog-8-basic-obedience-commands-every-esa-should-know": "/images/blog/training-an-esa-image.webp",
+  "blog-8-basic-obedience-commands-every-esa-should-know": "/images/blog/training-an-esa-image.jpg",
   "blog-esa-for-ptsd": "/images/blog/esa-for-ptsd-image.webp",
   "blog-esa-for-depression": "/images/blog/emotional-support-through-canine-companionship-image.webp",
   "blog-prepare-esa-for-rental-housing": "/images/blog/moving-in-with-a-furry-friend-image.webp",
@@ -148,21 +148,30 @@ export function socialImage(key: string, alt: string) {
 
 const PAGE_TYPE = /WebPage|CollectionPage|ProfilePage|AboutPage|ContactPage|FAQPage/;
 
+function localizeImageHosts<T>(schema: T): T {
+  const json = JSON.stringify(schema);
+  if (!json.includes("https://myesatherapist.com/images/")) return schema;
+  return JSON.parse(
+    json.replaceAll("https://myesatherapist.com/images/", `${SITE_URL}/images/`),
+  ) as T;
+}
+
 /**
  * Points a page's JSON-LD at its feature image (the same file as the OG card).
  * Updates an existing #primaryimage ImageObject, or adds one and links it from the page node;
  * BlogPosting nodes get it as `image`. The schema object itself is not modified.
  */
 export function withFeatureImage<T>(schema: T, key: string, caption?: string): T {
-  if (!hasSocialImage(key)) return schema;
+  const source = localizeImageHosts(schema);
+  if (!hasSocialImage(key)) return source;
   const size = SIZES[key] ?? [1200, 800];
-  const graph = (schema as { "@graph"?: unknown })?.["@graph"];
+  const graph = (source as { "@graph"?: unknown })?.["@graph"];
 
   // Standalone page object (not a @graph): attach the image directly.
   if (!Array.isArray(graph)) {
-    const single = schema as Record<string, any>;
+    const single = source as Record<string, any>;
     const types = ([] as string[]).concat(single?.["@type"] ?? []);
-    if (!types.some((t) => PAGE_TYPE.test(t))) return schema;
+    if (!types.some((t) => PAGE_TYPE.test(t))) return source;
     const imageUrl = assetUrl(imagePath(key));
     return {
       ...single,
@@ -180,7 +189,7 @@ export function withFeatureImage<T>(schema: T, key: string, caption?: string): T
 
   const isArticle = key.startsWith("blog-") && key !== "blog-hub-page";
   const url = assetUrl(imagePath(key));
-  const next = structuredClone(schema) as { "@graph": Record<string, any>[] };
+  const next = structuredClone(source) as { "@graph": Record<string, any>[] };
   const nodes = next["@graph"];
   const typesOf = (n: Record<string, any>) => ([] as string[]).concat(n["@type"] ?? []);
 

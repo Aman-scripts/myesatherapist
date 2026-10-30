@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { serializeLd } from "@/lib/site";
 import React from "react";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -72,7 +73,7 @@ export default function HomePage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(homeSchema, "homepage")) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(homeSchema, "homepage")) }}
       />
 
       <TopBanner />

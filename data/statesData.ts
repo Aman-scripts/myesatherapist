@@ -12338,7 +12338,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Secure telehealth platform designed to meet HIPAA privacy.",
       "ESA documentation issued only after an independent clinical determination.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they must affirm that you have an eligible diagnosis.",
+    processNote: "Note: An ESA letter should be based on an appropriate individual evaluation by a qualified healthcare professional. Telehealth consultations must comply with applicable privacy and security requirements. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. When supporting documentation is necessary, it should provide reliable information establishing the individual’s disability-related need for an assistance animal. A specific diagnosis does not universally need to be disclosed in the letter.",
     whoQualifiesTitle: "Who May Qualify For an ESA Letter in Washington?",
     whoQualifiesSubtitle: "To protect privacy and confidentiality, all consultations are conducted through secure, HIPAA-compliant telehealth platforms. During the evaluation, a licensed clinician discusses mental health concerns that may impact daily life and overall functioning. These conditions may include, but are not limited to:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -12374,7 +12374,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "The clinician evaluates whether an emotional support animal may offer supportive benefits based on the individual’s needs.",
       "The individual lives in Washington or plans to move to the state.",
     ],
-    requirementsNote: "Important: A formal evaluation must be conducted by a licensed mental health professional to determine whether issuing an ESA letter in Washington is appropriate for the individual’s circumstances.",
+    requirementsNote: "Important: A formal evaluation must be conducted by a licensed mental health professional to determine whether issuing an ESA letter in Washington is appropriate for the individual’s circumstances. HUD’s May 22, 2026, enforcement memorandum changes how its Office of Fair Housing and Equal Opportunity handles certain assistance-animal complaints under the Fair Housing Act, focusing enforcement on animals trained to perform disability-related work or tasks. The memorandum changes HUD’s enforcement approach but does not amend the Fair Housing Act itself.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Washington?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in Washington while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -12413,6 +12413,15 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in Washington",
     benefitsSubtitle: "Look at the ways in which an emotional support animal letter in Washington can help individuals with mental health issues live happier and more confident lives with their ESAs.",
     financialBenefitsHeading: "Financial Benefits",
@@ -12457,11 +12466,11 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Items: [
       {
         title: "Reasonable Accommodation Requirement",
-        description: "Under the Fair Housing Act, housing providers must review ESA accommodation requests. Tenants with valid documentation may live with their emotional support animal despite standard pet restrictions.",
+        description: "Under the Fair Housing Act, housing providers must consider reasonable accommodation requests involving assistance animals in accordance with applicable law. HUD’s May 22, 2026, enforcement memorandum changed its stated enforcement approach for certain animal-related complaints, focusing on animals trained to perform disability-related work or tasks. The memorandum does not itself amend the Fair Housing Act.",
       },
       {
         title: "Documentation From Licensed Professionals",
-        description: "Housing providers may request credible documentation from a licensed mental health professional confirming the individual’s need for an emotional support animal due to a mental health condition.",
+        description: "There is no general federal requirement to renew an ESA letter every 12 months. Housing providers may request reliable additional information when legally justified by the circumstances of an accommodation request.",
       },
       {
         title: "Equal Housing Opportunity Protections",
@@ -12483,8 +12492,8 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "Housing providers are expected to respond to ESA accommodation requests in a timely manner and communicate clearly with tenants during the review process.",
       },
     ],
-    legalNotice: "Important Legal Notice: Under the Fair Housing Act, emotional support animals may be allowed in housing in Washington with proper documentation. However, the Americans with Disabilities Act generally does not grant ESAs public access rights like service animals. Many airlines also treat ESAs as pets and are not required to recognize them under the Air Carrier Access Act.",
-    scamsTitle: "ESA Letter Washington : Facts and Common Misconceptions",
+    legalNotice: "Under the Fair Housing Act, emotional support animals may be allowed in housing in Washington with proper documentation. However, the Americans with Disabilities Act generally does not grant ESAs public access rights like service animals. Many airlines also treat ESAs as pets and are not required to recognize them under the Air Carrier Access Act.",
+    scamsTitle: "ESA Letter Washington: Facts and Common Misconceptions",
     scamsSubtitle: "Understanding the actual guidelines for emotional support animals in Washington can help to eliminate common misconceptions. Learning how ESA documentation works promotes responsible requests and ensures that they are consistent with professional evaluations and housing accommodation standards.",
     scamsAlertTitle: "Important: ESA Registries Are Not Official",
     scamsAlertText: "There is no official ESA registry, ID, or certification maintained by any government agency in Washington or the United States. Only a licensed mental health professional can issue a valid ESA letter.",
@@ -12506,11 +12515,11 @@ export const STATES_DATA: Record<string, StateData> = {
     scamsCommonTitle: "Common ESA Scams in Washington",
     scamsCommonSubtitle: "Be aware of platforms or services that:",
     scamsCommonItems: [
-      "Claim there is an “official ESA registry” in Washington.",
-      "Sell instant ESA certificates, badges, or laminated ID cards.",
-      "Promise approval without a proper mental health evaluation.",
-      "Do not involve a licensed Washington mental health professional.",
-      "Guarantee automatic approval for housing accommodations.",
+      "Claim there is an “official ESA registry” in Washington",
+      "Sell instant ESA certificates, badges, or laminated ID cards",
+      "Promise approval without a proper mental health evaluation",
+      "Do not involve a licensed Washington mental health professional",
+      "Guarantee automatic approval for housing accommodations",
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Washington",
     psdVsEsaSubtitle: "It is critical to understand the distinctions between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Washington. While both help people with mental health issues, their training requirements, legal protections, and roles are very different.",
@@ -12623,7 +12632,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nWashington ESA Evaluation?",
-    ctaSubtitle: "Connect with a Washington-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a Washington-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in Washington?" },
@@ -12723,7 +12732,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Evaluations performed only by Wisconsin-licensed mental health professionals.",
       "ESA letters in Wisconsin are issued only after clinical assessment.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they must affirm that you have an eligible diagnosis.",
+    processNote: "Note: An ESA letter should be based on an appropriate individual evaluation. Telehealth consultations must comply with applicable privacy and security requirements. When supporting documentation is necessary for a housing accommodation, it should provide reliable information about the individual’s disability-related need for an assistance animal. Disclosure of a specific diagnosis is not universally required.",
     whoQualifiesTitle: "Who May Qualify for an ESA Letter Wisconsin?",
     whoQualifiesSubtitle: "In Wisconsin, those who are applying for an ESA letter usually need to get a professional mental health evaluation if emotional or psychological issues start to get in the way of everyday activities, concentration, or general functioning. Typical conditions that are taken into consideration include, but are not restricted to:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -12749,7 +12758,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/whomayqualifies-panicattack.svg",
       },
     ],
-    whoQualifiesNote: "Note: The presence of a mental health condition alone does not qualify someone for ESA documentation. A North Carolina licensed therapist or clinician must verify the diagnosis and the therapeutic need for an emotional support animal.",
+    whoQualifiesNote: "Note: The presence of a mental health condition alone does not qualify someone for ESA documentation. A Wisconsin-licensed therapist or clinician must verify the diagnosis and the therapeutic need for an emotional support animal.",
     requirementsTitle: "Basic Requirements for an ESA Letter Wisconsin",
     requirementsIntro: "To qualify for an ESA letter in Wisconsin, individuals must meet certain requirements. Some of these include:",
     requirementsItems: [
@@ -12759,7 +12768,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "The potential therapeutic benefits of the ESA are evaluated based on the individual’s specific mental health needs.",
       "The applicant must currently live in Wisconsin or plan to relocate to the state.",
     ],
-    requirementsNote: "Important: ESA letters are issued after a comprehensive, customized clinical evaluation by a registered mental health practitioner in Wisconsin.",
+    requirementsNote: "Important: ESA letters are issued after an individualized clinical evaluation by a qualified healthcare professional to determine whether an emotional support animal is appropriate for the individual’s circumstances. HUD’s May 22, 2026, enforcement memorandum changed its stated approach to certain assistance-animal complaints under the Fair Housing Act, focusing enforcement on animals trained to perform disability-related work or tasks. The memorandum changes HUD’s enforcement approach but does not amend the Fair Housing Act itself.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Wisconsin?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in Wisconsin while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -12807,7 +12816,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Lower Stress-Related Expenses",
-        description: "An ESA may minimize medical expenses by reducing stress and anxiety. This translates into fewer doctor visits, prescription drugs, or therapy sessions for diseases linked to stress in Wisconsin.",
+        description: "An emotional support animal may provide companionship and emotional comfort to some individuals. The extent of any benefit varies by person, and an ESA should not be assumed to reduce medical expenses or replace prescribed treatment.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
@@ -12840,11 +12849,11 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Items: [
       {
         title: "Fair Housing Act (FHA) Protections",
-        description: "Tenants with mental or emotional problems are guaranteed the ability to reside with their support animals in Wisconsin by the FHA. Due to an ESA, landlords are unable to impose strict “no-pet” policies or refuse tenants accommodation. In order to assist tenants’ mental health and guarantee equal access to housing options, reasonable accommodations must be made.",
+        description: "Under the Fair Housing Act and Wisconsin’s fair housing law, eligible individuals with disabilities may request reasonable accommodations for emotional support animals, including exceptions to no-pet policies. Housing providers must assess requests under applicable law. Approval is not automatic, and legally recognized grounds for denial may apply.",
       },
       {
         title: "HUD Guidance for Emotional Support Animals",
-        description: "HUD clarifies that emotional support animals are not pets but necessary aids for qualifying tenants. Landlords are required to make reasonable adjustments and take into account ESA documentation from a qualified professional.",
+        description: "HUD’s May 22, 2026, enforcement memorandum changed its stated approach to certain assistance-animal complaints under the Fair Housing Act, focusing enforcement on animals trained to perform disability-related work or tasks. The memorandum changes HUD’s enforcement approach but does not itself amend the Fair Housing Act. Housing accommodation requests remain subject to applicable federal and state law.",
       },
       {
         title: "Section 504 of the Rehabilitation Act",
@@ -12859,14 +12868,14 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Avoid Unnecessary Barriers",
-        description: "Landlords are not allowed to impose additional regulations, charge pet fees, or require emotional support animals to undergo specialized training. Providers should not treat ESAs like pets since they are not. Unless the animal directly endangers human safety, it is their duty to permit reasonable accommodations.",
+        description: "Housing providers must consider reasonable accommodation requests for qualifying assistance animals under applicable law. They generally may not impose pet fees for an approved assistance-animal accommodation is prohibited by law. A request may be denied on legally recognized grounds, including an undue financial and administrative burden, a fundamental alteration, an unmitigable direct threat, or substantial property damage.",
       },
       {
         title: "Maintain Safe and Respectful Housing",
         description: "Housing providers can still maintain the property’s safety and upkeep while permitting ESAs. Tenants are accountable for the behavior of their animals and any harm they may cause. Tenants with disabilities must not face discrimination when providers respond to valid concerns.",
       },
     ],
-    legalNotice: "Emotional support animals are permitted in Wisconsin homes under the Fair Housing Act as a reasonable accommodation for people with qualifying disabilities. Even in properties with no-pet policy, landlords are required to allow ESAs as long as the necessary paperwork is submitted.",
+    legalNotice: "Emotional support animals may qualify as reasonable accommodations in housing for individuals with disabilities who have a disability-related need for the animal. A request must be assessed under applicable fair housing law, and submitting documentation does not guarantee approval in every situation.",
     scamsTitle: "Wisconsin ESA Letters: What’s True and What’s Not",
     scamsSubtitle: "Wisconsin residents must stay clear of fraud and fake promises by being aware of their rights regarding emotional support animals (ESAs).",
     scamsAlertTitle: "Important Notice: There Is No Official ESA Registry in Wisconsin",
@@ -12914,6 +12923,15 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     pricingTitle: "The Cost of an ESA Letter in Wisconsin",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -12986,7 +13004,7 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "Can My ESA Be A Non-Traditional Animal In Wisconsin, Like A Miniature Pig Or Bird?",
-        a: "Yes, any animal can qualify as an ESA if a licensed mental health professional documents your need. Landlords can only deny it if the animal poses a direct threat or health risk.",
+        a: "Yes. An animal may qualify as an ESA when the applicable legal requirements are met and the animal addresses a disability-related need. Housing providers may assess requests involving the specific animal and may deny an accommodation on legally recognized grounds, including an undue burden, a fundamental alteration, an unmitigable direct threat, or substantial property damage.",
       },
       {
         q: "What Happens If A Wisconsin Landlord Violates My ESA Letter Rights?",
@@ -13002,15 +13020,15 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Can I Have More Than One ESA In Wisconsin?",
-        a: "Yes, multiple ESAs are allowed if each is necessary for your mental or emotional health. Landlords can review the genuine documentation but cannot put a limit on the number.",
+        a: "More than one emotional support animal may be covered when each animal is supported by a disability-related need. Housing providers may assess the request for each animal under applicable law and consider legally recognized grounds for denial. There is no blanket rule requiring approval of every request for multiple animals.",
       },
       {
         q: "Can I Use My Wisconsin ESA Letter In Other U.S. States?",
-        a: "No. If you move out or relocate to a different state, it is mandatory to get a genuine ESA letter issued by a mental health professional licensed in that particular state. Out-of-state ESA letters do not work.",
+        a: "An ESA letter may support a housing accommodation request after a move to another state. The new housing provider may assess the request under applicable law and request reliable supporting information when legally necessary. Federal law does not universally require a new ESA letter solely because someone relocates.",
       },
     ],
     ctaTitle: "Ready to Start Your Wisconsin ESA Evaluation?",
-    ctaSubtitle: "Connect with a Wisconsin-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a Wisconsin-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in Wisconsin?" },
@@ -13107,9 +13125,9 @@ export const STATES_DATA: Record<string, StateData> = {
       "No assurances of instant or guaranteed ESA approvals.",
       "Secure telehealth platform designed to comply with HIPAA privacy.",
       "Evaluations completed by licensed mental health professionals in Wyoming.",
-      "ESA documentation issued only when the clinician determines there is need for an emotional support animal.",
+      "ESA documentation issued only when the clinician determines there is need for an emotional support animal",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they must affirm that you have an eligible diagnosis.",
+    processNote: "Note: An ESA recommendation should be based on an individualized assessment by a qualified professional. For housing accommodation requests, documentation should reliably establish the individual’s disability-related need for an emotional support animal. A specific diagnosis generally does not need to be disclosed to the housing provider.",
     whoQualifiesTitle: "Who May Be Considered For ESA Documentation in Wyoming?",
     whoQualifiesSubtitle: "To ensure privacy and confidentiality, all consultations are conducted via secure, HIPAA-compliant telehealth systems. During the assessment, a licensed clinician discusses mental health issues that may affect daily life and functioning. Such conditions include, but are not limited to:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -13145,7 +13163,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "The clinician assesses whether an emotional support animal may provide supportive benefits based on the person’s circumstances.",
       "The individual resides in Wyoming or intends to relocate to the state.",
     ],
-    requirementsNote: "Important: A formal evaluation must be carried out by a licensed mental health professional to determine whether issuing an ESA letter Wyoming is suitable for the individual’s specific situation.",
+    requirementsNote: "Important: A licensed mental health professional should evaluate whether an ESA letter is appropriate for the individual’s circumstances. HUD Update (May 22, 2026) announced a narrower enforcement approach, focusing on cases involving animals trained to perform disability-related tasks. This is an enforcement policy, not a change to the Fair Housing Act, and does not automatically eliminate all housing protections for ESAs.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Wyoming?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in Wyoming while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -13252,7 +13270,7 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "Property owners may raise concerns if an animal causes significant property damage or safety risks, but decisions must rely on specific evidence rather than assumptions.",
       },
     ],
-    legalNotice: "According to the Fair Housing Act, emotional support animals may be permitted in housing in Wyoming if the necessary paperwork is presented. However, under the Americans with Disabilities Act, ESAs often do not have the same rights to public access as certified service animals.",
+    legalNotice: "",
     scamsTitle: "Wyoming ESA Letter: Truths and Misunderstandings",
     scamsSubtitle: "Understanding the real guidelines for emotional support animals in Wyoming can help people avoid common misunderstandings. Knowing how ESA documentation works helps ensure that requests adhere to professional evaluation practices and housing accommodation standards.",
     scamsAlertTitle: "Important: ESA Registries Are Not Official",
@@ -13275,11 +13293,11 @@ export const STATES_DATA: Record<string, StateData> = {
     scamsCommonTitle: "Common ESA Scams to Watch For",
     scamsCommonSubtitle: "Be aware of platforms or services that:",
     scamsCommonItems: [
-      "Claim there is an “official ESA registry” in Wyoming.",
-      "Sell instant ESA certificates, badges, or laminated ID cards.",
-      "Promise approval without a proper mental health evaluation.",
-      "Do not involve a licensed Wyoming mental health professional.",
-      "Guarantee automatic approval for housing accommodations.",
+      "Claim there is an “official ESA registry” in Wyoming",
+      "Sell instant ESA certificates, badges, or laminated ID cards",
+      "Promise approval without a proper mental health evaluation",
+      "Do not involve a licensed Wyoming mental health professional",
+      "Guarantee automatic approval for housing accommodations",
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Wyoming",
     psdVsEsaSubtitle: "It’s important to understand the distinctions between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Wyoming. While both help individuals with mental health challenges, their training requirements, legal protections, and roles differ significantly.",
@@ -13298,6 +13316,15 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     pricingTitle: "The Cost of an ESA Letter in Wyoming",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -13370,7 +13397,7 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "Do ESA Letters In Wyoming Expire?",
-        a: "No. While there are no specific expiry dates on Wyoming ESA letters, landlords may ask for updated documentation issued within the last 12 months to confirm the most recent diagnoses.",
+        a: "No universal annual renewal requirement applies to ESA letters under federal fair housing law. A housing provider may request reliable information when reasonably necessary to evaluate a disability-related accommodation request.",
       },
       {
         q: "What Should You Expect When Paying For An ESA Letter In Wyoming?",
@@ -13394,7 +13421,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your Wyoming ESA Evaluation?",
-    ctaSubtitle: "Connect with a Wyoming-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a Wyoming-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in Wyoming?" },
@@ -17472,6 +17499,15 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in Utah",
     benefitsSubtitle: "Know how having an ESA letter in Utah can support your well-being and make your daily routine with your companion animal stress-free and manageable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -17856,6 +17892,15 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in South Carolina",
     benefitsSubtitle: "Know how an emotional support animal letter in South Carolina can help people with mental health issues live happier, more confident lives with their ESA.",
     financialBenefitsHeading: "Financial Benefits",
@@ -18165,7 +18210,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-compliant system.",
       "ESA letters signed by a mental health expert.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they must affirm that you have an eligible diagnosis.",
+    processNote: "Note: ESA recommendations should be based on an individualized assessment by a qualified professional. For housing accommodation requests, reliable documentation may be requested when the disability or disability-related need is not readily apparent or already known. Documentation should support the disability-related need for the assistance animal, but a specific diagnosis does not necessarily need to be disclosed. My ESA Therapist issues letters only when the evaluating clinician independently determines that a recommendation is appropriate.",
     whoQualifiesTitle: "Who May Qualify For an ESA Letter in Virginia?",
     whoQualifiesSubtitle: "Clinicians may evaluate individuals for mental or emotional health conditions that interfere with daily functioning and day-to-day activities. Evaluations are conducted on an individual basis and may reference DSM-5-TR criteria as part of a licensed clinician’s professional assessment.",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -18201,7 +18246,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Animal’s role in providing emotional support is assessed on an individual basis.",
       "Ability to care for the animal responsibly.",
     ],
-    requirementsNote: "Important: An ESA evaluation must be conducted by a Virginia-licensed mental health professional, and an ESA letter is provided only if the clinician independently determines eligibility.",
+    requirementsNote: "Important: An ESA evaluation must be conducted by a Virginia-licensed mental health professional, and an ESA letter is provided only if the clinician independently determines eligibility. HUD’s May 22, 2026, enforcement memorandum changes how its Office of Fair Housing and Equal Opportunity handles assistance-animal complaints under the Fair Housing Act, focusing enforcement on animals trained to perform disability-related work or tasks. The memorandum changes HUD’s enforcement approach but does not amend the Fair Housing Act itself.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Virginia?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in Virginia while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -18240,8 +18285,17 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "What Benefits You Get With an ESA Letter in Virginia?",
-    benefitsSubtitle: "Understand how your emotional support animal recommendation offers you legal rights to stay with your pet and manage your emotional well-being. Additionally, it may help reduce financial burdens related to pet housing fees.",
+    benefitsSubtitle: "An ESA recommendation may support a request for reasonable accommodation in housing when the individual meets the applicable legal requirements. Approval is not automatic, and the outcome depends on the circumstances of the request.",
     financialBenefitsHeading: "Financial Benefits",
     financialBenefits: [
       {
@@ -18255,8 +18309,8 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
-        title: "Avoidance of Breed Size Restrictions",
-        description: "Housing providers may not apply size or breed restrictions when an individual provides valid ESA documentation. However, housing providers may deny an accommodation if the animal poses a direct threat to health or safety that cannot be reasonably mitigated.",
+        title: "Individualized Assessment of Breed and Size Concerns",
+        description: "Housing providers must evaluate assistance-animal accommodation requests individually. Under Virginia law, a decision cannot be based solely on the animal’s breed, size, or type. A request may be denied on applicable legal grounds, including a clear and present threat of substantial harm that cannot be reduced or eliminated through a reasonable accommodation.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
@@ -18284,11 +18338,11 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Items: [
       {
         title: "Federal Fair Housing Act (FHA)",
-        description: "Sets nationwide housing standards that allow individuals with a qualifying need to request reasonable accommodation for an emotional support animal, subject to fair housing review and documentation requirements.",
+        description: "The Fair Housing Act prohibits disability-based housing discrimination and provides a basis for requesting reasonable accommodations. HUD’s May 22, 2026, enforcement memorandum changes how its Office of Fair Housing and Equal Opportunity handles animal-related accommodation complaints. It does not amend the text of the FHA.",
       },
       {
         title: "Virginia Fair Housing Law (VFHL)",
-        description: "Enforces fair housing standards within Virginia by applying federal fair housing principles at the state level and clarifying how ESA accommodation requests are reviewed locally.",
+        description: "Virginia law separately addresses assistance-animal accommodations in housing. Under Virginia Code §§ 36-96.3:1 and 36-96.3:2, housing providers must assess requests according to the applicable legal requirements, including the disability-related need, relevant documentation, and permissible grounds for denial.",
       },
       {
         title: "Covered Housing Scope",
@@ -18310,11 +18364,11 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "Providers may request reliable documentation supporting the ESA need but must not demand excessive medical records or impose requirements beyond what state and federal fair housing laws allow.",
       },
     ],
-    legalNotice: "Important Legal Notice: Just like service animals, ESAs do not have public-access rights. This means entry to stores, restaurants, and airlines depends on individual policies, so always cross check before visiting or traveling.",
+    legalNotice: "Emotional support animals do not have the general public-access rights granted to qualifying service animals under the Americans with Disabilities Act (ADA). Stores and restaurants generally are not required to admit an ESA as a service animal. Airlines are also not required to treat ESAs as service animals, although they may allow them under their pet-travel policies.",
     scamsTitle: "Virginia ESA Scams: What’s Real vs. Fake",
     scamsSubtitle: "Knowing what is legally valid and legitimate helps individuals make informed decisions and avoid ESA-related scams.",
     scamsAlertTitle: "Important: No Official ESA Registry Exists",
-    scamsAlertText: "There is no official ESA registry or certification applicable in Virginia or in any US state. Your ESA letter is valid only when written and signed by a Virginia-licensed mental health professional.",
+    scamsAlertText: "There is no official government ESA registry or certification system in Virginia. An identification card or registration does not independently establish eligibility for a housing accommodation. Supporting documentation should reliably address the disability and the disability-related need for the animal when such documentation is permitted or required.",
     scamsWhatYouNeedTitle: "What You Actually Need",
     scamsWhatYouNeedItems: [
       {
@@ -18326,8 +18380,8 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "An ESA letter may be issued based on the evaluation if the Virginia clinician finds appropriate.",
       },
       {
-        title: "Ongoing Therapeutic Relationship",
-        description: "ESA eligibility must be determined within a continuing provider-patient relationship, not through a one-time or automated assessment.",
+        title: "Individualized Professional Assessment",
+        description: "ESA recommendations should be based on an appropriate, individualized assessment rather than automatic approval. Virginia law recognizes documentation from a person with whom the individual has or has had a therapeutic relationship, but it does not establish a continuing therapy relationship as a universal prerequisite for every assistance-animal housing request.",
       },
     ],
     scamsCommonTitle: "Common ESA Scams in Virginia",
@@ -18433,12 +18487,12 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "In Virginia, ESA letter pricing varies by provider, but most reputable services generally fall within the $149–$199 range for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
       },
       {
-        q: "Can I have more than one ESA in Virginia?",
-        a: "Yes. Virginia residents may request accommodation for more than one ESA if a licensed healthcare provider determines each animal is necessary and reasonable under fair housing laws.",
+        q: "Can I request accommodation for more than one ESA in Virginia?",
+        a: "Yes. An individual may request accommodation for more than one assistance animal when each animal has a disability-related role. Each request is assessed under applicable fair housing law, and approval is not automatic.",
       },
       {
-        q: "Are parents required to participate in a child’s ESA process in Virginia?",
-        a: "Yes. Parental or legal guardian involvement is required throughout the ESA process, including evaluation and documentation, because minors cannot consent independently.",
+        q: "Are parents required to participate in a child's ESA evaluation in Virginia?",
+        a: "Requirements depend on the minor's circumstances, the nature of the service, and the provider's policies. Virginia law permits minors to consent independently to certain outpatient mental health services. Contact the provider in advance to confirm its consent and participation requirements for an ESA evaluation.",
       },
       {
         q: "Can an ESA live in student housing in Virginia?",
@@ -18446,7 +18500,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your\nVirginia ESA Evaluation?",
-    ctaSubtitle: "Connect with a Virginia-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a Virginia-licensed mental health professional today for a legitimate, hassle-free ESA letter evaluation.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in Virginia?" },
@@ -18545,7 +18599,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Evaluations conducted by licensed mental health professionals in West Virginia.",
       "ESA documentation issued only when the clinician determines a legitimate clinical need for an emotional support animal",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they must affirm that you have an eligible diagnosis.",
+    processNote: "Note: An ESA letter should be based on an appropriate individual evaluation. Telehealth consultations must comply with applicable privacy and security requirements. When supporting documentation is necessary, it should provide reliable information about the individual’s disability-related need for an assistance animal; disclosure of a specific diagnosis is not universally required.",
     whoQualifiesTitle: "Who May Qualify For an ESA Letter in West Virginia?",
     whoQualifiesSubtitle: "All consultations are conducted via secure, HIPAA-compliant telehealth platforms to ensure privacy. During the evaluation, a licensed clinician reviews mental health concerns that could affect daily life and overall functioning. These may include, but are not limited to:",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -18581,7 +18635,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "The clinician assesses whether an emotional support animal could provide meaningful support.",
       "The individual resides in West Virginia or intends to relocate to the state.",
     ],
-    requirementsNote: "Important: A licensed mental health professional must conduct a formal evaluation to determine whether issuing an ESA letter in West Virginia is appropriate based on the individual’s circumstances.",
+    requirementsNote: "Important: A licensed mental health professional must conduct an appropriate individual evaluation to determine whether issuing an ESA letter is clinically appropriate based on the individual’s circumstances. HUD’s May 22, 2026, enforcement memorandum changed its stated approach to certain assistance-animal complaints under the Fair Housing Act, focusing enforcement on animals trained to perform disability-related work or tasks. The memorandum changes HUD’s enforcement approach but does not amend the Fair Housing Act itself.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in West Virginia?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in West Virginia while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -18662,7 +18716,7 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Items: [
       {
         title: "Reasonable Accommodation Requests",
-        description: "The Fair Housing Act says that people in West Virginia who need an emotional support animal can ask for housing accommodations, even if the property normally doesn’t allow pets. Housing providers look at each of these requests one at a time.",
+        description: "Under the Fair Housing Act and the West Virginia Fair Housing Act, eligible individuals may request reasonable accommodations for assistance animals, including exceptions to no-pet policies. When the disability-related need is not apparent, housing providers may request appropriate supporting documentation from a professional treatment provider establishing the need for the animal.",
       },
       {
         title: "Verification of Supporting Documents",
@@ -18670,7 +18724,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Equal Housing Consideration",
-        description: "Federal housing rules say that landlords should treat requests for housing fairly and without bias. This means that people with emotional support animals should have the same housing options as other tenants.",
+        description: "Housing providers must consider reasonable accommodation requests in accordance with applicable fair housing laws. Approval depends on the circumstances of the request and any legally recognized grounds for denial.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
@@ -18688,7 +18742,7 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "Even though ESA-related pet fees might not apply, tenants are still responsible for any damage their pet does, just like with normal housing rules.",
       },
     ],
-    legalNotice: "Important Legal Notice: Emotional support animals are mostly considered for housing, and they don’t have the same rights to public access as service animals do under the Americans with Disabilities Act of 1990. Most of the time, pets aren’t allowed in restaurants, stores, or other public places where pets aren’t allowed. Airline regulations can differ, so travelers should review the latest airline guidelines before flying with an emotional support animal.",
+    legalNotice: "Emotional support animals are mostly considered for housing, and they don’t have the same rights to public access as service animals do under the Americans with Disabilities Act of 1990. Most of the time, pets aren’t allowed in restaurants, stores, or other public places where pets aren’t allowed. Airline regulations can differ, so travelers should review the latest airline guidelines before flying with an emotional support animal.",
     scamsTitle: "ESA Scams in West Virginia: Fake vs. Reality",
     scamsSubtitle: "Understanding what is, and is not, required can help individuals avoid fake services and excess costs.",
     scamsAlertTitle: "Important: ESA Registries Are Not Official",
@@ -18711,11 +18765,11 @@ export const STATES_DATA: Record<string, StateData> = {
     scamsCommonTitle: "Common ESA Scams in West Virginia",
     scamsCommonSubtitle: "Be aware of platforms or services that:",
     scamsCommonItems: [
-      "Claim there is an “official ESA registry” in West Virginia.",
-      "Sell instant ESA certificates, badges, or laminated ID cards.",
-      "Promise approval without a proper mental health evaluation.",
-      "Do not involve a licensed West Virginia mental health professional.",
-      "Guarantee automatic approval for housing accommodations.",
+      "Claim there is an “official ESA registry” in West Virginia",
+      "Sell instant ESA certificates, badges, or laminated ID cards",
+      "Promise approval without a proper mental health evaluation",
+      "Do not involve a licensed West Virginia mental health professional",
+      "Guarantee automatic approval for housing accommodations",
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in West Virginia",
     psdVsEsaSubtitle: "It is critical to understand the differences between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in West Virginia. While both assist people with mental health issues, their training requirements, legal protections, and roles are vastly different.",
@@ -18734,6 +18788,15 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     pricingTitle: "The Cost of an ESA Letter in West Virginia",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -18818,11 +18881,11 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Do ESA Letters Expire In West Virginia?",
-        a: "While federal law does not set a fixed expiration date, many housing providers request an updated ESA letter annually to confirm continued clinical need.",
+        a: "Federal fair housing law does not establish a universal annual renewal requirement for ESA letters. Whether additional documentation is appropriate depends on the circumstances and applicable legal requirements.",
       },
       {
         q: "Is An ESA Letter Valid If I Move To Another State?",
-        a: "An ESA letter may still be recognized under federal housing laws, but housing providers might request updated documentation from a professional licensed in your new state.",
+        a: "An ESA letter may support a housing accommodation request after a move, but the new housing provider may assess the request under applicable law and request reliable supporting information when legally necessary. Federal law does not universally require a new ESA letter solely because someone moves to another state.",
       },
       {
         q: "Can A Landlord Ask About My Medical Diagnosis?",
@@ -18830,7 +18893,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     ctaTitle: "Ready to Start Your West Virginia ESA Evaluation?",
-    ctaSubtitle: "Connect with a West Virginia-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaSubtitle: "Connect with a West Virginia-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in West Virginia?" },

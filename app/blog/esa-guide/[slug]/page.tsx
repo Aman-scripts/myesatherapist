@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { serializeLd } from "@/lib/site";
 import { notFound } from "next/navigation";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -128,7 +129,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
       {/* Article Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(articleSchema, `blog-${article.slug}`)) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(articleSchema, `blog-${article.slug}`)) }}
       />
 
       <TopBanner />

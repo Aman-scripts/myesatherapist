@@ -79,6 +79,11 @@ const DOC_PRICING_SLUGS = new Set([
   "south-dakota",
   "texas",
   "utah",
+  "virginia",
+  "washington",
+  "west-virginia",
+  "wisconsin",
+  "wyoming",
 ]);
 
 const DOC_DATA_PLAN_SLUGS = new Set([
@@ -121,6 +126,11 @@ const DOC_DATA_PLAN_SLUGS = new Set([
   "south-dakota",
   "texas",
   "utah",
+  "virginia",
+  "washington",
+  "west-virginia",
+  "wisconsin",
+  "wyoming",
 ]);
 
 export function StatePricingSection({ data }: StatePricingSectionProps) {

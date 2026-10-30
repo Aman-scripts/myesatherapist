@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { serializeLd } from "@/lib/site";
 import { notFound } from "next/navigation";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -150,13 +151,13 @@ export default async function DoctorInternalPage({ params }: PageProps) {
           <script
             key={index}
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+            dangerouslySetInnerHTML={{ __html: serializeLd(schemaObj) }}
           />
         ))
       ) : (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }}
+          dangerouslySetInnerHTML={{ __html: serializeLd(doctorSchema) }}
         />
       )}
 

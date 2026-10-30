@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -46,7 +47,7 @@ export default function BlogHubPage() {
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(blogSchema, "blog-hub-page")) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(blogSchema, "blog-hub-page")) }}
       />
 
       <TopBanner />

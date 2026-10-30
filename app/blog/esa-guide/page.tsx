@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -83,7 +84,7 @@ export default function EsaGuidePage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(schemaObj, "esa-guide")) }}
+          dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(schemaObj, "esa-guide")) }}
         />
       ))}
 

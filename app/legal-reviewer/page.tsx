@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -95,7 +96,7 @@ export default function LegalReviewerPage() {
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalReviewerSchema) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(legalReviewerSchema) }}
       />
 
       {/* Top Banner & Header */}

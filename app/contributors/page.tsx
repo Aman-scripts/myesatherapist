@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -49,7 +50,7 @@ export default function ContributorsPage() {
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }}
+          dangerouslySetInnerHTML={{ __html: serializeLd(schemaObj) }}
         />
       ))}
 

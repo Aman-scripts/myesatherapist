@@ -5,6 +5,7 @@ import { ThirdPartyErrorHandler } from "@/components/common/ThirdPartyErrorHandl
 import { GlobalDesktopScaler } from "@/components/common/GlobalDesktopScaler";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { SITE_URL } from "@/lib/site";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -25,6 +26,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   robots: {
     index: false,
     follow: false,
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
     title: "My ESA Therapist | Official ESA Letters from Licensed Therapists",
     description:
       "Qualify online in 2 minutes. State-licensed therapists, 100% legal under Fair Housing Act, no pet rent, money-back guarantee.",
-    url: "https://myesatherapist.com",
+    url: SITE_URL,
     siteName: "My ESA Therapist",
     locale: "en_US",
     type: "website",

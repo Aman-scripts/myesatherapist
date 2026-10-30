@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
@@ -108,7 +109,7 @@ export default async function DynamicStatePage({ params }: Props) {
       {data.schema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(withFeatureImage(data.schema, `state-${data.slug}`)) }}
+          dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(data.schema, `state-${data.slug}`)) }}
         />
       )}
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ALL_POLICIES_LIST, getPolicyBySlug, POLICIES_DATA } from "@/data/policiesData";
@@ -262,7 +263,7 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
     <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-current">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeLd(jsonLd) }}
       />
       {/* Top Announcement Banner & Header */}
       <TopBanner />
