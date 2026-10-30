@@ -22,27 +22,23 @@ export function DoctorConditionsSection({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header: eyebrow + heading, description below */}
-        <div className="space-y-3 lg:space-y-4 mb-10 lg:mb-14 max-w-[820px]">
-          <p className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-primary">
-            Areas of Focus
-          </p>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight tracking-[-0.006em]">
+        <div className="text-center space-y-3 lg:space-y-4 mb-10 lg:mb-14 max-w-[860px] mx-auto">
+          <h2 className="heading-h2 text-primary">
             {conditionsData.heading}
           </h2>
-          <p className="text-body-text text-base sm:text-lg font-semibold leading-relaxed">
+          <p className="body-large text-body-text">
             {conditionsData.description}
           </p>
         </div>
 
-        {/* Condition cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {conditionsData.conditions.map((condition) => (
             <div
               key={condition}
-              className="bg-white rounded-[10px] border border-[#E4E4E4] border-l-4 border-l-accent px-5 sm:px-6 py-5 sm:py-6"
+              className="bg-[#F7F3EC] rounded-[16px] shadow-[0px_1px_4px_rgba(0,0,0,0.06)] flex items-center overflow-hidden min-h-[64px]"
             >
-              <span className="font-sans font-bold text-[15px] sm:text-[16px] text-primary">
+              <div className="w-[8px] self-stretch bg-accent shrink-0" />
+              <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-primary px-5 py-4">
                 {condition}
               </span>
             </div>

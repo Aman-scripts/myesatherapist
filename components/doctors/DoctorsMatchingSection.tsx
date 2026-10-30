@@ -6,51 +6,21 @@ import Image from "next/image";
 export function DoctorsMatchingSection() {
   const steps = [
     {
-      num: "01",
       title: "Start Evaluation",
-      desc: "Begin your secure online evaluation through our HIPAA-compliant platform.",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_howyouarematched_startevalutation.svg"
-          alt=""
-          width={24}
-          height={24}
-          className="w-6 h-6 object-contain"
-        />
-      ),
+      desc: "Begin your secure online ESA evaluation through our HIPAA-compliant platform, available to individuals in all 50 states.",
+      icon: "/ESA ICons/Icon-18.svg",
       desktopOffsetClass: "lg:translate-y-0",
     },
     {
-      num: "02",
       title: "Get Matched",
-      desc: "We connect you with a licensed professional authorized to practice in your state.",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_howyouarematched_getmatchec.svg"
-          alt=""
-          width={24}
-          height={24}
-          className="w-6 h-6 object-contain"
-        />
-      ),
+      desc: "We connect you with a licensed professional authorized to practice in your state, with telehealth sessions by video or phone.",
+      icon: "/ESA ICons/Icon-25.svg",
       desktopOffsetClass: "lg:translate-y-[40px]",
     },
     {
-      num: "03",
       title: "Receive Decision",
-      desc: "Your therapist provides their independent clinical assessment.",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_howyouarematched_receivedecision.svg"
-          alt=""
-          width={24}
-          height={24}
-          className="w-6 h-6 object-contain"
-        />
-      ),
+      desc: "Your therapist provides an independent clinical assessment. We do not influence clinical decisions. Approval is never guaranteed.",
+      icon: "/ESA ICons/Icon-46.svg",
       desktopOffsetClass: "lg:translate-y-[80px]",
     },
   ];
@@ -61,10 +31,10 @@ export function DoctorsMatchingSection() {
         
         {/* Frame 1000011447 (Header, gap: 8px) */}
         <div className="text-center mb-12 lg:mb-[80px] max-w-[987px] mx-auto flex flex-col items-center gap-[8px]">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-primary leading-[1.18] sm:leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] max-w-[742px]">
-            How You&apos;re Matched With a Provider
+          <h2 className="heading-h2 text-primary max-w-[742px]">
+            How You&apos;re Matched With A Provider
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-body-text leading-relaxed lg:leading-[30px] max-w-[987px]">
+          <p className="body-large text-body-text max-w-[987px]">
             When you begin an evaluation, you are matched with a licensed mental health professional authorized in your state.
           </p>
         </div>
@@ -74,28 +44,16 @@ export function DoctorsMatchingSection() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className={`w-full min-h-[225px] p-[24px_22px] bg-white rounded-[30px] shadow-[0px_1px_7px_rgba(0,0,0,0.08)] border border-[#EAE5DC]/60 flex flex-col justify-between transition-all duration-300 hover:shadow-md ${step.desktopOffsetClass}`}
+              className={`relative w-full min-h-[210px] mt-8 px-6 pb-6 pt-10 bg-white rounded-[24px] shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-end transition-all duration-300 hover:shadow-md ${step.desktopOffsetClass}`}
             >
-              {/* Frame 1000011971 (Header: 46px Circle Icon + Watermark Number) */}
-              <div className="flex items-center justify-between w-full h-[66px]">
-                {/* Frame 1000011969 - 46px Gradient Icon Badge */}
-                <div
-                  className="w-[46px] h-[46px] rounded-full flex items-center justify-center shrink-0 shadow-xs"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  {step.icon}
-                </div>
-
-                {/* 01 / 02 / 03 Step Number (Plus Jakarta Sans 700, 54px, 20% opacity) */}
-                <span aria-hidden="true" data-num={step.num} className="font-sans font-bold text-[50px] sm:text-[54px] leading-[66px] text-body-text opacity-20 select-none tracking-tight before:content-[attr(data-num)]" />
+              <div className="absolute -top-7 left-6 w-[58px] h-[58px] rounded-full bg-white shadow-[0px_2px_6px_rgba(0,0,0,0.12)] flex items-center justify-center">
+                <Image src={step.icon} alt="" width={28} height={28} unoptimized className="w-7 h-7 object-contain" />
               </div>
-
-              {/* Frame 1000011970 (Title + Description, gap: 8px) */}
-              <div className="flex flex-col items-start gap-[8px] w-full pt-3">
-                <h3 className="font-heading font-bold text-[22px] sm:text-[24px] leading-[30px] sm:leading-[32px] text-primary">
+              <div className="flex flex-col items-start gap-2 w-full">
+                <h3 className="heading-h4 text-primary">
                   {step.title}
                 </h3>
-                <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text">
+                <p className="body-text text-body-text">
                   {step.desc}
                 </p>
               </div>

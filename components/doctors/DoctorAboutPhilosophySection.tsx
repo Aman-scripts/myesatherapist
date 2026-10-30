@@ -41,14 +41,14 @@ export function DoctorAboutPhilosophySection({
           <div className="lg:col-span-2 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] space-y-4 sm:space-y-5">
 
             <div className="space-y-3 sm:space-y-4">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] font-bold text-primary leading-tight lg:leading-[50px] tracking-[-0.00015em]">
+              <h2 className="heading-h2 text-primary">
                 {aboutHeading}
               </h2>
               <div className="space-y-3">
                 {aboutParagraphs.map((para, idx) => (
                   <p
                     key={idx}
-                    className="font-sans font-semibold text-[15px] sm:text-[18px] text-body-text leading-[24px] sm:leading-[30px]"
+                    className="body-large text-body-text"
                   >
                     {para}
                   </p>
@@ -60,6 +60,7 @@ export function DoctorAboutPhilosophySection({
             <div className="pt-1">
               <CtaButton
                 href={ctaHref}
+                variant="accent"
                 className="w-[192px]"
               >
                 Get Started
@@ -68,19 +69,24 @@ export function DoctorAboutPhilosophySection({
           </div>
 
           {/* ── My Philosophy card (narrow tile) ── */}
-          <div className="lg:col-span-1 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] space-y-3 sm:space-y-4">
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] font-bold text-primary leading-tight lg:leading-[40px] tracking-[-0.00015em]">
+          <div className="lg:col-span-1 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col gap-4">
+            <h2 className="heading-h3 text-primary">
               {philosophyHeading}
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-3 flex-1">
               {philosophyParagraphs.map((para, idx) => (
                 <p
                   key={idx}
-                  className="font-sans font-semibold text-[15px] sm:text-[18px] text-body-text leading-[24px] sm:leading-[30px]"
+                  className="body-large text-body-text"
                 >
                   {para}
                 </p>
               ))}
+            </div>
+            <div className="pt-1">
+              <CtaButton href={ctaHref} variant="accent" className="w-[192px]">
+                Get Started
+              </CtaButton>
             </div>
           </div>
         </div>

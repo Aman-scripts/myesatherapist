@@ -7,55 +7,19 @@ export function DoctorsDisclosureSection() {
   const cards = [
     {
       text: "Providers listed are independent professionals, not employees making platform decisions",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_importantproviders_firstcards-icon.svg"
-          alt=""
-          width={32}
-          height={32}
-          className="w-8 h-8 object-contain"
-        />
-      ),
+      icon: "/ESA ICons/Icon-25.svg",
     },
     {
       text: "Provider availability varies by state & ESA approval is never guaranteed",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_importantproviders_restallthreecards-icon.svg"
-          alt=""
-          width={32}
-          height={32}
-          className="w-8 h-8 object-contain"
-        />
-      ),
+      icon: "/ESA ICons/Icon-44.svg",
     },
     {
-      text: "Evaluations are conducted based on state licensure requirements",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_importantproviders_restallthreecards-icon.svg"
-          alt=""
-          width={32}
-          height={32}
-          className="w-8 h-8 object-contain"
-        />
-      ),
+      text: "Evaluations are conducted by providers licensed in your state, based on state licensure requirements",
+      icon: "/ESA ICons/Icon-33.svg",
     },
     {
       text: "My ESA Therapist does not influence clinical decisions or documentation outcomes",
-      icon: (
-        <Image
-            quality={90}
-          src="/doctors/doctors_importantproviders_restallthreecards-icon.svg"
-          alt=""
-          width={32}
-          height={32}
-          className="w-8 h-8 object-contain"
-        />
-      ),
+      icon: "/ESA ICons/Icon-17.svg",
     },
   ];
 
@@ -65,10 +29,10 @@ export function DoctorsDisclosureSection() {
         
         {/* Frame: Heading (gap: 16px, height: 100px) */}
         <div className="flex flex-col items-center text-center gap-3 sm:gap-[16px] max-w-[854px] mx-auto mb-14 lg:mb-[67px]">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-primary leading-[1.18] sm:leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] max-w-[624px]">
+          <h2 className="heading-h2 text-primary max-w-[624px]">
             Important Provider Disclosure
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] text-body-text leading-[1.65] lg:leading-[30px] max-w-[854px]">
+          <p className="body-large text-body-text max-w-[854px]">
             How our network of independent professionals operates.
           </p>
         </div>
@@ -102,7 +66,7 @@ export function DoctorsDisclosureSection() {
                 className="absolute -top-[32px] left-1/2 -translate-x-1/2 w-[74.56px] h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center"
                 style={{ zIndex: 2 }}
               >
-                {card.icon}
+                <Image src={card.icon} alt="" width={32} height={32} unoptimized className="w-8 h-8 object-contain" />
               </div>
             </div>
           ))}
