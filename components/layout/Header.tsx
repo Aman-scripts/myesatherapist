@@ -258,7 +258,7 @@ export function Header() {
               { name: "Illinois", slug: "illinois" },
               { name: "Washington", slug: "washington" },
             ].map((st) => {
-              const href = `/${st.slug}`;
+              const href = `/esa-letter-${st.slug}/`;
               const isActive =
                 pathname === href ||
                 pathname === `/esa-${st.slug}` ||

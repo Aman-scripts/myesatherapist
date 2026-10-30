@@ -18,10 +18,10 @@ const companyLinks = [
 ];
 
 const quickLinks = [
-  { label: "ESA Letter Online", href: "#how-it-works" },
-  { label: "ESA Letter for Housing", href: "#housing" },
-  { label: "ESA Letter Renewal", href: "#renewal" },
-  { label: "ESA Letter by State", href: "#states" },
+  { label: "ESA Letter Online", href: "/esa-letter-online/" },
+  { label: "ESA Letter for Housing", href: "/esa-letter-for-housing/" },
+  { label: "ESA Letter Renewal", href: "/esa-letter-renewal/" },
+  { label: "ESA Letter by State", href: "/states/" },
   { label: "ESA Letter Cost", href: "/pricing/" },
   { label: "ESA FAQs", href: "/frequently-asked-questions/" },
   { label: "ESA Resources", href: "/blog/" },

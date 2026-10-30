@@ -47,12 +47,12 @@ export function StatesHeroSection() {
   const handleStateSelect = (slug: string) => {
     setSelectedState(slug);
     setIsDropdownOpen(false);
-    router.push(`/${slug}`);
+    router.push(`/esa-letter-${slug}/`);
   };
 
   const handleGetStarted = () => {
     if (selectedState) {
-      router.push(`/${selectedState}`);
+      router.push(`/esa-letter-${selectedState}/`);
     } else {
       const stateGrid = document.getElementById("choose-state-section");
       if (stateGrid) {

@@ -54,7 +54,7 @@ export function PsdHeroSection() {
   const handleStateSelect = (slug: string) => {
     setSelectedState(slug);
     setIsDropdownOpen(false);
-    router.push(`/${slug}`);
+    router.push(`/esa-letter-${slug}/`);
   };
 
   return (
