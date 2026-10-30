@@ -7,7 +7,7 @@ export function EsaTrainingLegalSection() {
     <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1065px] flex-col items-center gap-8 px-4 sm:px-8 lg:px-[5vw] xl:gap-8 xl:px-0">
         <div className="flex w-full flex-col items-center gap-8">
-          <SectionHeader title="Is ESA Training Required by Law?" />
+          <SectionHeader title="Is ESA Training Required By Law?" />
           <GoldPill title="2026">
             HUD enforcement now prioritizes trained, task-specific animals — but valid ESA letters still matter for
             housing.
@@ -34,7 +34,7 @@ export function EsaTrainingLegalSection() {
 
         <GoldPill>If your letter isn&apos;t current, this is a good time to renew it.</GoldPill>
 
-        <CtaButton href="/pricing/">Renew your ESA Letter Now</CtaButton>
+        <CtaButton href="/pricing/">Renew Your ESA Letter Now</CtaButton>
       </div>
     </section>
   );

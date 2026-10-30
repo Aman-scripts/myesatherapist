@@ -34,7 +34,7 @@ export function VideoTestimonialsTrustBar() {
         {ITEMS.map((item, index) => (
           <div key={item.label} className="flex items-center w-full sm:flex-1 min-w-0">
             {index > 0 && (
-              <div className="hidden sm:block w-px h-14 bg-[#E4DFD6] shrink-0" />
+              <div className="hidden sm:block w-px h-16 bg-[#E4DFD6] shrink-0" />
             )}
             <div className="flex items-center justify-center gap-3 sm:gap-4 w-full py-2 sm:py-0 sm:px-5">
               <div className={`relative shrink-0 ${item.iconClass}`}>
@@ -47,10 +47,10 @@ export function VideoTestimonialsTrustBar() {
                 />
               </div>
               <div className="flex flex-col items-start">
-                <span className="font-heading font-bold text-[22px] leading-[28px] text-[#1A3D4F]">
+                <span className="heading-h2 text-[#1A3D4F]">
                   {item.value}
                 </span>
-                <span className="font-sans font-medium text-[14px] leading-[20px] text-[#5F6B6F] whitespace-nowrap">
+                <span className="font-sans font-medium text-[18px] leading-[28px] text-[#5F6B6F] whitespace-nowrap">
                   {item.label}
                 </span>
               </div>

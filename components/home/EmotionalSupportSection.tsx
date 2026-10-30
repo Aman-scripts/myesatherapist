@@ -16,7 +16,7 @@ export function EmotionalSupportSection() {
         {/* Mobile Image (< 640px) */}
         <div className="sm:hidden w-full -mt-2.5">
           <Image
-            quality={90}
+            quality={80} loading="lazy"
             src="/home/mobile-emotional-support.webp"
             alt="What is an Emotional Support Animal"
             width={390}
@@ -28,7 +28,7 @@ export function EmotionalSupportSection() {
         {/* Tablet Image (640px to 1023px) */}
         <div className="hidden sm:block w-full -mt-3.5">
           <Image
-            quality={90}
+            quality={80} loading="lazy"
             src="/home/tablet-emotional-support-section.webp"
             alt="What is an Emotional Support Animal"
             width={834}
@@ -122,7 +122,7 @@ export function EmotionalSupportSection() {
           {/* Desktop Right Graphics (607px natural curved frame) */}
           <div className="w-[607px] absolute right-0 top-0 bottom-0 h-full pointer-events-none z-0">
             <Image
-              quality={90}
+              quality={80} loading="lazy"
               src="/home/emotional-support-right-frame.webp"
               alt="Emotional support dog and woman"
               fill
@@ -134,7 +134,7 @@ export function EmotionalSupportSection() {
           {/* Bottom-right teal wave (Figma: 423 x 110, flush to the section's bottom-right corner) */}
           <div className="absolute z-10 pointer-events-none right-0 bottom-0 w-[423px] h-[110px]">
             <Image
-              quality={90}
+              quality={80} loading="lazy"
               src="/home/emotional-support-section-bottom.svg"
               alt=""
               fill
@@ -145,7 +145,7 @@ export function EmotionalSupportSection() {
           {/* Bottom Paw Icon: sits on the teal wave in the bottom-right corner */}
           <div className="absolute z-20 pointer-events-none right-[20px] bottom-[2px] w-[84px] h-[84px]">
             <Image
-              quality={90}
+              quality={80} loading="lazy"
               src="/home/emotional-support-section-bottom-paw-icon.svg"
               alt="Paw prints"
               fill

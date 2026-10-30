@@ -58,9 +58,9 @@ export default function ContributorsPage() {
 
       <main className="flex-1">
         <EsaOnlineHero
-          title="Meet our contributors"
+          title="Meet Our Contributors"
           description="Thoughtful, evidence-informed content starts with people who care. Get to know the authors and reviewers who help make My ESA Therapist a trusted resource."
-          buttonText="Explore the Team"
+          buttonText="Explore The Team"
           buttonHref="#authors"
           image="/contributors/contributors_herosection.webp"
           imageMobile="/contributors/contributors_herosection-mobile.webp"

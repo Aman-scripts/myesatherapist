@@ -17,10 +17,10 @@ function StatPills() {
       {STATS.map((pill) => (
         <div
           key={pill.label}
-          className="min-w-[140px] rounded-[24px] bg-background/95 border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] px-4 py-2 flex flex-col items-center"
+          className="inline-flex w-[176px] h-[77px] flex-col items-center justify-center rounded-full border border-[#EAE5DC]/80 bg-background px-4 py-3 shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
         >
-          <span className="font-heading font-bold text-[20px] sm:text-[22px] leading-tight text-[#1A3D4F]">{pill.value}</span>
-          <span className="font-sans font-semibold text-[11px] sm:text-[12px] leading-[16px] text-[#6B6B6B]">{pill.label}</span>
+          <span className="body-large text-color-gradient leading-none">{pill.value}</span>
+          <span className="body-small mt-1 leading-tight whitespace-nowrap text-[#949494]">{pill.label}</span>
         </div>
       ))}
     </div>

@@ -3,13 +3,11 @@ import Image from "next/image";
 import { CtaButton, LATO, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
 import { SectionHeader } from "@/components/common/BlogPageBlocks";
 
-const ICON = "/esa-training/esa-traning_esatrainingvsbasicstraining-allcardsicon.svg";
-
 const ROWS = [
-  { feature: "Legal framework", esa: "Fair Housing Act", dog: "ADA" },
-  { feature: "Training required", esa: "No", dog: "Yes, task-specific" },
-  { feature: "Public access rights", esa: "Housing only", dog: "Nearly everywhere" },
-  { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task" },
+  { feature: "Legal Framework", esa: "Fair Housing Act", dog: "ADA", icon: "/ESA ICons/Icon-25.svg" },
+  { feature: "Training Required", esa: "No", dog: "Yes, task-specific", icon: "/ESA ICons/Icon-30.svg" },
+  { feature: "Public Access Rights", esa: "Housing only", dog: "Nearly everywhere", icon: "/ESA ICons/Icon-20.svg" },
+  { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task", icon: "/ESA ICons/Icon-12.svg" },
 ];
 
 const ROW_H = "lg:h-[5.2vw] xl:h-[61px]";
@@ -21,7 +19,7 @@ export function EsaTrainingVsServiceDog() {
       <section className="w-full bg-white py-12 sm:py-16 lg:py-[4.7vw] xl:py-[68px]">
         <div className="mx-auto flex w-full max-w-[1254px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[4.5vw] lg:px-[5vw] xl:gap-[60px] xl:px-0">
           <SectionHeader
-            title="ESA Training vs. Service Dog Training"
+            title="ESA Training Vs. Service Dog Training"
             subtitle="ESAs and service dogs are often confused, but they differ in legal status, training requirements, and public access rights."
             subtitleFont="lato"
           />
@@ -51,7 +49,7 @@ export function EsaTrainingVsServiceDog() {
                   <div className={`flex items-center gap-[2.3vw] border-t border-[#C8B9A7]/50 pl-[2vw] xl:gap-[34px] xl:pl-[30px] ${ROW_H}`}>
                     <span className="flex h-[2.5vw] w-[2.5vw] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.25)] xl:h-9 xl:w-9">
                       <Image
-            quality={90} src={ICON} alt="" width={19} height={19} className="h-[52%] w-[52%] object-contain" />
+            quality={90} src={row.icon} alt="" width={19} height={19} unoptimized className="h-[52%] w-[52%] object-contain" />
                     </span>
                     <span className="text-[1.4vw] font-bold leading-8 text-primary xl:text-[20px]">{row.feature}</span>
                   </div>
@@ -73,7 +71,7 @@ export function EsaTrainingVsServiceDog() {
                 <div className="flex items-center gap-3 px-5 py-3.5" style={LATO}>
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.25)]">
                     <Image
-            quality={90} src={ICON} alt="" width={19} height={19} className="h-[19px] w-[19px]" />
+            quality={90} src={row.icon} alt="" width={19} height={19} unoptimized className="h-[19px] w-[19px]" />
                   </span>
                   <span className="text-lg font-bold text-primary">{row.feature}</span>
                 </div>

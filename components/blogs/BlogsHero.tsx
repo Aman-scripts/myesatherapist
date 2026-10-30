@@ -22,7 +22,7 @@ export function BlogsHero() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={75}
           src="/blogs/blog_hero-section-mobile.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
@@ -116,7 +116,7 @@ export function BlogsHero() {
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={75}
           src="/blogs/blog_hero-section-tablet.webp"
           alt="Your Guide to Emotional Support Animals"
           fill
@@ -210,7 +210,7 @@ export function BlogsHero() {
       <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
         <BreakpointImage
           media="(min-width: 1024px)"
-          quality={90}
+          quality={75}
           src="/blogs/blog-hero_section.webp"
           alt="Your Guide to Emotional Support Animals"
           fill

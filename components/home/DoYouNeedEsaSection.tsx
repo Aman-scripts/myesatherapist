@@ -66,7 +66,7 @@ export function DoYouNeedEsaSection() {
             {/* Background Decorative Line SVG */}
             <div className="absolute left-0 top-[15px] w-[81px] h-[669px] z-0">
               <Image
-                quality={90}
+                quality={80} loading="lazy"
                 src="/home/doyouneed-emotional-support-section-line.svg"
                 alt=""
                 width={81}
@@ -78,7 +78,7 @@ export function DoYouNeedEsaSection() {
             {/* Main Photo (Natural aspect ratio, un-cropped) */}
             <div className="absolute right-0 top-0 w-[571px] h-[701px] z-10">
               <Image
-                quality={90}
+                quality={80} loading="lazy"
                 src="/home/doyouneed-esa-perfect-v3.webp"
                 alt="Emotional support dog and owner"
                 fill
@@ -90,7 +90,7 @@ export function DoYouNeedEsaSection() {
             {/* Floating Circle Badge at Curve Apex */}
             <div className="absolute left-[1px] top-[359px] -translate-x-1/2 -translate-y-1/2 w-[73px] h-[73px] z-20 drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)]">
               <Image
-                quality={90}
+                quality={80} loading="lazy"
                 src="/home/doyouneed-emotional-support-icon.svg"
                 alt="ESA Badge"
                 width={73}
@@ -109,7 +109,7 @@ export function DoYouNeedEsaSection() {
           {/* Mobile Image (< 640px) */}
           <div className="sm:hidden w-full -mt-2.5">
             <Image
-            quality={90}
+            quality={80} loading="lazy"
               src="/home/mobile-do-you-need-emotional-support.webp"
               alt="Do You Need an Emotional Support Animal"
               width={390}
@@ -121,7 +121,7 @@ export function DoYouNeedEsaSection() {
           {/* Tablet Image (640px to 1023px) */}
           <div className="hidden sm:block w-full -mt-3.5">
             <Image
-            quality={90}
+            quality={80} loading="lazy"
               src="/home/tablet-do-you-need-emotional-support.webp"
               alt="Do You Need an Emotional Support Animal"
               width={834}

@@ -1,7 +1,7 @@
 import type { BlogSection, BlogTocItem } from "@/data/blogsData";
 
 export const ALABAMA_HERO = {
-  title: "Alabama ESA Laws Explained: A Guide for Tenants and Landlords.",
+  title: "Alabama ESA Laws Explained: A Guide For Tenants And Landlords.",
   description:
     "Understand your rights under Alabama ESA laws, including housing accommodations, documentation requirements, and landlord responsibilities. Learn what tenants should know when requesting an emotional support animal accommodation, what information a landlord may request, and how ESA rules apply to housing situations. This guide provides clear answers to help you understand the Alabama ESA process and avoid common mistakes when requesting or reviewing an ESA accommodation.",
 };
@@ -20,7 +20,7 @@ export const ALABAMA_TOC: BlogTocItem[] = [
 export const ALABAMA_SECTIONS: BlogSection[] = [
   {
     id: "alabama-esa-laws-at-a-glance",
-    title: "Alabama ESA Laws at a Glance",
+    title: "Alabama ESA Laws At A Glance",
     statCards: [
       { value: "363A", label: "Alabama’s own Statue", description: "Alabama Human Right Act - housing discrimination", variant: "teal" },
       { value: "Moderate", label: "Effect of HUD’s May 2026 change", description: "State laws exits; how the agency treats untrained animals is still settling", variant: "white" },
@@ -66,7 +66,7 @@ export const ALABAMA_SECTIONS: BlogSection[] = [
   },
   {
     id: "who-qualifies-for-an-esa-in-alabama",
-    title: "Who Qualifies for an ESA in Alabama?",
+    title: "Who Qualifies For An ESA In Alabama?",
     paragraphs: [
       "Eligibility is not predetermined. It is determined through a clinical evaluation by a licensed mental health professional using diagnostic standards, including the DSM-5-TR.",
     ],
@@ -89,7 +89,7 @@ export const ALABAMA_SECTIONS: BlogSection[] = [
   },
   {
     id: "rights-and-responsibilities-of-tenants",
-    title: "Rights and Responsibilities of Tenants",
+    title: "Rights And Responsibilities Of Tenants",
     paragraphs: ["Tenants in Alabama benefit from FHA protections but must also follow certain rules."],
     subsections: [
       {
@@ -116,7 +116,7 @@ export const ALABAMA_SECTIONS: BlogSection[] = [
   },
   {
     id: "rights-and-responsibilities-of-landlords",
-    title: "Rights and Responsibilities of Landlords",
+    title: "Rights And Responsibilities Of Landlords",
     paragraphs: ["Landlords are required to comply with federal law but retain important rights."],
     subsections: [
       {

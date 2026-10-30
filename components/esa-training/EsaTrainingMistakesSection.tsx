@@ -1,15 +1,15 @@
 import React from "react";
 import { IconCard, SectionHeader } from "@/components/common/BlogPageBlocks";
 
-const ICON = "/esa-training/esa-traning_commonesatraining_allcardsicon.svg";
+const ICON = "/ESA ICons/Icon-25.svg";
 
 const MISTAKES = [
   {
-    title: "Skipping socialization",
+    title: "Skipping Socialization",
     text: "Leads to fearful or reactive behavior around people and other animals",
   },
   {
-    title: "Inconsistent commands",
+    title: "Contradictory",
     text: "Different words or cues each time slow progress and confuse your animal",
   },
   {
@@ -17,7 +17,7 @@ const MISTAKES = [
     text: "Punishment tends to build anxiety, not obedience",
   },
   {
-    title: "Starting too late",
+    title: "Starting Too Late",
     text: "Unwanted behaviors get harder to unlearn the longer they go unaddressed",
   },
 ];
@@ -27,7 +27,7 @@ export function EsaTrainingMistakesSection() {
     <section className="w-full bg-background">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[3.2vw] lg:px-[4vw] xl:gap-[72px] xl:px-0">
         <SectionHeader
-          title="Common ESA Training Mistakes to Avoid"
+          title="Common ESA Training Mistakes To Avoid"
           subtitle="With the right approach, training can be simple. Discover common mistakes and learn how to create a better experience for you and your ESA."
           titleClassName="max-w-[912px]"
         />

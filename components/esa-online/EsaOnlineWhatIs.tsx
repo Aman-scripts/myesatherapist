@@ -40,7 +40,7 @@ export function EsaOnlineWhatIs() {
         />
         <div className="w-full max-w-[737px] lg:max-w-[min(42.4vw,610px)] text-center lg:text-left flex flex-col gap-10 lg:gap-[min(3.75vw,54px)]">
           <div className="flex flex-col gap-4">
-            <h2 className={H2}>What is an ESA Letter?</h2>
+            <h2 className={H2}>What Is An ESA Letter?</h2>
             <p className={P}>
               An Emotional Support Animal (ESA) letter is a written recommendation from a licensed mental health professional stating that an emotional support animal may help support a person’s mental or emotional well-being. The recommendation is based on an individual evaluation and is provided when clinically appropriate.
               <br />
@@ -64,7 +64,7 @@ export function EsaOnlineWhatIs() {
             >
               Learn About ESA
             </a>
-            <CtaButton href="/pricing/">Get Started</CtaButton>
+            <CtaButton href="/pricing/" variant="accent">Get Started</CtaButton>
           </div>
         </div>
 

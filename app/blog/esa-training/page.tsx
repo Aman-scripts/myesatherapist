@@ -124,8 +124,8 @@ export default function EsaTrainingPage() {
         {/* 10. Frequently Asked Questions */}
         <FaqSection
           id="faq"
-          title="ESA Training FAQs"
-          subtitle="Common Questions"
+          title="Frequently Asked Questions"
+          subtitle="Get answers to common questions about ESA letters and our service."
           faqs={esaTrainingFaqs}
           bg="bg-background"
         />

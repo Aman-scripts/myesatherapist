@@ -3,22 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { TEAL_GRADIENT, WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
-const ICON = "/esa-training/esa-traning_basicstraining-allcardsicon.svg";
 const ART = "/esa-training/esa-traning_basicstraining.webp";
 const ART_ALT = "Woman rewarding her golden retriever during a training session";
 
 const BASICS = [
   {
-    title: "Foundational obedience",
+    title: "Foundational Obedience",
     text: "Sit, stay, come. The basics that make everyday life predictable.",
+    icon: "/ESA ICons/Icon-11.svg",
   },
   {
-    title: "Leash manners",
+    title: "Leash Manners",
     text: "No pulling, lunging, or bolting when you're out together.",
+    icon: "/ESA ICons/Icon-30.svg",
   },
   {
-    title: "Calm public behavior",
+    title: "Calm Public Behavior",
     text: "No excessive barking, jumping, or aggression around others.",
+    icon: "/ESA ICons/Icon-10.svg",
   },
 ];
 
@@ -72,7 +74,7 @@ export function EsaTrainingBasicsSection() {
                 <div className="flex flex-1 items-center gap-4 py-4 pl-4 pr-4 sm:gap-6 sm:pl-6 lg:gap-[1.6vw] lg:py-[1vw] xl:gap-6 xl:py-3">
                   <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] sm:h-[74.56px] sm:w-[74.56px] lg:h-[5vw] lg:w-[5vw] xl:h-[74.56px] xl:w-[74.56px]">
                     <Image
-            quality={90} src={ICON} alt="" width={32} height={32} className="h-6 w-6 object-contain sm:h-8 sm:w-8 lg:h-[2.2vw] lg:w-[2.2vw] xl:h-8 xl:w-8" />
+            quality={90} src={item.icon} alt="" width={32} height={32} unoptimized className="h-6 w-6 object-contain sm:h-8 sm:w-8 lg:h-[2.2vw] lg:w-[2.2vw] xl:h-8 xl:w-8" />
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5">
                     <h3 className="font-heading text-lg font-bold leading-tight text-primary sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] xl:leading-7">

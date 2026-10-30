@@ -47,7 +47,7 @@ export function EsaTrainingHero() {
               including what changed in 2026 and what it means for your housing rights.
             </p>
           </div>
-          <CtaButton href="/esa-doctors/">Explore the Team</CtaButton>
+          <CtaButton href="/esa-doctors/">Explore The Team</CtaButton>
         </div>
 
         {/* Right: frosted key-takeaway card */}
@@ -55,7 +55,7 @@ export function EsaTrainingHero() {
           <div className="flex w-full max-w-[360px] flex-col items-center gap-8 lg:max-w-none lg:gap-[2.2vw] xl:max-w-[360px] xl:gap-8">
             <div className="flex w-full flex-col items-center gap-2">
               <h2 className="w-full font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-[#373737] sm:text-[32px] sm:leading-10 lg:text-[2.45vw] lg:leading-[3vw] xl:text-[36px] xl:leading-[44px]">
-                No. Training isn&apos;t legally required.
+                No. Training Isn&apos;t Legally Required.
               </h2>
               <p className="w-full font-sans text-sm font-semibold leading-[26px] text-body-text lg:text-[1vw] lg:leading-[1.8vw] xl:text-sm xl:leading-[26px]">
                 The Fair Housing Act has never required ESAs to be trained. But behavior, documentation, and a current

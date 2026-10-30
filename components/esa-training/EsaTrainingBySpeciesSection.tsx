@@ -16,7 +16,7 @@ const ANIMALS = [
     alt: "Woman playing with her cat",
   },
   {
-    title: "Rabbits, birds, and others",
+    title: "Others",
     text: "Training looks different here. It's more about handling, socialization, and predictable routines than commands.",
     image: "/esa-training/esa-traning_byanimamals-rabbitsbirds.webp",
     alt: "Woman with a rabbit, a bird and a guinea pig",
@@ -29,7 +29,7 @@ export function EsaTrainingBySpeciesSection() {
       <div className="mx-auto flex w-full max-w-[1448px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[2.8vw] lg:px-[5vw] xl:gap-10 xl:px-0">
         <div className="flex w-full flex-col items-center gap-10 lg:gap-[4.4vw] xl:gap-16">
           <SectionHeader
-            title="Training by Animal Type"
+            title="Training By Animal Type"
             subtitle="ESAs and service dogs are often confused, but they differ in legal status, training requirements, and public access rights."
             subtitleFont="lato"
           />

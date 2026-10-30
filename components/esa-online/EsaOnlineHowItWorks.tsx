@@ -17,9 +17,9 @@ const STEPS = [
   },
   {
     image: "/esa-renewal/esa-renewal-processworks-step3.webp",
-    title: "Clinical Review & Documentation",
+    title: "Clinical Determination",
     description:
-      "Following the evaluation, if the licensed professional determines an emotional support animal is appropriate, documentation is sent directly to you.",
+      "Following the professional evaluation, if deemed appropriate by the licensed professional, emotional support animal documentation is sent directly to your email. If not, no documentation is issued.",
   },
 ];
 
@@ -48,14 +48,13 @@ export function EsaOnlineHowItWorks() {
             <React.Fragment key={step.title}>
               {index > 0 && <StepArrow />}
               <div className="flex w-full max-w-[300px] flex-col items-center">
-                <div className="relative h-[226px] w-[228px]">
-                  <div className="absolute inset-0 rounded-full bg-[#EFFFF1]/80 shadow-[0px_2px_4px_rgba(0,0,0,0.25)]" />
-                  <div className="absolute left-[14px] top-[13px] h-[200px] w-[200px] overflow-hidden rounded-full">
-                    <Image src={step.image} alt="" fill unoptimized className="object-cover" sizes="200px" />
+                <div className="flex h-[226px] w-[226px] items-center justify-center rounded-full bg-[#EFFFF1]">
+                  <div className="h-[200px] w-[200px] overflow-hidden rounded-full">
+                    <Image src={step.image} alt="" width={200} height={200} className="h-full w-full object-cover" />
                   </div>
                 </div>
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">
-                  <h3 className="heading-h3 text-[#1A3D4F]">{step.title}</h3>
+                  <h3 className="whitespace-nowrap font-heading text-[22px] font-bold leading-7 text-[#1A3D4F] sm:text-[24px]">{step.title}</h3>
                   <p className="body-text text-body-text">{step.description}</p>
                 </div>
               </div>
@@ -63,9 +62,17 @@ export function EsaOnlineHowItWorks() {
           ))}
         </div>
 
-        <CtaButton href="/pricing/" variant="accent">
-          Get Started
-        </CtaButton>
+        <div className="flex flex-col items-center gap-3">
+          <CtaButton href="/pricing/" variant="accent">
+            Get Started
+          </CtaButton>
+          <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
+            If not approved after your evaluation? You get a full refund.
+          </p>
+          <p className="rounded-full bg-[#FDECEC] px-5 py-2 text-center font-sans text-[14px] font-medium leading-[22px] text-[#8A3A3A]">
+            We authorize your payment first, but we will only charge it after your evaluation is completed.
+          </p>
+        </div>
       </div>
     </section>
   );

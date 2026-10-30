@@ -39,7 +39,7 @@ export function EsaHousingWhoCanIssue() {
   return (
     <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
-        <SectionHeader title="Who Can Issue an ESA Letter for Housing?" titleMax="max-w-[644px]" leadMax="max-w-[1062px]">
+        <SectionHeader title="Who Can Issue An ESA Letter For Housing?" titleMax="max-w-[644px]" leadMax="max-w-[1062px]">
           Only licensed mental health professionals (LMHPs) are authorized to evaluate ESA requests and issue valid ESA letters for housing. The professional must be licensed and permitted to practice in the state where the evaluation takes place.
         </SectionHeader>
 

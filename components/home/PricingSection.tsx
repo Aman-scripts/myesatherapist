@@ -323,13 +323,13 @@ export function PricingSection({
               Starts exactly at the last card's right edge and sits level with the price circles. */}
           {showDog && <div className="hidden lg:block absolute left-[calc(100%+1px)] top-[279px] w-[245px] h-[209px] pointer-events-none z-20">
             <Image
-              quality={95}
+              quality={80}
               src="/home/pricing-section-dog.webp"
               alt="Dog giving paw to woman hand"
               width={245}
               height={209}
               className="w-[245px] h-[209px] object-contain object-left pointer-events-none"
-              priority
+              loading="lazy"
             />
           </div>}
         </div>

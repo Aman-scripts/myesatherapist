@@ -45,7 +45,7 @@ export function CtaButton({
   className = "",
   iconClassName = "",
   showIcon,
-  variant = "primary",
+  variant = "accent",
   onClick,
   disabled,
   type = "button",

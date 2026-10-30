@@ -97,12 +97,12 @@ export function HeroSection() {
         {/* Background Image: mobile-hero-section.png */}
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={80}
+            quality={75}
           src="/home/mobile-hero-section.webp"
           alt="Emotional Support Animal Evaluations"
           fill
           className="object-cover object-top"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="(max-width: 639px) 430px, 1px"
         />
 
         {/* Content Container (Centered) */}
@@ -157,7 +157,7 @@ export function HeroSection() {
         {/* Background Image: tablet-hero-section.png */}
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={80}
+            quality={75}
           src="/home/tablet-hero-section.webp"
           alt="Emotional Support Animal Evaluations"
           fill
@@ -263,7 +263,7 @@ export function HeroSection() {
           background={
             <BreakpointImage
               media="(min-width: 1024px)"
-              quality={80}
+              quality={75}
               src="/home/hero-section.webp"
               alt="Woman embracing her emotional support golden retriever outdoors"
               fill

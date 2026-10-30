@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/common/BlogPageBlocks";
 
 const CARDS = [
   {
-    title: "Tips for DIY training",
+    title: "Tips For DIY Training",
     image: "/esa-training/esa-traning_canyoutrain_tipstodiy.webp",
     alt: "Woman teaching her golden retriever a new trick at home",
     items: [
@@ -16,7 +16,7 @@ const CARDS = [
     ],
   },
   {
-    title: "When to hire a professional",
+    title: "When To Hire A Professional",
     image: "/esa-training/esa-traning_canyoutrain_whentohireprofess.webp",
     alt: "Professional trainer working with a golden retriever and its owner",
     items: [

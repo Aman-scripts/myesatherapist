@@ -93,7 +93,7 @@ export default function QualifyingConditionsPage() {
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
-          subtitle="Answers to the most common ESA questions"
+          subtitle="Get answers to common questions about ESA letters and our service."
           faqs={qualifyingConditionsFaqs}
           bg="bg-background"
         />

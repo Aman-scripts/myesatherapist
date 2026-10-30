@@ -16,15 +16,20 @@ function LinkedinIcon({ className }: { className?: string }) {
 }
 
 function Badge({ label, value, icon }: { label: string; value: string; icon?: string }) {
+  const key = label.toLowerCase();
   const iconSrc =
     icon ||
-    (label.toLowerCase().includes("licensed")
-      ? "/home/doctor_professionals_licensedin_icon.svg"
-      : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/home/doctor_professionals_evaluationmethod_icon.svg"
-      : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/home/doctor_professionals_focusarea_icon.svg"
-      : "/common/therapist-section-badge.svg");
+    (key.includes("licensed") || key.includes("credential") || key.includes("role")
+      ? "/ESA ICons/Icon-33.svg"
+      : key.includes("evaluation") || key.includes("method")
+      ? "/ESA ICons/Icon-15.svg"
+      : key.includes("focus") || key.includes("area")
+      ? "/ESA ICons/Icon-1.svg"
+      : key.includes("based") || key.includes("location")
+      ? "/ESA ICons/Icon-37.svg"
+      : key.includes("experience")
+      ? "/ESA ICons/Icon-23.svg"
+      : "/ESA ICons/Icon-25.svg");
 
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
@@ -36,6 +41,7 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
             alt=""
             width={16}
             height={16}
+            unoptimized
             className="w-4 h-4 object-contain"
           />
         </div>

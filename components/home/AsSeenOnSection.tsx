@@ -153,6 +153,7 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
               >
                 <Image
                   unoptimized
+                  loading="lazy"
                   src={logo.src}
                   alt={logo.name}
                   width={260}
@@ -178,6 +179,7 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
               >
                 <Image
                   unoptimized
+                  loading="lazy"
                   src={logo.src}
                   alt={logo.name}
                   width={260}

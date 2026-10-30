@@ -36,7 +36,7 @@ export function QualifyingConditionsHero() {
         <div className="flex w-full flex-col items-center gap-8 text-center lg:max-w-[45vw] lg:items-start lg:gap-[3.3vw] lg:text-left xl:max-w-[613px] xl:gap-12">
           <div className="flex flex-col gap-4 lg:gap-[1.6vw] xl:gap-6">
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-primary sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:text-[56px] xl:leading-[64px]">
-              Qualifying Conditions for an ESA Letter
+              Qualifying Conditions For An ESA Letter
             </h1>
             <div className="flex flex-col gap-[22px] font-sans text-base font-semibold leading-[1.65] text-body-text sm:text-[18px] lg:gap-[2vw] lg:text-[1.25vw] lg:leading-[2.1vw] xl:gap-[30px] xl:text-[18px] xl:leading-[30px]">
               <p>
@@ -54,7 +54,7 @@ export function QualifyingConditionsHero() {
               </p>
             </div>
           </div>
-          <CtaButton href="/esa-doctors/">Explore the Team</CtaButton>
+          <CtaButton href="/esa-doctors/">Explore The Team</CtaButton>
         </div>
       </div>
     </section>
