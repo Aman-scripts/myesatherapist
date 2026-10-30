@@ -1,242 +1,72 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { ReviewBadges } from "@/components/common/ReviewBadges";
-import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-import { STATE_INDEX } from "@/data/stateIndex";
-import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
-import { CtaButton } from "@/components/common/CtaButton";
+import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const AVAILABLE_STATES = STATE_INDEX;
+const HEADING = "Meet Our Licensed Mental Health Professionals";
+const DESCRIPTION =
+  "My ESA Therapist works with a network of independent, state-licensed mental health professionals who conduct emotional support animal (ESA) evaluations through secure telehealth sessions.";
 
 export function DoctorsHeroSection() {
-  const router = useRouter();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedState, setSelectedState] = useState<string>("");
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleSelectState = (slug: string, name: string) => {
-    setSelectedState(name);
-    setDropdownOpen(false);
-    router.push(`/esa-letter-${slug}/`);
-  };
-
   return (
-    <section className="relative w-full bg-background overflow-hidden min-h-[760px] sm:min-h-[1050px] md:min-h-[1150px] xl:min-h-[768px] flex items-start xl:items-center">
-      
-      {/* ========================================================================= */}
-      {/* 1. DESKTOP BACKGROUND GRAPHIC (xl: >= 1280px)                            */}
-      {/* ========================================================================= */}
-      <div className="hidden xl:block absolute inset-0 z-0">
-        <BreakpointImage
-          media="(min-width: 1280px)"
-          quality={90}
-          src="/doctors/doctors_hero-section.webp"
-          alt="Meet Our Licensed Mental Health Professionals"
-          fill
-          className="object-cover object-right"
-          sizes="100vw"
-        />
-        {/* Soft gradient wash on left for contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent w-[52%] pointer-events-none" />
-      </div>
-
-      {/* ========================================================================= */}
-      {/* 2. TABLET BACKGROUND GRAPHIC (sm: to < xl, e.g. 640px - 1279px, 1024px)   */}
-      {/* ========================================================================= */}
-      <div className="hidden sm:block xl:hidden absolute inset-0 z-0">
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1279px)"
-          quality={90}
-          src="/doctors/doctors_hero-section_tablet.webp"
-          alt="Meet Our Licensed Mental Health Professionals"
-          fill
-          className="object-cover object-top"
-          sizes="100vw"
-        />
-      </div>
-
-      {/* ========================================================================= */}
-      {/* 3. MOBILE BACKGROUND GRAPHIC (< sm, < 640px)                              */}
-      {/* ========================================================================= */}
-      <div className="block sm:hidden absolute inset-0 z-0">
+    <section className="relative z-30 w-full bg-background overflow-visible">
+      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
           src="/doctors/doctors_hero-section_mobile.webp"
-          alt="Meet Our Licensed Mental Health Professionals"
+          alt={HEADING}
           fill
-          className="object-cover object-top"
-          sizes="100vw"
+          className="object-cover object-bottom"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
-      </div>
-
-      {/* ========================================================================= */}
-      {/* MAIN CONTENT CONTAINER                                                    */}
-      {/* ========================================================================= */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-[82px] pt-8 sm:pt-12 md:pt-14 xl:py-16">
-        
-        {/* Wrapper: centered on mobile & tablet, left-aligned on xl desktop */}
-        <div className="w-full max-w-[640px] xl:max-w-[626px] mx-auto xl:mx-0 flex flex-col items-center xl:items-start text-center xl:text-left gap-5 sm:gap-7 xl:gap-[30px]">
-          
-          {/* Header Block */}
-          <div className="w-full flex flex-col items-center xl:items-start gap-3.5 sm:gap-[16px]">
-            
-            {/* Top Stat Badges Row: Visible on all devices */}
-            <div className="flex items-center justify-center xl:justify-start gap-2 sm:gap-[12px] w-full max-w-[360px] sm:max-w-[513px]">
-              
-              {/* Badge 1: 50 USA States */}
-              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
-                <span
-                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  50
-                </span>
-                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#707070] text-center whitespace-nowrap">
-                  USA States
-                </span>
-              </div>
-
-              {/* Badge 2: HIPAA Compliant */}
-              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
-                <span
-                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  HIPAA
-                </span>
-                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#707070] text-center whitespace-nowrap">
-                  Compliant
-                </span>
-              </div>
-
-              {/* Badge 3: 100% Licensed Pros */}
-              <div className="flex-1 sm:flex-initial w-auto sm:w-[145px] xl:w-[163px] h-[46px] sm:h-[53px] rounded-[30px] bg-white/95 sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-center items-center px-2 sm:px-4 shrink-0">
-                <span
-                  className="font-heading font-bold text-[18px] sm:text-[24px] leading-tight sm:leading-[28px] bg-clip-text text-transparent text-center"
-                  style={{ backgroundImage: "var(--color-gradient)" }}
-                >
-                  100%
-                </span>
-                <span className="font-sans font-semibold text-[10px] sm:text-[12px] leading-tight text-[#707070] text-center whitespace-nowrap">
-                  Licensed Pros
-                </span>
-              </div>
-
-            </div>
-
-            {/* Heading: Meet Our Licensed Mental Health Professionals */}
-            <h1 className="w-full heading-h1 max-w-[340px] sm:max-w-[580px] xl:max-w-[624px] mx-auto xl:mx-0">
-              Meet Our Licensed Mental Health Professionals
-            </h1>
-
-            {/* Subtitle */}
-            <p className="w-full body-large max-w-[340px] sm:max-w-[600px] xl:max-w-[626px] mx-auto xl:mx-0">
-              My ESA Therapist works with a network of independent, state-licensed mental health professionals who conduct emotional support animal (ESA) evaluations through secure telehealth sessions.
-            </p>
-
+        <div className="absolute inset-0 z-10 flex items-center px-5">
+          <div className="flex flex-col items-start gap-3 max-w-[320px]">
+            <h1 className="heading-h2 text-primary">{HEADING}</h1>
+            <p className="body-text text-body-text">{DESCRIPTION}</p>
           </div>
-
-          {/* Mobile Buttons (Frame 7) */}
-          <div className="sm:hidden w-full flex justify-center">
-            <MobileHeroActionButtons
-              selectedState={selectedState}
-              onStateSelect={(slug) => {
-                const st = AVAILABLE_STATES.find((s) => s.slug === slug);
-                handleSelectState(slug, st ? st.name : slug);
-              }}
-              getStartedHref="#therapists"
-              placeholder="Select your State"
-            />
-          </div>
-
-          {/* Tablet & Desktop Buttons Row */}
-          <div className="hidden sm:flex flex-row items-center justify-center xl:justify-start gap-4 xl:gap-[25px] w-full sm:max-w-none">
-            
-            {/* "Select your State" Dropdown Button */}
-            <div className="relative w-full sm:w-auto" ref={dropdownRef}>
-              <button
-                type="button"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="w-full sm:min-w-[220px] xl:min-w-[246px] h-[48px] sm:h-[54px] rounded-[30px] bg-white sm:bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 sm:px-6 flex items-center justify-between gap-[10px] hover:bg-white transition-all cursor-pointer border border-background"
-                aria-haspopup="listbox"
-                aria-expanded={dropdownOpen}
-              >
-                <div className="flex items-center gap-[8px] shrink-0">
-                  <svg className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] text-primary shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
-                  </svg>
-                  <span
-                    className="font-sans font-semibold text-[16px] sm:text-[18px] leading-[30px] bg-clip-text text-transparent whitespace-nowrap shrink-0"
-                    style={{ backgroundImage: "var(--color-gradient)" }}
-                  >
-                    {selectedState || "Select your State"}
-                  </span>
-                </div>
-                <svg
-                  className={`w-[12px] h-[10px] text-primary transition-transform duration-200 shrink-0 ml-1 ${
-                    dropdownOpen ? "rotate-180" : ""
-                  }`}
-                  viewBox="0 0 12 10"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M2 3l4 4 4-4" />
-                </svg>
-              </button>
-
-              {/* State Dropdown Menu */}
-              {dropdownOpen && (
-                <div className={`${STATE_DROPDOWN_PANEL} !max-h-[390px]`}>
-                  {AVAILABLE_STATES.map((st) => (
-                    <button
-                      key={st.slug}
-                      type="button"
-                      onClick={() => handleSelectState(st.slug, st.name)}
-                      className={STATE_DROPDOWN_ITEM}
-                    >
-                      <span>{st.name}</span>
-                      <span className={STATE_DROPDOWN_ABBR}>{st.abbreviation}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* "Get Started" Pill Button */}
-            <CtaButton
-              href="#therapists"
-              className="w-full sm:w-[192px]"
-            >
-              Get Started
-            </CtaButton>
-
-          </div>
-
-          {/* Trustpilot Card: ONLY on xl desktop (hidden on mobile and tablet) */}
-          <div className="hidden xl:block"><ReviewBadges /></div>
-
         </div>
       </div>
+
+      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1100] min-h-[720px]">
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
+          quality={90}
+          src="/doctors/doctors_hero-section_tablet.webp"
+          alt={HEADING}
+          fill
+          className="object-cover object-bottom"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
+        />
+        <div className="absolute inset-0 z-10 flex items-center px-10">
+          <div className="flex flex-col items-start gap-4 max-w-[520px]">
+            <h1 className="heading-h1 text-primary">{HEADING}</h1>
+            <p className="body-large text-body-text">{DESCRIPTION}</p>
+          </div>
+        </div>
+      </div>
+
+      <DesktopScaleWrapper
+        designHeight={720}
+        designWidth={1440}
+        wrapperClassName="bg-background overflow-hidden"
+        background={
+          <BreakpointImage
+            media="(min-width: 1024px)"
+            quality={90}
+            src="/doctors/doctors_hero-section.webp"
+            alt={HEADING}
+            fill
+            className="object-cover object-right"
+            sizes="(min-width: 1024px) 100vw, 1px"
+          />
+        }
+      >
+        <div className="relative w-[1440px] h-[720px] flex items-center">
+          <div className="pl-[82px] max-w-[760px] z-10 flex flex-col items-start gap-5">
+            <h1 className="heading-h1 text-primary max-w-[640px]">{HEADING}</h1>
+            <p className="body-large text-body-text max-w-[620px]">{DESCRIPTION}</p>
+          </div>
+        </div>
+      </DesktopScaleWrapper>
     </section>
   );
 }

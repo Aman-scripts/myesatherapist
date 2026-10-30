@@ -70,9 +70,9 @@ export default function DoctorsPage() {
 
         {/* CTA Banner Section */}
         <CtaBanner
-          title={`Learn More About\nESA Evaluations`}
-          description="Understand how the ESA evaluation process works."
-          buttonText="Start your Evaluation"
+          title="Ready to Start Your ESA Evaluation?"
+          description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
+          buttonText="Start Your Evaluation"
           buttonHref="/pricing/"
         />
 

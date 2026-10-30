@@ -9,14 +9,17 @@ export function DoctorsAllStatesSection() {
     {
       title: "State-Licensed Providers",
       subtitle: "Therapists authorized in your state",
+      icon: "/ESA ICons/Icon-33.svg",
     },
     {
       title: "Telehealth Sessions",
       subtitle: "Video or phone, from anywhere",
+      icon: "/ESA ICons/Icon-15.svg",
     },
     {
       title: "Same-Week Availability",
       subtitle: "Most evaluations within 24-48 hours",
+      icon: "/ESA ICons/Icon-38.svg",
     },
   ];
 
@@ -120,11 +123,11 @@ export function DoctorsAllStatesSection() {
                   {/* Frame 1000011444 - Circular Icon Badge */}
                   <div className="w-[58px] h-[58px] sm:w-[66px] sm:h-[66px] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0 ml-3 sm:ml-4 xl:ml-6">
                     <Image
-            quality={90}
-                      src="/doctors/doctors_wearein50states-icon.svg"
+                      src={card.icon}
                       alt=""
                       width={32}
                       height={32}
+                      unoptimized
                       className="w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8 object-contain"
                     />
                   </div>
