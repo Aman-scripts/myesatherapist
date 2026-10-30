@@ -126,12 +126,12 @@ export function EsaDogBenefitsSection() {
         <div className="relative w-full max-w-[1440px] mx-auto h-[320px] sm:h-[480px] lg:h-[620px] xl:h-[710px] overflow-hidden">
           <Image
             quality={90}
-            src="/home/myesatherapist_homepage_benefitssection.png"
+            src="/home/myesatherapist_homepage_benefitssection.webp"
             alt="Woman smiling affectionately at her emotional support dog on the couch"
             fill
             className="object-cover object-top"
             sizes="(min-width: 1440px) 1440px, 100vw"
-            priority={false}
+            loading="lazy"
           />
         </div>
       </div>

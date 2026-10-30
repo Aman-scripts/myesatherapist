@@ -3180,7 +3180,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
   publishDate: "September 30, 2026",
   lastUpdated: "September 30, 2026",
-  cardImage: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
+  cardImage: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.webp",
   heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
   heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
   heroImageDesktop: "/blogs/blog-hero_section.webp",
@@ -3194,7 +3194,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "A licensed mental health professional must make the decision through an independent, clinical assessment. Understanding this process can help you know what to expect before requesting an ESA letter."
   ],
   introImage: {
-    src: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.jpg",
+    src: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.webp",
     alt: "esa for ptsd",
     width: 1024,
     height: 559,

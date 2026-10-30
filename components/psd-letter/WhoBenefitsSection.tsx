@@ -84,10 +84,11 @@ export function WhoBenefitsSection() {
       <div className="relative mt-12 w-full sm:mt-16 lg:mt-20">
         <div className="relative mx-auto aspect-[1440/620] w-full max-w-[1440px]">
           <Image
-            src="/psd-letter/psd_letter_benefits_Section.png"
+            src="/psd-letter/psd_letter_benefits_Section.webp"
             alt="Woman resting her head against her cat"
             fill
-            quality={95}
+            quality={85}
+            loading="lazy"
             className="object-cover object-center"
             sizes="(min-width: 1440px) 1440px, 100vw"
           />
