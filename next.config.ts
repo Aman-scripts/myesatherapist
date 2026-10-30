@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
