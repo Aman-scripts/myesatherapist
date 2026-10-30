@@ -275,15 +275,15 @@ export function VideoTestimonialsGridSection() {
   const [activeVideo, setActiveVideo] = useState<VideoReviewItem | null>(null);
 
   return (
-    <section className="relative w-full bg-background pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 lg:pb-32">
+    <section className="relative w-full bg-background pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-32">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-[820px] mx-auto mb-10 sm:mb-14">
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] leading-tight sm:leading-[54px] text-primary tracking-[-0.00015em] mb-3 sm:mb-4">
+          <h2 className="heading-h2 text-primary mb-3 sm:mb-4">
             Client Video Testimonials
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg lg:text-[18px] leading-relaxed sm:leading-[30px] text-body-text">
+          <p className="body-large text-body-text">
             Watch our clients share their personal experiences and success stories
           </p>
         </div>
@@ -322,8 +322,8 @@ export function VideoTestimonialsGridSection() {
 
                 {/* YouTube Red Play Button Badge */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-[58px] h-[40px] rounded-xl bg-[#FF0000] text-white flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#E60000] transition-all duration-200">
-                    <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 rounded-full bg-[#FF0000] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                    <svg className="w-7 h-7 fill-current ml-1" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
@@ -334,7 +334,7 @@ export function VideoTestimonialsGridSection() {
               <div className="flex-1 w-full p-6 sm:py-9 sm:pr-7 sm:pl-[18px] flex flex-col justify-between h-full min-h-[290px] sm:min-h-[350px]">
                 {/* Name & Stars */}
                 <div className="space-y-2">
-                  <h3 className="font-sans font-bold text-2xl sm:text-[28px] leading-[36px] text-primary tracking-tight">
+                  <h3 className="heading-h3 text-primary">
                     {review.name}
                   </h3>
 

@@ -77,7 +77,7 @@ export default function VideoTestimonialsPage() {
             "If you believe an Emotional Support Animal may be appropriate\n" +
             "for your situation, you can begin a professional evaluation today."
           }
-          buttonText="Start your Evaluation"
+          buttonText="Start Your Evaluation"
           buttonHref="/pricing/"
           className="pb-0"
         />
