@@ -47,7 +47,7 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
         <div className="font-heading font-bold text-[14px] leading-[18px] text-primary w-full">
           {label}
         </div>
-        <div className="font-sans font-medium text-[13px] leading-[18px] text-body-text mt-1 w-full">{value}</div>
+        <div className="body-small text-body-text mt-1 w-full">{value}</div>
       </div>
     </div>
   );
@@ -118,7 +118,7 @@ export function ContributorsSection({
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] text-primary leading-[1.2] lg:leading-[54px] tracking-[-0.00015em]">
             {title}
           </h2>
-          <p className="font-sans font-semibold text-base sm:text-lg text-body-text leading-relaxed lg:leading-[30px] max-w-[813px] mx-auto">
+          <p className="body-large text-body-text max-w-[813px] mx-auto">
             {description}
           </p>
         </div>

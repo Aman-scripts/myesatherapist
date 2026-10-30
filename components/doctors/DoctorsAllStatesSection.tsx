@@ -13,11 +13,11 @@ export function DoctorsAllStatesSection() {
     },
     {
       title: "Telehealth Sessions",
-      subtitle: "Video or phone, from anywhere",
+      subtitle: "Video or phone, subject to state rules",
       icon: "/ESA ICons/Icon-15.svg",
     },
     {
-      title: "Same-Week Availability",
+      title: "Fast Scheduling",
       subtitle: "Most evaluations within 24-48 hours",
       icon: "/ESA ICons/Icon-38.svg",
     },
@@ -96,10 +96,10 @@ export function DoctorsAllStatesSection() {
             {/* Frame 1000011698 (Heading + Subtitle, gap: 28px) */}
             <div className="flex flex-col items-start gap-3.5 sm:gap-5 lg:gap-6 xl:gap-[28px] max-w-[560px] xl:max-w-[626px] w-full">
               <h2 className="heading-h2 text-primary">
-                We&apos;re In All 50 US States
+                We&apos;re in All 50 U.S. States
               </h2>
               <p className="body-large text-body-text">
-                Our licensed therapists are available across the entire United States, providing professional ESA evaluations no matter where you live.
+                Our licensed mental health professionals are available across the United States, providing professional ESA evaluations subject to applicable state licensing requirements.
               </p>
             </div>
 

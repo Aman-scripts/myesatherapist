@@ -140,21 +140,22 @@ export const DOCTORS_DATA: DoctorProfile[] = [
     licensedStatesSection: {
       heading: "States Where Dr. Leslie K. Gamble Is Licensed",
       description:
-        "Explore the states where Dr. Leslie K. Gamble's clinical expertise is available to individuals seeking professional mental health support.",
+        "Explore the states where Dr. Leslie K. Gamble’s clinical expertise is available to individuals seeking professional mental health support.",
       states: [
         "Arkansas",
-        "Washington",
+        "D.C.",
         "Louisiana",
         "Maryland",
         "Mississippi",
         "Montana",
-        "North Carolina",
-        "North Dakota",
+        "N. Carolina",
+        "N. Dakota",
         "Nebraska",
         "Ohio",
         "Oklahoma",
         "Oregon",
-        "South Dakota",
+        "S. Dakota",
+        "Tennessee",
         "Virginia",
       ],
     },
@@ -247,7 +248,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
         "Dr. Robert Staaf is licensed across multiple U.S. states, extending his clinical expertise to individuals seeking professional mental health support.",
       states: [
         "Virginia",
-        "Washington",
+        "Washington, DC",
         "Maryland",
         "Florida",
         "Massachusetts",
@@ -275,6 +276,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
         "New Mexico",
         "Colorado",
         "Indiana",
+        "Rhode Island",
         "Montana",
       ],
     },
@@ -363,11 +365,12 @@ export const DOCTORS_DATA: DoctorProfile[] = [
       ],
     },
     licensedStatesSection: {
-      heading: "States Where Dr. Patel Is Licensed",
+      heading: "States Where Dr. Gourav Patel Is Licensed",
       description:
         "Learn about the states where Dr. Gourav Patel serves patients through his medical practice.",
       states: [
         "Georgia",
+        "Vermont",
         "New Hampshire",
         "Mississippi",
         "Maryland",

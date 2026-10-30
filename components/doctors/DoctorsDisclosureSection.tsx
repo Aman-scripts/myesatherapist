@@ -6,7 +6,7 @@ import Image from "next/image";
 export function DoctorsDisclosureSection() {
   const cards = [
     {
-      text: "Providers listed are independent professionals, not employees making platform decisions",
+      text: "Providers listed are independent professionals who make clinical decisions independently of the platform.",
       icon: "/ESA ICons/Icon-25.svg",
     },
     {
@@ -14,7 +14,7 @@ export function DoctorsDisclosureSection() {
       icon: "/ESA ICons/Icon-44.svg",
     },
     {
-      text: "Evaluations are conducted by providers licensed in your state, based on state licensure requirements",
+      text: "Evaluations are conducted based on state licensure requirements",
       icon: "/ESA ICons/Icon-33.svg",
     },
     {
@@ -33,40 +33,27 @@ export function DoctorsDisclosureSection() {
             Important Provider Disclosure
           </h2>
           <p className="body-large text-body-text max-w-[854px]">
-            How our network of independent professionals operates.
+            Get clear information about our independent providers, their role in the evaluation process, and how clinical decisions are made.
           </p>
         </div>
 
         {/* Frame 1261153636 (Cards Grid: 1 col on mobile, 2x2 on tablet/1024px, 4 cols on xl desktop) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-14 sm:gap-y-16 xl:gap-y-0 gap-x-6 max-w-[680px] xl:max-w-[1288px] mx-auto pt-4 xl:pt-0">
-          {cards.map((card, idx) => (
+          {cards.map((card) => (
             <div
-              key={idx}
-              className="relative w-full max-w-[302px] h-[148px] mx-auto isolate transition-transform duration-200 hover:-translate-y-1"
+              key={card.text}
+              className="relative mx-auto w-full max-w-[302px] pt-[36px] transition-transform duration-200 hover:-translate-y-1"
             >
-              {/* Frame 1000011684 - Gold Accent Backing Card */}
-              <div
-                className="absolute inset-x-0 top-0 h-[142px] bg-accent rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-                style={{ zIndex: 0 }}
-              />
-
-              {/* Frame 1000011683 - White Foreground Card */}
-              <div
-                className="absolute inset-x-0 top-[7px] h-[136px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col items-center justify-start pt-[39px] pb-[14px] px-4 text-center"
-                style={{ zIndex: 1 }}
-              >
-                {/* Frame 1000011458 - Card Text */}
-                <p className={`font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-body-text text-center ${idx === 0 ? 'max-w-[250px]' : 'max-w-[238px]'}`}>
-                  {card.text}
-                </p>
+              <div className="rounded-[20px] bg-accent pt-[7px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
+                <div className="flex min-h-[168px] flex-col items-center rounded-[20px] bg-white px-4 pb-5 pt-[52px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
+                  <p className="body-text max-w-[250px] text-center font-semibold text-body-text">
+                    {card.text}
+                  </p>
+                </div>
               </div>
 
-              {/* Frame 1000011444 - Floating Circular Icon Badge */}
-              <div
-                className="absolute -top-[32px] left-1/2 -translate-x-1/2 w-[74.56px] h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center"
-                style={{ zIndex: 2 }}
-              >
-                <Image src={card.icon} alt="" width={32} height={32} unoptimized className="w-8 h-8 object-contain" />
+              <div className="absolute left-1/2 top-0 flex h-[72px] w-[72px] -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.18)]">
+                <Image src={card.icon} alt="" width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
               </div>
             </div>
           ))}
