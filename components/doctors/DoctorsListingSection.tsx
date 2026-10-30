@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { CtaButton } from "@/components/common/CtaButton";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -79,12 +78,12 @@ function DoctorStatBadge({
   const iconSrc =
     icon ||
     (label.toLowerCase().includes("licensed")
-      ? "/home/doctor_professionals_licensedin_icon.svg"
+      ? "/ESA ICons/Icon-33.svg"
       : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/home/doctor_professionals_evaluationmethod_icon.svg"
+      ? "/ESA ICons/Icon-15.svg"
       : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/home/doctor_professionals_focusarea_icon.svg"
-      : "/common/therapist-section-badge.svg");
+      ? "/ESA ICons/Icon-1.svg"
+      : "/ESA ICons/Icon-25.svg");
 
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
@@ -92,11 +91,11 @@ function DoctorStatBadge({
         {/* Floating circular icon badge at top center */}
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
           <Image
-            quality={90}
             src={iconSrc}
             alt=""
             width={16}
             height={16}
+            unoptimized
             className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain"
           />
         </div>
@@ -115,8 +114,6 @@ function DoctorStatBadge({
 }
 
 export function DoctorsListingSection() {
-  const [activePage, setActivePage] = useState<number>(0);
-
   return (
     <section className="w-full py-16 sm:py-20 lg:py-24 bg-background relative">
       <div className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,17 +190,17 @@ export function DoctorsListingSection() {
                   <DoctorStatBadge
                     label="Licensed In"
                     value={doc.licensedIn}
-                    icon="/home/doctor_professionals_licensedin_icon.svg"
+                    icon="/ESA ICons/Icon-33.svg"
                   />
                   <DoctorStatBadge
                     label="Evaluation Method"
                     value={doc.method}
-                    icon="/home/doctor_professionals_evaluationmethod_icon.svg"
+                    icon="/ESA ICons/Icon-15.svg"
                   />
                   <DoctorStatBadge
                     label="Focus Areas"
                     value={doc.focus}
-                    icon="/home/doctor_professionals_focusarea_icon.svg"
+                    icon="/ESA ICons/Icon-1.svg"
                   />
                 </div>
 
@@ -222,60 +219,17 @@ export function DoctorsListingSection() {
           ))}
         </div>
 
-        {/* Carousel indicator dots (Frame 1000012048) */}
-        <div className="flex items-center justify-center gap-2 mt-8 sm:mt-10">
-          <button
-            type="button"
-            onClick={() => setActivePage(0)}
-            aria-label="Slide 1"
-            className="relative flex items-center justify-center w-6 h-6"
-          >
-            <span
-              className={`block transition-all duration-200 ${
-                activePage === 0
-                  ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                  : "w-2.5 h-2.5 rounded-full bg-primary/20 hover:bg-primary/40"
-              }`}
-            />
-          </button>
-          <button
-            type="button"
-            onClick={() => setActivePage(1)}
-            aria-label="Slide 2"
-            className="relative flex items-center justify-center w-6 h-6"
-          >
-            <span
-              className={`block transition-all duration-200 ${
-                activePage === 1
-                  ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                  : "w-2.5 h-2.5 rounded-full bg-primary/20 hover:bg-primary/40"
-              }`}
-            />
-          </button>
-          <button
-            type="button"
-            onClick={() => setActivePage(2)}
-            aria-label="Slide 3"
-            className="relative flex items-center justify-center w-6 h-6"
-          >
-            <span
-              className={`block transition-all duration-200 ${
-                activePage === 2
-                  ? "w-3.5 h-3.5 rounded-full bg-[#1A3D4F]"
-                  : "w-2.5 h-2.5 rounded-full bg-primary/20 hover:bg-primary/40"
-              }`}
-            />
-          </button>
-        </div>
-
-        {/* Bottom CTA Pill Button (Frame 1000011742) */}
-        <div className="flex justify-center mt-7">
+        <div className="flex flex-col items-center mt-10 sm:mt-12 gap-3">
           <CtaButton
             href="/pricing/"
-            className="w-auto min-w-[215px]"
+            variant="accent"
+            className="w-auto min-w-[260px]"
           >
-            Book Appointment
+            Book Your Appointment
           </CtaButton>
+          <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text text-center">
+            If not approved after your evaluation? You get a full refund.
+          </p>
         </div>
 
       </div>

@@ -99,10 +99,10 @@ export function DoctorsAllStatesSection() {
             
             {/* Frame 1000011698 (Heading + Subtitle, gap: 28px) */}
             <div className="flex flex-col items-start gap-3.5 sm:gap-5 lg:gap-6 xl:gap-[28px] max-w-[560px] xl:max-w-[626px] w-full">
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] text-primary leading-[1.18] sm:leading-[1.2] lg:leading-[48px] xl:leading-[54px] tracking-[-0.00015em]">
-                We&apos;re in All 50 US States
+              <h2 className="heading-h2 text-primary">
+                We&apos;re In All 50 US States
               </h2>
-              <p className="font-sans font-semibold text-base sm:text-lg lg:text-[17px] xl:text-[18px] text-body-text leading-[1.65] lg:leading-[28px] xl:leading-[30px]">
+              <p className="body-large text-body-text">
                 Our licensed therapists are available across the entire United States, providing professional ESA evaluations no matter where you live.
               </p>
             </div>
