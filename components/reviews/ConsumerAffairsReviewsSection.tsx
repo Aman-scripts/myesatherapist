@@ -33,39 +33,31 @@ export function ConsumerAffairsReviewsSection() {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-10 lg:mb-12">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] font-bold text-primary tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-primary">
             Consumer Affairs Reviews
           </h2>
         </div>
 
-        {/* Summary Bar: Matches Figma Frame 1000012004 */}
-        <div className="max-w-[1065px] mx-auto mb-14 lg:mb-16 bg-white shadow-[0px_2px_8px_rgba(103,103,103,0.12)] rounded-[15px] flex items-center overflow-hidden border border-[#EAE5DC]/60">
-          {/* Left accent strip (Rectangle 25: 17px wide) */}
-          <div
-            className="w-[14px] sm:w-[17px] h-full self-stretch shrink-0 rounded-l-[15px]"
-            style={{ backgroundImage: "var(--color-gradient)" }}
-          />
-
-          {/* Inner Content (Frame 1261153667) */}
-          <div className="flex-1 flex flex-col sm:flex-row items-center justify-between gap-4 p-3.5 sm:py-3 sm:px-6 md:px-8">
-            {/* Left: Google Logo + Stars + Label */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-5 justify-center sm:justify-start">
-              <div className="flex items-center gap-2.5">
-                <ConsumerAffairsMark className="w-6 h-6 shrink-0" />
-                <StarRating rating={4} />
+        <div className="max-w-[1065px] mx-auto mb-14 lg:mb-16 bg-white shadow-[0px_2px_12px_rgba(103,103,103,0.08)] rounded-[18px]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-5 sm:px-8 py-4 sm:py-[18px]">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 justify-center sm:justify-start">
+              <div className="flex items-center gap-1" role="img" aria-label="4 out of 5 stars">
+                {["#095691", "#E8B92C", "#E8B92C", "#E8B92C", "#F3E3A8"].map((fill, i) => (
+                  <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill={fill} className="shrink-0" aria-hidden="true">
+                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
+                  </svg>
+                ))}
               </div>
-              <span className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[26px] text-primary whitespace-nowrap">
+              <span className="font-sans font-semibold text-[16px] leading-[26px] text-primary whitespace-nowrap">
                 Consumer Affairs · Verified reviews
               </span>
             </div>
 
-            {/* Right: View Source Button */}
             <a
               href="https://www.consumeraffairs.com/pets/my-esa-therapist.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-7 h-[44px] sm:h-[48px] rounded-[30px] text-white font-sans font-semibold text-[15px] sm:text-[16px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity whitespace-nowrap shrink-0"
-              style={{ backgroundImage: "var(--color-gradient)" }}
+              className="inline-flex items-center justify-center px-7 h-[44px] rounded-full bg-primary text-white font-sans font-semibold text-[15px] leading-[22px] hover:opacity-95 transition-opacity whitespace-nowrap shrink-0"
             >
               View Source
             </a>

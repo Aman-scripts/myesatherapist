@@ -33,7 +33,7 @@ export function TrustpilotReviewsSection() {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] leading-tight lg:leading-[54px] font-bold text-primary tracking-[-0.00015em]">
+          <h2 className="heading-h2 text-primary">
             Trustpilot Reviews
           </h2>
         </div>
