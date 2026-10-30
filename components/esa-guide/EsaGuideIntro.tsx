@@ -6,6 +6,7 @@ const TOPICS = [
   "Mental wellness support",
   "Emotional companionship",
   "ESA misconceptions",
+  "ESA responsibilities",
 ];
 
 export function EsaGuideIntro() {
@@ -24,7 +25,7 @@ export function EsaGuideIntro() {
           <h3 className="text-center font-heading text-[22px] font-bold leading-8 text-primary sm:text-2xl lg:text-[1.67vw] lg:leading-[2.2vw] xl:text-[24px] xl:leading-8">
             Topics Covered
           </h3>
-          <ul className="grid w-full grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid w-full grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-5">
             {TOPICS.map((topic) => (
               <li key={topic} className="relative">
                 <span className="absolute inset-x-0 top-0 bottom-0 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" aria-hidden="true" />

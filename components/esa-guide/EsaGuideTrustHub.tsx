@@ -25,7 +25,7 @@ export function EsaGuideTrustHub() {
       <div className="mx-auto flex w-full max-w-[1288px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[3.2vw] lg:px-[5vw] xl:gap-[72px] xl:px-0">
         <SectionHeader
           title="Your Trusted ESA Resource Hub"
-          subtitle="Our guides are written to give you clear, accurate information about emotional support animals — without the confusion, misinformation, or unnecessary upsells that are common in this space."
+          subtitle="Our guides are written to give you clear, accurate information about emotional support animals, without the confusion, misinformation, or unnecessary upsells that are common in this space."
           titleClassName="max-w-[912px]"
         />
         <div className="grid w-full max-w-[1281px] grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">

@@ -489,7 +489,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     url: "/blog/esa-guide/is-esa-registration-legit/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/is-esa-registration-legit/",
     schema: isEsaRegistrationLegitSchema,
-    title: "Is ESA Registration Legit or Required? The Truth About ESA Registration.",
+    title: "Is ESA Registration Legit or Required? The Truth About ESA Registration",
     metaTitle: "ESA Registration: Is It Legit & Required? | My ESA Therapist",
     metaDescription:
       "Is ESA registration required or legitimate? Learn the truth about ESA registries, ID cards, certificates, and what documentation actually matters for housing.",
@@ -854,7 +854,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     metaDescription:
       "Learn who qualifies for an ESA for children, who signs the ESA letter, parents' role, qualifying conditions, housing rights, and the evaluation process.",
     schema: esaForChildrenSchema,
-    title: "ESA for Children and Minors: How It Works and Who Signs the Letter?",
+    title: "ESA for Children and Minors: How It Works and Who Signs the Letter",
     shortDescription:
       "For children and minors, the ESA evaluation process includes parental or guardian consent. If the child qualifies, the emotional support animal letter is issued and signed by a licensed mental health professional, not by a parent or guardian.",
     category: "ESA Guide",
@@ -1194,8 +1194,8 @@ export const BLOG_POSTS: BlogArticle[] = [
     metaTitle: "ESA Letter Sample: What a Legitimate ESA Letter Looks Like? | My ESA Therapist",
     metaDescription: "Looking for an ESA letter sample? See what a legitimate ESA letter looks like, what it should include, and what landlords can verify.",
     schema: esaLetterSampleSchema,
-    title: "ESA Letter Sample: What Does a Legitimate ESA Letter Look Like?",
-    shortDescription: "This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
+    title: "ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026",
+    shortDescription: "A legitimate ESA letter in 2026 should come from a licensed mental health professional and include essentials like provider credentials, clinical determination of a need, and a housing accommodation recommendation. This guide provides an ESA letter sample and explains what a valid ESA letter should include, along with the red flags that may indicate fake or invalid documentation.",
     category: "ESA Guide",
     author: {
       name: "Allyson Valley",
@@ -1723,7 +1723,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
-      "You might wonder whether a landlord may lawfully deny your ESA accommodation request if you have an ESA letter and are moving into a rental home. The response is based on a number of factors, including the kind of housing, the paperwork you submit, and whether your request fits federal or state legislation as a reasonable accommodation.",
+      "You might wonder whether a landlord may lawfully reject your request if you have a valid emotional support animal (ESA) and are moving into a rental house. The response is based on a number of factors, including the kind of housing, the paperwork you submit, and whether your request fits federal or state legislation as a reasonable accommodation.",
       "In many scenarios, property owners have to look into an ESA request even if their building has a strict no pets rule. However, approval is not automatically granted. Housing providers may legally deny a request when specific exceptions apply. These include invalid documentation, exempt housing, or a direct threat to the health or safety of others.",
       "This blog covers when landlords may, cannot, and what you may do to improve your housing request.",
     ],
@@ -1895,7 +1895,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     metaDescription:
       "Learn everything about Emotional Support Animals, including ESA letters, landlord rules, and legal protections.",
     schema: whatIsAnEsaSchema,
-    title: "What is an Emotional Support Animal? Everything You Need to Know.",
+    title: "What is an Emotional Support Animal? Everything You Need to Know",
     shortDescription:
       "This complete guide covers everything you need to know about emotional support animals, including how ESAs work, who qualifies, federal ESA laws, housing rights, and the difference between ESAs and service animals. It also explains landlord rules, common misconceptions, and how emotional support animals help improve mental well-being.",
     category: "ESA Guide",
@@ -2317,7 +2317,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "metaTitle": "Which DSM-5 Conditions May Qualifies for an ESA Letter? My ESA Therapist",
   "metaDescription": "Explore which DSM-5 conditions may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, OCD, and other mental health conditions. Learn how eligibility works.",
   schema: conditionsThatMayQualifySchema,
-  "title": "Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide.",
+  "title": "Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide",
   "shortDescription": "Anxiety, PTSD, depression, ADHD, bipolar disorder, and several other DSM-5 conditions qualify for an emotional support animal. Learn how eligibility is assessed and how licensed professionals determine eligibility for an ESA letter.",
   "category": "Qualifying Conditions",
   "author": {
