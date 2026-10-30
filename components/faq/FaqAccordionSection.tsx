@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FAQ_DATA, FAQ_FILTERS, type FaqFilter } from "./faqData";
+import { FAQ_DATA, FAQ_FILTERS, FAQ_FILTER_LABELS, type FaqFilter } from "./faqData";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -25,10 +25,17 @@ export function FaqAccordionSection() {
 
   return (
     <section id="faq-list" className="w-full bg-background py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20">
-      <div className="max-w-[1016px] mx-auto space-y-4 sm:space-y-6">
+      <div className="max-w-[1016px] mx-auto flex flex-col items-center gap-8 sm:gap-10">
+        <div className="flex flex-col items-center gap-4 text-center max-w-[720px]">
+          <h2 className="heading-h2 text-primary">Frequently Asked Questions</h2>
+          <p className="body-large text-body-text">
+            Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
+          </p>
+        </div>
+
         {/* Topic Filters */}
         <div
-          className="flex flex-nowrap gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar -mx-4 sm:-mx-6 lg:mx-0 px-4 sm:px-6 lg:px-0 py-2"
+          className="flex flex-wrap justify-center gap-2.5 sm:gap-3 w-full py-1"
           role="group"
           aria-label="Filter FAQs by topic"
         >
@@ -43,16 +50,19 @@ export function FaqAccordionSection() {
                   e.currentTarget.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
                 }}
                 aria-pressed={active}
-                className={`shrink-0 whitespace-nowrap px-4 sm:px-6 lg:px-5 py-2 sm:py-2.5 lg:py-3 rounded-full font-sans font-semibold text-sm sm:text-base lg:text-sm xl:text-base shadow-sm transition-colors cursor-pointer ${
-                  active ? "bg-primary text-white" : "bg-white text-primary hover:bg-primary/10"
+                className={`shrink-0 whitespace-nowrap px-5 py-2.5 rounded-full font-sans font-semibold text-[14px] leading-[22px] border transition-colors cursor-pointer ${
+                  active
+                    ? "bg-primary text-white border-primary"
+                    : "bg-white text-primary border-[#EAE5DC] hover:bg-primary/5"
                 }`}
               >
-                {f}
+                {FAQ_FILTER_LABELS[f]}
               </button>
             );
           })}
         </div>
 
+        <div className="w-full flex flex-col gap-4">
         {visibleFaqs.map((faq, idx) => {
           const isOpen = openIdx === idx;
           return (
@@ -113,6 +123,7 @@ export function FaqAccordionSection() {
             </div>
           );
         })}
+        </div>
       </div>
     </section>
   );

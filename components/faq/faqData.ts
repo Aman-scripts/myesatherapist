@@ -1,15 +1,25 @@
 export const FAQ_FILTERS = [
   "All Topics",
-  "ESA",
-  "ESA Laws",
-  "Costs",
+  "ESA Letter",
   "Evaluation Process",
   "Housing Rights",
-  "ESA Letter",
+  "Costs",
+  "ESA",
+  "ESA Laws",
 ] as const;
 
 export type FaqFilter = (typeof FAQ_FILTERS)[number];
 export type FaqCategory = Exclude<FaqFilter, "All Topics">;
+
+export const FAQ_FILTER_LABELS: Record<FaqFilter, string> = {
+  "All Topics": "All Topics",
+  "ESA Letter": "ESA Letters",
+  "Evaluation Process": "Evaluation Process",
+  "Housing Rights": "Housing Rights",
+  Costs: "Costs",
+  ESA: "ESA",
+  "ESA Laws": "ESA Laws",
+};
 
 export interface FaqItem {
   category: FaqCategory;
