@@ -125,21 +125,14 @@ const PLANS: Record<PlanType, PlanSet> = {
 
 function CheckmarkIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 w-4 h-4">
-      <path
-        d="M7.01412 1.74904C7.54306 1.16829 8.45679 1.16829 8.98572 1.74904L9.66586 2.49586C9.93312 2.78937 10.3173 2.94851 10.7139 2.92997L11.7229 2.88282C12.5075 2.84615 13.1537 3.4923 13.1171 4.27695L13.0699 5.28595C13.0513 5.68251 13.2105 6.0667 13.504 6.33399L14.2508 7.01412C14.8316 7.54306 14.8316 8.45679 14.2508 8.98572L13.504 9.66586C13.2105 9.93312 13.0513 10.3173 13.0699 10.7139L13.1171 11.7229C13.1537 12.5075 12.5075 13.1537 11.7229 13.1171L10.7139 13.0699C10.3173 13.0513 9.93312 13.2105 9.66586 13.504L8.98572 14.2508C8.45679 14.8316 7.54306 14.8316 7.01412 14.2508L6.33399 13.504C6.0667 13.2105 5.68251 13.0513 5.28595 13.0699L4.27694 13.1171C3.4923 13.1537 2.84615 12.5075 2.88282 11.7229L2.92997 10.7139C2.94851 10.3173 2.78937 9.93312 2.49586 9.66586L1.74904 8.98572C1.16829 8.45679 1.16829 7.54306 1.74904 7.01412L2.49586 6.33399C2.78937 6.0667 2.94851 5.68251 2.92997 5.28595L2.88282 4.27694C2.84615 3.4923 3.4923 2.84615 4.27695 2.88282L5.28595 2.92997C5.68251 2.94851 6.0667 2.78937 6.33399 2.49586L7.01412 1.74904Z"
-        fill="#EDEDED"
-        stroke="#2E5A66"
-        strokeWidth="1.06667"
-      />
-      <path
-        d="M6 8.00033L7.33333 9.33366L10 6.66699"
-        stroke="#2E5A66"
-        strokeWidth="1.06667"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <Image
+      src="/ESA ICons/Icon-46.svg"
+      alt=""
+      width={20}
+      height={20}
+      unoptimized
+      className="shrink-0 w-5 h-5 object-contain"
+    />
   );
 }
 
@@ -147,31 +140,48 @@ interface PricingSectionProps {
   bgColor?: string;
   defaultPlan?: PlanType;
   ctaHref?: string;
+  sectionId?: string;
+  sectionClassName?: string;
+  heading?: string;
+  descriptionOverride?: string;
+  showTabs?: boolean;
+  maxCards?: number;
+  popularCardIndex?: number;
+  showDog?: boolean;
 }
 
 export function PricingSection({
   bgColor = "bg-background",
   defaultPlan = "esa",
   ctaHref = "#how-it-works",
+  sectionId = "pricing",
+  sectionClassName = "py-16 lg:py-24",
+  heading = "Plans & Pricing",
+  descriptionOverride,
+  showTabs = true,
+  maxCards,
+  popularCardIndex,
+  showDog = true,
 }: PricingSectionProps) {
   const [active, setActive] = useState<PlanType>(defaultPlan);
   const plan = PLANS[active];
+  const cards = plan.cards.slice(0, maxCards ?? plan.cards.length);
 
   return (
-    <section id="pricing" className={`py-16 lg:py-24 ${bgColor} relative overflow-hidden`}>
+    <section id={sectionId} className={`${sectionClassName} ${bgColor} relative overflow-hidden`}>
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-0 flex flex-col items-center gap-10">
         {/* Heading */}
-        <div className="text-center max-w-[709px] mx-auto space-y-3">
+        <div className="text-center max-w-[760px] mx-auto space-y-3">
           <h2 className="heading-h2 capitalize">
-            Plans &amp; Pricing
+            {heading}
           </h2>
           <p className="body-large">
-            {plan.description}
+            {descriptionOverride ?? plan.description}
           </p>
         </div>
 
         {/* Payment mode toggle (Frame: Payment Mode in Figma, w: 386px, h: 59px) */}
-        <div
+        {showTabs && <div
           className="flex w-full max-w-[386px] h-[59px] items-center rounded-full bg-white p-[4px_7px] shadow-sm"
           role="tablist"
           aria-label="Letter type"
@@ -195,30 +205,27 @@ export function PricingSection({
               </button>
             );
           })}
-        </div>
+        </div>}
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
-        <div className="relative w-full max-w-[972px] pb-10">
-          <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-12 lg:gap-[16px]">
-            {plan.cards.map((card, idx) => {
-              const isPopular = card.isPopular;
+        <div className={`relative w-full pb-10 ${maxCards === 2 ? "max-w-[660px]" : "max-w-[972px]"}`}>
+          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-12 lg:gap-[16px] ${maxCards === 2 ? "" : "lg:justify-between"}`}>
+            {cards.map((card, idx) => {
+              const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
 
               if (isPopular) {
                 return (
-                  /* Frame 1261153972: 310px wide Popular Card with Yellow Accent Frame */
+                  /* Gold frame wraps the full card, including the button */
                   <div
                     key={idx}
-                    className="w-[310px] bg-accent rounded-[24px] pt-[8px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-visible"
+                    className="w-[310px] bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex flex-col items-center shrink-0"
                   >
-                    {/* MOST POPULAR banner */}
-                    <div className="text-center font-sans font-bold text-[14px] leading-[26px] text-body-text uppercase tracking-wider py-1 shrink-0">
+                    <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-body-text uppercase tracking-wider shrink-0">
                       MOST POPULAR
                     </div>
 
-                    {/* Starter Plan: Inner White Card */}
-                    <div className="w-[300px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 pb-[36px] overflow-visible">
-                      {/* Frame 1261153969: Teal Header */}
-                      <div className="w-[300px] h-[285px] rounded-t-[20px] color-gradient pt-[22px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
+                    <div className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden">
+                      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
                         <h3 className="heading-h3 text-background capitalize">
                           {card.title}
                         </h3>
@@ -227,15 +234,13 @@ export function PricingSection({
                         </p>
                       </div>
 
-                      {/* Ellipse 20: Gold Price Circle (78px x 78px, centered on header-body divide) */}
-                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[246px] flex items-center justify-center z-20">
+                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[222px] flex items-center justify-center z-20">
                         <span className="heading-h4 font-heading font-bold text-primary">
                           {card.price}
                         </span>
                       </div>
 
-                      {/* Feature List */}
-                      <div className="pt-[54px] px-[24px] pb-[20px] flex flex-col gap-[8px]">
+                      <div className="pt-[54px] px-[24px] pb-[16px] flex flex-col gap-[6px] min-h-[220px]">
                         {card.features.map((f) => (
                           <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
                             <CheckmarkIcon />
@@ -246,11 +251,10 @@ export function PricingSection({
                         ))}
                       </div>
 
-                      {/* Button: Centered on bottom border (-bottom-[25px]) */}
-                      <div className="absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-30">
+                      <div className="pt-2 pb-7 flex justify-center items-center px-3">
                         <a
                           href={ctaHref}
-                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
+                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
                         >
                           {card.buttonText}
                         </a>
@@ -266,10 +270,10 @@ export function PricingSection({
                 /* Starter Plan: Standard Cards */
                 <div
                   key={idx}
-                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 overflow-hidden lg:mt-[38px]"
+                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden"
                 >
                   {/* Frame 1261153969: Teal Header */}
-                  <div className="w-[300px] h-[285px] rounded-t-[24px] color-gradient pt-[22px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
+                  <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
                     <h3 className="heading-h3 text-background capitalize">
                       {card.title}
                     </h3>
@@ -279,7 +283,7 @@ export function PricingSection({
                   </div>
 
                   {/* Ellipse 20: Gold Price Circle (78px x 78px, centered on header-body divide) */}
-                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[246px] flex items-center justify-center z-20">
+                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[222px] flex items-center justify-center z-20">
                     <span className="heading-h4 font-heading font-bold text-primary">
                       {card.price}
                     </span>
@@ -301,7 +305,7 @@ export function PricingSection({
                   <div className="pt-2 pb-7 flex justify-center items-center px-3">
                     <a
                       href={ctaHref}
-                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient ${
+                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
                         isLongButton
                           ? "w-[272px] px-2 whitespace-nowrap"
                           : "w-[154px]"
@@ -317,7 +321,7 @@ export function PricingSection({
 
           {/* Dog & hand artwork (Figma: width 245px, height 209px, left: 1207px, top: 494px, z-index: 3).
               Starts exactly at the last card's right edge and sits level with the price circles. */}
-          <div className="hidden lg:block absolute left-[calc(100%+1px)] top-[279px] w-[245px] h-[209px] pointer-events-none z-20">
+          {showDog && <div className="hidden lg:block absolute left-[calc(100%+1px)] top-[279px] w-[245px] h-[209px] pointer-events-none z-20">
             <Image
               quality={95}
               src="/home/pricing-section-dog.webp"
@@ -327,7 +331,7 @@ export function PricingSection({
               className="w-[245px] h-[209px] object-contain object-left pointer-events-none"
               priority
             />
-          </div>
+          </div>}
         </div>
       </div>
     </section>
@@ -375,7 +379,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       <div className="pt-2 pb-7 flex justify-center items-center px-3">
         <a
           href={ctaHref}
-          className="inline-flex items-center justify-center w-[272px] h-[50px] px-2 rounded-[42px] text-white font-sans font-semibold text-[16px] leading-[26px] whitespace-nowrap text-center shadow-[0px_4px_8px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity color-gradient"
+          className="inline-flex items-center justify-center w-[272px] h-[50px] px-2 rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] whitespace-nowrap text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
         >
           Find Your Eligibility in Minutes
         </a>

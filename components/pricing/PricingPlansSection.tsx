@@ -4,70 +4,74 @@ import React from "react";
 import Image from "next/image";
 import { PricingSection } from "@/components/home/PricingSection";
 
-const TEAL_GRADIENT = "var(--color-gradient)";
+const PLAN_INTRO =
+  "Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.";
 
 export function PricingPlansSection() {
   return (
     <div id="plans">
-      {/* Shared three-card Plans & Pricing section (same as the home page) */}
-      <PricingSection ctaHref="#evaluation" />
+      <PricingSection
+        ctaHref="#evaluation"
+        heading="Emotional Support Animal"
+        descriptionOverride={PLAN_INTRO}
+        showTabs={false}
+        maxCards={2}
+        popularCardIndex={1}
+        showDog={false}
+        sectionClassName="pt-16 lg:pt-24 pb-6"
+      />
+      <PricingSection
+        sectionId="pricing-psd"
+        defaultPlan="psd"
+        ctaHref="#evaluation"
+        heading="Psychiatric Service Dog"
+        descriptionOverride={PLAN_INTRO}
+        showTabs={false}
+        maxCards={2}
+        popularCardIndex={1}
+        showDog={false}
+        sectionClassName="pt-6 pb-8 lg:pb-12"
+      />
 
       <section className="pb-16 sm:pb-20 lg:pb-24 bg-background relative z-10 overflow-visible">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* ==================================================== */}
         {/* ADD-ON BANNER: More Than One Pet? (Frame 1000012004) */}
         {/* ==================================================== */}
-        <div className="max-w-[1065px] mx-auto bg-white/40 backdrop-blur-md rounded-[15px] border border-white/60 shadow-[0px_1px_4px_rgba(103,103,103,0.1)] overflow-hidden flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 p-4 sm:p-0 sm:pr-8">
-          <div className="flex items-center gap-4 sm:gap-6 flex-1">
-            {/* Gradient accent bar */}
-            <div
-              className="hidden sm:block w-[17px] min-h-[115px] self-stretch rounded-l-[10px] shrink-0"
-              style={{ backgroundImage: TEAL_GRADIENT }}
+        <div className="max-w-[1065px] mx-auto bg-white rounded-[18px] shadow-[0px_2px_10px_rgba(103,103,103,0.08)] flex flex-col sm:flex-row items-center justify-between gap-4 px-4 sm:px-6 py-4 sm:py-5">
+          <div className="flex items-center gap-4 sm:gap-5 flex-1 min-w-0">
+            <div className="hidden sm:block w-[10px] h-[64px] rounded-full bg-primary shrink-0" />
+            <Image
+              src="/pricing/pricingsection_Addpetbutton-icon.svg"
+              alt=""
+              width={64}
+              height={64}
+              unoptimized
+              className="w-14 h-14 sm:w-16 sm:h-16 object-contain shrink-0"
             />
-
-            {/* Pet illustration icon */}
-            <div className="w-[60px] sm:w-[78px] h-[60px] sm:h-[79px] shrink-0 relative flex items-center justify-center">
-              <Image
-            quality={90}
-                src="/pricing/pricingsection_Addpetbutton-icon.svg"
-                alt="Add a pet"
-                width={78}
-                height={79}
-                className="object-contain w-full h-full"
-              />
-            </div>
-
-            {/* Text description */}
-            <div className="flex flex-col justify-center">
-              <h4 className="text-[16px] font-semibold text-primary font-sans leading-[26px]">
+            <div className="flex flex-col justify-center min-w-0">
+              <h4 className="font-sans font-bold text-[18px] leading-[26px] text-primary">
                 More Than One Pet?
               </h4>
-              <p className="text-[13px] sm:text-[14px] text-body-text font-semibold leading-[20px] sm:leading-[26px] font-sans max-w-[658px]">
+              <p className="font-sans font-medium text-[14px] leading-[22px] text-[#6B7280]">
                 Each additional animal requires its own clinical evaluation and documentation. Select this add-on at checkout to cover a second or additional pet.
               </p>
             </div>
           </div>
-
-          {/* Add a Pet CTA button */}
-          <div className="shrink-0 self-center sm:self-auto">
-            <a
-              href="#add-pet"
-              className="flex items-center gap-2 pl-6 pr-1.5 py-1.5 rounded-[30px] text-white font-semibold text-[16px] leading-[26px] font-sans transition-opacity hover:opacity-90 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] h-[48px]"
-              style={{ backgroundImage: TEAL_GRADIENT }}
-            >
-              <span>Add a Pet</span>
-              <span className="w-[38px] h-[38px] rounded-full bg-background shadow-[0_3px_6px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
-                <Image
-            quality={90}
-                  src="/pricing/pricing_section_morethanonepet_tag.webp"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="w-5 h-5 object-contain"
-                />
-              </span>
-            </a>
-          </div>
+          <a
+            href="#add-pet"
+            className="inline-flex items-center gap-2 pl-5 pr-2 h-[42px] rounded-full bg-primary text-white font-sans font-semibold text-[15px] leading-[22px] shrink-0 hover:opacity-90 transition-opacity"
+          >
+            <span>Add a Pet</span>
+            <Image
+              src="/pricing/pricingsection_Addpetbutton-icon.svg"
+              alt=""
+              width={26}
+              height={26}
+              unoptimized
+              className="w-[26px] h-[26px] object-contain shrink-0"
+            />
+          </a>
         </div>
       </div>
       </section>

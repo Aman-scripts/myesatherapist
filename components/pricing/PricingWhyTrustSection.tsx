@@ -14,7 +14,7 @@ const EVALUATION_STEPS = [
   {
     title: "Card Authorization",
     description: "Your card is authorized (not charged) to hold your appointment slot.",
-    icon: "/about-us/about_us-transparetesa-secure_payment-icon.svg",
+    icon: "/ESA ICons/Icon-33.svg",
   },
   {
     title: "Attend Evaluation",

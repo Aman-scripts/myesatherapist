@@ -102,7 +102,7 @@ export default function PricingPage() {
 
         {/* 5. Common ESA Letter Pricing Questions (Shared Project FaqSection) */}
         <FaqSection
-          title="Common ESA Letter Pricing Questions"
+          title="Frequently Asked Questions"
           subtitle="Get answers to common questions about ESA letters and our service."
           faqs={PRICING_FAQS}
         />
