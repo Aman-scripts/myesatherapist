@@ -42,7 +42,7 @@ export function EsaOnlineSupportAnimals() {
               <div className="flex flex-col items-center text-center sm:items-start sm:text-left justify-center gap-4 p-5 sm:p-6 xl:p-8">
                 <h3 className="font-heading text-2xl lg:text-[24px] xl:text-[28px] font-bold text-primary leading-8 xl:leading-9 max-w-[300px]">{a.title}</h3>
                 <p className="font-sans text-[14px] font-semibold leading-[26px] text-body-text">{a.description}</p>
-                <CtaButton href="/pricing/">Apply your ESA Now</CtaButton>
+                <CtaButton href="/pricing/">Apply ESA Letter Now</CtaButton>
               </div>
             </div>
           ))}
@@ -53,7 +53,7 @@ export function EsaOnlineSupportAnimals() {
           <p className="font-sans text-[14px] font-semibold leading-[26px] text-body-text">
             Emotional support animal letters are not limited to dogs and cats. A licensed mental health professional may consider other animals, such as rabbits, birds, or guinea pigs, on a case-by-case basis when appropriate.
           </p>
-          <CtaButton href="/pricing/">Begin with ESA Letter Process</CtaButton>
+          <CtaButton href="/pricing/">Begin with ESA Letter Evaluation</CtaButton>
         </div>
       </div>
     </section>

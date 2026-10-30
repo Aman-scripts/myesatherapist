@@ -49,7 +49,7 @@ function TrustpilotStars() {
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
   { value: "5+", label: "Years Serving" },
-  { value: "100%", label: "Moneyback Guarantee" },
+  { value: "4.8", label: "Verified Reviews" },
 ];
 
 export function HeroSection() {

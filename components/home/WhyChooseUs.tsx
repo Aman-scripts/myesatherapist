@@ -20,13 +20,13 @@ const defaultFeatures: WhyChooseFeature[] = [
     icon: "/ESA ICons/Icon-15.svg",
     title: "Secure Telehealth Platform",
     description:
-      "HIPAA-compliant systems help ensure your personal and health information remains confidential and protected throughout your evaluation.",
+      "HIPAA-compliant systems ensure your information remains confidential and protected.",
   },
   {
     icon: "/ESA ICons/Glyph-2.svg",
     title: "Clinical Integrity First",
     description:
-      "We do not guarantee ESA approval. Recommendations are based solely on the licensed clinician's independent clinical judgment.",
+      "We do not guarantee ESA approval. Recommendations are based solely on clinical judgment.",
   },
   {
     icon: "/ESA ICons/Icon-17.svg",
@@ -44,7 +44,7 @@ const defaultFeatures: WhyChooseFeature[] = [
     icon: "/ESA ICons/Icon-26.svg",
     title: "Transparent Process",
     description:
-      "Clear steps and clear expectations at every stage, with no misleading claims or promises of automatic approval.",
+      "Clear steps, clear expectations, no misleading claims.",
   },
 ];
 

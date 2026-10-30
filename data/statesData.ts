@@ -13865,7 +13865,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Assessments conducted by New Jersey-licensed mental health professionals.",
       "ESA documentation issued only after a thorough, independent clinical evaluation.",
     ],
-    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. These audio-visual assessments must be conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. While your ESA letter writer does not need to disclose your specific diagnosis in the letter, they do need to affirm that you have an applicable diagnosis.",
+    processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. Our audio-video assessments are conducted on a HIPAA-compliant platform. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. Your documentation should explain your disability-related need for an assistance animal when supporting information is necessary. It generally does not need to disclose a specific diagnosis or include detailed medical records.",
     whoQualifiesTitle: "Who Could Be Eligible for an ESA Letter in New Jersey?",
     whoQualifiesSubtitle: "Individuals living in New Jersey may choose to complete a professional assessment if emotional or mental health challenges interfere with their everyday functioning. Licensed mental health specialists evaluate an emotional support animal’s potential to provide significant therapeutic support.",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -13901,7 +13901,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "An emotional support animal’s potential therapeutic benefits are examined on an individual basis.",
       "The person must either be a New Jersey resident at the moment or plan to move there.",
     ],
-    requirementsNote: "Important: ESA recommendations are issued only after a personalized evaluation conducted by a New Jersey-licensed mental health professional.",
+    requirementsNote: "Important: ESA recommendations are issued only after a personalized evaluation conducted by a New Jersey-licensed mental health professional. HUD’s May 22, 2026, enforcement guidance directs HUD’s Fair Housing and Equal Opportunity office to focus its reasonable-cause findings on assistance animals individually trained to perform disability-related work or tasks. This significantly changes HUD’s enforcement approach to requests involving untrained emotional support animals, although the guidance itself does not amend the Fair Housing Act.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in New Jersey?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in New Jersey while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -13940,6 +13940,15 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
     trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
+    trustedReviews: [
+      { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
+      { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
+      { name: "Bryan, Plymouth, MA", quote: "I had a really good experience with My ESA Therapist. The evaluation was straightforward, and I felt comfortable discussing my situation with the therapist. Everything was explained clearly, and I never felt rushed or pressured. The whole process was simple and professional, which made things much easier for me." },
+      { name: "Kerry, Decatur, IL", quote: "I had a pretty straightforward experience with an ESA evaluation. The process was explained clearly, and I was able to speak with a mental health professional and ask questions before moving forward. I appreciated that there weren’t unrealistic promises or pressure. Overall, everything felt professional and easier than I expected." },
+      { name: "Jimmy, Newport, PA", quote: "I was a bit unsure of what to expect, I was really nervous about the process of getting an ESA letter, but the therapist I dealt with was incredibly kind and helpful. The whole thing was sorted out quickly and without hassle." },
+      { name: "Todd, San Francisco, CA", quote: "What stood out to me was how comfortable the conversation felt. I didn’t feel like I had to explain everything perfectly, which made the whole experience much easier for me." },
+    ],
+    benefitsRefundNote: "",
     benefitsTitle: "Benefits of Having an ESA Letter in New Jersey",
     benefitsSubtitle: "Learn how obtaining an ESA letter in New Jersey may support your well-being and make everyday life with your companion animal more manageable.",
     financialBenefitsHeading: "Financial Benefits",
@@ -13983,23 +13992,23 @@ export const STATES_DATA: Record<string, StateData> = {
     card1Title: "Federal Housing Guidelines",
     card1Items: [
       {
-        title: "Clear Review Process for ESA Requests",
-        description: "According to federal housing rules, housing providers in New Jersey are required to thoroughly consider each request for an emotional support animal accommodation. After a customized clinical evaluation, anyone with a documented need may submit the appropriate paperwork from a mental health professional licensed in New Jersey.",
+        title: "New Jersey ESA Law",
+        description: "Under the New Jersey Law Against Discrimination (N.J.S.A. 10:5-12(g)) and the federal Fair Housing Act (42 U.S.C. § 3604(f)(3)(B)), qualifying individuals with disabilities may request reasonable housing accommodations for emotional support animals, including exceptions to no-pet policies.",
       },
       {
-        title: "Protection from Standard Pet Classifications",
-        description: "Emotional support animals are not considered regular pets under federal housing standards. Most property owners are unable to treat the animal as part of regular pet policies or implement standard pet-related regulations once valid ESA documentation is granted.",
+        title: "Protection from Pet-Related Fees",
+        description: "Assistance animals approved as reasonable accommodations generally are not subject to pet rent, pet deposits, or other pet-related fees. Reasonable, nondiscriminatory rules that do not interfere with the approved accommodation may still apply.",
       },
       {
         title: "Case-by-Case Determination",
-        description: "Every request for accommodations is evaluated on the basis of the particulars of the property and the resident. Although ESAs are exempt from the majority of typical pet restrictions, a request can be turned down if the animal directly endangers public safety or has the potential to seriously harm property.",
+        description: "A housing provider may deny an assistance-animal request when reliable, objective evidence shows that the specific animal poses a direct threat to health or safety or would cause substantial physical damage to another person’s property, and the risk cannot be reduced or eliminated through another reasonable accommodation. Other applicable Fair Housing Act exceptions may also apply.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
     card2Items: [
       {
         title: "Verification of ESA Documentation",
-        description: "New Jersey property owners can verify that an ESA has been granted following a valid clinical evaluation by looking over the documents. Landlords can confirm that the letter was written by an authorized mental health practitioner who is permitted to practice in New Jersey under the federal Fair Housing Act.",
+        description: "Housing providers may review reliable supporting information when necessary to evaluate an assistance-animal accommodation request. They may take reasonable steps to verify its authenticity, but federal fair housing law does not universally require supporting information to come from a clinician licensed in New Jersey or follow a particular letter format.",
       },
       {
         title: "Compliance with Property Standards",
@@ -14010,7 +14019,7 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "If there is solid proof that an animal directly endangers people or is likely to cause significant property damage, the housing provider may refuse or reevaluate an ESA arrangement. Decisions should not be made based on presumptions about breed, size, or look, but rather on recorded behavior or risk.",
       },
     ],
-    legalNotice: "Important Legal Notice: Under the Fair Housing Act, emotional support animals are recognized for housing purposes. They do not have the same rights to public access as service animals, which are safeguarded under the 1990 Americans with Disabilities Act. ESAs are typically not allowed in eateries, retail establishments, or other public areas where pets are not allowed. Additionally, before flying with an ESA, passengers should examine the most recent airline instructions as air travel policies have changed.",
+    legalNotice: "Under the Fair Housing Act, emotional support animals are recognized for housing purposes. They do not have the same rights to public access as service animals, which are safeguarded under the 1990 Americans with Disabilities Act. ESAs are typically not allowed in eateries, retail establishments, or other public areas where pets are not allowed. Emotional support animals generally do not have the same public-access rights as service animals under the ADA. Airlines are generally not required to treat ESAs as service animals, so passengers should check the airline’s current pet-travel policies before flying.",
     scamsTitle: "ESA Letters in New Jersey: Truth vs. Misconceptions",
     scamsSubtitle: "Understanding how emotional support animal laws actually function in New Jersey can help residents avoid misinformation and questionable services.",
     scamsAlertTitle: "Important Note: No Official ESA Registry",
@@ -14131,7 +14140,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Happens If I Move To Another State With My New Jersey ESA Letter?",
-        a: "If you relocate, housing providers in the new state may require documentation from a clinician licensed in that state. It’s often recommended to obtain an updated evaluation after moving.",
+        a: "Moving to another state does not automatically invalidate existing ESA documentation. The new housing provider may assess the documentation under the applicable fair housing requirements and request reliable additional information when permitted and necessary. A new evaluation or documentation from a clinician licensed in the new state is not automatically required in every case.",
       },
       {
         q: "How Much Does An ESA Letter Cost In New Jersey?",
@@ -14139,7 +14148,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "Can A Housing Provider Limit The Type Of Animal That Qualifies As An ESA In New Jersey?",
-        a: "Generally, most domesticated animals may qualify if a licensed clinician determines they provide therapeutic benefit. However, requests involving uncommon or exotic animals may receive closer review, especially if there are legitimate safety or property concerns.",
+        a: "The animal’s suitability is assessed individually. Under federal housing guidance, assistance animals are generally animals commonly kept in households, although other animals may be considered in appropriate circumstances. The decision depends on the disability-related need, the animal, and the circumstances of the request.",
       },
       {
         q: "Can A Landlord Delay Responding To My New Jersey ESA Request?",
@@ -14150,8 +14159,8 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "In most cases, a clear digital copy is acceptable, especially if it includes the clinician’s license details and signature. Housing providers may verify authenticity but cannot require unnecessary formatting beyond reasonable documentation standards.",
       },
     ],
-    ctaTitle: "Ready to Start Your\nNew Jersey ESA Evaluation?",
-    ctaSubtitle: "Connect with a New Jersey-licensed mental health professional today\nfor a legitimate, FHA-compliant ESA letter.",
+    ctaTitle: "Ready to Start Your New Jersey ESA Evaluation?",
+    ctaSubtitle: "Connect with a New Jersey-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     tableOfContents: [
       { id: "therapists", label: "Who Conducts My ESA Evaluation?" },
       { id: "process", label: "How to Get an ESA Letter in New Jersey?" },

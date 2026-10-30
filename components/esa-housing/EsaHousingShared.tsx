@@ -6,12 +6,11 @@ import React from "react";
  */
 export const SECTION_H2 =
   "font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em]";
-export const SECTION_LEAD = "font-sans text-base sm:text-[18px] text-body-text font-semibold leading-[30px]";
+export const SECTION_LEAD = "body-large text-body-text";
 
 export const SCALED_H2 =
   "font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-primary leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em]";
-export const SCALED_P =
-  "font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-body-text font-semibold leading-[1.67]";
+export const SCALED_P = "body-large text-body-text";
 
 export function SectionHeader({
   title,

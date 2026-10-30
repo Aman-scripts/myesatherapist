@@ -10,13 +10,13 @@ const POINTS = [
       "Housing providers are required to consider ESA accommodation requests under applicable federal housing laws.",
   },
   {
-    title: "Save On Pet Fees",
+    title: "Save on Pet Fees",
     icon: "/ESA ICons/Icon-21.svg",
     description:
       "When an ESA letter is accepted, pet deposits and monthly pet rent typically do not apply, subject to provider review.",
   },
   {
-    title: "Breed Or Weight Restrictions Waived",
+    title: "Breed or Weight Restrictions Waived",
     icon: "/ESA ICons/Icon-30.svg",
     description:
       "When an ESA accommodation request is granted, ESAs are generally exempt from breed and size limitations, consistent with fair housing guidelines.",
@@ -41,7 +41,7 @@ export function EsaOnlineHousingRights() {
 
           <div className="flex flex-col items-center gap-6 px-5 sm:px-10 pt-8 pb-10">
             <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary leading-[1.2] sm:leading-[44px] text-center">
-              Your Housing Rights With An ESA Letter
+              Your Housing Rights With an ESA Letter
             </h2>
 
             <ul className="w-full max-w-[712px] flex flex-col gap-5">

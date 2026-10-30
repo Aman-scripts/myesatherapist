@@ -150,6 +150,8 @@ interface PricingSectionProps {
   popularCardIndex?: number;
   showDog?: boolean;
   cards?: PlanCard[];
+  /** Teal header height. Shorter copy, such as renewal subtitles, should use a tighter header so the price sits on the divider. */
+  headerHeight?: number;
 }
 
 export function PricingSection({
@@ -166,6 +168,7 @@ export function PricingSection({
   popularCardIndex,
   showDog = true,
   cards: cardsOverride,
+  headerHeight = 261,
 }: PricingSectionProps) {
   const [active, setActive] = useState<PlanType>(defaultPlan);
   const plan = PLANS[active];
@@ -213,8 +216,8 @@ export function PricingSection({
         </div>}
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
-        <div className={`relative w-full pb-10 ${maxCards === 2 ? "max-w-[660px]" : "max-w-[972px]"}`}>
-          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-12 lg:gap-[16px] ${maxCards === 2 ? "" : "lg:justify-between"}`}>
+        <div className={`relative pb-10 ${maxCards === 2 ? "w-fit max-w-full" : "w-full max-w-[972px]"}`}>
+          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
             {cards.map((card, idx) => {
               const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
 
@@ -230,8 +233,8 @@ export function PricingSection({
                     </div>
 
                     <div className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden">
-                      <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
-                        <h3 className="heading-h3 text-background">
+                      <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
+                        <h3 className="heading-h3 text-background whitespace-pre-line">
                           {card.title}
                         </h3>
                         <p className="body-text text-background font-semibold">
@@ -239,7 +242,7 @@ export function PricingSection({
                         </p>
                       </div>
 
-                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[222px] flex items-center justify-center z-20">
+                      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-20" style={{ top: headerHeight - 39 }}>
                         <span className="heading-h4 font-heading font-bold text-primary">
                           {card.price}
                         </span>
@@ -247,9 +250,9 @@ export function PricingSection({
 
                       <div className="pt-[54px] px-[24px] pb-[16px] flex flex-col gap-[6px] min-h-[220px]">
                         {card.features.map((f) => (
-                          <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
-                            <CheckmarkIcon />
-                            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+                          <div key={f} className="flex items-start gap-[8px]">
+                            <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
+                            <span className="font-sans font-semibold text-[14px] leading-[22px] text-body-text">
                               {f}
                             </span>
                           </div>
@@ -278,8 +281,8 @@ export function PricingSection({
                   className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden"
                 >
                   {/* Frame 1261153969: Teal Header */}
-                  <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
-                    <h3 className="heading-h3 text-background">
+                  <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
+                    <h3 className="heading-h3 text-background whitespace-pre-line">
                       {card.title}
                     </h3>
                     <p className="body-text text-background font-semibold">
@@ -288,7 +291,7 @@ export function PricingSection({
                   </div>
 
                   {/* Ellipse 20: Gold Price Circle (78px x 78px, centered on header-body divide) */}
-                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 top-[222px] flex items-center justify-center z-20">
+                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-20" style={{ top: headerHeight - 39 }}>
                     <span className="heading-h4 font-heading font-bold text-primary">
                       {card.price}
                     </span>
@@ -297,9 +300,9 @@ export function PricingSection({
                   {/* Feature List (min-h keeps button aligned across cards with 4 vs 5 features) */}
                   <div className="pt-[54px] px-[24px] pb-[16px] flex flex-col gap-[8px] min-h-[220px]">
                     {card.features.map((f) => (
-                      <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
-                        <CheckmarkIcon />
-                        <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+                      <div key={f} className="flex items-start gap-[8px]">
+                        <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
+                        <span className="font-sans font-semibold text-[14px] leading-[22px] text-body-text">
                           {f}
                         </span>
                       </div>
@@ -326,7 +329,7 @@ export function PricingSection({
 
           {/* Dog & hand artwork (Figma: width 245px, height 209px, left: 1207px, top: 494px, z-index: 3).
               Starts exactly at the last card's right edge and sits level with the price circles. */}
-          {showDog && <div className="hidden lg:block absolute left-[calc(100%+1px)] top-[279px] w-[245px] h-[209px] pointer-events-none z-20">
+          {showDog && <div className="hidden lg:block absolute left-[calc(100%+1px)] w-[245px] h-[209px] pointer-events-none z-20" style={{ top: headerHeight === 261 ? 279 : headerHeight + 20 }}>
             <Image
               quality={80}
               src="/home/pricing-section-dog.webp"

@@ -7,19 +7,19 @@ const STEPS = [
     image: "/esa-renewal/esa-renewal-processworks-step1.webp",
     title: "Set Up Your Appointment",
     description:
-      "Create your account and choose a time that works for you to connect with a licensed mental health professional.",
+      "Create your account and choose a time that works for you to connect with a state-licensed mental health professional.",
   },
   {
     image: "/esa-renewal/esa-renewal-processworks-step2.webp",
     title: "Speak With Professionals",
     description:
-      "During the consultation, the professional reviews your emotional and mental health concerns and assesses whether an emotional support animal is appropriate.",
+      "During your consultation, the clinician reviews your emotional and mental health concerns and discusses whether an emotional support animal may be appropriate.",
   },
   {
     image: "/esa-renewal/esa-renewal-processworks-step3.webp",
-    title: "Clinical Determination",
+    title: "Clinical Review & Documentation",
     description:
-      "Following the professional evaluation, if deemed appropriate by the licensed professional, emotional support animal documentation is sent directly to your email. If not, no documentation is issued.",
+      "After your evaluation, the licensed mental health professional determines whether ESA documentation is clinically appropriate. If so, the letter may be provided by email.",
   },
 ];
 
@@ -37,9 +37,9 @@ export function EsaOnlineHowItWorks() {
     <section id="how-it-works" className="w-full bg-background py-16 sm:py-20 lg:py-24">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <div className="flex flex-col items-center gap-2 text-center max-w-[820px]">
-          <h2 className="heading-h2 text-primary">How Does Online ESA Evaluation Work</h2>
+          <h2 className="heading-h2 text-primary">How Does Our Online ESA Letter Evaluation Work?</h2>
           <p className="body-large text-body-text">
-            A simple 3-step process to complete your emotional support animal letter evaluation.
+            A simple three-step process guided by a licensed mental health professional.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export function EsaOnlineHowItWorks() {
                   </div>
                 </div>
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">
-                  <h3 className="whitespace-nowrap font-heading text-[22px] font-bold leading-7 text-[#1A3D4F] sm:text-[24px]">{step.title}</h3>
+                  <h3 className="font-heading text-[22px] font-bold leading-7 text-[#1A3D4F] sm:text-[24px]">{step.title}</h3>
                   <p className="body-text text-body-text">{step.description}</p>
                 </div>
               </div>
@@ -67,10 +67,7 @@ export function EsaOnlineHowItWorks() {
             Get Started
           </CtaButton>
           <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
-            If not approved after your evaluation? You get a full refund.
-          </p>
-          <p className="rounded-full bg-[#FDECEC] px-5 py-2 text-center font-sans text-[14px] font-medium leading-[22px] text-[#8A3A3A]">
-            We authorize your payment first, but we will only charge it after your evaluation is completed.
+            ESA letters are provided solely when deemed clinically appropriate by the evaluating clinician.
           </p>
         </div>
       </div>

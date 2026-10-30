@@ -16,9 +16,9 @@ const CARDS = [
   },
   {
     icon: "/ESA ICons/Icon-25.svg",
-    title: "FHA And HUD Guidance",
+    title: "Alignment With FHA and HUD Guidance",
     description:
-      "Your ESA letter is issued in accordance with applicable federal law and relevant HUD guidance for housing accommodation requests under the FHA.",
+      "Your ESA letter is issued in accordance with applicable federal law and relevant HUD guidance for housing accommodation requests under the Fair Housing Act.",
   },
 ];
 

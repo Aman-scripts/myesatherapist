@@ -58,7 +58,7 @@ export function EsaOnlineEligible() {
         <div className="w-full max-w-[628px] lg:max-w-[min(43.6vw,628px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-primary leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(32.6vw,470px)]">
-              Who May Be Eligible For An ESA Letter?
+              Who May Be Eligible for an ESA Letter?
             </h2>
             <p className="font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-body-text font-semibold leading-[1.67] lg:max-w-[min(39.4vw,568px)]">
               Your eligibility for an ESA letter is determined solely by a licensed mental health professional. The clinician evaluates whether an emotional support animal may be appropriate based on your individual needs. There is no automatic approval.
@@ -67,7 +67,7 @@ export function EsaOnlineEligible() {
 
           <div className="flex flex-col gap-4">
             <h3 className="font-heading text-2xl sm:text-[28px] lg:text-[length:min(1.94vw,28px)] font-bold text-body-text leading-9 lg:leading-[min(2.5vw,36px)]">
-              Qualifying Conditions :
+              Conditions Commonly Evaluated by Clinicians
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 lg:gap-x-[min(1.1vw,16px)] lg:gap-y-[min(0.83vw,12px)]">
               {CONDITIONS.map((c) => (
@@ -89,6 +89,9 @@ export function EsaOnlineEligible() {
                 </div>
               ))}
             </div>
+            <p className="font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-body-text font-semibold leading-[1.67]">
+              Licensed clinicians will refer to established clinical guidelines, including the Diagnostic and Statistical Manual of Mental Disorders (DSM-5), as a standard part of every individualized evaluation.
+            </p>
           </div>
 
           <GoldCallout>
@@ -121,10 +124,13 @@ export function EsaOnlineEligible() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start">
-            <CtaButton href="/pricing/" variant="accent" className="w-auto min-w-[280px]">
-              Talk With Licensed Therapist
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start sm:gap-4">
+            <CtaButton href="/pricing/" variant="accent" className="w-auto shrink-0">
+              Talk With a Licensed Therapist
             </CtaButton>
+            <p className="max-w-[240px] text-left font-sans text-base font-semibold leading-[26px] text-body-text">
+              And receive a professional mental health evaluation.
+            </p>
           </div>
         </div>
 

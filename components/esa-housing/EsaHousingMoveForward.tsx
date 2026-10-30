@@ -20,7 +20,7 @@ export function EsaHousingMoveForward() {
         <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-background leading-[1.2] xl:leading-[54px] tracking-[-0.00015em] max-w-[888px] lg:max-w-[min(61vw,888px)]">
           Move Forward With Clarity About Your Housing Options
         </h2>
-        <p className="font-sans text-base sm:text-[18px] font-semibold leading-[30px] text-background max-w-[932px] lg:max-w-[min(64vw,932px)]">
+        <p className="body-large text-background max-w-[932px] lg:max-w-[min(64vw,932px)]">
           Learn whether an Emotional Support Animal may be appropriate for you and how housing protections may support your situation.
         </p>
         <a

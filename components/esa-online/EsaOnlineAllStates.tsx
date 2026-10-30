@@ -14,7 +14,23 @@ export function EsaOnlineAllStates() {
           </p>
         </div>
 
-        <CtaButton href="/states/">View All 50 states</CtaButton>
+        <div className="flex flex-col items-center gap-3">
+          <p className="font-sans text-base font-semibold text-primary">Popular States</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              ["ESA Letter California", "/california/"],
+              ["ESA Letter Texas", "/texas/"],
+              ["ESA Letter Florida", "/florida/"],
+              ["ESA Letter New York", "/new-york/"],
+            ].map(([label, href]) => (
+              <a key={href} href={href} className="font-sans text-base font-semibold text-primary underline">
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <CtaButton href="/states/">View All 50 States</CtaButton>
 
         <GoldCallout className="text-left max-w-[1021px]">
           No matter where you live, you can be connected with a licensed mental health professional who conducts your ESA evaluation and may issue documentation.

@@ -5,7 +5,7 @@ import { PricingSection } from "@/components/home/PricingSection";
 
 const RENEWAL_CARDS = [
   {
-    title: "New ESA Letter",
+    title: "New ESA\nLetter",
     description: "For first-time applicants",
     price: "$129",
     features: [
@@ -19,7 +19,7 @@ const RENEWAL_CARDS = [
     buttonText: "Get Started",
   },
   {
-    title: "ESA Letter Renewal",
+    title: "ESA Letter\nRenewal",
     description: "For individuals with an existing ESA letter",
     price: "$129",
     features: [
@@ -42,9 +42,10 @@ export function EsaRenewalPricing() {
       headingClassName="heading-h2"
       descriptionOverride="Understand your evaluation options and pricing before getting started"
       showTabs={false}
-      showDog={false}
+      showDog
+      maxCards={2}
       popularCardIndex={1}
-      headerHeight={184}
+      headerHeight={216}
       cards={RENEWAL_CARDS}
       ctaHref="/pricing/#evaluation"
       sectionClassName="pt-16 lg:pt-24 pb-8 lg:pb-12"

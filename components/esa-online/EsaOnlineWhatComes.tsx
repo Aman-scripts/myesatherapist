@@ -6,7 +6,7 @@ const CARDS = [
     icon: "/ESA ICons/Icon-33.svg",
     title: "State Licensed Clinician Signature",
     description:
-      "Each letter is issued on professional letterhead and signed by a mental health professional authorized to practice in your state.",
+      "Each document is issued on the clinician’s professional letterhead and signed by a mental health professional authorized to practice in your state.",
   },
   {
     icon: "/ESA ICons/Icon-25.svg",
@@ -24,7 +24,7 @@ const CARDS = [
     icon: "/ESA ICons/Icon-22.svg",
     title: "Renewal Reminders",
     description:
-      "You receive timely notifications before your letter expires to help keep your ESA documentation current.",
+      "You receive notifications to help keep your ESA documentation current.",
   },
   {
     icon: "/ESA ICons/Glyph-2.svg",
