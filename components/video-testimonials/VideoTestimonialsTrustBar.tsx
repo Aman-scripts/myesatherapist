@@ -3,74 +3,60 @@
 import React from "react";
 import Image from "next/image";
 
+const ITEMS = [
+  {
+    src: "/video_testimonial/video_testimonial-trustsection-happyclient.webp",
+    alt: "Happy Clients",
+    value: "624+",
+    label: "Happy Clients",
+    iconClass: "w-[72px] h-[64px] sm:w-[88px] sm:h-[76px]",
+  },
+  {
+    src: "/video_testimonial/video_testimonial-trustsection-rating.webp",
+    alt: "Average Rating",
+    value: "4.9/5",
+    label: "Average Rating",
+    iconClass: "w-[72px] h-[60px] sm:w-[88px] sm:h-[72px]",
+  },
+  {
+    src: "/video_testimonial/video_testimonial-trustsection-acceptancerate.webp",
+    alt: "Acceptance Rate",
+    value: "100%",
+    label: "Acceptance Rate",
+    iconClass: "w-[68px] h-[68px] sm:w-[84px] sm:h-[84px]",
+  },
+] as const;
+
 export function VideoTestimonialsTrustBar() {
   return (
-    <div className="w-full max-w-[933px] mx-auto bg-white shadow-[0px_2px_8px_rgba(0,0,0,0.12)] rounded-[22px] py-3.5 sm:py-4 lg:py-[20px] px-4 sm:px-7 border border-black/[0.04]">
-      <div className="flex flex-col sm:flex-row items-center justify-between divide-y sm:divide-y-0 sm:divide-x divide-body-text/20 gap-3 sm:gap-0">
-        
-        {/* Item 1: 624+ Happy Clients */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-1/3 py-1.5 sm:py-0 sm:px-4">
-          <div className="relative w-[65px] h-[60px] sm:w-[77px] sm:h-[71px] shrink-0">
-            <Image
-            quality={90}
-              src="/video_testimonial/video_testimonial-trustsection-happyclient.webp"
-              alt="Happy Clients"
-              fill
-              className="object-contain"
-            />
+    <div className="w-full max-w-[980px] mx-auto bg-white shadow-[0px_8px_24px_rgba(26,61,79,0.08)] rounded-[24px] py-4 sm:py-5 px-4 sm:px-8">
+      <div className="flex flex-col sm:flex-row items-center">
+        {ITEMS.map((item, index) => (
+          <div key={item.label} className="flex items-center w-full sm:flex-1 min-w-0">
+            {index > 0 && (
+              <div className="hidden sm:block w-px h-14 bg-[#E4DFD6] shrink-0" />
+            )}
+            <div className="flex items-center justify-center gap-3 sm:gap-4 w-full py-2 sm:py-0 sm:px-5">
+              <div className={`relative shrink-0 ${item.iconClass}`}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  unoptimized
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col items-start">
+                <span className="font-heading font-bold text-[22px] leading-[28px] text-[#1A3D4F]">
+                  {item.value}
+                </span>
+                <span className="font-sans font-medium text-[14px] leading-[20px] text-[#5F6B6F] whitespace-nowrap">
+                  {item.label}
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col items-start">
-            <span className="font-heading font-bold text-xl sm:text-[20px] leading-[26px] text-primary">
-              624+
-            </span>
-            <span className="font-sans font-semibold text-xs leading-[22px] text-body-text whitespace-nowrap">
-              Happy Clients
-            </span>
-          </div>
-        </div>
-
-        {/* Item 2: 4.9/5 Average Rating */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-1/3 py-1.5 sm:py-0 sm:px-4">
-          <div className="relative w-[65px] h-[54px] sm:w-[77px] sm:h-[64px] shrink-0">
-            <Image
-            quality={90}
-              src="/video_testimonial/video_testimonial-trustsection-rating.webp"
-              alt="Average Rating"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <div className="flex flex-col items-start">
-            <span className="font-heading font-bold text-xl sm:text-[20px] leading-[26px] text-primary">
-              4.9/5
-            </span>
-            <span className="font-sans font-semibold text-xs leading-[22px] text-body-text whitespace-nowrap">
-              Average Rating
-            </span>
-          </div>
-        </div>
-
-        {/* Item 3: 100% Acceptance Rate */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 w-full sm:w-1/3 py-1.5 sm:py-0 sm:px-4">
-          <div className="relative w-[65px] h-[65px] sm:w-[77px] sm:h-[77px] shrink-0">
-            <Image
-            quality={90}
-              src="/video_testimonial/video_testimonial-trustsection-acceptancerate.webp"
-              alt="Acceptance Rate"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <div className="flex flex-col items-start">
-            <span className="font-heading font-bold text-xl sm:text-[20px] leading-[26px] text-primary">
-              100%
-            </span>
-            <span className="font-sans font-semibold text-xs leading-[22px] text-body-text whitespace-nowrap">
-              Acceptance Rate
-            </span>
-          </div>
-        </div>
-
+        ))}
       </div>
     </div>
   );
