@@ -1,7 +1,6 @@
 import React from "react";
-import { Home, X } from "lucide-react";
-
-const TEAL_GRADIENT = "var(--color-gradient)";
+import Image from "next/image";
+import { X } from "lucide-react";
 
 const DENIAL_REASONS = [
   "Put an unfair financial and administrative burden on the landlord (e.g., a landlord can’t insure their rental properties because of the ESA)",
@@ -10,31 +9,33 @@ const DENIAL_REASONS = [
   "Possibly cause major physical damage to others’ property, even with reasonable accommodations put in place to reduce the damage",
 ];
 
-function CardIcon() {
+function CardIcon({ src }: { src: string }) {
   return (
-    <div className="w-[57px] h-[57px] rounded-2xl flex items-center justify-center shrink-0" style={{ background: TEAL_GRADIENT }}>
-      <Home className="w-6 h-6 text-white" strokeWidth={2} />
+    <div className="w-[57px] h-[57px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-[0px_2px_4px_rgba(0,0,0,0.08)]">
+      <Image src={src} alt="" width={32} height={32} unoptimized className="w-8 h-8 object-contain" />
     </div>
   );
 }
 
 function LawCard({
   title,
+  icon,
   children,
 }: {
   title: string;
+  icon: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)]">
       <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
-        <CardIcon />
+        <CardIcon src={icon} />
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
-          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
+          <h3 className="heading-h4 text-primary">
             {title}
           </h3>
-          <div className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text flex flex-col gap-4">
+          <div className="body-large text-body-text flex flex-col gap-4">
             {children}
           </div>
         </div>
@@ -48,16 +49,16 @@ export function EsaLawsFederalSection() {
     <section className="w-full bg-white py-14 sm:py-20 px-4 sm:px-8 lg:px-[132px]">
       <div className="max-w-[1178px] mx-auto flex flex-col items-center gap-10 sm:gap-14">
         <div className="flex flex-col items-center gap-3 sm:gap-4 max-w-[764px] text-center">
-          <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-primary">
+          <h2 className="heading-h2 text-primary">
             Federal Laws Governing Emotional Support Animals
           </h2>
-          <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text max-w-[1052px]">
+          <p className="body-large text-body-text max-w-[1052px]">
             Two primary federal laws have historically governed ESA rights in the United States. Understanding their scope is essential for both ESA owners and housing providers.
           </p>
         </div>
 
         <div className="w-full flex flex-col gap-12 sm:gap-[72px]">
-          <LawCard title="Fair Housing Act (FHA)">
+          <LawCard title="Fair Housing Act (FHA)" icon="/ESA ICons/Icon-24.svg">
             <p>
               The federal Fair Housing Act (FHA) allows individuals with disabilities to request an ESA as a reasonable accommodation, even in housing that has pet restrictions. However, the request must include reliable, disability-related documentation. This typically means providing an ESA letter issued after a clinical evaluation by a licensed mental health professional.
             </p>
@@ -69,13 +70,13 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="Air Carrier Access Act (ACAA)">
+          <LawCard title="Air Carrier Access Act (ACAA)" icon="/ESA ICons/Icon-17.svg">
             <p>
               The federal Air Carrier Access Act (ACAA) previously required airlines to allow ESAs to travel with passengers who have disabilities. However, this rule changed in 2021. ESAs are no longer protected under the ACAA and are now treated as pets on flights. Only service dogs are required to be allowed on flights.
             </p>
           </LawCard>
 
-          <LawCard title="What Federal Law Covers vs Does Not Cover">
+          <LawCard title="What Federal Law Covers vs Does Not Cover" icon="/ESA ICons/Glyph-3.svg">
             <p>
               Federal ESA law protects the rights of individuals with disabilities to keep their ESAs in housing as a reasonable accommodation. This includes college housing and dorms. They are not required to pay pet fees or deposits. ESAs also do not need special training like service dogs. There is no legal requirement to register, license, or certify an ESA in an online database, even though many scam websites claim otherwise.
             </p>
@@ -87,7 +88,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="ESA Rights vs Landlord Rights">
+          <LawCard title="ESA Rights vs Landlord Rights" icon="/ESA ICons/Icon-18.svg">
             <p>
               According to federal law, the only times housing providers can refuse a reasonable accommodation request for an ESA are when the ESA would:
             </p>

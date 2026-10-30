@@ -10,14 +10,14 @@ export function EsaLawsIntroSection() {
   return (
     <section className="w-full bg-background pt-14 sm:pt-20 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1178px] mx-auto flex flex-col items-center gap-4 sm:gap-5">
-        <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-primary text-center">
+        <h2 className="heading-h2 text-primary text-center">
           Understanding ESA Laws
         </h2>
         <div className="flex flex-col gap-5 sm:gap-6 max-w-[1156px]">
           {PARAGRAPHS.map((p, idx) => (
             <p
               key={idx}
-              className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-center text-body-text"
+              className="body-large text-center text-body-text"
             >
               {p}
             </p>
