@@ -71,6 +71,14 @@ const DOC_PRICING_SLUGS = new Set([
   "new-york",
   "north-carolina",
   "north-dakota",
+  "ohio",
+  "oklahoma",
+  "oregon",
+  "pennsylvania",
+  "south-carolina",
+  "south-dakota",
+  "texas",
+  "utah",
 ]);
 
 const DOC_DATA_PLAN_SLUGS = new Set([
@@ -105,6 +113,14 @@ const DOC_DATA_PLAN_SLUGS = new Set([
   "new-mexico",
   "north-carolina",
   "north-dakota",
+  "ohio",
+  "oklahoma",
+  "oregon",
+  "pennsylvania",
+  "south-carolina",
+  "south-dakota",
+  "texas",
+  "utah",
 ]);
 
 export function StatePricingSection({ data }: StatePricingSectionProps) {

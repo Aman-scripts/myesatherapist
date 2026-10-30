@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { assetUrl, SITE_URL } from "@/lib/site";
 
-const SITE = "https://myesatherapist.com";
+const SITE = SITE_URL;
 
 /** Feature / Open Graph card images in public/og, keyed by file name. Value is [width, height]. */
 const SIZES: Record<string, [number, number]> = {
@@ -79,12 +80,54 @@ const SIZES: Record<string, [number, number]> = {
   "blog-conditions-that-may-qualify-for-an-esa": [1201, 901],
   "blog-esa-for-anxiety": [1201, 801],
   "blog-8-basic-obedience-commands-every-esa-should-know": [1200, 800],
+  "blog-esa-for-ptsd": [1200, 800],
+  "blog-esa-for-depression": [1200, 800],
+  "blog-prepare-esa-for-rental-housing": [1200, 800],
+  "blog-esa-training-myths": [1200, 800],
 };
+
+/** Public paths from the featured-image spreadsheet. State samples are derived from the key. */
+const PATHS: Record<string, string> = {
+  homepage: "/images/pages/telehealth-with-a-happy-companion.webp",
+  "about-us": "/images/about/esa-evaluations-online-image.webp",
+  "blog-hub-page": "/images/pages/resource-hub-for-emotional-support-animals.webp",
+  "customer-reviews": "/images/pages/five-star-customer-reviews.webp",
+  "esa-by-state": "/images/pages/person-with-esa-image.webp",
+  "esa-guide": "/images/pages/couple-and-dog-exploring-esa-guidance.webp",
+  "esa-laws": "/images/pages/esa-laws-federal-state-guide.webp",
+  "esa-letter-cost": "/images/pages/esa-letter-cost.webp",
+  "esa-letter-for-housing": "/images/pages/emotional-support-animal-letter-image.webp",
+  "esa-letter-online": "/images/pages/esa-evaluations-online-image.webp",
+  "esa-letter-renewal": "/images/pages/lady-with-her-emotional-support-dog-image.webp",
+  "our-therapist": "/images/pages/our-therapists.webp",
+  "psd-letter": "/images/psd/psd-letter-consultation-hero.webp",
+  "video-testimonials": "/images/pages/customer-video-testimonial.webp",
+  "blog-how-to-verify-an-esa-letter": "/images/blog/happily-living-with-emotional-support-animal.webp",
+  "blog-is-esa-registration-legit": "/images/blog/woman-with-emotional-support-dog.webp",
+  "blog-hud-guidance-for-emotional-support-animals": "/images/blog/living-with-an-esa-in-rental-housing-image.webp",
+  "blog-can-landlords-deny-emotional-support-animals": "/images/blog/can-landlords-reject-esas-image.webp",
+  "blog-emotional-support-animal": "/images/blog/emotional-support-animal.webp",
+  "blog-esa-letter-sample": "/images/blog/emotional-support-animal-letter-sample-image.webp",
+  "blog-esa-for-children": "/images/blog/minor-with-emotional-support-animal.webp",
+  "blog-conditions-that-may-qualify-for-an-esa": "/images/blog/who-qualifing-for-emotional-support-animal.webp",
+  "blog-esa-for-anxiety": "/images/blog/how-can-esa-support-with-anxity-image.webp",
+  "blog-8-basic-obedience-commands-every-esa-should-know": "/images/blog/training-an-esa-image.webp",
+  "blog-esa-for-ptsd": "/images/blog/esa-for-ptsd-image.webp",
+  "blog-esa-for-depression": "/images/blog/emotional-support-through-canine-companionship-image.webp",
+  "blog-prepare-esa-for-rental-housing": "/images/blog/moving-in-with-a-furry-friend-image.webp",
+  "blog-esa-training-myths": "/images/blog/esa-training-myth-vs-fact-image.webp",
+};
+
+function imagePath(key: string) {
+  if (PATHS[key]) return PATHS[key];
+  if (key.startsWith("state-")) return `/images/states/${key.slice("state-".length)}-esa-letter-sample.webp`;
+  return `/og/${key}.webp`;
+}
 
 export type SocialImageKey = keyof typeof SIZES;
 
 export function hasSocialImage(key: string) {
-  return key in SIZES;
+  return key in SIZES || key in PATHS || key.startsWith("state-");
 }
 
 /**
@@ -92,9 +135,9 @@ export function hasSocialImage(key: string) {
  *   openGraph: { ...socialImage("homepage", alt).openGraph }
  */
 export function socialImage(key: string, alt: string) {
-  const size = SIZES[key];
-  if (!size) throw new Error(`Unknown social image: ${key}`);
-  const url = `${SITE}/og/${key}.webp`;
+  if (!hasSocialImage(key)) throw new Error(`Unknown social image: ${key}`);
+  const size = SIZES[key] ?? [1200, 800];
+  const url = assetUrl(imagePath(key));
   return {
     openGraph: [{ url, width: size[0], height: size[1], alt, type: "image/webp" }] as NonNullable<
       NonNullable<Metadata["openGraph"]>["images"]
@@ -111,16 +154,16 @@ const PAGE_TYPE = /WebPage|CollectionPage|ProfilePage|AboutPage|ContactPage|FAQP
  * BlogPosting nodes get it as `image`. The schema object itself is not modified.
  */
 export function withFeatureImage<T>(schema: T, key: string, caption?: string): T {
-  const size = SIZES[key];
+  if (!hasSocialImage(key)) return schema;
+  const size = SIZES[key] ?? [1200, 800];
   const graph = (schema as { "@graph"?: unknown })?.["@graph"];
-  if (!size) return schema;
 
   // Standalone page object (not a @graph): attach the image directly.
   if (!Array.isArray(graph)) {
     const single = schema as Record<string, any>;
     const types = ([] as string[]).concat(single?.["@type"] ?? []);
     if (!types.some((t) => PAGE_TYPE.test(t))) return schema;
-    const imageUrl = `${SITE}/og/${key}.webp`;
+    const imageUrl = assetUrl(imagePath(key));
     return {
       ...single,
       primaryImageOfPage: {
@@ -136,7 +179,7 @@ export function withFeatureImage<T>(schema: T, key: string, caption?: string): T
   }
 
   const isArticle = key.startsWith("blog-") && key !== "blog-hub-page";
-  const url = `${SITE}/og/${key}.webp`;
+  const url = assetUrl(imagePath(key));
   const next = structuredClone(schema) as { "@graph": Record<string, any>[] };
   const nodes = next["@graph"];
   const typesOf = (n: Record<string, any>) => ([] as string[]).concat(n["@type"] ?? []);

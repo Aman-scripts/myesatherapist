@@ -59,7 +59,7 @@ const SITUATIONS: SituationEntry[] = [
 
 function SituationCard({ entry }: { entry: SituationEntry }) {
   return (
-    <div className="w-full flex flex-col rounded-[20px] overflow-hidden bg-background">
+    <div className="w-full flex flex-col rounded-[20px] overflow-hidden bg-background [content-visibility:auto] [contain-intrinsic-size:1px_450px]">
       <div className="relative w-full aspect-[567/380]">
         <Image
             quality={75}

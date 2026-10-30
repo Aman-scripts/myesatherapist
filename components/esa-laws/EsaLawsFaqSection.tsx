@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
-const FAQS = [
+export const ESA_LAWS_FAQS = [
   {
     num: "01.",
     q: "Are ESA Letters Legally Required?",
@@ -51,17 +51,18 @@ export function EsaLawsFaqSection() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 xl:gap-[60px]">
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[500px] h-[360px] sm:h-[440px] lg:h-[500px] xl:h-[540px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
             <Image
-            quality={90}
+            quality={75}
               src="/common/faq-section-image.webp"
               alt="Woman with her emotional support dog outdoors"
               fill
               className="object-cover"
-              sizes="(min-width: 1280px) 500px, (min-width: 1024px) 380px, 90vw"
+              loading="lazy"
+              sizes="(min-width: 1280px) 500px, (min-width: 1024px) 380px, (max-width: 639px) 430px, 90vw"
             />
           </div>
 
           <div className="w-full max-w-[566px] lg:max-w-none lg:flex-1 space-y-4 sm:space-y-5 flex flex-col justify-center">
-            {FAQS.map((faq, idx) => {
+            {ESA_LAWS_FAQS.map((faq, idx) => {
               const isOpen = openIdx === idx;
               return (
                 <div key={idx} className="w-full rounded-[20px] overflow-hidden shadow-sm transition-all duration-200">

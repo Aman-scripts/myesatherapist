@@ -8,7 +8,8 @@ import { EsaLawsIntroSection } from "@/components/esa-laws/EsaLawsIntroSection";
 import { EsaLawsFederalSection } from "@/components/esa-laws/EsaLawsFederalSection";
 import { EsaLawsStateSection } from "@/components/esa-laws/EsaLawsStateSection";
 import { EsaLawsSituationSection } from "@/components/esa-laws/EsaLawsSituationSection";
-import { EsaLawsFaqSection } from "@/components/esa-laws/EsaLawsFaqSection";
+import { FaqSection } from "@/components/home/FaqSection";
+import { ESA_LAWS_FAQS } from "@/components/esa-laws/EsaLawsFaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
@@ -76,7 +77,12 @@ export default function EsaLawsPage() {
         <EsaLawsSituationSection />
 
         {/* 6. Common Questions About ESA Laws */}
-        <EsaLawsFaqSection />
+        <FaqSection
+          title="Common Questions About ESA Laws"
+          subtitle="Get clear answers to the most frequently asked questions about emotional support animal laws and regulations."
+          faqs={ESA_LAWS_FAQS}
+          bg="bg-background"
+        />
 
         {/* 7. CTA Banner */}
         <CtaBanner

@@ -25,7 +25,7 @@ function LawCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)]">
+    <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)] [content-visibility:auto] [contain-intrinsic-size:1px_350px]">
       <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
         <CardIcon src={icon} />
