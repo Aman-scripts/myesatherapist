@@ -62,7 +62,7 @@ export function PsdProcessSection() {
           {/* Floating Circle Badge - Top Right Edge */}
           <div className="absolute top-[18%] -right-3.5 sm:-right-5 lg:-right-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
-              src="/psd-letter/psdprocess-section-icon.svg"
+              src="/psd-letter/psdprocess-section-icon.webp"
               alt=""
               width={73}
               height={73}
@@ -74,7 +74,7 @@ export function PsdProcessSection() {
           {/* Floating Circle Badge - Bottom Left Edge */}
           <div className="absolute bottom-[18%] -left-3.5 sm:-left-5 lg:-left-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
-              src="/psd-letter/psdprocess-section-icon.svg"
+              src="/psd-letter/psdprocess-section-icon.webp"
               alt=""
               width={73}
               height={73}

@@ -13,7 +13,7 @@ export function VideoTestimonialsHeroSection() {
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={80}
           src="/video_testimonial/video_testimonial-herosection_mobile.webp"
           alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
           fill
@@ -35,7 +35,7 @@ export function VideoTestimonialsHeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[941/1100] min-h-[720px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={80}
           src="/video_testimonial/video_testimonial-herosection_tablet.webp"
           alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
           fill
@@ -62,7 +62,7 @@ export function VideoTestimonialsHeroSection() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={80}
             src="/video_testimonial/video_testimonial-herosection.webp"
             alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
             fill

@@ -1,23 +1,24 @@
 import React from "react";
 import { FeatureCard } from "./EsaOnlineShared";
 
-const ICON = "/esa-online/esa-letter-online_esatherapistlegalstandard-allcards-icon.svg";
-
 const CARDS = [
   {
+    icon: "/ESA ICons/Icon-18.svg",
     title: "Independent Clinical Evaluation",
     description:
       "Any ESA recommendation you receive is based solely on the clinician’s professional judgment, not automatic approval.",
   },
   {
+    icon: "/ESA ICons/Icon-33.svg",
     title: "State Authorized Professionals",
     description:
       "ESA documentation is issued only by licensed mental health professionals authorized to practice in the individual’s state.",
   },
   {
-    title: "FHA and HUD Guidance",
+    icon: "/ESA ICons/Icon-25.svg",
+    title: "FHA And HUD Guidance",
     description:
-      "Your ESA letter is issued in accordance with applicable federal law and relevant HUD guidance for housing accommodation requests under the Fair Housing Act.",
+      "Your ESA letter is issued in accordance with applicable federal law and relevant HUD guidance for housing accommodation requests under the FHA.",
   },
 ];
 
@@ -36,7 +37,7 @@ export function EsaOnlineLegalStandards() {
 
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-14 pt-2">
           {CARDS.map((card) => (
-            <FeatureCard key={card.title} icon={ICON} dark {...card} />
+            <FeatureCard key={card.title} dark {...card} />
           ))}
         </div>
       </div>

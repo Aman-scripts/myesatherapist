@@ -6,14 +6,14 @@ const P = "/esa-online/esa-letter-online_howmyesatherapistcompare";
 
 type Other = { type: "warning" | "cross"; text: string };
 
-const ROWS: { feature: string; other: Other }[] = [
-  { feature: "Licensed evaluations", other: { type: "warning", text: "Varies" } },
-  { feature: "State-specific licensing", other: { type: "warning", text: "Varies" } },
-  { feature: "HIPAA-compliant platform", other: { type: "warning", text: "Varies" } },
-  { feature: "Phone & video options", other: { type: "warning", text: "Limited" } },
-  { feature: "HUD-compliant", other: { type: "warning", text: "Varies" } },
-  { feature: "Full refund", other: { type: "warning", text: "Varies" } },
-  { feature: "Renewals", other: { type: "cross", text: "Not Available" } },
+const ROWS: { feature: string; icon: string; other: Other }[] = [
+  { feature: "Licensed Evaluations", icon: "/ESA ICons/Icon-33.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "State-Specific Licensing", icon: "/ESA ICons/Icon-13.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "HIPAA-Compliant Platform", icon: "/ESA ICons/Glyph-3.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "Phone & Video Options", icon: "/ESA ICons/Icon-15.svg", other: { type: "warning", text: "Limited" } },
+  { feature: "HUD-Compliant", icon: "/ESA ICons/Icon-25.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "Full Refund", icon: "/ESA ICons/Icon-21.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "Renewals", icon: "/ESA ICons/Icon-22.svg", other: { type: "cross", text: "Not Available" } },
 ];
 
 function GreenCheck() {
@@ -61,8 +61,7 @@ export function EsaOnlineComparison() {
                 <React.Fragment key={row.feature}>
                   <div className="flex h-[56px] sm:h-[64px] items-center gap-2 sm:gap-3 border-t border-[#C8B9A7]/50 pl-3 sm:pl-8 pr-1">
                     <span className="hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-                      <Image
-            quality={90} src={`${P}allicon.svg`} alt="" width={24} height={24} className="h-6 w-6" />
+                      <Image src={row.icon} alt="" width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
                     </span>
                     <span className="text-primary font-bold text-sm sm:text-xl leading-tight" style={LATO}>
                       {row.feature}
@@ -147,7 +146,7 @@ export function EsaOnlineComparison() {
           </div>
         </div>
 
-        <CtaButton href="/pricing/">Get Started</CtaButton>
+        <CtaButton href="/pricing/" variant="accent">Get Started</CtaButton>
       </div>
     </section>
   );

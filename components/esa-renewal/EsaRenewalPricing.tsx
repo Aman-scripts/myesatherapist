@@ -49,7 +49,17 @@ const RENEWAL: Plan = {
 
 function CheckBadge() {
   return (
-    <Image src="/ESA ICons/Icon-46.svg" alt="" width={18} height={18} unoptimized className="h-[18px] w-[18px] shrink-0 object-contain" />
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" className="mt-0.5 h-[18px] w-[18px] shrink-0">
+      <circle cx="9" cy="9" r="9" fill="#E8B92C" />
+      <path
+        d="M5.2 9.15 7.7 11.6 12.8 6.5"
+        fill="none"
+        stroke="#fff"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
@@ -76,9 +86,7 @@ function PlanBody({ plan, ctaClassName }: { plan: Plan; ctaClassName?: string })
           {plan.features.map((feature) => (
             <li key={feature} className="flex items-start gap-[6px] self-stretch">
               <CheckBadge />
-              <span
-                className="flex-1 italic body-small"
-              >
+              <span className="flex-1 body-small text-[#5F6B6F]">
                 {feature}
               </span>
             </li>

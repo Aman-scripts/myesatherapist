@@ -103,14 +103,14 @@ export function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; a
     return (
       <div className="relative w-full" style={{ aspectRatio: `${img.w} / ${img.h}` }}>
         <Image
-            quality={90} src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
+            quality={80} src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
       </div>
     );
   }
   return (
     <div className="relative w-full overflow-hidden" style={{ aspectRatio: `${c.w} / ${c.h}` }}>
       <Image
-            quality={90}
+            quality={80}
         src={img.src}
         alt={alt}
         width={img.w}
@@ -154,8 +154,8 @@ export function WaveImage({
       </div>
       {badge && (
         <Image
-            quality={90}
-          src="/about-us/about_us-legimateesasection-hearticon.svg"
+            quality={80}
+          src="/about-us/about_us-legimateesasection-hearticon.webp"
           alt=""
           width={64}
           height={64}

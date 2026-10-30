@@ -14,7 +14,7 @@ export function AboutHeroSection() {
       <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[580px] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={80}
           src="/about-us/about_us-mobile_hero_section.webp"
           alt="About My ESA Therapist"
           fill
@@ -40,7 +40,7 @@ export function AboutHeroSection() {
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[720px] max-h-[960px] overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={80}
           src="/about-us/about_us-tablet_hero_section.webp"
           alt="About My ESA Therapist"
           fill
@@ -70,7 +70,7 @@ export function AboutHeroSection() {
         fullBleedBackground={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={80}
             src="/about-us/hero_section-about_us.webp"
             alt="About My ESA Therapist"
             fill

@@ -19,7 +19,7 @@ export function FaqHero() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={80}
           src="/faq/faq_hero-section_mobile.webp"
           alt="ESA Questions? We’re Here To Help."
           fill
@@ -37,7 +37,7 @@ export function FaqHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={80}
           src="/faq/faq_hero-section_tablet.webp"
           alt="ESA Questions? We’re Here To Help."
           fill
@@ -59,7 +59,7 @@ export function FaqHero() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={80}
             src="/faq/faq_hero-section.webp"
             alt="ESA Questions? We're Here To Help"
             fill

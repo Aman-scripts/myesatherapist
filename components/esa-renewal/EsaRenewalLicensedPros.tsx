@@ -28,7 +28,7 @@ export function EsaRenewalLicensedPros() {
       {/* Illustration: map + doctors artwork (with curve and heart badge built in), full section height, flush right (lg and up) */}
       <div className="hidden lg:block absolute inset-y-0 right-0 aspect-[2291/2205]">
         <Image
-            quality={90}
+            quality={80}
           src="/esa-renewal/esa-renewal-all50states.webp"
           alt="State licensed mental health professionals map across US"
           fill
@@ -71,14 +71,14 @@ export function EsaRenewalLicensedPros() {
                 {/* Card Content Row */}
                 <div className="flex flex-1 items-center gap-4 sm:gap-6 lg:gap-[1.6vw] xl:gap-6 py-5 lg:py-[1vw] xl:py-[12px] pl-4 sm:pl-6 pr-4">
                   {/* Circle Icon Badge (Frame 1000011444) */}
-                  <div className="w-[60px] h-[60px] sm:w-[74.56px] sm:h-[74.56px] lg:w-[5vw] lg:h-[5vw] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
+                  <div className="w-[60px] h-[60px] sm:w-[74px] sm:h-[74px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image
-            quality={90}
-                      src="/esa-renewal/esa-renewal-whyconsiderrenew-allthreecards-icon.svg"
-                      alt={feat.title}
-                      width={32}
-                      height={32}
-                      className="object-contain lg:w-6 lg:h-6 xl:w-8 xl:h-8"
+                      src="/ESA ICons/Icon-33.svg"
+                      alt=""
+                      width={40}
+                      height={40}
+                      unoptimized
+                      className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
                     />
                   </div>
 

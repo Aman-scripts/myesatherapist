@@ -42,7 +42,7 @@ export function EsaTrainingBasicsSection() {
           </div>
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.svg"
+            src="/about-us/about_us-legimateesasection-hearticon.webp"
             alt=""
             width={64}
             height={64}

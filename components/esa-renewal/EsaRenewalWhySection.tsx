@@ -42,7 +42,7 @@ export function EsaRenewalWhySection() {
         <div className="absolute left-[7%] top-[38.4%] z-20 w-[56px] h-[56px] xl:w-[73px] xl:h-[73px]">
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.svg"
+            src="/about-us/about_us-legimateesasection-hearticon.webp"
             alt="Compassionate verified support badge"
             width={73}
             height={73}

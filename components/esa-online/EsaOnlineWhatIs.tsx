@@ -62,7 +62,7 @@ export function EsaOnlineWhatIs() {
               href="/blog/esa-guide/emotional-support-animal/"
               className="inline-flex h-12 items-center rounded-[30px] bg-background px-8 font-sans font-semibold text-base text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#f1ece2] transition-colors"
             >
-              Learn about ESA’s
+              Learn About ESA
             </a>
             <CtaButton href="/pricing/">Get Started</CtaButton>
           </div>

@@ -85,7 +85,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               <div className="absolute bottom-0 left-[36.4%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.webp"
                   alt="Heart Icon"
                   width={40}
                   height={40}
@@ -106,7 +106,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               <div className="absolute bottom-0 left-[33.8%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.webp"
                   alt="Heart Icon"
                   width={48}
                   height={48}
@@ -136,7 +136,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               >
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.svg"
+                  src="/states/whomayqualifies-california_icon.webp"
                   alt="Heart Icon"
                   width={64}
                   height={64}

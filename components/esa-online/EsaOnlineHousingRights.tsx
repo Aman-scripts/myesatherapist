@@ -5,29 +5,23 @@ import { CtaButton, GoldCallout } from "./EsaOnlineShared";
 const POINTS = [
   {
     title: "Reasonable Accommodation Requests",
+    icon: "/ESA ICons/Icon-20.svg",
     description:
       "Housing providers are required to consider ESA accommodation requests under applicable federal housing laws.",
   },
   {
-    title: "Save on Pet Fees",
+    title: "Save On Pet Fees",
+    icon: "/ESA ICons/Icon-21.svg",
     description:
       "When an ESA letter is accepted, pet deposits and monthly pet rent typically do not apply, subject to provider review.",
   },
   {
-    title: "Breed or Weight Restrictions Waived",
+    title: "Breed Or Weight Restrictions Waived",
+    icon: "/ESA ICons/Icon-30.svg",
     description:
       "When an ESA accommodation request is granted, ESAs are generally exempt from breed and size limitations, consistent with fair housing guidelines.",
   },
 ];
-
-function CheckCircle() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="mt-[5px] shrink-0" aria-hidden="true">
-      <circle cx="10" cy="10" r="10" fill="#1D6E72" />
-      <path d="M5.7 10.2l3 3 5.6-6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 export function EsaOnlineHousingRights() {
   return (
@@ -47,13 +41,15 @@ export function EsaOnlineHousingRights() {
 
           <div className="flex flex-col items-center gap-6 px-5 sm:px-10 pt-8 pb-10">
             <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary leading-[1.2] sm:leading-[44px] text-center">
-              Your Housing Rights With an ESA Letter
+              Your Housing Rights With An ESA Letter
             </h2>
 
             <ul className="w-full max-w-[712px] flex flex-col gap-5">
               {POINTS.map((p) => (
                 <li key={p.title} className="flex items-start gap-3">
-                  <CheckCircle />
+                  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F7F3EC]">
+                    <Image src={p.icon} alt="" width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
+                  </span>
                   <div className="flex flex-col">
                     <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-primary">{p.title}</h3>
                     <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-body-text">{p.description}</p>
@@ -62,7 +58,7 @@ export function EsaOnlineHousingRights() {
               ))}
             </ul>
 
-            <CtaButton href="/pricing/">Schedule your ESA Assessment</CtaButton>
+            <CtaButton href="/pricing/" variant="accent">Schedule Your ESA Assessment</CtaButton>
           </div>
         </div>
 

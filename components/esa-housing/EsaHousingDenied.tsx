@@ -3,21 +3,22 @@ import Image from "next/image";
 import { WaveImage } from "@/components/esa-online/EsaOnlineShared";
 import { SCALED_H2 } from "./EsaHousingShared";
 
-const ICON = "/esa-housing/esa-letter-housing_housinglawssection-allcards-icon.svg";
-
 const STEPS = [
   {
-    title: "File a Complaint",
+    title: "File A Complaint",
+    icon: "/ESA ICons/Icon-18.svg",
     description:
       "You may submit a complaint to the U.S. Department of Housing and Urban Development (HUD) if you believe your rights under the Fair Housing Act were violated.",
   },
   {
     title: "Seek Legal Guidance",
+    icon: "/ESA ICons/Icon-25.svg",
     description:
       "An attorney familiar with fair housing or ESA-related matters can help you assess your situation and advise you on appropriate next steps.",
   },
   {
     title: "Provide Written Clarification",
+    icon: "/ESA ICons/Icon-17.svg",
     description:
       "A clear, written explanation to your landlord can help resolve misunderstandings and support your accommodation request.",
   },
@@ -47,7 +48,7 @@ export function EsaHousingDenied() {
           />
         </div>
         <div className="w-full max-w-[626px] lg:max-w-[min(41vw,590px)] flex flex-col gap-8 lg:gap-[min(2.5vw,36px)]">
-          <h2 className={`${SCALED_H2} text-center lg:text-left lg:max-w-[min(43.5vw,626px)]`}>What to Do If Your ESA Is Denied Without a Valid Reason?</h2>
+          <h2 className={`${SCALED_H2} text-center lg:text-left lg:max-w-[min(43.5vw,626px)]`}>What To Do If Your ESA Is Denied Without A Valid Reason?</h2>
 
           <div className="flex flex-col gap-5 lg:gap-[min(1.5vw,22px)]">
             {STEPS.map((s) => (
@@ -55,8 +56,7 @@ export function EsaHousingDenied() {
                 <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#1D6E72]" />
                 <div className="flex items-center gap-4 sm:gap-6 lg:gap-[min(1.7vw,24px)] py-5 lg:py-[min(1.3vw,18px)] pl-4 sm:pl-6 lg:pl-[min(1.7vw,24px)] pr-5 lg:pr-[min(1.4vw,20px)]">
                   <div className="flex h-[60px] w-[60px] sm:h-[74px] sm:w-[74px] lg:h-[min(5.2vw,74px)] lg:w-[min(5.2vw,74px)] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
-                    <Image
-            quality={90} src={ICON} alt="" width={32} height={32} className="h-8 w-8 lg:h-[min(2.2vw,32px)] lg:w-[min(2.2vw,32px)] object-contain" />
+                    <Image src={s.icon} alt="" width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <h3 className="font-heading font-bold text-[20px] lg:text-[length:min(1.39vw,20px)] leading-7 lg:leading-[min(1.94vw,28px)] text-primary">{s.title}</h3>

@@ -3,7 +3,23 @@ import Image from "next/image";
 import { FeatureCard, GoldCallout } from "@/components/esa-online/EsaOnlineShared";
 import { CheckCircle, SectionHeader } from "./EsaHousingShared";
 
-const ICON = "/esa-housing/esa-letter-housing_housinglawssection-allcards-icon.svg";
+const CARDS = [
+  {
+    title: "No Discrimination",
+    description: "Landlords cannot discriminate against an ESA based on its size, weight, or breed.",
+    icon: "/ESA ICons/Icon-25.svg",
+  },
+  {
+    title: "No Pet Policies",
+    description: "Landlords must allow ESAs as a reasonable accommodation, even in buildings with a general “no-pet” policy.",
+    icon: "/ESA ICons/Icon-20.svg",
+  },
+  {
+    title: "No Pet Fees",
+    description: "Landlords cannot impose pet rent, pet fees, or deposits for tenants with a valid ESA letter.",
+    icon: "/ESA ICons/Icon-21.svg",
+  },
+];
 
 const COLUMNS = [
   {
@@ -30,11 +46,6 @@ const COLUMNS = [
   },
 ];
 
-const CARDS = [
-  { title: "No Discrimination", description: "Landlords cannot discriminate against an ESA based on its size, weight, or breed." },
-  { title: "No Pet Policies", description: "Landlords must allow ESAs even if there’s a general “no-pet” policy." },
-  { title: "No Pet Fees", description: "Landlords cannot impose pet rent, pet fees, or deposits for tenants with a valid ESA letter." },
-];
 
 export function EsaHousingLaws() {
   return (
@@ -68,7 +79,7 @@ export function EsaHousingLaws() {
 
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-14 pt-2">
           {CARDS.map((card) => (
-            <FeatureCard key={card.title} icon={ICON} headingFont="lato" {...card} />
+            <FeatureCard key={card.title} headingFont="lato" {...card} />
           ))}
         </div>
 

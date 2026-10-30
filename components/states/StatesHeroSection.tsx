@@ -73,7 +73,7 @@ export function StatesHeroSection() {
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <BreakpointImage
             media="(max-width: 639px)"
-            quality={90}
+            quality={80}
             src="/states/state_hero-section-mobile.webp"
             alt="ESA Evaluation For Every State"
             fill
@@ -151,7 +151,7 @@ export function StatesHeroSection() {
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <BreakpointImage
             media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+            quality={80}
             src="/states/state_hero-section-tablet.webp"
             alt="ESA Evaluation For Every State"
             fill
@@ -281,7 +281,7 @@ export function StatesHeroSection() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={80}
             src="/states/statepage_hero-section.webp"
             alt="ESA Evaluation For Every State"
             fill
@@ -302,7 +302,7 @@ export function StatesHeroSection() {
           >
             <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
               <Image
-                quality={90}
+                quality={80}
                 src="/ESA ICons/Icon-37.svg"
                 alt="Available in all 50 states"
                 width={28}

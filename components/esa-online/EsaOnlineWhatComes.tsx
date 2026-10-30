@@ -1,40 +1,39 @@
 import React from "react";
 import { FeatureCard, GoldCallout } from "./EsaOnlineShared";
 
-const P = "/esa-online/esa-letter-online_whatcomewithesa-";
-
 const CARDS = [
   {
-    icon: `${P}statelicensed-icon.svg`,
+    icon: "/ESA ICons/Icon-33.svg",
     title: "State Licensed Clinician Signature",
     description:
-      "Each document is issued on the clinician’s professional letterhead and signed by a mental health professional authorized to practice in your state.",
+      "Each letter is issued on professional letterhead and signed by a mental health professional authorized to practice in your state.",
   },
   {
-    icon: `${P}hudcompliance-icon.svg`,
+    icon: "/ESA ICons/Icon-25.svg",
     title: "HUD Compliance",
     description:
       "You receive general guidance on ESA-related housing accommodations consistent with federal fair housing laws.",
   },
   {
-    icon: `${P}housingguidance-icon.svg`,
+    icon: "/ESA ICons/Icon-20.svg",
     title: "Housing Guidance",
     description:
       "You’re provided with helpful information on how ESA accommodations typically work for housing providers.",
   },
   {
-    icon: `${P}renewalreminders-icon.svg`,
+    icon: "/ESA ICons/Icon-22.svg",
     title: "Renewal Reminders",
-    description: "You receive notifications to help keep your ESA documentation current.",
+    description:
+      "You receive timely notifications before your letter expires to help keep your ESA documentation current.",
   },
   {
-    icon: `${P}clinicalcontact-icon.svg`,
+    icon: "/ESA ICons/Glyph-2.svg",
     title: "Clinician Contact Information",
     description:
       "Your letter includes the clinician’s credentials and state license details for verification purposes.",
   },
   {
-    icon: `${P}professionalverification-icon.svg`,
+    icon: "/ESA ICons/Icon-19.svg",
     title: "Professional Verification Statement",
     description:
       "Your documentation confirms it was issued by an authorized professional following a clinical consultation.",

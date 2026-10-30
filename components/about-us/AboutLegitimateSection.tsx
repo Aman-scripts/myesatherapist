@@ -61,11 +61,10 @@ export function AboutLegitimateSection() {
           {/* Floating Heart & Paw Badge centered at bottom curve */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.15)] p-3 sm:p-3.5 flex items-center justify-center z-20 border border-[#EAE5DC]">
             <Image
-              src="/about-us/about_us-legimateesasection-hearticon.svg"
+              src="/about-us/about_us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={42}
               height={42}
-              unoptimized
               className="object-contain w-full h-full"
             />
           </div>

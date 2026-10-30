@@ -11,7 +11,7 @@ export function DoctorsHeroSection() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={80}
           src="/doctors/doctors_hero-section_mobile.webp"
           alt={HEADING}
           fill
@@ -29,7 +29,7 @@ export function DoctorsHeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1100] min-h-[720px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={80}
           src="/doctors/doctors_hero-section_tablet.webp"
           alt={HEADING}
           fill
@@ -51,7 +51,7 @@ export function DoctorsHeroSection() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={80}
             src="/doctors/doctors_hero-section.webp"
             alt={HEADING}
             fill

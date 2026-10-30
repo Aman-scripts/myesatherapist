@@ -94,7 +94,7 @@ export function WhoBenefitsSection() {
           />
           <div className="absolute left-[26.4%] top-[12.1%] z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center sm:h-16 sm:w-16 lg:h-[73px] lg:w-[73px]">
             <Image
-              src="/psd-letter/whobenefits-section-icon.svg"
+              src="/psd-letter/whobenefits-section-icon.webp"
               alt=""
               width={73}
               height={73}

@@ -75,7 +75,7 @@ export function EsaOnlineHero({
             <>
               <BreakpointImage
                 media="(max-width: 639px)"
-                quality={90}
+                quality={80}
                 src={imageMobile!}
                 alt={imageAlt}
                 fill
@@ -84,7 +84,7 @@ export function EsaOnlineHero({
               />
               <BreakpointImage
                 media="(min-width: 640px) and (max-width: 1023px)"
-                quality={90}
+                quality={80}
                 src={imageTablet!}
                 alt={imageAlt}
                 fill
@@ -99,7 +99,7 @@ export function EsaOnlineHero({
                 alt={imageAlt}
                 fill
                 priority
-                quality={100}
+                quality={80}
                 className="object-cover object-[75%_center] sm:object-right md:object-center"
                 sizes="100vw"
               />
@@ -187,7 +187,7 @@ export function EsaOnlineHero({
             src={image}
             alt={imageAlt}
             fill
-            quality={100}
+            quality={80}
             className="object-cover object-center"
             sizes="(min-width: 1024px) 100vw, 1px"
           />

@@ -42,7 +42,7 @@ export function PsdCapabilitiesSection() {
           {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (88.1% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[88.1%] w-[54px] h-[54px] z-30 pointer-events-none">
             <Image
-              src="/psd-letter/psdcapabilites-section-icon.svg"
+              src="/psd-letter/psdcapabilites-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
               height={73}
@@ -67,7 +67,7 @@ export function PsdCapabilitiesSection() {
           {/* Centered Heart-Paw Badge Icon directly on Green Curved Line (84.7% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[84.7%] w-[68px] h-[68px] z-30 pointer-events-none">
             <Image
-              src="/psd-letter/psdcapabilites-section-icon.svg"
+              src="/psd-letter/psdcapabilites-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
               height={73}

@@ -2,17 +2,15 @@ import React from "react";
 import Image from "next/image";
 import { GoldCallout, WaveImage } from "./EsaOnlineShared";
 
-const P = "/esa-online/esa-letter-online_whatmaybeeligible-";
-
 const CONDITIONS = [
-  { label: "Anxiety", icon: `${P}anxiety-icon.svg` },
-  { label: "Depression", icon: `${P}depression-icon.svg` },
-  { label: "PTSD", icon: `${P}ptsd-icon.svg` },
-  { label: "ADHD", icon: `${P}adhd-icon.svg` },
-  { label: "Panic Disorder", icon: `${P}panicdisorder-icon.svg` },
-  { label: "Bipolar Disorder", icon: `${P}bipolar-icon.svg` },
-  { label: "OCD", icon: `${P}ocd-icon.svg` },
-  { label: "Social Anxiety", icon: `${P}socialanxiety-icon.svg` },
+  { label: "Anxiety", icon: "/ESA ICons/Icon.svg" },
+  { label: "Depression", icon: "/ESA ICons/Icon-3.svg" },
+  { label: "PTSD", icon: "/ESA ICons/Icon-2.svg" },
+  { label: "ADHD", icon: "/ESA ICons/Icon-5.svg" },
+  { label: "Panic Disorder", icon: "/ESA ICons/Icon-1.svg" },
+  { label: "Bipolar Disorder", icon: "/ESA ICons/Icon-4.svg" },
+  { label: "OCD", icon: "/ESA ICons/Icon-27.svg" },
+  { label: "Social Anxiety", icon: "/ESA ICons/Icon-10.svg" },
 ];
 
 /*
@@ -27,7 +25,7 @@ export function EsaOnlineEligible() {
         <div className="absolute left-[2%] top-[50%] z-20 w-[min(5vw,73px)] h-[min(5vw,73px)] -translate-y-1/2">
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.svg"
+            src="/about-us/about_us-legimateesasection-hearticon.webp"
             alt=""
             width={73}
             height={73}
@@ -53,7 +51,7 @@ export function EsaOnlineEligible() {
         <div className="w-full max-w-[628px] lg:max-w-[min(43.6vw,628px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-primary leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(32.6vw,470px)]">
-              Who May Be Eligible for an ESA Letter?
+              Who May Be Eligible For An ESA Letter?
             </h2>
             <p className="font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-body-text font-semibold leading-[1.67] lg:max-w-[min(39.4vw,568px)]">
               Your eligibility for an ESA letter is determined solely by a licensed mental health professional. The clinician evaluates whether an emotional support animal may be appropriate based on your individual needs. There is no automatic approval.
@@ -71,12 +69,12 @@ export function EsaOnlineEligible() {
                   className="flex items-center gap-4 lg:gap-[min(1.1vw,16px)] rounded-[14px] bg-white px-4 py-3 lg:px-[min(1.1vw,16px)] lg:py-[min(0.83vw,12px)] shadow-[0px_1px_5px_rgba(0,0,0,0.12)] border border-primary/5"
                 >
                   <Image
-            quality={90}
                     src={c.icon}
                     alt=""
-                    width={30}
-                    height={30}
-                    className="h-[30px] w-[30px] lg:h-[min(2.1vw,30px)] lg:w-[min(2.1vw,30px)] object-contain"
+                    width={28}
+                    height={28}
+                    unoptimized
+                    className="h-7 w-7 object-contain"
                   />
                   <span className="font-sans text-[16px] sm:text-[18px] lg:text-[length:min(1.25vw,18px)] font-semibold text-primary leading-[30px] lg:leading-[min(2.1vw,30px)]">
                     {c.label}

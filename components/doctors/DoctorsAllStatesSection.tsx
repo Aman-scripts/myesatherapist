@@ -51,17 +51,15 @@ export function DoctorsAllStatesSection() {
         <div className="sm:hidden w-full relative">
           <WaveImageFrame
             alt="We're in All 50 US States - Licensed Mental Health Professionals"
-            priority
             img={{ src: "/esa-renewal/esa-renwal_licensedprofessional_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 109, w: 390, h: 402 } }}
           />
           {/* Centered Circular Heart & Paw Badge right on the bottom wave dip */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[52px] h-[52px] z-20 pointer-events-none flex items-center justify-center">
             <Image
-              src="/about-us/about_us-legimateesasection-hearticon.svg"
+              src="/about-us/about_us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={52}
               height={52}
-              unoptimized
               className="w-full h-full object-contain"
             />
           </div>
@@ -71,17 +69,15 @@ export function DoctorsAllStatesSection() {
         <div className="hidden sm:block w-full relative">
           <WaveImageFrame
             alt="We're in All 50 US States - Licensed Mental Health Professionals"
-            priority
             img={{ src: "/esa-renewal/esa-renwal_licensedprofessional_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
           />
           {/* Centered Circular Heart & Paw Badge right on the bottom wave dip */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] z-20 pointer-events-none flex items-center justify-center">
             <Image
-              src="/about-us/about_us-legimateesasection-hearticon.svg"
+              src="/about-us/about_us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={72}
               height={72}
-              unoptimized
               className="w-full h-full object-contain"
             />
           </div>
