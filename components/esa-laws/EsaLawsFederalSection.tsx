@@ -1,12 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { X } from "lucide-react";
 
 const DENIAL_REASONS = [
-  "Put an unfair financial and administrative burden on the landlord (e.g., a landlord can’t insure their rental properties because of the ESA)",
-  "Fundamentally change the nature of the housing",
-  "Directly threaten the health and safety of others, even with reasonable accommodations put in place to reduce the threat",
-  "Possibly cause major physical damage to others’ property, even with reasonable accommodations put in place to reduce the damage",
+  "Situations creating financial burdens: Landlords can deny an ESA housing request in situations where the animal would possibly create an undue financial or administrative burden that would fundamentally alter the nature of the housing provider’s operations.",
+  "ESAs posing a direct threat to health or safety: A landlord may deny an ESA if the specific animal poses a documented direct threat to others that cannot be reduced through reasonable measures.",
+  "Risk involving physical damage: Landlords can also deny an ESA housing request if there is solid evidence stating that the animal would damage the property in the future and it cannot be prevented.",
 ];
 
 function CardIcon({ src }: { src: string }) {
@@ -53,60 +51,82 @@ export function EsaLawsFederalSection() {
             Federal Laws Governing Emotional Support Animals
           </h2>
           <p className="body-large text-body-text max-w-[1052px]">
-            Two primary federal laws have historically governed ESA rights in the United States. Understanding their scope is essential for both ESA owners and housing providers.
+            Emotional support animals are not governed by one standalone federal law. Different federal laws apply depending on the situation, with the Fair Housing Act (FHA) being the key framework for housing.
           </p>
         </div>
 
         <div className="w-full flex flex-col gap-12 sm:gap-[72px]">
-          <LawCard title="Fair Housing Act (FHA)" icon="/ESA ICons/Icon-24.svg">
+          <LawCard title="Fair Housing Act (FHA), 42 U.S.C. § 3604" icon="/ESA ICons/Icon-24.svg">
             <p>
-              The federal Fair Housing Act (FHA) allows individuals with disabilities to request an ESA as a reasonable accommodation, even in housing that has pet restrictions. However, the request must include reliable, disability-related documentation. This typically means providing an ESA letter issued after a clinical evaluation by a licensed mental health professional.
+              The Fair Housing Act (FHA), 42 U.S.C. § 3604, is the primary federal law governing emotional support animals in housing. It prohibits disability discrimination and requires reasonable accommodations when necessary for a person with a disability to use and enjoy their home. Its implementing regulation, 24 C.F.R. § 100.204, remains in effect and continues to address reasonable accommodation requests.
             </p>
             <p>
-              Under the FHA, housing providers cannot deny ESAs, even if they have a no-pet policy in place. They are also not allowed to charge pet deposits or fees for ESAs. These rules apply to college housing and dormitories at public universities as well. In addition, breed, size, and species restrictions do not apply to ESAs in housing. However, ESAs do not have public access rights. Unlike service animals, they are not allowed to enter all public or business spaces.
+              The federal ESA landscape has changed in recent years. HUD withdrew its 2013 and 2020 assistance-animal guidance effective September 17, 2025. On May 22, 2026, HUD&apos;s Office of Fair Housing and Equal Opportunity (FHEO) issued new internal enforcement guidance for animal-accommodation complaints. The memorandum directs FHEO to apply a trained-animal standard when determining reasonable cause and recommending charges in certain cases.
             </p>
             <p>
-              Federal ESA law does not recognize letters or certificates purchased online after a brief or superficial interview as valid proof. In most cases, a proper clinical evaluation by a licensed healthcare provider is required to determine eligibility for an ESA.
-            </p>
-          </LawCard>
-
-          <LawCard title="Air Carrier Access Act (ACAA)" icon="/ESA ICons/Icon-17.svg">
-            <p>
-              The federal Air Carrier Access Act (ACAA) previously required airlines to allow ESAs to travel with passengers who have disabilities. However, this rule changed in 2021. ESAs are no longer protected under the ACAA and are now treated as pets on flights. Only service dogs are required to be allowed on flights.
+              Importantly, the 2026 memorandum did not amend or repeal the FHA. The FHA remains federal law, and 24 C.F.R. § 100.204 remains in effect. However, HUD&apos;s current enforcement approach differs from its earlier assistance-animal guidance, so older ESA housing information may not fully reflect the agency&apos;s current position.
             </p>
           </LawCard>
 
-          <LawCard title="What Federal Law Covers vs Does Not Cover" icon="/ESA ICons/Glyph-3.svg">
+          <LawCard title="Americans with Disabilities Act (ADA)" icon="/ESA ICons/Icon-33.svg">
             <p>
-              Federal ESA law protects the rights of individuals with disabilities to keep their ESAs in housing as a reasonable accommodation. This includes college housing and dorms. They are not required to pay pet fees or deposits. ESAs also do not need special training like service dogs. There is no legal requirement to register, license, or certify an ESA in an online database, even though many scam websites claim otherwise.
+              The Americans with Disabilities Act (ADA) doesn&apos;t give emotional support animals the same public-access rights that qualifying service animals get. Under the ADA, a service animal is usually a dog that&apos;s been individually trained to do work or perform tasks tied directly to a person&apos;s disability. Offering emotional support, comfort, or companionship on its own doesn&apos;t count as a service-animal task.
             </p>
             <p>
-              Federal law also exempts ESAs from state or local breed, size, or species restrictions that may ban certain pets, such as pit bulls. In addition, under the Americans with Disabilities Act (ADA), individuals may request to bring their ESA into the workplace as a reasonable accommodation.
-            </p>
-            <p>
-              However, ESAs are not considered service animals, so they do not have the same public access rights. They are not allowed to enter most public places by default. States, cities, and businesses can decide whether to allow ESAs in spaces like schools, restaurants, and hotels. ESAs are also no longer allowed to travel freely on airlines, so individuals must check and choose airlines that accept animals. If a person has multiple ESAs, they must submit a separate request for each one.
+              So an ESA doesn&apos;t automatically get to go into restaurants, stores, workplaces, or other public places just because it helps with someone&apos;s emotional needs. The ADA&apos;s service-animal rules and the FHA&apos;s housing rules cover different situations. That means an ESA letter meant for housing doesn&apos;t turn the animal into a service animal under the ADA.
             </p>
           </LawCard>
 
-          <LawCard title="ESA Rights vs Landlord Rights" icon="/ESA ICons/Icon-18.svg">
+          <LawCard title="Air Carrier Access Act (ACAA), 49 U.S.C. § 41705" icon="/ESA ICons/Icon-17.svg">
             <p>
-              According to federal law, the only times housing providers can refuse a reasonable accommodation request for an ESA are when the ESA would:
+              The Air Carrier Access Act (49 U.S.C. § 41705) bans disability discrimination in air travel, but under its current regulations, emotional support animals no longer count as service animals for flying. Under 14 C.F.R. Part 382, airlines have to recognize service dogs that have been individually trained to do work or perform tasks related to a person&apos;s disability.
+            </p>
+            <p>
+              So having an ESA letter doesn&apos;t give your animal a federal right to fly in the cabin as a service animal. Before you travel, check your airline&apos;s current policy, because the rules for pets and other animals can be different from the federal rules for service animals.
+            </p>
+          </LawCard>
+
+          <LawCard title="What Federal Laws Mean in 2026" icon="/ESA ICons/Icon-18.svg">
+            <p>
+              There&apos;s no single federal law you can point to and call the &quot;ESA law.&quot; What exists instead is several federal laws, each covering a different situation involving animals. The FHA mainly applies to housing, the ADA covers service-animal access in public places, the ACAA applies to air travel, and Section 504 can apply to certain federally funded programs.
+            </p>
+            <p>
+              If you own an ESA, this matters because rights in one setting don&apos;t automatically carry over to another. On May 22, 2026, HUD issued internal enforcement guidance that changes how FHEO handles certain animal-accommodation complaints, including the use of a trained-animal standard during enforcement. That guidance didn&apos;t repeal or amend the FHA or 24 C.F.R. § 100.204, so the underlying federal housing laws are still in place.
+            </p>
+          </LawCard>
+
+          <LawCard title="What Federal Law Covers vs. Does Not Cover" icon="/ESA ICons/Glyph-3.svg">
+            <p>
+              The Fair Housing Act (FHA) protects people with disabilities from housing discrimination and may require reasonable accommodations involving assistance animals. This can include qualifying requests for emotional support animals in housing, including some college and university housing. However, HUD changed its enforcement guidance on May 22, 2026, withdrawing its prior ESA guidance. The FHA itself remains in effect, but HUD’s current enforcement approach places greater emphasis on animals individually trained to perform disability-related work or tasks.
+            </p>
+            <p>
+              Federal law does not require an ESA to be registered, licensed, certified, or listed in an online database. An ESA also does not have the same public access rights as a service animal under the Americans with Disabilities Act (ADA). Businesses, restaurants, schools, and other public places generally do not have to admit an ESA unless another law or policy provides access. The ADA also does not automatically give employees a right to bring an ESA to work, although an animal may be requested as a disability-related workplace accommodation.
+            </p>
+            <p>
+              For air travel, the Air Carrier Access Act (ACAA) no longer requires airlines to recognize emotional support animals as service animals. Airlines may have their own policies for transporting ESAs, so travelers should check with the carrier before flying.
+            </p>
+          </LawCard>
+
+          <LawCard title="ESA Rights vs. Landlord Rights" icon="/ESA ICons/Icon-18.svg">
+            <p>
+              Under the Fair Housing Act (FHA), housing providers must consider reasonable accommodation requests related to disabilities. But there are some situations where a landlord has the complete right to deny an ESA for a housing request. These include:
             </p>
             <div className="flex flex-col gap-4">
-              {DENIAL_REASONS.map((reason, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <span className="w-6 h-6 rounded-full bg-[#E42529] flex items-center justify-center shrink-0 mt-0.5">
-                    <X className="w-3.5 h-3.5 text-background" strokeWidth={3} />
-                  </span>
+              {DENIAL_REASONS.map((reason) => (
+                <div key={reason} className="flex items-start gap-4">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
                   <span>{reason}</span>
                 </div>
               ))}
             </div>
             <p>
-              Note: Under federal law, another person’s allergy or fear of an animal is not considered a disability that requires accommodation. It also cannot be used as a valid reason to deny someone with a service or assistance animal.
+              However, the federal enforcement landscape for emotional support animals changed in 2026. On May 22, 2026, HUD’s Office of Fair Housing and Equal Opportunity issued an internal enforcement memorandum permanently rescinding its previous assistance-animal guidance. Under the new enforcement approach, HUD says it will generally find reasonable cause in animal-accommodation complaints only when the animal has been individually trained to perform work or tasks directly related to a person’s disability. Requests involving untrained ESAs are no longer treated as presumptively reasonable by HUD.
             </p>
             <p>
-              Unless a landlord can clearly prove a valid exception, they are required to allow ESAs in housing as a reasonable accommodation. This applies once the request has been made and proper supporting documents are provided, such as an ESA letter issued after a clinical evaluation. Landlords are not responsible for any damage caused by an ESA. However, the individual may be held responsible if the damage goes beyond normal wear and tear, especially in cases where other residents would also be charged for similar damage. If someone is illegally denied a reasonable accommodation for their ESA or faces any form of housing discrimination, they have the right to file a complaint. This can be done with the federal Office of Fair Housing and Equal Opportunity or through their state government.
+              Importantly, the May 22 memorandum is an internal HUD enforcement policy. It does not amend the FHA or automatically eliminate protections that may exist under state or local fair housing laws. Some states continue to recognize broader protections for assistance animals, including untrained ESAs.
+            </p>
+            <p>
+              If a tenant believes they have experienced unlawful housing discrimination, they can file a complaint with HUD’s Office of Fair Housing and Equal Opportunity (FHEO). State or local fair housing agencies may also provide additional remedies.
             </p>
           </LawCard>
         </div>

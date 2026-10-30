@@ -13,40 +13,46 @@ const SITUATIONS: SituationEntry[] = [
     image: "/esa-laws/esalaws-situation-apartments-rentals.webp",
     title: "ESA Laws for Apartments & Rentals",
     description:
-      "Under federal law, tenants with disabilities can request to keep an ESA in their apartment as a reasonable accommodation. This is usually done by providing an ESA letter from a licensed mental health professional who has conducted a clinical evaluation.",
+      "Under the Fair Housing Act, people with disabilities can request an assistance animal, including an emotional support animal (ESA), as a reasonable accommodation when the animal is needed because of their disability.",
     bullets: [
-      "ESAs are not considered pets. They are exempt from pet fees, no-pet policies, and breed restrictions.",
-      "A landlord cannot deny an ESA request unless they can prove that the animal poses an unmitigable threat or would cause significant property damage. They may also deny the request if it creates an undue administrative burden.",
+      "Assistance animals are not considered pets under the FHA, and qualifying animals are generally exempt from pet fees, pet deposits, and no-pet policies.",
+      "A housing provider may request reliable supporting information when the disability or disability-related need is not apparent.",
+      "A request may be denied when legally recognized grounds apply, such as an undue financial or administrative burden, a fundamental alteration, a direct threat that cannot be reduced through reasonable accommodation, or significant physical damage that cannot be prevented or reduced.",
     ],
   },
   {
     image: "/esa-laws/esalaws-situation-colleges-dorms.webp",
     title: "ESA Laws for Colleges & Dorms",
     description:
-      "The Fair Housing Act protects the rights of students with disabilities who attend public universities that receive federal funding. It allows them to keep an ESA in college housing or dormitories. Some private universities may have more restrictive standards.",
+      "Students with disabilities may request an assistance animal as a reasonable accommodation in college or university housing when applicable federal disability and fair housing laws cover the housing.",
     bullets: [
-      "Different universities and states may have additional requirements or restrictions for ESAs, especially regarding the animal's safety in dorms.",
-      "Individuals should always research their university's policies and local regulations for ESAs. They should also coordinate with their university's health or disability support services.",
+      "Depending on the institution and housing program, the Fair Housing Act, Section 504, and the ADA may apply.",
+      "Universities may have their own accommodation procedures and may request appropriate supporting documentation.",
+      "Students should check with their housing or disability services office for the specific ESA accommodation process and campus requirements.",
     ],
   },
   {
     image: "/esa-laws/esalaws-situation-landlords.webp",
     title: "ESA Laws for Landlords",
     description:
-      "Landlords must treat a valid ESA letter as reasonable-accommodation documentation, not as a pet request. Under the Fair Housing Act, a no-pet policy, breed restriction, or pet fee cannot be applied to a tenant's ESA once the request is properly supported.",
+      "Housing providers generally must consider a qualifying assistance-animal request as a reasonable accommodation, including an exception to a no-pet policy.",
     bullets: [
-      "A request can only be denied for a narrow set of reasons: an undue financial or administrative burden, a fundamental change to the housing, a direct threat to others' safety, or a likelihood of significant property damage.",
-      "Landlords may ask for documentation confirming the disability-related need, but cannot demand medical records, a specific form, or details about the diagnosis, and cannot charge a pet deposit or monthly pet rent for the ESA.",
+      "Landlords may request reliable disability-related information when the disability or need for the animal is not apparent and supporting information is reasonably necessary.",
+      "Landlords generally cannot charge pet fees or pet deposits for a qualifying assistance animal.",
+      "Tenants may still be responsible for actual property damage caused by their assistance animal when applicable law allows comparable charges for tenant-caused damage.",
+      "A landlord may deny a request only when the applicable legal requirements for denial are met.",
     ],
   },
   {
     image: "/esa-laws/esalaws-situation-tenants.webp",
     title: "ESA Laws for Tenants",
     description:
-      "Tenants with a disability-related need can request to live with an ESA even in housing with a strict no-pet policy, by submitting a reasonable accommodation request along with a valid ESA letter from a licensed mental health professional.",
+      "Some housing situations are exempt from certain Fair Housing Act requirements, although other federal, state, or local protections may still apply.",
     bullets: [
-      "Tenants remain responsible for their ESA's behavior and for any damage beyond normal wear and tear, and may still need to meet local vaccination and licensing requirements.",
-      "If a request is wrongly denied, tenants can file a housing discrimination complaint with the federal Office of Fair Housing and Equal Opportunity or their state's housing agency.",
+      "Certain owner-occupied properties with no more than four independently occupied units may be exempt.",
+      "Certain single-family homes rented directly by qualifying private owners may be exempt, subject to specific federal conditions.",
+      "Certain housing owned or operated by qualifying religious organizations or private clubs may also be exempt.",
+      "Tenants may remain responsible for actual damage caused by an assistance animal when applicable law permits comparable charges for tenant-caused damage.",
     ],
   },
 ];

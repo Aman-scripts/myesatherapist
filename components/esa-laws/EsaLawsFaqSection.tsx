@@ -9,22 +9,27 @@ const FAQS = [
   {
     num: "01.",
     q: "Are ESA Letters Legally Required?",
-    a: "Yes, in the sense that housing providers are legally allowed to request reliable, disability-related documentation before granting a reasonable accommodation. A valid ESA letter, issued by a licensed mental health professional after a proper clinical evaluation, is the only way to establish that eligibility under the Fair Housing Act — there is no separate registration, certificate, or ID card required by law.",
+    a: "Under federal ESA law, housing providers can ask for reliable documentation when someone requests an ESA. In most cases, this is an ESA letter from a licensed medical professional. The letter is issued after a clinical evaluation of the individual, their disability, and their need for an ESA.",
   },
   {
     num: "02.",
-    q: "Can Landlords Deny ESAs?",
-    a: "Only in limited circumstances. Under federal law, a landlord can deny an ESA request if the animal would create an undue financial or administrative burden, fundamentally change the nature of the housing, pose a direct threat to others' health and safety, or cause significant property damage — even with reasonable accommodations in place. Outside of these exceptions, housing providers must waive no-pet policies, pet fees, and breed or size restrictions for a properly documented ESA.",
+    q: "Do ESA Laws Apply Nationwide?",
+    a: "Federal ESA laws apply across all 50 states. Under the FHA, qualifying ESAs may be allowed as a reasonable housing accommodation without pet fees or pet restrictions. State laws may add requirements, such as a required provider relationship before an ESA letter can be issued.",
   },
   {
     num: "03.",
-    q: "Do ESA Laws Apply Nationwide?",
-    a: "The Fair Housing Act sets a federal baseline that applies in all 50 states, so tenants everywhere have the right to request an ESA as a reasonable accommodation. However, many states layer on additional rules — such as minimum evaluation periods, in-state licensing requirements for the issuing clinician, or penalties for misrepresenting an animal as an ESA — so it's worth checking your specific state's requirements.",
+    q: "Are Online ESA Evaluations Legal?",
+    a: "Yes. Online ESA evaluations are legal when conducted by a state-licensed healthcare professional through compliant telehealth. Instant approvals, guaranteed letters, or certificates and registrations issued without a clinical evaluation are not legitimate.",
   },
   {
     num: "04.",
-    q: "Are Online ESA Evaluations Legal?",
-    a: "Yes, a licensed mental health professional can conduct a valid clinical evaluation through telehealth, and an ESA letter issued this way is legally recognized under the Fair Housing Act. What makes an evaluation legitimate isn't whether it happens online or in person — it's whether a properly licensed clinician actually assesses your condition, rather than issuing a letter after a brief questionnaire with no real clinical review.",
+    q: "Can ESA laws vary by state?",
+    a: "Yes. Federal housing protections apply nationwide, but states may have additional rules for ESA requests, documentation, or provider requirements. Check your state’s current laws before requesting an ESA accommodation.",
+  },
+  {
+    num: "05.",
+    q: "What are the legal requirements for an ESA?",
+    a: "An ESA request generally requires a qualifying disability-related need and, when that need is not apparent, reliable documentation from a qualified healthcare professional. State laws may impose additional requirements.",
   },
 ];
 
@@ -39,7 +44,7 @@ export function EsaLawsFaqSection() {
             Common Questions About ESA Laws
           </h2>
           <p className="text-body-text text-[15px] sm:text-[18px] font-semibold leading-[26px] sm:leading-[30px] font-sans">
-            Get clear answers to the most frequently asked questions about emotional support animal regulations.
+            Get clear answers to the most frequently asked questions about emotional support animal laws and regulations.
           </p>
         </div>
 

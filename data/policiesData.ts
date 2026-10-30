@@ -1359,8 +1359,8 @@ export const POLICIES_DATA: PolicyDocument[] = [
           },
           {
             "type": "paragraph",
-            "html": "This Refund Policy outlines:",
-            "text": "This Refund Policy outlines:"
+            "html": "This refund policy outlines:",
+            "text": "This refund policy outlines:"
           },
           {
             "type": "checklist",
@@ -1446,8 +1446,8 @@ export const POLICIES_DATA: PolicyDocument[] = [
           },
           {
             "type": "note",
-            "html": "<b>Any approved refund is subject to a non-refundable $35 provider fee.</b>",
-            "text": "Any approved refund is subject to a non-refundable $35 provider fee."
+            "html": "<b>100% refunds are issued for eligible cancellations.</b>",
+            "text": "100% refunds are issued for eligible cancellations."
           },
           {
             "type": "paragraph",
@@ -1502,8 +1502,8 @@ export const POLICIES_DATA: PolicyDocument[] = [
                 "text": "After internal review, it is determined that services cannot proceed as initially scheduled"
               },
               {
-                "html": "A refund may be issued following an internal review, subject to the $35 provider fee deduction",
-                "text": "A refund may be issued following an internal review, subject to the $35 provider fee deduction"
+                "html": "Eligible customers receive a 100% refund following an internal review.",
+                "text": "Eligible customers receive a 100% refund following an internal review."
               }
             ]
           },
@@ -1690,8 +1690,8 @@ export const POLICIES_DATA: PolicyDocument[] = [
           },
           {
             "type": "note",
-            "html": "The $35 provider fee will be deducted prior to refund issuance.",
-            "text": "The $35 provider fee will be deducted prior to refund issuance."
+            "html": "A 100% refund will be issued if the refund request is approved.",
+            "text": "A 100% refund will be issued if the refund request is approved."
           }
         ]
       },
@@ -1764,10 +1764,10 @@ export const POLICIES_DATA: PolicyDocument[] = [
       }
     ],
     "takeaways": [
-      "Fees apply to professional evaluation services, not outcomes",
-      "ESA recommendations are determined independently by licensed providers",
-      "Refunds are limited and subject to a $35 provider fee deduction",
-      "Transparency, ethics, and regulatory compliance guide our process"
+      "Fees apply to professional evaluation services, not outcomes.",
+      "ESA recommendations are determined independently by licensed providers.",
+      "Refunds are available at 100% with no provider fee deduction.",
+      "Transparency, ethics, and regulatory compliance guide our process."
     ],
     "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 29, 2025"
   },

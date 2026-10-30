@@ -2,7 +2,7 @@ import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const HEADING = "Emotional Support Animal Laws By State And Federal Guidelines";
+const HEADING = "Emotional Support Animal Laws by State and Federal Guidelines";
 const DESCRIPTION =
   "Understand federal and state-level ESA regulations, housing rules, and evaluation requirements.";
 const HERO_IMAGE = "/esa-laws/esalaws-herosection-portrait.webp";

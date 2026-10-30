@@ -14,9 +14,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Alabama",
     icon: "/esa-laws/esalaws_albama.webp",
     bullets: [
-      "Federal ESA law protects the rights of individuals with disabilities to keep their ESAs in housing as a reasonable accommodation. This includes college housing and dorms. They are not required to pay pet fees or deposits. ESAs also do not need special training like service dogs. There is no legal requirement to register, license, or certify an ESA in an online database, even though many scam websites claim otherwise.",
-      "Federal law also exempts ESAs from state or local breed, size, or species restrictions that may ban certain pets, such as pit bulls. In addition, under the Americans with Disabilities Act (ADA), individuals may request to bring their ESA into the workplace as a reasonable accommodation.",
-      "However, ESAs are not considered service animals, so they do not have the same public access rights. They are not allowed to enter most public places by default. States, cities, and businesses can decide whether to allow ESAs in spaces like schools, restaurants, and hotels. ESAs are also no longer allowed to travel freely on airlines, so individuals must check and choose airlines that accept animals. If a person has multiple ESAs, they must submit a separate request for each one.",
+      "Alabama-specific ESA law: Alabama’s Assistance and Service Animal Integrity in Housing Act, Ala. Code §§ 24-8A-1 through 24-8A-5, works alongside the federal FHA to address assistance-animal accommodations in housing. Alabama does not require ESA registration, certification, or an ID card.",
+      "Penalty for misrepresentation: Under Ala. Code §§ 24-8A-4 and 24-8A-5 (Act 2018-235), intentionally misrepresenting a disability-related need for an assistance animal in housing, falsifying documentation, or providing a false document can bring a $500 civil penalty or a Class C misdemeanor for a first offense, and a Class B misdemeanor for later offenses.",
+      "HUD update and Alabama impact: HUD withdrew its prior 2013 and 2020 assistance-animal guidance on May 22, 2026. This does not eliminate FHA housing protections in Alabama. Alabama housing providers must still apply the FHA’s reasonable-accommodation requirements, while the state’s assistance-animal law continues to address documentation and misrepresentation issues.",
     ],
   },
   {
@@ -24,11 +24,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "California",
     icon: "/esa-laws/esalaws_california.webp",
     bullets: [
-      "In California, reliable documentation for an ESA request can include a person's own statement or proof of receiving disability benefits.",
-      "ESA letters can also be provided by a third party who is familiar with the individual's clinical needs. This may include healthcare providers, non-medical service providers, or family members. The reliability of such third parties is evaluated on a case-by-case basis.",
-      "If the documentation provided is not sufficient, a housing provider cannot deny the request right away. The individual must be given a chance to submit additional reliable documentation.",
-      "Under California law, a licensed healthcare professional can conduct an online, individualized assessment to determine a person's need for an ESA and issue an ESA letter.",
-      "Individuals may have more than one ESA.",
+      "California-specific ESA law: California regulates ESAs under Health & Safety Code §§ 122317 through 122319.5 (AB 468, effective January 1, 2022), which works alongside the federal FHA and state housing law. California does not require ESA registration, training, or certification. For ESA dogs, a licensed health care practitioner may only provide documentation if the practitioner holds a valid license in the jurisdiction where the documentation is provided, has had a client-provider relationship with the person for at least 30 days, completes a clinical evaluation, and gives notice about the misrepresentation penalty.",
+      "Penalty for misrepresentation: Knowingly and fraudulently representing oneself as the owner or trainer of a guide, signal, or service dog is a misdemeanor under Penal Code § 365.7, punishable by up to 6 months in jail, a fine of up to $1,000, or both. Separately, under § 122319, knowingly and fraudulently representing or selling an ESA dog as having service dog rights, or violating the required written notices when selling ESA dogs or ESA items such as vests and tags, carries civil penalties of $500, $1,000, and $2,500 (first, second, and third or later violation). Practitioners who violate § 122318 can also face licensing board discipline. These penalties target fraud, not a genuine ESA request.",
+      "HUD update and California impact: HUD withdrew its 2013 and 2020 assistance-animal guidance (notice dated September 17, 2025) and followed up with a May 22, 2026 memo. Neither changes the FHA, and California's law expressly preserves housing rights under FEHA, the Unruh Civil Rights Act, and the Disabled Persons Act, so California housing providers must still evaluate ESA requests under those laws.",
     ],
   },
   {
@@ -36,7 +34,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Colorado",
     icon: "/esa-laws/esalaws-colarado.webp",
     bullets: [
-      "Under Colorado law, it is illegal to knowingly misrepresent an ESA, companion, or assistance animal. This includes doing so to avoid pet fees or to keep an animal in housing that does not otherwise allow pets.",
+      "Colorado-specific ESA law: Colorado's HB 26-1045 (signed May 28, 2026) adds definitions of \"assistance animal\" and \"emotional support animal\" to the Colorado Anti-Discrimination Act and sets housing-accommodation rules alongside the federal FHA. Licensed providers must also make a written finding on disability and need when asked for a housing accommodation (C.R.S. §§ 12-240-144, 12-245-229, 12-255-133). Colorado has no state ESA registration or certification requirement.",
+      "Penalty for misrepresentation: Under C.R.S. § 18-13-107.3 (HB 16-1426), knowingly misrepresenting entitlement to an assistance animal for housing, after a prior warning, is a civil infraction with fines of $25 (first offense), $50 to $200 (second), and $100 to $500 (third or later). A provider's written finding is an affirmative defense.",
+      "HUD update and Colorado impact: HUD withdrew its 2013 and 2020 assistance-animal guidance (notice dated September 17, 2025) and followed up with a May 22, 2026 memo. Neither changes the FHA itself, so Colorado housing providers must still follow its reasonable-accommodation requirements, and HB 26-1045 now backs this up in state law.",
     ],
   },
   {
@@ -44,9 +44,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Florida",
     icon: "/esa-laws/esalaws_florida.webp",
     bullets: [
-      "In Florida, ESA letters must clearly identify the therapeutic emotional support provided by the specific animal. They must be issued by a Florida-licensed healthcare practitioner, a telehealth provider, or a qualified licensed professional from another state who has personal knowledge of the individual's disability.",
-      "Individuals may also be asked to provide proof of their ESA's vaccination and local licensing.",
-      "Providing false or fraudulent ESA letters, or falsely claiming a disability-related need for an ESA, is a second-degree misdemeanor in Florida. It may result in penalties such as a minimum of 60 days in jail and 30 hours of community service.",
+      "Florida-specific ESA law: Florida's Fla. Stat. § 760.27 (2020 law, effective July 1, 2020) works alongside the federal FHA. It lets a housing provider request reliable information supporting the need for the specific ESA when the need isn't readily apparent. Providers (including telehealth providers) count as reliable only if they have personal knowledge of the person's disability and act within their scope of practice. Florida does not require ESA registration or certification.",
+      "Penalty for misrepresentation: Under Fla. Stat. § 817.265, falsifying ESA documentation, knowingly providing fraudulent documentation, or knowingly misrepresenting a disability or disability-related need for an ESA is a second-degree misdemeanor, plus 30 hours of community service within 6 months of conviction. Under § 456.072, health professionals who provide ESA documentation without personal knowledge of the person's disability or need are subject to discipline.",
+      "HUD update and Florida impact: HUD withdrew its 2013 and 2020 assistance-animal guidance (notice dated September 17, 2025) and followed up with a May 22, 2026 memo. Neither changes the FHA or Florida's own statute, so Florida housing providers must still follow § 760.27 and the FHA.",
     ],
   },
   {
@@ -54,7 +54,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Hawai‘i",
     icon: "/esa-laws/esalaws_hawaii.webp",
     bullets: [
-      "Hawai‘i has a quarantine law impacting animals brought in from locales that are not rabies-free.",
+      "Hawaii-specific ESA law: Hawaii has no standalone ESA statute or registration requirement. ESA housing requests fall under Hawaii's fair housing law (HRS Chapter 515, § 515-3), enforced by the Hawaii Civil Rights Commission, alongside the federal FHA. The Commission has said reasonable accommodation under fair housing law can include \"assistance animals\" such as support animals, not just service animals.",
+      "Penalty for misrepresentation: Under HRS § 347-2.6 (Act 217 of 2018), knowingly misrepresenting an animal as a service animal carries a civil fine of $100 to $250 for a first violation and at least $500 for each later one, on clear and convincing evidence. This covers service-animal fraud only, and Hawaii has no specific penalty for misrepresenting an ESA.",
+      "HUD update and Hawaii impact: HUD withdrew its 2013 and 2020 assistance-animal guidance (notice dated September 17, 2025) and followed up with a May 22, 2026 memo. Neither changes the FHA itself, so Hawaii housing providers must still follow the FHA's reasonable-accommodation requirements and Chapter 515.",
     ],
   },
   {
@@ -62,8 +64,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Illinois",
     icon: "/esa-laws/esalaws-state-illinois.webp",
     bullets: [
-      "Illinois allows ESA letters from individuals who have a therapeutic relationship with the person and have completed a meaningful clinical evaluation. This can include a physician or medical professional, a mental health service provider, a non-medical service agency, or a reliable third party who is in a position to understand the individual's disability.",
-      "If the initial ESA letter does not meet state requirements, a housing provider may request additional documentation. This can include proof of the individual's disability, their clinical eligibility for an ESA, or evidence of a professional therapeutic relationship with the person who issued the letter.",
+      "Illinois-specific ESA law: Illinois has no standalone ESA statute or registration requirement. ESA housing requests are handled under the Illinois Human Rights Act, which prohibits disability discrimination in housing (775 ILCS 5/3-102), alongside the federal FHA. Illinois's service-animal access provisions (720 ILCS 5/48-8) cover service animals, not ESAs.",
+      "Penalty for misrepresentation: Illinois does not appear to have an enacted penalty for misrepresenting an animal as an ESA or service animal. Bills have been introduced over the years, including \"Gander's Law\" and the Assistance and Service Animal Integrity Act, but I found no enacted version.",
+      "HUD update and Illinois impact: HUD withdrew its 2013 and 2020 assistance-animal guidance (notice dated September 17, 2025) and followed up with a May 22, 2026 memo. Neither changes the FHA itself, so Illinois housing providers must still follow the FHA's reasonable-accommodation requirements and the Illinois Human Rights Act.",
     ],
   },
   {
@@ -71,9 +74,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Indiana",
     icon: "/esa-laws/esalaws-state-indiana.webp",
     bullets: [
-      "Requests for ESAs as a reasonable accommodation can be made in any way that works best for the individual. However, submitting the request in writing is generally recommended.",
-      "ESA letters in Indiana should come from a medical provider who has recently seen or treated the individual with a disability.",
-      "Housing providers may require ESAs in common areas to be leashed, well-behaved, and properly supervised. Certain areas within the housing may also be designated as off-limits to ESAs.",
+      "Indiana-specific ESA law: Indiana regulates ESA housing requests under Ind. Code Chapter 22-9-7 (SB 240, P.L. 162-2018, effective July 1, 2018), alongside the federal FHA and Indiana's fair housing law (IC 22-9.5). An ESA needs no specific training, but the person needs a verifiable disability. Indiana does not require ESA registration or certification.",
+      "Penalty for misrepresentation: Under IC § 22-9-7-12, it is a Class A infraction to misrepresent a disability or disability-related need to a housing provider, to make a materially false statement to get documentation, to give a landlord a document that misrepresents an animal as an ESA, or to fit a non-ESA with an ESA vest, collar, or sign. The same section applies to health service providers who verify need without adequate professional knowledge or who charge a fee for verification and provide no other service.",
+      "HUD update and Indiana impact: HUD withdrew its 2013 and 2020 assistance-animal guidance (notice dated September 17, 2025) and followed up with a May 22, 2026 memo. Neither changes the FHA itself, so Indiana housing providers must still follow the FHA's reasonable-accommodation requirements and Indiana Code Chapter 22-9-7.",
     ],
   },
   {
@@ -81,10 +84,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Kentucky",
     icon: "/esa-laws/esalaws-state-kentucky.webp",
     bullets: [
-      "ESA letters can be issued by Kentucky-licensed and Kentucky-resident professionals who have a therapeutic relationship with the individual. This includes licensed clinical social workers, professional counselors, advanced practice registered nurses, psychologists, and physicians.",
-      "Individuals who have recently moved to Kentucky may still use ESA letters from healthcare providers licensed in their previous state, as long as they maintain an ongoing therapeutic relationship with them.",
-      "ESA letters are not considered valid if they come from providers whose primary service is simply creating documentation for a fee for ESA requests.",
-      "Falsely claiming a disability, providing misleading information to obtain an ESA letter, or using false documents or identification for an ESA are all considered offenses in Kentucky. Misrepresentation of an ESA can lead to penalties, including fines of up to $1,000.",
+      "Kentucky-specific ESA law: KRS § 383.085 specifically governs assistance animals in housing, including ESAs. It allows reasonable accommodation requests, permits reliable disability-related documentation when the need is not apparent, and prohibits pet fees, deposits, or additional rent for an approved assistance animal.",
+      "Penalty for misrepresentation: Under KRS § 383.085(6)-(7), knowingly misrepresenting a disability or need, providing false ESA documentation, or falsely identifying a pet as an assistance animal for housing is a violation punishable by a fine of up to $1,000.",
+      "HUD update and Kentucky impact: HUD withdrew its prior assistance-animal guidance, but the FHA itself remains in effect. Kentucky's specific KRS § 383.085 continues to provide its own housing-accommodation framework, including documentation rules and protection from pet fees for approved assistance animals.",
     ],
   },
   {
@@ -92,9 +94,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Louisiana",
     icon: "/esa-laws/esalaws-state-louisiana.webp",
     bullets: [
-      "In Louisiana, a meaningful assessment of a person's eligibility for an ESA must be conducted by a healthcare professional who has had a therapeutic relationship with the individual for at least 30 days. This must include a minimum of two in-person or remote sessions before an ESA letter is issued. ESA letters or certifications provided without a proper clinical evaluation are not considered valid.",
-      "Healthcare professionals issuing ESA letters must be licensed in Louisiana or hold a license in a healthcare field that qualifies them to perform disability evaluations.",
-      "Violating ESA laws in Louisiana can lead to penalties. Fines may be up to $500 for a first offense, $1,000 for a second offense, and up to $2,500 for additional offenses.",
+      "Louisiana-specific ESA law: La. Rev. Stat. §§ 46:1971–1978, enacted by Act 558 of 2024, regulates support animals and documentation. Healthcare providers must meet specific licensing, evaluation, and therapeutic-relationship requirements before issuing support-animal documentation.",
+      "Penalty for misrepresentation: Under La. Rev. Stat. § 46:1977, violations of the Support and Service Animal Integrity Act can result in fines of up to $500 for a first offense, $1,000 for a second, and $2,500 for a third or subsequent offense. This includes prohibited misrepresentations involving support or service animals.",
+      "HUD update and Louisiana impact: HUD withdrew its 2013 and 2020 assistance-animal guidance, but the FHA remains in effect. Louisiana's Act 558 also expressly preserves existing federal and state rights to reasonable accommodation and equal access to housing, so qualifying ESA requests remain subject to applicable fair-housing law.",
     ],
   },
   {
@@ -102,9 +104,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Maine",
     icon: "/esa-laws/esalaws-state-maine.webp",
     bullets: [
-      "In Maine, individuals cannot have both a service animal and an ESA in the same housing.",
-      "ESAs are defined as assistance animals that help reduce the effects of a person's disability. This must be determined by a qualified professional, such as a physician, psychologist, physician assistant, nurse practitioner, licensed social worker, or licensed professional counselor. The professional should also understand the individual's disability-related need for an ESA.",
-      "Knowingly misrepresenting an animal as an ESA is considered a civil violation. This includes creating false documents or identification, and it may result in a fine of up to $1,000.",
+      "Maine-specific ESA law: 5 M.R.S. §§ 4553(1-H) and 4582-A recognize assistance animals, including animals needed to mitigate a physical or mental disability, and protect their use in housing. Landlords generally cannot charge a fee or security deposit for an approved assistance animal.",
+      "Penalty for misrepresentation: Under 17 M.R.S. § 1314-A, knowingly misrepresenting an animal as an assistance animal, including through false documents, is a civil violation punishable by a fine of up to $1,000 per occurrence.",
+      "HUD update and Maine impact: HUD withdrew its prior assistance-animal guidance, but the FHA itself remains in effect. Maine's own assistance-animal housing protections continue to apply, so qualifying requests remain subject to both federal fair-housing requirements and Maine law.",
     ],
   },
   {
@@ -112,10 +114,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Massachusetts",
     icon: "/esa-laws/esalaws-state-massachusetts.webp",
     bullets: [
-      "In Massachusetts, ESA letters can be provided by a healthcare professional, but this is not strictly required. Other sources may include non-medical service agencies, peer support groups, or reliable third parties who can verify the individual's need.",
-      "A housing provider is not allowed to contact the author of the ESA letter, except to confirm its authenticity and signature.",
-      "The state recommends that the clinician writing the ESA letter consider the individual's preference when deciding the type of animal. If the person already has an animal, it can be specifically mentioned in the letter.",
-      "All dogs, including ESAs and other assistance animals, must be locally registered in Massachusetts. However, there is no official registry for ESAs. Online certifications, licenses, or ID cards obtained without a proper clinical evaluation are not considered valid documentation.",
+      "Massachusetts-specific ESA law: M.G.L. c. 151B protects people with disabilities who need assistance animals as a reasonable housing accommodation. Massachusetts specifically recognizes ESAs and allows housing providers to request supporting documentation when the disability-related need is not apparent.",
+      "Penalty for misrepresentation: Massachusetts does not currently appear to have a specific state fine or criminal penalty for falsely claiming an ESA for housing. A 2025–26 bill, H.1534, is studying ESA fraud and potential future legislation, but it remains pending.",
+      "HUD update and Massachusetts impact: HUD withdrew its 2013 and 2020 assistance-animal guidance, but Massachusetts confirmed in July 2026 that the federal change does not modify or limit protections under M.G.L. c. 151B. Massachusetts housing providers must therefore continue applying the state's assistance-animal protections alongside applicable federal law.",
     ],
   },
   {
@@ -123,9 +124,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Michigan",
     icon: "/esa-laws/esalaws-state-michigan.webp",
     bullets: [
-      "In Michigan, all animals, including ESAs and service animals, must follow local rules for vaccination, registration, or certification based on city or town requirements.",
-      "Healthcare providers who issue ESA letters must be licensed in Michigan or another state. If licensed in another state, they must have treated the individual for at least 180 days.",
-      "Providers are not allowed to charge a fee solely for determining ESA eligibility. ESA letters issued under such conditions are considered invalid.",
+      "Michigan-specific ESA law: Michigan has no enacted standalone ESA certification law. Housing protections come primarily from the Persons with Disabilities Civil Rights Act and FHA; Michigan guidance recognizes support animals as reasonable accommodations in housing.",
+      "Penalty for misrepresentation: Michigan's proposed Emotional Support Animal Act (HB 4910), which would have created specific ESA misrepresentation rules, was vetoed in 2020. Therefore, Michigan currently has no enacted ESA-specific misrepresentation penalty under that proposal.",
+      "HUD update and Michigan impact: HUD withdrew its prior assistance-animal guidance, but the FHA remains in effect. Michigan continues to recognize reasonable accommodations for support animals, and a July 2026 Michigan Civil Rights Commission ruling reaffirmed protections for tenants requesting ESAs.",
     ],
   },
   {
@@ -133,9 +134,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Minnesota",
     icon: "/esa-laws/esalaws-state-minnesota.webp",
     bullets: [
-      "If a person has requested an ESA but does not yet have the animal, they are generally expected to choose one that meets their housing provider's size or breed restrictions. However, this does not apply if there is a valid disability-related reason for needing a specific size or breed.",
-      "ESAs should be licensed and vaccinated as locally required. Wild or exotic animals locally prohibited on public health grounds cannot be used as ESAs.",
-      "Businesses and government offices in Minnesota are not required to allow ESAs but can choose to do so.",
+      "Minnesota-specific ESA law: Minn. Stat. § 504B.113 defines a “support animal” and governs housing accommodations. Landlords may request documentation from a licensed professional when the disability-related need is not apparent, but cannot require medical records.",
+      "Penalty for misrepresentation: Under § 504B.113(4)-(5), knowingly misrepresenting a disability-related need or submitting fraudulent documentation can lead to denial of the rental application or animal request, and may support eviction for a lease violation. Minnesota’s separate § 609.833 makes intentional service-animal misrepresentation a petty misdemeanor, with repeat violations classified as a misdemeanor, but it applies to public accommodations.",
+      "HUD update and Minnesota impact: HUD withdrew its earlier assistance-animal guidance, but the FHA remains in effect. Minnesota’s § 504B.113 expressly ties housing accommodations to the FHA, so state protections and reasonable-accommodation requirements continue to apply.",
     ],
   },
   {
@@ -143,8 +144,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Missouri",
     icon: "/esa-laws/esalaws-state-missouri.webp",
     bullets: [
-      "In Missouri, it is a crime to knowingly misrepresent an animal as an ESA or assistance animal in housing. A first offense is treated as a Class C misdemeanor, while additional offenses may be charged as a Class B misdemeanor.",
-      "Individuals may also be held civilly liable for any damages resulting from such misrepresentation.",
+      "Missouri-specific ESA law: Missouri Rev. Stat. § 209.204(3) defines an “assistance animal” to include an animal that provides emotional support that alleviates one or more identified effects of a person’s disability. Documentation for an assistance animal must come from a qualified professional as permitted under the FHA or Rehabilitation Act.",
+      "Penalty for misrepresentation: Under § 209.204(3), knowingly misrepresenting an animal as an assistance animal, creating or providing fraudulent documentation, or intentionally misrepresenting a material fact to obtain documentation is a Class C misdemeanor, with civil liability for actual damages. A second or subsequent violation is a Class B misdemeanor.",
+      "HUD update and Missouri impact: HUD withdrew its 2013 and 2020 assistance-animal guidance, but the FHA remains in effect. Missouri’s § 209.204 expressly addresses assistance animals under the FHA and Rehabilitation Act, including documentation and misrepresentation rules.",
     ],
   },
   {
@@ -152,9 +154,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Montana",
     icon: "/esa-laws/esalaws-state-montana.webp",
     bullets: [
-      "In Montana, ESA letters must include proof that the animal is locally licensed and vaccinated.",
-      "Healthcare professionals issuing ESA letters must be licensed in Montana. They must also have a client-provider relationship with the individual for at least 30 days and conduct a proper clinical evaluation before writing the letter.",
-      "Submitting an ESA letter does not automatically require a housing provider or business to allow the ESA beyond what is required under federal law.",
+      "Montana-specific ESA law: Montana Code Ann. § 70-24-114 specifically governs emotional support animals in housing. If the disability-related need is not readily apparent, a landlord may request supporting information from a qualified health care practitioner, but may not require the tenant’s diagnosis, disability severity, or medical records. Montana also requires the practitioner to have an established client-provider relationship of at least 30 days and complete a clinical evaluation.",
+      "Penalty for misrepresentation: Under § 70-24-114, an ESA registration, ID card, patch, certificate, or similar registration is not by itself sufficient to establish a disability-related need. The statute does not create a separate criminal penalty for a tenant's ESA misrepresentation, but a health care practitioner may face licensing-board discipline for violating the section.",
+      "HUD update and Montana impact: HUD withdrew its earlier assistance-animal guidance, but the Fair Housing Act remains in effect. Montana’s § 70-24-114 expressly preserves federal and state reasonable-accommodation rights while setting specific state rules for ESA documentation in housing.",
     ],
   },
   {
@@ -162,7 +164,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Nebraska",
     icon: "/esa-laws/esalaws-state-nebraska.webp",
     bullets: [
-      "ESAs are not recognized or protected in Nebraska beyond what is required for housing by federal law. ESAs may need to be licensed and immunized to comply with local regulations.",
+      "Nebraska-specific ESA law: Nebraska does not currently have a separate statute specifically regulating emotional support animals in housing. The Nebraska Fair Housing Act, including Neb. Rev. Stat. § 20-319(2)(b), prohibits disability discrimination and requires reasonable accommodations in housing when necessary for a person with a disability to use and enjoy a dwelling.",
+      "Penalty for misrepresentation: Nebraska law prohibits intentionally misrepresenting a disability or disability-related need for an assistance animal, providing unreliable documentation, or falsely representing an animal as an assistance animal. The enacted provisions would classify a first offense as a Class III misdemeanor and a second or subsequent offense as a Class II misdemeanor. However, LB 309 was indefinitely postponed and did not become law, so these penalties should not be presented as current Nebraska law.",
+      "HUD update and Nebraska impact: HUD withdrew its earlier assistance-animal guidance, but the Fair Housing Act remains in effect, and HUD's current assistance-animal page continues to recognize reasonable accommodations for assistance animals in housing. Nebraska's Fair Housing Act also addresses disability-related housing discrimination, while its specific state housing statute, § 20-131.04, expressly addresses service animals rather than ESAs.",
     ],
   },
   {
@@ -170,9 +174,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Pennsylvania",
     icon: "/esa-laws/esalaws-state-pennsylvania.webp",
     bullets: [
-      "As of December 2025, the Pennsylvania Human Relations Commission is asking for public input on issues regarding ESAs, particularly their public access rights. However, under current PA law at the time of writing, ESAs do not yet have public access rights.",
-      "It is a third-degree misdemeanor in Pennsylvania to misrepresent one's eligibility for an ESA in housing or to make false statements in order to obtain an ESA letter.",
-      "In Pennsylvania, it is a summary offense to intentionally create or provide false documents or identification that misrepresent an animal as an ESA for housing. This can result in a fine of up to $1,000.",
+      "Pennsylvania-specific ESA law: Pennsylvania's Assistance and Service Animal Integrity Act (Act 118 of 2018) recognizes emotional support animals as assistance animals when they qualify as reasonable accommodations under fair housing laws. Landlords may request reliable written documentation of a disability-related need when it is not readily apparent.",
+      "Penalty for misrepresentation: Under Pennsylvania's Assistance and Service Animal Integrity Act, intentionally misrepresenting a disability-related need for an assistance animal in housing is a third-degree misdemeanor. Intentionally creating or providing false assistance-animal documentation for housing is a summary offense punishable by a fine of up to $1,000.",
+      "HUD update and Pennsylvania impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. Pennsylvania's state law also establishes documentation requirements and penalties for certain forms of misrepresentation in housing. Changes to HUD guidance do not, by themselves, repeal federal or state fair housing laws.",
     ],
   },
   {
@@ -180,8 +184,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "South Dakota",
     icon: "/esa-laws/esalaws-state-south-dakota.webp",
     bullets: [
-      "Knowingly making a false claim for an ESA as a housing accommodation or providing false supporting documents can lead to eviction.",
-      "It may also result in a damage fee of up to $1,000 payable to the housing provider.",
+      "South Dakota-specific ESA law: South Dakota has specific housing laws addressing assistance animals, including ESAs. Under S.D. Codified Laws §§ 43-32-33 to 43-32-35, landlords may request reliable documentation of a disability-related need for an assistance animal when that need is not readily apparent. Documentation must come from a licensed healthcare provider who does not operate in the state solely to certify assistance animals.",
+      "Penalty for misrepresentation: Under S.D. Codified Laws § 43-32-36, knowingly making a false disability claim or providing fraudulent documentation to obtain an assistance-animal accommodation may result in eviction. Landlords may also charge a damage fee of up to $1,000 for fraudulent disability documentation.",
+      "HUD update and South Dakota impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. South Dakota's housing laws provide additional requirements for documentation and penalties for fraudulent claims. Changes to HUD guidance do not, by themselves, repeal federal or state fair housing laws.",
     ],
   },
   {
@@ -189,9 +194,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Tennessee",
     icon: "/esa-laws/esalaws-state-tennessee.webp",
     bullets: [
-      "In Tennessee, it is an offense to knowingly make a false claim of eligibility for an ESA or to provide false documentation identifying an animal as an ESA. This is considered misrepresentation and is classified as a Class B misdemeanor.",
-      "Such misrepresentation can also allow a housing provider to evict the tenant and recover damages, including legal fees.",
-      "ESA letters in Tennessee must be written documentation from a qualified source. This can include a healthcare provider, a Tennessee-licensed mental health professional, or a caregiver. It may also include a reliable third party or a government entity that knows about the individual's disability.",
+      "Tennessee-specific ESA law: Tennessee law specifically addresses support animals in rental housing. Under Tenn. Code Ann. § 66-28-406, tenants with disabilities may request reasonable accommodations for ESAs, including exceptions to no-pet policies and pet fees. Landlords may request reliable documentation of the disability-related need when it is not readily apparent.",
+      "Penalty for misrepresentation: Under Tenn. Code Ann. § 39-16-304, knowingly misrepresenting a disability-related need for a support animal or providing false documentation to a landlord is a Class B misdemeanor. A landlord may also terminate the tenancy and seek damages, including reasonable attorney's fees, under § 66-28-406.",
+      "HUD update and Tennessee impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. Tennessee law provides additional rules for housing requests and penalties for misrepresentation. Changes to HUD guidance do not, by themselves, repeal federal or state fair housing laws.",
     ],
   },
   {
@@ -199,9 +204,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Virginia",
     icon: "/esa-laws/esalaws-state-virginia.webp",
     bullets: [
-      "In Virginia, ESA letters can be provided by individuals from whom the requester currently receives or has previously received medical or personal care.",
-      "This may include a licensed mental health provider, a state-licensed disability service, or a peer support group member who does not charge fees. It can also include a caregiver, a reliable third party, or a government entity with direct knowledge of the individual's disability.",
-      "Providing fraudulent supporting ESA documentation to an individual is legally prohibited and punishable in Virginia.",
+      "Virginia-specific ESA law: Virginia has a specific law protecting assistance animals in housing. Under Va. Code § 36-96.3:1, landlords must consider reasonable accommodation requests for ESAs when necessary for a person with a disability to use and enjoy their home. Landlords cannot charge pet fees, deposits, or additional rent for qualifying assistance animals, although tenants remain responsible for property damage.",
+      "Penalty for misrepresentation: Virginia law prohibits knowingly providing fraudulent documentation to support an assistance-animal housing request. Under Va. Code § 36-96.3:1(F), violations may be treated as prohibited practices under the Virginia Consumer Protection Act. Separately, Va. Code § 51.5-44.1 makes fraudulent representation of a service dog to gain public access a Class 4 misdemeanor. This criminal provision concerns service dogs, not ESAs in housing.",
+      "HUD update and Virginia impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. Virginia's Fair Housing Law provides additional state-level protections. Changes to HUD guidance do not, by themselves, repeal federal or state fair housing laws.",
     ],
   },
   {
@@ -209,8 +214,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Washington",
     icon: "/esa-laws/esalaws-state-washington.webp",
     bullets: [
-      "Only Washington state licensed mental health professionals (LMHP) can issue ESA letters in Washington.",
-      "Vaccination and local licensing/registering of animals are required in most jurisdictions of Washington.",
+      "Washington-specific ESA law: Washington's Law Against Discrimination, under RCW § 49.60.222, prohibits disability discrimination in housing. Landlords must consider reasonable accommodation requests for assistance animals, including ESAs, when necessary for a person with a disability to use and enjoy their home. Qualifying assistance animals are generally exempt from pet fees and deposits.",
+      "Penalty for misrepresentation: Under RCW § 49.60.214, knowingly or negligently misrepresenting an animal as a service animal or service animal trainee is a civil infraction. The penalty can be up to $500. This provision concerns service animals and public access, not specifically ESA misrepresentation in housing.",
+      "HUD update and Washington impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. Washington's Law Against Discrimination provides additional state-level housing protections. Changes to HUD guidance do not, by themselves, repeal federal or state fair housing laws.",
     ],
   },
   {
@@ -218,7 +224,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "West Virginia",
     icon: "/esa-laws/esalaws-state-west-virginia.webp",
     bullets: [
-      "Animals weighing more than one hundred and fifty pounds cannot be ESAs or service animals in West Virginia.",
+      "West Virginia-specific ESA law: West Virginia's Human Rights Act, under W. Va. Code § 5-11A-5(f)(3)(B), requires reasonable accommodations for assistance animals in housing, including ESAs, when necessary for a person with a disability to use and enjoy their home. Landlords generally cannot charge additional pet fees or deposits for qualifying assistance animals.",
+      "Penalty for misrepresentation: Under W. Va. Code § 5-15-9, falsely representing an animal as a service animal to obtain public-access rights is a misdemeanor punishable by a fine of up to $200, up to 10 days in jail, or both. Repeat offenses carry higher penalties. This provision concerns service animals in public settings, not ESA misrepresentation in housing.",
+      "HUD update and West Virginia impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. West Virginia's Human Rights Act also provides state-level housing protections. Changes to HUD guidance do not, by themselves, repeal federal or state fair housing laws.",
     ],
   },
   {
@@ -226,8 +234,9 @@ const STATE_LAWS: StateLawEntry[] = [
     name: "Wyoming",
     icon: "/esa-laws/esalaws-state-wyoming.webp",
     bullets: [
-      "In Wyoming, knowingly and intentionally misrepresenting an animal as an ESA to receive housing accommodations is a misdemeanor.",
-      "This can result in a fine of up to $750.",
+      "Wyoming-specific ESA law: Wyoming does not have a separate state statute specifically governing emotional support animals (ESAs) in housing. However, the federal Fair Housing Act requires landlords to consider reasonable accommodation requests for qualifying assistance animals when necessary for a person with a disability to use and enjoy their home. Landlords generally cannot charge pet fees for approved assistance animals.",
+      "Penalty for misrepresentation: Wyoming law addresses the fraudulent representation of service animals under Wyo. Stat. § 35-13-202. However, this provision concerns service animals and should not be presented as a specific criminal penalty for misrepresenting an ESA in a housing request.",
+      "HUD update and Wyoming impact: The federal Fair Housing Act continues to protect qualifying requests for assistance animals, including ESAs, as reasonable housing accommodations. Changes to HUD guidance do not, by themselves, repeal the Act. Wyoming's service-animal laws should be distinguished from federal housing protections for ESAs.",
     ],
   },
 ];
@@ -270,13 +279,13 @@ export function EsaLawsStateSection() {
             ESA Laws by State
           </h2>
           <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text max-w-[1156px]">
-            Some states have additional ESA-specific laws, but all states must still follow federal rules that allow ESA accommodations in housing. Under federal law, ESAs do not have public access rights, so businesses are not required to allow them inside. An ESA letter must clearly explain the individual's clinical eligibility for an ESA as a housing accommodation. Housing providers also cannot require a specific form or method for submitting an ESA request. In some states, a 30-day or longer clinical relationship between the mental health professional and the person requesting the ESA letter is required. Other states require the provider to be licensed or based in the same state as the individual. A few states have penalties for falsely claiming an animal as a service animal. These penalties can include eviction or financial liability for damages. Since ESA laws can change at both state and federal levels, it is important to stay updated on current requirements.
+            State laws can add requirements for emotional support animals, while housing providers must also follow applicable federal fair housing protections. Under federal law, ESAs do not have the public-access rights of service animals, so businesses generally do not have to admit an ESA. In housing, a person may request an assistance animal as a reasonable accommodation. If the disability or need for the animal is not obvious, a housing provider may request reliable information supporting the request. Federal law does not require a specific ESA letter format or a particular method for submitting an accommodation request. State requirements vary. Some states, like California require a minimum 30 days provider-client relationship, specific licensing requirements, or particular evaluation standards before documentation can be issued. Some states, like Florida, also impose penalties for falsely representing a service animal, although these laws generally concern service-animal misrepresentation rather than ESA requests. Because requirements can vary and change, renters should check the current federal, state, and local rules that apply to their housing situation.
           </p>
         </div>
 
         <div className="w-full flex flex-col items-center gap-10 sm:gap-14">
           <h3 className="font-heading font-bold text-[22px] sm:text-[28px] leading-[1.3] text-primary text-center">
-            Additional ESA laws by state include
+            State-Specific ESA Laws and Requirements
           </h3>
           <div className="w-full grid grid-cols-1 gap-6 sm:gap-8">
             {STATE_LAWS.map((entry) => (

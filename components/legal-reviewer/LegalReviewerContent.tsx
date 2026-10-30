@@ -3,7 +3,6 @@ import { ProfileShell } from "./ProfileShell";
 import {
   AboutSection,
   BulletColumns,
-  DisclosureCard,
   EducationEntry,
   EducationSection,
   NumberedSection,
@@ -116,15 +115,6 @@ export function LegalReviewerContent() {
         text="My role is to review legal content for accuracy, clarity, source support, and compliance with applicable legal standards. I verify legal claims against credible authority, flag overbroad or misleading language, and revise content so it remains both legally reliable and understandable for a non-lawyer audience."
       />
 
-      <DisclosureCard
-        title="Reviewer Disclosure"
-        keepCase
-        items={[
-          "I authorize My ESA Therapist to display my name, photo, biography, credentials, and professional information on its website.",
-          "I have reviewed and approved the information provided.",
-          "I understand that my review of website content does not establish an attorney-client relationship with website visitors.",
-        ]}
-      />
     </ProfileShell>
   );
 }
