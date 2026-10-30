@@ -2,8 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  compress: true,
+  poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ["lucide-react"],
+  },
   images: {
-    qualities: [75, 90, 95, 100],
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
+    qualities: [75, 80, 90, 95, 100],
     remotePatterns: [
       {
         protocol: "https",
