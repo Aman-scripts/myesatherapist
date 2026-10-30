@@ -156,9 +156,11 @@ export function StateProcessSection({ data }: { data: StateData }) {
         {/* Frame 1000011961: CTA Button and Subtitle */}
         <div className="flex flex-col items-center gap-2">
           <CtaButton href="/pricing/">Start Your Free Evaluation</CtaButton>
-          <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
-            If not approved after your evaluation? You get a full refund.
-          </p>
+          {data.benefitsRefundNote !== "" && (
+            <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
+              If not approved after your evaluation? You get a full refund.
+            </p>
+          )}
         </div>
       </div>
     </section>

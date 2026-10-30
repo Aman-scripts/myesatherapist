@@ -128,6 +128,7 @@ export default async function DynamicStatePage({ params }: Props) {
             subtitle={data.therapistsSubtitle}
             licensureNote={data.therapistsLicensureNote}
             therapistsList={data.therapistsList}
+            refundText={data.benefitsRefundNote === "" ? null : undefined}
           />
         </div>
         <div id="process"><StateProcessSection data={data} /></div>
@@ -156,6 +157,7 @@ export default async function DynamicStatePage({ params }: Props) {
             stateName={data.name}
             title={data.trustedReviewsTitle}
             subtitle={data.trustedReviewsSubtitle}
+            testimonials={data.trustedReviews}
           />
         </div>
         <div id="pricing"><StatePricingSection stateName={data.name} data={data} /></div>

@@ -4,6 +4,13 @@ import React from "react";
 import Image from "next/image";
 import { StateData } from "@/data/statesData";
 
+const QUALIFY_ICONS = [
+  "/ESA ICons/Icon.svg",
+  "/ESA ICons/Icon-1.svg",
+  "/ESA ICons/Icon-2.svg",
+  "/ESA ICons/Icon-4.svg",
+];
+
 const defaultConditions = [
   {
     title: "Panic Disorder with Agoraphobia",
@@ -154,18 +161,18 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-3 xl:gap-4 max-w-[620px]">
-                {conditions.map((item) => (
+                {conditions.map((item, idx) => (
                   <div
                     key={item.title}
                     className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
                   >
                     <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
-            quality={90}
-                        src={item.icon || "/states/whomayqualifies-moodconditions.svg"}
-                        alt={item.title}
+                        src={QUALIFY_ICONS[idx % QUALIFY_ICONS.length]}
+                        alt=""
                         width={40}
                         height={40}
+                        unoptimized
                         className="object-contain w-full h-full"
                       />
                     </div>

@@ -5,6 +5,30 @@ import Image from "next/image";
 import { StateData } from "@/data/statesData";
 import { CtaButton } from "@/components/common/CtaButton";
 
+const FINANCIAL_ICONS = [
+  "/ESA ICons/Icon-20.svg",
+  "/ESA ICons/Icon-28.svg",
+  "/ESA ICons/Icon-10.svg",
+];
+
+const EMOTIONAL_ICONS = [
+  "/ESA ICons/Icon-29.svg",
+  "/ESA ICons/Icon-30.svg",
+  "/ESA ICons/Icon-17.svg",
+];
+
+function BenefitCard({ title, description, icon }: { title: string; description: string; icon: string }) {
+  return (
+    <div className="bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
+        <Image src={icon} alt="" width={26} height={26} unoptimized className="h-[26px] w-[26px] object-contain" />
+      </div>
+      <h4 className="font-heading text-[18px] sm:text-[20px] font-bold text-primary leading-snug">{title}</h4>
+      <p className="font-sans text-[14px] sm:text-[15px] font-medium leading-6 text-[#5F6B6F]">{description}</p>
+    </div>
+  );
+}
+
 export function StateBenefitsSection({ data }: { data: StateData }) {
   const stateName = data.name;
 
@@ -59,20 +83,17 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
   const subtitle = data.benefitsSubtitle || `A properly issued emotional support animal letter in ${stateName} can help residents obtain housing accommodations while also promoting emotional well-being and everyday stability.`;
   const financialHeading = data.financialBenefitsHeading || "Financial Benefits :";
   const emotionalHeading = data.emotionalBenefitsHeading || "Emotional Benefits :";
-
-  const maxLen = Math.max(financialBenefits.length, emotionalBenefits.length);
-  const benefitPairs = Array.from({ length: maxLen }).map((_, idx) => ({
-    financial: financialBenefits[idx] || financialBenefits[0],
-    emotional: emotionalBenefits[idx] || emotionalBenefits[0],
-  }));
+  const refundNote = data.benefitsRefundNote === ""
+    ? ""
+    : (data.benefitsRefundNote || "If not approved after your evaluation? You get a full refund.");
 
   const isStateWhoBenefits = Boolean(data.benefitsImage?.includes("statewhobenefits"));
 
   return (
-    <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
-      <div className="w-full max-w-[1440px] ml-auto mr-0 px-0 lg:pl-8 xl:pl-16 lg:pr-0">
-        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-3 xl:gap-8 items-stretch">
-          <div className="order-1 lg:order-2 lg:col-span-5 relative flex justify-end items-stretch w-full">
+    <section className="w-full bg-white overflow-hidden relative z-10">
+      <div className="w-full max-w-[1440px] mx-auto">
+        <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(420px,46%)] lg:items-stretch">
+          <div className="order-1 lg:order-2 relative flex w-full min-h-[280px] sm:min-h-[420px] lg:min-h-full">
             <div className="sm:hidden relative w-full aspect-[390/513]">
               <Image
             quality={90}
@@ -115,17 +136,14 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               </div>
             </div>
 
-            <div
-              className="hidden lg:block relative h-full ml-auto"
-              style={{ aspectRatio: data.benefitsAspect ?? (isStateWhoBenefits ? "696/1623" : "724/1427") }}
-            >
+            <div className="hidden lg:block absolute inset-0">
               <Image
-            quality={90}
+                quality={90}
                 src={data.benefitsImage ?? "/states/california-benefits-clinical-issued.webp"}
                 alt={`Benefits of Having an ESA Letter in ${stateName}`}
                 fill
-                className="object-contain object-right-top pointer-events-none"
-                sizes="42vw"
+                className="object-cover object-left pointer-events-none"
+                sizes="46vw"
               />
               <div
                 className="absolute -translate-x-1/2 -translate-y-1/2 z-10 w-11 h-11 xl:w-16 xl:h-16"
@@ -135,7 +153,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                 }}
               >
                 <Image
-            quality={90}
+                  quality={90}
                   src="/states/whomayqualifies-california_icon.webp"
                   alt="Heart Icon"
                   width={64}
@@ -146,86 +164,61 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-7 px-4 sm:px-6 lg:px-0 pt-4 pb-6 sm:pb-8 lg:py-5 xl:py-12 pr-0 lg:pr-3 xl:pr-4 flex flex-col justify-center">
-            <div className="mb-4 lg:mb-5 xl:mb-8">
-              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[29px] xl:text-[44px] font-bold text-primary leading-[1.16] tracking-tight mb-2 lg:mb-2.5">
+          <div className="order-2 lg:order-1 px-4 sm:px-6 lg:px-10 xl:px-16 py-8 lg:py-14 flex flex-col justify-center">
+            <div className="mb-6 lg:mb-8">
+              <h2 className="heading-h2 text-primary mb-3">
                 {title}
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[12px] xl:text-base text-body-text font-semibold leading-relaxed max-w-[520px]">
+              <p className="body-large max-w-[640px] text-[#5F6B6F]">
                 {subtitle}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 max-w-[650px] mb-2 lg:mb-3">
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-body-text leading-tight whitespace-pre-line">
-                {financialHeading}
-              </h3>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[16.5px] xl:text-[28px] font-bold text-body-text leading-tight whitespace-pre-line hidden sm:block">
-                {emotionalHeading}
-              </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5 max-w-[860px] mb-8">
+              <div className="flex flex-col gap-4">
+                <h3 className="font-heading text-[22px] md:text-[26px] font-bold text-primary leading-tight whitespace-pre-line">
+                  {financialHeading}
+                </h3>
+                {financialBenefits.map((item, idx) => (
+                  <BenefitCard
+                    key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    icon={FINANCIAL_ICONS[idx % FINANCIAL_ICONS.length]}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="font-heading text-[22px] md:text-[26px] font-bold text-primary leading-tight whitespace-pre-line">
+                  {emotionalHeading}
+                </h3>
+                {emotionalBenefits.map((item, idx) => (
+                  <BenefitCard
+                    key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    icon={EMOTIONAL_ICONS[idx % EMOTIONAL_ICONS.length]}
+                  />
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-3 lg:space-y-2.5 xl:space-y-4 max-w-[650px] mb-6">
-              {benefitPairs.map((pair, idx) => (
-                <div key={idx} className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-2.5 xl:gap-5 items-stretch">
-                  <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
-                      <Image
-            quality={90}
-                        src={pair.financial.icon || "/states/whomayqualifies-california_chronicworry.svg"}
-                        alt={pair.financial.title}
-                        width={40}
-                        height={40}
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
+            {data.benefitsFootnote ? (
+              <p className="body-text text-[#5F6B6F] max-w-[860px] mb-8">
+                {data.benefitsFootnote}
+              </p>
+            ) : null}
 
-                    <div className="min-w-0 flex-1">
-                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-primary mb-0.5 lg:mb-1 leading-snug">
-                        {pair.financial.title}
-                      </h4>
-                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-body-text leading-tight xl:leading-normal font-semibold">
-                        {pair.financial.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5 h-full">
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-8.5 lg:h-8.5 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
-                      <Image
-            quality={90}
-                        src={pair.emotional.icon || "/states/whomayqualifies-panicattack.svg"}
-                        alt={pair.emotional.title}
-                        width={40}
-                        height={40}
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <h4 className="font-sans text-xs sm:text-[13px] lg:text-[11.5px] xl:text-[16px] font-bold text-primary mb-0.5 lg:mb-1 leading-snug">
-                        {pair.emotional.title}
-                      </h4>
-                      <p className="font-sans text-[10px] sm:text-[11px] lg:text-[10px] xl:text-[13px] text-body-text leading-tight xl:leading-normal font-semibold">
-                        {pair.emotional.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex justify-center lg:justify-start pt-2">
-              <div className="flex flex-col items-center gap-1.5 w-fit">
-                <CtaButton
-                  href="#faq"
-                  className="w-auto"
-                >
+            <div className="flex justify-center lg:justify-start">
+              <div className="flex flex-col items-center lg:items-start gap-2 w-fit">
+                <CtaButton href="#faq" className="w-auto">
                   Apply your ESA Letter Now
                 </CtaButton>
-                <p className="font-sans font-semibold text-[12px] lg:text-[13px] text-body-text text-center">
-                  No hidden fees. HIPAA-secure.
-                </p>
+                {refundNote ? (
+                  <p className="font-sans text-[13px] font-medium text-[#5F6B6F] text-center lg:text-left">
+                    {refundNote}
+                  </p>
+                ) : null}
               </div>
             </div>
           </div>
