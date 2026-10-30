@@ -143,11 +143,13 @@ interface PricingSectionProps {
   sectionId?: string;
   sectionClassName?: string;
   heading?: string;
+  headingClassName?: string;
   descriptionOverride?: string;
   showTabs?: boolean;
   maxCards?: number;
   popularCardIndex?: number;
   showDog?: boolean;
+  cards?: PlanCard[];
 }
 
 export function PricingSection({
@@ -157,22 +159,25 @@ export function PricingSection({
   sectionId = "pricing",
   sectionClassName = "py-16 lg:py-24",
   heading = "Plans & Pricing",
+  headingClassName = "heading-h2 capitalize",
   descriptionOverride,
   showTabs = true,
   maxCards,
   popularCardIndex,
   showDog = true,
+  cards: cardsOverride,
 }: PricingSectionProps) {
   const [active, setActive] = useState<PlanType>(defaultPlan);
   const plan = PLANS[active];
-  const cards = plan.cards.slice(0, maxCards ?? plan.cards.length);
+  const sourceCards = cardsOverride ?? plan.cards;
+  const cards = sourceCards.slice(0, maxCards ?? sourceCards.length);
 
   return (
     <section id={sectionId} className={`${sectionClassName} ${bgColor} relative overflow-hidden`}>
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-0 flex flex-col items-center gap-10">
         {/* Heading */}
         <div className="text-center max-w-[760px] mx-auto space-y-3">
-          <h2 className="heading-h2 capitalize">
+          <h2 className={headingClassName}>
             {heading}
           </h2>
           <p className="body-large">
@@ -226,7 +231,7 @@ export function PricingSection({
 
                     <div className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden">
                       <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
-                        <h3 className="heading-h3 text-background capitalize">
+                        <h3 className="heading-h3 text-background">
                           {card.title}
                         </h3>
                         <p className="body-text text-background font-semibold">
@@ -274,7 +279,7 @@ export function PricingSection({
                 >
                   {/* Frame 1261153969: Teal Header */}
                   <div className="w-[300px] h-[261px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
-                    <h3 className="heading-h3 text-background capitalize">
+                    <h3 className="heading-h3 text-background">
                       {card.title}
                     </h3>
                     <p className="body-text text-background font-semibold">

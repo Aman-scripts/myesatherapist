@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { GoldCallout, WaveImage } from "./EsaOnlineShared";
+import { CtaButton, GoldCallout, WaveImage } from "./EsaOnlineShared";
 
 const CONDITIONS = [
   { label: "Anxiety", icon: "/ESA ICons/Icon.svg" },
@@ -11,6 +11,13 @@ const CONDITIONS = [
   { label: "Bipolar Disorder", icon: "/ESA ICons/Icon-4.svg" },
   { label: "OCD", icon: "/ESA ICons/Icon-27.svg" },
   { label: "Social Anxiety", icon: "/ESA ICons/Icon-10.svg" },
+];
+
+const FACTORS = [
+  { text: "Your current emotional or mental health concerns", icon: "/ESA ICons/Icon-4.svg" },
+  { text: "Whether an animal can reasonably fit into your daily routines", icon: "/ESA ICons/Icon-16.svg" },
+  { text: "Your ability to care for an animal responsibly", icon: "/ESA ICons/Icon-7.svg" },
+  { text: "How an ESA may support your emotional stability", icon: "/ESA ICons/Icon-12.svg" },
 ];
 
 /*
@@ -87,6 +94,38 @@ export function EsaOnlineEligible() {
           <GoldCallout>
             This information has been reviewed for accuracy by a licensed mental health professional. ESA letters are issued only after a clinical evaluation and are based on criteria outlined in the DSM-5 and applicable federal housing guidelines.
           </GoldCallout>
+
+          <div className="flex flex-col gap-4">
+            <h3 className="font-heading text-2xl sm:text-[28px] lg:text-[length:min(1.94vw,28px)] font-bold text-primary leading-9 lg:leading-[min(2.5vw,36px)]">
+              Factors Considered May Include:
+            </h3>
+            <div className="flex flex-col gap-3 lg:gap-[min(0.83vw,12px)]">
+              {FACTORS.map((factor) => (
+                <div
+                  key={factor.text}
+                  className="flex items-center gap-4 lg:gap-[min(1.1vw,16px)] rounded-[14px] bg-white px-4 py-3 lg:px-[min(1.1vw,16px)] lg:py-[min(0.83vw,12px)] shadow-[0px_1px_5px_rgba(0,0,0,0.12)] border border-primary/5 text-left"
+                >
+                  <Image
+                    src={factor.icon}
+                    alt=""
+                    width={28}
+                    height={28}
+                    unoptimized
+                    className="h-7 w-7 object-contain shrink-0"
+                  />
+                  <span className="font-sans text-[16px] sm:text-[18px] lg:text-[length:min(1.25vw,18px)] font-semibold text-primary leading-[28px] lg:leading-[min(2.1vw,30px)]">
+                    {factor.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-start">
+            <CtaButton href="/pricing/" variant="accent" className="w-auto min-w-[280px]">
+              Talk With Licensed Therapist
+            </CtaButton>
+          </div>
         </div>
 
       </div>

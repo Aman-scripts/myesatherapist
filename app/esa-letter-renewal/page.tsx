@@ -9,7 +9,7 @@ import { EsaRenewalHero } from "@/components/esa-renewal/EsaRenewalHero";
 import { EsaRenewalTrustCards } from "@/components/esa-renewal/EsaRenewalTrustCards";
 import { EsaRenewalWhySection } from "@/components/esa-renewal/EsaRenewalWhySection";
 import { EsaRenewalHowItWorks } from "@/components/esa-renewal/EsaRenewalHowItWorks";
-import { PricingPlansSection } from "@/components/pricing/PricingPlansSection";
+import { EsaRenewalPricing } from "@/components/esa-renewal/EsaRenewalPricing";
 import { EsaRenewalImportantCallout } from "@/components/esa-renewal/EsaRenewalImportantCallout";
 import { EsaRenewalHousingSection } from "@/components/esa-renewal/EsaRenewalHousingSection";
 import { EsaRenewalLicensedPros } from "@/components/esa-renewal/EsaRenewalLicensedPros";
@@ -130,7 +130,7 @@ export default function EsaRenewalPage() {
         {/* 3-Step Process: How the ESA Letter Renewal Process Works */}
         <EsaRenewalHowItWorks />
 
-        <PricingPlansSection ctaHref="/pricing/#evaluation" addPetHref="/pricing/#add-pet" />
+        <EsaRenewalPricing />
 
         {/* Important Disclaimer Callout */}
         <EsaRenewalImportantCallout />
