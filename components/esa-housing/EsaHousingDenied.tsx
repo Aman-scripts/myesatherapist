@@ -30,7 +30,7 @@ export function EsaHousingDenied() {
       {/* Artwork with the curve and heart badge baked in, flush right */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(51.7%,745px)]">
         <Image
-            quality={90}
+            quality={75}
           src="/esa-housing/esa-letter-housing_esaisdenied.webp"
           alt="Woman looking worried at an ESA denied notice with legal books beside her"
           fill

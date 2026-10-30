@@ -46,7 +46,7 @@ export function EsaHousingLandlordRefuse() {
         <div className="w-full max-w-[1062px] overflow-hidden rounded-[30px] shadow-[0px_1px_4px_rgba(0,0,0,0.06)]">
           <div className="relative w-full aspect-[1983/793]">
             <Image
-            quality={90}
+            quality={75}
               src="/esa-housing/esa-letter-housing_landlordrefusesesa.webp"
               alt="Tenant and her dog being refused by a landlord holding a denied notice"
               fill

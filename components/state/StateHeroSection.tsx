@@ -320,12 +320,12 @@ export function StateHeroSection({ data }: { data: StateData }) {
       <div className="sm:hidden relative w-full aspect-[390/1380] overflow-hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={70}
           src="/states/california-hero-section-mobile.webp"
           alt={`${stateName} ESA Evaluations Mobile View`}
           fill
           className="object-cover object-top pointer-events-none"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="(max-width: 639px) 430px, 1px"
         />
 
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">

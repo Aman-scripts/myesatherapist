@@ -44,12 +44,12 @@ export function ContactHero() {
         {/* Background Image: contact-us-hero-section-mobile.png */}
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={80}
+          quality={70}
           src="/contact/contact-us-hero-section-mobile.webp"
           alt="Contact Customer Support Mobile"
           fill
           className="object-cover object-top pointer-events-none"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="(max-width: 639px) 430px, 1px"
         />
 
         {/* Floating Request Info Overlay Card */}

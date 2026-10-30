@@ -44,6 +44,7 @@ export function EsaRenewalPricing() {
       showTabs={false}
       showDog={false}
       popularCardIndex={1}
+      headerHeight={184}
       cards={RENEWAL_CARDS}
       ctaHref="/pricing/#evaluation"
       sectionClassName="pt-16 lg:pt-24 pb-8 lg:pb-12"
