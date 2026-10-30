@@ -58,3 +58,10 @@ figma_frame_*.png
 
 # local design reference dump
 homepage.md
+
+# temporary audit scripts and unzipped asset drops
+public/*20261030*
+audit_all_pages.js
+check_esa_laws.js
+check_lcp.js
+test_lighthouse.js
