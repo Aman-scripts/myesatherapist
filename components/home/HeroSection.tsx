@@ -203,6 +203,9 @@ export function HeroSection() {
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                aria-haspopup="listbox"
+                aria-expanded={isDropdownOpen}
+                aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"}` : "Select your State"}
                 className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
               >
                 <Image
@@ -313,6 +316,9 @@ export function HeroSection() {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    aria-haspopup="listbox"
+                    aria-expanded={isDropdownOpen}
+                    aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"}` : "Select your State"}
                     className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
                     <Image

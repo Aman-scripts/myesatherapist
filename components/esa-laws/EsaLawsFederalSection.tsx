@@ -10,7 +10,7 @@ const DENIAL_REASONS = [
 function CardIcon({ src }: { src: string }) {
   return (
     <div className="w-[57px] h-[57px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-[0px_2px_4px_rgba(0,0,0,0.08)]">
-      <Image src={src} alt="" width={32} height={32} unoptimized className="w-8 h-8 object-contain" />
+      <Image src={src} alt="" width={32} height={32} unoptimized loading="lazy" className="w-8 h-8 object-contain" />
     </div>
   );
 }

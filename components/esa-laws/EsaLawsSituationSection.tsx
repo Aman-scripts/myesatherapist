@@ -62,7 +62,7 @@ function SituationCard({ entry }: { entry: SituationEntry }) {
     <div className="w-full flex flex-col rounded-[20px] overflow-hidden bg-background [content-visibility:auto] [contain-intrinsic-size:1px_450px]">
       <div className="relative w-full aspect-[567/380]">
         <Image
-            quality={75}
+            quality={70}
           src={entry.image}
           alt={entry.title}
           fill

@@ -28,7 +28,7 @@ export function BreakpointImage({ media, alt, preload = true, ...rest }: Breakpo
         <link
           rel="preload"
           as="image"
-          href={props.src}
+          href={props.srcSet ? undefined : props.src}
           imageSrcSet={props.srcSet}
           imageSizes={props.sizes}
           media={media}

@@ -13,12 +13,12 @@ export function EsaLawsHero() {
       <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={60}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
           className="object-cover object-bottom"
-          sizes="(max-width: 639px) 430px, 1px"
+          sizes="(max-width: 639px) 390px, 1px"
         />
         <div className="absolute inset-0 z-10 flex items-center px-5">
           <div className="flex flex-col items-start gap-3 max-w-[300px]">
