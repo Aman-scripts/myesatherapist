@@ -134,6 +134,7 @@ const DOC_DATA_PLAN_SLUGS = new Set([
 ]);
 
 export function StatePricingSection({ data }: StatePricingSectionProps) {
+  if (!data?.pricingTitle && !data?.pricingPlan1Title) return null;
   const slug = data?.slug ?? "";
   const useDocPricing = DOC_PRICING_SLUGS.has(slug);
   const useDataPlans = Boolean(

@@ -135,32 +135,38 @@ export default async function DynamicStatePage({ params }: Props) {
         <div id="process"><StateProcessSection data={data} /></div>
         <div id="who-qualifies"><StateWhoQualifiesSection data={data} /></div>
         <StateRequirementsSection data={data} />
-        <div id="why-choose">
-          <WhyChooseUs
-            bgColor="bg-white"
-            title={data.whyChooseTitle}
-            subtitle={data.whyChooseSubtitle}
-            features={data.whyChooseItems}
-          />
-        </div>
-        <div id="reviews">
-          <TestimonialsSection
-            title={data.reviewsTitle}
-            subtitle={data.reviewsSubtitle}
-          />
-        </div>
+        {data.whyChooseItems && data.whyChooseItems.length > 0 && (
+          <div id="why-choose">
+            <WhyChooseUs
+              bgColor="bg-white"
+              title={data.whyChooseTitle}
+              subtitle={data.whyChooseSubtitle}
+              features={data.whyChooseItems}
+            />
+          </div>
+        )}
+        {data.reviewsTitle && (
+          <div id="reviews">
+            <TestimonialsSection
+              title={data.reviewsTitle}
+              subtitle={data.reviewsSubtitle}
+            />
+          </div>
+        )}
         <div id="benefits"><StateBenefitsSection data={data} /></div>
         <div id="laws"><StateLawsSection data={data} /></div>
         <div id="scams"><StateScamsSection data={data} /></div>
         <div id="psd-vs-esa"><StatePsdVsEsaSection data={data} /></div>
-        <div id="trusted-reviews">
-          <TrustedByPetOwnersSection
-            stateName={data.name}
-            title={data.trustedReviewsTitle}
-            subtitle={data.trustedReviewsSubtitle}
-            testimonials={data.trustedReviews}
-          />
-        </div>
+        {data.trustedReviews && data.trustedReviews.length > 0 && (
+          <div id="trusted-reviews">
+            <TrustedByPetOwnersSection
+              stateName={data.name}
+              title={data.trustedReviewsTitle}
+              subtitle={data.trustedReviewsSubtitle}
+              testimonials={data.trustedReviews}
+            />
+          </div>
+        )}
         <div id="pricing"><StatePricingSection stateName={data.name} data={data} /></div>
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <div id="faq">
@@ -170,15 +176,17 @@ export default async function DynamicStatePage({ params }: Props) {
             faqs={data.faqs}
           />
         </div>
-        <div id="cta">
-          <CtaBanner
-            title={data.ctaTitle || `Ready to Start Your\n${data.name} ESA Evaluation?`}
-            description={data.ctaSubtitle || `Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
-            note={data.ctaNote}
-            buttonText="Start your Evaluation"
-            buttonHref="#faq"
-          />
-        </div>
+        {data.ctaTitle && (
+          <div id="cta">
+            <CtaBanner
+              title={data.ctaTitle}
+              description={data.ctaSubtitle || `Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
+              note={data.ctaNote}
+              buttonText="Start your Evaluation"
+              buttonHref="#faq"
+            />
+          </div>
+        )}
         <StateReviewerBanner />
       </main>
 

@@ -125,7 +125,7 @@ export const statesSchema = {
       "@id": "https://myesatherapist.com/state/#state-list",
       "name": "Choose Your State For ESA Evaluation",
       "description": "Learn about emotional support animal rules, evaluation requirements, and housing protections in your state.",
-      "numberOfItems": 51,
+      "numberOfItems": 53,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -430,6 +430,18 @@ export const statesSchema = {
         {
           "@type": "ListItem",
           "position": 51,
+          "name": "ESA Letter Vermont",
+          "url": "https://myesatherapist.com/esa-letter-vermont/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "ESA Letter Washington, DC",
+          "url": "https://myesatherapist.com/esa-letter-washington-dc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
           "name": "ESA Letter Guam",
           "url": "https://myesatherapist.com/esa-letter-guam/"
         }

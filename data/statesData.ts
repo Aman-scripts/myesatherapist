@@ -45,6 +45,7 @@ import { washingtonSchema } from "./schemas/washingtonSchema";
 import { westVirginiaSchema } from "./schemas/westVirginiaSchema";
 import { wisconsinSchema } from "./schemas/wisconsinSchema";
 import { wyomingSchema } from "./schemas/wyomingSchema";
+import { EXTRA_STATES } from "./extraStates";
 
 
 export interface StateLawCard {
@@ -18911,6 +18912,7 @@ export const STATES_DATA: Record<string, StateData> = {
       { id: "cta", label: "Start My ESA Evaluation Now!" },
     ],
   },
+  ...EXTRA_STATES,
 };
 
 export function getStateSlug(rawSlug?: string): string {

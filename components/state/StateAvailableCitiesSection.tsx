@@ -10,6 +10,8 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
   const title = data.citiesTitle || `Available Everywhere in ${stateName}`;
   const subtitle = data.citiesSubtitle || `Our entire process runs through secure telehealth, which means we're available to clients across all cities and counties in ${stateName}.`;
 
+  if (cities.length === 0) return null;
+
   const hasDescriptions = cities.some((c) => !!c.description);
 
   return (
