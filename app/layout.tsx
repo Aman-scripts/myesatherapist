@@ -160,9 +160,24 @@ export default function RootLayout({
         {/* Google Tag Manager. GA4 G-4Y59YKVXPF and Microsoft Clarity load from this container. */}
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MRLDDQG');`,
+            __html: `(function(w,d,s,l,i){
+function loadGtm(){
+  if (w.__gtmLoaded) return;
+  w.__gtmLoaded = true;
+  w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+}
+var events=['pointerdown','mousemove','keydown','touchstart','scroll'];
+function onInteract(){
+  events.forEach(function(e){w.removeEventListener(e,onInteract);});
+  loadGtm();
+}
+events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:true});});
+})(window,document,'script','dataLayer','GTM-MRLDDQG');`,
           }}
         />
         {/* End Google Tag Manager */}
