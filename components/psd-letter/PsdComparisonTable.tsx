@@ -259,7 +259,7 @@ export function PsdComparisonTable() {
                   <div className="w-[32px] h-[32px] rounded-full bg-background border border-[#E2E8F0] shadow-xs flex items-center justify-center shrink-0">
                     <Image
                       src={row.icon}
-                      alt=""
+                      alt={row.feature}
                       width={24}
                       height={24}
                       unoptimized

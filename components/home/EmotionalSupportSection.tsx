@@ -84,9 +84,9 @@ export function EmotionalSupportSection() {
           {/* Left Content Area (Exact 737px Figma Frame) */}
           <div className="w-[737px] pl-[78px] pr-4 z-10 space-y-8 my-auto">
             <div className="space-y-3.5">
-              <h2 className="heading-h2 capitalize">
+              <p className="heading-h2 capitalize">
                 What Is An Emotional Support Animal?
-              </h2>
+              </p>
 
               <div className="space-y-3.5">
                 <p className="body-large">
@@ -136,7 +136,7 @@ export function EmotionalSupportSection() {
             <Image
               quality={80} loading="lazy"
               src="/home/emotional-support-section-bottom.svg"
-              alt=""
+              alt="Decorative line"
               fill
               className="object-fill"
             />

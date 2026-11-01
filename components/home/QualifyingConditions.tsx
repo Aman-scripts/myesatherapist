@@ -202,7 +202,7 @@ export function QualifyingConditions({
                     <span className="w-[20px] h-[20px] md:w-[20px] md:h-[20px] lg:w-[26px] lg:h-[26px] xl:w-[35px] xl:h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
                       <Image
                         src={c.icon}
-                        alt=""
+                        alt={c.label}
                         width={20}
                         height={20}
                         unoptimized
@@ -288,7 +288,7 @@ export function QualifyingConditions({
                     <span className="w-[32px] h-[32px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
                       <Image
                         src={c.icon}
-                        alt=""
+                        alt={c.label}
                         width={20}
                         height={20}
                         unoptimized

@@ -6,7 +6,7 @@ export function SendIcon({ className = "w-[22px] h-[22px]" }: { className?: stri
   return (
     <Image
       src="/common/send-icon.svg"
-      alt=""
+      alt="Send"
       width={22}
       height={22}
       unoptimized

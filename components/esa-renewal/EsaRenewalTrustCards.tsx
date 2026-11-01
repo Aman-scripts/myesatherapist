@@ -60,7 +60,7 @@ export function EsaRenewalTrustCards() {
               <div className="absolute left-[calc(50%-37.28px-1px)] -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
                 <Image
                   src={card.icon}
-                  alt=""
+                  alt={card.title}
                   width={32}
                   height={32}
                   unoptimized

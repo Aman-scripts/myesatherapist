@@ -27,7 +27,7 @@ export function EsaOnlineTrustCards() {
                 <p className="body-small">{card.subtitle}</p>
               </div>
               <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74px] w-[74px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
-                <Image src={card.icon} alt="" width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
+                <Image src={card.icon} alt={card.title} width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
               </div>
             </div>
           ))}

@@ -45,7 +45,7 @@ export function EsaTrainingBasicsSection() {
           <Image
             quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.webp"
-            alt=""
+            alt="Heart"
             width={64}
             height={64}
             className="absolute bottom-0 left-1/2 z-20 h-14 w-14 -translate-x-1/2 translate-y-[45%] sm:h-16 sm:w-16"
@@ -74,7 +74,7 @@ export function EsaTrainingBasicsSection() {
                 <div className="flex flex-1 items-center gap-4 py-4 pl-4 pr-4 sm:gap-6 sm:pl-6 lg:gap-[1.6vw] lg:py-[1vw] xl:gap-6 xl:py-3">
                   <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] sm:h-[74.56px] sm:w-[74.56px] lg:h-[5vw] lg:w-[5vw] xl:h-[74.56px] xl:w-[74.56px]">
                     <Image
-            quality={90} src={item.icon} alt="" width={32} height={32} unoptimized className="h-6 w-6 object-contain sm:h-8 sm:w-8 lg:h-[2.2vw] lg:w-[2.2vw] xl:h-8 xl:w-8" />
+            quality={90} src={item.icon} alt={item.title} width={32} height={32} unoptimized className="h-6 w-6 object-contain sm:h-8 sm:w-8 lg:h-[2.2vw] lg:w-[2.2vw] xl:h-8 xl:w-8" />
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5">
                     <h3 className="font-heading text-lg font-bold leading-tight text-primary sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] xl:leading-7">

@@ -206,9 +206,9 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
 
                   {/* Heading: Table Of Contents */}
                   <div className="mb-4 sm:mb-5">
-                    <h2 className="heading-h2 text-background leading-[1.15]">
+                    <p className="heading-h2 text-background leading-[1.15]">
                       Table Of<br />Contents
-                    </h2>
+                    </p>
                   </div>
 
                   {/* Line 11 Divider (Edge-to-Edge) */}

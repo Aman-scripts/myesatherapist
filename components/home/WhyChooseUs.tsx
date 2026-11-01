@@ -99,7 +99,7 @@ export function WhyChooseUs({
                   <div className="absolute -top-6 sm:-top-7 left-1/2 -translate-x-1/2 w-[52px] h-[52px] sm:w-[58px] sm:h-[58px] lg:w-[64px] lg:h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
                     <Image
                       src={resolvedIcon}
-                      alt=""
+                      alt={itemTitle}
                       width={32}
                       height={32}
                       unoptimized

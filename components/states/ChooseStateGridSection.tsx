@@ -69,7 +69,7 @@ export function ChooseStateGridSection({
                 <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[32px] lg:h-[32px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
                     src="/ESA ICons/Icon-37.svg"
-                    alt=""
+                    alt="Location"
                     width={32}
                     height={32}
                     unoptimized

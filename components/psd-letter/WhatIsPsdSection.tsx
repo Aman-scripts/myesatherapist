@@ -104,9 +104,9 @@ export function WhatIsPsdSection() {
         <div className="relative w-[1440px] h-[699px] mx-auto overflow-hidden bg-white">
           {/* Frame 1000011698: Left Text Container (left: 87px, top: 31px, width: 626px, height: 416px) */}
           <div className="absolute left-[87px] top-[31px] w-[626px] z-10 flex flex-col justify-between">
-            <h2 className="heading-h2 text-primary capitalize mb-6 w-[541px]">
+            <p className="heading-h2 text-primary capitalize mb-6 w-[541px]">
               What is a Psychiatric Service Dog Letter?
-            </h2>
+            </p>
 
             <div className="space-y-4 body-large text-body-text w-[626px]">
               <p>
@@ -125,9 +125,9 @@ export function WhatIsPsdSection() {
               style={{ backgroundImage: "var(--color-gradient)" }}
             />
             <div className="pl-4 space-y-1.5">
-              <h3 className="heading-h3 text-color-gradient capitalize">
+              <p className="heading-h3 text-color-gradient capitalize">
                 Is a PSD Letter Required?
-              </h3>
+              </p>
               <p className="body-text text-body-text">
                 While not legally required by the ADA for public access, a PSD letter is highly recommended as backup documentation. Many airlines, landlords, and housing providers request this documentation to verify your legitimate need for a service dog.
               </p>
@@ -154,7 +154,7 @@ export function WhatIsPsdSection() {
               <div className="absolute left-0 top-[9px] w-[228px] h-[698px] z-20 pointer-events-none">
                 <Image
                   src="/psd-letter/psd-dogphyscarist-section-line.svg"
-                  alt=""
+                  alt="Decorative line"
                   width={228}
                   height={698}
                   unoptimized

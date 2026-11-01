@@ -597,7 +597,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 <Image
                   quality={90}
                   src="/common/cta-section-paw.webp"
-                  alt=""
+                  alt="Paw print"
                   fill
                   sizes="(min-width: 1024px) 380px, 320px"
                   className="object-contain object-right-bottom"
@@ -661,7 +661,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             <Image
               quality={90}
               src="/common/cta-section-paw.webp"
-              alt=""
+              alt="Paw print"
               fill
               sizes="(min-width: 1024px) 380px, 320px"
               className="object-contain object-right-bottom"

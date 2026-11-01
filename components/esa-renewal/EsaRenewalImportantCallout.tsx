@@ -16,7 +16,7 @@ export function EsaRenewalImportantCallout() {
           <Image
             quality={90}
             src="/esa-renewal/esa-renewal-redalerticon.svg"
-            alt=""
+            alt="Warning"
             width={48}
             height={48}
             className="h-12 w-12 shrink-0"

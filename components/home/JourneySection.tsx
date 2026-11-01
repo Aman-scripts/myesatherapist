@@ -67,7 +67,7 @@ export function JourneySection() {
                     <Image
                       quality={90}
                       src={card.icon}
-                      alt=""
+                      alt={card.stat}
                       width={32}
                       height={32}
                       className="icon-lg object-contain"

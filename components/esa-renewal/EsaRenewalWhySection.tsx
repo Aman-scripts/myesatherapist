@@ -96,7 +96,7 @@ export function EsaRenewalWhySection() {
                   <div className="w-[66px] h-[66px] sm:w-[74.56px] sm:h-[74.56px] lg:w-[4.6vw] lg:h-[4.6vw] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image
                       src={card.icon}
-                      alt=""
+                      alt={card.title}
                       width={32}
                       height={32}
                       unoptimized

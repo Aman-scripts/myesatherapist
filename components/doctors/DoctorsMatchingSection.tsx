@@ -44,7 +44,7 @@ export function DoctorsMatchingSection() {
               className="relative w-full min-h-[210px] px-6 pt-6 pb-8 bg-white rounded-[24px] shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col items-start transition-all duration-300 hover:shadow-md"
             >
               <div className="mb-4 flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_2px_6px_rgba(0,0,0,0.08)]">
-                <Image src={step.icon} alt="" width={28} height={28} unoptimized className="h-7 w-7 object-contain" />
+                <Image src={step.icon} alt={step.title} width={28} height={28} unoptimized className="h-7 w-7 object-contain" />
               </div>
               <div className="flex flex-col items-start gap-2 w-full">
                 <h3 className="heading-h4 text-primary">

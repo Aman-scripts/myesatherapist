@@ -28,9 +28,9 @@ export function DoYouNeedEsaSection() {
           {/* Left Content Area */}
           <div className="w-[737px] pl-[78px] pr-4 my-auto py-0 z-10 flex flex-col justify-center shrink-0 space-y-5">
             <div className="space-y-4">
-              <h2 className="heading-h2 capitalize">
+              <p className="heading-h2 capitalize">
                 Do You Need An Emotional Support Animal?
-              </h2>
+              </p>
 
               <div className="space-y-3">
                 <p className="body-large">
@@ -68,7 +68,7 @@ export function DoYouNeedEsaSection() {
               <Image
                 quality={80} loading="lazy"
                 src="/home/doyouneed-emotional-support-section-line.svg"
-                alt=""
+                alt="Decorative line"
                 width={81}
                 height={669}
                 className="object-contain w-full h-full"

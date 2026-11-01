@@ -21,7 +21,7 @@ function BenefitCard({ title, description, icon }: { title: string; description:
   return (
     <div className="bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left">
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
-        <Image src={icon} alt="" width={26} height={26} unoptimized className="h-[26px] w-[26px] object-contain" />
+        <Image src={icon} alt={title} width={26} height={26} unoptimized className="h-[26px] w-[26px] object-contain" />
       </div>
       <h4 className="font-heading text-[18px] sm:text-[20px] font-bold text-primary leading-snug">{title}</h4>
       <p className="font-sans text-[14px] sm:text-[15px] font-medium leading-6 text-[#5F6B6F]">{description}</p>

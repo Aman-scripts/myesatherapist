@@ -129,7 +129,7 @@ function StatBadge({
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
           <Image
             src={iconSrc}
-            alt=""
+            alt={label}
             width={20}
             height={20}
             unoptimized
@@ -278,7 +278,7 @@ export function TherapistsSection({
           <div className="w-full max-w-[1070px] overflow-hidden">
             <div
               ref={scrollRef}
-              className="flex items-stretch gap-5 sm:gap-6 lg:gap-8 xl:gap-[32px] overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-1"
+              className="flex items-stretch gap-0 sm:gap-6 lg:gap-8 xl:gap-[32px] overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-0 sm:px-1"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {therapists.map((t, idx) => {
@@ -287,7 +287,7 @@ export function TherapistsSection({
                     key={t.id ?? `${t.name}-${idx}`}
                     data-card
                     onClick={() => scrollToSlide(idx)}
-                    className="snap-start shrink-0 w-[86vw] sm:w-[calc(50%-12px)] lg:w-[519px] lg:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                    className="snap-start shrink-0 w-full min-w-full sm:min-w-0 sm:w-[calc(50%-12px)] lg:w-[519px] lg:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                   >
                     {/* Teal Header Bar */}
                     <div

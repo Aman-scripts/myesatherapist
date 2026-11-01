@@ -63,7 +63,7 @@ export function WhoBenefitsSection() {
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F5EFE6]">
                 <Image
                   src={item.icon}
-                  alt=""
+                  alt={item.title}
                   width={24}
                   height={24}
                   unoptimized
@@ -100,7 +100,7 @@ export function WhoBenefitsSection() {
           <div className="absolute left-[26.4%] top-[12.1%] z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center sm:h-16 sm:w-16 lg:h-[73px] lg:w-[73px]">
             <Image
               src="/psd-letter/whobenefits-section-icon.webp"
-              alt=""
+              alt="Who benefits from a psychiatric service dog"
               width={73}
               height={73}
               unoptimized

@@ -63,6 +63,7 @@ export function StatesHeroSection() {
 
   return (
     <section className="relative z-30 bg-background">
+      <h1 className="sr-only">ESA Evaluation For Every State</h1>
       
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
@@ -110,14 +111,14 @@ export function StatesHeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="heading-h2 text-primary">
+          <p aria-hidden="true" className="heading-h2 text-primary">
             ESA Evaluation For
             <br />
             Every State
-          </h1>
+          </p>
 
           {/* Subtitle */}
-          <p className="body-text text-body-text max-w-[320px] mx-auto mt-3">
+          <p className="body-large text-primary max-w-[320px] mx-auto mt-3">
             Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
           </p>
 
@@ -188,11 +189,11 @@ export function StatesHeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="heading-h1 text-primary mt-6 max-w-xl mx-auto">
+          <p aria-hidden="true" className="heading-h1 text-primary mt-6 max-w-xl mx-auto">
             ESA Evaluation For
             <br />
             Every State
-          </h1>
+          </p>
 
           {/* Subheading */}
           <p className="body-large text-body-text max-w-md mx-auto mt-3">
@@ -212,7 +213,7 @@ export function StatesHeroSection() {
                 <span className="flex items-center gap-2">
                   <Image
                     src="/ESA ICons/Icon-37.svg"
-                    alt=""
+                    alt="Location"
                     width={20}
                     height={20}
                     unoptimized
@@ -357,11 +358,11 @@ export function StatesHeroSection() {
 
               {/* Heading & Subtitle (Frame 8) */}
               <div className="flex flex-col gap-3">
-                <h1 className="heading-h1 text-primary">
+                <p aria-hidden="true" className="heading-h1 text-primary">
                   ESA Evaluation For
                   <br />
                   Every State
-                </h1>
+                </p>
                 <p className="body-large text-body-text max-w-[461px]">
                   Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
                 </p>

@@ -7,10 +7,10 @@ const DENIAL_REASONS = [
   "Risk involving physical damage: Landlords can also deny an ESA housing request if there is solid evidence stating that the animal would damage the property in the future and it cannot be prevented.",
 ];
 
-function CardIcon({ src }: { src: string }) {
+function CardIcon({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="w-[57px] h-[57px] rounded-full bg-white flex items-center justify-center shrink-0 shadow-[0px_2px_4px_rgba(0,0,0,0.08)]">
-      <Image src={src} alt="" width={32} height={32} unoptimized loading="lazy" className="w-8 h-8 object-contain" />
+      <Image src={src} alt={alt} width={32} height={32} unoptimized loading="lazy" className="w-8 h-8 object-contain" />
     </div>
   );
 }
@@ -28,7 +28,7 @@ function LawCard({
     <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)] [content-visibility:auto] [contain-intrinsic-size:1px_350px]">
       <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
-        <CardIcon src={icon} />
+        <CardIcon src={icon} alt={title} />
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
           <h3 className="heading-h4 text-primary">
             {title}

@@ -42,7 +42,7 @@ export function EsaTrainingHero() {
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-primary sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:max-w-[462px] xl:text-[56px] xl:leading-[64px]">
               Does Your ESA Actually Need Training?
             </h1>
-            <p className="max-w-[520px] font-sans text-base font-semibold leading-[1.65] text-body-text sm:text-[18px] lg:max-w-[26vw] lg:text-[1.25vw] lg:leading-[2.1vw] xl:max-w-[364px] xl:text-[18px] xl:leading-[30px]">
+            <p className="body-large max-w-[520px] text-primary lg:max-w-[26vw] lg:text-[1.25vw] lg:leading-[2.1vw] xl:max-w-[364px] xl:text-[18px] xl:leading-[30px]">
               Wondering whether your emotional support animal needs training? Here&apos;s the honest, complete answer,
               including what changed in 2026 and what it means for your housing rights.
             </p>

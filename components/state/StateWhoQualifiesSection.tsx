@@ -169,7 +169,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
                       <Image
                         src={QUALIFY_ICONS[idx % QUALIFY_ICONS.length]}
-                        alt=""
+                        alt={item.title}
                         width={40}
                         height={40}
                         unoptimized

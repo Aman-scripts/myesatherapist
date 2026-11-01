@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import Image from "next/image";
@@ -65,7 +65,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
           <div className="relative w-full h-full">
             <Image
               src="/common/myesa-logo.svg"
-              alt=""
+              alt="My ESA Therapist"
               fill
               unoptimized
               className="object-contain"
@@ -74,9 +74,15 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
         </Link>
 
         {/* Heading with Gold Highlight */}
-        <h2 className="heading-h2 text-background capitalize text-center">
-          My ESA <span className="text-accent">Therapist</span>
-        </h2>
+        {isDesktop ? (
+          <h2 className="heading-h2 text-background capitalize text-center">
+            My ESA <span className="text-accent">Therapist</span>
+          </h2>
+        ) : (
+          <p className="heading-h2 text-background capitalize text-center">
+            My ESA <span className="text-accent">Therapist</span>
+          </p>
+        )}
 
         {/* Subtitle */}
         <p className="text-background body-large text-center max-w-[734px]">
@@ -200,7 +206,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
                 <Image
                   quality={90}
                   src="/ESA ICons/Icon-36.svg"
-                  alt=""
+                  alt="Phone"
                   width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
@@ -220,7 +226,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
                 <Image
                   quality={90}
                   src="/ESA ICons/Icon-35.svg"
-                  alt=""
+                  alt="Email"
                   width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
@@ -240,7 +246,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
                 <Image
                   quality={90}
                   src="/ESA ICons/Icon-38.svg"
-                  alt=""
+                  alt="Support hours"
                   width={20} height={20} className="icon-sm object-contain"
                 />
               </div>
@@ -260,7 +266,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
                 <Image
                   quality={90}
                   src="/ESA ICons/Icon-37.svg"
-                  alt=""
+                  alt="Service area"
                   width={20} height={20} className="icon-sm object-contain"
                 />
               </div>

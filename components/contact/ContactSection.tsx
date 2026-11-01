@@ -74,9 +74,9 @@ export function ContactSection() {
               
               {/* Header Title & Subtitle (Centered) */}
               <div className="text-center space-y-2">
-                <h1 className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1E3942] leading-tight">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1E3942] leading-tight">
                   Request Info
-                </h1>
+                </h2>
                 <p className="text-xs sm:text-sm text-[#263B42]/90 font-sans font-medium">
                   Feel Free To Connect With Us! (24×7 Available At Your Service)
                 </p>

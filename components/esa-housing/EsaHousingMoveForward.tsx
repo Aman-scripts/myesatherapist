@@ -9,7 +9,7 @@ export function EsaHousingMoveForward() {
         <Image
             quality={90}
           src="/esa-housing/esa-letter-housing_moveforwardsection-pawicon.webp"
-          alt=""
+          alt="Paw print"
           fill
           className="object-contain object-right-bottom"
           sizes="260px"

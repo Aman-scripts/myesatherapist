@@ -46,7 +46,7 @@ export function LicensedProviderSection() {
               >
                 <Image
                   src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
-                  alt=""
+                  alt={VIDEO_TITLE}
                   fill
                   sizes="(max-width: 960px) 100vw, 920px"
                   className="object-cover"

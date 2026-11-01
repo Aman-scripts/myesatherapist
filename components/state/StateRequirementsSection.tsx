@@ -42,7 +42,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
               <div key={index} className="flex items-start gap-3">
                 <Image
                   src="/ESA ICons/Icon-46.svg"
-                  alt=""
+                  alt="Included"
                   width={20}
                   height={20}
                   unoptimized

@@ -95,7 +95,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                   <Image
                     quality={90}
                     src={processIcon(step.icon)}
-                    alt=""
+                    alt={step.title}
                     width={24}
                     height={24}
                     unoptimized
@@ -130,7 +130,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 {/* Frame 1000011979: Gradient Check Icon */}
                 <Image
                   src="/ESA ICons/Icon-46.svg"
-                  alt=""
+                  alt="Included"
                   width={20}
                   height={20}
                   unoptimized

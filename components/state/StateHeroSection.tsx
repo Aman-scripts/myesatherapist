@@ -74,6 +74,7 @@ interface EvaluationFormCardProps {
   isSubmitted: boolean;
   compact?: boolean;
   stateName: string;
+  titleAs?: "h2" | "p";
 }
 
 // Figma: 44px fields, 5px radius, 0.2px body-text border on a translucent cream fill
@@ -87,6 +88,7 @@ function EvaluationFormCard({
   isSubmitted,
   compact = false,
   stateName,
+  titleAs = "p",
 }: EvaluationFormCardProps) {
   const labelClass = `block text-body-text mb-2 ${compact ? "body-small" : "body-text"}`;
 
@@ -97,9 +99,15 @@ function EvaluationFormCard({
       }`}
     >
       <div className={`text-center ${compact ? "mb-4" : "mb-[30px]"}`}>
-        <h2 className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
-          Start Your Evaluation
-        </h2>
+        {titleAs === "h2" ? (
+          <h2 className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
+            Start Your Evaluation
+          </h2>
+        ) : (
+          <p className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
+            Start Your Evaluation
+          </p>
+        )}
         <p className={`text-body-text mt-1 ${compact ? "body-small" : "body-large"}`}>
           Free consultation - takes less than 5 minutes.
         </p>
@@ -233,6 +241,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
   return (
     <section className="relative w-full bg-background overflow-hidden">
+      <h1 className="sr-only">{desktopTitle}</h1>
       {/* 1. DESKTOP VIEW — 1440px coordinates from the Figma "ESA - California" hero */}
       <DesktopScaleWrapper
         wrapperClassName="bg-background"
@@ -263,7 +272,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
               ))}
             </div>
 
-            <h1 className="heading-h1 text-primary capitalize mt-6">{desktopTitle}</h1>
+            <p aria-hidden="true" className="heading-h1 text-primary capitalize mt-6">{desktopTitle}</p>
 
             <p className="body-large text-body-text mt-4 max-w-[460px]">{subtitle}</p>
 
@@ -279,6 +288,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
               handleSubmit={handleSubmit}
               isSubmitted={isSubmitted}
               stateName={stateName}
+              titleAs="h2"
             />
           </div>
         </div>
@@ -298,10 +308,10 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
-            <h1 className="heading-h1 text-primary capitalize text-center">
+            <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
-            </h1>
-            <p className="body-text text-body-text text-center max-w-[560px] mx-auto">{subtitle}</p>
+            </p>
+            <p className="body-large text-primary text-center max-w-[560px] mx-auto">{subtitle}</p>
           </div>
         </div>
 
@@ -330,10 +340,10 @@ export function StateHeroSection({ data }: { data: StateData }) {
 
         <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
-            <h1 className="heading-h1 text-primary capitalize text-center">
+            <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
-            </h1>
-            <p className="body-small text-body-text text-center max-w-[330px] mx-auto">{subtitle}</p>
+            </p>
+            <p className="body-large text-primary text-center max-w-[330px] mx-auto">{subtitle}</p>
           </div>
         </div>
 

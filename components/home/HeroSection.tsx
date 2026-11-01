@@ -89,6 +89,7 @@ export function HeroSection() {
 
   return (
     <section className="relative z-40 bg-background">
+      <h1 className="sr-only">Emotional Support Animal Evaluations by Licensed Professionals</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
       {/* Matches Screenshot 2                                 */}
@@ -125,16 +126,16 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="heading-h1 capitalize">
+          <p aria-hidden="true" className="heading-h1 capitalize">
             Emotional Support
             <br />
             Animal Evaluations
             <br />
             by Licensed Professionals
-          </h1>
+          </p>
 
           {/* Subheading */}
-          <p className="body-text max-w-[310px] mx-auto mt-3">
+          <p className="body-large text-primary max-w-[310px] mx-auto mt-3">
             Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
@@ -183,13 +184,13 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="heading-h1 mt-6 max-w-xl mx-auto capitalize">
+          <p aria-hidden="true" className="heading-h1 mt-6 max-w-xl mx-auto capitalize">
             Emotional Support
             <br />
             Animal Evaluations
             <br />
             by Licensed Professionals
-          </h1>
+          </p>
 
           {/* Subheading */}
           <p className="body-large max-w-md mx-auto mt-4">
@@ -210,7 +211,7 @@ export function HeroSection() {
               >
                 <Image
                   src="/ESA ICons/Icon-37.svg"
-                  alt=""
+                  alt="Location"
                   width={20}
                   height={20}
                   unoptimized
@@ -296,13 +297,13 @@ export function HeroSection() {
               </div>
 
               {/* Headline */}
-              <h1 className="heading-h1 mt-6 capitalize">
+              <p aria-hidden="true" className="heading-h1 mt-6 capitalize">
                 Emotional Support
                 <br />
                 Animal Evaluations
                 <br />
                 by Licensed Professionals
-              </h1>
+              </p>
 
               {/* Subheading */}
               <p className="body-large max-w-none mt-4">
@@ -323,7 +324,7 @@ export function HeroSection() {
                   >
                     <Image
                       src="/ESA ICons/Icon-37.svg"
-                      alt=""
+                      alt="Location"
                       width={20}
                       height={20}
                       unoptimized

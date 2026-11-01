@@ -77,7 +77,7 @@ function ProfileIdentity({
               <Image
                 quality={90}
                 src="/legal_reviewer/legal_reviewer-bag-icon.svg"
-                alt=""
+                alt="Professional credentials"
                 width={24}
                 height={24}
                 className="w-6 h-6 shrink-0"

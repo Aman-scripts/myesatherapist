@@ -53,7 +53,7 @@ export function DoctorsDisclosureSection() {
               </div>
 
               <div className="absolute left-1/2 top-0 flex h-[72px] w-[72px] -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.18)]">
-                <Image src={card.icon} alt="" width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
+                <Image src={card.icon} alt={card.text} width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
               </div>
             </div>
           ))}

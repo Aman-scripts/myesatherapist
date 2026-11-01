@@ -52,7 +52,7 @@ export function EsaRenewalHowItWorks() {
               <div className="flex w-full max-w-[300px] flex-col items-center">
                 <div className="flex h-[226px] w-[226px] items-center justify-center rounded-full bg-[#EFFFF1]">
                   <div className="h-[200px] w-[200px] overflow-hidden rounded-full">
-                    <Image src={step.image} alt="" width={200} height={200} className="h-full w-full object-cover" />
+                    <Image src={step.image} alt={step.title} width={200} height={200} className="h-full w-full object-cover" />
                   </div>
                 </div>
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">

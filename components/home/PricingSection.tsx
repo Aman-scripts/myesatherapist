@@ -127,13 +127,38 @@ function CheckmarkIcon() {
   return (
     <Image
       src="/ESA ICons/Icon-46.svg"
-      alt=""
+      alt="Included"
       width={20}
       height={20}
       unoptimized
       className="shrink-0 w-5 h-5 object-contain"
     />
   );
+}
+
+function MobileCheck() {
+  return (
+    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-accent">
+      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+        <path d="M1 4.1L3.4 6.5L9 1" stroke="#2E5A66" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
+
+function mobileButtonLabel(text: string) {
+  if (text.toLowerCase().startsWith("find your eligibility")) return "Find Your Eligibility";
+  return text;
+}
+
+function mobilePlanTitle(title: string) {
+  if (title.includes("\n")) return title;
+  const normalized = title.toLowerCase();
+  if (normalized.includes("not sure")) return "Not Sure\nWhich\nOne";
+  if (normalized.includes("combo")) return "ESA +\nPSD\nCombo";
+  if (normalized.includes("housing")) return "ESA\nLetter -\nHousing";
+  if (normalized.includes("service")) return "PSD\nLetter";
+  return title;
 }
 
 interface PricingSectionProps {
@@ -217,16 +242,72 @@ export function PricingSection({
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
         <div className={`relative pb-10 ${maxCards === 2 ? "w-fit max-w-full" : "w-full max-w-[972px]"}`}>
-          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
+          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-6 sm:gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
             {cards.map((card, idx) => {
               const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
 
+              const mobileCard = (
+                <div
+                  key={`mobile-${idx}`}
+                  className={`sm:hidden relative mx-auto w-full max-w-[350px] ${
+                    isPopular
+                      ? "rounded-[22px] bg-accent px-[5px] pb-[6px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)]"
+                      : ""
+                  }`}
+                >
+                  {isPopular && (
+                    <div className="flex h-7 items-center justify-center font-sans text-[12px] font-bold uppercase tracking-wider text-[#5F6B6F]">
+                      Most Popular
+                    </div>
+                  )}
+                  <div
+                    className={`relative overflow-hidden rounded-[20px] bg-white ${
+                      isPopular
+                        ? ""
+                        : "border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)]"
+                    }`}
+                  >
+                    <div className="flex min-h-[158px]">
+                      <div className="flex w-[112px] shrink-0 items-start rounded-l-[20px] color-gradient px-2.5 pb-[62px] pt-3.5">
+                        <p className="whitespace-pre-line font-heading text-[20px] font-semibold leading-[26px] text-background">
+                          {mobilePlanTitle(card.title)}
+                        </p>
+                      </div>
+                      <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 px-2.5 py-3">
+                        <div className="flex flex-col gap-1">
+                          {card.features.slice(0, 3).map((feature) => (
+                            <div key={feature} className="flex items-start gap-1.5">
+                              <span className="mt-0.5"><MobileCheck /></span>
+                              <span className="font-sans text-[13px] font-medium leading-[18px] text-body-text">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                        <a
+                          href={ctaHref}
+                          className="inline-flex h-9 w-full max-w-[150px] items-center justify-center self-center rounded-full bg-accent px-3 font-sans text-[13px] font-bold leading-5 text-[#1A3D4F] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                        >
+                          {mobileButtonLabel(card.buttonText)}
+                        </a>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-[10px] left-[26px] flex h-[56px] w-[56px] items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
+                      <span className="font-heading text-[16px] font-semibold leading-5 text-[#2E5A66]">
+                        {card.price}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              );
+
               if (isPopular) {
                 return (
-                  /* Gold frame wraps the full card, including the button */
+                  <React.Fragment key={idx}>
+                  {mobileCard}
+                  {/* Gold frame wraps the full card, including the button */}
                   <div
-                    key={idx}
-                    className="w-[310px] bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex flex-col items-center shrink-0"
+                    className="hidden sm:flex w-[310px] bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex-col items-center shrink-0"
                   >
                     <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-body-text uppercase tracking-wider shrink-0">
                       MOST POPULAR
@@ -269,16 +350,18 @@ export function PricingSection({
                       </div>
                     </div>
                   </div>
+                  </React.Fragment>
                 );
               }
 
               const isLongButton = card.buttonText.length > 18;
 
               return (
-                /* Starter Plan: Standard Cards */
+                <React.Fragment key={idx}>
+                {mobileCard}
+                {/* Starter Plan: Standard Cards */}
                 <div
-                  key={idx}
-                  className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden"
+                  className="hidden sm:flex w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex-col shrink-0 overflow-hidden"
                 >
                   {/* Frame 1261153969: Teal Header */}
                   <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
@@ -323,6 +406,7 @@ export function PricingSection({
                     </a>
                   </div>
                 </div>
+                </React.Fragment>
               );
             })}
           </div>

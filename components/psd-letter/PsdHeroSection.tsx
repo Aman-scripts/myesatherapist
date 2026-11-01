@@ -59,6 +59,7 @@ export function PsdHeroSection() {
 
   return (
     <section className="relative z-30 w-full bg-background">
+      <h1 className="sr-only">Psychiatric Service Dog Letter Assistance</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PSD HERO SECTION (sm:hidden / < 640px)     */}
       {/* Matches Screenshot 2 (Figma iPhone 13 & 14)          */}
@@ -91,11 +92,11 @@ export function PsdHeroSection() {
             ))}
           </div>
 
-          <h1 className="heading-h1 capitalize max-w-xs mx-auto">
+          <p aria-hidden="true" className="heading-h1 capitalize max-w-xs mx-auto">
             Psychiatric Service
             <br />
             Dog Letter Assistance
-          </h1>
+          </p>
 
           <p className="body-large max-w-[290px] mx-auto mt-2.5">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
@@ -146,11 +147,11 @@ export function PsdHeroSection() {
             ))}
           </div>
 
-          <h1 className="heading-h1 capitalize mt-6 max-w-xl mx-auto">
+          <p aria-hidden="true" className="heading-h1 capitalize mt-6 max-w-xl mx-auto">
             Psychiatric Service
             <br />
             Dog Letter Assistance
-          </h1>
+          </p>
 
           <p className="body-large max-w-md mx-auto mt-4">
             Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
@@ -166,7 +167,7 @@ export function PsdHeroSection() {
               >
                 <Image
                   src="/ESA ICons/Icon-37.svg"
-                  alt=""
+                  alt="Location"
                   width={20}
                   height={20}
                   unoptimized
@@ -251,11 +252,11 @@ export function PsdHeroSection() {
               ))}
             </div>
 
-            <h1 className="heading-h1 capitalize mt-6">
+            <p aria-hidden="true" className="heading-h1 capitalize mt-6">
               Psychiatric Service Dog
               <br />
               Letter Assistance
-            </h1>
+            </p>
 
             <p className="body-large max-w-[588px] mt-4">
               Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
@@ -272,7 +273,7 @@ export function PsdHeroSection() {
                   >
                     <Image
                       src="/ESA ICons/Icon-37.svg"
-                      alt=""
+                      alt="Location"
                       width={20}
                       height={20}
                       unoptimized

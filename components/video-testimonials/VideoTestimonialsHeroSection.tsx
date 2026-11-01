@@ -10,6 +10,7 @@ const DESCRIPTION =
 export function VideoTestimonialsHeroSection() {
   return (
     <section className="relative z-20 w-full bg-background overflow-visible">
+      <h1 className="sr-only">{HEADING_LINE_1} {HEADING_LINE_2}</h1>
       <div className="sm:hidden relative w-full aspect-[390/740] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
@@ -22,12 +23,12 @@ export function VideoTestimonialsHeroSection() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-5 pb-16">
           <div className="flex flex-col items-start gap-3 max-w-[300px]">
-            <h1 className="heading-h2 text-primary">
+            <p aria-hidden="true" className="heading-h2 text-primary">
               {HEADING_LINE_1}
               <br />
               {HEADING_LINE_2}
-            </h1>
-            <p className="body-text text-body-text">{DESCRIPTION}</p>
+            </p>
+            <p className="body-large text-primary">{DESCRIPTION}</p>
           </div>
         </div>
       </div>
@@ -44,11 +45,11 @@ export function VideoTestimonialsHeroSection() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-10 pb-16">
           <div className="flex flex-col items-start gap-4 max-w-[480px]">
-            <h1 className="heading-h1 text-primary">
+            <p aria-hidden="true" className="heading-h1 text-primary">
               {HEADING_LINE_1}
               <br />
               {HEADING_LINE_2}
-            </h1>
+            </p>
             <p className="body-large text-body-text">{DESCRIPTION}</p>
           </div>
         </div>
@@ -73,11 +74,11 @@ export function VideoTestimonialsHeroSection() {
       >
         <div className="relative w-[1440px] h-[680px] flex items-center">
           <div className="pl-[82px] max-w-[620px] z-10 flex flex-col items-start gap-5 pb-10">
-            <h1 className="heading-h1 text-primary">
+            <p aria-hidden="true" className="heading-h1 text-primary">
               {HEADING_LINE_1}
               <br />
               {HEADING_LINE_2}
-            </h1>
+            </p>
             <p className="body-large text-body-text max-w-[520px]">{DESCRIPTION}</p>
           </div>
         </div>

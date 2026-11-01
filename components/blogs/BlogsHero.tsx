@@ -16,6 +16,7 @@ export function BlogsHero() {
 
   return (
     <section className="relative w-full bg-background">
+      <h1 className="sr-only">Your Go-to-Resource Hub for Emotional Support Animals</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE BLOGS HERO SECTION (sm:hidden / < 640px)   */}
       {/* ---------------------------------------------------- */}
@@ -34,11 +35,11 @@ export function BlogsHero() {
         <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
           {/* Frame 1000011902: Headline & Subtitle */}
           <div className="flex flex-col items-center gap-3 max-w-[340px]">
-            <h1 className="heading-h2 text-primary capitalize text-center">
+            <p aria-hidden="true" className="heading-h2 text-primary capitalize text-center">
               Your Go-to-Resource Hub for Emotional Support Animals
-            </h1>
+            </p>
 
-            <p className="body-text text-body-text text-center max-w-[320px]">
+            <p className="body-large text-primary text-center max-w-[320px]">
               Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics.
             </p>
           </div>
@@ -128,9 +129,9 @@ export function BlogsHero() {
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 max-w-[620px] mx-auto">
           {/* Headline & Subtitle */}
           <div className="flex flex-col items-center gap-4 max-w-xl mx-auto">
-            <h1 className="heading-h1 text-primary capitalize text-center text-3xl sm:text-4xl">
+            <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center text-3xl sm:text-4xl">
               Your Go-to-Resource Hub for Emotional Support Animals
-            </h1>
+            </p>
 
             <p className="body-large text-body-text text-center max-w-lg mx-auto">
               Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics and help you better understand your rights.
@@ -225,9 +226,9 @@ export function BlogsHero() {
               {/* Frame 1000011884 / Frame 1000011902 */}
               <div className="flex flex-col items-start gap-[24px] w-full max-w-[512px]">
                 {/* Heading: Your Go-to-Resource Hub for Emotional Support Animals */}
-                <h1 className="heading-h1 text-primary capitalize max-w-[512px]">
+                <p aria-hidden="true" className="heading-h1 text-primary capitalize max-w-[512px]">
                   Your Go-to-Resource Hub for Emotional Support Animals
-                </h1>
+                </p>
 
                 {/* Subtitle from blog.md */}
                 <p className="body-large text-body-text max-w-[512px]">

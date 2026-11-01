@@ -38,7 +38,7 @@ export function EsaGuideHero() {
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-primary sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:text-[56px] xl:leading-[64px]">
               Emotional Support Animal Resource Center
             </h1>
-            <div className="flex flex-col gap-[22px] font-sans text-base font-semibold leading-[1.65] text-body-text sm:text-[18px] lg:gap-[2vw] lg:text-[1.25vw] lg:leading-[2.1vw] xl:gap-[30px] xl:text-[18px] xl:leading-[30px]">
+            <div className="body-large flex flex-col gap-[22px] text-primary lg:gap-[2vw] lg:text-[1.25vw] lg:leading-[2.1vw] xl:gap-[30px] xl:text-[18px] xl:leading-[30px]">
               <p>
                 Understanding emotional support animals can feel overwhelming, especially with changing housing
                 guidelines, online information, and common misconceptions surrounding ESA documentation. This resource

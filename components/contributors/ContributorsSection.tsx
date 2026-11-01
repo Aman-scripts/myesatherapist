@@ -37,7 +37,7 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
           <Image
             quality={90}
             src={iconSrc}
-            alt=""
+            alt={label}
             width={16}
             height={16}
             unoptimized

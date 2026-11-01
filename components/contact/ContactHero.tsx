@@ -37,6 +37,7 @@ export function ContactHero() {
 
   return (
     <section className="relative w-full bg-background overflow-hidden">
+      <h1 className="sr-only">Request Info</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE VIEW (< 640px)                             */}
       {/* ---------------------------------------------------- */}
@@ -60,9 +61,9 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1">
-              <h1 className="heading-h3 text-primary text-center">
+              <p aria-hidden="true" className="heading-h3 text-primary text-center">
                 Request Info
-              </h1>
+              </p>
               <p className="body-small text-body-text text-center">
                 Feel Free To Connect With Us! (24×7 Available At Your Service)
               </p>
@@ -178,9 +179,9 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1.5">
-              <h1 className="heading-h2 text-primary text-center">
+              <p aria-hidden="true" className="heading-h2 text-primary text-center">
                 Request Info
-              </h1>
+              </p>
               <p className="body-text text-body-text text-center">
                 Feel Free To Connect With Us! (24×7 Available At Your Service)
               </p>
@@ -301,9 +302,9 @@ export function ContactHero() {
             >
               {/* Centered Header */}
               <div className="text-center space-y-1">
-                <h1 className="heading-h1 text-primary">
+                <p aria-hidden="true" className="heading-h1 text-primary">
                   Request Info
-                </h1>
+                </p>
                 <p className="body-large text-body-text text-center">
                   Feel Free To Connect With Us! (24×7 Available At Your Service)
                 </p>

@@ -137,10 +137,10 @@ export function PsdCapabilitiesSection() {
           <div className="absolute left-[84px] top-1/2 -translate-y-1/2 w-[704px] z-20 flex flex-col items-start">
             {/* Heading */}
             <div className="text-left mb-8 flex flex-col gap-4">
-              <h2 className="heading-h2 text-primary capitalize max-w-[559px] leading-[48px]">
+              <p className="heading-h2 text-primary capitalize max-w-[559px] leading-[48px]">
                 What A Psychiatric Service <br />
                 Dog Can Do?
-              </h2>
+              </p>
               <p className="body-large text-body-text max-w-[525px]">
                 Understand the legal framework behind your PSD empowers you as a handler.
               </p>

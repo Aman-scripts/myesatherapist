@@ -55,6 +55,7 @@ export function EsaOnlineHero({
 
   return (
     <>
+      <h1 className="sr-only">{title}</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE & TABLET HERO (< 1024px)                   */}
       {/* ---------------------------------------------------- */}
@@ -123,8 +124,8 @@ export function EsaOnlineHero({
             {showStats ? (
               <>
                 <StatPills />
-                <h1 className="heading-h1 text-[#1A3D4F]">{title}</h1>
-                <p className="body-text sm:body-large text-[#1A3D4F]">{description}</p>
+                <p aria-hidden="true" className="heading-h1 text-[#1A3D4F]">{title}</p>
+                <p className="body-large text-[#1A3D4F]">{description}</p>
                 <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
                   {buttonText}
                 </CtaButton>
@@ -152,9 +153,9 @@ export function EsaOnlineHero({
                 )}
 
                 <div className="space-y-3.5 sm:space-y-6">
-                  <h1 className="font-heading text-[26px] sm:text-5xl font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
+                  <p aria-hidden="true" className="font-heading text-[26px] sm:text-5xl font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
                     {title}
-                  </h1>
+                  </p>
                   <p className="font-sans text-[12.5px] sm:text-base text-body-text font-semibold leading-[1.65] max-w-[626px]">
                     {description}
                   </p>
@@ -198,7 +199,7 @@ export function EsaOnlineHero({
             {showStats ? (
               <div className="max-w-[640px] flex flex-col items-start gap-5">
                 <StatPills />
-                <h1 className="heading-h1 text-[#1A3D4F] max-w-[620px]">{title}</h1>
+                <p aria-hidden="true" className="heading-h1 text-[#1A3D4F] max-w-[620px]">{title}</p>
                 <p className="body-large text-[#1A3D4F] max-w-[560px]">{description}</p>
                 <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[260px]">
                   {buttonText}
@@ -211,7 +212,7 @@ export function EsaOnlineHero({
             ) : (
               <div className="max-w-[626px] space-y-6">
                 <div className="space-y-6">
-                  <h1 className="heading-h1 text-[#1A3D4F]">{title}</h1>
+                  <p aria-hidden="true" className="heading-h1 text-[#1A3D4F]">{title}</p>
                   <p className="body-large text-[#1A3D4F] max-w-[626px]">{description}</p>
                 </div>
                 <CtaButton href={buttonHref}>{buttonText}</CtaButton>

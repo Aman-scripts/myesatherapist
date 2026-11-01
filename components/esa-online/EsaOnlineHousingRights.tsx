@@ -48,7 +48,7 @@ export function EsaOnlineHousingRights() {
               {POINTS.map((p) => (
                 <li key={p.title} className="flex items-start gap-3">
                   <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F7F3EC]">
-                    <Image src={p.icon} alt="" width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
+                    <Image src={p.icon} alt={p.title} width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
                   </span>
                   <div className="flex flex-col">
                     <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-primary">{p.title}</h3>

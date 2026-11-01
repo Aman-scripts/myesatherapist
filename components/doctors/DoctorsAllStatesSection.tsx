@@ -120,7 +120,7 @@ export function DoctorsAllStatesSection() {
                   <div className="w-[58px] h-[58px] sm:w-[66px] sm:h-[66px] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0 ml-3 sm:ml-4 xl:ml-6">
                     <Image
                       src={card.icon}
-                      alt=""
+                      alt={card.title}
                       width={32}
                       height={32}
                       unoptimized

@@ -55,7 +55,7 @@ export function PsdTrustBarSection() {
               <div className="absolute -top-[37px] left-1/2 -translate-x-1/2 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_1.88px_3.77px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
                 <Image
                   src={card.icon}
-                  alt=""
+                  alt={card.title}
                   width={32}
                   height={32}
                   unoptimized

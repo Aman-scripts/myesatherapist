@@ -124,9 +124,9 @@ export function AboutLegitimateSection() {
           <div className="absolute left-[84px] top-[58px] w-[651px] flex flex-col items-start gap-10 z-10">
             {/* Heading Block */}
             <div className="w-[525px] flex flex-col items-start gap-4 text-left">
-              <h2 className="heading-h2 text-primary">
+              <p className="heading-h2 text-primary">
                 Legitimate ESA Letter Evaluations You Can Trust
-              </h2>
+              </p>
               <p className="body-large text-body-text">
                 Our mission is to make the ESA evaluation process clear, ethical, and accessible. We connect individuals with licensed mental health professionals through a secure ESA evaluation process, with all outcomes determined solely through an independent clinical assessment by the provider.
               </p>
@@ -148,9 +148,9 @@ export function AboutLegitimateSection() {
 
                   {/* Text Content */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="heading-h3 text-color-gradient">
+                    <p className="heading-h3 text-color-gradient">
                       {item.title}
-                    </h3>
+                    </p>
                     <p className="body-text text-body-text mt-1">
                       {item.description}
                     </p>

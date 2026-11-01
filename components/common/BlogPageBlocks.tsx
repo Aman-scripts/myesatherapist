@@ -100,7 +100,7 @@ export function IconCard({
       </div>
       <div className="absolute left-1/2 top-[-37px] z-10 flex h-[74.56px] w-[74.56px] -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] lg:h-[5.6vw] lg:w-[5.6vw] lg:top-[-2.6vw] xl:h-[74.56px] xl:w-[74.56px] xl:top-[-37px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={icon} alt="" width={32} height={32} className="h-8 w-8 object-contain lg:h-[2.4vw] lg:w-[2.4vw] xl:h-8 xl:w-8" />
+        <img src={icon} alt={title} width={32} height={32} className="h-8 w-8 object-contain lg:h-[2.4vw] lg:w-[2.4vw] xl:h-8 xl:w-8" />
       </div>
       </div>
     </div>

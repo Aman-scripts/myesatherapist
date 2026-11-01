@@ -61,7 +61,7 @@ export function EsaOnlineComparison() {
                 <React.Fragment key={row.feature}>
                   <div className="flex h-[56px] sm:h-[64px] items-center gap-2 sm:gap-3 border-t border-[#C8B9A7]/50 pl-3 sm:pl-8 pr-1">
                     <span className="hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-                      <Image src={row.icon} alt="" width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
+                      <Image src={row.icon} alt={row.feature} width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
                     </span>
                     <span className="text-primary font-bold text-sm sm:text-xl leading-tight" style={LATO}>
                       {row.feature}
@@ -80,7 +80,7 @@ export function EsaOnlineComparison() {
                       <Image
             quality={90}
                         src={`${P}-${row.other.type}-icon.svg`}
-                        alt=""
+                        alt={row.other.text}
                         width={22}
                         height={22}
                         className="h-[22px] w-[22px] shrink-0"
@@ -117,7 +117,7 @@ export function EsaOnlineComparison() {
                   <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1 gap-1.5">
                     <Image
-            quality={90} src={`${P}-${row.other.type}-icon.svg`} alt="" width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
+            quality={90} src={`${P}-${row.other.type}-icon.svg`} alt={row.other.text} width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
                     <span className="italic text-[11px] sm:text-[13px] text-body-text leading-[15px]" style={LATO}>{row.other.text}</span>
                   </div>
                 </div>

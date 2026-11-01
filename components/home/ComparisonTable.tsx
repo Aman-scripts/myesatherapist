@@ -198,15 +198,15 @@ export function ComparisonTable() {
                 {/* Header Labels for FEATURES and OTHERS */}
                 <div className="flex items-center px-[25px] h-[74px]">
                   <div className="w-[320px] text-center shrink-0">
-                    <h3 className="heading-h3">
+                    <p className="heading-h3">
                       FEATURES
-                    </h3>
+                    </p>
                   </div>
                   <div className="w-[580px] shrink-0" />
                   <div className="w-[490px] text-center shrink-0">
-                    <h3 className="heading-h3">
+                    <p className="heading-h3">
                       OTHERS
-                    </h3>
+                    </p>
                   </div>
                 </div>
 
@@ -219,7 +219,7 @@ export function ComparisonTable() {
                         <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_1.5px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                           <Image
                             src={row.icon}
-                            alt=""
+                            alt={row.desktopFeature}
                             width={24}
                             height={24}
                             unoptimized

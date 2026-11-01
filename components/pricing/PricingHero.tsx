@@ -8,6 +8,7 @@ import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 export function PricingHero() {
   return (
     <section className="relative z-30 w-full bg-background overflow-visible">
+      <h1 className="sr-only">Choose The Right ESA Package For You</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PRICING HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
@@ -40,9 +41,9 @@ export function PricingHero() {
             </div>
           </div>
 
-          <h1 className="heading-h2 text-primary max-w-[320px]">
+          <p aria-hidden="true" className="heading-h2 text-primary max-w-[320px]">
             Choose The Right ESA Package For You
-          </h1>
+          </p>
 
           <p className="body-large text-body-text max-w-[300px] mx-auto mt-2">
             No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed.
@@ -86,9 +87,9 @@ export function PricingHero() {
             </div>
           </div>
 
-          <h1 className="heading-h1 text-primary mt-6 max-w-xl">
+          <p aria-hidden="true" className="heading-h1 text-primary mt-6 max-w-xl">
             Choose The Right ESA Package For You
-          </h1>
+          </p>
 
           <p className="body-large text-body-text max-w-md mx-auto mt-3">
             No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.
@@ -141,9 +142,9 @@ export function PricingHero() {
               </div>
             </div>
 
-            <h1 className="heading-h1 text-primary max-w-[553px]">
+            <p aria-hidden="true" className="heading-h1 text-primary max-w-[553px]">
               Choose The Right ESA Package For You
-            </h1>
+            </p>
 
             <p className="body-large text-body-text max-w-[553px]">
               No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.

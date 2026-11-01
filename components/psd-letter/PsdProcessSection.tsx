@@ -63,7 +63,7 @@ export function PsdProcessSection() {
           <div className="absolute top-[18%] -right-3.5 sm:-right-5 lg:-right-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
               src="/psd-letter/psdprocess-section-icon.webp"
-              alt=""
+              alt="Psychiatric service dog support"
               width={73}
               height={73}
               unoptimized
@@ -75,7 +75,7 @@ export function PsdProcessSection() {
           <div className="absolute bottom-[18%] -left-3.5 sm:-left-5 lg:-left-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
             <Image
               src="/psd-letter/psdprocess-section-icon.webp"
-              alt=""
+              alt="Psychiatric service dog support"
               width={73}
               height={73}
               unoptimized

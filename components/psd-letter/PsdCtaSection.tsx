@@ -49,7 +49,7 @@ export function PsdCtaSection() {
           <Image
             quality={90}
             src="/common/cta-section-paw.webp"
-            alt=""
+            alt="Paw print"
             fill
             sizes="240px"
             className="object-contain object-bottom"

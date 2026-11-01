@@ -57,7 +57,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
         <Image
           quality={90}
           src="/doctors/doctor_internal.webp"
-          alt=""
+          alt="Licensed mental health professional"
           fill
           priority
           className="object-cover object-[75%_center] lg:object-right"

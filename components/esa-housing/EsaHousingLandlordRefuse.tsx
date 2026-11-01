@@ -59,7 +59,7 @@ export function EsaHousingLandlordRefuse() {
             {REASONS.map((r) => (
               <li key={r.title} className="flex items-start gap-4">
                 <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.12)]">
-                  <Image src={r.icon} alt="" width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
+                  <Image src={r.icon} alt={r.title} width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
                 </span>
                 <div className="flex flex-col">
                   <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#CC191D]">{r.title}</h3>

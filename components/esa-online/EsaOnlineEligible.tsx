@@ -33,7 +33,7 @@ export function EsaOnlineEligible() {
           <Image
             quality={90}
             src="/about-us/about_us-legimateesasection-hearticon.webp"
-            alt=""
+            alt="Heart"
             width={73}
             height={73}
             className="object-contain filter drop-shadow-[0px_1px_4px_rgba(0,0,0,0.25)]"
@@ -77,7 +77,7 @@ export function EsaOnlineEligible() {
                 >
                   <Image
                     src={c.icon}
-                    alt=""
+                    alt={c.label}
                     width={28}
                     height={28}
                     unoptimized
@@ -110,7 +110,7 @@ export function EsaOnlineEligible() {
                 >
                   <Image
                     src={factor.icon}
-                    alt=""
+                    alt={factor.text}
                     width={28}
                     height={28}
                     unoptimized

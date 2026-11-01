@@ -92,7 +92,7 @@ function DoctorStatBadge({
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
           <Image
             src={iconSrc}
-            alt=""
+            alt={label}
             width={16}
             height={16}
             unoptimized
