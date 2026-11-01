@@ -6,6 +6,8 @@ import { GlobalDesktopScaler } from "@/components/common/GlobalDesktopScaler";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SITE_URL } from "@/lib/site";
+import { socialImage } from "@/data/socialImages";
+import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -25,14 +27,19 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const defaultSocial = socialImage("homepage", "Telehealth with a happy companion");
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   title: "My ESA Therapist | Official Emotional Support Animal Letters Online",
@@ -60,16 +67,23 @@ export const metadata: Metadata = {
       { url: "/apple-icon-180.png", sizes: "180x180", type: "image/png" },
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
+    shortcut: [{ url: "/favicon.ico" }],
   },
   manifest: "/manifest.json",
   openGraph: {
     title: "My ESA Therapist | Official ESA Letters from Licensed Therapists",
     description:
       "Qualify online in 2 minutes. State-licensed therapists, 100% legal under Fair Housing Act, no pet rent, money-back guarantee.",
-    url: SITE_URL,
+    url: "https://myesatherapist.com/",
     siteName: "My ESA Therapist",
     locale: "en_US",
     type: "website",
+    images: defaultSocial.openGraph,
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@MyESATherapist",
+    images: defaultSocial.twitter,
   },
   verification: {
     google: "hZEn7s77TUksTd08P_-V4gKQzGdXE0dkQeF4-B7vzuY",
@@ -98,6 +112,7 @@ export default function RootLayout({
         className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-accent/35 selection:text-current"
       >
         <ThirdPartyErrorHandler />
+        <SiteAnalytics />
         {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}
         <Script
           id="tawk-logger-filter"
@@ -142,31 +157,12 @@ export default function RootLayout({
 })();`,
           }}
         />
-        {/* Google Tag Manager: deferred until the first interaction (scroll,
-            touch, pointer or key) so GTM and the tags it injects (GA, Tawk
-            chat, Clarity: ~650 KB of JS) never compete with the initial
-            render. A fixed idle timeout made mobile Lighthouse scores flaky
-            because it sometimes fired inside the measurement window. */}
+        {/* Google Tag Manager. GA4 G-4Y59YKVXPF and Microsoft Clarity load from this container. */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){
-function loadGtm(){
-  if (w.__gtmLoaded) return;
-  w.__gtmLoaded = true;
-  w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-  j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-  f.parentNode.insertBefore(j,f);
-}
-var events=['pointerdown','mousemove','keydown','touchstart','scroll'];
-function onInteract(){
-  events.forEach(function(e){w.removeEventListener(e,onInteract);});
-  loadGtm();
-}
-events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:true});});
-})(window,document,'script','dataLayer','GTM-MRLDDQG');`,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MRLDDQG');`,
           }}
         />
         {/* End Google Tag Manager */}
