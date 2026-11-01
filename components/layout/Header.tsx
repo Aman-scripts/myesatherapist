@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { CtaButton } from "@/components/common/CtaButton";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 
 const AVAILABLE_STATES = [
@@ -47,12 +48,16 @@ const AVAILABLE_STATES = [
   { name: "Oklahoma", slug: "oklahoma" },
   { name: "Oregon", slug: "oregon" },
   { name: "Pennsylvania", slug: "pennsylvania" },
+  { name: "Rhode Island", slug: "rhode-island" },
   { name: "South Carolina", slug: "south-carolina" },
   { name: "South Dakota", slug: "south-dakota" },
+  { name: "Tennessee", slug: "tennessee" },
   { name: "Texas", slug: "texas" },
   { name: "Utah", slug: "utah" },
+  { name: "Vermont", slug: "vermont" },
   { name: "Virginia", slug: "virginia" },
   { name: "Washington", slug: "washington" },
+  { name: "Washington, DC", slug: "washington-dc" },
   { name: "West Virginia", slug: "west-virginia" },
   { name: "Wisconsin", slug: "wisconsin" },
   { name: "Wyoming", slug: "wyoming" },
@@ -101,12 +106,14 @@ function ResourcesMenu() {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
+        aria-label="Resources"
         className={`flex items-center gap-1.5 whitespace-nowrap body-small hover:text-[#1D6E72] transition-colors cursor-pointer ${
           open ? "text-[#1D6E72]" : ""
         }`}
       >
         Resources
         <ChevronDown
+          aria-hidden="true"
           className={`w-3.5 h-3.5 xl:w-4 xl:h-4 text-body-text transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
@@ -233,9 +240,11 @@ export function Header() {
 
           {/* Mobile toggle */}
           <button
+            type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
             className="lg:hidden p-2 rounded-lg text-[#1E3E47] min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -280,7 +289,7 @@ export function Header() {
 
           {/* Right: Frame 1000011909 (See all 50 States + Arrow) */}
           <Link
-            href="/states/"
+            href="/state/"
             className="font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-primary hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
             <span>See all 50 States</span>
@@ -290,8 +299,10 @@ export function Header() {
       </div>
 
       {/* Mobile Menu */}
+      <SiteBreadcrumbs />
+
       {mobileOpen && (
-        <div className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
+        <div id="mobile-navigation" className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
           <Link
             href="/esa-doctors/"
             className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
@@ -343,7 +354,7 @@ export function Header() {
           {/* Mobile All Available States section */}
           <div className="border-t border-[#EAE5DC] pt-4">
             <Link
-              href="/states/"
+              href="/state/"
               onClick={() => setMobileOpen(false)}
               className="w-full flex items-center justify-between py-2 text-[#1E3E47] font-semibold text-base"
             >

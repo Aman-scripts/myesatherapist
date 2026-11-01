@@ -10,6 +10,12 @@ const PROFILE_HREF: Record<string, string> = Object.fromEntries(
   [...AUTHORS, ...REVIEWERS].map((p) => [p.name, p.href]),
 );
 
+function toIsoDate(value: string) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return undefined;
+  return parsed.toISOString().slice(0, 10);
+}
+
 interface BlogMetaBarProps {
   authorName?: string;
   authorRole?: string;
@@ -92,11 +98,15 @@ export function BlogMetaBar({
             <span className="body-large text-primary leading-tight">
               Published
             </span>
-            <span className="body-text font-bold text-transparent bg-clip-text color-gradient whitespace-nowrap mt-0.5">
+            <time
+              dateTime={toIsoDate(publishDate)}
+              className="body-text font-bold text-transparent bg-clip-text color-gradient whitespace-nowrap mt-0.5"
+            >
               {publishDate}
-            </span>
+            </time>
             <span className="body-small text-body-text leading-tight whitespace-nowrap mt-0.5">
-              Last updated: {lastUpdated}
+              Last updated:{" "}
+              <time dateTime={toIsoDate(lastUpdated)}>{lastUpdated}</time>
             </span>
           </div>
         </div>

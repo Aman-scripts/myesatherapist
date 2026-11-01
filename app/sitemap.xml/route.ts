@@ -71,6 +71,11 @@ function buildEntries(): SitemapEntry[] {
     { path: "/esa-laws/", changefreq: "weekly", priority: 0.7 },
     { path: "/esa-laws/alabama/", changefreq: "monthly", priority: 0.5 },
     { path: "/state/", changefreq: "weekly", priority: 0.7 },
+    { path: "/legal-reviewer/", changefreq: "monthly", priority: 0.4 },
+    { path: "/disclaimer/", changefreq: "yearly", priority: 0.3 },
+    { path: "/editorial-policy/", changefreq: "yearly", priority: 0.3 },
+    { path: "/accessibility-statement/", changefreq: "yearly", priority: 0.3 },
+    { path: "/consent-for-telehealth/", changefreq: "yearly", priority: 0.3 },
 
     // Policies
     { path: "/privacy-policy/", changefreq: "yearly", priority: 0.3 },

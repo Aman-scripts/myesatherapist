@@ -14,8 +14,13 @@ export function assetUrl(path: string) {
 
 /** JSON-LD string with featured-image hosts pointed at SITE_URL. Emails are left unchanged. */
 export function serializeLd(schema: unknown) {
-  return JSON.stringify(schema).replaceAll(
-    "https://myesatherapist.com/images/",
-    `${SITE_URL}/images/`,
-  );
+  return JSON.stringify(schema)
+    .replaceAll(
+      "https://myesatherapist.com/images/logo/my-esa-therapist-logo.webp",
+      `${SITE_URL}/common/myesa-logo.svg`,
+    )
+    .replaceAll(
+      "https://myesatherapist.com/images/",
+      `${SITE_URL}/images/`,
+    );
 }

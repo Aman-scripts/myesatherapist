@@ -6,7 +6,9 @@ export function GET() {
   const body = [
     "User-agent: *",
     "Allow: /",
+    "Disallow: /api/",
     "",
+    `Host: ${SITE_URL}`,
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     "",
   ].join("\n");

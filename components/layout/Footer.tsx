@@ -21,7 +21,7 @@ const quickLinks = [
   { label: "ESA Letter Online", href: "/esa-letter-online/" },
   { label: "ESA Letter for Housing", href: "/esa-letter-for-housing/" },
   { label: "ESA Letter Renewal", href: "/esa-letter-renewal/" },
-  { label: "ESA Letter by State", href: "/states/" },
+  { label: "ESA Letter by State", href: "/state/" },
   { label: "ESA Letter Cost", href: "/pricing/" },
   { label: "ESA FAQs", href: "/frequently-asked-questions/" },
   { label: "ESA Resources", href: "/blog/" },
@@ -61,17 +61,17 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
       {/* Top Centered Section */}
       <div className="flex flex-col items-center text-center max-w-[700px] mx-auto space-y-5">
         {/* Logo Card with Gold Border (Frame 1000011910) */}
-        <div className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-accent p-3 flex items-center justify-center shadow-xl">
+        <Link href="/" aria-label="My ESA Therapist home" className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-accent p-3 flex items-center justify-center shadow-xl">
           <div className="relative w-full h-full">
             <Image
-              quality={90}
               src="/common/myesa-logo.svg"
-              alt="My ESA Therapist"
+              alt=""
               fill
+              unoptimized
               className="object-contain"
             />
           </div>
-        </div>
+        </Link>
 
         {/* Heading with Gold Highlight */}
         <h2 className="heading-h2 text-background capitalize text-center">
@@ -205,9 +205,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
                 />
               </div>
               <div className="text-left leading-tight">
-                <div className="body-text text-background">
+                <a href="tel:+18884124041" aria-label="Call My ESA Therapist at +1 (888) 412-4041" className="body-text text-background hover:text-accent">
                   +1 (888) 412-4041
-                </div>
+                </a>
                 <div className="body-small text-background/75">
                   24/7 Online Support
                 </div>
@@ -225,9 +225,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
                 />
               </div>
               <div className="text-left leading-tight">
-                <div className="body-text text-background">
+                <a href="mailto:info@myesatherapist.com" aria-label="Email info@myesatherapist.com" className="body-text text-background hover:text-accent">
                   info@myesatherapist.com
-                </div>
+                </a>
                 <div className="body-small text-background/75">
                   Email us anytime
                 </div>

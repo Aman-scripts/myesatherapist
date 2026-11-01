@@ -98,6 +98,8 @@ export function CtaButton({
           target={target}
           rel={rel}
           className={baseClasses}
+          data-event="cta_click"
+          data-event-label={typeof children === "string" ? children : undefined}
           onClick={onClick as any}
         >
           {content}
@@ -110,6 +112,8 @@ export function CtaButton({
         target={target}
         rel={rel ?? (target === "_blank" ? "noopener noreferrer" : undefined)}
         className={baseClasses}
+        data-event="cta_click"
+        data-event-label={typeof children === "string" ? children : undefined}
         onClick={onClick as any}
       >
         {content}
@@ -121,6 +125,8 @@ export function CtaButton({
     <button
       type={type}
       className={baseClasses}
+      data-event="cta_click"
+      data-event-label={typeof children === "string" ? children : undefined}
       onClick={onClick}
       disabled={disabled}
       {...rest}
