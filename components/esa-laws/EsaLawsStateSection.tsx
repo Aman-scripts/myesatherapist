@@ -246,9 +246,16 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
     <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)] [content-visibility:auto] [contain-intrinsic-size:1px_300px]">
       <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
-        <div className="relative w-[57px] h-[57px] shrink-0">
+        <div className="w-[57px] h-[57px] shrink-0 flex items-center justify-center">
           <Image
-            quality={60} loading="lazy" src={entry.icon} alt={`${entry.name} state map`} fill className="object-contain" sizes="57px" />
+            quality={60}
+            loading="lazy"
+            src={entry.icon}
+            alt={`${entry.name} state map`}
+            width={57}
+            height={57}
+            className="object-contain"
+          />
         </div>
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
           <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">

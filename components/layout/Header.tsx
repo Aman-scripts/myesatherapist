@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { CtaButton } from "@/components/common/CtaButton";
-import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
+
 
 
 const AVAILABLE_STATES = [
@@ -299,7 +299,7 @@ export function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <SiteBreadcrumbs />
+
 
       {mobileOpen && (
         <div id="mobile-navigation" className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">

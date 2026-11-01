@@ -138,6 +138,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <li key={link.label}>
                 <Link
                   href={link.href}
+                  prefetch={false}
                   className="group flex items-center gap-2 body-text text-background hover:text-accent transition-colors"
                 >
                   <span className="text-background/60 group-hover:text-accent text-xs transition-colors">
@@ -160,6 +161,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <li key={link.label}>
                 <Link
                   href={link.href}
+                  prefetch={false}
                   className="group flex items-center gap-2 body-text text-background hover:text-accent transition-colors"
                 >
                   <span className="text-background/60 group-hover:text-accent text-xs transition-colors">
@@ -182,6 +184,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
               <li key={link.label}>
                 <Link
                   href={link.href}
+                  prefetch={false}
                   className="group flex items-center gap-2 body-text text-background hover:text-accent transition-colors"
                 >
                   <span className="text-background/60 group-hover:text-accent text-xs transition-colors">
