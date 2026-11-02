@@ -25,10 +25,10 @@ export function FederalHousingRulesSection() {
 
         {/* Frame 1000011891: CTA Button */}
         <CtaButton
-          href="/pricing/"
-          className="w-auto min-w-[246px]"
+          href="/esa-laws/"
+          className="w-auto min-w-[280px]"
         >
-          Get Started
+          Check your State law
         </CtaButton>
 
       </div>

@@ -17,7 +17,7 @@ const statsData = [
 ];
 
 const desktopStats = [
-  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "Mental Health Evaluations" },
   { value: "5+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
@@ -170,7 +170,7 @@ export function PsdHeroSection() {
               {desktopStats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex h-[77px] w-[176px] shrink-0 flex-col items-center justify-center rounded-[30px] bg-background px-3 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                  className="flex h-[77px] w-auto min-w-[176px] shrink-0 flex-col items-center justify-center rounded-[30px] bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                 >
                   <span className="body-large text-color-gradient leading-none">{stat.value}</span>
                   <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{stat.label}</span>
