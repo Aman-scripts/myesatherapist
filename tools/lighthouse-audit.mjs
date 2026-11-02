@@ -180,7 +180,7 @@ async function main() {
   let serverProcess;
   if (!skipBuild) {
     console.log("Building production bundle...");
-    await run(process.platform === "win32" ? "npx.cmd" : "npx", ["next", "build"]);
+    await run(process.platform === "win32" ? "npm.cmd" : "npm", ["run", "build"]);
   }
 
   console.log(`Starting production server on port ${PORT}...`);
