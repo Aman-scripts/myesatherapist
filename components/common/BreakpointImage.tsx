@@ -36,8 +36,13 @@ export function BreakpointImage({ media, alt, preload = true, ...rest }: Breakpo
         />
       )}
       <picture style={{ display: "contents" }}>
-        <source media={`not all and ${media}`} srcSet={BLANK_PIXEL} />
-        <img {...props} alt={alt} />
+        <source media={media} srcSet={props.srcSet || props.src} sizes={props.sizes} />
+        <img
+          {...props}
+          src={BLANK_PIXEL}
+          srcSet={undefined}
+          alt={alt}
+        />
       </picture>
     </>
   );

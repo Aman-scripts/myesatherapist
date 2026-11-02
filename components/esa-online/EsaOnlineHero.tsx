@@ -153,7 +153,7 @@ export function EsaOnlineHero({
                 </div>
                 <div className="hidden sm:flex flex-col items-start gap-5 text-left">
                   <StatPills />
-                  <p aria-hidden="true" className="heading-h1 text-[#1A3D4F]">{title}</p>
+                  <p aria-hidden="true" className="heading-h1 text-primary">{title}</p>
                   <p className="body-large text-[#1A3D4F]">{description}</p>
                   <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
                     {buttonText}
@@ -211,7 +211,7 @@ export function EsaOnlineHero({
             {showStats ? (
               <div className="max-w-[640px] flex flex-col items-start gap-5">
                 <StatPills />
-                <p aria-hidden="true" className="heading-h1 text-[#1A3D4F] max-w-[620px]">{title}</p>
+                <p aria-hidden="true" className="heading-h1 text-primary max-w-[620px]">{title}</p>
                 <p className="body-large text-[#1A3D4F] max-w-[560px]">{description}</p>
                 <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[260px]">
                   {buttonText}
@@ -224,7 +224,7 @@ export function EsaOnlineHero({
             ) : (
               <div className="max-w-[626px] space-y-6">
                 <div className="space-y-6">
-                  <p aria-hidden="true" className="heading-h1 text-[#1A3D4F]">{title}</p>
+                  <p aria-hidden="true" className="heading-h1 text-primary">{title}</p>
                   <p className="body-large text-[#1A3D4F] max-w-[626px]">{description}</p>
                 </div>
                 <CtaButton href={buttonHref}>{buttonText}</CtaButton>

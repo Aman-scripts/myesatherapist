@@ -130,7 +130,11 @@ export default function PsdLetterPage() {
 
         {/* 6. Plans & Pricing (Warm background bg-background matching Benefits Section) */}
         <div id="pricing">
-          <PricingSection bgColor="bg-background" defaultPlan="psd" />
+          <PricingSection
+            bgColor="bg-background"
+            defaultPlan="psd"
+            sectionClassName="pt-16 lg:pt-24 pb-0"
+          />
         </div>
 
         {/* 7. Common Qualifying Conditions for a PSD Letter */}

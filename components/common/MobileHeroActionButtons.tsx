@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import {
@@ -15,7 +16,7 @@ const TEAL_GRADIENT = "var(--color-gradient)";
 
 export interface MobileHeroActionButtonsProps {
   selectedState?: string;
-  onStateSelect: (slug: string) => void;
+  onStateSelect?: (slug: string) => void;
   getStartedHref?: string;
   getStartedText?: string;
   placeholder?: string;
@@ -35,6 +36,8 @@ export function MobileHeroActionButtons({
   onGetStartedClick,
   selectTone = "teal",
 }: MobileHeroActionButtonsProps) {
+  const router = useRouter();
+  const [internalState, setInternalState] = useState(selectedState);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -54,11 +57,17 @@ export function MobileHeroActionButtons({
 
   const handleSelect = (slug: string) => {
     setIsOpen(false);
-    onStateSelect(slug);
+    setInternalState(slug);
+    if (onStateSelect) {
+      onStateSelect(slug);
+    } else {
+      router.push(`/esa-letter-${slug}/`);
+    }
   };
 
-  const displayText = selectedState
-    ? STATE_INDEX_BY_SLUG[selectedState]?.name || selectedState
+  const activeSlug = selectedState || internalState;
+  const displayText = activeSlug
+    ? STATE_INDEX_BY_SLUG[activeSlug]?.name || activeSlug
     : placeholder;
 
   return (

@@ -109,7 +109,7 @@ function EvaluationFormCard({
           </p>
         )}
         <p className={`text-body-text mt-1 ${compact ? "body-text" : "body-large"}`}>
-          Free consultation - takes less than 5 minutes.
+          Take the first step toward your ESA letter evaluation.
         </p>
       </div>
 

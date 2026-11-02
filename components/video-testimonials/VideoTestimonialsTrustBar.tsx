@@ -47,7 +47,7 @@ export function VideoTestimonialsTrustBar() {
                 />
               </div>
               <div className="flex flex-col items-start">
-                <span className="heading-h2 text-[#1A3D4F]">
+                <span className="heading-h2 text-primary">
                   {item.value}
                 </span>
                 <span className="font-sans font-medium text-[18px] leading-[28px] text-[#5F6B6F] whitespace-nowrap">

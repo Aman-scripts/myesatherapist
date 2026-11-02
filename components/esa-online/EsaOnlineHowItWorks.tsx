@@ -60,7 +60,7 @@ export function EsaOnlineHowItWorks() {
                   </div>
                 </div>
                 <div className="mt-6 flex w-full flex-col items-center gap-2 text-center">
-                  <h3 className="font-heading text-[22px] font-bold leading-7 text-[#1A3D4F] sm:text-[24px]">{step.title}</h3>
+                  <h3 className="heading-h3 text-primary">{step.title}</h3>
                   <p className="body-text text-body-text">{step.description}</p>
                 </div>
               </div>

@@ -134,7 +134,7 @@ export function PsdQualifyingConditions() {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
   return (
-    <section className="pt-14 sm:pt-16 lg:pt-20 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible">
+    <section className="-mt-2 pt-0 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10 lg:mb-14 space-y-3 max-w-[1100px] mx-auto">

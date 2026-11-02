@@ -1,68 +1,28 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { useRouter } from "next/navigation";
-import { ChevronDown } from "lucide-react";
-import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
-import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
+import { HeroStateDropdown } from "@/components/common/HeroStateDropdown";
 import { CtaButton } from "@/components/common/CtaButton";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
 const TRUSTPILOT_GREEN = "#00B67A";
 
 const statsData = [
-  { value: "51,488+", label: "ESA Evaluations" },
+  { value: "51,488+", label: "Mental Health Evaluations" },
   { value: "7+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
 const mobileStats = [
   { value: "7+", label: "Years Serving" },
-  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "Mental Health Evaluations" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
 export function PsdHeroSection() {
-  const router = useRouter();
-  const [selectedState, setSelectedState] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRefMobile = useRef<HTMLDivElement>(null);
-  const dropdownRefTablet = useRef<HTMLDivElement>(null);
-  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      const target = event.target as Node;
-      const isInside =
-        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
-        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
-        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
-
-      if (!isInside) {
-        setIsDropdownOpen(false);
-      }
-    }
-
-    if (isDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isDropdownOpen]);
-
-  const handleStateSelect = (slug: string) => {
-    setSelectedState(slug);
-    setIsDropdownOpen(false);
-    router.push(`/esa-letter-${slug}/`);
-  };
-
   return (
     <section className="relative z-30 w-full bg-background">
       <h1 className="sr-only">Psychiatric Service Dog Letter Assistance</h1>
@@ -75,7 +35,7 @@ export function PsdHeroSection() {
           media="(max-width: 639px)"
           quality={70}
           src="/Hero_image_for_mobile_all.png"
-          alt=""
+          alt="Psychiatric Service Dog Letter Assistance"
           fill
           className="object-cover object-top"
           sizes="100vw"
@@ -94,8 +54,6 @@ export function PsdHeroSection() {
 
           <MobileHeroActionButtons
             className="mt-5"
-            selectedState={selectedState}
-            onStateSelect={handleStateSelect}
             getStartedHref="#pricing"
             placeholder="Select your State"
           />
@@ -118,43 +76,41 @@ export function PsdHeroSection() {
             ))}
           </div>
 
-          <div className="mt-5 w-full max-w-[360px]">
-            <ReviewBadges className="mx-auto max-w-none justify-center" />
+          <div className="mt-5">
+            <ReviewBadges />
           </div>
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. TABLET PSD HERO SECTION (sm: to lg: / 640-1023px) */}
-      {/* Matches Screenshot 2                                 */}
+      {/* 2. TABLET PSD HERO SECTION (sm: to lg: / 640px-1023px) */}
+      {/* Matches Screenshot 3 (iPad Pro 11)                   */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1190] min-h-[880px]">
+      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1200] min-h-[780px] max-h-[1050px] overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={70}
           src="/psd-letter/psd-hero-section-tablet.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
-        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
-          <div className="flex items-center justify-center gap-3 flex-wrap">
+        <div className="absolute inset-x-0 top-0 pt-16 px-6 text-center z-10 flex flex-col items-center">
+          <div className="inline-flex items-center gap-3 flex-wrap justify-center">
             {statsData.map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center bg-background px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
+                className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
               >
-                <span className="body-large text-color-gradient leading-none">
-                  {stat.value}
-                </span>
-                <span className="body-small text-[#6B6B6B] mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="body-strong text-primary">{stat.value}</span>
+                <span className="body-text text-primary">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <p aria-hidden="true" className="heading-h1 capitalize mt-6 max-w-xl mx-auto">
+          <p aria-hidden="true" className="heading-h1 capitalize mx-auto max-w-lg mt-6">
             Psychiatric Service
             <br />
             Dog Letter Assistance
@@ -165,48 +121,7 @@ export function PsdHeroSection() {
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
-            {/* State Dropdown */}
-            <div className="relative z-30" ref={dropdownRefTablet}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
-              >
-                <Image
-                  src="/ESA ICons/Icon-37.svg"
-                  alt="Location"
-                  width={20}
-                  height={20}
-                  unoptimized
-                  className="icon-sm shrink-0 object-contain"
-                />
-                <span className="text-primary">
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            <HeroStateDropdown />
 
             <CtaButton
               href="#pricing"
@@ -238,81 +153,40 @@ export function PsdHeroSection() {
             src="/psd-letter/psd-herosection-new.webp"
             alt="Psychiatric Service Dog Letter Assistance"
             fill
-            className="object-cover object-center"
-            sizes="(min-width: 1024px) 100vw, 1px"
+            className="object-cover object-left"
+            sizes="(min-width: 1024px) 1440px, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[814px]">
-          <div className="absolute left-[82px] top-[100px] w-[678px] z-10">
-            <div className="flex items-center gap-3">
-              {statsData.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-background py-2 rounded-[30px] text-center w-[176px] h-[77px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-                >
-                  <span className="body-large text-color-gradient">
-                    {stat.value}
-                  </span>
-                  <span className="body-small text-[#6B6B6B] mt-0.5 whitespace-nowrap">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-
-            <p aria-hidden="true" className="heading-h1 capitalize mt-6">
-              Psychiatric Service Dog
-              <br />
-              Letter Assistance
-            </p>
-
-            <p className="body-large max-w-[588px] mt-4">
-              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
-            </p>
-
-            <div className="mt-6 flex flex-col items-start gap-2">
-              <div className="flex items-center gap-[25px]">
-                {/* State Dropdown */}
-                <div className="relative z-30" ref={dropdownRefDesktop}>
-                  <button
-                    type="button"
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2.5 px-[24px] py-3 rounded-[30px] bg-background font-semibold body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+        <div className="relative w-[1440px] h-[814px] mx-auto">
+          <div className="absolute top-[85px] right-[40px] w-[574px] flex flex-col items-center">
+            <div className="flex w-full flex-col items-center">
+              <div className="flex items-center gap-3 w-max justify-end self-end">
+                {statsData.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] shrink-0"
                   >
-                    <Image
-                      src="/ESA ICons/Icon-37.svg"
-                      alt="Location"
-                      width={20}
-                      height={20}
-                      unoptimized
-                      className="icon-sm shrink-0 object-contain"
-                    />
-                    <span className="text-primary">
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                    </span>
-                    <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                  </button>
+                    <span className="body-strong text-primary">{stat.value}</span>
+                    <span className="body-text text-primary">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
 
-                  {isDropdownOpen && (
-                    <div
-                      className={STATE_DROPDOWN_PANEL}
-                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                    >
-                      <div className="py-1">
-                        {POPULAR_STATES.map((state) => (
-                          <button
-                            key={state.slug}
-                            type="button"
-                            onClick={() => handleStateSelect(state.slug)}
-                            className={STATE_DROPDOWN_ITEM}
-                          >
-                            <span>{state.name}</span>
-                            <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
+              <p aria-hidden="true" className="heading-h1 capitalize text-center mt-6">
+                Psychiatric Service
+                <br />
+                Dog Letter Assistance
+              </p>
+
+              <p className="body-large text-center w-[463px] mt-4">
+                Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
+              </p>
+
+              <div className="flex items-center justify-center gap-3 mt-6">
+                <HeroStateDropdown
+                  buttonClassName="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                />
 
                 <CtaButton
                   href="#pricing"

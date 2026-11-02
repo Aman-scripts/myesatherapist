@@ -34,7 +34,7 @@ function HeroCopy() {
   return (
     <div className="flex flex-col items-start gap-5">
       <StatPills />
-      <h1 className="heading-h1 text-[#1A3D4F] max-w-[560px]">
+      <h1 className="heading-h1 text-primary max-w-[560px]">
         {HEADING_LINE_1}
         <br />
         {HEADING_LINE_2}

@@ -10,12 +10,20 @@ import React from "react";
 /* Main column                                                         */
 /* ------------------------------------------------------------------ */
 
-// Pill label above each section (Figma Frame 1000011819: h 26, pl 12, pr 24, radius 42)
-export function SectionBadge({ title }: { title: string }) {
+// Pill label above each section. Section titles are h2; the About label stays body text
+// because that block already has its own heading.
+export function SectionBadge({ title, heading = true }: { title: string; heading?: boolean }) {
   return (
-    <div className="self-start inline-flex items-center gap-[10px] h-[26px] pl-3 pr-6 rounded-[42px] bg-white border-[0.4px] border-[#E4E4E4] shadow-[0px_1px_0px_rgba(64,64,64,0.15)] body-text whitespace-nowrap">
-      <span aria-hidden="true" className="w-1 h-1 rounded-full bg-body-text shrink-0" />
-      <span>{title}</span>
+    <div
+      className={`self-start inline-flex items-center max-w-full px-6 rounded-[42px] bg-white border-[0.4px] border-[#E4E4E4] shadow-[0px_1px_0px_rgba(64,64,64,0.15)] ${
+        heading ? "py-2" : "h-[26px] body-text whitespace-nowrap"
+      }`}
+    >
+      {heading ? (
+        <h2 className="heading-h2 text-primary m-0 min-w-0">{title}</h2>
+      ) : (
+        <span>{title}</span>
+      )}
     </div>
   );
 }
@@ -87,7 +95,7 @@ export function AboutSection({
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-6">
-        {showBadge && <SectionBadge title="About" />}
+        {showBadge && <SectionBadge title="About" heading={false} />}
         <div className="flex flex-col gap-2 max-w-[809px]">
           <h2 className={`heading-h2 text-balance ${keepCase ? "" : "capitalize"}`}>{heading}</h2>
           {paragraphs.map((p, i) => (

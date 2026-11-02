@@ -71,7 +71,7 @@ export function BlogFaqSection({
   const items = customFaqs && customFaqs.length > 0 ? customFaqs : DEFAULT_BLOG_FAQS;
 
   return (
-    <section id={id} className="w-full pt-10 sm:pt-14 pb-12 sm:pb-16 scroll-mt-28">
+    <section id={id} className="w-full pb-12 sm:pb-16 scroll-mt-28">
       {/* Anchor targets */}
       {id !== "faq" && <div id="faq" className="sr-only" />}
       {id !== "frequently-asked-questions" && <div id="frequently-asked-questions" className="sr-only" />}
