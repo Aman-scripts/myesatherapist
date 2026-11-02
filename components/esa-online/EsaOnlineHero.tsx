@@ -55,7 +55,7 @@ export function EsaOnlineHero({
 
   return (
     <>
-      <h1 className="sr-only">{title}</h1>
+      <h1 className={showStats ? "sr-only" : "sr-only max-lg:hidden"}>{title}</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE & TABLET HERO (< 1024px)                   */}
       {/* ---------------------------------------------------- */}
@@ -166,26 +166,8 @@ export function EsaOnlineHero({
               </>
             ) : (
               <>
-                {stacked && (
-                  <div className="flex items-center justify-center gap-2 sm:gap-3 w-full max-w-[360px] sm:max-w-[513px]">
-                    {STATS.map((s) => (
-                      <div
-                        key={s.label}
-                        className="flex-1 rounded-[30px] bg-background border border-white/80 shadow-[0px_2px_4px_rgba(0,0,0,0.12)] py-1.5 sm:py-2.5 px-1 flex flex-col items-center"
-                      >
-                        <span className="font-heading font-bold text-[15px] sm:text-[22px] leading-tight text-[#1A3D4F]">
-                          {s.value}
-                        </span>
-                        <span className="font-sans font-semibold text-[9px] sm:text-[12px] text-[#707070] whitespace-nowrap">{s.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
                 <div className="space-y-3.5 sm:space-y-6">
-                  <p aria-hidden="true" className="font-heading text-[26px] sm:text-5xl font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
-                    {title}
-                  </p>
+                  <h1 className="heading-h1 text-primary">{title}</h1>
                   <p className="font-sans text-[12.5px] sm:text-base text-body-text font-semibold leading-[1.65] max-w-[626px]">
                     {description}
                   </p>

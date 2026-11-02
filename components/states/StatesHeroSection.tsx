@@ -100,7 +100,6 @@ export function StatesHeroSection() {
             onStateSelect={handleStateSelect}
             onGetStartedClick={handleGetStarted}
             placeholder="Select your State"
-            selectTone="gold"
           />
 
           <p className="body-small text-body-text mt-4 text-center max-w-[260px]">

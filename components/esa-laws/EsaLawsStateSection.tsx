@@ -254,7 +254,8 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
             alt={`${entry.name} state map`}
             width={57}
             height={57}
-            className="object-contain"
+            className="h-[57px] w-[57px] object-contain"
+            style={{ width: 57, height: 57 }}
           />
         </div>
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">

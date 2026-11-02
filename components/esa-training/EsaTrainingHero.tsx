@@ -11,19 +11,33 @@ const POINTS = [
 export function EsaTrainingHero() {
   return (
     <section className="relative grid w-full grid-cols-[minmax(0,1fr)] overflow-hidden bg-background lg:flex lg:min-h-[46vw] lg:items-center xl:min-h-[654px]">
-      {/* Sizes the mobile / tablet hero to the portrait artwork */}
+      {/* Mobile cream wash, same full-bleed background as the homepage and PSD letter */}
+      <div className="pointer-events-none absolute inset-0 sm:hidden">
+        <BreakpointImage
+          media="(max-width: 639px)"
+          quality={90}
+          src="/Hero_image_for_mobile_all.png"
+          alt=""
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 639px) 100vw, 1px"
+        />
+      </div>
+      {/* Sizes the tablet hero to the portrait artwork */}
       <div aria-hidden="true" className="col-start-1 row-start-1 hidden aspect-[941/1672] sm:block lg:hidden" />
-      {/* Hero photo: portrait art on mobile / tablet, full-bleed on desktop */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 aspect-[941/1672] lg:hidden"
+        className="pointer-events-none absolute inset-x-0 bottom-0 hidden aspect-[941/1672] sm:block lg:hidden"
         style={{ maskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, #000 14%)" }}
       >
         <BreakpointImage
-          media="(max-width: 639px)"
-            quality={90} src="/Hero_image_for_mobile_all.png" alt="" fill className="object-cover object-bottom sm:hidden" sizes="(max-width: 639px) 100vw, 1px" />
-        <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90} src="/esa-training/esa-training-herosection_tablet.webp" alt="Woman sitting on the floor at home holding her cat" fill className="hidden object-cover object-bottom sm:block" sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px" />
+          quality={90}
+          src="/esa-training/esa-training-herosection_tablet.webp"
+          alt="Woman sitting on the floor at home holding her cat"
+          fill
+          className="object-cover object-bottom"
+          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
+        />
       </div>
       <BreakpointImage
         media="(min-width: 1024px)"

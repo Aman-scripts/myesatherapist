@@ -275,7 +275,7 @@ export function VideoTestimonialsGridSection() {
   const [activeVideo, setActiveVideo] = useState<VideoReviewItem | null>(null);
 
   return (
-    <section className="relative w-full bg-background pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-32">
+    <section className="relative w-full bg-background pt-[180px] sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-32">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

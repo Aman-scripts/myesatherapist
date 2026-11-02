@@ -123,8 +123,8 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
       {/* Heading */}
       <div className="flex items-center justify-center gap-4 sm:gap-5 lg:gap-6 mb-6 sm:mb-8 xl:mb-[32px] px-4">
         <div className="w-[50px] sm:w-[80px] h-[1px] bg-accent rounded-[10px] shrink-0" />
-        <h2 className="heading-h2 text-center shrink-0 capitalize">
-          As Seen On
+        <h2 className="heading-h2 text-center shrink-0">
+          In the News
         </h2>
         <div className="w-[50px] sm:w-[80px] h-[1px] bg-accent rounded-[10px] shrink-0" />
       </div>

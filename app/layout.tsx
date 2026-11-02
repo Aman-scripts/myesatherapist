@@ -18,13 +18,15 @@ export const viewport: Viewport = {
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap",
+  display: "optional",
+
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
-  display: "swap",
+  display: "optional",
+
 });
 
 const defaultSocial = socialImage("homepage", "Telehealth with a happy companion");
