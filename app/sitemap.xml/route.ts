@@ -122,20 +122,19 @@ export function GET() {
 
   const urls = buildEntries()
     .map((e) => {
-      const lastmod = startOfDayUtc(e.lastmod ?? now).toISOString();
+      const lastmod = startOfDayUtc(e.lastmod ?? now).toISOString().slice(0, 10);
       return [
         "  <url>",
         `    <loc>${escapeXml(absolute(e.path))}</loc>`,
         `    <lastmod>${lastmod}</lastmod>`,
         `    <changefreq>${e.changefreq}</changefreq>`,
-        `    <priority>${e.priority.toFixed(1)}</priority>`,
+        `    <priority>${e.priority}</priority>`,
         "  </url>",
       ].join("\n");
     })
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
 </urlset>
