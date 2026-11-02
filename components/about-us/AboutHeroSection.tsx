@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
@@ -15,12 +14,12 @@ export function AboutHeroSection() {
       <div className="block sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={80}
+          quality={70}
           src="/Hero_image_for_mobile_all.png"
           alt="About My ESA Therapist"
           fill
           className="object-cover object-bottom pointer-events-none"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="100vw"
         />
 
         {/* Content Container at Top */}

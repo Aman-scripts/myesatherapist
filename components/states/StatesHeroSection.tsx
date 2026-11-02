@@ -363,7 +363,7 @@ export function StatesHeroSection() {
                     <button
                       type="button"
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="inline-flex items-center justify-between gap-3 px-6 h-[54px] bg-background hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC] transition-all duration-200 cursor-pointer text-left min-w-[246px]"
+                      className="inline-flex items-center justify-between gap-3 px-6 h-[54px] bg-background hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-primary transition-all duration-200 cursor-pointer text-left min-w-[246px]"
                       aria-expanded={isDropdownOpen}
                     >
                       <div className="flex items-center gap-2.5">

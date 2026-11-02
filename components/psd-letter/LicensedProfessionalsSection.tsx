@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import { TherapistsSection } from "@/components/home/TherapistsSection";

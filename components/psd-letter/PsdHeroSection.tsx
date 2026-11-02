@@ -73,12 +73,12 @@ export function PsdHeroSection() {
       <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={90}
+          quality={70}
           src="/Hero_image_for_mobile_all.png"
           alt=""
           fill
           className="object-cover object-top"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="100vw"
         />
 
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
@@ -131,7 +131,7 @@ export function PsdHeroSection() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1190] min-h-[880px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
+          quality={70}
           src="/psd-letter/psd-hero-section-tablet.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
@@ -234,7 +234,7 @@ export function PsdHeroSection() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={70}
             src="/psd-letter/psd-herosection-new.webp"
             alt="Psychiatric Service Dog Letter Assistance"
             fill

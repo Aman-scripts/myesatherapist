@@ -25,7 +25,7 @@ export function QualifyingConditionsLearnMore() {
         />
         <div className="flex w-full flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[2.2vw] xl:gap-8">
           {GUIDES.map((guide) => (
-            <CtaButton key={guide.href} href={guide.href} className="w-full max-w-[473px] lg:w-auto lg:max-w-none">
+            <CtaButton key={guide.href} href={guide.href} wrap className="w-full max-w-[473px]">
               {guide.label}
             </CtaButton>
           ))}

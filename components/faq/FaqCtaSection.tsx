@@ -1,4 +1,3 @@
-"use client";
 
 import { CtaBanner } from "@/components/home/CtaBanner";
 

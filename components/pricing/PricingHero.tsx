@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
@@ -15,12 +14,12 @@ export function PricingHero() {
       <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={90}
+            quality={70}
           src="/Hero_image_for_mobile_all.png"
           alt="Choose The Right ESA Package For You"
           fill
           className="object-cover object-bottom"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="100vw"
         />
 
         {/* Content Container at Top */}
@@ -61,7 +60,7 @@ export function PricingHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
+            quality={70}
           src="/pricing/pricing_section-hero_section_tablet.webp"
           alt="Choose The Right ESA Package For You"
           fill
@@ -114,7 +113,7 @@ export function PricingHero() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={90}
+            quality={70}
             src="/pricing/pricing_section-hero_section.webp"
             alt="Choose The Right ESA Package For You"
             fill
