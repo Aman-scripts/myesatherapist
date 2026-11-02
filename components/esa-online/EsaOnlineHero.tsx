@@ -154,11 +154,11 @@ export function EsaOnlineHero({
                 <div className="hidden sm:flex flex-col items-start gap-5 text-left">
                   <StatPills />
                   <p aria-hidden="true" className="heading-h1 text-primary">{title}</p>
-                  <p className="body-large text-[#1A3D4F]">{description}</p>
+                  <p className="body-large text-body-text">{description}</p>
                   <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
                     {buttonText}
                   </CtaButton>
-                  <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+                  <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
                     Not approved after your ESA evaluation? You get a full refund!.
                   </p>
                   <ReviewBadges />
@@ -212,11 +212,11 @@ export function EsaOnlineHero({
               <div className="max-w-[640px] flex flex-col items-start gap-5">
                 <StatPills />
                 <p aria-hidden="true" className="heading-h1 text-primary max-w-[620px]">{title}</p>
-                <p className="body-large text-[#1A3D4F] max-w-[560px]">{description}</p>
+                <p className="body-large text-body-text max-w-[560px]">{description}</p>
                 <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[260px]">
                   {buttonText}
                 </CtaButton>
-                <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+                <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
                   Not approved after your ESA evaluation? You get a full refund!.
                 </p>
                 <ReviewBadges />
@@ -225,7 +225,7 @@ export function EsaOnlineHero({
               <div className="max-w-[626px] space-y-6">
                 <div className="space-y-6">
                   <p aria-hidden="true" className="heading-h1 text-primary">{title}</p>
-                  <p className="body-large text-[#1A3D4F] max-w-[626px]">{description}</p>
+                  <p className="body-large text-body-text max-w-[626px]">{description}</p>
                 </div>
                 <CtaButton href={buttonHref}>{buttonText}</CtaButton>
                 <div className="pt-1">

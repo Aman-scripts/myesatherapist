@@ -50,7 +50,7 @@ function renderTextWithLinks(text: string): React.ReactNode {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[#1A3D4F] underline hover:text-[#1D6E72] font-bold transition-colors"
+        className="text-primary underline hover:text-[#1D6E72] font-bold transition-colors"
       >
         {label}
       </a>

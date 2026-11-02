@@ -107,7 +107,7 @@ function ResourcesMenu() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Resources"
-        className={`flex items-center gap-1.5 whitespace-nowrap body-small hover:text-[#1D6E72] transition-colors cursor-pointer ${
+        className={`flex items-center gap-1.5 whitespace-nowrap body-small text-primary hover:text-[#1D6E72] transition-colors cursor-pointer ${
           open ? "text-[#1D6E72]" : ""
         }`}
       >
@@ -129,7 +129,7 @@ function ResourcesMenu() {
               href={item.href}
               role="menuitem"
               onClick={() => setOpen(false)}
-              className="block px-7 py-3.5 body-text font-semibold text-[#1A3D4F] hover:bg-background hover:text-[#1D6E72] transition-colors font-manrope"
+              className="block px-7 py-3.5 body-text font-semibold text-body-text hover:bg-background hover:text-[#1D6E72] transition-colors font-manrope"
             >
               {item.label}
             </Link>
@@ -173,10 +173,10 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav Links (clean spacing, no overlap with logo) */}
-          <nav className="hidden lg:flex items-center gap-[28px] mx-6 shrink-0">
+          <nav className="hidden lg:flex items-center gap-[28px] mx-6 shrink-0 text-primary">
             <Link prefetch={false}
               href="/esa-doctors/"
-              className={`body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px] ${
+              className={`body-small text-primary hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px] ${
                 isDoctors ? "text-[#1D6E72] font-bold" : ""
               }`}
             >
@@ -184,14 +184,14 @@ export function Header() {
             </Link>
             <Link prefetch={false}
               href="/about-us/"
-              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
+              className="body-small text-primary hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
             >
               About Us
             </Link>
             <ResourcesMenu />
             <Link prefetch={false}
               href="/contact-us/"
-              className="body-small hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
+              className="body-small text-primary hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
             >
               Contact Us
             </Link>
@@ -245,7 +245,7 @@ export function Header() {
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
-            className="lg:hidden p-2 rounded-lg text-[#1E3E47] min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="lg:hidden p-2 rounded-lg text-primary min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -259,7 +259,7 @@ export function Header() {
           <Link
             prefetch={false}
             href="/state/"
-            className="flex items-center gap-2 whitespace-nowrap font-manrope text-[13px] font-semibold leading-[26px] text-primary"
+            className="flex items-center gap-2 whitespace-nowrap font-manrope text-[13px] font-medium leading-[26px] text-primary"
           >
             <span>See all 50 States</span>
             <ArrowRight className="h-4 w-4 text-primary" strokeWidth={1.5} />
@@ -291,8 +291,8 @@ export function Header() {
                 <Link prefetch={false}
                   key={st.slug}
                   href={href}
-                  className={`font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:text-primary transition-colors whitespace-nowrap ${
-                    isActive ? "text-primary font-bold" : ""
+                  className={`font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-primary transition-colors whitespace-nowrap ${
+                    isActive ? "font-bold" : ""
                   }`}
                 >
                   {st.name}
@@ -304,7 +304,7 @@ export function Header() {
           {/* Right: Frame 1000011909 (See all 50 States + Arrow) */}
           <Link prefetch={false}
             href="/state/"
-            className="font-manrope font-semibold text-[13px] xl:text-[14px] leading-[26px] text-primary hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
+            className="font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-primary hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
             <span>See all 50 States</span>
             <ArrowRight className="w-4 h-4 text-primary" strokeWidth={1.5} />
@@ -319,26 +319,26 @@ export function Header() {
         <div id="mobile-navigation" className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
           <Link prefetch={false}
             href="/esa-doctors/"
-            className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
+            className="block py-2 text-primary font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             Our Therapists
           </Link>
           <Link prefetch={false}
             href="/about-us/"
-            className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
+            className="block py-2 text-primary font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             About Us
           </Link>
           <button
             type="button"
-            className="w-full py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center justify-between cursor-pointer"
+            className="w-full py-2 text-primary font-medium text-base min-h-[44px] flex items-center justify-between cursor-pointer"
             aria-expanded={mobileResourcesOpen}
             onClick={() => setMobileResourcesOpen((v) => !v)}
           >
             <span>Resources</span>
-            <ChevronDown className={`w-4 h-4 text-[#1E3E47] transition-transform duration-200 ${mobileResourcesOpen ? "rotate-180" : ""}`} />
+            <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileResourcesOpen ? "rotate-180" : ""}`} />
           </button>
           {mobileResourcesOpen && (
             <div className="ml-3 flex flex-col border-l-2 border-[#F6EBCB] pl-4">
@@ -346,7 +346,7 @@ export function Header() {
                 <Link prefetch={false}
                   key={item.href}
                   href={item.href}
-                  className="py-2.5 text-[#1A3D4F] font-bold text-[15px] min-h-[44px] flex items-center"
+                  className="py-2.5 text-primary font-bold text-[15px] min-h-[44px] flex items-center"
                   onClick={() => {
                     setMobileOpen(false);
                     setMobileResourcesOpen(false);
@@ -359,7 +359,7 @@ export function Header() {
           )}
           <Link prefetch={false}
             href="/contact-us/"
-            className="block py-2 text-[#1E3E47] font-medium text-base min-h-[44px] flex items-center"
+            className="block py-2 text-primary font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             Contact Us

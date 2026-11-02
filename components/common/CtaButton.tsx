@@ -71,7 +71,7 @@ export function CtaButton({
     textColor = "text-color-gradient";
   } else if (isAccent) {
     bgClass = "bg-accent hover:bg-[#dba81f]";
-    textColor = "text-[#1A3D4F]";
+    textColor = "text-primary";
   }
 
   const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b|\bmin-w-\[\S+\]/.test(className);

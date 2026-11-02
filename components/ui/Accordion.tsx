@@ -40,7 +40,7 @@ export function AccordionItem({
               {category}
             </span>
           )}
-          <span className="font-semibold text-slate-900 text-base md:text-lg">
+          <span className="font-semibold text-primary text-base md:text-lg">
             {question}
           </span>
         </div>

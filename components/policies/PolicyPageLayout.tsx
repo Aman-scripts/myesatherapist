@@ -11,7 +11,7 @@ interface PolicyPageLayoutProps {
 
 export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
   return (
-    <div className="w-full bg-background min-h-screen text-slate-900 selection:bg-accent/30 selection:text-current">
+    <div className="w-full bg-background min-h-screen selection:bg-accent/30 selection:text-current">
       {/* 1. Hero Section */}
       <PolicyHero policy={policy} />
 

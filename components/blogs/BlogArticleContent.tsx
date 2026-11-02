@@ -350,7 +350,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 <div className="text-xs sm:text-sm text-[#69777C] font-medium">
                   {sec.sampleLetter.date}
                 </div>
-                <div className="font-semibold text-slate-800">
+                <div className="font-semibold text-primary">
                   {sec.sampleLetter.recipient}
                 </div>
                 <div className="space-y-4">
@@ -361,7 +361,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   ))}
                 </div>
                 <div className="pt-4 border-t border-[#EAE5DC] space-y-1">
-                  <p className="font-semibold text-slate-800">{sec.sampleLetter.closing}</p>
+                  <p className="font-semibold text-primary">{sec.sampleLetter.closing}</p>
                   {sec.sampleLetter.signoff.map((s, sIdx) => (
                     <p key={sIdx} className="text-xs sm:text-sm text-body-text font-medium">
                       {s}

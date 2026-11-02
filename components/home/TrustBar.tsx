@@ -46,7 +46,7 @@ export function TrustBar() {
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="text-left">
-                  <div className="text-sm font-bold text-slate-900 leading-tight">
+                  <div className="text-sm font-bold text-primary leading-tight">
                     {item.title}
                   </div>
                   <div className="text-xs text-slate-500 mt-0.5">

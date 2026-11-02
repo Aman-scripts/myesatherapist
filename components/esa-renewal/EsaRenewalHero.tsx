@@ -39,11 +39,11 @@ function HeroCopy() {
         <br />
         {HEADING_LINE_2}
       </h1>
-      <p className="body-large text-[#1A3D4F] max-w-[560px]">{DESCRIPTION}</p>
+      <p className="body-large text-body-text max-w-[560px]">{DESCRIPTION}</p>
       <CtaButton href="#pricing" variant="accent" className="w-auto min-w-[280px]">
         Start Your Renewal Online
       </CtaButton>
-      <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+      <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
         Not approved after your ESA evaluation? You get a full refund!.
       </p>
       <ReviewBadges />

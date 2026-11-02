@@ -216,7 +216,7 @@ function RenderCardsContainer({
                     <div className="mt-auto flex justify-center pt-5">
                       <a
                         href={ctaHref}
-                        className="inline-flex h-11 w-fit max-w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-[#1A3D4F] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                        className="inline-flex h-11 w-fit max-w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                       >
                         {mobileButtonLabel(card.buttonText)}
                       </a>
@@ -242,7 +242,7 @@ function RenderCardsContainer({
               <div
                 className="hidden sm:flex w-[310px] self-stretch bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex-col items-center shrink-0"
               >
-                <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-[#1A3D4F] uppercase tracking-wider shrink-0">
+                <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-primary uppercase tracking-wider shrink-0">
                   MOST POPULAR
                 </div>
 
@@ -276,7 +276,7 @@ function RenderCardsContainer({
                   <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
                     <a
                       href={ctaHref}
-                      className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-[#1A3D4F] font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
+                      className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
                     >
                       {card.buttonText}
                     </a>
@@ -324,7 +324,7 @@ function RenderCardsContainer({
               <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
                 <a
                   href={ctaHref}
-                  className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-[#1A3D4F] font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
+                  className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
                     isLongButton
                       ? "w-[272px] px-2 whitespace-nowrap"
                       : "w-[154px]"

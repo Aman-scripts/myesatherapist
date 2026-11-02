@@ -56,7 +56,7 @@ export function BlogsHero() {
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="shrink-0 text-black/60"
+                className="shrink-0 text-body-text"
                 aria-hidden="true"
               >
                 <circle
@@ -81,7 +81,7 @@ export function BlogsHero() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search anything...."
-                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[15px] text-primary placeholder:text-black/60"
+                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[15px] text-primary placeholder:text-body-text"
               />
             </div>
 
@@ -150,7 +150,7 @@ export function BlogsHero() {
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="shrink-0 text-black/60"
+                className="shrink-0 text-body-text"
                 aria-hidden="true"
               >
                 <circle
@@ -175,7 +175,7 @@ export function BlogsHero() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search anything...."
-                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] text-primary placeholder:text-black/60"
+                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] text-primary placeholder:text-body-text"
               />
             </div>
 
@@ -249,7 +249,7 @@ export function BlogsHero() {
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 text-black/60"
+                    className="shrink-0 text-body-text"
                     aria-hidden="true"
                   >
                     <circle
@@ -274,7 +274,7 @@ export function BlogsHero() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search anything...."
-                    className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] xl:text-[18px] leading-[30px] text-primary placeholder:text-black/60"
+                    className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] xl:text-[18px] leading-[30px] text-primary placeholder:text-body-text"
                   />
                 </div>
 

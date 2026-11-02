@@ -18,7 +18,7 @@ function CheckmarkIcon() {
       <circle cx="9" cy="9" r="9" fill="var(--color-accent)" />
       <path
         d="M5.5 9.2L7.8 11.5L12.5 6.5"
-        stroke="#1A3D4F"
+        stroke="#2E5A66"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

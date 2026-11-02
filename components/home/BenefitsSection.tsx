@@ -65,7 +65,7 @@ export function BenefitsSection() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6F3F0] text-[#0F5B4C] text-xs font-bold uppercase tracking-wider">
             Key ESA Advantages
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
             Why Choose My ESA Therapist?
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -92,7 +92,7 @@ export function BenefitsSection() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0F5B4C] transition-colors">
+                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-[#0F5B4C] transition-colors">
                     {benefit.title}
                   </h3>
 

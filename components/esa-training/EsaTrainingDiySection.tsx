@@ -62,7 +62,7 @@ export function EsaTrainingDiySection() {
                   {card.items.map((item) => (
                     <li key={item} className="flex items-start gap-[18px] lg:gap-[1.2vw] xl:gap-[18px]">
                       <Check />
-                      <span className="font-sans text-base font-semibold leading-[1.65] text-[#1E3E47] sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] xl:leading-[30px]">
+                      <span className="font-sans text-base font-semibold leading-[1.65] text-primary sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] xl:leading-[30px]">
                         {item}
                       </span>
                     </li>

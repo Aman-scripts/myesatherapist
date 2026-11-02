@@ -125,7 +125,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30 selection:text-current">
+    <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30 selection:text-current">
       {/* Article Schema.org JSON-LD */}
       <script
         type="application/ld+json"

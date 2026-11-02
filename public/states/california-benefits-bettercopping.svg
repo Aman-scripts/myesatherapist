@@ -5,19 +5,19 @@
 <path d="M37.9431 46.1866C37.825 45.7394 37.3609 45.4694 36.9137 45.5875L33.699 46.4482C28.4087 47.8572 22.7387 46.4482 18.7056 42.7863L18.8321 42.8116C19.2878 42.9128 19.735 42.6175 19.8362 42.1619C19.9375 41.7063 19.6421 41.2591 19.1865 41.1578L16.2165 40.5166C15.9381 40.4575 15.6512 40.5419 15.4487 40.736C15.2462 40.93 15.1534 41.2169 15.204 41.4953L15.7525 44.4907C15.8284 44.8957 16.1828 45.1825 16.5793 45.1825C16.63 45.1825 16.6806 45.1825 16.7312 45.1657C17.1868 45.0813 17.4906 44.6425 17.4062 44.1869L17.3387 43.8157C20.6715 46.9628 25.0675 48.6757 29.5646 48.6757C31.0834 48.6757 32.619 48.4816 34.1209 48.0766L37.3356 47.216C37.7828 47.0978 38.0528 46.6338 37.9346 46.1866H37.9431Z" fill="url(#paint3_linear_4202_2580)"/>
 <defs>
 <linearGradient id="paint0_linear_4202_2580" x1="3.375" y1="11.3906" x2="28.6755" y2="35.9237" gradientUnits="userSpaceOnUse">
-<stop stop-color="#1A3D4F"/>
+<stop stop-color="#2E5A66"/>
 <stop offset="1" stop-color="#1D6E72"/>
 </linearGradient>
 <linearGradient id="paint1_linear_4202_2580" x1="25.3125" y1="17.2969" x2="50.625" y2="42.6094" gradientUnits="userSpaceOnUse">
-<stop stop-color="#1A3D4F"/>
+<stop stop-color="#2E5A66"/>
 <stop offset="1" stop-color="#1D6E72"/>
 </linearGradient>
 <linearGradient id="paint2_linear_4202_2580" x1="16.0371" y1="5.31836" x2="21.2323" y2="19.7997" gradientUnits="userSpaceOnUse">
-<stop stop-color="#1A3D4F"/>
+<stop stop-color="#2E5A66"/>
 <stop offset="1" stop-color="#1D6E72"/>
 </linearGradient>
 <linearGradient id="paint3_linear_4202_2580" x1="15.1904" y1="40.498" x2="20.3928" y2="54.985" gradientUnits="userSpaceOnUse">
-<stop stop-color="#1A3D4F"/>
+<stop stop-color="#2E5A66"/>
 <stop offset="1" stop-color="#1D6E72"/>
 </linearGradient>
 </defs>

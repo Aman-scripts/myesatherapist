@@ -104,7 +104,7 @@ export default async function DynamicStatePage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* State JSON-LD Structured Data */}
       {data.schema && (
         <script

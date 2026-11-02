@@ -101,7 +101,7 @@ const PSD_FAQS: FaqItem[] = [
 
 export default function PsdLetterPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"

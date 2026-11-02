@@ -25,7 +25,7 @@ const schema = {
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900">
+    <div className="min-h-screen flex flex-col bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(schema) }} />
       <TopBanner />
       <Header />

@@ -74,7 +74,7 @@ const STATES_FAQS: FaqItem[] = [
 
 export default function StatesDirectoryPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-slate-900 selection:bg-accent/30">
+    <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30">
       {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"

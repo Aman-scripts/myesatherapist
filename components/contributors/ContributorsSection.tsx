@@ -76,7 +76,7 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
           aria-label={`${person.name} LinkedIn Profile`}
           className="w-8 h-8 rounded-full bg-accent hover:bg-[#dba81f] flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105"
         >
-          <LinkedinIcon className="w-4 h-4 text-[#1A3D4F]" />
+          <LinkedinIcon className="w-4 h-4 text-primary" />
         </a>
       </div>
 
