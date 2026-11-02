@@ -444,7 +444,7 @@ export const esaLetterForHousingSchemas = [
             "name": "Can a landlord say no to an ESA because it's too difficult to accommodate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "In limited situations, yes. A landlord may deny an ESA request if accommodating the animal would create an undue burden, such as significant operational difficulty or expense. However, inconvenience alone is not enough -- there must be a legitimate, well-supported reason tied to the property or its operation."
+              "text": "In limited situations, yes. A landlord may deny an ESA request if accommodating the animal would create an undue burden, such as significant operational difficulty or expense. However, inconvenience alone is not enough, there must be a legitimate, well-supported reason tied to the property or its operation."
             }
           },
           {
@@ -460,7 +460,7 @@ export const esaLetterForHousingSchemas = [
             "name": "How long should a landlord take to respond to an ESA request?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Housing providers are expected to respond to reasonable accommodation requests within a reasonable timeframe, often around 10-14 days. Delays without explanation may warrant a written follow-up."
+              "text": "Housing providers are expected to respond to reasonable accommodation requests within a reasonable timeframe, often around 10–14 days. Delays without explanation may warrant a written follow-up."
             }
           },
           {

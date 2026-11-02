@@ -11,7 +11,7 @@ const CARDS = [
   },
   {
     title: "No Pet Policies",
-    description: "Landlords must allow ESAs as a reasonable accommodation, even in buildings with a general “no-pet” policy.",
+    description: "Landlords must allow ESAs even if there’s a general “no-pet” policy.",
     icon: "/ESA ICons/Icon-20.svg",
   },
   {
@@ -38,7 +38,7 @@ const COLUMNS = [
     image: "/esa-housing/esa-letter-housing_housinglawssection-landlordobligatory.webp",
     alt: "Landlord reviewing a lease agreement with a tenant and her dog",
     items: [
-      "No breed, size, or weight restrictions",
+      "Must allow housing regardless of pet policies",
       "Must not require special training, certification, or licensing for your ESA",
       "Must not deny housing because your ESA is an emotional support animal",
       "Must respect privacy and cannot demand detailed medical records beyond a valid ESA letter",

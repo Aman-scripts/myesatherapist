@@ -5,33 +5,33 @@ import { SectionHeader } from "./EsaHousingShared";
 const CARDS = [
   {
     icon: "/ESA ICons/Glyph-2.svg",
-    title: "Licensed Psychiatrist (MD Or DO)",
-    description: "Medical doctors (MD or DO) trained in mental health who can evaluate emotional or psychiatric conditions.",
+    title: "Licensed Psychiatrist (MD or DO)",
+    description: "Medical doctors trained in mental health who can evaluate emotional or psychiatric conditions.",
   },
   {
     icon: "/ESA ICons/Icon-41.svg",
-    title: "Licensed Psychologist (PhD Or PsyD)",
-    description: "Doctoral-level professionals (PhD or PsyD) who assess mental and emotional health through a structured clinical evaluation.",
+    title: "Licensed Psychologist (PhD or PsyD)",
+    description: "Doctoral-level professionals who assess mental and emotional health through clinical evaluation.",
   },
   {
     icon: "/ESA ICons/Icon-34.svg",
-    title: "Licensed Therapist (LMFT Or LCSW)",
-    description: "Master’s-level clinicians who provide counseling and assess emotional or behavioral concerns under their state license.",
+    title: "Licensed Therapist (LMFT or LCSW)",
+    description: "Master’s-level clinicians who provide counseling and assess emotional or behavioral concerns.",
   },
   {
     icon: "/ESA ICons/Icon-33.svg",
     title: "Licensed Professional Counselor (LPC / LCPC)",
-    description: "State-licensed mental health counselors trained to evaluate emotional challenges and whether emotional support is clinically appropriate.",
+    description: "State-licensed mental health counselors trained to evaluate emotional challenges.",
   },
   {
     icon: "/ESA ICons/Icon-8.svg",
     title: "Licensed Clinical Social Worker (LCSW)",
-    description: "Licensed professionals with advanced training in mental health assessment, counseling, and evaluating emotional support needs.",
+    description: "Professionals with advanced training in mental health assessment and counseling.",
   },
   {
     icon: "/ESA ICons/Icon-18.svg",
     title: "Psychiatric Mental Health Nurse (PMHN / PMHNP)",
-    description: "Advanced practice nurses specializing in mental health who can evaluate emotional and psychiatric conditions.",
+    description: "Advanced practice nurses specializing in mental health who can evaluate psychiatric conditions.",
   },
 ];
 

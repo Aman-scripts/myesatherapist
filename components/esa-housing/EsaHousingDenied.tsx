@@ -66,6 +66,10 @@ export function EsaHousingDenied() {
               </div>
             ))}
           </div>
+
+          <p className="body-text text-body-text text-center lg:text-left">
+            <strong>Note:</strong> HUD’s May 22, 2026 update may affect how ESA housing accommodation requests are reviewed, including the assessment of supporting documentation and disability-related needs.
+          </p>
         </div>
 
       </div>

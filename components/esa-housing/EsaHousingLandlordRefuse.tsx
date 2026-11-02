@@ -4,25 +4,25 @@ import { SectionHeader } from "./EsaHousingShared";
 
 const REASONS = [
   {
-    title: "Invalid Or Unverifiable ESA Documentation",
+    title: "Invalid or Unverifiable ESA Documentation",
     icon: "/ESA ICons/Icon-17.svg",
     description:
       "A landlord may deny an ESA request if the letter is fraudulent, outdated, or issued by an unlicensed provider. ESA documentation must come from a properly licensed mental health professional.",
   },
   {
-    title: "Health Or Safety Conflicts",
+    title: "Health or Safety Conflicts",
     icon: "/ESA ICons/Glyph-2.svg",
     description:
       "If another resident has a documented medical condition that could be significantly affected, a landlord may evaluate whether accommodations can be made without compromising health or safety.",
   },
   {
-    title: "Behavior Or Safety Concerns",
+    title: "Behavior or Safety Concerns",
     icon: "/ESA ICons/Icon-44.svg",
     description:
       "An ESA may be restricted if it displays aggressive behavior, causes repeated disturbances, or poses a genuine safety risk to others within the property.",
   },
   {
-    title: "Lack Of Reasonable Accommodation",
+    title: "Lack of Reasonable Accommodation",
     icon: "/ESA ICons/Icon-20.svg",
     description:
       "If accommodating the ESA would impose an undue burden due to space, structural, or operational limitations, a landlord may deny the request.",
