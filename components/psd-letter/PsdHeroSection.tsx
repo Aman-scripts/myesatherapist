@@ -3,8 +3,7 @@ import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
-import { HeroStateDropdown } from "@/components/common/HeroStateDropdown";
-import { CtaButton } from "@/components/common/CtaButton";
+import { HeroCtaGroup } from "@/components/common/HeroCtaGroup";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -13,12 +12,6 @@ const TRUSTPILOT_GREEN = "#00B67A";
 const statsData = [
   { value: "51,488+", label: "Mental Health Evaluations" },
   { value: "7+", label: "Years Serving" },
-  { value: "100%", label: "Moneyback Guarantee" },
-];
-
-const desktopStats = [
-  { value: "64,739+", label: "Mental Health Evaluations" },
-  { value: "5+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
@@ -40,11 +33,11 @@ export function PsdHeroSection() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/Hero_image_for_mobile_all.webp"
+          src="/psd-letter/psd-herosection-mobile.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           className="object-cover object-top"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="100vw"
         />
 
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
@@ -64,151 +57,163 @@ export function PsdHeroSection() {
             placeholder="Select your State"
           />
 
-          <p className="body-small text-center mt-4 max-w-[260px]">
-            If not approved after your evaluation?
-            <br />
-            You get a full refund.
+          <p className="body-small mt-4 max-w-[280px]">
+            Not approved after your PSD evaluation? You get a full refund!.
           </p>
 
-          <div className="mt-4 flex flex-col items-center gap-3">
-            {mobileStats.map((stat) => (
+          {/* Guarantee Pills */}
+          <div className="mt-5 flex flex-col items-center gap-3">
+            {mobileStats.map((stat, i) => (
               <div
                 key={stat.label}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2.5 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
               >
-                <span className="body-strong text-primary">{stat.value}</span>
-                <span className="body-text text-primary">{stat.label}</span>
+                {i === 2 ? (
+                  <span className="font-semibold text-primary">{stat.value}</span>
+                ) : (
+                  <span className="font-semibold text-color-gradient">{stat.value}</span>
+                )}
+                <span className="text-sm font-medium text-primary">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <div className="mt-5">
-            <ReviewBadges />
-          </div>
+          <ReviewBadges
+            className="mt-6 flex-col gap-3"
+            showGoogleReviews
+            showTrustpilot
+          />
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. TABLET PSD HERO SECTION (sm: to lg: / 640px-1023px) */}
-      {/* Matches Screenshot 3 (iPad Pro 11)                   */}
+      {/* 2. TABLET PSD HERO SECTION (sm:block lg:hidden)      */}
+      {/* Matches Screenshot 3 (Figma Tablet 834x1200)         */}
       {/* ---------------------------------------------------- */}
-      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1200] min-h-[780px] max-h-[1050px] overflow-hidden">
+      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={70}
           src="/psd-letter/psd-hero-section-tablet.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
-          className="object-cover object-center"
+          className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
-        <div className="absolute inset-x-0 top-0 pt-16 px-6 text-center z-10 flex flex-col items-center">
-          <div className="inline-flex items-center gap-3 flex-wrap justify-center">
-            {statsData.map((stat) => (
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start pt-16 px-6 text-center">
+          <p aria-hidden="true" className="heading-h1 capitalize max-w-[620px]">
+            Psychiatric Service Dog
+            <br />
+            Letter Assistance
+          </p>
+
+          <p className="body-large text-body-text max-w-[540px] mt-4">
+            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter is right for you.
+          </p>
+
+          <HeroCtaGroup
+            containerClassName="flex items-center justify-center gap-3 flex-wrap mt-6"
+            ctaClassName="w-auto"
+            defaultHref="#pricing"
+          />
+
+          <p className="body-small text-body-text max-w-[420px] mt-4">
+            Not approved after your PSD evaluation? You get a full refund!.
+          </p>
+
+          {/* Tablet Stats Pills */}
+          <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
+            {statsData.map((stat, i) => (
               <div
                 key={stat.label}
-                className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+                className="inline-flex items-center gap-2 rounded-full bg-background px-5 py-2.5 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
               >
-                <span className="body-strong text-primary">{stat.value}</span>
-                <span className="body-text text-primary">{stat.label}</span>
+                {i === 2 ? (
+                  <span className="font-semibold text-primary">{stat.value}</span>
+                ) : (
+                  <span className="font-semibold text-color-gradient">{stat.value}</span>
+                )}
+                <span className="text-sm font-medium text-primary">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <p aria-hidden="true" className="heading-h1 capitalize mx-auto max-w-lg mt-6">
-            Psychiatric Service
-            <br />
-            Dog Letter Assistance
-          </p>
-
-          <p className="body-large max-w-md mx-auto mt-4">
-            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
-          </p>
-
-          <div className="flex items-center justify-center gap-3 flex-wrap mt-6">
-            <HeroStateDropdown />
-
-            <CtaButton
-              href="#pricing"
-              variant="accent"
-              className="w-auto"
-            >
-              Get Started
-            </CtaButton>
-          </div>
-
-          <p className="body-small text-center mt-3">
-            Not approved after your PSD evaluation? You get a full refund!
-          </p>
+          <ReviewBadges
+            className="mt-6 flex-row gap-6"
+            showGoogleReviews
+            showTrustpilot
+          />
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP PSD HERO SECTION (lg: / 1024px and up)     */}
-      {/* Matches Screenshot 1                                 */}
+      {/* 3. DESKTOP PSD HERO SECTION (lg:block / >= 1024px)   */}
+      {/* Matches Screenshot 1 (Figma Desktop 1440x737)        */}
       {/* ---------------------------------------------------- */}
       <DesktopScaleWrapper
-        designHeight={814}
+        designHeight={737}
         designWidth={1440}
         wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
             quality={70}
-            src="/psd-letter/psd-herosection-new.webp"
+            src="/psd-letter/psd-hero-section.webp"
             alt="Psychiatric Service Dog Letter Assistance"
             fill
-            className="object-cover object-left"
-            sizes="(min-width: 1024px) 1440px, 1px"
+            className="object-cover object-bottom"
+            sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[814px] mx-auto">
-          <div className="absolute left-[80px] top-[72px] z-10 flex w-[760px] flex-col items-start">
-            <div className="flex items-center gap-3">
-              {desktopStats.map((stat) => (
+        <div className="relative w-[1440px] h-[737px] flex items-center">
+          {/* Left Content Area (Frame 1000011929: left: 91px, top: 121px, width: 624px) */}
+          <div className="absolute left-[91px] top-[121px] w-[624px] flex flex-col z-10">
+            <p aria-hidden="true" className="heading-h1 capitalize text-primary text-[48px]! leading-[56px]!">
+              Psychiatric Service Dog
+              <br />
+              Letter Assistance
+            </p>
+
+            <p className="body-large text-body-text max-w-[539px] mt-4">
+              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter is right for you.
+            </p>
+
+            {/* Desktop CTA Group */}
+            <HeroCtaGroup
+              containerClassName="mt-6 flex items-center gap-3"
+              dropdownClassName="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+              ctaClassName="w-[192px]"
+              defaultHref="#pricing"
+            />
+
+            <p className="body-small text-body-text mt-3">
+              Not approved after your PSD evaluation? You get a full refund!.
+            </p>
+
+            {/* Stats Row */}
+            <div className="mt-8 flex items-center gap-3">
+              {statsData.map((stat, i) => (
                 <div
                   key={stat.label}
-                  className="flex h-[77px] w-auto min-w-[176px] shrink-0 flex-col items-center justify-center rounded-[30px] bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-background px-4 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
                 >
-                  <span className="body-large text-color-gradient leading-none">{stat.value}</span>
-                  <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{stat.label}</span>
+                  {i === 2 ? (
+                    <span className="font-semibold text-primary">{stat.value}</span>
+                  ) : (
+                    <span className="font-semibold text-color-gradient">{stat.value}</span>
+                  )}
+                  <span className="text-xs font-medium text-primary">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-            <p aria-hidden="true" className="heading-h1 capitalize mt-6">
-              Psychiatric Service
-              <br />
-              Dog Letter Assistance
-            </p>
-
-            <p className="body-large mt-4 max-w-[520px]">
-              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
-            </p>
-
-            <div className="mt-6 flex items-center gap-3">
-              <HeroStateDropdown
-                buttonClassName="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-              />
-
-              <CtaButton
-                href="#pricing"
-                variant="accent"
-                className="w-[192px]"
-              >
-                Get Started
-              </CtaButton>
-            </div>
-
-            <p className="body-small mt-3">
-              Not approved after your PSD evaluation? You get a full refund!
-            </p>
-
-            <div className="mt-6">
-              <ReviewBadges />
-            </div>
+            <ReviewBadges
+              className="mt-6 flex-row gap-6"
+              showGoogleReviews
+              showTrustpilot
+            />
           </div>
         </div>
       </DesktopScaleWrapper>
