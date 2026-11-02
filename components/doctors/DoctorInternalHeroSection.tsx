@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { DoctorProfile } from "@/data/doctorsData";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { CtaButton } from "@/components/common/CtaButton";
 
 interface DoctorInternalHeroSectionProps {
@@ -52,15 +53,26 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
 
   return (
     <section className="relative w-full overflow-hidden bg-background">
-      <div className="absolute inset-0 pointer-events-none">
-        <Image
+      <div className="absolute inset-0 pointer-events-none sm:hidden">
+        <BreakpointImage
+          media="(max-width: 639px)"
+          quality={70}
+          src="/Hero_image_for_mobile_all.webp"
+          alt=""
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 639px) 100vw, 1px"
+        />
+      </div>
+      <div className="absolute inset-0 pointer-events-none hidden sm:block">
+        <BreakpointImage
+          media="(min-width: 640px)"
           quality={90}
           src="/doctors/doctor_internal.webp"
           alt="Licensed mental health professional"
           fill
-          priority
           className="object-cover object-[75%_center] lg:object-right"
-          sizes="100vw"
+          sizes="(min-width: 640px) 100vw, 1px"
         />
       </div>
 

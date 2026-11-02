@@ -207,7 +207,7 @@ function RenderCardsContainer({
                           <span className="flex h-[22px] shrink-0 items-center">
                             <CheckmarkIcon />
                           </span>
-                          <span className="min-w-0 font-sans text-[14px] font-semibold leading-[22px] text-body-text">
+                          <span className="body-small min-w-0 text-body-text">
                             {feature}
                           </span>
                         </div>
@@ -266,7 +266,7 @@ function RenderCardsContainer({
                     {card.features.map((f) => (
                       <div key={f} className="flex items-start gap-[8px]">
                         <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
-                        <span className="font-sans font-semibold text-[14px] leading-[22px] text-body-text">
+                        <span className="body-small text-body-text">
                           {f}
                         </span>
                       </div>
@@ -314,7 +314,7 @@ function RenderCardsContainer({
                 {card.features.map((f) => (
                   <div key={f} className="flex items-start gap-[8px]">
                     <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
-                    <span className="font-sans font-semibold text-[14px] leading-[22px] text-body-text">
+                    <span className="body-small text-body-text">
                       {f}
                     </span>
                   </div>
@@ -476,7 +476,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
         ].map((f) => (
           <div key={f} className="flex items-center gap-[8px] min-h-[26px]">
             <CheckmarkIcon />
-            <span className="font-sans font-semibold text-[14px] leading-[26px] text-body-text">
+            <span className="body-small text-body-text">
               {f}
             </span>
           </div>

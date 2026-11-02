@@ -54,7 +54,7 @@ export function DoctorsHeroSection() {
             src="/doctors/doctors_hero-section.webp"
             alt={HEADING}
             fill
-            className="object-cover object-right"
+            className="object-cover object-[right_35%]"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
