@@ -16,6 +16,12 @@ const statsData = [
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
+const desktopStats = [
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "5+", label: "Years Serving" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
+
 const mobileStats = [
   { value: "7+", label: "Years Serving" },
   { value: "64,739+", label: "Mental Health Evaluations" },
@@ -34,11 +40,11 @@ export function PsdHeroSection() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/Hero_image_for_mobile_all.png"
+          src="/Hero_image_for_mobile_all.webp"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           className="object-cover object-top"
-          sizes="100vw"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
@@ -159,51 +165,50 @@ export function PsdHeroSection() {
         }
       >
         <div className="relative w-[1440px] h-[814px] mx-auto">
-          <div className="absolute top-[85px] right-[40px] w-[574px] flex flex-col items-center">
-            <div className="flex w-full flex-col items-center">
-              <div className="flex items-center gap-3 w-max justify-end self-end">
-                {statsData.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] shrink-0"
-                  >
-                    <span className="body-strong text-primary">{stat.value}</span>
-                    <span className="body-text text-primary">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
-
-              <p aria-hidden="true" className="heading-h1 capitalize text-center mt-6">
-                Psychiatric Service
-                <br />
-                Dog Letter Assistance
-              </p>
-
-              <p className="body-large text-center w-[463px] mt-4">
-                Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
-              </p>
-
-              <div className="flex items-center justify-center gap-3 mt-6">
-                <HeroStateDropdown
-                  buttonClassName="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-                />
-
-                <CtaButton
-                  href="#pricing"
-                  variant="accent"
-                  className="w-[192px]"
+          <div className="absolute left-[80px] top-[72px] z-10 flex w-[760px] flex-col items-start">
+            <div className="flex items-center gap-3">
+              {desktopStats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex h-[77px] w-[176px] shrink-0 flex-col items-center justify-center rounded-[30px] bg-background px-3 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                 >
-                  Get Started
-                </CtaButton>
-              </div>
-
-              {/* Refund guarantee note */}
-              <p className="body-small text-center w-[463px] pt-1">
-                Not approved after your PSD evaluation? You get a full refund!
-              </p>
+                  <span className="body-large text-color-gradient leading-none">{stat.value}</span>
+                  <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{stat.label}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="mt-[24px]"><ReviewBadges /></div>
+            <p aria-hidden="true" className="heading-h1 capitalize mt-6">
+              Psychiatric Service
+              <br />
+              Dog Letter Assistance
+            </p>
+
+            <p className="body-large mt-4 max-w-[520px]">
+              Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
+            </p>
+
+            <div className="mt-6 flex items-center gap-3">
+              <HeroStateDropdown
+                buttonClassName="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
+              />
+
+              <CtaButton
+                href="#pricing"
+                variant="accent"
+                className="w-[192px]"
+              >
+                Get Started
+              </CtaButton>
+            </div>
+
+            <p className="body-small mt-3">
+              Not approved after your PSD evaluation? You get a full refund!
+            </p>
+
+            <div className="mt-6">
+              <ReviewBadges />
+            </div>
           </div>
         </div>
       </DesktopScaleWrapper>

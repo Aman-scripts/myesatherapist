@@ -145,7 +145,6 @@ export function WhatIsPsdSection() {
                   fill
                   className="object-cover object-right h-full w-full"
                   sizes="727px"
-                  priority
                 />
               </div>
 

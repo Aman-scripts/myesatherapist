@@ -190,7 +190,6 @@ export function PsdCapabilitiesSection() {
               fill
               className="object-contain object-right"
               sizes="641px"
-              priority
             />
           </div>
         </div>

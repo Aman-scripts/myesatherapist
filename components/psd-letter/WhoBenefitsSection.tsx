@@ -33,11 +33,6 @@ const benefitsData = [
     description: "Individuals who want a licensed mental health professional to assess whether a psychiatric service dog may be appropriate for their needs.",
     icon: "/ESA ICons/Icon-17.svg",
   },
-  {
-    title: "People Seeking Workplace Support",
-    description: "Individuals who may need professional PSD documentation when discussing disability-related accommodations with an employer.",
-    icon: "/ESA ICons/Icon-12.svg",
-  },
 ];
 
 export function WhoBenefitsSection() {
