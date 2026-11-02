@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import {
@@ -36,7 +35,6 @@ export function MobileHeroActionButtons({
   onGetStartedClick,
   selectTone = "teal",
 }: MobileHeroActionButtonsProps) {
-  const router = useRouter();
   const [internalState, setInternalState] = useState(selectedState);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -58,11 +56,7 @@ export function MobileHeroActionButtons({
   const handleSelect = (slug: string) => {
     setIsOpen(false);
     setInternalState(slug);
-    if (onStateSelect) {
-      onStateSelect(slug);
-    } else {
-      router.push(`/esa-letter-${slug}/`);
-    }
+    onStateSelect?.(slug);
   };
 
   const activeSlug = selectedState || internalState;
@@ -128,8 +122,8 @@ export function MobileHeroActionButtons({
 
       {/* Frame 1000011890: Get Started Button */}
       <CtaButton
-        href={getStartedHref}
-        onClick={onGetStartedClick}
+        href={activeSlug ? `/esa-letter-${activeSlug}/` : onGetStartedClick ? undefined : getStartedHref}
+        onClick={activeSlug ? undefined : onGetStartedClick}
         variant="accent"
         className="w-[192px]"
       >

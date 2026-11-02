@@ -47,7 +47,6 @@ export function StatesHeroSection() {
   const handleStateSelect = (slug: string) => {
     setSelectedState(slug);
     setIsDropdownOpen(false);
-    router.push(`/esa-letter-${slug}/`);
   };
 
   const handleGetStarted = () => {

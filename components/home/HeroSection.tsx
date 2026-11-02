@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
@@ -61,7 +60,6 @@ const mobileGuaranteePills = [
 ];
 
 export function HeroSection() {
-  const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRefMobile = useRef<HTMLDivElement>(null);
@@ -92,8 +90,9 @@ export function HeroSection() {
   const handleStateSelect = (slug: string) => {
     setSelectedState(slug);
     setIsDropdownOpen(false);
-    router.push(`/esa-letter-${slug}/`);
   };
+
+  const getStartedHref = selectedState ? `/esa-letter-${selectedState}/` : "#how-it-works";
 
   return (
     <section className="relative z-40 bg-background">
@@ -252,7 +251,7 @@ export function HeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <CtaButton href="#how-it-works" variant="accent" className="w-full sm:w-[192px]">
+            <CtaButton href={getStartedHref} variant="accent" className="w-full sm:w-[192px]">
               Get Started
             </CtaButton>
           </div>
@@ -365,7 +364,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Get Started Button */}
-                <CtaButton href="#how-it-works" variant="accent" className="w-[192px]">
+                <CtaButton href={getStartedHref} variant="accent" className="w-[192px]">
                   Get Started
                 </CtaButton>
               </div>

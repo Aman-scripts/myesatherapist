@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import {
@@ -16,6 +15,8 @@ interface HeroStateDropdownProps {
   buttonClassName?: string;
   iconSize?: number;
   placeholder?: string;
+  /** Called when a state is chosen. Navigation happens from the Get Started button. */
+  onChange?: (slug: string) => void;
 }
 
 export function HeroStateDropdown({
@@ -23,8 +24,8 @@ export function HeroStateDropdown({
   buttonClassName = "flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary",
   iconSize = 20,
   placeholder = "Select your State",
+  onChange,
 }: HeroStateDropdownProps) {
-  const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -46,7 +47,7 @@ export function HeroStateDropdown({
   const handleSelect = (slug: string) => {
     setSelectedState(slug);
     setIsOpen(false);
-    router.push(`/esa-letter-${slug}/`);
+    onChange?.(slug);
   };
 
   return (
