@@ -1,5 +1,5 @@
 import { STATE_INDEX } from "@/data/stateIndex";
-import { PSD_SURVEY_URL, SURVEY_STATE_SLUGS } from "@/components/common/stateModalDestination";
+import { SURVEY_STATE_SLUGS, surveyRegisterUrl } from "@/components/common/stateModalDestination";
 
 const STATE_TIMEZONES: Record<string, string> = {
   AL: "CST", AK: "AKST", AZ: "MST", AR: "CST", CA: "PST",
@@ -70,7 +70,15 @@ function encodePreset(payload: object) {
 export function evaluationDestination(lead: EvaluationLead) {
   const entry = STATE_INDEX.find((state) => state.name === lead.stateName);
   const abbreviation = entry?.abbreviation || "CA";
-  if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) return PSD_SURVEY_URL;
+  if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
+    return surveyRegisterUrl({
+      firstName: lead.firstName,
+      lastName: lead.lastName,
+      email: lead.email,
+      phone: lead.phone,
+      state: lead.stateName,
+    });
+  }
 
   const payload = {
     first_name: lead.firstName.trim(),

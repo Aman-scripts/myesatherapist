@@ -12,7 +12,7 @@ import {
 import { CtaButton } from "@/components/common/CtaButton";
 import { openStateSelectModal } from "@/components/common/evaluationCta";
 import { promptSelectState } from "@/components/common/promptSelectState";
-import { PSD_SURVEY_URL } from "@/components/common/stateModalDestination";
+import { surveyRegisterUrl } from "@/components/common/stateModalDestination";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -130,7 +130,7 @@ export function MobileHeroActionButtons({
         href={
           activeSlug
             ? surveyOnStart
-              ? PSD_SURVEY_URL
+              ? surveyRegisterUrl({ state: STATE_INDEX_BY_SLUG[activeSlug]?.name })
               : `/esa-letter-${activeSlug}/`
             : undefined
         }

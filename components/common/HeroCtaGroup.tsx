@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { HeroStateDropdown } from "@/components/common/HeroStateDropdown";
 import { CtaButton } from "@/components/common/CtaButton";
 import { openStateSelectModal } from "@/components/common/evaluationCta";
-import { PSD_SURVEY_URL } from "@/components/common/stateModalDestination";
+import { surveyRegisterUrl } from "@/components/common/stateModalDestination";
+import { STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 
 interface HeroCtaGroupProps {
   defaultHref?: string;
@@ -28,7 +29,11 @@ export function HeroCtaGroup({
         buttonClassName={buttonClassName ?? dropdownClassName}
       />
       <CtaButton
-        href={selectedState ? PSD_SURVEY_URL : undefined}
+        href={
+          selectedState
+            ? surveyRegisterUrl({ state: STATE_INDEX_BY_SLUG[selectedState]?.name })
+            : undefined
+        }
         onClick={selectedState ? undefined : () => openStateSelectModal("psd")}
         stateModal={false}
         variant="accent"
