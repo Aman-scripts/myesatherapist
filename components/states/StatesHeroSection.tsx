@@ -10,6 +10,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { promptSelectState } from "@/components/common/promptSelectState";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
@@ -53,10 +54,7 @@ export function StatesHeroSection() {
     if (selectedState) {
       router.push(`/esa-letter-${selectedState}/`);
     } else {
-      const stateGrid = document.getElementById("choose-state-section");
-      if (stateGrid) {
-        stateGrid.scrollIntoView({ behavior: "smooth" });
-      }
+      promptSelectState();
     }
   };
 

@@ -10,6 +10,7 @@ import {
   STATE_DROPDOWN_ABBR,
 } from "@/components/common/stateDropdownClasses";
 import { CtaButton } from "@/components/common/CtaButton";
+import { promptSelectState } from "@/components/common/promptSelectState";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -28,7 +29,6 @@ export interface MobileHeroActionButtonsProps {
 export function MobileHeroActionButtons({
   selectedState = "",
   onStateSelect,
-  getStartedHref = "#how-it-works",
   getStartedText = "Get Started",
   placeholder = "Select your State",
   className = "",
@@ -122,8 +122,12 @@ export function MobileHeroActionButtons({
 
       {/* Frame 1000011890: Get Started Button */}
       <CtaButton
-        href={activeSlug ? `/esa-letter-${activeSlug}/` : onGetStartedClick ? undefined : getStartedHref}
-        onClick={activeSlug ? undefined : onGetStartedClick}
+        href={activeSlug ? `/esa-letter-${activeSlug}/` : undefined}
+        onClick={
+          activeSlug
+            ? undefined
+            : onGetStartedClick ?? promptSelectState
+        }
         variant="accent"
         className="w-[192px]"
       >

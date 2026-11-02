@@ -78,11 +78,7 @@ export function PsdHeroSection() {
             ))}
           </div>
 
-          <ReviewBadges
-            className="mt-6 flex-col gap-3"
-            showGoogleReviews
-            showTrustpilot
-          />
+          <ReviewBadges className="mt-6 flex-col gap-3" />
         </div>
       </div>
 
@@ -139,11 +135,7 @@ export function PsdHeroSection() {
             ))}
           </div>
 
-          <ReviewBadges
-            className="mt-6 flex-row gap-6"
-            showGoogleReviews
-            showTrustpilot
-          />
+          <ReviewBadges className="mt-6 flex-row gap-6" />
         </div>
       </div>
 
@@ -209,11 +201,7 @@ export function PsdHeroSection() {
               ))}
             </div>
 
-            <ReviewBadges
-              className="mt-6 flex-row gap-6"
-              showGoogleReviews
-              showTrustpilot
-            />
+            <ReviewBadges className="mt-6 flex-row gap-6" />
           </div>
         </div>
       </DesktopScaleWrapper>

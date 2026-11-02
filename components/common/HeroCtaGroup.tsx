@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { HeroStateDropdown } from "@/components/common/HeroStateDropdown";
 import { CtaButton } from "@/components/common/CtaButton";
+import { promptSelectState } from "@/components/common/promptSelectState";
 
 interface HeroCtaGroupProps {
   defaultHref?: string;
@@ -12,23 +13,22 @@ interface HeroCtaGroupProps {
 }
 
 export function HeroCtaGroup({
-  defaultHref = "#pricing",
   buttonClassName,
   dropdownClassName,
   ctaClassName = "w-[192px]",
   containerClassName = "flex items-center gap-3",
 }: HeroCtaGroupProps) {
   const [selectedState, setSelectedState] = useState("");
-  const href = selectedState ? `/esa-letter-${selectedState}/` : defaultHref;
 
   return (
     <div className={containerClassName}>
       <HeroStateDropdown
         onChange={setSelectedState}
-        buttonClassName={dropdownClassName}
+        buttonClassName={buttonClassName ?? dropdownClassName}
       />
       <CtaButton
-        href={href}
+        href={selectedState ? `/esa-letter-${selectedState}/` : undefined}
+        onClick={selectedState ? undefined : promptSelectState}
         variant="accent"
         className={ctaClassName}
       >
@@ -37,3 +37,4 @@ export function HeroCtaGroup({
     </div>
   );
 }
+

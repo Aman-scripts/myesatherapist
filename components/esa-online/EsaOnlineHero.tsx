@@ -37,6 +37,7 @@ export function EsaOnlineHero({
   imageMobile,
   imageTablet,
   showStats = false,
+  refundText = "Not approved after your ESA evaluation? You get a full refund!.",
 }: {
   title?: string;
   description?: string;
@@ -50,6 +51,7 @@ export function EsaOnlineHero({
   imageTablet?: string;
   /** Stat pills, gold button, refund line, and review badges from the Figma heroes. */
   showStats?: boolean;
+  refundText?: string;
 } = {}) {
   const stacked = Boolean(imageMobile && imageTablet);
 
@@ -130,7 +132,7 @@ export function EsaOnlineHero({
                     {buttonText}
                   </CtaButton>
                   <p className="body-small text-body-text mt-4 max-w-[280px]">
-                    Not approved after your ESA evaluation? You get a full refund!.
+                    {refundText}
                   </p>
                   <div className="mt-5 flex flex-col items-center gap-3">
                     {[
@@ -159,7 +161,7 @@ export function EsaOnlineHero({
                     {buttonText}
                   </CtaButton>
                   <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
-                    Not approved after your ESA evaluation? You get a full refund!.
+                    {refundText}
                   </p>
                   <ReviewBadges />
                 </div>
@@ -217,7 +219,7 @@ export function EsaOnlineHero({
                   {buttonText}
                 </CtaButton>
                 <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
-                  Not approved after your ESA evaluation? You get a full refund!.
+                  {refundText}
                 </p>
                 <ReviewBadges />
               </div>

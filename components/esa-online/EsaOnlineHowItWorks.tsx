@@ -23,6 +23,12 @@ const STEPS = [
   },
 ];
 
+export type HowItWorksStep = {
+  image: string;
+  title: string;
+  description: string;
+};
+
 function StepArrow() {
   return (
     <>
@@ -38,19 +44,33 @@ function StepArrow() {
   );
 }
 
-export function EsaOnlineHowItWorks() {
+export function EsaOnlineHowItWorks({
+  title = "How Does Our Online ESA Letter Evaluation Work?",
+  subtitle = "A simple three-step process guided by a licensed mental health professional.",
+  steps = STEPS,
+  buttonText = "Get Started",
+  note = "ESA letters are provided solely when deemed clinically appropriate by the evaluating clinician.",
+  showCta = true,
+}: {
+  title?: string;
+  subtitle?: string;
+  steps?: HowItWorksStep[];
+  buttonText?: string;
+  note?: string;
+  showCta?: boolean;
+} = {}) {
   return (
     <section id="how-it-works" className="w-full bg-background py-16 sm:py-20 lg:py-24">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <div className="flex flex-col items-center gap-2 text-center max-w-[820px]">
-          <h2 className="heading-h2 text-primary">How Does Our Online ESA Letter Evaluation Work?</h2>
+          <h2 className="heading-h2 text-primary">{title}</h2>
           <p className="body-large text-body-text">
-            A simple three-step process guided by a licensed mental health professional.
+            {subtitle}
           </p>
         </div>
 
         <div className="flex w-full flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-4">
-          {STEPS.map((step, index) => (
+          {steps.map((step, index) => (
             <React.Fragment key={step.title}>
               {index > 0 && <StepArrow />}
               <div className="flex w-full max-w-[300px] flex-col items-center">
@@ -68,14 +88,18 @@ export function EsaOnlineHowItWorks() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-3">
-          <CtaButton href="/pricing/" variant="accent">
-            Get Started
-          </CtaButton>
-          <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
-            ESA letters are provided solely when deemed clinically appropriate by the evaluating clinician.
-          </p>
-        </div>
+        {showCta && (
+          <div className="flex flex-col items-center gap-3">
+            <CtaButton href="/pricing/" variant="accent">
+              {buttonText}
+            </CtaButton>
+            {note && (
+              <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
+                {note}
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

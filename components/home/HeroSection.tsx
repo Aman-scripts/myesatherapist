@@ -9,6 +9,7 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
+import { promptSelectState } from "@/components/common/promptSelectState";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const POPULAR_STATES = STATE_INDEX;
@@ -92,7 +93,7 @@ export function HeroSection() {
     setIsDropdownOpen(false);
   };
 
-  const getStartedHref = selectedState ? `/esa-letter-${selectedState}/` : "#how-it-works";
+  const getStartedHref = selectedState ? `/esa-letter-${selectedState}/` : undefined;
 
   return (
     <section className="relative z-40 bg-background">
@@ -129,7 +130,6 @@ export function HeroSection() {
             className="mt-5"
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
-            getStartedHref="#how-it-works"
             placeholder="Select your State"
           />
 
@@ -251,7 +251,12 @@ export function HeroSection() {
             </div>
 
             {/* Get Started Button */}
-            <CtaButton href={getStartedHref} variant="accent" className="w-full sm:w-[192px]">
+            <CtaButton
+              href={getStartedHref}
+              onClick={selectedState ? undefined : promptSelectState}
+              variant="accent"
+              className="w-full sm:w-[192px]"
+            >
               Get Started
             </CtaButton>
           </div>
@@ -364,7 +369,12 @@ export function HeroSection() {
                 </div>
 
                 {/* Get Started Button */}
-                <CtaButton href={getStartedHref} variant="accent" className="w-[192px]">
+                <CtaButton
+                  href={getStartedHref}
+                  onClick={selectedState ? undefined : promptSelectState}
+                  variant="accent"
+                  className="w-[192px]"
+                >
                   Get Started
                 </CtaButton>
               </div>
