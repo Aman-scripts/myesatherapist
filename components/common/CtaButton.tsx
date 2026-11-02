@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { isEvaluationCtaLabel, openStateSelectModal } from "@/components/common/evaluationCta";
 
 export function SendIcon({ className = "w-[22px] h-[22px]" }: { className?: string }) {
   return (
@@ -28,6 +31,11 @@ export interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   /** Centers the label in the pill and keeps the icon on the right. */
   centerLabel?: boolean;
   variant?: "primary" | "secondary" | "accent";
+  /**
+   * Opens the state modal for evaluation labels.
+   * Hero pickers pass false so they keep their own state control.
+   */
+  stateModal?: boolean;
 }
 
 /**
@@ -52,11 +60,25 @@ export function CtaButton({
   wrap = false,
   centerLabel = false,
   variant = "accent",
+  stateModal,
   onClick,
   disabled,
   type = "button",
   ...rest
 }: CtaButtonProps) {
+  const label = typeof children === "string" ? children : "";
+  const opensModal =
+    stateModal === true ||
+    (stateModal !== false && type !== "submit" && isEvaluationCtaLabel(label));
+  const resolvedHref = opensModal ? undefined : href;
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    if (opensModal) {
+      event.preventDefault();
+      openStateSelectModal();
+    }
+    onClick?.(event as React.MouseEvent<HTMLButtonElement>);
+  };
   const isSecondary = variant === "secondary";
   const isAccent = variant === "accent";
 
@@ -99,18 +121,18 @@ export function CtaButton({
     </>
   );
 
-  if (href) {
-    const isInternal = href.startsWith("/") || href.startsWith("#");
+  if (resolvedHref) {
+    const isInternal = resolvedHref.startsWith("/") || resolvedHref.startsWith("#");
     if (isInternal) {
       return (
         <Link prefetch={false}
-          href={href}
+          href={resolvedHref}
           target={target}
           rel={rel}
           className={baseClasses}
           data-event="cta_click"
           data-event-label={typeof children === "string" ? children : undefined}
-          onClick={onClick as any}
+          onClick={handleClick as any}
         >
           {content}
         </Link>
@@ -118,13 +140,13 @@ export function CtaButton({
     }
     return (
       <a
-        href={href}
+        href={resolvedHref}
         target={target}
         rel={rel ?? (target === "_blank" ? "noopener noreferrer" : undefined)}
         className={baseClasses}
         data-event="cta_click"
         data-event-label={typeof children === "string" ? children : undefined}
-        onClick={onClick as any}
+        onClick={handleClick as any}
       >
         {content}
       </a>
@@ -137,7 +159,7 @@ export function CtaButton({
       className={baseClasses}
       data-event="cta_click"
       data-event-label={typeof children === "string" ? children : undefined}
-      onClick={onClick}
+      onClick={handleClick}
       disabled={disabled}
       {...rest}
     >
