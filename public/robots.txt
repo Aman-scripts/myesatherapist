@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /api/
-
-Host: https://myesatherapist.com
-Sitemap: https://myesatherapist.com/sitemap.xml
-
