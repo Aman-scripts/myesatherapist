@@ -305,10 +305,10 @@ export function TherapistsSection({
                           />
                         </div>
                         <div className="min-w-0">
-                          <h3 className="heading-h3 text-background truncate">
+                          <h3 className="heading-h3 text-background sm:truncate">
                             {t.name}
                           </h3>
-                          <div className="text-accent body-large truncate mt-0.5">
+                          <div className="text-accent body-large mt-0.5 whitespace-normal sm:truncate">
                             {t.title}
                           </div>
                         </div>
@@ -334,8 +334,8 @@ export function TherapistsSection({
                         {t.bio}
                       </p>
 
-                      {/* 3 Stat Badges */}
-                      <div className="flex items-stretch gap-2 sm:gap-3.5 pt-3 sm:pt-3.5">
+                      {/* 3 Stat Badges (desktop and tablet) */}
+                      <div className="hidden sm:flex items-stretch gap-2 sm:gap-3.5 pt-3 sm:pt-3.5">
                         <StatBadge
                           label="Licensed In"
                           value={t.licensedIn}
@@ -353,16 +353,26 @@ export function TherapistsSection({
                         />
                       </div>
 
-                      {/* View Profile CTA Button INSIDE the Card */}
+                      {/* View Profile: plain gold pill on mobile, icon button from tablet up */}
                       <div className="pt-2 flex justify-center">
-                        <CtaButton
+                        <Link
+                          prefetch={false}
                           href={getTherapistProfileHref(t)}
-                          variant="accent"
-                          className="w-[192px]"
                           onClick={(e) => e.stopPropagation()}
+                          className="sm:hidden inline-flex h-11 min-w-[168px] items-center justify-center rounded-full bg-accent px-8 font-sans text-[16px] font-semibold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                         >
                           View Profile
-                        </CtaButton>
+                        </Link>
+                        <div className="hidden sm:block">
+                          <CtaButton
+                            href={getTherapistProfileHref(t)}
+                            variant="accent"
+                            className="w-[192px]"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            View Profile
+                          </CtaButton>
+                        </div>
                       </div>
                     </div>
                   </div>

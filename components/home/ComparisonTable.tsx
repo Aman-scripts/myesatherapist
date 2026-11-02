@@ -139,7 +139,7 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[116px] sm:h-[114px]"
+                  className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-16 sm:h-[114px]"
                 >
                   <div className="px-1 sm:px-2 flex items-center justify-center text-center min-w-0">
                     <h4 className="font-heading font-bold text-center text-[10.5px] sm:text-[13px] md:text-sm leading-tight text-primary break-words">{row.feature}</h4>
@@ -147,7 +147,7 @@ export function ComparisonTable() {
                   <div />
                   <div className="px-1.5 sm:px-2 flex flex-col items-center justify-center text-center gap-1">
                     {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
-                    <span className="font-sans font-medium text-[10.5px] sm:text-[12px] md:text-[13px] leading-[14px] sm:leading-[17px] text-body-text">
+                    <span className="hidden sm:block font-sans font-medium text-[12px] md:text-[13px] leading-[17px] text-body-text">
                       {row.others}
                     </span>
                   </div>
@@ -169,9 +169,9 @@ export function ComparisonTable() {
             </div>
             <div className="divide-y divide-[#C8B9A7]/25">
               {comparisonRows.map((row, idx) => (
-                <div key={idx} className="h-[116px] sm:h-[114px] px-1.5 sm:px-2.5 flex flex-col items-center justify-center text-center gap-1">
+                <div key={idx} className="h-16 sm:h-[114px] px-1.5 sm:px-2.5 flex flex-col items-center justify-center text-center gap-1">
                   <GreenCheckIcon />
-                  <span className="font-sans font-medium text-[10.5px] sm:text-[12px] md:text-[13px] leading-[14px] sm:leading-[17px] text-background">
+                  <span className="hidden sm:block font-sans font-medium text-[12px] md:text-[13px] leading-[17px] text-background">
                     {row.myEsa}
                   </span>
                 </div>

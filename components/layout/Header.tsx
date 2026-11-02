@@ -253,6 +253,20 @@ export function Header() {
         </div>
       </div>
 
+      {/* Mobile states link. Desktop keeps the state names beside it. */}
+      <div className="lg:hidden bg-background w-full h-[37px]">
+        <div className="mx-auto flex h-full max-w-[1278px] items-center justify-end px-4">
+          <Link
+            prefetch={false}
+            href="/state/"
+            className="flex items-center gap-2 whitespace-nowrap font-manrope text-[13px] font-semibold leading-[26px] text-primary"
+          >
+            <span>See all 50 States</span>
+            <ArrowRight className="h-4 w-4 text-primary" strokeWidth={1.5} />
+          </Link>
+        </div>
+      </div>
+
       {/* States Bar (Frame 1000011905: 1440px x 37px, bg background) */}
       <div className="hidden lg:block bg-background w-full h-[37px]">
         <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-0 h-full flex items-center justify-between">

@@ -205,12 +205,14 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
           <div className="space-y-4 font-manrope">
             {/* Phone */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image
-                  quality={90}
-                  src="/ESA ICons/Icon-36.svg"
+                  src="/common/footer-phone-icon.svg"
                   alt="Phone"
-                  width={20} height={20} className="icon-sm object-contain"
+                  width={14}
+                  height={14}
+                  unoptimized
+                  className="w-3.5 h-3.5 object-contain"
                 />
               </div>
               <div className="text-left leading-tight">
@@ -225,12 +227,14 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
 
             {/* Email */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image
-                  quality={90}
-                  src="/ESA ICons/Icon-35.svg"
+                  src="/common/footer-email-icon.svg"
                   alt="Email"
-                  width={20} height={20} className="icon-sm object-contain"
+                  width={14}
+                  height={14}
+                  unoptimized
+                  className="w-3.5 h-3.5 object-contain"
                 />
               </div>
               <div className="text-left leading-tight">
@@ -245,12 +249,14 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
 
             {/* Hours */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image
-                  quality={90}
-                  src="/ESA ICons/Icon-38.svg"
+                  src="/common/footer-clock-icon.svg"
                   alt="Support hours"
-                  width={20} height={20} className="icon-sm object-contain"
+                  width={14}
+                  height={14}
+                  unoptimized
+                  className="w-3.5 h-3.5 object-contain"
                 />
               </div>
               <div className="text-left leading-tight">
@@ -265,12 +271,14 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
 
             {/* Location */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image
-                  quality={90}
-                  src="/ESA ICons/Icon-37.svg"
+                  src="/common/footer-location-icon.svg"
                   alt="Service area"
-                  width={20} height={20} className="icon-sm object-contain"
+                  width={14}
+                  height={14}
+                  unoptimized
+                  className="w-3.5 h-3.5 object-contain"
                 />
               </div>
               <div className="text-left leading-tight">

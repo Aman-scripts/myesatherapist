@@ -63,8 +63,10 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
             quality={90} src={person.avatar} alt={person.name} fill className="object-cover object-top" sizes="67px" />
           </div>
           <div className="min-w-0">
-            <h3 className="heading-h4 text-background">{person.name}</h3>
-            <p className="body-small text-accent mt-0.5">{person.title}</p>
+            <h3 className="heading-h3 text-background sm:hidden">{person.name}</h3>
+            <h3 className="heading-h4 text-background hidden sm:block">{person.name}</h3>
+            <p className="body-large text-accent mt-0.5 whitespace-normal sm:hidden">{person.title}</p>
+            <p className="body-small text-accent mt-0.5 hidden sm:block">{person.title}</p>
           </div>
         </div>
         <a
@@ -80,7 +82,7 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
 
       <div className="p-5 sm:p-7 flex flex-col flex-1 justify-between gap-6">
         <p className="body-text text-body-text">{person.bio}</p>
-        <div className="flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
+        <div className="hidden sm:flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
           {person.badges.map((b) => (
             <Badge key={b.label} {...b} />
           ))}

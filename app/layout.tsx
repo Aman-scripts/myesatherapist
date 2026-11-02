@@ -116,7 +116,7 @@ export default function RootLayout({
         {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}
         <Script
           id="tawk-logger-filter"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(){
   if (typeof window === 'undefined') return;

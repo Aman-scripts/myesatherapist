@@ -22,8 +22,9 @@ export function GlobalDesktopScaler() {
     const root = document.documentElement;
     let lastCss = "";
 
+    let lastWidth = window.innerWidth;
+
     function update() {
-      // Breakpoint decision uses innerWidth so it matches CSS media queries (lg = 1024px).
       const viewport = window.innerWidth;
       let styleEl = document.getElementById(SCALER_STYLE_ID) as HTMLStyleElement | null;
 
@@ -33,34 +34,37 @@ export function GlobalDesktopScaler() {
         return;
       }
 
-      if (!styleEl) {
-        styleEl = document.createElement("style");
-        styleEl.id = SCALER_STYLE_ID;
-        styleEl.textContent = "html{overflow-y:scroll;overflow-x:hidden}";
-        document.head.appendChild(styleEl);
-      }
-
       const scale = root.clientWidth / DESIGN_WIDTH;
       const css =
         "html{overflow-y:scroll;overflow-x:hidden}" +
         `body{zoom:${scale};width:${DESIGN_WIDTH}px!important;min-width:${DESIGN_WIDTH}px;overflow-x:hidden}`;
-      if (css !== lastCss || styleEl.textContent !== css) {
+
+      if (!styleEl) {
+        styleEl = document.createElement("style");
+        styleEl.id = SCALER_STYLE_ID;
+        styleEl.textContent = css;
+        document.head.appendChild(styleEl);
+        lastCss = css;
+        return;
+      }
+
+      if (css !== lastCss && styleEl.textContent !== css) {
         styleEl.textContent = css;
         lastCss = css;
       }
     }
 
-    update();
-    window.addEventListener("resize", update);
-    const observer = new ResizeObserver(update);
-    observer.observe(root);
+    function onResize() {
+      if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        update();
+      }
+    }
 
-    // Intentionally does not remove the style on cleanup: the root layout never
-    // unmounts, and removing it (e.g. during React Strict Mode re-runs) would
-    // flash the unscaled 1440px layout.
+    window.addEventListener("resize", onResize, { passive: true });
+
     return () => {
-      window.removeEventListener("resize", update);
-      observer.disconnect();
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 

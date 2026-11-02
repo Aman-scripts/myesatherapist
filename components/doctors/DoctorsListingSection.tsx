@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CtaButton } from "@/components/common/CtaButton";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -157,10 +158,10 @@ export function DoctorsListingSection() {
 
                   {/* Name and Title */}
                   <div className="min-w-0">
-                    <h3 className="heading-h3 text-background truncate">
+                    <h3 className="heading-h3 text-background sm:truncate">
                       {doc.name}
                     </h3>
-                    <p className="body-large text-accent truncate mt-0.5">
+                    <p className="body-large text-accent mt-0.5 whitespace-normal sm:truncate">
                       {doc.title}
                     </p>
                   </div>
@@ -185,8 +186,8 @@ export function DoctorsListingSection() {
                   {doc.bio}
                 </p>
 
-                {/* 3 Stat Badges Row */}
-                <div className="flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
+                {/* 3 Stat Badges Row (desktop and tablet) */}
+                <div className="hidden sm:flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
                   <DoctorStatBadge
                     label="Licensed In"
                     value={doc.licensedIn}
@@ -206,13 +207,22 @@ export function DoctorsListingSection() {
 
                 {/* Card Action Button */}
                 <div className="pt-2 flex justify-center">
-                  <CtaButton
+                  <Link
+                    prefetch={false}
                     href={`/esa-doctors/${doc.slug}/`}
-                    variant="accent"
-                    className="w-[192px]"
+                    className="sm:hidden inline-flex h-11 min-w-[168px] items-center justify-center rounded-full bg-accent px-8 font-sans text-[16px] font-semibold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
                     View Profile
-                  </CtaButton>
+                  </Link>
+                  <div className="hidden sm:block">
+                    <CtaButton
+                      href={`/esa-doctors/${doc.slug}/`}
+                      variant="accent"
+                      className="w-[192px]"
+                    >
+                      View Profile
+                    </CtaButton>
+                  </div>
                 </div>
               </div>
             </div>
