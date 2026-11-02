@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { PricingTabSwitcher } from "./PricingTabSwitcher";
+import { MaybeStateModalButton } from "@/components/common/MaybeStateModalButton";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -214,12 +215,12 @@ function RenderCardsContainer({
                       ))}
                     </div>
                     <div className="mt-auto flex justify-center pt-5">
-                      <a
+                      <MaybeStateModalButton
                         href={ctaHref}
                         className="inline-flex h-11 w-fit max-w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                       >
                         {mobileButtonLabel(card.buttonText)}
-                      </a>
+                      </MaybeStateModalButton>
                     </div>
                   </div>
                 </div>
@@ -274,12 +275,12 @@ function RenderCardsContainer({
                   </div>
 
                   <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
-                    <a
+                    <MaybeStateModalButton
                       href={ctaHref}
                       className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
                     >
                       {card.buttonText}
-                    </a>
+                    </MaybeStateModalButton>
                   </div>
                 </div>
               </div>
@@ -322,7 +323,7 @@ function RenderCardsContainer({
               </div>
 
               <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
-                <a
+                <MaybeStateModalButton
                   href={ctaHref}
                   className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
                     isLongButton
@@ -331,7 +332,7 @@ function RenderCardsContainer({
                   }`}
                 >
                   {card.buttonText}
-                </a>
+                </MaybeStateModalButton>
               </div>
             </div>
             </React.Fragment>
@@ -484,12 +485,12 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       </div>
 
       <div className="pt-2 pb-7 flex justify-center items-center px-3">
-        <a
+        <MaybeStateModalButton
           href={ctaHref}
           className="inline-flex items-center justify-center w-[272px] h-[50px] px-2 rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] whitespace-nowrap text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
         >
           Find Your Eligibility in Minutes
-        </a>
+        </MaybeStateModalButton>
       </div>
     </div>
   );

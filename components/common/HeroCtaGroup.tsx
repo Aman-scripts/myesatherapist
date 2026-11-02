@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { HeroStateDropdown } from "@/components/common/HeroStateDropdown";
 import { CtaButton } from "@/components/common/CtaButton";
-import { promptSelectState } from "@/components/common/promptSelectState";
+import { openStateSelectModal } from "@/components/common/evaluationCta";
+import { PSD_SURVEY_URL } from "@/components/common/stateModalDestination";
 
 interface HeroCtaGroupProps {
   defaultHref?: string;
@@ -27,8 +28,9 @@ export function HeroCtaGroup({
         buttonClassName={buttonClassName ?? dropdownClassName}
       />
       <CtaButton
-        href={selectedState ? `/esa-letter-${selectedState}/` : undefined}
-        onClick={selectedState ? undefined : promptSelectState}
+        href={selectedState ? PSD_SURVEY_URL : undefined}
+        onClick={selectedState ? undefined : openStateSelectModal}
+        stateModal={false}
         variant="accent"
         className={ctaClassName}
       >

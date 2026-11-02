@@ -10,7 +10,9 @@ import {
   STATE_DROPDOWN_ABBR,
 } from "@/components/common/stateDropdownClasses";
 import { CtaButton } from "@/components/common/CtaButton";
+import { openStateSelectModal } from "@/components/common/evaluationCta";
 import { promptSelectState } from "@/components/common/promptSelectState";
+import { PSD_SURVEY_URL } from "@/components/common/stateModalDestination";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -24,6 +26,8 @@ export interface MobileHeroActionButtonsProps {
   onGetStartedClick?: () => void;
   /** Gold outline on the state button, used by the states hub mobile hero. */
   selectTone?: "teal" | "gold";
+  /** PSD hero: Get Started opens the state modal, then continues to the survey. */
+  surveyOnStart?: boolean;
 }
 
 export function MobileHeroActionButtons({
@@ -34,6 +38,7 @@ export function MobileHeroActionButtons({
   className = "",
   onGetStartedClick,
   selectTone = "teal",
+  surveyOnStart = false,
 }: MobileHeroActionButtonsProps) {
   const [internalState, setInternalState] = useState(selectedState);
   const [isOpen, setIsOpen] = useState(false);
@@ -122,12 +127,21 @@ export function MobileHeroActionButtons({
 
       {/* Frame 1000011890: Get Started Button */}
       <CtaButton
-        href={activeSlug ? `/esa-letter-${activeSlug}/` : undefined}
+        href={
+          activeSlug
+            ? surveyOnStart
+              ? PSD_SURVEY_URL
+              : `/esa-letter-${activeSlug}/`
+            : undefined
+        }
         onClick={
           activeSlug
             ? undefined
-            : onGetStartedClick ?? promptSelectState
+            : surveyOnStart
+              ? openStateSelectModal
+              : onGetStartedClick ?? promptSelectState
         }
+        stateModal={false}
         variant="accent"
         className="w-[192px]"
       >

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { LATO, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
+import { TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
+import { MaybeStateModalButton } from "@/components/common/MaybeStateModalButton";
 
 export function EsaHousingMoveForward() {
   return (
@@ -23,13 +24,12 @@ export function EsaHousingMoveForward() {
         <p className="body-large text-background max-w-[932px] lg:max-w-[min(64vw,932px)]">
           Learn whether an Emotional Support Animal may be appropriate for you and how housing protections may support your situation.
         </p>
-        <a
+        <MaybeStateModalButton
           href="/pricing/"
-          className="mt-2 inline-flex h-[46px] items-center rounded-[30px] bg-accent px-8 text-[18px] font-bold text-[#29515B] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] hover:opacity-95 transition-opacity"
-          style={LATO}
+          className="mt-2 inline-flex h-[46px] items-center rounded-[30px] bg-accent px-8 text-[18px] font-bold text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.25)] hover:opacity-95 transition-opacity"
         >
           Start Your Evaluation
-        </a>
+        </MaybeStateModalButton>
         <p className="font-sans text-[14px] font-medium leading-[22px] text-background max-w-[640px]">
           100% Money-Back Guarantee. If not approved after your evaluation? You get a full refund
         </p>

@@ -235,6 +235,7 @@ export function StatesHeroSection() {
             {/* Get Started Button */}
             <CtaButton
               onClick={handleGetStarted}
+              stateModal={false}
               variant="accent"
               className="w-auto"
             >
@@ -407,6 +408,7 @@ export function StatesHeroSection() {
                   {/* Get Started Button */}
                   <CtaButton
                     onClick={handleGetStarted}
+                    stateModal={false}
                     variant="accent"
                     className="w-[192px]"
                   >

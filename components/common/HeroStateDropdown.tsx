@@ -17,6 +17,8 @@ interface HeroStateDropdownProps {
   placeholder?: string;
   /** Called when a state is chosen. Navigation happens from the Get Started button. */
   onChange?: (slug: string) => void;
+  /** Replaces the floating list, used when the menu should sit inside a modal. */
+  menuClassName?: string;
 }
 
 export function HeroStateDropdown({
@@ -25,6 +27,7 @@ export function HeroStateDropdown({
   iconSize = 20,
   placeholder = "Select your State",
   onChange,
+  menuClassName,
 }: HeroStateDropdownProps) {
   const [selectedState, setSelectedState] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +78,7 @@ export function HeroStateDropdown({
       </button>
 
       {isOpen && (
-        <div className={STATE_DROPDOWN_PANEL} style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        <div className={menuClassName ?? STATE_DROPDOWN_PANEL} style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
           <div className="py-1">
             {STATE_INDEX.map((state) => (
               <button

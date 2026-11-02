@@ -1,7 +1,7 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { MaybeStateModalButton } from "@/components/common/MaybeStateModalButton";
 
 export function StatesPsdCtaSection() {
   return (
@@ -32,14 +32,12 @@ export function StatesPsdCtaSection() {
               Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you.
             </p>
 
-            <Link prefetch={false}
+            <MaybeStateModalButton
               href="/psd-letter/"
-              className="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-[#f0c33a] rounded-xl shadow-[0px_2px_8px_rgba(232,185,44,0.4)] transition-all duration-200 group"
+              className="body-large mt-2 inline-flex items-center justify-center rounded-[30px] bg-accent px-8 py-3.5 font-bold text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
             >
-              <span className="body-large font-bold text-color-gradient group-hover:scale-105 transition-transform">
-                Start your Evaluation
-              </span>
-            </Link>
+              Start your Evaluation
+            </MaybeStateModalButton>
           </div>
 
           {/* Right Floating Dog & Owner Image */}

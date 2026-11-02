@@ -254,6 +254,7 @@ export function HeroSection() {
             <CtaButton
               href={getStartedHref}
               onClick={selectedState ? undefined : promptSelectState}
+              stateModal={false}
               variant="accent"
               className="w-full sm:w-[192px]"
             >
@@ -372,6 +373,7 @@ export function HeroSection() {
                 <CtaButton
                   href={getStartedHref}
                   onClick={selectedState ? undefined : promptSelectState}
+                  stateModal={false}
                   variant="accent"
                   className="w-[192px]"
                 >
