@@ -248,19 +248,18 @@ function RenderCardsContainer({
                 </div>
 
                 <div className="w-[300px] flex-1 bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col overflow-hidden">
-                  <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
+                  <div className="relative w-[300px] rounded-t-[20px] color-gradient px-6 pb-14 pt-8 flex flex-col gap-2 text-left shrink-0" style={{ minHeight: headerHeight }}>
                     <h3 className="heading-h3 text-background whitespace-pre-line">
                       {card.title}
                     </h3>
-                    <p className="body-text text-background font-semibold">
+                    <p className="body-text text-background">
                       {card.description}
                     </p>
-                  </div>
-
-                  <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-20" style={{ top: headerHeight - 39 }}>
-                    <span className="heading-h4 font-heading font-bold text-primary">
-                      {card.price}
-                    </span>
+                    <div className="absolute bottom-0 left-1/2 z-20 flex h-[78px] w-[78px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
+                      <span className="heading-h4 font-heading font-bold text-primary">
+                        {card.price}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="pt-[54px] px-[24px] pb-[16px] flex flex-1 flex-col gap-[6px]">
@@ -296,19 +295,18 @@ function RenderCardsContainer({
             <div
               className="hidden sm:flex self-stretch w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex-col shrink-0 overflow-hidden"
             >
-              <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
+              <div className="relative w-[300px] rounded-t-[20px] color-gradient px-6 pb-14 pt-8 flex flex-col gap-2 text-left shrink-0" style={{ minHeight: headerHeight }}>
                 <h3 className="heading-h3 text-background whitespace-pre-line">
                   {card.title}
                 </h3>
-                <p className="body-text text-background font-semibold">
+                <p className="body-text text-background">
                   {card.description}
                 </p>
-              </div>
-
-              <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-20" style={{ top: headerHeight - 39 }}>
-                <span className="heading-h4 font-heading font-bold text-primary">
-                  {card.price}
-                </span>
+                <div className="absolute bottom-0 left-1/2 z-20 flex h-[78px] w-[78px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
+                  <span className="heading-h4 font-heading font-bold text-primary">
+                    {card.price}
+                  </span>
+                </div>
               </div>
 
               <div className="pt-[54px] px-[24px] pb-[16px] flex flex-1 flex-col gap-[8px]">
@@ -343,7 +341,7 @@ function RenderCardsContainer({
       {showDog && (
         <div
           className="hidden lg:block absolute left-[calc(100%+1px)] w-[245px] h-[209px] pointer-events-none z-20"
-          style={{ top: headerHeight === 261 ? 279 : headerHeight + 20 }}
+          style={{ top: headerHeight === 261 || headerHeight === 272 ? 279 : headerHeight + 20 }}
         >
           <Image
             quality={75}
@@ -391,7 +389,7 @@ export function PricingSection({
   popularCardIndex,
   showDog = true,
   cards: cardsOverride,
-  headerHeight = 261,
+  headerHeight = 272,
 }: PricingSectionProps) {
   const plan = PLANS[defaultPlan];
   const sourceCards = cardsOverride ?? plan.cards;
