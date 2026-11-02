@@ -52,7 +52,7 @@ const statsData = [
   { value: "4.8", label: "Verified Reviews" },
 ];
 
-const MOBILE_HERO_BG = "/Hero_image_for_mobile_all.png";
+const MOBILE_HERO_BG = "/Hero_image_for_mobile_all.webp";
 
 const mobileGuaranteePills = [
   { value: "7+", label: "Years Serving" },

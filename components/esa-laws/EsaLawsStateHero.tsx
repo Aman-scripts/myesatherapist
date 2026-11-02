@@ -40,7 +40,7 @@ export function EsaLawsStateHero({
             <BreakpointImage
               media="(max-width: 639px)"
               quality={90}
-              src="/Hero_image_for_mobile_all.png"
+              src="/Hero_image_for_mobile_all.webp"
               alt=""
               fill
               className="sm:hidden object-cover object-top"

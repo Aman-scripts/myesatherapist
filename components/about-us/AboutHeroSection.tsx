@@ -15,7 +15,7 @@ export function AboutHeroSection() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/Hero_image_for_mobile_all.png"
+          src="/Hero_image_for_mobile_all.webp"
           alt="About My ESA Therapist"
           fill
           className="object-cover object-bottom pointer-events-none"

@@ -331,7 +331,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/Hero_image_for_mobile_all.png"
+          src="/Hero_image_for_mobile_all.webp"
           alt={`${stateName} ESA Evaluations Mobile View`}
           fill
           className="object-cover object-top pointer-events-none"

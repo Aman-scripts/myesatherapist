@@ -43,7 +43,7 @@ export function BlogHeroSection({
           <BreakpointImage
             media="(max-width: 1023px)"
             quality={90}
-            src="/Hero_image_for_mobile_all.png"
+            src="/Hero_image_for_mobile_all.webp"
             alt=""
             fill
             className="object-cover object-top"

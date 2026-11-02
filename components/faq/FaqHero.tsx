@@ -21,7 +21,7 @@ export function FaqHero() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/Hero_image_for_mobile_all.png"
+          src="/faq/faq_hero-section_mobile.webp"
           alt="ESA Questions? We’re Here To Help."
           fill
           className="object-cover object-bottom"

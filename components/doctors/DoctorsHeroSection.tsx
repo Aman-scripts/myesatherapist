@@ -13,7 +13,7 @@ export function DoctorsHeroSection() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={80}
-          src="/Hero_image_for_mobile_all.png"
+          src="/Hero_image_for_mobile_all.webp"
           alt={HEADING}
           fill
           className="object-cover object-bottom"

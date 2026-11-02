@@ -15,7 +15,7 @@ export function VideoTestimonialsHeroSection() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={80}
-          src="/Hero_image_for_mobile_all.png"
+          src="/Hero_image_for_mobile_all.webp"
           alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
           fill
           className="object-cover object-bottom"

@@ -16,7 +16,7 @@ export function EsaTrainingHero() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
-          src="/Hero_image_for_mobile_all.png"
+          src="/Hero_image_for_mobile_all.webp"
           alt=""
           fill
           className="object-cover object-top"
