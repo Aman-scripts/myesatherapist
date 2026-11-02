@@ -20,7 +20,7 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight">
             {title}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
+          <p className="body-large text-body-text mt-3 max-w-[760px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -43,9 +43,9 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
                       sizes="56px"
                     />
                   </div>
-                  <span className="font-heading text-base sm:text-lg lg:text-[19px] font-bold text-primary leading-snug">
+                  <h3 className="heading-h3 text-primary">
                     {city.name}
-                  </span>
+                  </h3>
                 </div>
                 {city.description && (
                   <p className="font-sans text-[13px] sm:text-[14px] lg:text-[14.5px] text-body-text font-medium leading-relaxed flex-1">
@@ -72,9 +72,9 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
                     sizes="68px"
                   />
                 </div>
-                <span className="font-heading text-sm sm:text-base lg:text-[19px] xl:text-[20px] font-bold text-primary whitespace-nowrap">
+                <h3 className="heading-h3 text-primary whitespace-nowrap">
                   {city.name}
-                </span>
+                </h3>
               </div>
             ))}
           </div>

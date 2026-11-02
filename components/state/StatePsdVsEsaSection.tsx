@@ -39,7 +39,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight">
             {title}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
+          <p className="body-large text-body-text mt-3 max-w-[760px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -65,8 +65,8 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 <ul className="space-y-2 mb-4">
                   {esaBullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-body-text shrink-0 mt-1.5" />
-                      <span className="font-sans text-[11px] sm:text-[11.5px] lg:text-[11.5px] xl:text-[13px] text-body-text font-semibold leading-tight">
+                      <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-body-text" />
+                      <span className="body-text text-body-text">
                         {bullet}
                       </span>
                     </li>
@@ -74,14 +74,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 </ul>
               </div>
 
-              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-nowrap">
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-primary bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
+              <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
                   Housing Rights
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-primary bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
                   No Pet Fees
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-primary bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
                   Emotional Support
                 </span>
               </div>
@@ -108,8 +108,8 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 <ul className="space-y-2 mb-4">
                   {psdBullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-body-text shrink-0 mt-1.5" />
-                      <span className="font-sans text-[11px] sm:text-[11.5px] lg:text-[11.5px] xl:text-[13px] text-body-text font-semibold leading-tight">
+                      <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-body-text" />
+                      <span className="body-text text-body-text">
                         {bullet}
                       </span>
                     </li>
@@ -117,14 +117,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
                 </ul>
               </div>
 
-              <div className="flex items-center gap-1 sm:gap-1.5 pt-1 flex-nowrap">
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-primary bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
+              <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
                   Full Public Access
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-primary bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
                   Trained Tasks
                 </span>
-                <span className="font-sans text-[9px] sm:text-[10px] lg:text-[9.5px] xl:text-[11px] font-semibold text-primary bg-[#E7F5EE] px-1.5 sm:px-2 lg:px-1.5 xl:px-2.5 py-0.5 sm:py-1 rounded-full whitespace-nowrap shrink-0">
+                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
                   ADA Protected
                 </span>
               </div>

@@ -51,7 +51,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight">
             {title}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed mt-3 max-w-[760px] mx-auto">
+          <p className="body-large text-body-text mt-3 max-w-[760px] mx-auto">
             {subtitle}
           </p>
         </div>

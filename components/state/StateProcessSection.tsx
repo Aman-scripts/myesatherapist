@@ -76,7 +76,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em]">
             {title}
           </h2>
-          <p className="font-sans font-semibold text-sm sm:text-base lg:text-[18px] text-body-text leading-relaxed sm:leading-[30px] max-w-[885px] mx-auto">
+          <p className="body-large text-body-text max-w-[885px] mx-auto">
             {subtitle}
           </p>
         </div>
@@ -118,9 +118,9 @@ export function StateProcessSection({ data }: { data: StateData }) {
 
         {/* Frame 1000011978: Why Our Process Is Different / Unique */}
         <div className="w-full max-w-[760px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] p-6 sm:p-[25px_45px] flex flex-col items-center gap-6 shadow-xs">
-          <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary text-center">
+          <h4 className="heading-h4 text-primary text-center">
             {data.processDifferentiatorsTitle || "Why Our Process Is Different"}
-          </h3>
+          </h4>
 
           {/* Frame 1000012001: Checklist */}
           <div className="flex flex-col items-start gap-2.5 w-full max-w-[620px]">
@@ -133,9 +133,9 @@ export function StateProcessSection({ data }: { data: StateData }) {
                   width={20}
                   height={20}
                   unoptimized
-                  className="mt-0.5 h-5 w-5 shrink-0 object-contain"
+                  className="mt-[3px] h-5 w-5 shrink-0 object-contain"
                 />
-                <span className="font-sans font-semibold text-[13px] sm:text-[14px] leading-relaxed text-body-text">
+                <span className="body-text text-body-text">
                   {item}
                 </span>
               </div>
@@ -145,7 +145,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
           {/* Process Note if provided */}
           {data.processNote && (
             <div className="w-full bg-white/80 rounded-[16px] p-4 border border-accent/40 mt-2">
-              <p className="font-sans text-xs sm:text-[13px] font-semibold text-body-text leading-relaxed">
+              <p className="body-small text-body-text">
                 {data.processNote}
               </p>
             </div>

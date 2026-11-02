@@ -151,7 +151,7 @@ export function StatePricingSection({ data }: StatePricingSectionProps) {
         showDog={false}
         maxCards={2}
         popularCardIndex={-1}
-        headerHeight={270}
+        headerHeight={310}
         cards={[
           {
             title: data.pricingPlan1Title || "ESA Letter",
@@ -186,7 +186,7 @@ export function StatePricingSection({ data }: StatePricingSectionProps) {
         showDog={false}
         maxCards={3}
         popularCardIndex={0}
-        headerHeight={270}
+        headerHeight={310}
         ctaHref="#faq"
         bgColor="bg-background"
         sectionClassName="py-14 sm:py-18 lg:py-24"
@@ -204,7 +204,7 @@ export function StatePricingSection({ data }: StatePricingSectionProps) {
       showDog={false}
       maxCards={2}
       popularCardIndex={1}
-      headerHeight={270}
+      headerHeight={310}
       cards={STATE_PLAN_CARDS}
       ctaHref="#faq"
       bgColor="bg-background"

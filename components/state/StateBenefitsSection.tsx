@@ -168,7 +168,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               <h2 className="heading-h2 text-primary mb-3">
                 {title}
               </h2>
-              <p className="body-large max-w-[640px] text-[#5F6B6F]">
+              <p className="body-large text-body-text max-w-[640px]">
                 {subtitle}
               </p>
             </div>

@@ -31,7 +31,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
           </h2>
 
           {intro && (
-            <p className="font-sans text-xs sm:text-sm lg:text-[14px] font-semibold text-body-text leading-relaxed max-w-[720px] mx-auto mb-6 text-center">
+            <p className="body-large text-body-text max-w-[720px] mx-auto mb-6 text-center">
               {intro}
             </p>
           )}

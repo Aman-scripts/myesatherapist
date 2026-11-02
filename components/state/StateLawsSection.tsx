@@ -14,7 +14,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight mb-3">
             {data.lawsTitle || `Understanding ${stateName} ESA Laws for Reasonable Accommodations`}
           </h2>
-          <p className="font-sans text-xs sm:text-sm lg:text-[16px] text-body-text font-semibold leading-relaxed max-w-[760px] mx-auto">
+          <p className="body-large text-body-text max-w-[760px] mx-auto">
             {data.lawsSubtitle ||
               `Emotional support animal housing in ${stateName} is governed by federal housing regulations that lay out the accommodation process and what landlords are required to provide.`}
           </p>

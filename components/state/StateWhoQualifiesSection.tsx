@@ -149,7 +149,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-primary leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 {title}
               </h2>
-              <p className="font-sans text-xs sm:text-sm lg:text-[13px] xl:text-base text-body-text font-semibold leading-relaxed xl:leading-[26px] max-w-[540px]">
+              <p className="body-large text-body-text max-w-[540px]">
                 {renderTextWithLinks(subtitle)}
               </p>
             </div>
