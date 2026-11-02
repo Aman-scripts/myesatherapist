@@ -5,7 +5,7 @@ import { SCALED_H2 } from "./EsaHousingShared";
 
 const STEPS = [
   {
-    title: "File A Complaint",
+    title: "File a Complaint",
     icon: "/ESA ICons/Icon-18.svg",
     description:
       "You may submit a complaint to the U.S. Department of Housing and Urban Development (HUD) if you believe your rights under the Fair Housing Act were violated.",
@@ -48,7 +48,7 @@ export function EsaHousingDenied() {
           />
         </div>
         <div className="w-full max-w-[626px] lg:max-w-[min(41vw,590px)] flex flex-col gap-8 lg:gap-[min(2.5vw,36px)]">
-          <h2 className={`${SCALED_H2} text-center lg:text-left lg:max-w-[min(43.5vw,626px)]`}>What To Do If Your ESA Is Denied Without A Valid Reason?</h2>
+          <h2 className={`${SCALED_H2} text-center lg:text-left lg:max-w-[min(43.5vw,626px)]`}>What to Do If Your ESA Is Denied Without a Valid Reason?</h2>
 
           <div className="flex flex-col gap-5 lg:gap-[min(1.5vw,22px)]">
             {STEPS.map((s) => (
