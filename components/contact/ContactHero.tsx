@@ -41,12 +41,12 @@ export function ContactHero() {
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE VIEW (< 640px)                             */}
       {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full aspect-[390/1007] overflow-hidden max-w-[480px] mx-auto">
+      <div className="sm:hidden relative w-full max-w-[480px] mx-auto">
         {/* Background Image: contact-us-hero-section-mobile.png */}
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/contact/contact-us-hero-section-mobile.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt="Contact Customer Support Mobile"
           fill
           className="object-cover object-top pointer-events-none"
@@ -54,7 +54,7 @@ export function ContactHero() {
         />
 
         {/* Floating Request Info Overlay Card */}
-        <div className="relative z-10 pt-[7%] px-4 w-full flex justify-center">
+        <div className="relative z-10 py-8 px-4 w-full flex justify-center">
           <div
             className="w-full max-w-[340px] rounded-[30px] p-5 space-y-3.5 shadow-sm"
             style={cardStyle}

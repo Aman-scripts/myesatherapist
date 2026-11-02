@@ -17,7 +17,7 @@ function StarIcon({ className = "w-4 h-4 text-white" }: { className?: string }) 
  */
 export function ReviewBadges({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3 xl:gap-4 max-w-[470px] ${className}`}>
+    <div className={`flex items-stretch gap-2 sm:gap-3 xl:gap-4 w-full max-w-[470px] ${className}`}>
       
       {/* ─── Trustpilot Card (Frame 1000011803) ─── */}
       <a
@@ -25,16 +25,15 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Trustpilot - Trustscore 4.0 (opens in a new tab)"
-        className="box-border flex flex-col justify-center items-center py-2.5 xl:py-3 px-3 sm:px-4 xl:px-6 w-[180px] sm:w-[195px] xl:w-[201px] h-[98px] sm:h-[102px] xl:h-[105px] rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer shrink-0"
+        className="box-border flex flex-col justify-center items-center py-2 sm:py-2.5 xl:py-3 px-1.5 sm:px-4 xl:px-6 w-[118px] sm:w-[195px] xl:w-[201px] min-h-[88px] sm:h-[102px] xl:h-[105px] rounded-[16px] sm:rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer shrink-0"
       >
         {/* Header: Star + Trustpilot */}
         <div className="flex items-center gap-1.5 mb-1.5 xl:mb-2">
-          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#00B67A] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+          <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#00B67A] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <polygon points={STAR_POLYGON} />
           </svg>
-          <span className="body-text text-body-text">
-            Trustpilot
-          </span>
+          <span className="body-small text-body-text whitespace-nowrap sm:hidden">Trustpilot</span>
+          <span className="body-text text-body-text hidden sm:inline">Trustpilot</span>
         </div>
 
         {/* 5 Stars Grid (4 Green #00B67A, 1 Grey #CCCCCC) */}
@@ -42,14 +41,14 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
           {[0, 1, 2, 3].map((i) => (
             <div
               key={i}
-              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#00B67A] flex items-center justify-center rounded-[2px]"
+              className="w-3.5 h-3.5 sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#00B67A] flex items-center justify-center rounded-[2px]"
             >
-              <StarIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
+              <StarIcon className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
             </div>
           ))}
           {/* 5th Star: Grey */}
-          <div className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#CCCCCC] flex items-center justify-center rounded-[2px]">
-            <StarIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
+          <div className="w-3.5 h-3.5 sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#CCCCCC] flex items-center justify-center rounded-[2px]">
+            <StarIcon className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
           </div>
         </div>
 
@@ -65,16 +64,15 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="ConsumerAffair Reviews - Reviews 4.9 (opens in a new tab)"
-        className="box-border flex flex-col justify-center items-center py-2.5 xl:py-3 px-3 sm:px-4 xl:px-6 w-[215px] sm:w-[235px] xl:w-[253px] h-[98px] sm:h-[102px] xl:h-[105px] rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer shrink-0"
+        className="box-border flex flex-col justify-center items-center py-2 sm:py-2.5 xl:py-3 px-2 sm:px-4 xl:px-6 min-w-0 flex-1 sm:flex-none sm:w-[235px] xl:w-[253px] min-h-[88px] sm:h-[102px] xl:h-[105px] rounded-[16px] sm:rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer"
       >
         {/* Header: Star + ConsumerAffair Reviews */}
         <div className="flex items-center gap-1.5 mb-1.5 xl:mb-2">
-          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#095691] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+          <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#095691] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <polygon points={STAR_POLYGON} />
           </svg>
-          <span className="body-text text-body-text whitespace-nowrap">
-            ConsumerAffair Reviews
-          </span>
+          <span className="body-small text-body-text whitespace-nowrap sm:hidden">ConsumerAffair Reviews</span>
+          <span className="body-text text-body-text whitespace-nowrap hidden sm:inline">ConsumerAffair Reviews</span>
         </div>
 
         {/* 5 Stars Grid (all blue #095691, Reviews 4.9) */}
@@ -82,13 +80,13 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
           {[0, 1, 2, 3].map((i) => (
             <div
               key={i}
-              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#095691] flex items-center justify-center rounded-[2px]"
+              className="w-3.5 h-3.5 sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#095691] flex items-center justify-center rounded-[2px]"
             >
-              <StarIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
+              <StarIcon className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
             </div>
           ))}
-          <div className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#095691] flex items-center justify-center rounded-[2px]">
-            <StarIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
+          <div className="w-3.5 h-3.5 sm:w-[22px] sm:h-[22px] xl:w-[24px] xl:h-[24px] bg-[#095691] flex items-center justify-center rounded-[2px]">
+            <StarIcon className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 xl:w-4 xl:h-4 text-white" />
           </div>
         </div>
 

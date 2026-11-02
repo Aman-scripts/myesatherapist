@@ -242,7 +242,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     publishDate: "June 19, 2026",
     lastUpdated: "June 19, 2026",
     cardImage: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord and Tenant Checklist ESA Guide/happily-living-with-emotional-support-animal-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
@@ -514,7 +514,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     publishDate: "July 22, 2026",
     lastUpdated: "August 17, 2026",
     cardImage: "/Blog Images/Does ESA Registration Actually Mean Anything_/woman-with-emotional-support-dog.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
@@ -877,7 +877,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     lastUpdated: "July 30, 2026",
     cardImage:
       "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/esa for children-.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
@@ -1215,7 +1215,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     publishDate: "July 30, 2026",
     lastUpdated: "August 17, 2026",
     cardImage: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/emotional-support-animal-letter-sample-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     questionCallout: {
@@ -1473,7 +1473,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     lastUpdated: "June 09, 2026",
     cardImage:
       "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/living-with-an-esa-in-rental-housing-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
@@ -1719,7 +1719,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     lastUpdated: "August 17, 2026",
     cardImage:
       "/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
@@ -1918,7 +1918,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     lastUpdated: "August 17, 2026",
     cardImage:
       "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/emotional-support-animal-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     introParagraphs: [
@@ -2338,7 +2338,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "publishDate": "July 10, 2026",
   "lastUpdated": "July 10, 2026",
   "cardImage": "/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
+  "heroImageMobile": "/Hero_image_for_mobile_all.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
   "heroImageDesktop": "/blogs/blog-hero_section.webp",
   "questionCallout": {
@@ -2547,7 +2547,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "publishDate": "August 26, 2026",
   "lastUpdated": "August 26, 2026",
   "cardImage": "/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/how-can-esa-support-with-anxity-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
+  "heroImageMobile": "/Hero_image_for_mobile_all.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
   "heroImageDesktop": "/blogs/blog-hero_section.webp",
   "questionCallout": {
@@ -2769,7 +2769,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "publishDate": "September 11, 2026",
   "lastUpdated": "September 11, 2026",
   "cardImage": "/Blog Images/8 Basic Obedience Commands Every ESA Should Know/training-an-esa-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
+  "heroImageMobile": "/Hero_image_for_mobile_all.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
   "heroImageDesktop": "/blogs/blog-hero_section.webp",
   "questionCallout": {
@@ -2956,7 +2956,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "publishDate": "October 13, 2026",
   "lastUpdated": "October 13, 2026",
   "cardImage": "/Blog Images/ESA for Depression/emotional-support-through-canine-companionship-image.webp",
-  "heroImageMobile": "/blogs/blog_hero-section-mobile.webp",
+  "heroImageMobile": "/Hero_image_for_mobile_all.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
   "heroImageDesktop": "/blogs/blog-hero_section.webp",
   "questionCallout": {
@@ -3181,7 +3181,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   publishDate: "September 30, 2026",
   lastUpdated: "September 30, 2026",
   cardImage: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.webp",
-  heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+  heroImageMobile: "/Hero_image_for_mobile_all.png",
   heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
   heroImageDesktop: "/blogs/blog-hero_section.webp",
   questionCallout: {
@@ -3396,7 +3396,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     publishDate: "October 05, 2026",
     lastUpdated: "October 05, 2026",
     cardImage: "/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     questionCallout: {
@@ -3602,7 +3602,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     publishDate: "October 12, 2026",
     lastUpdated: "October 12, 2026",
     cardImage: "/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
-    heroImageMobile: "/blogs/blog_hero-section-mobile.webp",
+    heroImageMobile: "/Hero_image_for_mobile_all.png",
     heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
     heroImageDesktop: "/blogs/blog-hero_section.webp",
     questionCallout: {

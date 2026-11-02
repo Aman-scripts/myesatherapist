@@ -12,11 +12,11 @@ export function AboutHeroSection() {
       {/* 1. MOBILE VIEW (< 640px)                             */}
       {/* Uses /about_us-mobile_hero_section.webp (390x768)     */}
       {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full aspect-[390/768] min-h-[580px] overflow-hidden">
+      <div className="block sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={80}
-          src="/about-us/about_us-mobile_hero_section.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt="About My ESA Therapist"
           fill
           className="object-cover object-bottom pointer-events-none"
@@ -24,7 +24,7 @@ export function AboutHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 space-y-3">
+        <div className="relative z-10 px-6 pt-10 pb-12 text-center flex flex-col items-center space-y-3">
           <p aria-hidden="true" className="heading-h2 text-primary max-w-[320px]">
             About My ESA Therapist
           </p>

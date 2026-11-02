@@ -64,11 +64,11 @@ export function PsdHeroSection() {
       {/* 1. MOBILE PSD HERO SECTION (sm:hidden / < 640px)     */}
       {/* Matches Screenshot 2 (Figma iPhone 13 & 14)          */}
       {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full aspect-[390/740] min-h-[580px] max-h-[760px] overflow-hidden">
+      <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
-          src="/psd-letter/psd-herosection-mobile.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt="Psychiatric Service Dog Letter Assistance"
           fill
           className="object-cover object-bottom"
@@ -76,7 +76,7 @@ export function PsdHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
+        <div className="relative z-10 px-3 pt-6 pb-10 text-center flex flex-col items-center">
           {/* Stat Pills at top (Mobile) */}
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
             {statsData.map((stat) => (

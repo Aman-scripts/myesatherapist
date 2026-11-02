@@ -10,17 +10,17 @@ export function ReviewsHeroSection() {
   return (
     <section className="relative z-30 w-full bg-background overflow-visible">
       <h1 className="sr-only">{HEADING}</h1>
-      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
+      <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
-          src="/reviews/reviews_phone-hero_section.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt="What Our Clients Are Saying"
           fill
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
-        <div className="absolute inset-0 z-10 flex items-center px-5">
+        <div className="relative z-10 flex items-center px-5 py-12">
           <div className="flex flex-col items-start gap-3 max-w-[300px]">
             <p aria-hidden="true" className="heading-h2 text-primary">{HEADING}</p>
             <p className="body-large text-primary">{DESCRIPTION}</p>

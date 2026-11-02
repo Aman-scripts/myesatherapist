@@ -66,7 +66,7 @@ export function EsaOnlineHero({
             : "flex items-center min-h-[580px] sm:min-h-[620px]"
         }`}
       >
-        {stacked && <div aria-hidden className="col-start-1 row-start-1 aspect-[941/1672]" />}
+        {stacked && <div aria-hidden className="col-start-1 row-start-1 hidden aspect-[941/1672] sm:block" />}
         <div
           className={`absolute pointer-events-none z-0 ${
             stacked ? "inset-x-0 bottom-0 aspect-[941/1672]" : "inset-0 w-full h-full"
@@ -111,7 +111,7 @@ export function EsaOnlineHero({
 
         <div
           className={`relative z-10 w-full mx-auto px-5 sm:px-8 py-10 sm:py-14 ${
-            stacked ? "col-start-1 row-start-1 pb-[80vw] sm:pb-[80vw]" : ""
+            stacked ? "col-start-1 row-start-1 pb-12 sm:pb-[80vw]" : ""
           }`}
         >
           <div

@@ -69,13 +69,13 @@ export function StatesHeroSection() {
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
       {/* Matches state_hero-section-mobile.png                */}
       {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full aspect-[390/833] min-h-[720px]">
+      <div className="block sm:hidden relative w-full">
         {/* Background Artwork */}
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <BreakpointImage
             media="(max-width: 639px)"
             quality={80}
-            src="/states/state_hero-section-mobile.webp"
+            src="/Hero_image_for_mobile_all.png"
             alt="ESA Evaluation For Every State"
             fill
             className="object-cover object-top"
@@ -84,7 +84,7 @@ export function StatesHeroSection() {
         </div>
 
         {/* Content Container (Centered on top) */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-7 text-center flex flex-col items-center z-10">
+        <div className="relative z-10 px-4 pt-7 pb-10 text-center flex flex-col items-center">
           
           {/* Top 3 Stat Pills */}
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-4">

@@ -29,7 +29,7 @@ export function EsaLawsStateHero({
           : "flex items-center min-h-[560px] lg:min-h-[480px] xl:min-h-[619px]"
       }`}
     >
-      {stacked && <div aria-hidden className="lg:hidden col-start-1 row-start-1 aspect-[941/1672]" />}
+      {stacked && <div aria-hidden className="col-start-1 row-start-1 hidden aspect-[941/1672] sm:block lg:hidden" />}
       <div
         className={`absolute pointer-events-none z-0 ${
           stacked ? "inset-x-0 bottom-0 aspect-[941/1672] lg:inset-0 lg:aspect-auto lg:h-full" : "inset-0 w-full h-full"
@@ -83,7 +83,7 @@ export function EsaLawsStateHero({
 
       <div
         className={`relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-20 py-10 sm:py-14 lg:py-10 xl:py-16 ${
-          stacked ? "col-start-1 row-start-1 pb-[80vw] sm:pb-[80vw] lg:pb-10 xl:pb-16" : ""
+          stacked ? "col-start-1 row-start-1 pb-12 sm:pb-[80vw] lg:pb-10 xl:pb-16" : ""
         }`}
       >
         <div

@@ -52,6 +52,14 @@ const statsData = [
   { value: "4.8", label: "Verified Reviews" },
 ];
 
+const MOBILE_HERO_BG = "/Hero_image_for_mobile_all.png";
+
+const mobileGuaranteePills = [
+  { value: "5+", label: "Years Serving" },
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
+
 export function HeroSection() {
   const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
@@ -94,38 +102,18 @@ export function HeroSection() {
       {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
       {/* Matches Screenshot 2                                 */}
       {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full aspect-[390/833] min-h-[680px]">
-        {/* Background Image: mobile-hero-section.png */}
+      <div className="block sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/home/mobile-hero-section.webp"
-          alt="Emotional Support Animal Evaluations"
+          src={MOBILE_HERO_BG}
+          alt=""
           fill
           className="object-cover object-top"
-          sizes="(max-width: 639px) 390px, 1px"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
 
-        {/* Content Container (Centered) */}
-        <div className="absolute inset-x-0 top-0 px-3 pt-6 text-center flex flex-col items-center z-10">
-          {/* Stat Pills at top (Mobile) */}
-          <div className="flex items-center justify-center gap-1.5 sm:gap-2 w-full max-w-[350px] mx-auto mb-3.5">
-            {statsData.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1.5 rounded-[24px] text-center shadow-xs min-w-0"
-              >
-                <span className="body-large text-color-gradient text-[17px]">
-                  {stat.value}
-                </span>
-                <span className="body-small text-[11px] min-[375px]:text-xs mt-0.5 whitespace-nowrap">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Headline */}
+        <div className="relative z-10 px-4 pt-8 pb-8 text-center flex flex-col items-center">
           <p aria-hidden="true" className="heading-h1 capitalize">
             Emotional Support
             <br />
@@ -134,12 +122,10 @@ export function HeroSection() {
             by Licensed Professionals
           </p>
 
-          {/* Subheading */}
-          <p className="body-large text-primary max-w-[310px] mx-auto mt-3">
+          <p className="body-large text-primary max-w-[340px] mx-auto mt-3">
             Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
-          {/* Stacked Action Buttons */}
           <MobileHeroActionButtons
             className="mt-5"
             selectedState={selectedState}
@@ -147,6 +133,26 @@ export function HeroSection() {
             getStartedHref="#how-it-works"
             placeholder="Select your State"
           />
+
+          <p className="body-small mt-4 max-w-[280px]">
+            If not approved after your evaluation? You get a full refund.
+          </p>
+
+          <div className="mt-5 flex flex-col items-center gap-3">
+            {mobileGuaranteePills.map((pill) => (
+              <div
+                key={pill.label}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2.5 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+              >
+                <span className="body-strong text-primary">{pill.value}</span>
+                <span className="body-text text-primary">{pill.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 w-full max-w-[360px]">
+            <ReviewBadges className="mx-auto max-w-none justify-center" />
+          </div>
         </div>
       </div>
 

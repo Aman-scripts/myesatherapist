@@ -20,11 +20,11 @@ export function BlogsHero() {
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE BLOGS HERO SECTION (sm:hidden / < 640px)   */}
       {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px] max-h-[760px] overflow-hidden">
+      <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/blogs/blog_hero-section-mobile.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt="Your Guide to Emotional Support Animals"
           fill
           className="object-cover object-bottom pointer-events-none"
@@ -32,7 +32,7 @@ export function BlogsHero() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
+        <div className="relative z-10 px-4 pt-6 pb-10 text-center flex flex-col items-center">
           {/* Frame 1000011902: Headline & Subtitle */}
           <div className="flex flex-col items-center gap-3 max-w-[340px]">
             <p aria-hidden="true" className="heading-h2 text-primary capitalize text-center">

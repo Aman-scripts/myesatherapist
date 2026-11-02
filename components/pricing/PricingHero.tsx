@@ -12,11 +12,11 @@ export function PricingHero() {
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PRICING HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[620px]">
+      <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
             quality={90}
-          src="/pricing/pricing_section-hero_section_mobile.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt="Choose The Right ESA Package For You"
           fill
           className="object-cover object-bottom"
@@ -24,7 +24,7 @@ export function PricingHero() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-4 pt-6 text-center flex flex-col items-center z-10">
+        <div className="relative z-10 px-4 pt-6 pb-10 text-center flex flex-col items-center">
           {/* Stat Pills at top (Mobile) */}
           <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-4">
             <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">

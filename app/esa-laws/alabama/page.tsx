@@ -81,7 +81,7 @@ export default function AlabamaEsaLawsPage() {
         <EsaLawsStateHero
           title={ALABAMA_HERO.title}
           description={ALABAMA_HERO.description}
-          imageMobile="/esalawsblog/esa-laws_alabama_herosection-mobile.webp"
+          imageMobile="/Hero_image_for_mobile_all.png"
           imageTablet="/esalawsblog/esa-laws_alabama_herosection-tablet.webp"
           imageAlt="Alabama ESA laws guide for tenants and landlords"
         />

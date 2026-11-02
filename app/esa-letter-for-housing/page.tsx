@@ -80,7 +80,7 @@ export default function EsaLetterForHousingPage() {
           buttonText="Start Your ESA Evaluation"
           showStats
           image="/esa-housing/esa-letter-housing_herosection.webp"
-          imageMobile="/esa-housing/esa-letter-housing_herosection_mobile.webp"
+          imageMobile="/Hero_image_for_mobile_all.png"
           imageTablet="/esa-housing/esa-letter-housing_herosection_tablet.webp"
           imageAlt="Woman on a video call with a licensed therapist while sitting with her dog"
         />

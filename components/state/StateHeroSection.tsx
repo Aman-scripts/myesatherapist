@@ -327,35 +327,34 @@ export function StateHeroSection({ data }: { data: StateData }) {
       </div>
 
       {/* 3. MOBILE VIEW */}
-      <div className="sm:hidden relative w-full aspect-[390/1380] overflow-hidden">
+      <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
-          src="/states/california-hero-section-mobile.webp"
+          src="/Hero_image_for_mobile_all.png"
           alt={`${stateName} ESA Evaluations Mobile View`}
           fill
           className="object-cover object-top pointer-events-none"
           sizes="(max-width: 639px) 430px, 1px"
         />
 
-        <div className="absolute top-0 inset-x-0 z-10 pt-5 px-4">
+        <div className="relative z-10 flex flex-col items-center gap-6 px-4 pb-10 pt-5">
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
             <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
             </p>
             <p className="body-large text-primary text-center max-w-[330px] mx-auto">{subtitle}</p>
           </div>
-        </div>
-
-        <div className="absolute top-[52%] left-1/2 -translate-x-1/2 z-10 w-full max-w-[350px] px-4">
-          <EvaluationFormCard
-            formData={formData}
-            setFormData={setFormData}
-            handleSubmit={handleSubmit}
-            isSubmitted={isSubmitted}
-            compact
-            stateName={stateName}
-          />
+          <div className="w-full max-w-[350px]">
+            <EvaluationFormCard
+              formData={formData}
+              setFormData={setFormData}
+              handleSubmit={handleSubmit}
+              isSubmitted={isSubmitted}
+              compact
+              stateName={stateName}
+            />
+          </div>
         </div>
       </div>
     </section>

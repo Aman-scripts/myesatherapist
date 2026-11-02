@@ -168,7 +168,7 @@ export function Header() {
               height={71}
               priority
               unoptimized
-              className="h-10 sm:h-12 lg:h-[71px] w-auto shrink-0 object-contain"
+              className="h-14 sm:h-16 lg:h-[71px] w-auto shrink-0 object-contain"
             />
           </Link>
 

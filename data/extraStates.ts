@@ -146,6 +146,13 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroTitle: "ESA Letter Evaluations\nby Vermont Licensed Therapists",
     heroSubtitle:
       "Connect with Vermont mental health professionals for personalized ESA evaluations. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
+    benefitsImage: "/states/statewhobenefits-vermont.webp",
+    benefitsImageMobile: "/states/statewhobenefits-vermont_mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-vermont_tablet.webp",
+    whoQualifiesImage: "/states/statewhoqualifies-vermont.webp",
+    whoQualifiesAspect: "699/1053",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-vermont_mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-vermont_tablet.webp",
     ...SHARED,
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Vermont?",
     whyChooseSubtitle:
@@ -416,6 +423,13 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroTitle: "ESA Letter Evaluations\nby Tennessee Licensed Therapists",
     heroSubtitle:
       "Connect with licensed mental health professionals in Tennessee for personalized emotional wellness evaluations. Schedule an appointment with a licensed clinician who will thoroughly examine your situation and guide you through a safe, organized emotional support animal evaluation process.",
+    benefitsImage: "/states/statewhobenefits-tennessee.webp",
+    benefitsImageMobile: "/states/statewhobenefits-tennessee_mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-tennessee_tablet.webp",
+    whoQualifiesImage: "/states/statewhoqualifies-tennessee.webp",
+    whoQualifiesAspect: "699/1053",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-tennessee_mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-tennessee_tablet.webp",
     ...SHARED,
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Tennessee?",
     whyChooseSubtitle:
@@ -687,6 +701,13 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroTitle: "ESA Letter Evaluations\nby Rhode Island Licensed Therapist",
     heroSubtitle:
       "Get in touch with licensed mental health professionals in Rhode Island for a personalized wellness checkup. Talk to a state-licensed therapist who will carefully look at your situation and guide you through a private emotional support animal (ESA) qualification process that is specific to your needs.",
+    benefitsImage: "/states/statewhobenefits-rhode-island.webp",
+    benefitsImageMobile: "/states/statewhobenefits-rhode-island_mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-rhode-island_tablet.webp",
+    whoQualifiesImage: "/states/statewhoqualifies-rhode-island.webp",
+    whoQualifiesAspect: "699/1053",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-rhode-island_mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-rhode-island_tablet.webp",
     ...SHARED,
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Rhode Island?",
     whyChooseSubtitle:
@@ -957,6 +978,13 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroTitle: "ESA Letter Evaluations\nin the District of Columbia\nby Licensed Mental Health Experts",
     heroSubtitle:
       "Connect with licensed mental health professionals in the District of Columbia for ESA letter evaluations. ESA documentation is provided when clinically appropriate and in line with federal housing guidelines.",
+    benefitsImage: "/states/statewhobenefits-washington-dc.webp",
+    benefitsImageMobile: "/states/statewhobenefits-washington-dc_mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-washington-dc_tablet.webp",
+    whoQualifiesImage: "/states/statewhoqualifies-washington-dc.webp",
+    whoQualifiesAspect: "699/1053",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-washington-dc_mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-washington-dc_tablet.webp",
     therapistsTitle: SHARED.therapistsTitle,
     therapistsSubtitle: SHARED.therapistsSubtitle,
     therapistsLicensureNote: SHARED.therapistsLicensureNote,
