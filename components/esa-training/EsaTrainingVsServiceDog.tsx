@@ -9,7 +9,7 @@ const ROWS = [
   { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task", icon: "/ESA ICons/Icon-12.svg" },
 ];
 
-const ROW_H = "lg:h-[5.2vw] xl:h-[61px]";
+const ROW_H = "lg:min-h-[5.2vw] xl:min-h-[61px]";
 const HEAD_H = "lg:h-[6.2vw] xl:h-[74px]";
 
 export function EsaTrainingVsServiceDog() {
@@ -51,7 +51,7 @@ export function EsaTrainingVsServiceDog() {
                       <Image
             quality={90} src={row.icon} alt={row.feature} width={19} height={19} unoptimized className="h-[52%] w-[52%] object-contain" />
                     </span>
-                    <span className="heading-h4">{row.feature}</span>
+                    <h3 className="heading-h3">{row.feature}</h3>
                   </div>
                   <div className={`flex items-center border-t border-white/15 pl-[5vw] body-large text-white xl:pl-[85px] ${ROW_H}`}>
                     {row.esa}
@@ -73,15 +73,15 @@ export function EsaTrainingVsServiceDog() {
                     <Image
             quality={90} src={row.icon} alt={row.feature} width={19} height={19} unoptimized className="h-[19px] w-[19px]" />
                   </span>
-                  <span className="heading-h4">{row.feature}</span>
+                  <h3 className="heading-h3">{row.feature}</h3>
                 </div>
                 <div className="grid grid-cols-2">
                   <div className="px-5 py-3.5 text-white" style={{ backgroundImage: TEAL_GRADIENT }}>
-                    <span className="button-text-small block text-white/80">ESA</span>
+                    <h4 className="heading-h4 text-white/80">ESA</h4>
                     <span className="body-text text-white">{row.esa}</span>
                   </div>
                   <div className="px-5 py-3.5">
-                    <span className="button-text-small block text-primary">Service Dog</span>
+                    <h4 className="heading-h4 text-primary">Service Dog</h4>
                     <span className="body-text">{row.dog}</span>
                   </div>
                 </div>
