@@ -162,7 +162,7 @@ export function ComparisonTable() {
           >
             <div className="h-[76px] sm:h-[84px] rounded-b-[20px] flex items-center justify-center px-3 text-center bg-[#1A3D4F]/35">
               <h3 className="font-heading font-bold text-background text-center leading-[30px] text-[24px]! sm:text-[26px]!">
-                ESA
+                My ESA
                 <br />
                 Therapist
               </h3>
