@@ -27,9 +27,8 @@ export function EsaGuideIntro() {
           </h3>
           <ul className="grid w-full grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-5">
             {TOPICS.map((topic) => (
-              <li key={topic} className="relative">
-                <span className="absolute inset-x-0 top-0 bottom-0 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" aria-hidden="true" />
-                <span className="relative mt-1.5 flex min-h-[75px] items-center justify-center rounded-[20px] bg-white px-4 py-4 text-center font-sans text-base font-semibold leading-[26px] text-body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:min-h-[5.2vw] lg:px-[1vw] lg:text-[1.1vw] lg:leading-[1.8vw] xl:min-h-[75px] xl:text-base xl:leading-[26px]">
+              <li key={topic}>
+                <span className="flex min-h-[75px] items-center justify-center rounded-[20px] bg-white px-4 py-4 text-center font-sans text-base font-semibold leading-[26px] text-body-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:min-h-[5.2vw] lg:px-[1vw] lg:text-[1.1vw] lg:leading-[1.8vw] xl:min-h-[75px] xl:text-base xl:leading-[26px]">
                   {topic}
                 </span>
               </li>
