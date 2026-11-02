@@ -2,12 +2,19 @@
 
 import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { CheckCircle2, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { CtaButton } from "@/components/common/CtaButton";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { STATE_INDEX } from "@/data/stateIndex";
+import {
+  evaluationDestination,
+  formatPhone,
+  trackHeallySubmit,
+  validateEvaluationLead,
+  type EvaluationErrors,
+} from "@/lib/evaluationHandoff";
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -65,15 +72,18 @@ type HeroFormData = {
   email: string;
   phone: string;
   state: string;
+  terms: boolean;
+  promotion: boolean;
 };
 
 interface EvaluationFormCardProps {
   formData: HeroFormData;
   setFormData: React.Dispatch<React.SetStateAction<HeroFormData>>;
   handleSubmit: (e: React.FormEvent) => void;
-  isSubmitted: boolean;
+  errors: EvaluationErrors;
   compact?: boolean;
-  stateName: string;
+  /** Desktop hero card: shorter rhythm so the card clears the floating trust bar. */
+  tight?: boolean;
   titleAs?: "h2" | "p";
 }
 
@@ -85,9 +95,9 @@ function EvaluationFormCard({
   formData,
   setFormData,
   handleSubmit,
-  isSubmitted,
+  errors,
   compact = false,
-  stateName,
+  tight = false,
   titleAs = "p",
 }: EvaluationFormCardProps) {
   const labelClass = "block whitespace-nowrap body-text text-body-text mb-1";
@@ -95,10 +105,14 @@ function EvaluationFormCard({
   return (
     <div
       className={`w-full bg-[rgba(245,166,54,0.26)] backdrop-blur-[18px] border border-[rgba(245,166,54,0.09)] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
-        compact ? "rounded-[22px] p-4 sm:p-5" : "rounded-[30px] px-[18px] pt-[30px] pb-[34px]"
+        compact
+          ? "rounded-[22px] p-4 sm:p-5"
+          : tight
+            ? "rounded-[30px] px-[18px] pt-[22px] pb-5"
+            : "rounded-[30px] px-[18px] pt-[30px] pb-[34px]"
       }`}
     >
-      <div className={`text-center ${compact ? "mb-4" : "mb-[30px]"}`}>
+      <div className={`text-center ${compact || tight ? "mb-4" : "mb-[30px]"}`}>
         {titleAs === "h2" ? (
           <h2 className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
             Start Your Evaluation
@@ -113,18 +127,7 @@ function EvaluationFormCard({
         </p>
       </div>
 
-      {isSubmitted ? (
-        <div className="py-6 text-center space-y-3 animate-fadeIn">
-          <div className="w-12 h-12 rounded-full color-gradient flex items-center justify-center mx-auto shadow-md">
-            <CheckCircle2 className="w-7 h-7 text-accent" />
-          </div>
-          <div className="heading-h4 text-primary">Evaluation Request Received!</div>
-          <p className="body-small text-body-text">
-            Our {stateName} intake specialist is reviewing your submission.
-          </p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className={compact ? "space-y-3" : "space-y-[19px]"}>
+      <form noValidate onSubmit={handleSubmit} className={compact || tight ? "space-y-3" : "space-y-[19px]"}>
           <div className="grid grid-cols-2 gap-3 sm:gap-6">
             <div>
               <label className={labelClass}>First Name</label>
@@ -136,6 +139,7 @@ function EvaluationFormCard({
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 className={INPUT_CLASS}
               />
+              {errors.firstName && <p className="body-small mt-1 text-[#c00]">{errors.firstName}</p>}
             </div>
             <div>
               <label className={labelClass}>Last Name</label>
@@ -147,6 +151,7 @@ function EvaluationFormCard({
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                 className={INPUT_CLASS}
               />
+              {errors.lastName && <p className="body-small mt-1 text-[#c00]">{errors.lastName}</p>}
             </div>
           </div>
 
@@ -158,8 +163,9 @@ function EvaluationFormCard({
               placeholder="your@email.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className={INPUT_CLASS}
-            />
+                className={INPUT_CLASS}
+              />
+            {errors.email && <p className="body-small mt-1 text-[#c00]">{errors.email}</p>}
           </div>
 
           <div>
@@ -167,11 +173,13 @@ function EvaluationFormCard({
             <input
               type="tel"
               required
-              placeholder="(555) 000-0000"
+              inputMode="numeric"
+              placeholder="999-999-9999"
               value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
               className={INPUT_CLASS}
             />
+            {errors.phone && <p className="body-small mt-1 text-[#c00]">{errors.phone}</p>}
           </div>
 
           <div>
@@ -193,7 +201,36 @@ function EvaluationFormCard({
             </div>
           </div>
 
-          <div className={`flex justify-center ${compact ? "pt-2" : "pt-[21px]"}`}>
+          <div className="space-y-2">
+            <label className="flex items-start gap-2 body-small text-body-text">
+              <input
+                type="checkbox"
+                checked={formData.terms}
+                onChange={(e) => setFormData({ ...formData, terms: e.target.checked })}
+                className="mt-1 h-4 w-4 shrink-0 accent-primary"
+              />
+              <span>
+                I accept the{" "}
+                <a href="/terms-of-use/" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                  Terms and Conditions*
+                </a>
+              </span>
+            </label>
+            {errors.terms && <p className="body-small text-[#c00]">{errors.terms}</p>}
+            <label className="flex items-start gap-2 body-small text-body-text">
+              <input
+                type="checkbox"
+                checked={formData.promotion}
+                onChange={(e) => setFormData({ ...formData, promotion: e.target.checked })}
+                className="mt-1 h-4 w-4 shrink-0 accent-primary"
+              />
+              <span>
+                I agree to receive emails with educational content, exclusive offers, partnership discounts, and marketing updates
+              </span>
+            </label>
+          </div>
+
+          <div className={`flex justify-center ${compact || tight ? "pt-2" : "pt-[21px]"}`}>
             <CtaButton type="submit" variant="accent" className={compact ? "w-full" : "w-[290px]"}>
               Start your ESA Evaluation
             </CtaButton>
@@ -203,7 +240,6 @@ function EvaluationFormCard({
             Your information is 100% secure and private.
           </p>
         </form>
-      )}
     </div>
   );
 }
@@ -216,18 +252,30 @@ export function StateHeroSection({ data }: { data: StateData }) {
     email: "",
     phone: "",
     state: stateName,
+    terms: false,
+    promotion: false,
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<EvaluationErrors>({});
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      const faqEl = document.getElementById("faq");
-      if (faqEl) {
-        faqEl.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 1500);
+    const lead = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      stateName: formData.state,
+    };
+    const nextErrors = validateEvaluationLead(lead, formData.terms);
+    setErrors(nextErrors);
+    if (Object.keys(nextErrors).length > 0) return;
+
+    const destination = evaluationDestination(lead);
+    if (destination.includes("getheally.com")) {
+      const abbreviation = STATE_INDEX.find((state) => state.name === formData.state)?.abbreviation || "CA";
+      trackHeallySubmit(formData.email.trim(), abbreviation);
+    }
+    window.location.assign(destination);
   };
 
   const subtitle =
@@ -286,9 +334,9 @@ export function StateHeroSection({ data }: { data: StateData }) {
               formData={formData}
               setFormData={setFormData}
               handleSubmit={handleSubmit}
-              isSubmitted={isSubmitted}
-              stateName={stateName}
+              errors={errors}
               titleAs="h2"
+              tight
             />
           </div>
         </div>
@@ -320,8 +368,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
             formData={formData}
             setFormData={setFormData}
             handleSubmit={handleSubmit}
-            isSubmitted={isSubmitted}
-            stateName={stateName}
+            errors={errors}
           />
         </div>
       </div>
@@ -350,9 +397,8 @@ export function StateHeroSection({ data }: { data: StateData }) {
               formData={formData}
               setFormData={setFormData}
               handleSubmit={handleSubmit}
-              isSubmitted={isSubmitted}
+              errors={errors}
               compact
-              stateName={stateName}
             />
           </div>
         </div>
