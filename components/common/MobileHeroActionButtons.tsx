@@ -138,7 +138,7 @@ export function MobileHeroActionButtons({
           activeSlug
             ? undefined
             : surveyOnStart
-              ? openStateSelectModal
+              ? () => openStateSelectModal("psd")
               : onGetStartedClick ?? promptSelectState
         }
         stateModal={false}

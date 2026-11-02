@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { CtaButton } from "@/components/common/CtaButton";
 import { HeroStateDropdown } from "@/components/common/HeroStateDropdown";
-import { OPEN_STATE_MODAL_EVENT } from "@/components/common/evaluationCta";
+import { OPEN_STATE_MODAL_EVENT, type StateModalLetter } from "@/components/common/evaluationCta";
 import { promptSelectState } from "@/components/common/promptSelectState";
 import {
   letterFromPath,
@@ -21,9 +21,10 @@ export function StateSelectModal() {
   const [letter, setLetter] = useState<ModalLetter>("esa");
 
   useEffect(() => {
-    const onOpen = () => {
+    const onOpen = (event: Event) => {
+      const requested = (event as CustomEvent<{ letter?: StateModalLetter }>).detail?.letter;
       setSlug("");
-      setLetter(letterFromPath(window.location.pathname));
+      setLetter(requested ?? letterFromPath(window.location.pathname));
       setOpen(true);
     };
     window.addEventListener(OPEN_STATE_MODAL_EVENT, onOpen);

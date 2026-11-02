@@ -27,12 +27,14 @@ const EVALUATION_CTA_LABELS = new Set([
 
 export const OPEN_STATE_MODAL_EVENT = "open-state-select-modal";
 
+export type StateModalLetter = "esa" | "psd";
+
 export function isEvaluationCtaLabel(label: string) {
   const text = label.replace(/\s+/g, " ").trim().toLowerCase();
   return EVALUATION_CTA_LABELS.has(text);
 }
 
-export function openStateSelectModal() {
+export function openStateSelectModal(letter?: StateModalLetter) {
   if (typeof window === "undefined") return;
-  window.dispatchEvent(new Event(OPEN_STATE_MODAL_EVENT));
+  window.dispatchEvent(new CustomEvent(OPEN_STATE_MODAL_EVENT, { detail: { letter } }));
 }

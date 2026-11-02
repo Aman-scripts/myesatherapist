@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { PricingTabSwitcher } from "./PricingTabSwitcher";
 import { MaybeStateModalButton } from "@/components/common/MaybeStateModalButton";
+import type { StateModalLetter } from "@/components/common/evaluationCta";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -151,6 +152,12 @@ function mobilePlanTitle(title: string) {
   return title;
 }
 
+function cardLetter(buttonText: string, directSurvey: boolean): StateModalLetter | undefined {
+  const label = buttonText.replace(/\s+/g, " ").trim().toLowerCase();
+  if (directSurvey && (label === "get started" || label === "start evaluation")) return "psd";
+  return undefined;
+}
+
 interface RenderCardsProps {
   cards: PlanCard[];
   maxCards?: number;
@@ -158,6 +165,7 @@ interface RenderCardsProps {
   headerHeight: number;
   showDog: boolean;
   ctaHref: string;
+  directSurvey?: boolean;
 }
 
 function RenderCardsContainer({
@@ -167,12 +175,14 @@ function RenderCardsContainer({
   headerHeight,
   showDog,
   ctaHref,
+  directSurvey = false,
 }: RenderCardsProps) {
   return (
     <div className={`relative pb-10 ${maxCards === 2 ? "w-fit max-w-full" : "w-full max-w-[972px]"}`}>
       <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-[68px] sm:gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
         {cards.map((card, idx) => {
           const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
+          const letter = cardLetter(card.buttonText, directSurvey);
 
           const mobileCard = (
             <div
@@ -217,6 +227,7 @@ function RenderCardsContainer({
                     <div className="mt-auto flex justify-center pt-5">
                       <MaybeStateModalButton
                         href={ctaHref}
+                        letter={letter}
                         className="inline-flex h-11 w-fit max-w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                       >
                         {mobileButtonLabel(card.buttonText)}
@@ -276,6 +287,7 @@ function RenderCardsContainer({
                   <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
                     <MaybeStateModalButton
                       href={ctaHref}
+                      letter={letter}
                       className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
                     >
                       {card.buttonText}
@@ -323,6 +335,7 @@ function RenderCardsContainer({
               <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
                 <MaybeStateModalButton
                   href={ctaHref}
+                  letter={letter}
                   className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
                     isLongButton
                       ? "w-[272px] px-2 whitespace-nowrap"
@@ -430,6 +443,7 @@ export function PricingSection({
                 headerHeight={headerHeight}
                 showDog={showDog}
                 ctaHref={ctaHref}
+                directSurvey
               />
             }
           />
@@ -441,6 +455,7 @@ export function PricingSection({
             headerHeight={headerHeight}
             showDog={showDog}
             ctaHref={ctaHref}
+            directSurvey={defaultPlan === "psd"}
           />
         )}
       </div>

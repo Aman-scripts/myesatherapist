@@ -29,7 +29,7 @@ export function HeroCtaGroup({
       />
       <CtaButton
         href={selectedState ? PSD_SURVEY_URL : undefined}
-        onClick={selectedState ? undefined : openStateSelectModal}
+        onClick={selectedState ? undefined : () => openStateSelectModal("psd")}
         stateModal={false}
         variant="accent"
         className={ctaClassName}
