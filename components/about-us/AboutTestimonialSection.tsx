@@ -191,7 +191,7 @@ export function AboutTestimonialSection() {
                 key={idx}
                 type="button"
                 onClick={() => setActiveIdx(idx)}
-                className="flex items-center justify-center p-1 cursor-pointer"
+                className="flex items-center justify-center min-w-[28px] min-h-[28px] p-2 cursor-pointer"
                 aria-label={`Go to slide ${idx + 1}`}
               >
                 <span

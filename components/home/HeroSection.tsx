@@ -107,10 +107,10 @@ export function HeroSection() {
           media="(max-width: 639px)"
           quality={70}
           src={MOBILE_HERO_BG}
-          alt=""
+          alt="Emotional Support Animal Evaluations by Licensed Professionals"
           fill
           className="object-cover object-top"
-          sizes="(max-width: 639px) 100vw, 1px"
+          sizes="100vw"
         />
 
         <div className="relative z-10 px-4 pt-8 pb-8 text-center flex flex-col items-center">

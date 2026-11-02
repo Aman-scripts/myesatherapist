@@ -232,7 +232,7 @@ export function PricingSection({
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
         <div className={`relative pb-10 ${maxCards === 2 ? "w-fit max-w-full" : "w-full max-w-[972px]"}`}>
-          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-[68px] sm:gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
+          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-[68px] sm:gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
             {cards.map((card, idx) => {
               const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
 
@@ -304,13 +304,13 @@ export function PricingSection({
                   {mobileCard}
                   {/* Gold frame wraps the full card, including the button */}
                   <div
-                    className="hidden sm:flex w-[310px] bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex-col items-center shrink-0"
+                    className="hidden sm:flex w-[310px] self-stretch bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex-col items-center shrink-0"
                   >
-                    <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-body-text uppercase tracking-wider shrink-0">
+                    <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-[#1A3D4F] uppercase tracking-wider shrink-0">
                       MOST POPULAR
                     </div>
 
-                    <div className="w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col shrink-0 overflow-hidden">
+                    <div className="w-[300px] flex-1 bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col overflow-hidden">
                       <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
                         <h3 className="heading-h3 text-background whitespace-pre-line">
                           {card.title}
@@ -321,12 +321,12 @@ export function PricingSection({
                       </div>
 
                       <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-20" style={{ top: headerHeight - 39 }}>
-                        <span className="heading-h4 font-heading font-bold text-primary">
+                        <span className="heading-h4 font-heading font-bold text-[#1A3D4F]">
                           {card.price}
                         </span>
                       </div>
 
-                      <div className="pt-[54px] px-[24px] pb-[16px] flex flex-col gap-[6px] min-h-[220px]">
+                      <div className="pt-[54px] px-[24px] pb-[16px] flex flex-1 flex-col gap-[6px]">
                         {card.features.map((f) => (
                           <div key={f} className="flex items-start gap-[8px]">
                             <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
@@ -337,10 +337,10 @@ export function PricingSection({
                         ))}
                       </div>
 
-                      <div className="pt-2 pb-7 flex justify-center items-center px-3">
+                      <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
                         <a
                           href={ctaHref}
-                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
+                          className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-[#1A3D4F] font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
                         >
                           {card.buttonText}
                         </a>
@@ -358,7 +358,7 @@ export function PricingSection({
                 {mobileCard}
                 {/* Starter Plan: Standard Cards */}
                 <div
-                  className="hidden sm:flex w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex-col shrink-0 overflow-hidden"
+                  className="hidden sm:flex self-stretch w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex-col shrink-0 overflow-hidden"
                 >
                   {/* Frame 1261153969: Teal Header */}
                   <div className="w-[300px] rounded-t-[20px] color-gradient pt-[32px] px-[24px] flex flex-col gap-2 relative text-left shrink-0" style={{ height: headerHeight }}>
@@ -372,13 +372,13 @@ export function PricingSection({
 
                   {/* Ellipse 20: Gold Price Circle (78px x 78px, centered on header-body divide) */}
                   <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-20" style={{ top: headerHeight - 39 }}>
-                    <span className="heading-h4 font-heading font-bold text-primary">
+                    <span className="heading-h4 font-heading font-bold text-[#1A3D4F]">
                       {card.price}
                     </span>
                   </div>
 
                   {/* Feature List (min-h keeps button aligned across cards with 4 vs 5 features) */}
-                  <div className="pt-[54px] px-[24px] pb-[16px] flex flex-col gap-[8px] min-h-[220px]">
+                  <div className="pt-[54px] px-[24px] pb-[16px] flex flex-1 flex-col gap-[8px]">
                     {card.features.map((f) => (
                       <div key={f} className="flex items-start gap-[8px]">
                         <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
@@ -390,10 +390,10 @@ export function PricingSection({
                   </div>
 
                   {/* Button: Inside the card, centered with padding below */}
-                  <div className="pt-2 pb-7 flex justify-center items-center px-3">
+                  <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
                     <a
                       href={ctaHref}
-                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
+                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-[#1A3D4F] font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
                         isLongButton
                           ? "w-[272px] px-2 whitespace-nowrap"
                           : "w-[154px]"

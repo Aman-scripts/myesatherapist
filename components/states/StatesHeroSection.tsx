@@ -83,62 +83,50 @@ export function StatesHeroSection() {
           />
         </div>
 
-        {/* Content Container (Centered on top) */}
-        <div className="relative z-10 px-4 pt-7 pb-10 text-center flex flex-col items-center">
-          
-          {/* Top 3 Stat Pills */}
-          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-4">
-            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">
-                64,739+
-              </span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">ESA Evaluations</span>
-            </div>
-
-            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">
-                5+
-              </span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Years Serving</span>
-            </div>
-
-            <div className="flex-1 flex flex-col items-center justify-center bg-background py-2 px-1 rounded-full text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">
-                100%
-              </span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Moneyback</span>
-            </div>
-          </div>
-
-          {/* Headline */}
-          <p aria-hidden="true" className="heading-h2 text-primary">
+        <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+          <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">
             ESA Evaluation For
             <br />
             Every State
           </p>
 
-          {/* Subtitle */}
-          <p className="body-large text-primary max-w-[320px] mx-auto mt-3">
+          <p className="body-large text-body-text max-w-[320px] mx-auto mt-3">
             Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
           </p>
 
-          {/* Stacked Action Controls (Mobile - Frame 7) */}
           <MobileHeroActionButtons
             className="mt-5"
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             onGetStartedClick={handleGetStarted}
             placeholder="Select your State"
+            selectTone="gold"
           />
 
-          {/* Refund Guarantee Note */}
-          <p className="body-small text-body-text mt-3 text-center">
-            Not approved after your ESA evaluation? You get a full refund!.
+          <p className="body-small text-body-text mt-4 text-center max-w-[260px]">
+            If not approved after your evaluation?
+            <br />
+            You get a full refund.
           </p>
 
-          {/* Review Badges */}
-          <div className="mt-4">
-            <ReviewBadges className="justify-center" />
+          <div className="mt-4 flex flex-col items-center gap-3">
+            {[
+              { value: "5+", label: "Years Serving" },
+              { value: "64,739+", label: "ESA Evaluations" },
+              { value: "100%", label: "Moneyback Guarantee" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+              >
+                <span className="body-strong text-primary">{stat.value}</span>
+                <span className="body-text text-primary">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-5 w-full max-w-[360px]">
+            <ReviewBadges className="mx-auto max-w-none justify-center" />
           </div>
         </div>
       </div>

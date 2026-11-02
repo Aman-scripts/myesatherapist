@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import Image from "next/image";
@@ -226,9 +226,9 @@ export function ComparisonTable() {
                             className="icon-md object-contain"
                           />
                         </div>
-                        <h4 className="heading-h4 whitespace-nowrap">
+                        <span className="heading-h4 whitespace-nowrap">
                           {row.desktopFeature}
-                        </h4>
+                        </span>
                       </div>
 
                       {/* Empty spacer matching elevated card exactly: 580px */}

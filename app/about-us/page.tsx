@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AboutHeroSection } from "@/components/about-us/AboutHeroSection";
 import { AboutLegitimateSection } from "@/components/about-us/AboutLegitimateSection";
+import { AboutTrustBySection } from "@/components/about-us/AboutTrustBySection";
 import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection";
 import { AboutWhoWeHelpSection } from "@/components/about-us/AboutWhoWeHelpSection";
 import { AboutVsFakeSection } from "@/components/about-us/AboutVsFakeSection";
@@ -109,6 +110,9 @@ export default function AboutUsPage() {
 
         {/* Legitimate ESA Letter Evaluations You Can Trust */}
         <AboutLegitimateSection />
+
+        {/* Why ESA Owners Trust Us */}
+        <AboutTrustBySection />
 
         {/* Section 3: Why Pet Owners Trust MY ESA Therapist */}
         <AboutWhyTrustSection />

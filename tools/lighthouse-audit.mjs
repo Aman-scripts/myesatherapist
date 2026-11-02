@@ -16,7 +16,7 @@ import * as chromeLauncher from "chrome-launcher";
 import lighthouse from "lighthouse";
 
 const PORT = process.env.LH_PORT || "3100";
-const BASE_URL = `http://localhost:${PORT}`;
+const BASE_URL = `http://127.0.0.1:${PORT}`;
 const OUT_DIR = path.resolve("lighthouse-reports");
 const THRESHOLD = 95;
 
@@ -190,7 +190,7 @@ async function main() {
   }
 
   console.log(`Starting production server on port ${PORT}...`);
-  serverProcess = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["next", "start", "-p", PORT], {
+  serverProcess = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["next", "start", "-H", "127.0.0.1", "-p", PORT], {
     stdio: "inherit",
     shell: true,
   });

@@ -417,7 +417,7 @@ export function TherapistsSection({
                 key={idx}
                 onClick={() => scrollToSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className="w-5 h-5 flex items-center justify-center cursor-pointer"
+                className="w-7 h-7 flex items-center justify-center cursor-pointer"
               >
                 <span
                   className={`block transition-all duration-300 rounded-full ${
@@ -450,7 +450,7 @@ export function TherapistsSection({
               key={idx}
               onClick={() => scrollToSlide(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className="relative flex items-center justify-center w-6 h-6 cursor-pointer"
+              className="relative flex items-center justify-center w-7 h-7 cursor-pointer"
             >
               <span
                 className={`block transition-all duration-300 rounded-full ${

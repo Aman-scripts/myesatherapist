@@ -18,13 +18,13 @@ function StarIcon({ className = "w-4 h-4 text-white" }: { className?: string }) 
 export function ReviewBadges({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-stretch gap-2 sm:gap-3 xl:gap-4 w-full max-w-[470px] ${className}`}>
-      
+
       {/* ─── Trustpilot Card (Frame 1000011803) ─── */}
       <a
         href="https://www.trustpilot.com/review/myesatherapist.com"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Trustpilot - Trustscore 4.0 (opens in a new tab)"
+        aria-label="Trustpilot Trustscore 4.0 (opens in a new tab)"
         className="box-border flex flex-col justify-center items-center py-2 sm:py-2.5 xl:py-3 px-1.5 sm:px-4 xl:px-6 w-[118px] sm:w-[195px] xl:w-[201px] min-h-[88px] sm:h-[102px] xl:h-[105px] rounded-[16px] sm:rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer shrink-0"
       >
         {/* Header: Star + Trustpilot */}
@@ -63,7 +63,7 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
         href="https://www.consumeraffairs.com/pets/my-esa-therapist.html"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="ConsumerAffair Reviews - Reviews 4.9 (opens in a new tab)"
+        aria-label="ConsumerAffair Reviews Reviews 4.9 (opens in a new tab)"
         className="box-border flex flex-col justify-center items-center py-2 sm:py-2.5 xl:py-3 px-2 sm:px-4 xl:px-6 min-w-0 flex-1 sm:flex-none sm:w-[235px] xl:w-[253px] min-h-[88px] sm:h-[102px] xl:h-[105px] rounded-[16px] sm:rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer"
       >
         {/* Header: Star + ConsumerAffair Reviews */}

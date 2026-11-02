@@ -21,6 +21,8 @@ export interface MobileHeroActionButtonsProps {
   placeholder?: string;
   className?: string;
   onGetStartedClick?: () => void;
+  /** Gold outline on the state button, used by the states hub mobile hero. */
+  selectTone?: "teal" | "gold";
 }
 
 export function MobileHeroActionButtons({
@@ -31,6 +33,7 @@ export function MobileHeroActionButtons({
   placeholder = "Select your State",
   className = "",
   onGetStartedClick,
+  selectTone = "teal",
 }: MobileHeroActionButtonsProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -67,7 +70,9 @@ export function MobileHeroActionButtons({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-[246px] h-[54px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 px-[18px] border border-primary active:scale-[0.98] transition-all"
+          className={`w-[246px] h-[54px] rounded-[30px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 px-[18px] active:scale-[0.98] transition-all border ${
+            selectTone === "gold" ? "border-accent" : "border-primary"
+          }`}
         >
           <div className="flex items-center gap-2 max-w-full">
             <Image
@@ -78,13 +83,13 @@ export function MobileHeroActionButtons({
               unoptimized
               className="icon-sm shrink-0 object-contain"
             />
-            <span className="body-text text-primary truncate max-w-[138px]">
+            <span className={`body-text truncate max-w-[138px] ${selectTone === "gold" ? "text-[#DBA81F]" : "text-primary"}`}>
               {displayText}
             </span>
             <ChevronDown
-              className={`w-[14px] h-[14px] text-primary shrink-0 transition-transform duration-200 ${
-                isOpen ? "rotate-180" : ""
-              }`}
+              className={`w-[14px] h-[14px] shrink-0 transition-transform duration-200 ${
+                selectTone === "gold" ? "text-accent" : "text-primary"
+              } ${isOpen ? "rotate-180" : ""}`}
             />
           </div>
         </button>

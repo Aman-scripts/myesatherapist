@@ -65,7 +65,9 @@ export function ContactHero() {
                 Request Info
               </p>
               <p className="body-small text-body-text text-center">
-                Feel Free To Connect With Us! (24×7 Available At Your Service)
+                Feel Free To Connect With Us!
+                <br />
+                (24×7 Available At Your Service)
               </p>
             </div>
 
@@ -79,64 +81,59 @@ export function ContactHero() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-2.5">
-                {/* First Name & Last Name */}
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="space-y-0.5">
-                    <label className="block body-small text-body-text">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="First Name"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                    />
-                  </div>
-
-                  <div className="space-y-0.5">
-                    <label className="block body-small text-body-text">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Last Name"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                    />
-                  </div>
+                <div className="space-y-0.5">
+                  <label className="block whitespace-nowrap body-small text-body-text">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
+                  />
                 </div>
 
-                {/* Email Address */}
                 <div className="space-y-0.5">
-                  <label className="block body-small text-body-text">
+                  <label className="block whitespace-nowrap body-small text-body-text">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Last Name"
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
+                  />
+                </div>
+
+                <div className="space-y-0.5">
+                  <label className="block whitespace-nowrap body-small text-body-text">
                     Email Address
                   </label>
                   <input
                     type="email"
                     required
-                    placeholder="your@email.com"
+                    placeholder="youremail.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
 
-                {/* Message */}
                 <div className="space-y-0.5">
-                  <label className="block body-small text-body-text">
+                  <label className="block whitespace-nowrap body-small text-body-text">
                     Message
                   </label>
-                  <textarea
+                  <input
+                    type="text"
                     required
-                    rows={3}
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full min-h-[75px] p-2.5 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all resize-none"
+                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
                   />
                 </div>
 

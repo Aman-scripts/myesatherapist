@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
@@ -312,12 +312,12 @@ small,
 }
 
 @layer base {
-  :where(h1, h2, h3, h4, h5, h6, .heading-h1, .heading-h2, .heading-h3, .heading-h4, .type-stat) {
-    color: var(--color-primary);
-  }
-
   :where(p, li, .lead, .body, .body-large, .body-text, .body-strong, .body-small, .type-small) {
     color: var(--ink-700);
+  }
+
+  :where(h1, h2, h3, h4, h5, h6, .heading-h1, .heading-h2, .heading-h3, .heading-h4, .type-stat) {
+    color: var(--color-primary);
   }
 
   :where(.caption, .eyebrow) {
@@ -530,16 +530,17 @@ small,
 /* Marquee animation */
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-marquee {
   animation: marquee 14s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee:hover {

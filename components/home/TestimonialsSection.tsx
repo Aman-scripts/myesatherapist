@@ -155,9 +155,9 @@ export function TestimonialsSection({
 
                           {/* Client Name (Playfair Display 28px/36px) */}
                           <div className="absolute inset-x-0 bottom-[11px] text-center z-10 px-3 pointer-events-none">
-                            <h4 className="heading-h3 text-white text-center drop-shadow-md">
+                            <h3 className="heading-h3 text-white text-center drop-shadow-md">
                               {review.name}
-                            </h4>
+                            </h3>
                           </div>
                         </>
                       )}
@@ -184,7 +184,7 @@ export function TestimonialsSection({
                   type="button"
                   onClick={() => scrollToIndex(idx)}
                   aria-label={`Go to slide ${idx + 1}`}
-                  className="relative flex items-center justify-center p-0 cursor-pointer"
+                  className="relative flex items-center justify-center min-w-[28px] min-h-[28px] p-2 cursor-pointer"
                 >
                   <span
                     className={`block transition-all duration-300 rounded-full ${

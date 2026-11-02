@@ -14,12 +14,12 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
       />
 
       {/* Frame 1261153667: Content Area (padding: 0px 67px 0px 0px on desktop) */}
-      <div className="flex-1 p-4 sm:py-3.5 sm:pl-6 sm:pr-8 lg:pr-[67px] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+      <div className="flex-1 px-4 py-4 sm:py-3.5 sm:pl-6 sm:pr-8 lg:pr-[67px] flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         
         {/* Frame 1261153666: Google Logo & Text */}
-        <div className="flex items-center gap-4 sm:gap-[22px] text-center sm:text-left">
-          <div className="w-[48px] h-[48px] sm:w-[58px] sm:h-[52px] shrink-0 flex items-center justify-center">
-            <svg className="w-10 h-10 sm:w-[52px] sm:h-[48px]" viewBox="0 0 24 24">
+        <div className="flex flex-col items-start gap-3 text-left sm:flex-row sm:items-center sm:gap-[22px]">
+          <div className="h-10 w-10 sm:h-[52px] sm:w-[58px] shrink-0 flex items-center justify-center">
+            <svg className="h-10 w-10 sm:h-[48px] sm:w-[52px]" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -40,12 +40,12 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
           </div>
 
           {/* Frame 1000012015 */}
-          <div className="space-y-0.5">
-            <h4 className="heading-h4 text-primary text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] tracking-[-0.00015em]">
+          <div className="space-y-1 text-left">
+            <h4 className="heading-h4 text-primary text-left text-[18px]! sm:text-[20px]! leading-[26px] sm:leading-[28px] tracking-[-0.00015em]">
               See Our Articles Highlighted In Google Search
             </h4>
-            <p className="body-text text-[#5F6B6F] text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px] lg:whitespace-nowrap">
-              Add My ESA Therapist as a source - see results your way.
+            <p className="body-text text-[#5F6B6F] text-left text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px]">
+              Add a My ESA Therapist pet as a source - see results your way.
             </p>
           </div>
         </div>
