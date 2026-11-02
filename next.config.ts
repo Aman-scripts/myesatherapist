@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
-  compress: true,
+  // Vercel compresses responses. Next's gzip adds a drain listener per chunk
+  // and warns once a large page, such as a state page, passes 10 listeners.
+  compress: false,
   poweredByHeader: false,
   experimental: {
     optimizePackageImports: ["lucide-react"],
