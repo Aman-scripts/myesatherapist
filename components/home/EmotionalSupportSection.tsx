@@ -69,7 +69,7 @@ export function EmotionalSupportSection() {
             </CtaButton>
           </div>
           <p className="body-small text-center sm:text-left">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
         </div>
       </div>
@@ -114,7 +114,7 @@ export function EmotionalSupportSection() {
                 </CtaButton>
               </div>
               <p className="body-small">
-                If not approved after your evaluation? You get a full refund.
+                Not approved after your ESA evaluation? You get a full refund!.
               </p>
             </div>
           </div>

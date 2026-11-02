@@ -135,7 +135,7 @@ export function HeroSection() {
           />
 
           <p className="body-small mt-4 max-w-[280px]">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
 
           <div className="mt-5 flex flex-col items-center gap-3">
@@ -258,7 +258,7 @@ export function HeroSection() {
           </div>
 
             <p className="body-small mt-3 text-center">
-              If not approved after your evaluation? You get a full refund.
+              Not approved after your ESA evaluation? You get a full refund!.
             </p>
           </div>
         </div>
@@ -372,7 +372,7 @@ export function HeroSection() {
 
               {/* Reassurance text from homepage.md */}
               <p className="body-small mt-2">
-                If not approved after your evaluation? You get a full refund.
+                Not approved after your ESA evaluation? You get a full refund!.
               </p>
 
               {/* Trustpilot Badge */}

@@ -133,7 +133,7 @@ export function StatesHeroSection() {
 
           {/* Refund Guarantee Note */}
           <p className="body-small text-body-text mt-3 text-center">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
 
           {/* Review Badges */}
@@ -260,7 +260,7 @@ export function StatesHeroSection() {
 
           {/* Refund Guarantee Note */}
           <p className="body-small text-body-text mt-3 text-center">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
 
           {/* Review Badges */}
@@ -432,7 +432,7 @@ export function StatesHeroSection() {
 
                 {/* Refund Guarantee Note */}
                 <p className="body-small text-body-text">
-                  If not approved after your evaluation? You get a full refund.
+                  Not approved after your ESA evaluation? You get a full refund!.
                 </p>
               </div>
 

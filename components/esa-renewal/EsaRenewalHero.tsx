@@ -44,7 +44,7 @@ function HeroCopy() {
         Start Your Renewal Online
       </CtaButton>
       <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
-        If not approved after your evaluation? You get a full refund.
+        Not approved after your ESA evaluation? You get a full refund!.
       </p>
       <ReviewBadges />
     </div>

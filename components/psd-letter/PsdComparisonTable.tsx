@@ -284,7 +284,7 @@ export function PsdComparisonTable() {
             Start Your Consultation
           </CtaButton>
           <p className="body-small text-center">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
         </div>
       </div>

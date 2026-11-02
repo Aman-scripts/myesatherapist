@@ -80,7 +80,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               Schedule Consultation
             </CtaButton>
             <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
-              If not approved after your evaluation? You get a full refund.
+              Not approved after your ESA evaluation? You get a full refund!.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
             </CtaButton>
           </div>
           <p className="font-sans font-medium text-[13px] leading-[20px] text-body-text mt-3">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
           <div className="relative w-[280px] sm:w-[380px] aspect-[4/5] mt-4">
             <Image

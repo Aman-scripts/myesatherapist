@@ -114,7 +114,7 @@ export function HowItWorks() {
           <div className="flex flex-col items-center mt-10 lg:mt-12 gap-2">
             <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
             <p className="body-small text-center">
-              If not approved after your evaluation? You get a full refund.
+              Not approved after your ESA evaluation? You get a full refund!.
             </p>
           </div>
 

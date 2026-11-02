@@ -238,7 +238,7 @@ export function DoctorsListingSection() {
             Book Your Appointment
           </CtaButton>
           <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text text-center">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
         </div>
 

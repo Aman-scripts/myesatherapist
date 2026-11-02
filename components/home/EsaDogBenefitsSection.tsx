@@ -13,7 +13,7 @@ const BENEFITS: BenefitCard[] = [
   {
     title: "Reduces Stress & Anxiety",
     description:
-      "Petting and being near your dog can help calm your nervous system, ease tension, and make stressful moments feel more manageable.",
+      "Petting and being near your ESA can help calm your nervous system, ease tension, and make stressful moments feel more manageable.",
     icon: "/ESA ICons/Icon-21.svg",
   },
   {
@@ -25,44 +25,44 @@ const BENEFITS: BenefitCard[] = [
   {
     title: "Builds Daily Routine",
     description:
-      "Regular feeding times and daily walks add structure to your day, which may help with depression and low motivation.",
+      "Regular feeding times and daily walks add structure to your day, which may help with mental health conditions and low motivation.",
     icon: "/ESA ICons/Icon-9.svg",
   },
   {
     title: "Encourages Activity",
     description:
-      "Daily walks with your dog mean more movement, more fresh air, and steady habits that can support better physical health.",
+      "Prepping meals for your ESA means more movement, a sense of responsibility, and steady habits that can support better physical health.",
     icon: "/ESA ICons/Icon-10.svg",
   },
   {
     title: "Better Sleep",
     description:
-      "Many owners feel safer and more settled at night with their dog nearby, which can make it easier to rest.",
+      "Many owners feel safer and more settled at night with their ESA nearby, which can make it easier to rest.",
     icon: "/ESA ICons/Glyph-1.svg",
   },
   {
-    title: "Social Connection",
+    title: "Sense of Purpose",
     description:
-      "Dogs make it easier to start conversations, meet neighbors, and gradually rebuild confidence when you are around other people.",
-    icon: "/ESA ICons/Icon-8.svg",
-  },
-  {
-    title: "Sense Of Purpose",
-    description:
-      "Caring for another living being each day can restore a sense of meaning and responsibility to your daily life.",
+      "Caring for another living being each day can restore a sense of obligation, meaning, and responsibility to your daily life.",
     icon: "/ESA ICons/Icon-11.svg",
   },
   {
     title: "Unconditional Support",
     description:
-      "Your dog offers constant, non-judgmental companionship during hard moments, stressful days, and panic episodes when you need it most.",
+      "Your ESA offers constant, non-judgmental companionship during hard moments, stressful days, and panic episodes when you need it most.",
     icon: "/ESA ICons/Icon-12.svg",
+  },
+  {
+    title: "Supports Social Confidence",
+    description:
+      "For some individuals, having an ESA can make certain social situations feel less intimidating. Walking a dog or spending time outdoors with an animal may also create opportunities for casual social interaction.",
+    icon: "/ESA ICons/Icon-8.svg",
   },
 ];
 
 export function EsaDogBenefitsSection() {
   return (
-    <section className="relative w-full bg-white pt-0 lg:pt-24 pb-0 overflow-hidden">
+    <section className="relative w-full bg-white pt-0 lg:pt-24 pb-14 sm:pb-16 lg:pb-0 overflow-hidden">
       {/* Mobile and tablet photo sits above the copy. Desktop keeps the banner below the cards. */}
       <div className="lg:hidden w-full">
         <Image
@@ -88,10 +88,10 @@ export function EsaDogBenefitsSection() {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-14 lg:mb-16 space-y-3 max-w-[680px] mx-auto">
           <h2 className="heading-h2 capitalize">
-            Benefits Of Having An Emotional Support Dog
+            Benefits Of Having An Emotional Support Animal
           </h2>
           <p className="body-large">
-            Dogs provide steady comfort and structure. Here&apos;s how an ESA dog can support your daily life.
+            Emotional support animals (ESAs) provide steady comfort and structure. Here&apos;s how an ESA can support your daily life.
           </p>
         </div>
 

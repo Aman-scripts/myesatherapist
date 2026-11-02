@@ -22,6 +22,12 @@ const statsData = [
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
+const mobileStats = [
+  { value: "5+", label: "Years Serving" },
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
+
 export function PsdHeroSection() {
   const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
@@ -69,51 +75,52 @@ export function PsdHeroSection() {
           media="(max-width: 639px)"
           quality={90}
           src="/Hero_image_for_mobile_all.png"
-          alt="Psychiatric Service Dog Letter Assistance"
+          alt=""
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-top"
           sizes="(max-width: 639px) 100vw, 1px"
         />
 
-        {/* Content Container at Top */}
-        <div className="relative z-10 px-3 pt-6 pb-10 text-center flex flex-col items-center">
-          {/* Stat Pills at top (Mobile) */}
-          <div className="flex items-center justify-center gap-2 w-full max-w-[340px] mx-auto mb-3.5">
-            {statsData.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex-1 flex flex-col items-center justify-center bg-background py-1.5 px-1 rounded-[24px] text-center shadow-xs"
-              >
-                <span className="body-large text-color-gradient leading-none">
-                  {stat.value}
-                </span>
-                <span className="body-small text-[#6B6B6B] mt-0.5 whitespace-nowrap !text-[11px] leading-tight">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-
-          <p aria-hidden="true" className="heading-h1 capitalize max-w-xs mx-auto">
-            Psychiatric Service
+        <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+          <p aria-hidden="true" className="heading-h1 capitalize mx-auto max-w-[340px] text-[28px]! leading-[36px]!">
+            Psychiatric Service Dog
             <br />
-            Dog Letter Assistance
+            Letter Assistance
           </p>
 
-          <p className="body-large max-w-[290px] mx-auto mt-2.5">
-            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.
+          <p className="body-large max-w-[300px] mx-auto mt-3">
+            Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.
           </p>
 
-          {/* Stacked Action Buttons (Mobile - Frame 7) */}
           <MobileHeroActionButtons
-            className="mt-4"
+            className="mt-5"
             selectedState={selectedState}
             onStateSelect={handleStateSelect}
             getStartedHref="#pricing"
             placeholder="Select your State"
           />
 
-          <p className="body-small text-center mt-2.5 max-w-[300px]">
-            Not approved after your PSD evaluation? You get a full refund!
+          <p className="body-small text-center mt-4 max-w-[260px]">
+            If not approved after your evaluation?
+            <br />
+            You get a full refund.
           </p>
+
+          <div className="mt-4 flex flex-col items-center gap-3">
+            {mobileStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+              >
+                <span className="body-strong text-primary">{stat.value}</span>
+                <span className="body-text text-primary">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-5 w-full max-w-[360px]">
+            <ReviewBadges className="mx-auto max-w-none justify-center" />
+          </div>
         </div>
       </div>
 

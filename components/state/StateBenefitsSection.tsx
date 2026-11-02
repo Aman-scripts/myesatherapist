@@ -85,7 +85,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
   const emotionalHeading = data.emotionalBenefitsHeading || "Emotional Benefits :";
   const refundNote = data.benefitsRefundNote === ""
     ? ""
-    : (data.benefitsRefundNote || "If not approved after your evaluation? You get a full refund.");
+    : (data.benefitsRefundNote || "Not approved after your ESA evaluation? You get a full refund!.");
 
   const isStateWhoBenefits = Boolean(data.benefitsImage?.includes("statewhobenefits"));
 

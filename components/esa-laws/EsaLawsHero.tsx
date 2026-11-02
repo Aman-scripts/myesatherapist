@@ -10,21 +10,20 @@ const HERO_IMAGE = "/esa-laws/esalaws-herosection-portrait.webp";
 export function EsaLawsHero() {
   return (
     <section className="relative z-30 w-full bg-background overflow-visible">
-      <h1 className="sr-only">{HEADING}</h1>
-      <div className="sm:hidden relative w-full">
+      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={60}
-          src="/Hero_image_for_mobile_all.png"
-          alt=""
+          quality={70}
+          src={HERO_IMAGE}
+          alt="Woman reading ESA Laws guide with her emotional support dog"
           fill
-          className="object-cover object-top"
-          sizes="(max-width: 639px) 390px, 1px"
+          className="object-cover object-bottom"
+          sizes="(max-width: 639px) 430px, 1px"
         />
-        <div className="relative z-10 flex items-center px-5 py-12">
+        <div className="absolute inset-0 z-10 flex items-center px-5">
           <div className="flex flex-col items-start gap-3 max-w-[300px]">
-            <p aria-hidden="true" className="heading-h2 text-primary">{HEADING}</p>
-            <p className="body-large text-primary">{DESCRIPTION}</p>
+            <h1 className="heading-h2 text-primary">{HEADING}</h1>
+            <p className="body-text text-body-text">{DESCRIPTION}</p>
           </div>
         </div>
       </div>
@@ -41,7 +40,7 @@ export function EsaLawsHero() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-10">
           <div className="flex flex-col items-start gap-4 max-w-[520px]">
-            <p aria-hidden="true" className="heading-h1 text-primary">{HEADING}</p>
+            <h1 className="heading-h1 text-primary">{HEADING}</h1>
             <p className="body-large text-body-text max-w-[440px]">{DESCRIPTION}</p>
           </div>
         </div>
@@ -65,7 +64,7 @@ export function EsaLawsHero() {
       >
         <div className="relative w-[1440px] h-[797px] flex items-center">
           <div className="pl-[82px] w-[720px] z-10 flex flex-col items-start gap-5">
-            <p aria-hidden="true" className="heading-h1 text-primary">{HEADING}</p>
+            <h1 className="heading-h1 text-primary">{HEADING}</h1>
             <p className="body-large text-body-text max-w-[460px]">{DESCRIPTION}</p>
           </div>
         </div>

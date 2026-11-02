@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { createPortal } from "react-dom";
 import { X, ChevronRight } from "lucide-react";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { SidebarDivider } from "./ReviewerUI";
 
 export interface ProfileShellProps {
@@ -148,8 +149,29 @@ export function ProfileShell(props: ProfileShellProps) {
   }, [isOpen]);
 
   return (
-    <section className="w-full bg-background relative pb-16 lg:pb-24">
-      <div className="w-full flex flex-col lg:flex-row items-start">
+    <section className="w-full bg-background relative pb-16 lg:pb-24 overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[360px] sm:h-[420px] lg:hidden" aria-hidden="true">
+        <BreakpointImage
+          media="(max-width: 639px)"
+          quality={90}
+          src="/blogs/blog_hero-section-mobile.webp"
+          alt=""
+          fill
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+        <BreakpointImage
+          media="(min-width: 640px) and (max-width: 1023px)"
+          quality={90}
+          src="/blogs/blog_hero-section-tablet.webp"
+          alt=""
+          fill
+          className="object-cover object-top"
+          sizes="100vw"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-background" />
+      </div>
+      <div className="relative z-10 w-full flex flex-col lg:flex-row items-start">
         {/* Desktop sidebar (Figma Frame 1000011828: 382px, padding 57px 31px) */}
         <aside className="hidden lg:block w-[382px] shrink-0 sticky top-[126px] self-start z-20 max-h-[calc(100vh-126px)] overflow-y-auto overflow-x-hidden no-scrollbar color-gradient px-[31px] pt-[57px] pb-12">
           <SidebarBody {...props} />

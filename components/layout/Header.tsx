@@ -365,18 +365,6 @@ export function Header() {
             Contact Us
           </Link>
 
-          {/* Mobile All Available States section */}
-          <div className="border-t border-[#EAE5DC] pt-4">
-            <Link prefetch={false}
-              href="/state/"
-              onClick={() => setMobileOpen(false)}
-              className="w-full flex items-center justify-between py-2 text-[#1E3E47] font-semibold text-base"
-            >
-              <span>See all 50 States</span>
-              <ArrowRight className="w-4 h-4 text-[#1E3E47]" />
-            </Link>
-          </div>
-
           <div className="pt-2 space-y-2.5">
             {!isPsd && (
               <CtaButton

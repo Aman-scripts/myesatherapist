@@ -142,29 +142,25 @@ export default async function BlogDetailPage({ params }: PageProps) {
           subtitle={article.shortDescription}
           category={article.category}
           categorySlug={article.categorySlug}
+          meta={
+            <BlogMetaBar
+              authorName={article.author.name}
+              authorRole={article.author.role}
+              authorCredentials={article.author.credentials}
+              authorImage={article.author.image}
+              publishDate={article.publishDate}
+              lastUpdated={article.lastUpdated}
+              reviewerName={article.reviewedBy.name}
+              reviewerRole={article.reviewedBy.role}
+              reviewerCredentials={article.reviewedBy.credentials}
+              reviewerImage={article.reviewedBy.image}
+              reviewerLinkedin={article.reviewedBy.linkedin}
+            />
+          }
         />
 
-        {/* 2. Floating Meta/Trust Bar & Main Article Content */}
+        {/* 2. Main Article Content */}
         <div className="relative w-full">
-          {/* Floating Meta/Trust Bar: sits across seam of hero and content without pushing down desktop TOC */}
-          <div className="relative lg:absolute lg:left-0 lg:right-0 lg:-top-[62px] z-30 px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-10 lg:mt-0 pointer-events-none">
-            <div className="pointer-events-auto">
-              <BlogMetaBar
-                authorName={article.author.name}
-                authorRole={article.author.role}
-                authorCredentials={article.author.credentials}
-                authorImage={article.author.image}
-                publishDate={article.publishDate}
-                lastUpdated={article.lastUpdated}
-                reviewerName={article.reviewedBy.name}
-                reviewerRole={article.reviewedBy.role}
-                reviewerCredentials={article.reviewedBy.credentials}
-                reviewerImage={article.reviewedBy.image}
-                reviewerLinkedin={article.reviewedBy.linkedin}
-              />
-            </div>
-          </div>
-
           {/* Main Article Content with Left-Aligned Sticky Table of Contents */}
           <div className="w-full relative flex flex-col lg:flex-row items-start justify-start z-10 pb-8 lg:pb-12">
             <BlogTableOfContents items={article.tocItems} />

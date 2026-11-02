@@ -69,7 +69,7 @@ export function EsaRenewalHowItWorks() {
             Get Started
           </CtaButton>
           <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
           <p className="rounded-full bg-[#FDECEC] px-5 py-2 text-center font-sans text-[14px] font-medium leading-[22px] text-[#8A3A3A]">
             We authorize your payment first, but only charge it after your evaluation is completed.

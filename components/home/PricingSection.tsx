@@ -264,26 +264,26 @@ export function PricingSection({
                         </h3>
                       </div>
                       <div className="flex min-w-0 flex-1 flex-col px-4 pb-3 pt-5">
-                        <div className="flex flex-col gap-2.5">
-                          {["Online ESA evaluation", "Licensed mental health professional", "Secure email delivery"].map((feature) => (
+                        <div className="flex flex-col gap-2">
+                          {card.features.slice(0, 3).map((feature) => (
                             <div key={feature} className="flex items-start gap-2">
-                              <span className="mt-0.5 flex h-3 w-3 shrink-0 items-center justify-center rounded-full bg-accent">
-                                <svg width="8" height="6" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-                                  <path d="M1 4.1L3.4 6.5L9 1" stroke="#2E5A66" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                              <span className="flex h-[22px] shrink-0 items-center">
+                                <CheckmarkIcon />
                               </span>
-                              <span className="font-sans text-[14px] font-semibold leading-[22px] text-body-text">
+                              <span className="min-w-0 font-sans text-[14px] font-semibold leading-[22px] text-body-text">
                                 {feature}
                               </span>
                             </div>
                           ))}
                         </div>
-                        <a
-                          href={ctaHref}
-                          className="mt-auto inline-flex h-11 w-fit max-w-full items-center justify-center self-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-[#1A3D4F] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
-                        >
-                          {mobileButtonLabel(card.buttonText)}
-                        </a>
+                        <div className="mt-auto flex justify-center pt-5">
+                          <a
+                            href={ctaHref}
+                            className="inline-flex h-11 w-fit max-w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-[#1A3D4F] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                          >
+                            {mobileButtonLabel(card.buttonText)}
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

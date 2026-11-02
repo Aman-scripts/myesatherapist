@@ -5,7 +5,7 @@ import Image from "next/image";
 import { YouTubePlayIcon } from "./TestimonialsSection";
 
 const VIDEO_ID = "z139gKZv4_Y";
-const VIDEO_TITLE = "A licensed ESA provider explains how ESA evaluations work";
+const VIDEO_TITLE = "A licensed therapist explains how ESA evaluations work";
 
 export function LicensedProviderSection() {
   // Click-to-load facade: the YouTube player (~1 MB of JS plus ad cookies)
@@ -17,11 +17,11 @@ export function LicensedProviderSection() {
       <div className="max-w-[999px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-6 sm:mb-8 lg:mb-10 xl:mb-12 space-y-2.5 max-w-[999px] mx-auto">
-          <h2 className="heading-h2 capitalize">
-            Hear From A Licensed ESA Provider
+          <h2 className="heading-h2">
+            Hear From a Licensed Therapist
           </h2>
           <p className="body-large max-w-[850px] mx-auto">
-            Nervous about your first evaluation? A licensed provider explains how ESA evaluations work, what questions you may be asked, and how the process helps you feel comfortable and supported.
+            Nervous about your first evaluation? A licensed therapist explains how ESA evaluations work, what questions you may be asked, and how the process helps you feel comfortable and supported.
           </p>
         </div>
 

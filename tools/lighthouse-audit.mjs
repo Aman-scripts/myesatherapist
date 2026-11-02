@@ -53,6 +53,7 @@ const DEFAULT_PAGES = [
   "/esa-letter-for-housing/",
   "/esa-letter-online/",
   "/esa-letter-renewal/",
+  "/faq/",
   "/frequently-asked-questions/",
   "/hipaa-compliance/",
   "/legal-reviewer/",
@@ -159,7 +160,11 @@ async function auditPage(chromePort, urlPath, formFactor) {
   const config = formFactor === "desktop" ? desktopConfig : undefined;
   const result = await lighthouse(
     url,
-    { port: chromePort, onlyCategories: ["performance", "accessibility"], logLevel: "error" },
+    {
+      port: chromePort,
+      onlyCategories: ["performance", "accessibility", "best-practices", "seo"],
+      logLevel: "error",
+    },
     config
   );
   const { categories } = result.lhr;
@@ -168,6 +173,8 @@ async function auditPage(chromePort, urlPath, formFactor) {
     formFactor,
     performance: Math.round((categories.performance?.score ?? 0) * 100),
     accessibility: Math.round((categories.accessibility?.score ?? 0) * 100),
+    bestPractices: Math.round((categories["best-practices"]?.score ?? 0) * 100),
+    seo: Math.round((categories.seo?.score ?? 0) * 100),
     report: result.report,
     lhr: result.lhr,
   };
@@ -179,11 +186,11 @@ async function main() {
   let serverProcess;
   if (!skipBuild) {
     console.log("Building production bundle...");
-    await run("npx", ["next", "build"]);
+    await run(process.platform === "win32" ? "npx.cmd" : "npx", ["next", "build"]);
   }
 
   console.log(`Starting production server on port ${PORT}...`);
-  serverProcess = spawn("npx", ["next", "start", "-p", PORT], {
+  serverProcess = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["next", "start", "-p", PORT], {
     stdio: "inherit",
     shell: true,
   });
@@ -201,8 +208,8 @@ async function main() {
         try {
           const result = await auditPage(chrome.port, pagePath, formFactor);
           results.push(result);
-          console.log(`perf=${result.performance} a11y=${result.accessibility}`);
-          if (result.performance < THRESHOLD || result.accessibility < THRESHOLD) {
+          console.log(`perf=${result.performance} a11y=${result.accessibility} bp=${result.bestPractices} seo=${result.seo}`);
+          if (result.performance < THRESHOLD || result.accessibility < THRESHOLD || result.bestPractices < THRESHOLD || result.seo < THRESHOLD) {
             const safeName = (pagePath.replace(/\//g, "_") || "_home").replace(/^_|_$/g, "") || "home";
             await writeFile(path.join(OUT_DIR, `${safeName}-${formFactor}.html`), result.report);
             await writeFile(
@@ -212,7 +219,7 @@ async function main() {
           }
         } catch (err) {
           console.log(`ERROR: ${err.message}`);
-          results.push({ url: pagePath, formFactor, performance: null, accessibility: null, error: err.message });
+          results.push({ url: pagePath, formFactor, performance: null, accessibility: null, bestPractices: null, seo: null, error: err.message });
         }
       }
     }
@@ -226,9 +233,11 @@ async function main() {
   for (const r of results) {
     const pPass = r.performance !== null && r.performance >= THRESHOLD;
     const aPass = r.accessibility !== null && r.accessibility >= THRESHOLD;
-    if (!pPass || !aPass) failing.push(r);
+    const bpPass = r.bestPractices !== null && r.bestPractices >= THRESHOLD;
+    const sPass = r.seo !== null && r.seo >= THRESHOLD;
+    if (!pPass || !aPass || !bpPass || !sPass) failing.push(r);
     console.log(
-      `${r.url.padEnd(58)} ${r.formFactor.padEnd(8)} perf=${String(r.performance).padEnd(5)}${pPass ? "PASS" : "FAIL"}   a11y=${String(r.accessibility).padEnd(5)}${aPass ? "PASS" : "FAIL"}`
+      `${r.url.padEnd(52)} ${r.formFactor.padEnd(8)} perf=${String(r.performance).padEnd(4)}${pPass ? "PASS" : "FAIL"}  a11y=${String(r.accessibility).padEnd(4)}${aPass ? "PASS" : "FAIL"}  bp=${String(r.bestPractices).padEnd(4)}${bpPass ? "PASS" : "FAIL"}  seo=${String(r.seo).padEnd(4)}${sPass ? "PASS" : "FAIL"}`
     );
   }
   console.log(`\n${failing.length} of ${results.length} audits below ${THRESHOLD}.`);

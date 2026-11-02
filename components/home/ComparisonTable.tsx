@@ -129,7 +129,7 @@ export function ComparisonTable() {
         <div className="block lg:hidden w-full max-w-[370px] sm:max-w-[620px] md:max-w-[700px] relative mx-auto pt-[14px]">
           {/* Cream frame with Features / Others columns */}
           <div className="w-full bg-background rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-3">
-            <div className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
+            <div className="grid grid-cols-[minmax(0,1.28fr)_132px_minmax(0,0.86fr)] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
               <h3 className="font-heading font-bold text-center text-xs sm:text-base text-primary">Features</h3>
               <div />
               <h3 className="font-heading font-bold text-center text-xs sm:text-base text-primary">Others</h3>
@@ -139,10 +139,10 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-[1fr_124px_1fr] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-16 sm:h-[114px]"
+                  className="grid grid-cols-[minmax(0,1.28fr)_132px_minmax(0,0.86fr)] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-16 sm:h-[114px]"
                 >
-                  <div className="px-1 sm:px-2 flex items-center justify-center text-center min-w-0">
-                    <h4 className="font-heading font-bold text-center text-[10.5px] sm:text-[13px] md:text-sm leading-tight text-primary break-words">{row.feature}</h4>
+                  <div className="px-2 sm:px-2 flex items-center justify-center text-center min-w-0">
+                    <h4 className="font-heading font-bold text-center text-[11px] sm:text-[13px] md:text-sm leading-tight text-primary">{row.feature}</h4>
                   </div>
                   <div />
                   <div className="px-1.5 sm:px-2 flex flex-col items-center justify-center text-center gap-1">
@@ -156,12 +156,12 @@ export function ComparisonTable() {
             </div>
           </div>
 
-          {/* Raised center card: ESA Therapist */}
+          {/* Raised center card sits on the middle track, right of center, so feature labels stay clear. */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-[-14px] w-[124px] sm:w-[214px] md:w-[234px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
+            className="absolute top-0 bottom-[-14px] w-[132px] sm:w-[214px] md:w-[234px] left-[calc((100%-132px)*1.28/2.14)] sm:left-1/2 sm:-translate-x-1/2 rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
           >
             <div className="h-[76px] sm:h-[84px] rounded-b-[20px] flex items-center justify-center px-3 text-center bg-[#1A3D4F]/35">
-              <h3 className="heading-h4 text-background text-center leading-tight text-sm sm:text-base">
+              <h3 className="font-heading font-bold text-background text-center leading-[30px] text-[24px]! sm:text-[26px]!">
                 ESA
                 <br />
                 Therapist
@@ -277,7 +277,7 @@ export function ComparisonTable() {
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton href="#how-it-works">Get Started</CtaButton>
           <p className="body-small text-center">
-            If not approved after your evaluation? You get a full refund.
+            Not approved after your ESA evaluation? You get a full refund!.
           </p>
         </div>
       </div>

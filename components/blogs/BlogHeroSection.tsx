@@ -1,14 +1,16 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { BreakpointImage } from "@/components/common/BreakpointImage";
 
 interface BlogHeroSectionProps {
   title?: string;
   subtitle?: string;
   category?: string;
   categorySlug?: string;
+  /** Author / published / reviewer card. Sits on the cream area on small screens. */
+  meta?: React.ReactNode;
 }
 
 export function BlogHeroSection({
@@ -16,22 +18,29 @@ export function BlogHeroSection({
   subtitle = "Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.",
   category = "ESA Guide",
   categorySlug = "esa-guide",
+  meta,
 }: BlogHeroSectionProps = {}) {
   const categoryHref = categorySlug ? `/blog/${categorySlug}/` : "/blog/";
 
   return (
-    <section className="relative w-full bg-background overflow-hidden min-h-[420px] sm:min-h-[460px] lg:min-h-[500px] xl:min-h-[540px] flex flex-col justify-start items-center">
-      {/* ---------------------------------------------------- */}
-      {/* Background Graphic: blogs_internal_page_common      */}
-      {/* Anchored object-right so laptop and dog are visible  */}
-      {/* ---------------------------------------------------- */}
-      <Image
-        src="/blogs/blogs_internal_page_common.webp"
-        alt={title}
+    <section className="relative w-full bg-background overflow-hidden min-h-[640px] sm:min-h-[720px] lg:min-h-[500px] xl:min-h-[540px] lg:overflow-visible flex flex-col justify-start items-center">
+      {/* Mobile and tablet use the shared cream hero. Desktop keeps the illustration. */}
+      <BreakpointImage
+        media="(max-width: 1023px)"
+        quality={90}
+        src="/Hero_image_for_mobile_all.png"
+        alt=""
         fill
-        priority
-        quality={95}
-        className="object-cover object-right md:object-[right_center] pointer-events-none"
+        className="object-cover object-top pointer-events-none"
+        sizes="100vw"
+      />
+      <BreakpointImage
+        media="(min-width: 1024px)"
+        quality={90}
+        src="/blogs/blogs_internal_page_common.webp"
+        alt=""
+        fill
+        className="object-cover object-right pointer-events-none"
         sizes="100vw"
       />
 
@@ -45,7 +54,7 @@ export function BlogHeroSection({
         {/* Auto layout: row, align-items: center, gap: 12px */}
         <nav
           aria-label="Breadcrumb"
-          className="flex items-center justify-center flex-wrap gap-3 body-text text-body-text mb-6 sm:mb-7 lg:mb-[30px]"
+          className="hidden sm:flex items-center justify-center flex-wrap gap-3 body-text text-body-text mb-6 sm:mb-7 lg:mb-[30px]"
         >
           <Link prefetch={false} href="/" className="hover:text-primary transition-colors">
             Home
@@ -94,11 +103,17 @@ export function BlogHeroSection({
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="body-large text-body-text text-center max-w-[574px] mx-auto">
+            <p className="body-large text-body-text text-center max-w-[320px] sm:max-w-[460px] lg:max-w-[574px] mx-auto">
               {subtitle}
             </p>
           )}
         </div>
+
+        {meta && (
+          <div className="w-full max-w-[360px] sm:max-w-[520px] lg:max-w-[1069px] mt-6 lg:mt-0 lg:absolute lg:left-0 lg:right-0 lg:bottom-0 lg:translate-y-1/2 lg:px-8">
+            {meta}
+          </div>
+        )}
       </div>
     </section>
   );

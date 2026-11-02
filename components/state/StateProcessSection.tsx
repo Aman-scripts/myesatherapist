@@ -158,7 +158,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
           <CtaButton href="/pricing/">Start Your Free Evaluation</CtaButton>
           {data.benefitsRefundNote !== "" && (
             <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
-              If not approved after your evaluation? You get a full refund.
+              Not approved after your ESA evaluation? You get a full refund!.
             </p>
           )}
         </div>
