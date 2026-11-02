@@ -21,15 +21,13 @@ export function VideoTestimonialsHeroSection() {
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
-        <div className="relative z-10 flex items-center px-5 py-12">
-          <div className="flex flex-col items-start gap-3 max-w-[300px]">
-            <p aria-hidden="true" className="heading-h2 text-primary">
-              {HEADING_LINE_1}
-              <br />
-              {HEADING_LINE_2}
-            </p>
-            <p className="body-large text-primary">{DESCRIPTION}</p>
-          </div>
+        <div className="relative z-10 px-6 pt-10 pb-[168px] text-center flex flex-col items-center space-y-3">
+          <p aria-hidden="true" className="heading-h1 text-primary max-w-[280px]">
+            {HEADING_LINE_1}
+            <br />
+            {HEADING_LINE_2}
+          </p>
+          <p className="body-large text-body-text max-w-[320px]">{DESCRIPTION}</p>
         </div>
       </div>
 

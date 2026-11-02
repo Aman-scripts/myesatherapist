@@ -60,11 +60,11 @@ export function ContactHero() {
             style={cardStyle}
           >
             {/* Header */}
-            <div className="text-center space-y-1">
-              <p aria-hidden="true" className="heading-h3 text-primary text-center">
+            <div className="text-center space-y-2">
+              <p aria-hidden="true" className="heading-h1 text-primary text-center">
                 Request Info
               </p>
-              <p className="body-small text-body-text text-center">
+              <p className="body-text text-body-text text-center">
                 Feel Free To Connect With Us!
                 <br />
                 (24×7 Available At Your Service)
@@ -82,7 +82,7 @@ export function ContactHero() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-2.5">
                 <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-small text-body-text">
+                  <label className="block whitespace-nowrap body-text text-body-text">
                     First Name
                   </label>
                   <input
@@ -96,7 +96,7 @@ export function ContactHero() {
                 </div>
 
                 <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-small text-body-text">
+                  <label className="block whitespace-nowrap body-text text-body-text">
                     Last Name
                   </label>
                   <input
@@ -110,7 +110,7 @@ export function ContactHero() {
                 </div>
 
                 <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-small text-body-text">
+                  <label className="block whitespace-nowrap body-text text-body-text">
                     Email Address
                   </label>
                   <input
@@ -124,7 +124,7 @@ export function ContactHero() {
                 </div>
 
                 <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-small text-body-text">
+                  <label className="block whitespace-nowrap body-text text-body-text">
                     Message
                   </label>
                   <input

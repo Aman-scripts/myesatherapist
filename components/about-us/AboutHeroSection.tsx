@@ -24,7 +24,7 @@ export function AboutHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="relative z-10 px-6 pt-10 pb-12 text-center flex flex-col items-center space-y-3">
+        <div className="relative z-10 px-6 pt-[80px] pb-[88px] text-center flex flex-col items-center space-y-3">
           <p aria-hidden="true" className="heading-h1 text-primary max-w-[280px] text-[32px]! leading-[40px]!">
             About My ESA
             <br />

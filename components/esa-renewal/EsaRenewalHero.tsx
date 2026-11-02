@@ -61,12 +61,39 @@ export function EsaRenewalHero() {
           src="/Hero_image_for_mobile_all.png"
           alt="Renew Your ESA Letter Online"
           fill
-          className="object-cover object-bottom"
-          sizes="(max-width: 639px) 430px, 1px"
+          className="object-cover object-top"
+          sizes="(max-width: 639px) 100vw, 1px"
         />
-        <div className="relative z-10 flex items-center px-5 py-12">
-          <div className="max-w-[340px]">
-            <HeroCopy />
+        <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+          <h1 className="heading-h1 text-primary max-w-[320px]">
+            {HEADING_LINE_1}
+            <br />
+            {HEADING_LINE_2}
+          </h1>
+          <p className="body-large text-body-text max-w-[320px] mx-auto mt-3">{DESCRIPTION}</p>
+          <CtaButton href="#pricing" variant="accent" className="mt-5 w-auto min-w-[240px]">
+            Start Your Renewal Online
+          </CtaButton>
+          <p className="body-small text-body-text mt-4 max-w-[280px]">
+            Not approved after your ESA evaluation? You get a full refund!.
+          </p>
+          <div className="mt-5 flex flex-col items-center gap-3">
+            {[
+              { value: "5+", label: "Years Serving" },
+              { value: "64,739+", label: "ESA Evaluations" },
+              { value: "100%", label: "Moneyback Guarantee" },
+            ].map((pill) => (
+              <div
+                key={pill.label}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+              >
+                <span className="body-strong text-primary">{pill.value}</span>
+                <span className="body-text text-primary">{pill.label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 w-full max-w-[360px]">
+            <ReviewBadges className="mx-auto max-w-none justify-center" />
           </div>
         </div>
       </div>

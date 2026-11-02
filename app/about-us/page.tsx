@@ -108,11 +108,11 @@ export default function AboutUsPage() {
         {/* Section 1: Hero */}
         <AboutHeroSection />
 
-        {/* Legitimate ESA Letter Evaluations You Can Trust */}
-        <AboutLegitimateSection />
-
         {/* Why ESA Owners Trust Us */}
         <AboutTrustBySection />
+
+        {/* Legitimate ESA Letter Evaluations You Can Trust */}
+        <AboutLegitimateSection />
 
         {/* Section 3: Why Pet Owners Trust MY ESA Therapist */}
         <AboutWhyTrustSection />

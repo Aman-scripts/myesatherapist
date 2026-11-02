@@ -69,7 +69,7 @@ export function EsaOnlineHero({
         {stacked && <div aria-hidden className="col-start-1 row-start-1 hidden aspect-[941/1672] sm:block" />}
         <div
           className={`absolute pointer-events-none z-0 ${
-            stacked ? "inset-x-0 bottom-0 aspect-[941/1672]" : "inset-0 w-full h-full"
+            stacked ? "inset-0 sm:inset-x-0 sm:bottom-0 sm:top-auto sm:h-auto sm:aspect-[941/1672]" : "inset-0 w-full h-full"
           }`}
         >
           {stacked ? (
@@ -80,7 +80,7 @@ export function EsaOnlineHero({
                 src={imageMobile!}
                 alt={imageAlt}
                 fill
-                className="sm:hidden object-cover object-bottom"
+                className="sm:hidden object-cover object-top"
                 sizes="(max-width: 639px) 430px, 1px"
               />
               <BreakpointImage
@@ -123,16 +123,46 @@ export function EsaOnlineHero({
           >
             {showStats ? (
               <>
-                <StatPills />
-                <p aria-hidden="true" className="heading-h1 text-[#1A3D4F]">{title}</p>
-                <p className="body-large text-[#1A3D4F]">{description}</p>
-                <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
-                  {buttonText}
-                </CtaButton>
-                <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
-                  Not approved after your ESA evaluation? You get a full refund!.
-                </p>
-                <ReviewBadges />
+                <div className="flex w-full flex-col items-center text-center sm:hidden">
+                  <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">{title}</p>
+                  <p className="body-large text-body-text max-w-[320px] mt-3">{description}</p>
+                  <CtaButton href={buttonHref} variant="accent" className="mt-5 w-auto min-w-[240px]">
+                    {buttonText}
+                  </CtaButton>
+                  <p className="body-small text-body-text mt-4 max-w-[280px]">
+                    Not approved after your ESA evaluation? You get a full refund!.
+                  </p>
+                  <div className="mt-5 flex flex-col items-center gap-3">
+                    {[
+                      { value: "5+", label: "Years Serving" },
+                      { value: "64,739+", label: "ESA Evaluations" },
+                      { value: "100%", label: "Moneyback Guarantee" },
+                    ].map((pill) => (
+                      <div
+                        key={pill.label}
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+                      >
+                        <span className="body-strong text-primary">{pill.value}</span>
+                        <span className="body-text text-primary">{pill.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 w-full max-w-[360px]">
+                    <ReviewBadges className="mx-auto max-w-none justify-center" />
+                  </div>
+                </div>
+                <div className="hidden sm:flex flex-col items-start gap-5 text-left">
+                  <StatPills />
+                  <p aria-hidden="true" className="heading-h1 text-[#1A3D4F]">{title}</p>
+                  <p className="body-large text-[#1A3D4F]">{description}</p>
+                  <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
+                    {buttonText}
+                  </CtaButton>
+                  <p className="font-sans font-medium text-[14px] leading-[22px] text-[#1A3D4F]">
+                    Not approved after your ESA evaluation? You get a full refund!.
+                  </p>
+                  <ReviewBadges />
+                </div>
               </>
             ) : (
               <>

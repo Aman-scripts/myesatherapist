@@ -10,21 +10,19 @@ const HERO_IMAGE = "/esa-laws/esalaws-herosection-portrait.webp";
 export function EsaLawsHero() {
   return (
     <section className="relative z-30 w-full bg-background overflow-visible">
-      <div className="sm:hidden relative w-full aspect-[390/780] min-h-[660px]">
+      <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
-          src={HERO_IMAGE}
-          alt="Woman reading ESA Laws guide with her emotional support dog"
+          quality={90}
+          src="/Hero_image_for_mobile_all.png"
+          alt=""
           fill
-          className="object-cover object-bottom"
-          sizes="(max-width: 639px) 430px, 1px"
+          className="object-cover object-top"
+          sizes="100vw"
         />
-        <div className="absolute inset-0 z-10 flex items-center px-5">
-          <div className="flex flex-col items-start gap-3 max-w-[300px]">
-            <h1 className="heading-h2 text-primary">{HEADING}</h1>
-            <p className="body-text text-body-text">{DESCRIPTION}</p>
-          </div>
+        <div className="relative z-10 px-6 pt-10 pb-12 text-center flex flex-col items-center space-y-3">
+          <h1 className="heading-h1 text-primary max-w-[320px]">{HEADING}</h1>
+          <p className="body-large text-body-text max-w-[320px]">{DESCRIPTION}</p>
         </div>
       </div>
 

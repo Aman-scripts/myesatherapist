@@ -32,19 +32,19 @@ export function EsaLawsStateHero({
       {stacked && <div aria-hidden className="col-start-1 row-start-1 hidden aspect-[941/1672] sm:block lg:hidden" />}
       <div
         className={`absolute pointer-events-none z-0 ${
-          stacked ? "inset-x-0 bottom-0 aspect-[941/1672] lg:inset-0 lg:aspect-auto lg:h-full" : "inset-0 w-full h-full"
+          stacked ? "inset-0 sm:inset-x-0 sm:bottom-0 sm:top-auto sm:h-auto sm:aspect-[941/1672] lg:inset-0 lg:aspect-auto lg:h-full" : "inset-0 w-full h-full"
         }`}
       >
         {stacked ? (
           <>
             <BreakpointImage
               media="(max-width: 639px)"
-            quality={90}
-              src={imageMobile!}
-              alt={imageAlt}
+              quality={90}
+              src="/Hero_image_for_mobile_all.png"
+              alt=""
               fill
-              className="sm:hidden object-cover object-bottom"
-              sizes="(max-width: 639px) 100vw, 1px"
+              className="sm:hidden object-cover object-top"
+              sizes="100vw"
             />
             <BreakpointImage
               media="(min-width: 640px) and (max-width: 1023px)"
@@ -87,14 +87,12 @@ export function EsaLawsStateHero({
         }`}
       >
         <div
-          className={`max-w-[624px] lg:max-w-[440px] xl:max-w-[624px] space-y-5 sm:space-y-6 lg:space-y-4 xl:space-y-6 ${
-            stacked ? "mx-auto lg:mx-0 text-center lg:text-left" : ""
-          }`}
+          className={`max-w-[624px] lg:max-w-[440px] xl:max-w-[624px] space-y-3 sm:space-y-6 lg:space-y-4 xl:space-y-6 mx-auto text-center lg:mx-0 lg:text-left`}
         >
-          <h1 className="font-heading text-[26px] sm:text-5xl lg:text-[34px] xl:text-[56px] font-bold text-primary leading-[1.14] tracking-[-0.0002em]">
+          <h1 className="heading-h1 text-primary max-w-[320px] mx-auto sm:max-w-none sm:mx-0 sm:text-5xl lg:text-[34px] xl:text-[56px]">
             {title}
           </h1>
-          <p className="font-sans text-[12.5px] sm:text-base lg:text-[13px] xl:text-[18px] text-body-text font-semibold leading-[1.65] max-w-[626px]">
+          <p className="body-large text-body-text max-w-[320px] mx-auto sm:max-w-[626px] sm:mx-0">
             {description}
           </p>
         </div>
