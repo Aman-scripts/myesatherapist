@@ -45,7 +45,7 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
               See Our Articles Highlighted In Google Search
             </h4>
             <p className="body-text text-[#5F6B6F] text-left text-[15px] sm:text-[16px] leading-[24px] sm:leading-[26px]">
-              Add a My ESA Therapist pet as a source - see results your way.
+              Add My ESA Therapist as a preferred resource.
             </p>
           </div>
         </div>

@@ -120,13 +120,13 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                 const isActive = activeId === item.id;
                 return (
                   <li key={item.id} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-[9px] shrink-0 select-none" />
+                    <span className={`w-1.5 h-1.5 rounded-full mt-[9px] shrink-0 select-none ${isActive ? "bg-accent" : "bg-white/70"}`} />
                     <a
                       href={`#${item.id}`}
                       onClick={(e) => scrollToSection(e, item.id)}
                       className={`body-text transition-colors leading-[24px] sm:leading-[26px] ${
                         isActive
-                          ? "text-white font-bold"
+                          ? "text-accent font-bold"
                           : "text-background/85 hover:text-white font-medium"
                       }`}
                     >
@@ -226,13 +226,13 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                         const isActive = activeId === item.id;
                         return (
                           <li key={item.id} className="flex items-start gap-2.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-white/70 mt-[9px] shrink-0 select-none" />
+                            <span className={`w-1.5 h-1.5 rounded-full mt-[9px] shrink-0 select-none ${isActive ? "bg-accent" : "bg-white/70"}`} />
                             <a
                               href={`#${item.id}`}
                               onClick={(e) => scrollToSection(e, item.id)}
                               className={`body-text transition-colors leading-[26px] ${
                                 isActive
-                                  ? "text-white font-bold"
+                                  ? "text-accent font-bold"
                                   : "text-background/85 hover:text-white font-medium"
                               }`}
                             >

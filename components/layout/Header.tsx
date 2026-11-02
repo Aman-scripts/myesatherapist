@@ -378,7 +378,8 @@ export function Header() {
             )}
             <CtaButton
               href="#pricing"
-              className="w-full justify-between h-[48px]"
+              centerLabel
+              className="w-full h-[48px]"
               onClick={() => setMobileOpen(false)}
             >
               {isPsd ? "Start Your Consultation" : "Get Started"}

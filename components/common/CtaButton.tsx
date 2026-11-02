@@ -25,6 +25,8 @@ export interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   showIcon?: boolean;
   /** Lets a long label wrap instead of staying on one line. */
   wrap?: boolean;
+  /** Centers the label in the pill and keeps the icon on the right. */
+  centerLabel?: boolean;
   variant?: "primary" | "secondary" | "accent";
 }
 
@@ -48,6 +50,7 @@ export function CtaButton({
   iconClassName = "",
   showIcon,
   wrap = false,
+  centerLabel = false,
   variant = "accent",
   onClick,
   disabled,
@@ -77,16 +80,19 @@ export function CtaButton({
   // In Figma Frame 1000011890: padding with 8px gap and 42.5px badge inside button
   const paddingClass = isSecondary
     ? "px-6 xl:px-8"
-    : (shouldShowIcon ? "pl-6 sm:pl-[28px] pr-[5px]" : "px-6 xl:px-8");
+    : centerLabel
+      ? "px-[52px]"
+      : (shouldShowIcon ? "pl-6 sm:pl-[28px] pr-[5px]" : "px-6 xl:px-8");
 
   const heightClass = wrap ? "h-auto min-h-[54px] py-1.5" : "h-[54px]";
-  const baseClasses = `inline-flex items-center ${shouldShowIcon && !isSecondary ? "justify-between" : "justify-center"} ${heightClass} rounded-[30px] ${paddingClass} gap-2.5 sm:gap-3 ${bgClass} ${textColor} button-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const justifyClass = centerLabel || !(shouldShowIcon && !isSecondary) ? "justify-center" : "justify-between";
+  const baseClasses = `inline-flex items-center ${centerLabel ? "relative" : ""} ${justifyClass} ${heightClass} rounded-[30px] ${paddingClass} gap-2.5 sm:gap-3 ${bgClass} ${textColor} button-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>
-      <span className={wrap ? "min-w-0 flex-1 whitespace-normal text-center text-inherit" : "whitespace-nowrap text-inherit"}>{children}</span>
+      <span className={wrap ? "min-w-0 flex-1 whitespace-normal text-center text-inherit" : centerLabel ? "w-full text-center text-inherit" : "whitespace-nowrap text-inherit"}>{children}</span>
       {shouldShowIcon && (
-        <span className="w-[42.5px] h-[42.5px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0">
+        <span className={`${centerLabel ? "absolute right-[5px]" : ""} w-[42.5px] h-[42.5px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0`}>
           <SendIcon className={`w-[22px] h-[22px] ${iconClassName}`} />
         </span>
       )}
