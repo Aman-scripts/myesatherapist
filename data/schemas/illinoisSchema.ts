@@ -106,8 +106,7 @@ export const illinoisSchema = {
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          "h1",
-          ".meta-description"
+          "h1"
         ]
       }
     },
@@ -222,19 +221,16 @@ export const illinoisSchema = {
       }
     },
     {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "@id": "https://myesatherapist.com/#medicalprovider",
       "name": "My ESA Therapist",
       "url": "https://myesatherapist.com/",
       "medicalSpecialty": "Psychiatric",
       "isAcceptingNewPatients": true,
       "availableService": {
-        "@id": "https://myesatherapist.com/esa-letter-illinois/#service"
-      },
-      "audience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Patient",
-        "requiredMinAge": 18
+        "@type": "MedicalTherapy",
+        "name": "Online ESA Letter Evaluation",
+        "url": "https://myesatherapist.com/esa-letter-illinois/"
       }
     },
     {
@@ -377,9 +373,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/vId0sRVPY0I",
       "contentUrl": "https://www.youtube.com/shorts/vId0sRVPY0I",
       "uploadDate": "2026-07-08T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }
@@ -395,9 +388,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/gxdipq0J2No",
       "contentUrl": "https://www.youtube.com/shorts/gxdipq0J2No",
       "uploadDate": "2026-06-02T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }
@@ -413,9 +403,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/Mjf33Y0NvVc",
       "contentUrl": "https://www.youtube.com/shorts/Mjf33Y0NvVc",
       "uploadDate": "2026-06-05T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }
@@ -431,9 +418,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/CybsnJUGzTM",
       "contentUrl": "https://www.youtube.com/shorts/CybsnJUGzTM",
       "uploadDate": "2026-06-03T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }
@@ -449,9 +433,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/figN4V7ThbM",
       "contentUrl": "https://www.youtube.com/shorts/figN4V7ThbM",
       "uploadDate": "2026-05-27T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }
@@ -467,9 +448,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/TV4dghtuqak",
       "contentUrl": "https://www.youtube.com/shorts/TV4dghtuqak",
       "uploadDate": "2026-05-21T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }
@@ -485,9 +463,6 @@ export const illinoisSchema = {
       "embedUrl": "https://www.youtube.com/embed/rPtmxr05tsc",
       "contentUrl": "https://www.youtube.com/shorts/rPtmxr05tsc",
       "uploadDate": "2026-05-14T00:00:00+00:00",
-      "uploader": {
-        "@id": "https://myesatherapist.com/#organization"
-      },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
       }

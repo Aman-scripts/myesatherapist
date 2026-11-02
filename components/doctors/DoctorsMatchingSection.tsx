@@ -47,7 +47,7 @@ export function DoctorsMatchingSection() {
                 <Image src={step.icon} alt={step.title} width={28} height={28} unoptimized className="h-7 w-7 object-contain" />
               </div>
               <div className="flex flex-col items-start gap-2 w-full">
-                <h3 className="heading-h4 text-primary">
+                <h3 className="heading-h3 text-primary">
                   {step.title}
                 </h3>
                 <p className="body-text text-body-text">

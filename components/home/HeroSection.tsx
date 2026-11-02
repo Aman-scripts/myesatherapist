@@ -48,14 +48,14 @@ function TrustpilotStars() {
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
+  { value: "7+", label: "Years Serving" },
   { value: "4.8", label: "Verified Reviews" },
 ];
 
 const MOBILE_HERO_BG = "/Hero_image_for_mobile_all.png";
 
 const mobileGuaranteePills = [
-  { value: "5+", label: "Years Serving" },
+  { value: "7+", label: "Years Serving" },
   { value: "64,739+", label: "ESA Evaluations" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];

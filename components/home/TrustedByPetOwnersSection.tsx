@@ -8,6 +8,19 @@ import { ALL_REVIEWS } from "@/data/trustpilotReviews";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
+const STATE_NAME =
+  /,\s*(?:Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming|District of Columbia)$/;
+const STATE_ABBR =
+  /,\s*(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)$/;
+
+function reviewerNameOnly(name: string) {
+  const parts = name.split(",");
+  if (STATE_NAME.test(name) || (parts.length >= 3 && STATE_ABBR.test(name))) {
+    return parts[0].trim();
+  }
+  return name;
+}
+
 interface TestimonialItem {
   quote: string;
   name: string;
@@ -71,6 +84,7 @@ export function TrustedByPetOwnersSection({
 
 
   const current = list[activeIdx] || list[0];
+  const reviewerName = reviewerNameOnly(current.name);
 
   const displayTitle = title || (stateName ? `Trusted by Thousands of ESA Owners in ${stateName}` : "Trusted by Thousands of ESA Owners");
   const displaySubtitle = subtitle || "See why so many clients trust My ESA Therapist for their ESA needs. Real stories from real people who experienced our process firsthand.";
@@ -145,13 +159,13 @@ export function TrustedByPetOwnersSection({
                   <Image
             quality={90} src={current.avatar} alt={current.name} fill className="object-cover" sizes="60px" />
                 ) : (
-                  <InitialsAvatar name={current.name} index={activeIdx} className="absolute inset-0 text-[20px]" />
+                  <InitialsAvatar name={reviewerName} index={activeIdx} className="absolute inset-0 text-[20px]" />
                 )}
               </div>
 
               {/* Name */}
-              <h3 className="heading-h4 text-center">
-                {current.name}
+              <h3 className="heading-h3 text-center">
+                {reviewerName}
               </h3>
 
               <div className="flex items-center justify-center gap-1 ">

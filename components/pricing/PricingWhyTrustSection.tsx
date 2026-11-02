@@ -67,7 +67,7 @@ export function PricingWhyTrustSection() {
               <div className="w-full min-h-[202px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-12 pb-5 px-4 flex flex-col items-center justify-center text-center">
                 {/* Title with Teal Gradient */}
                 <h3
-                  className="heading-h4 text-color-gradient mb-2"
+                  className="heading-h3 text-color-gradient mb-2"
                 >
                   {item.title}
                 </h3>

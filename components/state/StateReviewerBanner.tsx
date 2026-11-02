@@ -53,9 +53,9 @@ export function StateReviewerBanner({
                     href={reviewerLinkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 hover:text-accent transition-colors cursor-pointer"
+                    className="group inline-flex items-center gap-2 text-accent hover:opacity-80 transition-opacity cursor-pointer"
                   >
-                    <span className="group-hover:text-accent transition-colors">
+                    <span className="text-accent">
                       {reviewerName}
                     </span>
                     <span className="w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">

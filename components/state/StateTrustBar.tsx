@@ -22,7 +22,7 @@ export function StateTrustBar({ data }: { data: StateData }) {
       label: "Average Verified Ratings",
     },
     {
-      value: "5+ years",
+      value: "7+ years",
       label: `Serving ${stateName}`,
     },
     {

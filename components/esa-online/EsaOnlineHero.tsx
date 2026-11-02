@@ -7,7 +7,7 @@ import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
 const STATS = [
   { value: "64,739+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
+  { value: "7+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
@@ -134,7 +134,7 @@ export function EsaOnlineHero({
                   </p>
                   <div className="mt-5 flex flex-col items-center gap-3">
                     {[
-                      { value: "5+", label: "Years Serving" },
+                      { value: "7+", label: "Years Serving" },
                       { value: "64,739+", label: "ESA Evaluations" },
                       { value: "100%", label: "Moneyback Guarantee" },
                     ].map((pill) => (

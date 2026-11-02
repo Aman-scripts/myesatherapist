@@ -70,7 +70,7 @@ export function DoctorAboutPhilosophySection({
 
           {/* ── My Philosophy card (narrow tile) ── */}
           <div className="lg:col-span-1 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col gap-4">
-            <h2 className="heading-h3 text-primary">
+            <h2 className="heading-h2 text-primary">
               {philosophyHeading}
             </h2>
             <div className="space-y-3 flex-1">

@@ -310,7 +310,7 @@ export function DisclosureCard({
   return (
     <div className="w-full max-w-[864px] rounded-[30px] px-6 py-7 sm:px-[37px] sm:py-[33px] color-gradient text-background">
       <div className="flex flex-col gap-[22px]">
-        <h3 className={`heading-h4 text-background ${keepCase ? "" : "uppercase"}`}>{title}</h3>
+        <h3 className={`heading-h3 text-background ${keepCase ? "" : "uppercase"}`}>{title}</h3>
         {items && (
           <ul className="flex flex-col gap-5">
             {items.map((item) => (

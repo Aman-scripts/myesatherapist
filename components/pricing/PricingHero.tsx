@@ -35,7 +35,7 @@ export function PricingHero() {
 
           <div className="mt-5 flex flex-col items-center gap-3">
             {[
-              { value: "5+", label: "Years Serving" },
+              { value: "7+", label: "Years Serving" },
               { value: "64,739+", label: "ESA Evaluations" },
               { value: "100%", label: "Moneyback Guarantee" },
             ].map((stat) => (
@@ -78,7 +78,7 @@ export function PricingHero() {
               <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">ESA Evaluations</span>
             </div>
             <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[130px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">5+</span>
+              <span className="body-large text-color-gradient leading-none">7+</span>
               <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Years Serving</span>
             </div>
             <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[170px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
@@ -133,7 +133,7 @@ export function PricingHero() {
                 <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">ESA Evaluations</span>
               </div>
               <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                <span className="body-large text-color-gradient leading-none">5+</span>
+                <span className="body-large text-color-gradient leading-none">7+</span>
                 <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">Years Serving</span>
               </div>
               <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">

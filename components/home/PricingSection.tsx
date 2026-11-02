@@ -258,8 +258,8 @@ export function PricingSection({
                     }`}
                   >
                     <div className="flex items-stretch">
-                      <div className="flex w-[128px] shrink-0 items-start rounded-l-[18px] color-gradient px-4 pb-14 pt-8">
-                        <h3 className="heading-h3 whitespace-pre-line text-background">
+                      <div className="flex w-[128px] shrink-0 items-center justify-center rounded-l-[18px] color-gradient px-3 pb-14 pt-8 text-center">
+                        <h3 className="heading-h3 w-full whitespace-pre-line text-center text-background">
                           {mobilePlanTitle(card.title)}
                         </h3>
                       </div>

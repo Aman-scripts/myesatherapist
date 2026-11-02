@@ -109,8 +109,7 @@ export const psdLetterSchema = {
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          "h1",
-          ".meta-description"
+          "h1"
         ]
       }
     },
@@ -221,19 +220,16 @@ export const psdLetterSchema = {
       }
     },
     {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "@id": "https://myesatherapist.com/#medicalprovider",
       "name": "My ESA Therapist",
       "url": "https://myesatherapist.com/",
       "medicalSpecialty": "Psychiatric",
       "isAcceptingNewPatients": true,
       "availableService": {
-        "@id": "https://myesatherapist.com/psd-letter/#service"
-      },
-      "audience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Patient",
-        "requiredMinAge": 18
+        "@type": "MedicalTherapy",
+        "name": "Psychiatric Service Dog (PSD) Letter Evaluation",
+        "url": "https://myesatherapist.com/psd-letter/"
       }
     },
     {

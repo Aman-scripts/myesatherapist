@@ -18,12 +18,12 @@ const TRUSTPILOT_GREEN = "#00B67A";
 
 const statsData = [
   { value: "51,488+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
+  { value: "7+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
 const mobileStats = [
-  { value: "5+", label: "Years Serving" },
+  { value: "7+", label: "Years Serving" },
   { value: "64,739+", label: "ESA Evaluations" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];

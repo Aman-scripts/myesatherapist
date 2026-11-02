@@ -111,8 +111,7 @@ export const aboutUsSchema = {
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          "h1",
-          ".meta-description"
+          "h1"
         ]
       }
     },
@@ -193,19 +192,16 @@ export const aboutUsSchema = {
       "termsOfService": "https://myesatherapist.com/terms-of-use/"
     },
     {
-      "@type": "MedicalOrganization",
+      "@type": "MedicalClinic",
       "@id": "https://myesatherapist.com/#medicalprovider",
       "name": "My ESA Therapist",
       "url": "https://myesatherapist.com/",
       "medicalSpecialty": "Psychiatric",
       "isAcceptingNewPatients": true,
       "availableService": {
-        "@id": "https://myesatherapist.com/#esa-service"
-      },
-      "audience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Patient",
-        "requiredMinAge": 18
+        "@type": "MedicalTherapy",
+        "name": "ESA Letter Evaluation",
+        "url": "https://myesatherapist.com/"
       }
     },
     {

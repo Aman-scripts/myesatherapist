@@ -21,7 +21,7 @@ export function GoldCallout({
       <div className="w-[10px] sm:w-[13px] shrink-0 bg-accent" />
       <div className="flex flex-col gap-1 py-4 sm:py-5 px-4 sm:px-6">
         {title && (
-          <h3 className="heading-h4 uppercase">{title}</h3>
+          <h3 className="heading-h3 uppercase">{title}</h3>
         )}
         <p className="body-small">{children}</p>
       </div>
@@ -59,12 +59,12 @@ export function FeatureCard({
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
       >
         {!title ? null : headingFont === "heading" ? (
-          <Heading className={`heading-h4 text-balance ${dark ? "text-background" : "text-primary"}`}>
+          <Heading className={`${Heading === "h2" ? "heading-h2" : "heading-h3"} text-balance ${dark ? "text-background" : "text-primary"}`}>
             {title}
           </Heading>
         ) : (
           <Heading
-            className="heading-h4 text-color-gradient"
+            className={`${Heading === "h2" ? "heading-h2" : "heading-h3"} text-color-gradient`}
           >
             {title}
           </Heading>

@@ -64,7 +64,7 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
           </div>
           <div className="min-w-0">
             <h3 className="heading-h3 text-background sm:hidden">{person.name}</h3>
-            <h3 className="heading-h4 text-background hidden sm:block">{person.name}</h3>
+            <h3 className="heading-h3 text-background hidden sm:block">{person.name}</h3>
             <p className="body-large text-accent mt-0.5 whitespace-normal sm:hidden">{person.title}</p>
             <p className="body-small text-accent mt-0.5 hidden sm:block">{person.title}</p>
           </div>

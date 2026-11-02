@@ -14,35 +14,35 @@ interface TestimonialItem {
 const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
-    name: "Jason T., Texas",
+    name: "Jason T.",
     rating: 5,
     quote:
       "“Finally, a legitimate ESA service! My therapist was professional and understanding. Got my letter in under 24 hours and my landlord accepted it immediately.”",
   },
   {
     id: 2,
-    name: "Laura P., Florida",
+    name: "Laura P.",
     rating: 5,
     quote:
       "“Quick consultation, professional licensed therapist, and my landlord accepted the letter immediately with zero complications.”",
   },
   {
     id: 3,
-    name: "Michael R., California",
+    name: "Michael R.",
     rating: 5,
     quote:
       "“The evaluation felt respectful and thorough. Having a licensed clinician in my state assess my situation gave me complete confidence.”",
   },
   {
     id: 4,
-    name: "Sarah W., Illinois",
+    name: "Sarah W.",
     rating: 5,
     quote:
       "“Transparent pricing, no hidden recurring fees, and excellent support throughout property manager verification. Truly life-changing!”",
   },
   {
     id: 5,
-    name: "David K., New York",
+    name: "David K.",
     rating: 5,
     quote:
       "“The telehealth session was simple and comfortable. Received my official ESA recommendation securely and on time as promised.”",
@@ -179,7 +179,7 @@ export function AboutTestimonialSection() {
             </div>
 
             {/* Name, State */}
-            <h3 className="heading-h4 text-primary mt-2">
+            <h3 className="heading-h3 text-primary mt-2">
               {current.name}
             </h3>
           </div>

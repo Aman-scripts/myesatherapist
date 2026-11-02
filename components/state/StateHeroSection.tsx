@@ -11,7 +11,7 @@ import { STATE_INDEX } from "@/data/stateIndex";
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
-  { value: "5+", label: "Years Serving" },
+  { value: "7+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
@@ -90,7 +90,7 @@ function EvaluationFormCard({
   stateName,
   titleAs = "p",
 }: EvaluationFormCardProps) {
-  const labelClass = `block text-body-text mb-2 ${compact ? "body-small" : "body-text"}`;
+  const labelClass = "block whitespace-nowrap body-text text-body-text mb-1";
 
   return (
     <div
@@ -108,7 +108,7 @@ function EvaluationFormCard({
             Start Your Evaluation
           </p>
         )}
-        <p className={`text-body-text mt-1 ${compact ? "body-small" : "body-large"}`}>
+        <p className={`text-body-text mt-1 ${compact ? "body-text" : "body-large"}`}>
           Free consultation - takes less than 5 minutes.
         </p>
       </div>

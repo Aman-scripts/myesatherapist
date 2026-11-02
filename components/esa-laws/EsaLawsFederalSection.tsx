@@ -30,7 +30,7 @@ function LawCard({
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
         <CardIcon src={icon} alt={title} />
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
-          <h3 className="heading-h4 text-primary">
+          <h3 className="heading-h3 text-primary">
             {title}
           </h3>
           <div className="body-large text-body-text flex flex-col gap-4">
