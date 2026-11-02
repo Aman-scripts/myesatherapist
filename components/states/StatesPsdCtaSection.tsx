@@ -33,7 +33,7 @@ export function StatesPsdCtaSection() {
               Connect with a state-licensed mental health professional to discuss your needs and see if a psychiatric service dog letter may be right for you.
             </p>
 
-            <Link
+            <Link prefetch={false}
               href="/psd-letter/"
               className="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-accent hover:bg-[#f0c33a] rounded-xl shadow-[0px_2px_8px_rgba(232,185,44,0.4)] transition-all duration-200 group"
             >

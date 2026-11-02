@@ -115,7 +115,7 @@ export function SiteBreadcrumbs() {
                   {crumb.name}
                 </span>
               ) : (
-                <Link href={crumb.path} className="hover:text-primary transition-colors">
+                <Link prefetch={false} href={crumb.path} className="hover:text-primary transition-colors">
                   {crumb.name}
                 </Link>
               )}

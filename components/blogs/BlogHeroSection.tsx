@@ -47,7 +47,7 @@ export function BlogHeroSection({
           aria-label="Breadcrumb"
           className="flex items-center justify-center flex-wrap gap-3 body-text text-body-text mb-6 sm:mb-7 lg:mb-[30px]"
         >
-          <Link href="/" className="hover:text-primary transition-colors">
+          <Link prefetch={false} href="/" className="hover:text-primary transition-colors">
             Home
           </Link>
 
@@ -63,7 +63,7 @@ export function BlogHeroSection({
             <path d="M2 1.5L6 4L2 6.5V1.5Z" />
           </svg>
 
-          <Link href="/blog/" className="hover:text-primary transition-colors">
+          <Link prefetch={false} href="/blog/" className="hover:text-primary transition-colors">
             Blog
           </Link>
 
@@ -79,7 +79,7 @@ export function BlogHeroSection({
             <path d="M2 1.5L6 4L2 6.5V1.5Z" />
           </svg>
 
-          <Link href={categoryHref} className="hover:text-primary transition-colors">
+          <Link prefetch={false} href={categoryHref} className="hover:text-primary transition-colors">
             {category}
           </Link>
         </nav>

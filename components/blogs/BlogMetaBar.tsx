@@ -66,7 +66,7 @@ export function BlogMetaBar({
             <span className="body-large text-primary leading-tight">
               {authorRole}
             </span>
-            <Link
+            <Link prefetch={false}
               href={authorHref}
               className="body-text font-bold text-transparent bg-clip-text color-gradient underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
             >
@@ -132,7 +132,7 @@ export function BlogMetaBar({
               {reviewerRole}
             </span>
             {reviewerHref ? (
-              <Link
+              <Link prefetch={false}
                 href={reviewerHref}
                 className="body-text font-bold text-transparent bg-clip-text color-gradient underline hover:opacity-80 transition-opacity whitespace-nowrap mt-0.5"
               >

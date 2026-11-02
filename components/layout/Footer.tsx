@@ -43,7 +43,7 @@ function HipaaBadge() {
     <div className="w-[155px] h-[67px] bg-white rounded-xl border-[3.5px] border-accent flex items-center justify-center p-2 shadow-md">
       <div className="relative w-full h-full">
         <Image
-            quality={90}
+          quality={90}
           src="/common/hippa_log.webp"
           alt="HIPAA Compliant"
           fill
@@ -61,7 +61,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
       {/* Top Centered Section */}
       <div className="flex flex-col items-center text-center max-w-[700px] mx-auto space-y-5">
         {/* Logo Card with Gold Border (Frame 1000011910) */}
-        <Link href="/" aria-label="My ESA Therapist home" className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-accent p-3 flex items-center justify-center shadow-xl">
+        <Link prefetch={false} href="/" aria-label="My ESA Therapist home" className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-accent p-3 flex items-center justify-center shadow-xl">
           <div className="relative w-full h-full">
             <Image
               src="/common/myesa-logo.svg"
@@ -99,7 +99,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
             Apply Your ESA Letter
           </CtaButton>
 
-          <Link
+          <Link prefetch={false}
             href="/contact-us/"
             className="inline-flex items-center justify-center w-[151px] h-[50px] px-8 rounded-[67px] border border-background [filter:drop-shadow(0px_1px_4px_var(--color-accent))] hover:bg-white/10 transition-colors"
           >
@@ -295,16 +295,16 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
           &copy; 2026 <span className="text-accent">myesatherapist.com</span> — All Rights Reserved
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-          <Link href="/privacy-policy/" className="body-small text-background hover:text-accent transition-colors">
+          <Link prefetch={false} href="/privacy-policy/" className="body-small text-background hover:text-accent transition-colors">
             Privacy Policy
           </Link>
-          <Link href="/refund-policy/" className="body-small text-background hover:text-accent transition-colors">
+          <Link prefetch={false} href="/refund-policy/" className="body-small text-background hover:text-accent transition-colors">
             Refund Policy
           </Link>
-          <Link href="/terms-of-use/" className="body-small text-background hover:text-accent transition-colors">
+          <Link prefetch={false} href="/terms-of-use/" className="body-small text-background hover:text-accent transition-colors">
             Terms of Use
           </Link>
-          <Link href="/accessibility-statement/" className="body-small text-background hover:text-accent transition-colors">
+          <Link prefetch={false} href="/accessibility-statement/" className="body-small text-background hover:text-accent transition-colors">
             Accessibility Statement
           </Link>
         </div>

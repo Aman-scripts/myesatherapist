@@ -17,7 +17,7 @@ export function BlogCard({ article, priority = false }: BlogCardProps) {
   return (
     <article className="w-full max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px] group hover:shadow-lg transition-all duration-300">
       {/* Card Image: 411px x 317px (rounded-t-[20px]) */}
-      <Link
+      <Link prefetch={false}
         href={article.url}
         className="w-full h-[317px] relative overflow-hidden block shrink-0 cursor-pointer rounded-t-[20px] bg-background"
       >
@@ -36,7 +36,7 @@ export function BlogCard({ article, priority = false }: BlogCardProps) {
       <div className="w-[374px] max-w-[calc(100%-36px)] flex-1 flex flex-col justify-between pt-[20px]">
         {/* Heading: 108px max height with inline author matching Figma Frame 1000011908 */}
         <div className="h-[108px] overflow-hidden">
-          <Link
+          <Link prefetch={false}
             href={article.url}
             className="block group-hover:text-[#1D6E72] transition-colors"
           >

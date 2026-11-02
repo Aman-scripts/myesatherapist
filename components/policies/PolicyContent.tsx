@@ -170,7 +170,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
               const mappedHref = slugMap[card.title.toLowerCase()] || card.href || "/privacy-policy/";
 
               return (
-                <Link
+                <Link prefetch={false}
                   key={cIdx}
                   href={mappedHref}
                   className="group flex items-center justify-between p-4 sm:p-5 rounded-[16px] border border-[#EAE5DC] bg-white hover:border-primary hover:shadow-md transition-all font-sans font-bold text-sm sm:text-base text-primary"
@@ -201,7 +201,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
 
         return (
           <div key={bIdx} className="my-6">
-            <Link
+            <Link prefetch={false}
               href={targetHref}
               className="inline-flex items-center gap-2.5 rounded-[30px] text-white px-6 py-3 text-sm sm:text-base font-sans font-bold transition-opacity hover:opacity-90 shadow-sm"
               style={{ background: "var(--color-gradient)" }}

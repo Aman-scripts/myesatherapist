@@ -86,7 +86,7 @@ function ContributorCard({ person }: { person: ContributorCardData }) {
           ))}
         </div>
         <div className="pt-2 flex justify-center">
-          <Link
+          <Link prefetch={false}
             href={person.href}
             className="inline-flex items-center justify-center h-[44px] px-8 rounded-full bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:bg-[#dba81f] transition-colors"
           >

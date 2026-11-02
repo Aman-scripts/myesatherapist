@@ -136,16 +136,6 @@ function CheckmarkIcon() {
   );
 }
 
-function MobileCheck() {
-  return (
-    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-accent">
-      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-        <path d="M1 4.1L3.4 6.5L9 1" stroke="#2E5A66" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </span>
-  );
-}
-
 function mobileButtonLabel(text: string) {
   if (text.toLowerCase().startsWith("find your eligibility")) return "Find Your Eligibility";
   return text;
@@ -242,7 +232,7 @@ export function PricingSection({
 
         {/* Plan cards (Frame 1261153813 in Figma: width 972px, height 540px) */}
         <div className={`relative pb-10 ${maxCards === 2 ? "w-fit max-w-full" : "w-full max-w-[972px]"}`}>
-          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-6 sm:gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
+          <div className={`relative z-10 flex flex-col lg:flex-row items-center lg:items-end justify-center gap-[68px] sm:gap-12 ${maxCards === 2 ? "lg:gap-[28px]" : "lg:gap-[16px] lg:justify-between"}`}>
             {cards.map((card, idx) => {
               const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
 
@@ -251,34 +241,38 @@ export function PricingSection({
                   key={`mobile-${idx}`}
                   className={`sm:hidden relative mx-auto w-full max-w-[350px] ${
                     isPopular
-                      ? "rounded-[22px] bg-accent px-[5px] pb-[6px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)]"
+                      ? "rounded-[22px] bg-accent px-1 pb-1 shadow-[0px_4px_12px_rgba(0,0,0,0.1)]"
                       : ""
                   }`}
                 >
                   {isPopular && (
-                    <div className="flex h-7 items-center justify-center font-sans text-[12px] font-bold uppercase tracking-wider text-[#5F6B6F]">
+                    <div className="flex h-8 items-center justify-center font-sans text-[12px] font-bold uppercase leading-4 tracking-[0.08em] text-body-text">
                       Most Popular
                     </div>
                   )}
                   <div
-                    className={`relative overflow-hidden rounded-[20px] bg-white ${
+                    className={`overflow-hidden rounded-[18px] bg-white ${
                       isPopular
                         ? ""
                         : "border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)]"
                     }`}
                   >
-                    <div className="flex min-h-[158px]">
-                      <div className="flex w-[112px] shrink-0 items-start rounded-l-[20px] color-gradient px-2.5 pb-[62px] pt-3.5">
-                        <p className="whitespace-pre-line font-heading text-[20px] font-semibold leading-[26px] text-background">
+                    <div className="flex items-stretch">
+                      <div className="flex w-[128px] shrink-0 items-start rounded-l-[18px] color-gradient px-4 pb-14 pt-8">
+                        <span className="whitespace-pre-line font-heading text-[22px] font-bold leading-8 text-background">
                           {mobilePlanTitle(card.title)}
-                        </p>
+                        </span>
                       </div>
-                      <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 px-2.5 py-3">
-                        <div className="flex flex-col gap-1">
-                          {card.features.slice(0, 3).map((feature) => (
-                            <div key={feature} className="flex items-start gap-1.5">
-                              <span className="mt-0.5"><MobileCheck /></span>
-                              <span className="font-sans text-[13px] font-medium leading-[18px] text-body-text">
+                      <div className="flex min-w-0 flex-1 flex-col px-4 pb-3 pt-5">
+                        <div className="flex flex-col gap-2.5">
+                          {["Online ESA evaluation", "Licensed mental health professional", "Secure email delivery"].map((feature) => (
+                            <div key={feature} className="flex items-start gap-2">
+                              <span className="mt-0.5 flex h-3 w-3 shrink-0 items-center justify-center rounded-full bg-accent">
+                                <svg width="8" height="6" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+                                  <path d="M1 4.1L3.4 6.5L9 1" stroke="#2E5A66" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </span>
+                              <span className="font-sans text-[14px] font-semibold leading-[22px] text-body-text">
                                 {feature}
                               </span>
                             </div>
@@ -286,17 +280,20 @@ export function PricingSection({
                         </div>
                         <a
                           href={ctaHref}
-                          className="inline-flex h-9 w-full max-w-[150px] items-center justify-center self-center rounded-full bg-accent px-3 font-sans text-[13px] font-bold leading-5 text-[#1A3D4F] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                          className="mt-auto inline-flex h-11 w-fit max-w-full items-center justify-center self-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-[#1A3D4F] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                         >
                           {mobileButtonLabel(card.buttonText)}
                         </a>
                       </div>
                     </div>
-                    <div className="absolute bottom-[10px] left-[26px] flex h-[56px] w-[56px] items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
-                      <span className="font-heading text-[16px] font-semibold leading-5 text-[#2E5A66]">
-                        {card.price}
-                      </span>
-                    </div>
+                  </div>
+                  <div
+                    className="absolute bottom-0 z-20 flex h-[72px] w-[72px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                    style={{ left: isPopular ? 68 : 64 }}
+                  >
+                    <span className="font-heading text-[20px] font-bold leading-none text-primary">
+                      {card.price}
+                    </span>
                   </div>
                 </div>
               );

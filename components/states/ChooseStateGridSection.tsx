@@ -58,7 +58,7 @@ export function ChooseStateGridSection({
           {statesToDisplay.map((state) => {
             const stateHref = state.slug.startsWith("esa-letter-") ? `/${state.slug}/` : `/esa-letter-${state.slug}/`;
             return (
-              <Link
+              <Link prefetch={false}
                 key={state.slug}
                 href={stateHref}
                 className="group flex flex-col justify-center items-start px-3 sm:px-6 lg:px-[32px] py-2.5 sm:py-[15px] bg-background hover:bg-white rounded-[12px] sm:rounded-[10px] shadow-[0px_1px_4px_rgba(78,78,78,0.12)] hover:shadow-[0px_4px_12px_rgba(26,61,79,0.15)] transition-all duration-200 w-full max-w-[302px] min-h-[58px] sm:h-[62px]"
