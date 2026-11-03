@@ -44,22 +44,22 @@ export function DoctorsHeroSection() {
       </div>
 
       <DesktopScaleWrapper
-        designHeight={720}
+        designHeight={762}
         designWidth={1440}
         wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={80}
-            src="/doctors/doctors_hero_section_desktop.webp"
+            quality={90}
+            src="/doctors/esa-doctors-hero-desktop.webp"
             alt={HEADING}
             fill
-            className="object-cover object-[right_35%]"
+            className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[720px] flex items-center">
+        <div className="relative w-[1440px] h-[762px] flex items-center">
           <div className="pl-[82px] max-w-[760px] z-10 flex flex-col items-start gap-5">
             <p aria-hidden="true" className="heading-h1 text-primary max-w-[640px]">{HEADING}</p>
             <p className="body-large text-body-text max-w-[560px]">{DESCRIPTION}</p>

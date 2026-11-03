@@ -67,23 +67,22 @@ export function AboutHeroSection() {
       {/* ---------------------------------------------------- */}
       <DesktopScaleWrapper
         designWidth={1440}
-        designHeight={751}
+        designHeight={640}
         className="hidden lg:block relative"
         fullBleedBackground={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={80}
-            src="/about-us/hero_section-about_us.webp"
+            quality={90}
+            src="/about-us/hero-about-desktop.webp"
             alt="About My ESA Therapist"
             fill
-              className="object-cover object-right"
+            className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[751px] flex items-center">
-          {/* Content Container (Figma Frame 1000011884 / Frame 1000011902) */}
-          <div className="relative z-10 px-[82px] py-[185px] w-full">
+        <div className="relative w-[1440px] h-[640px] flex items-center">
+          <div className="relative z-10 px-[82px] py-16 w-full">
             <div className="w-[513px] flex flex-col items-start gap-4 text-left">
               <p aria-hidden="true" className="heading-h1 text-primary capitalize leading-[58px]">
                 About My ESA Therapist

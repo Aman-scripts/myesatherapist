@@ -1,6 +1,5 @@
 import { STATES_DATA } from "@/data/statesData";
-
-const SITE_URL = "https://myesatherapist.com";
+import { SITE_URL } from "@/lib/site";
 
 // Regenerate at most once an hour; the state list is built from the site's data.
 export const revalidate = 3600;
@@ -157,7 +156,7 @@ ${states}
 ## Last Reviewed
 
 ${LAST_REVIEWED}
-`;
+`.replaceAll("https://myesatherapist.com", SITE_URL);
 
   return new Response(body, {
     headers: {

@@ -38,6 +38,7 @@ export function EsaOnlineHero({
   imageTablet,
   showStats = false,
   refundText = "Not approved after your ESA evaluation? You get a full refund!.",
+  desktopHeight = 723,
 }: {
   title?: string;
   description?: string;
@@ -52,6 +53,8 @@ export function EsaOnlineHero({
   /** Stat pills, gold button, refund line, and review badges from the Figma heroes. */
   showStats?: boolean;
   refundText?: string;
+  /** Desktop canvas height in the 1440px design. Match the desktop artwork aspect ratio. */
+  desktopHeight?: number;
 } = {}) {
   const stacked = Boolean(imageMobile && imageTablet);
 
@@ -194,7 +197,7 @@ export function EsaOnlineHero({
       {/* ---------------------------------------------------- */}
       <DesktopScaleWrapper
         designWidth={1440}
-        designHeight={723}
+        designHeight={showStats ? 820 : desktopHeight}
         className="hidden lg:block relative"
         fullBleedBackground={
           <BreakpointImage
@@ -208,7 +211,10 @@ export function EsaOnlineHero({
           />
         }
       >
-        <div className={`relative w-[1440px] ${showStats ? "h-[820px]" : "h-[723px]"} flex items-center`}>
+        <div
+          className="relative w-[1440px] flex items-center"
+          style={{ height: showStats ? 820 : desktopHeight }}
+        >
           <div className="relative z-10 w-full pl-[82px] pr-20 py-16">
             {showStats ? (
               <div className="max-w-[640px] flex flex-col items-start gap-5">

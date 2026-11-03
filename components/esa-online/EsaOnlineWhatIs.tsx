@@ -43,7 +43,8 @@ export function EsaOnlineWhatIs() {
             <h2 className={H2}>What Is An ESA Letter?</h2>
             <p className={P}>
               An Emotional Support Animal (ESA) letter is a written recommendation from a licensed mental health professional stating that an emotional support animal may help support a person’s mental or emotional well-being. The recommendation is based on an individual evaluation and is provided when clinically appropriate.
-              <br />
+            </p>
+            <p className={P}>
               An ESA letter may be used to support a request for reasonable accommodation in housing under applicable fair housing laws. When a housing accommodation is approved, a tenant may be able to live with an emotional support animal without being subject to certain pet-related restrictions or fees that normally apply to pets. Specific rights and requirements can vary depending on the housing situation and applicable laws.
             </p>
           </div>
@@ -51,8 +52,10 @@ export function EsaOnlineWhatIs() {
           <div className="flex flex-col gap-4">
             <h2 className={H2}>What Does an ESA Letter Do?</h2>
             <p className={P}>
-              An ESA letter provides documentation supporting the need for an emotional support animal as part of a person’s mental or emotional health care. It is not an ESA registration, certification, or ID card, and simply owning an animal does not make it an emotional support animal.
-              <br />
+              An ESA letter provides documentation supporting the need for an emotional support animal as part of a person’s mental or emotional health care. It is not an{" "}
+              <a href="/blog/esa-guide/is-esa-registration-legit/" className="text-primary underline underline-offset-2">ESA registration</a>, certification, or ID card, and simply owning an animal does not make it an emotional support animal.
+            </p>
+            <p className={P}>
               For housing, an ESA letter may be used when requesting a reasonable accommodation from a housing provider. The accommodation process may require additional information depending on the circumstances.
             </p>
           </div>

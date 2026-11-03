@@ -52,22 +52,22 @@ export function FaqHero() {
       </div>
 
       <DesktopScaleWrapper
-        designHeight={737}
+        designHeight={526}
         designWidth={1440}
         wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={70}
-            src="/faq/faq_hero-section.webp"
+            quality={90}
+            src="/faq/esa-questions-hero-desktop.webp"
             alt="ESA Questions? We're Here To Help"
             fill
-            className="object-cover object-center"
+            className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[737px] flex items-center">
+        <div className="relative w-[1440px] h-[526px] flex items-center">
           <div className="pl-[82px] max-w-[680px] z-10 flex flex-col items-start gap-5">
             <p aria-hidden="true" className="heading-h1 text-primary">{HEADING}</p>
             <p className="body-large text-body-text max-w-[420px]">{DESCRIPTION}</p>

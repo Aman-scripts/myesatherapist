@@ -2,8 +2,7 @@ import { STATES_DATA } from "@/data/statesData";
 import { BLOG_POSTS } from "@/data/blogsData";
 import { AUTHORS_DATA } from "@/data/authorsData";
 import { DOCTORS_DATA } from "@/data/doctorsData";
-
-const SITE_URL = "https://myesatherapist.com";
+import { SITE_URL } from "@/lib/site";
 
 // Regenerate at most once an hour; the list itself is built from the site's data files.
 export const revalidate = 3600;
@@ -28,7 +27,9 @@ function startOfDayUtc(d: Date): Date {
 }
 
 function absolute(pathOrUrl: string): string {
-  if (pathOrUrl.startsWith("http")) return pathOrUrl;
+  if (pathOrUrl.startsWith("http")) {
+    return pathOrUrl.replace(/^https?:\/\/myesatherapist\.com/, SITE_URL);
+  }
   return `${SITE_URL}${pathOrUrl.startsWith("/") ? "" : "/"}${pathOrUrl}`;
 }
 

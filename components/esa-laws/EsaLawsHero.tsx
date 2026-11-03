@@ -45,22 +45,22 @@ export function EsaLawsHero() {
       </div>
 
       <DesktopScaleWrapper
-        designHeight={797}
+        designHeight={618}
         designWidth={1440}
         wrapperClassName="bg-background overflow-hidden"
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={80}
-            src="/esa-laws/esalaws-herosection.webp"
+            quality={90}
+            src="/esa-laws/esa-laws-hero-desktop.webp"
             alt="Woman reading ESA Laws guide with her emotional support dog"
             fill
-            className="object-cover object-center"
+            className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
           />
         }
       >
-        <div className="relative w-[1440px] h-[797px] flex items-center">
+        <div className="relative w-[1440px] h-[618px] flex items-center">
           <div className="pl-[82px] w-[720px] z-10 flex flex-col items-start gap-5">
             <h1 className="heading-h1 text-primary">{HEADING}</h1>
             <p className="body-large text-body-text max-w-[460px]">{DESCRIPTION}</p>
