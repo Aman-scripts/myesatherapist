@@ -33,8 +33,8 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
   const calloutText = data.psdCalloutText;
 
   return (
-    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 px-4 sm:px-5 lg:px-4">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[1060px]">
         <div className="text-center max-w-[840px] mx-auto mb-10 sm:mb-12 lg:mb-14">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] xl:text-[44px] font-bold text-primary leading-[1.2] tracking-tight">
             {title}
@@ -46,18 +46,18 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 mb-10 lg:mb-12">
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden sm:flex-row">
-            <div className="relative mx-auto aspect-[193/354] h-[300px] w-auto shrink-0 overflow-hidden bg-[#F6F1EA] sm:mx-0 sm:h-auto sm:max-w-[42%] sm:min-w-[150px] sm:flex-none sm:self-stretch">
+            <div className="relative h-[260px] w-full shrink-0 overflow-hidden bg-[#F6F1EA] sm:h-auto sm:w-[190px]">
               <Image
                 quality={90}
                 src="/home/emotionalsupportnanimal.webp"
                 alt="Emotional Support Animals (ESA)"
                 fill
-                className="object-contain object-center"
-                sizes="(max-width: 1024px) 46vw, 280px"
+                className="object-cover object-center"
+                sizes="(max-width: 639px) 100vw, 190px"
               />
             </div>
 
-            <div className="flex min-w-0 flex-1 flex-col justify-between p-4 sm:p-5 lg:p-4">
+            <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5 lg:p-5">
               <div>
                 <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-primary mb-3 leading-snug">
                   {esaTitle}
@@ -89,18 +89,18 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           </div>
 
           <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden sm:flex-row">
-            <div className="relative mx-auto aspect-[193/354] h-[300px] w-auto shrink-0 overflow-hidden bg-[#F6F1EA] sm:mx-0 sm:h-auto sm:max-w-[42%] sm:min-w-[150px] sm:flex-none sm:self-stretch">
+            <div className="relative h-[260px] w-full shrink-0 overflow-hidden bg-[#F6F1EA] sm:h-auto sm:w-[190px]">
               <Image
                 quality={90}
                 src="/psd-letter/psychiatricservicedogs.webp"
                 alt="Psychiatric Service Dogs (PSD)"
                 fill
-                className="object-contain object-center"
-                sizes="(max-width: 1024px) 46vw, 280px"
+                className="object-cover object-center"
+                sizes="(max-width: 639px) 100vw, 190px"
               />
             </div>
 
-            <div className="flex min-w-0 flex-1 flex-col justify-between p-4 sm:p-5 lg:p-4">
+            <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5 lg:p-5">
               <div>
                 <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-primary mb-3 leading-snug">
                   {psdTitle}
