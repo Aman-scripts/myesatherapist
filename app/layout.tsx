@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import { ThirdPartyErrorHandler } from "@/components/common/ThirdPartyErrorHandler";
 import { GlobalDesktopScaler } from "@/components/common/GlobalDesktopScaler";
@@ -16,18 +16,29 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-const manrope = Manrope({
-  subsets: ["latin"],
+const manrope = localFont({
+  src: [
+    { path: "../fonts/manrope-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/manrope-500.woff2", weight: "500", style: "normal" },
+    { path: "../fonts/manrope-600.woff2", weight: "600", style: "normal" },
+    { path: "../fonts/manrope-700.woff2", weight: "700", style: "normal" },
+    { path: "../fonts/manrope-800.woff2", weight: "800", style: "normal" },
+  ],
   variable: "--font-sans",
-  display: "optional",
-
+  display: "block",
+  adjustFontFallback: false,
+  preload: true,
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
+const playfair = localFont({
+  src: [
+    { path: "../fonts/playfair-display-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/playfair-display-700.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-heading",
-  display: "optional",
-
+  display: "block",
+  adjustFontFallback: false,
+  preload: true,
 });
 
 const defaultSocial = socialImage("homepage", "Telehealth with a happy companion");
