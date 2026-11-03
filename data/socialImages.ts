@@ -86,6 +86,9 @@ const SIZES: Record<string, [number, number]> = {
   "blog-esa-for-depression": [1200, 800],
   "blog-prepare-esa-for-rental-housing": [1200, 800],
   "blog-esa-training-myths": [1200, 800],
+  "blog-who-can-write-an-esa-letter": [1536, 1024],
+  "blog-esa-for-bipolar-disorder": [1536, 1024],
+  "blog-esa-for-adhd": [1536, 1024],
 };
 
 /** Public paths from the featured-image spreadsheet. State samples are derived from the key. */
@@ -119,6 +122,9 @@ const PATHS: Record<string, string> = {
   "blog-esa-for-depression": "/images/blog/emotional-support-through-canine-companionship-image.webp",
   "blog-prepare-esa-for-rental-housing": "/images/blog/moving-in-with-a-furry-friend-image.webp",
   "blog-esa-training-myths": "/images/blog/esa-training-myth-vs-fact-image.webp",
+  "blog-who-can-write-an-esa-letter": "/images/blog/therapist-writing-with-emotional-support-dog-image.webp",
+  "blog-esa-for-bipolar-disorder": "/images/blog/cozy-companionship-on-the-couch-image.webp",
+  "blog-esa-for-adhd": "/images/blog/cozy-afternoon-with-a-golden-retriever-image.webp",
 };
 
 function imagePath(key: string) {

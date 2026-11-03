@@ -41,7 +41,7 @@ export function BlogCard({ article, priority = false }: BlogCardProps) {
             className="block group-hover:text-[#1D6E72] transition-colors"
           >
             <h3 className="heading-h3 text-primary text-[26px] sm:text-[28px] leading-[34px] sm:leading-[36px] tracking-[-0.0003em] line-clamp-3">
-              {article.title}{" "}
+              {article.cardTitle || article.title}{" "}
               {authorDisplayName && (
                 <span className="font-sans font-medium text-[15px] sm:text-[16px] leading-[24px] text-[#69777C] whitespace-nowrap ml-1.5 normal-case tracking-normal inline-block align-baseline font-normal">
                   by {authorDisplayName}

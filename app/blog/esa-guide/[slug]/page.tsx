@@ -176,7 +176,14 @@ export default async function BlogDetailPage({ params }: PageProps) {
         </section>
 
         {/* 4. About the Author */}
-        <BlogAuthorBio />
+        <BlogAuthorBio
+          name={article.aboutAuthor?.name}
+          title={article.aboutAuthor?.title}
+          bio={article.aboutAuthor?.bio}
+          image={article.aboutAuthor?.image}
+          bioHref={article.aboutAuthor?.bioHref}
+          linkedin={article.aboutAuthor?.linkedin}
+        />
 
         {/* 5. More ESA Resources (Other Blog Cards) */}
         <BlogMoreResources currentSlug={article.slug} />

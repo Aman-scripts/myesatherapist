@@ -174,17 +174,28 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
         </section>
 
         {/* 4. About the Author */}
-        <BlogAuthorBio />
+        <BlogAuthorBio
+          name={article.aboutAuthor?.name}
+          title={article.aboutAuthor?.title}
+          bio={article.aboutAuthor?.bio}
+          image={article.aboutAuthor?.image}
+          bioHref={article.aboutAuthor?.bioHref}
+          linkedin={article.aboutAuthor?.linkedin}
+        />
 
         {/* 5. More ESA Resources (Other Blog Cards) */}
         <BlogMoreResources currentSlug={article.slug} />
 
         {/* 6. PSD CTA Banner */}
         <CtaBanner
-          title="Need help with an ESA letter?"
-          description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
-          buttonText="Start your Evaluation"
-          buttonHref="#faq"
+          title={article.bottomCta?.title || "Need help with an ESA letter?"}
+          description={
+            article.bottomCta?.description ||
+            "Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
+          }
+          buttonText={article.bottomCta?.buttonText || "Start your Evaluation"}
+          buttonHref={article.bottomCta?.buttonHref || "#faq"}
+          note={article.bottomCta?.note}
           bgColor="bg-background"
           className="pb-12 sm:pb-16"
         />

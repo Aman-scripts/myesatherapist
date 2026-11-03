@@ -726,6 +726,37 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         </div>
       )}
 
+      {article.disclaimer && (
+        <section className="scroll-mt-28 rounded-[22px] border border-[#f0e3b8] border-l-[6px] border-l-[#efbf2f] bg-[#fdf6e3] px-6 py-7 sm:px-8 sm:py-8 text-[#134c5f]">
+          {article.disclaimer.label && (
+            <p className="body-small font-bold uppercase tracking-[1.5px] text-[#b8901a]">
+              {article.disclaimer.label}
+            </p>
+          )}
+          <h2 className="heading-h3 mt-1 text-[#082935]">{article.disclaimer.title}</h2>
+          <p className="body-text mt-4 text-[#3d6473]">{article.disclaimer.intro}</p>
+          <ul className="mt-4 space-y-3">
+            {article.disclaimer.items.map((item) => (
+              <li key={item.title} className="body-text">
+                <strong className="font-bold text-[#082935]">{item.title}</strong> {item.text}
+              </li>
+            ))}
+          </ul>
+          <p className="body-text mt-5">{renderFormattedText(article.disclaimer.urgent)}</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a href="tel:988" className="inline-flex items-center rounded-full border-2 border-[#efbf2f] bg-[#efbf2f] px-5 py-2 body-small font-bold text-[#134c5f]">
+              Call 988
+            </a>
+            <a href="sms:988" className="inline-flex items-center rounded-full border-2 border-[#082935] px-5 py-2 body-small font-bold text-[#082935]">
+              Text 988
+            </a>
+          </div>
+          {article.disclaimer.footer && (
+            <p className="body-small mt-4 text-[#3d6473]">{renderFormattedText(article.disclaimer.footer)}</p>
+          )}
+        </section>
+      )}
+
     </div>
   );
 }

@@ -12,6 +12,7 @@ import { esaForDepressionSchema } from "./schemas/esaForDepressionSchema";
 import { esaForPtsdSchema } from "./schemas/esaForPtsdSchema";
 import { prepareEsaForRentalHousingSchema } from "./schemas/prepareEsaForRentalHousingSchema";
 import { esaTrainingMythsSchema } from "./schemas/esaTrainingMythsSchema";
+import { NEW_BLOG_POSTS } from "./blogPosts2026";
 
 export interface BlogTocItem {
   id: string;
@@ -126,6 +127,29 @@ export interface BlogFaq {
   a: string;
 }
 
+export interface BlogDisclaimerItem {
+  title: string;
+  text: string;
+}
+
+export interface BlogDisclaimer {
+  label?: string;
+  title: string;
+  intro: string;
+  items: BlogDisclaimerItem[];
+  urgent: string;
+  footer?: string;
+}
+
+export interface BlogAboutAuthor {
+  name: string;
+  title?: string;
+  bio?: string;
+  image?: string;
+  bioHref?: string;
+  linkedin?: string;
+}
+
 export interface BlogArticle {
   id: string;
   slug: string;
@@ -133,6 +157,8 @@ export interface BlogArticle {
   url: string;
   canonicalUrl: string;
   title: string;
+  /** Hub card heading when it differs from the article H1. */
+  cardTitle?: string;
   metaTitle?: string;
   metaDescription?: string;
   /** Optional Open Graph / Twitter description when it differs from the meta description. */
@@ -200,6 +226,8 @@ export interface BlogArticle {
     paragraphs: string[];
   };
   faqs: BlogFaq[];
+  disclaimer?: BlogDisclaimer;
+  aboutAuthor?: BlogAboutAuthor;
   faqSectionTitle?: string;
   faqSectionSubtitle?: string;
   faqSectionId?: string;
@@ -3762,7 +3790,8 @@ export const BLOG_POSTS: BlogArticle[] = [
     faqSectionTitle: "Frequently Asked Questions",
     faqSectionId: "frequently-asked-questions",
     schema: esaTrainingMythsSchema,
-  }
+  },
+  ...NEW_BLOG_POSTS,
 ];
 
 export function getBlogBySlug(slug: string): BlogArticle | undefined {

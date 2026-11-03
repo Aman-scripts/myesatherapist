@@ -81,15 +81,18 @@ export function BlogAuthorBio({
                 <h3 className="heading-h3 text-background">
                   {name}
                 </h3>
-                <span className="body-large text-background">
-                  {title}
-                </span>
+                {title ? (
+                  <span className="body-large text-background">
+                    {title}
+                  </span>
+                ) : null}
               </div>
 
-              {/* Frame 1261153662: Bio text */}
-              <p className="body-text text-background">
-                {bio}
-              </p>
+              {bio ? (
+                <p className="body-text text-background">
+                  {bio}
+                </p>
+              ) : null}
             </div>
 
           </div>
