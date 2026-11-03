@@ -42,7 +42,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "ESA letter if clinically approved",
           "Secure email delivery",
         ],
-        buttonText: "Get Started",
+        buttonText: "Start your ESA Evaluation",
       },
       {
         title: "ESA Letter + PSD Letter Combo",
@@ -182,6 +182,8 @@ function RenderCardsContainer({
         {cards.map((card, idx) => {
           const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
           const letter = cardLetter(card.buttonText, directSurvey);
+          const isLongButton = card.buttonText.length > 18;
+          const buttonWidth = isLongButton ? "w-[272px] px-2 whitespace-nowrap" : "w-[154px]";
 
           const mobileCard = (
             <div
@@ -227,7 +229,11 @@ function RenderCardsContainer({
                       <MaybeStateModalButton
                         href={ctaHref}
                         letter={letter}
-                        className="inline-flex h-11 w-fit max-w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                        className={`inline-flex w-fit max-w-full items-center justify-center text-center rounded-full bg-accent font-sans font-bold text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)] ${
+                          isLongButton
+                            ? "h-auto min-h-11 whitespace-normal px-3 py-2 text-[13px] leading-4"
+                            : "h-11 whitespace-nowrap px-5 text-[14px] leading-5"
+                        }`}
                       >
                         {mobileButtonLabel(card.buttonText)}
                       </MaybeStateModalButton>
@@ -287,7 +293,7 @@ function RenderCardsContainer({
                     <MaybeStateModalButton
                       href={ctaHref}
                       letter={letter}
-                      className="inline-flex items-center justify-center w-[154px] h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
+                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${buttonWidth}`}
                     >
                       {card.buttonText}
                     </MaybeStateModalButton>
@@ -297,8 +303,6 @@ function RenderCardsContainer({
               </React.Fragment>
             );
           }
-
-          const isLongButton = card.buttonText.length > 18;
 
           return (
             <React.Fragment key={idx}>

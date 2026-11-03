@@ -23,7 +23,7 @@ const STATE_PLAN_CARDS = [
       "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
     price: "$149",
     features: PLAN_FEATURES,
-    buttonText: "Get Started",
+    buttonText: "Start your ESA Evaluation",
   },
   {
     title: "ESA + PSD\nCombo",
@@ -31,7 +31,7 @@ const STATE_PLAN_CARDS = [
     description:
       "ESA and PSD letters from a state-licensed mental health professional when each is clinically appropriate.",
     features: PLAN_FEATURES,
-    buttonText: "Get Started",
+    buttonText: "Start your ESA Evaluation",
   },
 ];
 
@@ -158,14 +158,14 @@ export function StatePricingSection({ data }: StatePricingSectionProps) {
             description: data.pricingPlan1Description || "",
             price: data.pricingPlan1Price || "$149",
             features: data.pricingPlan1Features || [],
-            buttonText: "Get Started",
+            buttonText: "Start your ESA Evaluation",
           },
           {
             title: data.pricingPlan2Title || "ESA Letter + PSD Letter Combo",
             description: data.pricingPlan2Description || "",
             price: data.pricingPlan2Price || "$199",
             features: data.pricingPlan2Features || [],
-            buttonText: "Get Started",
+            buttonText: "Start your ESA Evaluation",
           },
         ]}
         ctaHref="#faq"

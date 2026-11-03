@@ -53,9 +53,9 @@ export function BlogsFeaturedArticle({
             <div className="pt-1">
               <CtaButton
                 href={ctaHref}
-                className="w-[192px]"
+                className="w-auto min-w-[240px]"
               >
-                Get Started
+                Start your ESA Evaluation
               </CtaButton>
             </div>
 

@@ -212,9 +212,9 @@ export function Header() {
               /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
               <CtaButton
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
-                className="w-[192px] h-[54px] text-[16px]"
+                className="w-auto px-6 h-[54px] text-[16px]"
               >
-                Get Started
+                Start your ESA Evaluation
               </CtaButton>
             ) : (
               /* Homepage (Frame 1000011888 & Frame 1000011890) */
@@ -231,9 +231,9 @@ export function Header() {
                 {/* Button 2: Get Started (Frame 1000011890) */}
                 <CtaButton
                   href="#pricing"
-                  className="w-auto min-w-[192px] h-[54px] text-[16px] pl-[34px] pr-[5px]"
+                  className="w-auto h-[54px] text-[16px]"
                 >
-                  Get Started
+                  Start your ESA Evaluation
                 </CtaButton>
               </>
             )}
@@ -383,7 +383,7 @@ export function Header() {
               className="w-full h-[48px]"
               onClick={() => setMobileOpen(false)}
             >
-              {isPsd ? "Start Your Consultation" : "Get Started"}
+              {isPsd ? "Start Your Consultation" : "Start your ESA Evaluation"}
             </CtaButton>
           </div>
         </div>

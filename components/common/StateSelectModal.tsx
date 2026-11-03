@@ -101,7 +101,7 @@ export function StateSelectModal() {
 
         <div className="mt-4 flex justify-center">
           <CtaButton stateModal={false} onClick={start} variant="accent">
-            Get Started
+            {letter === "psd" ? "Get Started" : "Start your ESA Evaluation"}
           </CtaButton>
         </div>
 

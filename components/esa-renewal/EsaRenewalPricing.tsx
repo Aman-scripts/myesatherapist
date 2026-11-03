@@ -15,7 +15,7 @@ const RENEWAL_CARDS = [
       "Intended for housing accommodation requests",
       "Professional review (no guaranteed outcome)",
     ],
-    buttonText: "Get Started",
+    buttonText: "Start your ESA Evaluation",
   },
   {
     title: "New ESA\nLetter",
@@ -29,7 +29,7 @@ const RENEWAL_CARDS = [
       "Independent professional determination required",
       "Professional clinical assessment (no guaranteed approval)",
     ],
-    buttonText: "Get Started",
+    buttonText: "Start your ESA Evaluation",
   },
 ];
 
