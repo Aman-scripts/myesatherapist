@@ -43,9 +43,6 @@ function HeroCopy() {
       <CtaButton href="#pricing" variant="accent" className="w-auto min-w-[280px]">
         Start Your Renewal Online
       </CtaButton>
-      <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
-        If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
-      </p>
       <ReviewBadges />
     </div>
   );
@@ -74,9 +71,6 @@ export function EsaRenewalHero() {
           <CtaButton href="#pricing" variant="accent" className="mt-5 w-auto min-w-[240px]">
             Start Your Renewal Online
           </CtaButton>
-          <p className="body-small text-body-text mt-4 max-w-[280px]">
-            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
-          </p>
           <div className="mt-5 flex flex-col items-center gap-3">
             {[
               { value: "7+", label: "Years Serving" },

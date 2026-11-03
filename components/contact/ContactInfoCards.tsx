@@ -28,7 +28,7 @@ export function ContactInfoCards() {
     },
     {
       title: "OPEN HOURS:",
-      detail: "Mon–Fri · 8am – 8pm ET",
+      detail: "Mon-Sat - 9 AM to 6 PM",
       icon: "/esa-icons/Icon-38.svg",
       href: "#hours",
       isLink: false,

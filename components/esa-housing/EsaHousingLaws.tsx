@@ -40,7 +40,7 @@ const COLUMNS = [
     items: [
       "Must allow housing regardless of pet policies",
       "Must not require special training, certification, or licensing for your ESA",
-      "Must not deny housing because your ESA is an emotional support animal",
+      "Must individually review ESA accommodation requests before making a decision",
       "Must respect privacy and cannot demand detailed medical records beyond a valid ESA letter",
     ],
   },

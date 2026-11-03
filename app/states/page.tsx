@@ -49,28 +49,28 @@ export const metadata: Metadata = {
 const STATES_FAQS: FaqItem[] = [
   {
     num: "01.",
-    q: "Which States Have the Strictest ESA Laws?",
-    a: "States like California, Montana, Arkansas, Louisiana, and Iowa require ESA owners to have at least a 30-day relationship with their mental health professional before an ESA evaluation can be conducted.",
+    q: "Which States Have Strict ESA Laws?",
+    a: "Some states have additional rules addressing ESA documentation, misrepresentation, or housing accommodations. However, federal Fair Housing Act protections generally apply nationwide, subject to eligibility requirements and applicable exceptions.",
   },
   {
     num: "02.",
     q: "Can a Landlord Deny an ESA in Any State?",
-    a: "No. Under the Fair Housing Act (FHA), landlords cannot deny an emotional support animal (ESA) as long as you have a legitimate ESA letter based on an evaluation conducted by a licensed professional.",
+    a: "A landlord generally cannot deny a valid ESA accommodation request solely because of a no-pet policy. However, denial may be permitted in certain circumstances, such as undue hardship, direct threats, or significant property damage.",
   },
   {
     num: "03.",
     q: "Can an Online ESA Letter Be Valid in My State?",
-    a: "Yes, if the letter comes from a licensed mental health professional who conducts a legitimate telehealth evaluation. Documentation generated instantly or through automated processes without a proper clinical assessment may be rejected by housing providers.",
+    a: "Yes. An online ESA letter may be valid if it follows applicable requirements and is provided by a qualified mental health professional licensed or otherwise authorized to practice in your state after an appropriate evaluation.",
   },
   {
     num: "04.",
     q: "Do ESA Owners Need Additional Documentation in Certain States?",
-    a: "Generally, a valid ESA letter is sufficient in all 50 states. However, some states require an established 30-day patient-provider relationship with the licensed mental health professional conducting the evaluation. Many states also note that ESA letters expire after 12 months and must be renewed.",
+    a: "Some states have additional documentation rules, including requirements related to the professional relationship or evaluation process. However, there is no universal federal ESA certificate or registration requirement for housing.",
   },
   {
     num: "05.",
     q: "Can I Use an ESA Letter From Another State?",
-    a: "You generally cannot use emotional support documentation issued by a professional licensed in another state. The evaluation must be completed by a mental health professional licensed in the state where you currently reside to meet state-specific requirements and Fair Housing Act (FHA) standards. States such as California, Arkansas, Iowa, Louisiana, and Montana also require an established patient–provider relationship. If you move, a new in-state evaluation is typically needed to remain compliant.",
+    a: "An ESA letter from another state may not automatically meet your state's requirements. The professional issuing it must be appropriately licensed or authorized to practice where you live, and the documentation must meet applicable standards.",
   },
 ];
 
@@ -101,12 +101,12 @@ export default function StatesDirectoryPage() {
         {/* 4. Frequently Asked Questions Section */}
         <FaqSection
           title="Frequently Asked Questions"
-          subtitle="Get answers to common questions about ESA letters and our service."
+          subtitle="Explore ESA letter information by state, including local requirements, housing rights, applicable laws, and the process for getting an ESA letter."
           faqs={STATES_FAQS}
         />
 
         {/* 5. Common CTA Banner Section */}
-        <CtaBanner buttonText="Get Started" buttonHref="/pricing/" />
+        <CtaBanner buttonText="Start your ESA Evaluation" buttonHref="/pricing/" />
         <StateReviewerBanner updatedDate="November 3, 2026" />
       </main>
 

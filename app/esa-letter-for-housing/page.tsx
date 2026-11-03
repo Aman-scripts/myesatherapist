@@ -110,7 +110,7 @@ export default function EsaLetterForHousingPage() {
 
       <main className="flex-1">
         <EsaOnlineHero
-          title="ESA Letter For Housing Online From Licensed Therapist"
+          title="Online ESA Letter for Housing From Licensed Therapist"
           description="Connect with a licensed mental health professional for a secure online ESA evaluation. When clinically appropriate, documentation may be provided to support a housing-related accommodation request."
           buttonText="Start Your Application"
           refundText="Not approved after your evaluation? You get a full refund."

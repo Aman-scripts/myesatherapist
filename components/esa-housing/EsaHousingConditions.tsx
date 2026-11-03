@@ -25,7 +25,7 @@ export function EsaHousingConditions() {
           {CONDITIONS.map((condition) => (
             <li key={condition.label} className="flex items-center gap-3 rounded-[20px] bg-white px-4 py-4 shadow-[0px_2px_4px_rgba(0,0,0,0.08)]">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-background">
-                <Image src={condition.icon} alt="" width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
+                <Image src={condition.icon} alt={condition.label} width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
               </span>
               <span className="font-sans font-semibold text-base leading-[26px] text-primary">{condition.label}</span>
             </li>

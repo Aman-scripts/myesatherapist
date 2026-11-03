@@ -275,7 +275,7 @@ export function ComparisonTable() {
 
         {/* Bottom CTA Button */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
-          <CtaButton href="#how-it-works">Get Started</CtaButton>
+          <CtaButton href="#how-it-works">Start your ESA Evaluation</CtaButton>
           <p className="body-small text-center">
             If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>

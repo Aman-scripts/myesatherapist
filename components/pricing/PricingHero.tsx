@@ -7,7 +7,7 @@ import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 export function PricingHero() {
   return (
     <section className="relative z-30 w-full bg-background overflow-visible">
-      <h1 className="sr-only">Choose The Right ESA Package For You</h1>
+      <h1 className="sr-only">Choose the Right Package For You</h1>
       {/* ---------------------------------------------------- */}
       {/* 1. MOBILE PRICING HERO SECTION (< 640px)             */}
       {/* ---------------------------------------------------- */}
@@ -16,7 +16,7 @@ export function PricingHero() {
           media="(max-width: 639px)"
             quality={70}
           src="/Hero_image_for_mobile_all.webp"
-          alt="Choose The Right ESA Package For You"
+          alt="Choose the Right Package For You"
           fill
           className="object-cover object-bottom"
           sizes="100vw"
@@ -25,7 +25,7 @@ export function PricingHero() {
         {/* Content Container at Top */}
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
           <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">
-            Choose The Right ESA Package For You
+            Choose the Right Package For You
           </p>
 
           <p className="body-large text-body-text max-w-[320px] mx-auto mt-3">
@@ -62,7 +62,7 @@ export function PricingHero() {
           media="(min-width: 640px) and (max-width: 1023px)"
             quality={70}
           src="/pricing/pricing_section-hero_section_tablet.webp"
-          alt="Choose The Right ESA Package For You"
+          alt="Choose the Right Package For You"
           fill
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
@@ -87,7 +87,7 @@ export function PricingHero() {
           </div>
 
           <p aria-hidden="true" className="heading-h1 text-primary mt-6 max-w-xl">
-            Choose The Right ESA Package For You
+            Choose the Right Package For You
           </p>
 
           <p className="body-large text-body-text max-w-md mx-auto mt-3">
@@ -115,7 +115,7 @@ export function PricingHero() {
             media="(min-width: 1024px)"
             quality={70}
             src="/pricing/pricing_section-hero_section.webp"
-            alt="Choose The Right ESA Package For You"
+            alt="Choose the Right Package For You"
             fill
             className="object-cover object-center"
             sizes="(min-width: 1024px) 100vw, 1px"
@@ -142,7 +142,7 @@ export function PricingHero() {
             </div>
 
             <p aria-hidden="true" className="heading-h1 text-primary max-w-[553px]">
-              Choose The Right ESA Package For You
+              Choose the Right Package For You
             </p>
 
             <p className="body-large text-body-text max-w-[553px]">

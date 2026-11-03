@@ -3,8 +3,11 @@ import React from "react";
 import Image from "next/image";
 import { PricingSection } from "@/components/home/PricingSection";
 
-const PLAN_INTRO =
-  "Each plan is a one-time clinical evaluation. $149 covers an ESA letter or a PSD letter. $199 covers both when a licensed clinician approves them. ID cards are not included.";
+const ESA_INTRO =
+  "Choose the evaluation package that fits your needs. A one-time $149 fee covers an ESA letter evaluation, while $199 covers both, an ESA letter evaluation and a PSD letter evaluation. Documentation is provided only if approved by a licensed clinician.";
+
+const PSD_INTRO =
+  "Get a Psychiatric Service Dog (PSD) letter evaluation for $149 or combine it with an ESA letter evaluation for $199. Documentation is provided only when approved by a licensed clinician.";
 
 export function PricingPlansSection({
   ctaHref = "#evaluation",
@@ -17,8 +20,8 @@ export function PricingPlansSection({
     <div id="plans">
       <PricingSection
         ctaHref={ctaHref}
-        heading="Emotional Support Animal"
-        descriptionOverride={PLAN_INTRO}
+        heading="Emotional Support Animal Letter Pricing"
+        descriptionOverride={ESA_INTRO}
         showTabs={false}
         maxCards={2}
         popularCardIndex={1}
@@ -29,8 +32,8 @@ export function PricingPlansSection({
         sectionId="pricing-psd"
         defaultPlan="psd"
         ctaHref={ctaHref}
-        heading="Psychiatric Service Dog"
-        descriptionOverride={PLAN_INTRO}
+        heading="Psychiatric Service Dog Letter Pricing"
+        descriptionOverride={PSD_INTRO}
         showTabs={false}
         maxCards={2}
         popularCardIndex={-1}

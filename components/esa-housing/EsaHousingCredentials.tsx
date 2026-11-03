@@ -33,7 +33,7 @@ export function EsaHousingCredentials() {
           </div>
 
           <div className="flex justify-center lg:justify-start">
-            <CtaButton href="/pricing/">Work With Licensed Professionals</CtaButton>
+            <CtaButton href="/esa-doctors/">Connect With a Licensed Professional</CtaButton>
           </div>
 
           <div className="flex overflow-hidden text-left rounded-[20px] bg-background shadow-[0px_2px_4px_rgba(0,0,0,0.1)]">

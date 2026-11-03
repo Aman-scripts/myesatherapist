@@ -106,7 +106,7 @@ export function EsaTrainingVsServiceDog() {
               provider as a possible psychiatric service dog path.
             </p>
           </div>
-          <CtaButton href="/pricing/">Get Started</CtaButton>
+          <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
         </div>
       </section>
     </>

@@ -70,15 +70,9 @@ export function EsaRenewalHowItWorks() {
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <CtaButton href="#pricing" className="w-auto min-w-[180px]">
-            Get Started
+          <CtaButton href="#pricing" className="w-auto min-w-[240px]">
+            Start your ESA Evaluation
           </CtaButton>
-          <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
-            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
-          </p>
-          <p className="rounded-full bg-[#FDECEC] px-5 py-2 text-center font-sans text-[14px] font-medium leading-[22px] text-[#8A3A3A]">
-            We authorize your payment first, but only charge it after your evaluation is completed.
-          </p>
         </div>
       </div>
     </section>

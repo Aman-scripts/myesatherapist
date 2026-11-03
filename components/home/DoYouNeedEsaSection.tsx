@@ -54,7 +54,7 @@ export function DoYouNeedEsaSection() {
 
             {/* CTA Button & Refund Reassurance */}
             <div className="pt-4 space-y-2">
-              <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
+              <CtaButton href="#how-it-works" variant="accent">Start your ESA Evaluation</CtaButton>
               <p className="body-small">
                 If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
               </p>
@@ -160,7 +160,7 @@ export function DoYouNeedEsaSection() {
 
           {/* Action Button & Refund Reassurance */}
           <div className="flex flex-col items-center gap-2 pt-2">
-            <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
+            <CtaButton href="#how-it-works" variant="accent">Start your ESA Evaluation</CtaButton>
             <p className="body-small text-center">
               If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
             </p>

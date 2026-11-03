@@ -4,11 +4,56 @@ import { SectionHeader, SECTION_LEAD } from "./EsaHousingShared";
 
 const P = "/esa-housing/esa-letter-housing_housingbarrierssection-";
 
-const STATS = [
-  { icon: `${P}70-icon.svg`, w: 50, h: 28, description: "of renters with pets settle for lower-quality housing due to limited options." },
-  { icon: `${P}72-icon.svg`, w: 47, h: 28, description: "of renters say pet-friendly housing is hard to find." },
-  { icon: `${P}8-icon.svg`, w: 34, h: 25, description: "of U.S. rental housing is truly pet-inclusive." },
-  { icon: `${P}200-icon.svg`, w: 71, h: 24, description: "higher average cost for pet-friendly housing" },
+const PIHI_DATA_2025 = {
+  label: "PIHI – Pets & Housing Data 2025",
+  href: "https://www.petsandhousing.org/pets-housing-2025-data-report/",
+};
+
+const STATS: Array<{
+  alt: string;
+  description: string;
+  source: { label: string; href: string };
+  stat?: string;
+  icon?: string;
+  w?: number;
+  h?: number;
+}> = [
+  {
+    stat: "59%",
+    alt: "59%",
+    description: "Renters say pet-friendly housing is unaffordable.",
+    source: PIHI_DATA_2025,
+  },
+  {
+    icon: `${P}72-icon.svg`,
+    alt: "72%",
+    w: 47,
+    h: 28,
+    description: "of renters say pet-friendly housing is hard to find.",
+    source: PIHI_DATA_2025,
+  },
+  {
+    icon: `${P}8-icon.svg`,
+    alt: "8%",
+    w: 34,
+    h: 25,
+    description: "of U.S. rental housing is truly pet-inclusive.",
+    source: {
+      label: "PIHI – Pets in Rental Housing 2025 Outlook (PDF)",
+      href: "https://www.petsandhousing.org/wp-content/uploads/2025/08/Pets-in-Rental-Housing-2025-Outlook.pdf",
+    },
+  },
+  {
+    icon: `${P}200-icon.svg`,
+    alt: "$200",
+    w: 71,
+    h: 24,
+    description: "higher average cost for pet-friendly housing",
+    source: {
+      label: "https://jlsp.law.columbia.edu/wp-content/blogs.dir/213/files/2019/04/Vol52-OReilly-Jones.pdf",
+      href: "https://jlsp.law.columbia.edu/wp-content/blogs.dir/213/files/2019/04/Vol52-OReilly-Jones.pdf",
+    },
+  },
 ];
 
 export function EsaHousingBarriers() {
@@ -21,7 +66,16 @@ export function EsaHousingBarriers() {
 
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 pt-2">
           {STATS.map((s) => (
-            <FeatureCard key={s.icon} icon={s.icon} iconW={s.w} iconH={s.h} description={s.description} />
+            <FeatureCard
+              key={s.alt}
+              icon={s.icon}
+              stat={s.stat}
+              iconAlt={s.alt}
+              iconW={s.w}
+              iconH={s.h}
+              description={s.description}
+              source={s.source}
+            />
           ))}
         </div>
 

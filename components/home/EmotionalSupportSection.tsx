@@ -63,8 +63,8 @@ export function EmotionalSupportSection() {
             >
               Learn About ESA
             </CtaButton>
-            <CtaButton href="#how-it-works" variant="accent" className="w-[192px]">
-              Get Started
+            <CtaButton href="#how-it-works" variant="accent" className="w-auto min-w-[240px]">
+              Start your ESA Evaluation
             </CtaButton>
           </div>
           <p className="body-small text-center sm:text-left">
@@ -108,8 +108,8 @@ export function EmotionalSupportSection() {
                   Learn About ESA
                 </CtaButton>
 
-                <CtaButton href="#how-it-works" variant="accent" className="w-[192px]">
-                  Get Started
+                <CtaButton href="#how-it-works" variant="accent" className="w-auto min-w-[240px]">
+                  Start your ESA Evaluation
                 </CtaButton>
               </div>
               <p className="body-small">

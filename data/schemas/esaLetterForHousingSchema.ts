@@ -257,7 +257,7 @@ export const esaLetterForHousingSchemas = [
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Must not deny housing because your ESA is an emotional support animal"
+            "name": "Must individually review ESA accommodation requests before making a decision"
           },
           {
             "@type": "ListItem",

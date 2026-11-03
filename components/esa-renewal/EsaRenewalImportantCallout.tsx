@@ -31,9 +31,6 @@ export function EsaRenewalImportantCallout() {
                 Payment provides access to a professional evaluation only. The licensed mental health professional independently determines whether ESA letters may be issued based on their clinical judgment.
               </p>
             </div>
-            <p className="font-sans text-sm font-medium leading-[22px] text-body-text">
-              Disclaimer: We authorize your payment first, but only charge it after your evaluation is completed.
-            </p>
           </div>
         </div>
       </div>

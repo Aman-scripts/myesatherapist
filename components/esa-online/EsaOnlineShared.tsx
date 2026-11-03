@@ -34,20 +34,28 @@ export function FeatureCard({
   icon,
   title,
   description,
+  iconAlt,
   headingFont = "heading",
   dark = false,
   headingAs: Heading = "h3",
   iconW = 32,
   iconH = 32,
+  stat,
+  source,
 }: {
-  icon: string;
+  icon?: string;
   title?: string;
   description?: string;
+  /** Used when the icon itself contains text, such as a statistic. */
+  iconAlt?: string;
   iconW?: number;
   iconH?: number;
   headingFont?: "heading" | "lato";
   dark?: boolean;
   headingAs?: "h2" | "h3";
+  /** Text statistic shown in the badge when there is no icon. */
+  stat?: string;
+  source?: { label: string; href: string };
 }) {
   return (
     <div className="relative flex w-full flex-col">
@@ -74,10 +82,27 @@ export function FeatureCard({
             {description}
           </p>
         )}
+        {source && (
+          <p className={`body-small ${dark ? "text-background" : "text-body-text"}`}>
+            Source:{" "}
+            <a
+              href={source.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 break-all"
+            >
+              {source.label}
+            </a>
+          </p>
+        )}
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
-        <Image
-            src={icon} alt={title ?? ""} width={iconW} height={iconH} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
+        {stat ? (
+          <span className="font-heading font-bold text-[22px] leading-none text-[#2E5A66]">{stat}</span>
+        ) : (
+          <Image
+            src={icon || ""} alt={iconAlt || title || "Icon"} width={iconW} height={iconH} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
+        )}
       </div>
     </div>
   );

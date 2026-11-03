@@ -69,10 +69,10 @@ export function EsaRenewalWhySection() {
           {/* Header Text (Frame 1000011447) */}
           <div className="flex flex-col gap-5 lg:gap-[1.95vw] xl:gap-7 text-center lg:text-left">
             <h2 className="heading-h2 text-primary max-w-[541px] mx-auto lg:mx-0">
-              Why Consider Renewing Your ESA Letter Through Our Platform
+              Why Consider Renewing Your ESA Letter Through My ESA Therapist
             </h2>
             <p className="body-large text-body-text">
-              Housing providers may ask for current emotional support animal letters when reviewing accommodation requests. If the document is outdated, it may no longer be accepted in certain housing situations. Our platform is designed to help individuals reconnect with a licensed mental health professional who can review their current emotional needs through an evaluation.
+              Housing providers may ask for current emotional support animal letters when reviewing accommodation requests. If the document is outdated, it may no longer be accepted in certain housing situations. My ESA Therapist helps individuals reconnect with a licensed mental health professional who can review their current emotional needs through an evaluation.
             </p>
           </div>
 

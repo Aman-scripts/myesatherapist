@@ -146,7 +146,7 @@ export function EsaOnlineComparison() {
           </div>
         </div>
 
-        <CtaButton href="/pricing/" variant="accent">Get Started</CtaButton>
+        <CtaButton href="/pricing/" variant="accent">Start your ESA Evaluation</CtaButton>
       </div>
     </section>
   );

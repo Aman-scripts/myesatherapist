@@ -60,9 +60,9 @@ export function DoctorAboutPhilosophySection({
               <CtaButton
                 href={ctaHref}
                 variant="accent"
-                className="w-[192px]"
+                className="w-auto min-w-[240px]"
               >
-                Get Started
+                Start your ESA Evaluation
               </CtaButton>
             </div>
           </div>
@@ -83,8 +83,8 @@ export function DoctorAboutPhilosophySection({
               ))}
             </div>
             <div className="pt-1">
-              <CtaButton href={ctaHref} variant="accent" className="w-[192px]">
-                Get Started
+              <CtaButton href={ctaHref} variant="accent" className="w-auto min-w-[240px]">
+                Start your ESA Evaluation
               </CtaButton>
             </div>
           </div>

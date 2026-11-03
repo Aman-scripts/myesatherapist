@@ -112,7 +112,7 @@ export function HowItWorks() {
 
           {/* Get Started Button + Refund reassurance */}
           <div className="flex flex-col items-center mt-10 lg:mt-12 gap-2">
-            <CtaButton href="#how-it-works" variant="accent">Get Started</CtaButton>
+            <CtaButton href="#how-it-works" variant="accent">Start your ESA Evaluation</CtaButton>
             <p className="body-small text-center">
               If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
             </p>

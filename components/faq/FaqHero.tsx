@@ -2,13 +2,7 @@ import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const HEADING = (
-  <>
-    ESA Questions?
-    <br />
-    We’re Here To Help.
-  </>
-);
+const HEADING = "Need Clarity About ESA Letters?";
 
 const DESCRIPTION =
   "Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.";
@@ -16,13 +10,13 @@ const DESCRIPTION =
 export function FaqHero() {
   return (
     <section className="relative z-30 w-full bg-background overflow-visible">
-      <h1 className="sr-only">ESA Questions? We’re Here To Help.</h1>
+      <h1 className="sr-only">Need Clarity About ESA Letters?</h1>
       <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
           quality={70}
           src="/faq/faq_hero-section_mobile.webp"
-          alt="ESA Questions? We’re Here To Help."
+          alt="Need Clarity About ESA Letters?"
           fill
           className="object-cover object-bottom"
           sizes="100vw"
@@ -38,7 +32,7 @@ export function FaqHero() {
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={70}
           src="/faq/faq_hero-section_tablet.webp"
-          alt="ESA Questions? We’re Here To Help."
+          alt="Need Clarity About ESA Letters?"
           fill
           className="object-cover object-bottom"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
@@ -60,7 +54,7 @@ export function FaqHero() {
             media="(min-width: 1024px)"
             quality={90}
             src="/faq/esa-questions-hero-desktop.webp"
-            alt="ESA Questions? We're Here To Help"
+            alt="Need Clarity About ESA Letters?"
             fill
             className="object-cover object-right"
             sizes="(min-width: 1024px) 100vw, 1px"
