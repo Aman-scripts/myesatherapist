@@ -20,7 +20,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
   return (
     <section className="w-full pt-8 pb-4 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto">
       {/* Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2.5 text-xs sm:text-sm text-body-text font-sans font-semibold">
+      <nav aria-label="Breadcrumb" className="body-small mb-6 flex items-center gap-2.5">
         <Link prefetch={false} href="/" className="hover:text-primary transition-colors">
           Home
         </Link>
@@ -51,7 +51,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
         <div className="relative z-10 max-w-[840px]">
           {/* Eyebrow Badge */}
           {policy.eyebrow && (
-            <div className="inline-flex items-center gap-2 rounded-full bg-background border border-[#EAE5DC] px-4 py-1.5 text-xs sm:text-sm font-sans font-bold text-primary shadow-2xs mb-4 sm:mb-5">
+            <div className="button-text-small inline-flex items-center gap-2 rounded-full bg-background border border-[#EAE5DC] px-4 py-1.5 text-primary shadow-2xs mb-4 sm:mb-5">
               <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z" />
                 <path d="M9 12l2 2 4-4" />
@@ -61,7 +61,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           )}
 
           {/* Main Headline H1 */}
-          <h1 className="font-heading text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] font-bold tracking-tight text-primary leading-[1.15] mb-4">
+          <h1 className="heading-h1 mb-4">
             {accentIdx !== -1 ? (
               <>
                 {beforeAccent}
@@ -75,7 +75,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
 
           {/* Subtitle / Lede */}
           {policy.lede && (
-            <p className="font-sans text-base sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text font-medium mb-6 max-w-[740px]">
+            <p className="body-large mb-6 max-w-[740px]">
               {policy.lede}
             </p>
           )}
@@ -85,8 +85,8 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             <div className="grid grid-cols-3 gap-3 sm:gap-4 my-6 max-w-[540px]">
               {policy.heroStats.map((st, i) => (
                 <div key={i} className="bg-background border border-[#EAE5DC] rounded-[16px] p-3.5 sm:p-4 text-center shadow-2xs">
-                  <div className="font-heading text-xl sm:text-2xl font-bold text-primary">{st.num}</div>
-                  <div className="font-sans text-xs sm:text-[13px] text-body-text font-semibold leading-tight mt-1">{st.label}</div>
+                  <div className="heading-h4">{st.num}</div>
+                  <div className="body-small mt-1">{st.label}</div>
                 </div>
               ))}
             </div>
@@ -94,7 +94,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
 
           {/* Metadata Chips: Last updated date & Reviewer */}
           <div className="flex flex-wrap items-center gap-3 mb-4 pt-1">
-            <div className="inline-flex items-center gap-2 rounded-full bg-background border border-[#EAE5DC] px-3.5 py-1.5 text-xs sm:text-sm font-sans font-semibold text-body-text">
+            <div className="body-small inline-flex items-center gap-2 rounded-full bg-background border border-[#EAE5DC] px-3.5 py-1.5">
               <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12 6 12 12 16 14" />
@@ -106,13 +106,13 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
           {/* Related Policy Pills */}
           {policy.relatedLinks && policy.relatedLinks.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-[#EAE5DC]/80 mt-5">
-              <span className="text-xs font-sans font-bold text-body-text mr-1 uppercase tracking-wider">Related Policies:</span>
+              <span className="eyebrow mr-1">Related Policies:</span>
               {policy.relatedLinks.map((link, idx) => {
                 const slugMap: Record<string, string> = {
                   "terms of use": "/terms-of-use/",
                   "privacy policy": "/privacy-policy/",
                   "refund policy": "/refund-policy/",
-                  "consent for telehealth": "/consent-for-telehealth/",
+                  "consent for telehealth": "/telehealth-consent/",
                   "hipaa compliance": "/hipaa-compliance/",
                   "editorial policy": "/editorial-policy/",
                   "disclaimer & policies": "/disclaimer/",
@@ -133,7 +133,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                   <Link prefetch={false}
                     key={idx}
                     href={mappedHref}
-                    className="inline-flex items-center gap-1 rounded-full border border-[#EAE5DC] bg-background hover:bg-white hover:border-primary/40 px-3 py-1 text-xs font-sans font-semibold text-primary transition-all"
+                    className="button-text-small inline-flex items-center gap-1 rounded-full border border-[#EAE5DC] bg-background hover:bg-white hover:border-primary/40 px-3 py-1 text-primary transition-colors"
                   >
                     <span>{link.text}</span>
                     <svg className="w-3 h-3 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

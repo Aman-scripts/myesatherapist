@@ -17,7 +17,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       .replace(/href="terms-of-use\.html"/g, 'href="/terms-of-use/"')
       .replace(/href="privacy-policy\.html"/g, 'href="/privacy-policy/"')
       .replace(/href="refund-policy\.html"/g, 'href="/refund-policy/"')
-      .replace(/href="consent-for-telehealth\.html"/g, 'href="/consent-for-telehealth/"')
+      .replace(/href="consent-for-telehealth\.html"/g, 'href="/telehealth-consent/"')
       .replace(/href="hipaa-compliance\.html"/g, 'href="/hipaa-compliance/"')
       .replace(/href="editorial-policy\.html"/g, 'href="/editorial-policy/"')
       .replace(/href="disclaimer-and-policies\.html"/g, 'href="/disclaimer/"')
@@ -32,7 +32,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <p
             key={bIdx}
-            className="text-base sm:text-[17px] leading-[28px] sm:leading-[30px] text-body-text font-sans font-medium"
+            className="body-text"
           >
             {block.html ? renderInlineHtml(block.html) : block.text}
           </p>
@@ -44,7 +44,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             key={bIdx}
             className="w-full bg-[#FEF8EC] border-l-[5px] border-accent rounded-[12px] p-4 sm:p-5 my-5 shadow-2xs"
           >
-            <p className="text-sm sm:text-base leading-[24px] sm:leading-[26px] text-primary font-sans font-medium">
+            <p className="body-text text-primary">
               {block.html ? renderInlineHtml(block.html) : block.text}
             </p>
           </div>
@@ -54,7 +54,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <ul key={bIdx} className="space-y-3 my-4 pl-1">
             {block.items?.map((item, iIdx) => (
-              <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-body-text font-sans font-medium">
+              <li key={iIdx} className="body-text flex items-start gap-3">
                 <svg
                   className="w-5 h-5 text-primary shrink-0 mt-0.5"
                   viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             {block.columns?.map((col, cIdx) => (
               <ul key={cIdx} className="space-y-3">
                 {col.map((item, iIdx) => (
-                  <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-[15px] leading-relaxed text-body-text font-sans font-medium">
+                  <li key={iIdx} className="body-text flex items-start gap-3">
                     <svg
                       className="w-5 h-5 text-primary shrink-0 mt-0.5"
                       viewBox="0 0 24 24"
@@ -108,24 +108,24 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         return (
           <div key={bIdx} className="mt-6 pt-5 border-t border-[#EAE5DC] space-y-3">
             {block.tag && (
-              <span className="inline-flex items-center justify-center text-sm sm:text-base font-sans font-bold bg-background text-primary border border-[#EAE5DC] px-4 py-1.5 sm:px-5 sm:py-2 rounded-full shadow-2xs">
+              <span className="button-text-small inline-flex items-center justify-center bg-background text-primary border border-[#EAE5DC] px-4 py-1.5 sm:px-5 sm:py-2 rounded-full shadow-2xs">
                 {block.tag}
               </span>
             )}
             {block.title && (
-              <h3 className="font-heading text-lg sm:text-xl lg:text-[22px] font-bold text-primary leading-snug tracking-tight">
+              <h3 className="heading-h4">
                 {block.title}
               </h3>
             )}
             {block.paragraphs?.map((p, pIdx) => (
-              <p key={pIdx} className="text-sm sm:text-base leading-[26px] sm:leading-[28px] text-body-text font-sans font-medium">
+              <p key={pIdx} className="body-text">
                 {p.html ? renderInlineHtml(p.html) : p.text}
               </p>
             ))}
             {block.items && block.items.length > 0 && (
               <ul className="space-y-2.5 pl-1 my-3">
                 {block.items.map((item, iIdx) => (
-                  <li key={iIdx} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed text-body-text font-sans font-medium">
+                  <li key={iIdx} className="body-text flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
                     <div className="flex-1">
                       {item.html ? renderInlineHtml(item.html) : item.text}
@@ -140,11 +140,11 @@ export function PolicyContent({ policy }: PolicyContentProps) {
       case "field-table":
         return (
           <div key={bIdx} className="my-5">
-            <dl className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-6 sm:gap-x-8 gap-y-3 text-sm sm:text-base font-sans items-baseline">
+            <dl className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-6 sm:gap-x-8 gap-y-3 items-baseline">
               {block.fields?.map((f, fIdx) => (
                 <React.Fragment key={fIdx}>
-                  <dt className="font-bold text-primary whitespace-nowrap">{f.label}</dt>
-                  <dd className="font-medium text-body-text leading-relaxed mb-1 sm:mb-0">{f.value}</dd>
+                  <dt className="body-strong whitespace-nowrap text-primary">{f.label}</dt>
+                  <dd className="body-text mb-1 sm:mb-0">{f.value}</dd>
                 </React.Fragment>
               ))}
             </dl>
@@ -158,7 +158,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
               const slugMap: Record<string, string> = {
                 "terms of use": "/terms-of-use/",
                 "privacy policy": "/privacy-policy/",
-                "consent for telehealth": "/consent-for-telehealth/",
+                "consent for telehealth": "/telehealth-consent/",
                 "refund policy": "/refund-policy/",
                 "hipaa compliance": "/hipaa-compliance/",
                 "editorial policy": "/editorial-policy/",
@@ -173,7 +173,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 <Link prefetch={false}
                   key={cIdx}
                   href={mappedHref}
-                  className="group flex items-center justify-between p-4 sm:p-5 rounded-[16px] border border-[#EAE5DC] bg-white hover:border-primary hover:shadow-md transition-all font-sans font-bold text-sm sm:text-base text-primary"
+                  className="body-strong group flex items-center justify-between p-4 sm:p-5 rounded-[16px] border border-[#EAE5DC] bg-white hover:border-primary hover:shadow-md transition-all text-primary"
                 >
                   <span>{card.title}</span>
                   <svg
@@ -203,7 +203,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
           <div key={bIdx} className="my-6">
             <Link prefetch={false}
               href={targetHref}
-              className="inline-flex items-center gap-2.5 rounded-[30px] text-white px-6 py-3 text-sm sm:text-base font-sans font-bold transition-opacity hover:opacity-90 shadow-sm"
+              className="button-text inline-flex items-center gap-2.5 rounded-[30px] text-white px-6 py-3 transition-opacity hover:opacity-90 shadow-sm"
               style={{ background: "var(--color-gradient)" }}
             >
               <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -236,7 +236,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 <circle cx="12" cy="12" r="3" />
               </svg>
             </div>
-            <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-primary leading-tight">
+            <h2 className="heading-h3">
               {policy.sections[0].title}
             </h2>
           </div>
@@ -257,11 +257,11 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             {/* Section Header with Project-Style Numeral Badge */}
             <div className="flex items-center gap-4 pb-3 border-b border-[#EAE5DC]">
               <div className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
-                <span className="font-heading font-bold text-xl sm:text-2xl text-primary">
+                <span className="heading-h4">
                   {sec.number}
                 </span>
               </div>
-              <h2 className="font-heading text-2xl sm:text-[28px] lg:text-[32px] font-bold text-primary leading-snug tracking-tight">
+              <h2 className="heading-h3">
                 {sec.title}
               </h2>
             </div>
@@ -281,7 +281,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-accent font-heading font-bold text-base shadow-xs">
               ✓
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            <h2 className="heading-h3">
               Key Takeaways
             </h2>
           </div>
@@ -295,7 +295,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/20 text-primary mt-0.5 font-bold text-xs">
                   ✓
                 </div>
-                <p className="font-sans text-sm sm:text-[15px] font-semibold text-primary leading-relaxed">
+                <p className="body-strong text-primary">
                   {point}
                 </p>
               </div>
@@ -310,7 +310,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-accent font-bold text-sm">
             ✓
           </div>
-          <p className="font-sans text-sm sm:text-base text-body-text font-medium leading-relaxed">
+          <p className="body-text">
             <span className="font-bold text-primary">{policy.reviewerLine}</span>
           </p>
         </div>

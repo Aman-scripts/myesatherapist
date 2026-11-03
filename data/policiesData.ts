@@ -623,7 +623,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "Information is collected only when necessary",
       "Transparency and trust guide our practices"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 25, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 25, 2025"
   },
   {
     "slug": "terms-of-use",
@@ -1288,7 +1288,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "No outcomes are guaranteed",
       "Transparency, compliance, and ethical standards guide our services"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 30, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 30, 2025"
   },
   {
     "slug": "refund-policy",
@@ -1769,7 +1769,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "Refunds are available at 100% with no provider fee deduction.",
       "Transparency, ethics, and regulatory compliance guide our process."
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 29, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 29, 2025"
   },
   {
     "slug": "consent-for-telehealth",
@@ -2329,7 +2329,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "Your information is kept confidential, consistent with HIPAA and law",
       "Providers are matched to your state of licensure"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 30, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 30, 2025"
   },
   {
     "slug": "hipaa-compliance",
@@ -2802,7 +2802,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "Licensed professionals control evaluations",
       "No guarantees — only ethical, confidential care"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: [Month DD, YYYY]"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 30, 2025"
   },
   {
     "slug": "editorial-policy",
@@ -3226,7 +3226,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "Authors and reviewers are disclosed on every article",
       "Content informs, but does not replace, an individualized evaluation"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 30, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 30, 2025"
   },
   {
     "slug": "disclaimer-and-policies",
@@ -3566,7 +3566,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "No outcome or approval is guaranteed",
       "Detailed policies govern each specific topic — this page is a summary"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 30, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 30, 2025"
   },
   {
     "slug": "accessibility-statement",
@@ -3899,7 +3899,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       "Some third-party tools and legacy content may have limitations",
       "We welcome feedback and respond to reported barriers"
     ],
-    "reviewerLine": "Content reviewed by [Reviewer Name] · Last updated: December 30, 2025"
+    "reviewerLine": "Content reviewed by Robert Staaf · Last updated: December 30, 2025"
   }
 ];
 
@@ -3907,7 +3907,7 @@ export const ALL_POLICIES_LIST = [
   { slug: 'privacy-policy', label: 'Privacy Policy', shortLabel: 'Privacy', href: '/privacy-policy/' },
   { slug: 'terms-of-use', label: 'Terms of Use', shortLabel: 'Terms', href: '/terms-of-use/' },
   { slug: 'refund-policy', label: 'Refund Policy', shortLabel: 'Refund', href: '/refund-policy/' },
-  { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/consent-for-telehealth/' },
+  { slug: 'consent-for-telehealth', label: 'Consent for Telehealth', shortLabel: 'Telehealth', href: '/telehealth-consent/' },
   { slug: 'hipaa-compliance', label: 'HIPAA Compliance', shortLabel: 'HIPAA', href: '/hipaa-compliance/' },
   { slug: 'editorial-policy', label: 'Editorial Policy', shortLabel: 'Editorial', href: '/editorial-policy/' },
   { slug: 'disclaimer-and-policies', label: 'Disclaimer & Policies', shortLabel: 'Disclaimer', href: '/disclaimer/' },
@@ -3922,7 +3922,7 @@ export function getPolicyHref(slug: string): string {
   if (slug === 'disclaimer' || slug === 'disclaimer-and-policies') return '/disclaimer/';
   if (slug === 'hipaa-compliance') return '/hipaa-compliance/';
   if (slug === 'refund-policy') return '/refund-policy/';
-  if (slug === 'consent-for-telehealth') return '/consent-for-telehealth/';
+  if (slug === 'consent-for-telehealth') return '/telehealth-consent/';
   if (slug === 'editorial-policy') return '/editorial-policy/';
   if (slug === 'accessibility-statement') return '/accessibility-statement/';
   return item?.href || (slug === 'disclaimer' || slug === 'disclaimer-and-policies' ? '/disclaimer/' : `/${slug}/`);

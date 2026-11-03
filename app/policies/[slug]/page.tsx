@@ -103,7 +103,7 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
         "max-image-preview": "large",
       },
       alternates: {
-        canonical: "https://myesatherapist.com/consent-for-telehealth/",
+        canonical: "https://myesatherapist.com/telehealth-consent/",
       },
     };
   }
@@ -197,7 +197,7 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
   }
 
   if (slug === "consent-for-telehealth") {
-    permanentRedirect("/consent-for-telehealth/");
+    permanentRedirect("/telehealth-consent/");
   }
 
   if (slug === "editorial-policy") {

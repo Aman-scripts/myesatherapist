@@ -34,6 +34,7 @@ const LABELS: Record<string, string> = {
   "editorial-policy": "Editorial Policy",
   "accessibility-statement": "Accessibility Statement",
   "consent-for-telehealth": "Consent for Telehealth",
+  "telehealth-consent": "Consent for Telehealth",
   "legal-reviewer": "Legal Reviewer",
   "max-phillips": "Max Phillips",
   "awais-arshad": "Awais Arshad",
@@ -50,6 +51,7 @@ const OWN_BREADCRUMB = [
   /^\/editorial-policy\/?$/,
   /^\/accessibility-statement\/?$/,
   /^\/consent-for-telehealth\/?$/,
+  /^\/telehealth-consent\/?$/,
 ];
 
 function titleCase(segment: string) {

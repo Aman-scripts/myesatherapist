@@ -12,7 +12,6 @@ const companyLinks = [
   { label: "About Us", href: "/about-us/" },
   { label: "Contact Us", href: "/contact-us/" },
   { label: "Meet our Therapists", href: "/esa-doctors/" },
-  { label: "HIPAA Compliance", href: "/hipaa-compliance/" },
   { label: "Video Testimonials", href: "/video-testimonials/" },
   { label: "Customer Reviews", href: "/reviews/" },
 ];
@@ -33,7 +32,7 @@ const legalLinks = [
   { label: "Medical Disclaimer", href: "/disclaimer/" },
   { label: "HIPAA Notice of Privacy Practices", href: "/hipaa-compliance/" },
   { label: "Refund Policy", href: "/refund-policy/" },
-  { label: "Consent for Telehealth", href: "/consent-for-telehealth/" },
+  { label: "Consent for Telehealth", href: "/telehealth-consent/" },
   { label: "Editorial Policy", href: "/editorial-policy/" },
   { label: "Accessibility Statement", href: "/accessibility-statement/" },
 ];

@@ -107,7 +107,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
           <div className="bg-white border border-[#EAE5DC] rounded-[20px] shadow-xs flex flex-col overflow-hidden">
             {/* Fixed Header: ON THIS PAGE (does not scroll away) */}
             <div className="px-5 pt-5 pb-3 sm:px-6 sm:pt-6 sm:pb-3 border-b border-[#EAE5DC]/60 bg-white shrink-0">
-              <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#6B797C] px-1">
+              <p className="eyebrow px-1">
                 On this page
               </p>
             </div>
@@ -125,10 +125,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                     key={item.id}
                     href={`#${item.id}`}
                     onClick={(e) => scrollToSection(e, item.id, false)}
-                    className={`group block px-3 py-2 rounded-lg text-xs sm:text-[13px] leading-snug transition-all font-sans ${
+                    className={`group block px-3 py-2 rounded-lg body-small transition-colors ${
                       isActive
-                        ? "text-primary font-bold bg-background"
-                        : "font-medium text-body-text hover:text-primary hover:bg-background"
+                        ? "text-primary font-bold! bg-background"
+                        : "text-body-text hover:text-primary hover:bg-background"
                     }`}
                   >
                     <span className="line-clamp-2">{item.label}</span>
@@ -141,7 +141,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
         {/* 2. All Policies Menu Card */}
         <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs">
-          <p className="font-sans text-xs font-bold uppercase tracking-wider text-[#6B797C] mb-3.5 px-1">
+          <p className="eyebrow mb-3.5 px-1">
             All Policies
           </p>
           <nav aria-label="Legal policies navigation" className="space-y-1.5">
@@ -151,10 +151,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                 <Link prefetch={false}
                   key={item.slug}
                   href={item.href}
-                  className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-[13.5px] transition-all font-sans ${
+                  className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl body-small transition-colors ${
                     isActive
-                      ? "bg-background text-primary font-bold border-l-[3.5px] border-accent shadow-2xs pl-3"
-                      : "font-semibold text-body-text hover:bg-background hover:text-primary"
+                      ? "bg-background text-primary font-bold! border-l-[3.5px] border-accent shadow-2xs pl-3"
+                      : "text-body-text hover:bg-background hover:text-primary"
                   }`}
                 >
                   <span>{item.label}</span>
@@ -250,10 +250,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
                   {/* Fixed Title Section: Table of Contents & On this page */}
                   <div className="space-y-1 pb-3">
-                    <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-background leading-tight tracking-[-0.00015em]">
+                    <h2 className="heading-h3 text-background leading-tight">
                       Table of Contents
                     </h2>
-                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-accent">
+                    <p className="eyebrow text-accent">
                       On this page
                     </p>
                   </div>
@@ -281,10 +281,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                             <a
                               href={`#${item.id}`}
                               onClick={(e) => scrollToSection(e, item.id, true)}
-                              className={`block text-xs sm:text-[14px] leading-snug transition-all ${
+                              className={`block body-small transition-colors ${
                                 isActive
-                                  ? "text-accent font-bold"
-                                  : "text-background font-medium hover:text-accent"
+                                  ? "text-accent font-bold!"
+                                  : "text-background hover:text-accent"
                               }`}
                             >
                               {item.label}
@@ -300,7 +300,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
                   {/* 2. All Policies Navigation */}
                   <div className="space-y-3">
-                    <p className="font-sans text-xs font-bold uppercase tracking-wider text-accent">
+                    <p className="eyebrow text-accent">
                       All Policies
                     </p>
                     <nav className="space-y-1.5 font-sans">
@@ -311,10 +311,10 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                             key={item.slug}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-[13.5px] transition-all ${
+                            className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl body-small transition-colors ${
                               isActive
-                                ? "bg-white/20 text-accent font-bold border-l-[3.5px] border-accent"
-                                : "text-background/80 font-semibold hover:bg-white/10 hover:text-white"
+                                ? "bg-white/20 text-accent font-bold! border-l-[3.5px] border-accent"
+                                : "text-background/80 hover:bg-white/10 hover:text-white"
                             }`}
                           >
                             <span>{item.label}</span>

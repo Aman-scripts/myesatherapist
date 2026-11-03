@@ -75,7 +75,7 @@ function buildEntries(): SitemapEntry[] {
     { path: "/disclaimer/", changefreq: "yearly", priority: 0.3 },
     { path: "/editorial-policy/", changefreq: "yearly", priority: 0.3 },
     { path: "/accessibility-statement/", changefreq: "yearly", priority: 0.3 },
-    { path: "/consent-for-telehealth/", changefreq: "yearly", priority: 0.3 },
+    { path: "/telehealth-consent/", changefreq: "yearly", priority: 0.3 },
 
     // Policies
     { path: "/privacy-policy/", changefreq: "yearly", priority: 0.3 },
