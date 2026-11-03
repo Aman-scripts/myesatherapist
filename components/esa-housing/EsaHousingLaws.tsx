@@ -7,17 +7,17 @@ const CARDS = [
   {
     title: "No Discrimination",
     description: "Landlords cannot discriminate against an ESA based on its size, weight, or breed.",
-    icon: "/ESA ICons/Icon-25.svg",
+    icon: "/esa-icons/Icon-25.svg",
   },
   {
     title: "No Pet Policies",
     description: "Landlords must allow ESAs even if there’s a general “no-pet” policy.",
-    icon: "/ESA ICons/Icon-20.svg",
+    icon: "/esa-icons/Icon-20.svg",
   },
   {
     title: "No Pet Fees",
     description: "Landlords cannot impose pet rent, pet fees, or deposits for tenants with a valid ESA letter.",
-    icon: "/ESA ICons/Icon-21.svg",
+    icon: "/esa-icons/Icon-21.svg",
   },
 ];
 

@@ -23,11 +23,15 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 import { esaLetterOnlineSchema } from "@/data/schemas/esaLetterOnlineSchema";
+import { pageSocial } from "@/lib/seo";
+
+const ONLINE_TITLE = "ESA Letter Online From Licensed Therapist | My ESA Therapist";
+const ONLINE_DESCRIPTION =
+  "Get an ESA letter online after a confidential evaluation with a licensed mental health professional. Start from home.";
 
 export const metadata: Metadata = {
-  title: "ESA Letter Online From Licensed Therapist | My ESA Therapist",
-  description:
-    "Get an ESA letter online through a confidential evaluation with a licensed mental health professional. Start your ESA evaluation securely from home with My ESA Therapist.",
+  title: ONLINE_TITLE,
+  description: ONLINE_DESCRIPTION,
   alternates: {
     canonical: "https://myesatherapist.com/esa-letter-online/",
   },
@@ -38,26 +42,12 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-video-preview": -1,
   },
-  openGraph: {
-    title: "ESA Letter Online From Licensed Therapist | My ESA Therapist",
-    description:
-      "Get an ESA letter online through a confidential evaluation with a licensed mental health professional. Start your ESA evaluation securely from home with My ESA Therapist.",
-    type: "website",
+  ...pageSocial({
+    title: ONLINE_TITLE,
+    description: ONLINE_DESCRIPTION,
     url: "https://myesatherapist.com/esa-letter-online/",
-    siteName:
-      "My ESA Therapist | Licensed ESA Therapists & Emotional Support Animal Services",
-    locale: "en_US",
-    images: socialImage("esa-letter-online", "Cozy telehealth call with a golden retriever").openGraph,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ESA Letter Online From Licensed Therapist | My ESA Therapist",
-    description:
-      "Get an ESA letter online through a confidential evaluation with a licensed mental health professional. Start your ESA evaluation securely from home with My ESA Therapist.",
-    site: "@MyESATherapist",
-    creator: "@MyESATherapist",
-    images: socialImage("esa-letter-online", "Cozy telehealth call with a golden retriever").twitter,
-  },
+    images: socialImage("esa-letter-online", "Cozy telehealth call with a golden retriever"),
+  }),
 };
 
 export default function EsaLetterOnlinePage() {

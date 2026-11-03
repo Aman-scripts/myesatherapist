@@ -43,10 +43,10 @@ export function BenefitsSection() {
     },
     {
       icon: RefreshCw,
-      title: "100% Money-Back Guarantee",
+      title: "Refund if the evaluation is not completed",
       description:
-        "If you are not approved for an ESA letter by our licensed clinician during your evaluation, you will receive an immediate 100% full refund. Zero financial risk.",
-      badge: "Zero Risk",
+        "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable.",
+      badge: "Published policy",
     },
     {
       icon: PhoneCall,

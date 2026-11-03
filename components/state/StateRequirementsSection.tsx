@@ -40,7 +40,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
             {requirements.map((req, index) => (
               <div key={index} className="flex items-start gap-3">
                 <Image
-                  src="/ESA ICons/Icon-46.svg"
+                  src="/esa-icons/Icon-46.svg"
                   alt="Included"
                   width={20}
                   height={20}

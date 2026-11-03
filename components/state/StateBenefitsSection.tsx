@@ -5,15 +5,15 @@ import { StateData } from "@/data/statesData";
 import { CtaButton } from "@/components/common/CtaButton";
 
 const FINANCIAL_ICONS = [
-  "/ESA ICons/Icon-20.svg",
-  "/ESA ICons/Icon-28.svg",
-  "/ESA ICons/Icon-10.svg",
+  "/esa-icons/Icon-20.svg",
+  "/esa-icons/Icon-28.svg",
+  "/esa-icons/Icon-10.svg",
 ];
 
 const EMOTIONAL_ICONS = [
-  "/ESA ICons/Icon-29.svg",
-  "/ESA ICons/Icon-30.svg",
-  "/ESA ICons/Icon-17.svg",
+  "/esa-icons/Icon-29.svg",
+  "/esa-icons/Icon-30.svg",
+  "/esa-icons/Icon-17.svg",
 ];
 
 function BenefitCard({ title, description, icon }: { title: string; description: string; icon: string }) {
@@ -84,7 +84,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
   const emotionalHeading = data.emotionalBenefitsHeading || "Emotional Benefits :";
   const refundNote = data.benefitsRefundNote === ""
     ? ""
-    : (data.benefitsRefundNote || "Not approved after your ESA evaluation? You get a full refund!.");
+    : (data.benefitsRefundNote || "If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.");
 
   const isStateWhoBenefits = Boolean(data.benefitsImage?.includes("statewhobenefits"));
 

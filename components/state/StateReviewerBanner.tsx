@@ -13,7 +13,7 @@ interface StateReviewerBannerProps {
 
 export function StateReviewerBanner({
   reviewerName = "Max Phillips",
-  updatedDate = "May 12, 2026",
+  updatedDate = "November 3, 2026",
   reviewerImage = "/author/max-phill.webp",
   reviewerLinkedin = "https://www.linkedin.com/in/max-phillips-883485a5/",
   className = "",

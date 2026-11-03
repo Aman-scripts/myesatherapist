@@ -8,17 +8,17 @@ export function DoctorsAllStatesSection() {
     {
       title: "State-Licensed Providers",
       subtitle: "Therapists authorized in your state",
-      icon: "/ESA ICons/Icon-33.svg",
+      icon: "/esa-icons/Icon-33.svg",
     },
     {
       title: "Telehealth Sessions",
       subtitle: "Video or phone, subject to state rules",
-      icon: "/ESA ICons/Icon-15.svg",
+      icon: "/esa-icons/Icon-15.svg",
     },
     {
       title: "Fast Scheduling",
       subtitle: "Most evaluations within 24-48 hours",
-      icon: "/ESA ICons/Icon-38.svg",
+      icon: "/esa-icons/Icon-38.svg",
     },
   ];
 

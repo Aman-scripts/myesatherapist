@@ -103,7 +103,7 @@ export default function AlabamaEsaLawsPage() {
           title="Legal Writer and Researcher"
           bio="Mohammed Ziauddin is an experienced legal researcher, and leagl writer with 12 years of experience. He holds a Master of Physiotherapy in Sports from Jamia Hamdard University and has expertise in health assessment, rehabilitation, pain management, patient care, and evidence-based healthcare practices."
           image="/author/mohammed-ziauddin-image.webp"
-          bioHref="/author/mohammed-ziauddin/"
+          bioHref="/contributors/mohammed-ziauddin/"
           linkedin="https://www.linkedin.com/in/physiozia/"
         />
 

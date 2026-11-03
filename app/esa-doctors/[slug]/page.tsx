@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -87,6 +87,10 @@ export default async function DoctorInternalPage({ params }: PageProps) {
     notFound();
   }
 
+  if (slug !== doctor.slug) {
+    permanentRedirect(`/esa-doctors/${doctor.slug}/`);
+  }
+
   const doctorSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -124,6 +128,11 @@ export default async function DoctorInternalPage({ params }: PageProps) {
           "@id": `https://myesatherapist.com/esa-doctors/${doctor.slug}/#person`,
           name: doctor.name,
           jobTitle: doctor.title,
+          description: "License numbers are printed on the issued letter and can be verified with the state licensing board.",
+          hasCredential: (doctor.licenses || [doctor.credentials]).map((credential) => ({
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: credential,
+          })),
           image: doctor.avatar.startsWith("http")
             ? doctor.avatar
             : `https://myesatherapist.com${doctor.avatar}`,

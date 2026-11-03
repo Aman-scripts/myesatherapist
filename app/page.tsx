@@ -23,6 +23,8 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { Footer } from "@/components/layout/Footer";
 import { homeSchema } from "@/data/schemas/homeSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
+import { pageSocial } from "@/lib/seo";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -30,10 +32,13 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const HOME_TITLE = "ESA Letter from Licensed Therapists | My ESA Therapist";
+const HOME_DESCRIPTION =
+  "Connect with state-licensed therapists for an ESA letter evaluation conducted through secure telehealth.";
+
 export const metadata: Metadata = {
-  title: "ESA Evaluations by Licensed Therapists - My ESA Therapist",
-  description:
-    "Connect with state-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
   alternates: {
     canonical: "https://myesatherapist.com/",
   },
@@ -41,27 +46,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   },
-  openGraph: {
-    title: "ESA Evaluations by Licensed Professionals - My ESA Therapist",
-    description:
-      "Connect with U.S.-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
-    type: "article",
+  ...pageSocial({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     url: "https://myesatherapist.com/",
-    siteName:
-      "My ESA Therapist | Licensed ESA Therapists & Emotional Support Animal Services",
-    locale: "en_US",
-    images: socialImage("homepage", "Telehealth with a happy companion").openGraph,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ESA Evaluations by Licensed Professionals - My ESA Therapist",
-    description:
-      "Connect with U.S.-licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
-    site: "@MyESATherapist",
-    creator: "@MyESATherapist",
-    images: socialImage("homepage", "Telehealth with a happy companion").twitter,
-  },
+    images: socialImage("homepage", "Telehealth with a happy companion"),
+  }),
   verification: {
     google: "hZEn7s77TUksTd08P_-V4gKQzGdXE0dkQeF4-B7vzuY",
   },
@@ -107,6 +100,8 @@ export default function HomePage() {
         <ComparisonTable />
 
         <FaqSection />
+
+        <StateReviewerBanner updatedDate="November 3, 2026" />
 
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"

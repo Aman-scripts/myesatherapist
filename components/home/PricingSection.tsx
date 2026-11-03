@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { PricingTabSwitcher } from "./PricingTabSwitcher";
 import { MaybeStateModalButton } from "@/components/common/MaybeStateModalButton";
-import type { StateModalLetter } from "@/components/common/evaluationCta";
+import { isEvaluationCtaLabel, type StateModalLetter } from "@/components/common/evaluationCta";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -27,7 +27,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
   esa: {
     tabLabel: "ESA Letter",
     description:
-      "Choose the ESA package that fits your needs. Get a professional ESA evaluation and letter, with an ID card option for added convenience.",
+      "Choose a one-time ESA evaluation. $149 is the ESA letter. $199 adds a PSD letter when a clinician approves it. ID cards are not included.",
     cards: [
       {
         title: "ESA Letter - Housing",
@@ -127,8 +127,8 @@ export const PLANS: Record<PlanType, PlanSet> = {
 function CheckmarkIcon() {
   return (
     <Image
-      src="/ESA ICons/Icon-46.svg"
-      alt="Included"
+      src="/esa-icons/Icon-46.svg"
+      alt=""
       width={20}
       height={20}
       unoptimized
@@ -153,8 +153,7 @@ function mobilePlanTitle(title: string) {
 }
 
 function cardLetter(buttonText: string, directSurvey: boolean): StateModalLetter | undefined {
-  const label = buttonText.replace(/\s+/g, " ").trim().toLowerCase();
-  if (directSurvey && (label === "get started" || label === "start evaluation")) return "psd";
+  if (directSurvey && isEvaluationCtaLabel(buttonText)) return "psd";
   return undefined;
 }
 

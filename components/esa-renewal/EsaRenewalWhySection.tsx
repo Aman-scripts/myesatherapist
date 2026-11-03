@@ -16,19 +16,19 @@ const CARDS: WhyCard[] = [
     title: "Legitimate Process",
     description:
       "Renewals are never issued automatically. A licensed professional independently reviews your evaluation and decides whether updated documentation may be appropriate.",
-    icon: "/ESA ICons/Icon-46.svg",
+    icon: "/esa-icons/Icon-46.svg",
   },
   {
     title: "Remote Evaluation",
     description:
       "The renewal process is completed online, with sessions designed to fit everyday schedules so you can take part from home instead of in person.",
-    icon: "/ESA ICons/Icon-15.svg",
+    icon: "/esa-icons/Icon-15.svg",
   },
   {
     title: "Licensed Professionals",
     description:
       "Licensed mental health professionals assess whether your condition aligns with recognized DSM standards. ESA documentation is considered only when clinically appropriate.",
-    icon: "/ESA ICons/Icon-33.svg",
+    icon: "/esa-icons/Icon-33.svg",
   },
 ];
 

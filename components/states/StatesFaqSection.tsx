@@ -15,7 +15,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     id: "faq-1",
     num: "01.",
-    question: "Which States Have the Strict ESA Laws?",
+    question: "Which States Have the Strictest ESA Laws?",
     answer:
       "States like California, Montana, Arkansas, Louisiana, and Iowa require ESA owners to have at least a 30-day relationship with their mental health professional before an ESA evaluation can be conducted.",
   },
@@ -91,15 +91,17 @@ export function StatesFaqSection() {
               const isOpen = openId === faq.id;
 
               return (
-                <div
+                <details
                   key={faq.id}
+                  open={isOpen}
                   className="w-full rounded-[20px] color-gradient text-white overflow-hidden shadow-md transition-all duration-300"
                 >
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left cursor-pointer gap-4 group"
-                    aria-expanded={isOpen}
+                  <summary
+                    onClick={(event) => {
+                      event.preventDefault();
+                      toggleFaq(faq.id);
+                    }}
+                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left cursor-pointer gap-4 group list-none [&::-webkit-details-marker]:hidden"
                   >
                     <div className="flex items-center gap-4 sm:gap-6">
                       {/* Gold Number Badge */}
@@ -123,15 +125,12 @@ export function StatesFaqSection() {
                         <Plus className="w-5 h-5 text-white group-hover:text-accent transition-colors" />
                       )}
                     </div>
-                  </button>
+                  </summary>
 
-                  {/* Accordion Answer Content */}
-                  {isOpen && (
-                    <div className="px-6 pb-6 pt-1 body-large text-background border-t border-white/10">
-                      <p>{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
+                  <div className="px-6 pb-6 pt-1 body-large text-background border-t border-white/10">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
               );
             })}
           </div>

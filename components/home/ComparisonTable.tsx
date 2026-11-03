@@ -41,7 +41,7 @@ const comparisonRows = [
   {
     feature: "Evaluations",
     desktopFeature: "Licensed Evaluations",
-    icon: "/ESA ICons/Icon-33.svg",
+    icon: "/esa-icons/Icon-33.svg",
     myEsa: "Evaluations by state-licensed mental health professionals",
     others: "May not involve licensed mental health professionals",
     othersType: "cross",
@@ -49,7 +49,7 @@ const comparisonRows = [
   {
     feature: "Determination",
     desktopFeature: "Clinical Determination",
-    icon: "/ESA ICons/Icon-18.svg",
+    icon: "/esa-icons/Icon-18.svg",
     myEsa: "Independent clinical evaluation and professional judgment",
     others: "May offer instant approval without a proper evaluation",
     othersType: "cross",
@@ -57,7 +57,7 @@ const comparisonRows = [
   {
     feature: "Telehealth",
     desktopFeature: "Secure Telehealth",
-    icon: "/ESA ICons/Icon-15.svg",
+    icon: "/esa-icons/Icon-15.svg",
     myEsa: "HIPAA-compliant telehealth designed for privacy and security",
     others: "Privacy and security practices may vary",
     othersType: "warning",
@@ -65,7 +65,7 @@ const comparisonRows = [
   {
     feature: "Compliance",
     desktopFeature: "Compliance-Focused",
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
     myEsa: "Focused on applicable FHA, HUD, and professional requirements",
     others: "May not follow applicable guidelines",
     othersType: "warning",
@@ -73,7 +73,7 @@ const comparisonRows = [
   {
     feature: "Transparency",
     desktopFeature: "Transparent Process",
-    icon: "/ESA ICons/Icon-26.svg",
+    icon: "/esa-icons/Icon-26.svg",
     myEsa: "Clear steps and straightforward communication",
     others: "Process or fees may not always be clear",
     othersType: "cross",
@@ -81,7 +81,7 @@ const comparisonRows = [
   {
     feature: "Privacy",
     desktopFeature: "Privacy Protection",
-    icon: "/ESA ICons/Glyph-3.svg",
+    icon: "/esa-icons/Glyph-3.svg",
     myEsa: "Personal information is protected through secure systems",
     others: "Privacy protections may vary",
     othersType: "cross",
@@ -89,7 +89,7 @@ const comparisonRows = [
   {
     feature: "Nationwide",
     desktopFeature: "Nationwide Access",
-    icon: "/ESA ICons/Icon-24.svg",
+    icon: "/esa-icons/Icon-24.svg",
     myEsa: "Licensed providers available across all U.S. states, where allowed",
     others: "Availability may be limited by location",
     othersType: "warning",
@@ -97,7 +97,7 @@ const comparisonRows = [
   {
     feature: "Trust",
     desktopFeature: "Trust & Legitimacy",
-    icon: "/ESA ICons/Icon-19.svg",
+    icon: "/esa-icons/Icon-19.svg",
     myEsa: "Serving clients since 2019 with licensed professionals",
     others: "Provider credentials or reputation may be unclear",
     othersType: "cross",
@@ -277,7 +277,7 @@ export function ComparisonTable() {
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton href="#how-it-works">Get Started</CtaButton>
           <p className="body-small text-center">
-            Not approved after your ESA evaluation? You get a full refund!.
+            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>
         </div>
       </div>

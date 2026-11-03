@@ -6,19 +6,19 @@ import { SCALED_H2 } from "./EsaHousingShared";
 const STEPS = [
   {
     title: "File a Complaint",
-    icon: "/ESA ICons/Icon-18.svg",
+    icon: "/esa-icons/Icon-18.svg",
     description:
       "You may submit a complaint to the U.S. Department of Housing and Urban Development (HUD) if you believe your rights under the Fair Housing Act were violated.",
   },
   {
     title: "Seek Legal Guidance",
-    icon: "/ESA ICons/Icon-25.svg",
+    icon: "/esa-icons/Icon-25.svg",
     description:
       "An attorney familiar with fair housing or ESA-related matters can help you assess your situation and advise you on appropriate next steps.",
   },
   {
     title: "Provide Written Clarification",
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
     description:
       "A clear, written explanation to your landlord can help resolve misunderstandings and support your accommodation request.",
   },

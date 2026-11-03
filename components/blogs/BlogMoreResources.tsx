@@ -23,7 +23,7 @@ export function BlogMoreResources({ currentSlug }: BlogMoreResourcesProps = {}) 
             More ESA Resources
           </h2>
           <p className="body-large text-body-text text-center max-w-[978px]">
-            Get answers to common questions about ESA letters and our service.
+            Guides on ESA letters, housing rights, qualifying conditions, and training.
           </p>
         </div>
 

@@ -56,7 +56,7 @@ export function EsaLawsFederalSection() {
         </div>
 
         <div className="w-full flex flex-col gap-12 sm:gap-[72px]">
-          <LawCard title="Fair Housing Act (FHA), 42 U.S.C. § 3604" icon="/ESA ICons/Icon-24.svg">
+          <LawCard title="Fair Housing Act (FHA), 42 U.S.C. § 3604" icon="/esa-icons/Icon-24.svg">
             <p>
               The Fair Housing Act (FHA), 42 U.S.C. § 3604, is the primary federal law governing emotional support animals in housing. It prohibits disability discrimination and requires reasonable accommodations when necessary for a person with a disability to use and enjoy their home. Its implementing regulation, 24 C.F.R. § 100.204, remains in effect and continues to address reasonable accommodation requests.
             </p>
@@ -68,7 +68,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="Americans with Disabilities Act (ADA)" icon="/ESA ICons/Icon-33.svg">
+          <LawCard title="Americans with Disabilities Act (ADA)" icon="/esa-icons/Icon-33.svg">
             <p>
               The Americans with Disabilities Act (ADA) doesn&apos;t give emotional support animals the same public-access rights that qualifying service animals get. Under the ADA, a service animal is usually a dog that&apos;s been individually trained to do work or perform tasks tied directly to a person&apos;s disability. Offering emotional support, comfort, or companionship on its own doesn&apos;t count as a service-animal task.
             </p>
@@ -77,7 +77,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="Air Carrier Access Act (ACAA), 49 U.S.C. § 41705" icon="/ESA ICons/Icon-17.svg">
+          <LawCard title="Air Carrier Access Act (ACAA), 49 U.S.C. § 41705" icon="/esa-icons/Icon-17.svg">
             <p>
               The Air Carrier Access Act (49 U.S.C. § 41705) bans disability discrimination in air travel, but under its current regulations, emotional support animals no longer count as service animals for flying. Under 14 C.F.R. Part 382, airlines have to recognize service dogs that have been individually trained to do work or perform tasks related to a person&apos;s disability.
             </p>
@@ -86,7 +86,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="What Federal Laws Mean in 2026" icon="/ESA ICons/Icon-18.svg">
+          <LawCard title="What Federal Laws Mean in 2026" icon="/esa-icons/Icon-18.svg">
             <p>
               There&apos;s no single federal law you can point to and call the &quot;ESA law.&quot; What exists instead is several federal laws, each covering a different situation involving animals. The FHA mainly applies to housing, the ADA covers service-animal access in public places, the ACAA applies to air travel, and Section 504 can apply to certain federally funded programs.
             </p>
@@ -95,7 +95,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="What Federal Law Covers vs. Does Not Cover" icon="/ESA ICons/Glyph-3.svg">
+          <LawCard title="What Federal Law Covers vs. Does Not Cover" icon="/esa-icons/Glyph-3.svg">
             <p>
               The Fair Housing Act (FHA) protects people with disabilities from housing discrimination and may require reasonable accommodations involving assistance animals. This can include qualifying requests for emotional support animals in housing, including some college and university housing. However, HUD changed its enforcement guidance on May 22, 2026, withdrawing its prior ESA guidance. The FHA itself remains in effect, but HUD’s current enforcement approach places greater emphasis on animals individually trained to perform disability-related work or tasks.
             </p>
@@ -107,7 +107,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="ESA Rights vs. Landlord Rights" icon="/ESA ICons/Icon-18.svg">
+          <LawCard title="ESA Rights vs. Landlord Rights" icon="/esa-icons/Icon-18.svg">
             <p>
               Under the Fair Housing Act (FHA), housing providers must consider reasonable accommodation requests related to disabilities. But there are some situations where a landlord has the complete right to deny an ESA for a housing request. These include:
             </p>

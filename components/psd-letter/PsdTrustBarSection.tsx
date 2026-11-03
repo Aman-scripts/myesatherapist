@@ -14,17 +14,17 @@ const trustCards: TrustCard[] = [
   {
     title: "HIPAA Compliant",
     description: "Your health information stays just between you and your provider",
-    icon: "/ESA ICons/Glyph-3.svg",
+    icon: "/esa-icons/Glyph-3.svg",
   },
   {
     title: "Response Within 24-72 Hours",
     description: "Get timely updates throughout your evaluation journey",
-    icon: "/ESA ICons/Icon-38.svg",
+    icon: "/esa-icons/Icon-38.svg",
   },
   {
     title: "Licensed in All 50 States",
     description: "State-specific expertise for your PSD letter evaluation",
-    icon: "/ESA ICons/Icon-24.svg",
+    icon: "/esa-icons/Icon-24.svg",
   },
 ];
 

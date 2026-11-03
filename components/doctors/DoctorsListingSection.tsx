@@ -78,12 +78,12 @@ function DoctorStatBadge({
   const iconSrc =
     icon ||
     (label.toLowerCase().includes("licensed")
-      ? "/ESA ICons/Icon-33.svg"
+      ? "/esa-icons/Icon-33.svg"
       : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/ESA ICons/Icon-15.svg"
+      ? "/esa-icons/Icon-15.svg"
       : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/ESA ICons/Icon-1.svg"
-      : "/ESA ICons/Icon-25.svg");
+      ? "/esa-icons/Icon-1.svg"
+      : "/esa-icons/Icon-25.svg");
 
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
@@ -190,17 +190,17 @@ export function DoctorsListingSection() {
                   <DoctorStatBadge
                     label="Licensed In"
                     value={doc.licensedIn}
-                    icon="/ESA ICons/Icon-33.svg"
+                    icon="/esa-icons/Icon-33.svg"
                   />
                   <DoctorStatBadge
                     label="Evaluation Method"
                     value={doc.method}
-                    icon="/ESA ICons/Icon-15.svg"
+                    icon="/esa-icons/Icon-15.svg"
                   />
                   <DoctorStatBadge
                     label="Focus Areas"
                     value={doc.focus}
-                    icon="/ESA ICons/Icon-1.svg"
+                    icon="/esa-icons/Icon-1.svg"
                   />
                 </div>
 
@@ -237,7 +237,7 @@ export function DoctorsListingSection() {
             Book Your Appointment
           </CtaButton>
           <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text text-center">
-            Not approved after your ESA evaluation? You get a full refund!.
+            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>
         </div>
 

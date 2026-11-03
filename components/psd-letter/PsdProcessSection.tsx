@@ -6,21 +6,21 @@ import { CtaButton } from "@/components/common/CtaButton";
 const stepsData = [
   {
     number: "1",
-    icon: "/ESA ICons/Icon-38.svg",
+    icon: "/esa-icons/Icon-38.svg",
     title: "Schedule Consultation",
     description:
       "Complete our simple online form to request a consultation with a licensed mental health professional in your state.",
   },
   {
     number: "2",
-    icon: "/ESA ICons/Icon-15.svg",
+    icon: "/esa-icons/Icon-15.svg",
     title: "Meet Your Therapist",
     description:
       "Connect with a licensed professional via secure video or phone. They'll assess whether a PSD letter may be appropriate for you.",
   },
   {
     number: "3",
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
     title: "Letter if Qualified",
     description:
       "If you qualify, you may receive your PSD letter within 24-72 hours via email, signed by your licensed professional.",
@@ -130,7 +130,7 @@ export function PsdProcessSection() {
             Start Your Consultation
           </CtaButton>
           <p className="body-small text-center">
-            Not approved after your ESA evaluation? You get a full refund!.
+            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>
         </div>
 

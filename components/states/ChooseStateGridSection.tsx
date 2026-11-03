@@ -67,8 +67,8 @@ export function ChooseStateGridSection({
                 {/* fi_3177361: Pin Icon */}
                 <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[32px] lg:h-[32px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                   <Image
-                    src="/ESA ICons/Icon-37.svg"
-                    alt="Location"
+                    src="/esa-icons/Icon-37.svg"
+                    alt=""
                     width={32}
                     height={32}
                     unoptimized
@@ -78,7 +78,7 @@ export function ChooseStateGridSection({
 
                 {/* Page Description: State Text */}
                 <span className="body-large text-color-gradient group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
-                  {state.name}
+                  ESA letter in {state.name}
                 </span>
               </div>
             </Link>

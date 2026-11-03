@@ -107,7 +107,7 @@ export function StateSelectModal() {
 
         <p className="body-small text-body-text mt-4 flex items-center justify-center gap-2 text-center">
           <Image
-            src="/ESA ICons/Icon-46.svg"
+            src="/esa-icons/Icon-46.svg"
             alt=""
             width={16}
             height={16}

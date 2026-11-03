@@ -12,7 +12,7 @@ import {
 import { CtaButton } from "@/components/common/CtaButton";
 import { openStateSelectModal } from "@/components/common/evaluationCta";
 import { promptSelectState } from "@/components/common/promptSelectState";
-import { surveyRegisterUrl } from "@/components/common/stateModalDestination";
+import { psdStateDestination } from "@/components/common/stateModalDestination";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -26,7 +26,7 @@ export interface MobileHeroActionButtonsProps {
   onGetStartedClick?: () => void;
   /** Gold outline on the state button, used by the states hub mobile hero. */
   selectTone?: "teal" | "gold";
-  /** PSD hero: Get Started opens the state modal, then continues to the survey. */
+  /** PSD hero: Get Started uses the 29-state survey, otherwise the Heally portal. */
   surveyOnStart?: boolean;
 }
 
@@ -84,7 +84,7 @@ export function MobileHeroActionButtons({
         >
           <div className="flex items-center gap-2 max-w-full">
             <Image
-              src="/ESA ICons/Icon-37.svg"
+              src="/esa-icons/Icon-37.svg"
               alt="Location"
               width={20}
               height={20}
@@ -130,7 +130,7 @@ export function MobileHeroActionButtons({
         href={
           activeSlug
             ? surveyOnStart
-              ? surveyRegisterUrl({ state: STATE_INDEX_BY_SLUG[activeSlug]?.name })
+              ? psdStateDestination(activeSlug)
               : `/esa-letter-${activeSlug}/`
             : undefined
         }

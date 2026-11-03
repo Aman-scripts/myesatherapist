@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const benefitsData = [
   {
-    icon: "/ESA ICons/Icon-20.svg",
+    icon: "/esa-icons/Icon-20.svg",
     title: "Housing Support",
     badge: "Most Requested",
     description:
@@ -12,35 +12,35 @@ const benefitsData = [
     isDark: true,
   },
   {
-    icon: "/ESA ICons/Icon-3.svg",
+    icon: "/esa-icons/Icon-3.svg",
     title: "Air Travel Documentation",
     description:
       "Provides documentation that may support your air travel needs, subject to airline policies and approval.",
     isDark: false,
   },
   {
-    icon: "/ESA ICons/Icon-30.svg",
+    icon: "/esa-icons/Icon-30.svg",
     title: "Public Access Information",
     description:
       "Offers documentation for public spaces when accompanied by your trained psychiatric service dog.",
     isDark: false,
   },
   {
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
     title: "Professional Documentation",
     description:
       "Official letter on letterhead from a state-licensed mental health professional with their credentials.",
     isDark: false,
   },
   {
-    icon: "/ESA ICons/Icon-12.svg",
+    icon: "/esa-icons/Icon-12.svg",
     title: "Supportive Documentation",
     description:
       "Backup documentation regarding your condition to help support your needs as a service dog handler.",
     isDark: false,
   },
   {
-    icon: "/ESA ICons/Glyph-2.svg",
+    icon: "/esa-icons/Glyph-2.svg",
     title: "Mental Health Consultation",
     description:
       "Professional assessment and consultation from licensed therapists who understand service dogs",

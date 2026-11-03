@@ -16,11 +16,15 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { pricingSchema } from "@/data/schemas/pricingSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
+import { CHARGE_AND_REFUND, pageSocial } from "@/lib/seo";
+
+const PRICING_TITLE = "ESA Letter Cost in 2026";
+const PRICING_DESCRIPTION =
+  "See ESA letter pricing, what each plan includes, and when your card is charged. No ID cards and no hidden fees.";
 
 export const metadata: Metadata = {
-  title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
-  description:
-    "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
+  title: `${PRICING_TITLE} | My ESA Therapist`,
+  description: PRICING_DESCRIPTION,
   alternates: {
     canonical: "https://myesatherapist.com/pricing/",
   },
@@ -31,22 +35,12 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-video-preview": -1,
   },
-  openGraph: {
-    title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
-    description:
-      "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
+  ...pageSocial({
+    title: `${PRICING_TITLE} | My ESA Therapist`,
+    description: PRICING_DESCRIPTION,
     url: "https://myesatherapist.com/pricing/",
-    siteName: "My ESA Therapist",
-    type: "website",
-    images: socialImage("esa-letter-cost", "ESA letter cost").openGraph,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist",
-    description:
-      "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals and no hidden fees.",
-    images: socialImage("esa-letter-cost", "ESA letter cost").twitter,
-  },
+    images: socialImage("esa-letter-cost", "ESA letter cost"),
+  }),
 };
 
 
@@ -54,12 +48,12 @@ const PRICING_FAQS: FaqItem[] = [
   {
     num: "01.",
     q: "When exactly is my card charged?",
-    a: "Your card is authorized at booking to hold your appointment slot, but the actual charge only occurs after your telehealth evaluation is completed and you are approved by the licensed professional. If not approved, no charge is made.",
+    a: CHARGE_AND_REFUND,
   },
   {
     num: "02.",
-    q: "What is included in the ID Card?",
-    a: "The ID card is a supplementary identification document for your ESA or PSD. It makes it easier to identify your animal to landlords and property managers. Note that ID cards alone do not convey legal rights, the letter remains the primary legal document.",
+    q: "Do any plans include an ESA ID card?",
+    a: "No. An ESA or PSD letter is the clinical document. ID cards, registries, and certificates are not included because they are not legal proof of an assistance animal.",
   },
   {
     num: "03.",
@@ -115,7 +109,7 @@ export default function PricingPage() {
             <>
               Choose your package and book your appointment today. You are only{" "}
               <br className="hidden sm:inline" />
-              charged after your evaluation is complete.
+              charged when you book. See the Refund Policy for when a refund applies.
             </>
           }
           buttonText="Start Your ESA Evaluation"

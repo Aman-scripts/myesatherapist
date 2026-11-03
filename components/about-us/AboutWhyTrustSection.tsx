@@ -4,22 +4,22 @@ import Image from "next/image";
 
 const cards = [
   {
-    icon: "/ESA ICons/Icon-33.svg",
+    icon: "/esa-icons/Icon-33.svg",
     title: "Licensed Clinicians",
     description: "State-licensed mental health professionals",
   },
   {
-    icon: "/ESA ICons/Icon-15.svg",
+    icon: "/esa-icons/Icon-15.svg",
     title: "Phone or Video Evaluation",
     description: "Secure phone or video sessions",
   },
   {
-    icon: "/ESA ICons/Icon-14.svg",
+    icon: "/esa-icons/Icon-14.svg",
     title: "HIPAA-Compliant",
     description: "Secure handling of personal information",
   },
   {
-    icon: "/ESA ICons/Icon-18.svg",
+    icon: "/esa-icons/Icon-18.svg",
     title: "Clinical Assessment",
     description: "Outcomes based on clinical assessment",
   },

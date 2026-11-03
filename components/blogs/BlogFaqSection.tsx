@@ -49,7 +49,7 @@ const DEFAULT_BLOG_FAQS: BlogFaqItem[] = [
   {
     num: "06.",
     q: "What If I Don't Qualify for an ESA?",
-    a: "We offer a 100% money-back satisfaction guarantee. If our licensed mental health professional evaluates your case and determines that an ESA is not clinically appropriate for your situation, you will receive a full refund.",
+    a: "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued.",
   },
 ];
 
@@ -94,15 +94,17 @@ export function BlogFaqSection({
           const isOpen = openIdx === idx;
 
           return (
-            <div
+            <details
               key={`${faq.q}-${idx}`}
+              open={isOpen}
               className="w-full rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.08)] transition-all duration-200"
             >
-              {/* Question Header Card */}
-              <button
-                type="button"
-                onClick={() => setOpenIdx(isOpen ? null : idx)}
-                className="w-full min-h-[64px] sm:min-h-[74px] px-6 sm:px-8 py-4 sm:py-[19px] flex items-center justify-between text-left rounded-[20px] transition-all duration-200 cursor-pointer group"
+              <summary
+                onClick={(event) => {
+                  event.preventDefault();
+                  setOpenIdx(isOpen ? null : idx);
+                }}
+                className="w-full min-h-[64px] sm:min-h-[74px] px-6 sm:px-8 py-4 sm:py-[19px] flex items-center justify-between text-left rounded-[20px] transition-all duration-200 cursor-pointer group list-none [&::-webkit-details-marker]:hidden"
                 style={{ backgroundImage: TEAL_GRADIENT }}
               >
                 {/* Question Title in heading-h3 (Playfair Display 28px/36px) */}
@@ -133,15 +135,12 @@ export function BlogFaqSection({
                     />
                   </svg>
                 </span>
-              </button>
+              </summary>
 
-              {/* Accordion Answer Content */}
-              {isOpen && (
-                <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large text-body-text border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
-                  {faq.a}
-                </div>
-              )}
-            </div>
+              <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large text-body-text border border-primary/10 border-t-0 rounded-b-[20px] whitespace-pre-line">
+                {faq.a}
+              </div>
+            </details>
           );
         })}
       </div>

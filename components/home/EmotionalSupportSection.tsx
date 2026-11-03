@@ -68,7 +68,7 @@ export function EmotionalSupportSection() {
             </CtaButton>
           </div>
           <p className="body-small text-center sm:text-left">
-            Not approved after your ESA evaluation? You get a full refund!.
+            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export function EmotionalSupportSection() {
                 </CtaButton>
               </div>
               <p className="body-small">
-                Not approved after your ESA evaluation? You get a full refund!.
+                If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
               </p>
             </div>
           </div>

@@ -44,7 +44,7 @@ const defaultFaqs = [
   {
     num: "06.",
     q: "What If I Don't Qualify for an ESA?",
-    a: "We offer a 100% money-back satisfaction guarantee. If our licensed mental health professional evaluates your case and determines that an ESA is not clinically appropriate for your situation, you will receive a full refund.",
+    a: "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued.",
   },
 ];
 
@@ -116,13 +116,17 @@ export function FaqSection({
             {items.map((faq, idx) => {
               const isOpen = openIdx === idx;
               return (
-                <div
+                <details
                   key={idx}
+                  open={isOpen}
                   className="w-full rounded-[20px] overflow-hidden shadow-sm transition-all duration-200"
                 >
-                  <button
-                    onClick={() => setOpenIdx(isOpen ? null : idx)}
-                    className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative color-gradient"
+                  <summary
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setOpenIdx(isOpen ? null : idx);
+                    }}
+                    className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative color-gradient cursor-pointer list-none [&::-webkit-details-marker]:hidden"
                   >
                     {/* Gold Number Block: Frame 1000011949 (accent) */}
                     <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center heading-h3 text-primary leading-none rounded-l-[20px] self-stretch">
@@ -158,15 +162,12 @@ export function FaqSection({
                         </svg>
                       </span>
                     </div>
-                  </button>
+                  </summary>
 
-                  {/* Accordion Answer Content */}
-                  {isOpen && (
-                    <div className="bg-background px-5 sm:px-7 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
-                      {faq.a}
-                    </div>
-                  )}
-                </div>
+                  <div className="bg-background px-5 sm:px-7 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] whitespace-pre-line">
+                    {faq.a}
+                  </div>
+                </details>
               );
             })}
           </div>

@@ -1,11 +1,15 @@
 import StatesDirectoryPage from "../states/page";
 import type { Metadata } from "next";
 import { socialImage } from "@/data/socialImages";
+import { pageSocial } from "@/lib/seo";
+
+const STATE_TITLE = "ESA Letter by State | My ESA Therapist";
+const STATE_DESCRIPTION =
+  "Compare ESA letter rules by state, including which states require a 30-day clinician relationship, and open your state page.";
 
 export const metadata: Metadata = {
-  title: "ESA Evaluations by State | My ESA Therapist",
-  description:
-    "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
+  title: STATE_TITLE,
+  description: STATE_DESCRIPTION,
   alternates: {
     canonical: "https://myesatherapist.com/state/",
   },
@@ -16,22 +20,12 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-video-preview": -1,
   },
-  openGraph: {
-    title: "ESA Evaluations by State | My ESA Therapist",
-    description:
-      "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
+  ...pageSocial({
+    title: STATE_TITLE,
+    description: STATE_DESCRIPTION,
     url: "https://myesatherapist.com/state/",
-    siteName: "My ESA Therapist",
-    type: "website",
-    images: socialImage("esa-by-state", "ESA letter by state").openGraph,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ESA Evaluations by State | My ESA Therapist",
-    description:
-      "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
-    images: socialImage("esa-by-state", "ESA letter by state").twitter,
-  },
+    images: socialImage("esa-by-state", "ESA letter by state"),
+  }),
 };
 
 export default StatesDirectoryPage;

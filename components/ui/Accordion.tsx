@@ -56,11 +56,9 @@ export function AccordionItem({
         </div>
       </button>
 
-      {isOpen && (
-        <div className="px-5 md:px-6 pb-6 pt-1 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 animate-in fade-in-50 duration-200">
-          {typeof answer === "string" ? <p>{answer}</p> : answer}
-        </div>
-      )}
+      <div className={isOpen ? "px-5 md:px-6 pb-6 pt-1 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100" : "sr-only"}>
+        {typeof answer === "string" ? <p>{answer}</p> : answer}
+      </div>
     </div>
   );
 }

@@ -56,18 +56,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  title: "My ESA Therapist | Official Emotional Support Animal Letters Online",
+  title: "ESA Letter from Licensed Therapists | My ESA Therapist",
   description:
-    "Get legitimate ESA letters online certified by licensed mental health professionals in your state. 100% compliant with Fair Housing Act (FHA) & 100% Money-Back Guarantee.",
-  keywords: [
-    "ESA Letter",
-    "Emotional Support Animal",
-    "PSD Letter",
-    "Psychiatric Service Dog",
-    "Fair Housing Act",
-    "LMHP ESA Letter",
-    "ESA Therapist",
-  ],
+    "Get an ESA letter online after an evaluation with a state-licensed therapist. Secure telehealth, transparent pricing, and a published refund policy.",
   authors: [{ name: "My ESA Therapist" }],
   icons: {
     icon: [
@@ -85,9 +76,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "My ESA Therapist | Official ESA Letters from Licensed Therapists",
+    title: "ESA Letter from Licensed Therapists | My ESA Therapist",
     description:
-      "Qualify online in 2 minutes. State-licensed therapists, 100% legal under Fair Housing Act, no pet rent, money-back guarantee.",
+      "Get an ESA letter online after an evaluation with a state-licensed therapist. Secure telehealth and transparent pricing.",
     url: "https://myesatherapist.com/",
     siteName: "My ESA Therapist",
     locale: "en_US",
@@ -97,6 +88,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     images: defaultSocial.twitter,
   },
   verification: {

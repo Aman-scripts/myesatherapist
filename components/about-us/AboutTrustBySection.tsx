@@ -4,17 +4,17 @@ import Image from "next/image";
 
 const trustCards = [
   {
-    icon: "/ESA ICons/Glyph-3.svg",
+    icon: "/esa-icons/Glyph-3.svg",
     title: "HIPAA Compliant",
     description: "Your information stays private and confidential, handled through secure, HIPAA-compliant systems throughout your ESA evaluation with a licensed clinician.",
   },
   {
-    icon: "/ESA ICons/Icon-38.svg",
+    icon: "/esa-icons/Icon-38.svg",
     title: "Response Within 24–72 Hours",
     description: "Expect a timely response within 24–72 hours of completing your evaluation, subject to provider availability in your state.",
   },
   {
-    icon: "/ESA ICons/Icon-24.svg",
+    icon: "/esa-icons/Icon-24.svg",
     title: "Licensed In All 50 States",
     description: "Access mental health professionals licensed in your state, with secure phone or video evaluations available wherever you live in the U.S.",
   },

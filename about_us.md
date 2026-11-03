@@ -7769,7 +7769,7 @@ background: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
 box-shadow: 0px 1.51724px 0px #DEBA50;
 
 
-/* Not approved after your ESA evaluation? You get a full refund!. */
+/* If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable. */
 
 width: 388px;
 height: 26px;

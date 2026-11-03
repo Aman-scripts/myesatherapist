@@ -7,6 +7,8 @@ import { Footer } from "@/components/layout/Footer";
 import { StatesHeroSection } from "@/components/states/StatesHeroSection";
 import { FederalHousingRulesSection } from "@/components/states/FederalHousingRulesSection";
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
+import { StateRulesTable } from "@/components/states/StateRulesTable";
+import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { statesSchema } from "@/data/schemas/statesSchema";
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
 const STATES_FAQS: FaqItem[] = [
   {
     num: "01.",
-    q: "Which States Have the Strict ESA Laws?",
+    q: "Which States Have the Strictest ESA Laws?",
     a: "States like California, Montana, Arkansas, Louisiana, and Iowa require ESA owners to have at least a 30-day relationship with their mental health professional before an ESA evaluation can be conducted.",
   },
   {
@@ -90,9 +92,11 @@ export default function StatesDirectoryPage() {
 
         {/* 2. Federal Housing Protections & State ESA Rules */}
         <FederalHousingRulesSection />
-
-        {/* 3. 4-Column Grid of All 50 US States */}
-        <ChooseStateGridSection />
+        <StateRulesTable />
+        <ChooseStateGridSection
+          title="ESA Letter by State"
+          description="Open a state page for the local rule, a short summary, and a link to start an evaluation with a clinician licensed in that state."
+        />
 
         {/* 4. Frequently Asked Questions Section */}
         <FaqSection
@@ -103,6 +107,7 @@ export default function StatesDirectoryPage() {
 
         {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonText="Get Started" buttonHref="/pricing/" />
+        <StateReviewerBanner updatedDate="November 3, 2026" />
       </main>
 
       <Footer />

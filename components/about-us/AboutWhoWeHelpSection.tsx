@@ -4,31 +4,31 @@ import Image from "next/image";
 
 const groups = [
   {
-    icon: "/ESA ICons/Icon-20.svg",
+    icon: "/esa-icons/Icon-20.svg",
     title: "Renters Facing Housing Restrictions",
     description:
       "An ESA letter, issued after evaluation by a licensed professional, may help you live with your ESA in no-pet housing.",
   },
   {
-    icon: "/ESA ICons/Icon.svg",
+    icon: "/esa-icons/Icon.svg",
     title: "Individuals with Mental Health Conditions",
     description:
       "Discuss your mental health concerns with a licensed mental health professional who will independently assess whether an ESA may be clinically appropriate.",
   },
   {
-    icon: "/ESA ICons/Icon-15.svg",
+    icon: "/esa-icons/Icon-15.svg",
     title: "Remote or Telehealth Users",
     description:
       "Complete secure, HIPAA-compliant telehealth ESA evaluations from anywhere, with scheduling flexibility to suit your needs.",
   },
   {
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
     title: "First-Time and Returning ESA Applicants",
     description:
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
   {
-    icon: "/ESA ICons/Icon-1.svg",
+    icon: "/esa-icons/Icon-1.svg",
     title: "Emotional Wellness-Focused Pet Owners",
     description:
       "Discuss with licensed professionals the potential role of a companion animal in emotional support.",

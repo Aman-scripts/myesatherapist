@@ -719,7 +719,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             title="Frequently Asked Questions"
             subtitle={
               article.faqSectionSubtitle ||
-              "Get answers to common questions about ESA letters and our service."
+              "Answers from this article about eligibility, housing, and the evaluation."
             }
             faqs={article.faqs}
           />

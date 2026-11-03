@@ -61,7 +61,7 @@ export function getTherapistLinkedin(t: Therapist): string {
 /** Internal doctor profile page for a therapist. */
 export function getTherapistProfileHref(t: Therapist): string {
   const lower = t.name.toLowerCase();
-  if (lower.includes("robert") || lower.includes("staaf")) return "/esa-doctors/dr-robert-staff/";
+  if (lower.includes("robert") || lower.includes("staaf")) return "/esa-doctors/robert-staaf/";
   if (lower.includes("leslie") || lower.includes("gamble")) return "/esa-doctors/dr-leslie-k-gamble/";
   if (lower.includes("gaurav") || lower.includes("patel")) return "/esa-doctors/dr-gaurav-patel/";
   return "/esa-doctors/";
@@ -115,11 +115,11 @@ function StatBadge({
   const iconSrc =
     icon ||
     (label.toLowerCase().includes("licensed")
-      ? "/ESA ICons/Icon-37.svg"
+      ? "/esa-icons/Icon-37.svg"
       : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/ESA ICons/Icon-15.svg"
+      ? "/esa-icons/Icon-15.svg"
       : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/ESA ICons/Icon.svg"
+      ? "/esa-icons/Icon.svg"
       : "/common/therapist-section-badge.svg");
 
   return (
@@ -158,10 +158,10 @@ interface TherapistsSectionProps {
 }
 
 export function TherapistsSection({
-  title = "Our Licensed Mental Health Professionals",
+  title = "Our Licensed Clinicians",
   subtitle = "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
   licensureNote = "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
-  refundText = "Not approved after your ESA evaluation? You get a full refund!.",
+  refundText = "If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.",
   therapistsList,
   bgColor = "bg-white",
   className = "",
@@ -339,17 +339,17 @@ export function TherapistsSection({
                         <StatBadge
                           label="Licensed In"
                           value={t.licensedIn}
-                          icon="/ESA ICons/Icon-37.svg"
+                          icon="/esa-icons/Icon-37.svg"
                         />
                         <StatBadge
                           label="Evaluation Method"
                           value={t.method || "Video or Phone"}
-                          icon="/ESA ICons/Icon-15.svg"
+                          icon="/esa-icons/Icon-15.svg"
                         />
                         <StatBadge
                           label="Focus Areas"
                           value={t.focus}
-                          icon="/ESA ICons/Icon.svg"
+                          icon="/esa-icons/Icon.svg"
                         />
                       </div>
 

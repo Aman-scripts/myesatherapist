@@ -20,7 +20,7 @@ export function StateTableOfContents({ stateName, data }: Props) {
   const defaultTocItems = [
     {
       id: "therapists",
-      label: data?.therapistsTitle || "Our Licensed Mental Health Professionals",
+      label: data?.therapistsTitle || "Our Licensed Clinicians",
     },
     {
       id: "process",

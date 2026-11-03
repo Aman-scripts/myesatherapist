@@ -5,9 +5,9 @@ import { StateData } from "@/data/statesData";
 import { CtaButton } from "@/components/common/CtaButton";
 
 function processIcon(src: string) {
-  if (src.includes("schedule")) return "/ESA ICons/Icon-16.svg";
-  if (src.includes("clinicalevaluation")) return "/ESA ICons/Icon-18.svg";
-  if (src.includes("clinicaldetermination")) return "/ESA ICons/Glyph-2.svg";
+  if (src.includes("schedule")) return "/esa-icons/Icon-16.svg";
+  if (src.includes("clinicalevaluation")) return "/esa-icons/Icon-18.svg";
+  if (src.includes("clinicaldetermination")) return "/esa-icons/Glyph-2.svg";
   return src;
 }
 
@@ -17,7 +17,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
   const defaultSteps = [
     {
       number: "01",
-      icon: "/states/californina-esa-evalutation_schedule.svg",
+      icon: "/states/california-esa-evaluation-schedule.svg",
       title: "Schedule an Evaluation",
       description: `Create an account and schedule a telehealth appointment with a ${stateName}-licensed mental health professional.${
         data.abbreviation === "CA"
@@ -28,7 +28,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
     },
     {
       number: "02",
-      icon: "/states/californina-esa-evalutation_clinicalevaluation.svg",
+      icon: "/states/california-esa-evaluation-clinical.svg",
       title: "Clinical Evaluation & Ongoing Provider Relationship",
       description:
         "Meet privately via secure audio or video consultation. The clinician assesses your needs and maintains the therapeutic relationship throughout the required period.",
@@ -36,7 +36,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
     },
     {
       number: "03",
-      icon: "/states/californina-esa-evalutation_clinicaldetermination.svg",
+      icon: "/states/california-esa-evaluation-determination.svg",
       title: "Clinical Determination",
       description: `If the clinician determines that an ESA is appropriate after the ${
         data.abbreviation === "CA" ? "30‑day requirement" : "evaluation process"
@@ -128,7 +128,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
               <div key={idx} className="flex items-start gap-3.5 w-full">
                 {/* Frame 1000011979: Gradient Check Icon */}
                 <Image
-                  src="/ESA ICons/Icon-46.svg"
+                  src="/esa-icons/Icon-46.svg"
                   alt="Included"
                   width={20}
                   height={20}
@@ -157,7 +157,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
           <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
           {data.benefitsRefundNote !== "" && (
             <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
-              Not approved after your ESA evaluation? You get a full refund!.
+              If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
             </p>
           )}
         </div>

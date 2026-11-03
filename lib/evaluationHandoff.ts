@@ -1,18 +1,5 @@
 import { STATE_INDEX } from "@/data/stateIndex";
-import { SURVEY_STATE_SLUGS, surveyRegisterUrl } from "@/components/common/stateModalDestination";
-
-const STATE_TIMEZONES: Record<string, string> = {
-  AL: "CST", AK: "AKST", AZ: "MST", AR: "CST", CA: "PST",
-  CO: "MST", CT: "EST", DE: "EST", FL: "EST", GA: "EST",
-  HI: "HST", ID: "MST", IL: "CST", IN: "EST", IA: "CST",
-  KS: "CST", KY: "EST", LA: "CST", ME: "EST", MD: "EST",
-  MA: "EST", MI: "EST", MN: "CST", MS: "CST", MO: "CST",
-  MT: "MST", NE: "CST", NV: "PST", NH: "EST", NJ: "EST",
-  NM: "MST", NY: "EST", NC: "EST", ND: "CST", OH: "EST",
-  OK: "CST", OR: "PST", PA: "EST", RI: "EST", SC: "EST",
-  SD: "CST", TN: "CST", TX: "CST", UT: "MST", VT: "EST",
-  VA: "EST", WA: "PST", DC: "EST", WV: "EST", WI: "CST", WY: "MST",
-};
+import { heallyPortalUrl, SURVEY_STATE_SLUGS, surveyRegisterUrl } from "@/components/common/stateModalDestination";
 
 export type EvaluationLead = {
   firstName: string;
@@ -59,13 +46,6 @@ export function validateEvaluationLead(lead: EvaluationLead, termsAccepted: bool
   return errors;
 }
 
-function encodePreset(payload: object) {
-  return btoa(unescape(encodeURIComponent(JSON.stringify(payload))))
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-}
-
 /** Survey site for the 29 listed states. Heally prefill for every other state. */
 export function evaluationDestination(lead: EvaluationLead) {
   const entry = STATE_INDEX.find((state) => state.name === lead.stateName);
@@ -80,21 +60,13 @@ export function evaluationDestination(lead: EvaluationLead) {
     });
   }
 
-  const payload = {
-    first_name: lead.firstName.trim(),
-    last_name: lead.lastName.trim(),
-    email: lead.email.trim(),
-    phone: lead.phone.trim(),
-    state: abbreviation,
-    state_of_evaluation: abbreviation,
-    timezone: STATE_TIMEZONES[abbreviation] || "PST",
-    extra_data: {
-      "contact[contact_type]": "Web Form",
-      "product[name]": "Eva",
-    },
-  };
-  const preset = encodeURIComponent(encodePreset(payload));
-  return `https://myesatherapist.getheally.com/patient_admin/prefill?redirect=sched&preset=${preset}`;
+  return heallyPortalUrl({
+    abbreviation,
+    firstName: lead.firstName,
+    lastName: lead.lastName,
+    email: lead.email,
+    phone: lead.phone,
+  });
 }
 
 export function trackHeallySubmit(email: string, stateAbbreviation: string) {

@@ -12,14 +12,14 @@ import { DoctorsDisclosureSection } from "@/components/doctors/DoctorsDisclosure
 import { CtaBanner } from "@/components/home/CtaBanner";
 
 export const metadata: Metadata = {
-  title: "Meet Our Licensed Mental Health Professionals | My ESA Therapist",
+  title: "Meet Our Licensed Clinicians | My ESA Therapist",
   description:
     "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",
   alternates: {
     canonical: "https://myesatherapist.com/esa-doctors/",
   },
   openGraph: {
-    title: "Meet Our Licensed Mental Health Professionals | My ESA Therapist",
+    title: "Meet Our Licensed Clinicians | My ESA Therapist",
     description:
       "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",
     url: "https://myesatherapist.com/esa-doctors/",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meet Our Licensed Mental Health Professionals | My ESA Therapist",
+    title: "Meet Our Licensed Clinicians | My ESA Therapist",
     description:
       "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",
     images: socialImage("our-therapist", "Our therapists").twitter,

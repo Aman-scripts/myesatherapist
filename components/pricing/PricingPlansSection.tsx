@@ -4,7 +4,7 @@ import Image from "next/image";
 import { PricingSection } from "@/components/home/PricingSection";
 
 const PLAN_INTRO =
-  "Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime.";
+  "Each plan is a one-time clinical evaluation. $149 covers an ESA letter or a PSD letter. $199 covers both when a licensed clinician approves them. ID cards are not included.";
 
 export function PricingPlansSection({
   ctaHref = "#evaluation",
@@ -33,7 +33,7 @@ export function PricingPlansSection({
         descriptionOverride={PLAN_INTRO}
         showTabs={false}
         maxCards={2}
-        popularCardIndex={1}
+        popularCardIndex={-1}
         showDog={false}
         sectionClassName="pt-6 pb-8 lg:pb-12"
       />

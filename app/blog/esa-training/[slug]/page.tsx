@@ -14,6 +14,7 @@ import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
+import { fitDescription, fitMetaTitle } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{
@@ -40,8 +41,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const title = article.metaTitle || `${article.title} | My ESA Therapist`;
-  const description = article.metaDescription || article.shortDescription;
+  const title = fitMetaTitle(article.metaTitle || `${article.title} | My ESA Therapist`);
+  const description = fitDescription(article.metaDescription || article.shortDescription);
   const imageKey = `blog-${article.slug}`;
   const image = hasSocialImage(imageKey) ? socialImage(imageKey, article.title) : null;
   const socialDescription = article.ogDescription || description;

@@ -4,10 +4,10 @@ import Image from "next/image";
 import { StateData } from "@/data/statesData";
 
 const QUALIFY_ICONS = [
-  "/ESA ICons/Icon.svg",
-  "/ESA ICons/Icon-1.svg",
-  "/ESA ICons/Icon-2.svg",
-  "/ESA ICons/Icon-4.svg",
+  "/esa-icons/Icon.svg",
+  "/esa-icons/Icon-1.svg",
+  "/esa-icons/Icon-2.svg",
+  "/esa-icons/Icon-4.svg",
 ];
 
 const defaultConditions = [

@@ -4,19 +4,19 @@ import Image from "next/image";
 
 const cards = [
   {
-    icon: "/ESA ICons/Icon-22.svg",
+    icon: "/esa-icons/Icon-22.svg",
     title: "Refund Policy",
     description:
-      "If a licensed mental health professional determines an ESA letter is not clinically appropriate, a 100% refund will be provided.",
+      "Your card is charged when you book. A refund is issued if the evaluation cannot be completed. A completed evaluation is non-refundable.",
   },
   {
-    icon: "/ESA ICons/Glyph-3.svg",
+    icon: "/esa-icons/Glyph-3.svg",
     title: "Secure Payment",
     description:
       "All payments are processed securely through encrypted systems to ensure your financial information is protected.",
   },
   {
-    icon: "/ESA ICons/Icon-45.svg",
+    icon: "/esa-icons/Icon-45.svg",
     title: "No Hidden Fees",
     description:
       "Upfront, transparent pricing with no surprise charges or recurring fees. One payment covers the complete evaluation.",

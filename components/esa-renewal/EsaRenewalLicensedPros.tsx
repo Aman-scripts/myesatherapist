@@ -72,7 +72,7 @@ export function EsaRenewalLicensedPros() {
                   {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[60px] h-[60px] sm:w-[74px] sm:h-[74px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image
-                      src="/ESA ICons/Icon-33.svg"
+                      src="/esa-icons/Icon-33.svg"
                       alt={feat.title}
                       width={40}
                       height={40}

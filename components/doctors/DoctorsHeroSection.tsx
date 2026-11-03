@@ -1,7 +1,7 @@
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 
-const HEADING = "Meet Our Licensed Mental Health Professionals";
+const HEADING = "Meet Our Licensed Clinicians";
 const DESCRIPTION =
   "My ESA Therapist works with a network of independent, state-licensed mental health professionals who conduct emotional support animal (ESA) evaluations through secure telehealth sessions.";
 

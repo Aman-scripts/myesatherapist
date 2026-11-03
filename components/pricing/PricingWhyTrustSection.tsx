@@ -8,22 +8,22 @@ const EVALUATION_STEPS = [
   {
     title: "Select Your Package",
     description: "Choose the ESA or PSD option that fits your needs and schedule your appointment.",
-    icon: "/ESA ICons/Icon-38.svg",
+    icon: "/esa-icons/Icon-38.svg",
   },
   {
     title: "Card Authorization",
-    description: "Your card is authorized (not charged) to hold your appointment slot.",
-    icon: "/ESA ICons/Icon-33.svg",
+    description: "Your card is charged when you book the evaluation.",
+    icon: "/esa-icons/Icon-33.svg",
   },
   {
     title: "Attend Evaluation",
     description: "Speak with a U.S.-licensed mental health professional via secure telehealth.",
-    icon: "/ESA ICons/Icon-15.svg",
+    icon: "/esa-icons/Icon-15.svg",
   },
   {
     title: "Receive Your Letter",
     description: "If approved, payment is collected and your letter is emailed immediately.",
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
   },
 ];
 
@@ -37,7 +37,7 @@ export function PricingWhyTrustSection() {
             You Only Pay After Your Evaluation
           </h2>
           <p className="body-large max-w-[854px] mx-auto">
-            Our transparent 4-step process ensures you are only charged once your telehealth evaluation is complete and approved.
+            Your card is charged when you book. A refund applies only if the evaluation cannot be completed. A completed evaluation is non-refundable.
           </p>
         </div>
 

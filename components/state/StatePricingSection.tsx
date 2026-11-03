@@ -20,16 +20,16 @@ const STATE_PLAN_CARDS = [
   {
     title: "ESA Letter -\nHousing",
     description:
-      "Professional ESA letters from a state-licensed mental health professional for housing and service dog needs.",
-    price: "$199",
+      "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
+    price: "$149",
     features: PLAN_FEATURES,
-    buttonText: "Start Evaluation",
+    buttonText: "Get Started",
   },
   {
-    title: "ESA Letter +\nID Card",
-    price: "$149",
+    title: "ESA + PSD\nCombo",
+    price: "$199",
     description:
-      "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
+      "ESA and PSD letters from a state-licensed mental health professional when each is clinically appropriate.",
     features: PLAN_FEATURES,
     buttonText: "Get Started",
   },
@@ -161,7 +161,7 @@ export function StatePricingSection({ data }: StatePricingSectionProps) {
             buttonText: "Get Started",
           },
           {
-            title: data.pricingPlan2Title || "ESA Letter + ID Card",
+            title: data.pricingPlan2Title || "ESA Letter + PSD Letter Combo",
             description: data.pricingPlan2Description || "",
             price: data.pricingPlan2Price || "$199",
             features: data.pricingPlan2Features || [],
@@ -199,7 +199,7 @@ export function StatePricingSection({ data }: StatePricingSectionProps) {
       sectionId="state-pricing"
       heading="Emotional Support Animal"
       headingClassName="heading-h2"
-      descriptionOverride="Choose the plan that fits your needs. All plans include essential features to get you started, with options to scale as you grow. No hidden fees and the flexibility to change anytime."
+      descriptionOverride="Choose the plan that fits your needs. All plans include essential features to get you started, with Each plan is a one-time evaluation. No subscriptions and no ID cards."
       showTabs={false}
       showDog={false}
       maxCards={2}

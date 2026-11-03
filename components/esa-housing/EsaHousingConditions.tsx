@@ -3,14 +3,14 @@ import Image from "next/image";
 import { SectionHeader } from "./EsaHousingShared";
 
 const CONDITIONS = [
-  { label: "Anxiety Disorders", icon: "/ESA ICons/Icon-21.svg" },
-  { label: "Depression", icon: "/ESA ICons/Icon-3.svg" },
-  { label: "PTSD", icon: "/ESA ICons/Icon-2.svg" },
-  { label: "Bipolar Disorder", icon: "/ESA ICons/Icon-4.svg" },
-  { label: "OCD", icon: "/ESA ICons/Icon-6.svg" },
-  { label: "Panic Disorders", icon: "/ESA ICons/Icon-1.svg" },
-  { label: "ADHD", icon: "/ESA ICons/Icon-5.svg" },
-  { label: "Social Anxiety", icon: "/ESA ICons/Icon-8.svg" },
+  { label: "Anxiety Disorders", icon: "/esa-icons/Icon-21.svg" },
+  { label: "Depression", icon: "/esa-icons/Icon-3.svg" },
+  { label: "PTSD", icon: "/esa-icons/Icon-2.svg" },
+  { label: "Bipolar Disorder", icon: "/esa-icons/Icon-4.svg" },
+  { label: "OCD", icon: "/esa-icons/Icon-6.svg" },
+  { label: "Panic Disorders", icon: "/esa-icons/Icon-1.svg" },
+  { label: "ADHD", icon: "/esa-icons/Icon-5.svg" },
+  { label: "Social Anxiety", icon: "/esa-icons/Icon-8.svg" },
 ];
 
 export function EsaHousingConditions() {

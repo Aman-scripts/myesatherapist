@@ -51,43 +51,43 @@ interface ComparisonRow {
 const psdComparisonRows: ComparisonRow[] = [
   {
     feature: "Public Access Rights",
-    icon: "/ESA ICons/Icon-30.svg",
+    icon: "/esa-icons/Icon-30.svg",
     psd: { text: "Yes - ADA Protected", type: "check" },
     esa: { text: "No public access", type: "cross" },
   },
   {
     feature: "Housing Rights (FHA)",
-    icon: "/ESA ICons/Icon-20.svg",
+    icon: "/esa-icons/Icon-20.svg",
     psd: { text: "Yes", type: "check" },
     esa: { text: "Yes", type: "check" },
   },
   {
     feature: "Airline Travel",
-    icon: "/ESA ICons/Icon-3.svg",
+    icon: "/esa-icons/Icon-3.svg",
     psd: { text: "Airline Dependent", type: "warning" },
     esa: { text: "Airline Dependent", type: "warning" },
   },
   {
     feature: "Dog Training",
-    icon: "/ESA ICons/Icon-40.svg",
+    icon: "/esa-icons/Icon-40.svg",
     psd: { text: "Must perform tasks", type: "check" },
     esa: { text: "Not Required", type: "cross" },
   },
   {
     feature: "Restaurant & Stores",
-    icon: "/ESA ICons/Icon-8.svg",
+    icon: "/esa-icons/Icon-8.svg",
     psd: { text: "Allowed", type: "check" },
     esa: { text: "Not Allowed", type: "cross" },
   },
   {
     feature: "Therapist Letter",
-    icon: "/ESA ICons/Icon-17.svg",
+    icon: "/esa-icons/Icon-17.svg",
     psd: { text: "Recommended", type: "check" },
     esa: { text: "Required for Housing", type: "check" },
   },
   {
     feature: "Animal Allowed",
-    icon: "/ESA ICons/Icon-29.svg",
+    icon: "/esa-icons/Icon-29.svg",
     psd: { text: "Dogs only", type: "cross" },
     esa: { text: "Most animals", type: "check" },
   },
@@ -283,7 +283,7 @@ export function PsdComparisonTable() {
             Start Your Consultation
           </CtaButton>
           <p className="body-small text-center">
-            Not approved after your ESA evaluation? You get a full refund!.
+            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>
         </div>
       </div>

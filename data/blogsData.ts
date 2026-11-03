@@ -2351,7 +2351,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "author": {
     "name": "Allyson Valley",
     "title": "Mental Health Writer & Research Contributor",
-    "credentials": "Licensed Clinical Social Worker",
+    "credentials": "Ph.D., LPC-MHSP",
     "image": "/blogs/blogs_trustbar-author.webp",
     "bio": "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"
@@ -2551,16 +2551,16 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "qualifying-conditions",
   "url": "/blog/qualifying-conditions/esa-for-anxiety/",
   "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/",
-  "metaTitle": "ESA for Anxiety: Eligibility, Benefits & How to Qualify | My ESA Therapist",
+  "metaTitle": "ESA for Anxiety: Eligibility & Benefits | My ESA Therapist",
   "metaDescription": "Wondering if anxiety qualifies for an ESA? Explore eligibility requirements, potential benefits, housing protections, and what you need to qualify.",
   schema: esaForAnxietySchema,
-  "title": "ESA for Anxiety: Eligibility, Benefits, and How to Qualify?",
+  "title": "ESA for Anxiety: Eligibility, Benefits, and How to Qualify",
   "shortDescription": "An emotional support animal can offer comfort, companionship, and stability for people living with anxiety. For those whose anxiety affects daily life, an ESA may offer meaningful emotional support as part of their care.",
   "category": "Qualifying Conditions",
   "author": {
     "name": "Allyson Valley",
     "title": "Mental Health Writer & Research Contributor",
-    "credentials": "Licensed Clinical Social Worker",
+    "credentials": "Ph.D., LPC-MHSP",
     "image": "/blogs/blogs_trustbar-author.webp",
     "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"
@@ -2574,7 +2574,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   },
   "publishDate": "August 26, 2026",
   "lastUpdated": "August 26, 2026",
-  "cardImage": "/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/how-can-esa-support-with-anxity-image.webp",
+  "cardImage": "/images/blog/esa-for-anxiety/how-can-esa-support-with-anxity-image.webp",
   "heroImageMobile": "/Hero_image_for_mobile_all.png",
   "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
   "heroImageDesktop": "/blogs/blog-hero_section.webp",
@@ -2589,7 +2589,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "Having anxiety just by itself, though, does not automatically qualify someone for an ESA. Whether the animal offers support linked to a diagnosed mental health need and a professional assessment will help to determine an individual’s qualification for an ESA."
   ],
   "introImage": {
-    "src": "/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/how-can-esa-support-with-anxity-image.webp",
+    "src": "/images/blog/esa-for-anxiety/how-can-esa-support-with-anxity-image.webp",
     "alt": "Woman sitting on a sofa calmly stroking her golden retriever emotional support dog",
     "width": 1201,
     "height": 801
@@ -2646,7 +2646,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       ],
       "quoteBox": {
         "quote": "“The consistent companionship of an emotional support animal can be a valuable source of comfort for individuals whose anxiety affects their daily emotional well-being.”",
-        "author": "[Dr. Robert Staaf, Licensed Clinical Social Worker](/esa-doctors/dr-robert-staff/)"
+        "author": "[Robert Staaf, Licensed Clinical Social Worker](/esa-doctors/robert-staaf/)"
       },
       "quoteBoxPosition": "bottom"
     },
@@ -2661,8 +2661,8 @@ export const BLOG_POSTS: BlogArticle[] = [
         {
           "title": "A Calming Presence During Stressful Moments",
           "paragraphs": [
-            "For many ESA owners, an animal’s presence provides reassurance during periods of increased anxiety. In challenging emotional situations, simple interactions like petting an animal or sitting next to them can set up a calming routine. Certain animals may be trained to press against or lie on top of a person’s chest, providing an effect similar to a weighted blanket, and activate the safe and secure vagus nerve response.",
-            "Further research shows that nervous systems co-regulate, or attune, to one another. If an animal is calm while their human is anxious, being close to the animal will help relax the human’s nervous system out of fight or flight and back into a safe and secure state."
+            "For many ESA owners, an animal’s presence provides reassurance during periods of increased anxiety. Petting an animal or sitting beside one can become a calming routine. Some people also teach an animal to lean against them, similar to a weighted blanket. Research on human–animal interaction has explored stress responses, but it does not show that an ESA treats anxiety or activates a specific nerve pathway. See Brooks et al., BMC Psychiatry (2018), https://doi.org/10.1186/s12888-018-1613-2.",
+            "Some clinicians describe close contact with a calm animal as emotionally grounding. That is an observation about comfort, not a claim that an animal regulates a person’s nervous system or replaces mental health care."
           ]
         },
         {
@@ -2675,7 +2675,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         {
           "title": "Provides Consistent Companionship",
           "paragraphs": [
-            "Anxiety can often involve feelings of isolation. An ESA offers a constant companion that can help to reduce feelings of loneliness during challenging times. Although animals cannot communicate in the same ways humans do, they are often incredibly attuned to emotional shifts, particularly in people they are close to. An ESA can provide emotional support even in situations where an individual may feel isolated, providing reduced risk of harmful behaviors such as suicide."
+            "Anxiety can involve feeling isolated. An ESA may offer companionship during those periods. This article does not claim that an ESA reduces suicide risk or treats a mental health condition. If you are thinking about harming yourself, call or text 988 in the United States."
           ]
         },
         {
@@ -2689,7 +2689,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     {
       "id": "esa-rights",
       "title": "What Rights Does an ESA Letter Provide?",
-        bannerImage: {"src":"/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/rights-does-an-esa-letter-provide-image.webp","alt":"Rights does an ESA letter provide"},
+        bannerImage: {"src":"/images/blog/esa-for-anxiety/rights-does-an-esa-letter-provide-image.webp","alt":"Rights does an ESA letter provide"},
         bannerPosition: "bottom",
       "paragraphs": [
         "Many people look for ESA paperwork because of issues with their homes. People with qualified impairments may ask for reasonable housing for an emotional support animal under the Fair Housing Act (FHA), even in places with pet restrictions.",
@@ -2709,7 +2709,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     {
       "id": "choosing-esa",
       "title": "How to Choose an ESA for Anxiety Support?",
-        bannerImage: {"src":"/Blog Images/ESA for Anxiety_ Eligibility Benefits and How to Qualify_/esas-for-anxiety-support-image.webp","alt":"ESAs for anxiety support"},
+        bannerImage: {"src":"/images/blog/esa-for-anxiety/esas-for-anxiety-support-image.webp","alt":"ESAs for anxiety support"},
         bannerPosition: "bottom",
       "paragraphs": [
         "Choosing an emotional support animal should not depend on the size, breed, or color of the animal. The right choice depends on the person’s lifestyle, emotional connection, and ability to provide proper care.",
@@ -2737,7 +2737,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "title": "Final Thoughts",
     "paragraphs": [
       "An emotional support animal can provide helpful support to people who struggle with anxiety, but it’s not a quick fix or a replacement for mental health care. The purpose of an ESA evaluation is to understand whether an animal can provide genuine emotional support based on an individual’s specific disability needs.",
-      "If anxiety is affecting your quality of life, discussing your situation with a licensed mental health professional can help you understand whether an ESA may be an appropriate option for your mental health journey."
+      "If anxiety is affecting your quality of life, a licensed clinician can help you decide whether an ESA may be appropriate. This article was reviewed by Max Phillips, MSW, LCSW. It is educational and is not medical advice. Related reading: [ESA for PTSD](/blog/qualifying-conditions/esa-for-ptsd/), [ESA for depression](/blog/qualifying-conditions/esa-for-depression/), [ESA for ADHD](/blog/qualifying-conditions/esa-for-adhd/), [ESA for bipolar disorder](/blog/qualifying-conditions/esa-for-bipolar-disorder/), [how to get an ESA letter online](/esa-letter-online/), and [ESA letter pricing](/pricing/)."
     ]
   },
   "faqs": [
@@ -2782,7 +2782,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "author": {
     "name": "Allyson Valley",
     "title": "Mental Health Writer & Research Contributor",
-    "credentials": "Licensed Clinical Social Worker",
+    "credentials": "Ph.D., LPC-MHSP",
     "image": "/blogs/blogs_trustbar-author.webp",
     "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"

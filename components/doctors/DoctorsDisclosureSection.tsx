@@ -6,19 +6,19 @@ export function DoctorsDisclosureSection() {
   const cards = [
     {
       text: "Providers listed are independent professionals who make clinical decisions independently of the platform.",
-      icon: "/ESA ICons/Icon-25.svg",
+      icon: "/esa-icons/Icon-25.svg",
     },
     {
       text: "Provider availability varies by state & ESA approval is never guaranteed",
-      icon: "/ESA ICons/Icon-44.svg",
+      icon: "/esa-icons/Icon-44.svg",
     },
     {
       text: "Evaluations are conducted based on state licensure requirements",
-      icon: "/ESA ICons/Icon-33.svg",
+      icon: "/esa-icons/Icon-33.svg",
     },
     {
       text: "My ESA Therapist does not influence clinical decisions or documentation outcomes",
-      icon: "/ESA ICons/Icon-17.svg",
+      icon: "/esa-icons/Icon-17.svg",
     },
   ];
 

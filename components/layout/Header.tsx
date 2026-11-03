@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { CtaButton } from "@/components/common/CtaButton";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 
 
@@ -68,7 +69,7 @@ const RESOURCE_LINKS = [
   { label: "ESA Guide", href: "/blog/esa-guide/" },
   { label: "PSD Letter", href: "/psd-letter/" },
   { label: "ESA Letter Online", href: "/esa-letter-online/" },
-  { label: "ESA by State", href: "/states/" },
+  { label: "ESA by State", href: "/state/" },
 ];
 
 /** Desktop "Resources" button that opens a dropdown of resource pages on click. */
@@ -387,6 +388,7 @@ export function Header() {
           </div>
         </div>
       )}
+      <SiteBreadcrumbs />
     </header>
   );
 }

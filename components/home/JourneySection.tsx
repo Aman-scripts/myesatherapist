@@ -8,19 +8,19 @@ const cards = [
   {
     stat: "80%",
     image: "/home/journey-section-one.webp",
-    icon: "/ESA ICons/Icon-1.svg",
+    icon: "/esa-icons/Icon-1.svg",
     text: "Pet owners say their pets bring them happiness and emotional support.",
   },
   {
     stat: "84%",
     image: "/home/journey-section-two.webp",
-    icon: "/ESA ICons/Icon-4.svg",
+    icon: "/esa-icons/Icon-4.svg",
     text: "Report a mostly positive impact on their mental health.",
   },
   {
     stat: "66%",
     image: "/home/journey-section-three.webp",
-    icon: "/ESA ICons/Icon.svg",
+    icon: "/esa-icons/Icon.svg",
     text: "Believe their pets help reduce stress and promote calm.",
   },
 ];

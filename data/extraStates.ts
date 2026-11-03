@@ -32,9 +32,9 @@ const THERAPISTS = [
 ];
 
 const PROCESS_ICONS = [
-  "/states/californina-esa-evalutation_schedule.svg",
-  "/states/californina-esa-evalutation_clinicalevaluation.svg",
-  "/states/californina-esa-evalutation_clinicaldetermination.svg",
+  "/states/california-esa-evaluation-schedule.svg",
+  "/states/california-esa-evaluation-clinical.svg",
+  "/states/california-esa-evaluation-determination.svg",
 ];
 
 const CONDITION_ICONS = [
@@ -61,35 +61,35 @@ const CITY_ICONS = [
 function whyChoose(last: string) {
   return [
     {
-      icon: "/ESA ICons/Icon-33.svg",
+      icon: "/esa-icons/Icon-33.svg",
       title: "Licensed Professionals",
       description:
         "ESA evaluations are conducted by independent US licensed mental health professionals authorized to assess ESA eligibility.",
     },
     {
-      icon: "/ESA ICons/Icon-15.svg",
+      icon: "/esa-icons/Icon-15.svg",
       title: "Secure Telehealth Platform",
       description: "Our HIPAA-compliant systems ensure your information remains confidential and protected.",
     },
     {
-      icon: "/ESA ICons/Glyph-2.svg",
+      icon: "/esa-icons/Glyph-2.svg",
       title: "Clinical Integrity First",
       description: "ESA recommendations are issued by licensed professionals based on individualized clinical evaluation.",
     },
     {
-      icon: "/ESA ICons/Icon-17.svg",
+      icon: "/esa-icons/Icon-17.svg",
       title: "Legitimate ESA Documentation",
       description:
         "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
     },
     {
-      icon: "/ESA ICons/Icon-24.svg",
+      icon: "/esa-icons/Icon-24.svg",
       title: "Nationwide Access",
       description:
         "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
     },
     {
-      icon: "/ESA ICons/Icon-26.svg",
+      icon: "/esa-icons/Icon-26.svg",
       title: "Transparent Process",
       description: last,
     },
@@ -126,7 +126,7 @@ function cities(rows: Array<[string, string]>) {
 }
 
 const SHARED = {
-  therapistsTitle: "Our Licensed Mental Health Professionals",
+  therapistsTitle: "Our Licensed Clinicians",
   therapistsSubtitle: THERAPISTS_SUBTITLE,
   therapistsLicensureNote: LICENSURE_NOTE,
   therapistsList: THERAPISTS,
@@ -400,7 +400,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
+      { id: "therapists", label: "Our Licensed Clinicians" },
       { id: "process", label: "How ESA Letter Process Works in Vermont?" },
       { id: "who-qualifies", label: "Who May Qualify for an ESA Letter in Vermont?" },
       { id: "why-choose", label: "Why Choose My ESA Therapist for ESA Letter Evaluation in Vermont?" },
@@ -678,7 +678,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
+      { id: "therapists", label: "Our Licensed Clinicians" },
       { id: "process", label: "How ESA Letter Process Works in Tennessee?" },
       { id: "who-qualifies", label: "Who May Be Eligible for an ESA Letter Tennessee?" },
       { id: "why-choose", label: "Why Choose My ESA Therapist for ESA Letter Evaluation in Tennessee?" },
@@ -954,7 +954,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
+      { id: "therapists", label: "Our Licensed Clinicians" },
       { id: "process", label: "How ESA Letter Process Works in Rhode Island?" },
       { id: "who-qualifies", label: "Who Can Qualify for an ESA Letter Rhode Island?" },
       { id: "why-choose", label: "Why Choose My ESA Therapist for ESA Letter Evaluation in Rhode Island?" },
@@ -1195,7 +1195,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
+      { id: "therapists", label: "Our Licensed Clinicians" },
       { id: "process", label: "How Does the ESA Letter Process Work in the District of Columbia?" },
       { id: "who-qualifies", label: "Who Can Qualify for an ESA Letter in the District of Columbia?" },
       { id: "benefits", label: "Benefits of Having an ESA Letter in District of Columbia" },

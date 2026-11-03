@@ -3,10 +3,10 @@ import Image from "next/image";
 import { CtaButton, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShared";
 
 const ROWS = [
-  { feature: "Legal Framework", esa: "Fair Housing Act", dog: "ADA", icon: "/ESA ICons/Icon-25.svg" },
-  { feature: "Training Required", esa: "No", dog: "Yes, task-specific", icon: "/ESA ICons/Icon-30.svg" },
-  { feature: "Public Access Rights", esa: "Housing only", dog: "Nearly everywhere", icon: "/ESA ICons/Icon-20.svg" },
-  { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task", icon: "/ESA ICons/Icon-12.svg" },
+  { feature: "Legal Framework", esa: "Fair Housing Act", dog: "ADA", icon: "/esa-icons/Icon-25.svg" },
+  { feature: "Training Required", esa: "No", dog: "Yes, task-specific", icon: "/esa-icons/Icon-30.svg" },
+  { feature: "Public Access Rights", esa: "Housing only", dog: "Nearly everywhere", icon: "/esa-icons/Icon-20.svg" },
+  { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task", icon: "/esa-icons/Icon-12.svg" },
 ];
 
 const ROW_H = "lg:min-h-[5.2vw] xl:min-h-[61px]";

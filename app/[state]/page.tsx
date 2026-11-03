@@ -3,6 +3,7 @@ import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
+import { fitDescription, pageSocial, statePageTitle } from "@/lib/seo";
 import { STATES_DATA, getStateData } from "@/data/statesData";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -24,7 +25,6 @@ import { StateTableOfContents } from "@/components/state/StateTableOfContents";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
@@ -49,8 +49,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     (item: any) => item["@type"] === "WebPage"
   );
 
-  const title = data.metaTitle || webPageSchema?.name || `ESA Letter in ${data.name} | My ESA Therapist`;
-  const description = data.metaDescription || webPageSchema?.description || `Get your legitimate ESA letter in ${data.name} from licensed therapists.`;
+  const title = statePageTitle(data.name, data.slug);
+  const description = fitDescription(
+    data.metaDescription ||
+      webPageSchema?.description ||
+      `Get an ESA letter in ${data.name} from a ${data.name}-licensed therapist. Secure telehealth evaluation and transparent pricing.`,
+  );
 
   const imageKey = `state-${data.slug}`;
   const image = hasSocialImage(imageKey) ? socialImage(imageKey, `ESA letter in ${data.name}`) : null;
@@ -68,19 +72,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: canonicalUrl,
     },
-    openGraph: {
+    ...pageSocial({
       title,
       description,
       url: canonicalUrl,
-      type: "website",
-      ...(image && { images: image.openGraph }),
-    },
-    twitter: {
-      card: image ? "summary_large_image" : "summary",
-      title,
-      description,
-      ...(image && { images: image.twitter }),
-    },
+      images: image ?? undefined,
+    }),
   };
 }
 
@@ -125,9 +122,9 @@ export default async function DynamicStatePage({ params }: Props) {
         <AsSeenOnSection bgColor="bg-background" />
         <div id="therapists">
           <TherapistsSection
-            title={data.therapistsTitle}
-            subtitle={data.therapistsSubtitle}
-            licensureNote={data.therapistsLicensureNote}
+            title="Our Licensed Clinicians"
+            subtitle={data.therapistsSubtitle || `Evaluations for ${data.name} are completed by a clinician licensed in ${data.name}.`}
+            licensureNote={`${data.therapistsLicensureNote || ""} Evaluations for ${data.name} are completed by a clinician licensed in ${data.name}. License numbers are printed on the issued letter and can be verified with the state licensing board.`.trim()}
             therapistsList={data.therapistsList}
             refundText={data.benefitsRefundNote === "" ? null : undefined}
           />
@@ -145,14 +142,7 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        {data.reviewsTitle && (
-          <div id="reviews">
-            <TestimonialsSection
-              title={data.reviewsTitle}
-              subtitle={data.reviewsSubtitle}
-            />
-          </div>
-        )}
+        <StateReviewerBanner updatedDate="November 3, 2026" />
         <div id="benefits"><StateBenefitsSection data={data} /></div>
         <div id="laws"><StateLawsSection data={data} /></div>
         <div id="scams"><StateScamsSection data={data} /></div>
@@ -188,7 +178,6 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <StateReviewerBanner />
       </main>
 
       <Footer />

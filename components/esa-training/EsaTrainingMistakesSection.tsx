@@ -1,7 +1,7 @@
 import React from "react";
 import { IconCard, SectionHeader } from "@/components/common/BlogPageBlocks";
 
-const ICON = "/ESA ICons/Icon-25.svg";
+const ICON = "/esa-icons/Icon-25.svg";
 
 const MISTAKES = [
   {

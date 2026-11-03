@@ -10,17 +10,17 @@ const BASICS = [
   {
     title: "Foundational Obedience",
     text: "Sit, stay, come. The basics that make everyday life predictable.",
-    icon: "/ESA ICons/Icon-11.svg",
+    icon: "/esa-icons/Icon-11.svg",
   },
   {
     title: "Leash Manners",
     text: "No pulling, lunging, or bolting when you're out together.",
-    icon: "/ESA ICons/Icon-30.svg",
+    icon: "/esa-icons/Icon-30.svg",
   },
   {
     title: "Calm Public Behavior",
     text: "No excessive barking, jumping, or aggression around others.",
-    icon: "/ESA ICons/Icon-10.svg",
+    icon: "/esa-icons/Icon-10.svg",
   },
 ];
 
