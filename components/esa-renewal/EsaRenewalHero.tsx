@@ -2,6 +2,7 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { CtaButton } from "@/components/common/CtaButton";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const HEADING_LINE_1 = "Renew Your ESA";
 const HEADING_LINE_2 = "Letter Online";
@@ -62,6 +63,7 @@ export function EsaRenewalHero() {
           sizes="(max-width: 639px) 100vw, 1px"
         />
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           <h1 className="heading-h1 text-primary max-w-[320px]">
             {HEADING_LINE_1}
             <br />
@@ -104,6 +106,7 @@ export function EsaRenewalHero() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-10 pb-10">
           <div className="max-w-[520px]">
+            <SiteBreadcrumbs className="mb-4" includeSchema={false} />
             <HeroCopy />
           </div>
         </div>
@@ -127,6 +130,7 @@ export function EsaRenewalHero() {
       >
         <div className="relative w-[1440px] h-[780px] flex items-center">
           <div className="pl-[82px] max-w-[760px] z-10">
+            <SiteBreadcrumbs className="mb-4" />
             <HeroCopy />
           </div>
         </div>

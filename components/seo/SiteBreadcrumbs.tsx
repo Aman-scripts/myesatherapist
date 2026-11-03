@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronRight } from "lucide-react";
 import { serializeLd } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -80,9 +79,12 @@ function labelFor(segment: string) {
 export function SiteBreadcrumbs({
   className,
   includeSchema = true,
+  onDark = false,
 }: {
   className?: string;
   includeSchema?: boolean;
+  /** Trail sits on the dark profile panel from the lg breakpoint up. */
+  onDark?: boolean;
 }) {
   const pathname = usePathname() || "/";
   if (pathname === "/") return null;
@@ -122,16 +124,37 @@ export function SiteBreadcrumbs({
         {crumbs.map((crumb, index) => {
           const current = index === crumbs.length - 1;
           return (
-            <li key={crumb.path} className="flex items-center gap-2">
+            <li key={crumb.path} className="flex items-center gap-3">
               {index > 0 && (
-                <ChevronRight aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-primary/45" strokeWidth={2.25} />
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  className={cn(
+                    "shrink-0",
+                    onDark ? "text-primary/45 lg:text-background" : "text-body-text",
+                  )}
+                >
+                  <path d="M2 1.5L6 4L2 6.5V1.5Z" />
+                </svg>
               )}
               {current ? (
-                <span aria-current="page" className="font-bold text-gold-600">
+                <span aria-current="page" className="font-bold text-accent">
                   {crumb.name}
                 </span>
               ) : (
-                <Link prefetch={false} href={crumb.path} className="font-medium text-primary transition-colors hover:text-[#1D6E72]">
+                <Link
+                  prefetch={false}
+                  href={crumb.path}
+                  className={cn(
+                    "font-medium transition-colors",
+                    onDark
+                      ? "text-primary hover:text-[#1D6E72] lg:text-[#FAF7F2]! lg:hover:text-white!"
+                      : "text-primary hover:text-[#1D6E72]",
+                  )}
+                >
                   {crumb.name}
                 </Link>
               )}

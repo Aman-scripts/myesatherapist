@@ -4,6 +4,7 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { CtaButton } from "./EsaOnlineShared";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const STATS = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -126,6 +127,7 @@ export function EsaOnlineHero({
                 : `space-y-6 sm:space-y-8 ${stacked ? "mx-auto text-center flex flex-col items-center" : ""}`
             }`}
           >
+            <SiteBreadcrumbs className={showStats ? "self-start" : undefined} includeSchema={false} />
             {showStats ? (
               <>
                 <div className="flex w-full flex-col items-center text-center sm:hidden">
@@ -218,6 +220,7 @@ export function EsaOnlineHero({
           <div className="relative z-10 w-full pl-[82px] pr-20 py-16">
             {showStats ? (
               <div className="max-w-[640px] flex flex-col items-start gap-5">
+                <SiteBreadcrumbs />
                 <StatPills />
                 <p aria-hidden="true" className="heading-h1 text-primary max-w-[620px]">{title}</p>
                 <p className="body-large text-body-text max-w-[560px]">{description}</p>
@@ -231,6 +234,7 @@ export function EsaOnlineHero({
               </div>
             ) : (
               <div className="max-w-[626px] space-y-6">
+                <SiteBreadcrumbs />
                 <div className="space-y-6">
                   <p aria-hidden="true" className="heading-h1 text-primary">{title}</p>
                   <p className="body-large text-body-text max-w-[626px]">{description}</p>

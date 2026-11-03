@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 export function EsaLawsStateHero({
   title,
@@ -89,6 +90,7 @@ export function EsaLawsStateHero({
         <div
           className={`max-w-[624px] lg:max-w-[440px] xl:max-w-[624px] space-y-3 sm:space-y-6 lg:space-y-4 xl:space-y-6 mx-auto text-center lg:mx-0 lg:text-left`}
         >
+          <SiteBreadcrumbs className="mb-3 lg:mb-4" />
           <h1 className="heading-h1 text-primary max-w-[320px] mx-auto sm:max-w-none sm:mx-0 sm:text-5xl lg:text-[34px] xl:text-[56px]">
             {title}
           </h1>

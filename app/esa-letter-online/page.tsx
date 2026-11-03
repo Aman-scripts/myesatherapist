@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 import { EsaOnlineHero } from "@/components/esa-online/EsaOnlineHero";
+import { EsaOnlineTrustCards } from "@/components/esa-online/EsaOnlineTrustCards";
 import { EsaOnlineHowItWorks } from "@/components/esa-online/EsaOnlineHowItWorks";
 import { EsaOnlineWhatIs } from "@/components/esa-online/EsaOnlineWhatIs";
 import { EsaOnlineWhatComes } from "@/components/esa-online/EsaOnlineWhatComes";
@@ -67,6 +68,7 @@ export default function EsaLetterOnlinePage() {
           imageMobile="/Hero_image_for_mobile_all.png"
           imageTablet="/esa-online/esa-online-herosection_tablet.webp"
         />
+        <EsaOnlineTrustCards />
         <EsaOnlineHowItWorks />
         <EsaOnlineWhatIs />
         <EsaOnlineWhatComes />

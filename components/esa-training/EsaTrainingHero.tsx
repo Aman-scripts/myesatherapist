@@ -1,5 +1,6 @@
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const POINTS = [
   "No pet fees for a legitimate ESA. That hasn't changed.",
@@ -50,6 +51,7 @@ export function EsaTrainingHero() {
 
       <div className="relative z-10 col-start-1 row-start-1 mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 pb-12 pt-10 sm:pb-[90vw] sm:px-8 sm:pt-14 lg:flex-row lg:items-center lg:justify-between lg:gap-[2vw] lg:px-[5.6vw] lg:pb-[3vw] lg:pt-[3vw] xl:gap-8 xl:px-20 xl:py-[64px]">
         <div className="flex w-full flex-col items-center gap-6 text-center lg:w-[45%] lg:items-start lg:gap-[1.7vw] lg:text-left xl:w-[549px] xl:gap-[33px]">
+          <SiteBreadcrumbs />
           <div className="flex flex-col items-center gap-4 lg:items-start lg:gap-[1.6vw] xl:gap-6">
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-primary sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:max-w-[462px] xl:text-[56px] xl:leading-[64px]">
               Does Your ESA Actually Need Training?

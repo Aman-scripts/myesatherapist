@@ -55,14 +55,11 @@ export function PsdBenefitsSection() {
     <section className="w-full bg-background py-16 sm:py-20 lg:py-24">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header (Figma Frame 1000011754: 2-column layout on Desktop) */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-16 lg:mb-20">
-          <h2 className="heading-h2 capitalize max-w-xl">
-            Understanding Your
-            <br className="hidden sm:block" />
-            {" "}PSD Letter Benefits
+        <div className="text-center max-w-[820px] mx-auto mb-16 lg:mb-20 space-y-3">
+          <h2 className="heading-h2 capitalize">
+            Understanding Your PSD Letter Benefits
           </h2>
-          <p className="body-large max-w-xl lg:mt-2">
+          <p className="body-large">
             Learn about the potential advantages of having professional documentation for your psychiatric service dog and how it supports your needs across housing, travel, and daily life.
           </p>
         </div>

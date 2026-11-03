@@ -10,26 +10,34 @@ const QUALIFY_ICONS = [
   "/esa-icons/Icon-4.svg",
 ];
 
+function qualifyIcon(src: string | undefined, index: number) {
+  if (src?.includes("chronicworry")) return "/esa-icons/Icon.svg";
+  if (src?.includes("panicattack")) return "/esa-icons/Icon-1.svg";
+  if (src?.includes("posttrauma")) return "/esa-icons/Icon-2.svg";
+  if (src?.includes("moodconditions")) return "/esa-icons/Icon-4.svg";
+  return src || QUALIFY_ICONS[index % QUALIFY_ICONS.length];
+}
+
 const defaultConditions = [
   {
     title: "Panic Disorder with Agoraphobia",
     description: "Frequent panic attacks restricting leaving homes and public spaces.",
-    icon: "/states/whomayqualifies-california_chronicworry.svg",
+    icon: "/esa-icons/Icon.svg",
   },
   {
     title: "Chronic PTSD",
     description: "Trauma-related flashbacks affecting daily life or emotional regulation.",
-    icon: "/states/whomayqualifies-panicattack.svg",
+    icon: "/esa-icons/Icon-1.svg",
   },
   {
     title: "Persistent Depressive Disorder",
     description: "Long-term depressive symptoms affecting motivation and energy.",
-    icon: "/states/whomayqualifies-california_posttrauma.svg",
+    icon: "/esa-icons/Icon-2.svg",
   },
   {
     title: "Obsessive-Compulsive Disorder",
     description: "Intrusive thoughts or compulsions disrupting routine activities.",
-    icon: "/states/whomayqualifies-moodconditions.svg",
+    icon: "/esa-icons/Icon-4.svg",
   },
 ];
 
@@ -73,7 +81,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
   const title = data.whoQualifiesTitle || `Who May Eligible For ESA Letter in ${stateName}?`;
   const subtitle = data.whoQualifiesSubtitle || `${stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in ${stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:`;
-  const sectionHeading = data.whoQualifiesSectionHeading || "Qualifying Conditions :";
+  const sectionHeading = "Qualifying Conditions";
 
   return (
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
@@ -168,7 +176,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
                       <Image
                         quality={90}
-                        src={item.icon || QUALIFY_ICONS[idx % QUALIFY_ICONS.length]}
+                        src={qualifyIcon(item.icon, idx)}
                         alt=""
                         width={26}
                         height={26}

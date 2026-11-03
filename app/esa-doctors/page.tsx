@@ -75,6 +75,9 @@ export default function DoctorsPage() {
           buttonText="Start Your Evaluation"
           buttonHref="/pricing/"
         />
+
+        {/* Clearance so the CTA photo does not meet the footer */}
+        <div className="w-full h-16 sm:h-20 lg:h-28 bg-background" />
       </main>
 
       {/* Global Footer */}

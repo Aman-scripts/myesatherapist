@@ -46,7 +46,8 @@ export function EsaRenewalPricing() {
       headerHeight={220}
       cards={RENEWAL_CARDS}
       ctaHref="/pricing/#evaluation"
-      sectionClassName="pt-12 pb-8 lg:pb-12"
+      bgColor="bg-white"
+      sectionClassName="pt-6 pb-8 lg:pt-8 lg:pb-12"
     />
   );
 }

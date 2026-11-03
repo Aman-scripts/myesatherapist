@@ -6,8 +6,8 @@ import { CtaButton } from "@/components/common/CtaButton";
 
 function processIcon(src: string) {
   if (src.includes("schedule")) return "/esa-icons/Icon-16.svg";
-  if (src.includes("clinicalevaluation")) return "/esa-icons/Icon-18.svg";
-  if (src.includes("clinicaldetermination")) return "/esa-icons/Glyph-2.svg";
+  if (src.includes("determination")) return "/esa-icons/Glyph-2.svg";
+  if (src.includes("clinical")) return "/esa-icons/Icon-18.svg";
   return src;
 }
 

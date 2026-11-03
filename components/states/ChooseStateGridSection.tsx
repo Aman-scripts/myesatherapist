@@ -78,7 +78,7 @@ export function ChooseStateGridSection({
 
                 {/* Page Description: State Text */}
                 <span className="body-large text-color-gradient group-hover:underline decoration-[#1D6E72] underline-offset-4 transition-all truncate">
-                  ESA letter in {state.name}
+                  {state.name}
                 </span>
               </div>
             </Link>

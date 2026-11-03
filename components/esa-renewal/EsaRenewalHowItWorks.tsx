@@ -41,7 +41,7 @@ function StepArrow() {
 
 export function EsaRenewalHowItWorks() {
   return (
-    <section id="how-it-works" className="w-full bg-background pt-16 pb-0 sm:pt-20 lg:pt-24">
+    <section id="how-it-works" className="w-full bg-background pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-24 lg:pb-16">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <div className="flex flex-col items-center gap-2 text-center max-w-[820px]">
           <h2 className="heading-h2 text-primary">How The ESA Letter Renewal Process Works?</h2>
@@ -69,10 +69,16 @@ export function EsaRenewalHowItWorks() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center gap-4">
           <CtaButton href="#pricing" className="w-auto min-w-[240px]">
             Start your ESA Evaluation
           </CtaButton>
+          <p className="body-small text-center max-w-[640px]">
+            If not approved after your evaluation? You get a full refund.
+          </p>
+          <div className="inline-block max-w-[720px] bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 body-small text-center border border-[#E76F51]/20">
+            We authorize your payment first, but only charge it after your evaluation is completed.
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const ART = "/esa-guide/esa-guide_herosection.webp";
 const ART_ALT = "Woman relaxing at home with her golden retriever and her cat";
@@ -47,6 +48,7 @@ export function EsaGuideHero() {
 
       <div className="relative z-10 col-start-1 row-start-1 mx-auto w-full max-w-[1440px] px-5 pb-12 pt-10 sm:px-8 sm:pb-[64vw] sm:pt-14 lg:px-[5.6vw] lg:pb-[4vw] lg:pt-[6.4vw] xl:px-20 xl:pb-16 xl:pt-[100px]">
         <div className="flex w-full flex-col items-center gap-8 text-center lg:max-w-[46vw] lg:items-start lg:gap-[3.3vw] lg:text-left xl:max-w-[665px] xl:gap-12">
+          <SiteBreadcrumbs />
           <div className="flex flex-col gap-4 lg:gap-[1.6vw] xl:gap-6">
             <h1 className="font-heading text-[34px] font-bold leading-[1.15] tracking-[-0.0002em] text-primary sm:text-5xl lg:text-[3.9vw] lg:leading-[4.4vw] xl:text-[56px] xl:leading-[64px]">
               Emotional Support Animal Resource Center

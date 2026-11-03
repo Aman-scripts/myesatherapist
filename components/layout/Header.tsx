@@ -6,8 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { CtaButton } from "@/components/common/CtaButton";
-import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
-
 
 
 const AVAILABLE_STATES = [
@@ -148,10 +146,7 @@ export function Header() {
 
   // Check route conditions
   const isPsd = pathname === "/psd-letter/";
-  const isStateHero = /^\/esa-letter-(?!online\/|for-housing\/|renewal\/)[^/]+\/?$/.test(pathname || "");
-  const isStateDirectory = pathname === "/state/" || pathname === "/states/";
   const isDoctors = pathname === "/esa-doctors/" || pathname === "/esa-doctors/";
-  const isAbout = pathname === "/about-us/";
   const isLegalReviewer =
     pathname?.includes("legal-reviewer") ||
     pathname?.includes("reviewer") ||
@@ -393,16 +388,6 @@ export function Header() {
         </div>
       )}
     </header>
-    {/* Kept on the same 1440px column as the hero content. State and doctor heroes place their own. */}
-    {!isStateHero && !isDoctors && !isStateDirectory && !isAbout && (
-      <div className="relative z-40 h-0">
-        <div className="absolute inset-x-0 top-0">
-          <div className="mx-auto w-full max-w-[1440px] px-4 pt-3 sm:px-6 lg:px-[80px] lg:pt-4">
-            <SiteBreadcrumbs />
-          </div>
-        </div>
-      </div>
-    )}
     </>
   );
 }

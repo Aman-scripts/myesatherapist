@@ -24,6 +24,7 @@ import { StateTableOfContents } from "@/components/state/StateTableOfContents";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
@@ -138,6 +139,14 @@ export default async function DynamicStatePage({ params }: Props) {
               title={data.whyChooseTitle}
               subtitle={data.whyChooseSubtitle}
               features={data.whyChooseItems}
+            />
+          </div>
+        )}
+        {data.reviewsTitle && (
+          <div id="reviews">
+            <TestimonialsSection
+              title={data.reviewsTitle}
+              subtitle={data.reviewsSubtitle}
             />
           </div>
         )}

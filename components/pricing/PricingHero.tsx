@@ -3,6 +3,7 @@ import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 export function PricingHero() {
   return (
@@ -24,6 +25,7 @@ export function PricingHero() {
 
         {/* Content Container at Top */}
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">
             Choose the Right Package For You
           </p>
@@ -70,6 +72,7 @@ export function PricingHero() {
 
         {/* Content Container at Top */}
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           {/* Stat Pills */}
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[150px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
@@ -125,6 +128,7 @@ export function PricingHero() {
         <div className="relative w-[1440px] h-[802px]">
           {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
           <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
+            <SiteBreadcrumbs />
             {/* Stat Pills at top (Frame 1000011901) */}
             <div className="flex items-center gap-3">
               <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">

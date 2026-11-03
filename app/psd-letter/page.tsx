@@ -11,9 +11,11 @@ import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection
 import { WhatIsPsdSection } from "@/components/psd-letter/WhatIsPsdSection";
 import { PsdBenefitsSection } from "@/components/psd-letter/PsdBenefitsSection";
 import { PsdProcessSection } from "@/components/psd-letter/PsdProcessSection";
+import { PsdComparisonTable } from "@/components/psd-letter/PsdComparisonTable";
 import { PsdQualifyingConditions } from "@/components/psd-letter/PsdQualifyingConditions";
 import { WhoBenefitsSection } from "@/components/psd-letter/WhoBenefitsSection";
 import { LicensedProfessionalsSection } from "@/components/psd-letter/LicensedProfessionalsSection";
+import { PsdCapabilitiesSection } from "@/components/psd-letter/PsdCapabilitiesSection";
 import { PsdWhyChooseSection } from "@/components/psd-letter/PsdWhyChooseSection";
 import { PsdCtaSection } from "@/components/psd-letter/PsdCtaSection";
 
@@ -135,7 +137,10 @@ export default function PsdLetterPage() {
           />
         </div>
 
-        {/* 7. Common Qualifying Conditions for a PSD Letter */}
+        {/* 7. PSD vs ESA Comparison Table */}
+        <PsdComparisonTable />
+
+        {/* 8. Common Qualifying Conditions for a PSD Letter */}
         <PsdQualifyingConditions />
 
         {/* 9. Who Benefits Most From PSD Letter */}
@@ -143,6 +148,9 @@ export default function PsdLetterPage() {
 
         {/* 10. Our Licensed Professionals for PSD Support */}
         <LicensedProfessionalsSection />
+
+        {/* 11. What A Psychiatric Service Dog Can Do */}
+        <PsdCapabilitiesSection />
 
         <PsdWhyChooseSection />
 

@@ -4,19 +4,20 @@ import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { HeroCtaGroup } from "@/components/common/HeroCtaGroup";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const MOBILE_HERO_BG = "/Hero_image_for_mobile_all.webp";
 const DESKTOP_HERO_BG = "/psd-letter/psd-herosection-new.webp";
 
 const desktopStats = [
-  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "Mental Health Evaluations" },
   { value: "7+", label: "Years Serving" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
 const mobileStats = [
   { value: "7+", label: "Years Serving" },
-  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "64,739+", label: "Mental Health Evaluations" },
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
@@ -44,6 +45,7 @@ export function PsdHeroSection() {
         />
 
         <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           <p aria-hidden="true" className="heading-h1 capitalize mx-auto max-w-[340px] text-[28px]! leading-[36px]!">
             Psychiatric Service Dog
             <br />
@@ -100,6 +102,7 @@ export function PsdHeroSection() {
         />
 
         <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center px-6 pt-16 text-center">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           <div className="flex flex-wrap items-center justify-center gap-3">
             {desktopStats.map((stat) => (
               <div
@@ -156,6 +159,7 @@ export function PsdHeroSection() {
       >
         <div className="relative mx-auto h-[814px] w-[1440px]">
           <div className="absolute left-[80px] top-[72px] z-10 flex w-[760px] flex-col items-start">
+            <SiteBreadcrumbs className="mb-4" />
             <div className="flex items-center gap-3">
               {desktopStats.map((stat) => (
                 <div

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { CtaButton } from "@/components/common/CtaButton";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 export function ContactHero() {
   const [formData, setFormData] = useState({
@@ -61,6 +62,7 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-2">
+              <SiteBreadcrumbs includeSchema={false} />
               <p aria-hidden="true" className="heading-h1 text-primary text-center">
                 Request Info
               </p>
@@ -176,6 +178,7 @@ export function ContactHero() {
           >
             {/* Header */}
             <div className="text-center space-y-1.5">
+              <SiteBreadcrumbs includeSchema={false} />
               <p aria-hidden="true" className="heading-h2 text-primary text-center">
                 Request Info
               </p>
@@ -299,6 +302,7 @@ export function ContactHero() {
             >
               {/* Centered Header */}
               <div className="text-center space-y-1">
+                <SiteBreadcrumbs />
                 <p aria-hidden="true" className="heading-h1 text-primary">
                   Request Info
                 </p>

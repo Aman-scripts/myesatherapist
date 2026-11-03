@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { StatesHeroSection } from "@/components/states/StatesHeroSection";
 import { FederalHousingRulesSection } from "@/components/states/FederalHousingRulesSection";
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
-import { StateRulesTable } from "@/components/states/StateRulesTable";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { statesSchema } from "@/data/schemas/statesSchema";
@@ -91,7 +90,6 @@ export default function StatesDirectoryPage() {
 
         {/* 2. Federal Housing Protections & State ESA Rules */}
         <FederalHousingRulesSection />
-        <StateRulesTable />
         <ChooseStateGridSection
           title="ESA Letter by State"
           description="Open a state page for the local rule, a short summary, and a link to start an evaluation with a clinician licensed in that state."

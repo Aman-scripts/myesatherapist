@@ -4,6 +4,7 @@ import Image from "next/image";
 import { DoctorProfile } from "@/data/doctorsData";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { CtaButton } from "@/components/common/CtaButton";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 interface DoctorInternalHeroSectionProps {
   doctor: DoctorProfile;
@@ -77,8 +78,9 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
       </div>
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="hidden lg:flex items-center justify-between gap-8 min-h-[640px] py-16">
+        <div className="hidden lg:flex items-center justify-between gap-8 min-h-[640px] pt-16 pb-0">
           <div className="max-w-[620px] flex flex-col items-start gap-5">
+            <SiteBreadcrumbs />
             <DoctorName name={doctor.name} linkedin={doctor.linkedin} />
             <p className="body-large text-body-text max-w-[560px]">
               {doctor.heroBio || doctor.bio}
@@ -95,7 +97,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
             </p>
           </div>
 
-          <div className="relative w-[460px] xl:w-[520px] h-[560px] shrink-0">
+          <div className="relative w-[460px] xl:w-[520px] h-[600px] shrink-0 self-end">
             <Image
               quality={90}
               src={desktopSrc}
@@ -109,6 +111,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
         </div>
 
         <div className="lg:hidden flex flex-col items-center text-center pt-10 pb-0">
+          <SiteBreadcrumbs includeSchema={false} />
           <DoctorName name={doctor.name} linkedin={doctor.linkedin} />
           <p className="body-large text-body-text max-w-[560px] mt-4">
             {doctor.heroBio || doctor.bio}
@@ -132,7 +135,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               alt={doctor.name}
               fill
               priority
-              className="object-contain object-bottom sm:hidden"
+              className="object-cover object-bottom sm:hidden"
               sizes="280px"
             />
             <Image
@@ -140,7 +143,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               src={tabletSrc}
               alt={doctor.name}
               fill
-              className="object-contain object-bottom hidden sm:block"
+              className="object-cover object-bottom hidden sm:block"
               sizes="380px"
             />
           </div>

@@ -266,7 +266,7 @@ export const STATES_DATA: Record<string, StateData> = {
     processNote: "Note: When a housing provider requests reliable disability-related information, documentation from an appropriate healthcare professional may help establish the individual's disability-related need for an assistance animal. Evaluations are conducted through our secure, HIPAA-compliant telehealth platform using audio or video appointments. This is not an instant-approval process; the ESA letter must be uniquely tailored to you and your disability. Depending on the housing provider's request and applicable law, documentation may need to establish the presence of a disability and explain the disability-related need for an assistance animal.",
     whoQualifiesTitle: "Who May Qualify For an ESA Letter in Alabama?",
     whoQualifiesSubtitle: "Mental health conditions that substantially impact daily functioning may be considered during an ESA evaluation. As part of the assessment, clinicians may reference DSM-5-TR diagnostic criteria.",
-    whoQualifiesSectionHeading: "Qualifying Mental Health Conditions",
+    whoQualifiesSectionHeading: "Qualifying Conditions",
     whoQualifiesConditions: [
       {
         title: "Mood Disorders",
@@ -356,7 +356,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
-    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefitsHeading: "Mental Health and\nEmotional Support",
     emotionalBenefits: [
       {
         title: "Emotional Grounding in Daily Life",
@@ -673,7 +673,7 @@ export const STATES_DATA: Record<string, StateData> = {
     processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following a formal mental health evaluation. Evaluations are conducted through our secure telehealth platform using video or audio appointments, depending on clinician availability and applicable requirements. This is not an instant-approval process; the documentation should reflect your individual circumstances and disability-related need. Depending on the circumstances and applicable requirements, documentation may need to establish a disability-related need for an assistance animal.",
     whoQualifiesTitle: "Who May Qualify for an Emotional Support Animal in Alaska?",
     whoQualifiesSubtitle: "Individuals suffering from mental health conditions that may impact day-to-day activities may qualify for an ESA evaluation. Clinicians determine eligibility aligned with DSM-5-TR criteria and federal housing guidelines.",
-    whoQualifiesSectionHeading: "Qualifying Mental Health Conditions",
+    whoQualifiesSectionHeading: "Qualifying Conditions",
     whoQualifiesConditions: [
       {
         title: "Anxiety Disorders",
@@ -755,7 +755,7 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "If your housing situation changes, you may need to provide updated information or address the accommodation with the housing provider as appropriate.",
       },
     ],
-    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefitsHeading: "Mental Health and\nEmotional Support",
     emotionalBenefits: [
       {
         title: "Social Ease",
@@ -2436,7 +2436,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
-    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefitsHeading: "Mental Health and\nEmotional Support",
     emotionalBenefits: [
       {
         title: "Comfort During Challenging Times",
@@ -5240,7 +5240,7 @@ export const STATES_DATA: Record<string, StateData> = {
     processNote: "Note: A valid ESA letter must be written by a licensed mental health professional following an individualized clinical evaluation. This is not an instant-approval process, and any recommendation should be based on the individual’s circumstances and applicable federal and state requirements.",
     whoQualifiesTitle: "Who May Qualify for an Emotional Support Animal in Illinois?",
     whoQualifiesSubtitle: "Individuals whose mental or emotional health condition substantially affects daily life may qualify for an emotional support animal, if a licensed mental health professional determines it is clinically appropriate following an evaluation aligned with DSM-5-TR criteria and federal housing guidelines.",
-    whoQualifiesSectionHeading: "Qualifying Mental Health Conditions",
+    whoQualifiesSectionHeading: "Qualifying Conditions",
     whoQualifiesConditions: [
       {
         title: "Post-Traumatic Stress Disorder (PTSD)",
@@ -11487,7 +11487,7 @@ export const STATES_DATA: Record<string, StateData> = {
     processNote: "Note: An ESA letter should be based on an individualized mental health evaluation conducted by a licensed professional. The recommendation should reflect your individual circumstances and disability-related need. This is not an instant-approval process.",
     whoQualifiesTitle: "Who Qualifies For an Emotional Support Animal in New York?",
     whoQualifiesSubtitle: "People experiencing emotional or mental health concerns that substantially affect their day-to-day life may qualify for an ESA after being evaluated by a licensed mental health professional. The assessment may include conditions such as:",
-    whoQualifiesSectionHeading: "Mental Health Conditions Considered During an ESA Evaluation",
+    whoQualifiesSectionHeading: "Qualifying Conditions",
     whoQualifiesConditions: [
       {
         title: "Chronic Stress or Burnout",
@@ -11586,7 +11586,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
-    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefitsHeading: "Mental Health and\nEmotional Support",
     emotionalBenefits: [
       {
         title: "Greater Comfort",
@@ -12021,7 +12021,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
-    emotionalBenefitsHeading: "Mental Health Benefits",
+    emotionalBenefitsHeading: "Mental Health and\nEmotional Support",
     emotionalBenefits: [
       {
         title: "Mental and Daily-Living Support",

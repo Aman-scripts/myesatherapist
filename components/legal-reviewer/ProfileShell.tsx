@@ -5,6 +5,7 @@ import Image from "next/image";
 import { createPortal } from "react-dom";
 import { X, ChevronRight } from "lucide-react";
 import { SidebarDivider } from "./ReviewerUI";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 export interface ProfileShellProps {
   name: string;
@@ -148,10 +149,11 @@ export function ProfileShell(props: ProfileShellProps) {
   }, [isOpen]);
 
   return (
-    <section className="w-full bg-background relative pb-16 lg:pb-24">
+    <section className="w-full bg-background relative pb-6 lg:pb-8">
       <div className="relative z-10 w-full flex flex-col lg:flex-row items-start">
-        {/* Desktop sidebar (Figma Frame 1000011828: 382px, padding 57px 31px) */}
-        <aside className="hidden lg:block w-[382px] shrink-0 sticky top-[135px] self-start z-20 max-h-[calc(100vh-135px)] overflow-y-auto overflow-x-hidden no-scrollbar color-gradient px-[31px] pt-[57px] pb-12">
+        {/* Desktop sidebar. The trail lives in this panel so it wraps on the teal background. */}
+        <aside className="hidden lg:block w-[382px] shrink-0 sticky top-[135px] self-start z-20 max-h-[calc(100vh-135px)] overflow-y-auto overflow-x-hidden no-scrollbar color-gradient px-[31px] pt-6 pb-12">
+          <SiteBreadcrumbs onDark className="mb-8" />
           <SidebarBody {...props} />
         </aside>
 
@@ -200,7 +202,8 @@ export function ProfileShell(props: ProfileShellProps) {
           )}
 
         {/* Main column (Figma Frame 1000011878: padding 0 74px, gap 53px) */}
-        <div className="flex-1 min-w-0 max-w-[1055px] px-4 sm:px-8 lg:px-[74px] pt-10 lg:pt-[74px] flex flex-col gap-10 lg:gap-[53px]">
+        <div className="flex-1 min-w-0 max-w-[1055px] px-4 sm:px-8 lg:px-[74px] pt-6 lg:pt-[74px] flex flex-col gap-10 lg:gap-[53px]">
+          <SiteBreadcrumbs className="lg:hidden" includeSchema={false} />
           {children}
         </div>
       </div>

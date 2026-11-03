@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 export function BlogsHero() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,6 +34,7 @@ export function BlogsHero() {
 
         {/* Content Container at Top */}
         <div className="relative z-10 px-4 pt-6 pb-10 text-center flex flex-col items-center">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           {/* Frame 1000011902: Headline & Subtitle */}
           <div className="flex flex-col items-center gap-3 max-w-[340px]">
             <p aria-hidden="true" className="heading-h2 text-primary capitalize text-center">
@@ -127,6 +129,7 @@ export function BlogsHero() {
 
         {/* Content Container at Top */}
         <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 max-w-[620px] mx-auto">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           {/* Headline & Subtitle */}
           <div className="flex flex-col items-center gap-4 max-w-xl mx-auto">
             <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center text-3xl sm:text-4xl">
@@ -223,6 +226,7 @@ export function BlogsHero() {
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="w-full max-w-[1440px] mx-auto px-8 lg:px-[84px]">
             <div className="w-full max-w-[519px] flex flex-col items-start gap-[32px]">
+              <SiteBreadcrumbs />
               {/* Frame 1000011884 / Frame 1000011902 */}
               <div className="flex flex-col items-start gap-[24px] w-full max-w-[512px]">
                 {/* Heading: Your Go-to-Resource Hub for Emotional Support Animals */}

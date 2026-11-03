@@ -38,10 +38,10 @@ const PROCESS_ICONS = [
 ];
 
 const CONDITION_ICONS = [
-  "/states/whomayqualifies-california_chronicworry.svg",
-  "/states/whomayqualifies-panicattack.svg",
-  "/states/whomayqualifies-moodconditions.svg",
-  "/states/whomayqualifies-california_posttrauma.svg",
+  "/esa-icons/Icon.svg",
+  "/esa-icons/Icon-1.svg",
+  "/esa-icons/Icon-4.svg",
+  "/esa-icons/Icon-2.svg",
 ];
 
 const FIN_ICON = "/states/california-benefits-workplaceconsideration.svg";

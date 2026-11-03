@@ -117,6 +117,36 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground antialiased selection:bg-accent/35 selection:text-current"
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  var key = 'met-chunk-reload';
+  function isChunkError(message) {
+    return message.indexOf('ChunkLoadError') !== -1 || message.indexOf('Loading chunk') !== -1 || message.indexOf('Failed to fetch dynamically imported module') !== -1;
+  }
+  function reloadOnce() {
+    try {
+      if (sessionStorage.getItem(key) === '1') return;
+      sessionStorage.setItem(key, '1');
+    } catch (e) {}
+    window.location.reload();
+  }
+  window.addEventListener('error', function(event) {
+    var message = String((event && (event.message || (event.error && event.error.message))) || '');
+    if (!isChunkError(message)) return;
+    event.preventDefault();
+    reloadOnce();
+  }, true);
+  window.addEventListener('unhandledrejection', function(event) {
+    var reason = event && event.reason;
+    var message = reason ? String(reason.message || reason) : '';
+    if (!isChunkError(message)) return;
+    event.preventDefault();
+    reloadOnce();
+  });
+})();`,
+          }}
+        />
         <ThirdPartyErrorHandler />
         <SiteAnalytics />
         {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}
