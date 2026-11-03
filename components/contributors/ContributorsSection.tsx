@@ -19,16 +19,16 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
   const iconSrc =
     icon ||
     (key.includes("licensed") || key.includes("credential") || key.includes("role")
-      ? "/ESA ICons/Icon-33.svg"
+      ? "/esa-icons/Icon-33.svg"
       : key.includes("evaluation") || key.includes("method")
-      ? "/ESA ICons/Icon-15.svg"
+      ? "/esa-icons/Icon-15.svg"
       : key.includes("focus") || key.includes("area")
-      ? "/ESA ICons/Icon-2.svg"
+      ? "/esa-icons/Icon-2.svg"
       : key.includes("based") || key.includes("location")
-      ? "/ESA ICons/Icon-37.svg"
+      ? "/esa-icons/Icon-37.svg"
       : key.includes("experience")
-      ? "/ESA ICons/Icon-23.svg"
-      : "/ESA ICons/Icon-25.svg");
+      ? "/esa-icons/Icon-23.svg"
+      : "/esa-icons/Icon-25.svg");
 
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">

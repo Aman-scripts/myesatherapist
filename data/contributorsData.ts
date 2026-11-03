@@ -17,7 +17,7 @@ export const AUTHORS: ContributorCardData[] = [
     bio: "Allyson Valley, Ph.D., LPC, is a licensed counselor with 11 years of experience, creating research-based content on emotional wellness, ESA guidance, and mental health education.",
     avatar: "/blogs/blogs_trustbar-author.webp",
     linkedin: "https://www.linkedin.com/in/allyson-valley/",
-    href: "/author/allyson-valley/",
+    href: "/contributors/allyson-valley/",
     badges: [
       { label: "Credentials", value: "Ph.D., LPC" },
       { label: "Experience", value: "11 Years" },
@@ -31,7 +31,7 @@ export const AUTHORS: ContributorCardData[] = [
     bio: "Mohammed Ziauddin is a healthcare professional, medical researcher, and health writer with 12 years of experience creating research-based content on ESA guidance, mental health, and emotional wellness.",
     avatar: "/author/mohammed-ziauddin-image.webp",
     linkedin: "https://www.linkedin.com/in/physiozia/",
-    href: "/author/mohammed-ziauddin/",
+    href: "/contributors/mohammed-ziauddin/",
     badges: [
       { label: "Role", value: "Health Writer" },
       { label: "Experience", value: "12 Years" },
