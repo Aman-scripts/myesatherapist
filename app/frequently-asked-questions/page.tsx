@@ -71,6 +71,7 @@ export default function FaqPage() {
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
           buttonText="Start your Evaluation"
           buttonHref="/pricing/"
+          flushBottom
         />
 
         {/* 4. Content Reviewed by Doctor Badge (Between CTA & Footer) */}

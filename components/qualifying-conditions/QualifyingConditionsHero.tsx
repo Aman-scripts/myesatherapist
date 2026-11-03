@@ -1,6 +1,5 @@
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
 
 const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_herosection.webp";
 const ART_ALT = "Woman hugging her cat, surrounded by icons for anxiety, stress, depression, PTSD and mood disorders";
@@ -68,7 +67,6 @@ export function QualifyingConditionsHero() {
               </p>
             </div>
           </div>
-          <CtaButton href="/esa-doctors/">Explore The Team</CtaButton>
         </div>
       </div>
     </section>

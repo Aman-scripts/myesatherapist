@@ -13,6 +13,7 @@ const PREFERRED_ORDER = [
   "emotional-support-animal",
   "esa-letter-sample",
   "esa-for-children",
+  "who-can-write-an-esa-letter",
 ];
 
 const ESA_GUIDE_POSTS = [...BLOG_POSTS.filter(
@@ -58,7 +59,7 @@ export function EsaGuideFilterableGrid() {
                   <div className="flex flex-col gap-2.5">
                     <Link prefetch={false} href={art.url}>
                       <h3 className="line-clamp-3 font-heading text-[22px] font-bold leading-[30px] text-primary transition-colors group-hover:text-[#1D6E72] lg:text-[1.9vw] lg:leading-[2.4vw] xl:text-[24px] xl:leading-8">
-                        {art.title}
+                        {art.cardTitle || art.title}
                       </h3>
                     </Link>
                     <div className="font-sans text-xs font-medium text-[#69777C] sm:text-sm lg:text-[0.95vw] xl:text-sm">

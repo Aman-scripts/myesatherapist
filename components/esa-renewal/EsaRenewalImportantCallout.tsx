@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function EsaRenewalImportantCallout() {
   return (
-    <section className="w-full bg-background py-8 sm:py-12">
+    <section className="w-full bg-background pt-8 pb-0 sm:pt-12">
       <div className="max-w-[1099px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Frame 1000012004 */}
         <div className="flex flex-col items-center text-center sm:text-left sm:flex-row sm:items-center gap-4 sm:gap-6 rounded-[24px] sm:rounded-l-[10px] sm:rounded-r-[30px] bg-[#FF383C]/10 py-6 sm:py-8 px-6 sm:pl-0 sm:pr-[67px] lg:pr-10 xl:pr-[67px]">

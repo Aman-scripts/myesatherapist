@@ -10,7 +10,6 @@ import { DoctorsAllStatesSection } from "@/components/doctors/DoctorsAllStatesSe
 import { DoctorsMatchingSection } from "@/components/doctors/DoctorsMatchingSection";
 import { DoctorsDisclosureSection } from "@/components/doctors/DoctorsDisclosureSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 
 export const metadata: Metadata = {
   title: "Meet Our Licensed Mental Health Professionals | My ESA Therapist",
@@ -76,9 +75,6 @@ export default function DoctorsPage() {
           buttonText="Start Your Evaluation"
           buttonHref="/pricing/"
         />
-
-        {/* State Reviewer Banner (above footer and below cta section) */}
-        <StateReviewerBanner />
       </main>
 
       {/* Global Footer */}

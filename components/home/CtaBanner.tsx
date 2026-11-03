@@ -19,6 +19,8 @@ type CtaBannerProps = {
   disclaimer?: string;
   buttonText?: string;
   buttonHref?: string;
+  /** Drop the bottom padding when a reviewer bar sits directly underneath. */
+  flushBottom?: boolean;
 };
 
 export function CtaBanner({
@@ -32,9 +34,15 @@ export function CtaBanner({
   disclaimer,
   buttonText = "Start Your Evaluation",
   buttonHref = "#how-it-works",
+  flushBottom = false,
 }: CtaBannerProps) {
   return (
-    <section className={`relative w-full ${bgColor} pt-0 lg:pt-[8.7vw] xl:pt-[125px] pb-16 sm:pb-20 lg:pb-24 xl:pb-[96px] overflow-visible ${className}`}>
+    <section className={cn(
+      "relative w-full overflow-visible pt-0 lg:pt-[8.7vw] xl:pt-[125px] pb-16 sm:pb-20 lg:pb-24 xl:pb-[96px]",
+      flushBottom && "pb-0 sm:pb-0 lg:pb-0 xl:pb-0",
+      bgColor,
+      className,
+    )}>
       {/* Full-width Teal Gradient Banner (Edge to Edge) */}
       <div
         className="w-full relative min-h-[404px] lg:min-h-[28vw] xl:min-h-[404px] color-gradient"

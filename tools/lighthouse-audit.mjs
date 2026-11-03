@@ -36,7 +36,7 @@ const DEFAULT_PAGES = [
   "/blog/esa-guide/",
   "/blog/esa-training/",
   "/blog/qualifying-conditions/",
-  "/consent-for-telehealth/",
+  "/telehealth-consent/",
   "/contact-us/",
   "/contributors/",
   "/contributors/awais-arshad/",

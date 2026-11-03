@@ -41,7 +41,7 @@ function StepArrow() {
 
 export function EsaRenewalHowItWorks() {
   return (
-    <section id="how-it-works" className="w-full bg-background py-16 sm:py-20 lg:py-24">
+    <section id="how-it-works" className="w-full bg-background pt-16 pb-0 sm:pt-20 lg:pt-24">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
         <div className="flex flex-col items-center gap-2 text-center max-w-[820px]">
           <h2 className="heading-h2 text-primary">How The ESA Letter Renewal Process Works?</h2>

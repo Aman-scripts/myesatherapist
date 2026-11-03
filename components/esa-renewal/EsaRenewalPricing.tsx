@@ -41,12 +41,12 @@ export function EsaRenewalPricing() {
       headingClassName="heading-h2"
       descriptionOverride="Understand your evaluation options and pricing before getting started"
       showTabs={false}
-      showDog
+      showDog={false}
       maxCards={2}
       headerHeight={220}
       cards={RENEWAL_CARDS}
       ctaHref="/pricing/#evaluation"
-      sectionClassName="pt-16 lg:pt-24 pb-8 lg:pb-12"
+      sectionClassName="pt-12 pb-8 lg:pb-12"
     />
   );
 }

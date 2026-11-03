@@ -9,7 +9,6 @@ import { Footer } from "@/components/layout/Footer";
 import { EsaOnlineHero } from "@/components/esa-online/EsaOnlineHero";
 import { EsaHousingBarriers } from "@/components/esa-housing/EsaHousingBarriers";
 import { EsaHousingLaws } from "@/components/esa-housing/EsaHousingLaws";
-import { EsaHousingLastLetter } from "@/components/esa-housing/EsaHousingLastLetter";
 import { EsaHousingHowItWorks } from "@/components/esa-housing/EsaHousingHowItWorks";
 import { EsaHousingMoveForward } from "@/components/esa-housing/EsaHousingMoveForward";
 import { EsaHousingConditions } from "@/components/esa-housing/EsaHousingConditions";
@@ -18,7 +17,6 @@ import { EsaHousingWhoCanIssue } from "@/components/esa-housing/EsaHousingWhoCan
 import { EsaHousingCredentials } from "@/components/esa-housing/EsaHousingCredentials";
 import { EsaHousingLandlordRefuse } from "@/components/esa-housing/EsaHousingLandlordRefuse";
 import { EsaHousingDenied } from "@/components/esa-housing/EsaHousingDenied";
-import { EsaHousingReviewer } from "@/components/esa-housing/EsaHousingReviewer";
 
 // Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
@@ -124,7 +122,6 @@ export default function EsaLetterForHousingPage() {
         />
         <EsaHousingBarriers />
         <EsaHousingLaws />
-        <EsaHousingLastLetter />
         <EsaHousingHowItWorks />
         <EsaHousingMoveForward />
         <EsaHousingConditions />
@@ -139,7 +136,6 @@ export default function EsaLetterForHousingPage() {
           subtitle="Everything you need to know about an ESA letter for housing"
           faqs={HOUSING_FAQS}
         />
-        <EsaHousingReviewer />
         <CtaBanner
           buttonHref="/pricing/"
           bgColor="bg-background"

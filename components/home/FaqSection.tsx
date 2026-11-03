@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
 
@@ -59,6 +60,7 @@ interface FaqSectionProps {
   subtitle?: string;
   faqs?: FaqItem[];
   bg?: string;
+  className?: string;
 }
 
 export function FaqSection({
@@ -67,6 +69,7 @@ export function FaqSection({
   subtitle = "Get answers to common questions about ESA letters and our service.",
   faqs: customFaqs,
   bg = "bg-background",
+  className,
 }: FaqSectionProps = {}) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
@@ -77,7 +80,7 @@ export function FaqSection({
   }));
 
   return (
-    <section id={id} className={`pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24 ${bg} relative`}>
+    <section id={id} className={cn("relative pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24", bg, className)}>
       {id !== "faq" && <div id="faq" className="sr-only" />}
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
         {/* Frame 1000011716: Section Header */}

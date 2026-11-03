@@ -1,6 +1,5 @@
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { CtaButton } from "@/components/esa-online/EsaOnlineShared";
 
 const ART = "/esa-guide/esa-guide_herosection.webp";
 const ART_ALT = "Woman relaxing at home with her golden retriever and her cat";
@@ -67,7 +66,6 @@ export function EsaGuideHero() {
               </p>
             </div>
           </div>
-          <CtaButton href="/esa-doctors/">Explore The Team</CtaButton>
         </div>
       </div>
     </section>

@@ -120,6 +120,7 @@ export default function PricingPage() {
           }
           buttonText="Start Your ESA Evaluation"
           buttonHref="#plans"
+          flushBottom
         />
 
         {/* 7. Content Reviewed by Doctor Badge */}

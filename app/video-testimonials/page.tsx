@@ -80,7 +80,7 @@ export default function VideoTestimonialsPage() {
           }
           buttonText="Start Your Evaluation"
           buttonHref="/pricing/"
-          className="pb-0"
+          flushBottom
         />
 
         {/* 5. Content Reviewed by Doctor Badge */}

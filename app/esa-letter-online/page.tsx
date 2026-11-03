@@ -118,6 +118,7 @@ export default function EsaLetterOnlinePage() {
         <FaqSection
           id="faq"
           bg="bg-background"
+          className="pt-12 sm:pt-12 lg:pt-12 xl:pt-12"
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about getting your ESA letter"
           faqs={[

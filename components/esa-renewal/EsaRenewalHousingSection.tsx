@@ -6,7 +6,7 @@ const TEAL_GRADIENT = "var(--color-gradient)";
 
 export function EsaRenewalHousingSection() {
   return (
-    <section className="w-full bg-background py-16 sm:py-20 lg:py-24">
+    <section className="w-full bg-background pt-12 pb-16 sm:pb-20 lg:pb-24">
       <div className="max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 sm:space-y-10">
         {/* Title */}
         <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-primary leading-tight sm:leading-[54px] lg:leading-[42px] xl:leading-[54px] tracking-tight max-w-[980px] mx-auto">

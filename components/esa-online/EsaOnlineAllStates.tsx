@@ -3,7 +3,7 @@ import { CtaButton, GoldCallout } from "./EsaOnlineShared";
 
 export function EsaOnlineAllStates() {
   return (
-    <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
+    <section className="w-full bg-background pt-14 pb-0 sm:pt-20 lg:pt-24">
       <div className="max-w-[1131px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-8 text-center">
         <div className="flex flex-col items-center gap-3">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] text-balance font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em] max-w-[915px]">
