@@ -302,20 +302,6 @@ export function EsaLawsStateSection() {
           <h2 className="font-heading font-bold text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.2] lg:leading-[54px] tracking-[-0.00015em] text-primary">
             ESA Laws by State
           </h2>
-          <div className="flex max-w-[1156px] flex-col gap-4">
-            <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text">
-              State laws can add requirements for emotional support animals, while housing providers must also follow applicable federal fair housing protections. Under federal law, ESAs do not have the public-access rights of service animals, so businesses generally do not have to admit an ESA.
-            </p>
-            <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text">
-              In housing, a person may request an assistance animal as a reasonable accommodation. If the disability or need for the animal is not obvious, a housing provider may request reliable information supporting the request. Federal law does not require a specific ESA letter format or a particular method for submitting an accommodation request.
-            </p>
-            <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text">
-              State requirements vary. Some states, like California require a minimum 30 days provider-client relationship, specific licensing requirements, or particular evaluation standards before documentation can be issued. Some states, like Florida, also impose penalties for falsely representing a service animal, although these laws generally concern service-animal misrepresentation rather than ESA requests.
-            </p>
-            <p className="font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text">
-              Because requirements can vary and change, renters should check the current federal, state, and local rules that apply to their housing situation.
-            </p>
-          </div>
         </div>
 
         <div className="w-full flex flex-col items-center gap-10 sm:gap-14">
