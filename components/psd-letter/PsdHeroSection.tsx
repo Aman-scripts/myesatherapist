@@ -20,9 +20,9 @@ const mobileStats = [
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
-const REFUND_NOTE = "If not approved after your evaluation? You get a full refund.";
+const REFUND_NOTE = "Not approved after your PSD evaluation? You get a full refund!";
 const HERO_SUBTITLE =
-  "Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter.";
+  "Connect with state-licensed mental health professionals to discuss your needs and explore if a psychiatric service dog letter may be appropriate for you.";
 
 export function PsdHeroSection() {
   return (
@@ -61,9 +61,9 @@ export function PsdHeroSection() {
           />
 
           <p className="body-small mt-4 max-w-[260px]">
-            If not approved after your evaluation?
+            Not approved after your PSD evaluation?
             <br />
-            You get a full refund.
+            You get a full refund!
           </p>
 
           <div className="mt-4 flex flex-col items-center gap-3">
