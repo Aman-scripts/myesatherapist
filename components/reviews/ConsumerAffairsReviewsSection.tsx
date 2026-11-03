@@ -86,14 +86,14 @@ export function ConsumerAffairsReviewsSection() {
         {/* Reviews Cards Grid: Matches Figma Frame 1261153766 */}
         <div className="flex flex-col items-center gap-10 lg:gap-[68px]">
           {/* Row 1: 3 cards on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-[24px] w-full max-w-[1280px] justify-items-center">
+          <div className="grid w-full max-w-[1280px] grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-[24px]">
             {rowOne.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
           </div>
 
           {/* Row 2: 1 card centered on desktop (or responsive) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-[24px] w-full max-w-[1280px] justify-items-center">
+          <div className="grid w-full max-w-[1280px] grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-[24px]">
             {rowTwo.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
@@ -110,11 +110,11 @@ function ReviewCard({
   review: CustomerReview;
 }) {
   return (
-    <div className="flex flex-col items-start gap-5 sm:gap-6 w-full max-w-[411px]">
+    <div className="flex h-full w-full max-w-[411px] flex-col items-start gap-5 sm:gap-6">
       {/* Speech Bubble Box */}
-      <div className="relative w-full">
+      <div className="relative flex w-full flex-1 flex-col">
         <div
-          className="w-full rounded-[20px] p-6 flex flex-col gap-3 min-h-[222px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-200 hover:shadow-lg"
+          className="flex min-h-[222px] w-full flex-1 flex-col gap-3 rounded-[20px] p-6 shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-200 hover:shadow-lg"
           style={{ backgroundImage: "var(--color-gradient)" }}
         >
           {/* Top row: Google / source logo + 5 Stars */}

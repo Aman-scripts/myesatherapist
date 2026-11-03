@@ -66,8 +66,8 @@ export function EsaOnlineEligible() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h3 className="font-heading text-2xl sm:text-[28px] lg:text-[length:min(1.94vw,28px)] font-bold text-body-text leading-9 lg:leading-[min(2.5vw,36px)]">
-              Conditions Commonly Evaluated by Clinicians
+            <h3 className="font-heading text-2xl sm:text-[28px] lg:text-[length:min(1.94vw,28px)] font-bold text-primary leading-9 lg:leading-[min(2.5vw,36px)]">
+              Qualifying Conditions
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 lg:gap-x-[min(1.1vw,16px)] lg:gap-y-[min(0.83vw,12px)]">
               {CONDITIONS.map((c) => (

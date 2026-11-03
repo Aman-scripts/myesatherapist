@@ -36,7 +36,7 @@ export function PricingPlansSection({
         descriptionOverride={PSD_INTRO}
         showTabs={false}
         maxCards={2}
-        popularCardIndex={-1}
+        popularCardIndex={1}
         showDog={false}
         sectionClassName="pt-6 pb-8 lg:pb-12"
       />

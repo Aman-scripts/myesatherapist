@@ -228,7 +228,7 @@ export const esaLetterOnlineSchema = {
     {
       "@type": "ItemList",
       "@id": "https://myesatherapist.com/esa-letter-online/#conditions",
-      "name": "Conditions Commonly Evaluated by Clinicians",
+      "name": "Qualifying Conditions",
       "itemListElement": [
         {
           "@type": "ListItem",

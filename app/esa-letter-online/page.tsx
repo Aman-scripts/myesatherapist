@@ -19,6 +19,7 @@ import { EsaOnlineAllStates } from "@/components/esa-online/EsaOnlineAllStates";
 
 // Shared Site Components
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { EsaOnlineComparison } from "@/components/esa-online/EsaOnlineComparison";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -102,6 +103,7 @@ export default function EsaLetterOnlinePage() {
             },
           ]}
         />
+        <EsaOnlineComparison />
         <TestimonialsSection />
         <EsaOnlineLegalStandards />
         <EsaOnlineHousingRights />

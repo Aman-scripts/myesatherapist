@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { CtaButton, LATO, TEAL_GRADIENT } from "./EsaOnlineShared";
 
@@ -30,69 +29,68 @@ export function EsaOnlineComparison() {
     <section id="compare" className="w-full bg-white py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1100px] mx-auto px-3 sm:px-6 lg:px-8 flex flex-col items-center gap-10">
         <div className="text-center flex flex-col gap-3 max-w-[944px]">
-          <h2 className="text-primary">
-            How My ESA Therapist Compare to Other ESA Letter Services
+          <h2 className="heading-h2">
+            How My ESA Therapist Compare To Other ESA Letter Services
           </h2>
-          <p className="text-body-text text-base sm:text-[20px] leading-8 italic" style={LATO}>
+          <p className="body-large">
             We set the standard for professional care, compliance, and trust.
           </p>
         </div>
 
-        {/* Comparison table */}
-        <div className="hidden lg:block relative w-full max-w-[1062px] rounded-[20px] bg-background shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
-          <div className="grid grid-cols-[1fr_130px_1fr] sm:grid-cols-[1fr_180px_1fr] md:grid-cols-[1fr_260px_1fr] lg:grid-cols-[1fr_297px_1fr]">
-            {/* Header row */}
-            <div className="flex h-[64px] items-center justify-center text-primary font-bold text-lg sm:text-2xl" style={LATO}>
-              FEATURES
+        {/* Desktop: cream frame with a raised center column */}
+        <div className="hidden lg:block relative w-full max-w-[1062px] pt-5 pb-5">
+          <div className="w-full rounded-[20px] bg-background shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
+            <div className="grid grid-cols-[1fr_297px_1fr] items-center h-[72px]">
+              <h3 className="heading-h3 text-center">FEATURES</h3>
+              <div />
+              <h3 className="heading-h3 text-center">OTHERS</h3>
             </div>
-            <div
-              className="-mt-3 flex h-[76px] items-center justify-center rounded-t-[20px] text-center text-background font-bold text-sm sm:text-xl md:text-2xl leading-tight px-2 shadow-[0px_4px_12px_rgba(0,0,0,0.2)] relative z-10"
-              style={{ backgroundImage: TEAL_GRADIENT, ...LATO }}
-            >
-              MY ESA THERAPIST
-            </div>
-            <div className="flex h-[64px] items-center justify-center text-primary font-bold text-lg sm:text-2xl" style={LATO}>
-              OTHERS
-            </div>
-
-            {ROWS.map((row, idx) => {
-              const last = idx === ROWS.length - 1;
-              return (
-                <React.Fragment key={row.feature}>
-                  <div className="flex h-[56px] sm:h-[64px] items-center gap-2 sm:gap-3 border-t border-[#C8B9A7]/50 pl-3 sm:pl-8 pr-1">
-                    <span className="hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-                      <Image quality={90} src={row.icon} alt={row.feature} width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
+            <div className="divide-y divide-[#C8B9A7]/60 border-t border-[#C8B9A7]/60 mx-6">
+              {ROWS.map((row) => (
+                <div key={row.feature} className="grid grid-cols-[1fr_297px_1fr] items-center h-[64px]">
+                  <div className="flex items-center gap-3 pl-6 pr-2 min-w-0">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
+                      <Image quality={90} src={row.icon} alt="" width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
                     </span>
-                    <span className="text-primary font-bold text-sm sm:text-xl leading-tight" style={LATO}>
+                    <h4 className="heading-h4 text-primary">
                       {row.feature}
-                    </span>
+                    </h4>
                   </div>
-                  <div
-                    className={`flex h-[56px] sm:h-[64px] items-center justify-center border-t border-white/15 relative z-10 shadow-[0px_4px_12px_rgba(0,0,0,0.15)] ${
-                      last ? "rounded-b-[20px]" : ""
-                    }`}
-                    style={{ backgroundImage: TEAL_GRADIENT }}
-                  >
-                    <GreenCheck />
-                  </div>
-                  <div className="flex h-[56px] sm:h-[64px] items-center justify-center border-t border-[#C8B9A7]/50 px-2">
-                    <div className="flex w-[130px] sm:w-[160px] items-center gap-2 sm:gap-3">
+                  <div />
+                  <div className="flex items-center justify-center px-2">
+                    <div className="flex w-[170px] items-center gap-3">
                       <Image
-            quality={90}
+                        quality={90}
                         src={`${P}-${row.other.type}-icon.svg`}
-                        alt={row.other.text}
+                        alt=""
                         width={22}
                         height={22}
                         className="h-[22px] w-[22px] shrink-0"
                       />
-                      <span className="text-body-text italic text-sm sm:text-lg" style={LATO}>
+                      <span className="text-body-text text-[18px] leading-7" style={LATO}>
                         {row.other.text}
                       </span>
                     </div>
                   </div>
-                </React.Fragment>
-              );
-            })}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="absolute left-1/2 top-0 bottom-0 z-10 w-[297px] -translate-x-1/2 overflow-hidden rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.12)]"
+            style={{ backgroundImage: TEAL_GRADIENT }}
+          >
+            <div className="flex h-[92px] items-center justify-center bg-[#1A3D4F]/35 pt-5">
+              <h3 className="heading-h3 text-background text-center">MY ESA THERAPIST</h3>
+            </div>
+            <div className="divide-y divide-white/15">
+              {ROWS.map((row) => (
+                <div key={row.feature} className="flex h-[64px] items-center justify-center">
+                  <GreenCheck />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -146,7 +144,12 @@ export function EsaOnlineComparison() {
           </div>
         </div>
 
-        <CtaButton href="/pricing/" variant="accent">Start your ESA Evaluation</CtaButton>
+        <div className="flex flex-col items-center gap-3">
+          <CtaButton variant="accent">Get Started</CtaButton>
+          <p className="body-small text-center">
+            If not approved after your evaluation? You get a full refund.
+          </p>
+        </div>
       </div>
     </section>
   );

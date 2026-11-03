@@ -135,7 +135,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               alt={doctor.name}
               fill
               priority
-              className="object-cover object-bottom sm:hidden"
+              className="object-contain object-bottom sm:hidden"
               sizes="280px"
             />
             <Image
@@ -143,7 +143,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               src={tabletSrc}
               alt={doctor.name}
               fill
-              className="object-cover object-bottom hidden sm:block"
+              className="object-contain object-bottom hidden sm:block"
               sizes="380px"
             />
           </div>
