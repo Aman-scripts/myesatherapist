@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { EXTRA_STATE_LAWS } from "@/data/esaLawsByState";
 
 interface StateLawEntry {
   slug: string;
   name: string;
-  icon: string;
+  icon?: string;
+  abbr?: string;
   bullets: string[];
 }
 
@@ -241,22 +243,36 @@ const STATE_LAWS: StateLawEntry[] = [
   },
 ];
 
+const ALL_STATE_LAWS: StateLawEntry[] = [
+  ...STATE_LAWS,
+  ...EXTRA_STATE_LAWS.map((entry) => ({
+    ...entry,
+    icon: `/esa-laws/esalaws-state-${entry.slug}.webp`,
+  })),
+].sort((a, b) => a.name.localeCompare(b.name, "en"));
+
 function StateCard({ entry }: { entry: StateLawEntry }) {
   return (
     <div className="w-full flex items-stretch rounded-[15px] overflow-hidden bg-[rgba(232,185,44,0.2)] [content-visibility:auto] [contain-intrinsic-size:1px_300px]">
       <div className="w-[17px] shrink-0 bg-accent rounded-l-[10px]" />
       <div className="flex-1 flex flex-col items-start gap-4 sm:gap-6 py-6 sm:py-8 pl-5 sm:pl-8 pr-5 sm:pr-[67px]">
         <div className="w-[57px] h-[57px] shrink-0 flex items-center justify-center">
-          <Image
-            quality={60}
-            loading="lazy"
-            src={entry.icon}
-            alt={`${entry.name} state map`}
-            width={57}
-            height={57}
-            className="h-[57px] w-[57px] object-contain"
-            style={{ width: 57, height: 57 }}
-          />
+          {entry.icon ? (
+            <Image
+              quality={60}
+              loading="lazy"
+              src={entry.icon}
+              alt={`${entry.name} state map`}
+              width={57}
+              height={57}
+              className="h-[57px] w-[57px] object-contain"
+              style={{ width: 57, height: 57 }}
+            />
+          ) : (
+            <span className="flex h-[57px] w-[57px] items-center justify-center rounded-[12px] bg-primary font-heading text-[16px] font-bold leading-none text-accent">
+              {entry.abbr}
+            </span>
+          )}
         </div>
         <div className="flex flex-col gap-2.5 sm:gap-3 w-full">
           <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
@@ -296,7 +312,7 @@ export function EsaLawsStateSection() {
             State-Specific ESA Laws and Requirements
           </h3>
           <div className="w-full grid grid-cols-1 gap-6 sm:gap-8">
-            {STATE_LAWS.map((entry) => (
+            {ALL_STATE_LAWS.map((entry) => (
               <StateCard key={entry.slug} entry={entry} />
             ))}
           </div>

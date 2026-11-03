@@ -90,6 +90,7 @@ export default function EsaLawsPage() {
           title="Ready to Start Your ESA Evaluation?"
           description="Understanding ESA laws is an important first step. If you believe an emotional support animal may be appropriate for your situation, you can start your professional evaluation today."
           buttonText="Start Your ESA Evaluation"
+          flushBottom
         />
 
         {/* 8. Reviewer Banner */}
