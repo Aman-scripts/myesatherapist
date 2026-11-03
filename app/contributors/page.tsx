@@ -9,7 +9,7 @@ import { EsaOnlineHero } from "@/components/esa-online/EsaOnlineHero";
 import { ContributorsSection } from "@/components/contributors/ContributorsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { AUTHORS, REVIEWERS } from "@/data/contributorsData";
+import { AUTHORS, REVIEWERS, CONTRIBUTORS_FAQS } from "@/data/contributorsData";
 
 // Schema.org Structured Data
 import { contributorsSchemas } from "@/data/schemas/contributorsSchema";
@@ -60,7 +60,7 @@ export default function ContributorsPage() {
       <main className="flex-1">
         <EsaOnlineHero
           title="Meet Our Contributors"
-          description="Thoughtful, evidence-informed content starts with people who care. Get to know the authors and reviewers who help make My ESA Therapist a trusted resource."
+          description="Our contributors combine professional expertise, clinical knowledge, and thoughtful insights to create reliable content that helps readers make informed decisions about emotional support animals."
           buttonText="Explore The Team"
           buttonHref="#authors"
           image="/contributors/contributor-hero-desktop.webp"
@@ -73,19 +73,25 @@ export default function ContributorsPage() {
         <ContributorsSection
           id="authors"
           title="Our Authors"
-          description="Our authors turn complex topics into useful, welcoming information for people and their support animals."
+          description="Meet the writers who turn complex mental health and ESA topics into clear, helpful, and easy-to-understand content."
           people={AUTHORS}
         />
 
         <ContributorsSection
           id="reviewers"
           title="Our Reviewers"
-          description="Our reviewers help keep each piece clear, responsible, and useful—so you can feel confident in the information you find here."
+          description="Our reviewers bring clinical and professional expertise to ensure our ESA-related content is accurate, well-researched, and aligned with current mental health and housing guidance."
           people={REVIEWERS}
           bg="bg-white"
         />
 
-        <FaqSection id="faq" bg="bg-background" />
+        <FaqSection
+          id="faq"
+          title="Frequently Asked Questions About Our Contributors"
+          subtitle="Learn about our contributors' qualifications, expertise, and roles in reviewing content."
+          faqs={CONTRIBUTORS_FAQS}
+          bg="bg-background"
+        />
 
         <CtaBanner
           title="Ready to Explore ESA Evaluation?"
