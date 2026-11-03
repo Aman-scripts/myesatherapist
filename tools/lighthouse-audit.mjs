@@ -71,7 +71,7 @@ const DEFAULT_PAGES = [
   "/blog/qualifying-conditions/conditions-that-may-qualify-for-an-esa/",
   "/blog/qualifying-conditions/esa-for-anxiety/",
   "/esa-doctors/dr-leslie-k-gamble/",
-  "/esa-doctors/dr-robert-staff/",
+  "/esa-doctors/robert-staaf/",
   "/author/allyson-valley/",
   "/author/mohammed-ziauddin/",
   "/policies/privacy-policy/",

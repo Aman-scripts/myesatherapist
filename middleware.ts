@@ -19,15 +19,25 @@ const ALIASES: Record<string, string> = {
   "/disclaimer-and-policies/": "/disclaimer/",
 };
 
+function applyStagingRobots(response: NextResponse, request: NextRequest) {
+  const host = request.headers.get("host") || "";
+  if (host.endsWith(".vercel.app")) {
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
+  return response;
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const lower = pathname.toLowerCase();
   const target = ALIASES[lower] ?? (lower !== pathname ? lower : null);
-  if (!target || target === pathname) return NextResponse.next();
+  if (!target || target === pathname) {
+    return applyStagingRobots(NextResponse.next(), request);
+  }
 
   const url = request.nextUrl.clone();
   url.pathname = target;
-  return NextResponse.redirect(url, 308);
+  return applyStagingRobots(NextResponse.redirect(url, 308), request);
 }
 
 export const config = {

@@ -3,7 +3,7 @@
  * Override with NEXT_PUBLIC_SITE_URL only for a temporary preview host.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://myesatherapist.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://myesatherapist.com"
 ).replace(/\/$/, "");
 
 export function assetUrl(path: string) {

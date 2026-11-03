@@ -145,10 +145,9 @@ export function hasSocialImage(key: string) {
  */
 export function socialImage(key: string, alt: string) {
   if (!hasSocialImage(key)) throw new Error(`Unknown social image: ${key}`);
-  const size = SIZES[key] ?? [1200, 800];
-  const url = assetUrl(imagePath(key));
+  const url = assetUrl("/og/default-1200x630.jpg");
   return {
-    openGraph: [{ url, width: size[0], height: size[1], alt, type: "image/webp" }] as NonNullable<
+    openGraph: [{ url, width: 1200, height: 630, alt, type: "image/jpeg" }] as NonNullable<
       NonNullable<Metadata["openGraph"]>["images"]
     >,
     twitter: [url] as NonNullable<NonNullable<Metadata["twitter"]>["images"]>,

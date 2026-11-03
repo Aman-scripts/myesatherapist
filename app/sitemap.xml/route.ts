@@ -102,7 +102,7 @@ function buildEntries(): SitemapEntry[] {
 
   // Authors and doctors
   for (const author of AUTHORS_DATA) {
-    entries.push({ path: `/author/${author.slug}/`, changefreq: "monthly", priority: 0.5 });
+    entries.push({ path: `/contributors/${author.slug}/`, changefreq: "monthly", priority: 0.5 });
   }
   for (const doctor of DOCTORS_DATA) {
     entries.push({ path: `/esa-doctors/${doctor.slug}/`, changefreq: "monthly", priority: 0.5 });
