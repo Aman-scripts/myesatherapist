@@ -45,15 +45,15 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 mb-10 lg:mb-12">
-          <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
-            <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden sm:aspect-auto sm:w-[200px] lg:w-[108px]">
+          <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden sm:flex-row">
+            <div className="relative mx-auto aspect-[193/354] h-[300px] w-auto shrink-0 overflow-hidden bg-[#F6F1EA] sm:mx-0 sm:h-auto sm:max-w-[42%] sm:min-w-[150px] sm:flex-none sm:self-stretch">
               <Image
-            quality={90}
+                quality={90}
                 src="/home/emotionalsupportnanimal.webp"
                 alt="Emotional Support Animals (ESA)"
                 fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 100vw, 25vw"
+                className="object-contain object-center"
+                sizes="(max-width: 1024px) 46vw, 280px"
               />
             </div>
 
@@ -88,15 +88,15 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row overflow-hidden">
-            <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden sm:aspect-auto sm:w-[200px] lg:w-[108px]">
+          <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden sm:flex-row">
+            <div className="relative mx-auto aspect-[193/354] h-[300px] w-auto shrink-0 overflow-hidden bg-[#F6F1EA] sm:mx-0 sm:h-auto sm:max-w-[42%] sm:min-w-[150px] sm:flex-none sm:self-stretch">
               <Image
-            quality={90}
+                quality={90}
                 src="/psd-letter/psychiatricservicedogs.webp"
                 alt="Psychiatric Service Dogs (PSD)"
                 fill
-                className="object-cover object-center"
-                sizes="(max-width: 640px) 100vw, 25vw"
+                className="object-contain object-center"
+                sizes="(max-width: 1024px) 46vw, 280px"
               />
             </div>
 

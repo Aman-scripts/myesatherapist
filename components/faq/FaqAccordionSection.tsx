@@ -29,7 +29,7 @@ export function FaqAccordionSection() {
         <div className="flex flex-col items-center gap-4 text-center max-w-[720px]">
           <h2 className="heading-h2 text-primary">Frequently Asked Questions</h2>
           <p className="body-large text-body-text">
-            Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.
+            Explore helpful information about ESA letters, mental health support, housing rights, and the evaluation process.
           </p>
         </div>
 

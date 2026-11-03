@@ -62,7 +62,8 @@ export default function BlogHubPage() {
 
         {/* 3. Can ESA Be Right For You Call to Action */}
         <CtaBanner
-          title="Can ESA be Right for you"
+          title="Could an ESA Be Right for You?"
+          titleClassName="normal-case"
           description="Learning about emotional support animals is the first step. When you're ready, speak with a licensed mental health professional to determine whether an ESA is appropriate for your individual needs."
           buttonText="Start Your Evaluation"
           buttonHref="/pricing/"

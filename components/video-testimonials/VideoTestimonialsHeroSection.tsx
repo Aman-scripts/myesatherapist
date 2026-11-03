@@ -5,7 +5,7 @@ import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
 const HEADING_LINE_1 = "Real Stories,";
 const HEADING_LINE_2 = "Real Impact";
 const DESCRIPTION =
-  "Hear directly from our clients about their journey with emotional support animal therapy and how we’ve helped them live better lives.";
+  "Hear directly from our clients as they share their experiences with My ESA Therapist and the support they received throughout their ESA evaluation journey.";
 
 export function VideoTestimonialsHeroSection() {
   return (

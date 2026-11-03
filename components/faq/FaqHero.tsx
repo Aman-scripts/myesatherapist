@@ -5,7 +5,7 @@ import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 const HEADING = "Need Clarity About ESA Letters?";
 
 const DESCRIPTION =
-  "Have questions about Emotional Support Animals? Find simple, reliable answers to help you understand the ESA process.";
+  "Have questions about emotional support animals? Find simple, reliable answers to help you understand the ESA process.";
 
 export function FaqHero() {
   return (

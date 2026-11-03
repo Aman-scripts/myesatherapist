@@ -47,7 +47,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
                   unoptimized
                   className="mt-0.5 h-5 w-5 shrink-0 object-contain"
                 />
-                <span className="font-sans text-xs sm:text-sm lg:text-[14px] font-semibold text-body-text leading-relaxed">
+                <span className="font-sans text-[16px] font-semibold text-body-text leading-relaxed">
                   {req}
                 </span>
               </div>
@@ -56,7 +56,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
 
           <div className="max-w-[711px] mx-auto relative overflow-hidden bg-background rounded-[10px] py-3.5 px-4 sm:px-6 shadow-xs flex items-center pl-6 sm:pl-7 text-left">
             <div className="absolute left-0 top-0 bottom-0 w-3 bg-accent rounded-l-[10px]" />
-            <p className="font-sans text-[11.5px] sm:text-xs lg:text-[14px] font-semibold text-body-text leading-relaxed">
+            <p className="font-sans text-[14px]! leading-[22px]! font-semibold text-body-text">
               <span className="font-bold text-primary uppercase tracking-wider">
                 {/^important\s*note/i.test(note) ? "IMPORTANT NOTE - " : "IMPORTANT - "}
               </span>

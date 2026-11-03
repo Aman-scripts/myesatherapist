@@ -142,7 +142,6 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <StateReviewerBanner updatedDate="November 3, 2026" />
         <div id="benefits"><StateBenefitsSection data={data} /></div>
         <div id="laws"><StateLawsSection data={data} /></div>
         <div id="scams"><StateScamsSection data={data} /></div>
@@ -178,6 +177,7 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
+        <StateReviewerBanner updatedDate="November 3, 2026" />
       </main>
 
       <Footer />
