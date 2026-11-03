@@ -198,7 +198,6 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
           buttonHref={article.bottomCta?.buttonHref || "#faq"}
           note={article.bottomCta?.note}
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
         />
       </main>
 

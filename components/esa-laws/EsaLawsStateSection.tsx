@@ -259,7 +259,7 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
         <div className="w-[57px] h-[57px] shrink-0 flex items-center justify-center">
           {entry.icon ? (
             <Image
-              quality={60}
+              quality={90}
               loading="lazy"
               src={entry.icon}
               alt={`${entry.name} state map`}

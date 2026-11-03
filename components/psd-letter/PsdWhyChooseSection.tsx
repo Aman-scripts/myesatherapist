@@ -54,7 +54,7 @@ export function PsdWhyChooseSection() {
             >
               <div className="flex h-full min-h-[228px] w-full flex-col items-center rounded-[20px] bg-white px-6 pb-8 pt-12 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] sm:px-8">
                 <div className="absolute -top-6 left-1/2 flex h-[52px] w-[52px] -translate-x-1/2 items-center justify-center rounded-full border border-[#E2E8F0] bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] sm:-top-7 sm:h-[58px] sm:w-[58px] lg:h-[64px] lg:w-[64px]">
-                  <Image
+                  <Image quality={90}
                     src={item.icon}
                     alt=""
                     width={32}

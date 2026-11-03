@@ -19,7 +19,7 @@ export function WhatIsPsdSection() {
           />
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (90.5% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[90.5%] w-[54px] h-[54px] z-30 pointer-events-none">
-            <Image
+            <Image quality={90}
               src="/psd-letter/psd-dogphyscarist-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
@@ -44,7 +44,7 @@ export function WhatIsPsdSection() {
           />
           {/* Centered Heart-Paw Badge Icon directly on Golden Curved Line (93.3% from top) */}
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-[93.3%] w-[68px] h-[68px] z-30 pointer-events-none">
-            <Image
+            <Image quality={90}
               src="/psd-letter/psd-dogphyscarist-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
@@ -150,7 +150,7 @@ export function WhatIsPsdSection() {
 
               {/* Decorative Curve Line (Vector 8: left 0px, top 9px, width 228px, height 698px) */}
               <div className="absolute left-0 top-[9px] w-[228px] h-[698px] z-20 pointer-events-none">
-                <Image
+                <Image quality={90}
                   src="/psd-letter/psd-dogphyscarist-section-line.svg"
                   alt="Decorative line"
                   width={228}
@@ -162,7 +162,7 @@ export function WhatIsPsdSection() {
 
               {/* Badge (Frame 1000011731: left 27px, top 345px, width 73px, height 73px) */}
               <div className="absolute left-[27px] top-[345px] w-[73px] h-[73px] z-30 pointer-events-none drop-shadow-md">
-                <Image
+                <Image quality={90}
                   src="/psd-letter/psd-dogphyscarist-section-icon.webp"
                   alt="Heart Paw Badge"
                   width={73}

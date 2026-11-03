@@ -34,7 +34,7 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
               >
                 <div className="flex items-center gap-3.5 w-full">
                   <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 shrink-0">
-                    <Image
+                    <Image quality={90}
                       src={city.icon}
                       alt={`${city.name} Map`}
                       fill
@@ -63,7 +63,7 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
                 className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 lg:gap-4 text-center sm:text-left"
               >
                 <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-[68px] lg:h-[68px] shrink-0">
-                  <Image
+                  <Image quality={90}
                     src={city.icon}
                     alt={`${city.name} Map`}
                     fill

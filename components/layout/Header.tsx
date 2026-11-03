@@ -149,7 +149,9 @@ export function Header() {
   // Check route conditions
   const isPsd = pathname === "/psd-letter/";
   const isStateHero = /^\/esa-letter-(?!online\/|for-housing\/|renewal\/)[^/]+\/?$/.test(pathname || "");
+  const isStateDirectory = pathname === "/state/" || pathname === "/states/";
   const isDoctors = pathname === "/esa-doctors/" || pathname === "/esa-doctors/";
+  const isAbout = pathname === "/about-us/";
   const isLegalReviewer =
     pathname?.includes("legal-reviewer") ||
     pathname?.includes("reviewer") ||
@@ -164,7 +166,7 @@ export function Header() {
 
           {/* Logo (ESA LOGO FINAL-01 1: 171px x 71px) */}
           <Link prefetch={false} href="/" className="flex items-center shrink-0">
-            <Image
+            <Image quality={90}
               src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
               width={171}
@@ -391,10 +393,14 @@ export function Header() {
         </div>
       )}
     </header>
-    {/* State heroes render the trail inside the hero. Other pages overlay it on the hero. */}
-    {!isStateHero && !isDoctors && (
+    {/* Kept on the same 1440px column as the hero content. State and doctor heroes place their own. */}
+    {!isStateHero && !isDoctors && !isStateDirectory && !isAbout && (
       <div className="relative z-40 h-0">
-        <SiteBreadcrumbs className="absolute inset-x-0 top-0 px-4 pt-3 sm:px-6 lg:px-[80px] lg:pt-4" />
+        <div className="absolute inset-x-0 top-0">
+          <div className="mx-auto w-full max-w-[1440px] px-4 pt-3 sm:px-6 lg:px-[80px] lg:pt-4">
+            <SiteBreadcrumbs />
+          </div>
+        </div>
       </div>
     )}
     </>

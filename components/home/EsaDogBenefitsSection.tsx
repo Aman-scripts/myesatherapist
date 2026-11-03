@@ -62,29 +62,9 @@ const BENEFITS: BenefitCard[] = [
 
 export function EsaDogBenefitsSection() {
   return (
-    <section className="relative w-full bg-white pt-0 lg:pt-24 pb-14 sm:pb-16 lg:pb-0 overflow-hidden">
-      {/* Mobile and tablet photo sits above the copy. Desktop keeps the banner below the cards. */}
-      <div className="lg:hidden w-full">
-        <Image
-          src="/home/homepage_benefits_section_mobile.png"
-          alt="Woman smiling with her emotional support dog at home"
-          width={390}
-          height={363}
-          className="sm:hidden block w-full h-auto"
-          sizes="100vw"
-        />
-        <Image
-          src="/home/homepage_benefits_section_tablet.png"
-          alt="Woman smiling with her emotional support dog at home"
-          width={834}
-          height={833}
-          className="hidden sm:block w-full h-auto"
-          sizes="100vw"
-        />
-      </div>
-
+    <section className="relative w-full bg-white py-14 sm:py-16 lg:py-24 overflow-hidden">
       {/* Container matching Figma 1281px content width */}
-      <div className="max-w-[1281px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 lg:pt-0">
+      <div className="max-w-[1281px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-14 lg:mb-16 space-y-3 max-w-[680px] mx-auto">
           <h2 className="heading-h2 capitalize">
@@ -125,34 +105,6 @@ export function EsaDogBenefitsSection() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Bottom Full-Width Banner Image with Floating Badge at top center */}
-      <div className="relative hidden w-full lg:block mt-14 sm:mt-16 lg:mt-20">
-        {/* Floating Top Badge with ESA Paw Heart Icon */}
-        <div className="absolute left-[26.4%] top-[11%] z-20 flex h-[64px] w-[64px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#E2E8F0] bg-white p-2.5 shadow-[0_4px_16px_rgba(0,0,0,0.12)] sm:h-[72px] sm:w-[72px]">
-          <Image
-            quality={90}
-            src="/home/doyouneed-emotional-support-icon.svg"
-            alt="ESA Heart Paw Badge"
-            width={48}
-            height={48}
-            className="w-full h-full object-contain"
-          />
-        </div>
-
-        {/* Wide Banner Image (Figma 1440x710 Image Mask) */}
-        <div className="relative w-full max-w-[1440px] mx-auto h-[320px] sm:h-[480px] lg:h-[620px] xl:h-[710px] overflow-hidden">
-          <Image
-            quality={90}
-            src="/home/myesatherapist_homepage_benefitssection.webp"
-            alt="Woman smiling affectionately at her emotional support dog on the couch"
-            fill
-            className="object-cover object-top"
-            sizes="(min-width: 1440px) 1440px, 100vw"
-            loading="lazy"
-          />
         </div>
       </div>
     </section>

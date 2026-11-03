@@ -8,7 +8,6 @@ import { StatesHeroSection } from "@/components/states/StatesHeroSection";
 import { FederalHousingRulesSection } from "@/components/states/FederalHousingRulesSection";
 import { ChooseStateGridSection } from "@/components/states/ChooseStateGridSection";
 import { StateRulesTable } from "@/components/states/StateRulesTable";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { statesSchema } from "@/data/schemas/statesSchema";
@@ -107,12 +106,6 @@ export default function StatesDirectoryPage() {
 
         {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonText="Start your ESA Evaluation" buttonHref="/pricing/" />
-        <StateReviewerBanner
-          reviewerName="Robert Staaf"
-          reviewerImage="/images/doctors/Robert_Staff_Dr.webp"
-          reviewerLinkedin="https://www.linkedin.com/in/robert-staaf-b57b53333/"
-          updatedDate="November 3, 2026"
-        />
       </main>
 
       <Footer />

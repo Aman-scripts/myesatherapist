@@ -7,8 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { FaqHero } from "@/components/faq/FaqHero";
 import { FaqAccordionSection } from "@/components/faq/FaqAccordionSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
-
 // Schema.org Structured Data
 import { frequentlyAskedQuestionsSchemas } from "@/data/schemas/frequentlyAskedQuestionsSchema";
 
@@ -74,8 +72,6 @@ export default function FaqPage() {
           flushBottom
         />
 
-        {/* 4. Content Reviewed by Doctor Badge (Between CTA & Footer) */}
-        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

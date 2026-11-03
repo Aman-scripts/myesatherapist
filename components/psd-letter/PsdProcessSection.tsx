@@ -60,7 +60,7 @@ export function PsdProcessSection() {
 
           {/* Floating Circle Badge - Top Right Edge */}
           <div className="absolute top-[18%] -right-3.5 sm:-right-5 lg:-right-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
-            <Image
+            <Image quality={90}
               src="/psd-letter/psdprocess-section-icon.webp"
               alt="Psychiatric service dog support"
               width={73}
@@ -72,7 +72,7 @@ export function PsdProcessSection() {
 
           {/* Floating Circle Badge - Bottom Left Edge */}
           <div className="absolute bottom-[18%] -left-3.5 sm:-left-5 lg:-left-7 w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] lg:w-[73px] lg:h-[73px] z-20 pointer-events-none drop-shadow-md">
-            <Image
+            <Image quality={90}
               src="/psd-letter/psdprocess-section-icon.webp"
               alt="Psychiatric service dog support"
               width={73}
@@ -97,7 +97,7 @@ export function PsdProcessSection() {
 
               {/* Step Icon Container */}
               <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-full bg-[#AEBBBE33] flex items-center justify-center mb-4 sm:mb-5 mt-2 sm:mt-3 shrink-0">
-                <Image
+                <Image quality={90}
                   src={step.icon}
                   alt={step.title}
                   width={32}

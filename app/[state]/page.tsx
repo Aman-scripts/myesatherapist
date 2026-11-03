@@ -20,7 +20,6 @@ import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
 import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
 import { PricingSection } from "@/components/home/PricingSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { StateTableOfContents } from "@/components/state/StateTableOfContents";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
 import { TherapistsSection } from "@/components/home/TherapistsSection";
@@ -177,12 +176,6 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <StateReviewerBanner
-          reviewerName="Robert Staaf"
-          reviewerImage="/images/doctors/Robert_Staff_Dr.webp"
-          reviewerLinkedin="https://www.linkedin.com/in/robert-staaf-b57b53333/"
-          updatedDate="November 3, 2026"
-        />
       </main>
 
       <Footer />

@@ -60,7 +60,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
           <div className="w-3.5 sm:w-4 bg-[#D9383A] shrink-0" />
           <div className="p-4 sm:p-5 lg:p-6 flex items-center gap-3.5 sm:gap-4 flex-1">
             <div className="relative w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 shrink-0">
-              <Image
+              <Image quality={90}
                 src="/states/california-scams-alert-icon.svg"
                 alt="Alert Icon"
                 fill

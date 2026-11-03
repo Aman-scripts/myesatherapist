@@ -146,7 +146,6 @@ export default function AboutUsPage() {
           buttonText="Start Evaluation"
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16 lg:pb-24"
         />
       </main>
       <Footer bgColor="bg-background" />

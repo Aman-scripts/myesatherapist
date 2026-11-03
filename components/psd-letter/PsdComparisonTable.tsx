@@ -256,7 +256,7 @@ export function PsdComparisonTable() {
               {psdComparisonRows.map((row, idx) => (
                 <div key={idx} className="flex items-center gap-3 h-[62px] px-5 lg:px-6 bg-white">
                   <div className="w-[32px] h-[32px] rounded-full bg-background border border-[#E2E8F0] shadow-xs flex items-center justify-center shrink-0">
-                    <Image
+                    <Image quality={90}
                       src={row.icon}
                       alt={row.feature}
                       width={24}

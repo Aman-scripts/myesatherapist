@@ -38,7 +38,7 @@ export function VideoTestimonialsTrustBar() {
             )}
             <div className="flex items-center justify-center gap-3 sm:gap-4 w-full py-2 sm:py-0 sm:px-5">
               <div className={`relative shrink-0 ${item.iconClass}`}>
-                <Image
+                <Image quality={90}
                   src={item.src}
                   alt={item.alt}
                   fill

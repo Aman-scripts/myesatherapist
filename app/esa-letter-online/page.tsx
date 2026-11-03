@@ -157,7 +157,6 @@ export default function EsaLetterOnlinePage() {
         <CtaBanner
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
           title="Ready to Protect Your Housing Rights?"
           description="If you believe an emotional support animal is appropriate for your situation, you can begin a professional consultation today. ESA letters are issued only by licensed mental health providers following a professional evaluation."
           buttonText="Start Your Confidential ESA Evaluation"

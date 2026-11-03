@@ -2,6 +2,7 @@
 import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 export function AboutHeroSection() {
   return (
@@ -14,7 +15,7 @@ export function AboutHeroSection() {
       <div className="block sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={90}
           src="/Hero_image_for_mobile_all.webp"
           alt="About My ESA Therapist"
           fill
@@ -23,7 +24,8 @@ export function AboutHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="relative z-10 px-6 pt-[80px] pb-[88px] text-center flex flex-col items-center space-y-3">
+        <div className="relative z-10 px-6 pt-5 pb-[88px] text-center flex flex-col items-center space-y-3">
+          <SiteBreadcrumbs className="self-start" includeSchema={false} />
           <p aria-hidden="true" className="heading-h1 text-primary max-w-[280px] text-[32px]! leading-[40px]!">
             About My ESA
             <br />
@@ -42,7 +44,7 @@ export function AboutHeroSection() {
       <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1226] min-h-[720px] max-h-[960px] overflow-hidden">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={80}
+          quality={90}
           src="/about-us/about_us-tablet_hero_section.webp"
           alt="About My ESA Therapist"
           fill
@@ -51,7 +53,8 @@ export function AboutHeroSection() {
         />
 
         {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-8 pt-16 text-center flex flex-col items-center z-10 space-y-4 max-w-[620px] mx-auto">
+        <div className="absolute inset-x-0 top-0 px-8 pt-8 text-center flex flex-col items-center z-10 space-y-4 max-w-[620px] mx-auto">
+          <SiteBreadcrumbs className="self-start" includeSchema={false} />
           <p aria-hidden="true" className="heading-h1 text-primary">
             About My ESA Therapist
           </p>
@@ -84,6 +87,7 @@ export function AboutHeroSection() {
         <div className="relative w-[1440px] h-[640px] flex items-center">
           <div className="relative z-10 px-[82px] py-16 w-full">
             <div className="w-[513px] flex flex-col items-start gap-4 text-left">
+              <SiteBreadcrumbs className="-mb-1" />
               <p aria-hidden="true" className="heading-h1 text-primary capitalize leading-[58px]">
                 About My ESA Therapist
               </p>

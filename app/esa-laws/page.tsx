@@ -12,8 +12,6 @@ import { EsaLawsSituationSection } from "@/components/esa-laws/EsaLawsSituationS
 import { FaqSection } from "@/components/home/FaqSection";
 import { ESA_LAWS_FAQS } from "@/components/esa-laws/EsaLawsFaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
-
 import { esaLawsSchema } from "@/data/schemas/esaLawsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -93,8 +91,6 @@ export default function EsaLawsPage() {
           flushBottom
         />
 
-        {/* 8. Reviewer Banner */}
-        <StateReviewerBanner />
       </main>
 
       <Footer />

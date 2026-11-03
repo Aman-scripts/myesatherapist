@@ -78,7 +78,6 @@ export default function ReviewsPage() {
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
           buttonText="Start your Evaluation"
           buttonHref="#trustpilot-reviews"
-          className="pb-12 sm:pb-16 lg:pb-24"
         />
       </main>
 

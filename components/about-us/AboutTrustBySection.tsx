@@ -40,7 +40,7 @@ export function AboutTrustBySection() {
             <div key={idx} className="relative flex h-full flex-col items-center">
               {/* Top Floating White Badge (Figma Frame 1000011685, 74.56x74.56px) */}
               <div className="absolute -top-9 z-10 w-[74px] h-[74px] rounded-full bg-white shadow-[0px_2px_6px_rgba(0,0,0,0.18)] flex items-center justify-center p-4 border border-[#EAE5DC]/60">
-                <Image
+                <Image quality={90}
                   src={card.icon}
                   alt={card.title}
                   width={34}

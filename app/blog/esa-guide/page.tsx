@@ -130,7 +130,6 @@ export default function EsaGuidePage() {
         <CtaBanner
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
         />
       </main>
 

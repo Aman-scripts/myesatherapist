@@ -127,7 +127,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
             {differentiators.map((item, idx) => (
               <div key={idx} className="flex items-start gap-3.5 w-full">
                 {/* Frame 1000011979: Gradient Check Icon */}
-                <Image
+                <Image quality={90}
                   src="/esa-icons/Icon-46.svg"
                   alt="Included"
                   width={20}

@@ -93,7 +93,7 @@ export function EsaRenewalWhySection() {
                 <div className="flex flex-1 flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-[1.7vw] xl:gap-6 py-6 lg:py-[1.8vw] xl:py-6 pl-5 sm:pl-6 lg:pl-[1.7vw] xl:pl-6 pr-5 sm:pr-8 lg:pr-[2vw] xl:pr-8">
                   {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[66px] h-[66px] sm:w-[74.56px] sm:h-[74.56px] lg:w-[4.6vw] lg:h-[4.6vw] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
-                    <Image
+                    <Image quality={90}
                       src={card.icon}
                       alt={card.title}
                       width={32}

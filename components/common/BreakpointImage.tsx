@@ -19,8 +19,8 @@ type BreakpointImageProps = Omit<ImageProps, "priority" | "loading" | "fetchPrio
  * with the matching media query, giving instant LCP discovery without downloading
  * inactive variants.
  */
-export function BreakpointImage({ media, alt, preload = true, ...rest }: BreakpointImageProps) {
-  const { props } = getImageProps({ ...rest, alt, loading: "eager", fetchPriority: "high" });
+export function BreakpointImage({ media, alt, preload = true, quality = 90, ...rest }: BreakpointImageProps) {
+  const { props } = getImageProps({ ...rest, alt, quality, loading: "eager", fetchPriority: "high" });
 
   return (
     <>

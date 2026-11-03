@@ -83,7 +83,7 @@ export function MobileHeroActionButtons({
           }`}
         >
           <div className="flex items-center gap-2 max-w-full">
-            <Image
+            <Image quality={90}
               src="/esa-icons/Icon-37.svg"
               alt="Location"
               width={20}

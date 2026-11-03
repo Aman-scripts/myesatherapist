@@ -12,6 +12,7 @@ import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionBut
 import { CtaButton } from "@/components/common/CtaButton";
 import { promptSelectState } from "@/components/common/promptSelectState";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const POPULAR_STATES = STATE_INDEX;
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -71,7 +72,7 @@ export function StatesHeroSection() {
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <BreakpointImage
             media="(max-width: 639px)"
-            quality={80}
+            quality={90}
             src="/Hero_image_for_mobile_all.webp"
             alt="ESA Evaluation For Every State"
             fill
@@ -80,7 +81,8 @@ export function StatesHeroSection() {
           />
         </div>
 
-        <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
+        <div className="relative z-10 px-4 pt-4 pb-10 text-center flex flex-col items-center">
+          <SiteBreadcrumbs className="mb-4 self-start" includeSchema={false} />
           <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">
             ESA Evaluation For
             <br />
@@ -136,7 +138,7 @@ export function StatesHeroSection() {
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <BreakpointImage
             media="(min-width: 640px) and (max-width: 1023px)"
-            quality={80}
+            quality={90}
             src="/states/state_hero-section-tablet.webp"
             alt="ESA Evaluation For Every State"
             fill
@@ -146,7 +148,8 @@ export function StatesHeroSection() {
         </div>
 
         {/* Content Container (Centered on top) */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-12 text-center flex flex-col items-center z-10">
+        <div className="absolute inset-x-0 top-0 px-6 pt-5 text-center flex flex-col items-center z-10">
+          <SiteBreadcrumbs className="mb-4 self-start" includeSchema={false} />
           
           {/* Stat Pills at top */}
           <div className="flex items-center justify-center gap-3 flex-wrap">
@@ -195,7 +198,7 @@ export function StatesHeroSection() {
                 className="flex items-center justify-between gap-3 px-6 h-[48px] rounded-[30px] bg-background body-text shadow-sm hover:bg-white transition-colors border border-[#EAE5DC] min-w-[200px]"
               >
                 <span className="flex items-center gap-2">
-                  <Image
+                  <Image quality={90}
                     src="/ESA ICons/Icon-37.svg"
                     alt="Location"
                     width={20}
@@ -267,7 +270,7 @@ export function StatesHeroSection() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={80}
+            quality={90}
             src="/states/statepage_hero-section.webp"
             alt="ESA Evaluation For Every State"
             fill
@@ -288,7 +291,7 @@ export function StatesHeroSection() {
           >
             <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
               <Image
-                quality={80}
+                quality={90}
                 src="/ESA ICons/Icon-37.svg"
                 alt="Available in all 50 states"
                 width={28}
@@ -308,7 +311,8 @@ export function StatesHeroSection() {
           </div>
 
           {/* Inner Desktop Container */}
-          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-16 py-16">
+          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-16 pt-8 pb-16">
+            <SiteBreadcrumbs className="mb-6" />
             <div className="max-w-[553px] flex flex-col gap-6">
               
               {/* Top 3 Pill Stat Badges (Frame 1000011902: 552px width, 12px gap) */}
@@ -365,7 +369,7 @@ export function StatesHeroSection() {
                       aria-expanded={isDropdownOpen}
                     >
                       <div className="flex items-center gap-2.5">
-                        <Image
+                        <Image quality={90}
                           src="/ESA ICons/Icon-37.svg"
                           alt="Location pin"
                           width={20}

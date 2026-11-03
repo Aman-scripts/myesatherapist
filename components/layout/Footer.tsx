@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CtaButton } from "@/components/common/CtaButton";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteReviewerBanner } from "@/components/state/SiteReviewerBanner";
 
 const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #000000 100%)";
 
@@ -62,7 +63,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
         {/* Logo Card with Gold Border (Frame 1000011910) */}
         <Link prefetch={false} href="/" aria-label="My ESA Therapist home" className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-accent p-3 flex items-center justify-center shadow-xl">
           <div className="relative w-full h-full">
-            <Image
+            <Image quality={90}
               src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
               fill
@@ -205,7 +206,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
             {/* Phone */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
-                <Image
+                <Image quality={90}
                   src="/common/footer-phone-icon.svg"
                   alt="Phone"
                   width={14}
@@ -227,7 +228,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
             {/* Email */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
-                <Image
+                <Image quality={90}
                   src="/common/footer-email-icon.svg"
                   alt="Email"
                   width={14}
@@ -249,7 +250,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
             {/* Hours */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
-                <Image
+                <Image quality={90}
                   src="/common/footer-clock-icon.svg"
                   alt="Support hours"
                   width={14}
@@ -271,7 +272,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
             {/* Location */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
-                <Image
+                <Image quality={90}
                   src="/common/footer-location-icon.svg"
                   alt="Service area"
                   width={14}
@@ -322,6 +323,8 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
 
 export function Footer({ bgColor = "bg-background" }: { bgColor?: string }) {
   return (
+    <>
+    <SiteReviewerBanner />
     <footer className={`w-full ${bgColor} pt-4 sm:pt-6 lg:pt-8`}>
       {/* ---------------------------------------------------- */}
       {/* 1. DESKTOP FOOTER (>= 1024px)                        */}
@@ -357,5 +360,6 @@ export function Footer({ bgColor = "bg-background" }: { bgColor?: string }) {
         </div>
       </div>
     </footer>
+    </>
   );
 }

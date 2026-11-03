@@ -1972,7 +1972,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
-    emotionalBenefitsHeading: "Mental Health and\nEmotional Support\nBenefits",
+    emotionalBenefitsHeading: "Mental Health and\nEmotional Support",
     emotionalBenefits: [
       {
         title: "Stronger Sense of Safety",

@@ -35,7 +35,6 @@ export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
         description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
         buttonText="Start your Evaluation"
         buttonHref="/pricing/"
-        className="pb-14 sm:pb-20 lg:pb-28"
       />
     </div>
   );

@@ -13,7 +13,6 @@ import { PricingWhyTrustSection } from "@/components/pricing/PricingWhyTrustSect
 // Common Shared Components from Homepage / Project
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { pricingSchema } from "@/data/schemas/pricingSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 import { CHARGE_AND_REFUND, pageSocial } from "@/lib/seo";
@@ -117,8 +116,6 @@ export default function PricingPage() {
           flushBottom
         />
 
-        {/* 7. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

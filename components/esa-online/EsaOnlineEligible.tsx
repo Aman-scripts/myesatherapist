@@ -75,7 +75,7 @@ export function EsaOnlineEligible() {
                   key={c.label}
                   className="flex items-center gap-4 lg:gap-[min(1.1vw,16px)] rounded-[14px] bg-white px-4 py-3 lg:px-[min(1.1vw,16px)] lg:py-[min(0.83vw,12px)] shadow-[0px_1px_5px_rgba(0,0,0,0.12)] border border-primary/5"
                 >
-                  <Image
+                  <Image quality={90}
                     src={c.icon}
                     alt={c.label}
                     width={28}
@@ -108,7 +108,7 @@ export function EsaOnlineEligible() {
                   key={factor.text}
                   className="flex items-center gap-4 lg:gap-[min(1.1vw,16px)] rounded-[14px] bg-white px-4 py-3 lg:px-[min(1.1vw,16px)] lg:py-[min(0.83vw,12px)] shadow-[0px_1px_5px_rgba(0,0,0,0.12)] border border-primary/5 text-left"
                 >
-                  <Image
+                  <Image quality={90}
                     src={factor.icon}
                     alt={factor.text}
                     width={28}

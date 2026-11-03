@@ -56,7 +56,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
       <div className="absolute inset-0 pointer-events-none sm:hidden">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={90}
           src="/Hero_image_for_mobile_all.webp"
           alt=""
           fill

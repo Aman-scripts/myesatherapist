@@ -63,7 +63,7 @@ export function HeroStateDropdown({
         aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || placeholder}` : placeholder}
         className={buttonClassName}
       >
-        <Image
+        <Image quality={90}
           src="/esa-icons/Icon-37.svg"
           alt="Location"
           width={iconSize}

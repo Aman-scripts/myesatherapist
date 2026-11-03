@@ -38,7 +38,7 @@ export function CtaBanner({
 }: CtaBannerProps) {
   return (
     <section className={cn(
-      "relative w-full overflow-visible pt-0 lg:pt-[8.7vw] xl:pt-[125px] pb-16 sm:pb-20 lg:pb-24 xl:pb-[96px]",
+      "relative w-full overflow-visible pt-0 lg:pt-[8.7vw] xl:pt-[125px] pb-0",
       flushBottom && "pb-0 sm:pb-0 lg:pb-0 xl:pb-0",
       bgColor,
       className,

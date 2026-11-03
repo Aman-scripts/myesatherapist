@@ -111,7 +111,7 @@ export default function AlabamaEsaLawsPage() {
 
         <FaqSection id="faq" bg="bg-background" />
 
-        <CtaBanner buttonHref="/pricing/" bgColor="bg-background" className="pb-12 sm:pb-16" />
+        <CtaBanner buttonHref="/pricing/" bgColor="bg-background" />
       </main>
 
       <Footer />

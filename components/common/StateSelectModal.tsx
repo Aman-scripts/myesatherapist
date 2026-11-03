@@ -106,7 +106,7 @@ export function StateSelectModal() {
         </div>
 
         <p className="body-small text-body-text mt-4 flex items-center justify-center gap-2 text-center">
-          <Image
+          <Image quality={90}
             src="/esa-icons/Icon-46.svg"
             alt=""
             width={16}

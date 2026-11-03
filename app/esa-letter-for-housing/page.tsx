@@ -139,7 +139,6 @@ export default function EsaLetterForHousingPage() {
         <CtaBanner
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
           title="Ready to Start Your ESA Evaluation?"
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
           buttonText="Start Your ESA Evaluation"

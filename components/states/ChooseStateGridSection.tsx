@@ -66,7 +66,7 @@ export function ChooseStateGridSection({
               <div className="flex flex-row items-center gap-2 sm:gap-2.5 lg:gap-[8px] w-full overflow-hidden">
                 {/* fi_3177361: Pin Icon */}
                 <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[32px] lg:h-[32px] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                  <Image
+                  <Image quality={90}
                     src="/esa-icons/Icon-37.svg"
                     alt=""
                     width={32}

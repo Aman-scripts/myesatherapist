@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 
 // PSD Letter Dedicated Components
 import { PsdHeroSection } from "@/components/psd-letter/PsdHeroSection";
-import { PsdTrustBarSection } from "@/components/psd-letter/PsdTrustBarSection";
+import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection";
 import { WhatIsPsdSection } from "@/components/psd-letter/WhatIsPsdSection";
 import { PsdBenefitsSection } from "@/components/psd-letter/PsdBenefitsSection";
 import { PsdProcessSection } from "@/components/psd-letter/PsdProcessSection";
@@ -20,7 +20,6 @@ import { PsdCtaSection } from "@/components/psd-letter/PsdCtaSection";
 // Reused Common Components from Homepage
 import { PricingSection } from "@/components/home/PricingSection";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { psdLetterSchema } from "@/data/schemas/psdLetterSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -116,8 +115,7 @@ export default function PsdLetterPage() {
         {/* 1. PSD Hero Section */}
         <PsdHeroSection />
 
-        {/* 2. Trust Bar & As Seen On Section */}
-        <PsdTrustBarSection />
+        <AboutWhyTrustSection />
 
         {/* 3. What is a PSD Letter Section */}
         <WhatIsPsdSection />
@@ -155,9 +153,6 @@ export default function PsdLetterPage() {
         />
 
         <PsdCtaSection />
-
-        {/* 14. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

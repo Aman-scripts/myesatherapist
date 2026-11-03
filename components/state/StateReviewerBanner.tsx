@@ -12,10 +12,10 @@ interface StateReviewerBannerProps {
 }
 
 export function StateReviewerBanner({
-  reviewerName = "Max Phillips",
+  reviewerName = "Robert Staaf",
   updatedDate = "November 3, 2026",
-  reviewerImage = "/author/max-phill.webp",
-  reviewerLinkedin = "https://www.linkedin.com/in/max-phillips-883485a5/",
+  reviewerImage = "/images/doctors/Robert_Staff_Dr.webp",
+  reviewerLinkedin = "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   className = "",
 }: StateReviewerBannerProps) {
   return (
@@ -34,7 +34,7 @@ export function StateReviewerBanner({
               className="relative w-[76px] h-[76px] sm:w-[89px] sm:h-[89px] rounded-full border-[3.5px] sm:border-[4px] border-[#FFFFFF] overflow-hidden shrink-0 shadow-sm hover:opacity-95 transition-opacity block cursor-pointer"
             >
               <Image
-            quality={75}
+            quality={90}
                 loading="lazy"
                 src={reviewerImage}
                 alt={`Content reviewed by ${reviewerName}`}

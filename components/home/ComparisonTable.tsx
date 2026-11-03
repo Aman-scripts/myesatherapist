@@ -217,7 +217,7 @@ export function ComparisonTable() {
                       {/* Features Column: 320px */}
                       <div className="w-[320px] shrink-0 flex items-center gap-3.5">
                         <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_1.5px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
-                          <Image
+                          <Image quality={90}
                             src={row.icon}
                             alt={row.desktopFeature}
                             width={24}

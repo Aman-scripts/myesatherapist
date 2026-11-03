@@ -163,27 +163,25 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 {conditions.map((item, idx) => (
                   <div
                     key={item.title}
-                    className="bg-white rounded-[20px] p-3.5 sm:p-4 lg:p-3 xl:p-4 border border-[#EAE5DC]/60 shadow-[0px_0.4px_3.6px_rgba(0,0,0,0.11)] flex items-center gap-2.5 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
+                    className="bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
                   >
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 shrink-0 relative flex items-center justify-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
                       <Image
-                        src={QUALIFY_ICONS[idx % QUALIFY_ICONS.length]}
-                        alt={item.title}
-                        width={40}
-                        height={40}
+                        quality={90}
+                        src={item.icon || QUALIFY_ICONS[idx % QUALIFY_ICONS.length]}
+                        alt=""
+                        width={26}
+                        height={26}
                         unoptimized
-                        className="object-contain w-full h-full"
+                        className="h-[26px] w-[26px] object-contain"
                       />
                     </div>
-
-                    <div className="min-w-0">
-                      <h4 className="font-heading text-xs sm:text-sm lg:text-[14px] xl:text-[16px] font-bold text-primary mb-0.5 leading-snug">
-                        {item.title}
-                      </h4>
-                      <p className="font-sans text-[10px] sm:text-xs lg:text-[11px] xl:text-[13px] text-body-text leading-tight xl:leading-relaxed font-semibold">
-                        {item.description}
-                      </p>
-                    </div>
+                    <h4 className="font-heading text-[18px] sm:text-[20px] font-bold text-primary leading-snug">
+                      {item.title}
+                    </h4>
+                    <p className="font-sans text-[14px] sm:text-[15px] font-medium leading-6 text-[#5F6B6F]">
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>

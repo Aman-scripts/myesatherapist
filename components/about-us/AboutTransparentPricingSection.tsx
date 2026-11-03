@@ -43,7 +43,7 @@ export function AboutTransparentPricingSection() {
             <div key={idx} className="relative flex flex-col items-center">
               {/* Top Floating Circular Icon Badge */}
               <div className="absolute -top-8 sm:-top-9 lg:-top-10 z-10 w-[72px] h-[72px] sm:w-[82px] sm:h-[82px] lg:w-[88px] lg:h-[88px] xl:w-[96px] xl:h-[96px] rounded-full bg-white shadow-[0px_4px_14px_rgba(0,0,0,0.12)] flex items-center justify-center p-3.5 sm:p-4 lg:p-4.5 border border-background">
-                <Image
+                <Image quality={90}
                   src={card.icon}
                   alt={card.title}
                   width={44}

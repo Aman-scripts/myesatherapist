@@ -45,7 +45,7 @@ export function AboutWhyTrustSection() {
             <div key={idx} className="relative flex flex-col items-center">
               {/* Top Floating Circular Icon Badge */}
               <div className="absolute -top-7 sm:-top-8 z-10 w-[64px] h-[64px] sm:w-[70px] sm:h-[70px] xl:w-[74px] xl:h-[74px] rounded-full bg-white shadow-[0px_4px_12px_rgba(0,0,0,0.12)] flex items-center justify-center p-3 sm:p-3.5 border border-background">
-                <Image
+                <Image quality={90}
                   src={card.icon}
                   alt={card.title}
                   width={34}

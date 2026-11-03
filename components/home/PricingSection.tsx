@@ -27,7 +27,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
   esa: {
     tabLabel: "ESA Letter",
     description:
-      "Choose a one-time ESA evaluation. $149 is the ESA letter. $199 adds a PSD letter when a clinician approves it. ID cards are not included.",
+      "Choose the ESA package that fits your needs. Get a professional ESA evaluation and letter, with an ID card option for added convenience.",
     cards: [
       {
         title: "ESA Letter - Housing",
@@ -126,7 +126,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
 
 function CheckmarkIcon() {
   return (
-    <Image
+    <Image quality={90}
       src="/esa-icons/Icon-46.svg"
       alt=""
       width={20}
@@ -360,7 +360,7 @@ function RenderCardsContainer({
           style={{ top: headerHeight === 261 || headerHeight === 272 ? 279 : headerHeight + 20 }}
         >
           <Image
-            quality={75}
+            quality={90}
             src="/home/pricing-section-dog.webp"
             alt="Dog giving paw to woman hand"
             width={245}

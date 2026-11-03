@@ -54,7 +54,7 @@ export function DoctorsAllStatesSection() {
           />
           {/* Centered Circular Heart & Paw Badge right on the bottom wave dip */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[52px] h-[52px] z-20 pointer-events-none flex items-center justify-center">
-            <Image
+            <Image quality={90}
               src="/about-us/about_us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={52}
@@ -72,7 +72,7 @@ export function DoctorsAllStatesSection() {
           />
           {/* Centered Circular Heart & Paw Badge right on the bottom wave dip */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] z-20 pointer-events-none flex items-center justify-center">
-            <Image
+            <Image quality={90}
               src="/about-us/about_us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={72}
@@ -117,7 +117,7 @@ export function DoctorsAllStatesSection() {
 
                   {/* Frame 1000011444 - Circular Icon Badge */}
                   <div className="w-[58px] h-[58px] sm:w-[66px] sm:h-[66px] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0 ml-3 sm:ml-4 xl:ml-6">
-                    <Image
+                    <Image quality={90}
                       src={card.icon}
                       alt={card.title}
                       width={32}

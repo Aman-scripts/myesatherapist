@@ -29,7 +29,7 @@ export function EsaLawsHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={75}
+          quality={90}
           src={HERO_IMAGE}
           alt="Woman reading ESA Laws guide with her emotional support dog"
           fill

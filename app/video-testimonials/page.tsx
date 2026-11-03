@@ -11,8 +11,6 @@ import { VideoTestimonialsGridSection } from "@/components/video-testimonials/Vi
 
 // Shared Components
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
-
 import { videoTestimonialsSchemas } from "@/data/schemas/videoTestimonialsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -83,8 +81,6 @@ export default function VideoTestimonialsPage() {
           flushBottom
         />
 
-        {/* 5. Content Reviewed by Doctor Badge */}
-        <StateReviewerBanner />
       </main>
 
       {/* Footer */}

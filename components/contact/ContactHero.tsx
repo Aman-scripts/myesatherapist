@@ -45,7 +45,7 @@ export function ContactHero() {
         {/* Background Image: contact-us-hero-section-mobile.png */}
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={90}
           src="/Hero_image_for_mobile_all.webp"
           alt="Contact Customer Support Mobile"
           fill
@@ -160,7 +160,7 @@ export function ContactHero() {
         {/* Background Image: contact_us-hero-section-tablet.png */}
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={80}
+          quality={90}
           src="/contact/contact_us-hero-section-tablet.webp"
           alt="Contact Customer Support Tablet"
           fill
@@ -281,7 +281,7 @@ export function ContactHero() {
         fullBleedBackground={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={80}
+            quality={90}
             src="/contact/contact-hero-section.webp"
             alt="Customer service representative at desk"
             fill

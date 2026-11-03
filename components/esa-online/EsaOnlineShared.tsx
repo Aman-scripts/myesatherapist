@@ -100,7 +100,7 @@ export function FeatureCard({
         {stat ? (
           <span className="font-heading font-bold text-[22px] leading-none text-[#2E5A66]">{stat}</span>
         ) : (
-          <Image
+          <Image quality={90}
             src={icon || ""} alt={iconAlt || title || "Icon"} width={iconW} height={iconH} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
         )}
       </div>
@@ -123,14 +123,14 @@ export function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; a
     return (
       <div className="relative w-full" style={{ aspectRatio: `${img.w} / ${img.h}` }}>
         <Image
-            quality={80} src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
+            quality={90} src={img.src} alt={alt} fill priority={priority} className="object-cover object-top" sizes="100vw" />
       </div>
     );
   }
   return (
     <div className="relative w-full overflow-hidden" style={{ aspectRatio: `${c.w} / ${c.h}` }}>
       <Image
-            quality={80}
+            quality={90}
         src={img.src}
         alt={alt}
         width={img.w}
@@ -174,7 +174,7 @@ export function WaveImage({
       </div>
       {badge && (
         <Image
-            quality={80}
+            quality={90}
           src="/about-us/about_us-legimateesasection-hearticon.webp"
           alt="Heart"
           width={64}

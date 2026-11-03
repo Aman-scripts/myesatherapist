@@ -7,7 +7,7 @@ import { isEvaluationCtaLabel, openStateSelectModal } from "@/components/common/
 
 export function SendIcon({ className = "w-[22px] h-[22px]" }: { className?: string }) {
   return (
-    <Image
+    <Image quality={90}
       src="/common/send-icon.svg"
       alt=""
       width={22}

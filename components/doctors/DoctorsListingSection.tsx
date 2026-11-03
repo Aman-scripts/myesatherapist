@@ -90,7 +90,7 @@ function DoctorStatBadge({
       <div className="bg-white rounded-[8px] pt-[22px] sm:pt-[24px] pb-2 sm:pb-2.5 px-1.5 sm:px-2 text-center flex flex-col justify-start items-center relative min-h-[62px] sm:min-h-[66px]">
         {/* Floating circular icon badge at top center */}
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
-          <Image
+          <Image quality={90}
             src={iconSrc}
             alt={label}
             width={16}

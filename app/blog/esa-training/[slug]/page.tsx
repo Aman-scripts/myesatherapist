@@ -187,7 +187,6 @@ export default async function EsaTrainingBlogPage({ params }: PageProps) {
           buttonText="Start your Evaluation"
           buttonHref="#faq"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
         />
       </main>
 

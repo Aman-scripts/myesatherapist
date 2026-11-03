@@ -98,7 +98,6 @@ export default function ContributorsPage() {
           description="Connect with licensed mental health professionals who can evaluate your needs and provide a legitimate ESA letter if you qualify."
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
         />
       </main>
 

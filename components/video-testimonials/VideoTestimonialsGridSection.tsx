@@ -309,7 +309,7 @@ export function VideoTestimonialsGridSection() {
                 }}
               >
                 <Image
-            quality={80}
+            quality={90}
                   src={review.thumbnail}
                   alt={`${review.name} Video Testimonial`}
                   fill

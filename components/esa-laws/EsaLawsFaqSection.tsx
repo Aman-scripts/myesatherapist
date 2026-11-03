@@ -51,7 +51,7 @@ export function EsaLawsFaqSection() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 xl:gap-[60px]">
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[500px] h-[360px] sm:h-[440px] lg:h-[500px] xl:h-[540px] relative rounded-[20px] overflow-hidden shrink-0 shadow-md">
             <Image
-              quality={75}
+              quality={90}
               src="/common/faq-section-image.webp"
               alt="Woman with her emotional support dog outdoors"
               fill

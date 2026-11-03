@@ -37,54 +37,8 @@ const benefitsData = [
 
 export function WhoBenefitsSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-0 lg:pt-24">
-      <div className="relative w-full sm:hidden">
-        <Image
-          src="/psd-letter/whobenefits-section-mobile.webp"
-          alt="Woman resting her head against her cat"
-          width={390}
-          height={652}
-          quality={90}
-          loading="lazy"
-          className="block h-auto w-full"
-          sizes="100vw"
-        />
-        <div className="absolute left-1/2 top-[95.4%] z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center">
-          <Image
-            src="/psd-letter/whobenefits-section-icon.webp"
-            alt=""
-            width={73}
-            height={73}
-            unoptimized
-            className="h-full w-full object-contain drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]"
-          />
-        </div>
-      </div>
-
-      <div className="relative hidden w-full sm:block lg:hidden">
-        <Image
-          src="/psd-letter/whobenefits-section-tablet.webp"
-          alt="Woman resting her head against her cat"
-          width={833}
-          height={1140}
-          quality={90}
-          loading="lazy"
-          className="block h-auto w-full"
-          sizes="100vw"
-        />
-        <div className="absolute left-1/2 top-[93.4%] z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center">
-          <Image
-            src="/psd-letter/whobenefits-section-icon.webp"
-            alt=""
-            width={73}
-            height={73}
-            unoptimized
-            className="h-full w-full object-contain drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]"
-          />
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-[1120px] px-4 pt-10 sm:px-6 sm:pt-12 lg:px-8 lg:pt-0">
+    <section className="relative w-full overflow-hidden bg-white py-14 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 space-y-3 text-center sm:mb-12 lg:mb-14">
           <h2 className="heading-h2 text-primary">
             People Who Benefit Most From a PSD Letter
@@ -101,7 +55,7 @@ export function WhoBenefitsSection() {
               className="flex flex-col items-start gap-3 rounded-[16px] border border-[#EFEAE3] bg-white px-5 py-5 shadow-[0px_2px_8px_rgba(0,0,0,0.06)] sm:px-6 sm:py-6"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F5EFE6]">
-                <Image
+                <Image quality={90}
                   src={item.icon}
                   alt={item.title}
                   width={24}
@@ -123,30 +77,6 @@ export function WhoBenefitsSection() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="relative mt-12 hidden w-full lg:mt-20 lg:block">
-        <div className="relative mx-auto aspect-[1440/620] w-full max-w-[1440px]">
-          <Image
-            src="/psd-letter/psd_letter_benefits_Section.webp"
-            alt="Woman resting her head against her cat"
-            fill
-            quality={90}
-            loading="lazy"
-            className="object-cover object-center"
-            sizes="(min-width: 1440px) 1440px, 100vw"
-          />
-          <div className="absolute left-[26.4%] top-[12.1%] z-20 flex h-[73px] w-[73px] -translate-x-1/2 -translate-y-1/2 items-center justify-center">
-            <Image
-              src="/psd-letter/whobenefits-section-icon.webp"
-              alt=""
-              width={73}
-              height={73}
-              unoptimized
-              className="h-full w-full object-contain drop-shadow-[0px_2px_6px_rgba(0,0,0,0.18)]"
-            />
-          </div>
         </div>
       </div>
     </section>

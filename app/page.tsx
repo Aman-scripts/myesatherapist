@@ -24,8 +24,6 @@ import { Footer } from "@/components/layout/Footer";
 import { homeSchema } from "@/data/schemas/homeSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 import { pageSocial } from "@/lib/seo";
-import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -100,8 +98,6 @@ export default function HomePage() {
         <ComparisonTable />
 
         <FaqSection />
-
-        <StateReviewerBanner updatedDate="November 3, 2026" />
 
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"

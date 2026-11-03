@@ -54,7 +54,7 @@ export function EsaRenewalHero() {
       <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={90}
           src="/Hero_image_for_mobile_all.webp"
           alt="Renew Your ESA Letter Online"
           fill
@@ -95,7 +95,7 @@ export function EsaRenewalHero() {
       <div className="hidden sm:block lg:hidden relative w-full min-h-[860px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={70}
+          quality={90}
           src="/esa-renewal/esa-renwal-herosection_tablet.webp"
           alt="Renew Your ESA Letter Online"
           fill
@@ -116,7 +116,7 @@ export function EsaRenewalHero() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={70}
+            quality={90}
             src="/esa-renewal/esa-renewal-herosection.webp"
             alt="Renew Your ESA Letter Online"
             fill

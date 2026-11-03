@@ -61,7 +61,7 @@ export function EsaOnlineComparison() {
                 <React.Fragment key={row.feature}>
                   <div className="flex h-[56px] sm:h-[64px] items-center gap-2 sm:gap-3 border-t border-[#C8B9A7]/50 pl-3 sm:pl-8 pr-1">
                     <span className="hidden sm:flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-                      <Image src={row.icon} alt={row.feature} width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
+                      <Image quality={90} src={row.icon} alt={row.feature} width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
                     </span>
                     <span className="text-primary font-bold text-sm sm:text-xl leading-tight" style={LATO}>
                       {row.feature}

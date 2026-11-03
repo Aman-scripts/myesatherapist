@@ -111,7 +111,6 @@ export default function QualifyingConditionsPage() {
           buttonText="Start Your ESA Evaluation Now"
           buttonHref="/pricing/"
           bgColor="bg-background"
-          className="pb-12 sm:pb-16"
         />
       </main>
 

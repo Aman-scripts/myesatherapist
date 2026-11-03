@@ -46,7 +46,7 @@ export function EsaHousingLandlordRefuse() {
         <div className="w-full max-w-[1062px] overflow-hidden rounded-[30px] shadow-[0px_1px_4px_rgba(0,0,0,0.06)]">
           <div className="relative w-full aspect-[1983/793]">
             <Image
-            quality={75}
+            quality={90}
               src="/esa-housing/esa-letter-housing_landlordrefusesesa.webp"
               alt="Tenant and her dog being refused by a landlord holding a denied notice"
               fill
@@ -59,7 +59,7 @@ export function EsaHousingLandlordRefuse() {
             {REASONS.map((r) => (
               <li key={r.title} className="flex items-start gap-4">
                 <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.12)]">
-                  <Image src={r.icon} alt={r.title} width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
+                  <Image quality={90} src={r.icon} alt={r.title} width={22} height={22} unoptimized className="h-[22px] w-[22px] object-contain" />
                 </span>
                 <div className="flex flex-col">
                   <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#CC191D]">{r.title}</h3>

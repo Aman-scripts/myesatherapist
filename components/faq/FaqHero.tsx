@@ -14,7 +14,7 @@ export function FaqHero() {
       <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={90}
           src="/faq/faq_hero-section_mobile.webp"
           alt="Need Clarity About ESA Letters?"
           fill
@@ -30,7 +30,7 @@ export function FaqHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={70}
+          quality={90}
           src="/faq/faq_hero-section_tablet.webp"
           alt="Need Clarity About ESA Letters?"
           fill

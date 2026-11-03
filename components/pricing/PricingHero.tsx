@@ -14,7 +14,7 @@ export function PricingHero() {
       <div className="sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-            quality={70}
+            quality={90}
           src="/Hero_image_for_mobile_all.webp"
           alt="Choose the Right Package For You"
           fill
@@ -60,7 +60,7 @@ export function PricingHero() {
       <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-            quality={70}
+            quality={90}
           src="/pricing/pricing_section-hero_section_tablet.webp"
           alt="Choose the Right Package For You"
           fill
@@ -113,7 +113,7 @@ export function PricingHero() {
         background={
           <BreakpointImage
             media="(min-width: 1024px)"
-            quality={70}
+            quality={90}
             src="/pricing/pricing_section-hero_section.webp"
             alt="Choose the Right Package For You"
             fill

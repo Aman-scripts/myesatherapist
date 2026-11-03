@@ -105,7 +105,7 @@ export function HeroSection() {
       <div className="block sm:hidden relative w-full">
         <BreakpointImage
           media="(max-width: 639px)"
-          quality={70}
+          quality={90}
           src={MOBILE_HERO_BG}
           alt="Emotional Support Animal Evaluations by Licensed Professionals"
           fill
@@ -163,7 +163,7 @@ export function HeroSection() {
         {/* Background Image: tablet-hero-section.png */}
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
-          quality={70}
+          quality={90}
           src="/home/tablet-hero-section.webp"
           alt="Emotional Support Animal Evaluations"
           fill
@@ -214,7 +214,7 @@ export function HeroSection() {
                 aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"}` : "Select your State"}
                 className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
               >
-                <Image
+                <Image quality={90}
                   src="/ESA ICons/Icon-37.svg"
                   alt="Location"
                   width={20}
@@ -278,7 +278,7 @@ export function HeroSection() {
           background={
             <BreakpointImage
               media="(min-width: 1024px)"
-            quality={70}
+            quality={90}
               src="/home/hero-section.webp"
               alt="Woman embracing her emotional support golden retriever outdoors"
               fill
@@ -333,7 +333,7 @@ export function HeroSection() {
                     aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"}` : "Select your State"}
                     className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                   >
-                    <Image
+                    <Image quality={90}
                       src="/ESA ICons/Icon-37.svg"
                       alt="Location"
                       width={20}

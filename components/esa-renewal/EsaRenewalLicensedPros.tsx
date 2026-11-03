@@ -27,7 +27,7 @@ export function EsaRenewalLicensedPros() {
       {/* Illustration: map + doctors artwork (with curve and heart badge built in), full section height, flush right (lg and up) */}
       <div className="hidden lg:block absolute inset-y-0 right-0 aspect-[2291/2205]">
         <Image
-            quality={80}
+            quality={90}
           src="/esa-renewal/esa-renewal-all50states.webp"
           alt="State licensed mental health professionals map across US"
           fill
@@ -71,7 +71,7 @@ export function EsaRenewalLicensedPros() {
                 <div className="flex flex-1 items-center gap-4 sm:gap-6 lg:gap-[1.6vw] xl:gap-6 py-5 lg:py-[1vw] xl:py-[12px] pl-4 sm:pl-6 pr-4">
                   {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[60px] h-[60px] sm:w-[74px] sm:h-[74px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
-                    <Image
+                    <Image quality={90}
                       src="/esa-icons/Icon-33.svg"
                       alt={feat.title}
                       width={40}

@@ -44,7 +44,7 @@ export function LicensedProviderSection() {
                 aria-label={`Play video: ${VIDEO_TITLE}`}
                 className="group absolute inset-0 w-full h-full cursor-pointer"
               >
-                <Image
+                <Image quality={90}
                   src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
                   alt={VIDEO_TITLE}
                   fill

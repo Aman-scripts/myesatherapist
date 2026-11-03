@@ -60,7 +60,7 @@ export function AboutWhoWeHelpSection() {
               >
                 {/* Gradient Teal Icon Badge */}
                 <div className="w-[46px] h-[46px] sm:w-[52px] sm:h-[52px] xl:w-[59px] xl:h-[59px] rounded-full flex items-center justify-center shrink-0 bg-background border border-[#EAE5DC]">
-                  <Image
+                  <Image quality={90}
                     src={group.icon}
                     alt={group.title}
                     width={24}
