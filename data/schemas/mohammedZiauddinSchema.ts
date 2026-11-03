@@ -2,8 +2,8 @@ export const mohammedZiauddinSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://myesatherapist.com/author/mohammed-ziauddin/#webpage",
-    "url": "https://myesatherapist.com/author/mohammed-ziauddin/",
+    "@id": "https://myesatherapist.com/contributors/mohammed-ziauddin/#webpage",
+    "url": "https://myesatherapist.com/contributors/mohammed-ziauddin/",
     "name": "Mohammed Ziauddin | My ESA Therapist",
     "description": "Mohammed Ziauddin is a legal writer and research contributor at My ESA Therapist with 12 years of experience in health assessment, rehabilitation, and evidence-based healthcare research.",
     "isPartOf": {
@@ -15,10 +15,10 @@ export const mohammedZiauddinSchemas = [
     },
     "mainEntity": {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/author/mohammed-ziauddin/#person",
+      "@id": "https://myesatherapist.com/contributors/mohammed-ziauddin/#person",
       "name": "Mohammed Ziauddin",
       "jobTitle": "Legal Writer & Research Contributor",
-      "url": "https://myesatherapist.com/author/mohammed-ziauddin/",
+      "url": "https://myesatherapist.com/contributors/mohammed-ziauddin/",
       "image": "https://myesatherapist.com/images/authors/mohammed-ziauddin-image.webp",
       "sameAs": [
         "https://www.linkedin.com/in/physiozia/"
@@ -65,7 +65,7 @@ export const mohammedZiauddinSchemas = [
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://myesatherapist.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Mohammed Ziauddin", "item": "https://myesatherapist.com/author/mohammed-ziauddin/" }
+      { "@type": "ListItem", "position": 2, "name": "Mohammed Ziauddin", "item": "https://myesatherapist.com/contributors/mohammed-ziauddin/" }
     ]
   }
 ];

@@ -38,13 +38,6 @@ export const leslieGambleSchemas = [
         "PTSD",
         "Emotional Support Animal Evaluations"
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "4595",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
     }
   },
   {

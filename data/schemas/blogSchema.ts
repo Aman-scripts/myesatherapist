@@ -68,9 +68,9 @@ export const blogSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/author/allyson-valley/",
+      "url": "https://myesatherapist.com/contributors/allyson-valley/",
       "jobTitle": "Mental Health Writer & Research Contributor",
       "description": "Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with experience across crisis services, behavioral health programs, and healthcare systems.",
       "image": "https://myesatherapist.com/images/authors/allyson-valley-image.webp",
@@ -234,7 +234,7 @@ export const blogSchema = {
       "datePublished": "2026-06-19T09:08:36+00:00",
       "dateModified": "2026-08-17T11:50:31+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -261,7 +261,7 @@ export const blogSchema = {
       "datePublished": "2026-07-21T12:49:25+00:00",
       "dateModified": "2026-08-27T07:18:26+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -288,7 +288,7 @@ export const blogSchema = {
       "datePublished": "2026-06-09T10:22:44+00:00",
       "dateModified": "2026-08-27T07:22:01+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -315,7 +315,7 @@ export const blogSchema = {
       "datePublished": "2026-05-27T10:04:41+00:00",
       "dateModified": "2026-08-17T11:53:24+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/awais-arshad-a51b31113/#person"
@@ -342,7 +342,7 @@ export const blogSchema = {
       "datePublished": "2026-05-14T11:00:21+00:00",
       "dateModified": "2026-08-27T07:25:31+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -369,7 +369,7 @@ export const blogSchema = {
       "datePublished": "2026-07-29T10:20:27+00:00",
       "dateModified": "2026-08-27T07:06:58+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -396,7 +396,7 @@ export const blogSchema = {
       "datePublished": "2026-07-27T11:42:05+00:00",
       "dateModified": "2026-08-27T07:17:03+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -423,7 +423,7 @@ export const blogSchema = {
       "datePublished": "2026-07-10T07:48:39+00:00",
       "dateModified": "2026-09-01T11:49:31+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -450,7 +450,7 @@ export const blogSchema = {
       "datePublished": "2026-08-26T09:42:01+00:00",
       "dateModified": "2026-08-27T07:28:42+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -477,7 +477,7 @@ export const blogSchema = {
       "datePublished": "2026-09-11T06:59:52+00:00",
       "dateModified": "2026-09-11T06:59:54+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"

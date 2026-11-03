@@ -25,9 +25,9 @@ export const esaForPtsdSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/author/allyson-valley/",
+      "url": "https://myesatherapist.com/contributors/allyson-valley/",
       "image": {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/authors/allyson-valley-profile-image.webp"
@@ -92,7 +92,7 @@ export const esaForPtsdSchema = {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/"
       },
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"
@@ -123,7 +123,7 @@ export const esaForPtsdSchema = {
       "datePublished": "2026-10-13",
       "dateModified": "2026-10-13",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/"

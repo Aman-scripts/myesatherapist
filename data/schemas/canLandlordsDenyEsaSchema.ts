@@ -89,9 +89,9 @@ export const canLandlordsDenyEsaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/author/allyson-valley/",
+      "url": "https://myesatherapist.com/contributors/allyson-valley/",
       "jobTitle": "Mental Health Writer & Research Contributor",
       "description": "Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with experience across crisis services, behavioral health programs, and healthcare systems.",
       "image": "https://myesatherapist.com/images/authors/allyson-valley-image.webp",
@@ -133,9 +133,9 @@ export const canLandlordsDenyEsaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
       "name": "Dr. Robert Staaf",
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
+      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
       "jobTitle": "Licensed Clinical Social Worker",
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization"
@@ -186,7 +186,7 @@ export const canLandlordsDenyEsaSchema = {
       "datePublished": "2026-05-27T10:04:41+00:00",
       "dateModified": "2026-08-17T11:53:24+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/awais-arshad-a51b31113/#person"
@@ -211,7 +211,7 @@ export const canLandlordsDenyEsaSchema = {
       "@id": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/#quote-staaf",
       "text": "An emotional support animal is not just a pet; for many people, it is part of their emotional well-being and daily stability.",
       "creator": {
-        "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person"
+        "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person"
       },
       "isPartOf": {
         "@id": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/#blogposting"

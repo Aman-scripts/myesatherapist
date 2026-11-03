@@ -20,7 +20,7 @@ export const esaLawsAlabamaSchemas = [
       "@id": "https://myesatherapist.com/#organization"
     },
     "author": {
-      "@id": "https://myesatherapist.com/author/mohammed-ziauddin/#person"
+      "@id": "https://myesatherapist.com/contributors/mohammed-ziauddin/#person"
     },
     "contributor": {
       "@type": "Person",

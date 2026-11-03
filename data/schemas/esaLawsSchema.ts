@@ -68,9 +68,9 @@ export const esaLawsSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/author/kiera-conrad/#person",
+      "@id": "https://myesatherapist.com/contributors/kiera-conrad/#person",
       "name": "Kiera Conrad",
-      "url": "https://myesatherapist.com/author/kiera-conrad/",
+      "url": "https://myesatherapist.com/contributors/kiera-conrad/",
       "jobTitle": "Content Lead & Research Contributor",
       "description": "Writer, editor, and educator focused on emotional support animal evaluations, mental health awareness, and accessibility-focused education. Not a licensed mental health, medical, or legal professional.",
       "image": "https://myesatherapist.com/images/authors/kiera-conrad-image.webp",
@@ -109,7 +109,7 @@ export const esaLawsSchema = {
         "@id": "https://myesatherapist.com/#website"
       },
       "author": {
-        "@id": "https://myesatherapist.com/author/kiera-conrad/#person"
+        "@id": "https://myesatherapist.com/contributors/kiera-conrad/#person"
       },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"

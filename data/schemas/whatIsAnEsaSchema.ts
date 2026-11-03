@@ -89,9 +89,9 @@ export const whatIsAnEsaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/author/allyson-valley/",
+      "url": "https://myesatherapist.com/contributors/allyson-valley/",
       "jobTitle": "Mental Health Writer & Research Contributor",
       "description": "Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with experience across crisis services, behavioral health programs, and healthcare systems.",
       "image": "https://myesatherapist.com/images/authors/allyson-valley-image.webp",
@@ -139,9 +139,9 @@ export const whatIsAnEsaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
       "name": "Dr. Robert Staaf",
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
+      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
       "jobTitle": "Licensed Clinical Social Worker",
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization"
@@ -192,7 +192,7 @@ export const whatIsAnEsaSchema = {
       "datePublished": "2026-05-14T11:00:21+00:00",
       "dateModified": "2026-08-27T07:25:31+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -214,7 +214,7 @@ export const whatIsAnEsaSchema = {
       "@id": "https://myesatherapist.com/blog/esa-guide/emotional-support-animal/#quote-staaf",
       "text": "The unconditional love and non-judgmental presence of an emotional support animal can create a safe space for healing and emotional growth.",
       "creator": {
-        "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person"
+        "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person"
       },
       "isPartOf": {
         "@id": "https://myesatherapist.com/blog/esa-guide/emotional-support-animal/#blogposting"

@@ -28,13 +28,6 @@ export const homeSchema = {
         "@type": "Country",
         "name": "United States"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "10894",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "sameAs": [
         "https://www.facebook.com/myesatherapy",
         "https://x.com/myesatherapist",
@@ -341,7 +334,7 @@ export const homeSchema = {
       "@type": "Person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker (LCSW)",
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
+      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],

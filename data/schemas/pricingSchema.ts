@@ -149,7 +149,7 @@ export const pricingSchema = {
       "seller": {
         "@id": "https://myesatherapist.com/#organization"
       },
-      "description": "Card is authorized at booking to hold the appointment slot. The charge is only collected after the telehealth evaluation is completed and the individual is approved by the licensed professional. If not approved, no charge is made."
+      "description": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
     },
     {
       "@type": "ItemList",
@@ -186,9 +186,9 @@ export const pricingSchema = {
     {
       "@type": "Service",
       "@id": "https://myesatherapist.com/pricing/#esa-letter-id",
-      "name": "ESA Letter + ID Card",
-      "description": "Everything in the ESA Letter package, plus an official ESA ID card for easy identification of your emotional support animal.",
-      "serviceType": "Online ESA Letter Evaluation (Telehealth) with ID Card",
+      "name": "ESA Letter + PSD Letter Combo",
+      "description": "Everything in the ESA Letter package, plus a PSD letter when a licensed clinician determines it is appropriate. ID cards are not included.",
+      "serviceType": "Online ESA and PSD Letter Evaluation (Telehealth)",
       "provider": {
         "@id": "https://myesatherapist.com/#organization"
       },
@@ -203,7 +203,7 @@ export const pricingSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/pricing/#offer-esa-letter-id",
-      "name": "ESA Letter + ID Card",
+      "name": "ESA Letter + PSD Letter Combo",
       "price": "199",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
@@ -218,12 +218,12 @@ export const pricingSchema = {
       "seller": {
         "@id": "https://myesatherapist.com/#organization"
       },
-      "description": "Card is authorized at booking to hold the appointment slot. The charge is only collected after the telehealth evaluation is completed and the individual is approved by the licensed professional. If not approved, no charge is made."
+      "description": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
     },
     {
       "@type": "ItemList",
       "@id": "https://myesatherapist.com/pricing/#esa-letter-id-features",
-      "name": "What's Included: ESA Letter + ID Card",
+      "name": "What's Included: ESA Letter + PSD Letter Combo",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -233,7 +233,7 @@ export const pricingSchema = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Official ESA ID card for your animal"
+          "name": "PSD letter if clinically appropriate"
         },
         {
           "@type": "ListItem",
@@ -287,7 +287,7 @@ export const pricingSchema = {
       "seller": {
         "@id": "https://myesatherapist.com/#organization"
       },
-      "description": "Card is authorized at booking to hold the appointment slot. The charge is only collected after the telehealth evaluation is completed and the individual is approved by the licensed professional. If not approved, no charge is made."
+      "description": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
     },
     {
       "@type": "ItemList",
@@ -324,9 +324,9 @@ export const pricingSchema = {
     {
       "@type": "Service",
       "@id": "https://myesatherapist.com/pricing/#psd-letter-id",
-      "name": "PSD Letter + ID Card",
-      "description": "Everything in the PSD Letter package, plus an official PSD ID card for clear identification of your psychiatric service dog.",
-      "serviceType": "Online Psychiatric Service Dog Letter Evaluation (Telehealth) with ID Card",
+      "name": "PSD Letter",
+      "description": "A PSD letter evaluation with a licensed clinician. ID cards are not included and are not legal proof.",
+      "serviceType": "Online Psychiatric Service Dog Letter Evaluation (Telehealth)",
       "provider": {
         "@id": "https://myesatherapist.com/#organization"
       },
@@ -341,7 +341,7 @@ export const pricingSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/pricing/#offer-psd-letter-id",
-      "name": "PSD Letter + ID Card",
+      "name": "PSD Letter",
       "price": "199",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
@@ -356,12 +356,12 @@ export const pricingSchema = {
       "seller": {
         "@id": "https://myesatherapist.com/#organization"
       },
-      "description": "Card is authorized at booking to hold the appointment slot. The charge is only collected after the telehealth evaluation is completed and the individual is approved by the licensed professional. If not approved, no charge is made."
+      "description": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
     },
     {
       "@type": "ItemList",
       "@id": "https://myesatherapist.com/pricing/#psd-letter-id-features",
-      "name": "What's Included: PSD Letter + ID Card",
+      "name": "What's Included: PSD Letter",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -371,7 +371,7 @@ export const pricingSchema = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Official PSD ID card for your service dog"
+          "name": "PSD letter if clinically appropriate"
         },
         {
           "@type": "ListItem",
@@ -430,15 +430,15 @@ export const pricingSchema = {
           "name": "When exactly is my card charged?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Your card is authorized at booking to hold your appointment slot, but the actual charge only occurs after your telehealth evaluation is completed and you are approved by the licensed professional. If not approved, no charge is made."
+            "text": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
           }
         },
         {
           "@type": "Question",
-          "name": "What is included in the ID Card?",
+          "name": "Do any plans include an ESA ID card?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The ID card is a supplementary identification document for your ESA or PSD. It makes it easier to identify your animal to landlords and property managers. Note that ID cards alone do not convey legal rights -- the letter remains the primary legal document."
+            "text": "No plan includes an ID card. ID cards, registries, and certificates are not legal proof of an assistance animal. The letter is the clinical document."
           }
         },
         {

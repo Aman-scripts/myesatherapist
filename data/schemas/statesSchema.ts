@@ -453,7 +453,7 @@ export const statesSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which States Have the Strict ESA Laws?",
+          "name": "Which States Have the Strictest ESA Laws?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "States like California, Montana, Arkansas, Louisiana, and Iowa require ESA owners to have at least a 30-day relationship with their mental health professional before an ESA evaluation can be conducted."

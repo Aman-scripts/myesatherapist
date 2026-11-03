@@ -23,11 +23,11 @@ export const contributorsSchemas = [
             "position": 1,
             "item": {
               "@type": "Person",
-              "@id": "https://myesatherapist.com/author/allyson-valley/#person",
+              "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
               "name": "Allyson Valley",
               "honorificSuffix": "Ph.D., LPC",
               "jobTitle": "Mental Health Writer & Research Contributor",
-              "url": "https://myesatherapist.com/author/allyson-valley/",
+              "url": "https://myesatherapist.com/contributors/allyson-valley/",
               "image": "https://myesatherapist.com/images/authors/allyson-valley-profile-image.webp",
               "sameAs": ["https://www.linkedin.com/in/allyson-valley/"],
               "description": "Mental health writer, researcher, and Licensed Professional Counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
@@ -44,10 +44,10 @@ export const contributorsSchemas = [
             "position": 2,
             "item": {
               "@type": "Person",
-              "@id": "https://myesatherapist.com/author/mohammed-ziauddin/#person",
+              "@id": "https://myesatherapist.com/contributors/mohammed-ziauddin/#person",
               "name": "Mohammed Ziauddin",
               "jobTitle": "Legal Writer & Research Contributor",
-              "url": "https://myesatherapist.com/author/mohammed-ziauddin/",
+              "url": "https://myesatherapist.com/contributors/mohammed-ziauddin/",
               "image": "https://myesatherapist.com/images/authors/mohammed-ziauddin-image.webp",
               "sameAs": ["https://www.linkedin.com/in/physiozia/"],
               "description": "Legal researcher and writer with 12 years of experience, holding a Master of Physiotherapy in Sports and expertise in health assessment, rehabilitation, and evidence-based healthcare practices.",
@@ -103,21 +103,21 @@ export const contributorsSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://myesatherapist.com/author/allyson-valley/#webpage",
-    "url": "https://myesatherapist.com/author/allyson-valley/",
+    "@id": "https://myesatherapist.com/contributors/allyson-valley/#webpage",
+    "url": "https://myesatherapist.com/contributors/allyson-valley/",
     "name": "Allyson Valley, Ph.D., LPC | My ESA Therapist",
     "mainEntity": {
-      "@id": "https://myesatherapist.com/author/allyson-valley/#person"
+      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://myesatherapist.com/author/mohammed-ziauddin/#webpage",
-    "url": "https://myesatherapist.com/author/mohammed-ziauddin/",
+    "@id": "https://myesatherapist.com/contributors/mohammed-ziauddin/#webpage",
+    "url": "https://myesatherapist.com/contributors/mohammed-ziauddin/",
     "name": "Mohammed Ziauddin | My ESA Therapist",
     "mainEntity": {
-      "@id": "https://myesatherapist.com/author/mohammed-ziauddin/#person"
+      "@id": "https://myesatherapist.com/contributors/mohammed-ziauddin/#person"
     }
   },
   {

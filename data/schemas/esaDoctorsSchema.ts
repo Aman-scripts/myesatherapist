@@ -109,7 +109,7 @@ export const esaDoctorsSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Robert Staaf, LCSW is an Independent Clinical Social Worker and Therapist, currently licensed to practice at the clinical level in over 30 states. He has extensive experience in psychotherapy and child and family welfare, and is an advocate for highlighting how animals can be utilized in mental health treatment.",
@@ -117,7 +117,7 @@ export const esaDoctorsSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
+      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -182,13 +182,13 @@ export const esaDoctorsSchema = {
     {
       "@type": "ItemList",
       "@id": "https://myesatherapist.com/esa-doctors/#provider-list",
-      "name": "Our Licensed Mental Health Professionals",
+      "name": "Our Licensed Clinicians",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person"
+            "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person"
           }
         },
         {

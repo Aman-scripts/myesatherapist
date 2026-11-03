@@ -297,7 +297,7 @@ export const esaLetterOnlineSchema = {
           "name": "How much does an ESA letter cost, and are there any hidden fees?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "With My ESA Therapist, the cost of an ESA documentation is $149. This fee includes a clinical evaluation conducted by a state-licensed mental health professional, the telehealth platform fee, and the letter if clinically approved. Pricing is clearly displayed before booking, and there are no hidden fees. You are paying for a professional assessment, not a guaranteed letter. If the letter is not clinically appropriate, no document is issued."
+            "text": "An ESA letter evaluation is $149. A combined ESA and PSD evaluation is $199. Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued. ID cards are not included."
           }
         },
         {
