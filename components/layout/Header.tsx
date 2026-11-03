@@ -148,6 +148,7 @@ export function Header() {
 
   // Check route conditions
   const isPsd = pathname === "/psd-letter/";
+  const isStateHero = /^\/esa-letter-(?!online\/|for-housing\/|renewal\/)[^/]+\/?$/.test(pathname || "");
   const isDoctors = pathname === "/esa-doctors/" || pathname === "/esa-doctors/";
   const isLegalReviewer =
     pathname?.includes("legal-reviewer") ||
@@ -155,6 +156,7 @@ export function Header() {
     pathname?.includes("contributors");
 
   return (
+    <>
     <header className="sticky top-0 z-50 bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
       {/* Main Navigation Bar (Frame 1000011803: 1440px x 98px, padding 13px 80px) */}
       <div className="w-full bg-white">
@@ -388,8 +390,14 @@ export function Header() {
           </div>
         </div>
       )}
-      <SiteBreadcrumbs />
     </header>
+    {/* State heroes render the trail inside the hero. Other pages overlay it on the hero. */}
+    {!isStateHero && !isDoctors && (
+      <div className="relative z-40 h-0">
+        <SiteBreadcrumbs className="absolute inset-x-0 top-0 px-4 pt-3 sm:px-6 lg:px-[80px] lg:pt-4" />
+      </div>
+    )}
+    </>
   );
 }
 

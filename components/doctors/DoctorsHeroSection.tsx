@@ -1,5 +1,6 @@
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 const HEADING = "Meet Our Licensed Clinicians";
 const DESCRIPTION =
@@ -19,7 +20,8 @@ export function DoctorsHeroSection() {
           className="object-cover object-bottom"
           sizes="(max-width: 639px) 100vw, 1px"
         />
-        <div className="relative z-10 px-6 pt-10 pb-12 text-center flex flex-col items-center space-y-3">
+        <div className="relative z-10 px-6 pt-5 pb-12 text-center flex flex-col items-center space-y-3">
+          <SiteBreadcrumbs className="self-start" includeSchema={false} />
           <p aria-hidden="true" className="heading-h1 text-primary max-w-[300px]">{HEADING}</p>
           <p className="body-large text-body-text max-w-[320px]">{DESCRIPTION}</p>
         </div>
@@ -37,6 +39,7 @@ export function DoctorsHeroSection() {
         />
         <div className="absolute inset-0 z-10 flex items-center px-10">
           <div className="flex flex-col items-start gap-4 max-w-[520px]">
+            <SiteBreadcrumbs includeSchema={false} />
             <p aria-hidden="true" className="heading-h1 text-primary">{HEADING}</p>
             <p className="body-large text-body-text">{DESCRIPTION}</p>
           </div>
@@ -61,6 +64,7 @@ export function DoctorsHeroSection() {
       >
         <div className="relative w-[1440px] h-[762px] flex items-center">
           <div className="pl-[82px] max-w-[760px] z-10 flex flex-col items-start gap-5">
+            <SiteBreadcrumbs className="-mb-1" />
             <p aria-hidden="true" className="heading-h1 text-primary max-w-[640px]">{HEADING}</p>
             <p className="body-large text-body-text max-w-[560px]">{DESCRIPTION}</p>
           </div>

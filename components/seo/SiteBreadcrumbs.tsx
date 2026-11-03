@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronRight } from "lucide-react";
 import { serializeLd } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 const CANONICAL_ORIGIN = "https://myesatherapist.com";
 
@@ -62,17 +64,26 @@ function titleCase(segment: string) {
     .join(" ");
 }
 
+const LETTER_PRODUCTS = ["esa-letter-online", "esa-letter-for-housing", "esa-letter-renewal"];
+
+function isStateLetter(segment: string) {
+  return segment.startsWith("esa-letter-") && !LETTER_PRODUCTS.includes(segment);
+}
+
 function labelFor(segment: string) {
-  if (
-    segment.startsWith("esa-letter-") &&
-    !["esa-letter-online", "esa-letter-for-housing", "esa-letter-renewal"].includes(segment)
-  ) {
+  if (isStateLetter(segment)) {
     return titleCase(segment.slice("esa-letter-".length));
   }
   return LABELS[segment] ?? titleCase(segment);
 }
 
-export function SiteBreadcrumbs() {
+export function SiteBreadcrumbs({
+  className,
+  includeSchema = true,
+}: {
+  className?: string;
+  includeSchema?: boolean;
+}) {
   const pathname = usePathname() || "/";
   if (pathname === "/") return null;
   if (OWN_BREADCRUMB.some((pattern) => pattern.test(pathname))) return null;
@@ -80,13 +91,16 @@ export function SiteBreadcrumbs() {
   const segments = pathname.split("/").filter(Boolean);
   const crumbs = [{ name: "Home", path: "/" }];
 
-  const isState = segments.length === 1 && segments[0].startsWith("esa-letter-") && labelFor(segments[0]) !== LABELS[segments[0]];
-  if (isState) crumbs.push({ name: "ESA Letter by State", path: "/state/" });
-
-  segments.forEach((segment, index) => {
-    const path = `/${segments.slice(0, index + 1).join("/")}/`;
-    crumbs.push({ name: labelFor(segment), path });
-  });
+  const isState = segments.length === 1 && isStateLetter(segments[0]);
+  if (isState) {
+    crumbs.push({ name: "ESA by State", path: "/state/" });
+    crumbs.push({ name: `ESA Letter ${labelFor(segments[0])}`, path: `/${segments[0]}/` });
+  } else {
+    segments.forEach((segment, index) => {
+      const path = `/${segments.slice(0, index + 1).join("/")}/`;
+      crumbs.push({ name: labelFor(segment), path });
+    });
+  }
 
   const schema = {
     "@context": "https://schema.org",
@@ -100,24 +114,24 @@ export function SiteBreadcrumbs() {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-background border-b border-black/5">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(schema) }} />
-      <ol className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] py-2.5 flex flex-wrap items-center gap-2 body-small text-body-text">
+    <nav aria-label="Breadcrumb" className={cn("pointer-events-none", className)}>
+      {includeSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(schema) }} />
+      )}
+      <ol className="pointer-events-auto flex flex-wrap items-center gap-x-2 gap-y-1 font-manrope text-[15px] leading-[22px]">
         {crumbs.map((crumb, index) => {
           const current = index === crumbs.length - 1;
           return (
             <li key={crumb.path} className="flex items-center gap-2">
               {index > 0 && (
-                <span aria-hidden="true" className="text-body-text/60">
-                  /
-                </span>
+                <ChevronRight aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-primary/45" strokeWidth={2.25} />
               )}
               {current ? (
-                <span aria-current="page" className="text-primary font-semibold">
+                <span aria-current="page" className="font-bold text-gold-600">
                   {crumb.name}
                 </span>
               ) : (
-                <Link prefetch={false} href={crumb.path} className="hover:text-primary transition-colors">
+                <Link prefetch={false} href={crumb.path} className="font-medium text-primary transition-colors hover:text-[#1D6E72]">
                   {crumb.name}
                 </Link>
               )}

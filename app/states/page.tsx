@@ -107,7 +107,12 @@ export default function StatesDirectoryPage() {
 
         {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonText="Start your ESA Evaluation" buttonHref="/pricing/" />
-        <StateReviewerBanner updatedDate="November 3, 2026" />
+        <StateReviewerBanner
+          reviewerName="Robert Staaf"
+          reviewerImage="/images/doctors/Robert_Staff_Dr.webp"
+          reviewerLinkedin="https://www.linkedin.com/in/robert-staaf-b57b53333/"
+          updatedDate="November 3, 2026"
+        />
       </main>
 
       <Footer />

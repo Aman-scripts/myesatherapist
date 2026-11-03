@@ -7,6 +7,7 @@ import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { CtaButton } from "@/components/common/CtaButton";
 import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 import { STATE_INDEX } from "@/data/stateIndex";
 import {
   evaluationDestination,
@@ -306,6 +307,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
         }
       >
         <div className="relative w-[1440px] h-[808px]">
+          <SiteBreadcrumbs className="absolute left-[82px] top-[18px] z-30" />
           <div className="absolute left-[82px] top-[82px] w-[560px] z-20">
             {/* Stat Pills */}
             <div className="flex items-center gap-3">
@@ -354,7 +356,8 @@ export function StateHeroSection({ data }: { data: StateData }) {
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
 
-        <div className="absolute top-0 inset-x-0 z-10 pt-8 sm:pt-10 px-6 sm:px-10">
+        <div className="absolute top-0 inset-x-0 z-10 px-6 pt-4 sm:px-10 sm:pt-5">
+          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
           <div className="text-center space-y-3 max-w-[620px] mx-auto">
             <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}
@@ -385,7 +388,8 @@ export function StateHeroSection({ data }: { data: StateData }) {
           sizes="(max-width: 639px) 430px, 1px"
         />
 
-        <div className="relative z-10 flex flex-col items-center gap-6 px-4 pb-10 pt-5">
+        <div className="relative z-10 flex flex-col items-center gap-6 px-4 pb-10 pt-4">
+          <SiteBreadcrumbs className="self-start" includeSchema={false} />
           <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
             <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
               {renderHeroTitle(data.heroTitle, stateName)}

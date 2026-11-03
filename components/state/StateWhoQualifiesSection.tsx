@@ -155,7 +155,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
             </div>
 
             <div>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-body-text mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
+              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-primary mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
                 {sectionHeading}
               </h3>
 

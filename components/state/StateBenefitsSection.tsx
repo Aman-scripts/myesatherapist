@@ -80,7 +80,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
 
   const title = data.benefitsTitle || `Benefits of Having an ESA Letter in ${stateName}`;
   const subtitle = data.benefitsSubtitle || `A properly issued emotional support animal letter in ${stateName} can help residents obtain housing accommodations while also promoting emotional well-being and everyday stability.`;
-  const financialHeading = data.financialBenefitsHeading || "Financial Benefits :";
+  const financialHeading = "Financial Benefits of ESA Letter";
   const emotionalHeading = data.emotionalBenefitsHeading || "Emotional Benefits :";
   const refundNote = data.benefitsRefundNote === ""
     ? ""

@@ -522,12 +522,12 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     cardImage: "/Blog Images/ESA for ADHD/cozy-afternoon-with-a-golden-retriever-image.webp",
     ...heroes,
     aboutAuthor: {
-      name: "Robert Staaf",
-      title: "",
-      bio: "",
-      image: "/doctors/Robert_Staff_Dr.webp",
-      bioHref: "/esa-doctors/robert-staaf/",
-      linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
+      name: "Max Phillips",
+      title: "Medical Reviewer",
+      bio: "Max Phillips, MSW, LCSW, is a Missouri-licensed clinical social worker with 16 years of experience, reviewing mental health content for clinical accuracy and trauma-informed guidance.",
+      image: "/author/max-phill.webp",
+      bioHref: "/contributors/max-phillips/",
+      linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     questionCallout: {
       question: "Can I take my ESA to work, restaurants, or on flights if I have ADHD?",

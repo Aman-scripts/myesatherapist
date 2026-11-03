@@ -18,7 +18,7 @@ import { StateLawsSection } from "@/components/state/StateLawsSection";
 import { StateScamsSection } from "@/components/state/StateScamsSection";
 import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
 import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
-import { StatePricingSection } from "@/components/state/StatePricingSection";
+import { PricingSection } from "@/components/home/PricingSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
 import { StateReviewerBanner } from "@/components/state/StateReviewerBanner";
 import { StateTableOfContents } from "@/components/state/StateTableOfContents";
@@ -156,7 +156,7 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <div id="pricing"><StatePricingSection stateName={data.name} data={data} /></div>
+        <PricingSection sectionId="pricing" />
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <div id="faq">
           <FaqSection
@@ -177,7 +177,12 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <StateReviewerBanner updatedDate="November 3, 2026" />
+        <StateReviewerBanner
+          reviewerName="Robert Staaf"
+          reviewerImage="/images/doctors/Robert_Staff_Dr.webp"
+          reviewerLinkedin="https://www.linkedin.com/in/robert-staaf-b57b53333/"
+          updatedDate="November 3, 2026"
+        />
       </main>
 
       <Footer />

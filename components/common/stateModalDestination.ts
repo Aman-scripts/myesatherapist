@@ -34,6 +34,8 @@ export const SURVEY_STATE_SLUGS = new Set([
 ]);
 
 export const PSD_SURVEY_URL = "https://staging.survey.myesatherapist.com/";
+export const PSD_SCHEDULE_URL =
+  "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule";
 
 const STATE_TIMEZONES: Record<string, string> = {
   AL: "CST", AK: "AKST", AZ: "MST", AR: "CST", CA: "PST",
@@ -81,13 +83,13 @@ export function heallyPortalUrl(fields: {
   return `https://myesatherapist.getheally.com/patient_admin/prefill?redirect=sched&preset=${preset}`;
 }
 
-/** Survey for the 29 listed states. Heally portal for every other state. */
+/** Survey for the 29 listed states. VideoVisit scheduling for every other state. */
 export function psdStateDestination(slug: string) {
   const entry = STATE_INDEX_BY_SLUG[slug];
   if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
     return surveyRegisterUrl({ state: entry.name });
   }
-  return heallyPortalUrl({ abbreviation: entry?.abbreviation || "CA" });
+  return PSD_SCHEDULE_URL;
 }
 
 export type SurveyRegisterFields = {
