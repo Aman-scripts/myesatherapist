@@ -105,7 +105,7 @@ export function AboutProcessSection() {
           </div>
 
           <div className="flex justify-center mt-10 lg:mt-12">
-            <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
+            <CtaButton href="/pricing/">Start Your ESA Evaluation</CtaButton>
           </div>
 
           {/* Payment note */}

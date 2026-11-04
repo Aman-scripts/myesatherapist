@@ -48,7 +48,7 @@ export function EsaOnlineHowItWorks({
   title = "How Does Our Online ESA Letter Evaluation Work?",
   subtitle = "A simple three-step process guided by a licensed mental health professional.",
   steps = STEPS,
-  buttonText = "Start your ESA Evaluation",
+  buttonText = "Start Your ESA Evaluation",
   note = "ESA letters are provided solely when deemed clinically appropriate by the evaluating clinician.",
   paymentNote,
   showCta = true,

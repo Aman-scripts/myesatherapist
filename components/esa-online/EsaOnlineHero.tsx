@@ -93,7 +93,7 @@ export function EsaOnlineHero({
           showStats
             ? "items-center text-center sm:items-start sm:px-8 sm:py-14 sm:text-left"
             : "items-center px-5 text-center lg:items-start lg:text-left"
-        } ${stacked ? "pb-[70vw] sm:pb-[80vw] lg:pb-16" : ""}`}
+        } ${stacked ? "sm:pb-[80vw] lg:pb-16" : ""}`}
         style={
           {
             "--hero-tablet": stacked ? "auto" : "620px",

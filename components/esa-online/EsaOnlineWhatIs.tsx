@@ -67,7 +67,7 @@ export function EsaOnlineWhatIs() {
             >
               Learn About ESA
             </a>
-            <CtaButton href="/pricing/" variant="accent">Start your ESA Evaluation</CtaButton>
+            <CtaButton href="/pricing/" variant="accent">Start Your ESA Evaluation</CtaButton>
           </div>
         </div>
 

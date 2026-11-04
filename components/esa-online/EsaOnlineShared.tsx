@@ -42,6 +42,7 @@ export function FeatureCard({
   iconH = 32,
   stat,
   className = "",
+  footer,
 }: {
   icon?: string;
   title?: string;
@@ -56,6 +57,8 @@ export function FeatureCard({
   /** Text statistic shown in the badge when there is no icon. */
   stat?: string;
   className?: string;
+  /** Extra content rendered inside the card, below the description. */
+  footer?: React.ReactNode;
 }) {
   return (
     <div className={`relative flex w-full flex-col ${className}`}>
@@ -82,6 +85,7 @@ export function FeatureCard({
             {description}
           </p>
         )}
+        {footer}
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
         {stat ? (

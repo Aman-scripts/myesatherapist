@@ -276,7 +276,7 @@ export function ComparisonTable() {
 
         {/* Bottom CTA Button */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
-          <CtaButton href="#how-it-works">Start your ESA Evaluation</CtaButton>
+          <CtaButton href="#how-it-works">Start Your ESA Evaluation</CtaButton>
           <p className="body-small text-center">
             100% Refund If No ESA Letter Is Issued
           </p>

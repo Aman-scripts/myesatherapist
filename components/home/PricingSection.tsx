@@ -42,7 +42,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "ESA letter if clinically approved",
           "Secure email delivery",
         ],
-        buttonText: "Start your ESA Evaluation",
+        buttonText: "Start Your ESA Evaluation",
       },
       {
         title: "ESA Letter + PSD Letter Combo",

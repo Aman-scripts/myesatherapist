@@ -1,4 +1,4 @@
-import React from "react";
+import { CtaButton } from "@/components/common/CtaButton";
 import { FeatureCard } from "@/components/esa-online/EsaOnlineShared";
 import { SectionHeader, SECTION_LEAD } from "./EsaHousingShared";
 
@@ -66,29 +66,22 @@ function StatCard({ stat, className = "" }: { stat: (typeof STATS)[number]; clas
       iconW={stat.w}
       iconH={stat.h}
       description={stat.description}
+      footer={
+        <CtaButton
+          href={stat.source.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="accent"
+          className="mt-3 w-auto min-w-[168px]"
+        >
+          View Source
+        </CtaButton>
+      }
     />
   );
 }
 
-function SourceLine({ source }: { source: { label: string; href: string } }) {
-  return (
-    <p className="body-small self-start px-1 text-center text-body-text">
-      Source:{" "}
-      <a
-        href={source.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline underline-offset-2 [overflow-wrap:anywhere]"
-      >
-        {source.label}
-      </a>
-    </p>
-  );
-}
-
 export function EsaHousingBarriers() {
-  const pairs = [STATS.slice(0, 2), STATS.slice(2)];
-
   return (
     <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
@@ -97,36 +90,9 @@ export function EsaHousingBarriers() {
         </SectionHeader>
 
         <div className="w-full pt-2">
-          <div className="grid grid-cols-1 gap-y-14 sm:hidden">
-            {STATS.map((s) => (
-              <div key={s.alt} className="flex flex-col gap-3">
-                <StatCard stat={s} />
-                <SourceLine source={s.source} />
-              </div>
-            ))}
-          </div>
-
-          <div className="hidden sm:grid sm:grid-cols-2 sm:items-stretch sm:gap-x-6 sm:gap-y-3 lg:hidden">
-            {pairs.map((pair, rowIndex) => (
-              <React.Fragment key={pair[0].alt}>
-                {pair.map((s) => (
-                  <div key={s.alt} className={`flex flex-col ${rowIndex > 0 ? "mt-10" : ""}`}>
-                    <StatCard stat={s} className="flex-1" />
-                  </div>
-                ))}
-                {pair.map((s) => (
-                  <SourceLine key={`${s.alt}-source`} source={s.source} />
-                ))}
-              </React.Fragment>
-            ))}
-          </div>
-
-          <div className="hidden lg:grid lg:grid-cols-4 lg:items-stretch lg:gap-x-6 lg:gap-y-3">
+          <div className="grid grid-cols-1 items-stretch gap-y-14 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4">
             {STATS.map((s) => (
               <StatCard key={s.alt} stat={s} />
-            ))}
-            {STATS.map((s) => (
-              <SourceLine key={`${s.alt}-source`} source={s.source} />
             ))}
           </div>
         </div>

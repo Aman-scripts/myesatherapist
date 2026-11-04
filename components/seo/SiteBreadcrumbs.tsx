@@ -126,7 +126,7 @@ export function SiteBreadcrumbs({
           return (
             <li
               key={crumb.path}
-              className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[14px]! leading-[22px]! sm:gap-3 sm:text-[15px]! sm:leading-[22px]!"
+              className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[14px]! leading-[22px]! sm:gap-3 sm:text-[16px]! sm:leading-[26px]!"
             >
               {index > 0 && (
                 <svg

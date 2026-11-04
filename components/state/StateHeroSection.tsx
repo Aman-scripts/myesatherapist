@@ -204,14 +204,14 @@ function EvaluationFormCard({
           </div>
 
           <div className="space-y-2">
-            <label className="flex items-start gap-2 body-small text-body-text">
+            <label className="flex items-start gap-2 text-left body-small text-body-text">
               <input
                 type="checkbox"
                 checked={formData.terms}
                 onChange={(e) => setFormData({ ...formData, terms: e.target.checked })}
                 className="mt-1 h-4 w-4 shrink-0 accent-primary"
               />
-              <span>
+              <span className="min-w-0 flex-1 text-left">
                 I accept the{" "}
                 <a href="/terms-of-use/" target="_blank" rel="noopener noreferrer" className="text-primary underline">
                   Terms and Conditions*
@@ -219,14 +219,14 @@ function EvaluationFormCard({
               </span>
             </label>
             {errors.terms && <p className="body-small text-[#c00]">{errors.terms}</p>}
-            <label className="flex items-start gap-2 body-small text-body-text">
+            <label className="flex items-start gap-2 text-left body-small text-body-text">
               <input
                 type="checkbox"
                 checked={formData.promotion}
                 onChange={(e) => setFormData({ ...formData, promotion: e.target.checked })}
                 className="mt-1 h-4 w-4 shrink-0 accent-primary"
               />
-              <span>
+              <span className="min-w-0 flex-1 text-left">
                 I agree to receive emails with educational content, exclusive offers, partnership discounts, and marketing updates
               </span>
             </label>
@@ -234,7 +234,7 @@ function EvaluationFormCard({
 
           <div className={`flex justify-center ${compact || tight ? "pt-2" : "pt-[21px]"}`}>
             <CtaButton type="submit" variant="accent" className={compact ? "w-full" : "w-[290px]"}>
-              Start your ESA Evaluation
+              Start Your ESA Evaluation
             </CtaButton>
           </div>
 
@@ -335,7 +335,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
         <h1 className="heading-h1 text-primary mt-2 max-w-[360px] capitalize sm:mt-6 sm:max-w-[620px] lg:max-w-[560px]">
           {renderHeroTitle(data.heroTitle, stateName)}
         </h1>
-        <p className="body-large text-primary mx-auto mt-3 max-w-[330px] sm:max-w-[560px] lg:mx-0 lg:max-w-[460px]">
+        <p className="body-large text-body-text mx-auto mt-3 max-w-[330px] sm:max-w-[560px] lg:mx-0 lg:max-w-[460px]">
           {subtitle}
         </p>
         <div className="mt-6 hidden lg:block">

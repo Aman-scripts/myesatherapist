@@ -157,7 +157,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
 
         {/* Frame 1000011961: CTA Button and Subtitle */}
         <div className="flex flex-col items-center gap-2">
-          <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
+          <CtaButton href="/pricing/">Start Your ESA Evaluation</CtaButton>
           {data.benefitsRefundNote !== "" && (
             <p className="body-small text-body-text text-center">
               100% Refund If No ESA Letter Is Issued

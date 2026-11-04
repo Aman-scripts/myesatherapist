@@ -106,7 +106,7 @@ export default function StatesDirectoryPage() {
         />
 
         {/* 5. Common CTA Banner Section */}
-        <CtaBanner buttonText="Start your ESA Evaluation" buttonHref="/pricing/" />
+        <CtaBanner buttonText="Start Your ESA Evaluation" buttonHref="/pricing/" />
       </main>
 
       <Footer />
