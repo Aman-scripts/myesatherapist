@@ -14,8 +14,10 @@ export async function GET() {
         "User-agent: *",
         "Allow: /",
         "Disallow: /api/",
+        "Disallow: /admin/",
+        "Disallow: /_next/",
+        "Disallow: /private/",
         "",
-        `Host: ${SITE_URL}`,
         `Sitemap: ${SITE_URL}/sitemap.xml`,
         "",
       ].join("\n");
