@@ -3805,3 +3805,15 @@ export function getBlogBySlug(slug: string): BlogArticle | undefined {
 export function getAllBlogs(): BlogArticle[] {
   return BLOG_POSTS;
 }
+
+function samePerson(a: string | undefined, b: string): boolean {
+  return !!a && a.trim().toLowerCase() === b.trim().toLowerCase();
+}
+
+export function getBlogsByAuthorName(name: string): BlogArticle[] {
+  return BLOG_POSTS.filter((post) => samePerson(post.author?.name, name));
+}
+
+export function getBlogsReviewedByName(name: string): BlogArticle[] {
+  return BLOG_POSTS.filter((post) => samePerson(post.reviewedBy?.name, name));
+}

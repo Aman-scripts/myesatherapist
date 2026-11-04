@@ -1,4 +1,5 @@
 import React from "react";
+import { ContributorArticles } from "@/components/author/ContributorArticles";
 import { REVIEWERS } from "@/data/contributorsData";
 import { ProfileShell } from "./ProfileShell";
 import {
@@ -128,6 +129,9 @@ export function LegalReviewerContent() {
         ]}
       />
 
+      <SectionDivider />
+
+      <ContributorArticles name="Awais Arshad" role="reviewer" />
     </ProfileShell>
   );
 }

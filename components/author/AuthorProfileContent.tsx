@@ -14,6 +14,7 @@ import {
   TagList,
   TextSection,
 } from "@/components/legal-reviewer/ReviewerUI";
+import { ContributorArticles } from "@/components/author/ContributorArticles";
 import { AuthorProfile } from "@/data/authorsData";
 import { AUTHORS, REVIEWERS } from "@/data/contributorsData";
 
@@ -89,7 +90,7 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
       <DisclosureCard title="Disclaimer" paragraphs={author.disclaimerParagraphs} keepCase />
 
       {author.articlesNote && (
-        <TextSection title={`Articles by ${author.name}`} intro={author.articlesNote} />
+        <ContributorArticles name={author.name} intro={author.articlesNote} />
       )}
     </ProfileShell>
   );

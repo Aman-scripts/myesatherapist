@@ -1,4 +1,5 @@
 import React from "react";
+import { ContributorArticles } from "@/components/author/ContributorArticles";
 import { REVIEWERS } from "@/data/contributorsData";
 import { ProfileShell } from "./ProfileShell";
 import {
@@ -123,6 +124,10 @@ export function MaxPhillipsReviewerContent() {
           "I understand that my review of website content does not establish a therapist-client relationship with website visitors or constitute individual mental health treatment or professional advice.",
         ]}
       />
+
+      <SectionDivider />
+
+      <ContributorArticles name="Max Phillips" role="reviewer" />
     </ProfileShell>
   );
 }
