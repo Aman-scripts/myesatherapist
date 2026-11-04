@@ -85,10 +85,10 @@ export function StateScamsSection({ data }: { data: StateData }) {
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
             quality={90}
-                src="/states/california-scams-whatyouneed.webp"
-                alt="What You Actually Need for an ESA"
+                src="/states/Emotional%20Support%20Letter%20Consultation_state_page_common.png"
+                alt="Consultation for an emotional support animal letter"
                 fill
-                className="object-cover object-[center_20%]"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

@@ -35,19 +35,15 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
 
   const cards = [
     {
-      image: "/home/emotionalsupportnanimal.webp",
+      image: "/states/PsdvsEsa_ESASection.png",
       alt: esaTitle,
-      width: 193,
-      height: 354,
       title: esaTitle,
       bullets: esaBullets,
       tags: ["Housing Rights", "No Pet Fees", "Emotional Support"],
     },
     {
-      image: "/psd-letter/psychiatricservicedogs.webp",
+      image: "/states/PsdvsEsa_PSDSection.png",
       alt: psdTitle,
-      width: 194,
-      height: 353,
       title: psdTitle,
       bullets: psdBullets,
       tags: ["Full Public Access", "Trained Tasks", "ADA Protected"],
@@ -72,15 +68,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
               key={card.title}
               className="bg-white rounded-[22px] sm:rounded-[26px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden"
             >
-              <div className="flex justify-center bg-[#F6F1EA] px-6 py-6 sm:px-8 sm:py-8">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
                 <Image
                   src={card.image}
                   alt={card.alt}
-                  width={card.width}
-                  height={card.height}
-                  quality={100}
-                  unoptimized
-                  className="h-auto w-[210px] max-w-full rounded-[18px] object-contain sm:w-[230px]"
+                  fill
+                  quality={90}
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
 
