@@ -81,7 +81,7 @@ const esaTrainingFaqs = [
 
 export default function EsaTrainingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A] selection:bg-accent/30 selection:text-current">
+    <div className="min-h-screen flex flex-col bg-background text-body-text selection:bg-accent/30 selection:text-current">
       {/* Schema.org JSON-LD */}
       {esaTrainingSchemas.map((schemaObj, index) => (
         <script

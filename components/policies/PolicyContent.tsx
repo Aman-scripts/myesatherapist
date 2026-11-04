@@ -44,7 +44,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             key={bIdx}
             className="w-full bg-[#FEF8EC] border-l-[5px] border-accent rounded-[12px] p-4 sm:p-5 my-5 shadow-2xs"
           >
-            <p className="body-text text-primary">
+            <p className="body-text text-body-text">
               {block.html ? renderInlineHtml(block.html) : block.text}
             </p>
           </div>
@@ -295,7 +295,7 @@ export function PolicyContent({ policy }: PolicyContentProps) {
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/20 text-primary mt-0.5 font-bold text-xs">
                   ✓
                 </div>
-                <p className="body-strong text-primary">
+                <p className="body-strong text-body-text">
                   {point}
                 </p>
               </div>

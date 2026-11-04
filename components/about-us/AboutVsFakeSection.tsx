@@ -66,7 +66,7 @@ export function AboutVsFakeSection() {
                     >
                       <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
                     </div>
-                    <span className="body-large text-primary leading-snug">
+                    <span className="body-large text-body-text leading-snug">
                       {point}
                     </span>
                   </div>

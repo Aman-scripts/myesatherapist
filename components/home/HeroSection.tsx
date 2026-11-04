@@ -94,7 +94,7 @@ export function HeroSection() {
                 className="flex min-w-[140px] flex-col items-center justify-center rounded-[30px] bg-background px-4 py-2.5 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)] lg:h-[77px] lg:min-w-[163px]"
               >
                 <span className="body-large text-color-gradient">{stat.value}</span>
-                <span className="body-small mt-1 whitespace-nowrap text-[#6B6B6B]">{stat.label}</span>
+                <span className="body-small mt-1 whitespace-nowrap text-body-text">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -107,7 +107,7 @@ export function HeroSection() {
             by Licensed Professionals
           </h1>
 
-          <p className="body-large mx-auto mt-4 max-w-[340px] text-primary sm:max-w-md lg:mx-0 lg:max-w-none">
+          <p className="body-large mx-auto mt-4 max-w-[340px] text-body-text sm:max-w-md lg:mx-0 lg:max-w-none">
             Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 

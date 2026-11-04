@@ -44,7 +44,7 @@ export function ContactMap() {
               className="w-full h-full"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
+            <div className="w-full h-full flex items-center justify-center text-body-text text-sm">
               Loading map...
             </div>
           )}

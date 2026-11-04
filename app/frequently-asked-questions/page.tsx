@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A]">
+    <div className="min-h-screen flex flex-col bg-background text-body-text">
       {/* Schema.org JSON-LD */}
       {frequentlyAskedQuestionsSchemas.map((schemaObj, index) => (
         <script

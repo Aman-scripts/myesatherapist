@@ -56,7 +56,7 @@ export function AccordionItem({
         </div>
       </button>
 
-      <div className={isOpen ? "px-5 md:px-6 pb-6 pt-1 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100" : "sr-only"}>
+      <div className={isOpen ? "px-5 md:px-6 pb-6 pt-1 text-body-text text-sm md:text-base leading-relaxed border-t border-slate-100" : "sr-only"}>
         {typeof answer === "string" ? <p>{answer}</p> : answer}
       </div>
     </div>

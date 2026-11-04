@@ -64,7 +64,7 @@ export function EsaHousingLandlordRefuse() {
                 </span>
                 <div className="flex flex-col">
                   <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-[#CC191D]">{r.title}</h3>
-                  <p className="body text-[#5D686C]">{r.description}</p>
+                  <p className="body text-body-text">{r.description}</p>
                 </div>
               </li>
             ))}

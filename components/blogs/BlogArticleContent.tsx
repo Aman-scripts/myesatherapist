@@ -82,7 +82,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
   const renderCalloutBox = (callout: BlogCalloutBox) => (
     <div className="w-full bg-[#FEF8EC] border-l-[5px] border-[#EFBF2F] rounded-[8px] p-4 sm:p-5 my-5">
-      <p className="body-text text-primary font-medium">
+      <p className="body-text text-body-text font-medium">
         {callout.prefix && <>{renderFormattedText(callout.prefix)} </>}
         {callout.linkText && callout.linkHref ? (
           <Link prefetch={false}
@@ -192,7 +192,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       {card.value}
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className={`body-text ${v === "teal" ? "text-background" : "text-primary"}`}>
+                      <p className={`body-text ${v === "teal" ? "text-background" : "text-body-text"}`}>
                         {card.label}
                       </p>
                       <p className={`body ${v === "teal" ? "text-background" : "text-body-text"}`}>
@@ -347,11 +347,11 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
               <div className="bg-background border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-body-text">
                 {sec.sampleLetter.disclaimer}
               </div>
-              <div className="p-6 sm:p-10 font-sans text-sm sm:text-base leading-relaxed text-primary space-y-5">
+              <div className="p-6 sm:p-10 font-sans text-sm sm:text-base leading-relaxed text-body-text space-y-5">
                 <div className="border-b border-[#EAE5DC] pb-4 font-bold text-base sm:text-lg text-[#1D6E72] tracking-wide">
                   {sec.sampleLetter.letterhead}
                 </div>
-                <div className="text-xs sm:text-sm text-[#69777C] font-medium">
+                <div className="text-xs sm:text-sm text-body-text font-medium">
                   {sec.sampleLetter.date}
                 </div>
                 <div className="font-semibold text-primary">
@@ -359,13 +359,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 </div>
                 <div className="space-y-4">
                   {sec.sampleLetter.paragraphs.map((p, pIdx) => (
-                    <p key={pIdx} className="leading-[26px] sm:leading-[28px] text-[#475467]">
+                    <p key={pIdx} className="leading-[26px] sm:leading-[28px] text-body-text">
                       {p}
                     </p>
                   ))}
                 </div>
                 <div className="pt-4 border-t border-[#EAE5DC] space-y-1">
-                  <p className="font-semibold text-primary">{sec.sampleLetter.closing}</p>
+                  <p className="font-semibold text-body-text">{sec.sampleLetter.closing}</p>
                   {sec.sampleLetter.signoff.map((s, sIdx) => (
                     <p key={sIdx} className="text-xs sm:text-sm text-body-text font-medium">
                       {s}
@@ -401,7 +401,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                   </div>
                 ))}
                 {sec.checklist.footerNote && (
-                  <div className="mt-6 pt-4 border-t border-[#EAE5DC] text-xs sm:text-sm font-medium text-[#69777C] italic">
+                  <div className="mt-6 pt-4 border-t border-[#EAE5DC] text-xs sm:text-sm font-medium text-body-text italic">
                     {sec.checklist.footerNote}
                   </div>
                 )}
@@ -436,11 +436,11 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                         key={rIdx}
                         className={rIdx % 2 === 1 ? "bg-[#f5f9fa]" : "bg-white"}
                       >
-                        <td className="relative px-4 sm:px-6 py-4 sm:py-[18px] text-[14px] sm:text-[15px] leading-[1.5] text-[#26333a] border border-[#e3e9eb] align-top">
+                        <td className="relative px-4 sm:px-6 py-4 sm:py-[18px] text-[14px] sm:text-[15px] leading-[1.5] text-body-text border border-[#e3e9eb] align-top">
                           <span className="absolute left-0 top-0 bottom-0 w-1 bg-[#efbf2f]" />
                           {row.mayDeny}
                         </td>
-                        <td className="px-4 sm:px-6 py-4 sm:py-[18px] text-[14px] sm:text-[15px] leading-[1.5] text-[#26333a] border border-[#e3e9eb] align-top">
+                        <td className="px-4 sm:px-6 py-4 sm:py-[18px] text-[14px] sm:text-[15px] leading-[1.5] text-body-text border border-[#e3e9eb] align-top">
                           {row.cannotDeny}
                         </td>
                       </tr>
@@ -743,7 +743,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </p>
           )}
           <h2 className="heading-h3 mt-1 text-[#082935]">{article.disclaimer.title}</h2>
-          <p className="body-text mt-4 text-[#3d6473]">{article.disclaimer.intro}</p>
+          <p className="body-text mt-4 text-body-text">{article.disclaimer.intro}</p>
           <ul className="mt-4 space-y-3">
             {article.disclaimer.items.map((item) => (
               <li key={item.title} className="body-text">
@@ -761,7 +761,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </a>
           </div>
           {article.disclaimer.footer && (
-            <p className="body-small mt-4 text-[#3d6473]">{renderFormattedText(article.disclaimer.footer)}</p>
+            <p className="body-small mt-4 text-body-text">{renderFormattedText(article.disclaimer.footer)}</p>
           )}
         </section>
       )}

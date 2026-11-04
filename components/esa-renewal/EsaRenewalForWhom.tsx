@@ -65,7 +65,7 @@ export function EsaRenewalForWhom() {
                       </svg>
                     </div>
 
-                    <p className="font-sans text-sm sm:text-[16px] lg:text-[17px] font-semibold text-primary leading-[1.5]">
+                    <p className="font-sans text-sm sm:text-[16px] lg:text-[17px] font-semibold text-body-text leading-[1.5]">
                       {point}
                     </p>
                   </div>

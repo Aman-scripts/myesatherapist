@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function VideoTestimonialsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-[#1A1A1A] selection:bg-accent/30 selection:text-current">
+    <div className="min-h-screen flex flex-col bg-background text-body-text selection:bg-accent/30 selection:text-current">
       {/* Schema.org JSON-LD Structured Data */}
       {videoTestimonialsSchemas.map((schemaObj, index) => (
         <script

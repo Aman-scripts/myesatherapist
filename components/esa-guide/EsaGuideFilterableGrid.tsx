@@ -65,7 +65,7 @@ export function EsaGuideFilterableGrid() {
                         {art.cardTitle || art.title}
                       </h3>
                     </Link>
-                    <div className="font-sans text-xs font-medium text-[#69777C] sm:text-sm lg:text-[0.95vw] xl:text-sm">
+                    <div className="font-sans text-xs font-medium text-body-text sm:text-sm lg:text-[0.95vw] xl:text-sm">
                       by{" "}
                       {authorHref ? (
                         <Link

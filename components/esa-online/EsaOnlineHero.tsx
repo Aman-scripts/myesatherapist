@@ -111,7 +111,7 @@ export function EsaOnlineHero({
                   className="flex h-[77px] min-w-[176px] flex-col items-center justify-center rounded-[30px] border border-[#EAE5DC]/80 bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
                 >
                   <span className="body-large leading-none text-color-gradient">{pill.value}</span>
-                  <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{pill.label}</span>
+                  <span className="body-small mt-1 whitespace-nowrap text-body-text">{pill.label}</span>
                 </div>
               ))}
             </div>

@@ -328,7 +328,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
               className="flex h-[77px] min-w-[177px] flex-col items-center justify-center rounded-[30px] bg-background px-4 py-2.5 text-center"
             >
               <span className="body-large text-color-gradient">{stat.value}</span>
-              <span className="body-small mt-0.5 whitespace-nowrap text-[#6B6B6B]">{stat.label}</span>
+              <span className="body-small mt-0.5 whitespace-nowrap text-body-text">{stat.label}</span>
             </div>
           ))}
         </div>

@@ -68,7 +68,7 @@ export function BenefitsSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
             Why Choose My ESA Therapist?
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-body-text leading-relaxed">
             We ensure you receive legitimate documentation with rock-solid legal backing, compassionate clinician care, and continuous housing verification.
           </p>
         </div>
@@ -96,7 +96,7 @@ export function BenefitsSection() {
                     {benefit.title}
                   </h3>
 
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-body-text leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>

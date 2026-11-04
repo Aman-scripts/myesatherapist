@@ -49,7 +49,7 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
               {article.cardTitle || article.title}
             </Link>
             {authorDisplayName && (
-              <span className="font-sans font-medium text-[15px] sm:text-[16px] leading-[24px] text-[#69777C] whitespace-nowrap ml-1.5 normal-case tracking-normal inline-block align-baseline font-normal">
+              <span className="font-sans font-medium text-[15px] sm:text-[16px] leading-[24px] text-body-text whitespace-nowrap ml-1.5 normal-case tracking-normal inline-block align-baseline font-normal">
                 by{" "}
                 {authorHref ? (
                   <Link
@@ -69,7 +69,7 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
 
         {/* Excerpt: 78px height */}
         <div className="h-[78px] overflow-hidden">
-          <p className="body-text text-[#475467] line-clamp-3">
+          <p className="body-text text-body-text line-clamp-3">
             {article.shortDescription}
           </p>
         </div>

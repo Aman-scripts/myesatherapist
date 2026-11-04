@@ -49,7 +49,7 @@ export function TrustBar() {
                   <div className="text-sm font-bold text-primary leading-tight">
                     {item.title}
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">
+                  <div className="text-xs text-body-text mt-0.5">
                     {item.subtitle}
                   </div>
                 </div>
