@@ -65,7 +65,7 @@ const comparisonRows = [
   {
     feature: "Compliance",
     desktopFeature: "Compliance-Focused",
-    icon: "/esa-icons/icon-17.svg",
+    icon: "/esa-icons/icon-25.svg",
     myEsa: "FHA and HUD Compliance",
     others: "Guideline Noncompliance",
     othersType: "warning",

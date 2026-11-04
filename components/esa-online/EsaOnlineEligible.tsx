@@ -10,7 +10,7 @@ const CONDITIONS = [
   { label: "Panic Disorder", icon: "/esa-icons/icon-1.svg" },
   { label: "Bipolar Disorder", icon: "/esa-icons/icon-4.svg" },
   { label: "OCD", icon: "/esa-icons/icon-27.svg" },
-  { label: "Social Anxiety", icon: "/esa-icons/icon-10.svg" },
+  { label: "Social Anxiety", icon: "/esa-icons/icon-8.svg" },
 ];
 
 const FACTORS = [

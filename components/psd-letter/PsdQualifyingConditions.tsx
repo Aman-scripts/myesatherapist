@@ -27,7 +27,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Anxiety Disorders",
-    icon: "/esa-icons/icon-21.svg",
+    icon: "/esa-icons/icon.svg",
     image: "/qualifying-conditions/anxiety-disorders.webp",
     left: 29.42,
     top: 4.55,
@@ -120,7 +120,7 @@ const conditions: Condition[] = [
   },
   {
     label: "Schizophrenia",
-    icon: "/esa-icons/icon-21.svg",
+    icon: "/esa-icons/icon-7.svg",
     image: "/qualifying-conditions/schizophrenia.webp",
     left: 82.24,
     top: 84.93,

@@ -9,7 +9,7 @@ const CARDS = [
       "Any ESA recommendation you receive is based solely on the clinician’s professional judgment, not automatic approval.",
   },
   {
-    icon: "/esa-icons/icon-33.svg",
+    icon: "/esa-icons/icon-13.svg",
     title: "State Authorized Professionals",
     description:
       "ESA documentation is issued only by licensed mental health professionals authorized to practice in the individual’s state.",

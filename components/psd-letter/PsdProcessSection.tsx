@@ -6,7 +6,7 @@ import { CtaButton } from "@/components/common/CtaButton";
 const stepsData = [
   {
     number: "1",
-    icon: "/esa-icons/icon-38.svg",
+    icon: "/esa-icons/icon-16.svg",
     title: "Schedule Consultation",
     description:
       "Complete our simple online form to request a consultation with a licensed mental health professional in your state.",

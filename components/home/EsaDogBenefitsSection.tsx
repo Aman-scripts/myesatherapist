@@ -14,7 +14,7 @@ const BENEFITS: BenefitCard[] = [
     title: "Reduces Stress & Anxiety",
     description:
       "Petting and being near your ESA can help calm your nervous system, ease tension, and make stressful moments feel more manageable.",
-    icon: "/esa-icons/icon-21.svg",
+    icon: "/esa-icons/icon.svg",
   },
   {
     title: "Eases Loneliness",

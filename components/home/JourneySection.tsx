@@ -8,7 +8,7 @@ const cards = [
   {
     stat: "80%",
     image: "/home/journey-section-one.webp",
-    icon: "/esa-icons/icon-1.svg",
+    icon: "/esa-icons/icon-12.svg",
     text: "Pet owners say their pets bring them happiness and emotional support.",
   },
   {

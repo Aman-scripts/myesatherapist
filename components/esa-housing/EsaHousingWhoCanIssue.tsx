@@ -19,7 +19,7 @@ const CARDS = [
     description: "Master’s-level clinicians who provide counseling and assess emotional or behavioral concerns.",
   },
   {
-    icon: "/esa-icons/icon-33.svg",
+    icon: "/esa-icons/icon-13.svg",
     title: "Licensed Professional Counselor (LPC / LCPC)",
     description: "State-licensed mental health counselors trained to evaluate emotional challenges.",
   },

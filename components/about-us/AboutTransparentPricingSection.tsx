@@ -10,13 +10,13 @@ const cards = [
       "Your card is charged when you book. A refund is issued if the evaluation cannot be completed. A completed evaluation is non-refundable.",
   },
   {
-    icon: "/esa-icons/glyph-3.svg",
+    icon: "/esa-icons/icon-14.svg",
     title: "Secure Payment",
     description:
       "All payments are processed securely through encrypted systems to ensure your financial information is protected.",
   },
   {
-    icon: "/esa-icons/icon-45.svg",
+    icon: "/esa-icons/icon-26.svg",
     title: "No Hidden Fees",
     description:
       "Upfront, transparent pricing with no surprise charges or recurring fees. One payment covers the complete evaluation.",

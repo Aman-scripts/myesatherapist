@@ -8,12 +8,12 @@ const EVALUATION_STEPS = [
   {
     title: "Select Your Package",
     description: "Choose the ESA or PSD option that fits your needs and schedule your appointment.",
-    icon: "/esa-icons/icon-38.svg",
+    icon: "/esa-icons/icon-16.svg",
   },
   {
     title: "Card Authorization",
     description: "Your card is charged when you book the evaluation.",
-    icon: "/esa-icons/icon-33.svg",
+    icon: "/esa-icons/icon-14.svg",
   },
   {
     title: "Attend Evaluation",
@@ -23,7 +23,7 @@ const EVALUATION_STEPS = [
   {
     title: "Receive Your Letter",
     description: "If approved, payment is collected and your letter is emailed immediately.",
-    icon: "/esa-icons/icon-17.svg",
+    icon: "/esa-icons/icon-18.svg",
   },
 ];
 

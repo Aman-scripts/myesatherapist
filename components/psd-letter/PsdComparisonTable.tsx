@@ -51,7 +51,7 @@ interface ComparisonRow {
 const psdComparisonRows: ComparisonRow[] = [
   {
     feature: "Public Access Rights",
-    icon: "/esa-icons/icon-30.svg",
+    icon: "/esa-icons/icon-25.svg",
     psd: { text: "Yes - ADA Protected", type: "check" },
     esa: { text: "No public access", type: "cross" },
   },
@@ -63,19 +63,19 @@ const psdComparisonRows: ComparisonRow[] = [
   },
   {
     feature: "Airline Travel",
-    icon: "/esa-icons/icon-3.svg",
+    icon: "/esa-icons/icon-28.svg",
     psd: { text: "Airline Dependent", type: "warning" },
     esa: { text: "Airline Dependent", type: "warning" },
   },
   {
     feature: "Dog Training",
-    icon: "/esa-icons/icon-40.svg",
+    icon: "/esa-icons/icon-29.svg",
     psd: { text: "Must perform tasks", type: "check" },
     esa: { text: "Not Required", type: "cross" },
   },
   {
     feature: "Restaurant & Stores",
-    icon: "/esa-icons/icon-8.svg",
+    icon: "/esa-icons/icon-37.svg",
     psd: { text: "Allowed", type: "check" },
     esa: { text: "Not Allowed", type: "cross" },
   },
@@ -87,7 +87,7 @@ const psdComparisonRows: ComparisonRow[] = [
   },
   {
     feature: "Animal Allowed",
-    icon: "/esa-icons/icon-29.svg",
+    icon: "/esa-icons/icon-30.svg",
     psd: { text: "Dogs only", type: "cross" },
     esa: { text: "Most animals", type: "check" },
   },

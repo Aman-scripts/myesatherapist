@@ -15,7 +15,7 @@ const TRUST_PILLARS = [
   {
     title: "Regularly Updated",
     text: "ESA laws and policies evolve. Our resources are kept current so you always have reliable, up-to-date guidance.",
-    icon: "/esa-icons/icon-27.svg",
+    icon: "/esa-icons/icon-32.svg",
   },
 ];
 

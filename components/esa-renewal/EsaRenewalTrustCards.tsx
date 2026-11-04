@@ -12,7 +12,7 @@ interface TrustCard {
 
 const CARDS: TrustCard[] = [
   {
-    icon: "/esa-icons/glyph-3.svg",
+    icon: "/esa-icons/glyph.svg",
     title: "Secure & Compliant",
     subtitle: "HIPAA-Aligned Platform",
   },

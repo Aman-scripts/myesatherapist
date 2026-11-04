@@ -20,7 +20,7 @@ const BASICS = [
   {
     title: "Calm Public Behavior",
     text: "No excessive barking, jumping, or aggression around others.",
-    icon: "/esa-icons/icon-10.svg",
+    icon: "/esa-icons/icon-8.svg",
   },
 ];
 

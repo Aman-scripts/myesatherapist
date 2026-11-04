@@ -5,8 +5,8 @@ import { CtaButton, TEAL_GRADIENT } from "@/components/esa-online/EsaOnlineShare
 const ROWS = [
   { feature: "Legal Framework", esa: "Fair Housing Act", dog: "ADA", icon: "/esa-icons/icon-25.svg" },
   { feature: "Training Required", esa: "No", dog: "Yes, task-specific", icon: "/esa-icons/icon-30.svg" },
-  { feature: "Public Access Rights", esa: "Housing only", dog: "Nearly everywhere", icon: "/esa-icons/icon-20.svg" },
-  { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task", icon: "/esa-icons/icon-12.svg" },
+  { feature: "Public Access Rights", esa: "Housing only", dog: "Nearly everywhere", icon: "/esa-icons/icon-8.svg" },
+  { feature: "Role", esa: "Comfort through presence", dog: "Performs a specific trained task", icon: "/esa-icons/icon-41.svg" },
 ];
 
 const ROW_H = "lg:min-h-[5.2vw] xl:min-h-[61px]";

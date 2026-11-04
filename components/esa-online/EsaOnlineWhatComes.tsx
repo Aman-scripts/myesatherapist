@@ -3,7 +3,7 @@ import { FeatureCard, GoldCallout } from "./EsaOnlineShared";
 
 const CARDS = [
   {
-    icon: "/esa-icons/icon-33.svg",
+    icon: "/esa-icons/icon-13.svg",
     title: "State Licensed Clinician Signature",
     description:
       "Each document is issued on the clinician’s professional letterhead and signed by a mental health professional authorized to practice in your state.",
@@ -21,7 +21,7 @@ const CARDS = [
       "You’re provided with helpful information on how ESA accommodations typically work for housing providers.",
   },
   {
-    icon: "/esa-icons/icon-22.svg",
+    icon: "/esa-icons/icon-27.svg",
     title: "Renewal Reminders",
     description:
       "You receive notifications to help keep your ESA documentation current.",

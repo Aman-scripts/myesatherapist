@@ -6,13 +6,13 @@ const P = "/esa-online/esa-letter-online_howmyesatherapistcompare";
 type Other = { type: "warning" | "cross"; text: string };
 
 const ROWS: { feature: string; icon: string; other: Other }[] = [
-  { feature: "Licensed Evaluations", icon: "/esa-icons/icon-33.svg", other: { type: "warning", text: "Varies" } },
-  { feature: "State-Specific Licensing", icon: "/esa-icons/icon-13.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "Licensed Evaluations", icon: "/esa-icons/icon-13.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "State-Specific Licensing", icon: "/esa-icons/icon-24.svg", other: { type: "warning", text: "Varies" } },
   { feature: "HIPAA-Compliant Platform", icon: "/esa-icons/glyph-3.svg", other: { type: "warning", text: "Varies" } },
   { feature: "Phone & Video Options", icon: "/esa-icons/icon-15.svg", other: { type: "warning", text: "Limited" } },
   { feature: "HUD-Compliant", icon: "/esa-icons/icon-25.svg", other: { type: "warning", text: "Varies" } },
-  { feature: "Full Refund", icon: "/esa-icons/icon-21.svg", other: { type: "warning", text: "Varies" } },
-  { feature: "Renewals", icon: "/esa-icons/icon-22.svg", other: { type: "cross", text: "Not Available" } },
+  { feature: "Full Refund", icon: "/esa-icons/icon-22.svg", other: { type: "warning", text: "Varies" } },
+  { feature: "Renewals", icon: "/esa-icons/icon-27.svg", other: { type: "cross", text: "Not Available" } },
 ];
 
 function GreenCheck() {

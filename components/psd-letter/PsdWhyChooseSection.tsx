@@ -18,7 +18,7 @@ const REASONS = [
     text: "Schedule your evaluation online and speak with a licensed professional without taking time out to visit an office.",
   },
   {
-    icon: "/esa-icons/icon-45.svg",
+    icon: "/esa-icons/icon-26.svg",
     title: "Transparent Pricing",
     text: "With no hidden fees or surprise charges, you’ll know the entire cost upfront before starting your PSD letter evaluation.",
   },

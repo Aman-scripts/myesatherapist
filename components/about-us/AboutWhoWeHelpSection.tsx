@@ -28,7 +28,7 @@ const groups = [
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
   {
-    icon: "/esa-icons/icon-1.svg",
+    icon: "/esa-icons/icon-30.svg",
     title: "Emotional Wellness-Focused Pet Owners",
     description:
       "Discuss with licensed professionals the potential role of a companion animal in emotional support.",

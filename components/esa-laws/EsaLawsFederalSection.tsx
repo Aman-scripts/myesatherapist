@@ -57,7 +57,7 @@ export function EsaLawsFederalSection() {
         </div>
 
         <div className="w-full flex flex-col gap-12 sm:gap-[72px]">
-          <LawCard title="Fair Housing Act (FHA), 42 U.S.C. § 3604" icon="/esa-icons/icon-24.svg">
+          <LawCard title="Fair Housing Act (FHA), 42 U.S.C. § 3604" icon="/esa-icons/icon-20.svg">
             <p>
               The Fair Housing Act (FHA), 42 U.S.C. § 3604, is the primary federal law governing emotional support animals in housing. It prohibits disability discrimination and requires reasonable accommodations when necessary for a person with a disability to use and enjoy their home. Its implementing regulation, 24 C.F.R. § 100.204, remains in effect and continues to address reasonable accommodation requests.
             </p>
@@ -78,7 +78,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="Air Carrier Access Act (ACAA), 49 U.S.C. § 41705" icon="/esa-icons/icon-17.svg">
+          <LawCard title="Air Carrier Access Act (ACAA), 49 U.S.C. § 41705" icon="/esa-icons/icon-28.svg">
             <p>
               The Air Carrier Access Act (49 U.S.C. § 41705) bans disability discrimination in air travel, but under its current regulations, emotional support animals no longer count as service animals for flying. Under 14 C.F.R. Part 382, airlines have to recognize service dogs that have been individually trained to do work or perform tasks related to a person&apos;s disability.
             </p>
@@ -96,7 +96,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="What Federal Law Covers vs. Does Not Cover" icon="/esa-icons/glyph-3.svg">
+          <LawCard title="What Federal Law Covers vs. Does Not Cover" icon="/esa-icons/icon-25.svg">
             <p>
               The Fair Housing Act (FHA) protects people with disabilities from housing discrimination and may require reasonable accommodations involving assistance animals. This can include qualifying requests for emotional support animals in housing, including some college and university housing. However, HUD changed its enforcement guidance on May 22, 2026, withdrawing its prior ESA guidance. The FHA itself remains in effect, but HUD’s current enforcement approach places greater emphasis on animals individually trained to perform disability-related work or tasks.
             </p>
@@ -108,7 +108,7 @@ export function EsaLawsFederalSection() {
             </p>
           </LawCard>
 
-          <LawCard title="ESA Rights vs. Landlord Rights" icon="/esa-icons/icon-18.svg">
+          <LawCard title="ESA Rights vs. Landlord Rights" icon="/esa-icons/icon-32.svg">
             <p>
               Under the Fair Housing Act (FHA), housing providers must consider reasonable accommodation requests related to disabilities. But there are some situations where a landlord has the complete right to deny an ESA for a housing request. These include:
             </p>

@@ -17,7 +17,7 @@ export function DoctorsMatchingSection() {
     {
       title: "Receive Decision",
       desc: "Your licensed mental health professional provides an independent clinical assessment.",
-      icon: "/esa-icons/icon-46.svg",
+      icon: "/esa-icons/icon-19.svg",
     },
   ];
 

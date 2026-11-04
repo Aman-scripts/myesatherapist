@@ -12,14 +12,14 @@ const benefitsData = [
     isDark: true,
   },
   {
-    icon: "/esa-icons/icon-3.svg",
+    icon: "/esa-icons/icon-28.svg",
     title: "Air Travel Documentation",
     description:
       "Provides documentation that may support your air travel needs, subject to airline policies and approval.",
     isDark: false,
   },
   {
-    icon: "/esa-icons/icon-30.svg",
+    icon: "/esa-icons/icon-25.svg",
     title: "Public Access Information",
     description:
       "Offers documentation for public spaces when accompanied by your trained psychiatric service dog.",
