@@ -42,7 +42,6 @@ const LABELS: Record<string, string> = {
 };
 
 const OWN_BREADCRUMB = [
-  /^\/blog\/[^/]+\/[^/]+\/?$/,
   /^\/policies\//,
   /^\/privacy-policy\/?$/,
   /^\/terms-of-use\/?$/,
@@ -55,11 +54,18 @@ const OWN_BREADCRUMB = [
   /^\/telehealth-consent\/?$/,
 ];
 
+const ACRONYMS = new Set(["esa", "psd", "hud", "faq", "hipaa", "adhd", "ptsd"]);
+
 function titleCase(segment: string) {
   return segment
     .split("-")
     .filter(Boolean)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => {
+      const lower = word.toLowerCase();
+      if (ACRONYMS.has(lower)) return lower.toUpperCase();
+      if (lower === "faqs") return "FAQs";
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
     .join(" ");
 }
 

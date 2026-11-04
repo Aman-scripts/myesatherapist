@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
+import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
 interface BlogHeroSectionProps {
   title?: string;
@@ -16,12 +16,8 @@ interface BlogHeroSectionProps {
 export function BlogHeroSection({
   title = "How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist",
   subtitle = "Connect ESA letters, emotional well-being, housing rights, and life with an Emotional Support Animal.",
-  category = "ESA Guide",
-  categorySlug = "esa-guide",
   meta,
 }: BlogHeroSectionProps = {}) {
-  const categoryHref = categorySlug ? `/blog/${categorySlug}/` : "/blog/";
-
   return (
     <section className="relative w-full bg-background lg:min-h-[500px] xl:min-h-[540px] flex flex-col items-center">
       {/* Desktop illustration fills the hero. The author card hangs halfway below it. */}
@@ -57,48 +53,7 @@ export function BlogHeroSection({
       {/* ---------------------------------------------------- */}
       <div className="relative z-10 w-full max-w-[1018px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 lg:pt-[56px] xl:pt-[64px] pb-[234px] sm:pb-[238px] md:pb-[96px] lg:pb-[70px] xl:pb-[76px] flex flex-col items-center text-center">
         
-        {/* Frame 1261153653: Breadcrumbs */}
-        {/* Auto layout: row, align-items: center, gap: 12px */}
-        <nav
-          aria-label="Breadcrumb"
-          className="hidden sm:flex items-center justify-center flex-wrap gap-3 body-text text-body-text mb-6 sm:mb-7 lg:mb-[30px]"
-        >
-          <Link prefetch={false} href="/" className="hover:text-primary transition-colors">
-            Home
-          </Link>
-
-          {/* fi_254434 vector indicator */}
-          <svg
-            width="8"
-            height="8"
-            viewBox="0 0 8 8"
-            fill="currentColor"
-            className="shrink-0 text-body-text"
-            aria-hidden="true"
-          >
-            <path d="M2 1.5L6 4L2 6.5V1.5Z" />
-          </svg>
-
-          <Link prefetch={false} href="/blog/" className="hover:text-primary transition-colors">
-            Blog
-          </Link>
-
-          {/* fi_254434 vector indicator */}
-          <svg
-            width="8"
-            height="8"
-            viewBox="0 0 8 8"
-            fill="currentColor"
-            className="shrink-0 text-body-text"
-            aria-hidden="true"
-          >
-            <path d="M2 1.5L6 4L2 6.5V1.5Z" />
-          </svg>
-
-          <Link prefetch={false} href={categoryHref} className="hover:text-primary transition-colors">
-            {category}
-          </Link>
-        </nav>
+        <SiteBreadcrumbs includeSchema={false} className="mb-6 self-start sm:mb-7 lg:mb-[30px]" />
 
         {/* Frame 1000011902: Title and Subtitle Block */}
         {/* Auto layout: column, align-items: center, gap: 24px */}
