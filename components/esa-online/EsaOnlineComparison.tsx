@@ -116,7 +116,7 @@ export function EsaOnlineComparison() {
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1 gap-1.5">
                     <Image
             quality={90} src={`${P}-${row.other.type}-icon.svg`} alt={row.other.text} width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
-                    <span className="italic text-[11px] sm:text-[13px] text-body-text leading-[15px]" style={LATO}>{row.other.text}</span>
+                    <span className="body italic text-center text-body-text" style={LATO}>{row.other.text}</span>
                   </div>
                 </div>
               ))}

@@ -78,7 +78,7 @@ export function FeatureCard({
           </Heading>
         )}
         {description && (
-          <p className={`body-small ${dark ? "text-background" : "text-body-text"}`}>
+          <p className={`body ${dark ? "text-background" : "text-body-text"}`}>
             {description}
           </p>
         )}

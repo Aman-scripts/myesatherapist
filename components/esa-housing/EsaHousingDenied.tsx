@@ -60,14 +60,14 @@ export function EsaHousingDenied() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <h3 className="font-heading font-bold text-[20px] lg:text-[length:min(1.39vw,20px)] leading-7 lg:leading-[min(1.94vw,28px)] text-primary">{s.title}</h3>
-                    <p className="font-sans text-[13px] sm:text-[14px] lg:text-[length:min(0.97vw,14px)] font-semibold leading-[26px] lg:leading-[min(1.8vw,26px)] text-body-text">{s.description}</p>
+                    <p className="body text-body-text">{s.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="body-text text-body-text text-center lg:text-left">
+          <p className="body-small text-body-text text-center lg:text-left">
             <strong>Note:</strong> HUD’s May 22, 2026 update may affect how ESA housing accommodation requests are reviewed, including the assessment of supporting documentation and disability-related needs.
           </p>
         </div>

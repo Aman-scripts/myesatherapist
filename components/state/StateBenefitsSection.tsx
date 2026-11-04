@@ -23,7 +23,7 @@ function BenefitCard({ title, description, icon }: { title: string; description:
         <Image quality={90} src={icon} alt={title} width={26} height={26} unoptimized className="h-[26px] w-[26px] object-contain" />
       </div>
       <h4 className="font-heading text-[18px] sm:text-[20px] font-bold text-primary leading-snug">{title}</h4>
-      <p className="font-sans text-[14px] sm:text-[15px] font-medium leading-6 text-[#5F6B6F]">{description}</p>
+      <p className="body text-[#5F6B6F]">{description}</p>
     </div>
   );
 }
@@ -214,7 +214,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   Apply your ESA Letter Now
                 </CtaButton>
                 {refundNote ? (
-                  <p className="font-sans text-[13px] font-medium text-[#5F6B6F] text-center lg:text-left">
+                  <p className="body-small text-[#5F6B6F] text-center lg:text-left">
                     {refundNote}
                   </p>
                 ) : null}

@@ -165,7 +165,7 @@ export function EsaOnlineHero({
                   <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[240px]">
                     {buttonText}
                   </CtaButton>
-                  <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
+                  <p className="body-small text-body-text">
                     {refundText}
                   </p>
                   <ReviewBadges />
@@ -227,7 +227,7 @@ export function EsaOnlineHero({
                 <CtaButton href={buttonHref} variant="accent" className="w-auto min-w-[260px]">
                   {buttonText}
                 </CtaButton>
-                <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text">
+                <p className="body-small text-body-text">
                   {refundText}
                 </p>
                 <ReviewBadges />

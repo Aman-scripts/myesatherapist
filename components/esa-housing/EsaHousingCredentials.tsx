@@ -40,7 +40,7 @@ export function EsaHousingCredentials() {
             <div className="w-[10px] sm:w-[13px] shrink-0 bg-[#1D6E72]" />
             <div className="flex flex-col gap-1 px-5 py-4">
               <h3 className="font-heading font-bold text-[20px] leading-7 text-primary">Important</h3>
-              <p className="font-sans text-[14px] font-semibold leading-[26px] text-body-text">
+              <p className="body-small text-body-text">
                 ESA registrations, certificates, or ID cards purchased online do not replace a professional evaluation and are not considered valid documentation.
               </p>
             </div>

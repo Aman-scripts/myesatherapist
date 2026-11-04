@@ -11,7 +11,6 @@ import { EsaRenewalTrustCards } from "@/components/esa-renewal/EsaRenewalTrustCa
 import { EsaRenewalWhySection } from "@/components/esa-renewal/EsaRenewalWhySection";
 import { EsaRenewalHowItWorks } from "@/components/esa-renewal/EsaRenewalHowItWorks";
 import { EsaRenewalPricing } from "@/components/esa-renewal/EsaRenewalPricing";
-import { EsaRenewalImportantCallout } from "@/components/esa-renewal/EsaRenewalImportantCallout";
 import { EsaRenewalHousingSection } from "@/components/esa-renewal/EsaRenewalHousingSection";
 import { EsaRenewalLicensedPros } from "@/components/esa-renewal/EsaRenewalLicensedPros";
 import { EsaRenewalForWhom } from "@/components/esa-renewal/EsaRenewalForWhom";
@@ -132,9 +131,6 @@ export default function EsaRenewalPage() {
         <EsaRenewalHowItWorks />
 
         <EsaRenewalPricing />
-
-        {/* Important Disclaimer Callout */}
-        <EsaRenewalImportantCallout />
 
         {/* Renewals for Housing Accommodation Requests */}
         <EsaRenewalHousingSection />

@@ -72,7 +72,7 @@ export function PricingWhyTrustSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="body-small max-w-[250px]">
+                <p className="body max-w-[250px]">
                   {item.description}
                 </p>
               </div>

@@ -52,7 +52,7 @@ export function EsaOnlineHousingRights() {
                   </span>
                   <div className="flex flex-col">
                     <h3 className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-primary">{p.title}</h3>
-                    <p className="font-sans font-semibold text-[13px] sm:text-[14px] leading-[26px] text-body-text">{p.description}</p>
+                    <p className="body text-body-text">{p.description}</p>
                   </div>
                 </li>
               ))}

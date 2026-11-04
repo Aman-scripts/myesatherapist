@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import { CtaButton } from "@/components/common/CtaButton";
+import { openEsaEligibilityChecker } from "@/components/common/evaluationCta";
 
 
 const AVAILABLE_STATES = [
@@ -220,9 +221,9 @@ export function Header() {
               <>
                 {/* Button 1: Free ESA Eligibility Checker (Frame 1000011888) */}
                 <CtaButton
-                  href="#eligibility"
                   variant="secondary"
                   className="w-auto px-6 h-[54px] text-[16px]"
+                  onClick={() => openEsaEligibilityChecker()}
                 >
                   Free ESA Eligibility Checker
                 </CtaButton>
@@ -368,10 +369,12 @@ export function Header() {
           <div className="pt-2 space-y-2.5">
             {!isPsd && (
               <CtaButton
-                href="#eligibility"
                 variant="secondary"
                 className="w-full justify-center h-[48px]"
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  setMobileOpen(false);
+                  openEsaEligibilityChecker();
+                }}
               >
                 Free ESA Eligibility Checker
               </CtaButton>

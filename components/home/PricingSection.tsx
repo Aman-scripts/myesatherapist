@@ -165,6 +165,7 @@ interface RenderCardsProps {
   showDog: boolean;
   ctaHref: string;
   directSurvey?: boolean;
+  mobileFeatureLimit?: number;
 }
 
 function RenderCardsContainer({
@@ -175,6 +176,7 @@ function RenderCardsContainer({
   showDog,
   ctaHref,
   directSurvey = false,
+  mobileFeatureLimit = 3,
 }: RenderCardsProps) {
   return (
     <div className={`relative pb-10 ${maxCards === 2 ? "w-fit max-w-full" : "w-full max-w-[972px]"}`}>
@@ -214,7 +216,7 @@ function RenderCardsContainer({
                   </div>
                   <div className="flex min-w-0 flex-1 flex-col px-4 pb-3 pt-5">
                     <div className="flex flex-col gap-2">
-                      {card.features.slice(0, 3).map((feature) => (
+                      {card.features.slice(0, mobileFeatureLimit).map((feature) => (
                         <div key={feature} className="flex items-start gap-2">
                           <span className="flex h-[22px] shrink-0 items-center">
                             <CheckmarkIcon />
@@ -389,6 +391,7 @@ interface PricingSectionProps {
   showDog?: boolean;
   cards?: PlanCard[];
   headerHeight?: number;
+  mobileFeatureLimit?: number;
 }
 
 export function PricingSection({
@@ -406,6 +409,7 @@ export function PricingSection({
   showDog = true,
   cards: cardsOverride,
   headerHeight = 272,
+  mobileFeatureLimit,
 }: PricingSectionProps) {
   const plan = PLANS[defaultPlan];
   const sourceCards = cardsOverride ?? plan.cards;
@@ -436,6 +440,7 @@ export function PricingSection({
                 headerHeight={headerHeight}
                 showDog={showDog}
                 ctaHref={ctaHref}
+                mobileFeatureLimit={mobileFeatureLimit}
               />
             }
             psdContent={
@@ -447,6 +452,7 @@ export function PricingSection({
                 showDog={showDog}
                 ctaHref={ctaHref}
                 directSurvey
+                mobileFeatureLimit={mobileFeatureLimit}
               />
             }
           />
@@ -459,6 +465,7 @@ export function PricingSection({
             showDog={showDog}
             ctaHref={ctaHref}
             directSurvey={defaultPlan === "psd"}
+            mobileFeatureLimit={mobileFeatureLimit}
           />
         )}
       </div>

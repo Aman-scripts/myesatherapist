@@ -69,17 +69,9 @@ export function EsaRenewalHowItWorks() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-4">
-          <CtaButton href="#pricing" className="w-auto min-w-[240px]">
-            Start your ESA Evaluation
-          </CtaButton>
-          <p className="body-small text-center max-w-[640px]">
-            If not approved after your evaluation? You get a full refund.
-          </p>
-          <div className="inline-block max-w-[720px] bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 body-small text-center border border-[#E76F51]/20">
-            We authorize your payment first, but only charge it after your evaluation is completed.
-          </div>
-        </div>
+        <CtaButton href="#pricing" className="w-auto min-w-[240px]">
+          Start your ESA Evaluation
+        </CtaButton>
       </div>
     </section>
   );

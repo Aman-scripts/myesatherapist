@@ -187,7 +187,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     <h4 className="font-heading text-[18px] sm:text-[20px] font-bold text-primary leading-snug">
                       {item.title}
                     </h4>
-                    <p className="font-sans text-[14px] sm:text-[15px] font-medium leading-6 text-[#5F6B6F]">
+                    <p className="body text-[#5F6B6F]">
                       {item.description}
                     </p>
                   </div>

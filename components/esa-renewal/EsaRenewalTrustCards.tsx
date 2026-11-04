@@ -56,7 +56,7 @@ export function EsaRenewalTrustCards() {
                 >
                   {card.title}
                 </h3>
-                <p className="body-small">
+                <p className="body">
                   {card.subtitle}
                 </p>
               </div>

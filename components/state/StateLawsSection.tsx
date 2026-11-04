@@ -66,10 +66,10 @@ export function StateLawsSection({ data }: { data: StateData }) {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-primary mb-1">
+                      <h4 className="font-sans text-[18px] leading-[26px] font-bold text-primary mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
+                      <p className="body text-body-text">
                         {item.description}
                       </p>
                     </div>
@@ -124,10 +124,10 @@ export function StateLawsSection({ data }: { data: StateData }) {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-primary mb-1">
+                      <h4 className="font-sans text-[18px] leading-[26px] font-bold text-primary mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
+                      <p className="body text-body-text">
                         {item.description}
                       </p>
                     </div>
@@ -145,7 +145,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
             <h3 className="font-heading text-sm sm:text-base lg:text-[17px] font-bold text-primary tracking-wider uppercase mb-1.5">
               IMPORTANT LEGAL NOTICE
             </h3>
-            <p className="font-sans text-[11px] sm:text-xs lg:text-[14px] text-body-text font-semibold leading-relaxed">
+            <p className="body-small text-body-text">
               {data.legalNotice ||
                 `Emotional support animals do not have public access rights like service animals under the ADA and are mainly considered for household housing accommodations in ${stateName}. Generally speaking, ESAs are not permitted in public places like restaurants or stores where pets are restricted.`}
             </p>

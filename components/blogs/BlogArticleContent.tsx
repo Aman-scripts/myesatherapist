@@ -194,7 +194,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                       <p className={`body-text ${v === "teal" ? "text-background" : "text-primary"}`}>
                         {card.label}
                       </p>
-                      <p className={`body-small ${v === "teal" ? "text-background" : "text-body-text"}`}>
+                      <p className={`body ${v === "teal" ? "text-background" : "text-body-text"}`}>
                         {card.description}
                       </p>
                     </div>

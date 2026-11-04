@@ -70,10 +70,10 @@ export function StateScamsSection({ data }: { data: StateData }) {
               />
             </div>
             <div className="flex-1">
-              <h3 className="font-sans text-sm sm:text-base lg:text-[16.5px] font-bold text-[#D6292B] mb-1">
+              <h3 className="font-sans text-[18px] leading-[26px] font-bold text-[#D6292B] mb-1">
                 {alertTitle}
               </h3>
-              <p className="font-sans text-xs sm:text-[13px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
+              <p className="body text-body-text">
                 {alertText}
               </p>
             </div>
@@ -110,10 +110,10 @@ export function StateScamsSection({ data }: { data: StateData }) {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-primary mb-1">
+                      <h4 className="font-sans text-[18px] leading-[26px] font-bold text-primary mb-1">
                         {item.title}
                       </h4>
-                      <p className="font-sans text-[11px] sm:text-[12px] lg:text-[14px] text-body-text font-semibold leading-relaxed">
+                      <p className="body text-body-text">
                         {item.description}
                       </p>
                     </div>

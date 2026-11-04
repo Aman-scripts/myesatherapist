@@ -18,7 +18,7 @@ import { StateLawsSection } from "@/components/state/StateLawsSection";
 import { StateScamsSection } from "@/components/state/StateScamsSection";
 import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
 import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
-import { PricingSection } from "@/components/home/PricingSection";
+import { PricingSection, type PlanCard } from "@/components/home/PricingSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
 import { StateTableOfContents } from "@/components/state/StateTableOfContents";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
@@ -122,9 +122,9 @@ export default async function DynamicStatePage({ params }: Props) {
         <AsSeenOnSection bgColor="bg-background" />
         <div id="therapists">
           <TherapistsSection
-            title="Our Licensed Clinicians"
+            title={data.therapistsTitle || "Our Licensed Clinicians"}
             subtitle={data.therapistsSubtitle || `Evaluations for ${data.name} are completed by a clinician licensed in ${data.name}.`}
-            licensureNote={`${data.therapistsLicensureNote || ""} Evaluations for ${data.name} are completed by a clinician licensed in ${data.name}. License numbers are printed on the issued letter and can be verified with the state licensing board.`.trim()}
+            licensureNote={data.therapistsLicensureNote}
             therapistsList={data.therapistsList}
             refundText={data.benefitsRefundNote === "" ? null : undefined}
           />
@@ -164,7 +164,39 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <PricingSection sectionId="pricing" />
+        <PricingSection
+          sectionId="pricing"
+          heading={data.slug === "georgia" && data.pricingTitle ? data.pricingTitle : `The Cost of an ESA Letter in ${data.name}`}
+          headingClassName="heading-h2"
+          descriptionOverride={
+            data.slug === "georgia" && data.pricingSubtitle
+              ? data.pricingSubtitle
+              : `Choose the option that best matches your needs in ${data.name}: an ESA letter evaluation, a combined ESA and PSD evaluation, or a professional assessment if you're unsure which type of support may be appropriate. Recommendations and documentation depend on a licensed clinician's assessment.`
+          }
+          showTabs={data.slug !== "georgia"}
+          maxCards={data.slug === "georgia" ? 2 : undefined}
+          mobileFeatureLimit={data.slug === "georgia" ? 6 : undefined}
+          cards={
+            data.slug === "georgia" && data.pricingPlan1Title && data.pricingPlan2Title
+              ? ([
+                  {
+                    title: data.pricingPlan1Title,
+                    description: data.pricingPlan1Description || "",
+                    price: data.pricingPlan1Price || "$149",
+                    features: data.pricingPlan1Features || [],
+                    buttonText: "Start your ESA Evaluation",
+                  },
+                  {
+                    title: data.pricingPlan2Title,
+                    description: data.pricingPlan2Description || "",
+                    price: data.pricingPlan2Price || "$199",
+                    features: data.pricingPlan2Features || [],
+                    buttonText: "Start Evaluation",
+                  },
+                ] satisfies PlanCard[])
+              : undefined
+          }
+        />
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <div id="faq">
           <FaqSection

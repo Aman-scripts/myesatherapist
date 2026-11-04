@@ -147,6 +147,7 @@ export interface StateData {
   esaCardBullets?: string[];
   psdCardTitle?: string;
   psdCardBullets?: string[];
+  psdVsEsaNote?: string;
   psdCalloutTitle?: string;
   psdCalloutText?: string;
   benefitsImage?: string;
@@ -1004,7 +1005,7 @@ export const STATES_DATA: Record<string, StateData> = {
     whoQualifiesImageTablet: "/states/statewhoqualifies-arizona_tablet.webp",
     therapistsTitle: "Our Licensed Clinicians",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
-    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may hold various titles, such as Licensed Clinical Social Worker (LCSW) or Licensed Independent Clinical Social Worker (LICSW). These are comparable licensure levels.",
+    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
     therapistsList: [
       {
         id: 1,
@@ -1544,7 +1545,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       {
         name: "Stewart, Oakland, CA",
@@ -2220,7 +2221,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ctaTitle: "Ready to Start Your California ESA Evaluation?",
     ctaSubtitle: "Connect with a California-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       {
         name: "Stewart, Oakland, CA",
@@ -2529,7 +2530,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Protected under the Americans with Disabilities Act (ADA), giving full public access rights, including stores, restaurants, and transportation.",
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       {
         name: "Stewart, Oakland, CA",
@@ -2934,7 +2935,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Protected under the Americans with Disabilities Act (ADA), giving full access to public spaces.",
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       {
         name: "Stewart, Oakland, CA",
@@ -3153,7 +3154,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-compliant telehealth appointments",
       "ESA letters are provided only when clinically appropriate",
     ],
-    processNote: "Note: A valid ESA letter must be issued by a licensed mental health professional following an individualized clinical evaluation. This is not an instant-approval process; any recommendation should be based on the individual’s circumstances and applicable federal and state requirements.",
+    processNote: "Note: A valid ESA letter must be issued by a qualified mental health professional following an individualized clinical evaluation. This is not an instant-approval process; any recommendation should be based on the individual’s circumstances and applicable legal requirements.",
     whoQualifiesTitle: "Who May Qualify for an ESA Letter in Delaware?",
     whoQualifiesSubtitle: "Individuals living in Delaware who are finding trouble and challenges in completing day-to-day tasks and activities can get themselves evaluated by a medical professional to check the need for an emotional support animal.",
     whoQualifiesSectionHeading: "Qualifying Conditions",
@@ -3341,7 +3342,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Granted full public access rights, including entry into workplaces, stores, and other public spaces where pets are not normally allowed.",
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       {
         name: "Stewart, Oakland, CA",
@@ -3494,7 +3495,7 @@ export const STATES_DATA: Record<string, StateData> = {
     heroSubtitle: "Complete a legitimate ESA evaluation through our HIPAA-compliant, secure telehealth platform with Florida-licensed mental health professionals, in alignment with federal housing laws.",
     therapistsTitle: "Our Licensed Clinicians",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct emotional support animal (ESA) evaluations and provide recommendations for accommodation when clinically appropriate.",
-    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may hold various titles, such as Licensed Clinical Social Worker (LCSW) or Licensed Independent Clinical Social Worker (LICSW). These are comparable licensure levels.",
+    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
     therapistsList: [
       {
         id: 1,
@@ -3751,7 +3752,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Require documented disability and appropriate task training",
     ],
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       {
         name: "Stewart, Oakland, CA",
@@ -3987,7 +3988,7 @@ export const STATES_DATA: Record<string, StateData> = {
     whoQualifiesAspect: "699/1053",
     whoQualifiesImageMobile: "/states/statewhoqualifies-georgia_mobile.webp",
     whoQualifiesImageTablet: "/states/statewhoqualifies-georgia_tablet.webp",
-    therapistsTitle: "Our Licensed Clinicians",
+    therapistsTitle: "Our Licensed Mental Health Professionals",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
     therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
     therapistsList: [
@@ -4048,9 +4049,9 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-compliant telehealth consultations",
       "ESA letters in Georgia issued solely when considered clinically necessary",
     ],
-    processNote: "Note: A valid ESA letter must be issued by a qualified mental health professional following an individualized clinical evaluation. This is not an instant-approval process; any recommendation should be based on the individual’s circumstances and applicable legal requirements.",
+    processNote: "Note: A valid ESA letter must be issued by a licensed mental health professional following an individualized clinical evaluation. This is not an instant-approval process; any recommendation should be based on the individual’s circumstances and applicable federal and state requirements.",
     whoQualifiesTitle: "Who May Qualify for an ESA Letter in Georgia?",
-    whoQualifiesSubtitle: "Residents of Georgia who are finding trouble and challenges with their emotional or mental health that interfere with day-to-day tasks and activities can get themselves evaluated to check whether an emotional support animal is required or not.",
+    whoQualifiesSubtitle: "Georgia residents experiencing emotional or mental health challenges that affect daily functioning may be evaluated by a licensed mental health professional to determine whether an emotional support animal may be clinically appropriate.",
     whoQualifiesSectionHeading: "Qualifying Conditions",
     whoQualifiesConditions: [
       {
@@ -4084,7 +4085,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "The potential role of the animal’s emotional support is evaluated on an individual basis.",
       "The individual at the moment lives or is planning to relocate to Georgia.",
     ],
-    requirementsNote: "Important: A licensed mental health expert based in Georgia must carry out the evaluation to determine whether an ESA letter is appropriate based on the individual assessment. HUD’s May 22, 2026, enforcement guidance also provides updated direction on how certain animal-related reasonable accommodation complaints are handled under the Fair Housing Act, particularly those involving animals without disability-related task training. This guidance does not amend the Fair Housing Act or itself determine ESA eligibility.",
+    requirementsNote: "Important: A licensed mental health professional authorized to practice in Georgia must carry out the evaluation to determine whether an ESA recommendation is appropriate based on an individualized assessment. HUD’s May 22, 2026, enforcement guidance also provides updated direction on how certain animal-related reasonable accommodation complaints are handled under the Fair Housing Act, particularly those involving animals without disability-related task training. This guidance does not amend the Fair Housing Act or itself determine ESA eligibility.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Georgia?",
     whyChooseSubtitle: "We simplify online emotional support animal evaluations in Georgia while maintaining efficiency and legal compliance. Here’s what makes us different from other providers.",
     whyChooseItems: [
@@ -4161,12 +4162,12 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Skip Unnecessary Pet Fees",
-        description: "Under federal housing guidelines, ESAs are not considered as usual pets. This means common pet related charges such as pet rent and pet deposits could be waived off, when valid ESA documentation is presented and approved.",
+        description: "When an emotional support animal is approved as a reasonable accommodation, housing providers generally may not charge pet rent, pet deposits, or other pet-related fees for the animal.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
       {
         title: "No Breed or Size Restrictions",
-        description: "Housing providers generally may not enforce standard breed, weight, or size limits on emotional support animals in Georgia. An accommodation may be declined only in limited circumstances permitted by fair housing law, such as a documented direct threat or significant property damage that cannot be mitigated.",
+        description: "Housing providers generally may not deny an otherwise reasonable assistance-animal accommodation solely because of the animal’s breed, weight, or size. However, an accommodation may be denied in limited circumstances permitted by fair housing law, such as a documented direct threat or significant property damage that cannot be reduced or eliminated by another reasonable accommodation.",
         icon: "/states/california-benefits-workplaceconsideration.svg",
       },
     ],
@@ -4189,20 +4190,20 @@ export const STATES_DATA: Record<string, StateData> = {
       },
     ],
     lawsTitle: "Understand Your Georgia ESA Laws for Housing & Accommodation Rights",
-    lawsSubtitle: "Georgia adheres to federal housing guidelines regarding emotional support animals. Georgia does not currently have a separate state ESA housing law that adds requirements beyond the Fair Housing Act. This set of rules and regulations explains how individuals may request housing accommodation and clarifies the responsibility of the housing provider.",
+    lawsSubtitle: "Georgia adheres to federal housing guidelines regarding emotional support animals. Georgia does not have a separate state ESA housing law, so the federal Fair Housing Act governs ESA housing requests in the state. This set of rules and regulations explains how individuals may request housing accommodation and clarifies the responsibility of the housing provider.",
     card1Title: "Federal Housing Guidelines",
     card1Items: [
       {
         title: "Fair Housing Act (FHA) Considerations",
-        description: "The Fair Housing Act allows individuals with a disability-related need for an emotional support animal to request reasonable housing accommodations, even in residences with pet restrictions. All requests are subject to the housing provider’s accommodation review process and applicable fair housing exceptions.",
+        description: "The Fair Housing Act allows individuals with a disability-related need for an assistance animal to request reasonable housing accommodations, including in residences with pet restrictions. All requests are subject to the applicable reasonable accommodation review process.",
       },
       {
         title: "Pet Fee Exemptions",
-        description: "Under federal housing guidance, ESAs are generally not categorized as pets. When valid ESA documents are provided and the accommodation is approved, common pet-related fees such as pet rent or deposits are typically not imposed.",
+        description: "When an emotional support animal is approved as a reasonable accommodation, housing providers generally may not charge pet rent, pet deposits, or other pet-related fees for the animal.",
       },
       {
         title: "Housing Evaluation Standards",
-        description: "Housing providers generally must assess ESA accommodation requests on an individual basis and generally may not enforce typical pet rules related to breed, weight, or size during this review, subject to applicable fair housing exceptions.",
+        description: "Housing providers generally may not apply ordinary pet restrictions solely because of an assistance animal’s breed, weight, or size, subject to applicable fair housing exceptions.",
       },
     ],
     card2Title: "Housing Provider Role & Responsibilities",
@@ -4217,7 +4218,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Health, Safety, and Property Considerations",
-        description: "An accommodation request may be denied, or an existing accommodation may be reconsidered, if the animal presents a documented direct threat or causes significant property damage that cannot be mitigated, consistent with fair housing requirements.",
+        description: "An accommodation request may be denied, or an existing accommodation may be reconsidered, in limited circumstances permitted by fair housing law, such as when the animal poses a documented direct threat or causes significant property damage that cannot be reduced or eliminated by another reasonable accommodation.",
       },
     ],
     legalNotice: "Emotional support animals have housing and accommodation-related considerations but typically do not have the same public access as service animals. ESAs are usually not permitted in locations that restrict general animals and pets, such as restaurants, retail outlets or other pet-restricted public places.",
@@ -4237,7 +4238,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Individualized Clinical Assessment",
-        description: "An evaluation based on the individual’s symptoms, functioning, and disability-related need rather than a generic form or instant approval.",
+        description: "The ESA recommendation should be based on an appropriate evaluation and the professional’s personal knowledge of the individual’s disability-related needs.",
       },
     ],
     scamsCommonTitle: "Common ESA Scams in Georgia",
@@ -4273,13 +4274,13 @@ export const STATES_DATA: Record<string, StateData> = {
       "Coverage for all 50 U.S. states",
       "HIPAA-secure telehealth experience",
     ],
-    pricingPlan2Title: "ESA Letter + PSD Letter Combo",
+    pricingPlan2Title: "ESA Letter + ID Card",
     pricingPlan2Price: "$199",
-    pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
+    pricingPlan2Description: "Everything in the ESA Letter package, plus an official ESA ID card for added convenience when identifying your emotional support animal.",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
-      "PSD letter if clinically appropriate",
-      "PSD letter if clinically appropriate",
+      "Official ESA ID card for your animal",
+      "Convenient physical identification",
       "Priority 24-hour delivery",
       "Coverage for all 50 U.S. states",
       "HIPAA-secure telehealth experience",
@@ -4527,7 +4528,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -4650,8 +4651,8 @@ export const STATES_DATA: Record<string, StateData> = {
       "Recognized under the Americans with Disabilities Act of 1990.",
       "Allowed access to public spaces such as restaurants, stores, and workplaces.",
       "Require ongoing, structured training to perform disability-related tasks.",
-      "Note: Service animals generally have broader access rights in public places under the ADA, while workplace accommodations are evaluated under applicable employment laws.",
     ],
+    psdVsEsaNote: "Note: Service animals generally have broader access rights in public places under the ADA, while workplace accommodations are evaluated under applicable employment laws.",
     pricingTitle: "The Cost of an ESA Letter in Hawaii",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
@@ -4919,7 +4920,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -5310,7 +5311,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -5703,7 +5704,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -6093,7 +6094,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -6483,7 +6484,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -6741,7 +6742,7 @@ export const STATES_DATA: Record<string, StateData> = {
     whoQualifiesImageTablet: "/states/statewhoqualifies-kentucky_tablet.webp",
     therapistsTitle: "Our Licensed Clinicians",
     therapistsSubtitle: "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
-    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may hold various titles, such as Licensed Clinical Social Worker (LCSW) or Licensed Independent Clinical Social Worker (LICSW). These are comparable licensure levels.",
+    therapistsLicensureNote: "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
     therapistsList: [
       {
         id: 1,
@@ -6875,7 +6876,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -7266,7 +7267,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -7657,7 +7658,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -8046,7 +8047,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -8434,7 +8435,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -8824,7 +8825,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -9213,7 +9214,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -9603,7 +9604,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -9993,7 +9994,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -10383,7 +10384,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -10777,7 +10778,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -11168,7 +11169,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -14765,7 +14766,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },
@@ -16323,7 +16324,7 @@ export const STATES_DATA: Record<string, StateData> = {
     reviewsTitle: "See What Our Clients Say",
     reviewsSubtitle: "Here’s what our clients say about their experience.",
     trustedReviewsTitle: "What People Say About Their ESA Letter Journey",
-    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with MY ESA Therapist.",
+    trustedReviewsSubtitle: "Sometimes, having the right support can make everyday life feel a little easier. Here’s what our clients have to say about their experience with My ESA Therapist.",
     trustedReviews: [
       { name: "Stewart, Oakland, CA", quote: "The process with My ESA Therapist was straightforward and comfortable. I was able to speak with a licensed professional, and everything was explained clearly without feeling rushed. Overall, it was a smooth experience and I’m glad I went through with it." },
       { name: "Edward, Vernon Rockville, CT", quote: "I had a smooth experience with My ESA Therapist. The evaluation was comfortable, and I was able to openly explain how my pet supports me emotionally. Everything was clearly explained, and the ESA Letter process was straightforward. I appreciated how professional and respectful the whole experience felt." },

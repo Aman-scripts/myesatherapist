@@ -80,7 +80,7 @@ export function EsaTrainingBasicsSection() {
                     <h3 className="font-heading text-lg font-bold leading-tight text-primary sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] xl:leading-7">
                       {item.title}
                     </h3>
-                    <p className="font-sans text-[13px] font-semibold leading-[1.6] text-body-text sm:text-[14px] sm:leading-[26px] lg:text-[1.1vw] lg:leading-[1.6] xl:text-[14px] xl:leading-[26px]">
+                    <p className="body text-body-text">
                       {item.text}
                     </p>
                   </div>

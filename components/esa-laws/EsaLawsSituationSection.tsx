@@ -82,7 +82,7 @@ function SituationCard({ entry }: { entry: SituationEntry }) {
           {entry.bullets.map((bullet, idx) => (
             <li
               key={idx}
-              className="relative pl-5 font-sans font-semibold text-[14px] sm:text-[15px] leading-[22px] sm:leading-[24px] text-body-text before:content-['•'] before:absolute before:left-0 before:top-0 before:text-primary"
+              className="body relative pl-5 text-body-text before:content-['•'] before:absolute before:left-0 before:top-0 before:text-primary"
             >
               {bullet}
             </li>

@@ -233,7 +233,7 @@ export function PsdQualifyingConditions() {
                       </div>
 
                       {/* Description */}
-                      <p className="body-small mt-2 text-left">
+                      <p className="body mt-2 text-left">
                         {c.description}
                       </p>
                     </div>
@@ -322,7 +322,7 @@ export function PsdQualifyingConditions() {
                         </div>
 
                         {/* Description text matching mockup */}
-                        <p className="body-small text-left">
+                        <p className="body text-left">
                           {c.description}
                         </p>
                       </div>

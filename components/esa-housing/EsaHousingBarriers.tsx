@@ -56,7 +56,39 @@ const STATS: Array<{
   },
 ];
 
+function StatCard({ stat, className = "" }: { stat: (typeof STATS)[number]; className?: string }) {
+  return (
+    <FeatureCard
+      className={`h-full ${className}`}
+      icon={stat.icon}
+      stat={stat.stat}
+      iconAlt={stat.alt}
+      iconW={stat.w}
+      iconH={stat.h}
+      description={stat.description}
+    />
+  );
+}
+
+function SourceLine({ source }: { source: { label: string; href: string } }) {
+  return (
+    <p className="body-small self-start px-1 text-center text-body-text">
+      Source:{" "}
+      <a
+        href={source.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 [overflow-wrap:anywhere]"
+      >
+        {source.label}
+      </a>
+    </p>
+  );
+}
+
 export function EsaHousingBarriers() {
+  const pairs = [STATS.slice(0, 2), STATS.slice(2)];
+
   return (
     <section className="w-full bg-background py-14 sm:py-20 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-14">
@@ -64,31 +96,39 @@ export function EsaHousingBarriers() {
           Renters who rely on emotional support animals face fewer housing options, higher costs, and added stress. These barriers aren’t minor inconveniences, they can directly undermine emotional well-being and housing stability.
         </SectionHeader>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 pt-2">
-          {STATS.map((s) => (
-            <div key={s.alt} className="row-span-2 grid grid-rows-subgrid gap-y-3 pb-12 lg:pb-0">
-              <FeatureCard
-                className="h-full"
-                icon={s.icon}
-                stat={s.stat}
-                iconAlt={s.alt}
-                iconW={s.w}
-                iconH={s.h}
-                description={s.description}
-              />
-              <p className="body-small px-1 text-center text-body-text">
-                Source:{" "}
-                <a
-                  href={s.source.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2 [overflow-wrap:anywhere]"
-                >
-                  {s.source.label}
-                </a>
-              </p>
-            </div>
-          ))}
+        <div className="w-full pt-2">
+          <div className="grid grid-cols-1 gap-y-14 sm:hidden">
+            {STATS.map((s) => (
+              <div key={s.alt} className="flex flex-col gap-3">
+                <StatCard stat={s} />
+                <SourceLine source={s.source} />
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden sm:grid sm:grid-cols-2 sm:items-stretch sm:gap-x-6 sm:gap-y-3 lg:hidden">
+            {pairs.map((pair, rowIndex) => (
+              <React.Fragment key={pair[0].alt}>
+                {pair.map((s) => (
+                  <div key={s.alt} className={`flex flex-col ${rowIndex > 0 ? "mt-10" : ""}`}>
+                    <StatCard stat={s} className="flex-1" />
+                  </div>
+                ))}
+                {pair.map((s) => (
+                  <SourceLine key={`${s.alt}-source`} source={s.source} />
+                ))}
+              </React.Fragment>
+            ))}
+          </div>
+
+          <div className="hidden lg:grid lg:grid-cols-4 lg:items-stretch lg:gap-x-6 lg:gap-y-3">
+            {STATS.map((s) => (
+              <StatCard key={s.alt} stat={s} />
+            ))}
+            {STATS.map((s) => (
+              <SourceLine key={`${s.alt}-source`} source={s.source} />
+            ))}
+          </div>
         </div>
 
         <p className={`${SECTION_LEAD} text-center max-w-[1208px]`}>

@@ -67,7 +67,7 @@ export function EsaRenewalWhatToKnow() {
                 <h3 className="font-heading font-bold text-xl sm:text-[24px] lg:text-[22px] xl:text-[28px] tracking-[-0.00015em] text-primary leading-snug xl:leading-9">
                   {card.title}
                 </h3>
-                <p className="font-sans text-sm lg:text-[13px] xl:text-[14px] font-semibold text-body-text leading-[26px] lg:leading-[23px] xl:leading-[26px]">
+                <p className="body text-body-text">
                   {card.description}
                 </p>
               </div>

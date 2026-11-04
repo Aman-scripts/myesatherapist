@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { SITE_URL } from "@/lib/site";
 import { socialImage } from "@/data/socialImages";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
+import { EsaEligibilityModal } from "@/components/common/EsaEligibilityModal";
 import { StateSelectModal } from "@/components/common/StateSelectModal";
 
 export const viewport: Viewport = {
@@ -247,6 +248,7 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
         <GlobalDesktopScaler />
         {children}
         <StateSelectModal />
+        <EsaEligibilityModal />
       </body>
     </html>
   );

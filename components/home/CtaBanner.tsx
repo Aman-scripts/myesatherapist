@@ -96,7 +96,7 @@ export function CtaBanner({
                 )}
               </p>
               {note && (
-                <p className="text-accent body-text pt-1">
+                <p className="text-accent body-small pt-1">
                   {note}
                 </p>
               )}

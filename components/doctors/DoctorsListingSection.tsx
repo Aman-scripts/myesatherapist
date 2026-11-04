@@ -181,7 +181,7 @@ export function DoctorsListingSection() {
               {/* Card Body */}
               <div className="p-5 sm:p-7 flex flex-col justify-between flex-1 gap-6">
                 {/* Clinical Bio */}
-                <p className="font-sans font-semibold text-sm sm:text-[14px] text-body-text leading-[24px] sm:leading-[26px]">
+                <p className="body text-body-text">
                   {doc.bio}
                 </p>
 
@@ -236,7 +236,7 @@ export function DoctorsListingSection() {
           >
             Book Your Appointment
           </CtaButton>
-          <p className="font-sans font-medium text-[14px] leading-[22px] text-body-text text-center">
+          <p className="body-small text-body-text text-center">
             If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
           </p>
         </div>

@@ -302,50 +302,50 @@ export const georgiaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Georgia?",
+          "name": "Who qualifies for an ESA letter in Georgia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Georgia residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "Individuals with a diagnosed mental or emotional health condition such as anxiety, depression, PTSD, or similar disorders may qualify if a Georgia-licensed mental health professional determines that an emotional support animal is clinically appropriate.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Georgia?",
+          "name": "Can landlords deny an emotional support animal in Georgia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Georgia residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "Housing providers generally must consider reasonable accommodation requests for qualifying emotional support animals. However, a request may be denied in limited circumstances permitted by fair housing law, such as a documented direct threat or significant property damage that cannot be mitigated.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Georgia residents?",
+          "name": "How Much Does An ESA Letter Cost In Georgia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Georgia residents.",
+            "text": "The cost of an ESA letter in Georgia can differ based on the provider and how the evaluation is conducted. At My ESA Therapist, the fee is $149, covering an assessment by a licensed mental health professional and the issuance of an ESA letter if you qualify.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Georgia qualify for an emotional support animal?",
+          "name": "Do emotional support animals need special training?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Georgia may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "No. Emotional support animals are not required to undergo specialized training. What is important is having a valid ESA letter from a Georgia-licensed clinician.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Georgia residents?",
+          "name": "Is there an official ESA registry in Georgia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "No. There is no government-approved ESA registry, certification, or identification system in Georgia or anywhere else in the United States.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Georgia?",
+          "name": "Can ESA letters be obtained through telehealth in Georgia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Georgia. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "Yes. ESA letter evaluations may be conducted through secure, HIPAA-compliant telehealth platforms by Georgia-licensed mental health professionals when clinically appropriate.",
           },
         },
       ],

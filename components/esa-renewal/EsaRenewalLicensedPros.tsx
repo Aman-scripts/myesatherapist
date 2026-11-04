@@ -86,7 +86,7 @@ export function EsaRenewalLicensedPros() {
                     <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] text-primary leading-tight xl:leading-7">
                       {feat.title}
                     </h3>
-                    <p className="font-sans text-xs sm:text-[14px] lg:text-[1.1vw] xl:text-[14px] text-body-text font-semibold leading-[1.6] sm:leading-[26px] lg:leading-[1.6] xl:leading-[26px]">
+                    <p className="body text-body-text">
                       {feat.subtitle}
                     </p>
                   </div>

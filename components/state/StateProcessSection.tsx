@@ -108,7 +108,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
                   {step.title}
                 </h3>
-                <p className="font-sans font-semibold text-[14px] sm:text-[16px] leading-[24px] sm:leading-[26px] text-body-text">
+                <p className="body text-body-text">
                   {step.description}
                 </p>
               </div>
@@ -157,7 +157,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
         <div className="flex flex-col items-center gap-2">
           <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
           {data.benefitsRefundNote !== "" && (
-            <p className="font-sans font-semibold text-[12px] leading-[26px] text-body-text text-center">
+            <p className="body-small text-body-text text-center">
               If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
             </p>
           )}

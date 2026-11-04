@@ -26,6 +26,7 @@ const EVALUATION_CTA_LABELS = new Set([
 ]);
 
 export const OPEN_STATE_MODAL_EVENT = "open-state-select-modal";
+export const OPEN_ESA_CHECKER_EVENT = "open-esa-eligibility-checker";
 
 export type StateModalLetter = "esa" | "psd";
 
@@ -37,4 +38,9 @@ export function isEvaluationCtaLabel(label: string) {
 export function openStateSelectModal(letter?: StateModalLetter) {
   if (typeof window === "undefined") return;
   window.dispatchEvent(new CustomEvent(OPEN_STATE_MODAL_EVENT, { detail: { letter } }));
+}
+
+export function openEsaEligibilityChecker() {
+  if (typeof window === "undefined") return;
+  window.dispatchEvent(new CustomEvent(OPEN_ESA_CHECKER_EVENT));
 }

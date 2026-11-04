@@ -31,6 +31,28 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
     : defaultPsdBullets;
   const calloutTitle = data.psdCalloutTitle;
   const calloutText = data.psdCalloutText;
+  const note = data.psdVsEsaNote;
+
+  const cards = [
+    {
+      image: "/home/emotionalsupportnanimal.webp",
+      alt: esaTitle,
+      width: 193,
+      height: 354,
+      title: esaTitle,
+      bullets: esaBullets,
+      tags: ["Housing Rights", "No Pet Fees", "Emotional Support"],
+    },
+    {
+      image: "/psd-letter/psychiatricservicedogs.webp",
+      alt: psdTitle,
+      width: 194,
+      height: 353,
+      title: psdTitle,
+      bullets: psdBullets,
+      tags: ["Full Public Access", "Trained Tasks", "ADA Protected"],
+    },
+  ];
 
   return (
     <section className="w-full bg-background py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
@@ -44,93 +66,56 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-4 mb-10 lg:mb-12">
-          <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden sm:flex-row">
-            <div className="relative h-[260px] w-full shrink-0 overflow-hidden bg-[#F6F1EA] sm:h-auto sm:w-[190px]">
-              <Image
-                quality={90}
-                src="/home/emotionalsupportnanimal.webp"
-                alt="Emotional Support Animals (ESA)"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 639px) 100vw, 190px"
-              />
-            </div>
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6 ${note ? "" : "mb-10 lg:mb-12"}`}>
+          {cards.map((card) => (
+            <div
+              key={card.title}
+              className="bg-white rounded-[22px] sm:rounded-[26px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden"
+            >
+              <div className="flex justify-center bg-[#F6F1EA] px-6 py-6 sm:px-8 sm:py-8">
+                <Image
+                  src={card.image}
+                  alt={card.alt}
+                  width={card.width}
+                  height={card.height}
+                  quality={100}
+                  unoptimized
+                  className="h-auto w-[210px] max-w-full rounded-[18px] object-contain sm:w-[230px]"
+                />
+              </div>
 
-            <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5 lg:p-5">
-              <div>
-                <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-primary mb-3 leading-snug">
-                  {esaTitle}
+              <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6 lg:p-7">
+                <h3 className="font-heading text-xl sm:text-2xl lg:text-[23px] xl:text-[28px] font-bold text-primary mb-4 sm:mb-5 leading-snug">
+                  {card.title}
                 </h3>
-                <ul className="space-y-2 mb-4">
-                  {esaBullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
+                <ul className="space-y-3 mb-5">
+                  {card.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2.5">
                       <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-body-text" />
-                      <span className="body-text text-body-text">
-                        {bullet}
-                      </span>
+                      <span className="body-text text-body-text">{bullet}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
-                  Housing Rights
-                </span>
-                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
-                  No Pet Fees
-                </span>
-                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
-                  Emotional Support
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-[22px] sm:rounded-[26px] lg:rounded-[28px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden sm:flex-row">
-            <div className="relative h-[260px] w-full shrink-0 overflow-hidden bg-[#F6F1EA] sm:h-auto sm:w-[190px]">
-              <Image
-                quality={90}
-                src="/psd-letter/psychiatricservicedogs.webp"
-                alt="Psychiatric Service Dogs (PSD)"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 639px) 100vw, 190px"
-              />
-            </div>
-
-            <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5 lg:p-5">
-              <div>
-                <h3 className="font-heading text-lg sm:text-xl lg:text-[19px] xl:text-[22px] font-bold text-primary mb-3 leading-snug">
-                  {psdTitle}
-                </h3>
-                <ul className="space-y-2 mb-4">
-                  {psdBullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-body-text" />
-                      <span className="body-text text-body-text">
-                        {bullet}
-                      </span>
-                    </li>
+                <div className="mt-auto flex flex-wrap items-center gap-1.5">
+                  {card.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap"
+                    >
+                      {tag}
+                    </span>
                   ))}
-                </ul>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
-                  Full Public Access
-                </span>
-                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
-                  Trained Tasks
-                </span>
-                <span className="body-small text-primary bg-[#E7F5EE] px-2.5 py-1 rounded-full whitespace-nowrap">
-                  ADA Protected
-                </span>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+
+        {note && (
+          <p className="body-text text-body-text mx-auto mt-6 max-w-[820px] text-center sm:mt-8">
+            {note}
+          </p>
+        )}
 
         {/* Frame 1000012004: Bottom Callout Box (Only if provided in data) */}
         {calloutTitle && calloutText && (

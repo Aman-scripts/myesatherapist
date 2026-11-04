@@ -26,11 +26,11 @@ export function EsaHousingMoveForward() {
         </p>
         <MaybeStateModalButton
           href="/pricing/"
-          className="mt-2 inline-flex h-[46px] items-center rounded-[30px] bg-accent px-8 text-[18px] font-bold text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.25)] hover:opacity-95 transition-opacity"
+          className="mt-2 inline-flex h-[46px] items-center rounded-[30px] bg-accent px-8 button-text text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.25)] hover:opacity-95 transition-opacity"
         >
           Start Your Evaluation
         </MaybeStateModalButton>
-        <p className="font-sans text-[14px] font-medium leading-[22px] text-background max-w-[640px]">
+        <p className="body-small text-background max-w-[640px]">
           If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
         </p>
       </div>

@@ -96,7 +96,7 @@ export function EsaOnlineHowItWorks({
               {buttonText}
             </CtaButton>
             {note && (
-              <p className={paymentNote ? "body-small text-center mt-2" : "text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]"}>
+              <p className={paymentNote ? "body-small text-center mt-2" : "body-small text-center text-[#5F6B6F]"}>
                 {note}
               </p>
             )}
