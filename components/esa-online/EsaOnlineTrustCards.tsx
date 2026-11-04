@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 const CARDS = [
-  { title: "Secure & Compliant", subtitle: "HIPAA-Aligned Platform", icon: "/ESA ICons/Glyph-3.svg" },
-  { title: "Flexible Evaluations", subtitle: "Phone or Video Sessions", icon: "/ESA ICons/Icon-18.svg" },
-  { title: "Fast Scheduling", subtitle: "Same-Day Appointments", icon: "/ESA ICons/Icon-16.svg" },
-  { title: "Fully Online", subtitle: "No In-Person Visits Required", icon: "/ESA ICons/Icon-15.svg" },
+  { title: "Secure & Compliant", subtitle: "HIPAA-Aligned Platform", icon: "/esa-icons/glyph-3.svg" },
+  { title: "Flexible Evaluations", subtitle: "Phone or Video Sessions", icon: "/esa-icons/icon-18.svg" },
+  { title: "Fast Scheduling", subtitle: "Same-Day Appointments", icon: "/esa-icons/icon-16.svg" },
+  { title: "Fully Online", subtitle: "No In-Person Visits Required", icon: "/esa-icons/icon-15.svg" },
 ];
 
 export function EsaOnlineTrustCards() {

@@ -127,7 +127,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
 function CheckmarkIcon() {
   return (
     <Image quality={90}
-      src="/esa-icons/Icon-46.svg"
+      src="/esa-icons/icon-46.svg"
       alt=""
       width={20}
       height={20}
@@ -140,16 +140,6 @@ function CheckmarkIcon() {
 function mobileButtonLabel(text: string) {
   if (text.toLowerCase().startsWith("find your eligibility")) return "Find Your Eligibility";
   return text;
-}
-
-function mobilePlanTitle(title: string) {
-  if (title.includes("\n")) return title;
-  const normalized = title.toLowerCase();
-  if (normalized.includes("not sure")) return "Not Sure\nWhich\nOne";
-  if (normalized.includes("combo")) return "ESA +\nPSD\nCombo";
-  if (normalized.includes("housing")) return "ESA\nLetter -\nHousing";
-  if (normalized.includes("service")) return "PSD\nLetter";
-  return title;
 }
 
 function cardLetter(buttonText: string, directSurvey: boolean): StateModalLetter | undefined {
@@ -187,171 +177,77 @@ function RenderCardsContainer({
           const isLongButton = card.buttonText.length > 18;
           const buttonWidth = isLongButton ? "w-[272px] px-2 whitespace-nowrap" : "w-[154px]";
 
-          const mobileCard = (
+          return (
             <div
-              key={`mobile-${idx}`}
-              className={`sm:hidden relative mx-auto w-full max-w-[350px] ${
+              key={card.title}
+              className={
                 isPopular
-                  ? "rounded-[22px] bg-accent px-1 pb-1 shadow-[0px_4px_12px_rgba(0,0,0,0.1)]"
-                  : ""
-              }`}
+                  ? "relative mx-auto w-full max-w-[350px] rounded-[22px] bg-accent px-1 pb-1 shadow-[0px_4px_12px_rgba(0,0,0,0.1)] sm:flex sm:w-[310px] sm:max-w-none sm:shrink-0 sm:flex-col sm:self-stretch sm:rounded-[20px] sm:px-[5px] sm:pb-[6px] sm:pt-1"
+                  : "relative mx-auto w-full max-w-[350px] sm:flex sm:w-[300px] sm:max-w-none sm:shrink-0 sm:flex-col sm:self-stretch"
+              }
             >
               {isPopular && (
-                <div className="flex h-8 items-center justify-center font-sans text-[12px] font-bold uppercase leading-4 tracking-[0.08em] text-body-text">
+                <div className="flex h-8 items-center justify-center font-sans text-[12px] font-bold uppercase leading-4 tracking-[0.08em] text-body-text sm:h-8 sm:text-[14px] sm:leading-[26px] sm:tracking-wider sm:text-primary">
                   Most Popular
                 </div>
               )}
               <div
-                className={`overflow-hidden rounded-[18px] bg-white ${
+                className={`overflow-hidden bg-white sm:flex sm:min-h-0 sm:flex-1 sm:flex-col sm:rounded-[24px] ${
                   isPopular
-                    ? ""
-                    : "border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)]"
+                    ? "rounded-[18px] sm:border sm:border-[#E1E1E1] sm:shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)]"
+                    : "rounded-[18px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] sm:rounded-[24px]"
                 }`}
               >
-                <div className="flex items-stretch">
-                  <div className="flex w-[128px] shrink-0 items-center justify-center rounded-l-[18px] color-gradient px-3 pb-14 pt-8 text-center">
-                    <h3 className="heading-h3 w-full whitespace-pre-line text-center text-background">
-                      {mobilePlanTitle(card.title)}
-                    </h3>
-                  </div>
-                  <div className="flex min-w-0 flex-1 flex-col px-4 pb-3 pt-5">
-                    <div className="flex flex-col gap-2">
-                      {card.features.slice(0, mobileFeatureLimit).map((feature) => (
-                        <div key={feature} className="flex items-start gap-2">
-                          <span className="flex h-[22px] shrink-0 items-center">
-                            <CheckmarkIcon />
-                          </span>
-                          <span className="body-small min-w-0 text-body-text">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
+                <div className="flex items-stretch sm:flex-col">
+                  <div
+                    className="relative flex w-[128px] shrink-0 flex-col items-center justify-between gap-3 rounded-l-[18px] color-gradient px-2 py-4 text-center sm:min-h-[var(--card-header)] sm:w-full sm:items-start sm:justify-start sm:gap-0 sm:rounded-l-none sm:rounded-t-[20px] sm:px-6 sm:py-0 sm:pb-0 sm:pt-[22px] sm:text-left"
+                    style={{ ["--card-header" as string]: `${headerHeight}px` }}
+                  >
+                    <div className="w-full">
+                      <h3 className="heading-h3 w-full whitespace-pre-line text-center text-background sm:text-left">
+                        {card.title}
+                      </h3>
+                      <p className="body-text text-background mt-2 hidden sm:block">{card.description}</p>
                     </div>
-                    <div className="mt-auto flex justify-center pt-5">
-                      <MaybeStateModalButton
-                        href={ctaHref}
-                        letter={letter}
-                        className={`inline-flex w-fit max-w-full items-center justify-center text-center rounded-full bg-accent font-sans font-bold text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)] ${
-                          isLongButton
-                            ? "h-auto min-h-11 whitespace-normal px-3 py-2 text-[13px] leading-4"
-                            : "h-11 whitespace-nowrap px-5 text-[14px] leading-5"
-                        }`}
-                      >
-                        {mobileButtonLabel(card.buttonText)}
-                      </MaybeStateModalButton>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="absolute bottom-0 z-20 flex h-[72px] w-[72px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
-                style={{ left: isPopular ? 68 : 64 }}
-              >
-                <span className="font-heading text-[20px] font-bold leading-none text-primary">
-                  {card.price}
-                </span>
-              </div>
-            </div>
-          );
-
-          if (isPopular) {
-            return (
-              <React.Fragment key={idx}>
-              {mobileCard}
-              <div
-                className="hidden sm:flex w-[310px] self-stretch bg-accent rounded-[20px] pt-[4px] pb-[6px] px-[5px] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] relative flex-col items-center shrink-0"
-              >
-                <div className="h-[32px] flex items-center justify-center font-sans font-bold text-[14px] leading-[26px] text-primary uppercase tracking-wider shrink-0">
-                  MOST POPULAR
-                </div>
-
-                <div className="w-[300px] flex-1 bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex flex-col overflow-hidden">
-                  <div className="relative w-[300px] rounded-t-[20px] color-gradient px-6 pb-14 pt-8 flex flex-col gap-2 text-left shrink-0" style={{ minHeight: headerHeight }}>
-                    <h3 className="heading-h3 text-background whitespace-pre-line">
-                      {card.title}
-                    </h3>
-                    <p className="body-text text-background">
-                      {card.description}
-                    </p>
-                    <div className="absolute bottom-0 left-1/2 z-20 flex h-[78px] w-[78px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
-                      <span className="heading-h4 font-heading font-bold text-primary">
+                    <div className="relative z-20 flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[78px] sm:w-[78px] sm:-translate-x-1/2 sm:translate-y-1/2">
+                      <span className="font-heading text-[18px] font-bold leading-none text-primary sm:text-[28px]">
                         {card.price}
                       </span>
                     </div>
                   </div>
 
-                  <div className="pt-[54px] px-[24px] pb-[16px] flex flex-1 flex-col gap-[6px]">
-                    {card.features.map((f) => (
-                      <div key={f} className="flex items-start gap-[8px]">
-                        <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
-                        <span className="body-small text-body-text">
-                          {f}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
-                    <MaybeStateModalButton
-                      href={ctaHref}
-                      letter={letter}
-                      className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${buttonWidth}`}
-                    >
-                      {card.buttonText}
-                    </MaybeStateModalButton>
+                  <div className="flex min-w-0 flex-1 flex-col px-4 pb-3 pt-5 sm:px-6 sm:pb-4 sm:pt-[54px]">
+                    <div className="flex flex-1 flex-col gap-2 sm:gap-2">
+                      {card.features.map((feature, featureIndex) => (
+                        <div
+                          key={feature}
+                          className={`items-start gap-2 ${featureIndex < mobileFeatureLimit ? "flex" : "hidden sm:flex"}`}
+                        >
+                          <span className="mt-[3px] flex h-[22px] shrink-0 items-center">
+                            <CheckmarkIcon />
+                          </span>
+                          <span className="body-small min-w-0 text-body-text">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-auto flex justify-center px-0 pt-5 sm:px-3 sm:pb-7 sm:pt-2">
+                      <MaybeStateModalButton
+                        href={ctaHref}
+                        letter={letter}
+                        className={`inline-flex items-center justify-center rounded-full bg-accent text-center font-sans font-bold text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:rounded-[42px] sm:font-semibold sm:shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
+                          isLongButton
+                            ? "h-auto min-h-11 w-full max-w-full whitespace-normal px-3 py-2 text-[14px] leading-5 sm:min-h-[52px] sm:w-full sm:px-4 sm:py-2 sm:text-[16px] sm:leading-5"
+                            : `h-11 w-fit whitespace-nowrap px-5 text-[14px] leading-5 sm:h-[50px] sm:w-[154px] sm:text-[16px] sm:leading-[26px] ${buttonWidth}`
+                        }`}
+                      >
+                        <span className="sm:hidden">{mobileButtonLabel(card.buttonText)}</span>
+                        <span className={`hidden sm:block ${isLongButton ? "w-full min-w-0 whitespace-normal" : ""}`}>{card.buttonText}</span>
+                      </MaybeStateModalButton>
+                    </div>
                   </div>
                 </div>
-              </div>
-              </React.Fragment>
-            );
-          }
-
-          return (
-            <React.Fragment key={idx}>
-            {mobileCard}
-            <div
-              className="hidden sm:flex self-stretch w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] relative flex-col shrink-0 overflow-hidden"
-            >
-              <div className="relative w-[300px] rounded-t-[20px] color-gradient px-6 pb-14 pt-8 flex flex-col gap-2 text-left shrink-0" style={{ minHeight: headerHeight }}>
-                <h3 className="heading-h3 text-background whitespace-pre-line">
-                  {card.title}
-                </h3>
-                <p className="body-text text-background">
-                  {card.description}
-                </p>
-                <div className="absolute bottom-0 left-1/2 z-20 flex h-[78px] w-[78px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
-                  <span className="heading-h4 font-heading font-bold text-primary">
-                    {card.price}
-                  </span>
-                </div>
-              </div>
-
-              <div className="pt-[54px] px-[24px] pb-[16px] flex flex-1 flex-col gap-[8px]">
-                {card.features.map((f) => (
-                  <div key={f} className="flex items-start gap-[8px]">
-                    <span className="mt-[3px] shrink-0"><CheckmarkIcon /></span>
-                    <span className="body-small text-body-text">
-                      {f}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-auto pt-2 pb-7 flex justify-center items-center px-3">
-                <MaybeStateModalButton
-                  href={ctaHref}
-                  letter={letter}
-                  className={`inline-flex items-center justify-center h-[50px] rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity ${
-                    isLongButton
-                      ? "w-[272px] px-2 whitespace-nowrap"
-                      : "w-[154px]"
-                  }`}
-                >
-                  {card.buttonText}
-                </MaybeStateModalButton>
               </div>
             </div>
-            </React.Fragment>
           );
         })}
       </div>
@@ -510,7 +406,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       <div className="pt-2 pb-7 flex justify-center items-center px-3">
         <MaybeStateModalButton
           href={ctaHref}
-          className="inline-flex items-center justify-center w-[272px] h-[50px] px-2 rounded-[42px] bg-accent text-primary font-sans font-semibold text-[16px] leading-[26px] whitespace-nowrap text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity"
+          className="inline-flex w-full items-center justify-center whitespace-normal rounded-[42px] bg-accent px-4 py-2 text-center font-sans text-[16px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity min-h-[52px]"
         >
           Find Your Eligibility in Minutes
         </MaybeStateModalButton>

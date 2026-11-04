@@ -4,31 +4,31 @@ import Image from "next/image";
 
 const groups = [
   {
-    icon: "/esa-icons/Icon-20.svg",
+    icon: "/esa-icons/icon-20.svg",
     title: "Renters Facing Housing Restrictions",
     description:
       "An ESA letter, issued after evaluation by a licensed professional, may help you live with your ESA in no-pet housing.",
   },
   {
-    icon: "/esa-icons/Icon.svg",
+    icon: "/esa-icons/icon.svg",
     title: "Individuals with Mental Health Conditions",
     description:
       "Discuss your mental health concerns with a licensed mental health professional who will independently assess whether an ESA may be clinically appropriate.",
   },
   {
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
     title: "Remote or Telehealth Users",
     description:
       "Complete secure, HIPAA-compliant telehealth ESA evaluations from anywhere, with scheduling flexibility to suit your needs.",
   },
   {
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
     title: "First-Time and Returning ESA Applicants",
     description:
       "Work with licensed professionals whether applying for the first time or updating existing documentation.",
   },
   {
-    icon: "/esa-icons/Icon-1.svg",
+    icon: "/esa-icons/icon-1.svg",
     title: "Emotional Wellness-Focused Pet Owners",
     description:
       "Discuss with licensed professionals the potential role of a companion animal in emotional support.",
@@ -37,7 +37,7 @@ const groups = [
 
 export function AboutWhoWeHelpSection() {
   return (
-    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
@@ -88,7 +88,7 @@ export function AboutWhoWeHelpSection() {
             <div className="relative w-full flex-1 min-h-[360px] sm:min-h-[440px] lg:min-h-0 rounded-[24px] xl:rounded-[30px] overflow-hidden shadow-xl">
               <Image
                 quality={90}
-                src="/about-us/about_us-whowehelp-section.webp"
+                src="/about-us/about-us-whowehelp-section.webp"
                 alt="Woman sitting on floor hugging cat"
                 fill
                 className="object-cover"

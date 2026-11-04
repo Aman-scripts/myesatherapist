@@ -6,21 +6,21 @@ import { CtaButton } from "@/components/common/CtaButton";
 const stepsData = [
   {
     number: "1",
-    icon: "/esa-icons/Icon-38.svg",
+    icon: "/esa-icons/icon-38.svg",
     title: "Schedule Consultation",
     description:
       "Complete our simple online form to request a consultation with a licensed mental health professional in your state.",
   },
   {
     number: "2",
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
     title: "Meet Your Therapist",
     description:
       "Connect with a licensed professional via secure video or phone. They'll assess whether a PSD letter may be appropriate for you.",
   },
   {
     number: "3",
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
     title: "Letter if Qualified",
     description:
       "If you qualify, you may receive your PSD letter within 24-72 hours via email, signed by your licensed professional.",

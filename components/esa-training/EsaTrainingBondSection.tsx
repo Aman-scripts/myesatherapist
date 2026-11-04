@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CtaButton, TEAL_GRADIENT, WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
-const ART = "/esa-training/esa-traning_howtotraningstrengeth.webp";
+const ART = "/esa-training/esa-traning-howtotraningstrengeth.webp";
 const ART_ALT = "Woman hugging her golden retriever at home";
 
 export function EsaTrainingBondSection() {
@@ -18,14 +18,14 @@ export function EsaTrainingBondSection() {
         {/* Artwork for mobile / tablet (curve and heart badge built in) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 144, w: 390, h: 368 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 144, w: 390, h: 368 } }} />
           </div>
           <div className="hidden sm:block">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 124, w: 834, h: 926 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength-tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 124, w: 834, h: 926 } }} />
           </div>
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.webp"
+            src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Heart"
             width={64}
             height={64}

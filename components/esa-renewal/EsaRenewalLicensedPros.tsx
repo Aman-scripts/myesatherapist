@@ -39,8 +39,8 @@ export function EsaRenewalLicensedPros() {
       <div className="relative z-10 mx-auto max-w-[1448px] px-4 sm:px-8 lg:pl-[6vw] xl:pl-[64px] xl:pr-0 pb-16 sm:pb-20 lg:py-[4.5vw] xl:py-[65px]">
         <WaveImage
           alt="State licensed mental health professionals map across US"
-          mobile={{ src: "/esa-renewal/esa-renwal_licensedprofessional_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 109, w: 390, h: 402 } }}
-          tablet={{ src: "/esa-renewal/esa-renwal_licensedprofessional_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
+          mobile={{ src: "/esa-renewal/esa-renwal-licensedprofessional-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 109, w: 390, h: 402 } }}
+          tablet={{ src: "/esa-renewal/esa-renwal-licensedprofessional-tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
         />
         {/* Left Column: Heading + Text + 2 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[39vw] xl:max-w-[590px] flex flex-col gap-10 lg:gap-[2.8vw] xl:gap-14">
@@ -72,7 +72,7 @@ export function EsaRenewalLicensedPros() {
                   {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[60px] h-[60px] sm:w-[74px] sm:h-[74px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image quality={90}
-                      src="/esa-icons/Icon-33.svg"
+                      src="/esa-icons/icon-33.svg"
                       alt={feat.title}
                       width={40}
                       height={40}

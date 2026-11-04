@@ -17,7 +17,7 @@ export function BlogAuthorBio({
   name = "Allyson Valley",
   title = "Mental Health Writer & Research Contributor",
   bio = "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
-  image = "/blogs/blogs_trustbar-author.webp",
+  image = "/blogs/blogs-trustbar-author.webp",
   bioHref = DEFAULT_AUTHOR?.href,
   linkedin = DEFAULT_AUTHOR?.linkedin,
 }: BlogAuthorBioProps = {}) {

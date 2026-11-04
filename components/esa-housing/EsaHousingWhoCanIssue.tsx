@@ -4,32 +4,32 @@ import { SectionHeader } from "./EsaHousingShared";
 
 const CARDS = [
   {
-    icon: "/esa-icons/Glyph-2.svg",
+    icon: "/esa-icons/glyph-2.svg",
     title: "Licensed Psychiatrist (MD or DO)",
     description: "Medical doctors trained in mental health who can evaluate emotional or psychiatric conditions.",
   },
   {
-    icon: "/esa-icons/Icon-41.svg",
+    icon: "/esa-icons/icon-41.svg",
     title: "Licensed Psychologist (PhD or PsyD)",
     description: "Doctoral-level professionals who assess mental and emotional health through clinical evaluation.",
   },
   {
-    icon: "/esa-icons/Icon-34.svg",
+    icon: "/esa-icons/icon-34.svg",
     title: "Licensed Therapist (LMFT or LCSW)",
     description: "Master’s-level clinicians who provide counseling and assess emotional or behavioral concerns.",
   },
   {
-    icon: "/esa-icons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
     title: "Licensed Professional Counselor (LPC / LCPC)",
     description: "State-licensed mental health counselors trained to evaluate emotional challenges.",
   },
   {
-    icon: "/esa-icons/Icon-8.svg",
+    icon: "/esa-icons/icon-8.svg",
     title: "Licensed Clinical Social Worker (LCSW)",
     description: "Professionals with advanced training in mental health assessment and counseling.",
   },
   {
-    icon: "/esa-icons/Icon-18.svg",
+    icon: "/esa-icons/icon-18.svg",
     title: "Psychiatric Mental Health Nurse (PMHN / PMHNP)",
     description: "Advanced practice nurses specializing in mental health who can evaluate psychiatric conditions.",
   },

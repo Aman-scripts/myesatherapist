@@ -5,9 +5,9 @@ import { StateData } from "@/data/statesData";
 import { CtaButton } from "@/components/common/CtaButton";
 
 function processIcon(src: string) {
-  if (src.includes("schedule")) return "/esa-icons/Icon-16.svg";
-  if (src.includes("determination")) return "/esa-icons/Glyph-2.svg";
-  if (src.includes("clinical")) return "/esa-icons/Icon-18.svg";
+  if (src.includes("schedule")) return "/esa-icons/icon-16.svg";
+  if (src.includes("determination")) return "/esa-icons/glyph-2.svg";
+  if (src.includes("clinical")) return "/esa-icons/icon-18.svg";
   return src;
 }
 
@@ -128,7 +128,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
               <div key={idx} className="flex items-start gap-3.5 w-full">
                 <span className="flex h-[26px] shrink-0 items-center">
                   <Image quality={90}
-                    src="/esa-icons/Icon-46.svg"
+                    src="/esa-icons/icon-46.svg"
                     alt=""
                     width={20}
                     height={20}

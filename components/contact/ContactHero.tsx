@@ -1,10 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { CtaButton } from "@/components/common/CtaButton";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
+import { ResponsiveHero, standardHeroBackgrounds } from "@/components/common/ResponsiveHero";
+
+const cardStyle = {
+  background: "rgba(245, 166, 54, 0.26)",
+  border: "1px solid rgba(245, 166, 54, 0.09)",
+  backdropFilter: "blur(18px)",
+  WebkitBackdropFilter: "blur(18px)",
+};
+
+const fieldClass =
+  "w-full h-[40px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all";
 
 export function ContactHero() {
   const [formData, setFormData] = useState({
@@ -20,384 +29,97 @@ export function ContactHero() {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: "",
-      });
+      setFormData({ firstName: "", lastName: "", email: "", message: "" });
     }, 4000);
   };
 
-  const cardStyle = {
-    background: "rgba(245, 166, 54, 0.26)",
-    border: "1px solid rgba(245, 166, 54, 0.09)",
-    backdropFilter: "blur(18px)",
-    WebkitBackdropFilter: "blur(18px)",
-  };
-
   return (
-    <section className="relative w-full bg-background overflow-hidden">
-      <h1 className="sr-only">Request Info</h1>
-      {/* ---------------------------------------------------- */}
-      {/* 1. MOBILE VIEW (< 640px)                             */}
-      {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full max-w-[480px] mx-auto">
-        {/* Background Image: contact-us-hero-section-mobile.png */}
-        <BreakpointImage
-          media="(max-width: 639px)"
-          quality={90}
-          src="/Hero_image_for_mobile_all.webp"
-          alt="Contact Customer Support Mobile"
-          fill
-          className="object-cover object-top pointer-events-none"
-          sizes="(max-width: 639px) 430px, 1px"
-        />
-
-        {/* Floating Request Info Overlay Card */}
-        <div className="relative z-10 py-8 px-4 w-full flex justify-center">
-          <div
-            className="w-full max-w-[340px] rounded-[30px] p-5 space-y-3.5 shadow-sm"
-            style={cardStyle}
-          >
-            {/* Header */}
-            <div className="text-center space-y-2">
-              <SiteBreadcrumbs includeSchema={false} />
-              <p aria-hidden="true" className="heading-h1 text-primary text-center">
-                Request Info
-              </p>
-              <p className="body-text text-body-text text-center">
-                Feel Free To Connect With Us!
-                <br />
-                (24×7 Available At Your Service)
-              </p>
-            </div>
-
-            {submitted ? (
-              <div className="color-gradient text-white p-5 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
-                <div className="w-8 h-8 rounded-full bg-accent text-[#04161C] font-bold text-lg flex items-center justify-center mx-auto">
-                  ✓
-                </div>
-                <h3 className="heading-h3 text-white">Thank You!</h3>
-                <p className="body-small text-white">Your message has been sent successfully.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-2.5">
-                <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-text text-body-text">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="First Name"
-                    value={formData.firstName}
-                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                  />
-                </div>
-
-                <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-text text-body-text">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Last Name"
-                    value={formData.lastName}
-                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                  />
-                </div>
-
-                <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-text text-body-text">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="youremail.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                  />
-                </div>
-
-                <div className="space-y-0.5">
-                  <label className="block whitespace-nowrap body-text text-body-text">
-                    Message
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full h-[36px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                  />
-                </div>
-
-                {/* Centered Button & Security Note */}
-                <div className="pt-1 flex flex-col items-center justify-center space-y-1">
-                  <CtaButton type="submit" variant="accent">
-                    Get Started
-                  </CtaButton>
-
-                  <p className="body-small text-body-text text-center text-[12px]">
-                    Your information is 100% secure and private.
-                  </p>
-                </div>
-              </form>
-            )}
-          </div>
+    <ResponsiveHero
+      centered={false}
+      desktopHeight={814}
+      tabletMinHeight="780px"
+      contentClassName="items-center lg:items-start"
+      backgrounds={standardHeroBackgrounds(
+        "/hero-image-for-mobile-all.webp",
+        "/contact/contact-us-hero-section-tablet.webp",
+        "/contact/contact-hero-section.webp",
+        { mobile: "object-top", tablet: "object-top", desktop: "object-center" },
+      )}
+    >
+      <div className="w-full max-w-[340px] space-y-4 rounded-[30px] p-5 shadow-sm sm:max-w-[520px] sm:p-8" style={cardStyle}>
+        <div className="space-y-2 text-center">
+          <SiteBreadcrumbs />
+          <h1 className="heading-h1 text-primary">Request Info</h1>
+          <p className="body-text text-body-text">
+            Feel Free To Connect With Us!
+            <br className="sm:hidden" /> (24×7 Available At Your Service)
+          </p>
         </div>
+
+        {submitted ? (
+          <div className="color-gradient space-y-2 rounded-2xl p-6 text-center text-white shadow-xl">
+            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-accent text-xl font-bold text-[#04161C]">
+              ✓
+            </div>
+            <h2 className="heading-h3 text-white">Thank You!</h2>
+            <p className="body-text text-white">Your message has been sent successfully.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <label className="block space-y-1">
+                <span className="body-text text-body-text">First Name</span>
+                <input
+                  type="text"
+                  required
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                  className={fieldClass}
+                />
+              </label>
+              <label className="block space-y-1">
+                <span className="body-text text-body-text">Last Name</span>
+                <input
+                  type="text"
+                  required
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                  className={fieldClass}
+                />
+              </label>
+            </div>
+            <label className="block space-y-1">
+              <span className="body-text text-body-text">Email Address</span>
+              <input
+                type="email"
+                required
+                placeholder="your@email.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className={fieldClass}
+              />
+            </label>
+            <label className="block space-y-1">
+              <span className="body-text text-body-text">Message</span>
+              <textarea
+                required
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className={`${fieldClass} h-[72px] py-2`}
+              />
+            </label>
+            <div className="flex flex-col items-center space-y-1 pt-1">
+              <CtaButton type="submit" variant="accent">
+                Get Started
+              </CtaButton>
+              <p className="body-small text-center text-body-text">Your information is 100% secure and private.</p>
+            </div>
+          </form>
+        )}
       </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET VIEW (640px - 1023px)                      */}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1380] overflow-hidden max-w-[834px] mx-auto">
-        {/* Background Image: contact_us-hero-section-tablet.png */}
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
-          src="/contact/contact_us-hero-section-tablet.webp"
-          alt="Contact Customer Support Tablet"
-          fill
-          className="object-cover object-top pointer-events-none"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-
-        {/* Floating Request Info Overlay Card */}
-        <div className="relative z-10 pt-8 sm:pt-10 md:pt-12 px-6 w-full flex justify-center">
-          <div
-            className="w-full max-w-[500px] md:max-w-[520px] rounded-[30px] p-6 sm:p-7 md:p-8 space-y-4 sm:space-y-5 shadow-sm"
-            style={cardStyle}
-          >
-            {/* Header */}
-            <div className="text-center space-y-1.5">
-              <SiteBreadcrumbs includeSchema={false} />
-              <p aria-hidden="true" className="heading-h2 text-primary text-center">
-                Request Info
-              </p>
-              <p className="body-text text-body-text text-center">
-                Feel Free To Connect With Us! (24×7 Available At Your Service)
-              </p>
-            </div>
-
-            {submitted ? (
-              <div className="color-gradient text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl">
-                <div className="w-10 h-10 rounded-full bg-accent text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
-                  ✓
-                </div>
-                <h3 className="heading-h3 text-white">Thank You!</h3>
-                <p className="body-text text-white">Your message has been sent successfully.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5">
-                {/* First Name & Last Name */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                  <div className="space-y-1">
-                    <label className="block body-text text-body-text">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="First Name"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="block body-text text-body-text">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Last Name"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                    />
-                  </div>
-                </div>
-
-                {/* Email Address */}
-                <div className="space-y-1">
-                  <label className="block body-text text-body-text">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full h-[40px] sm:h-[42px] px-3.5 sm:px-4 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                  />
-                </div>
-
-                {/* Message */}
-                <div className="space-y-1">
-                  <label className="block body-text text-body-text">
-                    Message
-                  </label>
-                  <textarea
-                    required
-                    rows={3}
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full min-h-[90px] sm:min-h-[100px] p-3 sm:p-3.5 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all resize-none"
-                  />
-                </div>
-
-                {/* Centered Button & Security Note */}
-                <div className="pt-1.5 flex flex-col items-center justify-center space-y-1.5">
-                  <CtaButton type="submit" variant="accent">
-                    Get Started
-                  </CtaButton>
-
-                  <p className="body-small text-body-text text-center">
-                    Your information is 100% secure and private.
-                  </p>
-                </div>
-              </form>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP VIEW (>= 1024px)                          */}
-      {/* ---------------------------------------------------- */}
-      <DesktopScaleWrapper
-        designWidth={1440}
-        designHeight={814}
-        className="hidden lg:block relative"
-        fullBleedBackground={
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/contact/contact-hero-section.webp"
-            alt="Customer service representative at desk"
-            fill
-            className="object-cover object-center pointer-events-none"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
-        }
-      >
-        <div className="relative w-[1440px] h-[814px] flex items-center">
-          {/* Floating Request Info Overlay Card (Figma Frame 1000011950, Left: 79px, Top: 89px) */}
-          <div className="absolute left-[79px] top-[89px] w-[611px] h-[636px]">
-            <div
-              className="w-[611px] h-[636px] rounded-[30px] py-[32px] px-[24px] flex flex-col justify-between shadow-sm"
-              style={cardStyle}
-            >
-              {/* Centered Header */}
-              <div className="text-center space-y-1">
-                <SiteBreadcrumbs />
-                <p aria-hidden="true" className="heading-h1 text-primary">
-                  Request Info
-                </p>
-                <p className="body-large text-body-text text-center">
-                  Feel Free To Connect With Us! (24×7 Available At Your Service)
-                </p>
-              </div>
-
-              {submitted ? (
-                <div className="color-gradient text-white p-6 rounded-2xl text-center space-y-2 animate-fadeIn shadow-xl my-auto">
-                  <div className="w-10 h-10 rounded-full bg-accent text-[#04161C] font-bold text-xl flex items-center justify-center mx-auto">
-                    ✓
-                  </div>
-                  <h3 className="heading-h3 text-white">Thank You!</h3>
-                  <p className="body-text text-white">Your message has been sent successfully.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* First Name & Last Name */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label className="block body-text text-body-text">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="First Name"
-                        value={formData.firstName}
-                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                        className="w-full h-[44px] px-4 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                      />
-                    </div>
-
-                    <div className="space-y-1">
-                      <label className="block body-text text-body-text">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Last Name"
-                        value={formData.lastName}
-                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                        className="w-full h-[44px] px-4 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Email Address */}
-                  <div className="space-y-1">
-                    <label className="block body-text text-body-text">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="your@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full h-[44px] px-4 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all"
-                    />
-                  </div>
-
-                  {/* Message */}
-                  <div className="space-y-1">
-                    <label className="block body-text text-body-text">
-                      Message
-                    </label>
-                    <textarea
-                      required
-                      rows={4}
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full min-h-[127px] p-3.5 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all resize-none"
-                    />
-                  </div>
-
-                  {/* Centered Button & Security Note */}
-                  <div className="pt-2 flex flex-col items-center justify-center space-y-2">
-                    <CtaButton type="submit" variant="accent">
-                      Get Started
-                    </CtaButton>
-
-                    <p className="body-small text-body-text text-center">
-                      Your information is 100% secure and private.
-                    </p>
-                  </div>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      </DesktopScaleWrapper>
-    </section>
+    </ResponsiveHero>
   );
 }

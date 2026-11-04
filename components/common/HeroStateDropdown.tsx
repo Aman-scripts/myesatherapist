@@ -64,7 +64,7 @@ export function HeroStateDropdown({
         className={buttonClassName}
       >
         <Image quality={90}
-          src="/esa-icons/Icon-37.svg"
+          src="/esa-icons/icon-37.svg"
           alt="Location"
           width={iconSize}
           height={iconSize}

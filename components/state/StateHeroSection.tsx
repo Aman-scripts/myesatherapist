@@ -5,8 +5,8 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ChevronDown } from "lucide-react";
 import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { HeroStatPills } from "@/components/common/HeroStatPills";
 import { CtaButton } from "@/components/common/CtaButton";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 import { STATE_INDEX } from "@/data/stateIndex";
 import {
@@ -284,129 +284,76 @@ export function StateHeroSection({ data }: { data: StateData }) {
     data.heroSubtitle ||
     `Speak to ${stateName}'s mental health professionals for personalized wellness evaluations. ESA documentation in ${stateName} is issued through a legitimate clinical assessment that aligns with federal housing guidelines.`;
 
-  // Desktop lets the headline wrap naturally inside the 560px Figma text column
-  const desktopTitle = data.heroTitle
-    ? data.heroTitle.replace(/\n/g, " ")
-    : `${stateName} ESA Letter Evaluations by Licensed Therapists`;
-
   return (
-    <section className="relative w-full bg-background overflow-hidden">
-      <h1 className="sr-only">{desktopTitle}</h1>
-      {/* 1. DESKTOP VIEW — 1440px coordinates from the Figma "ESA - California" hero */}
-      <DesktopScaleWrapper
-        wrapperClassName="bg-background"
-        background={
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/states/california-hero-section.webp"
-            alt={`${stateName} ESA Evaluations with Licensed Therapists`}
-            fill
-            className="object-cover object-top pointer-events-none"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
-        }
-      >
-        <div className="relative w-[1440px] h-[808px]">
-          <SiteBreadcrumbs className="absolute left-[82px] top-[18px] z-30" />
-          <div className="absolute left-[82px] top-[82px] w-[560px] z-20">
-            {/* Stat Pills */}
-            <div className="flex items-center gap-3">
-              {statsData.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center justify-center bg-background py-2.5 px-4 rounded-[30px] text-center min-w-[177px] h-[77px]"
-                >
-                  <span className="body-large text-color-gradient">{stat.value}</span>
-                  <span className="body-small text-[#6B6B6B] mt-0.5 whitespace-nowrap">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-
-            <p aria-hidden="true" className="heading-h1 text-primary capitalize mt-6">{desktopTitle}</p>
-
-            <p className="body-large text-body-text mt-4 max-w-[460px]">{subtitle}</p>
-
-            <div className="mt-6">
-              <ReviewBadges />
-            </div>
-          </div>
-
-          <div className="absolute right-[81px] top-[31px] w-[464px] z-20">
-            <EvaluationFormCard
-              formData={formData}
-              setFormData={setFormData}
-              handleSubmit={handleSubmit}
-              errors={errors}
-              titleAs="h2"
-              tight
-            />
-          </div>
-        </div>
-      </DesktopScaleWrapper>
-
-      {/* 2. TABLET VIEW */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1774] max-w-[834px] mx-auto overflow-hidden">
+    <section className="relative w-full overflow-visible bg-background">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <BreakpointImage
+          media="(max-width: 639px)"
+          quality={90}
+          src="/hero-image-for-mobile-all.webp"
+          alt=""
+          fill
+          className="object-cover object-top sm:hidden"
+          sizes="(max-width: 639px) 100vw, 1px"
+        />
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={90}
           src="/states/california-hero-section-tablet.webp"
-          alt={`${stateName} ESA Evaluations Tablet View`}
+          alt=""
           fill
-          className="object-cover object-top pointer-events-none"
+          className="hidden object-cover object-top sm:block lg:hidden"
           sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
         />
+        <BreakpointImage
+          media="(min-width: 1024px)"
+          quality={90}
+          src="/states/california-hero-section.webp"
+          alt=""
+          fill
+          className="hidden object-cover object-top lg:block"
+          sizes="(min-width: 1024px) 100vw, 1px"
+        />
+      </div>
 
-        <div className="absolute top-0 inset-x-0 z-10 px-6 pt-4 sm:px-10 sm:pt-5">
-          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-          <div className="text-center space-y-3 max-w-[620px] mx-auto">
-            <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
-              {renderHeroTitle(data.heroTitle, stateName)}
-            </p>
-            <p className="body-large text-primary text-center max-w-[560px] mx-auto">{subtitle}</p>
-          </div>
+      <div
+        className="responsive-hero-copy relative z-10 flex flex-col items-center px-4 pb-10 pt-4 text-center sm:px-10 lg:mx-auto lg:w-[1440px] lg:items-start lg:px-0 lg:pl-[82px] lg:pt-[82px] lg:text-left"
+        style={{ "--hero-tablet": "auto", "--hero-desktop": "808px" } as React.CSSProperties}
+      >
+        <SiteBreadcrumbs className="mb-4 self-start lg:absolute lg:left-[82px] lg:top-[18px]" />
+        <div className="hidden items-center gap-3 sm:flex sm:flex-wrap sm:justify-center lg:justify-start">
+          {statsData.map((stat) => (
+            <div
+              key={stat.label}
+              className="flex h-[77px] min-w-[177px] flex-col items-center justify-center rounded-[30px] bg-background px-4 py-2.5 text-center"
+            >
+              <span className="body-large text-color-gradient">{stat.value}</span>
+              <span className="body-small mt-0.5 whitespace-nowrap text-[#6B6B6B]">{stat.label}</span>
+            </div>
+          ))}
         </div>
-
-        <div className="absolute top-[56%] left-1/2 -translate-x-1/2 z-10 w-full max-w-[480px] px-6 sm:px-10">
+        <h1 className="heading-h1 text-primary mt-2 max-w-[360px] capitalize sm:mt-6 sm:max-w-[620px] lg:max-w-[560px]">
+          {renderHeroTitle(data.heroTitle, stateName)}
+        </h1>
+        <p className="body-large text-primary mx-auto mt-3 max-w-[330px] sm:max-w-[560px] lg:mx-0 lg:max-w-[460px]">
+          {subtitle}
+        </p>
+        <div className="mt-6 hidden lg:block">
+          <ReviewBadges />
+        </div>
+        <div className="mt-6 flex w-full max-w-[360px] flex-col items-center gap-3 sm:hidden">
+          <HeroStatPills stats={statsData} />
+          <ReviewBadges className="justify-center" />
+        </div>
+        <div className="mt-6 w-full max-w-[420px] lg:absolute lg:right-[81px] lg:top-[31px] lg:mt-0 lg:w-[464px] lg:max-w-none">
           <EvaluationFormCard
             formData={formData}
             setFormData={setFormData}
             handleSubmit={handleSubmit}
             errors={errors}
+            titleAs="h2"
+            tight
           />
-        </div>
-      </div>
-
-      {/* 3. MOBILE VIEW */}
-      <div className="sm:hidden relative w-full">
-        <BreakpointImage
-          media="(max-width: 639px)"
-          quality={90}
-          src="/Hero_image_for_mobile_all.webp"
-          alt={`${stateName} ESA Evaluations Mobile View`}
-          fill
-          className="object-cover object-top pointer-events-none"
-          sizes="(max-width: 639px) 430px, 1px"
-        />
-
-        <div className="relative z-10 flex flex-col items-center gap-6 px-4 pb-10 pt-4">
-          <SiteBreadcrumbs className="self-start" includeSchema={false} />
-          <div className="text-center space-y-2 pt-1 px-1 max-w-[360px] mx-auto">
-            <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center">
-              {renderHeroTitle(data.heroTitle, stateName)}
-            </p>
-            <p className="body-large text-primary text-center max-w-[330px] mx-auto">{subtitle}</p>
-          </div>
-          <div className="w-full max-w-[350px]">
-            <EvaluationFormCard
-              formData={formData}
-              setFormData={setFormData}
-              handleSubmit={handleSubmit}
-              errors={errors}
-              compact
-              titleAs="h2"
-            />
-          </div>
         </div>
       </div>
     </section>

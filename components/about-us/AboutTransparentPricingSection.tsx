@@ -4,19 +4,19 @@ import Image from "next/image";
 
 const cards = [
   {
-    icon: "/esa-icons/Icon-22.svg",
+    icon: "/esa-icons/icon-22.svg",
     title: "Refund Policy",
     description:
       "Your card is charged when you book. A refund is issued if the evaluation cannot be completed. A completed evaluation is non-refundable.",
   },
   {
-    icon: "/esa-icons/Glyph-3.svg",
+    icon: "/esa-icons/glyph-3.svg",
     title: "Secure Payment",
     description:
       "All payments are processed securely through encrypted systems to ensure your financial information is protected.",
   },
   {
-    icon: "/esa-icons/Icon-45.svg",
+    icon: "/esa-icons/icon-45.svg",
     title: "No Hidden Fees",
     description:
       "Upfront, transparent pricing with no surprise charges or recurring fees. One payment covers the complete evaluation.",
@@ -25,7 +25,7 @@ const cards = [
 
 export function AboutTransparentPricingSection() {
   return (
-    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">

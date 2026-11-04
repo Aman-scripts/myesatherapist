@@ -37,7 +37,7 @@ export function AboutLegitimateSection() {
           <div className="hidden sm:block relative w-full aspect-[834/1050]">
             <Image
               quality={90}
-              src="/about-us/about_us-legimatesection-tablet.webp"
+              src="/about-us/about-us-legimatesection-tablet.webp"
               alt="Legitimate ESA Evaluations"
               fill
               className="object-cover object-top"
@@ -49,7 +49,7 @@ export function AboutLegitimateSection() {
           <div className="block sm:hidden relative w-full aspect-[390/513]">
             <Image
               quality={90}
-              src="/about-us/about_us-legimatesection-mobile.webp"
+              src="/about-us/about-us-legimatesection-mobile.webp"
               alt="Legitimate ESA Evaluations"
               fill
               className="object-cover object-top"
@@ -60,7 +60,7 @@ export function AboutLegitimateSection() {
           {/* Floating Heart & Paw Badge centered at bottom curve */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.15)] p-3 sm:p-3.5 flex items-center justify-center z-20 border border-[#EAE5DC]">
             <Image quality={90}
-              src="/about-us/about_us-legimateesasection-hearticon.webp"
+              src="/about-us/about-us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={42}
               height={42}
@@ -163,7 +163,7 @@ export function AboutLegitimateSection() {
           <div className="absolute right-0 top-0 bottom-0 w-[737px] h-[938px] pointer-events-none z-0">
             <Image
               quality={90}
-              src="/about-us/about_us-legimate_Esa-section.webp"
+              src="/about-us/about-us-legimate-esa-section.webp"
               alt="Legitimate ESA Evaluations"
               fill
               className="object-cover object-right-top"

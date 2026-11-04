@@ -2,7 +2,7 @@ import React from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 
-const ART = "/esa-qualifying-conditions/esa-qualifyingconditions_herosection.webp";
+const ART = "/esa-qualifying-conditions/esa-qualifyingconditions-herosection.webp";
 const ART_ALT = "Woman hugging her cat, surrounded by icons for anxiety, stress, depression, PTSD and mood disorders";
 
 export function QualifyingConditionsHero() {
@@ -13,7 +13,7 @@ export function QualifyingConditionsHero() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
-          src="/Hero_image_for_mobile_all.webp"
+          src="/hero-image-for-mobile-all.webp"
           alt=""
           fill
           className="object-cover object-top"
@@ -29,7 +29,7 @@ export function QualifyingConditionsHero() {
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={90}
-          src="/esa-qualifying-conditions/esa-qualifyingcondtions_herosection_tablet.webp"
+          src="/esa-qualifying-conditions/esa-qualifyingcondtions-herosection-tablet.webp"
           alt={ART_ALT}
           fill
           className="object-cover object-bottom"

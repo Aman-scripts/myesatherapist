@@ -99,7 +99,7 @@ export function AboutTestimonialSection() {
   const current = TESTIMONIALS[activeIdx] || TESTIMONIALS[0];
 
   return (
-    <section className="w-full bg-white py-14 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+    <section className="w-full bg-background py-14 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Frame 1261153623: Section Header */}

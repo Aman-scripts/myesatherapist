@@ -32,13 +32,13 @@ export function getTherapistAvatar(t: Therapist): string {
   if (t.avatar && t.avatar !== "/common/therapist-avatar.webp") return t.avatar;
   const lower = t.name.toLowerCase();
   if (lower.includes("robert") || lower.includes("staaf")) {
-    return "/doctors/Robert_Staff_Dr.webp";
+    return "/doctors/robert-staff-dr.webp";
   }
   if (lower.includes("leslie") || lower.includes("gamble")) {
-    return "/doctors/Leslie_kgamble_Dr.webp";
+    return "/doctors/leslie-kgamble-dr.webp";
   }
   if (lower.includes("gaurav") || lower.includes("patel")) {
-    return "/doctors/Gaurav_patel_Dr.webp";
+    return "/doctors/gaurav-patel-dr.webp";
   }
   return t.avatar || "/common/therapist-avatar.webp";
 }
@@ -76,7 +76,7 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety & Stress",
-    avatar: "/doctors/Robert_Staff_Dr.webp",
+    avatar: "/doctors/robert-staff-dr.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   {
@@ -87,7 +87,7 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression & PTSD",
-    avatar: "/doctors/Leslie_kgamble_Dr.webp",
+    avatar: "/doctors/leslie-kgamble-dr.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
   },
   {
@@ -98,7 +98,7 @@ const defaultTherapists: Therapist[] = [
     licensedIn: "17 States",
     method: "Video or Phone",
     focus: "Chronic Conditions & Sleep Concerns",
-    avatar: "/doctors/Gaurav_patel_Dr.webp",
+    avatar: "/doctors/gaurav-patel-dr.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
 ];
@@ -115,11 +115,11 @@ function StatBadge({
   const iconSrc =
     icon ||
     (label.toLowerCase().includes("licensed")
-      ? "/esa-icons/Icon-37.svg"
+      ? "/esa-icons/icon-37.svg"
       : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/esa-icons/Icon-15.svg"
+      ? "/esa-icons/icon-15.svg"
       : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/esa-icons/Icon.svg"
+      ? "/esa-icons/icon.svg"
       : "/common/therapist-section-badge.svg");
 
   return (
@@ -339,17 +339,17 @@ export function TherapistsSection({
                         <StatBadge
                           label="Licensed In"
                           value={t.licensedIn}
-                          icon="/esa-icons/Icon-37.svg"
+                          icon="/esa-icons/icon-37.svg"
                         />
                         <StatBadge
                           label="Evaluation Method"
                           value={t.method || "Video or Phone"}
-                          icon="/esa-icons/Icon-15.svg"
+                          icon="/esa-icons/icon-15.svg"
                         />
                         <StatBadge
                           label="Focus Areas"
                           value={t.focus}
-                          icon="/esa-icons/Icon.svg"
+                          icon="/esa-icons/icon.svg"
                         />
                       </div>
 

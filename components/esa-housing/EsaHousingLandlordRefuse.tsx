@@ -5,31 +5,31 @@ import { SectionHeader } from "./EsaHousingShared";
 const REASONS = [
   {
     title: "Invalid or Unverifiable ESA Documentation",
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
     description:
       "A landlord may deny an ESA request if the letter is fraudulent, outdated, or issued by an unlicensed provider. ESA documentation must come from a properly licensed mental health professional.",
   },
   {
     title: "Health or Safety Conflicts",
-    icon: "/esa-icons/Glyph-2.svg",
+    icon: "/esa-icons/glyph-2.svg",
     description:
       "If another resident has a documented medical condition that could be significantly affected, a landlord may evaluate whether accommodations can be made without compromising health or safety.",
   },
   {
     title: "Behavior or Safety Concerns",
-    icon: "/esa-icons/Icon-44.svg",
+    icon: "/esa-icons/icon-44.svg",
     description:
       "An ESA may be restricted if it displays aggressive behavior, causes repeated disturbances, or poses a genuine safety risk to others within the property.",
   },
   {
     title: "Lack of Reasonable Accommodation",
-    icon: "/esa-icons/Icon-20.svg",
+    icon: "/esa-icons/icon-20.svg",
     description:
       "If accommodating the ESA would impose an undue burden due to space, structural, or operational limitations, a landlord may deny the request.",
   },
   {
     title: "Property Damage Responsibility",
-    icon: "/esa-icons/Icon-21.svg",
+    icon: "/esa-icons/icon-21.svg",
     description:
       "While pet deposits cannot be charged for ESAs, tenants remain responsible for covering the cost of any actual damage caused by their animal.",
   },
@@ -47,7 +47,7 @@ export function EsaHousingLandlordRefuse() {
           <div className="relative w-full aspect-[1983/793]">
             <Image
             quality={90}
-              src="/esa-housing/esa-letter-housing_landlordrefusesesa.webp"
+              src="/esa-housing/esa-letter-housing-landlordrefusesesa.webp"
               alt="Tenant and her dog being refused by a landlord holding a denied notice"
               fill
               className="object-cover"

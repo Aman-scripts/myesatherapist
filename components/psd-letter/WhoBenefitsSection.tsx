@@ -6,32 +6,32 @@ const benefitsData = [
   {
     title: "Individuals with Psychiatric Disabilities",
     description: "People whose mental health condition substantially affects daily activities and who benefit from a trained service dog.",
-    icon: "/esa-icons/Icon-20.svg",
+    icon: "/esa-icons/icon-20.svg",
   },
   {
     title: "Renters & Housing Applicants",
     description: "Those seeking housing accommodations for a psychiatric service dog.",
-    icon: "/esa-icons/Icon-29.svg",
+    icon: "/esa-icons/icon-29.svg",
   },
   {
     title: "Frequent Travelers",
     description: "People who regularly travel with a psychiatric service dog and may need professional documentation related to their PSD.",
-    icon: "/esa-icons/Icon-28.svg",
+    icon: "/esa-icons/icon-28.svg",
   },
   {
     title: "Existing Service Dog Handlers",
     description: "People who already work with a trained psychiatric service dog and need professional documentation related to their disability.",
-    icon: "/esa-icons/Icon-30.svg",
+    icon: "/esa-icons/icon-30.svg",
   },
   {
     title: "Individuals With Functional Limitations",
     description: "People whose psychiatric disability makes certain everyday activities more difficult and may require task-based assistance.",
-    icon: "/esa-icons/Icon-40.svg",
+    icon: "/esa-icons/icon-40.svg",
   },
   {
     title: "People Seeking Professional Guidance",
     description: "Individuals who want a licensed mental health professional to assess whether a psychiatric service dog may be appropriate for their needs.",
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
   },
 ];
 

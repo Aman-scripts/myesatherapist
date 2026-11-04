@@ -58,7 +58,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
-          src="/Hero_image_for_mobile_all.webp"
+          src="/hero-image-for-mobile-all.webp"
           alt=""
           fill
           className="object-cover object-top"
@@ -69,7 +69,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
         <BreakpointImage
           media="(min-width: 640px)"
           quality={90}
-          src="/doctors/doctor_internal.webp"
+          src="/doctors/doctor-internal.webp"
           alt="Licensed mental health professional"
           fill
           className="object-cover object-[75%_center] lg:object-right"

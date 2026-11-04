@@ -23,7 +23,7 @@ const fakePoints = [
 
 export function AboutVsFakeSection() {
   return (
-    <section className="w-full bg-background py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-[920px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">

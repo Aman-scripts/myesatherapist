@@ -3,21 +3,21 @@ import Image from "next/image";
 import { CtaButton, GoldCallout, WaveImage } from "./EsaOnlineShared";
 
 const CONDITIONS = [
-  { label: "Anxiety", icon: "/ESA ICons/Icon.svg" },
-  { label: "Depression", icon: "/ESA ICons/Icon-3.svg" },
-  { label: "PTSD", icon: "/ESA ICons/Icon-2.svg" },
-  { label: "ADHD", icon: "/ESA ICons/Icon-5.svg" },
-  { label: "Panic Disorder", icon: "/ESA ICons/Icon-1.svg" },
-  { label: "Bipolar Disorder", icon: "/ESA ICons/Icon-4.svg" },
-  { label: "OCD", icon: "/ESA ICons/Icon-27.svg" },
-  { label: "Social Anxiety", icon: "/ESA ICons/Icon-10.svg" },
+  { label: "Anxiety", icon: "/esa-icons/icon.svg" },
+  { label: "Depression", icon: "/esa-icons/icon-3.svg" },
+  { label: "PTSD", icon: "/esa-icons/icon-2.svg" },
+  { label: "ADHD", icon: "/esa-icons/icon-5.svg" },
+  { label: "Panic Disorder", icon: "/esa-icons/icon-1.svg" },
+  { label: "Bipolar Disorder", icon: "/esa-icons/icon-4.svg" },
+  { label: "OCD", icon: "/esa-icons/icon-27.svg" },
+  { label: "Social Anxiety", icon: "/esa-icons/icon-10.svg" },
 ];
 
 const FACTORS = [
-  { text: "Your current emotional or mental health concerns", icon: "/ESA ICons/Icon-4.svg" },
-  { text: "Whether an animal can reasonably fit into your daily routines", icon: "/ESA ICons/Icon-16.svg" },
-  { text: "Your ability to care for an animal responsibly", icon: "/ESA ICons/Icon-7.svg" },
-  { text: "How an ESA may support your emotional stability", icon: "/ESA ICons/Icon-12.svg" },
+  { text: "Your current emotional or mental health concerns", icon: "/esa-icons/icon-4.svg" },
+  { text: "Whether an animal can reasonably fit into your daily routines", icon: "/esa-icons/icon-16.svg" },
+  { text: "Your ability to care for an animal responsibly", icon: "/esa-icons/icon-7.svg" },
+  { text: "How an ESA may support your emotional stability", icon: "/esa-icons/icon-12.svg" },
 ];
 
 /*
@@ -32,7 +32,7 @@ export function EsaOnlineEligible() {
         <div className="absolute left-[2%] top-[50%] z-20 w-[min(5vw,73px)] h-[min(5vw,73px)] -translate-y-1/2">
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.webp"
+            src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Heart"
             width={73}
             height={73}
@@ -41,7 +41,7 @@ export function EsaOnlineEligible() {
         </div>
         <Image
             quality={90}
-          src="/esa-online/esa-letter-online_whatmaybeeligible.webp"
+          src="/esa-online/esa-letter-online-whatmaybeeligible.webp"
           alt="Woman reading her ESA letter with her pets beside her"
           fill
           className="object-cover object-left-bottom"
@@ -52,8 +52,8 @@ export function EsaOnlineEligible() {
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[min(5.56vw,80px)] lg:pr-0 pb-14 sm:pb-20 lg:py-[min(4.5vw,65px)]">
         <WaveImage
           alt="Woman reading her ESA letter with her pets beside her"
-          mobile={{ src: "/esa-online/esa-online-whomaybeeligible_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 99, w: 390, h: 412 } }}
-          tablet={{ src: "/esa-online/esa-online-whomaybeeligible_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
+          mobile={{ src: "/esa-online/esa-online-whomaybeeligible-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 99, w: 390, h: 412 } }}
+          tablet={{ src: "/esa-online/esa-online-whomaybeeligible-tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
         />
         <div className="w-full max-w-[628px] lg:max-w-[min(43.6vw,628px)] text-center lg:text-left flex flex-col gap-8 lg:gap-[min(2.2vw,32px)]">
           <div className="flex flex-col gap-4">

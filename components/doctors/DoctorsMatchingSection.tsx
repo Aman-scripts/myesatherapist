@@ -7,17 +7,17 @@ export function DoctorsMatchingSection() {
     {
       title: "Start Evaluation",
       desc: "Begin your secure online evaluation through our HIPAA-compliant platform.",
-      icon: "/esa-icons/Icon-18.svg",
+      icon: "/esa-icons/icon-18.svg",
     },
     {
       title: "Get Matched",
       desc: "We connect you with a licensed professional authorized to practice in your state.",
-      icon: "/esa-icons/Glyph-2.svg",
+      icon: "/esa-icons/glyph-2.svg",
     },
     {
       title: "Receive Decision",
       desc: "Your licensed mental health professional provides an independent clinical assessment.",
-      icon: "/esa-icons/Icon-46.svg",
+      icon: "/esa-icons/icon-46.svg",
     },
   ];
 

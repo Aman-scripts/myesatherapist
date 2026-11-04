@@ -34,13 +34,13 @@ export function BlogMetaBar({
   authorName = "Allyson Valley",
   authorRole = "Written by",
   authorCredentials = "Licensed Clinical Social Worker",
-  authorImage = "/blogs/blogs_trustbar-author.webp",
+  authorImage = "/blogs/blogs-trustbar-author.webp",
   publishDate = "June 19, 2026",
   lastUpdated = "June 19, 2026",
   reviewerName = "Max Phillips",
   reviewerRole = "Medically Reviewed by",
   reviewerCredentials = "MSW, LCSW",
-  reviewerImage = "/blogs/blogs_medical_reviewer.webp",
+  reviewerImage = "/blogs/blogs-medical-reviewer.webp",
   reviewerLinkedin,
 }: BlogMetaBarProps = {}) {
   const authorHref = PROFILE_HREF[authorName] ?? "#about-the-author";
@@ -86,7 +86,7 @@ export function BlogMetaBar({
           <div className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] md:w-[68px] md:h-[68px] lg:w-[77px] lg:h-[77px] shrink-0 relative flex items-center justify-center">
             <Image
               quality={90}
-              src="/blogs/blogs_trustbar-publish.webp"
+              src="/blogs/blogs-trustbar-publish.webp"
               alt="Calendar Icon"
               fill
               priority

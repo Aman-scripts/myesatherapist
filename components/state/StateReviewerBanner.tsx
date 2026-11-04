@@ -29,7 +29,7 @@ const REVIEWER_PROFILES: Record<string, { href: string; linkedin: string }> = {
 export function StateReviewerBanner({
   reviewerName = "Robert Staaf",
   updatedDate = "November 3, 2026",
-  reviewerImage = "/images/doctors/Robert_Staff_Dr.webp",
+  reviewerImage = "/images/doctors/robert-staff-dr.webp",
   reviewerHref,
   reviewerLinkedin,
   className = "",

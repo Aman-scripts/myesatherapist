@@ -18,14 +18,14 @@ export function EsaGuideWhyResearch() {
         {/* Artwork for mobile / tablet (curve built in, heart badge added) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-guide/esa-guide-whypeopleresearch_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 68, w: 390, h: 444 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-guide/esa-guide-whypeopleresearch-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 68, w: 390, h: 444 } }} />
           </div>
           <div className="hidden sm:block">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-guide/esa-guide-whypeopleresearch_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 197, w: 834, h: 853 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-guide/esa-guide-whypeopleresearch-tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 197, w: 834, h: 853 } }} />
           </div>
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.webp"
+            src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Heart"
             width={64}
             height={64}

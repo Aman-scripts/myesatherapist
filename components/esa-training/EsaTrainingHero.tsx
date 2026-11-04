@@ -16,7 +16,7 @@ export function EsaTrainingHero() {
         <BreakpointImage
           media="(max-width: 639px)"
           quality={90}
-          src="/Hero_image_for_mobile_all.webp"
+          src="/hero-image-for-mobile-all.webp"
           alt=""
           fill
           className="object-cover object-top"
@@ -32,7 +32,7 @@ export function EsaTrainingHero() {
         <BreakpointImage
           media="(min-width: 640px) and (max-width: 1023px)"
           quality={90}
-          src="/esa-training/esa-training-herosection_tablet.webp"
+          src="/esa-training/esa-training-herosection-tablet.webp"
           alt="Woman sitting on the floor at home holding her cat"
           fill
           className="object-cover object-bottom"
@@ -41,7 +41,7 @@ export function EsaTrainingHero() {
       </div>
       <BreakpointImage
         media="(min-width: 1024px)"
-        src="/esa-training/esa-traning_herosection.webp"
+        src="/esa-training/esa-traning-herosection.webp"
         alt="Woman sitting on the floor at home holding her cat"
         fill
         quality={90}

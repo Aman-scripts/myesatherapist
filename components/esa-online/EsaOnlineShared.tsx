@@ -162,7 +162,7 @@ export function WaveImage({
       {badge && (
         <Image
             quality={90}
-          src="/about-us/about_us-legimateesasection-hearticon.webp"
+          src="/about-us/about-us-legimateesasection-hearticon.webp"
           alt="Heart"
           width={64}
           height={64}

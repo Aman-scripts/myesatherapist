@@ -29,7 +29,7 @@ export function BlogHeroSection({
         <BreakpointImage
           media="(min-width: 1024px)"
           quality={90}
-          src="/blogs/blogs_internal_page_common.webp"
+          src="/blogs/blogs-internal-page-common.webp"
           alt=""
           fill
           className="object-cover object-right"
@@ -43,7 +43,7 @@ export function BlogHeroSection({
           <BreakpointImage
             media="(max-width: 1023px)"
             quality={90}
-            src="/Hero_image_for_mobile_all.webp"
+            src="/hero-image-for-mobile-all.webp"
             alt=""
             fill
             className="object-cover object-top"

@@ -32,7 +32,7 @@ export function LegalReviewerContent() {
   return (
     <ProfileShell
       name="Awais Arshad"
-      avatar="/legal_reviewer/legal-reviwer.webp"
+      avatar="/legal-reviewer/legal-reviwer.webp"
       avatarAlt="Awais Arshad - Legal Reviewer & Attorney at Law"
       sidebar={
         <>

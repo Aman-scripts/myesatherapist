@@ -1,94 +1,35 @@
-import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
-import { VideoTestimonialsTrustBar } from "./VideoTestimonialsTrustBar";
+import React from "react";
+import { ResponsiveHero, standardHeroBackgrounds } from "@/components/common/ResponsiveHero";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
-
-const HEADING_LINE_1 = "Real Stories,";
-const HEADING_LINE_2 = "Real Impact";
-const DESCRIPTION =
-  "Hear directly from our clients as they share their experiences with My ESA Therapist and the support they received throughout their ESA evaluation journey.";
+import { VideoTestimonialsTrustBar } from "@/components/video-testimonials/VideoTestimonialsTrustBar";
 
 export function VideoTestimonialsHeroSection() {
   return (
-    <section className="relative z-20 w-full bg-background overflow-visible">
-      <h1 className="sr-only">{HEADING_LINE_1} {HEADING_LINE_2}</h1>
-      <div className="sm:hidden relative w-full">
-        <BreakpointImage
-          media="(max-width: 639px)"
-          quality={90}
-          src="/Hero_image_for_mobile_all.webp"
-          alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
-          fill
-          className="object-cover object-bottom"
-          sizes="(max-width: 639px) 100vw, 1px"
-        />
-        <div className="relative z-10 px-6 pt-10 pb-[168px] text-center flex flex-col items-center space-y-3">
-          <SiteBreadcrumbs includeSchema={false} />
-          <p aria-hidden="true" className="heading-h1 text-primary max-w-[280px]">
-            {HEADING_LINE_1}
-            <br />
-            {HEADING_LINE_2}
-          </p>
-          <p className="body-large text-body-text max-w-[320px]">{DESCRIPTION}</p>
+    <ResponsiveHero
+      className="z-20"
+      desktopHeight={571}
+      tabletMinHeight="720px"
+      contentClassName="pb-[168px] sm:pb-16 lg:pb-10"
+      backgrounds={standardHeroBackgrounds(
+        "/hero-image-for-mobile-all.webp",
+        "/video-testimonial/video-testimonial-herosection-tablet.webp",
+        "/video-testimonial/client-stories-hero-desktop.webp",
+      )}
+      overlay={
+        <div className="absolute bottom-0 left-0 right-0 z-20 translate-y-1/2 px-4">
+          <VideoTestimonialsTrustBar />
         </div>
-      </div>
-
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[941/1100] min-h-[720px]">
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
-          src="/video_testimonial/video_testimonial-herosection_tablet.webp"
-          alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
-          fill
-          className="object-cover object-bottom"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-        <div className="absolute inset-0 z-10 flex items-center px-10 pb-16">
-          <div className="flex flex-col items-start gap-4 max-w-[480px]">
-            <SiteBreadcrumbs includeSchema={false} />
-            <p aria-hidden="true" className="heading-h1 text-primary">
-              {HEADING_LINE_1}
-              <br />
-              {HEADING_LINE_2}
-            </p>
-            <p className="body-large text-body-text">{DESCRIPTION}</p>
-          </div>
-        </div>
-      </div>
-
-      <DesktopScaleWrapper
-        designWidth={1440}
-        designHeight={571}
-        className="hidden lg:block relative"
-        wrapperClassName="bg-background overflow-hidden"
-        background={
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/video_testimonial/client-stories-hero-desktop.webp"
-            alt={`${HEADING_LINE_1} ${HEADING_LINE_2}`}
-            fill
-            className="object-cover object-right"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
-        }
-      >
-        <div className="relative w-[1440px] h-[571px] flex items-center">
-          <div className="pl-[82px] max-w-[620px] z-10 flex flex-col items-start gap-5 pb-10">
-            <SiteBreadcrumbs />
-            <p aria-hidden="true" className="heading-h1 text-primary">
-              {HEADING_LINE_1}
-              <br />
-              {HEADING_LINE_2}
-            </p>
-            <p className="body-large text-body-text max-w-[520px]">{DESCRIPTION}</p>
-          </div>
-        </div>
-      </DesktopScaleWrapper>
-
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 w-full max-w-[1040px] px-4 pointer-events-auto">
-        <VideoTestimonialsTrustBar />
-      </div>
-    </section>
+      }
+    >
+      <SiteBreadcrumbs className="mb-3 self-start sm:self-auto" />
+      <h1 className="heading-h1 text-primary max-w-[320px] sm:max-w-[620px]">
+        Real Stories,
+        <br />
+        Real Impact
+      </h1>
+      <p className="body-large text-body-text mx-auto mt-4 max-w-[320px] sm:mx-0 sm:max-w-[520px]">
+        Hear directly from our clients as they share their experiences with My ESA Therapist and the support they received throughout their ESA evaluation journey.
+      </p>
+    </ResponsiveHero>
   );
 }

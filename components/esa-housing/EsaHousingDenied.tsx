@@ -6,19 +6,19 @@ import { SCALED_H2 } from "./EsaHousingShared";
 const STEPS = [
   {
     title: "File a Complaint",
-    icon: "/esa-icons/Icon-18.svg",
+    icon: "/esa-icons/icon-18.svg",
     description:
       "You may submit a complaint to the U.S. Department of Housing and Urban Development (HUD) if you believe your rights under the Fair Housing Act were violated.",
   },
   {
     title: "Seek Legal Guidance",
-    icon: "/esa-icons/Icon-25.svg",
+    icon: "/esa-icons/icon-25.svg",
     description:
       "An attorney familiar with fair housing or ESA-related matters can help you assess your situation and advise you on appropriate next steps.",
   },
   {
     title: "Provide Written Clarification",
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
     description:
       "A clear, written explanation to your landlord can help resolve misunderstandings and support your accommodation request.",
   },
@@ -31,7 +31,7 @@ export function EsaHousingDenied() {
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(51.7%,745px)]">
         <Image
           quality={90}
-          src="/esa-housing/esa-letter-housing_esaisdenied.webp"
+          src="/esa-housing/esa-letter-housing-esaisdenied.webp"
           alt="Woman looking worried at an ESA denied notice with legal books beside her"
           fill
           className="object-cover object-left-top"
@@ -43,8 +43,8 @@ export function EsaHousingDenied() {
         <div className="lg:hidden">
           <WaveImage
             alt="Woman looking worried at an ESA denied notice with legal books beside her"
-            mobile={{ src: "/esa-housing/esa-letter-housing_ifesadeniend_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 165, w: 390, h: 346 } }}
-            tablet={{ src: "/esa-housing/esa-letter-housing_ifesadeniend_tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 211, w: 834, h: 838 } }}
+            mobile={{ src: "/esa-housing/esa-letter-housing-ifesadeniend-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 165, w: 390, h: 346 } }}
+            tablet={{ src: "/esa-housing/esa-letter-housing-ifesadeniend-tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 211, w: 834, h: 838 } }}
           />
         </div>
         <div className="w-full max-w-[626px] lg:max-w-[min(41vw,590px)] flex flex-col gap-8 lg:gap-[min(2.5vw,36px)]">

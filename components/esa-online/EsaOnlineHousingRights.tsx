@@ -5,19 +5,19 @@ import { CtaButton, GoldCallout } from "./EsaOnlineShared";
 const POINTS = [
   {
     title: "Reasonable Accommodation Requests",
-    icon: "/ESA ICons/Icon-20.svg",
+    icon: "/esa-icons/icon-20.svg",
     description:
       "Housing providers are required to consider ESA accommodation requests under applicable federal housing laws.",
   },
   {
     title: "Save on Pet Fees",
-    icon: "/ESA ICons/Icon-21.svg",
+    icon: "/esa-icons/icon-21.svg",
     description:
       "When an ESA letter is accepted, pet deposits and monthly pet rent typically do not apply, subject to provider review.",
   },
   {
     title: "Breed or Weight Restrictions Waived",
-    icon: "/ESA ICons/Icon-30.svg",
+    icon: "/esa-icons/icon-30.svg",
     description:
       "When an ESA accommodation request is granted, ESAs are generally exempt from breed and size limitations, consistent with fair housing guidelines.",
   },
@@ -31,7 +31,7 @@ export function EsaOnlineHousingRights() {
           <div className="relative w-full aspect-[1536/1024] sm:aspect-[850/460]">
             <Image
             quality={90}
-              src="/esa-online/esa-letter-online_yourhousingright.webp"
+              src="/esa-online/esa-letter-online-yourhousingright.webp"
               alt="Gavel and model house representing housing rights"
               fill
               className="object-cover"

@@ -5,17 +5,17 @@ const CONDITIONS = [
   {
     title: "Anxiety And Panic Attacks",
     text: "Teaching your animal to settle calmly beside you, which can help regulate your own breathing and heart rate",
-    icon: "/esa-icons/Icon.svg",
+    icon: "/esa-icons/icon.svg",
   },
   {
     title: "Depression",
     text: "Building routine around feeding, walking, and care, giving structure to days that might otherwise feel shapeless",
-    icon: "/esa-icons/Icon-3.svg",
+    icon: "/esa-icons/icon-3.svg",
   },
   {
     title: "PTSD",
     text: "Establishing a routine, stress-free setting where your pet's presence serves as a grounding signal",
-    icon: "/esa-icons/Icon-2.svg",
+    icon: "/esa-icons/icon-2.svg",
   },
 ];
 

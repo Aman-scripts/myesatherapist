@@ -2,38 +2,32 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { HeroStatPills } from "@/components/common/HeroStatPills";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
 import { promptSelectState } from "@/components/common/promptSelectState";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
+import { ResponsiveHero, standardHeroBackgrounds } from "@/components/common/ResponsiveHero";
 
-const POPULAR_STATES = STATE_INDEX;
-const TEAL_GRADIENT = "var(--color-gradient)";
+const STATS = [
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "7+", label: "Years Serving" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
 
 export function StatesHeroSection() {
   const router = useRouter();
   const [selectedState, setSelectedState] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRefMobile = useRef<HTMLDivElement>(null);
-  const dropdownRefTablet = useRef<HTMLDivElement>(null);
-  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      const target = event.target as Node;
-      const isInside =
-        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
-        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
-        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
-
-      if (!isInside) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsDropdownOpen(false);
       }
     }
@@ -46,396 +40,124 @@ export function StatesHeroSection() {
     };
   }, [isDropdownOpen]);
 
-  const handleStateSelect = (slug: string) => {
-    setSelectedState(slug);
-    setIsDropdownOpen(false);
-  };
-
-  const handleGetStarted = () => {
-    if (selectedState) {
-      router.push(`/esa-letter-${selectedState}/`);
-    } else {
-      promptSelectState();
-    }
-  };
+  const stateLabel = selectedState
+    ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
+    : "Select your State";
 
   return (
-    <section className="relative z-30 bg-background">
-      <h1 className="sr-only">ESA Evaluation For Every State</h1>
-      
-      {/* ---------------------------------------------------- */}
-      {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
-      {/* Matches state_hero-section-mobile.png                */}
-      {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full">
-        {/* Background Artwork */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
-          <BreakpointImage
-            media="(max-width: 639px)"
-            quality={90}
-            src="/Hero_image_for_mobile_all.webp"
-            alt="ESA Evaluation For Every State"
-            fill
-            className="object-cover object-top"
-            sizes="(max-width: 639px) 100vw, 1px"
-          />
-        </div>
-
-        <div className="relative z-10 px-4 pt-4 pb-10 text-center flex flex-col items-center">
-          <SiteBreadcrumbs className="mb-4 self-start" includeSchema={false} />
-          <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">
-            ESA Evaluation For
-            <br />
-            Every State
-          </p>
-
-          <p className="body-large text-body-text max-w-[320px] mx-auto mt-3">
-            Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
-          </p>
-
-          <MobileHeroActionButtons
-            className="mt-5"
-            selectedState={selectedState}
-            onStateSelect={handleStateSelect}
-            onGetStartedClick={handleGetStarted}
-            placeholder="Select your State"
-          />
-
-          <p className="body-small text-body-text mt-4 text-center max-w-[260px]">
-            If not approved after your evaluation?
-            <br />
-            You get a full refund.
-          </p>
-
-          <div className="mt-4 flex flex-col items-center gap-3">
-            {[
-              { value: "7+", label: "Years Serving" },
-              { value: "64,739+", label: "ESA Evaluations" },
-              { value: "100%", label: "Moneyback Guarantee" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
-              >
-                <span className="body-strong text-primary">{stat.value}</span>
-                <span className="body-text text-primary">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-5 w-full max-w-[360px]">
-            <ReviewBadges className="mx-auto max-w-none justify-center" />
-          </div>
-        </div>
-      </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET HERO SECTION (sm: to lg: / 640px to 1023px) */}
-      {/* Matches state_hero-section-tablet.png                */}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1385] min-h-[920px]">
-        {/* Background Artwork */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
-          <BreakpointImage
-            media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
-            src="/states/state_hero-section-tablet.webp"
-            alt="ESA Evaluation For Every State"
-            fill
-            className="object-cover object-top"
-            sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-          />
-        </div>
-
-        {/* Content Container (Centered on top) */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-5 text-center flex flex-col items-center z-10">
-          <SiteBreadcrumbs className="mb-4 self-start" includeSchema={false} />
-          
-          {/* Stat Pills at top */}
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[130px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">
-                64,739+
-              </span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">ESA Evaluations</span>
-            </div>
-
-            <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[130px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">
-                7+
-              </span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Years Serving</span>
-            </div>
-
-            <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[130px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">
-                100%
-              </span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Moneyback Guarantee</span>
-            </div>
-          </div>
-
-          {/* Headline */}
-          <p aria-hidden="true" className="heading-h1 text-primary mt-6 max-w-xl mx-auto">
-            ESA Evaluation For
-            <br />
-            Every State
-          </p>
-
-          {/* Subheading */}
-          <p className="body-large text-body-text max-w-md mx-auto mt-3">
-            Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
-          </p>
-
-          {/* Action Row */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            
-            {/* Select your State Dropdown */}
-            <div className="relative z-30" ref={dropdownRefTablet}>
-              <button
-                type="button"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center justify-between gap-3 px-6 h-[48px] rounded-[30px] bg-background body-text shadow-sm hover:bg-white transition-colors border border-[#EAE5DC] min-w-[200px]"
-              >
-                <span className="flex items-center gap-2">
-                  <Image quality={90}
-                    src="/ESA ICons/Icon-37.svg"
-                    alt="Location"
-                    width={20}
-                    height={20}
-                    unoptimized
-                    className="icon-sm shrink-0 object-contain"
-                  />
-                  <span className="body-text text-color-gradient">
-                    {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                  </span>
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
-                      <button
-                        key={state.slug}
-                        type="button"
-                        onClick={() => handleStateSelect(state.slug)}
-                        className={STATE_DROPDOWN_ITEM}
-                      >
-                        <span>{state.name}</span>
-                        <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Get Started Button */}
-            <CtaButton
-              onClick={handleGetStarted}
-              stateModal={false}
-              variant="accent"
-              className="w-auto"
-            >
-              Get Started
-            </CtaButton>
-          </div>
-
-          {/* Refund Guarantee Note */}
-          <p className="body-small text-body-text mt-3 text-center">
-            Not approved after your ESA evaluation? You get a full refund!.
-          </p>
-
-          {/* Review Badges */}
-          <div className="mt-5">
-            <ReviewBadges className="justify-center" />
-          </div>
-
-        </div>
-      </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP HERO SECTION (lg: / 1024px+)               */}
-      {/* Matches statepage_hero-section.png                   */}
-      {/* ---------------------------------------------------- */}
-      <DesktopScaleWrapper
-        designHeight={787}
-        designWidth={1440}
-        wrapperClassName="bg-background overflow-hidden"
-        background={
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/states/statepage_hero-section.webp"
-            alt="ESA Evaluation For Every State"
-            fill
-            className="object-cover object-right-top 2xl:object-center"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
-        }
+    <ResponsiveHero
+      className="z-30"
+      centered={false}
+      desktopHeight={787}
+      tabletMinHeight="780px"
+      backgrounds={standardHeroBackgrounds(
+        "/hero-image-for-mobile-all.webp",
+        "/states/state-hero-section-tablet.webp",
+        "/states/statepage-hero-section.webp",
+        { mobile: "object-top", tablet: "object-top", desktop: "object-right" },
+      )}
+    >
+      <div
+        className="absolute left-[705px] top-[488px] z-20 hidden -translate-y-1/2 items-center gap-3.5 rounded-[18px] border border-white/40 px-5 py-3 shadow-[0px_8px_24px_rgba(0,0,0,0.15)] lg:flex"
+        style={{
+          background: "linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(30, 70, 85, 0.65) 100%)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
       >
-        <div className="relative w-[1440px] h-[787px] flex items-center">
-          {/* Floating "Available in All 50 states" Glassmorphism Badge */}
+        <Image
+          quality={90}
+          src="/esa-icons/icon-37.svg"
+          alt=""
+          width={28}
+          height={28}
+          unoptimized
+          className="h-7 w-7 shrink-0 object-contain"
+        />
+        <span className="body-large text-left font-bold leading-tight text-white drop-shadow-sm">
+          Available in
+          <br />
+          All 50 states
+        </span>
+      </div>
+      <SiteBreadcrumbs className="mb-4 self-start" />
+      <div className="hidden items-center gap-3 sm:flex sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+        {STATS.map((stat) => (
           <div
-            className="flex items-center gap-3.5 absolute left-[705px] top-[488px] -translate-y-1/2 z-20 px-5 py-3 rounded-[18px] border border-white/40 shadow-[0px_8px_24px_rgba(0,0,0,0.15)] hover:scale-105 transition-transform"
-            style={{
-              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(30, 70, 85, 0.65) 100%)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
-            }}
+            key={stat.label}
+            className="flex min-w-[140px] flex-col items-center justify-center rounded-full border border-[#EAE5DC]/80 bg-background px-4 py-2.5 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] lg:h-[77px] lg:w-[176px]"
           >
-            <div className="w-[34px] h-[34px] flex items-center justify-center shrink-0">
-              <Image
-                quality={90}
-                src="/ESA ICons/Icon-37.svg"
-                alt="Available in all 50 states"
-                width={28}
-                height={28}
-                unoptimized
-                className="w-[28px] h-[28px] object-contain"
-              />
-            </div>
-            <div className="flex flex-col text-left">
-              <span className="body-large text-white drop-shadow-sm leading-tight">
-                Available in
-              </span>
-              <span className="body-large font-bold text-white drop-shadow-md leading-tight">
-                All 50 states
-              </span>
-            </div>
+            <span className="body-large leading-none text-color-gradient">{stat.value}</span>
+            <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{stat.label}</span>
           </div>
+        ))}
+      </div>
 
-          {/* Inner Desktop Container */}
-          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-16 pt-8 pb-16">
-            <SiteBreadcrumbs className="mb-6" />
-            <div className="max-w-[553px] flex flex-col gap-6">
-              
-              {/* Top 3 Pill Stat Badges (Frame 1000011902: 552px width, 12px gap) */}
-              <div className="flex items-center gap-3">
-                <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                  <span className="body-large text-color-gradient leading-none">
-                    64,739+
-                  </span>
-                  <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">
-                    ESA Evaluations
-                  </span>
-                </div>
+      <h1 className="heading-h1 text-primary mt-6 max-w-[320px] sm:max-w-xl">
+        ESA Evaluation For
+        <br />
+        Every State
+      </h1>
+      <p className="body-large text-body-text mx-auto mt-3 max-w-[320px] sm:mx-0 sm:max-w-[461px]">
+        Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
+      </p>
 
-                <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                  <span className="body-large text-color-gradient leading-none">
-                    7+
-                  </span>
-                  <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">
-                    Years Serving
-                  </span>
-                </div>
-
-                <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                  <span className="body-large text-color-gradient leading-none">
-                    100%
-                  </span>
-                  <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">
-                    Moneyback Guarantee
-                  </span>
-                </div>
-              </div>
-
-              {/* Heading & Subtitle (Frame 8) */}
-              <div className="flex flex-col gap-3">
-                <p aria-hidden="true" className="heading-h1 text-primary">
-                  ESA Evaluation For
-                  <br />
-                  Every State
-                </p>
-                <p className="body-large text-body-text max-w-[461px]">
-                  Access professional evaluations for ESA Letter that comply with the Fair Housing Act (FHA) and your state’s specific regulations.
-                </p>
-              </div>
-
-              {/* Action CTAs (Frame 1261153967) */}
-              <div className="flex flex-col gap-2 pt-1">
-                <div className="flex items-center gap-4">
-                  {/* Select your State Selector Dropdown Button */}
-                  <div className="relative z-30" ref={dropdownRefDesktop}>
-                    <button
-                      type="button"
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="inline-flex items-center justify-between gap-3 px-6 h-[54px] bg-background hover:bg-white rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-primary transition-all duration-200 cursor-pointer text-left min-w-[246px]"
-                      aria-expanded={isDropdownOpen}
-                    >
-                      <div className="flex items-center gap-2.5">
-                        <Image quality={90}
-                          src="/ESA ICons/Icon-37.svg"
-                          alt="Location pin"
-                          width={20}
-                          height={20}
-                          unoptimized
-                          className="icon-sm shrink-0 object-contain"
-                        />
-                        <span className="body-text text-color-gradient">
-                          {selectedState
-                            ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
-                            : "Select your State"}
-                        </span>
-                      </div>
-                      <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
-                    </button>
-
-                    {/* State Dropdown Menu */}
-                    {isDropdownOpen && (
-                      <div
-                        className={STATE_DROPDOWN_PANEL}
-                        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                      >
-                        <div className="py-1">
-                          {POPULAR_STATES.map((state) => (
-                            <button
-                              key={state.slug}
-                              type="button"
-                              onClick={() => handleStateSelect(state.slug)}
-                              className={STATE_DROPDOWN_ITEM}
-                            >
-                              <span>{state.name}</span>
-                              <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Get Started Button */}
-                  <CtaButton
-                    onClick={handleGetStarted}
-                    stateModal={false}
-                    variant="accent"
-                    className="w-[192px]"
+      <div className="relative z-50 mt-6 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
+        <div className="relative z-50" ref={dropdownRef}>
+          <button
+            type="button"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            aria-haspopup="listbox"
+            aria-expanded={isDropdownOpen}
+            aria-label={selectedState ? `Selected state ${stateLabel}` : "Select your State"}
+            className="inline-flex h-[48px] min-w-[220px] items-center justify-between gap-3 rounded-full border border-primary bg-background px-6 shadow-sm lg:h-[54px] lg:min-w-[246px]"
+          >
+            <span className="flex items-center gap-2">
+              <Image src="/esa-icons/icon-37.svg" alt="" width={20} height={20} unoptimized className="icon-sm shrink-0 object-contain" />
+              <span className="body-text text-color-gradient">{stateLabel}</span>
+            </span>
+            <ChevronDown className={`h-4 w-4 shrink-0 text-primary transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+          </button>
+          {isDropdownOpen && (
+            <div className={STATE_DROPDOWN_PANEL} style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+              <div className="py-1">
+                {STATE_INDEX.map((state) => (
+                  <button
+                    key={state.slug}
+                    type="button"
+                    onClick={() => {
+                      setSelectedState(state.slug);
+                      setIsDropdownOpen(false);
+                    }}
+                    className={STATE_DROPDOWN_ITEM}
                   >
-                    Get Started
-                  </CtaButton>
-                </div>
-
-                {/* Refund Guarantee Note */}
-                <p className="body-small text-body-text">
-                  Not approved after your ESA evaluation? You get a full refund!.
-                </p>
+                    <span>{state.name}</span>
+                    <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
+                  </button>
+                ))}
               </div>
-
-              {/* Review Badges */}
-              <div className="mt-2">
-                <ReviewBadges />
-              </div>
-
             </div>
-          </div>
-
+          )}
         </div>
-      </DesktopScaleWrapper>
-    </section>
+        <CtaButton
+          onClick={() => {
+            if (selectedState) router.push(`/esa-letter-${selectedState}/`);
+            else promptSelectState();
+          }}
+          stateModal={false}
+          variant="accent"
+          className="w-[192px]"
+        >
+          Get Started
+        </CtaButton>
+      </div>
+      <p className="body-small text-body-text mt-3">
+        Not approved after your ESA evaluation? You get a full refund!.
+      </p>
+      <div className="mt-5 flex flex-col items-center gap-3 lg:items-start">
+        <HeroStatPills stats={STATS} className="sm:hidden" />
+        <ReviewBadges />
+      </div>
+    </ResponsiveHero>
   );
 }

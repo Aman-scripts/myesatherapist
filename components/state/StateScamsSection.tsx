@@ -85,7 +85,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden shrink-0">
               <Image
             quality={90}
-                src="/states/Emotional%20Support%20Letter%20Consultation_state_page_common.png"
+                src="/states/emotional-support-letter-consultation.png"
                 alt="Consultation for an emotional support animal letter"
                 fill
                 className="object-cover object-center"

@@ -14,7 +14,7 @@ const STATE_LAWS: StateLawEntry[] = [
   {
     slug: "alabama",
     name: "Alabama",
-    icon: "/esa-laws/esalaws_albama.webp",
+    icon: "/esa-laws/esalaws-albama.webp",
     bullets: [
       "Alabama-specific ESA law: Alabama’s Assistance and Service Animal Integrity in Housing Act, Ala. Code §§ 24-8A-1 through 24-8A-5, works alongside the federal FHA to address assistance-animal accommodations in housing. Alabama does not require ESA registration, certification, or an ID card.",
       "Penalty for misrepresentation: Under Ala. Code §§ 24-8A-4 and 24-8A-5 (Act 2018-235), intentionally misrepresenting a disability-related need for an assistance animal in housing, falsifying documentation, or providing a false document can bring a $500 civil penalty or a Class C misdemeanor for a first offense, and a Class B misdemeanor for later offenses.",
@@ -24,7 +24,7 @@ const STATE_LAWS: StateLawEntry[] = [
   {
     slug: "california",
     name: "California",
-    icon: "/esa-laws/esalaws_california.webp",
+    icon: "/esa-laws/esalaws-california.webp",
     bullets: [
       "California-specific ESA law: California regulates ESAs under Health & Safety Code §§ 122317 through 122319.5 (AB 468, effective January 1, 2022), which works alongside the federal FHA and state housing law. California does not require ESA registration, training, or certification. For ESA dogs, a licensed health care practitioner may only provide documentation if the practitioner holds a valid license in the jurisdiction where the documentation is provided, has had a client-provider relationship with the person for at least 30 days, completes a clinical evaluation, and gives notice about the misrepresentation penalty.",
       "Penalty for misrepresentation: Knowingly and fraudulently representing oneself as the owner or trainer of a guide, signal, or service dog is a misdemeanor under Penal Code § 365.7, punishable by up to 6 months in jail, a fine of up to $1,000, or both. Separately, under § 122319, knowingly and fraudulently representing or selling an ESA dog as having service dog rights, or violating the required written notices when selling ESA dogs or ESA items such as vests and tags, carries civil penalties of $500, $1,000, and $2,500 (first, second, and third or later violation). Practitioners who violate § 122318 can also face licensing board discipline. These penalties target fraud, not a genuine ESA request.",
@@ -44,7 +44,7 @@ const STATE_LAWS: StateLawEntry[] = [
   {
     slug: "florida",
     name: "Florida",
-    icon: "/esa-laws/esalaws_florida.webp",
+    icon: "/esa-laws/esalaws-florida.webp",
     bullets: [
       "Florida-specific ESA law: Florida's Fla. Stat. § 760.27 (2020 law, effective July 1, 2020) works alongside the federal FHA. It lets a housing provider request reliable information supporting the need for the specific ESA when the need isn't readily apparent. Providers (including telehealth providers) count as reliable only if they have personal knowledge of the person's disability and act within their scope of practice. Florida does not require ESA registration or certification.",
       "Penalty for misrepresentation: Under Fla. Stat. § 817.265, falsifying ESA documentation, knowingly providing fraudulent documentation, or knowingly misrepresenting a disability or disability-related need for an ESA is a second-degree misdemeanor, plus 30 hours of community service within 6 months of conviction. Under § 456.072, health professionals who provide ESA documentation without personal knowledge of the person's disability or need are subject to discipline.",
@@ -54,7 +54,7 @@ const STATE_LAWS: StateLawEntry[] = [
   {
     slug: "hawaii",
     name: "Hawai‘i",
-    icon: "/esa-laws/esalaws_hawaii.webp",
+    icon: "/esa-laws/esalaws-hawaii.webp",
     bullets: [
       "Hawaii-specific ESA law: Hawaii has no standalone ESA statute or registration requirement. ESA housing requests fall under Hawaii's fair housing law (HRS Chapter 515, § 515-3), enforced by the Hawaii Civil Rights Commission, alongside the federal FHA. The Commission has said reasonable accommodation under fair housing law can include \"assistance animals\" such as support animals, not just service animals.",
       "Penalty for misrepresentation: Under HRS § 347-2.6 (Act 217 of 2018), knowingly misrepresenting an animal as a service animal carries a civil fine of $100 to $250 for a first violation and at least $500 for each later one, on clear and convincing evidence. This covers service-animal fraud only, and Hawaii has no specific penalty for misrepresenting an ESA.",

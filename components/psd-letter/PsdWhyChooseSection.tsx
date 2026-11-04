@@ -3,32 +3,32 @@ import Image from "next/image";
 
 const REASONS = [
   {
-    icon: "/esa-icons/Glyph-3.svg",
+    icon: "/esa-icons/glyph-3.svg",
     title: "HIPAA-Compliant Online Process",
     text: "Complete your PSD letter evaluation through a secure telehealth platform built to protect your personal information and privacy.",
   },
   {
-    icon: "/esa-icons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
     title: "Licensed Mental Health Professionals",
     text: "Connect with qualified, state-licensed professionals (LCSWs, LICSWs, LPCs) who assess your needs and determine whether a PSD letter is clinically appropriate.",
   },
   {
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
     title: "Convenient Virtual Evaluations",
     text: "Schedule your evaluation online and speak with a licensed professional without taking time out to visit an office.",
   },
   {
-    icon: "/esa-icons/Icon-45.svg",
+    icon: "/esa-icons/icon-45.svg",
     title: "Transparent Pricing",
     text: "With no hidden fees or surprise charges, you’ll know the entire cost upfront before starting your PSD letter evaluation.",
   },
   {
-    icon: "/esa-icons/Icon-14.svg",
+    icon: "/esa-icons/icon-14.svg",
     title: "Private and Confidential Care",
     text: "Discuss your mental health needs in a confidential setting designed to make your online PSD evaluation comfortable and secure.",
   },
   {
-    icon: "/esa-icons/Icon-24.svg",
+    icon: "/esa-icons/icon-24.svg",
     title: "Serving All 50 U.S. States",
     text: "Get connected with a professional licensed in your state, making PSD evaluations accessible to individuals nationwide.",
   },

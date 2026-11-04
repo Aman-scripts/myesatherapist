@@ -7,24 +7,24 @@ const CARDS = [
   {
     title: "No Discrimination",
     description: "Landlords cannot discriminate against an ESA based on its size, weight, or breed.",
-    icon: "/esa-icons/Icon-25.svg",
+    icon: "/esa-icons/icon-25.svg",
   },
   {
     title: "No Pet Policies",
     description: "Landlords must allow ESAs even if there’s a general “no-pet” policy.",
-    icon: "/esa-icons/Icon-20.svg",
+    icon: "/esa-icons/icon-20.svg",
   },
   {
     title: "No Pet Fees",
     description: "Landlords cannot impose pet rent, pet fees, or deposits for tenants with a valid ESA letter.",
-    icon: "/esa-icons/Icon-21.svg",
+    icon: "/esa-icons/icon-21.svg",
   },
 ];
 
 const COLUMNS = [
   {
     title: "Your Rights",
-    image: "/esa-housing/esa-letter-housing_housinglawssection-yourright.webp",
+    image: "/esa-housing/esa-letter-housing-housinglawssection-yourright.webp",
     alt: "Woman with her emotional support dog at home",
     items: [
       "Live with your ESA in no-pet buildings",
@@ -35,7 +35,7 @@ const COLUMNS = [
   },
   {
     title: "Your Landlord’s Obligatory Rights",
-    image: "/esa-housing/esa-letter-housing_housinglawssection-landlordobligatory.webp",
+    image: "/esa-housing/esa-letter-housing-housinglawssection-landlordobligatory.webp",
     alt: "Landlord reviewing a lease agreement with a tenant and her dog",
     items: [
       "Must allow housing regardless of pet policies",

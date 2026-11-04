@@ -41,7 +41,7 @@ const comparisonRows = [
   {
     feature: "Evaluations",
     desktopFeature: "Licensed Evaluations",
-    icon: "/esa-icons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
     myEsa: "State-Licensed Evaluations",
     others: "Unlicensed Providers",
     othersType: "cross",
@@ -49,7 +49,7 @@ const comparisonRows = [
   {
     feature: "Determination",
     desktopFeature: "Clinical Determination",
-    icon: "/esa-icons/Icon-18.svg",
+    icon: "/esa-icons/icon-18.svg",
     myEsa: "Independent Clinical Assessment",
     others: "No Proper Evaluation",
     othersType: "cross",
@@ -57,7 +57,7 @@ const comparisonRows = [
   {
     feature: "Telehealth",
     desktopFeature: "Secure Telehealth",
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
     myEsa: "HIPAA-Compliant Telehealth",
     others: "Varying Privacy Standards",
     othersType: "warning",
@@ -65,7 +65,7 @@ const comparisonRows = [
   {
     feature: "Compliance",
     desktopFeature: "Compliance-Focused",
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
     myEsa: "FHA and HUD Compliance",
     others: "Guideline Noncompliance",
     othersType: "warning",
@@ -73,7 +73,7 @@ const comparisonRows = [
   {
     feature: "Transparency",
     desktopFeature: "Transparent Process",
-    icon: "/esa-icons/Icon-26.svg",
+    icon: "/esa-icons/icon-26.svg",
     myEsa: "Clear Evaluation Process",
     others: "Unclear Process or Fees",
     othersType: "cross",
@@ -81,7 +81,7 @@ const comparisonRows = [
   {
     feature: "Privacy",
     desktopFeature: "Privacy Protection",
-    icon: "/esa-icons/Glyph-3.svg",
+    icon: "/esa-icons/glyph-3.svg",
     myEsa: "Secure Data Protection",
     others: "Limited Privacy Protection",
     othersType: "cross",
@@ -89,7 +89,7 @@ const comparisonRows = [
   {
     feature: "Nationwide",
     desktopFeature: "Nationwide Access",
-    icon: "/esa-icons/Icon-24.svg",
+    icon: "/esa-icons/icon-24.svg",
     myEsa: "Nationwide Licensed Providers",
     others: "Location-Based Availability",
     othersType: "warning",
@@ -97,7 +97,7 @@ const comparisonRows = [
   {
     feature: "Trust",
     desktopFeature: "Trust & Legitimacy",
-    icon: "/esa-icons/Icon-19.svg",
+    icon: "/esa-icons/icon-19.svg",
     myEsa: "Serving Clients Since 2019",
     others: "Unverified Provider Credentials",
     othersType: "cross",

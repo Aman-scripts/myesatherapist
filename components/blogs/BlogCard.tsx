@@ -22,7 +22,7 @@ export function BlogCard({ article, priority = false }: BlogCardProps) {
         className="w-full h-[317px] relative overflow-hidden block shrink-0 cursor-pointer rounded-t-[20px] bg-background"
       >
         <Image
-          src={article.cardImage || "/blogs/blog_cards.webp"}
+          src={article.cardImage || "/blogs/blog-cards.webp"}
           alt={article.title}
           fill
           quality={90}

@@ -84,7 +84,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
             quality={90}
-                src={data.slug === "california" ? "/states/esalaws-california-state.webp" : "/states/state_lawssection-secondcard.webp"}
+                src={data.slug === "california" ? "/states/esalaws-california-state.webp" : "/states/state-lawssection-secondcard.webp"}
                 alt="Housing Provider Roles & Responsibilities"
                 fill
                 className="object-cover object-center"

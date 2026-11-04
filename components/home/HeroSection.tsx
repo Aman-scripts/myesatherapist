@@ -6,45 +6,10 @@ import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ChevronDown } from "lucide-react";
 import { STATE_INDEX, STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { HeroStatPills } from "@/components/common/HeroStatPills";
 import { STATE_DROPDOWN_PANEL, STATE_DROPDOWN_ITEM, STATE_DROPDOWN_ABBR } from "@/components/common/stateDropdownClasses";
-import { MobileHeroActionButtons } from "@/components/common/MobileHeroActionButtons";
 import { CtaButton } from "@/components/common/CtaButton";
 import { promptSelectState } from "@/components/common/promptSelectState";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
-
-const POPULAR_STATES = STATE_INDEX;
-
-// Trustpilot green (brand-locked, not part of the site palette)
-const TRUSTPILOT_GREEN = "#00B67A";
-
-// Figma: var(--color-gradient)
-const TEAL_GRADIENT = "var(--color-gradient)";
-
-function StarMark({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} style={style} fill="currentColor">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
-function TrustpilotStars() {
-  return (
-    <div className="flex gap-2">
-      {[0, 1, 2, 3].map((i) => (
-        <div key={i} className="w-6 h-6 flex items-center justify-center shrink-0" style={{ backgroundColor: TRUSTPILOT_GREEN }}>
-          <StarMark className="w-4 h-4 text-white" />
-        </div>
-      ))}
-      <div className="relative w-6 h-6 shrink-0 overflow-hidden" style={{ backgroundColor: "#CCCCCC" }}>
-        <div className="absolute inset-y-0 left-0 w-1/2" style={{ backgroundColor: TRUSTPILOT_GREEN }} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <StarMark className="w-4 h-4 text-white" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 const statsData = [
   { value: "64,739+", label: "ESA Evaluations" },
@@ -52,30 +17,35 @@ const statsData = [
   { value: "4.8", label: "Verified Reviews" },
 ];
 
-const MOBILE_HERO_BG = "/Hero_image_for_mobile_all.webp";
-
-const mobileGuaranteePills = [
-  { value: "7+", label: "Years Serving" },
-  { value: "64,739+", label: "ESA Evaluations" },
-  { value: "100%", label: "Moneyback Guarantee" },
-];
+const HERO_BACKGROUNDS = [
+  {
+    media: "(max-width: 639px)",
+    src: "/hero-image-for-mobile-all.webp",
+    className: "object-cover object-top sm:hidden",
+    sizes: "100vw",
+  },
+  {
+    media: "(min-width: 640px) and (max-width: 1023px)",
+    src: "/home/tablet-hero-section.webp",
+    className: "object-cover object-top hidden sm:block lg:hidden",
+    sizes: "(min-width: 640px) and (max-width: 1023px) 100vw, 1px",
+  },
+  {
+    media: "(min-width: 1024px)",
+    src: "/home/hero-section.webp",
+    className: "object-cover object-right hidden lg:block",
+    sizes: "(min-width: 1024px) 100vw, 1px",
+  },
+] as const;
 
 export function HeroSection() {
   const [selectedState, setSelectedState] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRefMobile = useRef<HTMLDivElement>(null);
-  const dropdownRefTablet = useRef<HTMLDivElement>(null);
-  const dropdownRefDesktop = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      const target = event.target as Node;
-      const isInside =
-        (dropdownRefMobile.current && dropdownRefMobile.current.contains(target)) ||
-        (dropdownRefTablet.current && dropdownRefTablet.current.contains(target)) ||
-        (dropdownRefDesktop.current && dropdownRefDesktop.current.contains(target));
-
-      if (!isInside) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsDropdownOpen(false);
       }
     }
@@ -94,147 +64,80 @@ export function HeroSection() {
   };
 
   const getStartedHref = selectedState ? `/esa-letter-${selectedState}/` : undefined;
+  const stateLabel = selectedState
+    ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
+    : "Select your State";
 
   return (
     <section className="relative z-40 bg-background">
-      <h1 className="sr-only">Emotional Support Animal Evaluations by Licensed Professionals</h1>
-      {/* ---------------------------------------------------- */}
-      {/* 1. MOBILE HERO SECTION (< sm / < 640px)              */}
-      {/* Matches Screenshot 2                                 */}
-      {/* ---------------------------------------------------- */}
-      <div className="block sm:hidden relative w-full">
-        <BreakpointImage
-          media="(max-width: 639px)"
-          quality={90}
-          src={MOBILE_HERO_BG}
-          alt="Emotional Support Animal Evaluations by Licensed Professionals"
-          fill
-          className="object-cover object-top"
-          sizes="100vw"
-        />
-
-        <div className="relative z-10 px-4 pt-8 pb-8 text-center flex flex-col items-center">
-          <p aria-hidden="true" className="heading-h1 capitalize">
-            Emotional Support
-            <br />
-            Animal Evaluations
-            <br />
-            by Licensed Professionals
-          </p>
-
-          <p className="body-large text-primary max-w-[340px] mx-auto mt-3">
-            Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
-          </p>
-
-          <MobileHeroActionButtons
-            className="mt-5"
-            selectedState={selectedState}
-            onStateSelect={handleStateSelect}
-            placeholder="Select your State"
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        {HERO_BACKGROUNDS.map((image) => (
+          <BreakpointImage
+            key={image.src}
+            media={image.media}
+            quality={90}
+            src={image.src}
+            alt=""
+            fill
+            className={image.className}
+            sizes={image.sizes}
           />
-
-          <p className="body-small mt-4 max-w-[280px]">
-            Not approved after your ESA evaluation? You get a full refund!.
-          </p>
-
-          <div className="mt-5 flex flex-col items-center gap-3">
-            {mobileGuaranteePills.map((pill) => (
-              <div
-                key={pill.label}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2.5 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
-              >
-                <span className="body-strong text-primary">{pill.value}</span>
-                <span className="body-text text-primary">{pill.label}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 w-full max-w-[360px]">
-            <ReviewBadges className="mx-auto max-w-none justify-center" />
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET HERO SECTION (sm: to lg: / 640px to 1023px) */}
-      {/* Matches Screenshot 1                                 */}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1385] min-h-[900px]">
-        {/* Background Image: tablet-hero-section.png */}
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
-          src="/home/tablet-hero-section.webp"
-          alt="Emotional Support Animal Evaluations"
-          fill
-          className="object-cover object-top"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-
-        {/* Content Container (Centered) */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-12 text-center flex flex-col items-center z-30">
-          {/* Stat Pills at top */}
-          <div className="flex items-center justify-center gap-3 flex-wrap">
+      <div className="relative z-10 sm:min-h-[900px] lg:mx-auto lg:h-[744px] lg:min-h-0 lg:w-[1440px]">
+        <div className="flex flex-col items-center px-4 pb-8 pt-8 text-center sm:px-6 sm:pt-12 lg:absolute lg:left-[82px] lg:top-[92px] lg:w-[678px] lg:items-start lg:p-0 lg:text-left">
+          <div className="hidden items-center gap-3 sm:flex sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
             {statsData.map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center justify-center bg-background px-4 py-2 rounded-[30px] text-center min-w-[120px] shadow-xs"
+                className="flex min-w-[140px] flex-col items-center justify-center rounded-[30px] bg-background px-4 py-2.5 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)] lg:h-[77px] lg:min-w-[163px]"
               >
-                <span className="body-large text-color-gradient">
-                  {stat.value}
-                </span>
-                <span className="body-small text-[#6B6B6B] mt-1 whitespace-nowrap">{stat.label}</span>
+                <span className="body-large text-color-gradient">{stat.value}</span>
+                <span className="body-small mt-1 whitespace-nowrap text-[#6B6B6B]">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          {/* Headline */}
-          <p aria-hidden="true" className="heading-h1 mt-6 max-w-xl mx-auto capitalize">
+          <h1 className="heading-h1 mt-6 max-w-[320px] capitalize sm:max-w-xl lg:max-w-none">
             Emotional Support
             <br />
             Animal Evaluations
             <br />
             by Licensed Professionals
-          </p>
+          </h1>
 
-          {/* Subheading */}
-          <p className="body-large max-w-md mx-auto mt-4">
+          <p className="body-large mx-auto mt-4 max-w-[340px] text-primary sm:max-w-md lg:mx-0 lg:max-w-none">
             Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
           </p>
 
-          {/* Side-by-side Action Row */}
-          <div className="flex items-center justify-center gap-3 flex-wrap mt-6 relative z-50">
-            {/* State Dropdown */}
-            <div className="relative z-50" ref={dropdownRefTablet}>
+          <div className="relative z-50 mt-6 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+            <div className="relative z-50" ref={dropdownRef}>
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 aria-haspopup="listbox"
                 aria-expanded={isDropdownOpen}
-                aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"}` : "Select your State"}
-                className="flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary"
+                aria-label={selectedState ? `Selected state ${stateLabel}` : "Select your State"}
+                className="flex h-[54px] w-[246px] items-center justify-center gap-2.5 rounded-[30px] border border-primary bg-background px-6 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-colors hover:bg-white sm:w-auto sm:justify-start sm:px-[29px]"
               >
-                <Image quality={90}
-                  src="/ESA ICons/Icon-37.svg"
-                  alt="Location"
+                <Image
+                  quality={90}
+                  src="/esa-icons/icon-37.svg"
+                  alt=""
                   width={20}
                   height={20}
                   unoptimized
                   className="icon-sm shrink-0 object-contain"
                 />
-                <span className="text-primary">
-                  {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                </span>
-                <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                <span className="truncate font-manrope text-primary">{stateLabel}</span>
+                <ChevronDown className={`h-4 w-4 shrink-0 text-primary transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
 
               {isDropdownOpen && (
-                <div
-                  className={STATE_DROPDOWN_PANEL}
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
+                <div className={STATE_DROPDOWN_PANEL} style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
                   <div className="py-1">
-                    {POPULAR_STATES.map((state) => (
+                    {STATE_INDEX.map((state) => (
                       <button
                         key={state.slug}
                         type="button"
@@ -250,148 +153,27 @@ export function HeroSection() {
               )}
             </div>
 
-            {/* Get Started Button */}
             <CtaButton
               href={getStartedHref}
               onClick={selectedState ? undefined : promptSelectState}
               stateModal={false}
               variant="accent"
-              className="w-full sm:w-[192px]"
+              className="w-[246px] sm:w-[192px]"
             >
               Get Started
             </CtaButton>
           </div>
 
-            <p className="body-small mt-3 text-center">
-              Not approved after your ESA evaluation? You get a full refund!.
-            </p>
+          <p className="body-small mt-4 max-w-[280px] text-center sm:max-w-none lg:text-left">
+            Not approved after your ESA evaluation? You get a full refund!.
+          </p>
+
+          <div className="mt-6 flex w-full max-w-[360px] flex-col items-center gap-3 sm:max-w-none lg:items-start">
+            <HeroStatPills stats={statsData} className="sm:hidden" />
+            <ReviewBadges className="mx-auto justify-center lg:mx-0 lg:w-auto lg:justify-start" />
           </div>
         </div>
-
-        {/* ---------------------------------------------------- */}
-        {/* 3. DESKTOP HERO SECTION (lg: / 1024px and up)        */}
-        {/* ---------------------------------------------------- */}
-        <DesktopScaleWrapper
-          designHeight={744}
-          designWidth={1440}
-          wrapperClassName="bg-background"
-          background={
-            <BreakpointImage
-              media="(min-width: 1024px)"
-            quality={90}
-              src="/home/hero-section.webp"
-              alt="Woman embracing her emotional support golden retriever outdoors"
-              fill
-              className="object-cover object-right"
-              sizes="(min-width: 1024px) 100vw, 1px"
-            />
-          }
-        >
-          <div className="relative w-[1440px] h-[744px]">
-            {/* Content — exact 1440px coordinates from Figma Frame 1000011884 */}
-            <div className="absolute left-[82px] top-[92px] w-[678px] z-30">
-              {/* Stat Pills */}
-              <div className="flex items-center gap-3">
-                {statsData.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="flex flex-col items-center justify-center bg-background py-2.5 px-4 rounded-[30px] text-center min-w-[163px] h-[77px]"
-                  >
-                    <span className="body-large text-color-gradient">
-                      {stat.value}
-                    </span>
-                    <span className="body-small text-[#6B6B6B] mt-1 whitespace-nowrap">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Headline */}
-              <p aria-hidden="true" className="heading-h1 mt-6 capitalize">
-                Emotional Support
-                <br />
-                Animal Evaluations
-                <br />
-                by Licensed Professionals
-              </p>
-
-              {/* Subheading */}
-              <p className="body-large max-w-none mt-4">
-                Connect with state-licensed mental health professionals for ESA evaluations conducted through secure telehealth and aligned with federal housing guidelines.
-              </p>
-
-              {/* Action Row */}
-              <div className="flex items-center gap-3 flex-wrap mt-6 relative z-50">
-                {/* State Dropdown */}
-                <div className="relative z-50" ref={dropdownRefDesktop}>
-                  <button
-                    type="button"
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    aria-haspopup="listbox"
-                    aria-expanded={isDropdownOpen}
-                    aria-label={selectedState ? `Selected state ${STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"}` : "Select your State"}
-                    className="flex items-center gap-2.5 px-[29px] py-3 rounded-[30px] bg-background body-text hover:bg-white transition-colors h-[54px] shrink-0 border border-primary cursor-pointer shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-                  >
-                    <Image quality={90}
-                      src="/ESA ICons/Icon-37.svg"
-                      alt="Location"
-                      width={20}
-                      height={20}
-                      unoptimized
-                      className="icon-sm shrink-0 object-contain"
-                    />
-                    <span className="text-primary font-manrope">
-                      {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State" : "Select your State"}
-                    </span>
-                    <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
-                  </button>
-
-                  {isDropdownOpen && (
-                    <div
-                      className={STATE_DROPDOWN_PANEL}
-                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                    >
-                      <div className="py-1">
-                        {POPULAR_STATES.map((state) => (
-                          <button
-                            key={state.slug}
-                            type="button"
-                            onClick={() => handleStateSelect(state.slug)}
-                            className={STATE_DROPDOWN_ITEM}
-                          >
-                            <span>{state.name}</span>
-                            <span className={STATE_DROPDOWN_ABBR}>{state.abbreviation}</span>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Get Started Button */}
-                <CtaButton
-                  href={getStartedHref}
-                  onClick={selectedState ? undefined : promptSelectState}
-                  stateModal={false}
-                  variant="accent"
-                  className="w-[192px]"
-                >
-                  Get Started
-                </CtaButton>
-              </div>
-
-              {/* Reassurance text from homepage.md */}
-              <p className="body-small mt-2">
-                Not approved after your ESA evaluation? You get a full refund!.
-              </p>
-
-              {/* Trustpilot Badge */}
-              <div className="mt-[24px]"><ReviewBadges /></div>
-            </div>
-          </div>
-        </DesktopScaleWrapper>
+      </div>
     </section>
   );
 }
-

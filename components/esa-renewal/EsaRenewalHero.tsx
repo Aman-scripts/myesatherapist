@@ -1,8 +1,8 @@
-import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
+import { HeroStatPills } from "@/components/common/HeroStatPills";
 import { CtaButton } from "@/components/common/CtaButton";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
+import { ResponsiveHero, standardHeroBackgrounds } from "@/components/common/ResponsiveHero";
 
 const HEADING_LINE_1 = "Renew Your ESA";
 const HEADING_LINE_2 = "Letter Online";
@@ -15,126 +15,45 @@ const PILLS = [
   { value: "100%", label: "Moneyback Guarantee" },
 ];
 
-function StatPills() {
+export function EsaRenewalHero() {
   return (
-    <div className="flex flex-wrap items-center gap-3">
-      {PILLS.map((pill) => (
-        <div
-          key={pill.label}
-          className="inline-flex w-[176px] h-[77px] flex-col items-center justify-center rounded-full border border-[#EAE5DC]/80 bg-background px-4 py-3 shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-        >
-          <span className="body-large text-color-gradient leading-none">{pill.value}</span>
-          <span className="body-small mt-1 leading-tight whitespace-nowrap text-[#949494]">{pill.label}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function HeroCopy() {
-  return (
-    <div className="flex flex-col items-start gap-5">
-      <StatPills />
-      <h1 className="heading-h1 text-primary max-w-[560px]">
+    <ResponsiveHero
+      className="z-30"
+      centered
+      desktopHeight={780}
+      tabletMinHeight="860px"
+      backgrounds={standardHeroBackgrounds(
+        "/hero-image-for-mobile-all.webp",
+        "/esa-renewal/esa-renwal-herosection-tablet.webp",
+        "/esa-renewal/esa-renewal-herosection.webp",
+        { mobile: "object-top", tablet: "object-bottom", desktop: "object-right" },
+      )}
+    >
+      <SiteBreadcrumbs className="mb-4 self-start" />
+      <div className="hidden items-center gap-3 sm:flex sm:flex-row sm:flex-wrap lg:justify-start">
+        {PILLS.map((pill) => (
+          <div
+            key={pill.label}
+            className="flex h-[77px] min-w-[176px] flex-col items-center justify-center rounded-[30px] border border-[#EAE5DC]/80 bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+          >
+            <span className="body-large leading-none text-color-gradient">{pill.value}</span>
+            <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{pill.label}</span>
+          </div>
+        ))}
+      </div>
+      <h1 className="heading-h1 text-primary mt-5 max-w-[320px] sm:max-w-[560px]">
         {HEADING_LINE_1}
         <br />
         {HEADING_LINE_2}
       </h1>
-      <p className="body-large text-body-text max-w-[560px]">{DESCRIPTION}</p>
-      <CtaButton href="#pricing" variant="accent" className="w-auto min-w-[280px]">
+      <p className="body-large text-body-text mx-auto mt-3 max-w-[320px] sm:mx-0 sm:max-w-[560px]">{DESCRIPTION}</p>
+      <CtaButton href="#pricing" variant="accent" className="mt-5 w-auto min-w-[240px] sm:min-w-[280px]">
         Start Your Renewal Online
       </CtaButton>
-      <ReviewBadges />
-    </div>
-  );
-}
-
-export function EsaRenewalHero() {
-  return (
-    <section className="relative z-30 w-full bg-background overflow-visible">
-      <div className="sm:hidden relative w-full">
-        <BreakpointImage
-          media="(max-width: 639px)"
-          quality={90}
-          src="/Hero_image_for_mobile_all.webp"
-          alt="Renew Your ESA Letter Online"
-          fill
-          className="object-cover object-top"
-          sizes="(max-width: 639px) 100vw, 1px"
-        />
-        <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
-          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-          <h1 className="heading-h1 text-primary max-w-[320px]">
-            {HEADING_LINE_1}
-            <br />
-            {HEADING_LINE_2}
-          </h1>
-          <p className="body-large text-body-text max-w-[320px] mx-auto mt-3">{DESCRIPTION}</p>
-          <CtaButton href="#pricing" variant="accent" className="mt-5 w-auto min-w-[240px]">
-            Start Your Renewal Online
-          </CtaButton>
-          <div className="mt-5 flex flex-col items-center gap-3">
-            {[
-              { value: "7+", label: "Years Serving" },
-              { value: "64,739+", label: "ESA Evaluations" },
-              { value: "100%", label: "Moneyback Guarantee" },
-            ].map((pill) => (
-              <div
-                key={pill.label}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
-              >
-                <span className="body-strong text-primary">{pill.value}</span>
-                <span className="body-text text-primary">{pill.label}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 w-full max-w-[360px]">
-            <ReviewBadges className="mx-auto max-w-none justify-center" />
-          </div>
-        </div>
+      <div className="mt-6 flex flex-col items-center gap-3 lg:items-start">
+        <HeroStatPills stats={PILLS} className="sm:hidden" />
+        <ReviewBadges />
       </div>
-
-      <div className="hidden sm:block lg:hidden relative w-full min-h-[860px]">
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
-          src="/esa-renewal/esa-renwal-herosection_tablet.webp"
-          alt="Renew Your ESA Letter Online"
-          fill
-          className="object-cover object-bottom"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-        <div className="absolute inset-0 z-10 flex items-center px-10 pb-10">
-          <div className="max-w-[520px]">
-            <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-            <HeroCopy />
-          </div>
-        </div>
-      </div>
-
-      <DesktopScaleWrapper
-        designWidth={1440}
-        designHeight={780}
-        wrapperClassName="bg-background overflow-hidden"
-        background={
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/esa-renewal/esa-renewal-herosection.webp"
-            alt="Renew Your ESA Letter Online"
-            fill
-            className="object-cover object-right"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
-        }
-      >
-        <div className="relative w-[1440px] h-[780px] flex items-center">
-          <div className="pl-[82px] max-w-[760px] z-10">
-            <SiteBreadcrumbs className="mb-4" />
-            <HeroCopy />
-          </div>
-        </div>
-      </DesktopScaleWrapper>
-    </section>
+    </ResponsiveHero>
   );
 }

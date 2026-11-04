@@ -14,49 +14,49 @@ const BENEFITS: BenefitCard[] = [
     title: "Reduces Stress & Anxiety",
     description:
       "Petting and being near your ESA can help calm your nervous system, ease tension, and make stressful moments feel more manageable.",
-    icon: "/esa-icons/Icon-21.svg",
+    icon: "/esa-icons/icon-21.svg",
   },
   {
     title: "Eases Loneliness",
     description:
       "A loyal companion at home can reduce feelings of isolation and give you someone to come home to every day.",
-    icon: "/esa-icons/Icon-7.svg",
+    icon: "/esa-icons/icon-7.svg",
   },
   {
     title: "Builds Daily Routine",
     description:
       "Regular feeding times and daily walks add structure to your day, which may help with mental health conditions and low motivation.",
-    icon: "/esa-icons/Icon-9.svg",
+    icon: "/esa-icons/icon-9.svg",
   },
   {
     title: "Encourages Activity",
     description:
       "Prepping meals for your ESA means more movement, a sense of responsibility, and steady habits that can support better physical health.",
-    icon: "/esa-icons/Icon-10.svg",
+    icon: "/esa-icons/icon-10.svg",
   },
   {
     title: "Better Sleep",
     description:
       "Many owners feel safer and more settled at night with their ESA nearby, which can make it easier to rest.",
-    icon: "/esa-icons/Glyph-1.svg",
+    icon: "/esa-icons/glyph-1.svg",
   },
   {
     title: "Sense of Purpose",
     description:
       "Caring for another living being each day can restore a sense of obligation, meaning, and responsibility to your daily life.",
-    icon: "/esa-icons/Icon-11.svg",
+    icon: "/esa-icons/icon-11.svg",
   },
   {
     title: "Unconditional Support",
     description:
       "Your ESA offers constant, non-judgmental companionship during hard moments, stressful days, and panic episodes when you need it most.",
-    icon: "/esa-icons/Icon-12.svg",
+    icon: "/esa-icons/icon-12.svg",
   },
   {
     title: "Supports Social Confidence",
     description:
       "For some individuals, having an ESA can make certain social situations feel less intimidating. Walking a dog or spending time outdoors with an animal may also create opportunities for casual social interaction.",
-    icon: "/esa-icons/Icon-8.svg",
+    icon: "/esa-icons/icon-8.svg",
   },
 ];
 

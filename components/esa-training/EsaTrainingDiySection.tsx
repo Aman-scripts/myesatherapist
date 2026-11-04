@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/common/BlogPageBlocks";
 const CARDS = [
   {
     title: "Tips For DIY Training",
-    image: "/esa-training/esa-traning_canyoutrain_tipstodiy.webp",
+    image: "/esa-training/esa-traning-canyoutrain-tipstodiy.webp",
     alt: "Woman teaching her golden retriever a new trick at home",
     items: [
       "Keep sessions short, five to ten minutes, so neither of you gets frustrated",
@@ -17,7 +17,7 @@ const CARDS = [
   },
   {
     title: "When To Hire A Professional",
-    image: "/esa-training/esa-traning_canyoutrain_whentohireprofess.webp",
+    image: "/esa-training/esa-traning-canyoutrain-whentohireprofess.webp",
     alt: "Professional trainer working with a golden retriever and its owner",
     items: [
       "If your animal shows anxiety or aggression, or progress has stalled. Costs vary by location and format (group classes vs. private sessions), so it's worth comparing a few local options.",

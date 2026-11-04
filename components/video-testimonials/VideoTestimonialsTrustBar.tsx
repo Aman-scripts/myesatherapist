@@ -5,21 +5,21 @@ import Image from "next/image";
 
 const ITEMS = [
   {
-    src: "/video_testimonial/video_testimonial-trustsection-happyclient.webp",
+    src: "/video-testimonial/video-testimonial-trustsection-happyclient.webp",
     alt: "Happy Clients",
     value: "624+",
     label: "Happy Clients",
     iconClass: "w-[72px] h-[64px] sm:w-[88px] sm:h-[76px]",
   },
   {
-    src: "/video_testimonial/video_testimonial-trustsection-rating.webp",
+    src: "/video-testimonial/video-testimonial-trustsection-rating.webp",
     alt: "Average Rating",
     value: "4.9/5",
     label: "Average Rating",
     iconClass: "w-[72px] h-[60px] sm:w-[88px] sm:h-[72px]",
   },
   {
-    src: "/video_testimonial/video_testimonial-trustsection-acceptancerate.webp",
+    src: "/video-testimonial/video-testimonial-trustsection-acceptancerate.webp",
     alt: "Acceptance Rate",
     value: "100%",
     label: "Acceptance Rate",

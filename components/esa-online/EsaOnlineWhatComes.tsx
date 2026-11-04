@@ -3,37 +3,37 @@ import { FeatureCard, GoldCallout } from "./EsaOnlineShared";
 
 const CARDS = [
   {
-    icon: "/ESA ICons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
     title: "State Licensed Clinician Signature",
     description:
       "Each document is issued on the clinician’s professional letterhead and signed by a mental health professional authorized to practice in your state.",
   },
   {
-    icon: "/ESA ICons/Icon-25.svg",
+    icon: "/esa-icons/icon-25.svg",
     title: "HUD Compliance",
     description:
       "You receive general guidance on ESA-related housing accommodations consistent with federal fair housing laws.",
   },
   {
-    icon: "/ESA ICons/Icon-20.svg",
+    icon: "/esa-icons/icon-20.svg",
     title: "Housing Guidance",
     description:
       "You’re provided with helpful information on how ESA accommodations typically work for housing providers.",
   },
   {
-    icon: "/ESA ICons/Icon-22.svg",
+    icon: "/esa-icons/icon-22.svg",
     title: "Renewal Reminders",
     description:
       "You receive notifications to help keep your ESA documentation current.",
   },
   {
-    icon: "/ESA ICons/Glyph-2.svg",
+    icon: "/esa-icons/glyph-2.svg",
     title: "Clinician Contact Information",
     description:
       "Your letter includes the clinician’s credentials and state license details for verification purposes.",
   },
   {
-    icon: "/ESA ICons/Icon-19.svg",
+    icon: "/esa-icons/icon-19.svg",
     title: "Professional Verification Statement",
     description:
       "Your documentation confirms it was issued by an authorized professional following a clinical consultation.",

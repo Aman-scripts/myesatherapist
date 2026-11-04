@@ -115,11 +115,12 @@ export function FaqAccordionSection() {
               </button>
 
               {/* Accordion Body */}
-              {isOpen && (
-                <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large border border-primary/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line">
-                  {faq.answer}
-                </div>
-              )}
+              <div
+                hidden={!isOpen}
+                className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large border border-primary/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line"
+              >
+                {faq.answer}
+              </div>
             </div>
           );
         })}

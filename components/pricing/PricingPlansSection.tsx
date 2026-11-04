@@ -51,7 +51,7 @@ export function PricingPlansSection({
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 flex-1 min-w-0">
             <div className="flex items-center gap-4 sm:gap-5 flex-1 min-w-0">
               <Image quality={90}
-                src="/pricing/pricingsection_Addpetbutton-icon.svg"
+                src="/pricing/pricingsection-addpetbutton-icon.svg"
                 alt="Add a pet"
                 width={64}
                 height={64}

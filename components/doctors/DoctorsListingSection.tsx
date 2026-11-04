@@ -30,14 +30,14 @@ interface Doctor {
 const DOCTORS: Doctor[] = [
   {
     id: "robert-staaf",
-    slug: "dr-robert-staff",
+    slug: "robert-staaf",
     name: "Robert Staaf",
     title: "Licensed Clinical Social Worker",
     bio: "Robert Staaf is an independent clinical social worker and therapist, currently licensed to practice at the clinical level in over 30 states. With extensive experience in psychotherapy and child and family welfare, Dr. Staaf is dedicated to providing compassionate, evidence-based mental health care to individuals and families.",
     licensedIn: "30+ States",
     method: "Video or Phone",
     focus: "Anxiety, Stress",
-    avatar: "/doctors/Robert_Staff_Dr.webp",
+    avatar: "/doctors/robert-staff-dr.webp",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   {
@@ -49,7 +49,7 @@ const DOCTORS: Doctor[] = [
     licensedIn: "15+ States",
     method: "Video or Phone",
     focus: "Depression, PTSD",
-    avatar: "/doctors/Leslie_kgamble_Dr.webp",
+    avatar: "/doctors/leslie-kgamble-dr.webp",
     linkedin: "https://www.linkedin.com/in/leslie-gamble-727571366",
   },
   {
@@ -61,7 +61,7 @@ const DOCTORS: Doctor[] = [
     licensedIn: "17 States",
     method: "Video or Phone",
     focus: "Chronic Illness, Sleep",
-    avatar: "/doctors/Gaurav_patel_Dr.webp",
+    avatar: "/doctors/gaurav-patel-dr.webp",
     linkedin: "https://www.linkedin.com/in/gaurav-patel-m-d-b5565916",
   },
 ];
@@ -78,12 +78,12 @@ function DoctorStatBadge({
   const iconSrc =
     icon ||
     (label.toLowerCase().includes("licensed")
-      ? "/esa-icons/Icon-33.svg"
+      ? "/esa-icons/icon-33.svg"
       : label.toLowerCase().includes("evaluation") || label.toLowerCase().includes("method")
-      ? "/esa-icons/Icon-15.svg"
+      ? "/esa-icons/icon-15.svg"
       : label.toLowerCase().includes("focus") || label.toLowerCase().includes("area")
-      ? "/esa-icons/Icon-1.svg"
-      : "/esa-icons/Icon-25.svg");
+      ? "/esa-icons/icon-1.svg"
+      : "/esa-icons/icon-25.svg");
 
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
@@ -190,17 +190,17 @@ export function DoctorsListingSection() {
                   <DoctorStatBadge
                     label="Licensed In"
                     value={doc.licensedIn}
-                    icon="/esa-icons/Icon-33.svg"
+                    icon="/esa-icons/icon-33.svg"
                   />
                   <DoctorStatBadge
                     label="Evaluation Method"
                     value={doc.method}
-                    icon="/esa-icons/Icon-15.svg"
+                    icon="/esa-icons/icon-15.svg"
                   />
                   <DoctorStatBadge
                     label="Focus Areas"
                     value={doc.focus}
-                    icon="/esa-icons/Icon-1.svg"
+                    icon="/esa-icons/icon-1.svg"
                   />
                 </div>
 

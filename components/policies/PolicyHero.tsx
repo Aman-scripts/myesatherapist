@@ -120,12 +120,12 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                   "medical disclaimer": "/disclaimer/",
                   "accessibility statement": "/accessibility-statement/",
                   "about us": "/about-us/",
-                  "our service areas": "/states/",
-                  "our service area's": "/states/",
-                  "our state areas": "/states/",
-                  "our state area's": "/states/",
-                  "service areas": "/states/",
-                  "states": "/states/",
+                  "our service areas": "/state/",
+                  "our service area's": "/state/",
+                  "our state areas": "/state/",
+                  "our state area's": "/state/",
+                  "service areas": "/state/",
+                  "states": "/state/",
                 };
                 const mappedHref = slugMap[link.text.toLowerCase()] || link.href;
 

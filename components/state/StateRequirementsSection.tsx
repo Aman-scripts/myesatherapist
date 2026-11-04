@@ -41,7 +41,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
               <div key={index} className="flex items-start gap-3">
                 <span className="flex h-[26px] shrink-0 items-center">
                   <Image quality={90}
-                    src="/esa-icons/Icon-46.svg"
+                    src="/esa-icons/icon-46.svg"
                     alt=""
                     width={20}
                     height={20}

@@ -5,15 +5,15 @@ import { StateData } from "@/data/statesData";
 import { CtaButton } from "@/components/common/CtaButton";
 
 const FINANCIAL_ICONS = [
-  "/esa-icons/Icon-20.svg",
-  "/esa-icons/Icon-28.svg",
-  "/esa-icons/Icon-10.svg",
+  "/esa-icons/icon-20.svg",
+  "/esa-icons/icon-28.svg",
+  "/esa-icons/icon-10.svg",
 ];
 
 const EMOTIONAL_ICONS = [
-  "/esa-icons/Icon-29.svg",
-  "/esa-icons/Icon-30.svg",
-  "/esa-icons/Icon-17.svg",
+  "/esa-icons/icon-29.svg",
+  "/esa-icons/icon-30.svg",
+  "/esa-icons/icon-17.svg",
 ];
 
 function BenefitCard({ title, description, icon }: { title: string; description: string; icon: string }) {
@@ -35,7 +35,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     {
       title: "Comfortable Housing with Your ESA",
       description: `${stateName} tenants may request reasonable housing accommodations with their ESAs even in no-pet policy localities.`,
-      icon: "/states/whomayqualifies-california_chronicworry.svg",
+      icon: "/states/whomayqualifies-california-chronicworry.svg",
     },
     {
       title: "Avoid Extra Pet-Related Costs",
@@ -105,7 +105,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               <div className="absolute bottom-0 left-[36.4%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.webp"
+                  src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={40}
                   height={40}
@@ -126,7 +126,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               <div className="absolute bottom-0 left-[33.8%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.webp"
+                  src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={48}
                   height={48}
@@ -153,7 +153,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
               >
                 <Image
                   quality={90}
-                  src="/states/whomayqualifies-california_icon.webp"
+                  src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={64}
                   height={64}

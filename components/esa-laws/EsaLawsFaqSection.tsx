@@ -92,11 +92,12 @@ export function EsaLawsFaqSection() {
                     </div>
                   </button>
 
-                  {isOpen && (
-                    <div className="bg-white px-5 sm:px-7 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn">
-                      {faq.a}
-                    </div>
-                  )}
+                  <div
+                    hidden={!isOpen}
+                    className="bg-white px-5 sm:px-7 py-4 sm:py-5 body-large border border-primary/10 border-t-0 rounded-b-[20px] animate-fadeIn"
+                  >
+                    {faq.a}
+                  </div>
                 </div>
               );
             })}

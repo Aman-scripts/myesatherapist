@@ -26,7 +26,7 @@ export function BlogsFeaturedArticle({
           <div className="w-full lg:w-[55%] xl:w-[628px] h-[340px] sm:h-[420px] lg:h-[463px] relative rounded-[20px] lg:rounded-[24px] overflow-hidden shrink-0 shadow-sm z-0">
             <Image
             quality={90}
-              src="/blogs/blog_seven-things-to_know.webp"
+              src="/blogs/blog-seven-things-to-know.webp"
               alt="7 Things to Know Before Getting an ESA Letter"
               fill
               priority

@@ -5,17 +5,17 @@ const TRUST_PILLARS = [
   {
     title: "Clinician-Informed Content",
     text: "Every guide is grounded in current federal law and reviewed for accuracy by licensed mental health professionals.",
-    icon: "/esa-icons/Glyph-2.svg",
+    icon: "/esa-icons/glyph-2.svg",
   },
   {
     title: "No Legal Jargon",
     text: "We translate complex housing laws and ESA regulations into plain language anyone can understand and act on.",
-    icon: "/esa-icons/Icon-25.svg",
+    icon: "/esa-icons/icon-25.svg",
   },
   {
     title: "Regularly Updated",
     text: "ESA laws and policies evolve. Our resources are kept current so you always have reliable, up-to-date guidance.",
-    icon: "/esa-icons/Icon-27.svg",
+    icon: "/esa-icons/icon-27.svg",
   },
 ];
 

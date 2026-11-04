@@ -4,14 +4,14 @@ import { CtaButton } from "./EsaOnlineShared";
 
 const ANIMALS = [
   {
-    image: "/esa-online/esa-letter-online_esaletterdiffernt-emotinalsupportdog.webp",
+    image: "/esa-online/esa-letter-online-esaletterdiffernt-emotinalsupportdog.webp",
     alt: "Woman with her emotional support dog",
     title: "Emotional Support Dog Letter",
     description:
       "Request a professional consultation to determine whether a dog is suitable for your emotional and mental health needs. When appropriate, a letter may be issued to support your housing accommodation request.",
   },
   {
-    image: "/esa-online/esa-letter-online_esaletterdiffernt-emotionalsupportcat.webp",
+    image: "/esa-online/esa-letter-online-esaletterdiffernt-emotionalsupportcat.webp",
     alt: "Woman with her emotional support cat",
     title: "Emotional Support Cat Letter",
     description:

@@ -11,37 +11,37 @@ export interface WhyChooseFeature {
 
 const defaultFeatures: WhyChooseFeature[] = [
   {
-    icon: "/esa-icons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
     title: "Licensed Professionals",
     description:
       "Evaluations are conducted by independent U.S.-licensed mental health professionals authorized to assess ESA eligibility.",
   },
   {
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
     title: "Secure Telehealth Platform",
     description:
       "HIPAA-compliant systems ensure your information remains confidential and protected.",
   },
   {
-    icon: "/esa-icons/Glyph-2.svg",
+    icon: "/esa-icons/glyph-2.svg",
     title: "Clinical Integrity First",
     description:
       "We do not guarantee ESA approval. Recommendations are based solely on clinical judgment.",
   },
   {
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
     title: "Legitimate ESA Documentation",
     description:
       "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
   },
   {
-    icon: "/esa-icons/Icon-24.svg",
+    icon: "/esa-icons/icon-24.svg",
     title: "Nationwide Access",
     description:
       "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
   },
   {
-    icon: "/esa-icons/Icon-26.svg",
+    icon: "/esa-icons/icon-26.svg",
     title: "Transparent Process",
     description:
       "Clear steps, clear expectations, no misleading claims.",
@@ -88,7 +88,7 @@ export function WhyChooseUs({
             const resolvedIcon =
               icon && !icon.includes("/home/whychoose")
                 ? icon
-                : defaultFeatures[idx % defaultFeatures.length]?.icon || "/esa-icons/Icon-10.svg";
+                : defaultFeatures[idx % defaultFeatures.length]?.icon || "/esa-icons/icon-10.svg";
             return (
               <div
                 key={itemTitle}

@@ -12,22 +12,22 @@ interface TrustCard {
 
 const CARDS: TrustCard[] = [
   {
-    icon: "/esa-icons/Glyph-3.svg",
+    icon: "/esa-icons/glyph-3.svg",
     title: "Secure & Compliant",
     subtitle: "HIPAA-Aligned Platform",
   },
   {
-    icon: "/esa-icons/Icon-18.svg",
+    icon: "/esa-icons/icon-18.svg",
     title: "Flexible Evaluations",
     subtitle: "Phone or Video Sessions",
   },
   {
-    icon: "/esa-icons/Icon-16.svg",
+    icon: "/esa-icons/icon-16.svg",
     title: "Fast Scheduling",
     subtitle: "Same-Day Appointments",
   },
   {
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
     title: "Fully Online",
     subtitle: "No In-Person Visits Required",
   },

@@ -6,7 +6,7 @@ import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
 export function EsaLawsStateHero({
   title,
   description,
-  image = "/esalawsblog/esalaws_herosection.webp",
+  image = "/esalawsblog/esalaws-herosection.webp",
   imageMobile,
   imageTablet,
   imageAlt = "",
@@ -41,7 +41,7 @@ export function EsaLawsStateHero({
             <BreakpointImage
               media="(max-width: 639px)"
               quality={90}
-              src="/Hero_image_for_mobile_all.webp"
+              src="/hero-image-for-mobile-all.webp"
               alt=""
               fill
               className="sm:hidden object-cover object-top"

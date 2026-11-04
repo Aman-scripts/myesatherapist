@@ -9,7 +9,7 @@ export function EsaHousingMoveForward() {
       <div className="hidden sm:block absolute right-0 bottom-0 sm:h-[60%] lg:h-auto lg:w-[min(17.4vw,250px)] aspect-[254/262] pointer-events-none">
         <Image
             quality={90}
-          src="/esa-housing/esa-letter-housing_moveforwardsection-pawicon.webp"
+          src="/esa-housing/esa-letter-housing-moveforwardsection-pawicon.webp"
           alt="Paw print"
           fill
           className="object-contain object-right-bottom"

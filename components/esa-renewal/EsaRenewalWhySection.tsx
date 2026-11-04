@@ -16,19 +16,19 @@ const CARDS: WhyCard[] = [
     title: "Legitimate Process",
     description:
       "Renewals are never issued automatically. A licensed professional independently reviews your evaluation and decides whether updated documentation may be appropriate.",
-    icon: "/esa-icons/Icon-46.svg",
+    icon: "/esa-icons/icon-46.svg",
   },
   {
     title: "Remote Evaluation",
     description:
       "The renewal process is completed online, with sessions designed to fit everyday schedules so you can take part from home instead of in person.",
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
   },
   {
     title: "Licensed Professionals",
     description:
       "Licensed mental health professionals assess whether your condition aligns with recognized DSM standards. ESA documentation is considered only when clinically appropriate.",
-    icon: "/esa-icons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
   },
 ];
 
@@ -41,7 +41,7 @@ export function EsaRenewalWhySection() {
         <div className="absolute left-[7%] top-[38.4%] z-20 w-[56px] h-[56px] xl:w-[73px] xl:h-[73px]">
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.webp"
+            src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Compassionate verified support badge"
             width={73}
             height={73}
@@ -61,8 +61,8 @@ export function EsaRenewalWhySection() {
       <div className="relative z-10 mx-auto max-w-[1440px] px-4 sm:px-8 lg:pl-[4.5vw] xl:pl-20 xl:pr-0 pb-16 sm:pb-20 lg:py-[4.5vw] xl:py-[65px]">
         <WaveImage
           alt="Licensed emotional support animal therapist evaluation process"
-          mobile={{ src: "/esa-renewal/esa-renwal_whyconsidering_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 237, w: 390, h: 274 } }}
-          tablet={{ src: "/esa-renewal/esa-renwal_whyconsidering_tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 449, w: 834, h: 600 } }}
+          mobile={{ src: "/esa-renewal/esa-renwal-whyconsidering-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 237, w: 390, h: 274 } }}
+          tablet={{ src: "/esa-renewal/esa-renwal-whyconsidering-tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 449, w: 834, h: 600 } }}
         />
         {/* Left Column: Heading + Subtitle + 3 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[46vw] xl:max-w-[626px] flex flex-col gap-10 lg:gap-[3vw] xl:gap-14">

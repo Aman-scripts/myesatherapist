@@ -1,316 +1,69 @@
 "use client";
 
 import React, { useState } from "react";
-import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
+import { ResponsiveHero, standardHeroBackgrounds } from "@/components/common/ResponsiveHero";
+
+const TITLE = "Your Go-to-Resource Hub for Emotional Support Animals";
+const DESCRIPTION =
+  "Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics and help you better understand your rights, responsibilities, and the role of emotional support animals in everyday life.";
 
 export function BlogsHero() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const el = document.getElementById("esa-guide");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById("esa-guide")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative w-full bg-background">
-      <h1 className="sr-only">Your Go-to-Resource Hub for Emotional Support Animals</h1>
-      {/* ---------------------------------------------------- */}
-      {/* 1. MOBILE BLOGS HERO SECTION (sm:hidden / < 640px)   */}
-      {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full">
-        <BreakpointImage
-          media="(max-width: 639px)"
-          quality={90}
-          src="/Hero_image_for_mobile_all.webp"
-          alt="Your Guide to Emotional Support Animals"
-          fill
-          className="object-cover object-bottom pointer-events-none"
-          sizes="(max-width: 639px) 430px, 1px"
-        />
-
-        {/* Content Container at Top */}
-        <div className="relative z-10 px-4 pt-6 pb-10 text-center flex flex-col items-center">
-          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-          {/* Frame 1000011902: Headline & Subtitle */}
-          <div className="flex flex-col items-center gap-3 max-w-[340px]">
-            <p aria-hidden="true" className="heading-h2 text-primary capitalize text-center">
-              Your Go-to-Resource Hub for Emotional Support Animals
-            </p>
-
-            <p className="body-large text-primary text-center max-w-[320px]">
-              Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics.
-            </p>
-          </div>
-
-          {/* Search Bar */}
-          <form
-            onSubmit={handleSearch}
-            className="w-full max-w-[340px] h-[50px] bg-background rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-4 pr-1.5 py-1 mt-5"
-          >
-            <div className="flex items-center flex-1 min-w-0 gap-2.5">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="shrink-0 text-body-text"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="11"
-                  cy="11"
-                  r="7"
-                  stroke="rgba(0, 0, 0, 0.57)"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M20 20L16 16"
-                  stroke="rgba(0, 0, 0, 0.57)"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search anything...."
-                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[15px] text-primary placeholder:text-body-text"
-              />
-            </div>
-
-            <button
-              type="submit"
-              aria-label="Filter or Search"
-              className="w-[42px] h-[42px] rounded-full shrink-0 flex items-center justify-center text-white shadow-xs hover:opacity-95 transition-all"
-              style={{ background: "var(--color-gradient)" }}
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path d="M21 7H17" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <path d="M11 7H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="14" cy="7" r="3" stroke="white" strokeWidth="2" />
-                <path d="M21 17H13" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <path d="M7 17H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="10" cy="17" r="3" stroke="white" strokeWidth="2" />
-              </svg>
-            </button>
-          </form>
+    <ResponsiveHero
+      centered={false}
+      desktopHeight={744}
+      tabletMinHeight="720px"
+      backgrounds={standardHeroBackgrounds(
+        "/hero-image-for-mobile-all.webp",
+        "/blogs/blog-hero-section-tablet.webp",
+        "/blogs/blog-hero-section.webp",
+        { mobile: "object-bottom", tablet: "object-bottom", desktop: "object-center" },
+      )}
+    >
+      <SiteBreadcrumbs className="mb-4 self-start" />
+      <h1 className="heading-h1 text-primary max-w-[340px] capitalize sm:max-w-[512px]">{TITLE}</h1>
+      <p className="body-large text-body-text mx-auto mt-4 max-w-[320px] sm:mx-0 sm:max-w-[512px]">{DESCRIPTION}</p>
+      <form
+        onSubmit={handleSearch}
+        className="mt-6 flex h-[50px] w-full max-w-[340px] items-center justify-between rounded-[30px] bg-background pl-4 pr-1.5 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] sm:h-[54px] sm:max-w-[422px] sm:pl-5"
+      >
+        <div className="flex min-w-0 flex-1 items-center gap-2.5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0">
+            <circle cx="11" cy="11" r="7" stroke="rgba(0, 0, 0, 0.57)" strokeWidth="1.8" />
+            <path d="M20 20L16 16" stroke="rgba(0, 0, 0, 0.57)" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search anything...."
+            className="w-full border-none bg-transparent font-sans text-[15px] font-semibold text-primary outline-none placeholder:text-body-text sm:text-[17px]"
+          />
         </div>
-      </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET BLOGS HERO SECTION (sm: to lg: / 640-1023px)*/}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden sm:flex lg:hidden relative w-full aspect-[834/1100] min-h-[720px] max-h-[920px] overflow-hidden">
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-          quality={90}
-          src="/blogs/blog_hero-section-tablet.webp"
-          alt="Your Guide to Emotional Support Animals"
-          fill
-          className="object-cover object-bottom pointer-events-none"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-
-        {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10 max-w-[620px] mx-auto">
-          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-          {/* Headline & Subtitle */}
-          <div className="flex flex-col items-center gap-4 max-w-xl mx-auto">
-            <p aria-hidden="true" className="heading-h1 text-primary capitalize text-center text-3xl sm:text-4xl">
-              Your Go-to-Resource Hub for Emotional Support Animals
-            </p>
-
-            <p className="body-large text-body-text text-center max-w-lg mx-auto">
-              Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics and help you better understand your rights.
-            </p>
-          </div>
-
-          {/* Search Bar on Tablet */}
-          <form
-            onSubmit={handleSearch}
-            className="w-full max-w-[422px] h-[54px] bg-background rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-5 pr-1.5 py-1 mt-6"
-          >
-            <div className="flex items-center flex-1 min-w-0 gap-3">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="shrink-0 text-body-text"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="11"
-                  cy="11"
-                  r="7"
-                  stroke="rgba(0, 0, 0, 0.57)"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M20 20L16 16"
-                  stroke="rgba(0, 0, 0, 0.57)"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search anything...."
-                className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] text-primary placeholder:text-body-text"
-              />
-            </div>
-
-            <button
-              type="submit"
-              aria-label="Filter or Search"
-              className="w-[46px] h-[46px] rounded-full shrink-0 flex items-center justify-center text-white shadow-xs hover:opacity-95 transition-all"
-              style={{ background: "var(--color-gradient)" }}
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path d="M21 7H17" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <path d="M11 7H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="14" cy="7" r="3" stroke="white" strokeWidth="2" />
-                <path d="M21 17H13" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <path d="M7 17H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                <circle cx="10" cy="17" r="3" stroke="white" strokeWidth="2" />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP BLOGS HERO SECTION (lg: / 1024px and up)   */}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden lg:block relative w-full aspect-[1441/744] min-h-[580px] xl:min-h-0">
-        <BreakpointImage
-          media="(min-width: 1024px)"
-          quality={90}
-          src="/blogs/blog-hero_section.webp"
-          alt="Your Guide to Emotional Support Animals"
-          fill
-          className="object-cover lg:object-[82%_center] xl:object-center pointer-events-none"
-          sizes="(min-width: 1024px) 100vw, 1px"
-        />
-
-        {/* Content Container: Frame 1261153864 */}
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="w-full max-w-[1440px] mx-auto px-8 lg:px-[84px]">
-            <div className="w-full max-w-[519px] flex flex-col items-start gap-[32px]">
-              <SiteBreadcrumbs />
-              {/* Frame 1000011884 / Frame 1000011902 */}
-              <div className="flex flex-col items-start gap-[24px] w-full max-w-[512px]">
-                {/* Heading: Your Go-to-Resource Hub for Emotional Support Animals */}
-                <p aria-hidden="true" className="heading-h1 text-primary capitalize max-w-[512px]">
-                  Your Go-to-Resource Hub for Emotional Support Animals
-                </p>
-
-                {/* Subtitle from blog.md */}
-                <p className="body-large text-body-text max-w-[512px]">
-                  Finding reliable information about emotional support animals should not be complicated. Explore expert-written blogs that simplify important ESA topics and help you better understand your rights, responsibilities, and the role of emotional support animals in everyday life.
-                </p>
-              </div>
-
-              {/* Search Bar 2 */}
-              <form
-                onSubmit={handleSearch}
-                className="w-full max-w-[422px] h-[54px] bg-background rounded-[30px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-between pl-5 pr-1.5 py-1"
-              >
-                <div className="flex items-center flex-1 min-w-0 gap-3">
-                  {/* Iconsax/Linear/searchnormal1 */}
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 text-body-text"
-                    aria-hidden="true"
-                  >
-                    <circle
-                      cx="11"
-                      cy="11"
-                      r="7"
-                      stroke="rgba(0, 0, 0, 0.57)"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M20 20L16 16"
-                      stroke="rgba(0, 0, 0, 0.57)"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search anything...."
-                    className="w-full bg-transparent border-none outline-none font-sans font-semibold text-[17px] xl:text-[18px] leading-[30px] text-primary placeholder:text-body-text"
-                  />
-                </div>
-
-                {/* Group 3: Ellipse 1 + setting4 */}
-                <button
-                  type="submit"
-                  aria-label="Filter or Search"
-                  className="w-[46px] h-[46px] rounded-full shrink-0 flex items-center justify-center text-white shadow-xs hover:opacity-95 transition-all group cursor-pointer"
-                  style={{ background: "var(--color-gradient)" }}
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    className="group-hover:scale-105 transition-transform"
-                  >
-                    <path d="M21 7H17" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M11 7H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                    <circle cx="14" cy="7" r="3" stroke="white" strokeWidth="2" />
-                    <path d="M21 17H13" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M7 17H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                    <circle cx="10" cy="17" r="3" stroke="white" strokeWidth="2" />
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <button
+          type="submit"
+          aria-label="Filter or Search"
+          className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full text-white sm:h-[46px] sm:w-[46px]"
+          style={{ background: "var(--color-gradient)" }}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 7H17" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M11 7H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="14" cy="7" r="3" stroke="white" strokeWidth="2" />
+            <path d="M21 17H13" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M7 17H3" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="10" cy="17" r="3" stroke="white" strokeWidth="2" />
+          </svg>
+        </button>
+      </form>
+    </ResponsiveHero>
   );
 }

@@ -4,17 +4,17 @@ import Image from "next/image";
 import { StateData } from "@/data/statesData";
 
 const QUALIFY_ICONS = [
-  "/esa-icons/Icon.svg",
-  "/esa-icons/Icon-1.svg",
-  "/esa-icons/Icon-2.svg",
-  "/esa-icons/Icon-4.svg",
+  "/esa-icons/icon.svg",
+  "/esa-icons/icon-1.svg",
+  "/esa-icons/icon-2.svg",
+  "/esa-icons/icon-4.svg",
 ];
 
 function qualifyIcon(src: string | undefined, index: number) {
-  if (src?.includes("chronicworry")) return "/esa-icons/Icon.svg";
-  if (src?.includes("panicattack")) return "/esa-icons/Icon-1.svg";
-  if (src?.includes("posttrauma")) return "/esa-icons/Icon-2.svg";
-  if (src?.includes("moodconditions")) return "/esa-icons/Icon-4.svg";
+  if (src?.includes("chronicworry")) return "/esa-icons/icon.svg";
+  if (src?.includes("panicattack")) return "/esa-icons/icon-1.svg";
+  if (src?.includes("posttrauma")) return "/esa-icons/icon-2.svg";
+  if (src?.includes("moodconditions")) return "/esa-icons/icon-4.svg";
   return src || QUALIFY_ICONS[index % QUALIFY_ICONS.length];
 }
 
@@ -22,22 +22,22 @@ const defaultConditions = [
   {
     title: "Panic Disorder with Agoraphobia",
     description: "Frequent panic attacks restricting leaving homes and public spaces.",
-    icon: "/esa-icons/Icon.svg",
+    icon: "/esa-icons/icon.svg",
   },
   {
     title: "Chronic PTSD",
     description: "Trauma-related flashbacks affecting daily life or emotional regulation.",
-    icon: "/esa-icons/Icon-1.svg",
+    icon: "/esa-icons/icon-1.svg",
   },
   {
     title: "Persistent Depressive Disorder",
     description: "Long-term depressive symptoms affecting motivation and energy.",
-    icon: "/esa-icons/Icon-2.svg",
+    icon: "/esa-icons/icon-2.svg",
   },
   {
     title: "Obsessive-Compulsive Disorder",
     description: "Intrusive thoughts or compulsions disrupting routine activities.",
-    icon: "/esa-icons/Icon-4.svg",
+    icon: "/esa-icons/icon-4.svg",
   },
 ];
 
@@ -100,7 +100,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               <div className="absolute bottom-0 left-[73.8%] -translate-x-1/2 translate-y-1/2 z-10 w-10 h-10">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.webp"
+                  src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={40}
                   height={40}
@@ -121,7 +121,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               <div className="absolute bottom-0 left-[75.3%] -translate-x-1/2 translate-y-1/2 z-10 w-12 h-12">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.webp"
+                  src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={48}
                   height={48}
@@ -142,7 +142,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
               <div className="absolute left-[9.2%] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 xl:w-16 xl:h-16">
                 <Image
             quality={90}
-                  src="/states/whomayqualifies-california_icon.webp"
+                  src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={64}
                   height={64}

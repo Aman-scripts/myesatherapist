@@ -35,14 +35,14 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
 
   const cards = [
     {
-      image: "/states/PsdvsEsa_ESASection.png",
+      image: "/states/psdvsesa-esasection.png",
       alt: esaTitle,
       title: esaTitle,
       bullets: esaBullets,
       tags: ["Housing Rights", "No Pet Fees", "Emotional Support"],
     },
     {
-      image: "/states/PsdvsEsa_PSDSection.png",
+      image: "/states/psdvsesa-psdsection.png",
       alt: psdTitle,
       title: psdTitle,
       bullets: psdBullets,

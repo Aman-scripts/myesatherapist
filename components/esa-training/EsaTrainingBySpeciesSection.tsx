@@ -6,19 +6,19 @@ const ANIMALS = [
   {
     title: "Dogs",
     text: "The most common ESA and the easiest to train, given how many resources exist.",
-    image: "/esa-training/esa-traning_byanimamals-dogs.webp",
+    image: "/esa-training/esa-traning-byanimamals-dogs.webp",
     alt: "Woman training her golden retriever",
   },
   {
     title: "Cats",
     text: "Trainable too. Litter box reliability, scratching post use, and calm behavior around guests are realistic goals.",
-    image: "/esa-training/esa-traning_byanimamals-cats.webp",
+    image: "/esa-training/esa-traning-byanimamals-cats.webp",
     alt: "Woman playing with her cat",
   },
   {
     title: "Others",
     text: "Training looks different here. It's more about handling, socialization, and predictable routines than commands.",
-    image: "/esa-training/esa-traning_byanimamals-rabbitsbirds.webp",
+    image: "/esa-training/esa-traning-byanimamals-rabbitsbirds.webp",
     alt: "Woman with a rabbit, a bird and a guinea pig",
   },
 ];

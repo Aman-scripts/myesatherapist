@@ -3,19 +3,19 @@ import { FeatureCard } from "./EsaOnlineShared";
 
 const CARDS = [
   {
-    icon: "/ESA ICons/Icon-18.svg",
+    icon: "/esa-icons/icon-18.svg",
     title: "Independent Clinical Evaluation",
     description:
       "Any ESA recommendation you receive is based solely on the clinician’s professional judgment, not automatic approval.",
   },
   {
-    icon: "/ESA ICons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
     title: "State Authorized Professionals",
     description:
       "ESA documentation is issued only by licensed mental health professionals authorized to practice in the individual’s state.",
   },
   {
-    icon: "/ESA ICons/Icon-25.svg",
+    icon: "/esa-icons/icon-25.svg",
     title: "Alignment With FHA and HUD Guidance",
     description:
       "Your ESA letter is issued in accordance with applicable federal law and relevant HUD guidance for housing accommodation requests under the Fair Housing Act.",

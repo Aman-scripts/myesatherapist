@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CtaButton } from "@/components/common/CtaButton";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
 import { SiteReviewerBanner } from "@/components/state/SiteReviewerBanner";
 
 const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #000000 100%)";
@@ -44,7 +43,7 @@ function HipaaBadge() {
       <div className="relative w-full h-full">
         <Image
           quality={90}
-          src="/common/hippa_log.webp"
+          src="/common/hipaa-logo.webp"
           alt="HIPAA Compliant"
           fill
           className="object-contain"
@@ -55,7 +54,7 @@ function HipaaBadge() {
   );
 }
 
-function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
+function FooterContent() {
   return (
     <>
       {/* Top Centered Section */}
@@ -74,15 +73,9 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
         </Link>
 
         {/* Heading with Gold Highlight */}
-        {isDesktop ? (
-          <h2 className="heading-h2 text-background capitalize text-center">
-            My ESA <span className="text-accent">Therapist</span>
-          </h2>
-        ) : (
-          <p className="heading-h2 text-background capitalize text-center">
-            My ESA <span className="text-accent">Therapist</span>
-          </p>
-        )}
+        <h2 className="heading-h2 text-background capitalize text-center">
+          My ESA <span className="text-accent">Therapist</span>
+        </h2>
 
         {/* Subtitle */}
         <p className="text-background body-large text-center max-w-[734px]">
@@ -114,7 +107,7 @@ function FooterContent({ isDesktop = false }: { isDesktop?: boolean }) {
       <div className="w-full border-t border-white/15 my-14" />
 
       {/* 5 Navigation Columns */}
-      <div className={isDesktop ? "grid grid-cols-5 gap-8" : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"}>
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
         {/* Column 1: ABOUT US */}
         <div className="space-y-4">
           <div className="text-accent body-large tracking-wider uppercase">
@@ -326,37 +319,12 @@ export function Footer({ bgColor = "bg-background" }: { bgColor?: string }) {
     <>
     <SiteReviewerBanner />
     <footer className={`w-full ${bgColor} pt-4 sm:pt-6 lg:pt-8`}>
-      {/* ---------------------------------------------------- */}
-      {/* 1. DESKTOP FOOTER (>= 1024px)                        */}
-      {/* Scaled proportionally from 1440px to 1024px          */}
-      {/* ---------------------------------------------------- */}
-      <DesktopScaleWrapper
-        designWidth={1440}
-        designHeight={980}
-        className="hidden lg:block relative"
-        fullBleedBackground={
-          <div
-            className="w-full h-full rounded-t-[60px]"
-            style={{ backgroundImage: FOOTER_GRADIENT }}
-          />
-        }
-      >
-        <div className="relative w-[1440px] pt-16 pb-10 text-white">
-          <div className="max-w-[1380px] mx-auto px-14">
-            <FooterContent isDesktop />
-          </div>
-        </div>
-      </DesktopScaleWrapper>
-
-      {/* ---------------------------------------------------- */}
-      {/* 2. MOBILE & TABLET FOOTER (< 1024px)                 */}
-      {/* ---------------------------------------------------- */}
       <div
-        className="lg:hidden w-full rounded-t-[40px] pt-16 pb-10 text-white relative overflow-hidden"
+        className="relative w-full overflow-hidden rounded-t-[40px] pb-10 pt-16 text-white lg:rounded-t-[60px]"
         style={{ backgroundImage: FOOTER_GRADIENT }}
       >
-        <div className="max-w-[1380px] mx-auto px-6 sm:px-10">
-          <FooterContent isDesktop={false} />
+        <div className="mx-auto max-w-[1380px] px-6 sm:px-10 lg:px-14">
+          <FooterContent />
         </div>
       </div>
     </footer>

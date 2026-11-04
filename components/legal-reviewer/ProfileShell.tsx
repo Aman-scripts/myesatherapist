@@ -77,7 +77,7 @@ function ProfileIdentity({
             <div className="flex items-center gap-[10px]">
               <Image
                 quality={90}
-                src="/legal_reviewer/legal_reviewer-bag-icon.svg"
+                src="/legal-reviewer/legal-reviewer-bag-icon.svg"
                 alt="Professional credentials"
                 width={24}
                 height={24}

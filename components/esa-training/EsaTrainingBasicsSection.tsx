@@ -3,24 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { TEAL_GRADIENT, WaveImageFrame } from "@/components/esa-online/EsaOnlineShared";
 
-const ART = "/esa-training/esa-traning_basicstraining.webp";
+const ART = "/esa-training/esa-traning-basicstraining.webp";
 const ART_ALT = "Woman rewarding her golden retriever during a training session";
 
 const BASICS = [
   {
     title: "Foundational Obedience",
     text: "Sit, stay, come. The basics that make everyday life predictable.",
-    icon: "/esa-icons/Icon-11.svg",
+    icon: "/esa-icons/icon-11.svg",
   },
   {
     title: "Leash Manners",
     text: "No pulling, lunging, or bolting when you're out together.",
-    icon: "/esa-icons/Icon-30.svg",
+    icon: "/esa-icons/icon-30.svg",
   },
   {
     title: "Calm Public Behavior",
     text: "No excessive barking, jumping, or aggression around others.",
-    icon: "/esa-icons/Icon-10.svg",
+    icon: "/esa-icons/icon-10.svg",
   },
 ];
 
@@ -37,14 +37,14 @@ export function EsaTrainingBasicsSection() {
         {/* Artwork for mobile / tablet (curve and heart badge built in) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_mobile.webp", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />
           </div>
           <div className="hidden sm:block">
-            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining_tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 82, w: 834, h: 968 } }} />
+            <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining-tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 82, w: 834, h: 968 } }} />
           </div>
           <Image
             quality={90}
-            src="/about-us/about_us-legimateesasection-hearticon.webp"
+            src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Heart"
             width={64}
             height={64}

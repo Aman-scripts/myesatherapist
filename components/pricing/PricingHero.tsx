@@ -1,162 +1,51 @@
-
 import React from "react";
-import { BreakpointImage } from "@/components/common/BreakpointImage";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
-import { DesktopScaleWrapper } from "@/components/common/DesktopScaleWrapper";
+import { HeroStatPills } from "@/components/common/HeroStatPills";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
+import { ResponsiveHero, standardHeroBackgrounds } from "@/components/common/ResponsiveHero";
+
+const STATS = [
+  { value: "64,739+", label: "ESA Evaluations" },
+  { value: "7+", label: "Years Serving" },
+  { value: "100%", label: "Moneyback Guarantee" },
+];
 
 export function PricingHero() {
   return (
-    <section className="relative z-30 w-full bg-background overflow-visible">
-      <h1 className="sr-only">Choose the Right Package For You</h1>
-      {/* ---------------------------------------------------- */}
-      {/* 1. MOBILE PRICING HERO SECTION (< 640px)             */}
-      {/* ---------------------------------------------------- */}
-      <div className="sm:hidden relative w-full">
-        <BreakpointImage
-          media="(max-width: 639px)"
-            quality={90}
-          src="/Hero_image_for_mobile_all.webp"
-          alt="Choose the Right Package For You"
-          fill
-          className="object-cover object-bottom"
-          sizes="100vw"
-        />
-
-        {/* Content Container at Top */}
-        <div className="relative z-10 px-4 pt-8 pb-10 text-center flex flex-col items-center">
-          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-          <p aria-hidden="true" className="heading-h1 text-primary max-w-[320px]">
-            Choose the Right Package For You
-          </p>
-
-          <p className="body-large text-body-text max-w-[320px] mx-auto mt-3">
-            No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed.
-          </p>
-
-          <div className="mt-5 flex flex-col items-center gap-3">
-            {[
-              { value: "7+", label: "Years Serving" },
-              { value: "64,739+", label: "ESA Evaluations" },
-              { value: "100%", label: "Moneyback Guarantee" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
-              >
-                <span className="body-strong text-primary">{stat.value}</span>
-                <span className="body-text text-primary">{stat.label}</span>
-              </div>
-            ))}
+    <ResponsiveHero
+      className="z-30"
+      centered={false}
+      desktopHeight={802}
+      tabletMinHeight="780px"
+      backgrounds={standardHeroBackgrounds(
+        "/hero-image-for-mobile-all.webp",
+        "/pricing/pricing-section-hero-section-tablet.webp",
+        "/pricing/pricing-section-hero-section.webp",
+        { mobile: "object-bottom", tablet: "object-bottom", desktop: "object-center" },
+      )}
+    >
+      <SiteBreadcrumbs className="mb-4 self-start" />
+      <div className="hidden items-center gap-3 sm:flex sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+        {STATS.map((stat) => (
+          <div
+            key={stat.label}
+            className="flex h-[77px] min-w-[176px] flex-col items-center justify-center rounded-[30px] border border-[#EAE5DC]/80 bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+          >
+            <span className="body-large leading-none text-color-gradient">{stat.value}</span>
+            <span className="body-small mt-1 whitespace-nowrap text-[#949494]">{stat.label}</span>
           </div>
-
-          <div className="mt-6 w-full max-w-[360px]">
-            <ReviewBadges className="mx-auto max-w-none justify-center" />
-          </div>
-        </div>
+        ))}
       </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET PRICING HERO SECTION (640px to 1023px)     */}
-      {/* ---------------------------------------------------- */}
-      <div className="hidden sm:block lg:hidden relative w-full aspect-[834/1200] min-h-[780px]">
-        <BreakpointImage
-          media="(min-width: 640px) and (max-width: 1023px)"
-            quality={90}
-          src="/pricing/pricing_section-hero_section_tablet.webp"
-          alt="Choose the Right Package For You"
-          fill
-          className="object-cover object-bottom"
-          sizes="(min-width: 640px) and (max-width: 1023px) 100vw, 1px"
-        />
-
-        {/* Content Container at Top */}
-        <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center flex flex-col items-center z-10">
-          <SiteBreadcrumbs className="mb-4" includeSchema={false} />
-          {/* Stat Pills */}
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[150px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">64,739+</span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">ESA Evaluations</span>
-            </div>
-            <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[130px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">7+</span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Years Serving</span>
-            </div>
-            <div className="flex flex-col items-center justify-center bg-background px-5 py-2.5 rounded-full text-center min-w-[170px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/80">
-              <span className="body-large text-color-gradient leading-none">100%</span>
-              <span className="body-small text-[#949494] mt-0.5 whitespace-nowrap">Moneyback Guarantee</span>
-            </div>
-          </div>
-
-          <p aria-hidden="true" className="heading-h1 text-primary mt-6 max-w-xl">
-            Choose the Right Package For You
-          </p>
-
-          <p className="body-large text-body-text max-w-md mx-auto mt-3">
-            No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.
-          </p>
-
-          <div className="mt-6 flex justify-center">
-            <ReviewBadges />
-          </div>
-        </div>
+      <h1 className="heading-h1 text-primary mt-6 max-w-[320px] sm:max-w-[553px]">
+        Choose the Right Package For You
+      </h1>
+      <p className="body-large text-body-text mx-auto mt-3 max-w-[320px] sm:mx-0 sm:max-w-[553px]">
+        No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.
+      </p>
+      <div className="mt-6 flex w-full max-w-[360px] flex-col items-center gap-3 sm:max-w-none sm:items-start">
+        <HeroStatPills stats={STATS} className="sm:hidden" />
+        <ReviewBadges className="mx-auto max-w-none justify-center sm:mx-0 sm:justify-start" />
       </div>
-
-      {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP PRICING HERO SECTION (1024px and up)      */}
-      {/* ---------------------------------------------------- */}
-      {/* ---------------------------------------------------- */}
-      {/* 3. DESKTOP PRICING HERO SECTION (1024px and up)      */}
-      {/* ---------------------------------------------------- */}
-      <DesktopScaleWrapper
-        designHeight={802}
-        designWidth={1440}
-        wrapperClassName="bg-background overflow-hidden"
-        background={
-          <BreakpointImage
-            media="(min-width: 1024px)"
-            quality={90}
-            src="/pricing/pricing_section-hero_section.webp"
-            alt="Choose the Right Package For You"
-            fill
-            className="object-cover object-center"
-            sizes="(min-width: 1024px) 100vw, 1px"
-          />
-        }
-      >
-        <div className="relative w-[1440px] h-[802px]">
-          {/* Content Container Left-Aligned (Matches Figma Frame 1000011884) */}
-          <div className="absolute left-[82px] top-[120px] max-w-[553px] z-10 flex flex-col items-start gap-[24px]">
-            <SiteBreadcrumbs />
-            {/* Stat Pills at top (Frame 1000011901) */}
-            <div className="flex items-center gap-3">
-              <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                <span className="body-large text-color-gradient leading-none">64,739+</span>
-                <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">ESA Evaluations</span>
-              </div>
-              <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                <span className="body-large text-color-gradient leading-none">7+</span>
-                <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">Years Serving</span>
-              </div>
-              <div className="inline-flex flex-col items-center justify-center px-4 py-3 bg-background rounded-full shadow-[0px_2px_4px_rgba(0,0,0,0.15)] border border-[#EAE5DC]/80 w-[176px] h-[77px]">
-                <span className="body-large text-color-gradient leading-none">100%</span>
-                <span className="body-small text-[#949494] mt-1 leading-tight whitespace-nowrap">Moneyback Guarantee</span>
-              </div>
-            </div>
-
-            <p aria-hidden="true" className="heading-h1 text-primary max-w-[553px]">
-              Choose the Right Package For You
-            </p>
-
-            <p className="body-large text-body-text max-w-[553px]">
-              No hidden fees. No upfront charges. Your card is authorized at booking but only charged after your evaluation is completed by a licensed mental health professional.
-            </p>
-
-            <ReviewBadges />
-          </div>
-        </div>
-      </DesktopScaleWrapper>
-    </section>
+    </ResponsiveHero>
   );
 }

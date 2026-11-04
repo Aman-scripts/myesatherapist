@@ -8,22 +8,22 @@ const EVALUATION_STEPS = [
   {
     title: "Select Your Package",
     description: "Choose the ESA or PSD option that fits your needs and schedule your appointment.",
-    icon: "/esa-icons/Icon-38.svg",
+    icon: "/esa-icons/icon-38.svg",
   },
   {
     title: "Card Authorization",
     description: "Your card is charged when you book the evaluation.",
-    icon: "/esa-icons/Icon-33.svg",
+    icon: "/esa-icons/icon-33.svg",
   },
   {
     title: "Attend Evaluation",
     description: "Speak with a U.S.-licensed mental health professional via secure telehealth.",
-    icon: "/esa-icons/Icon-15.svg",
+    icon: "/esa-icons/icon-15.svg",
   },
   {
     title: "Receive Your Letter",
     description: "If approved, payment is collected and your letter is emailed immediately.",
-    icon: "/esa-icons/Icon-17.svg",
+    icon: "/esa-icons/icon-17.svg",
   },
 ];
 
