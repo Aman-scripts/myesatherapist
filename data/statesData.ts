@@ -2016,7 +2016,7 @@ export const STATES_DATA: Record<string, StateData> = {
         description: "FEHA also allows employees with disabilities to request reasonable workplace accommodations. However, approval depends on the specific job duties and workplace conditions.",
       },
     ],
-    card2Title: "California State Rules (AB 468)",
+    card2Title: "California ESA State Rules and Requirements (AB 468)",
     card2Items: [
       {
         title: "30-Day Provider Relationship",
