@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blogsData";
+import { contributorProfileHref } from "@/data/contributorsData";
 import { SectionHeader } from "@/components/common/BlogPageBlocks";
 import { CtaButton } from "@/components/common/CtaButton";
 
@@ -34,7 +35,9 @@ export function EsaGuideFilterableGrid() {
         <SectionHeader title="Featured Guide" />
 
         <div className="grid w-full grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-y-12">
-          {ESA_GUIDE_POSTS.map((art, i) => (
+          {ESA_GUIDE_POSTS.map((art, i) => {
+            const authorHref = contributorProfileHref(art.author.name);
+            return (
             <article
               key={art.id}
               className="group flex flex-col overflow-hidden rounded-[20px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-shadow duration-300 hover:shadow-md"
@@ -63,7 +66,19 @@ export function EsaGuideFilterableGrid() {
                       </h3>
                     </Link>
                     <div className="font-sans text-xs font-medium text-[#69777C] sm:text-sm lg:text-[0.95vw] xl:text-sm">
-                      by {art.author.name} • {art.publishDate}
+                      by{" "}
+                      {authorHref ? (
+                        <Link
+                          prefetch={false}
+                          href={authorHref}
+                          className="underline decoration-[#69777C]/70 underline-offset-2 hover:text-primary"
+                        >
+                          {art.author.name}
+                        </Link>
+                      ) : (
+                        art.author.name
+                      )}{" "}
+                      • {art.publishDate}
                     </div>
                   </div>
                   <p className="line-clamp-3 font-sans text-[15px] font-semibold leading-[26px] text-body-text lg:text-[1.1vw] lg:leading-[1.8vw] xl:text-base xl:leading-[26px]">
@@ -79,7 +94,8 @@ export function EsaGuideFilterableGrid() {
                 </CtaButton>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

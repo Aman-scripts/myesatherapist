@@ -55,7 +55,7 @@ export function BlogsFeaturedArticle({
                 href={ctaHref}
                 className="w-auto min-w-[240px]"
               >
-                Start your ESA Evaluation
+                Start Your ESA Evaluation
               </CtaButton>
             </div>
 

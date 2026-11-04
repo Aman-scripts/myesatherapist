@@ -34,7 +34,7 @@ export function EsaGuideTrustHub() {
               key={item.title}
               className={`h-full ${index === 2 ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-12px)] lg:col-span-1 lg:mx-0 lg:w-full" : ""}`}
             >
-              <IconCard icon={item.icon} title={item.title} text={item.text} />
+              <IconCard icon={item.icon} title={item.title} text={item.text} titleFont="playfair" />
             </div>
           ))}
         </div>

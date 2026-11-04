@@ -22,8 +22,8 @@ const DEFAULT_BLOG_FAQS: BlogFaqItem[] = [
     q: "How Does My ESA Therapist Work?",
     a: (
       <div>
-        <p className="mb-2 body-large text-[18px] leading-[28px]">Our process is simple and transparent:</p>
-        <ol className="list-decimal list-outside pl-5 space-y-1.5 body-large text-[18px] leading-[28px]">
+        <p className="mb-2">Our process is simple and transparent:</p>
+        <ol className="list-decimal list-outside pl-5 space-y-1.5">
           <li>Complete a confidential online pre-screening questionnaire</li>
           <li>Schedule a telehealth consultation with a licensed clinician in your state</li>
           <li>If qualified, receive your official ESA recommendation letter delivered securely via email.</li>
@@ -137,7 +137,7 @@ export function BlogFaqSection({
                 </span>
               </summary>
 
-              <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large text-body-text border border-primary/10 border-t-0 rounded-b-[20px] whitespace-pre-line">
+              <div className="bg-background px-6 sm:px-8 py-5 sm:py-6 font-sans font-medium text-[16px] leading-[26px] text-body-text border border-primary/10 border-t-0 rounded-b-[20px] whitespace-pre-line">
                 {faq.a}
               </div>
             </details>

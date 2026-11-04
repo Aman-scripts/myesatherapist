@@ -117,7 +117,7 @@ export function FaqAccordionSection() {
               {/* Accordion Body */}
               <div
                 hidden={!isOpen}
-                className="bg-background px-6 sm:px-8 py-5 sm:py-6 body-large border border-primary/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line"
+                className="bg-background px-6 sm:px-8 py-5 sm:py-6 font-sans font-medium text-[16px] leading-[26px] border border-primary/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line"
               >
                 {faq.answer}
               </div>

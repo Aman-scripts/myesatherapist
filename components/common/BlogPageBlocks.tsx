@@ -70,12 +70,15 @@ export function IconCard({
   title,
   text,
   compact = false,
+  titleFont = "manrope",
 }: {
   icon: string;
   title: string;
   text: string;
   /** Four-up layout (mistakes) uses tighter type at 1024px. */
   compact?: boolean;
+  /** ESA Guide trust cards use Playfair Display for the title. */
+  titleFont?: "manrope" | "playfair";
 }) {
   return (
     <div className="flex h-full w-full flex-col pt-10">
@@ -84,9 +87,15 @@ export function IconCard({
       <div className="relative mt-2 flex flex-1 flex-col items-center rounded-[20px] bg-white px-6 pb-8 pt-[58px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:px-[1.3vw] lg:pb-[2vw] lg:pt-[4.4vw] xl:px-3.5 xl:pb-[37px] xl:pt-[62px]">
         <h3
           className={`font-bold leading-[29px] text-primary text-[22px] sm:text-2xl ${
+            titleFont === "playfair" ? "font-heading" : ""
+          } ${
             compact ? "lg:text-[1.75vw] lg:leading-[2.2vw]" : "lg:text-[1.9vw] lg:leading-[2.3vw]"
           } xl:text-[24px] xl:leading-[29px]`}
-          style={LATO}
+          style={
+            titleFont === "playfair"
+              ? { fontFamily: "var(--font-heading), 'Playfair Display', Georgia, serif" }
+              : LATO
+          }
         >
           {title}
         </h3>

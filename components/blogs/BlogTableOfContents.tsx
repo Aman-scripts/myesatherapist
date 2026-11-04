@@ -157,7 +157,7 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
             </button>
             <div
-              className={`fixed inset-0 z-[99999] flex transition-all duration-300 ${
+              className={`fixed inset-0 z-[99999] flex overflow-hidden transition-all duration-300 ${
                 isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
               }`}
               role="dialog"

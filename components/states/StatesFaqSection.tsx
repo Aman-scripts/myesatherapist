@@ -127,7 +127,7 @@ export function StatesFaqSection() {
                     </div>
                   </summary>
 
-                  <div className="px-6 pb-6 pt-1 body-large text-background border-t border-white/10">
+                  <div className="px-6 pb-6 pt-1 font-sans font-medium text-[16px] leading-[26px] text-background border-t border-white/10">
                     <p>{faq.answer}</p>
                   </div>
                 </details>
