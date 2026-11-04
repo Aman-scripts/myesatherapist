@@ -15453,7 +15453,7 @@ export const STATES_DATA: Record<string, StateData> = {
         focus: "Chronic Conditions & Sleep Concerns",
       },
     ],
-    processTitle: "How ESA Letter Evaluation Process Works in Ohio?",
+    processTitle: "How Does the ESA Letter Evaluation Process Work in Ohio?",
     processSubtitle: "Under a licensed clinician’s supervision, residents of Ohio have the right to complete a professional ESA evaluation. The procedure is set up to be simple, clear, and easy to follow.",
     processSteps: [
       {
@@ -16232,7 +16232,7 @@ export const STATES_DATA: Record<string, StateData> = {
         focus: "Chronic Conditions & Sleep Concerns",
       },
     ],
-    processTitle: "How Does ESA Evaluation Process Work in Oregon?",
+    processTitle: "How Does the ESA Evaluation Process Work in Oregon?",
     processSubtitle: "Oregon residents can get mental health evaluations for the needs of ESAs conducted by certified experts in these 3 quick steps!",
     processSteps: [
       {
@@ -16771,7 +16771,7 @@ export const STATES_DATA: Record<string, StateData> = {
         icon: "/states/whomayqualifies-panicattack.svg",
       },
     ],
-    benefitsFootnote: "Housing outcomes vary by situation. Reasonable accommodation decisions are subject to federal housing law and individual housing provider obligations.",
+    benefitsFootnote: "",
     lawsTitle: "ESA Housing Rights in Pennsylvania: What Tenants Should Know",
     lawsSubtitle: "Emotional support animals in Pennsylvania are protected through disability accommodation laws, not pet policies. These protections come from federal law and are reinforced at the state level to support individuals with legitimate mental health needs in maintaining stable housing.",
     card1Title: "Legal Basis of ESA Housing Rights",

@@ -105,6 +105,7 @@ function EvaluationFormCard({
 
   return (
     <div
+      data-state-hero-form
       className={`w-full bg-[rgba(245,166,54,0.26)] backdrop-blur-[18px] border border-[rgba(245,166,54,0.09)] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
         compact
           ? "rounded-[22px] p-4 sm:p-5"
