@@ -65,3 +65,4 @@ audit_all_pages.js
 check_esa_laws.js
 check_lcp.js
 test_lighthouse.js
+tmp-*.js
