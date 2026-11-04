@@ -1,4 +1,5 @@
 import React from "react";
+import { REVIEWERS } from "@/data/contributorsData";
 import { ProfileShell } from "./ProfileShell";
 import {
   AboutSection,
@@ -34,6 +35,7 @@ export function LegalReviewerContent() {
       name="Awais Arshad"
       avatar="/legal-reviewer/legal-reviwer.webp"
       avatarAlt="Awais Arshad - Legal Reviewer & Attorney at Law"
+      linkedin={REVIEWERS.find((person) => person.id === "awais-arshad")?.linkedin}
       sidebar={
         <>
           <SidebarSection title="Education">

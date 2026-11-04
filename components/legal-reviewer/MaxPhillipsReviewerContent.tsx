@@ -1,4 +1,5 @@
 import React from "react";
+import { REVIEWERS } from "@/data/contributorsData";
 import { ProfileShell } from "./ProfileShell";
 import {
   AboutSection,
@@ -23,6 +24,7 @@ export function MaxPhillipsReviewerContent() {
       title="MSW, LCSW"
       avatar="/author/max-phill.webp"
       avatarAlt="Max Phillips - Trauma Therapist & Licensed Clinical Social Worker"
+      linkedin={REVIEWERS.find((person) => person.id === "max-phillips")?.linkedin}
       badges={["16 Years Experience"]}
       sidebar={
         <>

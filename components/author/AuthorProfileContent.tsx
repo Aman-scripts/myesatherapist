@@ -15,15 +15,19 @@ import {
   TextSection,
 } from "@/components/legal-reviewer/ReviewerUI";
 import { AuthorProfile } from "@/data/authorsData";
+import { AUTHORS, REVIEWERS } from "@/data/contributorsData";
 
 // Author profile page (same layout as the Legal Reviewer Figma page)
 export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
+  const linkedin = [...AUTHORS, ...REVIEWERS].find((person) => person.id === author.slug)?.linkedin;
+
   return (
     <ProfileShell
       name={author.name}
       title={author.credentials}
       avatar={author.avatar}
       avatarAlt={author.name}
+      linkedin={linkedin}
       badges={[author.experienceLabel]}
       sidebar={
         <>

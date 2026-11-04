@@ -12,6 +12,7 @@ export interface ProfileShellProps {
   title?: string;
   avatar: string;
   avatarAlt: string;
+  linkedin?: string;
   badges?: string[];
   /** Sidebar content below the first divider (SidebarSection / SidebarDivider blocks) */
   sidebar: React.ReactNode;
@@ -42,11 +43,22 @@ function ActiveCheck() {
 }
 
 // Avatar, name, title and status pills (Figma Frame 1000011839)
+function LinkedinIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="4.98" cy="4.98" r="2.4" />
+      <rect x="2.8" y="9.5" width="4.4" height="12.5" rx="0.5" />
+      <path d="M10.5 9.5h4.2v1.8c.6-1.1 2-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6v6.2h-4.4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.4V9.5z" />
+    </svg>
+  );
+}
+
 function ProfileIdentity({
   name,
   title,
   avatar,
   avatarAlt,
+  linkedin,
   badges,
   inDrawer,
 }: Omit<ProfileShellProps, "sidebar" | "children"> & { inDrawer?: boolean }) {
@@ -55,18 +67,31 @@ function ProfileIdentity({
   return (
     <div className="flex flex-col gap-[27px]">
       <div className="flex flex-col gap-6">
-        <div className="w-[138px] h-[138px] p-[5px] rounded-full bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] shrink-0">
-          <div className="relative w-[128px] h-[128px] rounded-full overflow-hidden">
-            <Image
-              quality={90}
-              src={avatar}
-              alt={avatarAlt}
-              fill
-              priority={!inDrawer}
-              className="object-cover object-top"
-              sizes="128px"
-            />
+        <div className="flex items-center gap-4">
+          <div className="w-[138px] h-[138px] p-[5px] rounded-full bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] shrink-0">
+            <div className="relative w-[128px] h-[128px] rounded-full overflow-hidden">
+              <Image
+                quality={90}
+                src={avatar}
+                alt={avatarAlt}
+                fill
+                priority={!inDrawer}
+                className="object-cover object-top"
+                sizes="128px"
+              />
+            </div>
           </div>
+          {linkedin && (
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${name} on LinkedIn`}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent shadow-sm transition-transform hover:scale-105 hover:bg-[#dba81f]"
+            >
+              <LinkedinIcon className="h-5 w-5 text-primary" />
+            </a>
+          )}
         </div>
 
         <div className="flex flex-col gap-2">
