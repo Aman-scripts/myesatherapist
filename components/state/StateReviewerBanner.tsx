@@ -18,7 +18,7 @@ interface StateReviewerBannerProps {
 
 const REVIEWER_PROFILES: Record<string, { href: string; linkedin: string }> = {
   "Robert Staaf": {
-    href: "/esa-doctors/robert-staaf/",
+    href: "/esa-doctors/dr-robert-staaf/",
     linkedin: "https://www.linkedin.com/in/robert-staaf-b57b53333/",
   },
   "Max Phillips": {

@@ -61,7 +61,7 @@ export function getTherapistLinkedin(t: Therapist): string {
 /** Internal doctor profile page for a therapist. */
 export function getTherapistProfileHref(t: Therapist): string {
   const lower = t.name.toLowerCase();
-  if (lower.includes("robert") || lower.includes("staaf")) return "/esa-doctors/robert-staaf/";
+  if (lower.includes("robert") || lower.includes("staaf")) return "/esa-doctors/dr-robert-staaf/";
   if (lower.includes("leslie") || lower.includes("gamble")) return "/esa-doctors/dr-leslie-k-gamble/";
   if (lower.includes("gaurav") || lower.includes("patel")) return "/esa-doctors/dr-gaurav-patel/";
   return "/esa-doctors/";

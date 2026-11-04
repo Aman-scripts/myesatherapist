@@ -95,7 +95,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
         quoteBox: {
           quote:
             "“A legitimate ESA letter starts with a real conversation. I need to understand your symptoms, how they affect your daily life, and whether an animal would meaningfully support your treatment. That’s why instant certificates and registrations can’t replace a proper evaluation.”",
-          author: "[Robert Staaf , Licensed Clinical Social Worker](/esa-doctors/robert-staaf/)",
+          author: "[Robert Staaf , Licensed Clinical Social Worker](/esa-doctors/dr-robert-staaf/)",
         },
         quoteBoxPosition: "bottom",
       },

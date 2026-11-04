@@ -170,8 +170,8 @@ export const DOCTORS_DATA: DoctorProfile[] = [
   },
   {
     id: "robert-staaf",
-    slug: "robert-staaf",
-    aliases: ["dr-robert-staff", "dr-robert-staaf", "robert-staff"],
+    slug: "dr-robert-staaf",
+    aliases: ["dr-robert-staff", "robert-staaf", "robert-staff"],
     name: "Robert Staaf, LCSW",
     title: "Licensed Clinical Social Worker",
     credentials: "LCSW, LISW",

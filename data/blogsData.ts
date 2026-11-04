@@ -2551,7 +2551,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "categorySlug": "qualifying-conditions",
   "url": "/blog/qualifying-conditions/esa-for-anxiety/",
   "canonicalUrl": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/",
-  "metaTitle": "ESA for Anxiety: Eligibility & Benefits | My ESA Therapist",
+  "metaTitle": "ESA for Anxiety: Eligibility, Benefits & How to Qualify | My ESA Therapist",
   "metaDescription": "Wondering if anxiety qualifies for an ESA? Explore eligibility requirements, potential benefits, housing protections, and what you need to qualify.",
   schema: esaForAnxietySchema,
   "title": "ESA for Anxiety: Eligibility, Benefits, and How to Qualify",
@@ -2646,7 +2646,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       ],
       "quoteBox": {
         "quote": "“The consistent companionship of an emotional support animal can be a valuable source of comfort for individuals whose anxiety affects their daily emotional well-being.”",
-        "author": "[Robert Staaf, Licensed Clinical Social Worker](/esa-doctors/robert-staaf/)"
+        "author": "[Robert Staaf, Licensed Clinical Social Worker](/esa-doctors/dr-robert-staaf/)"
       },
       "quoteBoxPosition": "bottom"
     },

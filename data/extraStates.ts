@@ -1,4 +1,8 @@
 import type { StateData } from "./statesData";
+import { rhodeIslandSchema } from "./schemas/rhodeIslandSchema";
+import { tennesseeSchema } from "./schemas/tennesseeSchema";
+import { vermontSchema } from "./schemas/vermontSchema";
+import { washingtonDcSchema } from "./schemas/washingtonDcSchema";
 
 const THERAPISTS_SUBTITLE =
   "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.";
@@ -140,9 +144,10 @@ export const EXTRA_STATES: Record<string, StateData> = {
     slug: "vermont",
     name: "Vermont",
     abbreviation: "VT",
-    metaTitle: "ESA Letter Evaluations by Vermont Licensed Therapists | My ESA Therapist",
+    schema: vermontSchema,
+    metaTitle: "Vermont ESA Letter From Licensed Therapists | My ESA Therapist",
     metaDescription:
-      "Connect with Vermont mental health professionals for personalized ESA evaluations. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
+      "Need an ESA letter in Vermont? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA letter evaluation.",
     heroTitle: "ESA Letter Evaluations\nby Vermont Licensed Therapists",
     heroSubtitle:
       "Connect with Vermont mental health professionals for personalized ESA evaluations. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
@@ -432,9 +437,10 @@ export const EXTRA_STATES: Record<string, StateData> = {
     slug: "tennessee",
     name: "Tennessee",
     abbreviation: "TN",
-    metaTitle: "ESA Letter Evaluations by Tennessee Licensed Therapists | My ESA Therapist",
+    schema: tennesseeSchema,
+    metaTitle: "Tennessee ESA Letter From Licensed Professional | My ESA Therapist",
     metaDescription:
-      "Connect with licensed mental health professionals in Tennessee for personalized emotional wellness evaluations. Schedule an appointment with a licensed clinician who will thoroughly examine your situation and guide you through a safe, organized emotional support animal evaluation process.",
+      "Need an ESA letter in Tennessee? My ESA Therapist connects you with licensed professionals for a secure and easy online ESA evaluation.",
     heroTitle: "ESA Letter Evaluations\nby Tennessee Licensed Therapists",
     heroSubtitle:
       "Connect with licensed mental health professionals in Tennessee for personalized emotional wellness evaluations. Schedule an appointment with a licensed clinician who will thoroughly examine your situation and guide you through a safe, organized emotional support animal evaluation process.",
@@ -720,9 +726,10 @@ export const EXTRA_STATES: Record<string, StateData> = {
     slug: "rhode-island",
     name: "Rhode Island",
     abbreviation: "RI",
-    metaTitle: "ESA Letter Evaluations by Rhode Island Licensed Therapist | My ESA Therapist",
+    schema: rhodeIslandSchema,
+    metaTitle: "Rhode Island ESA Letter Evaluation | My ESA Therapist",
     metaDescription:
-      "Get in touch with licensed mental health professionals in Rhode Island for a personalized wellness checkup. Talk to a state-licensed therapist who will carefully look at your situation and guide you through a private emotional support animal (ESA) qualification process that is specific to your needs.",
+      "Looking for an ESA letter in Rhode Island? My ESA Therapist helps you connect with licensed mental health professionals for esa letter evaluation.",
     heroTitle: "ESA Letter Evaluations\nby Rhode Island Licensed Therapist",
     heroSubtitle:
       "Get in touch with licensed mental health professionals in Rhode Island for a personalized wellness checkup. Talk to a state-licensed therapist who will carefully look at your situation and guide you through a private emotional support animal (ESA) qualification process that is specific to your needs.",
@@ -1010,6 +1017,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     slug: "washington-dc",
     name: "Washington, DC",
     abbreviation: "DC",
+    schema: washingtonDcSchema,
     metaTitle: "ESA Letter Evaluations in the District of Columbia by Licensed Mental Health Experts | My ESA Therapist",
     metaDescription:
       "Connect with licensed mental health professionals in the District of Columbia for ESA letter evaluations. ESA documentation is provided when clinically appropriate and in line with federal housing guidelines.",
