@@ -81,7 +81,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
 
   const title = data.whoQualifiesTitle || `Who May Eligible For ESA Letter in ${stateName}?`;
   const subtitle = data.whoQualifiesSubtitle || `${stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in ${stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:`;
-  const sectionHeading = "Qualifying Conditions";
+  const sectionHeading = data.whoQualifiesSectionHeading ?? "Qualifying Conditions";
 
   return (
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
@@ -163,9 +163,11 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
             </div>
 
             <div>
-              <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-primary mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
-                {sectionHeading}
-              </h3>
+              {sectionHeading ? (
+                <h3 className="font-heading text-base sm:text-lg lg:text-[18px] xl:text-[28px] font-bold text-primary mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4">
+                  {sectionHeading}
+                </h3>
+              ) : null}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-3 xl:gap-4 max-w-[620px]">
                 {conditions.map((item, idx) => (

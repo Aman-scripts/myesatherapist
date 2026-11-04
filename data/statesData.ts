@@ -5643,7 +5643,7 @@ export const STATES_DATA: Record<string, StateData> = {
     processNote: "Note: A valid ESA letter should be based on an individualized clinical evaluation conducted by a qualified mental health professional. This is not an instant-approval process; the recommendation should be based on your individual circumstances and disability-related needs. The provider does not generally need to disclose a specific diagnosis in the letter when sufficient reliable information supports the disability-related need.",
     whoQualifiesTitle: "Who May Be Eligible For an ESA Letter in Indiana?",
     whoQualifiesSubtitle: "Indiana residents having trouble completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in Indiana to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:",
-    whoQualifiesSectionHeading: "Qualifying Conditions",
+    whoQualifiesSectionHeading: "",
     whoQualifiesConditions: [
       {
         title: "Panic Disorder with Agoraphobia",
@@ -6815,7 +6815,7 @@ export const STATES_DATA: Record<string, StateData> = {
     processNote: "Note: An ESA recommendation should be based on an individualized clinical evaluation by a qualified healthcare professional. This is not an instant-approval process, and any documentation should be tailored to the individual's circumstances and disability-related need for the animal.",
     whoQualifiesTitle: "Who May Qualify For an ESA Letter in Kentucky?",
     whoQualifiesSubtitle: "A licensed mental health evaluation is often the first step for individuals in Kentucky considering an emotional support animal, especially when emotional or mental health challenges begin to affect daily life, concentration, or overall well-being. Common conditions that may be assessed include, but are not limited to:",
-    whoQualifiesSectionHeading: "Qualifying Conditions",
+    whoQualifiesSectionHeading: "",
     whoQualifiesConditions: [
       {
         title: "Cyclothymic Disorder",
@@ -7346,7 +7346,7 @@ export const STATES_DATA: Record<string, StateData> = {
     card2Items: [
       {
         title: "La. R.S. 46:1974",
-        description: "The House Bill 407 requires a genuine therapeutic relationship between the provider and client, generally lasting at least 30 days. This includes at least two in-person or remote sessions before documentation regarding the need for a support animal can be issued",
+        description: "The House Bill 407 requires a genuine therapeutic relationship between the provider and client, generally lasting at least 30 days. This includes at least two in-person or remote sessions before documentation regarding the need for a support animal can be issued.",
       },
       {
         title: "No Automatic Approvals",
@@ -7354,7 +7354,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         title: "Verification of ESA Documentation",
-        description: "Housing providers may request reliable documentation when the disability or disability-related need for an assistance animal is not apparent, consistent with applicable fair housing requirements",
+        description: "Housing providers may request reliable documentation when the disability or disability-related need for an assistance animal is not apparent, consistent with applicable fair housing requirements.",
       },
     ],
     legalNotice: "Unlike service animals, emotional support animals are recognized primarily for housing accommodations and are not granted the same rights to public access. In public settings where pets are not allowed, including restaurants or retail establishments, ESAs are typically not allowed.",
@@ -7974,7 +7974,7 @@ export const STATES_DATA: Record<string, StateData> = {
         number: "03",
         icon: "/states/california-esa-evaluation-determination.svg",
         title: "Professional Determination",
-        description: "Post the evaluation is completed, the mental health professional will reach an independent, non-biased decision based on the information collected. If the ESA is considered necessary, the letter is issued and sent via email.",
+        description: "Post the evaluation is completed, the mental health professional will reach an independent, unbiased decision based on the information collected. If the ESA is considered necessary, the letter is issued and sent via email.",
       },
     ],
     processDifferentiatorsTitle: "Our Unique Approach to ESA Letter in Maryland",
@@ -9698,7 +9698,7 @@ export const STATES_DATA: Record<string, StateData> = {
     scamsTitle: "ESA Letters in Mississippi: Facts vs. Misunderstandings",
     scamsSubtitle: "Having a clear understanding of how emotional support animal regulations operate in Mississippi can help residents steer clear of misleading claims, inaccurate information, and unreliable service providers.",
     scamsAlertTitle: "Important Notice: No Official ESA Registry Exists",
-    scamsAlertText: "There isn’t an ESA registration database run by the state or the federal government in Mississippi. Websites that provide ID cards, certificates, “official registrations,” or fast approvals are not accepted as legitimate legal documents. Supporting documentation, when appropriate, should come from a qualified healthcare professional who can reliably confirm the person’s disability and disability-related need for an assistance animal.",
+    scamsAlertText: "There isn’t an ESA registration database run by the state or the federal government in Mississippi. Websites that provide ID cards, certificates, “official registrations,” or fast approvals are not accepted as legitimate legal documents.",
     scamsCommonTitle: "Common ESA Scams to Watch For",
     scamsCommonSubtitle: "Be aware of platforms or services that:",
     scamsCommonItems: [
