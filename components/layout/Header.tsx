@@ -215,7 +215,7 @@ export function Header() {
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
                 className="w-auto px-6 h-[54px] text-[16px]"
               >
-                Start your ESA Evaluation
+                Start Your ESA Evaluation
               </CtaButton>
             ) : (
               /* Homepage (Frame 1000011888 & Frame 1000011890) */
@@ -234,7 +234,7 @@ export function Header() {
                   href="#pricing"
                   className="w-auto h-[54px] text-[16px]"
                 >
-                  Start your ESA Evaluation
+                  Start Your ESA Evaluation
                 </CtaButton>
               </>
             )}
@@ -252,20 +252,6 @@ export function Header() {
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-        </div>
-      </div>
-
-      {/* Mobile states link. Desktop keeps the state names beside it. */}
-      <div className="lg:hidden bg-background w-full h-[37px]">
-        <div className="mx-auto flex h-full max-w-[1278px] items-center justify-end px-4">
-          <Link
-            prefetch={false}
-            href="/state/"
-            className="flex items-center gap-2 whitespace-nowrap font-manrope text-[13px] font-medium leading-[26px] text-primary"
-          >
-            <span>See all 50 States</span>
-            <ArrowRight className="h-4 w-4 text-primary" strokeWidth={1.5} />
-          </Link>
         </div>
       </div>
 
@@ -386,7 +372,7 @@ export function Header() {
               className="w-full h-[48px]"
               onClick={() => setMobileOpen(false)}
             >
-              {isPsd ? "Start Your Consultation" : "Start your ESA Evaluation"}
+              {isPsd ? "Start Your Consultation" : "Start Your ESA Evaluation"}
             </CtaButton>
           </div>
         </div>

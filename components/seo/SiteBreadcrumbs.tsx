@@ -116,15 +116,18 @@ export function SiteBreadcrumbs({
   };
 
   return (
-    <nav aria-label="Breadcrumb" className={cn("pointer-events-none", className)}>
+    <nav aria-label="Breadcrumb" className={cn("pointer-events-none w-full min-w-0 max-w-full overflow-hidden", className)}>
       {includeSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(schema) }} />
       )}
-      <ol className="pointer-events-auto flex flex-wrap items-center gap-x-2 gap-y-1 font-manrope text-[15px] leading-[22px]">
+      <ol className="pointer-events-auto no-scrollbar flex w-full min-w-0 max-w-full flex-nowrap items-center gap-x-1.5 overflow-x-auto font-manrope sm:w-auto sm:gap-x-2 sm:overflow-visible">
         {crumbs.map((crumb, index) => {
           const current = index === crumbs.length - 1;
           return (
-            <li key={crumb.path} className="flex items-center gap-3">
+            <li
+              key={crumb.path}
+              className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[14px]! leading-[22px]! sm:gap-3 sm:text-[15px]! sm:leading-[22px]!"
+            >
               {index > 0 && (
                 <svg
                   width="8"
