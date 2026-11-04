@@ -56,6 +56,7 @@ export function PricingWhyTrustSection() {
                     src={item.icon}
                     alt={item.title}
                     width={34}
+          sizes="34px"
                     height={34}
                     className="object-contain w-full h-full"
                   />

@@ -44,6 +44,7 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
                     src="/esa-icons/icon-46.svg"
                     alt=""
                     width={20}
+          sizes="20px"
                     height={20}
                     unoptimized
                     className="h-5 w-5 object-contain"

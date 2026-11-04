@@ -42,6 +42,7 @@ export function VideoTestimonialsTrustBar() {
                   src={item.src}
                   alt={item.alt}
                   fill
+          sizes="100vw"
                   unoptimized
                   className="object-contain"
                 />

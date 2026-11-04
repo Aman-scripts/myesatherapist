@@ -63,6 +63,7 @@ export function AboutLegitimateSection() {
               src="/about-us/about-us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={42}
+          sizes="42px"
               height={42}
               className="object-contain w-full h-full"
             />

@@ -59,6 +59,7 @@ export function WhoBenefitsSection() {
                   src={item.icon}
                   alt={item.title}
                   width={24}
+          sizes="24px"
                   height={24}
                   unoptimized
                   className="icon-md object-contain"

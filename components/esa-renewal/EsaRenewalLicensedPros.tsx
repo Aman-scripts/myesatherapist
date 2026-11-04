@@ -75,6 +75,7 @@ export function EsaRenewalLicensedPros() {
                       src="/esa-icons/icon-33.svg"
                       alt={feat.title}
                       width={40}
+          sizes="40px"
                       height={40}
                       unoptimized
                       className="w-9 h-9 sm:w-10 sm:h-10 object-contain"

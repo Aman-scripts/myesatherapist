@@ -47,6 +47,7 @@ export function AboutTransparentPricingSection() {
                   src={card.icon}
                   alt={card.title}
                   width={44}
+          sizes="44px"
                   height={44}
                   unoptimized
                   className="object-contain w-7 h-7 sm:w-9 sm:h-9 lg:w-9 lg:h-9 xl:w-11 xl:h-11"

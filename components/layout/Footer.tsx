@@ -66,6 +66,7 @@ function FooterContent() {
               src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
               fill
+          sizes="100vw"
               unoptimized
               className="object-contain"
             />
@@ -203,6 +204,7 @@ function FooterContent() {
                   src="/common/footer-phone-icon.svg"
                   alt="Phone"
                   width={14}
+          sizes="14px"
                   height={14}
                   unoptimized
                   className="w-3.5 h-3.5 object-contain"
@@ -225,6 +227,7 @@ function FooterContent() {
                   src="/common/footer-email-icon.svg"
                   alt="Email"
                   width={14}
+          sizes="14px"
                   height={14}
                   unoptimized
                   className="w-3.5 h-3.5 object-contain"
@@ -247,6 +250,7 @@ function FooterContent() {
                   src="/common/footer-clock-icon.svg"
                   alt="Support hours"
                   width={14}
+          sizes="14px"
                   height={14}
                   unoptimized
                   className="w-3.5 h-3.5 object-contain"
@@ -269,6 +273,7 @@ function FooterContent() {
                   src="/common/footer-location-icon.svg"
                   alt="Service area"
                   width={14}
+          sizes="14px"
                   height={14}
                   unoptimized
                   className="w-3.5 h-3.5 object-contain"

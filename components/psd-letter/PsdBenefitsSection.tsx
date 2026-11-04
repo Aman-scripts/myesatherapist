@@ -90,6 +90,7 @@ export function PsdBenefitsSection() {
                   src={item.icon}
                   alt={item.title}
                   width={32}
+          sizes="32px"
                   height={32}
                   unoptimized
                   className="icon-lg object-contain"

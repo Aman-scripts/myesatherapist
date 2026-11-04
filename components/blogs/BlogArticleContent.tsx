@@ -145,6 +145,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             alt={article.introImage.alt}
             width={article.introImage.width ?? 870}
             height={article.introImage.height ?? 550}
+            sizes="(max-width: 870px) 100vw, 870px"
             className="w-full h-auto object-contain rounded-[18px]"
           />
           {article.introImage.caption && (
@@ -298,6 +299,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 alt={sec.bannerImage.alt}
                 width={sec.bannerImage.width ?? 870}
                 height={sec.bannerImage.height ?? 550}
+                sizes="(max-width: 870px) 100vw, 870px"
                 className="w-full h-auto object-contain rounded-[18px]"
               />
               {sec.bannerImage.caption && (
@@ -318,6 +320,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 src="/blogs/blogs-tentant-checklist.webp"
                 alt="Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate"
                 width={870}
+          sizes="870px"
                 height={1300}
                 className="w-full h-auto object-contain"
               />
@@ -331,6 +334,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 src="/blogs/blogs-landlord-checklist.webp"
                 alt="Landlord Checklist: How to Verify an ESA Letter?"
                 width={870}
+          sizes="870px"
                 height={1300}
                 className="w-full h-auto object-contain"
               />
@@ -466,6 +470,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                         alt={sub.image.alt}
                         width={sub.image.width || 24}
                         height={sub.image.height || 24}
+                        sizes="24px"
                         className="w-5 h-5 sm:w-6 sm:h-6 object-contain shrink-0"
                       />
                       {sub.title}
@@ -559,6 +564,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                         src={sub.image.src}
                         alt={sub.image.alt}
                         width={870}
+          sizes="870px"
                         height={500}
                         className="w-full h-auto object-contain rounded-[14px]"
                       />
@@ -632,6 +638,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 src={sec.bannerImage.src}
                 alt={sec.bannerImage.alt}
                 width={870}
+          sizes="870px"
                 height={550}
                 className="w-full h-auto object-contain rounded-[18px]"
               />

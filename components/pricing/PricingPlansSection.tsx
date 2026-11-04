@@ -54,6 +54,7 @@ export function PricingPlansSection({
                 src="/pricing/pricingsection-addpetbutton-icon.svg"
                 alt="Add a pet"
                 width={64}
+          sizes="64px"
                 height={64}
                 unoptimized
                 className="w-14 h-14 sm:w-16 sm:h-16 object-contain shrink-0"

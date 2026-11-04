@@ -221,6 +221,7 @@ export function ComparisonTable() {
                             src={row.icon}
                             alt={row.desktopFeature}
                             width={24}
+          sizes="24px"
                             height={24}
                             unoptimized
                             className="icon-md object-contain"

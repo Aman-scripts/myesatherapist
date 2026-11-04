@@ -35,6 +35,7 @@ export function PsdCapabilitiesSection() {
             src="/psd-letter/psdcapabilites-section-mobile.webp"
             alt="What A Psychiatric Service Dog Can Do"
             width={390}
+          sizes="390px"
             height={680}
             className="w-full h-auto block"
           />
@@ -44,6 +45,7 @@ export function PsdCapabilitiesSection() {
               src="/psd-letter/psdcapabilites-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
+          sizes="73px"
               height={73}
               unoptimized
               className="object-contain w-full h-full"
@@ -60,6 +62,7 @@ export function PsdCapabilitiesSection() {
             src="/psd-letter/psdcapabilities-section-tablet.webp"
             alt="What A Psychiatric Service Dog Can Do"
             width={834}
+          sizes="834px"
             height={1013}
             className="w-full h-auto block"
           />
@@ -69,6 +72,7 @@ export function PsdCapabilitiesSection() {
               src="/psd-letter/psdcapabilites-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
+          sizes="73px"
               height={73}
               unoptimized
               className="object-contain w-full h-full"

@@ -103,6 +103,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={40}
+          sizes="40px"
                   height={40}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
@@ -124,6 +125,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={48}
+          sizes="48px"
                   height={48}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
@@ -145,6 +147,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                   src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={64}
+          sizes="64px"
                   height={64}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
@@ -181,6 +184,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                         src={qualifyIcon(item.icon, idx)}
                         alt=""
                         width={26}
+          sizes="26px"
                         height={26}
                         unoptimized
                         className="h-[26px] w-[26px] object-contain"

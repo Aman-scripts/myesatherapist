@@ -88,7 +88,7 @@ export function FeatureCard({
           <span className="font-heading font-bold text-[22px] leading-none text-[#2E5A66]">{stat}</span>
         ) : (
           <Image quality={90}
-            src={icon || ""} alt={iconAlt || title || "Icon"} width={iconW} height={iconH} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
+            src={icon || ""} alt={iconAlt || title || "Icon"} width={iconW} height={iconH} sizes={`${iconW}px`} unoptimized style={{ width: iconW, height: iconH }} className="object-contain" />
         )}
       </div>
     </div>
@@ -165,6 +165,7 @@ export function WaveImage({
           src="/about-us/about-us-legimateesasection-hearticon.webp"
           alt="Heart"
           width={64}
+          sizes="64px"
           height={64}
           className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-[45%] w-14 h-14 sm:w-16 sm:h-16 z-20"
         />

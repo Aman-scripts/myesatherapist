@@ -67,6 +67,7 @@ export function EsaRenewalTrustCards() {
                   src={card.icon}
                   alt={card.title}
                   width={32}
+          sizes="32px"
                   height={32}
                   unoptimized
                   className="h-8 w-8 object-contain"

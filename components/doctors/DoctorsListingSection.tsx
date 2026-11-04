@@ -94,6 +94,7 @@ function DoctorStatBadge({
             src={iconSrc}
             alt={label}
             width={16}
+          sizes="16px"
             height={16}
             unoptimized
             className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain"

@@ -14,6 +14,7 @@ export function WhatIsPsdSection() {
             src="/psd-letter/whatispsd-section-mobile.webp"
             alt="What is a Psychiatric Service Dog Letter"
             width={390}
+          sizes="390px"
             height={547}
             className="w-full h-auto block"
           />
@@ -23,6 +24,7 @@ export function WhatIsPsdSection() {
               src="/psd-letter/psd-dogphyscarist-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
+          sizes="73px"
               height={73}
               unoptimized
               className="object-contain w-full h-full"
@@ -39,6 +41,7 @@ export function WhatIsPsdSection() {
             src="/psd-letter/whatispsd-section-tablet.webp"
             alt="What is a Psychiatric Service Dog Letter"
             width={834}
+          sizes="834px"
             height={654}
             className="w-full h-auto block"
           />
@@ -48,6 +51,7 @@ export function WhatIsPsdSection() {
               src="/psd-letter/psd-dogphyscarist-section-icon.webp"
               alt="Heart Paw Badge"
               width={73}
+          sizes="73px"
               height={73}
               unoptimized
               className="object-contain w-full h-full"
@@ -154,6 +158,7 @@ export function WhatIsPsdSection() {
                   src="/psd-letter/psd-dogphyscarist-section-line.svg"
                   alt="Decorative line"
                   width={228}
+          sizes="228px"
                   height={698}
                   unoptimized
                   className="object-contain w-full h-full object-left"
@@ -166,6 +171,7 @@ export function WhatIsPsdSection() {
                   src="/psd-letter/psd-dogphyscarist-section-icon.webp"
                   alt="Heart Paw Badge"
                   width={73}
+          sizes="73px"
                   height={73}
                   unoptimized
                   className="object-contain w-full h-full"

@@ -187,6 +187,7 @@ export function PsdQualifyingConditions() {
                         src={c.icon}
                         alt={c.label}
                         width={20}
+          sizes="20px"
                         height={20}
                         unoptimized
                         className="object-contain w-3 h-3 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5"
@@ -273,6 +274,7 @@ export function PsdQualifyingConditions() {
                         src={c.icon}
                         alt={c.label}
                         width={18}
+          sizes="18px"
                         height={18}
                         unoptimized
                         className="object-contain"
@@ -317,6 +319,7 @@ export function PsdQualifyingConditions() {
                             src={c.image}
                             alt={c.label}
                             fill
+          sizes="100vw"
                             className="object-cover"
                           />
                         </div>

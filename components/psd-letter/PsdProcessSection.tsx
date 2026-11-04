@@ -64,6 +64,7 @@ export function PsdProcessSection() {
               src="/psd-letter/psdprocess-section-icon.webp"
               alt="Psychiatric service dog support"
               width={73}
+          sizes="73px"
               height={73}
               unoptimized
               className="object-contain w-full h-full"
@@ -76,6 +77,7 @@ export function PsdProcessSection() {
               src="/psd-letter/psdprocess-section-icon.webp"
               alt="Psychiatric service dog support"
               width={73}
+          sizes="73px"
               height={73}
               unoptimized
               className="object-contain w-full h-full"
@@ -101,6 +103,7 @@ export function PsdProcessSection() {
                   src={step.icon}
                   alt={step.title}
                   width={32}
+          sizes="32px"
                   height={32}
                   unoptimized
                   className="icon-lg object-contain"

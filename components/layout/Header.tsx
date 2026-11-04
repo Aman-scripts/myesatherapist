@@ -166,6 +166,7 @@ export function Header() {
               src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
               width={171}
+          sizes="171px"
               height={71}
               priority
               unoptimized

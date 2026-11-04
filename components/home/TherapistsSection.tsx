@@ -131,6 +131,7 @@ function StatBadge({
             src={iconSrc}
             alt={label}
             width={20}
+          sizes="20px"
             height={20}
             unoptimized
             className="icon-sm object-contain"

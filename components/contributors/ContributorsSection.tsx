@@ -39,6 +39,7 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
             src={iconSrc}
             alt={label}
             width={16}
+          sizes="16px"
             height={16}
             unoptimized
             className="w-4 h-4 object-contain"

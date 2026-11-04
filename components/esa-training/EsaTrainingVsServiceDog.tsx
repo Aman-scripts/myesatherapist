@@ -49,7 +49,8 @@ export function EsaTrainingVsServiceDog() {
                   <div className={`flex items-center gap-[2.3vw] border-t border-[#C8B9A7]/50 pl-[2vw] xl:gap-[34px] xl:pl-[30px] ${ROW_H}`}>
                     <span className="flex h-[2.5vw] w-[2.5vw] shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.25)] xl:h-9 xl:w-9">
                       <Image
-            quality={90} src={row.icon} alt={row.feature} width={19} height={19} unoptimized className="h-[52%] w-[52%] object-contain" />
+            quality={90} src={row.icon} alt={row.feature} width={19}
+          sizes="19px" height={19} unoptimized className="h-[52%] w-[52%] object-contain" />
                     </span>
                     <h3 className="heading-h3">{row.feature}</h3>
                   </div>
@@ -71,7 +72,8 @@ export function EsaTrainingVsServiceDog() {
                 <div className="flex items-center gap-3 px-5 py-3.5">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.25)]">
                     <Image
-            quality={90} src={row.icon} alt={row.feature} width={19} height={19} unoptimized className="h-[19px] w-[19px]" />
+            quality={90} src={row.icon} alt={row.feature} width={19}
+          sizes="19px" height={19} unoptimized className="h-[19px] w-[19px]" />
                   </span>
                   <h3 className="heading-h3">{row.feature}</h3>
                 </div>

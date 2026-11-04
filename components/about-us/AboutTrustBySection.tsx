@@ -44,6 +44,7 @@ export function AboutTrustBySection() {
                   src={card.icon}
                   alt={card.title}
                   width={34}
+          sizes="34px"
                   height={34}
                   unoptimized
                   className="icon-lg object-contain"

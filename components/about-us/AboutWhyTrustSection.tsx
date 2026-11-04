@@ -49,6 +49,7 @@ export function AboutWhyTrustSection() {
                   src={card.icon}
                   alt={card.title}
                   width={34}
+          sizes="34px"
                   height={34}
                   unoptimized
                   className="object-contain w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] xl:w-[34px] xl:h-[34px]"

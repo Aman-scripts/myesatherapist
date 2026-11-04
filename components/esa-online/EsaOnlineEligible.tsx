@@ -35,6 +35,7 @@ export function EsaOnlineEligible() {
             src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Heart"
             width={73}
+          sizes="73px"
             height={73}
             className="object-contain filter drop-shadow-[0px_1px_4px_rgba(0,0,0,0.25)]"
           />
@@ -79,6 +80,7 @@ export function EsaOnlineEligible() {
                     src={c.icon}
                     alt={c.label}
                     width={28}
+          sizes="28px"
                     height={28}
                     unoptimized
                     className="h-7 w-7 object-contain"
@@ -112,6 +114,7 @@ export function EsaOnlineEligible() {
                     src={factor.icon}
                     alt={factor.text}
                     width={28}
+          sizes="28px"
                     height={28}
                     unoptimized
                     className="h-7 w-7 object-contain shrink-0"

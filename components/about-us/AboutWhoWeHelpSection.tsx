@@ -64,6 +64,7 @@ export function AboutWhoWeHelpSection() {
                     src={group.icon}
                     alt={group.title}
                     width={24}
+          sizes="24px"
                     height={24}
                     unoptimized
                     className="icon-md object-contain"

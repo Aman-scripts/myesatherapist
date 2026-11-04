@@ -130,6 +130,7 @@ function CheckmarkIcon() {
       src="/esa-icons/icon-46.svg"
       alt=""
       width={20}
+          sizes="20px"
       height={20}
       unoptimized
       className="shrink-0 w-5 h-5 object-contain"
@@ -262,6 +263,7 @@ function RenderCardsContainer({
             src="/home/pricing-section-dog.webp"
             alt="Dog giving paw to woman hand"
             width={245}
+          sizes="245px"
             height={209}
             className="w-[245px] h-[209px] object-contain object-left pointer-events-none"
             loading="lazy"

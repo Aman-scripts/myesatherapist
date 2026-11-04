@@ -28,6 +28,7 @@ export function EsaTrainingBondSection() {
             src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Heart"
             width={64}
+          sizes="64px"
             height={64}
             className="absolute bottom-0 left-1/2 z-20 h-14 w-14 -translate-x-1/2 translate-y-[45%] sm:h-16 sm:w-16"
           />

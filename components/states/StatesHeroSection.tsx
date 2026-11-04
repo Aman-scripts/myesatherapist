@@ -70,6 +70,7 @@ export function StatesHeroSection() {
           src="/esa-icons/icon-37.svg"
           alt=""
           width={28}
+          sizes="28px"
           height={28}
           unoptimized
           className="h-7 w-7 shrink-0 object-contain"
@@ -113,7 +114,8 @@ export function StatesHeroSection() {
             className="inline-flex h-[48px] min-w-[220px] items-center justify-between gap-3 rounded-full border border-primary bg-background px-6 shadow-sm lg:h-[54px] lg:min-w-[246px]"
           >
             <span className="flex items-center gap-2">
-              <Image src="/esa-icons/icon-37.svg" alt="" width={20} height={20} unoptimized className="icon-sm shrink-0 object-contain" />
+              <Image src="/esa-icons/icon-37.svg" alt="" width={20}
+          sizes="20px" height={20} unoptimized className="icon-sm shrink-0 object-contain" />
               <span className="body-text text-color-gradient">{stateLabel}</span>
             </span>
             <ChevronDown className={`h-4 w-4 shrink-0 text-primary transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />

@@ -157,6 +157,7 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                   src={logo.src}
                   alt={logo.name}
                   width={260}
+          sizes="260px"
                   height={65}
                   className={`shrink-0 grayscale contrast-125 opacity-100 hover:grayscale-0 hover:contrast-100 transition-all duration-300 ${
                     logo.imgClassName || "max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] w-auto object-contain"
@@ -179,6 +180,7 @@ export function AsSeenOnSection({ bgColor = "bg-white/40" }: AsSeenOnSectionProp
                   src={logo.src}
                   alt=""
                   width={260}
+          sizes="260px"
                   height={65}
                   className={`shrink-0 grayscale contrast-125 opacity-100 ${
                     logo.imgClassName || "max-h-[30px] sm:max-h-[36px] lg:max-h-[40px] xl:max-h-[44px] max-w-[140px] sm:max-w-[165px] lg:max-w-[180px] xl:max-w-[195px] w-auto object-contain"

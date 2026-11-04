@@ -44,6 +44,7 @@ export function EsaRenewalWhySection() {
             src="/about-us/about-us-legimateesasection-hearticon.webp"
             alt="Compassionate verified support badge"
             width={73}
+          sizes="73px"
             height={73}
             className="object-contain filter drop-shadow-[0px_1px_4px_rgba(0,0,0,0.25)]"
           />
@@ -97,6 +98,7 @@ export function EsaRenewalWhySection() {
                       src={card.icon}
                       alt={card.title}
                       width={32}
+          sizes="32px"
                       height={32}
                       unoptimized
                       className="object-contain"

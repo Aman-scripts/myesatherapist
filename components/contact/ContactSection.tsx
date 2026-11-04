@@ -190,6 +190,7 @@ export function ContactSection() {
                     src={card.icon}
                     alt={card.title}
                     width={24}
+          sizes="24px"
                     height={24}
                     className="object-contain"
                     style={{ width: "auto", height: "auto" }}

@@ -50,7 +50,8 @@ export function EsaOnlineComparison() {
                 <div key={row.feature} className="grid grid-cols-[1fr_297px_1fr] items-center h-[64px]">
                   <div className="flex items-center gap-3 pl-6 pr-2 min-w-0">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.25)]">
-                      <Image quality={90} src={row.icon} alt="" width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
+                      <Image quality={90} src={row.icon} alt="" width={20}
+          sizes="20px" height={20} unoptimized className="h-5 w-5 object-contain" />
                     </span>
                     <h4 className="heading-h4 text-primary">
                       {row.feature}
@@ -64,6 +65,7 @@ export function EsaOnlineComparison() {
                         src={`${P}-${row.other.type}-icon.svg`}
                         alt=""
                         width={22}
+          sizes="22px"
                         height={22}
                         className="h-[22px] w-[22px] shrink-0"
                       />
@@ -115,7 +117,8 @@ export function EsaOnlineComparison() {
                   <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1 gap-1.5">
                     <Image
-            quality={90} src={`${P}-${row.other.type}-icon.svg`} alt={row.other.text} width={22} height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
+            quality={90} src={`${P}-${row.other.type}-icon.svg`} alt={row.other.text} width={22}
+          sizes="22px" height={22} className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" />
                     <span className="body italic text-center text-body-text" style={LATO}>{row.other.text}</span>
                   </div>
                 </div>

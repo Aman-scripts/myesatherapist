@@ -208,6 +208,7 @@ export function QualifyingConditions({
                         src={c.icon}
                         alt={c.label}
                         width={20}
+          sizes="20px"
                         height={20}
                         unoptimized
                         className="icon-sm object-contain"
@@ -294,6 +295,7 @@ export function QualifyingConditions({
                         src={c.icon}
                         alt={c.label}
                         width={20}
+          sizes="20px"
                         height={20}
                         unoptimized
                         className="icon-sm object-contain"
@@ -337,6 +339,7 @@ export function QualifyingConditions({
                             src={c.image}
                             alt={c.label}
                             fill
+          sizes="100vw"
                             className="object-cover"
                           />
                         </div>

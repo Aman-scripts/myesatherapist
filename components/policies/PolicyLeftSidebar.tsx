@@ -230,6 +230,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                         src="/common/myesa-logo.svg"
                         alt="My ESA Therapist"
                         width={135}
+          sizes="135px"
                         height={56}
                         className="w-full h-full object-contain"
                       />

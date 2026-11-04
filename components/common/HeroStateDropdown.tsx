@@ -68,6 +68,7 @@ export function HeroStateDropdown({
           alt="Location"
           width={iconSize}
           height={iconSize}
+          sizes={`${iconSize}px`}
           unoptimized
           className="icon-sm shrink-0 object-contain"
         />

@@ -89,6 +89,7 @@ export function EsaDogBenefitsSection() {
                   src={benefit.icon}
                   alt={benefit.title}
                   width={32}
+          sizes="32px"
                   height={32}
                   className="icon-lg object-contain shrink-0"
                 />

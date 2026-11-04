@@ -19,6 +19,7 @@ export function EmotionalSupportSection() {
             src="/home/mobile-emotional-support.webp"
             alt="What is an Emotional Support Animal"
             width={390}
+          sizes="390px"
             height={425}
             className="w-full h-auto block"
           />
@@ -31,6 +32,7 @@ export function EmotionalSupportSection() {
             src="/home/tablet-emotional-support-section.webp"
             alt="What is an Emotional Support Animal"
             width={834}
+          sizes="834px"
             height={521}
             className="w-full h-auto block"
           />
@@ -137,6 +139,7 @@ export function EmotionalSupportSection() {
               src="/home/emotional-support-section-bottom.svg"
               alt="Decorative line"
               fill
+          sizes="100vw"
               className="object-fill"
             />
           </div>
@@ -148,6 +151,7 @@ export function EmotionalSupportSection() {
               src="/home/emotional-support-section-bottom-paw-icon.svg"
               alt="Paw prints"
               fill
+          sizes="100vw"
               className="object-contain"
             />
           </div>

@@ -80,6 +80,7 @@ function ProfileIdentity({
                 src="/legal-reviewer/legal-reviewer-bag-icon.svg"
                 alt="Professional credentials"
                 width={24}
+          sizes="24px"
                 height={24}
                 className="w-6 h-6 shrink-0"
               />

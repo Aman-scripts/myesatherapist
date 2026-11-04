@@ -110,6 +110,7 @@ export function StateSelectModal() {
             src="/esa-icons/icon-46.svg"
             alt=""
             width={16}
+          sizes="16px"
             height={16}
             unoptimized
             className="h-4 w-4 shrink-0 object-contain"

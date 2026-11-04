@@ -70,6 +70,7 @@ export function DoYouNeedEsaSection() {
                 src="/home/doyouneed-emotional-support-section-line.svg"
                 alt="Decorative line"
                 width={81}
+          sizes="81px"
                 height={669}
                 className="object-contain w-full h-full"
               />
@@ -94,6 +95,7 @@ export function DoYouNeedEsaSection() {
                 src="/home/doyouneed-emotional-support-icon.svg"
                 alt="ESA Badge"
                 width={73}
+          sizes="73px"
                 height={73}
                 className="object-contain rounded-full bg-[#FDFBF7] w-full h-full"
               />
@@ -113,6 +115,7 @@ export function DoYouNeedEsaSection() {
               src="/home/mobile-do-you-need-emotional-support.webp"
               alt="Do You Need an Emotional Support Animal"
               width={390}
+          sizes="390px"
               height={475}
               className="w-full h-auto block"
             />
@@ -125,6 +128,7 @@ export function DoYouNeedEsaSection() {
               src="/home/tablet-do-you-need-emotional-support.webp"
               alt="Do You Need an Emotional Support Animal"
               width={834}
+          sizes="834px"
               height={533}
               className="w-full h-auto block"
             />

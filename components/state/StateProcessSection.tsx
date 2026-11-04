@@ -96,6 +96,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                     src={processIcon(step.icon)}
                     alt={step.title}
                     width={24}
+          sizes="24px"
                     height={24}
                     unoptimized
                     className="h-6 w-6 object-contain"
@@ -131,6 +132,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
                     src="/esa-icons/icon-46.svg"
                     alt=""
                     width={20}
+          sizes="20px"
                     height={20}
                     unoptimized
                     className="h-5 w-5 object-contain"

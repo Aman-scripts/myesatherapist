@@ -70,6 +70,7 @@ export function ChooseStateGridSection({
                     src="/esa-icons/icon-37.svg"
                     alt=""
                     width={32}
+          sizes="32px"
                     height={32}
                     unoptimized
                     className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[28px] lg:h-[28px] object-contain"

@@ -20,7 +20,8 @@ function BenefitCard({ title, description, icon }: { title: string; description:
   return (
     <div className="bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left">
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
-        <Image quality={90} src={icon} alt={title} width={26} height={26} unoptimized className="h-[26px] w-[26px] object-contain" />
+        <Image quality={90} src={icon} alt={title} width={26}
+          sizes="26px" height={26} unoptimized className="h-[26px] w-[26px] object-contain" />
       </div>
       <h4 className="font-heading text-[18px] sm:text-[20px] font-bold text-primary leading-snug">{title}</h4>
       <p className="body text-[#5F6B6F]">{description}</p>
@@ -108,6 +109,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={40}
+          sizes="40px"
                   height={40}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
@@ -129,6 +131,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={48}
+          sizes="48px"
                   height={48}
                   className="w-full h-full object-contain drop-shadow-md"
                 />
@@ -156,6 +159,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                   src="/states/whomayqualifies-california-icon.webp"
                   alt="Heart Icon"
                   width={64}
+          sizes="64px"
                   height={64}
                   className="w-full h-full object-contain drop-shadow-md"
                 />

@@ -11,6 +11,7 @@ export function SendIcon({ className = "w-[22px] h-[22px]" }: { className?: stri
       src="/common/send-icon.svg"
       alt=""
       width={22}
+          sizes="22px"
       height={22}
       unoptimized
       className={`object-contain ${className}`}

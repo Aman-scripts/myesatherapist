@@ -58,6 +58,7 @@ export function PsdWhyChooseSection() {
                     src={item.icon}
                     alt=""
                     width={32}
+          sizes="32px"
                     height={32}
                     unoptimized
                     className="icon-lg object-contain"

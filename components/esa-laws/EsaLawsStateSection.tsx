@@ -264,6 +264,7 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
               src={entry.icon}
               alt={`${entry.name} state map`}
               width={57}
+          sizes="57px"
               height={57}
               className="h-[57px] w-[57px] object-contain"
               style={{ width: 57, height: 57 }}

@@ -58,6 +58,7 @@ export function DoctorsAllStatesSection() {
               src="/about-us/about-us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={52}
+          sizes="52px"
               height={52}
               className="w-full h-full object-contain"
             />
@@ -76,6 +77,7 @@ export function DoctorsAllStatesSection() {
               src="/about-us/about-us-legimateesasection-hearticon.webp"
               alt="Heart and Paw Icon"
               width={72}
+          sizes="72px"
               height={72}
               className="w-full h-full object-contain"
             />
@@ -121,6 +123,7 @@ export function DoctorsAllStatesSection() {
                       src={card.icon}
                       alt={card.title}
                       width={32}
+          sizes="32px"
                       height={32}
                       unoptimized
                       className="w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8 object-contain"

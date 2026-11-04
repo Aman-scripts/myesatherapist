@@ -50,6 +50,7 @@ export function ContactInfoCards() {
                     src={card.icon}
                     alt={card.title}
                     width={22}
+          sizes="22px"
                     height={22}
                     unoptimized
                     className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] object-contain"

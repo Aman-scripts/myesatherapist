@@ -126,6 +126,7 @@ export function HeroSection() {
                   src="/esa-icons/icon-37.svg"
                   alt=""
                   width={20}
+          sizes="20px"
                   height={20}
                   unoptimized
                   className="icon-sm shrink-0 object-contain"
