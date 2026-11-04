@@ -195,7 +195,7 @@ export const ALABAMA_META = {
   publishDate: "August 24, 2026",
   lastUpdated: "August 24, 2026",
   reviewerName: "Awais Arshad",
-  reviewerRole: "Medically Reviewed by",
+  reviewerRole: "Legally Reviewed by",
   reviewerCredentials: "Attorney at Law",
   reviewerImage: "/legal-reviewer/legal-reviwer.webp",
   reviewerLinkedin: "https://www.linkedin.com/in/awais-arshad-a51b31113/",

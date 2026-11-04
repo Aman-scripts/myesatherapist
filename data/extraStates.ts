@@ -117,11 +117,11 @@ function benefits(rows: Array<[string, string]>, icon: string) {
   return rows.map(([title, description]) => ({ title, description, icon }));
 }
 
-function cities(rows: Array<[string, string]>) {
-  return rows.map(([name, description], index) => ({
+function cities(rows: Array<[string, string, string?]>) {
+  return rows.map(([name, description, icon], index) => ({
     name,
     description,
-    icon: CITY_ICONS[index % CITY_ICONS.length],
+    icon: icon || CITY_ICONS[index % CITY_ICONS.length],
   }));
 }
 
@@ -347,34 +347,42 @@ export const EXTRA_STATES: Record<string, StateData> = {
       [
         "Burlington",
         "Vermont's largest city offers a mix of college life, waterfront neighborhoods, and urban housing. Eligible residents can get an ESA letter in Burlington through secure online telehealth evaluations.",
+        "/myesa-state/Vermont/1x/Burlington.webp",
       ],
       [
         "South Burlington",
         "South Burlington provides suburban living with easy access to employment centers and local amenities. An ESA letter in South Burlington is available through convenient virtual appointments.",
+        "/myesa-state/Vermont/1x/South%20Burlington.webp",
       ],
       [
         "Montpelier",
         "As the nation's smallest state capital, Montpelier combines historic charm with a close-knit community. Eligible individuals can access an ESA letter in Montpelier through telehealth services.",
+        "/myesa-state/Vermont/1x/Montpelier.webp",
       ],
       [
         "Rutland",
         "Rutland serves as a regional hub for businesses, healthcare, and surrounding communities. An ESA letter in Rutland is available through our licensed online evaluations.",
+        "/myesa-state/Vermont/1x/Rutland.webp",
       ],
       [
         "St. Albans",
         "St. Albans offers small-town living with access to northern Vermont's scenic landscapes. Eligible residents can obtain an ESA letter in St. Albans through secure telehealth appointments.",
+        "/myesa-state/Vermont/1x/St.%20Albans.webp",
       ],
       [
         "Brattleboro",
         "Known for its arts community and natural surroundings, Brattleboro attracts residents seeking a quieter lifestyle. An ESA letter in Brattleboro can be received online.",
+        "/myesa-state/Vermont/1x/Brattleboro.webp",
       ],
       [
         "Bennington / Southern Vermont",
         "Southern Vermont communities offer historic neighborhoods and rural living options. Eligible individuals can access an ESA letter in Bennington through convenient telehealth evaluations.",
+        "/myesa-state/Vermont/1x/Bennington%20-%20Southern%20Vermont.webp",
       ],
       [
         "All Other Vermont Cities",
         "Whether you're in Middlebury, Stowe, Barre, or another Vermont community, obtaining a Vermont ESA letter is simple through our statewide telehealth platform.",
+        "/myesa-state/Vermont/1x/All%20Other%20Vermont%20Cities.webp",
       ],
     ]),
     faqTitle: "Frequently Asked Questions About ESA Letter in Vermont",
@@ -628,34 +636,42 @@ export const EXTRA_STATES: Record<string, StateData> = {
       [
         "Nashville",
         "Nashville's booming population and competitive housing market continue attracting new residents. Eligible individuals can obtain an ESA letter in Nashville through secure online telehealth evaluations.",
+        "/myesa-state/Tennessee/1x/Nashville.webp",
       ],
       [
         "Memphis",
         "Known for its rich musical heritage, Memphis offers diverse neighborhoods and housing opportunities. An ESA letter in Memphis is available through licensed telehealth providers for eligible residents.",
+        "/myesa-state/Tennessee/1x/Memphis.webp",
       ],
       [
         "Knoxville",
         "Nestled near the Great Smoky Mountains, Knoxville blends university life with a growing residential community. Eligible residents can access an ESA letter in Knoxville through online evaluations.",
+        "/myesa-state/Tennessee/1x/Knoxville.webp",
       ],
       [
         "Chattanooga",
         "Chattanooga's downtown and outdoor lifestyle has encouraged consistent residential growth. An ESA letter in Chattanooga can be accessed through our 100% safe and secure platform.",
+        "/myesa-state/Tennessee/1x/Chattanooga.webp",
       ],
       [
         "Clarksville",
         "Clarksville's military presence and expanding neighborhoods continue driving housing demand. Eligible individuals can obtain an ESA letter in Clarksville through convenient telehealth services.",
+        "/myesa-state/Tennessee/1x/Clarksville.webp",
       ],
       [
         "Murfreesboro",
         "One of Tennessee's fastest-growing cities, Murfreesboro offers modern neighborhoods and a thriving university community. An ESA letter in Murfreesboro is available online.",
+        "/myesa-state/Tennessee/1x/Murfreesboro.webp",
       ],
       [
         "Johnson City / Tri-Cities",
         "Residents across the Tri-Cities region can conveniently access professional evaluations from home. An ESA letter in Johnson City is available through secure telehealth appointments.",
+        "/myesa-state/Tennessee/1x/Johnson%20City%20-%20Tri-Cities.webp",
       ],
       [
         "All Other Tennessee Cities",
         "Whether you're in Franklin, Jackson, Cookeville, Kingsport, or another community, getting a Tennessee ESA letter is simple through our statewide telehealth platform.",
+        "/myesa-state/Tennessee/1x/All%20Other%20Tennessee%20Cities.webp",
       ],
     ]),
     faqTitle: "Frequently Asked Questions About ESA Letter in Tennessee",
@@ -907,34 +923,42 @@ export const EXTRA_STATES: Record<string, StateData> = {
       [
         "Providence",
         "Providence combines historic neighborhoods, universities, and a busy rental market. Eligible residents can obtain an ESA letter in Providence through secure online telehealth evaluations.",
+        "/myesa-state/Rhode%20Island/4x/Providence.webp",
       ],
       [
         "Warwick",
         "Warwick offers suburban neighborhoods, waterfront living, and convenient access to Providence. An ESA letter in Warwick is available through licensed telehealth providers for eligible residents.",
+        "/myesa-state/Rhode%20Island/4x/Warwick.webp",
       ],
       [
         "Cranston",
         "Known for its family-friendly neighborhoods, Cranston continues to attract homeowners and renters alike. Eligible individuals can get an ESA letter in Cranston through virtual evaluations.",
+        "/myesa-state/Rhode%20Island/4x/Cranston.webp",
       ],
       [
         "Pawtucket",
         "Pawtucket's revitalized neighborhoods and growing residential communities offer diverse housing opportunities. An ESA letter in Pawtucket is available through online telehealth services.",
+        "/myesa-state/Rhode%20Island/4x/Pawtucket.webp",
       ],
       [
         "East Providence",
         "East Providence provides easy access to downtown Providence while maintaining its own welcoming neighborhoods. Eligible residents can get an ESA letter in East Providence online.",
+        "/myesa-state/Rhode%20Island/4x/East%20Providence.webp",
       ],
       [
         "Newport",
         "Famous for its coastal scenery and historic charm, Newport attracts year-round residents and seasonal renters. An ESA letter in Newport is available through secure telehealth appointments.",
+        "/myesa-state/Rhode%20Island/4x/Newport.webp",
       ],
       [
         "South County / Westerly",
         "South County communities offer coastal living with smaller residential neighborhoods. Eligible individuals can obtain an ESA letter in Westerly through convenient online evaluations.",
+        "/myesa-state/Rhode%20Island/4x/South%20County%20-%20Westerly.webp",
       ],
       [
         "All Other Rhode Island Cities & Towns",
         "Whether you're in Woonsocket, Bristol, Coventry, or another community, obtaining a Rhode Island ESA letter is simple through our statewide telehealth platform.",
+        "/myesa-state/Rhode%20Island/4x/All%20Other%20Rhode%20Island%20Cities%20&%20Towns.webp",
       ],
     ]),
     faqTitle: "Frequently Asked Questions About ESA Letters in Rhode Island",
@@ -1179,7 +1203,43 @@ export const EXTRA_STATES: Record<string, StateData> = {
     psdCalloutTitle: "Getting a Psychiatric Service Dog in District of Columbia",
     psdCalloutText:
       "In the District of Columbia, a psychiatric service dog must be individually trained to perform specific tasks that assist a person with a qualifying psychiatric disability. Under the Americans with Disabilities Act (ADA), a mental health provider's letter, service dog certification, or professional training is not required for public access. Training time varies depending on the dog's abilities and the tasks involved and may take a year or longer. Professional training costs can range from approximately $5,000 to $30,000 or more, depending on the training method, program, and level of assistance provided.",
-    cities: [],
+    citiesTitle: "Available Everywhere in Washington, DC",
+    citiesSubtitle:
+      "From historic rowhouse neighborhoods to newer waterfront communities, housing across Washington, DC often includes pet rules. Our secure telehealth platform makes licensed ESA evaluations available throughout the District.",
+    cities: cities([
+      [
+        "Capitol Hill",
+        "Capitol Hill mixes historic rowhouses, apartments, and a busy rental market near the U.S. Capitol. Eligible residents can obtain an ESA letter in Capitol Hill through secure online telehealth evaluations.",
+      ],
+      [
+        "Georgetown",
+        "Georgetown's historic streets and limited rental inventory often come with pet restrictions. An ESA letter in Georgetown is available through licensed telehealth evaluations.",
+      ],
+      [
+        "Dupont Circle",
+        "Dupont Circle offers walkable neighborhoods and a dense mix of apartments and condos. Eligible residents can get an ESA letter in Dupont Circle through virtual evaluations.",
+      ],
+      [
+        "Adams Morgan",
+        "Adams Morgan's apartment buildings and shared housing often include pet policies. An ESA letter in Adams Morgan is available through online telehealth services.",
+      ],
+      [
+        "Columbia Heights",
+        "Columbia Heights continues to grow with apartments and family housing across Northwest DC. Eligible individuals can obtain an ESA letter in Columbia Heights through secure telehealth appointments.",
+      ],
+      [
+        "Navy Yard / Southeast",
+        "Navy Yard and nearby Southeast neighborhoods include newer apartment buildings with pet rules. An ESA letter in Navy Yard is available through convenient online evaluations.",
+      ],
+      [
+        "Northeast DC",
+        "Northeast Washington includes a wide mix of rowhouses, apartments, and residential streets. Eligible residents can get an ESA letter in Northeast DC through licensed telehealth providers.",
+      ],
+      [
+        "All Other DC Neighborhoods",
+        "Whether you live in Shaw, Brookland, Anacostia, or another Washington, DC neighborhood, an ESA letter is available through our telehealth platform across the District.",
+      ],
+    ]),
     faqTitle: "Frequently Asked Questions About ESA Letters in District of Columbia",
     faqSubtitle:
       "Find answers to common questions about getting an ESA letter in District of Columbia, including eligibility, evaluation requirements, and housing protections.",
@@ -1217,6 +1277,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       { id: "laws", label: "Housing Accommodations for ESAs in District of Columbia" },
       { id: "scams", label: "District of Columbia ESA Letter: Facts and Myths" },
       { id: "psd-vs-esa", label: "Psychiatric Service Dogs vs. Emotional Support Animals in District of Columbia" },
+      { id: "available-cities", label: "Available Everywhere in Washington, DC" },
       { id: "faq", label: "Frequently Asked Questions About ESA Letters in District of Columbia" },
     ],
   },
