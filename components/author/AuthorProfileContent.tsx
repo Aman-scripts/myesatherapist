@@ -90,7 +90,24 @@ export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
       <DisclosureCard title="Disclaimer" paragraphs={author.disclaimerParagraphs} keepCase />
 
       {author.articlesNote && (
-        <ContributorArticles name={author.name} intro={author.articlesNote} />
+        <ContributorArticles
+          name={author.name}
+          intro={author.articlesNote}
+          extraCards={
+            author.slug === "mohammed-ziauddin"
+              ? [
+                  {
+                    id: "alabama-esa-laws",
+                    url: "/esa-laws/alabama/",
+                    title: "Alabama ESA Laws Explained: A Guide For Tenants And Landlords",
+                    description:
+                      "Learn Alabama ESA laws, FHA housing protections, ESA letter requirements, tenant rights, landlord rules, fees, and assistance animal regulations.",
+                    image: "/esalawsblog/eslalaws-blogsimages.webp",
+                  },
+                ]
+              : undefined
+          }
+        />
       )}
     </ProfileShell>
   );
