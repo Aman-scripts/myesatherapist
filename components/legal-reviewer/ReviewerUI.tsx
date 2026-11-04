@@ -392,7 +392,7 @@ export function SidebarList({ items }: { items: Array<{ label: string; year?: st
     <ul className="flex flex-col gap-[7px]">
       {items.map((item) => (
         <li key={item.label} className="flex items-start justify-between gap-4">
-          <span className="flex items-start gap-[10px] body-text text-background">
+          <span className="flex min-w-0 flex-1 items-start gap-[10px] body-text text-background">
             <span aria-hidden="true" className="w-1 h-1 rounded-full bg-background shrink-0 mt-[11px] ml-[10px]" />
             <span>{item.label}</span>
           </span>

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BlogArticle } from "@/data/blogsData";
+import { contributorProfileHref } from "@/data/contributorsData";
 import { CtaButton } from "@/components/common/CtaButton";
 
 export interface BlogCardProps {
@@ -16,9 +17,10 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
       ? article.author.name.replace(/,\s*(Ph\.?D\.?|LPC|MSW|LCSW|LMFT|MD).*/i, "")
       : "Dr. Marcus"
     : "";
+  const authorHref = contributorProfileHref(authorDisplayName);
 
   return (
-    <article className="w-full max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px] group hover:shadow-lg transition-all duration-300">
+    <article className="w-full min-w-0 max-w-full sm:max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px] group hover:shadow-lg transition-all duration-300">
       {/* Card Image: 411px x 317px (rounded-t-[20px]) */}
       <Link prefetch={false}
         href={article.url}
@@ -36,22 +38,33 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
       </Link>
 
       {/* Content Frame: 374px width, gap 15px, flex-1 flex flex-col justify-between pt-[20px] */}
-      <div className="w-[374px] max-w-[calc(100%-36px)] flex-1 flex flex-col justify-between pt-[20px]">
+      <div className="w-full max-w-[374px] px-4 sm:px-0 flex-1 flex flex-col justify-between pt-[20px]">
         {/* Heading: 108px max height with inline author matching Figma Frame 1000011908 */}
         <div className="h-[108px] overflow-hidden">
-          <Link prefetch={false}
-            href={article.url}
-            className="block group-hover:text-[#1D6E72] transition-colors"
-          >
-            <h3 className="heading-h3 text-primary text-[26px] sm:text-[28px] leading-[34px] sm:leading-[36px] tracking-[-0.0003em] line-clamp-3">
-              {article.cardTitle || article.title}{" "}
-              {authorDisplayName && (
-                <span className="font-sans font-medium text-[15px] sm:text-[16px] leading-[24px] text-[#69777C] whitespace-nowrap ml-1.5 normal-case tracking-normal inline-block align-baseline font-normal">
-                  by {authorDisplayName}
-                </span>
-              )}
-            </h3>
-          </Link>
+          <h3 className="heading-h3 text-primary text-[26px] sm:text-[28px] leading-[34px] sm:leading-[36px] tracking-[-0.0003em] line-clamp-3">
+            <Link prefetch={false}
+              href={article.url}
+              className="group-hover:text-[#1D6E72] transition-colors"
+            >
+              {article.cardTitle || article.title}
+            </Link>
+            {authorDisplayName && (
+              <span className="font-sans font-medium text-[15px] sm:text-[16px] leading-[24px] text-[#69777C] whitespace-nowrap ml-1.5 normal-case tracking-normal inline-block align-baseline font-normal">
+                by{" "}
+                {authorHref ? (
+                  <Link
+                    prefetch={false}
+                    href={authorHref}
+                    className="underline decoration-[#69777C]/70 underline-offset-2 hover:text-primary"
+                  >
+                    {authorDisplayName}
+                  </Link>
+                ) : (
+                  authorDisplayName
+                )}
+              </span>
+            )}
+          </h3>
         </div>
 
         {/* Excerpt: 78px height */}

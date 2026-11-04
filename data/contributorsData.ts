@@ -71,6 +71,13 @@ export const REVIEWERS: ContributorCardData[] = [
   },
 ];
 
+/** Profile URL for a contributor, matched by the name shown on article cards. */
+export function contributorProfileHref(name?: string): string | undefined {
+  if (!name) return undefined;
+  const key = name.trim().toLowerCase();
+  return [...AUTHORS, ...REVIEWERS].find((person) => person.name.trim().toLowerCase() === key)?.href;
+}
+
 export const CONTRIBUTORS_FAQS = [
   {
     q: "What is the difference between an author and a reviewer?",

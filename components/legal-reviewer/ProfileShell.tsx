@@ -148,8 +148,7 @@ function SidebarBody(
 
 /**
  * Page layout for author / contributor / reviewer profiles (Figma "Legal Reviewer Page"):
- * a 382px teal sidebar on desktop (slide-out drawer below 1024px) and a 1055px main
- * column with 74px side padding.
+ * a 382px teal sidebar on desktop, and a slide-out drawer below 1024px.
  */
 export function ProfileShell(props: ProfileShellProps) {
   const { name, children } = props;
@@ -160,7 +159,6 @@ export function ProfileShell(props: ProfileShellProps) {
     setMounted(true);
   }, []);
 
-  // Lock background scroll and close on Escape while the drawer is open
   React.useEffect(() => {
     if (!isOpen) return;
     document.body.style.overflow = "hidden";
@@ -175,14 +173,12 @@ export function ProfileShell(props: ProfileShellProps) {
   }, [isOpen]);
 
   return (
-    <section className="w-full bg-background relative pb-6 lg:pb-8">
-      <div className="relative z-10 w-full flex flex-col lg:flex-row items-start">
-        {/* Desktop sidebar */}
-        <aside className="hidden lg:block w-[382px] shrink-0 sticky top-[135px] self-start z-20 max-h-[calc(100vh-135px)] overflow-y-auto overflow-x-hidden no-scrollbar color-gradient px-[31px] pt-6 pb-12">
+    <section className="relative w-full max-w-full overflow-x-clip bg-background pb-6 lg:pb-8">
+      <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col items-start lg:flex-row">
+        <aside className="no-scrollbar color-gradient sticky top-[135px] z-20 hidden max-h-[calc(100vh-135px)] w-[382px] shrink-0 self-start overflow-x-hidden overflow-y-auto px-[31px] pb-12 pt-6 lg:block">
           <SidebarBody {...props} />
         </aside>
 
-        {/* Mobile & tablet: edge toggle + slide-out drawer */}
         {mounted &&
           createPortal(
             <>
@@ -190,13 +186,13 @@ export function ProfileShell(props: ProfileShellProps) {
                 type="button"
                 onClick={() => setIsOpen(true)}
                 aria-label={`Open ${name} profile`}
-                className="lg:hidden fixed left-0 top-[55%] sm:top-[50%] -translate-y-1/2 z-[80] w-[34px] sm:w-[40px] h-[64px] sm:h-[76px] rounded-r-full shadow-[2px_4px_16px_rgba(26,61,79,0.45)] flex items-center justify-center pl-0.5 color-gradient transition-all hover:w-[44px] active:scale-95 group cursor-pointer"
+                className="color-gradient group fixed left-0 top-[55%] z-[80] flex h-[64px] w-[34px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-r-full pl-0.5 shadow-[2px_4px_16px_rgba(26,61,79,0.45)] transition-all hover:w-[44px] active:scale-95 sm:top-[50%] sm:h-[76px] sm:w-[40px] lg:hidden"
               >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
+                <ChevronRight className="h-5 w-5 stroke-[2.5] text-background transition-all group-hover:translate-x-0.5 group-hover:text-accent sm:h-6 sm:w-6" />
               </button>
 
               <div
-                className={`fixed inset-0 z-[99999] flex transition-all duration-300 ${isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"}`}
+                className={`fixed inset-0 z-[99999] flex overflow-hidden transition-all duration-300 ${isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"}`}
                 role="dialog"
                 aria-modal="true"
                 aria-label={`${name} profile`}
@@ -207,16 +203,16 @@ export function ProfileShell(props: ProfileShellProps) {
                 />
 
                 <div
-                  className={`relative w-[320px] sm:w-[382px] h-full max-h-screen overflow-y-auto overflow-x-hidden no-scrollbar z-[100000] color-gradient shadow-2xl px-[31px] pt-6 pb-10 transition-transform duration-300 ease-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                  className={`color-gradient no-scrollbar relative z-[100000] h-full max-h-screen w-[320px] overflow-x-hidden overflow-y-auto px-[31px] pb-10 pt-6 shadow-2xl transition-transform duration-300 ease-out sm:w-[382px] ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
                 >
-                  <div className="flex justify-end mb-2">
+                  <div className="mb-2 flex justify-end">
                     <button
                       type="button"
                       onClick={() => setIsOpen(false)}
-                      className="w-9 h-9 rounded-full border border-white/40 hover:border-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer"
+                      className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/40 transition-all hover:border-white hover:bg-white/10"
                       aria-label="Close profile"
                     >
-                      <X className="w-5 h-5 text-background stroke-[2.2]" />
+                      <X className="h-5 w-5 stroke-[2.2] text-background" />
                     </button>
                   </div>
                   <SidebarBody {...props} inDrawer />
@@ -226,10 +222,9 @@ export function ProfileShell(props: ProfileShellProps) {
             document.body,
           )}
 
-        {/* Main column. The breadcrumb sits above the article, outside the sidebar. */}
-        <div className="flex-1 min-w-0 max-w-[1055px] px-4 sm:px-8 lg:px-[74px] pt-6 lg:pt-8 flex flex-col">
+        <div className="flex w-full min-w-0 max-w-full flex-col px-4 pb-2 pt-6 sm:px-8 lg:max-w-[1055px] lg:flex-1 lg:px-[74px] lg:pt-8">
           <SiteBreadcrumbs className="mb-6 lg:mb-8" />
-          <div className="flex flex-col gap-10 lg:gap-[53px]">{children}</div>
+          <div className="flex min-w-0 max-w-full flex-col gap-10 break-words lg:gap-[53px]">{children}</div>
         </div>
       </div>
     </section>

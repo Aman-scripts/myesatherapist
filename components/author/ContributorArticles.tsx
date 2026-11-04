@@ -40,7 +40,7 @@ export function ContributorArticles({
     <div className="flex flex-col gap-8">
       <TextSection title={title} intro={intro} />
       {(articles.length > 0 || extraCards.length > 0) && (
-        <div className="flex flex-wrap gap-6">
+        <div className="flex w-full min-w-0 max-w-full flex-col gap-6 sm:flex-row sm:flex-wrap">
           {articles.map((article) => (
             <BlogCard key={article.id} article={article} showAuthor={false} />
           ))}
