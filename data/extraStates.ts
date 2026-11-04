@@ -154,6 +154,9 @@ export const EXTRA_STATES: Record<string, StateData> = {
     whoQualifiesImageMobile: "/states/statewhoqualifies-vermont_mobile.webp",
     whoQualifiesImageTablet: "/states/statewhoqualifies-vermont_tablet.webp",
     ...SHARED,
+    therapistsTitle: "Our Licensed Mental Health Professionals",
+    therapistsSubtitle:
+      "We connect individuals with appropriately licensed or authorized mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Vermont?",
     whyChooseSubtitle:
       "We simplify online emotional support animal evaluations in Vermont while maintaining efficiency and legal compliance. Here's what makes us different from other providers.",
@@ -192,6 +195,8 @@ export const EXTRA_STATES: Record<string, StateData> = {
       ["Depersonalization/Derealization Disorder", "Feeling detached from self or surroundings."],
       ["Selective Mutism (Adults)", "Severe anxiety causing difficulty speaking in situations."],
     ]),
+    whoQualifiesNote:
+      "Note: A diagnosis alone does not automatically establish eligibility. The clinician must evaluate the individual's circumstances and disability-related need.",
     requirementsTitle: "Basic Requirements For Vermont ESA Letter",
     requirementsIntro: "In Vermont, ESA evaluations may consider the following factors:",
     requirementsItems: [
@@ -202,7 +207,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       "The individual lives in Vermont or plans to move to the state.",
     ],
     requirementsNote:
-      "Important: A formal assessment must be completed by a licensed mental health professional to determine whether issuing an ESA letter Vermont is appropriate for the individual's circumstances. HUD's May 22, 2026, enforcement guidance also provides updated direction on certain animal-related reasonable accommodation complaints under the Fair Housing Act. This guidance does not amend the Fair Housing Act or determine ESA eligibility.",
+      "Important: A formal assessment must be completed by an appropriately licensed or authorized mental health professional to determine whether an emotional support animal recommendation is clinically appropriate for the individual's circumstances. HUD's May 22, 2026, enforcement guidance changed how the Office of Fair Housing and Equal Opportunity (FHEO) handles certain assistance-animal complaints under the Fair Housing Act. The guidance directs FHEO's enforcement approach toward animals individually trained to perform disability-related tasks. It does not itself amend the Fair Housing Act or repeal Vermont's state-level fair housing protections for assistance animals.",
     benefitsTitle: "Benefits of Having an ESA Letter in Vermont",
     benefitsSubtitle:
       "Know how an emotional support letter Vermont may benefit individuals with mental health issues and lead to a happier and more self-assured life living with their companion pets.",
@@ -244,13 +249,13 @@ export const EXTRA_STATES: Record<string, StateData> = {
     ),
     lawsTitle: "Vermont Housing Guidelines for Emotional Support Animals",
     lawsSubtitle:
-      "Under the Fair Housing Act, landlords in Vermont are required to consider requests for reasonable accommodations for emotional support animals. These safeguards, which guarantee equitable housing opportunities for residents with documented needs, can be applied even in establishments with no-pet policies.",
+      "Under the federal Fair Housing Act (FHA) and Vermont's Fair Housing and Public Accommodations Act, particularly 9 V.S.A. § 4503(a)(9) and (10), landlords in Vermont are required to consider reasonable accommodation requests for emotional support animals. These protections, which ensure equitable housing opportunities for residents with qualifying disabilities, may apply even in properties with no-pet policies.",
     card1Title: "Federal Housing Guidelines",
     card1Items: [
       {
-        title: "Accommodation Beyond Pet Policies",
+        title: "Vermont Fair Housing Act Protections",
         description:
-          "Federal housing rules recognize emotional support animals as assistance animals rather than pets, meaning typical pet restrictions may not apply when a tenant presents valid ESA documentation.",
+          "Vermont's Fair Housing Act, under 9 V.S.A. § 4503(a)(10), prohibits housing providers from refusing reasonable accommodations necessary for individuals with disabilities to use and enjoy their homes. Vermont Human Rights Commission Rule 48 also addresses assistance animals as reasonable accommodations, including exceptions to no-pet policies.",
       },
       {
         title: "Individual Evaluation of Requests",
@@ -282,7 +287,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     legalNotice:
-      "In Vermont, emotional support animals are generally permitted in housing accommodations under the Fair Housing Act as long as they have the relevant paperwork. However, ESAs usually do not have the same rights to public access as trained service animals under the Americans with Disabilities Act. Furthermore, many airlines consider emotional support animals to be regular pets and are not required by the Air Carrier Access Act to acknowledge them. It is advised to review airline policies before boarding the flight.",
+      "In Vermont, individuals with qualifying disabilities may request reasonable accommodations for assistance animals in housing under applicable federal and state fair housing laws. Approval is based on the individual's disability-related need and the applicable accommodation requirements; an ESA certificate or letter does not automatically guarantee approval.\n\nEmotional support animals generally do not have the same public access rights as trained service animals under the Americans with Disabilities Act (ADA). Airlines are not required under the Air Carrier Access Act to recognize emotional support animals as service animals and may treat them as pets under their applicable policies. Travelers should review airline requirements before flying.",
     scamsTitle: "Truth vs. Myths About Emotional Support Animals in Vermont",
     scamsSubtitle:
       "Understanding the real guidelines for emotional support animals in Vermont can help people avoid common misconceptions. Knowing how ESA documentation works ensures that requests meet professional evaluation standards and housing accommodation requirements.",
@@ -291,17 +296,17 @@ export const EXTRA_STATES: Record<string, StateData> = {
       {
         title: "Professional Contact Information",
         description:
-          "Authentic ESA documentation includes the clinician's full name, practice address, licensing jurisdiction, and contact information, allowing housing providers to verify the professional's credentials if necessary.",
+          "ESA documentation may include the clinician's full name, professional credentials, licensing jurisdiction, practice information, and contact details so that housing providers can verify the professional's qualifications when reasonably necessary.",
       },
       {
-        title: "Date of Issuance and Validity",
+        title: "Date of Issuance",
         description:
-          "A genuine ESA letter Vermont clearly mentions when the document was issued, helping housing providers understand that the evaluation and recommendation are recent and professionally documented.",
+          "An ESA letter should include its issuance date to help identify when the professional evaluation and recommendation were completed.",
       },
       {
         title: "Individualized Recommendation Statement",
         description:
-          "The letter contains a statement from the clinician explaining that the emotional support animal is recommended as part of the individual's emotional wellness support plan and after a legitimate provider-patient therapeutic relationship is established.",
+          "When clinically appropriate, the documentation should explain that the individual has a disability-related need for an assistance animal. The recommendation should be based on an individualized professional assessment and an appropriate provider-client relationship.",
       },
     ],
     scamsCommonTitle: "Common ESA Scams to Watch For",
@@ -319,12 +324,14 @@ export const EXTRA_STATES: Record<string, StateData> = {
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Vermont",
     psdVsEsaSubtitle:
       "It's important to understand the differences between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Vermont. Although they both support people dealing with mental health issues, their specific tasks, training requirements, and legal protections are different.",
+    esaCardTitle: "Emotional Support Animals (ESAs)",
     esaCardBullets: [
       "Provide companionship and emotional support to individuals dealing with conditions such as anxiety, depression, PTSD, or other similar emotional or psychological challenges.",
       "No specialized task training is necessary for an ESA. Housing accommodations generally require a valid ESA letter issued by a licensed mental health professional in Vermont.",
       "Protected under the Fair Housing Act, which allows qualified individuals to keep their ESA even in housing communities that normally enforce strict no-pet policies.",
       "After housing accommodation is granted, tenants are typically not required to pay pet rent or extra pet security deposits for their emotional support animals.",
     ],
+    psdCardTitle: "Psychiatric Service Dogs",
     psdCardBullets: [
       "Specially trained to carry out particular tasks that support individuals with psychiatric disabilities, such as interrupting panic episodes, grounding the handler, or reminding them to take medication.",
       "Recognized and protected under the Americans with Disabilities Act (ADA).",
@@ -332,7 +339,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     ],
     psdCalloutTitle: "Getting a Psychiatric Service Dog in Vermont",
     psdCalloutText:
-      "In Vermont, a certified mental health professional's documentation confirming a psychiatric disability is typically required for anyone looking for a psychiatric service dog. The dog needs to be trained to carry out duties that directly improve the person's condition. Depending on how difficult the jobs are, training a PSD may take several months or more. According to the dog's ability level and the specific instruction needed, professional training programs can cost anywhere from $5,000 to $30,000.",
+      "In Vermont, psychiatric service dogs must be individually trained to perform specific tasks directly related to a person's disability. Under the Americans with Disabilities Act (ADA), individuals are not required to obtain certification or documentation from a mental health professional to establish that a dog is a service animal. Individuals may train their own service dogs or use professional training programs. Training time and costs vary depending on the dog's abilities, the tasks required, and the training approach.",
     citiesTitle: "Available Everywhere in Vermont",
     citiesSubtitle:
       "From vibrant towns near Lake Champlain to peaceful rural communities, Vermont offers a unique housing landscape across the state. Our secure telehealth platform helps eligible residents to access licensed ESA evaluations conveniently.",
@@ -396,11 +403,11 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
       {
         q: "Can Housing Providers Request A New Vermont ESA Letter After Some Time?",
-        a: "Some landlords may ask for updated documentation issued within the last 12 months if the existing ESA letter is outdated or if a new accommodation request is submitted.",
+        a: "Housing providers may request updated information when reasonably necessary to evaluate a new or continuing reasonable accommodation request. However, there is no general federal or Vermont law requiring ESA letters to be renewed every 12 months or establishing a universal 12-month expiration period.",
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Clinicians" },
+      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
       { id: "process", label: "How ESA Letter Process Works in Vermont?" },
       { id: "who-qualifies", label: "Who May Qualify for an ESA Letter in Vermont?" },
       { id: "why-choose", label: "Why Choose My ESA Therapist for ESA Letter Evaluation in Vermont?" },
@@ -431,6 +438,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     whoQualifiesImageMobile: "/states/statewhoqualifies-tennessee_mobile.webp",
     whoQualifiesImageTablet: "/states/statewhoqualifies-tennessee_tablet.webp",
     ...SHARED,
+    therapistsTitle: "Our Licensed Mental Health Professionals",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Tennessee?",
     whyChooseSubtitle:
       "We simplify online emotional support animal evaluations in Tennessee while maintaining efficiency and legal compliance. Here's what makes us different from other providers.",
@@ -475,12 +483,11 @@ export const EXTRA_STATES: Record<string, StateData> = {
     requirementsItems: [
       "The applicant must be at least 18 years old. Individuals under 18 require verified consent from a parent or legal guardian.",
       "A comprehensive clinical evaluation must be completed by a mental health professional licensed to practice in Tennessee.",
-      "The diagnosed emotional or psychological condition must substantially limit one or more major areas of daily living, such as employment, academics, or personal care.",
-      "The clinician must assess whether the emotional support animal provides therapeutic value specific to the individual's condition.",
-      "Note: The applicant must currently live in Tennessee or intend to establish residency there.",
+      "The individual must have a qualifying disability under applicable fair housing laws, which may involve a physical or mental impairment that substantially limits one or more major life activities.",
+      "The healthcare provider must evaluate whether the support animal provides disability-related assistance or emotional support that alleviates one or more identified symptoms or effects of the individual's disability.",
     ],
     requirementsNote:
-      "Important: Tennessee requires a comprehensive, individual evaluation by a state-licensed mental health practitioner before issuing ESA documentation. HUD's May 22, 2026, enforcement guidance also provides updated direction on certain animal-related reasonable accommodation complaints under the Fair Housing Act. This guidance does not amend the Fair Housing Act or determine ESA eligibility.",
+      "Important: Tennessee requires a comprehensive, individual evaluation by a state-licensed mental health practitioner before issuing ESA documentation. HUD's May 22, 2026, enforcement guidance changed the federal Office of Fair Housing and Equal Opportunity's approach to animal-related reasonable accommodation complaints. Under this guidance, FHEO will find reasonable cause and recommend charges only in cases involving animals trained to provide disability-related assistance. The guidance does not amend the Fair Housing Act itself or address enforcement under Section 504 of the Rehabilitation Act or the Americans with Disabilities Act.",
     benefitsTitle: "Benefits of Having an ESA Letter in Tennessee",
     benefitsSubtitle:
       "Look at how an ESA letter Tennessee could support your well-being and make your daily routine with your emotional support animal manageable.",
@@ -520,25 +527,25 @@ export const EXTRA_STATES: Record<string, StateData> = {
       ],
       EMO_ICON,
     ),
-    lawsTitle: "Housing Rights for Emotional Support Animals in Tennessee",
+    lawsTitle: "Tennessee ESA Housing Protections",
     lawsSubtitle:
-      "In Tennessee, emotional support animal housing accommodations are recognized under the Fair Housing Act, requiring landlords to provide reasonable accommodations for qualifying tenants.",
-    card1Title: "Federal Housing Guidelines",
+      "In Tennessee, qualifying individuals may request reasonable housing accommodations for emotional support animals under the federal Fair Housing Act and applicable Tennessee laws.",
+    card1Title: "Federal & State Housing Laws",
     card1Items: [
       {
-        title: "Reasonable Accommodation Requirement",
+        title: "Fair Housing Act (FHA)",
         description:
-          "Housing providers in Tennessee are required by the Fair Housing Act to make reasonable accommodations for people with qualifying disabilities. This includes allowing an emotional support animal where the request is supported by the appropriate paperwork, even in locations with pet restrictions.",
+          "The Fair Housing Act (42 U.S.C. § 3604) establishes federal protections against disability-based housing discrimination and provides for reasonable accommodation requests involving assistance animals. Depending on the circumstances and applicable legal requirements, housing providers may need to make exceptions to no-pet policies and pet-related fees.",
       },
       {
-        title: "Protection from Disability-Based Discrimination",
+        title: "Tennessee Code § 66-7-111",
         description:
-          "According to federal guidelines published by the U.S. Department of Housing and Urban Development, a tenant's need for an emotional support animal does not give landlords the right to refuse housing, impose breed or size limitations, or charge pet fees.",
+          "Tennessee law allows tenants with qualifying disabilities to request exceptions to rental policies that prohibit or limit animals or require pet-related payments. Landlords may request reliable documentation when the disability or disability-related need is not readily apparent or known, subject to the statute's documentation and privacy requirements.",
       },
       {
-        title: "Additional Safeguards in Federally Assisted Housing",
+        title: "Tennessee Code § 39-16-304",
         description:
-          "The Rehabilitation Act's Section 504, which forbids discrimination based on disability and emphasizes the need to fairly and individually assess ESA accommodation requests, must also be followed by properties that receive federal financial aid.",
+          "Tennessee law prohibits knowingly misrepresenting a disability-related need for a support animal or submitting fraudulent support-animal documentation. Violations may constitute a Class B misdemeanor, with additional penalties depending on the specific offense.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
@@ -546,21 +553,21 @@ export const EXTRA_STATES: Record<string, StateData> = {
       {
         title: "Timely Review of ESA Requests",
         description:
-          "Tennessee housing providers are required to respond to Fair Housing Act accommodation requests in a timely manner. Without excessive delays, each request should be considered separately to make sure that federal housing requirements are met.",
+          "Housing providers should consider reasonable accommodation requests within a reasonable timeframe and avoid unnecessary delays. Each request should be evaluated according to the individual's circumstances and applicable federal and Tennessee housing requirements.",
       },
       {
         title: "Verification of Reliable Documentation",
         description:
-          "Landlords might ask for the proper paperwork attesting to a qualifying need for an emotional support animal due to a handicap. U.S. Department of Housing and Urban Development guidance allows verification but forbids excessive or invasive information requests.",
+          "Under Tennessee Code §§ 66-7-111 and 66-28-406, landlords may request reliable documentation when a disability or the disability-related need for a support animal is not readily apparent or known. Documentation must meet the applicable statutory requirements, and landlords may verify it without obtaining confidential or protected medical records.",
       },
       {
         title: "Compliance Without Unlawful Conditions",
         description:
-          "Unless the animal directly threatens people or seriously damages property, housing providers are required to make reasonable accommodation. They may not impose pet deposits, breed restrictions, or additional conditions inconsistent with federal disability housing standards.",
+          "Housing providers may be required to waive pet-related fees and restrictions when approving a reasonable accommodation for a qualifying assistance animal. A request may be denied under applicable legal exceptions, including when the specific animal poses an unmitigated direct threat or a risk of significant property damage.",
       },
     ],
     legalNotice:
-      "As a reasonable accommodation for people with qualifying disabilities, emotional support animals are allowed in homes in Tennessee under the Fair Housing Act. ESAs are typically not allowed in restaurants, retail establishments, and other public spaces where dogs are prohibited since the Americans with Disabilities Act does not acknowledge them as service animals. Airlines that serve Tennessee airports are relieved from the requirement to register emotional support animals as service animals after the 2021 amendments to the Air Carrier Access Act. Travelers should verify individual airline policies before making flight arrangements.",
+      "Emotional support animals may qualify for reasonable housing accommodations under applicable federal and Tennessee fair housing laws. However, ESAs do not receive the same public access rights as trained service animals under the Americans with Disabilities Act (ADA). Under the Air Carrier Access Act regulations, airlines are not required to recognize emotional support animals as service animals and may treat them as pets under their applicable policies. Travelers should review airline requirements before flying.",
     scamsTitle: "ESA Letters in Tennessee: Facts vs. Common Misconceptions",
     scamsSubtitle:
       "Understanding how emotional support animal (ESA) rules operate under federal regulations can help citizens of Tennessee safeguard themselves against misleading promises and untrustworthy online businesses. Understanding the appropriate legal framework makes it easier to guarantee that documentation complies with the Fair Housing Act's housing standards.",
@@ -597,6 +604,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Tennessee",
     psdVsEsaSubtitle:
       "It's critical to fully understand the differences between emotional support animals (ESAs) and psychiatric service dogs (PSDs) in Tennessee. Although both might help people deal with mental health issues, there are substantial differences in their legal recognition, training requirements, and access rights.",
+    esaCardTitle: "Emotional Support Animals (ESAs)",
     esaCardBullets: [
       "Provide comfort and emotional support to individuals experiencing anxiety, depression, PTSD, or related conditions.",
       "Are not required to complete specialized task-based training.",
@@ -604,6 +612,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       "Are protected under the Fair Housing Act, allowing qualified tenants to request reasonable housing accommodations.",
       "Do not receive public access rights beyond housing.",
     ],
+    psdCardTitle: "Psychiatric Service Dogs",
     psdCardBullets: [
       "Are individually trained to perform specific tasks directly related to a psychiatric disability, such as interrupting panic attacks or providing grounding support during dissociative episodes.",
       "Are protected under the Americans with Disabilities Act.",
@@ -611,7 +620,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     ],
     psdCalloutTitle: "Getting a Psychiatric Service Dog in Tennessee",
     psdCalloutText:
-      "In Tennessee, a person must have a diagnosed mental illness and a dog that has been taught to carry out actions that directly relieve associated symptoms in order to be eligible for a PSD. Training is organized, strict, and frequently lasts for several months. Depending on the trainer and the difficulty of the activity, costs can vary significantly. Psychiatric service dogs are legally entitled to full public access protections when trained in compliance with ADA requirements.",
+      "Under the Americans with Disabilities Act, a psychiatric service dog must be individually trained to perform specific tasks directly related to a person's disability. A formal diagnosis or certification from a mental health professional is not required to establish service-animal status under the ADA. Individuals may train their own service dogs or use professional training programs. Qualifying service dogs receive public access protections under applicable ADA requirements.",
     citiesTitle: "Available Everywhere in Tennessee",
     citiesSubtitle:
       "From vibrant music cities to scenic mountain communities, Tennessee offers diverse housing options across the state. Our secure telehealth platform makes licensed ESA evaluations accessible to eligible residents statewide.",
@@ -654,7 +663,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     faqs: [
       {
         q: "Can A Landlord In Tennessee Ask For A New ESA Letter Every Year?",
-        a: "Housing providers may request updated documentation issued within the last 12 months if the disability-related need is not obvious, but repeated or excessive demands may conflict with the Fair Housing Act.",
+        a: "Housing providers may request reliable documentation when the disability or disability-related need for an assistance animal is not readily apparent or known. However, Tennessee and federal housing laws do not establish a universal 12-month expiration period or annual renewal requirement for ESA letters.",
       },
       {
         q: "Does An ESA Letter Automatically Transfer If I Move To A Different City In Tennessee?",
@@ -678,13 +687,13 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Clinicians" },
+      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
       { id: "process", label: "How ESA Letter Process Works in Tennessee?" },
       { id: "who-qualifies", label: "Who May Be Eligible for an ESA Letter Tennessee?" },
       { id: "why-choose", label: "Why Choose My ESA Therapist for ESA Letter Evaluation in Tennessee?" },
       { id: "reviews", label: "See What Our Clients Say" },
       { id: "benefits", label: "Benefits of Having an ESA Letter in Tennessee" },
-      { id: "laws", label: "Housing Rights for Emotional Support Animals in Tennessee" },
+      { id: "laws", label: "Tennessee ESA Housing Protections" },
       { id: "scams", label: "ESA Letters in Tennessee: Facts vs. Common Misconceptions" },
       { id: "psd-vs-esa", label: "Psychiatric Service Dogs vs. Emotional Support Animals in Tennessee" },
       { id: "available-cities", label: "Available Everywhere in Tennessee" },
@@ -709,6 +718,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
     whoQualifiesImageMobile: "/states/statewhoqualifies-rhode-island_mobile.webp",
     whoQualifiesImageTablet: "/states/statewhoqualifies-rhode-island_tablet.webp",
     ...SHARED,
+    therapistsTitle: "Our Licensed Mental Health Professionals",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Rhode Island?",
     whyChooseSubtitle:
       "We simplify online emotional support animal evaluations in Rhode Island while maintaining efficiency and legal compliance. Here's what makes us different from other providers.",
@@ -753,12 +763,12 @@ export const EXTRA_STATES: Record<string, StateData> = {
     requirementsItems: [
       "The individual is typically 18 years or older or a minor with parent/guardian consent.",
       "A mental or emotional health condition is identified during the clinical assessment.",
-      "The symptoms significantly affect daily life or overall functioning.",
+      "The clinician assesses whether the individual's mental or physical impairment substantially limits one or more major life activities and whether the animal may help alleviate disability-related symptoms or effects.",
       "The clinician determines whether an emotional support animal may provide therapeutic benefit.",
       "The individual lives in Rhode Island or plans to move to the state.",
     ],
     requirementsNote:
-      "Important: A licensed mental health professional in Rhode Island must complete a formal evaluation to decide whether issuing an ESA letter is suitable based on the person's specific circumstances. HUD's May 22, 2026, enforcement guidance also provides updated direction on certain animal-related reasonable accommodation complaints under the Fair Housing Act. This guidance does not amend the Fair Housing Act or determine ESA eligibility.",
+      "Important: An evaluation is conducted by a qualified healthcare professional who is authorized to provide services to individuals located in Rhode Island. The clinician independently determines whether an ESA recommendation is clinically appropriate. On May 22, 2026, HUD's Office of Fair Housing and Equal Opportunity issued new internal enforcement guidance concerning assistance-animal accommodation requests. The guidance rescinded HUD's 2020 assistance-animal notice and directed federal FHEO staff to prioritize cases involving animals trained to provide disability-related assistance. It does not amend the Fair Housing Act itself. Rhode Island also has separate state fair housing protections, including regulations recognizing that not every assistance animal requires specialized training.",
     benefitsTitle: "Benefits of Having an ESA Letter Rhode Island",
     benefitsSubtitle:
       "Check out how an emotional support animal letter in Rhode Island can help people with mental health problems live happier and more confident lives with their ESA.",
@@ -774,8 +784,8 @@ export const EXTRA_STATES: Record<string, StateData> = {
           "With proper ESA documentation, tenants may avoid frequent moves caused by pet restrictions, saving money on deposits, moving services, application fees, and temporary housing arrangements.",
         ],
         [
-          "Protection From Extra Housing Charges",
-          "ESA recognition in housing settings may help residents avoid recurring pet-related surcharges, helping maintain more predictable monthly housing costs while keeping their emotional support companions.",
+          "Potential Relief From Pet-Related Fees",
+          "When an assistance animal is approved as a reasonable accommodation, the tenant may request an exception to pet-related charges and restrictions. Whether the accommodation is required depends on the applicable housing laws and individual circumstances.",
         ],
       ],
       FIN_ICON,
@@ -800,23 +810,23 @@ export const EXTRA_STATES: Record<string, StateData> = {
     ),
     lawsTitle: "ESA Housing Laws in Rhode Island",
     lawsSubtitle:
-      "In Rhode Island, housing rights for emotional support animals are primarily governed by the federal Fair Housing Act. This legislation helps individuals with qualifying disabilities request reasonable accommodations in housing, allowing them to live with an emotional support animal without facing unfair housing discrimination.",
-    card1Title: "Federal Housing Guidelines",
+      "In Rhode Island, housing rights for emotional support animals are protected under the federal Fair Housing Act and the state's fair housing laws. These protections allow individuals with qualifying disabilities to request reasonable accommodations for their emotional support animals, subject to applicable documentation requirements and legal exceptions.",
+    card1Title: "Federal & State Housing Laws",
     card1Items: [
       {
-        title: "Reasonable Housing Accommodation",
+        title: "Fair Housing Act (FHA)",
         description:
-          "Under the Fair Housing Act, tenants with a verified need for an emotional support animal may request housing accommodations even in properties that normally restrict animals.",
+          "The federal Fair Housing Act (42 U.S.C. § 3604) protects individuals with qualifying disabilities from housing discrimination. It requires housing providers to consider reasonable accommodation requests involving assistance animals, including emotional support animals, when the animal is necessary for the person to use and enjoy their home.",
       },
       {
-        title: "Non-Pet Classification in Housing",
+        title: "Rhode Island Fair Housing Practices Act",
         description:
-          "Federal guidance generally treats emotional support animals differently from regular pets when a valid ESA letter is presented during the housing accommodation process.",
+          "Under R.I. Gen. Laws § 34-37-4(e)(1), housing providers must consider reasonable accommodations to rules, policies, and practices when necessary to give a person with a disability an equal opportunity to use and enjoy a dwelling. The Rhode Island Commission for Human Rights specifically confirms that this protection includes emotional support animals.",
       },
       {
-        title: "Individual Request Evaluation",
+        title: "Rhode Island Regulation 515-RICR-10-00-3.4(C)",
         description:
-          "Housing providers are expected to evaluate ESA accommodation requests on a case-by-case basis rather than applying blanket pet rules or restrictions.",
+          "Rhode Island's fair housing regulations require housing providers to consider reasonable accommodations to pet policies when necessary to give a person with a disability an equal opportunity to use and enjoy a dwelling. The regulations recognize that not all assistance animals need specialized training.",
       },
     ],
     card2Title: "Housing Provider Roles & Responsibilities",
@@ -824,7 +834,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       {
         title: "Verification of Professional Documentation",
         description:
-          "Property managers may examine the ESA letter to confirm that it was issued by a licensed mental health professional and contains legitimate provider credentials.",
+          "Housing providers may request reliable disability-related information when the disability or the need for an assistance animal is not readily apparent. They may assess whether the information establishes the connection between the person's disability and the requested accommodation.",
       },
       {
         title: "Maintaining Property Standards",
@@ -834,7 +844,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       {
         title: "Addressing Safety or Damage Issues",
         description:
-          "Housing providers may act if an animal creates a clear safety concern or causes serious property damage, consistent with fair housing guidelines.",
+          "Housing providers may deny an accommodation when an individualized assessment establishes that the specific animal poses a direct threat to health or safety or is likely to cause substantial physical property damage that cannot be reduced through reasonable measures.",
       },
     ],
     legalNotice:
@@ -846,12 +856,12 @@ export const EXTRA_STATES: Record<string, StateData> = {
       {
         title: "Licensed Professional Details",
         description:
-          "A credible ESA letter normally lists the mental health provider's full name, professional title, license number, and confirmation that they are authorized to practice in Rhode Island.",
+          "Reliable ESA documentation may include the healthcare professional's name, credentials, contact details, and confirmation of the disability-related need. Landlords may verify this information when legally appropriate.",
       },
       {
         title: "Statement of Clinical Evaluation",
         description:
-          "The document should mention that the individual completed a mental health assessment and that the clinician determined an emotional support animal may assist their psychological or emotional health.",
+          "When documentation is requested, it should provide reliable information connecting the individual's disability-related needs with the support or assistance the animal provides.",
       },
       {
         title: "Issue Date and Provider Authorization",
@@ -874,12 +884,14 @@ export const EXTRA_STATES: Record<string, StateData> = {
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Rhode Island",
     psdVsEsaSubtitle:
       "In Rhode Island, it's important to know the difference between psychiatric service dogs (PSDs) and emotional support animals (ESAs). Even though both help people with mental health issues, their jobs, training requirements, and legal protections are different.",
+    esaCardTitle: "Emotional Support Animals (ESAs)",
     esaCardBullets: [
       "Provide comfort, companionship, and emotional reassurance to individuals experiencing psychological or emotional challenges.",
       "No specialized task training required; a valid ESA letter from a licensed mental health professional is typically needed for housing accommodation requests.",
       "Housing rights for ESAs are primarily supported under the Fair Housing Act.",
       "Approved housing accommodations commonly allow tenants to keep their ESA without additional pet rent or pet security deposits.",
     ],
+    psdCardTitle: "Psychiatric Service Dogs",
     psdCardBullets: [
       "Specially trained dogs that perform tasks assisting individuals living with psychiatric disabilities.",
       "Recognized and protected under the Americans with Disabilities Act.",
@@ -954,7 +966,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
     ],
     tableOfContents: [
-      { id: "therapists", label: "Our Licensed Clinicians" },
+      { id: "therapists", label: "Our Licensed Mental Health Professionals" },
       { id: "process", label: "How ESA Letter Process Works in Rhode Island?" },
       { id: "who-qualifies", label: "Who Can Qualify for an ESA Letter Rhode Island?" },
       { id: "why-choose", label: "Why Choose My ESA Therapist for ESA Letter Evaluation in Rhode Island?" },

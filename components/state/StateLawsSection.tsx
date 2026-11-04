@@ -145,7 +145,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
             <h3 className="font-heading text-sm sm:text-base lg:text-[17px] font-bold text-primary tracking-wider uppercase mb-1.5">
               IMPORTANT LEGAL NOTICE
             </h3>
-            <p className="body-small text-body-text">
+            <p className="body-small whitespace-pre-line text-body-text">
               {data.legalNotice ||
                 `Emotional support animals do not have public access rights like service animals under the ADA and are mainly considered for household housing accommodations in ${stateName}. Generally speaking, ESAs are not permitted in public places like restaurants or stores where pets are restricted.`}
             </p>

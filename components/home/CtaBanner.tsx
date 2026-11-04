@@ -106,6 +106,7 @@ export function CtaBanner({
             <div className="pt-2">
               <CtaButton
                 href={buttonHref}
+                stateModal
                 variant="accent"
                 className="w-auto min-w-[240px]"
               >

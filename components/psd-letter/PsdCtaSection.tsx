@@ -97,6 +97,8 @@ export function PsdCtaSection() {
             <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               <CtaButton
                 href="#pricing"
+                stateModal
+                letter="psd"
                 variant="accent"
                 className="w-auto min-w-[240px]"
               >

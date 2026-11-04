@@ -23,6 +23,14 @@ const EVALUATION_CTA_LABELS = new Set([
   "talk with a licensed therapist",
   "find your eligibility",
   "find your eligibility in minutes",
+  "begin your evaluation",
+  "start your confidential esa evaluation",
+  "start your esa assessment",
+  "schedule a consultation",
+  "schedule a consultation now",
+  "book an esa evaluation",
+  "book an online esa evaluation",
+  "apply my esa letter",
 ]);
 
 export const OPEN_STATE_MODAL_EVENT = "open-state-select-modal";

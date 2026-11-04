@@ -15,10 +15,11 @@ import { StateWhoQualifiesSection } from "@/components/state/StateWhoQualifiesSe
 import { StateRequirementsSection } from "@/components/state/StateRequirementsSection";
 import { StateBenefitsSection } from "@/components/state/StateBenefitsSection";
 import { StateLawsSection } from "@/components/state/StateLawsSection";
+import { StateHousingRequestsSection } from "@/components/state/StateHousingRequestsSection";
 import { StateScamsSection } from "@/components/state/StateScamsSection";
 import { StatePsdVsEsaSection } from "@/components/state/StatePsdVsEsaSection";
 import { TrustedByPetOwnersSection } from "@/components/home/TrustedByPetOwnersSection";
-import { PricingSection, type PlanCard } from "@/components/home/PricingSection";
+import { PricingSection } from "@/components/home/PricingSection";
 import { StateAvailableCitiesSection } from "@/components/state/StateAvailableCitiesSection";
 import { StateTableOfContents } from "@/components/state/StateTableOfContents";
 import { AsSeenOnSection } from "@/components/home/AsSeenOnSection";
@@ -152,6 +153,7 @@ export default async function DynamicStatePage({ params }: Props) {
         )}
         <div id="benefits"><StateBenefitsSection data={data} /></div>
         <div id="laws"><StateLawsSection data={data} /></div>
+        <StateHousingRequestsSection data={data} />
         <div id="scams"><StateScamsSection data={data} /></div>
         <div id="psd-vs-esa"><StatePsdVsEsaSection data={data} /></div>
         {data.trustedReviews && data.trustedReviews.length > 0 && (
@@ -164,39 +166,12 @@ export default async function DynamicStatePage({ params }: Props) {
             />
           </div>
         )}
-        <PricingSection
+        {data.slug !== "vermont" && data.slug !== "tennessee" && data.slug !== "rhode-island" && <PricingSection
           sectionId="pricing"
-          heading={data.slug === "georgia" && data.pricingTitle ? data.pricingTitle : `The Cost of an ESA Letter in ${data.name}`}
+          heading={`The Cost of an ESA Letter in ${data.name}`}
           headingClassName="heading-h2"
-          descriptionOverride={
-            data.slug === "georgia" && data.pricingSubtitle
-              ? data.pricingSubtitle
-              : `Choose the option that best matches your needs in ${data.name}: an ESA letter evaluation, a combined ESA and PSD evaluation, or a professional assessment if you're unsure which type of support may be appropriate. Recommendations and documentation depend on a licensed clinician's assessment.`
-          }
-          showTabs={data.slug !== "georgia"}
-          maxCards={data.slug === "georgia" ? 2 : undefined}
-          mobileFeatureLimit={data.slug === "georgia" ? 6 : undefined}
-          cards={
-            data.slug === "georgia" && data.pricingPlan1Title && data.pricingPlan2Title
-              ? ([
-                  {
-                    title: data.pricingPlan1Title,
-                    description: data.pricingPlan1Description || "",
-                    price: data.pricingPlan1Price || "$149",
-                    features: data.pricingPlan1Features || [],
-                    buttonText: "Start your ESA Evaluation",
-                  },
-                  {
-                    title: data.pricingPlan2Title,
-                    description: data.pricingPlan2Description || "",
-                    price: data.pricingPlan2Price || "$199",
-                    features: data.pricingPlan2Features || [],
-                    buttonText: "Start Evaluation",
-                  },
-                ] satisfies PlanCard[])
-              : undefined
-          }
-        />
+          descriptionOverride={`Choose the option that best matches your needs in ${data.name}: an ESA letter evaluation, a combined ESA and PSD evaluation, or a professional assessment if you're unsure which type of support may be appropriate. Recommendations and documentation depend on a licensed clinician's assessment.`}
+        />}
         <div id="available-cities"><StateAvailableCitiesSection data={data} /></div>
         <div id="faq">
           <FaqSection

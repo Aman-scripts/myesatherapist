@@ -82,7 +82,7 @@ export function BlogFaqSection({
           {title}
         </h2>
         {subtitle && (
-          <p className="body-large text-body-text max-w-[588px]">
+          <p className="body-text text-body-text max-w-[588px]">
             {subtitle}
           </p>
         )}

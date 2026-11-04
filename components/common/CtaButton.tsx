@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { isEvaluationCtaLabel, openStateSelectModal } from "@/components/common/evaluationCta";
+import { isEvaluationCtaLabel, openStateSelectModal, type StateModalLetter } from "@/components/common/evaluationCta";
 
 export function SendIcon({ className = "w-[22px] h-[22px]" }: { className?: string }) {
   return (
@@ -36,6 +36,7 @@ export interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
    * Hero pickers pass false so they keep their own state control.
    */
   stateModal?: boolean;
+  letter?: StateModalLetter;
 }
 
 /**
@@ -61,6 +62,7 @@ export function CtaButton({
   centerLabel = false,
   variant = "accent",
   stateModal,
+  letter,
   onClick,
   disabled,
   type = "button",
@@ -75,7 +77,7 @@ export function CtaButton({
   const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     if (opensModal) {
       event.preventDefault();
-      openStateSelectModal();
+      openStateSelectModal(letter);
     }
     onClick?.(event as React.MouseEvent<HTMLButtonElement>);
   };

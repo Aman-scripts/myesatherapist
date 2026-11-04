@@ -132,6 +132,13 @@ export interface StateData {
   card2Title?: string;
   card2Items?: Array<{ title: string; description: string }>;
   legalNotice?: string;
+  housingRequests?: {
+    mayRequestTitle: string;
+    mayRequestIntro: string;
+    mayRequestItems: string[];
+    cannotRequestTitle: string;
+    cannotRequestItems: string[];
+  };
   scamsTitle?: string;
   scamsSubtitle?: string;
   scamsAlertTitle?: string;
@@ -3697,15 +3704,17 @@ export const STATES_DATA: Record<string, StateData> = {
         title: "ESA Fees & Property Damage",
         description: "Florida law generally prohibits landlords from charging pet-related fees or deposits for emotional support animals. However, ESA owners can still be held financially responsible for damage caused by the animal to property or people on the premises.",
       },
-      {
-        title: "What Florida Housing Providers May Request",
-        description: "If a disability is not readily apparent, a housing provider may request reliable information that reasonably supports the request, including: documentation from a health care practitioner as defined under Florida law, including a telehealth provider licensed within the state of Florida; an out-of-state practitioner must be in good standing and must have provided in-person care or services to the tenant on at least one occasion; the practitioner must also have personal knowledge of the person’s disability and act within the scope of their practice; information describing how the specific animal provides assistance or therapeutic emotional support related to the person’s disability; and proof of compliance with state or local licensing and vaccination requirements (e.g., rabies vaccination for dogs).",
-      },
-      {
-        title: "What Housing Providers Cannot Request",
-        description: "Details about a specific diagnosis or severity of a disability. Access to patient medical records. A specific form, notarized statement, or mandatory process. Denial solely because a tenant did not use a preferred form or method for providing the ESA letter.",
-      },
     ],
+    housingRequests: {
+      mayRequestTitle: "What Florida Housing Providers May Request",
+      mayRequestIntro:
+        "If a disability is not readily apparent, a housing provider may request reliable information that reasonably supports the request, including documentation from a health care practitioner as defined under Florida law, including a telehealth provider licensed within the state of Florida. An out-of-state practitioner must be in good standing and must have provided in-person care or services to the tenant on at least one occasion. The practitioner must also have personal knowledge of the person’s disability and act within the scope of their practice. Information describing how the specific animal provides assistance or therapeutic emotional support related to the person’s disability. Proof of compliance with state or local licensing and vaccination requirements (e.g., rabies vaccination for dogs).",
+      mayRequestItems: [],
+      cannotRequestTitle: "What Housing Providers Cannot Request",
+      cannotRequestItems: [
+        "Details about a specific diagnosis or severity of a disability. Access to patient medical records. A specific form, notarized statement, or mandatory process. Denial solely because a tenant did not use a preferred form or method for providing the ESA letter.",
+      ],
+    },
     legalNotice: "Under ESA laws in Florida and federal regulations, emotional support animals are protected in housing but do not have the same public access rights as service animals. ESAs are generally not allowed in restaurants, stores, or other public areas where pets are restricted. An ESA letter provides protections for your ESA at home, not in public facilities.",
     scamsTitle: "Florida ESA Scams: What’s Real vs. Fake",
     scamsSubtitle: "Protect yourself from ESA scams in Florida by learning what’s legally required and what’s simply a marketing gimmick. Knowing the difference can save you money and ensure your emotional support animal letter is legitimate, saving you hassle come move-in day.",
@@ -3962,6 +3971,7 @@ export const STATES_DATA: Record<string, StateData> = {
       { id: "reviews", label: "What Do ESA Owners Say About Their Experience?" },
       { id: "benefits", label: "What Benefits Can I Get From an ESA Letter in Florida?" },
       { id: "laws", label: "What Are My ESA Housing Rights in Florida?" },
+      { id: "housing-requests", label: "What Florida Housing Providers May Request" },
       { id: "scams", label: "What Should I Avoid When Applying for an ESA Letter?" },
       { id: "psd-vs-esa", label: "Psychiatric Service Dogs vs. Emotional Support Animals in Florida" },
       { id: "trusted-reviews", label: "Trusted by Thousands of ESA Owners in Florida" },

@@ -608,12 +608,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                 <h3 className="heading-h3 text-background">
                   {sec.ctaBox.heading}
                 </h3>
-                <p className="body-large text-background/90 max-w-[540px]">
+                <p className="body-text text-background/90 max-w-[540px]">
                   {sec.ctaBox.description}
                 </p>
                 <div className="pt-2 sm:pt-3">
                   <CtaButton
                     href={sec.ctaBox.buttonHref}
+                    stateModal
                     variant="accent"
                   >
                     {sec.ctaBox.buttonText}
@@ -673,12 +674,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             <h3 className="heading-h3 text-background">
               {article.cta.heading}
             </h3>
-            <p className="body-large text-background/90 max-w-[540px]">
+            <p className="body-text text-background/90 max-w-[540px]">
               {article.cta.description}
             </p>
             <div className="pt-2 sm:pt-3">
               <CtaButton
                 href={article.cta.buttonHref}
+                stateModal
                 variant="accent"
               >
                 {article.cta.buttonText}

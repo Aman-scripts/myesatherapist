@@ -115,11 +115,11 @@ function EvaluationFormCard({
     >
       <div className={`text-center ${compact || tight ? "mb-4" : "mb-[30px]"}`}>
         {titleAs === "h2" ? (
-          <h2 className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
+          <h2 className={`font-heading font-bold text-primary ${compact ? "" : "text-[36px] leading-[44px]"}`}>
             Start Your Evaluation
           </h2>
         ) : (
-          <p className={`font-heading font-bold text-primary ${compact ? "text-[24px] leading-[32px]" : "text-[36px] leading-[44px]"}`}>
+          <p className={`font-heading font-bold text-primary ${compact ? "" : "text-[36px] leading-[44px]"}`}>
             Start Your Evaluation
           </p>
         )}
@@ -403,6 +403,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
               handleSubmit={handleSubmit}
               errors={errors}
               compact
+              titleAs="h2"
             />
           </div>
         </div>
