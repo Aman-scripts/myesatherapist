@@ -6,6 +6,7 @@ import Link from "next/link";
 
 interface StateReviewerBannerProps {
   reviewerName?: string;
+  reviewLabel?: string;
   updatedDate?: string;
   reviewerImage?: string;
   reviewerHref?: string;
@@ -28,6 +29,7 @@ const REVIEWER_PROFILES: Record<string, { href: string; linkedin: string }> = {
 
 export function StateReviewerBanner({
   reviewerName = "Robert Staaf",
+  reviewLabel = "Content reviewed by",
   updatedDate = "November 3, 2026",
   reviewerImage = "/images/doctors/robert-staff-dr.webp",
   reviewerHref,
@@ -69,7 +71,7 @@ export function StateReviewerBanner({
                   quality={90}
                   loading="lazy"
                   src={reviewerImage}
-                  alt={`Content reviewed by ${reviewerName}`}
+                  alt={`${reviewLabel} ${reviewerName}`}
                   fill
                   className="object-cover object-center"
                   sizes="89px"
@@ -81,7 +83,7 @@ export function StateReviewerBanner({
                   quality={90}
                   loading="lazy"
                   src={reviewerImage}
-                  alt={`Content reviewed by ${reviewerName}`}
+                  alt={`${reviewLabel} ${reviewerName}`}
                   fill
                   className="object-cover object-center"
                   sizes="89px"
@@ -92,7 +94,7 @@ export function StateReviewerBanner({
             {/* Text details */}
             <div className="flex flex-col items-center sm:items-start space-y-1 sm:space-y-1.5">
               <h3 className="font-heading font-bold text-xl sm:text-[22px] lg:text-[24px] leading-tight sm:leading-[32px] text-background flex flex-wrap items-center justify-center sm:justify-start gap-x-2 gap-y-1">
-                <span>Content reviewed by</span>
+                <span>{reviewLabel}</span>
                 {profileHref ? (
                   <Link
                     prefetch={false}

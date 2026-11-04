@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { EXTRA_STATE_LAWS } from "@/data/esaLawsByState";
 
 interface StateLawEntry {
@@ -8,6 +9,8 @@ interface StateLawEntry {
   icon?: string;
   abbr?: string;
   bullets: string[];
+  guideHref?: string;
+  guideLabel?: string;
 }
 
 const STATE_LAWS: StateLawEntry[] = [
@@ -20,6 +23,8 @@ const STATE_LAWS: StateLawEntry[] = [
       "Penalty for misrepresentation: Under Ala. Code §§ 24-8A-4 and 24-8A-5 (Act 2018-235), intentionally misrepresenting a disability-related need for an assistance animal in housing, falsifying documentation, or providing a false document can bring a $500 civil penalty or a Class C misdemeanor for a first offense, and a Class B misdemeanor for later offenses.",
       "HUD update and Alabama impact: HUD withdrew its prior 2013 and 2020 assistance-animal guidance on May 22, 2026. This does not eliminate FHA housing protections in Alabama. Alabama housing providers must still apply the FHA’s reasonable-accommodation requirements, while the state’s assistance-animal law continues to address documentation and misrepresentation issues.",
     ],
+    guideHref: "/esa-laws/alabama/",
+    guideLabel: "Alabama ESA Laws",
   },
   {
     slug: "california",
@@ -289,6 +294,15 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
               </li>
             ))}
           </ul>
+          {entry.guideHref && entry.guideLabel ? (
+            <Link
+              prefetch={false}
+              href={entry.guideHref}
+              className="mt-1 font-sans font-semibold text-[16px] leading-[24px] text-primary underline underline-offset-4 transition-colors hover:text-[#8A6A0B]"
+            >
+              {entry.guideLabel}
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>
