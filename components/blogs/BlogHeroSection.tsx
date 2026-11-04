@@ -29,10 +29,10 @@ export function BlogHeroSection({
         <BreakpointImage
           media="(min-width: 1024px)"
           quality={90}
-          src="/blogs/blogs-internal-page-common.webp"
+          src="/blogs/blog_hero_section_innteralpage.png"
           alt=""
           fill
-          className="object-cover object-right"
+          className="object-cover object-center"
           sizes="100vw"
         />
       </div>
