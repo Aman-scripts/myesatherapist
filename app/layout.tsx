@@ -50,17 +50,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
-  title: "ESA Letter from Licensed Therapists | My ESA Therapist",
+  title: "ESA Evaluations by Licensed Therapists- My ESA Therapist",
   description:
-    "Get an ESA letter online after an evaluation with a state-licensed therapist. Secure telehealth, transparent pricing, and a published refund policy.",
+    "Connect with state licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
   authors: [{ name: "My ESA Therapist" }],
   icons: {
     icon: [
@@ -78,9 +71,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "ESA Letter from Licensed Therapists | My ESA Therapist",
+    title: "ESA Evaluations by Licensed Therapists- My ESA Therapist",
     description:
-      "Get an ESA letter online after an evaluation with a state-licensed therapist. Secure telehealth and transparent pricing.",
+      "Connect with state licensed mental health professionals for legitimate ESA Letter evaluations conducted through secure telehealth.",
     url: "https://myesatherapist.com/",
     siteName: "My ESA Therapist",
     locale: "en_US",
@@ -88,7 +81,7 @@ export const metadata: Metadata = {
     images: defaultSocial.openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     images: defaultSocial.twitter,

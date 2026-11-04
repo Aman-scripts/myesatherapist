@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -10,7 +11,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { blogSchema } from "@/data/schemas/blogSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
   description:
     "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
@@ -28,12 +29,12 @@ export const metadata: Metadata = {
       "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
     url: "https://myesatherapist.com/blog/",
     siteName: "My ESA Therapist",
-    type: "website",
+    type: "article",
     locale: "en_US",
     images: socialImage("blog-hub-page", "Resource hub for emotional support animals").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
       "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
     images: socialImage("blog-hub-page", "Resource hub for emotional support animals").twitter,
   },
-};
+});
 
 
 export default function BlogHubPage() {

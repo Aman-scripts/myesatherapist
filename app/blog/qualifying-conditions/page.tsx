@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -14,7 +15,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 // Schema.org Structured Data
 import { qualifyingConditionsSchemas } from "@/data/schemas/qualifyingConditionsSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Qualifying Conditions: What Conditions May Qualify? | My ESA Therapist",
   description:
     "Explore mental health conditions that may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, and panic disorder. Learn about ESA eligibility.",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
       "Explore mental health conditions that may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, and panic disorder. Learn about ESA eligibility.",
     url: "https://myesatherapist.com/blog/qualifying-conditions/",
     siteName: "My ESA Therapist",
-    type: "website",
+    type: "article",
     locale: "en_US",
   },
   twitter: {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "Explore mental health conditions that may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, and panic disorder. Learn about ESA eligibility.",
   },
-};
+});
 
 const qualifyingConditionsFaqs = [
   {

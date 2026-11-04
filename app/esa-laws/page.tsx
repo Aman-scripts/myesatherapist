@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -15,7 +16,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { esaLawsSchema } from "@/data/schemas/esaLawsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
   description:
     "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     images: socialImage("esa-laws", "Emotional support animal laws by state").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
       "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",
     images: socialImage("esa-laws", "Emotional support animal laws by state").twitter,
   },
-};
+});
 
 
 export default function EsaLawsPage() {

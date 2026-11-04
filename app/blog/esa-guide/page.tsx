@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -21,7 +22,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { esaGuideSchemas } from "@/data/schemas/esaGuideSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
   description:
     "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
@@ -31,9 +32,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    "max-snippet": -1,
     "max-image-preview": "large",
-    "max-video-preview": -1,
   },
   openGraph: {
     title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
@@ -41,12 +40,12 @@ export const metadata: Metadata = {
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
     url: "https://myesatherapist.com/blog/esa-guide/",
     siteName: "My ESA Therapist",
-    type: "website",
+    type: "article",
     locale: "en_US",
     images: socialImage("esa-guide", "Couple and dog exploring ESA guidance").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
     images: socialImage("esa-guide", "Couple and dog exploring ESA guidance").twitter,
   },
-};
+});
 
 const esaGuideFaqs = [
   {

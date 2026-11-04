@@ -14,7 +14,7 @@ import { BlogMoreResources } from "@/components/blogs/BlogMoreResources";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { getBlogBySlug, getAllBlogs } from "@/data/blogsData";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
-import { fitDescription, fitMetaTitle } from "@/lib/seo";
+import { applySheetSeo } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{
@@ -36,18 +36,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = getBlogBySlug(slug);
 
   if (!article || article.categorySlug !== "qualifying-conditions") {
-    return {
+    return applySheetSeo({
       title: "Article Not Found | My ESA Therapist",
-    };
+    });
   }
 
-  const title = fitMetaTitle(article.metaTitle || `${article.title} | My ESA Therapist`);
-  const description = fitDescription(article.metaDescription || article.shortDescription);
+  const title = article.metaTitle || `${article.title} | My ESA Therapist`;
+  const description = article.metaDescription || article.shortDescription;
   const imageKey = `blog-${article.slug}`;
   const image = hasSocialImage(imageKey) ? socialImage(imageKey, article.title) : null;
-  const socialDescription = article.ogDescription || description;
+  const socialDescription = description;
 
-  return {
+  return applySheetSeo({
     title,
     description,
     robots: {
@@ -70,14 +70,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: image ? image.openGraph : [{ url: article.cardImage, alt: article.title }],
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary",
+      card: "summary",
       title,
       description: socialDescription,
       site: "@MyESATherapist",
       creator: "@MyESATherapist",
       ...(image && { images: image.twitter }),
     },
-  };
+  });
 }
 
 export default async function QualifyingConditionsBlogPage({ params }: PageProps) {

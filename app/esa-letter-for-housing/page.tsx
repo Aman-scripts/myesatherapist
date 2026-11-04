@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -26,7 +27,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { esaLetterForHousingSchemas } from "@/data/schemas/esaLetterForHousingSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
   description:
     "Facing 'no-pet' housing rules? Get an FHA-compliant ESA letter for housing online from a licensed therapist. Secure, confidential and pay only if approved.",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     images: socialImage("esa-letter-for-housing", "Pet-friendly home comfort").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
       "Facing 'no-pet' housing rules? Get an FHA-compliant ESA letter for housing online from a licensed therapist. Secure, confidential and pay only if approved.",
     images: socialImage("esa-letter-for-housing", "Pet-friendly home comfort").twitter,
   },
-};
+});
 
 const HOUSING_FAQS = [
   {

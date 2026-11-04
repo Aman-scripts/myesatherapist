@@ -1,7 +1,68 @@
 import type { Metadata } from "next";
+import { SEO_SETTINGS, sheetRobots } from "@/data/seoSettings";
 
 export const SITE_NAME = "My ESA Therapist";
 export const TWITTER_HANDLE = "@MyESATherapist";
+
+/**
+ * Served URLs that moved, keyed to the spreadsheet pathname.
+ * Canonical stays on the URL this app actually renders.
+ */
+const SHEET_PATH_ALIASES: Record<string, string> = {
+  "/telehealth-consent/": "/consent-for-telehealth/",
+  "/esa-doctors/dr-robert-staaf/": "/esa-doctors/dr-robert-staff/",
+  "/contributors/allyson-valley/": "/author/allyson-valley/",
+  "/contributors/mohammed-ziauddin/": "/author/mohammed-ziauddin/",
+  "/contributors/kiera-conrad/": "/author/kiera-conrad/",
+};
+
+/**
+ * Overlay title, description, robots, Open Graph, and Twitter fields from the
+ * SEO spreadsheet. A blank sheet description is left alone (those cells are
+ * unfinished in the source sheet). Images already set on the page are kept.
+ */
+export function applySheetSeo(metadata: Metadata): Metadata {
+  const canonical = metadata.alternates?.canonical;
+  if (typeof canonical !== "string" || !canonical) return metadata;
+
+  let pathname = "";
+  try {
+    pathname = new URL(canonical).pathname;
+  } catch {
+    return metadata;
+  }
+
+  const row = SEO_SETTINGS[pathname] ?? SEO_SETTINGS[SHEET_PATH_ALIASES[pathname] ?? ""];
+  if (!row) return metadata;
+
+  const description = row.description.trim() ? row.description : undefined;
+  const openGraph = metadata.openGraph ?? {};
+  const twitter = metadata.twitter ?? {};
+
+  return {
+    ...metadata,
+    title: row.title,
+    description: description ?? metadata.description,
+    robots: sheetRobots(row.robots),
+    openGraph: {
+      ...openGraph,
+      title: row.title,
+      ...(description ? { description } : {}),
+      url: typeof openGraph.url === "string" ? openGraph.url : canonical,
+      siteName: SITE_NAME,
+      locale: "en_US",
+      type: row.ogType,
+    },
+    twitter: {
+      ...twitter,
+      card: "summary",
+      title: row.title,
+      ...(description ? { description } : {}),
+      site: TWITTER_HANDLE,
+      creator: TWITTER_HANDLE,
+    },
+  };
+}
 
 /** One customer-facing statement. Matches the Refund Policy: payment is for the evaluation, not an outcome. */
 export const CHARGE_AND_REFUND =
@@ -61,7 +122,7 @@ export function pageSocial(options: {
       ...(options.images ? { images: options.images.openGraph } : {}),
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title: options.title,
       description: options.description,
       site: TWITTER_HANDLE,

@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -25,7 +26,7 @@ import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { psdLetterSchema } from "@/data/schemas/psdLetterSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
   description:
     "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     images: socialImage("psd-letter", "Woman and service dog in sunlit comfort").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
       "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",
     images: socialImage("psd-letter", "Woman and service dog in sunlit comfort").twitter,
   },
-};
+});
 
 const PSD_FAQS: FaqItem[] = [
   {

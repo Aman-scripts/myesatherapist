@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -14,7 +15,7 @@ import { AUTHORS, REVIEWERS, CONTRIBUTORS_FAQS } from "@/data/contributorsData";
 // Schema.org Structured Data
 import { contributorsSchemas } from "@/data/schemas/contributorsSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "My ESA Therapist Contributors: Authors & Reviewers",
   description:
     "Meet the authors, medical reviewers, and legal reviewers who contribute to My ESA Therapist’s educational content about emotional support animals, ESA letters, and housing.",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     description:
       "Meet the authors, medical reviewers, and legal reviewers who contribute to My ESA Therapist’s educational content about emotional support animals, ESA letters, and housing.",
   },
-};
+});
 
 export default function ContributorsPage() {
   return (

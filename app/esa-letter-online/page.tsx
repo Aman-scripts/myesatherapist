@@ -25,13 +25,13 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 import { esaLetterOnlineSchema } from "@/data/schemas/esaLetterOnlineSchema";
-import { pageSocial } from "@/lib/seo";
+import { pageSocial, applySheetSeo } from "@/lib/seo";
 
 const ONLINE_TITLE = "ESA Letter Online From Licensed Therapist | My ESA Therapist";
 const ONLINE_DESCRIPTION =
   "Get an ESA letter online after a confidential evaluation with a licensed mental health professional. Start from home.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: ONLINE_TITLE,
   description: ONLINE_DESCRIPTION,
   alternates: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-letter-online/",
     images: socialImage("esa-letter-online", "Cozy telehealth call with a golden retriever"),
   }),
-};
+});
 
 export default function EsaLetterOnlinePage() {
   return (

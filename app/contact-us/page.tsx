@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -9,7 +10,7 @@ import { ContactMap } from "@/components/contact/ContactMap";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { contactUsSchemas } from "@/data/schemas/contactUsSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Connect With Our Customer Support Team | My ESA Therapist",
   description:
     "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     description:
       "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",
   },
-};
+});
 
 export default function ContactUsPage() {
   return (

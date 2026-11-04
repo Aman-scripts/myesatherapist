@@ -15,14 +15,14 @@ import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { pricingSchema } from "@/data/schemas/pricingSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
-import { CHARGE_AND_REFUND, pageSocial } from "@/lib/seo";
+import { CHARGE_AND_REFUND, pageSocial, applySheetSeo } from "@/lib/seo";
 
-const PRICING_TITLE = "ESA Letter Cost in 2026";
+const PRICING_TITLE = "How Much Does an ESA Letter Cost in 2026? | My ESA Therapist";
 const PRICING_DESCRIPTION =
-  "See ESA letter pricing, what each plan includes, and when your card is charged. No ID cards and no hidden fees.";
+  "Discover ESA letter pricing, what's included, and how the evaluation works. Transparent costs with licensed professionals no hidden fees.";
 
-export const metadata: Metadata = {
-  title: `${PRICING_TITLE} | My ESA Therapist`,
+export const metadata: Metadata = applySheetSeo({
+  title: PRICING_TITLE,
   description: PRICING_DESCRIPTION,
   alternates: {
     canonical: "https://myesatherapist.com/pricing/",
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
     "max-video-preview": -1,
   },
   ...pageSocial({
-    title: `${PRICING_TITLE} | My ESA Therapist`,
+    title: PRICING_TITLE,
     description: PRICING_DESCRIPTION,
     url: "https://myesatherapist.com/pricing/",
     images: socialImage("esa-letter-cost", "ESA letter cost"),
   }),
-};
+});
 
 
 const PRICING_FAQS: FaqItem[] = [

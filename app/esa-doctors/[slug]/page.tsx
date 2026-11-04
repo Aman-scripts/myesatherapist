@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -30,9 +31,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const doctor = getDoctorBySlug(slug);
 
   if (!doctor) {
-    return {
+    return applySheetSeo({
       title: "Doctor Profile Not Found | My ESA Therapist",
-    };
+    });
   }
 
   const title = doctor.metaTitle || `${doctor.name} - ${doctor.title} | My ESA Therapist`;
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     "max-video-preview": -1,
   };
 
-  return {
+  return applySheetSeo({
     title,
     description,
     robots: {
@@ -80,7 +81,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function DoctorInternalPage({ params }: PageProps) {

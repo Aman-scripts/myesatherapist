@@ -3,7 +3,7 @@ import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { socialImage, hasSocialImage, withFeatureImage } from "@/data/socialImages";
-import { fitDescription, pageSocial, statePageTitle } from "@/lib/seo";
+import { pageSocial, applySheetSeo } from "@/lib/seo";
 import { STATES_DATA, getStateData } from "@/data/statesData";
 import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
@@ -38,10 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = getStateData(state);
 
   if (!data) {
-    return {
+    return applySheetSeo({
       title: "State Page Not Found | My ESA Therapist",
       description: "The requested state ESA page could not be found.",
-    };
+    });
   }
 
   const canonicalUrl = `https://myesatherapist.com/esa-letter-${data.slug}/`;
@@ -50,17 +50,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     (item: any) => item["@type"] === "WebPage"
   );
 
-  const title = statePageTitle(data.name, data.slug);
-  const description = fitDescription(
+  const title = data.metaTitle;
+  const description =
     data.metaDescription ||
-      webPageSchema?.description ||
-      `Get an ESA letter in ${data.name} from a ${data.name}-licensed therapist. Secure telehealth evaluation and transparent pricing.`,
-  );
+    webPageSchema?.description ||
+    `Get an ESA letter in ${data.name} from a ${data.name}-licensed therapist. Secure telehealth evaluation and transparent pricing.`;
 
   const imageKey = `state-${data.slug}`;
   const image = hasSocialImage(imageKey) ? socialImage(imageKey, `ESA letter in ${data.name}`) : null;
 
-  return {
+  return applySheetSeo({
     title,
     description,
     robots: {
@@ -79,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonicalUrl,
       images: image ?? undefined,
     }),
-  };
+  });
 }
 
 export async function generateStaticParams() {

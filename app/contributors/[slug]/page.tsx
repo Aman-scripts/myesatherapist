@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { notFound } from "next/navigation";
@@ -25,9 +26,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const author = getAuthorBySlug(slug);
 
   if (!author) {
-    return {
+    return applySheetSeo({
       title: "Author Not Found | My ESA Therapist",
-    };
+    });
   }
 
   const title = author.metaTitle || `${author.name} - ${author.title} | My ESA Therapist`;
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       : author.bioParagraphs[0];
   const canonicalUrl = `https://myesatherapist.com/contributors/${author.slug}/`;
 
-  return {
+  return applySheetSeo({
     title,
     description,
     robots: {
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function ContributorProfilePage({ params }: PageProps) {

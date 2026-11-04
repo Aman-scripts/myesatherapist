@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -8,7 +9,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Editorial Policy | My ESA Therapist",
   description:
     "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
   },
-};
+});
 
 export default function EditorialPolicyPage() {
   const policy = getPolicyBySlug("editorial-policy");

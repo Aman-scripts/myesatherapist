@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -16,7 +17,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { aboutUsSchema } from "@/data/schemas/aboutUsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "About My ESA Therapist | Licensed ESA Evaluations You Can Trust",
   description:
     "Learn how My ESA Therapist provides legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     images: socialImage("about-us", "About My ESA Therapist").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "About My ESA Therapist | Licensed ESA Evaluations You Can Trust",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
       "Learn how My ESA Therapist provides legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.",
     images: socialImage("about-us", "About My ESA Therapist").twitter,
   },
-};
+});
 
 
 const ABOUT_FAQS: FaqItem[] = [

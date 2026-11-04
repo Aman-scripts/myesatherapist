@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -8,7 +9,7 @@ import { LegalReviewerContent } from "@/components/legal-reviewer/LegalReviewerC
 // Schema.org Structured Data
 import { awaisArshadSchemas } from "@/data/schemas/awaisArshadSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Awais Arshad – Legal Reviewer | My ESA Therapist",
   description:
     "Meet Awais Arshad, Legal Reviewer at My ESA Therapist. Learn about his role in reviewing legal and housing-related content concerning emotional support animals and ESA laws.",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "Meet Awais Arshad, Legal Reviewer at My ESA Therapist. Learn about his role in reviewing legal and housing-related content concerning emotional support animals and ESA laws.",
   },
-};
+});
 
 export default function AwaisArshadContributorPage() {
   return (

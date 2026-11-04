@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -24,28 +25,28 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
   const { slug } = await params;
 
   if (slug === "privacy-policy") {
-    return {
+    return applySheetSeo({
       title: "Privacy Policy | My ESA Therapist Data Protection & Security",
       description: "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
       alternates: {
         canonical: "https://myesatherapist.com/privacy-policy/",
       },
-    };
+    });
   }
 
   if (slug === "terms-of-use") {
-    return {
+    return applySheetSeo({
       title: "Terms of Use | My ESA Therapist Legal & Service Policies",
       description:
         "Read the Terms of Use for My ESA Therapist, including service policies, user responsibilities, payments, and ESA evaluation guidelines.",
       alternates: {
         canonical: "https://myesatherapist.com/terms-of-use/",
       },
-    };
+    });
   }
 
   if (slug === "disclaimer" || slug === "disclaimer-and-policies") {
-    return {
+    return applySheetSeo({
       title: "Disclaimer | My ESA Therapist",
       description:
         "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
@@ -57,11 +58,11 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       alternates: {
         canonical: "https://myesatherapist.com/disclaimer/",
       },
-    };
+    });
   }
 
   if (slug === "hipaa-compliance") {
-    return {
+    return applySheetSeo({
       title: "HIPAA Compliance & Data Privacy | My ESA Therapist",
       description:
         "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
@@ -73,11 +74,11 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       alternates: {
         canonical: "https://myesatherapist.com/hipaa-compliance/",
       },
-    };
+    });
   }
 
   if (slug === "refund-policy") {
-    return {
+    return applySheetSeo({
       title: "Refund & Cancellation Policy | My ESA Therapist",
       description:
         "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
@@ -89,11 +90,11 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       alternates: {
         canonical: "https://myesatherapist.com/refund-policy/",
       },
-    };
+    });
   }
 
   if (slug === "consent-for-telehealth") {
-    return {
+    return applySheetSeo({
       title: "Consent for Telehealth | My ESA Therapist",
       description:
         "Review My ESA Therapist’s telehealth consent information, including virtual care, communication, privacy, and important considerations before receiving services online.",
@@ -105,11 +106,11 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       alternates: {
         canonical: "https://myesatherapist.com/telehealth-consent/",
       },
-    };
+    });
   }
 
   if (slug === "editorial-policy") {
-    return {
+    return applySheetSeo({
       title: "Editorial Policy | My ESA Therapist",
       description:
         "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
@@ -121,11 +122,11 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       alternates: {
         canonical: "https://myesatherapist.com/editorial-policy/",
       },
-    };
+    });
   }
 
   if (slug === "accessibility-statement") {
-    return {
+    return applySheetSeo({
       title: "Accessibility Statement | My ESA Therapist",
       description:
         "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
@@ -137,22 +138,22 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       alternates: {
         canonical: "https://myesatherapist.com/accessibility-statement/",
       },
-    };
+    });
   }
 
   const policy = getPolicyBySlug(slug);
 
   if (!policy) {
-    return {
+    return applySheetSeo({
       title: "Policy Not Found | My ESA Therapist",
-    };
+    });
   }
 
   const title = `${policy.pageTitle} | My ESA Therapist`;
   const description = policy.lede || `${policy.pageTitle} for My ESA Therapist. Learn how we handle evaluations, privacy, and client documentation.`;
   const canonicalUrl = `https://myesatherapist.com/policies/${policy.slug}/`;
 
-  return {
+  return applySheetSeo({
     title,
     description,
     alternates: {
@@ -167,13 +168,13 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       siteName: "My ESA Therapist",
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       site: "@MyESATherapist",
       creator: "@MyESATherapist",
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function PolicyPage({ params }: PolicyPageProps) {

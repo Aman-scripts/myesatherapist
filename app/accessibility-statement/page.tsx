@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -8,7 +9,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Accessibility Statement | My ESA Therapist",
   description:
     "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
   },
-};
+});
 
 export default function AccessibilityStatementPage() {
   const policy = getPolicyBySlug("accessibility-statement");

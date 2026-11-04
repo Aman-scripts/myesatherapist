@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -8,7 +9,7 @@ import { MaxPhillipsReviewerContent } from "@/components/legal-reviewer/MaxPhill
 // Schema.org Structured Data
 import { maxPhillipsSchemas } from "@/data/schemas/maxPhillipsSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Max Phillips – Medical Reviewer | My ESA Therapist",
   description:
     "Meet Max Phillips, Medical Reviewer at My ESA Therapist. Learn about his role in reviewing health and mental health content related to emotional support animals and ESA evaluations.",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "Meet Max Phillips, Medical Reviewer at My ESA Therapist. Learn about his role in reviewing health and mental health content related to emotional support animals and ESA evaluations.",
   },
-};
+});
 
 export default function MaxPhillipsContributorPage() {
   return (

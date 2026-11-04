@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -26,7 +27,7 @@ import {
 // Schema.org Structured Data
 import { esaLawsAlabamaSchemas } from "@/data/schemas/esaLawsAlabamaSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Alabama ESA Laws: Rules for Tenants & Landlords | My ESA Therapist",
   description:
     "Learn Alabama ESA laws, FHA housing protections, ESA letter requirements, tenant rights, landlord rules, fees, and assistance animal regulations.",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     description:
       "Learn Alabama ESA laws, FHA housing protections, ESA letter requirements, tenant rights, landlord rules, fees, and assistance animal regulations.",
   },
-};
+});
 
 // BlogArticleContent only reads the body fields (intro, sections, cta, final thoughts).
 const article = {

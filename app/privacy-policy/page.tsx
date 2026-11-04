@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -8,7 +9,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Privacy Policy | My ESA Therapist Data Protection & Security",
   description:
     "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
     url: "https://myesatherapist.com/privacy-policy/",
-    type: "website",
+    type: "article",
     locale: "en_US",
     siteName: "My ESA Therapist",
   },
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
   },
-};
+});
 
 export default function PrivacyPolicyPage() {
   const policy = getPolicyBySlug("privacy-policy");

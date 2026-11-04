@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -8,7 +9,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "HIPAA Compliance & Data Privacy | My ESA Therapist",
   description:
     "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
     url: "https://myesatherapist.com/hipaa-compliance/",
-    type: "website",
+    type: "article",
     locale: "en_US",
     siteName: "My ESA Therapist",
   },
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
   },
-};
+});
 
 export default function HipaaCompliancePage() {
   const policy = getPolicyBySlug("hipaa-compliance");

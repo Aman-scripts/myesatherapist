@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -10,7 +11,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 // Schema.org Structured Data
 import { frequentlyAskedQuestionsSchemas } from "@/data/schemas/frequentlyAskedQuestionsSchema";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Frequently Asked Questions About ESA Letters | My ESA Therapist",
   description:
     "Find answers to frequently asked questions about ESA letters, eligibility, the evaluation process, housing accommodations, and emotional support animals.",
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    "max-snippet": -1,
     "max-image-preview": "large",
-    "max-video-preview": -1,
   },
   openGraph: {
     title: "Frequently Asked Questions About ESA Letters | My ESA Therapist",
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "Find answers to frequently asked questions about ESA letters, eligibility, the evaluation process, housing accommodations, and emotional support animals.",
   },
-};
+});
 
 export default function FaqPage() {
   return (

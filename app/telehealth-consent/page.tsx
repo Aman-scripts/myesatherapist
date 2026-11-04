@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -10,7 +11,7 @@ import { Footer } from "@/components/layout/Footer";
 
 const CANONICAL = "https://myesatherapist.com/telehealth-consent/";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Consent for Telehealth | My ESA Therapist",
   description:
     "Review My ESA Therapist’s telehealth consent information, including virtual care, communication, privacy, and important considerations before receiving services online.",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "Review My ESA Therapist’s telehealth consent information, including virtual care, communication, privacy, and important considerations before receiving services online.",
   },
-};
+});
 
 export default function TelehealthConsentPage() {
   const policy = getPolicyBySlug("consent-for-telehealth");

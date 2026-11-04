@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -14,7 +15,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { videoTestimonialsSchemas } from "@/data/schemas/videoTestimonialsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
   description:
     "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     images: socialImage("video-testimonials", "Customer video testimonials").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
       "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",
     images: socialImage("video-testimonials", "Customer video testimonials").twitter,
   },
-};
+});
 
 export default function VideoTestimonialsPage() {
   return (

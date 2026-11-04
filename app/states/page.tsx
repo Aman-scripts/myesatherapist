@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -12,7 +13,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { statesSchema } from "@/data/schemas/statesSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "ESA Evaluations by State | My ESA Therapist",
   description:
     "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     images: socialImage("esa-by-state", "ESA letter by state").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "ESA Evaluations by State | My ESA Therapist",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
       "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",
     images: socialImage("esa-by-state", "ESA letter by state").twitter,
   },
-};
+});
 
 const STATES_FAQS: FaqItem[] = [
   {

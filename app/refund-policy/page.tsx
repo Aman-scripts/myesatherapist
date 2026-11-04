@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -8,7 +9,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Refund & Cancellation Policy | My ESA Therapist",
   description:
     "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
     url: "https://myesatherapist.com/refund-policy/",
-    type: "website",
+    type: "article",
     locale: "en_US",
     siteName: "My ESA Therapist",
   },
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
   },
-};
+});
 
 export default function RefundPolicyPage() {
   const policy = getPolicyBySlug("refund-policy");

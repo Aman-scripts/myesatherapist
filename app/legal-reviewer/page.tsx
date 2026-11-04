@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import { Metadata } from "next";
 import { serializeLd } from "@/lib/site";
 import { TopBanner } from "@/components/layout/TopBanner";
@@ -5,7 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LegalReviewerContent } from "@/components/legal-reviewer/LegalReviewerContent";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Awais Arshad - Legal Reviewer & Attorney | My ESA Therapist",
   description:
     "Awais Arshad is a New York-licensed attorney and legal reviewer at My ESA Therapist with over a decade of experience fact-checking U.S. legal content and ESA regulations.",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "Awais Arshad - Legal Reviewer & Attorney | My ESA Therapist",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
       "Awais Arshad is a New York-licensed attorney and legal reviewer at My ESA Therapist with over a decade of experience fact-checking U.S. legal content and ESA regulations.",
     images: ["https://myesatherapist.com/legal-reviewer/legal-reviwer.webp"],
   },
-};
+});
 
 const legalReviewerSchema = {
   "@context": "https://schema.org",

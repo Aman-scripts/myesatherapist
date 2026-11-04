@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 import { reviewsSchema } from "@/data/schemas/reviewsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
   description:
     "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     images: socialImage("customer-reviews", "Five-star customer reviews").openGraph,
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
     title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
       "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",
     images: socialImage("customer-reviews", "Five-star customer reviews").twitter,
   },
-};
+});
 
 
 export default function ReviewsPage() {

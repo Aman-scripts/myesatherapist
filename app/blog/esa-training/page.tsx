@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import type { Metadata } from "next";
@@ -23,38 +24,36 @@ import { CtaBanner } from "@/components/home/CtaBanner";
 // Schema.org Structured Data
 import { esaTrainingSchemas } from "@/data/schemas/esaTrainingSchema";
 
-export const metadata: Metadata = {
-  title: "Does Your ESA Actually Need Training? | My ESA Therapist",
+export const metadata: Metadata = applySheetSeo({
+  title: "ESA Training: Commands, Tips & Guides | My ESA Therapist",
   description:
-    "Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.",
+    "Explore our full library of ESA training guides from HUD rules and legal requirements to breed-specific tips, FAQs, and expert advice, updated for 2026.",
   alternates: {
     canonical: "https://myesatherapist.com/blog/esa-training/",
   },
   robots: {
     index: true,
     follow: true,
-    "max-snippet": -1,
     "max-image-preview": "large",
-    "max-video-preview": -1,
   },
   openGraph: {
-    title: "Does Your ESA Actually Need Training? | My ESA Therapist",
+    title: "ESA Training: Commands, Tips & Guides | My ESA Therapist",
     description:
-      "Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.",
+      "Explore our full library of ESA training guides from HUD rules and legal requirements to breed-specific tips, FAQs, and expert advice, updated for 2026.",
     url: "https://myesatherapist.com/blog/esa-training/",
     siteName: "My ESA Therapist",
-    type: "website",
+    type: "article",
     locale: "en_US",
   },
   twitter: {
     card: "summary",
     site: "@MyESATherapist",
     creator: "@MyESATherapist",
-    title: "Does Your ESA Actually Need Training? | My ESA Therapist",
+    title: "ESA Training: Commands, Tips & Guides | My ESA Therapist",
     description:
-      "Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.",
+      "Explore our full library of ESA training guides from HUD rules and legal requirements to breed-specific tips, FAQs, and expert advice, updated for 2026.",
   },
-};
+});
 
 const esaTrainingFaqs = [
   {

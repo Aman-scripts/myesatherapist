@@ -1,3 +1,4 @@
+import { applySheetSeo } from "@/lib/seo";
 import React from "react";
 import { serializeLd } from "@/lib/site";
 import { Metadata } from "next";
@@ -8,7 +9,7 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = applySheetSeo({
   title: "Disclaimer | My ESA Therapist",
   description:
     "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
   },
-};
+});
 
 export default function DisclaimerPage() {
   const policy = getPolicyBySlug("disclaimer-and-policies") || getPolicyBySlug("disclaimer");
