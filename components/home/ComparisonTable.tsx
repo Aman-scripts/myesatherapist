@@ -187,12 +187,12 @@ export function ComparisonTable() {
         {/* Full Spacious Horizontal Row Layout with scaling     */}
         {/* ---------------------------------------------------- */}
         <DesktopScaleWrapper
-          designWidth={1110}
+          designWidth={1020}
           designHeight={665}
           className="hidden lg:block relative"
         >
-          <div className="relative w-[1110px] pt-[17px] pb-[16px] flex justify-center">
-            <div className="w-[1110px] relative">
+          <div className="relative w-[1020px] pt-[17px] pb-[16px] flex justify-center">
+            <div className="w-[1020px] relative">
               {/* Main Background Frame */}
               <div className="w-full bg-background rounded-[20px] shadow-[0_2px_5.2px_rgba(0,0,0,0.15)] pb-[14px] relative z-0">
                 {/* Header Labels for FEATURES and OTHERS */}
@@ -202,8 +202,8 @@ export function ComparisonTable() {
                       FEATURES
                     </p>
                   </div>
-                  <div className="w-[400px] shrink-0" />
-                  <div className="w-[360px] text-center shrink-0">
+                  <div className="w-[350px] shrink-0" />
+                  <div className="w-[320px] text-center shrink-0">
                     <p className="heading-h3">
                       OTHERS
                     </p>
@@ -232,10 +232,10 @@ export function ComparisonTable() {
                       </div>
 
                       {/* Spacer matches the elevated card width */}
-                      <div className="w-[400px] shrink-0" />
+                      <div className="w-[350px] shrink-0" />
 
                       {/* Others Column */}
-                      <div className="w-[360px] shrink-0 flex items-center justify-start gap-3 pl-5">
+                      <div className="w-[320px] shrink-0 flex items-center justify-start gap-3 pl-5">
                         {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
                         <span className="body-text text-left whitespace-nowrap">
                           {row.others}
@@ -248,7 +248,7 @@ export function ComparisonTable() {
 
               {/* Elevated Center Card sits over the middle spacer */}
               <div
-                className="absolute left-[325px] top-[-17px] bottom-[-16px] w-[400px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
+                className="absolute left-[325px] top-[-17px] bottom-[-16px] w-[350px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
               >
                 <div className="h-[91px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
                   <h3 className="heading-h3 text-background">

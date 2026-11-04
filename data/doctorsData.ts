@@ -124,7 +124,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
       ],
     },
     conditionsSection: {
-      heading: "Conditions Dr. Leslie K. Gamble Reviews",
+      heading: "Dr. Leslie K. Gamble's Areas of Clinical Expertise",
       description:
         "Leslie K. Gamble's clinical training and experience cover a range of mental health concerns, with a focus on the areas she most commonly supports.",
       conditions: [
@@ -352,7 +352,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
       ],
     },
     conditionsSection: {
-      heading: "Conditions Dr. Patel Reviews",
+      heading: "Dr. Patel's Areas of Clinical Expertise",
       description:
         "Dr. Patel considers each patient’s medical history, symptoms, functional needs, and overall health when conducting an evaluation. His clinical approach is informed by evidence-based medicine and individualized patient assessment. Where relevant, he considers the patient’s health needs alongside applicable clinical and state-specific requirements.",
       conditions: [
