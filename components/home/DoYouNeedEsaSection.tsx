@@ -56,7 +56,7 @@ export function DoYouNeedEsaSection() {
             <div className="pt-4 space-y-2">
               <CtaButton href="#how-it-works" variant="accent">Start your ESA Evaluation</CtaButton>
               <p className="body-small">
-                If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+                100% Refund If No ESA Letter Is Issued
               </p>
             </div>
           </div>
@@ -162,7 +162,7 @@ export function DoYouNeedEsaSection() {
           <div className="flex flex-col items-center gap-2 pt-2">
             <CtaButton href="#how-it-works" variant="accent">Start your ESA Evaluation</CtaButton>
             <p className="body-small text-center">
-              If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+              100% Refund If No ESA Letter Is Issued
             </p>
           </div>
         </div>

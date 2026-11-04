@@ -186,7 +186,7 @@ export default async function DynamicStatePage({ params }: Props) {
               title={data.ctaTitle}
               description={data.ctaSubtitle || `Connect with a ${data.name}-licensed mental health professional today for a legitimate, FHA-compliant ESA letter.`}
               note={data.ctaNote}
-              buttonText="Start your Evaluation"
+              buttonText={data.ctaButtonText || "Start your Evaluation"}
               buttonHref="#faq"
               flushBottom
             />

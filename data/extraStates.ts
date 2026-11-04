@@ -965,6 +965,9 @@ export const EXTRA_STATES: Record<string, StateData> = {
         a: "If a request is denied, individuals may ask the housing provider for clarification, review their documentation, or explore guidance related to the Fair Housing Act.",
       },
     ],
+    ctaTitle: "Ready to Start Your Rhode Island ESA Evaluation?",
+    ctaSubtitle: "Connect with a Rhode Island-licensed mental health professional today for a legitimate, FHA-compliant ESA letter evaluation.",
+    ctaButtonText: "Start Your Evaluation",
     tableOfContents: [
       { id: "therapists", label: "Our Licensed Mental Health Professionals" },
       { id: "process", label: "How ESA Letter Process Works in Rhode Island?" },

@@ -31,7 +31,7 @@ export function EsaHousingMoveForward() {
           Start Your Evaluation
         </MaybeStateModalButton>
         <p className="body-small text-background max-w-[640px]">
-          If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+          100% Refund If No ESA Letter Is Issued
         </p>
       </div>
     </section>

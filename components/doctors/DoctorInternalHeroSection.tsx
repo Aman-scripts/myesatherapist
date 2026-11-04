@@ -93,7 +93,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
               Schedule Consultation
             </CtaButton>
             <p className="body-small text-body-text">
-              If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+              100% Refund If No ESA Letter Is Issued
             </p>
           </div>
 
@@ -126,7 +126,7 @@ export function DoctorInternalHeroSection({ doctor }: DoctorInternalHeroSectionP
             </CtaButton>
           </div>
           <p className="body-small text-body-text mt-3">
-            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+            100% Refund If No ESA Letter Is Issued
           </p>
           <div className="relative w-[280px] sm:w-[380px] aspect-[4/5] mt-4">
             <Image

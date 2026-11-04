@@ -42,64 +42,64 @@ const comparisonRows = [
     feature: "Evaluations",
     desktopFeature: "Licensed Evaluations",
     icon: "/esa-icons/Icon-33.svg",
-    myEsa: "Evaluations by state-licensed mental health professionals",
-    others: "May not involve licensed mental health professionals",
+    myEsa: "State-Licensed Evaluations",
+    others: "Unlicensed Providers",
     othersType: "cross",
   },
   {
     feature: "Determination",
     desktopFeature: "Clinical Determination",
     icon: "/esa-icons/Icon-18.svg",
-    myEsa: "Independent clinical evaluation and professional judgment",
-    others: "May offer instant approval without a proper evaluation",
+    myEsa: "Independent Clinical Assessment",
+    others: "No Proper Evaluation",
     othersType: "cross",
   },
   {
     feature: "Telehealth",
     desktopFeature: "Secure Telehealth",
     icon: "/esa-icons/Icon-15.svg",
-    myEsa: "HIPAA-compliant telehealth designed for privacy and security",
-    others: "Privacy and security practices may vary",
+    myEsa: "HIPAA-Compliant Telehealth",
+    others: "Varying Privacy Standards",
     othersType: "warning",
   },
   {
     feature: "Compliance",
     desktopFeature: "Compliance-Focused",
     icon: "/esa-icons/Icon-17.svg",
-    myEsa: "Focused on applicable FHA, HUD, and professional requirements",
-    others: "May not follow applicable guidelines",
+    myEsa: "FHA and HUD Compliance",
+    others: "Guideline Noncompliance",
     othersType: "warning",
   },
   {
     feature: "Transparency",
     desktopFeature: "Transparent Process",
     icon: "/esa-icons/Icon-26.svg",
-    myEsa: "Clear steps and straightforward communication",
-    others: "Process or fees may not always be clear",
+    myEsa: "Clear Evaluation Process",
+    others: "Unclear Process or Fees",
     othersType: "cross",
   },
   {
     feature: "Privacy",
     desktopFeature: "Privacy Protection",
     icon: "/esa-icons/Glyph-3.svg",
-    myEsa: "Personal information is protected through secure systems",
-    others: "Privacy protections may vary",
+    myEsa: "Secure Data Protection",
+    others: "Limited Privacy Protection",
     othersType: "cross",
   },
   {
     feature: "Nationwide",
     desktopFeature: "Nationwide Access",
     icon: "/esa-icons/Icon-24.svg",
-    myEsa: "Licensed providers available across all U.S. states, where allowed",
-    others: "Availability may be limited by location",
+    myEsa: "Nationwide Licensed Providers",
+    others: "Location-Based Availability",
     othersType: "warning",
   },
   {
     feature: "Trust",
     desktopFeature: "Trust & Legitimacy",
     icon: "/esa-icons/Icon-19.svg",
-    myEsa: "Serving clients since 2019 with licensed professionals",
-    others: "Provider credentials or reputation may be unclear",
+    myEsa: "Serving Clients Since 2019",
+    others: "Unverified Provider Credentials",
     othersType: "cross",
   },
 ];
@@ -139,7 +139,7 @@ export function ComparisonTable() {
               {comparisonRows.map((row, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-[minmax(0,1.28fr)_132px_minmax(0,0.86fr)] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-16 sm:h-[114px]"
+                  className="grid grid-cols-[minmax(0,1.28fr)_132px_minmax(0,0.86fr)] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-16 sm:h-[80px]"
                 >
                   <div className="px-2 sm:px-2 flex items-center justify-center text-center min-w-0">
                     <h4 className="font-heading font-bold text-center text-[11px] sm:text-[13px] md:text-sm leading-tight text-primary">{row.feature}</h4>
@@ -169,7 +169,7 @@ export function ComparisonTable() {
             </div>
             <div className="divide-y divide-[#C8B9A7]/25">
               {comparisonRows.map((row, idx) => (
-                <div key={idx} className="h-16 sm:h-[114px] px-1.5 sm:px-2.5 flex flex-col items-center justify-center text-center gap-1">
+                <div key={idx} className="h-16 sm:h-[80px] px-1.5 sm:px-2.5 flex flex-col items-center justify-center text-center gap-1">
                   <GreenCheckIcon />
                   <span className="hidden sm:block font-sans font-medium text-[12px] md:text-[13px] leading-[17px] text-background">
                     {row.myEsa}
@@ -187,23 +187,23 @@ export function ComparisonTable() {
         {/* Full Spacious Horizontal Row Layout with scaling     */}
         {/* ---------------------------------------------------- */}
         <DesktopScaleWrapper
-          designWidth={1440}
+          designWidth={1110}
           designHeight={665}
           className="hidden lg:block relative"
         >
-          <div className="relative w-[1440px] pt-[17px] pb-[16px] flex justify-center">
-            <div className="w-[1440px] relative">
+          <div className="relative w-[1110px] pt-[17px] pb-[16px] flex justify-center">
+            <div className="w-[1110px] relative">
               {/* Main Background Frame */}
               <div className="w-full bg-background rounded-[20px] shadow-[0_2px_5.2px_rgba(0,0,0,0.15)] pb-[14px] relative z-0">
                 {/* Header Labels for FEATURES and OTHERS */}
                 <div className="flex items-center px-[25px] h-[74px]">
-                  <div className="w-[320px] text-center shrink-0">
+                  <div className="w-[300px] text-center shrink-0">
                     <p className="heading-h3">
                       FEATURES
                     </p>
                   </div>
-                  <div className="w-[580px] shrink-0" />
-                  <div className="w-[490px] text-center shrink-0">
+                  <div className="w-[400px] shrink-0" />
+                  <div className="w-[360px] text-center shrink-0">
                     <p className="heading-h3">
                       OTHERS
                     </p>
@@ -211,11 +211,11 @@ export function ComparisonTable() {
                 </div>
 
                 {/* Table Rows */}
-                <div className="divide-y divide-[#C8B9A7]/60 mx-6 border-t border-[#C8B9A7]/60">
+                <div className="divide-y divide-[#C8B9A7]/60 mx-[25px] border-t border-[#C8B9A7]/60">
                   {comparisonRows.map((row, idx) => (
-                    <div key={idx} className="flex items-center h-[60px] px-[25px]">
-                      {/* Features Column: 320px */}
-                      <div className="w-[320px] shrink-0 flex items-center gap-3.5">
+                    <div key={idx} className="flex items-center h-[60px]">
+                      {/* Features Column */}
+                      <div className="w-[300px] shrink-0 flex items-center gap-3.5">
                         <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_1.5px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                           <Image quality={90}
                             src={row.icon}
@@ -231,11 +231,11 @@ export function ComparisonTable() {
                         </span>
                       </div>
 
-                      {/* Empty spacer matching elevated card exactly: 580px */}
-                      <div className="w-[580px] shrink-0" />
+                      {/* Spacer matches the elevated card width */}
+                      <div className="w-[400px] shrink-0" />
 
-                      {/* Others Column: 490px */}
-                      <div className="w-[490px] shrink-0 flex items-center justify-start gap-3 pl-6">
+                      {/* Others Column */}
+                      <div className="w-[360px] shrink-0 flex items-center justify-start gap-3 pl-5">
                         {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
                         <span className="body-text text-left whitespace-nowrap">
                           {row.others}
@@ -246,9 +246,9 @@ export function ComparisonTable() {
                 </div>
               </div>
 
-              {/* Elevated Center Card: MY ESA THERAPIST (teal, precisely aligned over spacer from x=345px to 925px) */}
+              {/* Elevated Center Card sits over the middle spacer */}
               <div
-                className="absolute left-[345px] top-[-17px] bottom-[-16px] w-[580px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
+                className="absolute left-[325px] top-[-17px] bottom-[-16px] w-[400px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
               >
                 <div className="h-[91px] flex items-center justify-center px-4 bg-[#1A3D4F]/35">
                   <h3 className="heading-h3 text-background">
@@ -277,7 +277,7 @@ export function ComparisonTable() {
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton href="#how-it-works">Start your ESA Evaluation</CtaButton>
           <p className="body-small text-center">
-            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+            100% Refund If No ESA Letter Is Issued
           </p>
         </div>
       </div>

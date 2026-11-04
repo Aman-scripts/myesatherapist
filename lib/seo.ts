@@ -8,7 +8,7 @@ export const CHARGE_AND_REFUND =
   "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund under our Refund Policy. A completed evaluation is non-refundable, whether or not a letter is issued.";
 
 export const REFUND_NOTE =
-  "If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.";
+  "100% Refund If No ESA Letter Is Issued";
 
 export function statePageTitle(name: string, slug: string) {
   if (slug === "california") return "California ESA Letter | AB 468 | My ESA Therapist";

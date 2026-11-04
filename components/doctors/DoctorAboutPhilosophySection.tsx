@@ -72,7 +72,7 @@ export function DoctorAboutPhilosophySection({
             <h2 className="heading-h2 text-primary">
               {philosophyHeading}
             </h2>
-            <div className="space-y-3 flex-1">
+            <div className="space-y-3">
               {philosophyParagraphs.map((para, idx) => (
                 <p
                   key={idx}
@@ -81,11 +81,6 @@ export function DoctorAboutPhilosophySection({
                   {para}
                 </p>
               ))}
-            </div>
-            <div className="pt-1">
-              <CtaButton href={ctaHref} variant="accent" className="w-auto min-w-[240px]">
-                Start your ESA Evaluation
-              </CtaButton>
             </div>
           </div>
         </div>

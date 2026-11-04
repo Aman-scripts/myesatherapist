@@ -84,7 +84,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
   const emotionalHeading = data.emotionalBenefitsHeading || "Emotional Benefits :";
   const refundNote = data.benefitsRefundNote === ""
     ? ""
-    : (data.benefitsRefundNote || "If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.");
+    : (data.benefitsRefundNote || "100% Refund If No ESA Letter Is Issued");
 
   const isStateWhoBenefits = Boolean(data.benefitsImage?.includes("statewhobenefits"));
 

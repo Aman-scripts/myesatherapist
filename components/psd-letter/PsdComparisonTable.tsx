@@ -283,7 +283,7 @@ export function PsdComparisonTable() {
             Start Your Consultation
           </CtaButton>
           <p className="body-small text-center">
-            If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+            100% Refund If No ESA Letter Is Issued
           </p>
         </div>
       </div>

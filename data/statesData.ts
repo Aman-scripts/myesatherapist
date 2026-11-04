@@ -176,6 +176,7 @@ export interface StateData {
   ctaTitle?: string;
   ctaSubtitle?: string;
   ctaNote?: string;
+  ctaButtonText?: string;
   tableOfContents?: Array<{ id: string; label: string }>;
   trustedReviewsTitle?: string;
   trustedReviewsSubtitle?: string;

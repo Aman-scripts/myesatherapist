@@ -158,7 +158,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
           <CtaButton href="/pricing/">Start your ESA Evaluation</CtaButton>
           {data.benefitsRefundNote !== "" && (
             <p className="body-small text-body-text text-center">
-              If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.
+              100% Refund If No ESA Letter Is Issued
             </p>
           )}
         </div>

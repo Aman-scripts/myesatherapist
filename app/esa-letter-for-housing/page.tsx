@@ -142,7 +142,7 @@ export default function EsaLetterForHousingPage() {
           title="Ready to Start Your ESA Evaluation?"
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
           buttonText="Start Your ESA Evaluation"
-          note="If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable."
+          note="100% Refund If No ESA Letter Is Issued"
           disclaimer="ESA eligibility is determined by a licensed mental health professional following a clinical assessment. Approval is not guaranteed."
         />
       </main>

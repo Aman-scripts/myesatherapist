@@ -230,7 +230,7 @@ export const DOCTORS_DATA: DoctorProfile[] = [
       ],
     },
     conditionsSection: {
-      heading: "Conditions Dr. Robert Staaf Reviews",
+      heading: "Dr. Robert Staaf's Areas of Clinical Expertise",
       description:
         "Dr. Staaf's clinical experience covers a range of mental health and therapeutic support services, with a focus on emotional well-being and quality of life.",
       conditions: [

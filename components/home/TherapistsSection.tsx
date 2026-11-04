@@ -161,7 +161,7 @@ export function TherapistsSection({
   title = "Our Licensed Clinicians",
   subtitle = "We connect individuals with licensed mental health professionals who are qualified to conduct evaluations and provide recommendations when clinically appropriate.",
   licensureNote = "A Note on Licensure Levels: Depending on their state of origin, a social worker or counselor may have a variety of titles, such as Licensed Clinical Social Worker (LCSW), Licensed Independent Clinical Social Worker (LICSW), etc. These are comparable licensure levels.",
-  refundText = "If your evaluation cannot be completed, you receive a full refund. Completed evaluations are non-refundable.",
+  refundText = "100% Refund If No ESA Letter Is Issued",
   therapistsList,
   bgColor = "bg-white",
   className = "",
