@@ -6,7 +6,7 @@ const allyson = {
   name: "Allyson Valley",
   title: "Mental Health Writer & Research Contributor",
   credentials: "Licensed Professional Counselor (LPC-MHSP)",
-  image: "/blogs/blogs_trustbar-author.webp",
+  image: "/blogs/blogs-trustbar-author.webp",
   bio: "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
   role: "Written by",
 };
@@ -14,14 +14,14 @@ const allyson = {
 const maxPhillips = {
   name: "Max Phillips",
   credentials: "MSW, LCSW",
-  image: "/blogs/blogs_medical_reviewer.webp",
+  image: "/blogs/blogs-medical-reviewer.webp",
   linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
 };
 
 const heroes = {
-  heroImageMobile: "/Hero_image_for_mobile_all.png",
-  heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-  heroImageDesktop: "/blogs/blog-hero_section.webp",
+  heroImageMobile: "/hero-image-for-mobile-all.png",
+  heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+  heroImageDesktop: "/blogs/blog-hero-section.webp",
 };
 
 const bottomCta = {
@@ -54,7 +54,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     reviewedBy: { ...maxPhillips, date: "October 28, 2026" },
     publishDate: "October 28, 2026",
     lastUpdated: "October 28, 2026",
-    cardImage: "/Blog Images/Who Can Write an ESA Letter/therapist-writing-with-emotional-support-dog-image.webp",
+    cardImage: "/blog-images/who-can-write-an-esa-letter/therapist-writing-with-emotional-support-dog-image.webp",
     ...heroes,
     questionCallout: {
       question: "Can an online provider I just met write my ESA letter?",
@@ -67,7 +67,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
       "You don’t need to register your animal with any government agency or online registry, and you don’t need to buy a certificate, vest, or harness to show you have a disability-related need. What counts is having completed a proper individual mental health assessment, obtaining the right documentation when your landlord asks for it, and understanding the [ESA laws](/esa-laws/) that apply where you live.",
     ],
     introImage: {
-      src: "/Blog Images/Who Can Write an ESA Letter/therapist-writing-with-emotional-support-dog-image.webp",
+      src: "/blog-images/who-can-write-an-esa-letter/therapist-writing-with-emotional-support-dog-image.webp",
       alt: "therapist writing with emotional support dog",
       width: 1536,
       height: 1024,
@@ -115,7 +115,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
           "**Other Qualified Healthcare Professionals:** Some physicians (MDs or DOs), nurse practitioners (NPs, including psychiatric mental health nurse practitioners or PMHNPs), physician assistants (PAs), general practitioners (MDs or DOs), optometrists (ODs), and registered nurses (RNs) can also help, depending on their qualifications and how well they know your situation.",
         ],
         bannerImage: {
-          src: "/Blog Images/Who Can Write an ESA Letter/which-professtional-write-an-esa-image.webp",
+          src: "/blog-images/who-can-write-an-esa-letter/which-professtional-write-an-esa-image.webp",
           alt: "which professtional write an esa",
           width: 1200,
           height: 800,
@@ -189,7 +189,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
           },
         ],
         bannerImage: {
-          src: "/Blog Images/Who Can Write an ESA Letter/how-can-you-get-a-legitimate-esa-letter-online-image.webp",
+          src: "/blog-images/who-can-write-an-esa-letter/how-can-you-get-a-legitimate-esa-letter-online-image.webp",
           alt: "how can you get a legitimate esa letter online",
           width: 1036,
           height: 1200,
@@ -268,7 +268,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     reviewedBy: { ...maxPhillips, date: "October 21, 2026" },
     publishDate: "October 21, 2026",
     lastUpdated: "October 21, 2026",
-    cardImage: "/Blog Images/ESA for Bipolar Disorder/cozy-companionship-on-the-couch-image.webp",
+    cardImage: "/blog-images/esa-for-bipolar-disorder/cozy-companionship-on-the-couch-image.webp",
     ...heroes,
     questionCallout: {
       question: "Can You Get an ESA Letter for Bipolar Disorder?",
@@ -298,7 +298,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
           "Bipolar disorder is lifelong, but it is manageable. With the right treatment, which can include medication, therapy, and healthy daily habits, along with steady support, many people keep their symptoms under control. A qualified mental health professional can evaluate symptoms and suggest the right care.",
         ],
         bannerImage: {
-          src: "/Blog Images/ESA for Bipolar Disorder/cozy-companionship-on-the-couch-image.webp",
+          src: "/blog-images/esa-for-bipolar-disorder/cozy-companionship-on-the-couch-image.webp",
           alt: "cozy companionship on the couch",
           width: 1536,
           height: 1024,
@@ -368,7 +368,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
           },
         ],
         bannerImage: {
-          src: "/Blog Images/ESA for Bipolar Disorder/what-does-an-esa-do-for-someone-with-bipolar-disorder-image.webp",
+          src: "/blog-images/esa-for-bipolar-disorder/what-does-an-esa-do-for-someone-with-bipolar-disorder-image.webp",
           alt: "what does an esa do for someone with bipolar disorder",
           width: 1201,
           height: 801,
@@ -519,7 +519,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     reviewedBy: { ...maxPhillips, date: "October 30, 2026" },
     publishDate: "October 30, 2026",
     lastUpdated: "October 30, 2026",
-    cardImage: "/Blog Images/ESA for ADHD/cozy-afternoon-with-a-golden-retriever-image.webp",
+    cardImage: "/blog-images/esa-for-adhd/cozy-afternoon-with-a-golden-retriever-image.webp",
     ...heroes,
     aboutAuthor: {
       name: "Max Phillips",
@@ -555,7 +555,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
           "In daily life, ADHD can touch nearly everything: work, school, relationships, and the upkeep of a home. A person might find it hard to finish what they start, forget appointments, or stick to a steady routine. Over time, that can build into frustration, stress, or a constant sense of being overwhelmed. ADHD is manageable with the right treatment and support, though how much it affects someone depends on their own symptoms and what’s going on in their life. A qualified healthcare professional can evaluate the symptoms and suggest treatment that fits. [ESA for children and minors](/blog/esa-guide/esa-for-children/) may also be considered when a child has a qualifying mental or emotional disability and an emotional support animal helps address disability-related needs.",
         ],
         bannerImage: {
-          src: "/Blog Images/ESA for ADHD/cozy-afternoon-with-a-golden-retriever-image.webp",
+          src: "/blog-images/esa-for-adhd/cozy-afternoon-with-a-golden-retriever-image.webp",
           alt: "emotional support animal for ADHD",
           width: 1536,
           height: 1024,
@@ -597,7 +597,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
           "None of that is guaranteed, though. It depends a lot on the person and the animal. It’s worth being honest with yourself about the flip side too: An animal is also a responsibility, and for someone whose ADHD makes day-to-day organization hard, that responsibility can occasionally become its own kind of stress. If you have concerns about being able to take care of an ESA, you should discuss these with your ESA evaluator, therapist, or treatment team.",
         ],
         bannerImage: {
-          src: "/Blog Images/ESA for ADHD/emotional-support-animals-and-adhd-benefits.webp",
+          src: "/blog-images/esa-for-adhd/emotional-support-animals-and-adhd-benefits.webp",
           alt: "emotional support animals and adhd benefits",
           width: 1536,
           height: 1024,

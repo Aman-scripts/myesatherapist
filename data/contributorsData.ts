@@ -15,7 +15,7 @@ export const AUTHORS: ContributorCardData[] = [
     name: "Allyson Valley",
     title: "Mental Health Writer & Research Contributor",
     bio: "Allyson Valley, Ph.D., LPC, is a licensed counselor with 11 years of experience, creating research-based content on emotional wellness, ESA guidance, and mental health education.",
-    avatar: "/blogs/blogs_trustbar-author.webp",
+    avatar: "/blogs/blogs-trustbar-author.webp",
     linkedin: "https://www.linkedin.com/in/allyson-valley/",
     href: "/contributors/allyson-valley/",
     badges: [
@@ -60,7 +60,7 @@ export const REVIEWERS: ContributorCardData[] = [
     name: "Awais Arshad",
     title: "Legal Reviewer",
     bio: "Awais Arshad is a New York-licensed attorney with 12 years of legal experience, reviewing ESA content for accuracy, compliance, and alignment with federal and state laws.",
-    avatar: "/legal_reviewer/legal-reviwer.webp",
+    avatar: "/legal-reviewer/legal-reviwer.webp",
     linkedin: "https://www.linkedin.com/in/awais-arshad-a51b31113/",
     href: "/contributors/awais-arshad/",
     badges: [

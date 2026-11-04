@@ -38,10 +38,10 @@ const PROCESS_ICONS = [
 ];
 
 const CONDITION_ICONS = [
-  "/esa-icons/Icon.svg",
-  "/esa-icons/Icon-1.svg",
-  "/esa-icons/Icon-4.svg",
-  "/esa-icons/Icon-2.svg",
+  "/esa-icons/icon.svg",
+  "/esa-icons/icon-1.svg",
+  "/esa-icons/icon-4.svg",
+  "/esa-icons/icon-2.svg",
 ];
 
 const FIN_ICON = "/states/california-benefits-workplaceconsideration.svg";
@@ -61,35 +61,35 @@ const CITY_ICONS = [
 function whyChoose(last: string) {
   return [
     {
-      icon: "/esa-icons/Icon-33.svg",
+      icon: "/esa-icons/icon-33.svg",
       title: "Licensed Professionals",
       description:
         "ESA evaluations are conducted by independent US licensed mental health professionals authorized to assess ESA eligibility.",
     },
     {
-      icon: "/esa-icons/Icon-15.svg",
+      icon: "/esa-icons/icon-15.svg",
       title: "Secure Telehealth Platform",
       description: "Our HIPAA-compliant systems ensure your information remains confidential and protected.",
     },
     {
-      icon: "/esa-icons/Glyph-2.svg",
+      icon: "/esa-icons/glyph-2.svg",
       title: "Clinical Integrity First",
       description: "ESA recommendations are issued by licensed professionals based on individualized clinical evaluation.",
     },
     {
-      icon: "/esa-icons/Icon-17.svg",
+      icon: "/esa-icons/icon-17.svg",
       title: "Legitimate ESA Documentation",
       description:
         "When clinically appropriate, ESA letters are issued in compliance with applicable federal and state housing guidelines.",
     },
     {
-      icon: "/esa-icons/Icon-24.svg",
+      icon: "/esa-icons/icon-24.svg",
       title: "Nationwide Access",
       description:
         "Telehealth evaluations available for individuals across the United States, subject to clinician availability.",
     },
     {
-      icon: "/esa-icons/Icon-26.svg",
+      icon: "/esa-icons/icon-26.svg",
       title: "Transparent Process",
       description: last,
     },
@@ -147,12 +147,12 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroSubtitle:
       "Connect with Vermont mental health professionals for personalized ESA evaluations. Every assessment is conducted in a secure setting that prioritizes your privacy and well-being.",
     benefitsImage: "/states/statewhobenefits-vermont.webp",
-    benefitsImageMobile: "/states/statewhobenefits-vermont_mobile.webp",
-    benefitsImageTablet: "/states/statewhobenefits-vermont_tablet.webp",
+    benefitsImageMobile: "/states/statewhobenefits-vermont-mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-vermont-tablet.webp",
     whoQualifiesImage: "/states/statewhoqualifies-vermont.webp",
     whoQualifiesAspect: "699/1053",
-    whoQualifiesImageMobile: "/states/statewhoqualifies-vermont_mobile.webp",
-    whoQualifiesImageTablet: "/states/statewhoqualifies-vermont_tablet.webp",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-vermont-mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-vermont-tablet.webp",
     ...SHARED,
     therapistsTitle: "Our Licensed Mental Health Professionals",
     therapistsSubtitle:
@@ -431,12 +431,12 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroSubtitle:
       "Connect with licensed mental health professionals in Tennessee for personalized emotional wellness evaluations. Schedule an appointment with a licensed clinician who will thoroughly examine your situation and guide you through a safe, organized emotional support animal evaluation process.",
     benefitsImage: "/states/statewhobenefits-tennessee.webp",
-    benefitsImageMobile: "/states/statewhobenefits-tennessee_mobile.webp",
-    benefitsImageTablet: "/states/statewhobenefits-tennessee_tablet.webp",
+    benefitsImageMobile: "/states/statewhobenefits-tennessee-mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-tennessee-tablet.webp",
     whoQualifiesImage: "/states/statewhoqualifies-tennessee.webp",
     whoQualifiesAspect: "699/1053",
-    whoQualifiesImageMobile: "/states/statewhoqualifies-tennessee_mobile.webp",
-    whoQualifiesImageTablet: "/states/statewhoqualifies-tennessee_tablet.webp",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-tennessee-mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-tennessee-tablet.webp",
     ...SHARED,
     therapistsTitle: "Our Licensed Mental Health Professionals",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Tennessee?",
@@ -711,12 +711,12 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroSubtitle:
       "Get in touch with licensed mental health professionals in Rhode Island for a personalized wellness checkup. Talk to a state-licensed therapist who will carefully look at your situation and guide you through a private emotional support animal (ESA) qualification process that is specific to your needs.",
     benefitsImage: "/states/statewhobenefits-rhode-island.webp",
-    benefitsImageMobile: "/states/statewhobenefits-rhode-island_mobile.webp",
-    benefitsImageTablet: "/states/statewhobenefits-rhode-island_tablet.webp",
+    benefitsImageMobile: "/states/statewhobenefits-rhode-island-mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-rhode-island-tablet.webp",
     whoQualifiesImage: "/states/statewhoqualifies-rhode-island.webp",
     whoQualifiesAspect: "699/1053",
-    whoQualifiesImageMobile: "/states/statewhoqualifies-rhode-island_mobile.webp",
-    whoQualifiesImageTablet: "/states/statewhoqualifies-rhode-island_tablet.webp",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-rhode-island-mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-rhode-island-tablet.webp",
     ...SHARED,
     therapistsTitle: "Our Licensed Mental Health Professionals",
     whyChooseTitle: "Why Choose My ESA Therapist for ESA Letter Evaluation in Rhode Island?",
@@ -994,12 +994,12 @@ export const EXTRA_STATES: Record<string, StateData> = {
     heroSubtitle:
       "Connect with licensed mental health professionals in the District of Columbia for ESA letter evaluations. ESA documentation is provided when clinically appropriate and in line with federal housing guidelines.",
     benefitsImage: "/states/statewhobenefits-washington-dc.webp",
-    benefitsImageMobile: "/states/statewhobenefits-washington-dc_mobile.webp",
-    benefitsImageTablet: "/states/statewhobenefits-washington-dc_tablet.webp",
+    benefitsImageMobile: "/states/statewhobenefits-washington-dc-mobile.webp",
+    benefitsImageTablet: "/states/statewhobenefits-washington-dc-tablet.webp",
     whoQualifiesImage: "/states/statewhoqualifies-washington-dc.webp",
     whoQualifiesAspect: "699/1053",
-    whoQualifiesImageMobile: "/states/statewhoqualifies-washington-dc_mobile.webp",
-    whoQualifiesImageTablet: "/states/statewhoqualifies-washington-dc_tablet.webp",
+    whoQualifiesImageMobile: "/states/statewhoqualifies-washington-dc-mobile.webp",
+    whoQualifiesImageTablet: "/states/statewhoqualifies-washington-dc-tablet.webp",
     therapistsTitle: SHARED.therapistsTitle,
     therapistsSubtitle: SHARED.therapistsSubtitle,
     therapistsLicensureNote: SHARED.therapistsLicensureNote,

@@ -59,7 +59,7 @@ export const ALABAMA_SECTIONS: BlogSection[] = [
       },
     ],
     bannerImage: {
-      src: "/esalawsblog/eslalaws_blogsimages.webp",
+      src: "/esalawsblog/eslalaws-blogsimages.webp",
       alt: "ESA rights clipboard with a law book and a golden retriever in front of the Alabama State Capitol",
     },
     bannerPosition: "bottom",
@@ -197,6 +197,6 @@ export const ALABAMA_META = {
   reviewerName: "Awais Arshad",
   reviewerRole: "Medically Reviewed by",
   reviewerCredentials: "Attorney at Law",
-  reviewerImage: "/legal_reviewer/legal-reviwer.webp",
+  reviewerImage: "/legal-reviewer/legal-reviwer.webp",
   reviewerLinkedin: "https://www.linkedin.com/in/awais-arshad-a51b31113/",
 };

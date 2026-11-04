@@ -256,23 +256,23 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "June 19, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "June 19, 2026",
     lastUpdated: "June 19, 2026",
-    cardImage: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord and Tenant Checklist ESA Guide/happily-living-with-emotional-support-animal-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    cardImage: "/blog-images/how-to-verify-if-an-esa-letter-is-legitimate-a-landlord-and-tenant-checklist-esa-guide/happily-living-with-emotional-support-animal-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     introParagraphs: [
       "Emotional Support Animals (ESAs) play an important role in helping individuals manage mental and emotional health conditions. Landlords frequently receive ESA letters from tenants asking for reasonable accommodations because ESAs are eligible for housing accommodations under the Fair Housing Act (FHA). However, with the rise of online ESA services, fraudulent and invalid ESA letters have become increasingly common.",
       "Understanding how to validate an ESA letter is crucial, whether you're a landlord evaluating accommodation requests or a tenant looking for housing protections. This guide provides a practical checklist to help determine whether an emotional support animal letter is legitimate and compliant with current housing guidelines.",
@@ -310,7 +310,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "tenant-checklist",
         title: "Tenant Checklist: How to Ensure Your ESA Letter Is Legitimate",
         bannerImage: {
-          src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord and Tenant Checklist ESA Guide/tenant-checklist-to-verify-esa-letter-image.webp",
+          src: "/blog-images/how-to-verify-if-an-esa-letter-is-legitimate-a-landlord-and-tenant-checklist-esa-guide/tenant-checklist-to-verify-esa-letter-image.webp",
           alt: "tenant checklist to verify esa letter",
         },
         bannerPosition: "bottom",
@@ -376,7 +376,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "landlord-checklist",
         title: "Landlord Checklist: How to Verify an ESA Letter?",
         bannerImage: {
-          src: "/Blog Images/How to Verify If an ESA Letter Is Legitimate_ A Landlord and Tenant Checklist ESA Guide/landlord-checklist-to-verify-esa-letter-image.webp",
+          src: "/blog-images/how-to-verify-if-an-esa-letter-is-legitimate-a-landlord-and-tenant-checklist-esa-guide/landlord-checklist-to-verify-esa-letter-image.webp",
           alt: "landlord checklist to verify esa letter",
         },
         bannerPosition: "bottom",
@@ -528,30 +528,30 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "August 17, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "July 22, 2026",
     lastUpdated: "August 17, 2026",
-    cardImage: "/Blog Images/Does ESA Registration Actually Mean Anything_/woman-with-emotional-support-dog.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    cardImage: "/blog-images/does-esa-registration-actually-mean-anything/woman-with-emotional-support-dog.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     introParagraphs: [
       "If you’ve spent even five minutes searching online about emotional support animals (ESAs), you’ve probably seen websites promising instant ESA registration, official ESA certificates, registration numbers, ID cards, and even nationwide ESA databases.",
       "At first glance, these services look genuine. Many claim that registering your pet will make it a “legal ESA” or help you qualify for housing protections. But here’s the question thousands of people are asking: Does ESA registration actually mean anything legally? The short answer is no.",
       "Unlike what many websites suggest, there is no official federal ESA registry in the United States, and registering your animal with one of these sites does not grant any legal rights. This guide explains what ESA registration actually entails, why it’s necessary, what landlords really look for, and how to save money by avoiding services that have little to no legal value.",
     ],
     introImage: {
-      src: "/Blog Images/Does ESA Registration Actually Mean Anything_/woman-with-emotional-support-dog.webp",
+      src: "/blog-images/does-esa-registration-actually-mean-anything/woman-with-emotional-support-dog.webp",
       alt: "Woman hugging her emotional support dog at home",
     },
     tocItems: [
@@ -655,7 +655,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "is-there-an-official-esa-registry-in-the-united-states",
         title: "Is There an Official ESA Registry in the United States?",
         bannerImage: {
-          src: "/Blog Images/Does ESA Registration Actually Mean Anything_/esa-protection.webp",
+          src: "/blog-images/does-esa-registration-actually-mean-anything/esa-protection.webp",
           alt: "ESA protection comes from legal rights, not registration",
         },
         bannerPosition: "bottom",
@@ -699,7 +699,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         title:
           "ESA Registration, ID Cards & Certificates: What Counts as Legal Proof?",
         bannerImage: {
-          src: "/Blog Images/Does ESA Registration Actually Mean Anything_/common-esa-products-not-legal-proof.webp",
+          src: "/blog-images/does-esa-registration-actually-mean-anything/common-esa-products-not-legal-proof.webp",
           alt: "Common ESA products",
         },
         bannerPosition: "bottom",
@@ -890,24 +890,24 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "July 30, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "July 27, 2026",
     lastUpdated: "July 30, 2026",
     cardImage:
-      "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/esa for children-.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+      "/blog-images/esa-for-children-and-minors-how-it-works-and-who-signs-the-letter/esa-for-children.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     introParagraphs: [
       "If your child seems calmer around the family dog, sleeps better with a cat nearby, or depends on a pet during moments of anxiety, you may have wondered whether that animal could qualify as an [emotional support animal (ESA)](https://myesatherapist.com/blog/esa-guide/emotional-support-animal/).",
       "The short answer is yes. A child can have an emotional support animal letter if a licensed mental health professional determines that the animal helps reduce symptoms associated with a mental or emotional health condition. Age alone does not prevent someone from qualifying for an ESA.",
@@ -915,7 +915,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       "Understanding how ESA eligibility works for children can help families make informed decisions while avoiding common misconceptions about ESA rights, school accommodations, and housing protections.",
     ],
     introImage: {
-      src: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/esa for children-.webp",
+      src: "/blog-images/esa-for-children-and-minors-how-it-works-and-who-signs-the-letter/esa-for-children.webp",
       alt: "Smiling child sitting on a sofa with a golden retriever emotional support dog",
       width: 1081,
       height: 1081,
@@ -1009,7 +1009,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           },
         ],
         bannerImage: {
-          src: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/who-signs-the-esa-letter-for-a-mino.webp",
+          src: "/blog-images/esa-for-children-and-minors-how-it-works-and-who-signs-the-letter/who-signs-the-esa-letter-for-a-mino.webp",
           alt: "Woman on a video call at a round table while a boy pets a dog at home in a bright living room.",
         },
         bannerPosition: "bottom",
@@ -1168,7 +1168,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           },
         ],
         bannerImage: {
-          src: "/Blog Images/ESA for Children and Minors_ How It Works and Who Signs the Letter/how-to-talk-to-your-child-.webp",
+          src: "/blog-images/esa-for-children-and-minors-how-it-works-and-who-signs-the-letter/how-to-talk-to-your-child.webp",
           alt: "Parent talking with a child beside an emotional support dog at home",
         },
         bannerPosition: "bottom",
@@ -1229,23 +1229,23 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "August 17, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "July 30, 2026",
     lastUpdated: "August 17, 2026",
-    cardImage: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/emotional-support-animal-letter-sample-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    cardImage: "/blog-images/esa-letter-sample-what-a-legitimate-esa-letter-looks-like/emotional-support-animal-letter-sample-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     questionCallout: {
       question: "Can an ESA letter sample be used as a real letter?",
       answer:
@@ -1370,7 +1370,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           ],
         },
         bannerImage: {
-          src: "/Blog Images/ESA Letter Sample_ What a Legitimate ESA Letter Looks Like_/legitimate esa letter sample-image.webp",
+          src: "/blog-images/esa-letter-sample-what-a-legitimate-esa-letter-looks-like/legitimate-esa-letter-sample-image.webp",
           alt: "Sample emotional support animal letter from a licensed mental health professional",
           width: 1786,
           height: 2526,
@@ -1486,24 +1486,24 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "June 09, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "June 09, 2026",
     lastUpdated: "June 09, 2026",
     cardImage:
-      "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/living-with-an-esa-in-rental-housing-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+      "/blog-images/hud-esa-guidance-2026-what-changed-for-emotional-support-animal-housing/living-with-an-esa-in-rental-housing-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     introParagraphs: [
       "For years, [emotional support animal (ESA)](/blog/esa-guide/emotional-support-animal/) accommodations in housing followed a relatively clear path: Tenants with valid documentation could request reasonable accommodations under the Fair Housing Act (FHA), and housing providers were generally expected to comply. That changed significantly on May 22, 2026, when the U.S. Department of Housing and Urban Development (HUD) issued new enforcement guidance that reshaped how ESA-related housing complaints are handled.",
       "So, what exactly changed, and what does it mean for tenants with emotional support animals?",
@@ -1585,7 +1585,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Because enforcement standards may now differ more significantly across jurisdictions, tenants may need stronger documentation supporting both their disability-related need for accommodation and an understanding of the protections available under their state’s housing laws.",
         ],
         bannerImage: {
-          src: "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/living-with-an-esa-in-rental-housing-image.webp",
+          src: "/blog-images/hud-esa-guidance-2026-what-changed-for-emotional-support-animal-housing/living-with-an-esa-in-rental-housing-image.webp",
           alt: "living with an esa in rental housing",
           caption:
             "Housing accommodations can help ESA owners live with the animal that supports their emotional well-being.",
@@ -1606,7 +1606,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           "Understanding this distinction matters because enforcement guidance and federal law are not the same thing. Any currently open ESA cases will be reviewed on a case-by-case basis.",
         ],
         bannerImage: {
-          src: "/Blog Images/HUD ESA Guidance 2026_ What Changed for Emotional Support Animal Housing_/hud-esa-guidance-what-has-not-changed-image.webp",
+          src: "/blog-images/hud-esa-guidance-2026-what-changed-for-emotional-support-animal-housing/hud-esa-guidance-what-has-not-changed-image.webp",
           alt: "hud esa guidance what has not changed",
         },
         bannerPosition: "bottom",
@@ -1731,7 +1731,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
@@ -1739,17 +1739,17 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Awais Arshad",
       role: "Legally Reviewed by",
       credentials: "Attorney at Law",
-      image: "/legal_reviewer/legal-reviwer.webp",
+      image: "/legal-reviewer/legal-reviwer.webp",
       date: "August 17, 2026",
       linkedin: "https://www.linkedin.com/in/awais-arshad-a51b31113/",
     },
     publishDate: "May 27, 2026",
     lastUpdated: "August 17, 2026",
     cardImage:
-      "/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+      "/blog-images/can-landlords-reject-emotional-support-animals-here-s-the-truth/can-landlords-reject-esas-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     introParagraphs: [
       "You might wonder whether a landlord may lawfully reject your request if you have a valid emotional support animal (ESA) and are moving into a rental house. The response is based on a number of factors, including the kind of housing, the paperwork you submit, and whether your request fits federal or state legislation as a reasonable accommodation.",
       "In many scenarios, property owners have to look into an ESA request even if their building has a strict no pets rule. However, approval is not automatically granted. Housing providers may legally deny a request when specific exceptions apply. These include invalid documentation, exempt housing, or a direct threat to the health or safety of others.",
@@ -1843,7 +1843,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           "This means a denial based on an untrained ESA is no longer treated as a federal violation by HUD, though state fair housing laws may still apply separately",
         ],
         bannerImage: {
-          src: "/Blog Images/Can Landlords Reject Emotional Support Animals_ Here_s the Truth/can-landlords-reject-esas-image.webp",
+          src: "/blog-images/can-landlords-reject-emotional-support-animals-here-s-the-truth/can-landlords-reject-esas-image.webp",
           alt: "Can Landlords Reject Emotional Support Animals?",
           caption: "Emotional support animals help create a sense of calm, security, and connection.",
         },
@@ -1931,24 +1931,24 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by",
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "August 17, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/",
     },
     publishDate: "May 14, 2026",
     lastUpdated: "August 17, 2026",
     cardImage:
-      "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/emotional-support-animal-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+      "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/emotional-support-animal-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     introParagraphs: [
       "An emotional support animal can be more than just a pet. It can be a lifeline for people navigating anxiety, depression, and other mental health challenges. For many residents, the bond with an animal brings a sense of calm, stability, and daily comfort that traditional treatments alone may not fully provide. But what exactly qualifies an animal as an emotional support animal, and what rights do you actually have?",
       "With growing awareness and a lot of misinformation, understanding how ESAs work, who qualifies, and what the law actually says has never been more important. This guide breaks it all down clearly and practically so you can make informed decisions for yourself or a loved one.",
@@ -2021,7 +2021,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "The most common ESAs, dogs provide loyalty, companionship, and emotional security. They help with anxiety, depression, loneliness, and panic attacks, and they also encourage people to stick to a routine and be active.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/dog-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/dog-image.webp",
               alt: "dog",
               width: 200,
               height: 200,
@@ -2034,7 +2034,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Cats are ideal for people who prefer a calm and low-maintenance companion. Their affectionate nature helps reduce stress, loneliness, and emotional anxiety, especially in apartment living.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/cat-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/cat-image.webp",
               alt: "cat icon",
               width: 200,
               height: 200,
@@ -2047,7 +2047,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Quiet and gentle, rabbits are great for smaller spaces. They help create a peaceful environment and provide comfort for people dealing with stress or social anxiety.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/rabbit-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/rabbit-image.webp",
               alt: "rabbit icon",
               width: 200,
               height: 200,
@@ -2060,7 +2060,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Birds offer emotional connection through interaction and playful behavior. They help lift your mood, make you feel less alone, and bring good things into your life every day.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/bird-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/bird-image.webp",
               alt: "bird icon",
               width: 200,
               height: 200,
@@ -2073,7 +2073,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Hamsters, guinea pigs, and similar pets can also be ESAs. They are easy to manage and help create emotional stability through companionship and routine.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/small-animals-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/small-animals-image.webp",
               alt: "small animals icon",
               width: 200,
               height: 200,
@@ -2082,7 +2082,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           },
         ],
         bannerImage: {
-          src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/emotional-support-animal-image.webp",
+          src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/emotional-support-animal-image.webp",
           alt: "emotional support animal",
           caption:
             "The bond between humans and emotional support animals provides powerful therapeutic benefits",
@@ -2138,7 +2138,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "This is why many renters search: “Can a landlord deny ESA?” But the answer is, in most cases, no. If you have a valid ESA letter.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/fair-housing-act-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/fair-housing-act-image.webp",
               alt: "fair housing act",
               width: 200,
               height: 200,
@@ -2166,7 +2166,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         id: "esa-vs-service-animals",
         title: "ESA vs. Service Animals: What’s the Difference?",
         bannerImage: {
-          src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/difference-between-ESA-and-service-animal-image.webp",
+          src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/difference-between-esa-and-service-animal-image.webp",
           alt: "difference between ESA and service animal",
         },
         bannerPosition: "bottom",
@@ -2206,7 +2206,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "Confirmation that your need for the ESA is genuine",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/do-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/do-image.webp",
               alt: "do icon",
               width: 200,
               height: 200,
@@ -2224,7 +2224,7 @@ export const BLOG_POSTS: BlogArticle[] = [
               "This is especially helpful for renters worried about pet restrictions.",
             ],
             image: {
-              src: "/Blog Images/What is an Emotional Support Animal_ Everything You Need to Know/dont-image.webp",
+              src: "/blog-images/what-is-an-emotional-support-animal-everything-you-need-to-know/dont-image.webp",
               alt: "Don't Icon",
               width: 200,
               height: 200,
@@ -2352,23 +2352,23 @@ export const BLOG_POSTS: BlogArticle[] = [
     "name": "Allyson Valley",
     "title": "Mental Health Writer & Research Contributor",
     "credentials": "Ph.D., LPC-MHSP",
-    "image": "/blogs/blogs_trustbar-author.webp",
+    "image": "/blogs/blogs-trustbar-author.webp",
     "bio": "I'm a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"
   },
   "reviewedBy": {
     "name": "Max Phillips",
     "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
+    "image": "/blogs/blogs-medical-reviewer.webp",
     "date": "July 10, 2026",
     "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
   "publishDate": "July 10, 2026",
   "lastUpdated": "July 10, 2026",
-  "cardImage": "/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
-  "heroImageMobile": "/Hero_image_for_mobile_all.png",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
+  "cardImage": "/blog-images/which-dsm-5-conditions-qualify-for-an-esa-a-condition-by-condition-guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
+  "heroImageMobile": "/hero-image-for-mobile-all.png",
+  "heroImageTablet": "/blogs/blog-hero-section-tablet.webp",
+  "heroImageDesktop": "/blogs/blog-hero-section.webp",
   "questionCallout": {
     "question": "Can any mental illness qualify for an ESA?",
     "answer": "Yes, a mental health condition can qualify for an ESA if it substantially limits one or more major life activities and a licensed mental health professional determines that an emotional support animal provides disability-related support. No specific diagnosis automatically qualifies, so eligibility is based on the individual’s symptoms, functional limitations, and clinical evaluation."
@@ -2378,7 +2378,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "An ESA is more than just a pet. It is an animal recommended by a licensed mental health professional to provide emotional support related to a person’s mental health condition. Unlike service animals, ESAs don’t require specialized training, but their presence can significantly improve an individual’s daily functioning and emotional stability."
   ],
   "introImage": {
-    "src": "/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
+    "src": "/blog-images/which-dsm-5-conditions-qualify-for-an-esa-a-condition-by-condition-guide/who-qualifing-for-emotional-support-animal-featured-image.webp",
     "alt": "Woman laughing and playing with her golden retriever on a living room rug",
     "width": 1201,
     "height": 901
@@ -2507,7 +2507,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     {
       "id": "conditions-that-do-not-qualify",
       "title": "Conditions That Usually Do Not Qualify and Why?",
-        bannerImage: {"src":"/Blog Images/Which DSM-5 Conditions Qualify for an ESA_ A Condition-by-Condition Guide/does-it-quealitfy-for-an-esa.webp","alt":"Infographic showing conditions that usually qualify and usually do not qualify for an Emotional Support Animal (ESA)"},
+        bannerImage: {"src":"/blog-images/which-dsm-5-conditions-qualify-for-an-esa-a-condition-by-condition-guide/does-it-quealitfy-for-an-esa.webp","alt":"Infographic showing conditions that usually qualify and usually do not qualify for an Emotional Support Animal (ESA)"},
         bannerPosition: "bottom",
       "paragraphs": [
         "Not every type of emotional distress qualifies someone for an ESA. Temporary challenges, such as stress from a breakup, job loss, or exams, usually do not qualify by themselves because they are common life experiences. However, if these struggles develop into a diagnosed mental health condition that affects daily functioning, an ESA may be considered.",
@@ -2561,23 +2561,23 @@ export const BLOG_POSTS: BlogArticle[] = [
     "name": "Allyson Valley",
     "title": "Mental Health Writer & Research Contributor",
     "credentials": "Ph.D., LPC-MHSP",
-    "image": "/blogs/blogs_trustbar-author.webp",
+    "image": "/blogs/blogs-trustbar-author.webp",
     "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"
   },
   "reviewedBy": {
     "name": "Max Phillips",
     "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
+    "image": "/blogs/blogs-medical-reviewer.webp",
     "date": "August 26, 2026",
     "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
   "publishDate": "August 26, 2026",
   "lastUpdated": "August 26, 2026",
   "cardImage": "/images/blog/esa-for-anxiety/how-can-esa-support-with-anxity-image.webp",
-  "heroImageMobile": "/Hero_image_for_mobile_all.png",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
+  "heroImageMobile": "/hero-image-for-mobile-all.png",
+  "heroImageTablet": "/blogs/blog-hero-section-tablet.webp",
+  "heroImageDesktop": "/blogs/blog-hero-section.webp",
   "questionCallout": {
     "question": "Can I Get an ESA Letter If I Have Anxiety?",
     "answer": "Yes. Anxiety disorders are recognized in the DSM-5-TR as a mental health condition and may qualify you for an ESA if they significantly affect your daily life. A licensed mental health professional must evaluate your condition and determine whether an ESA can provide meaningful emotional support."
@@ -2783,23 +2783,23 @@ export const BLOG_POSTS: BlogArticle[] = [
     "name": "Allyson Valley",
     "title": "Mental Health Writer & Research Contributor",
     "credentials": "Ph.D., LPC-MHSP",
-    "image": "/blogs/blogs_trustbar-author.webp",
+    "image": "/blogs/blogs-trustbar-author.webp",
     "bio": "I’m a Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with over six years of experience leading and delivering care across crisis services, behavioral health programs, and healthcare systems.",
     "role": "Written by"
   },
   "reviewedBy": {
     "name": "Max Phillips",
     "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
+    "image": "/blogs/blogs-medical-reviewer.webp",
     "date": "September 11, 2026",
     "linkedin": "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
   "publishDate": "September 11, 2026",
   "lastUpdated": "September 11, 2026",
-  "cardImage": "/Blog Images/8 Basic Obedience Commands Every ESA Should Know/training-an-esa-image.webp",
-  "heroImageMobile": "/Hero_image_for_mobile_all.png",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
+  "cardImage": "/blog-images/8-basic-obedience-commands-every-esa-should-know/training-an-esa-image.webp",
+  "heroImageMobile": "/hero-image-for-mobile-all.png",
+  "heroImageTablet": "/blogs/blog-hero-section-tablet.webp",
+  "heroImageDesktop": "/blogs/blog-hero-section.webp",
   "questionCallout": {
     "id": "esa-training-mandatory",
     "question": "Is Training Mandatory for an Emotional Support Animal?",
@@ -2843,7 +2843,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     {
       "id": "esa-commands",
       "title": "What Commands Should an ESA Know?",
-        bannerImage: {"src":"/Blog Images/8 Basic Obedience Commands Every ESA Should Know/basic-commands-for-esas-image.webp","alt":"8 Basic obedience commands every ESA should know"},
+        bannerImage: {"src":"/blog-images/8-basic-obedience-commands-every-esa-should-know/basic-commands-for-esas-image.webp","alt":"8 Basic obedience commands every ESA should know"},
         bannerPosition: "top",
       "paragraphs": [
         "Teaching an ESA basic commands can make day-to-day routines safer and easier to manage.",
@@ -2970,23 +2970,23 @@ export const BLOG_POSTS: BlogArticle[] = [
     "name": "Allyson Valley, Ph.D., LPC",
     "title": "Licensed Professional Counselor",
     "credentials": "Ph.D., LPC",
-    "image": "/blogs/blogs_trustbar-author.webp",
+    "image": "/blogs/blogs-trustbar-author.webp",
     "bio": "Dr. Allyson Valley is a Licensed Professional Counselor with extensive clinical experience in mental health evaluation, emotional support animal assessments, and evidence-based psychotherapy.",
     "role": "Written by"
   },
   "reviewedBy": {
     "name": "Max Phillips, MSW, LCSW",
     "credentials": "MSW, LCSW",
-    "image": "/blogs/blogs_medical_reviewer.webp",
+    "image": "/blogs/blogs-medical-reviewer.webp",
     "date": "October 2026",
     "role": "Medically Reviewed by"
   },
   "publishDate": "October 13, 2026",
   "lastUpdated": "October 13, 2026",
-  "cardImage": "/Blog Images/ESA for Depression/emotional-support-through-canine-companionship-image.webp",
-  "heroImageMobile": "/Hero_image_for_mobile_all.png",
-  "heroImageTablet": "/blogs/blog_hero-section-tablet.webp",
-  "heroImageDesktop": "/blogs/blog-hero_section.webp",
+  "cardImage": "/blog-images/esa-for-depression/emotional-support-through-canine-companionship-image.webp",
+  "heroImageMobile": "/hero-image-for-mobile-all.png",
+  "heroImageTablet": "/blogs/blog-hero-section-tablet.webp",
+  "heroImageDesktop": "/blogs/blog-hero-section.webp",
   "questionCallout": {
     "question": "Can You Get an ESA for Depression If You Have Never Seen a Psychiatrist?",
     "answer": "Yes. You may qualify for an ESA for depression if you have never seen a psychiatrist. A state-licensed mental health professional can evaluate your mental health needs and determine whether an emotional support animal is right for you."
@@ -3039,7 +3039,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         "According to the National Institute of Mental Health (NIMH), depression can interfere with everyday activities, relationships, and work. It can also make it harder to maintain personal hygiene, manage household responsibilities, or stay connected with others. The severity of these effects varies from person to person, and symptoms may last for weeks or longer."
       ],
       "bannerImage": {
-        "src": "/Blog Images/ESA for Depression/emotional-support-through-canine-companionship-image.webp",
+        "src": "/blog-images/esa-for-depression/emotional-support-through-canine-companionship-image.webp",
         "alt": "emotional support through canine companionship",
         "width": 1200,
         "height": 800
@@ -3110,7 +3110,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         }
       ],
       "bannerImage": {
-        "src": "/Blog Images/ESA for Depression/how-esa-help-with-depression-image.webp",
+        "src": "/blog-images/esa-for-depression/how-esa-help-with-depression-image.webp",
         "alt": "how esa help with depression",
         "width": 980,
         "height": 654
@@ -3195,23 +3195,23 @@ export const BLOG_POSTS: BlogArticle[] = [
     name: "Allyson Valley",
     title: "Mental Health Writer & Research Contributor",
     credentials: "Ph.D., LPC",
-    image: "/blogs/blogs_trustbar-author.webp",
+    image: "/blogs/blogs-trustbar-author.webp",
     bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
     role: "Written by"
   },
   reviewedBy: {
     name: "Max Phillips",
     credentials: "MSW, LCSW",
-    image: "/blogs/blogs_medical_reviewer.webp",
+    image: "/blogs/blogs-medical-reviewer.webp",
     date: "September 30, 2026",
     linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/"
   },
   publishDate: "September 30, 2026",
   lastUpdated: "September 30, 2026",
-  cardImage: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.webp",
-  heroImageMobile: "/Hero_image_for_mobile_all.png",
-  heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-  heroImageDesktop: "/blogs/blog-hero_section.webp",
+  cardImage: "/blog-images/esa-for-ptsd/esa-for-ptsd-image.webp",
+  heroImageMobile: "/hero-image-for-mobile-all.png",
+  heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+  heroImageDesktop: "/blogs/blog-hero-section.webp",
   questionCallout: {
     question: "Can I Get an ESA Letter If I Have PTSD?",
     answer: "Yes. Post-traumatic stress disorder (PTSD) is a recognized mental health condition and may qualify you for an ESA if it significantly affects your daily life. A licensed mental health professional must evaluate your condition and determine whether an emotional support animal could provide meaningful therapeutic support."
@@ -3222,7 +3222,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     "A licensed mental health professional must make the decision through an independent, clinical assessment. Understanding this process can help you know what to expect before requesting an ESA letter."
   ],
   introImage: {
-    src: "/Blog Images/ESA for PTSD/esa-for-ptsd-image.webp",
+    src: "/blog-images/esa-for-ptsd/esa-for-ptsd-image.webp",
     alt: "esa for ptsd",
     width: 1024,
     height: 559,
@@ -3304,7 +3304,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       id: "what-esa-for-ptsd-helps",
       title: "What an ESA for PTSD Actually Helps With?",
       bannerImage: {
-        src: "/Blog Images/ESA for PTSD/what-an-esa-for-ptsd-actually-helps-with-image.webp",
+        src: "/blog-images/esa-for-ptsd/what-an-esa-for-ptsd-actually-helps-with-image.webp",
         alt: "what an esa for ptsd actually helps with",
         width: 1024,
         height: 1536,
@@ -3336,7 +3336,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       id: "questions-esa-letter-ptsd",
       title: "Things People Usually Ask While Getting an ESA Letter for PTSD.",
       bannerImage: {
-        src: "/Blog Images/ESA for PTSD/things-people-ask-about-esa-letters-for-ptsd-image.webp",
+        src: "/blog-images/esa-for-ptsd/things-people-ask-about-esa-letters-for-ptsd-image.webp",
         alt: "things people ask about esa letters for ptsd",
         width: 1254,
         height: 1254,
@@ -3410,23 +3410,23 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by"
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "October 05, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/"
     },
     publishDate: "October 05, 2026",
     lastUpdated: "October 05, 2026",
-    cardImage: "/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    cardImage: "/blog-images/how-to-prepare-your-esa-for-rental-housing/moving-in-with-a-furry-friend-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     questionCallout: {
       question: "Can an ESA live in a rental with a no-pet policy?",
       answer: "Yes. Under the Fair Housing Act, an approved ESA may qualify as a reasonable accommodation to a no-pet policy when the tenant has a disability-related need for the animal and when reliable documentation from a qualified professional supports that need."
@@ -3437,7 +3437,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       "Before moving day, focus on a few practical areas: house-training, barking, leash manners, being comfortable around strangers and other animals, and adjusting to being alone in a new home. At the same time, make sure your [housing documentation is ready](/esa-letter-for-housing/) and understand your responsibilities as a tenant."
     ],
     introImage: {
-      src: "/Blog Images/How to Prepare Your ESA for Rental Housing/moving-in-with-a-furry-friend-image.webp",
+      src: "/blog-images/how-to-prepare-your-esa-for-rental-housing/moving-in-with-a-furry-friend-image.webp",
       alt: "moving in with a furry friend",
       width: 1200,
       height: 800,
@@ -3616,23 +3616,23 @@ export const BLOG_POSTS: BlogArticle[] = [
       name: "Allyson Valley",
       title: "Mental Health Writer & Research Contributor",
       credentials: "Ph.D., LPC",
-      image: "/blogs/blogs_trustbar-author.webp",
+      image: "/blogs/blogs-trustbar-author.webp",
       bio: "Allyson Valley, Ph.D., LPC, is a mental health writer, researcher, and licensed professional counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
       role: "Written by"
     },
     reviewedBy: {
       name: "Max Phillips",
       credentials: "MSW, LCSW",
-      image: "/blogs/blogs_medical_reviewer.webp",
+      image: "/blogs/blogs-medical-reviewer.webp",
       date: "October 12, 2026",
       linkedin: "https://www.linkedin.com/in/max-phillips-883485a5/"
     },
     publishDate: "October 12, 2026",
     lastUpdated: "October 12, 2026",
-    cardImage: "/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
-    heroImageMobile: "/Hero_image_for_mobile_all.png",
-    heroImageTablet: "/blogs/blog_hero-section-tablet.webp",
-    heroImageDesktop: "/blogs/blog-hero_section.webp",
+    cardImage: "/blog-images/esa-training-myths/esa-training-myth-vs-fact-image.webp",
+    heroImageMobile: "/hero-image-for-mobile-all.png",
+    heroImageTablet: "/blogs/blog-hero-section-tablet.webp",
+    heroImageDesktop: "/blogs/blog-hero-section.webp",
     questionCallout: {
       question: "Does an ESA need to be trained by law?",
       answer: "No. Federal law does not require an ESA to have professional or task training, but basic obedience and appropriate behavior are expected. For housing, the focus is on the person’s disability-related need and whether the animal can be safely and reasonably accommodated."
@@ -3642,7 +3642,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       "With the rise in online ESA information, misleading claims about ESA training and certifications have made it even more difficult for ESA owners to understand the actual legal responsibilities. Knowing what the law actually requires can help ESA owners make informed decisions about their support animals and housing rights."
     ],
     introImage: {
-      src: "/Blog Images/ESA Training Myths/esa-training-myth-vs-fact-image.webp",
+      src: "/blog-images/esa-training-myths/esa-training-myth-vs-fact-image.webp",
       alt: "esa training myth vs fact",
       width: 1200,
       height: 800,

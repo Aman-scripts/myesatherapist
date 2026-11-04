@@ -59,7 +59,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
       },
       {
         "text": "Our Service Areas",
-        "href": "/states/"
+        "href": "/state/"
       },
       {
         "text": "Refund Policy",
