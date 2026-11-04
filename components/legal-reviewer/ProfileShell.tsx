@@ -152,9 +152,8 @@ export function ProfileShell(props: ProfileShellProps) {
   return (
     <section className="w-full bg-background relative pb-6 lg:pb-8">
       <div className="relative z-10 w-full flex flex-col lg:flex-row items-start">
-        {/* Desktop sidebar. The trail lives in this panel so it wraps on the teal background. */}
+        {/* Desktop sidebar */}
         <aside className="hidden lg:block w-[382px] shrink-0 sticky top-[135px] self-start z-20 max-h-[calc(100vh-135px)] overflow-y-auto overflow-x-hidden no-scrollbar color-gradient px-[31px] pt-6 pb-12">
-          <SiteBreadcrumbs onDark className="mb-8" />
           <SidebarBody {...props} />
         </aside>
 
@@ -202,10 +201,10 @@ export function ProfileShell(props: ProfileShellProps) {
             document.body,
           )}
 
-        {/* Main column (Figma Frame 1000011878: padding 0 74px, gap 53px) */}
-        <div className="flex-1 min-w-0 max-w-[1055px] px-4 sm:px-8 lg:px-[74px] pt-6 lg:pt-[74px] flex flex-col gap-10 lg:gap-[53px]">
-          <SiteBreadcrumbs className="lg:hidden" includeSchema={false} />
-          {children}
+        {/* Main column. The breadcrumb sits above the article, outside the sidebar. */}
+        <div className="flex-1 min-w-0 max-w-[1055px] px-4 sm:px-8 lg:px-[74px] pt-6 lg:pt-8 flex flex-col">
+          <SiteBreadcrumbs className="mb-6 lg:mb-8" />
+          <div className="flex flex-col gap-10 lg:gap-[53px]">{children}</div>
         </div>
       </div>
     </section>
