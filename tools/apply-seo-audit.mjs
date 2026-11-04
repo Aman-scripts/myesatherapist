@@ -30,7 +30,7 @@ const replacements = [
   ['href: "/author/allyson-valley/"', 'href: "/contributors/allyson-valley/"'],
   ['href: "/author/mohammed-ziauddin/"', 'href: "/contributors/mohammed-ziauddin/"'],
   ["bioHref=\"/author/mohammed-ziauddin/\"", "bioHref=\"/contributors/mohammed-ziauddin/\""],
-  ["/esa-doctors/dr-robert-staff/", "/esa-doctors/robert-staaf/"],
+  ["/esa-doctors/dr-robert-staff/", "/esa-doctors/dr-robert-staaf/"],
   ["Dr. Robert Staaf, Licensed Clinical Social Worker", "Robert Staaf, Licensed Clinical Social Worker"],
   ['"credentials": "Licensed Clinical Social Worker"', '"credentials": "Ph.D., LPC-MHSP"'],
   [

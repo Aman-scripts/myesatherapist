@@ -2,6 +2,50 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: "/esa-doctors/dr-robert-staff",
+        destination: "/esa-doctors/dr-robert-staaf/",
+        statusCode: 301,
+      },
+      {
+        source: "/esa-doctors/dr-robert-staff/",
+        destination: "/esa-doctors/dr-robert-staaf/",
+        statusCode: 301,
+      },
+      {
+        source: "/esa-doctors/robert-staaf",
+        destination: "/esa-doctors/dr-robert-staaf/",
+        statusCode: 301,
+      },
+      {
+        source: "/esa-doctors/robert-staaf/",
+        destination: "/esa-doctors/dr-robert-staaf/",
+        statusCode: 301,
+      },
+      {
+        source: "/author/allyson-valley",
+        destination: "/contributors/allyson-valley/",
+        statusCode: 301,
+      },
+      {
+        source: "/author/allyson-valley/",
+        destination: "/contributors/allyson-valley/",
+        statusCode: 301,
+      },
+      {
+        source: "/author/mohammed-ziauddin",
+        destination: "/contributors/mohammed-ziauddin/",
+        statusCode: 301,
+      },
+      {
+        source: "/author/mohammed-ziauddin/",
+        destination: "/contributors/mohammed-ziauddin/",
+        statusCode: 301,
+      },
+    ];
+  },
   // Vercel compresses responses. Next's gzip adds a drain listener per chunk
   // and warns once a large page, such as a state page, passes 10 listeners.
   compress: false,
