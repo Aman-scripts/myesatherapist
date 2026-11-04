@@ -7,12 +7,15 @@ import { CtaButton } from "@/components/common/CtaButton";
 export interface BlogCardProps {
   article: BlogArticle;
   priority?: boolean;
+  showAuthor?: boolean;
 }
 
-export function BlogCard({ article, priority = false }: BlogCardProps) {
-  const authorDisplayName = article.author?.name
-    ? article.author.name.replace(/,\s*(Ph\.?D\.?|LPC|MSW|LCSW|LMFT|MD).*/i, "")
-    : "Dr. Marcus";
+export function BlogCard({ article, priority = false, showAuthor = true }: BlogCardProps) {
+  const authorDisplayName = showAuthor
+    ? article.author?.name
+      ? article.author.name.replace(/,\s*(Ph\.?D\.?|LPC|MSW|LCSW|LMFT|MD).*/i, "")
+      : "Dr. Marcus"
+    : "";
 
   return (
     <article className="w-full max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px] group hover:shadow-lg transition-all duration-300">
