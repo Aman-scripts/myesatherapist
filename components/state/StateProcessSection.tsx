@@ -126,16 +126,17 @@ export function StateProcessSection({ data }: { data: StateData }) {
           <div className="flex flex-col items-start gap-2.5 w-full max-w-[620px]">
             {differentiators.map((item, idx) => (
               <div key={idx} className="flex items-start gap-3.5 w-full">
-                {/* Frame 1000011979: Gradient Check Icon */}
-                <Image quality={90}
-                  src="/esa-icons/Icon-46.svg"
-                  alt="Included"
-                  width={20}
-                  height={20}
-                  unoptimized
-                  className="mt-[3px] h-5 w-5 shrink-0 object-contain"
-                />
-                <span className="body-text text-body-text">
+                <span className="flex h-[26px] shrink-0 items-center">
+                  <Image quality={90}
+                    src="/esa-icons/Icon-46.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    unoptimized
+                    className="h-5 w-5 object-contain"
+                  />
+                </span>
+                <span className="body-text text-body-text leading-[26px]">
                   {item}
                 </span>
               </div>

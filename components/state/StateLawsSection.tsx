@@ -57,11 +57,13 @@ export function StateLawsSection({ data }: { data: StateData }) {
                   },
                 ]).map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div
-                      className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                      style={{ background: "var(--color-gradient)" }}
-                    >
-                      <Check className="w-3 h-3 stroke-[3]" />
+                    <div className="flex h-7 shrink-0 items-end">
+                      <div
+                        className="w-5 h-5 rounded-full text-white flex items-center justify-center shadow-xs"
+                        style={{ background: "var(--color-gradient)" }}
+                      >
+                        <Check className="w-3 h-3 stroke-[3]" />
+                      </div>
                     </div>
                     <div>
                       <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-primary mb-1">
@@ -113,11 +115,13 @@ export function StateLawsSection({ data }: { data: StateData }) {
                   },
                 ]).map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div
-                      className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                      style={{ background: "var(--color-gradient)" }}
-                    >
-                      <Check className="w-3 h-3 stroke-[3]" />
+                    <div className="flex h-7 shrink-0 items-end">
+                      <div
+                        className="w-5 h-5 rounded-full text-white flex items-center justify-center shadow-xs"
+                        style={{ background: "var(--color-gradient)" }}
+                      >
+                        <Check className="w-3 h-3 stroke-[3]" />
+                      </div>
                     </div>
                     <div>
                       <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[18px] font-bold text-primary mb-1">

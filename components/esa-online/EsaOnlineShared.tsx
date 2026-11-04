@@ -41,7 +41,7 @@ export function FeatureCard({
   iconW = 32,
   iconH = 32,
   stat,
-  source,
+  className = "",
 }: {
   icon?: string;
   title?: string;
@@ -55,10 +55,10 @@ export function FeatureCard({
   headingAs?: "h2" | "h3";
   /** Text statistic shown in the badge when there is no icon. */
   stat?: string;
-  source?: { label: string; href: string };
+  className?: string;
 }) {
   return (
-    <div className="relative flex w-full flex-col">
+    <div className={`relative flex w-full flex-col ${className}`}>
       <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
       <div
         className={`relative mt-2 flex flex-1 flex-col items-center justify-center gap-2 rounded-[20px] px-5 pt-[56px] pb-8 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
@@ -80,19 +80,6 @@ export function FeatureCard({
         {description && (
           <p className={`body-small ${dark ? "text-background" : "text-body-text"}`}>
             {description}
-          </p>
-        )}
-        {source && (
-          <p className={`body-small ${dark ? "text-background" : "text-body-text"}`}>
-            Source:{" "}
-            <a
-              href={source.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 break-all"
-            >
-              {source.label}
-            </a>
           </p>
         )}
       </div>

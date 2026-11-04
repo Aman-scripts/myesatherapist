@@ -28,7 +28,9 @@ export function EsaHousingHowItWorks() {
       title="How an Emotional Support Animal (ESA) Evaluation Works"
       subtitle="A simple 3-step process to complete your housing esa letter evaluation"
       steps={STEPS}
-      showCta={false}
+      buttonText="Get Started"
+      note="If not approved after your evaluation? You get a full refund."
+      paymentNote="We authorize your payment first, but we will only charge it after your evaluation is completed."
     />
   );
 }

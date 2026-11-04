@@ -39,15 +39,17 @@ export function StateRequirementsSection({ data }: { data: StateData }) {
           <div className="space-y-3.5 sm:space-y-4 max-w-[720px] mx-auto text-left mb-8">
             {requirements.map((req, index) => (
               <div key={index} className="flex items-start gap-3">
-                <Image quality={90}
-                  src="/esa-icons/Icon-46.svg"
-                  alt="Included"
-                  width={20}
-                  height={20}
-                  unoptimized
-                  className="mt-0.5 h-5 w-5 shrink-0 object-contain"
-                />
-                <span className="font-sans text-[16px] font-semibold text-body-text leading-relaxed">
+                <span className="flex h-[26px] shrink-0 items-center">
+                  <Image quality={90}
+                    src="/esa-icons/Icon-46.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    unoptimized
+                    className="h-5 w-5 object-contain"
+                  />
+                </span>
+                <span className="font-sans text-[16px] font-semibold text-body-text leading-[26px]">
                   {req}
                 </span>
               </div>

@@ -50,6 +50,7 @@ export function EsaOnlineHowItWorks({
   steps = STEPS,
   buttonText = "Start your ESA Evaluation",
   note = "ESA letters are provided solely when deemed clinically appropriate by the evaluating clinician.",
+  paymentNote,
   showCta = true,
 }: {
   title?: string;
@@ -57,6 +58,7 @@ export function EsaOnlineHowItWorks({
   steps?: HowItWorksStep[];
   buttonText?: string;
   note?: string;
+  paymentNote?: string;
   showCta?: boolean;
 } = {}) {
   return (
@@ -89,14 +91,19 @@ export function EsaOnlineHowItWorks({
         </div>
 
         {showCta && (
-          <div className="flex flex-col items-center gap-3">
+          <div className={paymentNote ? "flex flex-col items-center" : "flex flex-col items-center gap-3"}>
             <CtaButton href="/pricing/" variant="accent">
               {buttonText}
             </CtaButton>
             {note && (
-              <p className="text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]">
+              <p className={paymentNote ? "body-small text-center mt-2" : "text-center font-sans text-[14px] font-medium leading-[22px] text-[#5F6B6F]"}>
                 {note}
               </p>
+            )}
+            {paymentNote && (
+              <div className="mt-6 inline-block max-w-[760px] bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 body-small text-center border border-[#E76F51]/20">
+                {paymentNote}
+              </div>
             )}
           </div>
         )}

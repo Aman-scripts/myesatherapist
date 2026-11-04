@@ -68,7 +68,7 @@ export function EsaHousingLaws() {
                   {col.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle />
-                      <span className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-primary">{item}</span>
+                      <span className="font-sans font-semibold text-base sm:text-[18px] leading-[30px] text-body-text">{item}</span>
                     </li>
                   ))}
                 </ul>

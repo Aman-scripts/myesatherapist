@@ -101,11 +101,13 @@ export function StateScamsSection({ data }: { data: StateData }) {
               <div className="space-y-5 flex-1">
                 {whatYouNeedItems.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3.5">
-                    <div
-                      className="w-5 h-5 rounded-full text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
-                      style={{ background: "var(--color-gradient)" }}
-                    >
-                      <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    <div className="flex h-7 shrink-0 items-end">
+                      <div
+                        className="w-5 h-5 rounded-full text-white flex items-center justify-center shadow-xs"
+                        style={{ background: "var(--color-gradient)" }}
+                      >
+                        <Check className="w-3.5 h-3.5 stroke-[3]" />
+                      </div>
                     </div>
                     <div>
                       <h4 className="font-sans text-xs sm:text-[13.5px] lg:text-[16px] font-bold text-primary mb-1">
@@ -147,10 +149,12 @@ export function StateScamsSection({ data }: { data: StateData }) {
               <div className="space-y-4 sm:space-y-4.5 flex-1">
                 {commonItems.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3.5">
-                    <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                      <X className="w-3.5 h-3.5 stroke-[3]" />
+                    <div className="flex h-[26px] shrink-0 items-center">
+                      <div className="w-5 h-5 rounded-full bg-[#D9383A] text-white flex items-center justify-center shadow-sm">
+                        <X className="w-3.5 h-3.5 stroke-[3]" />
+                      </div>
                     </div>
-                    <p className="font-sans text-xs sm:text-[13.5px] lg:text-[14.5px] font-semibold text-body-text pt-0.5 leading-snug">
+                    <p className="font-sans text-xs sm:text-[13.5px] lg:text-[14.5px] font-semibold text-body-text leading-[26px]">
                       {item}
                     </p>
                   </div>

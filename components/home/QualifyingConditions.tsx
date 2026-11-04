@@ -137,6 +137,8 @@ interface QualifyingConditionsProps {
   id?: string;
   title?: string;
   description?: string;
+  introMaxClass?: string;
+  labelOverrides?: Record<string, string>;
 }
 
 export function QualifyingConditions({
@@ -144,6 +146,8 @@ export function QualifyingConditions({
   id = "qualifying-conditions",
   title = "Conditions That May Be Considered During an ESA Evaluation",
   description = "A licensed mental health professional will assess whether an emotional support animal may be appropriate based on your individual needs. These are some mental health conditions that may support the need for an ESA.",
+  introMaxClass = "max-w-[709px]",
+  labelOverrides,
 }: QualifyingConditionsProps = {}) {
   const [hoveredCondition, setHoveredCondition] = useState<string | null>(null);
 
@@ -151,7 +155,7 @@ export function QualifyingConditions({
     <section id={id} className={`pt-12 sm:pt-16 xl:pt-20 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible ${className}`}>
       <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 max-w-[709px] mx-auto">
+        <div className={`text-center mb-8 sm:mb-10 xl:mb-14 space-y-2.5 mx-auto ${introMaxClass}`}>
           <h2 className="heading-h2 capitalize">
             {title}
           </h2>
@@ -213,7 +217,7 @@ export function QualifyingConditions({
                       className="body-large bg-clip-text text-transparent"
                       style={{ backgroundImage: TEAL_GRADIENT }}
                     >
-                      {c.label}
+                      {labelOverrides?.[c.label] ?? c.label}
                     </span>
                   </div>
 
@@ -299,7 +303,7 @@ export function QualifyingConditions({
                       className="body-large bg-clip-text text-transparent"
                       style={{ backgroundImage: TEAL_GRADIENT }}
                     >
-                      {c.label}
+                      {labelOverrides?.[c.label] ?? c.label}
                     </span>
                   </button>
 

@@ -1446,8 +1446,8 @@ export const POLICIES_DATA: PolicyDocument[] = [
           },
           {
             "type": "note",
-            "html": "<b>100% refunds are issued for eligible cancellations.</b>",
-            "text": "100% refunds are issued for eligible cancellations."
+            "html": "<b>100% refunds are issued for eligible cancelations.</b>",
+            "text": "100% refunds are issued for eligible cancelations."
           },
           {
             "type": "paragraph",

@@ -64,18 +64,30 @@ export function EsaHousingBarriers() {
           Renters who rely on emotional support animals face fewer housing options, higher costs, and added stress. These barriers aren’t minor inconveniences, they can directly undermine emotional well-being and housing stability.
         </SectionHeader>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 pt-2">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 pt-2">
           {STATS.map((s) => (
-            <FeatureCard
-              key={s.alt}
-              icon={s.icon}
-              stat={s.stat}
-              iconAlt={s.alt}
-              iconW={s.w}
-              iconH={s.h}
-              description={s.description}
-              source={s.source}
-            />
+            <div key={s.alt} className="row-span-2 grid grid-rows-subgrid gap-y-3 pb-12 lg:pb-0">
+              <FeatureCard
+                className="h-full"
+                icon={s.icon}
+                stat={s.stat}
+                iconAlt={s.alt}
+                iconW={s.w}
+                iconH={s.h}
+                description={s.description}
+              />
+              <p className="body-small px-1 text-center text-body-text">
+                Source:{" "}
+                <a
+                  href={s.source.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 [overflow-wrap:anywhere]"
+                >
+                  {s.source.label}
+                </a>
+              </p>
+            </div>
           ))}
         </div>
 

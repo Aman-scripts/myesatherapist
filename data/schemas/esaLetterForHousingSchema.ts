@@ -297,46 +297,18 @@ export const esaLetterForHousingSchemas = [
         "@id": "https://myesatherapist.com/esa-letter-for-housing/#conditions",
         "name": "Conditions Commonly Considered During an ESA Evaluation",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Anxiety Disorders"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Depression"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "PTSD"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Bipolar Disorder"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "name": "OCD"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "name": "Panic Disorders"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "name": "ADHD"
-          },
-          {
-            "@type": "ListItem",
-            "position": 8,
-            "name": "Social Anxiety"
-          }
+          { "@type": "ListItem", "position": 1, "name": "Agoraphobia" },
+          { "@type": "ListItem", "position": 2, "name": "Anxiety Disorders" },
+          { "@type": "ListItem", "position": 3, "name": "Panic Disorders" },
+          { "@type": "ListItem", "position": 4, "name": "OCD" },
+          { "@type": "ListItem", "position": 5, "name": "Bipolar Disorders" },
+          { "@type": "ListItem", "position": 6, "name": "PTSD" },
+          { "@type": "ListItem", "position": 7, "name": "Social Anxiety" },
+          { "@type": "ListItem", "position": 8, "name": "ADHD" },
+          { "@type": "ListItem", "position": 9, "name": "Mood Disorders" },
+          { "@type": "ListItem", "position": 10, "name": "Other ADA Conditions" },
+          { "@type": "ListItem", "position": 11, "name": "Depression" },
+          { "@type": "ListItem", "position": 12, "name": "Schizophrenia" }
         ]
       },
       {
