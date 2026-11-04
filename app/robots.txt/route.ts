@@ -6,8 +6,10 @@ export const revalidate = 3600;
 export async function GET() {
   const host = (await headers()).get("host") || "";
   const staging = host.endsWith(".vercel.app");
+  // Allow the crawl so Google can see the noindex header. Blocking the host in
+  // robots.txt can leave staging URLs indexed without a snippet.
   const body = staging
-    ? ["User-agent: *", "Disallow: /", ""].join("\n")
+    ? ["User-agent: *", "Allow: /", ""].join("\n")
     : [
         "User-agent: *",
         "Allow: /",

@@ -26,10 +26,11 @@ export const metadata: Metadata = {
       "Meet Awais Arshad, Legal Reviewer at My ESA Therapist. Learn about his role in reviewing legal and housing-related content concerning emotional support animals and ESA laws.",
     url: "https://myesatherapist.com/contributors/awais-arshad/",
     type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
     images: [
       {
-        url: "https://myesatherapist.com/legal_reviewer/legal-reviwer.webp",
+        url: "https://myesatherapist.com/legal-reviewer/legal-reviwer.webp",
         width: 800,
         height: 1067,
         alt: "Awais Arshad – Legal Reviewer",
@@ -38,6 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Awais Arshad – Legal Reviewer | My ESA Therapist",
     description:
       "Meet Awais Arshad, Legal Reviewer at My ESA Therapist. Learn about his role in reviewing legal and housing-related content concerning emotional support animals and ESA laws.",

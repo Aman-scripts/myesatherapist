@@ -35,10 +35,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/video-testimonials/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("video-testimonials", "Customer video testimonials").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Letter Reviews - Video Reviews | My ESA Therapist",
     description:
       "Watch real customer video testimonials about their ESA letter experience with My ESA Therapist. See how our process helps you get started quickly and easily.",

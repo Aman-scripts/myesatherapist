@@ -25,11 +25,14 @@ export const metadata: Metadata = {
     description:
       "Read the Terms of Use for My ESA Therapist, including service policies, user responsibilities, payments, and ESA evaluation guidelines.",
     url: "https://myesatherapist.com/terms-of-use/",
-    type: "article",
+    type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Terms of Use | My ESA Therapist Legal & Service Policies",
     description:
       "Read the Terms of Use for My ESA Therapist, including service policies, user responsibilities, payments, and ESA evaluation guidelines.",

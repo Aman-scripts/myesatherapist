@@ -37,10 +37,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/reviews/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("customer-reviews", "Five-star customer reviews").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "My ESA Therapist Reviews | Real Customer Experiences & Ratings",
     description:
       "Read verified My ESA Therapist reviews from real customers. See ratings, experiences, and why clients trust our fast, legitimate ESA letter services.",

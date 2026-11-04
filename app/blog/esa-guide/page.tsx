@@ -41,11 +41,14 @@ export const metadata: Metadata = {
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",
     url: "https://myesatherapist.com/blog/esa-guide/",
     siteName: "My ESA Therapist",
-    type: "article",
+    type: "website",
+    locale: "en_US",
     images: socialImage("esa-guide", "Couple and dog exploring ESA guidance").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Guide: Emotional Support Animal Information & Resources | My ESA Therapist",
     description:
       "Explore emotional support animal laws, housing rights, ESA benefits, therapist evaluations, and expert guidance in one complete ESA resource center.",

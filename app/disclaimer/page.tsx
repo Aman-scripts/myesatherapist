@@ -26,10 +26,13 @@ export const metadata: Metadata = {
       "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
     url: "https://myesatherapist.com/disclaimer/",
     type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Disclaimer | My ESA Therapist",
     description:
       "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",

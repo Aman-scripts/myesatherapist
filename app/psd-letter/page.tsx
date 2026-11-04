@@ -46,10 +46,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/psd-letter/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("psd-letter", "Woman and service dog in sunlit comfort").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Psychiatric Service Dog (PSD) Letter Online | My ESA Therapist",
     description:
       "Need a Psychiatric Service Dog letter? My ESA Therapist connects you with licensed mental health professionals for confidential evaluations and legitimate PSD letters.",

@@ -27,10 +27,13 @@ export const metadata: Metadata = {
       "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",
     url: "https://myesatherapist.com/contact-us/",
     type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Connect With Our Customer Support Team | My ESA Therapist",
     description:
       "Have a question? Our Customer Support team is ready to help you! Feel free to call us at (888) 412-4041 email us at contact@myesatherapist.com",

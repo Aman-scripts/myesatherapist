@@ -26,10 +26,13 @@ export const metadata: Metadata = {
       "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
     url: "https://myesatherapist.com/accessibility-statement/",
     type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Accessibility Statement | My ESA Therapist",
     description:
       "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",

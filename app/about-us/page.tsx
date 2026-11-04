@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AboutHeroSection } from "@/components/about-us/AboutHeroSection";
 import { AboutLegitimateSection } from "@/components/about-us/AboutLegitimateSection";
-import { AboutTrustBySection } from "@/components/about-us/AboutTrustBySection";
 import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection";
 import { AboutWhoWeHelpSection } from "@/components/about-us/AboutWhoWeHelpSection";
 import { AboutVsFakeSection } from "@/components/about-us/AboutVsFakeSection";
@@ -38,10 +37,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/about-us/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("about-us", "About My ESA Therapist").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "About My ESA Therapist | Licensed ESA Evaluations You Can Trust",
     description:
       "Learn how My ESA Therapist provides legitimate, HIPAA-compliant ESA evaluations through state-licensed mental health professionals across all 50 states.",
@@ -108,14 +110,11 @@ export default function AboutUsPage() {
         {/* Section 1: Hero */}
         <AboutHeroSection />
 
-        {/* Why ESA Owners Trust Us */}
-        <AboutTrustBySection />
+        {/* Why Do Individuals Trust My ESA Therapist? */}
+        <AboutWhyTrustSection />
 
         {/* Legitimate ESA Letter Evaluations You Can Trust */}
         <AboutLegitimateSection />
-
-        {/* Section 3: Why Pet Owners Trust MY ESA Therapist */}
-        <AboutWhyTrustSection />
 
         {/* Section 4: Who We Help */}
         <AboutWhoWeHelpSection />

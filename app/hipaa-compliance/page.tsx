@@ -25,11 +25,14 @@ export const metadata: Metadata = {
     description:
       "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
     url: "https://myesatherapist.com/hipaa-compliance/",
-    type: "article",
+    type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "HIPAA Compliance & Data Privacy | My ESA Therapist",
     description:
       "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",

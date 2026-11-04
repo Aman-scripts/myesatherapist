@@ -26,10 +26,13 @@ export const metadata: Metadata = {
       "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
     url: "https://myesatherapist.com/editorial-policy/",
     type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Editorial Policy | My ESA Therapist",
     description:
       "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",

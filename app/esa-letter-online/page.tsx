@@ -66,8 +66,8 @@ export default function EsaLetterOnlinePage() {
       <main className="flex-1">
         <EsaOnlineHero
           showStats
-          imageMobile="/Hero_image_for_mobile_all.png"
-          imageTablet="/esa-online/esa-online-herosection_tablet.webp"
+          imageMobile="/hero-image-for-mobile-all.png"
+          imageTablet="/esa-online/esa-online-herosection-tablet.webp"
         />
         <EsaOnlineTrustCards />
         <EsaOnlineHowItWorks />

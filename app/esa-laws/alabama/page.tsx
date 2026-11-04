@@ -45,9 +45,12 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-laws/alabama/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Alabama ESA Laws: Rules for Tenants & Landlords | My ESA Therapist",
     description:
       "Learn Alabama ESA laws, FHA housing protections, ESA letter requirements, tenant rights, landlord rules, fees, and assistance animal regulations.",
@@ -81,8 +84,8 @@ export default function AlabamaEsaLawsPage() {
         <EsaLawsStateHero
           title={ALABAMA_HERO.title}
           description={ALABAMA_HERO.description}
-          imageMobile="/Hero_image_for_mobile_all.png"
-          imageTablet="/esalawsblog/esa-laws_alabama_herosection-tablet.webp"
+          imageMobile="/hero-image-for-mobile-all.png"
+          imageTablet="/esalawsblog/esa-laws-alabama-herosection-tablet.webp"
           imageAlt="Alabama ESA laws guide for tenants and landlords"
         />
 

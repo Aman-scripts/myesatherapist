@@ -17,6 +17,8 @@ const ALIASES: Record<string, string> = {
   "/esa-letter-by-state/": "/state/",
   "/disclaimer-and-policies": "/disclaimer/",
   "/disclaimer-and-policies/": "/disclaimer/",
+  "/consent-for-telehealth": "/telehealth-consent/",
+  "/consent-for-telehealth/": "/telehealth-consent/",
 };
 
 function applyStagingRobots(response: NextResponse, request: NextRequest) {

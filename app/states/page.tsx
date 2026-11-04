@@ -33,10 +33,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/state/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("esa-by-state", "ESA letter by state").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Evaluations by State | My ESA Therapist",
     description:
       "Explore ESA evaluation options by state. Connect with licensed mental health professionals for compliant emotional support animal assessments.",

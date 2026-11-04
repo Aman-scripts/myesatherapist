@@ -17,15 +17,26 @@ export const metadata: Metadata = {
     description:
       "Awais Arshad is a New York-licensed attorney and legal reviewer at My ESA Therapist with over a decade of experience fact-checking U.S. legal content and ESA regulations.",
     url: "https://myesatherapist.com/legal-reviewer/",
-    type: "profile",
+    siteName: "My ESA Therapist",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: "https://myesatherapist.com/legal_reviewer/legal-reviwer.webp",
+        url: "https://myesatherapist.com/legal-reviewer/legal-reviwer.webp",
         width: 800,
         height: 1067,
         alt: "Awais Arshad - Legal Reviewer",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
+    title: "Awais Arshad - Legal Reviewer & Attorney | My ESA Therapist",
+    description:
+      "Awais Arshad is a New York-licensed attorney and legal reviewer at My ESA Therapist with over a decade of experience fact-checking U.S. legal content and ESA regulations.",
+    images: ["https://myesatherapist.com/legal-reviewer/legal-reviwer.webp"],
   },
 };
 
@@ -61,7 +72,7 @@ const legalReviewerSchema = {
         "@id": "https://www.linkedin.com/in/awais-arshad-a51b31113/#person",
         "name": "Awais Arshad",
         "jobTitle": "Attorney at Law & Legal Reviewer",
-        "image": "https://myesatherapist.com/legal_reviewer/legal-reviwer.webp",
+        "image": "https://myesatherapist.com/legal-reviewer/legal-reviwer.webp",
         "sameAs": [
           "https://www.linkedin.com/in/awais-arshad-a51b31113/",
           "https://courtingthelaw.com/",

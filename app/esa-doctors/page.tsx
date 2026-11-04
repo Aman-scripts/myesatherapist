@@ -23,11 +23,15 @@ export const metadata: Metadata = {
     description:
       "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",
     url: "https://myesatherapist.com/esa-doctors/",
+    siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("our-therapist", "Our therapists").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Meet Our Licensed Clinicians | My ESA Therapist",
     description:
       "Connect with state-licensed therapists and physicians nationwide for legitimate emotional support animal (ESA) evaluations through secure, HIPAA-compliant telehealth.",

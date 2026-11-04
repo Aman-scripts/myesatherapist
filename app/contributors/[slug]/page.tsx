@@ -55,9 +55,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: canonicalUrl,
       type: "website",
+      locale: "en_US",
+      siteName: "My ESA Therapist",
     },
     twitter: {
       card: "summary",
+      site: "@MyESATherapist",
+      creator: "@MyESATherapist",
       title,
       description,
     },

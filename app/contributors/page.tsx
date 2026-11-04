@@ -33,9 +33,12 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/contributors/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "My ESA Therapist Contributors: Authors & Reviewers",
     description:
       "Meet the authors, medical reviewers, and legal reviewers who contribute to My ESA Therapist’s educational content about emotional support animals, ESA letters, and housing.",
@@ -64,8 +67,8 @@ export default function ContributorsPage() {
           buttonText="Explore The Team"
           buttonHref="#authors"
           image="/contributors/contributor-hero-desktop.webp"
-          imageMobile="/Hero_image_for_mobile_all.png"
-          imageTablet="/contributors/contributors_herosection-tablet.webp"
+          imageMobile="/hero-image-for-mobile-all.png"
+          imageTablet="/contributors/contributors-herosection-tablet.webp"
           imageAlt="Legal reviewers at a desk with books on disability rights and tenant protections"
           desktopHeight={632}
         />

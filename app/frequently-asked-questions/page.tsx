@@ -31,9 +31,12 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/frequently-asked-questions/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Frequently Asked Questions About ESA Letters | My ESA Therapist",
     description:
       "Find answers to frequently asked questions about ESA letters, eligibility, the evaluation process, housing accommodations, and emotional support animals.",

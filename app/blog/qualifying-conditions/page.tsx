@@ -34,10 +34,13 @@ export const metadata: Metadata = {
       "Explore mental health conditions that may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, and panic disorder. Learn about ESA eligibility.",
     url: "https://myesatherapist.com/blog/qualifying-conditions/",
     siteName: "My ESA Therapist",
-    type: "article",
+    type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Qualifying Conditions: What Conditions May Qualify? | My ESA Therapist",
     description:
       "Explore mental health conditions that may qualify for an ESA letter, including anxiety, depression, PTSD, ADHD, and panic disorder. Learn about ESA eligibility.",

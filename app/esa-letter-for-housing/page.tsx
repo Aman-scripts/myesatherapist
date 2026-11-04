@@ -47,10 +47,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-letter-for-housing/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("esa-letter-for-housing", "Pet-friendly home comfort").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Letter for Housing Online | Licensed & FHA-Compliant - My ESA Therapist",
     description:
       "Facing 'no-pet' housing rules? Get an FHA-compliant ESA letter for housing online from a licensed therapist. Secure, confidential and pay only if approved.",
@@ -115,9 +118,9 @@ export default function EsaLetterForHousingPage() {
           buttonText="Start Your Application"
           refundText="Not approved after your evaluation? You get a full refund."
           showStats
-          image="/esa-housing/esa-letter-housing_herosection.webp"
-          imageMobile="/Hero_image_for_mobile_all.png"
-          imageTablet="/esa-housing/esa-letter-housing_herosection_tablet.webp"
+          image="/esa-housing/esa-letter-housing-herosection.webp"
+          imageMobile="/hero-image-for-mobile-all.png"
+          imageTablet="/esa-housing/esa-letter-housing-herosection-tablet.webp"
           imageAlt="Woman on a video call with a licensed therapist while sitting with her dog"
         />
         <EsaHousingBarriers />

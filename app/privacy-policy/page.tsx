@@ -25,11 +25,14 @@ export const metadata: Metadata = {
     description:
       "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
     url: "https://myesatherapist.com/privacy-policy/",
-    type: "article",
+    type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Privacy Policy | My ESA Therapist Data Protection & Security",
     description:
       "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",

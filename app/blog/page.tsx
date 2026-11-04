@@ -28,11 +28,14 @@ export const metadata: Metadata = {
       "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",
     url: "https://myesatherapist.com/blog/",
     siteName: "My ESA Therapist",
-    type: "article",
+    type: "website",
+    locale: "en_US",
     images: socialImage("blog-hub-page", "Resource hub for emotional support animals").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Blog: Emotional Support Animal Articles & Resources | My ESA Therapist",
     description:
       "Explore expert-written articles covering emotional support animals, ESA housing information, therapist evaluations, mental health support, and more.",

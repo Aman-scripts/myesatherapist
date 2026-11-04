@@ -25,11 +25,14 @@ export const metadata: Metadata = {
     description:
       "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
     url: "https://myesatherapist.com/refund-policy/",
-    type: "article",
+    type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Refund & Cancellation Policy | My ESA Therapist",
     description:
       "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",

@@ -10,6 +10,7 @@ import { socialImage } from "@/data/socialImages";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { EsaEligibilityModal } from "@/components/common/EsaEligibilityModal";
 import { StateSelectModal } from "@/components/common/StateSelectModal";
+import { StagingRobots } from "@/components/seo/StagingRobots";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -148,6 +149,7 @@ export default function RootLayout({
 })();`,
           }}
         />
+        <StagingRobots />
         <ThirdPartyErrorHandler />
         <SiteAnalytics />
         {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}

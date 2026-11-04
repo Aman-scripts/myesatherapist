@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       "Meet Max Phillips, Medical Reviewer at My ESA Therapist. Learn about his role in reviewing health and mental health content related to emotional support animals and ESA evaluations.",
     url: "https://myesatherapist.com/contributors/max-phillips/",
     type: "website",
+    locale: "en_US",
     siteName: "My ESA Therapist",
     images: [
       {
@@ -38,6 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Max Phillips – Medical Reviewer | My ESA Therapist",
     description:
       "Meet Max Phillips, Medical Reviewer at My ESA Therapist. Learn about his role in reviewing health and mental health content related to emotional support animals and ESA evaluations.",

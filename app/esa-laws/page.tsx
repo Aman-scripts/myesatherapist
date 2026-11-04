@@ -36,10 +36,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-laws/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("esa-laws", "Emotional support animal laws by state").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Laws 2026: Federal & State Rules | My ESA Therapist",
     description:
       "Complete guide to ESA laws in the U.S. Covers housing rights, landlord rules, ESA letters, state regulations, and what federal law does and doesn't allow.",

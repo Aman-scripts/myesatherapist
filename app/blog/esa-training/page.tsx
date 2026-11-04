@@ -43,10 +43,13 @@ export const metadata: Metadata = {
       "Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.",
     url: "https://myesatherapist.com/blog/esa-training/",
     siteName: "My ESA Therapist",
-    type: "article",
+    type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "Does Your ESA Actually Need Training? | My ESA Therapist",
     description:
       "Wondering whether your emotional support animal needs training? Here's the honest, complete answer, including what changed in 2026 and what it means for your housing rights.",

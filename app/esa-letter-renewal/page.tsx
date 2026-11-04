@@ -45,10 +45,13 @@ export const metadata: Metadata = {
     url: "https://myesatherapist.com/esa-letter-renewal/",
     siteName: "My ESA Therapist",
     type: "website",
+    locale: "en_US",
     images: socialImage("esa-letter-renewal", "Online ESA letter renewal").openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    site: "@MyESATherapist",
+    creator: "@MyESATherapist",
     title: "ESA Letter Renewal Online by Licensed Therapists | My ESA Therapist",
     description:
       "Need to renew your ESA letter? My ESA Therapist offers simple online renewals with licensed therapists and quick turnaround.",

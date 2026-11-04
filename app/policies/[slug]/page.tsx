@@ -163,10 +163,13 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description,
       url: canonicalUrl,
       type: "website",
+      locale: "en_US",
       siteName: "My ESA Therapist",
     },
     twitter: {
       card: "summary_large_image",
+      site: "@MyESATherapist",
+      creator: "@MyESATherapist",
       title,
       description,
     },
