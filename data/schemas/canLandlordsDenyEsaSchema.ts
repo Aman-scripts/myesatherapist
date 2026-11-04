@@ -133,9 +133,9 @@ export const canLandlordsDenyEsaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Dr. Robert Staaf",
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "jobTitle": "Licensed Clinical Social Worker",
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization"
@@ -211,7 +211,7 @@ export const canLandlordsDenyEsaSchema = {
       "@id": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/#quote-staaf",
       "text": "An emotional support animal is not just a pet; for many people, it is part of their emotional well-being and daily stability.",
       "creator": {
-        "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person"
+        "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person"
       },
       "isPartOf": {
         "@id": "https://myesatherapist.com/blog/esa-guide/can-landlords-deny-emotional-support-animals/#blogposting"

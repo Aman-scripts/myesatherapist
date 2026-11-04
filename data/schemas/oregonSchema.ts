@@ -77,7 +77,7 @@ export const oregonSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-oregon/#webpage",
       "url": "https://myesatherapist.com/esa-letter-oregon/",
-      "name": "ESA Letter Oregon From Licensed Therapists | My ESA Therapist",
+      "name": "Oregon ESA Letter Online | My ESA Therapist",
       "description": "Looking for an ESA letter in Oregon? Get evaluated by a state-licensed therapist online. Transparent pricing, no hidden fees.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const oregonSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const oregonSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const oregonSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Oregon?",
+          "name": "Can A Landlord in Oregon Charge For Damage Caused By An ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Oregon residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. Although approved assistance-animal accommodations generally are not subject to pet rent or pet deposits, tenants may remain responsible for damage caused by their animals, subject to applicable law and the terms of the tenancy.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Oregon?",
+          "name": "What Does An ESA Letter Cost In Oregon?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Oregon residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Oregon, ESA letter pricing varies based on the provider and how the evaluation is conducted, with a strong focus on a legitimate mental health assessment. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Oregon residents?",
+          "name": "What If My ESA is An Uncommon Animal in Oregon Housing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Oregon residents."
-          }
+            "text": "While dogs and cats are common, there are several animals which may qualify. Housing providers may ask for additional verification if the ESA poses a legitimate risk to health, surroundings and the property.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Oregon qualify for an emotional support animal?",
+          "name": "Can A Landlord in Oregon Require Me To Use A Specific ESA Verification Form?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Oregon may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "A housing provider may request reliable supporting information when permitted by applicable law and when the disability-related need is not readily apparent. A specific ESA letter or form does not automatically guarantee approval, and any documentation request should be assessed under the applicable fair housing requirements.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Oregon residents?",
+          "name": "Does An ESA Letter in Oregon Expire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. There is no universal federal rule requiring ESA letters to be renewed every 12 months. A housing provider may request updated reliable information when permitted by law and reasonably necessary to assess an accommodation request. Whether updated documentation is appropriate depends on the circumstances and information already available.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Oregon?",
+          "name": "Can An Oregon Landlord Limit The Number Of ESAs In One Household?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Oregon. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "A housing provider may assess a request for multiple assistance animals individually and may request reliable supporting information when permitted by law. There is no universal rule guaranteeing approval for a particular number of animals. Each animal’s disability-related need and any relevant safety or property concerns may be considered.",
+          },
         }
       ]
     },

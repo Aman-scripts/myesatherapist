@@ -75,7 +75,7 @@ export const floridaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-florida/#webpage",
       "url": "https://myesatherapist.com/esa-letter-florida/",
-      "name": "Florida ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "name": "Florida ESA Letter Online | My ESA Therapist",
       "description": "Get evaluated for a Florida ESA Letter online by licensed therapists. Confidential assessments for qualified individuals. Get evaluated today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const floridaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const floridaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,188 @@ export const floridaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Florida?",
+          "name": "Are online ESA letters valid in Florida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Florida residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "An emotional support animal recommendation obtained through a telehealth ESA evaluation may be valid in Florida when it is issued by a state-licensed mental health provider following a proper clinical assessment. Online evaluations are permitted as long as federal housing guidance and professional standards are followed.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Florida?",
+          "name": "In Florida, does having an ESA remove all animal-related costs and charges in housing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Florida residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "When an ESA is approved as a reasonable accommodation, housing providers generally cannot charge pet deposits, pet rent, or pet-related fees. However, tenants remain responsible for any actual damage caused by the animal.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Florida residents?",
+          "name": "How much does an ESA letter cost in Florida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Florida residents.",
+            "text": "Costs for ESA letters in Florida vary depending on the provider and evaluation process. At My ESA Therapist, we charge $149, which includes a licensed professional assessment and an ESA letter upon approval. Approval for an ESA is not guaranteed.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Florida qualify for an emotional support animal?",
+          "name": "Can an emotional support animal letter allow my animal in restaurants or public places in Florida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Florida may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "No. Emotional Support Animals do not have public access rights under the Americans with Disabilities Act (ADA). Restaurants, stores, and private businesses in Florida can restrict ESAs, as ADA protections apply only to service animals.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Florida residents?",
+          "name": "Does an ESA letter make public transportation free in Florida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "No, an ESA approval letter does not provide free or automatic access to public transportation. Transportation providers follow their standard pet policies, as ESA access is not covered under ADA transportation regulations.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Florida?",
+          "name": "Can a landlord take time to review my ESA request in Florida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Florida. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "Yes. Landlords may take a reasonable amount of time to review and verify ESA documentation. Under HUD guidance, responses are generally expected to be prompt, often within about 10 business days, though timelines may vary.",
           },
         },
+        {
+          "@type": "Question",
+          "name": "Who is responsible if an emotional support animal causes damage in Florida housing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Florida, individuals approved for an emotional support animal are responsible for any damage their animal causes to the housing unit or to persons on the premises. While housing providers cannot charge pet fees or deposits for an ESA, they may recover reasonable repair or cleaning costs consistent with Florida Statutes section 760.27. This can include repairs to carpet, wood, walls, etc. if animal damage is evident.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Are there penalties for misrepresenting an ESA in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Florida law penalizes knowingly providing false or fraudulent information related to an Emotional Support Animal request. Misrepresentation may result in fines, community service requirements, or misdemeanor charges. Health care practitioners may also face professional discipline if ESA documentation is issued without proper evaluation or personal knowledge of the patient.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use an ESA letter from an out-of-state provider in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Florida may accept ESA documentation from an out-of-state health care practitioner if the provider is in good standing and meets Florida’s legal requirements. Under Florida law, out-of-state providers must have conducted at least one in-person evaluation with the individual. ESA letters issued without a qualifying evaluation or based solely on online questionnaires may be rejected by housing providers.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I Get an ESA Letter in Florida for a Child or Dependent Under 18?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A licensed mental health professional may determine that an emotional support animal benefits a minor's mental or emotional health. Parents or legal guardians are typically involved in the evaluation process, and often must sign consents before the evaluation can proceed.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Florida Landlord Require Proof of Training for My Emotional Support Animal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Emotional support animals are not required to have specialized training. However, the animal should be well-behaved, under control, and not pose a significant health, safety, or property damage risk. It may be beneficial to obtain training for your ESA to ensure they do not cause property damage, as you can be held liable for these repair fees.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Florida Landlord Ask My Therapist Directly to Verify the ESA Letter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In some cases, a landlord may seek to verify that the letter was issued by a licensed mental health professional. However, they generally cannot request detailed medical information or access to your treatment records. They cannot request the specific diagnosis to be disclosed, nor the severity of your disability.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a Florida ESA letter if I already have one from another state?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but a Florida housing provider may request documentation that meets current Florida and federal requirements. If your existing ESA letter is outdated or does not comply with Florida law, obtaining a new evaluation may be necessary.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does my emotional support animal need rabies vaccination or local licensing in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Emotional support animals must comply with the same local animal health and licensing requirements as other pets, including rabies vaccinations where required by state or local law.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Do emotional support animals need any registration, vest, or ID tag in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Florida does not require emotional support animals to be registered, wear a vest, or carry an ID card. A valid ESA letter from a licensed mental health professional is the primary documentation used for housing accommodations. Be wary of any sites selling vests, certificates, or ID cards, as these do not provide any legal housing protections.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Florida HOA or condo association deny my ESA even if my landlord approves it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In many cases, no. HOAs and condo associations may also be subject to fair housing laws and must generally consider reasonable accommodation requests for qualified emotional support animals.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How Long Is a Florida ESA Letter Valid Before It Needs Renewal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Florida law does not establish a fixed expiration date for an ESA letter. However, a housing provider may request updated reliable information when permitted under applicable fair housing requirements and based on the circumstances of the accommodation request.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I Have More Than One Emotional Support Animal in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if each animal is necessary for your disability-related needs and supported by appropriate documentation. Housing providers may evaluate whether the request is reasonable under fair housing laws.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can My Florida Landlord Ask to Meet My ESA or Require Specific Breed/Size Documentation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A landlord may request information necessary to evaluate an accommodation request, but they generally cannot deny an ESA solely because of breed, weight, or size. However, an animal that poses a direct threat or causes substantial property damage may not be protected.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does Florida Law Require My Therapist to Have Met Me in Person Before Issuing an ESA Letter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the provider’s licensing status. Florida law requires an out-of-state practitioner providing supporting information to have provided in-person care or services to the tenant on at least one occasion. Requirements may differ for Florida-licensed practitioners, who must still conduct an appropriate clinical evaluation within their scope of practice.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Should I Do if a Florida Landlord Asks for My Medical Records to Approve My ESA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You generally do not need to provide detailed medical records. A valid ESA letter typically confirms the disability-related need for the animal while protecting your private health information.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Is a Florida ESA Letter Accepted if I'm Subleasing or Renting a Room (Not the Full Unit)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the housing arrangement and whether fair housing laws apply. Some shared housing situations and owner-occupied properties may qualify for exemptions under federal housing rules.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does Florida Recognize Emotional Support Animals Other Than Dogs and Cats (Birds, Rabbits, etc.)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Emotional support animals are not limited to dogs or cats. Other domesticated animals may qualify if they provide disability-related emotional support and are reasonable for the housing situation.",
+          },
+        }
       ],
     },
     {

@@ -77,8 +77,8 @@ export const southDakotaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-south-dakota/#webpage",
       "url": "https://myesatherapist.com/esa-letter-south-dakota/",
-      "name": "South Dakota ESA Letter from Licensed Therapists | My ESA Therapist",
-      "description": "Need an ESA letter in South Dakota? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA Letter evaluation.",
+      "name": "South Dakota ESA Letter Online | My ESA Therapist",
+      "description": "Need an ESA letter in South Dakota? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA Letter.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const southDakotaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const southDakotaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const southDakotaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in South Dakota?",
+          "name": "Do ESA Letters In South Dakota Require In-Person Appointments?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for South Dakota residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "No. Many licensed mental health professionals conduct ESA evaluations through secure telehealth consultations. As long as the assessment is performed by a qualified clinician following professional standards, an in-person visit is usually not required.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in South Dakota?",
+          "name": "How Much Does An ESA Letter Cost In South Dakota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for South Dakota residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In South Dakota, ESA letter pricing can vary depending on the service and evaluation method, with reputable providers ensuring a proper licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for South Dakota residents?",
+          "name": "What Happens If A Housing Provider Delays Responding To An ESA Request?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for South Dakota residents."
-          }
+            "text": "Housing providers are expected to review reasonable accommodation requests within a reasonable timeframe. Unnecessary delays may interfere with fair housing practices, so tenants may consider following up with the provider or requesting clarification.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in South Dakota qualify for an emotional support animal?",
+          "name": "Does An ESA Letter In South Dakota Need To Include The Animal’s Details?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in South Dakota may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "An ESA letter typically focuses on confirming the individual’s need for emotional support. Some letters may mention the type of animal, but the primary requirement is the clinician’s recommendation and professional credentials.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for South Dakota residents?",
+          "name": "Can A Landlord Request A Renewed ESA Letter In South Dakota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "In some cases, housing providers may ask for updated documentation if the existing ESA letter is outdated or if a new housing request is submitted. The updated letter must still come from a licensed mental health professional.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in South Dakota?",
+          "name": "Do ESA Letters In South Dakota Need To Include A Specific Diagnosis?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in South Dakota. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No. ESA letters generally confirm that a person has a qualifying mental or emotional condition without revealing the exact diagnosis, as detailed medical information is considered private.",
+          },
         }
       ]
     },

@@ -77,7 +77,7 @@ export const newMexicoSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-new-mexico/#webpage",
       "url": "https://myesatherapist.com/esa-letter-new-mexico/",
-      "name": "New Mexico ESA Letter From Licensed Therapist | My ESA Therapist",
+      "name": "New Mexico ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in New Mexico? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const newMexicoSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const newMexicoSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const newMexicoSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in New Mexico?",
+          "name": "How Long Is An ESA Letter Valid In New Mexico?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for New Mexico residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "There is no universal federal expiration date for ESA documentation. A housing provider may request updated reliable information when permitted and reasonably necessary to assess an accommodation request. An automatic annual renewal is not universally required by federal fair housing law.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in New Mexico?",
+          "name": "Can More Than One Animal Be Considered For Emotional Support?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for New Mexico residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Yes. In some cases, a licensed clinician may determine that more than one animal provides meaningful emotional support. This decision is always based on individual therapeutic needs.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for New Mexico residents?",
+          "name": "What is Involved In The Cost Of An ESA Letter In New Mexico?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for New Mexico residents."
-          }
+            "text": "In New Mexico, ESA letter costs vary depending on the provider and consultation process, with pricing reflecting the legitimacy and depth of the evaluation. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in New Mexico qualify for an emotional support animal?",
+          "name": "Is An In-Person Visit Required To Obtain An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in New Mexico may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No, an in-person visit is not always required to receive an ESA letter. Licensed providers may conduct evaluations through secure telehealth consultations.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for New Mexico residents?",
+          "name": "Are There Specific Animal Types Allowed As ESAs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Assistance-animal requests are assessed individually. Animals commonly kept in households may qualify in appropriate circumstances, while requests involving other animals may require additional consideration. The decision depends on the disability-related need, the animal, and the circumstances of the request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in New Mexico?",
+          "name": "Do I Need To Train My ESA Formally?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in New Mexico. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No. Emotional support animals are not required to complete specialized training. Their role is to provide comfort through companionship rather than task-based assistance.",
+          },
         }
       ]
     },

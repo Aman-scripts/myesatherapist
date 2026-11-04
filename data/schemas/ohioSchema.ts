@@ -77,7 +77,7 @@ export const ohioSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-ohio/#webpage",
       "url": "https://myesatherapist.com/esa-letter-ohio/",
-      "name": "Ohio ESA Letter From Licensed Professionals | My ESA Therapist",
+      "name": "Ohio ESA Letter Online | My ESA Therapist",
       "description": "Looking for an ESA letter in Ohio? My ESA Therapist helps you begin your evaluation by connecting you with licensed professionals online.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const ohioSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const ohioSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const ohioSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Ohio?",
+          "name": "Does My ESA Letter Need To Be Renewed Every Year In Ohio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Ohio residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Federal law does not impose a universal annual renewal requirement for ESA letters. A housing provider may request updated reliable information when permitted by law and reasonably necessary to assess an accommodation request. Whether an update is appropriate depends on the circumstances and the information already available.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Ohio?",
+          "name": "How Much Does It Cost To Get An ESA Letter In Ohio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Ohio residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Ohio, ESA letter costs depend on the provider and how the evaluation is conducted, with legitimate services focusing on a verified mental health assessment. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Ohio residents?",
+          "name": "Can A Landlord In Ohio Verify My Therapist’s License Number?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Ohio residents."
-          }
+            "text": "Housing providers may request reliable supporting information when permitted by law and when the disability-related need is not apparent or already known. They generally should not require detailed medical records or unnecessary disclosure of a specific diagnosis. Any verification request should be limited to information reasonably necessary to assess the accommodation.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Ohio qualify for an emotional support animal?",
+          "name": "What Happens If My ESA Letter Was Issued By An Out-Of-State Provider?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Ohio may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Housing providers may assess whether supporting documentation is reliable and whether the professional was appropriately qualified and authorized to provide the service. An out-of-state license alone does not automatically invalidate documentation, but applicable professional licensing requirements and the circumstances of the assessment may matter.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Ohio residents?",
+          "name": "If I Work From Home, Can My Landlord Argue That I “Don’t Need” An ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Working from home does not automatically disqualify someone from requesting an assistance-animal accommodation. Housing providers may assess the request and any necessary supporting information under applicable law. They should not deny a request based solely on assumptions about the person’s condition or living arrangements.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Ohio?",
+          "name": "Can A Landlord In Ohio Require Me To Use A Specific ESA Verification Form?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Ohio. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "A housing provider may offer an accommodation request form, but the request should be assessed under applicable fair housing requirements rather than rejected solely because a particular form was not used. The provider may request reliable supporting information when legally permitted and reasonably necessary.",
+          },
         }
       ]
     },

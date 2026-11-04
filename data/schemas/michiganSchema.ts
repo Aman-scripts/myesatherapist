@@ -77,7 +77,7 @@ export const michiganSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-michigan/#webpage",
       "url": "https://myesatherapist.com/esa-letter-michigan/",
-      "name": "Michigan ESA Letter Online From Licensed Professionals | My ESA Therapist",
+      "name": "Michigan ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Michigan? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA evaluation. Apply today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const michiganSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const michiganSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const michiganSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Michigan?",
+          "name": "Can A Landlord In Michigan Contact The Clinician Who Issued My ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Michigan residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "When appropriate, housing providers may request reliable information supporting the disability-related need for an assistance animal. They generally may not require detailed medical information or disclosure of a specific diagnosis.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Michigan?",
+          "name": "How Much Does An ESA Letter Cost In Michigan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Michigan residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Michigan, ESA letter pricing can vary by provider, particularly depending on the method of consultation and the professional’s credentials. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Michigan residents?",
+          "name": "Does My ESA Letter Need To Be Renewed Every Year In Michigan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Michigan residents."
-          }
+            "text": "While federal law does not set a strict expiration date, some housing providers may request updated documentation periodically to confirm ongoing need.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Michigan qualify for an emotional support animal?",
+          "name": "Are Exotic Animals Allowed As ESAs In Michigan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Michigan may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Requests involving unique or non-traditional animals may receive closer review, especially if the animal presents safety, health, or property concerns.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Michigan residents?",
+          "name": "What Happens If My Landlord Denies My ESA Request?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "You may request a written explanation for the denial and review whether the decision aligns with federal housing standards and reasonable accommodation guidelines.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Michigan?",
+          "name": "Does Moving To A New Apartment In Michigan Require A New ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Michigan. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "In many cases, existing documentation can be used, but some housing providers may request updated paperwork to ensure it reflects your current circumstances.",
+          },
         }
       ]
     },

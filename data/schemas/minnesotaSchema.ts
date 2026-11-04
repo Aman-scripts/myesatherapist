@@ -77,7 +77,7 @@ export const minnesotaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-minnesota/#webpage",
       "url": "https://myesatherapist.com/esa-letter-minnesota/",
-      "name": "Minnesota ESA Letter Evaluation Online | My ESA Therapist",
+      "name": "Minnesota ESA Letter Online | My ESA Therapist",
       "description": "Looking for an ESA letter in Minnesota? My ESA Therapist offers online emotional support animal evaluations by licensed professionals.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const minnesotaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const minnesotaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const minnesotaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Minnesota?",
+          "name": "Do I Need An Explicit Minnesota-Licensed Clinician For An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Minnesota residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Not necessarily. Minnesota law allows supporting documentation from certain out-of-state licensed professionals when the professional has an existing treatment relationship with the tenant. The documentation must reliably confirm the tenant’s disability and the relationship between the disability and the need for a support animal.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Minnesota?",
+          "name": "Can My Landlord Put Restrictions On The Number Of ESAs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Minnesota residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Minnesota law does not establish a fixed number of support animals that every tenant may have. A landlord may request supporting documentation for each animal when appropriate, and the tenant must establish a disability-related need for each requested support animal. A request may be denied if the number or type of animals creates an undue burden.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Minnesota residents?",
+          "name": "What Can You Expect To Pay For An ESA Letter In Minnesota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Minnesota residents."
-          }
+            "text": "ESA letter costs in Minnesota vary depending on the service and assessment process, with reputable providers ensuring a proper licensed evaluation. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Minnesota qualify for an emotional support animal?",
+          "name": "Does An ESA Letter Allow My Emotional Support Animal In Public Places?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Minnesota may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No. ESA letters are mainly for housing accommodations. Emotional support animals do not receive the same public access rights as service animals under the ADA. Whether public places like parks and libraries allow ESAs depends on their specific rules regarding emotional support animals. Always check before going.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Minnesota residents?",
+          "name": "Does My ESA Have To Be Professionally Trained In Minnesota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. Emotional support animals are not required to have any special training. Unlike Psychiatric Dogs, ESAs do not have to be specifically trained to carry out tasks. Their main purpose is to ease the mental or emotional disorders and provide therapeutic benefits to the patient.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Minnesota?",
+          "name": "What Should I Do If My Landlord Refuses My ESA In Minnesota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Minnesota. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "A landlord generally cannot deny a reasonable accommodation based solely on the animal’s breed or size. However, a request may be denied when it creates an undue burden, the particular animal poses a threat to the health or safety of others, or the animal is likely to cause substantial property damage. Decisions should be based on the specific circumstances and the individual animal.",
+          },
         }
       ]
     },

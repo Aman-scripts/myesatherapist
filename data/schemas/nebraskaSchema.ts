@@ -77,7 +77,7 @@ export const nebraskaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-nebraska/#webpage",
       "url": "https://myesatherapist.com/esa-letter-nebraska/",
-      "name": "Nebraska ESA Letter From Licensed Therapist | My ESA Therapist",
+      "name": "Nebraska ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Nebraska? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const nebraskaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const nebraskaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const nebraskaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Nebraska?",
+          "name": "Can A Landlord In Nebraska Call My Therapist To Verify My ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Nebraska residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. A housing provider may verify that the letter was issued by a licensed professional, but they cannot request details about your diagnosis or treatment history.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Nebraska?",
+          "name": "What Is The Average Cost Of An ESA Letter In Nebraska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Nebraska residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Nebraska, the cost of an ESA letter can differ depending on the provider and evaluation method, typically ranging between $150 and $300. At My ESA Therapist, the fee is $149, covering the professional evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Nebraska residents?",
+          "name": "Does My ESA Letter Need To Be Renewed Every Year In Nebraska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Nebraska residents."
-          }
+            "text": "Federal law does not establish a universal annual expiration date for ESA documentation. A housing provider may request reliable updated information when permitted and reasonably necessary to evaluate an ongoing accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Nebraska qualify for an emotional support animal?",
+          "name": "Can I Have More Than One Emotional Support Animal In Nebraska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Nebraska may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Yes. You must demonstrate a disability-related need for each animal, and approval depends on whether the request is considered reasonable under the Fair Housing Act.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Nebraska residents?",
+          "name": "Is There A Government Website In Nebraska Where Landlords Can Verify My ESA Registration?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No, Nebraska does not have a public or government-run website or registry for emotional support animals. Landlords cannot search a state database to confirm ESA status. Verification is typically done by reviewing a valid ESA letter issued by a Nebraska-licensed mental health professional, not through an online registration system.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Nebraska?",
+          "name": "Can A Landlord Charge For Damages Caused By My ESA In Nebraska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Nebraska. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Yes. While pet fees and deposits typically do not apply, tenants remain responsible for any real damage caused by the animal.",
+          },
         }
       ]
     },

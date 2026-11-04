@@ -75,7 +75,7 @@ export const georgiaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-georgia/#webpage",
       "url": "https://myesatherapist.com/esa-letter-georgia/",
-      "name": "Georgia ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "name": "Georgia ESA Letter Online | My ESA Therapist",
       "description": "Georgia ESA Letter evaluations conducted by licensed therapists. Transparent pricing, secure telehealth, and compliant ESA documentation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const georgiaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const georgiaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -347,7 +347,7 @@ export const georgiaSchema = {
             "@type": "Answer",
             "text": "Yes. ESA letter evaluations may be conducted through secure, HIPAA-compliant telehealth platforms by Georgia-licensed mental health professionals when clinically appropriate.",
           },
-        },
+        }
       ],
     },
     {

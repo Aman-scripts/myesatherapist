@@ -77,7 +77,7 @@ export const maineSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-maine/#webpage",
       "url": "https://myesatherapist.com/esa-letter-maine/",
-      "name": "Maine ESA Letter from Licensed Therapists | My ESA Therapist",
+      "name": "Maine ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Maine? My ESA Therapist connects you with licensed mental health professionals in Maine for a secure conline ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const maineSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const maineSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const maineSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Maine?",
+          "name": "Are Online ESA Evaluations Valid In Maine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Maine residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes, provided the evaluation is conducted by an appropriately licensed healthcare professional who is authorized to provide the applicable evaluation and follows applicable professional and legal requirements",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Maine?",
+          "name": "What Is The Cost Of An ESA Letter In Maine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Maine residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "ESA letter costs in Maine vary by provider, but most reliable services generally charge around $100 to $200 for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes the evaluation and issuance of the ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Maine residents?",
+          "name": "Can Landlords Request Yearly Renewal Of An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Maine residents."
-          }
+            "text": "There is no general federal requirement for an ESA letter to be renewed every year. A housing provider may request updated reliable information when permitted by applicable fair housing requirements and reasonably necessary to evaluate an accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Maine qualify for an emotional support animal?",
+          "name": "Is An ESA Letter Valid After Moving Within Maine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Maine may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Yes, as long as the letter remains current and is issued by a licensed provider, it can be used across different housing situations in the state.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Maine residents?",
+          "name": "What If An ESA Causes Disturbances?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "A housing provider may take appropriate action when an assistance animal poses a direct threat, causes substantial physical damage, or substantially interferes with the reasonable enjoyment of the housing by others, subject to applicable fair housing requirements",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Maine?",
+          "name": "Can An ESA Letter Be Transferred To Another Person Or Animal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Maine. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No, ESA letters are issued based on an individual’s condition and cannot be reassigned; a new evaluation is required.",
+          },
         }
       ]
     },

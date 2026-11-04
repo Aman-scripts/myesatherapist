@@ -77,7 +77,7 @@ export const utahSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-utah/#webpage",
       "url": "https://myesatherapist.com/esa-letter-utah/",
-      "name": "Utah ESA Letter From Licensed Therapist | My ESA Therapist",
+      "name": "Utah ESA Letter Online | My ESA Therapist",
       "description": "Looking for an ESA letter in Utah? My ESA Therapist helps you connect with licensed mental health professionals for online esa letter evaluation in Utah.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const utahSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const utahSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const utahSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Utah?",
+          "name": "Can A Utah Landlord Verify My ESA Letter Directly With The Provider?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Utah residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "A housing provider may seek reliable information necessary to assess an accommodation request when the disability or disability-related need is not readily apparent. Requests should be limited to relevant information. Comprehensive medical records or disclosure of a specific diagnosis generally should not be required merely to evaluate an assistance-animal request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Utah?",
+          "name": "How is The Cost Of An ESA Letter Determined In Utah?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Utah residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Utah, the price of an ESA letter varies based on the consultation process and the credentials of the professional handling the evaluation. At My ESA Therapist, the fee is $149, covering both the assessment and issuance of the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Utah residents?",
+          "name": "Does Utah Require In-Person Visits To Qualify For An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Utah residents."
-          }
+            "text": "In-person visits are not universally required for an ESA evaluation. Telehealth may be used when the professional is authorized to provide services in Utah and the evaluation meets applicable professional standards. Housing documentation requirements depend on the circumstances of the accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Utah qualify for an emotional support animal?",
+          "name": "Can I Request More Than One ESA in Utah?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Utah may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Yes. Individuals with qualifying mental health disorders can have more than one ESA, provided each ESA offers therapeutic benefit and is deemed clinically appropriate by a licensed mental health professional in Utah.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Utah residents?",
+          "name": "Is There A Government Registry I Must Enroll My ESA In For Utah Housing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. There is no official Utah or federal ESA registry. Legitimate ESA documentation comes only from a licensed mental health professional after a proper clinical evaluation.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Utah?",
+          "name": "Can My ESA Letter Expire In Utah?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Utah. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Federal housing law does not establish a universal expiration date or annual renewal requirement for ESA documentation. A housing provider may request relevant additional information when reasonably necessary to assess a particular accommodation request, subject to applicable law.",
+          },
         }
       ]
     },

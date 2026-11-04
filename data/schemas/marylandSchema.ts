@@ -77,8 +77,8 @@ export const marylandSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-maryland/#webpage",
       "url": "https://myesatherapist.com/esa-letter-maryland/",
-      "name": "Maryland ESA Letter Evaluations by Licensed Professionals | My ESA Therapist",
-      "description": "My ESA Therapist connects Maryland residents with licensed mental health professionals for a simple and secure online ESA letter evaluation. Apply your maryland esa letter today!",
+      "name": "Maryland ESA Letter Online | My ESA Therapist",
+      "description": "My ESA Therapist connects Maryland residents with licensed mental health professionals for a simple and secure online ESA letter evaluation. Apply your.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const marylandSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const marylandSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const marylandSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Maryland?",
+          "name": "What Type Of Professional Can Issue An ESA Letter In Maryland?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Maryland residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "A licensed mental health professional or healthcare provider who is permitted to practice in Maryland, such as a certified clinical social worker, registered counselor, psychologist, or psychiatrist, needs to write an ESA letter.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Maryland?",
+          "name": "What Is The Average Cost Of An ESA Letter In Maryland?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Maryland residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Maryland, ESA letter pricing can differ based on the provider, though most legitimate services typically range between $100 to $200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation along with the ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Maryland residents?",
+          "name": "Does Maryland Require An In-Person Visit To Obtain An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Maryland residents."
-          }
+            "text": "Maryland law does not specifically require in-person appointments. Telehealth evaluations are permitted when the assessment is conducted by a licensed Maryland clinician and meets professional standards.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Maryland qualify for an emotional support animal?",
+          "name": "Are Employers In Maryland Required To Allow ESAs In The Workplace?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Maryland may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Unlike housing, emotional support animals are not automatically allowed in the workplace under the Fair Housing Act. Employees may consider requests under disability accommodation policies, but approval depends on case-to-case basis and is not guaranteed.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Maryland residents?",
+          "name": "How Long Is An ESA Letter Considered Valid In Maryland?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. There is no fixed expiration date for ESA documentation in Maryland. A housing provider may request updated reliable information when permitted and reasonably necessary to evaluate an accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Maryland?",
+          "name": "Can A Housing Provider Deny An ESA In Maryland?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Maryland. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Yes, in limited circumstances. For example, if the particular animal poses a direct threat to health or safety or would cause substantial physical damage to property that cannot be reduced or eliminated through reasonable measures.",
+          },
         }
       ]
     },

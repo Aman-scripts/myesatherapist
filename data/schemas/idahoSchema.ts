@@ -77,7 +77,7 @@ export const idahoSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-idaho/#webpage",
       "url": "https://myesatherapist.com/esa-letter-idaho/",
-      "name": "Idaho ESA Letter Evaluation Online | My ESA Therapist",
+      "name": "Idaho ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Idaho? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const idahoSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const idahoSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const idahoSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Idaho?",
+          "name": "Can an ESA Letter in Idaho Have An Expiration Date?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Idaho residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "No, although there is no fixed expiration date for ESA letter Idaho, many landlords may request an updated letter annually for continued accommodation.",
+          },
         },
         {
           "@type": "Question",
           "name": "How Much Does an ESA Letter Cost in Idaho?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Idaho residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Idaho, ESA letter pricing varies by provider, but most reliable services generally fall between $150–$250 for a proper licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Idaho residents?",
+          "name": "Are Online ESA Evaluations Legally Valid in Idaho?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Idaho residents."
-          }
+            "text": "Yes, as long as the evaluation is conducted by a licensed Idaho mental health professional and includes a legitimate clinical assessment via telehealth.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Idaho qualify for an emotional support animal?",
+          "name": "Is an ESA Letter Transferable Between Different Housing Properties?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Idaho may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Yes, but each new housing provider may independently verify the letter and assess the accommodation request under federal housing guidelines.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Idaho residents?",
+          "name": "Are Exotic Animals Allowed as ESAs in Idaho?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Uncommon animals may be considered, but approval depends on whether the animal poses safety, health, or property risks.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Idaho?",
+          "name": "Can an ESA Letter Be Used for Workplace Accommodations in Idaho?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Idaho. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Not automatically. Workplace accommodations fall under different laws, and employers are not required to accept ESA letters in most cases.",
+          },
         }
       ]
     },

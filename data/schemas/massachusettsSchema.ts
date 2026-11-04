@@ -77,7 +77,7 @@ export const massachusettsSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-massachusetts/#webpage",
       "url": "https://myesatherapist.com/esa-letter-massachusetts/",
-      "name": "Massachusetts ESA Letter from Licensed Therapists | My ESA Therapist",
+      "name": "Massachusetts ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Massachusetts? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const massachusettsSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const massachusettsSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const massachusettsSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Massachusetts?",
+          "name": "Can A Therapy Animal Also Be An ESA In Massachusetts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Massachusetts residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. A therapy animal may also be eligible as an ESA for housing purposes if a licensed mental health provider in Massachusetts recommends it to meet your emotional or psychological needs. Having a legitimate ESA letter Massachusetts based on your assessment is important.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Massachusetts?",
+          "name": "What Is The Typical Cost Of An ESA Letter In Massachusetts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Massachusetts residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Massachusetts, the cost of an ESA letter depends on the provider and evaluation process, with pricing varying based on the level of professional assessment involved. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Massachusetts residents?",
+          "name": "How Long Is A Massachusetts ESA Letter Valid?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Massachusetts residents."
-          }
+            "text": "There is no set ‘expiry date’ for an ESA letter in Massachusetts. However, homeowners and landlords may ask for updated documentation issued within the last 12 months to confirm the most up-to-date need for an ESA.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Massachusetts qualify for an emotional support animal?",
+          "name": "Can I Have Multiple ESAs With One ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Massachusetts may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "If multiple assistance animals are requested, supporting documentation should explain the separate disability-related need for each animal when applicable. A separate ESA letter is required for every support animal to ensure legal recognition and compliance.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Massachusetts residents?",
+          "name": "Are ESA Letters Recognized For Short-Term Rentals Or Airbnb Stays?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Generally, it is not necessary. Short-term rentals and vacation accommodations may be subject to different rules from ordinary housing. ESA protections are not automatically the same as those that apply to long-term housing, so travelers should check the property’s current policy and the laws applicable to the specific accommodation",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Massachusetts?",
+          "name": "When Can A Landlord Legally Reject An ESA In Massachusetts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Massachusetts. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "An ESA may be rejected by a landlord if the animal threatens people’s health or safety, seriously damages property, or fails to submit the required ESA paperwork from a qualified expert. It is illegal to discriminate based only on mental health or the existence of an ESA.",
+          },
         }
       ]
     },

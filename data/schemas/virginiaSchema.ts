@@ -77,8 +77,8 @@ export const virginiaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-virginia/#webpage",
       "url": "https://myesatherapist.com/esa-letter-virginia/",
-      "name": "Virginia ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
-      "description": "Connect with Virginia licensed therapists for ESA Letter evaluations. HIPAA-compliant telehealth. Virginia ESA letters issued only when clinically appropriate.",
+      "name": "Virginia ESA Letter Online | My ESA Therapist",
+      "description": "Connect with Virginia licensed therapists for ESA Letter evaluations. HIPAA-compliant telehealth. Virginia ESA letters issued only when clinically.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const virginiaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const virginiaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const virginiaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Virginia?",
+          "name": "Can emotional support animals be allowed in Virginia homeschool settings?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Virginia residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. Because homeschooling occurs in the home, families may choose to include an ESA, but ESAs have no public access or school-based accommodation rights under Virginia or federal law.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Virginia?",
+          "name": "Which is better for a child in Virginia: ESA or PSD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Virginia residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "It depends on the child’s needs. A licensed healthcare provider can evaluate the child and determine whether an ESA for home-based emotional support or a psychiatric service dog for task-based assistance and public access is appropriate.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Virginia residents?",
+          "name": "What Should You Expect To Pay For An ESA Letter In Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Virginia residents."
-          }
+            "text": "In Virginia, ESA letter pricing varies by provider, but most reputable services generally fall within the $149–$199 range for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Virginia qualify for an emotional support animal?",
+          "name": "Can I request accommodation for more than one ESA in Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Virginia may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Yes. An individual may request accommodation for more than one assistance animal when each animal has a disability-related role. Each request is assessed under applicable fair housing law, and approval is not automatic.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Virginia residents?",
+          "name": "Are parents required to participate in a child's ESA evaluation in Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Requirements depend on the minor's circumstances, the nature of the service, and the provider's policies. Virginia law permits minors to consent independently to certain outpatient mental health services. Contact the provider in advance to confirm its consent and participation requirements for an ESA evaluation.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Virginia?",
+          "name": "Can an ESA live in student housing in Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Virginia. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Yes. ESAs may be allowed in Virginia student housing covered by the Fair Housing Act when a qualifying need is documented, though public access rights do not apply.",
+          },
         }
       ]
     },

@@ -77,7 +77,7 @@ export const newHampshireSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-new-hampshire/#webpage",
       "url": "https://myesatherapist.com/esa-letter-new-hampshire/",
-      "name": "New Hampshire ESA Letter from Licensed Therapists | My ESA Therapist",
+      "name": "New Hampshire ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in New Hampshire? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const newHampshireSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const newHampshireSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const newHampshireSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in New Hampshire?",
+          "name": "Can A Landlord In New Hampshire Ask For A New ESA Letter Every Year?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for New Hampshire residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Federal law does not establish a universal annual expiration date for ESA documentation. A housing provider may request reliable updated information when permitted and reasonably necessary to evaluate an ongoing accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in New Hampshire?",
+          "name": "What Does An ESA Letter Typically Cost In New Hampshire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for New Hampshire residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In New Hampshire, ESA letter pricing depends on the provider and evaluation approach, with costs generally influenced by a number of influencing factors. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for New Hampshire residents?",
+          "name": "Can A Landlord Ask About My Medical Diagnosis When I Request An ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for New Hampshire residents."
-          }
+            "text": "Housing providers generally cannot request specific diagnosis details but may ask for documentation confirming a disability-related need for the emotional support animal.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in New Hampshire qualify for an emotional support animal?",
+          "name": "Is There A Specific Format Required For An ESA Letter In New Hampshire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in New Hampshire may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "There is no strict template required by law, but a legitimate letter typically includes clinician credentials, licensing details, and confirmation of a professional evaluation.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for New Hampshire residents?",
+          "name": "Do Emotional Support Animals Need To Be Registered With The State Of New Hampshire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. There is no official state registration system for emotional support animals in New Hampshire or anywhere else in the United States.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in New Hampshire?",
+          "name": "Can More Than One Emotional Support Animal Be Approved For The Same Person?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in New Hampshire. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "In some cases, a clinician may recommend more than one animal if each plays a distinct role in supporting the individual’s mental health needs.",
+          },
         }
       ]
     },

@@ -75,7 +75,7 @@ export const hawaiiSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-hawaii/#webpage",
       "url": "https://myesatherapist.com/esa-letter-hawaii/",
-      "name": "Hawaii ESA Letter from Licensed Therapists | My ESA Therapist",
+      "name": "Hawaii ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Hawaii? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const hawaiiSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const hawaiiSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,52 @@ export const hawaiiSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Hawaii?",
+          "name": "Can Landlords In Hawaii Verify My ESA Letter Directly With The Therapist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Hawaii residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "Yes, landlords can verify the authenticity of the letter with the provider, but they cannot request detailed medical or personal health information.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Hawaii?",
+          "name": "Do Hawaii Landlords Have A Response Time For ESA Accommodation Requests?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Hawaii residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "There is no fixed timeline, but landlords are expected to respond within a reasonable period without unnecessary delays.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Hawaii residents?",
+          "name": "What Is The Typical Cost Of An ESA Letter In Hawaii?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Hawaii residents.",
+            "text": "In Hawaii, the cost of an ESA letter depends on the provider and evaluation process, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter upon approval.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Hawaii qualify for an emotional support animal?",
+          "name": "Do I Need To Renew My ESA Letter Every Year In Hawaii?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Hawaii may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "While not strictly required by law, many landlords request updated documentation annually to confirm the most current need for an ESA.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Hawaii residents?",
+          "name": "What Happens If My ESA Causes Property Damage In Hawaii Housing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Tenants are responsible for any damage caused by their ESA, even if they are exempt from pet-related fees.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Hawaii?",
+          "name": "Can Telehealth Evaluations For ESA Letters Be Used In Hawaii?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Hawaii. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "Yes, telehealth ESA evaluations are acceptable if conducted by a licensed professional following proper clinical standards.",
           },
-        },
+        }
       ],
     },
     {

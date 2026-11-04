@@ -139,9 +139,9 @@ export const esaForAnxietySchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "jobTitle": "Licensed Clinical Social Worker",
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization"
@@ -218,7 +218,7 @@ export const esaForAnxietySchema = {
       "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/#quote-staaf",
       "text": "The consistent companionship of an emotional support animal can be a valuable source of comfort for individuals whose anxiety affects their daily emotional well-being.",
       "creator": {
-        "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person"
+        "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person"
       },
       "isPartOf": {
         "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/#blogposting"

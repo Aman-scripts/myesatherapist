@@ -75,7 +75,7 @@ export const coloradoSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-colorado/#webpage",
       "url": "https://myesatherapist.com/esa-letter-colorado/",
-      "name": "Colorado ESA Letter Evaluation by Licensed Therapists - My ESA Therapist",
+      "name": "Colorado ESA Letter Online | My ESA Therapist",
       "description": "Get connected with licensed therapists in Colorado for a online ESA letter evaluation. Start your emotional support animal assessment today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const coloradoSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const coloradoSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,52 @@ export const coloradoSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Colorado?",
+          "name": "What’s the price for getting ESA documentation here in Colorado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Colorado residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "At My ESA Therapist, an ESA recommendation letter in Colorado is $149. That includes your evaluation with a Colorado-licensed mental health professional, your official letter, and ongoing support whenever you need it.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Colorado?",
+          "name": "Can I use an online emotional support animal letter in Colorado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Colorado residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "Yes! Online ESA letters are fully valid in Colorado as long as they come from a licensed mental health professional who completes a proper evaluation and meets federal housing standards.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Colorado residents?",
+          "name": "Are there specific animals that can qualify as ESAs in Colorado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Colorado residents.",
+            "text": "Dogs and cats are the most common, but any domesticated animal can qualify if they provide emotional comfort and can behave calmly in a shared living environment.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Colorado qualify for an emotional support animal?",
+          "name": "When does an ESA recommendation letter expire in Colorado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Colorado may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "Colorado law does not establish a fixed expiration date for an ESA letter. However, a housing provider may request updated documentation when permitted under applicable housing laws and based on the circumstances of the accommodation request.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Colorado residents?",
+          "name": "Do landlords in Colorado have the right to refuse an emotional support animal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Generally no, landlords must accept an ESA with proper documentation.\n\nThey can only refuse if:\n* The animal is unsafe or destructive.\n* The animal is overly disruptive.\n* The ESA paperwork is fake or incomplete.\n\nA legitimate letter protects you from unfair denials and pet fees.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Colorado?",
+          "name": "Are airlines still allowing ESAs for travelers from Colorado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Colorado. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "Most airlines don’t treat Emotional Support Animals as service animals anymore, so they usually travel as regular pets now. It’s always best to take a quick look at your airline’s current pet policy to see whether your ESA can fly in the cabin or needs to be placed in cargo.",
           },
-        },
+        }
       ],
     },
     {

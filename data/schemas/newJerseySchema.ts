@@ -77,8 +77,8 @@ export const newJerseySchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-new-jersey/#webpage",
       "url": "https://myesatherapist.com/esa-letter-new-jersey/",
-      "name": "New Jersey ESA Letter From Licensed Therapist | My ESA Therapist",
-      "description": "Need an ESA letter in New Jersey? My ESA Therapist connects you with licensed mental health professionals for a secure and convenient ESA Letter evaluation online.",
+      "name": "New Jersey ESA Letter Online | My ESA Therapist",
+      "description": "Need an ESA letter in New Jersey? My ESA Therapist connects you with licensed mental health professionals for a secure and convenient ESA Letter.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const newJerseySchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const newJerseySchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const newJerseySchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in New Jersey?",
+          "name": "Can My Landlord Contact The Mental Health Provider Who Issued My New Jersey ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for New Jersey residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "A housing provider may verify that the clinician is licensed and that the letter is authentic. However, they cannot request details about your diagnosis, treatment history, or confidential medical information.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in New Jersey?",
+          "name": "What Happens If I Move To Another State With My New Jersey ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for New Jersey residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Moving to another state does not automatically invalidate existing ESA documentation. The new housing provider may assess the documentation under the applicable fair housing requirements and request reliable additional information when permitted and necessary. A new evaluation or documentation from a clinician licensed in the new state is not automatically required in every case.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for New Jersey residents?",
+          "name": "How Much Does An ESA Letter Cost In New Jersey?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for New Jersey residents."
-          }
+            "text": "In New Jersey, the cost of an ESA letter can vary based on the provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $149, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in New Jersey qualify for an emotional support animal?",
+          "name": "Can A Housing Provider Limit The Type Of Animal That Qualifies As An ESA In New Jersey?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in New Jersey may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "The animal’s suitability is assessed individually. Under federal housing guidance, assistance animals are generally animals commonly kept in households, although other animals may be considered in appropriate circumstances. The decision depends on the disability-related need, the animal, and the circumstances of the request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for New Jersey residents?",
+          "name": "Can A Landlord Delay Responding To My New Jersey ESA Request?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Housing providers are expected to respond within a reasonable timeframe. Unnecessary or prolonged delays without valid justification could be viewed as a failure to properly consider a reasonable accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in New Jersey?",
+          "name": "Can I Submit A Digital Copy Of My New Jersey ESA Letter, Or Does It Need To Be Printed?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in New Jersey. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "In most cases, a clear digital copy is acceptable, especially if it includes the clinician’s license details and signature. Housing providers may verify authenticity but cannot require unnecessary formatting beyond reasonable documentation standards.",
+          },
         }
       ]
     },

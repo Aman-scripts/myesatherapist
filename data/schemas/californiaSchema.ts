@@ -75,7 +75,7 @@ export const californiaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-california/#webpage",
       "url": "https://myesatherapist.com/esa-letter-california/",
-      "name": "California ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "name": "California ESA Letter | AB 468 | My ESA Therapist",
       "description": "My ESA Therapist connects you with California-licensed therapists for ESA letter evaluations. AB 468 compliant, transparent pricing, secure platform.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const californiaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const californiaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,164 @@ export const californiaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in California?",
+          "name": "What is the cost of an ESA letter in California?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for California residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "If you pursue an ESA evaluation through our platform, the fee is $149. This covers the clinical evaluation, the legally required 30-day client-provider relationship, and ESA documentation if a recommendation is made. If an ESA is not determined to be clinically appropriate, no letter is issued, and 100% refund is provided. Approval for an ESA is not guaranteed.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in California?",
+          "name": "Can I Get an ESA Letter Online in California?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for California residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "Yes. California allows ESA evaluations to be conducted via telehealth, provided the professional is licensed in California, conducts a proper clinical assessment, and maintains the required 30-day therapeutic relationship before issuing any recommendation.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for California residents?",
+          "name": "How long is an ESA letter valid in California?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for California residents.",
+            "text": "California law does not establish a fixed expiration date for an ESA letter. However, a housing provider may request updated documentation when permitted under applicable housing laws and based on the circumstances of the accommodation request.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in California qualify for an emotional support animal?",
+          "name": "How Many ESAs Can I Have in California?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in California may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "In some cases, more than one emotional support animal may be recommended. Each animal must be individually assessed, and a licensed mental health professional must determine that each provides a distinct therapeutic benefit.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for California residents?",
+          "name": "What are the penalties for faking an ESA letter in California?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Misrepresenting an emotional support animal or using fraudulent ESA documentation may lead to housing disputes, denied accommodations, fines, or legal consequences under state laws addressing disability fraud and misrepresentation.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in California?",
+          "name": "Can a landlord in California deny an ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in California. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "California landlords may deny an ESA request in limited situations, such as insufficient documentation, undue financial burden, direct safety threats, or if the accommodation fundamentally changes housing operations.",
           },
         },
+        {
+          "@type": "Question",
+          "name": "Can a landlord in California charge pet fees for an ESA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. In California, landlords cannot charge pet rent or pet deposits for legitimate assistance animals under state housing protections.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does the 30-day rule mean I wait 30 days before I start the process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can begin the process immediately. California's 30-day rule generally means a licensed provider must establish a relationship with you for at least 30 days before issuing an ESA letter recommendation.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does an ESA letter work for HOA housing and condos in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oftentimes, yes. HOAs and condo associations may still have reasonable accommodation obligations under California housing laws, even if pet restrictions exist. Accommodation requests are usually evaluated individually.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a college or university in California deny an ESA in student housing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schools may review ESA requests and deny accommodations in limited circumstances. However, colleges that provide housing often must still consider reasonable accommodation requests under housing-related disability laws.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a California landlord have to respond to an ESA accommodation request?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "California law does not provide a strict deadline, but housing providers are generally expected to respond to the accommodation request within a reasonable timeframe. Long delays or nonresponses may create legal issues. Under HUD guidance, responses are generally expected to be prompt, often within about 10 business days, though timelines may vary.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I take my ESA on a plane in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, no. Federal airline rules no longer obligate airlines to treat emotional support animals as service animals, so most airlines now classify ESAs as pets subject to fees and carrier restrictions.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bring my ESA into a restaurant or store in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, no. Emotional support animals do not have the same public access rights as trained service animals, meaning restaurants, retail stores, and other businesses may legally restrict access. Emotional Support Animals do not have public access rights under the Americans with Disabilities Act (ADA).",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a California Landlord Require Proof of Training for My Emotional Support Animal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Emotional support animals are not required to have specialized training. However, the animal should be well-behaved, under control, and not pose a significant health, safety, or property damage risk. It may be beneficial to obtain training for your ESA to ensure they do not cause property damage, as you can be held liable for these repair fees.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a child or minor get an ESA letter in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Minors in California may qualify for an ESA letter if a licensed mental health professional determines that the animal supports the child's mental or emotional health needs. Parents or legal guardians are typically involved in the evaluation and housing accommodation process, and often must sign consents before the evaluation can proceed.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get an ESA letter the same day in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. California's 30-day provider relationship requirement generally prevents legitimate providers from issuing same-day ESA letters. Most legal ESA evaluations require time to establish a provider-client relationship before documentation can be issued.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "If I move to a new apartment in California, do I need a new ESA letter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually no, but your new landlord may request updated documentation during the accommodation review process. Keeping your ESA letter up to date can help avoid delays when moving into new housing.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does my emotional support animal need rabies vaccination or local licensing in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Emotional support animals must comply with the same local animal health and licensing requirements as other pets, including rabies vaccinations where required by state or local law.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does my ESA need to wear a vest or tag in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. California does not require emotional support animals to wear vests, ID cards, tags, or special markings. Housing rights are generally based on documentation, not accessories or registration products.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can a California Landlord Ask My Therapist Directly to Verify the ESA Letter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In some cases, a landlord may seek to verify that the letter was issued by a licensed mental health professional. However, they generally cannot request detailed medical information or access to your treatment records. They cannot request the specific diagnosis to be disclosed, nor the severity of your disability.",
+          },
+        }
       ],
     },
     {

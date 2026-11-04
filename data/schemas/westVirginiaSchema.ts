@@ -77,8 +77,8 @@ export const westVirginiaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-west-virginia/#webpage",
       "url": "https://myesatherapist.com/esa-letter-west-virginia/",
-      "name": "West Virginia ESA Letter from Licensed Therapists | My ESA Therapist",
-      "description": "Need an ESA letter in West Virginia? My ESA Therapist connects you with licensed mental health professionals in West Virginia for online ESA letter evaluation.",
+      "name": "West Virginia ESA Letter Online | My ESA Therapist",
+      "description": "Need an ESA letter in West Virginia? My ESA Therapist connects you with licensed mental health professionals in West Virginia for online ESA letter.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const westVirginiaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const westVirginiaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const westVirginiaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in West Virginia?",
+          "name": "Can A Landlord In West Virginia Verify My ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for West Virginia residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. A landlord may verify that the letter was issued by a West Virginia-licensed mental health professional and confirm the professional’s credentials without requesting detailed medical records.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in West Virginia?",
+          "name": "Can More Than One Emotional Support Animal Be Approved For A Person?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for West Virginia residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In some situations, a clinician may recommend more than one ESA if each animal provides a distinct form of therapeutic support.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for West Virginia residents?",
+          "name": "How is ESA Letter Pricing Structured In West Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for West Virginia residents."
-          }
+            "text": "In West Virginia, the cost of an ESA letter depends on the provider and the type of consultation, with emphasis on a valid assessment by a licensed professional. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in West Virginia qualify for an emotional support animal?",
+          "name": "Do ESA Letters Expire In West Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in West Virginia may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Federal fair housing law does not establish a universal annual renewal requirement for ESA letters. Whether additional documentation is appropriate depends on the circumstances and applicable legal requirements.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for West Virginia residents?",
+          "name": "Is An ESA Letter Valid If I Move To Another State?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "An ESA letter may support a housing accommodation request after a move, but the new housing provider may assess the request under applicable law and request reliable supporting information when legally necessary. Federal law does not universally require a new ESA letter solely because someone moves to another state.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in West Virginia?",
+          "name": "Can A Landlord Ask About My Medical Diagnosis?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in West Virginia. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No. Landlords may request confirmation of disability-related need but cannot demand detailed medical records or specific diagnostic information.",
+          },
         }
       ]
     },

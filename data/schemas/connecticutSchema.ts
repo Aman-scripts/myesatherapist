@@ -75,7 +75,7 @@ export const connecticutSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-connecticut/#webpage",
       "url": "https://myesatherapist.com/esa-letter-connecticut/",
-      "name": "Connecticut ESA Letter Evaluation by Licensed Therapist- My ESA Therapist",
+      "name": "Connecticut ESA Letter Online | My ESA Therapist",
       "description": "Connect with licensed therapist for ESA letter evaluations. HIPAA-compliant telehealth. ESA letter Connecticut issued only when clinically appropriate.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const connecticutSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const connecticutSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,52 @@ export const connecticutSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Connecticut?",
+          "name": "What is an ESA letter in Connecticut?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Connecticut residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "An ESA letter is a document from a licensed mental health professional certifying that an emotional support animal helps with a diagnosed mental or emotional disability. It is required for housing protections under the Fair Housing Act.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Connecticut?",
+          "name": "How long is a Connecticut ESA letter valid?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Connecticut residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "Connecticut law does not establish a universal one-year expiration period for ESA documentation. A housing provider may request updated information when permitted under applicable housing laws and when necessary to evaluate an accommodation request.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Connecticut residents?",
+          "name": "What Is The Typical Cost Of An ESA Letter In Connecticut?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Connecticut residents.",
+            "text": "In Connecticut, ESA letter costs vary by provider and evaluation method, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter upon approval.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Connecticut qualify for an emotional support animal?",
+          "name": "Can landlords refuse housing for my teen’s ESA in Connecticut?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Connecticut may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "No, with a valid ESA letter, Connecticut landlords must make reasonable accommodations under the Fair Housing Act.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Connecticut residents?",
+          "name": "What types of animals qualify as ESAs in Connecticut?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Any animal that provides emotional support, such as dogs, cats, or small pets, can be an emotional support animal in Connecticut. There are no restrictions on breed or size.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Connecticut?",
+          "name": "Can I get an ESA letter if I’m relocating to Connecticut for work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Connecticut. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "Yes! If your move triggers anxiety, depression, or other mental health challenges, a licensed Connecticut therapist can evaluate you and provide an ESA letter to confirm your living accommodations.",
           },
-        },
+        }
       ],
     },
     {

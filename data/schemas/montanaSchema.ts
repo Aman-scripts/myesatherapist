@@ -77,8 +77,8 @@ export const montanaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-montana/#webpage",
       "url": "https://myesatherapist.com/esa-letter-montana/",
-      "name": "Montana ESA Letter From Licensed Therapist | My ESA Therapist",
-      "description": "Looking for a Montana ESA letter? My ESA Therapist connects you with licensed professionals for quick ESA evaluations online. Start Your ESA Evaluation Today.",
+      "name": "Montana ESA Letter Online | My ESA Therapist",
+      "description": "Looking for a Montana ESA letter? My ESA Therapist connects you with licensed professionals for quick ESA evaluations online. Start Your ESA Evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const montanaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const montanaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,59 @@ export const montanaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Montana?",
+          "name": "Does My ESA Letter Expire in Montana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Montana residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Although there is no set expiration date set by state law, many housing providers ask for updated documentation issued within 12 months to make sure it accurately reflects your current clinical status.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Montana?",
+          "name": "How Long Does The ESA Process Take In Montana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Montana residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Under the Montana ESA law, the process cannot be completed the same day. The Montana House Bill 703 outlines that a clinician must establish at least a 30-day professional relationship before issuing an ESA letter. The total timeline depends on scheduling and the provider’s evaluation process.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Montana residents?",
+          "name": "What Makes An ESA Letter Legally Valid In Montana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Montana residents."
-          }
+            "text": "Supporting information for an emotional support animal must meet applicable legal requirements. Under Montana law, when a landlord requests supporting information under the state's ESA documentation statute, the information must meet the applicable requirements for the professional's qualifications, clinical evaluation, and client-provider relationship. Other reasonable-accommodation protections under federal and state law also apply.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Montana qualify for an emotional support animal?",
+          "name": "How Much Does A Professionally Issued ESA Letter Cost In Montana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Montana may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "In Montana, ESA letter pricing varies based on the provider and the depth of the consultation process. At My ESA Therapist, the fee is $149, which includes both the evaluation and issuance of the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Montana residents?",
+          "name": "Can I Have More Than One ESA In Montana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Yes. But it is important for a licensed mental health expert licensed in Montana to determine that each animal provides distinct therapeutic support based on the documented mental health needs. It is also important to ensure that the emotional support animals do not pose a direct threat to property or safety.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Montana?",
+          "name": "Can A Landlord Delay Responding To My ESA Request?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Montana. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Housing providers should handle reasonable accommodation requests within a reasonable timeframe. Montana law also requires a landlord to issue a written determination after receiving the supplemental information required under the applicable ESA documentation law.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Happens If My ESA Causes Damage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If, under any circumstances, your ESA poses a threat or causes damage to the property, you may still be financially responsible for actual harm caused by the animal, even though pet fees cannot be charged upfront.",
+          },
         }
       ]
     },

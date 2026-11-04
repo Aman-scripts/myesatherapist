@@ -77,7 +77,7 @@ export const northCarolinaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-north-carolina/#webpage",
       "url": "https://myesatherapist.com/esa-letter-north-carolina/",
-      "name": "North Carolina ESA Letter From Licensed Therapist | My ESA Therapist",
+      "name": "North Carolina ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in North Carolina? My ESA Therapist connects you with licensed mental health professionals for a secure online ESA letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const northCarolinaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const northCarolinaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const northCarolinaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in North Carolina?",
+          "name": "Can An ESA Letter Be Used For Multiple Housing Locations In North Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for North Carolina residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. An ESA letter is issued for the individual, not for a specific property. This means the same valid letter can generally be used when requesting accommodation in different housing locations within North Carolina.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in North Carolina?",
+          "name": "What Does It Cost To Get An ESA Letter In North Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for North Carolina residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In North Carolina, ESA letter pricing varies based on the provider and consultation process, with some services offering evaluations around the $100–$150 range, depending on coverage or insurance. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for North Carolina residents?",
+          "name": "Can Landlords Ask About The Type Of Animal Listed In An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for North Carolina residents."
-          }
+            "text": "Yes. Housing providers may ask for information about the animal and, when necessary, reliable information supporting the accommodation request. Applicants generally do not need to disclose a specific diagnosis or provide detailed medical records. Requests should be assessed individually under applicable law and current HUD enforcement guidance.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in North Carolina qualify for an emotional support animal?",
+          "name": "What Happens If A Landlord Questions The Authenticity Of An ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in North Carolina may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "A landlord may verify whether the letter was issued by a licensed North Carolina mental health professional. They may contact the provider for confirmation but cannot ask for confidential medical information.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for North Carolina residents?",
+          "name": "What Should I Do If My ESA Accommodation Request Is Ignored?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "You should first follow up with the housing provider and provide any required documentation again. If the request continues to be ignored without proper review, you may consider filing a fair housing complaint with the appropriate authority.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in North Carolina?",
+          "name": "Can Landlords Set Behavioral Expectations For ESAs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in North Carolina. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Yes. ESAs must behave appropriately and not create disturbances or safety concerns. If an animal becomes aggressive, excessively disruptive, or causes repeated damage, the housing provider may address the issue under housing rules.",
+          },
         }
       ]
     },

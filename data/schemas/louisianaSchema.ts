@@ -77,7 +77,7 @@ export const louisianaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-louisiana/#webpage",
       "url": "https://myesatherapist.com/esa-letter-louisiana/",
-      "name": "Louisiana ESA Letter From Licensed Professionals | My ESA Therapist",
+      "name": "Louisiana ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Louisiana? My ESA Therapist connects you with licensed therapists for a secure online ESA evaluation. Start your evaluation today.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const louisianaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const louisianaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const louisianaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Louisiana?",
+          "name": "Can I Bring My ESA To Work In Louisiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Louisiana residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Unlike psychiatric service dogs, emotional support animals are not automatically allowed in public places and workspaces. Accepting accommodation requests depends on the employer and company policies and cannot be guaranteed.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Louisiana?",
+          "name": "Do ESA Letters Expire In Louisiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Louisiana residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "There is no general federal 12-month expiration rule for ESA documentation. However, a housing provider may request updated reliable information when permitted under applicable fair housing requirements and reasonably necessary to evaluate an accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Louisiana residents?",
+          "name": "How Much Does An ESA Letter Usually Cost In Louisiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Louisiana residents."
-          }
+            "text": "In Louisiana, the cost of an ESA letter depends on the provider and consultation process, with most legitimate services typically ranging between $100–$200. At My ESA Therapist, the fee is $149, covering both the assessment and the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Louisiana qualify for an emotional support animal?",
+          "name": "Can My Landlord Delay Responding To My ESA Request?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Louisiana may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "There is no specified ‘set time’ to respond to an ESA request under the Fair Housing Act. But, housing providers must review accommodation requests within a reasonable timeframe. Unnecessary delays without valid reason may raise fair housing concerns.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Louisiana residents?",
+          "name": "What Happens If My ESA Letter Is From An Online “Registry” Website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Louisiana does not recognize ESA registries, ID cards, or certifications as legal documentation. Housing providers may deny requests based on paperwork that does not come from a licensed clinician following proper evaluation standards.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Louisiana?",
+          "name": "What If My Louisiana Landlord Says Their Insurance Will Not Allow My ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Louisiana. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Insurance-related concerns do not automatically justify denying an assistance-animal accommodation. Housing providers should evaluate the specific circumstances and applicable fair housing requirements rather than relying solely on generalized or unsupported insurance restrictions.",
+          },
         }
       ]
     },

@@ -77,8 +77,8 @@ export const missouriSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-missouri/#webpage",
       "url": "https://myesatherapist.com/esa-letter-missouri/",
-      "name": "Missouri ESA Letter Online From Licensed Therapist | My ESA Therapist",
-      "description": "Looking for a Missouri ESA letter? My ESA Therapist connects you with licensed professionals for quick ESA evaluations online. Start your application today.",
+      "name": "Missouri ESA Letter Online | My ESA Therapist",
+      "description": "Looking for a Missouri ESA letter? My ESA Therapist connects you with licensed professionals for quick ESA evaluations online. Start your application.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const missouriSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const missouriSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const missouriSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Missouri?",
+          "name": "Can I Receive An ESA Letter In Missouri If My Anxiety Only Occurs During Certain Seasons?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Missouri residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. ESA letters are based on your overall mental health needs, not just constant symptoms. A licensed Missouri mental health provider will assess whether your animal provides meaningful support, even if your condition is not constant.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Missouri?",
+          "name": "What Should An ESA Letter Cost In Missouri?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Missouri residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In Missouri, the cost of an ESA letter depends on the provider and how thoroughly the evaluation is conducted. At My ESA Therapist, the fee is $149, covering a licensed professional assessment and the ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Missouri residents?",
+          "name": "Can I Use An ESA Letter From Another State While Living In Missouri?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Missouri residents."
-          }
+            "text": "Not necessarily. A housing provider may consider reliable supporting documentation from a qualified healthcare professional, including an appropriately licensed professional outside Missouri, when the documentation reliably establishes the person’s disability and disability-related need for an assistance animal.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Missouri qualify for an emotional support animal?",
+          "name": "Are Online “Instant ESA Letters” Legally Valid In Missouri?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Missouri may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No. Missouri requires a genuine therapeutic relationship with a licensed clinician. Instant online forms or purchased certificates do not meet the state’s legal or clinical standards.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Missouri residents?",
+          "name": "Can My Landlord Ask Me What Tasks My ESA Performs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. Unlike psychiatric service dogs, ESAs are not task-trained. Missouri landlords cannot require proof of training but can request legitimate documentation from a licensed clinician.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Missouri?",
+          "name": "Does My Missouri ESA Letter Expire Or Need Renewal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Missouri. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Federal law does not impose a general 12-month expiration period for ESA documentation. A housing provider may request updated reliable information when reasonably necessary to evaluate an accommodation request or an ongoing need.",
+          },
         }
       ]
     },

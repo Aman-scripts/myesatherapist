@@ -77,7 +77,7 @@ export const iowaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-iowa/#webpage",
       "url": "https://myesatherapist.com/esa-letter-iowa/",
-      "name": "Iowa ESA Letter From Licensed Professionals | My ESA Therapist",
+      "name": "Iowa ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Iowa? My ESA Therapist connects you with licensed mental health professionals for emotional support animal evaluation online.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const iowaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const iowaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const iowaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Iowa?",
+          "name": "Can I Use My ESA Letter In An Iowa Workplace?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Iowa residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Emotional support animals do not fall under any laws that allow individuals to take them to workplaces. Unlike service animals, which are covered by ADA, the approval to bring along ESAs to work depends on the employer’s policies, on a case-by-case basis, and is not guaranteed.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Iowa?",
+          "name": "How Much Should You Expect To Pay For An ESA Letter In Iowa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Iowa residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "ESA letter costs in Iowa vary by service, though most legitimate providers typically charge around $100–$200 for a proper licensed assessment. At My ESA Therapist, the fee is $149, including the evaluation and, if approved, issuance of the ESA letter.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Iowa residents?",
+          "name": "Is My Out-Of-State ESA Letter Valid If I Move To Iowa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Iowa residents."
-          }
+            "text": "If you are relocating to Iowa, your existing ESA documentation is not automatically invalid solely because it was issued in another state. However, Iowa's documentation requirements, including the applicable provider-patient relationship and other requirements under Iowa Code § 216.8C, should be satisfied when updated documentation is needed.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Iowa qualify for an emotional support animal?",
+          "name": "How Long Is An ESA Letter Valid In Iowa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Iowa may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Under Iowa law, the written finding must include an issuance and expiration date and is generally valid for 12 months or the term of the rental agreement, as specified by the applicable law.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Iowa residents?",
+          "name": "Can A Landlord In Iowa Verify My ESA Letter Directly With The Provider?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Yes. A landlord has the right to independently verify the ESA letter directly with the provider. They may deny an accommodation request when the documentation is fraudulent or otherwise does not satisfy applicable requirements. Additionally, misrepresenting an animal as a service animal constitutes a simple misdemeanor under Iowa Code § 216C.11, which can lead to jail time or a penalty.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Iowa?",
+          "name": "What Happens If My Iowa Landlord Claims Their Property Is Exempt From ESA Rules?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Iowa. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Certain small, owner-occupied properties may qualify for exemptions under federal housing law. While a landlord cannot deny accommodation requests when a legitimate ESA letter is presented, ESA protections apply depending on the size and structure of the housing arrangement.",
+          },
         }
       ]
     },

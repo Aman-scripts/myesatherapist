@@ -77,7 +77,7 @@ export const indianaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-indiana/#webpage",
       "url": "https://myesatherapist.com/esa-letter-indiana/",
-      "name": "Indiana ESA Letter Evaluations by Licensed Therapists | My ESA Therapist",
+      "name": "Indiana ESA Letter Online | My ESA Therapist",
       "description": "My ESA Therapist offers a convenient way for Indiana residents to complete ESA Letter evaluations with licensed mental health professionals online.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const indianaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const indianaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const indianaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Indiana?",
+          "name": "Can A Landlord Deny An ESA In Indiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Indiana residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes, but only in limited situations such as when the specific animal poses a documented health or safety risk or would cause significant property damage.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Indiana?",
+          "name": "Is Misrepresenting A Pet As An ESA Illegal In Indiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Indiana residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Yes. Falsely claiming an animal as an assistance or support animal to gain housing benefits can result in legal consequences under Indiana law, making accurate documentation essential.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Indiana residents?",
+          "name": "What Is The Average Price Of An ESA Letter In Indiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Indiana residents."
-          }
+            "text": "In Indiana, the cost of an ESA letter depends on the evaluation process, with most trusted providers generally falling within the $100–$200 range. At My ESA Therapist, the fee is $149, covering both the professional evaluation and the ESA letter if you qualify.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Indiana qualify for an emotional support animal?",
+          "name": "Does My ESA Letter in Indiana Expire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Indiana may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "There is no general fixed expiration date for ESA documentation in Indiana. However, a housing provider may request updated reliable information when permitted under applicable fair housing requirements and based on the circumstances of the accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Indiana residents?",
+          "name": "Can My Out-Of-State ESA Letter Work In Indiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "An out-of-state ESA letter is not automatically invalid in Indiana. Documentation should come from a qualified healthcare professional who is authorized to provide care to the individual under applicable licensure requirements and has sufficient knowledge of the disability-related need.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Indiana?",
+          "name": "What Happens If I Have More Than 1 Emotional Support Animal in Indiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Indiana. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "There is no fixed limit on the number of ESAs allowed in housing. However, each animal must be supported by proper documentation and considered reasonable based on your therapeutic needs and housing guidelines.",
+          },
         }
       ]
     },

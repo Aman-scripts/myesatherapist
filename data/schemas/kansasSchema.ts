@@ -77,7 +77,7 @@ export const kansasSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-kansas/#webpage",
       "url": "https://myesatherapist.com/esa-letter-kansas/",
-      "name": "Kansas ESA Letter from Licensed Therapists | My ESA Therapist",
+      "name": "Kansas ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Kansas? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA Letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const kansasSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const kansasSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const kansasSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Kansas?",
+          "name": "Are Online ESA Evaluations Valid For Kansas Residents?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Kansas residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. Online ESA evaluations are valid if conducted by a licensed mental health professional authorized to practice in Kansas and include a proper clinical assessment.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Kansas?",
+          "name": "Do ESA Letters In Kansas Need To Include A Specific Diagnosis?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Kansas residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "No, the letter typically does not need to disclose a specific diagnosis. When documentation is appropriate, it should provide sufficient reliable information to establish the disability-related need for the assistance animal.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Kansas residents?",
+          "name": "What Is The Usual Cost Of An ESA Letter In Kansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Kansas residents."
-          }
+            "text": "ESA letter pricing in Kansas can vary depending on the provider and the evaluation process. At My ESA Therapist, the fee is $149, which includes a complete assessment and the ESA letter if approved.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Kansas qualify for an emotional support animal?",
+          "name": "Is An ESA Letter Transferable Between States If I Move From Kansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Kansas may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "An ESA letter is not automatically invalid because you move to another state. However, if updated documentation is needed, the healthcare professional should be appropriately authorized to provide care in the new state, and the documentation should meet the applicable requirements there.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Kansas residents?",
+          "name": "What Happens If An ESA Letter Is Found To Be Fraudulent In Kansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Using a fake ESA letter may lead to denial of accommodation requests and potential legal or housing-related consequences.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Kansas?",
+          "name": "Can Family Members Use The Same ESA Letter In Kansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Kansas. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No, ESA letters are issued for a specific individual and cannot be shared or applied to others.",
+          },
         }
       ]
     },

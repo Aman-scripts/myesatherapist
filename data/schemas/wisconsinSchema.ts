@@ -77,7 +77,7 @@ export const wisconsinSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-wisconsin/#webpage",
       "url": "https://myesatherapist.com/esa-letter-wisconsin/",
-      "name": "Wisconsin ESA Letter from Licensed Professionals | My ESA Therapist",
+      "name": "Wisconsin ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Wisconsin? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const wisconsinSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const wisconsinSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const wisconsinSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Wisconsin?",
+          "name": "Can My ESA Be A Non-Traditional Animal In Wisconsin, Like A Miniature Pig Or Bird?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Wisconsin residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. An animal may qualify as an ESA when the applicable legal requirements are met and the animal addresses a disability-related need. Housing providers may assess requests involving the specific animal and may deny an accommodation on legally recognized grounds, including an undue burden, a fundamental alteration, an unmitigable direct threat, or substantial property damage.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Wisconsin?",
+          "name": "What Happens If A Wisconsin Landlord Violates My ESA Letter Rights?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Wisconsin residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "You can file a complaint with HUD or pursue legal action in Wisconsin courts. Violations include refusing reasonable accommodations or charging illegal fees.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Wisconsin residents?",
+          "name": "What is The Cost Of An ESA Letter In Wisconsin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Wisconsin residents."
-          }
+            "text": "In Wisconsin, ESA letter pricing varies depending on the service and consultation process, ensuring compliance through a licensed mental health assessment. The $149 fee at My ESA Therapist covers both the evaluation and, if you are eligible, the issuance of the ESA letter.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Wisconsin qualify for an emotional support animal?",
+          "name": "Do I Need To Renew My ESA Letter In Wisconsin Each Year?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Wisconsin may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No. While not legally required, many landlords request an updated ESA letter annually to confirm ongoing need. It helps avoid disputes and ensures your housing rights remain protected.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Wisconsin residents?",
+          "name": "Can I Have More Than One ESA In Wisconsin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "More than one emotional support animal may be covered when each animal is supported by a disability-related need. Housing providers may assess the request for each animal under applicable law and consider legally recognized grounds for denial. There is no blanket rule requiring approval of every request for multiple animals.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Wisconsin?",
+          "name": "Can I Use My Wisconsin ESA Letter In Other U.S. States?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Wisconsin. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "An ESA letter may support a housing accommodation request after a move to another state. The new housing provider may assess the request under applicable law and request reliable supporting information when legally necessary. Federal law does not universally require a new ESA letter solely because someone relocates.",
+          },
         }
       ]
     },

@@ -77,8 +77,8 @@ export const newYorkSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-new-york/#webpage",
       "url": "https://myesatherapist.com/esa-letter-new-york/",
-      "name": "ESA Letter Evaluations in New York by Licensed Therapists - My ESA Therapist",
-      "description": "My ESA Therapist offers ESA letter evaluations in New York by licensed therapists. Secure online assessments and HUD-compliant ESA letters for housing accommodations.",
+      "name": "New York ESA Letter Online | My ESA Therapist",
+      "description": "My ESA Therapist offers ESA letter evaluations in New York by licensed therapists. Secure online assessments and HUD-compliant ESA letters for housing.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const newYorkSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const newYorkSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,147 @@ export const newYorkSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in New York?",
+          "name": "How Long Does an ESA Evaluation Letter Remain Valid in New York?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for New York residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "An ESA evaluation letter doesn’t expire automatically, but most housing providers prefer documentation based on a recent evaluation, typically within the past 12 months. Regularly updating your ESA evaluation helps ensure that your documentation reflects your current mental and emotional health needs.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in New York?",
+          "name": "What Is The Average Price Of An ESA Letter In New York?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for New York residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "In New York, ESA letter costs typically align with national pricing trends, where licensed evaluations and documentation are commonly offered within a moderate price range, depending on the provider. At My ESA Therapist, the fee is $149, which includes a licensed professional evaluation and the ESA letter if approved.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for New York residents?",
+          "name": "Is ESA documentation valid across all of New York?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for New York residents."
-          }
+            "text": "Yes. ESA documentation may be used to support housing accommodation requests across New York when the applicable federal, state, and local requirements are met. Housing providers may review reliable documentation supporting the disability-related need for an assistance animal when that need is not apparent.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in New York qualify for an emotional support animal?",
+          "name": "Can landlords in New York verify the provider who conducted the ESA evaluation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in New York may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Yes. Housing providers may check the credentials and license of the mental health professional who performed your ESA evaluation. They cannot request medical records or details of your specific condition, only verification of the evaluation and licensing.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for New York residents?",
+          "name": "Can I use an out-of-state licensed professional for my ESA evaluation in NY?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "It depends. Licensure requirements vary based on where the professional and patient are located and the applicable telehealth rules. For evaluations conducted for individuals located in New York, the professional should be authorized to practice in New York.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in New York?",
+          "name": "Does New York allow ESAs in college dorms or university housing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in New York. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Yes. Students may request an ESA accommodation through their college or university's disability accommodation process. The institution will review the request under applicable disability and housing requirements, which may include documentation and reasonable restrictions.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have more than one ESA in NY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A licensed professional may determine during the evaluation that multiple animals provide distinct emotional support benefits. If so, each animal’s role should be clearly outlined in the evaluation-based documentation to ensure full recognition by housing providers.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can A New York Co-Op Board Deny My ESA Accommodation Request?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A co-op board generally must consider reasonable accommodation requests under fair housing laws. However, a request may be denied if the ESA poses a direct threat, causes substantial property damage, or if the housing is not covered by applicable housing laws.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does My ESA Letter Protect Me In NYC Rent-Stabilized Or Rent-Controlled Apartments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if your housing is covered under Fair Housing Act or applicable state and local laws, a valid ESA letter may support your request for reasonable accommodation regardless of whether the apartment is rent-stabilized or rent-controlled.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Happens If My New York Landlord Ignores Or Delays My ESA Accommodation Request?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Landlords are expected to respond to accommodation requests within a reasonable timeframe. Unnecessary delays or failure to engage in the accommodation process could potentially be considered a violation of fair housing requirements.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can My HOA (Homeowners Association) In New York Deny My ESA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HOAs and condominium associations could be required to provide reasonable accommodations for emotional support animals. They generally cannot enforce pet restrictions against a qualifying ESA unless a valid legal exception applies. It is always advised to check beforehand.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does My ESA Need To Be Vaccinated Or Licensed By The City In New York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While ESA status does not create special exemptions from animal health and safety laws, dogs must generally comply with applicable local licensing and vaccination requirements, including rabies vaccination rules.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Who Is Responsible If My ESA Causes Damage To The Rental Property?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ESA owners remain responsible for any damage their animal causes. While landlords cannot typically charge pet fees for an approved ESA, they may seek reimbursement for actual property damage.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can The Same ESA Letter Be Used For Both Housing And College Dorms In New York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In many cases, yes. Colleges often review ESA requests through their disability accommodation process, and a valid ESA letter may support both housing and dormitory accommodation requests, subject to the institution's requirements.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Specific Information Should A Valid New York ESA Letter Include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ESA documentation should identify the licensed professional providing the documentation and explain the professional's recommendation regarding the individual's need for an assistance animal. The specific information included may vary depending on the applicable housing requirements and circumstances.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Does New York State Have Any Additional ESA Protections Beyond The Federal Fair Housing Act?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. New York's human rights laws may provide additional housing-related protections against disability discrimination, which can complement federal fair housing protections in certain situations.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Are The Penalties For A New York Landlord Who Illegally Denies An ESA Accommodation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A landlord who unlawfully denies a valid accommodation request may face fair housing complaints, investigations, monetary damages, civil penalties, and orders requiring compliance with housing laws.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I Get An ESA Letter The Same Day In New York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Possibly. Some licensed mental health professionals offer same-day evaluations when clinically appropriate. However, the legitimacy of the letter depends on the professional assessment, not how quickly it is issued.",
+          },
         }
       ]
     },

@@ -77,7 +77,7 @@ export const illinoisSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-illinois/#webpage",
       "url": "https://myesatherapist.com/esa-letter-illinois/",
-      "name": "Illinois ESA Letter Evaluation by Licensed Professionals | My ESA Therapist",
+      "name": "Illinois ESA Letter Online | My ESA Therapist",
       "description": "Connect with Illinois licensed therapist for ESA evaluations. HIPAA-compliant telehealth. ESA letters in Illinois issued only when clinically appropriate.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const illinoisSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const illinoisSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const illinoisSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Illinois?",
+          "name": "Does Illinois recognize Emotional Support Animals (ESAs)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Illinois residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. Illinois recognizes Emotional Support Animals under federal fair housing laws. ESAs are allowed as reasonable accommodations in housing for people with qualifying mental or emotional disabilities, even though they are not considered service animals.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Illinois?",
+          "name": "What Does An ESA Letter Typically Cost In Illinois?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Illinois residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "ESA letter pricing in Illinois can differ based on the provider, but most reliable services usually charge between $100–$250 for a licensed mental health evaluation. At My ESA Therapist, the fee is $149, which includes the assessment and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Illinois residents?",
+          "name": "Under what circumstances can a landlord legally deny an Emotional Support Animal in Illinois?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Illinois residents."
-          }
+            "text": "An Illinois landlord may deny an ESA if the request lacks valid documentation, the animal poses a direct safety threat, causes significant property damage, or creates an undue financial or administrative burden that cannot be reasonably accommodated.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Illinois qualify for an emotional support animal?",
+          "name": "Is Emotional Support Animal registration required or legally valid in Illinois?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Illinois may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No. Illinois does not require ESA registration, and online certificates or registries have no legal standing. An Illinois-licensed healthcare professional may provide appropriate ESA documentation based on an individualized evaluation and the individual’s disability-related need.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Illinois residents?",
+          "name": "Can Anyone Get an Emotional Support Animal in Illinois?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "No. Only individuals with a diagnosed mental or emotional health condition that substantially affects daily life can qualify. A licensed healthcare provider must determine the need for an ESA as part of a legitimate therapeutic relationship.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Illinois?",
+          "name": "Can Illinois landlords deny an ESA request just because it was obtained online or via telehealth?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Illinois. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No. Illinois landlords cannot deny an ESA solely because the letter was obtained online or through telehealth, as long as it comes from a licensed provider and meets fair housing documentation requirements.",
+          },
         }
       ]
     },

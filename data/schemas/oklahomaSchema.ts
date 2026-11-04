@@ -77,7 +77,7 @@ export const oklahomaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-oklahoma/#webpage",
       "url": "https://myesatherapist.com/esa-letter-oklahoma/",
-      "name": "ESA Letter Oklahoma – Secure Online Evaluation | My ESA Therapist",
+      "name": "Oklahoma ESA Letter Online | My ESA Therapist",
       "description": "Start your Oklahoma ESA letter evaluation with My ESA Therapist by connecting with licensed mental health professionals through a secure online process.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const oklahomaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const oklahomaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const oklahomaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Oklahoma?",
+          "name": "Can My Oklahoma Landlord Request A New ESA Letter Every Time I Renew My Lease?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Oklahoma residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "A landlord may request updated reliable information when permitted by law and reasonably necessary to assess an accommodation request. There is no universal federal rule requiring ESA letters to be renewed every 12 months. Whether an update is appropriate depends on the circumstances and information already available.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Oklahoma?",
+          "name": "Does My ESA Letter Need To Mention My Specific Diagnosis In Oklahoma?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Oklahoma residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "A housing provider generally does not need your specific diagnosis or detailed medical records when sufficient reliable information establishes your disability-related need for an assistance animal. The information needed depends on the circumstances and applicable law.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Oklahoma residents?",
+          "name": "How Much Does An ESA Letter Typically Cost In Oklahoma?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Oklahoma residents."
-          }
+            "text": "In Oklahoma, ESA letter pricing can vary by provider, but legitimate services generally involve a paid consultation with a licensed professional before approval. At My ESA Therapist, the fee is $149, which includes a licensed evaluation and the ESA letter if approved.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Oklahoma qualify for an emotional support animal?",
+          "name": "If My ESA Causes Minor Damage, Can My Oklahoma Landlord Revoke The Accommodation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Oklahoma may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "Generally speaking, minor issues or normal wear and tear do not cancel a granted accommodation. But serious property damage or safety issues may call for a review of the agreement.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Oklahoma residents?",
+          "name": "What If My Oklahoma Landlord Says My ESA Is “Too Large” For The Apartment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Size alone is not an automatic ground for denial. The landlord would have to prove that the particular animal is a real safety hazard or would seriously damage the property, not just that it exceeds typical pet limits.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Oklahoma?",
+          "name": "If I Got My ESA Letter Online, Will Oklahoma Landlords Reject It?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Oklahoma. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Not necessarily. Online evaluations are valid if conducted by a properly licensed Oklahoma clinician who performs a genuine assessment and maintains a legitimate therapeutic relationship. However, letters from ‘registry-only’ websites without clinical evaluation are often rejected.",
+          },
         }
       ]
     },

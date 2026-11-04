@@ -75,8 +75,8 @@ export const arkansasSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-arkansas/#webpage",
       "url": "https://myesatherapist.com/esa-letter-arkansas/",
-      "name": "Arkansas ESA Letter Evaluation by Licensed Therapists - My ESA Therapist",
-      "description": "Connect with Arkansas licensed therapists for ESA letter evaluations. HIPAA-compliant telehealth. Arkansas ESA letters issued only when clinically appropriate.",
+      "name": "Arkansas ESA Letter Online | My ESA Therapist",
+      "description": "Connect with Arkansas licensed therapists for ESA letter evaluations. HIPAA-compliant telehealth. Arkansas ESA letters issued only when clinically.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
       },
@@ -229,7 +229,7 @@ export const arkansasSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const arkansasSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,60 @@ export const arkansasSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Arkansas?",
+          "name": "What is HB 1420 law in Arkansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Arkansas residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "HB 1420, also known as Act 268 of the Regular Session, is an Arkansas law that regulates how emotional support animal letters are issued. It requires a minimum 30-day relationship between an individual and a licensed healthcare provider before a document can be issued. The law also sets documentation standards and addresses misrepresentation of support animals.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Arkansas?",
+          "name": "Can I get an ESA letter online in Arkansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Arkansas residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "An emotional support animal letter may be issued through telehealth if the healthcare provider is properly licensed and complies with Arkansas HB 1420 requirements, including the 30-day client–provider relationship and a legitimate evaluation. Instant or same-day letters do not meet Arkansas legal standards.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Arkansas residents?",
+          "name": "How Much Does An ESA Letter Cost In Arkansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Arkansas residents.",
+            "text": "An ESA letter in Arkansas can cost anywhere between $150 and $300, depending on the provider and evaluation process. My ESA Therapist charges $149, which includes a professional evaluation conducted by a state-accredited mental health expert and an ESA letter upon approval.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Arkansas qualify for an emotional support animal?",
+          "name": "Does Arkansas recognize ESA registration websites?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Arkansas may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "Arkansas law does not recognize ESA registration websites as valid proof. Only an ESA recommendation letter from a licensed healthcare provider, issued in compliance with HB 1420, is considered appropriate documentation for housing accommodation requests.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Arkansas residents?",
+          "name": "Do Arkansas landlords have to accept all emotional support animals?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Not automatically. While housing providers must consider reasonable accommodation requests, they may deny an ESA if the specific animal poses a direct threat or creates a substantial risk of property damage, based on objective evidence rather than assumptions.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Arkansas?",
+          "name": "Can my landlord ask for additional proof beyond my ESA letter in Arkansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Arkansas. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "A housing provider may verify that the ESA letter meets legal requirements, such as license details and issuance date. However, they generally should not request medical records, a diagnosis, or details beyond what is permitted under housing law.",
           },
         },
+        {
+          "@type": "Question",
+          "name": "Does Arkansas recognize ESA letters from out-of-state providers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, no. Under Arkansas law HB 1420, an emotional support animal letter is considered valid only if it is issued by a healthcare provider who holds an active license to practice in Arkansas. The provider must also have an established client–provider relationship of at least 30 days before issuing the letter. One-time consultations or questionnaire-based letters do not meet state requirements.",
+          },
+        }
       ],
     },
     {

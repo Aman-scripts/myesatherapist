@@ -188,7 +188,7 @@ export const homeSchema = {
           "name": "Is My ESA Therapist Legitimate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. My ESA Therapist connects individuals with U.S.-licensed mental health professionals who are licensed in the client's state. All evaluations follow recognized clinical standards and applicable federal housing guidelines."
+            "text": "Yes. My ESA Therapist connects individuals directly with independent, state-licensed mental health professionals (LMHPs) who conduct clinical assessments designed to support applicable Fair Housing Act requirements and relevant HUD guidance."
           }
         },
         {
@@ -196,23 +196,7 @@ export const homeSchema = {
           "name": "How Does My ESA Therapist Work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "My ESA Therapist is a telehealth platform that facilitates emotional support animal (ESA) evaluations with licensed mental health professionals. If, after a clinical evaluation, a professional determines that an emotional support animal may be appropriate, they may issue documentation that supports housing accommodation requests under applicable federal housing laws."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does My ESA Therapist Comply With HUD and Fair Housing Act guidelines?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Evaluations and documentation are designed to align with current HUD guidance and Fair Housing Act (FHA) requirements, as applicable to each individual's circumstances."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does My ESA Therapist Offer Support if My Landlord Asks For Verification?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. With the client's written authorization, licensed professionals or support staff can help clarify evaluation details or documentation when requested by a housing provider."
+            "text": "Our process is simple and transparent: 1. Complete a confidential online pre-screening questionnaire. 2. Schedule a telehealth consultation with a licensed clinician in your state. 3. If qualified, receive your official ESA recommendation letter delivered securely via email."
           }
         },
         {
@@ -220,94 +204,38 @@ export const homeSchema = {
           "name": "Is My Information Safe With My ESA Therapist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All consultations and records are handled securely and in accordance with HIPAA privacy and data protection standards."
+            "text": "Yes. We take privacy extremely seriously. All personal and clinical information is encrypted, transmitted securely, and protected under strict HIPAA-compliant protocols. We will never share or sell your private information."
           }
         },
         {
           "@type": "Question",
-          "name": "What If I Already Have A Therapist? Can I Still Use Your Service?",
+          "name": "What are the Housing Protections for ESAs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Even if you already have a therapist, you can still use My ESA Therapist for an online ESA evaluation. Our licensed mental health professionals will evaluate your situation independently and determine whether an ESA letter is clinically appropriate or not."
+            "text": "Under the Fair Housing Act, individuals with disabilities may request a reasonable accommodation to keep an assistance animal when the animal is needed because of their disability. When the disability or disability-related need is not readily apparent, reliable documentation from a healthcare professional may help support the request."
           }
         },
         {
           "@type": "Question",
-          "name": "Does My ESA Therapist Offer Renewal Reminders?",
+          "name": "How Quickly Can I Receive My ESA Letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Users may receive reminders when updated documentation could be requested by a housing provider, depending on their situation."
+            "text": "After completing your telehealth evaluation with our licensed provider, approved ESA letters are delivered via secure digital PDF within 24 to 48 hours. Priority expedited delivery options are also available."
           }
         },
         {
           "@type": "Question",
-          "name": "Is The Consultation Done By Video or Phone?",
+          "name": "What If I Don't Qualify for an ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Both video and phone consultations are available, depending on provider availability and client preference."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What Payment Methods Does My ESA Therapist Accept?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Major credit cards are accepted."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if My Landlord Requires a Specific Form or Documentation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If a housing provider requests specific documentation, assistance may be available depending on the request. Additional administrative fees may apply."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What Does the ESA Evaluation Timeline Look Like?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evaluation length and timelines vary based on individual circumstances and state requirements. After completing an evaluation, if a licensed mental health professional determines that an emotional support animal may be clinically appropriate, documentation may be issued within a reasonable timeframe consistent with applicable state and federal laws."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How Long Does It Take To Receive My ESA Letter After The Evaluation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you meet the criteria, your ESA letter is typically issued via mail shortly after your evaluation is completed and approved by a licensed mental health professional. Processing times may vary depending on your state and individual circumstances."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What Happens If I'm Not Approved After My Evaluation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If a licensed professional determines that an emotional support animal may not be clinically appropriate, no documentation is issued. All outcomes are based solely on professional clinical judgment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I Change or Reschedule My Consultation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Consultations may be changed or rescheduled according to provider availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does My ESA Therapist Provide Letters For Dorms or University Housing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "When applicable under the Fair Housing Act or related housing regulations, ESA documentation issued following a clinical evaluation may be used to request housing accommodations in university or dorm settings."
+            "text": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
           }
         }
       ]
     },
     {
       "@type": "HowTo",
-      "name": "How Online ESA Evaluation Works",
+      "name": "How Does Online ESA Evaluation Work?",
       "description": "A simple 3-step process to complete your emotional support animal letter evaluation.",
       "step": [
         {
@@ -334,7 +262,7 @@ export const homeSchema = {
       "@type": "Person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker (LCSW)",
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],

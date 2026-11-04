@@ -75,7 +75,7 @@ export const alaskaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-alaska/#webpage",
       "url": "https://myesatherapist.com/esa-letter-alaska/",
-      "name": "Alaska ESA Letter by Licensed Professionals | My ESA Therapist",
+      "name": "Alaska ESA Letter Online | My ESA Therapist",
       "description": "Connect with Alaska licensed therapists for ESA letter evaluations through a secure telehealth platform. Private, professional, and supportive care.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const alaskaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const alaskaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,10 +302,10 @@ export const alaskaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Alaska?",
+          "name": "Can I Take My ESA on an Airline in Alaska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Alaska residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "No. Most U.S. airlines, including flights to or within Alaska, do not recognize emotional support animals. ESAs usually travel under standard pet policies. Only trained psychiatric service dogs may qualify for in-cabin access. Check your airline's current requirements before traveling.",
           },
         },
         {
@@ -313,41 +313,41 @@ export const alaskaSchema = {
           "name": "How Much Does an ESA Letter Cost in Alaska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Alaska residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "At My ESA Therapist, the cost of an ESA letter in Alaska starts at $149, which includes a professional evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Alaska residents?",
+          "name": "Does an ESA Letter Override All Breed Rules?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Alaska residents.",
+            "text": "No, an ESA letter does not automatically override housing rules. Under FHA, an assistance-animal request must be evaluated under the applicable reasonable-accommodation requirements. Housing providers may consider relevant, objective concerns when assessing a request, rather than relying only on general assumptions about an animal.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Alaska qualify for an emotional support animal?",
+          "name": "Does My ESA Have to Be a Dog or Cat in Alaska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Alaska may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "No. Emotional support animals are not limited to dogs or cats. Other animals may qualify if the accommodation request is reasonable and does not create health, safety, or property concerns.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Alaska residents?",
+          "name": "Can I Have More Than One ESA in Alaska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Possibly yes. Multiple ESAs may be considered if each animal is supported by a documented, disability-related need and the request is reasonable under Fair Housing Act guidelines.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Alaska?",
+          "name": "Can a Landlord in Alaska Require My ESA to Be Spayed or Neutered?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Alaska. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "It depends. Requirements involving an assistance animal can vary based on the circumstances, housing rules, and applicable law. An ESA accommodation does not eliminate reasonable requirements related to health, safety, animal control, or property protection. If a housing provider imposes a specific requirement, review the request in light of applicable fair housing rules.",
           },
-        },
+        }
       ],
     },
     {

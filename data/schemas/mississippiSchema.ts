@@ -77,7 +77,7 @@ export const mississippiSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-mississippi/#webpage",
       "url": "https://myesatherapist.com/esa-letter-mississippi/",
-      "name": "Mississippi ESA Letter From Licensed Therapist | My ESA Therapist",
+      "name": "Mississippi ESA Letter Online | My ESA Therapist",
       "description": "Searching for an ESA letter in Mississippi? My ESA Therapist connects you with licensed mental health professionals for online esa letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const mississippiSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const mississippiSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const mississippiSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Mississippi?",
+          "name": "Can a Mississippi landlord contact my therapist directly to verify my ESA letter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Mississippi residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "A landlord may verify that the provider is licensed and that the letter is authentic, but they cannot request detailed medical information or ask about your specific diagnosis without consent.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Mississippi?",
+          "name": "Can I request more than one ESA in Mississippi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Mississippi residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Possibly. However, each animal must be individually justified as therapeutically necessary. Landlords may consider multiple-animal requests more carefully.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Mississippi residents?",
+          "name": "Does my ESA letter need to be notarized in Mississippi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Mississippi residents."
-          }
+            "text": "No. Notarization is not a general legal requirement. What matters is that any supporting documentation is reliable and appropriately establishes the person’s disability and disability-related need for an assistance animal when documentation is permitted.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Mississippi qualify for an emotional support animal?",
+          "name": "If I Work From Home, Can My Landlord Argue That I “Don’t Need” An ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Mississippi may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No. Working from home does not automatically eliminate the need for a reasonable accommodation. A housing provider may consider reliable information relevant to whether the person has a disability and whether the animal is needed because of that disability but generally may not require detailed medical records or a specific diagnosis.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Mississippi residents?",
+          "name": "What happens if my roommate objects to my ESA in Mississippi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Roommate disagreements do not automatically override a valid accommodation. However, housing providers may attempt to balance accommodation needs if another tenant has severe allergies or medical concerns.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Mississippi?",
+          "name": "If my Mississippi landlord initially approves my ESA, can they later revoke it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Mississippi. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "Approval can only be reconsidered if the animal creates documented safety concerns, causes substantial property damage, or the documentation is found to be invalid. Accommodations cannot be denied simply due to preference changes.",
+          },
         }
       ]
     },

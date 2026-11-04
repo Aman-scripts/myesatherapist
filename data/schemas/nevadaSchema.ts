@@ -77,7 +77,7 @@ export const nevadaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-nevada/#webpage",
       "url": "https://myesatherapist.com/esa-letter-nevada/",
-      "name": "Nevada ESA Letter Evaluation Online | My ESA Therapist",
+      "name": "Nevada ESA Letter Online | My ESA Therapist",
       "description": "Looking for an ESA letter in Nevada? Start your ESA evaluation by connecting with licensed professionals through My ESA Therapist.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const nevadaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const nevadaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const nevadaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Nevada?",
+          "name": "Can I use a Nevada ESA letter for a rental with a no-pet policy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Nevada residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. An ESA may qualify for a reasonable housing accommodation when the applicable requirements are met, even if the property has a no-pet policy.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Nevada?",
+          "name": "Can my landlord charge pet rent for an ESA in Nevada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Nevada residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Generally, an assistance animal that qualifies for a housing accommodation is not treated as a pet, so pet-related fees may not apply.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Nevada residents?",
+          "name": "Can an ESA letter be used for more than one animal in Nevada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Nevada residents."
-          }
+            "text": "It depends on the individual circumstances and clinical need. A licensed professional should determine whether more than one animal is appropriate.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Nevada qualify for an emotional support animal?",
+          "name": "Does my ESA letter give my animal access to restaurants and stores in Nevada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Nevada may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "No. An ESA letter does not provide the public-access rights given to service animals under the ADA.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Nevada residents?",
+          "name": "Can my Nevada landlord ask for additional information about my ESA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "A housing provider may request reliable documentation when the disability-related need is not apparent or known, but the information requested should be relevant to evaluating the accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Nevada?",
+          "name": "What happens if my ESA accommodation request is denied in Nevada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Nevada. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "You can ask the housing provider for the reason for the decision and review whether the request was handled under applicable fair housing requirements.",
+          },
         }
       ]
     },

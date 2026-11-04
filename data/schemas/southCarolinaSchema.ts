@@ -77,8 +77,8 @@ export const southCarolinaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-south-carolina/#webpage",
       "url": "https://myesatherapist.com/esa-letter-south-carolina/",
-      "name": "South Carolina ESA Letter Evaluation | My ESA Therapist",
-      "description": "Need an ESA letter in South Carolina? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA evaluation.",
+      "name": "South Carolina ESA Letter Online | My ESA Therapist",
+      "description": "Need an ESA letter in South Carolina? My ESA Therapist connects you with licensed mental health professionals for a secure and simple online ESA.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
       },
@@ -235,7 +235,7 @@ export const southCarolinaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const southCarolinaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const southCarolinaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in South Carolina?",
+          "name": "Can A Landlord Verify An ESA Letter In South Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for South Carolina residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "Yes. Under S.C. Code § 31-21-70(N), a landlord may ask whether the person has a disability and a disability-related need for the animal. The landlord may request documentation to verify those responses, and the documentation must establish the disability and the animal’s disability-related assistance or emotional support role.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in South Carolina?",
+          "name": "Are ESA Letters In South Carolina Required To Be Renewed Annually?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for South Carolina residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "There is no universal federal rule requiring ESA letters to be renewed every 12 months. A housing provider may request updated supporting information when permitted by law and reasonably necessary to assess an accommodation request.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for South Carolina residents?",
+          "name": "Can More Than One ESA Be Approved In South Carolina Housing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for South Carolina residents."
-          }
+            "text": "In some situations, multiple animals may be considered if a licensed mental health professional determines each animal provides necessary emotional support.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in South Carolina qualify for an emotional support animal?",
+          "name": "What is The Average Cost Of An ESA Letter In South Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in South Carolina may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "In South Carolina, ESA letter costs are typically aligned with national standards, where licensed evaluations are often priced in the $149–$199 range. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for South Carolina residents?",
+          "name": "Is An In-Person Evaluation Required To Obtain An ESA Letter In South Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Not always. Licensed professionals may conduct evaluations through secure telehealth platforms if they follow proper clinical and licensing standards.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in South Carolina?",
+          "name": "Can A Landlord Ask About The Tasks Performed By An ESA In South Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in South Carolina. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "No. Unlike service animals, ESAs are not required to perform trained tasks, and landlords generally cannot require task-related explanations.",
+          },
         }
       ]
     },

@@ -75,7 +75,7 @@ export const delawareSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-delaware/#webpage",
       "url": "https://myesatherapist.com/esa-letter-delaware/",
-      "name": "Delaware ESA Letter From Licensed Professionals | My ESA Therapist",
+      "name": "Delaware ESA Letter Online | My ESA Therapist",
       "description": "Looking for an ESA letter in Delaware? My ESA Therapist helps you connect with licensed mental health professionals for a convenient online ESA evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const delawareSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const delawareSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,52 @@ export const delawareSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Delaware?",
+          "name": "Does an ESA Letter Need to Be Renewed Every Year in Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Delaware residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "Although annual renewal is not universally required by law, a housing provider may request updated documentation when permitted under applicable fair housing laws and when reasonably necessary to evaluate an accommodation request.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Delaware?",
+          "name": "What is the Cost of Getting an ESA Letter in Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Delaware residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In Delaware, ESA letter pricing depends on the provider and consultation process, but most reliable services generally fall between $100 to $200 for a licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Delaware residents?",
+          "name": "What Makes An ESA Letter Legally Valid In Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Delaware residents.",
+            "text": "ESA documentation should identify the qualified professional, include appropriate contact and licensing information, and provide reliable information supporting the disability-related need for the assistance animal when such information is necessary.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Delaware qualify for an emotional support animal?",
+          "name": "What Qualifies As “Reliable Documentation” For An ESA In Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Delaware may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "Reliable documentation must come from a Delaware-licensed healthcare or mental health professional who has personal knowledge of your condition and has evaluated you in a clinical setting. Generic online certificates or instant approvals do not meet this standard.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Delaware residents?",
+          "name": "Do I Need To Register My Emotional Support Animal In Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "No. Delaware does not recognize any official ESA registry. Online registrations, ID cards, or certificates have no legal value without a valid ESA letter.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Delaware?",
+          "name": "Can Landlords Charge Pet Fees For ESAs In Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Delaware. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "No. ESAs are not considered pets under the FHA, so landlords generally cannot charge pet rent, pet deposits, or enforce breed or size restrictions.",
           },
-        },
+        }
       ],
     },
     {

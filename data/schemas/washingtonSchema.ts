@@ -77,7 +77,7 @@ export const washingtonSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-washington/#webpage",
       "url": "https://myesatherapist.com/esa-letter-washington/",
-      "name": "Washington ESA Letter from Licensed Therapists | My ESA Therapist",
+      "name": "Washington ESA Letter Online | My ESA Therapist",
       "description": "Need an ESA letter in Washington? My ESA Therapist connects you with licensed mental health professionals in Washington for online ESA letter evaluation.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website"
@@ -235,7 +235,7 @@ export const washingtonSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -243,7 +243,7 @@ export const washingtonSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp"
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
@@ -314,51 +314,51 @@ export const washingtonSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Washington?",
+          "name": "Can A Washington ESA Letter Be Used For More Than One Animal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Washington residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences."
-          }
+            "text": "No. While in some cases, a clinician may recommend more than one emotional support animal if there is a clear therapeutic reason supporting the need, you need to get different ESA letters for all the emotional support animals.",
+          },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Washington?",
+          "name": "Can A Landlord Request Renewal Of An ESA Letter In Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Washington residents varies by provider and evaluation method. Typically, it ranges around $100\u2013$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify."
-          }
+            "text": "Housing providers may request updated documentation issued within the last 12 months if the previous letter is outdated or if there are legitimate reasons to confirm the continued need.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Washington residents?",
+          "name": "How Much Does An ESA Letter Cost In Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Washington residents."
-          }
+            "text": "In Washington, ESA letter pricing can differ by provider, with costs reflecting the credibility and depth of the licensed consultation. At My ESA Therapist, the fee is $149, covering the evaluation and ESA letter upon approval.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Washington qualify for an emotional support animal?",
+          "name": "What Happens If A Landlord Denies An ESA Request In Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Washington may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income."
-          }
+            "text": "If a request is denied, the tenant may ask for clarification, provide additional documentation, or review housing guidelines related to reasonable accommodations.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Washington residents?",
+          "name": "Can ESA Letters Be Issued After A Single Consultation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations."
-          }
+            "text": "Yes. Federal housing guidance under the Fair Housing Act allows a licensed mental health professional to issue an ESA letter if, after a proper evaluation, they determine an emotional support animal is clinically appropriate. The assessment may occur during one consultation if the clinician has enough information to make a professional determination.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Washington?",
+          "name": "Is There A Specific Format Required For An ESA Letter In Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Washington. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation."
-          }
+            "text": "There is no universal format, but legitimate letters typically include the clinician’s credentials, license details, and confirmation of a therapeutic recommendation.",
+          },
         }
       ]
     },

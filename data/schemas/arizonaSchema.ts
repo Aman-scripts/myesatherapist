@@ -75,7 +75,7 @@ export const arizonaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-arizona/#webpage",
       "url": "https://myesatherapist.com/esa-letter-arizona/",
-      "name": "Arizona ESA Letter Evaluations by Licensed Therapists - My ESA Therapist",
+      "name": "Arizona ESA Letter Online | My ESA Therapist",
       "description": "Begin a legitimate ESA Letter evaluation in Arizona with licensed therapist. Secure, HIPAA-compliant, and aligned with FHA guidelines.",
       "isPartOf": {
         "@id": "https://myesatherapist.com/#website",
@@ -229,7 +229,7 @@ export const arizonaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description": "Licensed Clinical Social Worker licensed in 30+ states specializing in psychotherapy and ESA evaluations.",
@@ -237,7 +237,7 @@ export const arizonaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -302,52 +302,52 @@ export const arizonaSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What questions are asked during an ESA evaluation in Arizona?",
+          "name": "What Happens to My ESA Rights When I Move to Arizona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During an online ESA evaluation for Arizona residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "When you move to Arizona with your emotional support animal, your housing rights remain protected under the federal Fair Housing Act (FHA). Some housing providers may request updated ESA documentation from an Arizona-licensed mental health professional. To avoid delays, review local housing policies and update your ESA letter if needed.",
           },
         },
         {
           "@type": "Question",
-          "name": "How Much Does an ESA Letter Cost in Arizona?",
+          "name": "What Is The Typical Cost of an ESA Letter In Arizona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter for Arizona residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In Arizona, the cost of an ESA letter can vary based on the provider and evaluation process, but most legitimate services typically fall between $100–$300 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter issued upon approval.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Arizona residents?",
+          "name": "What are the Requirements for Emotional Support Animals in Arizona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Arizona residents.",
+            "text": "To qualify for an emotional support animal in Arizona, you need a clinical evaluation and a valid ESA letter from a licensed mental health professional. Housing rights are protected under the federal Fair Housing Act.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Arizona qualify for an emotional support animal?",
+          "name": "Can My Child Qualify for an ESA if They Have Anxiety?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, working professionals in Arizona may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "Yes. A child with anxiety may qualify for an emotional support animal if a licensed mental health professional determines it is clinically appropriate. Parental or guardian consent is required for minors.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Arizona residents?",
+          "name": "If I have ADHD, Can I Get an Emotional Support Animal in Arizona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "Yes. If you have ADHD, you may qualify for an ESA in Arizona if a licensed mental health professional determines it is clinically appropriate and provides a valid ESA letter.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Arizona?",
+          "name": "How to Spot a Fake ESA Service in Arizona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, a condition does not need to be severe to qualify for an ESA in Arizona. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "To avoid fake ESA services in Arizona, watch for sites that promise instant approvals, sell ESA registrations or certificates, lack licensed clinician details, or skip proper mental health evaluations. Legitimate ESA letters require a real clinical assessment.",
           },
-        },
+        }
       ],
     },
     {

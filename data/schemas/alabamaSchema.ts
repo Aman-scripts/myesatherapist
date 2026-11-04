@@ -75,7 +75,7 @@ export const alabamaSchema = {
       "@type": "WebPage",
       "@id": "https://myesatherapist.com/esa-letter-alabama/#webpage",
       "url": "https://myesatherapist.com/esa-letter-alabama/",
-      "name": "ESA Letter in Alabama From Licensed Therapists | My ESA Therapist",
+      "name": "Alabama ESA Letter Online | My ESA Therapist",
       "description":
         "Start your ESA letter evaluation with licensed therapist. Secure telehealth process and reliable ESA documentation in Alabama for housing needs.",
       "isPartOf": {
@@ -231,7 +231,7 @@ export const alabamaSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker",
       "description":
@@ -240,7 +240,7 @@ export const alabamaSchema = {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/doctors/robert-staaf-profile-image.webp",
       },
-      "url": "https://myesatherapist.com/esa-doctors/robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
       "sameAs": ["https://www.linkedin.com/in/robert-staaf-b57b53333/"],
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization",
@@ -310,8 +310,7 @@ export const alabamaSchema = {
           "name": "What questions are asked during an ESA evaluation in Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":
-              "During an online ESA evaluation for Alabama residents, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
+            "text": "During an ESA evaluation in Alabama, clinicians typically ask about your mental health history, current symptoms, daily functioning, housing situation, and how an animal may provide emotional support. Questions focus on clinical need, not pet ownership preferences.",
           },
         },
         {
@@ -319,46 +318,41 @@ export const alabamaSchema = {
           "name": "How Much Does an ESA Letter Cost in Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":
-              "The cost of an ESA letter for Alabama residents varies by provider and evaluation method. Typically, it ranges around $100–$200 for a proper assessment by a licensed professional. At My ESA Therapist, the fee is $149, which includes the online evaluation and issuance of the ESA letter if you qualify.",
+            "text": "At My ESA Therapist, an ESA letter evaluation in Alabama starts at $149. It includes the clinical evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can any doctor write an ESA letter for Alabama residents?",
+          "name": "Can Any Doctor Write an ESA Letter in Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":
-              "No, not every doctor can write an ESA letter. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship remotely, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to practice telehealth for Alabama residents.",
+            "text": "No, not every doctor can write an ESA letter in Alabama. The letter must be issued by a licensed healthcare professional authorized to assess mental health and establish a therapeutic relationship, such as a licensed therapist, psychologist, psychiatrist, or other qualified healthcare professional authorized to assess mental health.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can working professionals in Alabama qualify for an emotional support animal?",
+          "name": "Can Working Professionals in Alabama Qualify for an Emotional Support Animal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":
-              "Yes, working professionals in Alabama may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
+            "text": "Yes, working professionals in Alabama may qualify for an ESA if they have a mental health condition that affects daily functioning. Employment status does not impact eligibility, as ESA evaluations are based on clinical need, not occupation or income.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is a single online ESA appointment enough for Alabama residents?",
+          "name": "Is a Single ESA Appointment Enough in Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":
-              "A single online ESA appointment may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
+            "text": "A single ESA appointment in Alabama may be sufficient only if it includes a legitimate clinical evaluation and establishes a therapeutic relationship. Instant or cursory visits without proper assessment typically do not meet ethical or professional standards for ESA recommendations.",
           },
         },
         {
           "@type": "Question",
-          "name": "Does a condition need to be severe to qualify for an ESA in Alabama?",
+          "name": "Does a Condition Need to Be Severe to Qualify for an ESA in Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text":
-              "No, a condition does not need to be severe to qualify for an ESA in Alabama. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional's online evaluation.",
+            "text": "No, a condition does not need to be severe to qualify for an ESA in Alabama. Eligibility is based on whether a mental health condition substantially affects daily functioning and whether an emotional support animal is clinically appropriate, as determined through a licensed professional’s evaluation.",
           },
-        },
+        }
       ],
     },
     {
