@@ -22,7 +22,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-8 mb-10 lg:mb-12">
           {/* Card 1: Federal Housing Guidelines */}
-          <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
+          <div className="hover-card hover-surface bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
             quality={90}
@@ -80,7 +80,7 @@ export function StateLawsSection({ data }: { data: StateData }) {
           </div>
 
           {/* Card 2: Housing Provider Role & Responsibilities */}
-          <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
+          <div className="hover-card hover-surface bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[30px] border border-[#EAE5DC] shadow-[0_4px_20px_rgba(0,0,0,0.025)] flex flex-col overflow-hidden">
             <div className="relative w-full aspect-[16/9] overflow-hidden shrink-0">
               <Image
             quality={90}

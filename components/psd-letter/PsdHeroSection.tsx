@@ -34,7 +34,7 @@ export function PsdHeroSection() {
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="flex h-[77px] min-w-[176px] flex-col items-center justify-center rounded-[30px] bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+            className="badge-hover flex h-[77px] min-w-[176px] flex-col items-center justify-center rounded-[30px] bg-background px-4 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
           >
             <span className="body-large leading-none text-color-gradient">{stat.value}</span>
             <span className="body-small mt-1 whitespace-nowrap text-body-text">{stat.label}</span>

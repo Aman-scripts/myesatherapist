@@ -20,13 +20,13 @@ export function EsaOnlineTrustCards() {
         </div>
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14">
           {CARDS.map((card) => (
-            <div key={card.title} className="relative flex w-full flex-col">
+            <div key={card.title} className="hover-card relative flex w-full flex-col">
               <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
-              <div className="relative mt-2 flex min-h-[160px] flex-1 flex-col items-center justify-center gap-2 rounded-[20px] bg-white px-4 pt-[60px] pb-[37px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
+              <div className="hover-surface relative mt-2 flex min-h-[160px] flex-1 flex-col items-center justify-center gap-2 rounded-[20px] bg-white px-4 pt-[60px] pb-[37px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
                 <h3 className="heading-h3 text-color-gradient">{card.title}</h3>
                 <p className="body">{card.subtitle}</p>
               </div>
-              <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74px] w-[74px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
+              <div className="hover-badge absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74px] w-[74px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
                 <Image quality={90} src={card.icon} alt={card.title} width={32}
           sizes="32px" height={32} unoptimized className="h-8 w-8 object-contain" />
               </div>

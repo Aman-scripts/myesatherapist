@@ -30,10 +30,10 @@ export function StateAvailableCitiesSection({ data }: { data: StateData }) {
             {cities.map((city, idx) => (
               <div
                 key={idx}
-                className="bg-background rounded-[22px] sm:rounded-[24px] p-5 sm:p-6 border border-[#EAE5DC]/70 flex flex-col items-start gap-3.5 shadow-xs hover:shadow-md transition-all duration-300 h-full"
+                className="hover-card hover-surface bg-background rounded-[22px] sm:rounded-[24px] p-5 sm:p-6 border border-[#EAE5DC]/70 flex flex-col items-start gap-3.5 shadow-xs h-full"
               >
                 <div className="flex items-center gap-3.5 w-full">
-                  <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 shrink-0">
+                  <div className="hover-badge relative w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 shrink-0">
                     <Image quality={90}
                       src={city.icon}
                       alt={`${city.name} Map`}

@@ -20,7 +20,7 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
   const authorHref = contributorProfileHref(authorDisplayName);
 
   return (
-    <article className="w-full min-w-0 max-w-full sm:max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px] group hover:shadow-lg transition-all duration-300">
+    <article className="hover-card hover-surface group w-full min-w-0 max-w-full sm:max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px]">
       {/* Card Image: 411px x 317px (rounded-t-[20px]) */}
       <Link
         href={article.url}

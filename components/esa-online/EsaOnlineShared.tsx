@@ -61,10 +61,10 @@ export function FeatureCard({
   footer?: React.ReactNode;
 }) {
   return (
-    <div className={`relative flex w-full flex-col ${className}`}>
+    <div className={`hover-card relative flex w-full flex-col ${className}`}>
       <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
       <div
-        className={`relative mt-2 flex flex-1 flex-col items-center justify-center gap-2 rounded-[20px] px-5 pt-[56px] pb-8 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
+        className={`hover-surface relative mt-2 flex flex-1 flex-col items-center justify-center gap-2 rounded-[20px] px-5 pt-[56px] pb-8 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
           dark ? "" : "bg-white"
         }`}
         style={dark ? { backgroundImage: TEAL_GRADIENT } : undefined}
@@ -87,7 +87,7 @@ export function FeatureCard({
         )}
         {footer}
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
+      <div className="hover-badge absolute left-1/2 -translate-x-1/2 -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
         {stat ? (
           <span className="font-heading font-bold text-[22px] leading-none text-[#2E5A66]">{stat}</span>
         ) : (

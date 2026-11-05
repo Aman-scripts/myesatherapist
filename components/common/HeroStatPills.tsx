@@ -13,7 +13,7 @@ export function HeroStatPills({
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
+          className="badge-hover inline-flex items-center justify-center gap-2 rounded-full bg-background px-5 py-2 shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
         >
           <span className="body-strong text-primary">{stat.value}</span>
           <span className="body-text text-body-text">{stat.label}</span>

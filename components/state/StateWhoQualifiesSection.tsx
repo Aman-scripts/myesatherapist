@@ -176,9 +176,9 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                 {conditions.map((item, idx) => (
                   <div
                     key={item.title}
-                    className="bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left transition-all duration-300 hover:shadow-[0_10px_30px_rgba(26,61,79,0.07)] hover:-translate-y-0.5"
+                    className="hover-card hover-surface bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
+                    <div className="hover-badge flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
                       <Image
                         quality={90}
                         src={qualifyIcon(item.icon, idx)}

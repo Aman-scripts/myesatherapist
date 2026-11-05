@@ -86,7 +86,7 @@ export function StatesHeroSection() {
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="flex min-w-[140px] flex-col items-center justify-center rounded-full border border-[#EAE5DC]/80 bg-background px-4 py-2.5 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] lg:h-[77px] lg:w-[176px]"
+            className="badge-hover flex min-w-[140px] flex-col items-center justify-center rounded-full border border-[#EAE5DC]/80 bg-background px-4 py-2.5 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.12)] lg:h-[77px] lg:w-[176px]"
           >
             <span className="body-large leading-none text-color-gradient">{stat.value}</span>
             <span className="body-small mt-1 whitespace-nowrap text-body-text">{stat.label}</span>

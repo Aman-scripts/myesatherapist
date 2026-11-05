@@ -134,7 +134,7 @@ export function DoctorsListingSection() {
           {DOCTORS.map((doc, idx) => (
             <div
               key={doc.id}
-              className={`w-full bg-white rounded-[30px] border-2 border-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg ${
+              className={`hover-card hover-surface w-full bg-white rounded-[30px] border-2 border-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col justify-between ${
                 idx === 2 ? "lg:col-span-2 lg:w-[calc(50%-21px)] lg:mx-auto" : ""
               }`}
             >
@@ -145,7 +145,7 @@ export function DoctorsListingSection() {
               >
                 <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                   {/* Doctor Avatar with Gold Border */}
-                  <div className="w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+                  <div className="hover-photo w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                     <Image
             quality={90}
                       src={doc.avatar}

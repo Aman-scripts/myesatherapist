@@ -65,11 +65,11 @@ export function HowItWorks() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-4 lg:gap-x-11 relative z-10">
               {steps.map((step, idx) => (
                 <React.Fragment key={step.number}>
-                  <div className="flex flex-col items-center text-center">
+                  <div className="hover-card flex flex-col items-center text-center">
                     {/* Circular Image with number badge */}
                     <div className="relative w-[180px] h-[180px] md:w-[170px] md:h-[170px] lg:w-[228px] lg:h-[226px] shrink-0 flex items-center justify-center">
                       <div className="absolute inset-0 rounded-full bg-[#EFFFF1] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]" />
-                      <div className="relative w-[156px] h-[156px] md:w-[148px] md:h-[148px] lg:w-[200px] lg:h-[200px] rounded-full overflow-hidden">
+                      <div className="hover-photo relative w-[156px] h-[156px] md:w-[148px] md:h-[148px] lg:w-[200px] lg:h-[200px] rounded-full overflow-hidden">
                         <Image
                           quality={90}
                           src={step.image}

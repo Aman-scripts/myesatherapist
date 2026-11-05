@@ -248,7 +248,7 @@ export function Header() {
               variant="accent"
               letter={isPsd ? "psd" : "esa"}
               forceStateModal
-              className="!h-11 !min-w-0 w-auto !gap-2 !pl-4 !pr-1 !text-[13px] [&>span:last-child]:!h-8 [&>span:last-child]:!w-8 [&_img]:!h-4 [&_img]:!w-4"
+              className="!h-11 !min-w-0 w-auto !gap-2 !pl-4 !pr-1 !text-[14px] [&>span:last-child]:!h-8 [&>span:last-child]:!w-8 [&_img]:!h-4 [&_img]:!w-4"
               onClick={() => setMobileOpen(false)}
             >
               Start Evaluation

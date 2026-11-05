@@ -123,10 +123,10 @@ function StatBadge({
       : "/common/therapist-section-badge.svg");
 
   return (
-    <div className="relative flex-1 min-w-0 rounded-[7.6px] bg-accent pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
+    <div className="hover-card hover-card-flat relative flex-1 min-w-0 rounded-[7.6px] bg-accent pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
       <div className="bg-white rounded-[7.6px] pt-[20px] sm:pt-[22px] pb-2 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
         {/* Floating badge icon at top center */}
-        <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
+        <div className="hover-badge absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
           <Image quality={90}
             src={iconSrc}
             alt={label}
@@ -288,14 +288,14 @@ export function TherapistsSection({
                     key={t.id ?? `${t.name}-${idx}`}
                     data-card
                     onClick={() => scrollToSlide(idx)}
-                    className="snap-start shrink-0 w-full min-w-full sm:min-w-0 sm:w-[calc(50%-12px)] lg:w-[519px] lg:min-h-[355px] rounded-[30px] overflow-hidden transition-all duration-300 flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
+                    className="hover-card hover-card-flat snap-start shrink-0 w-full min-w-full sm:min-w-0 sm:w-[calc(50%-12px)] lg:w-[519px] lg:min-h-[355px] rounded-[30px] overflow-hidden flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                   >
                     {/* Teal Header Bar */}
                     <div
                       className="px-4 sm:px-6 py-3.5 sm:py-4 xl:h-[92px] flex items-center justify-between gap-3 sm:gap-4 color-gradient"
                     >
                       <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
-                        <div className="w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+                        <div className="hover-photo w-[56px] h-[56px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.82px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                           <Image
                             quality={90}
                             src={getTherapistAvatar(t)}

@@ -38,7 +38,7 @@ export function AboutVsFakeSection() {
         {/* 2 Comparison Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-6 xl:gap-8 max-w-[1280px] mx-auto">
           {/* Left Card: My ESA Therapist (Legitimate Green) */}
-          <div className="bg-[#EBF7EE] rounded-[24px] sm:rounded-[30px] border border-[#CDEED5] shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md">
+          <div className="hover-card hover-surface bg-[#EBF7EE] rounded-[24px] sm:rounded-[30px] border border-[#CDEED5] shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden">
             {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
@@ -76,7 +76,7 @@ export function AboutVsFakeSection() {
           </div>
 
           {/* Right Card: Fake ESA Sites (Red Warning) */}
-          <div className="bg-[#FFF0F0] rounded-[24px] sm:rounded-[30px] border border-[#FCDADA] shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md">
+          <div className="hover-card hover-surface bg-[#FFF0F0] rounded-[24px] sm:rounded-[30px] border border-[#FCDADA] shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden">
             {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image

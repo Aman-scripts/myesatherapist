@@ -82,9 +82,9 @@ export function IconCard({
 }) {
   return (
     <div className="flex h-full w-full flex-col pt-10">
-      <div className="relative flex flex-1 flex-col">
+      <div className="hover-card relative flex flex-1 flex-col">
       <div className="absolute inset-x-0 top-0 bottom-1 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
-      <div className="relative mt-2 flex flex-1 flex-col items-center rounded-[20px] bg-white px-6 pb-8 pt-[58px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:px-[1.3vw] lg:pb-[2vw] lg:pt-[4.4vw] xl:px-3.5 xl:pb-[37px] xl:pt-[62px]">
+      <div className="hover-surface relative mt-2 flex flex-1 flex-col items-center rounded-[20px] bg-white px-6 pb-8 pt-[58px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:px-[1.3vw] lg:pb-[2vw] lg:pt-[4.4vw] xl:px-3.5 xl:pb-[37px] xl:pt-[62px]">
         <h3
           className={`font-bold leading-[29px] text-primary text-[22px] sm:text-2xl ${
             titleFont === "playfair" ? "font-heading" : ""
@@ -107,7 +107,7 @@ export function IconCard({
           {text}
         </p>
       </div>
-      <div className="absolute left-1/2 top-[-37px] z-10 flex h-[74.56px] w-[74.56px] -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] lg:h-[5.6vw] lg:w-[5.6vw] lg:top-[-2.6vw] xl:h-[74.56px] xl:w-[74.56px] xl:top-[-37px]">
+      <div className="hover-badge absolute left-1/2 top-[-37px] z-10 flex h-[74.56px] w-[74.56px] -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] lg:h-[5.6vw] lg:w-[5.6vw] lg:top-[-2.6vw] xl:h-[74.56px] xl:w-[74.56px] xl:top-[-37px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={icon} alt={title} width={32} height={32} className="h-8 w-8 object-contain lg:h-[2.4vw] lg:w-[2.4vw] xl:h-8 xl:w-8" />
       </div>

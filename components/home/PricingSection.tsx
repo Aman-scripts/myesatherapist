@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { PricingTabSwitcher } from "./PricingTabSwitcher";
 import { MaybeStateModalButton } from "@/components/common/MaybeStateModalButton";
+import { SendIcon } from "@/components/common/CtaButton";
 import { isEvaluationCtaLabel, type StateModalLetter } from "@/components/common/evaluationCta";
 
 const TEAL_GRADIENT = "var(--color-gradient)";
@@ -156,6 +157,38 @@ function cardLetter(buttonText: string, directSurvey: boolean): StateModalLetter
   return undefined;
 }
 
+function PricingCardButton({
+  href,
+  label,
+  letter,
+  mobileLabel,
+  desktopLabel,
+}: {
+  href: string;
+  label: string;
+  letter?: StateModalLetter;
+  mobileLabel: string;
+  desktopLabel: string;
+}) {
+  return (
+    <MaybeStateModalButton
+      href={href}
+      label={label}
+      letter={letter}
+      evaluationCta
+      className="inline-flex h-[46px] w-full min-w-0 items-center justify-between gap-1.5 rounded-full bg-accent pl-2.5 pr-1 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all hover:bg-[#dba81f] active:scale-[0.99] sm:h-[54px] sm:gap-2 sm:rounded-[30px] sm:pl-3 sm:pr-[5px] sm:text-[16px] sm:leading-5"
+    >
+      <span className="min-w-0 flex-1 whitespace-nowrap text-center">
+        <span className="sm:hidden">{mobileLabel}</span>
+        <span className="hidden sm:inline">{desktopLabel}</span>
+      </span>
+      <span className="flex h-[36px] w-[36px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] sm:h-[42.5px] sm:w-[42.5px]">
+        <SendIcon className="h-[18px] w-[18px] sm:h-[22px] sm:w-[22px]" />
+      </span>
+    </MaybeStateModalButton>
+  );
+}
+
 interface RenderCardsProps {
   cards: PlanCard[];
   maxCards?: number;
@@ -189,8 +222,8 @@ function RenderCardsContainer({
               key={card.title}
               className={
                 isPopular
-                  ? "relative mx-auto w-full max-w-[350px] rounded-[22px] bg-accent px-1 pb-1 shadow-[0px_4px_12px_rgba(0,0,0,0.1)] sm:flex sm:w-[310px] sm:max-w-none sm:shrink-0 sm:flex-col sm:self-stretch sm:rounded-[20px] sm:px-[5px] sm:pb-[6px] sm:pt-1"
-                  : "relative mx-auto w-full max-w-[350px] sm:flex sm:w-[300px] sm:max-w-none sm:shrink-0 sm:flex-col sm:self-stretch"
+                  ? "hover-card relative mx-auto w-full max-w-[350px] rounded-[22px] bg-accent px-1 pb-1 shadow-[0px_4px_12px_rgba(0,0,0,0.1)] sm:flex sm:w-[310px] sm:max-w-none sm:shrink-0 sm:flex-col sm:self-stretch sm:rounded-[20px] sm:px-[5px] sm:pb-[6px] sm:pt-1"
+                  : "hover-card relative mx-auto w-full max-w-[350px] sm:flex sm:w-[300px] sm:max-w-none sm:shrink-0 sm:flex-col sm:self-stretch"
               }
             >
               {isPopular && (
@@ -199,7 +232,7 @@ function RenderCardsContainer({
                 </div>
               )}
               <div
-                className={`overflow-hidden bg-white sm:flex sm:min-h-0 sm:flex-1 sm:flex-col sm:rounded-[24px] ${
+                className={`hover-surface overflow-hidden bg-white sm:flex sm:min-h-0 sm:flex-1 sm:flex-col sm:rounded-[24px] ${
                   isPopular
                     ? "rounded-[18px] sm:border sm:border-[#E1E1E1] sm:shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)]"
                     : "rounded-[18px] border border-[#E1E1E1] shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.1)] sm:rounded-[24px]"
@@ -216,7 +249,7 @@ function RenderCardsContainer({
                       </h3>
                       <p className="body-text text-background mt-2 hidden sm:block">{card.description}</p>
                     </div>
-                    <div className="relative z-20 flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[78px] sm:w-[78px] sm:-translate-x-1/2 sm:translate-y-1/2">
+                    <div className="hover-badge relative z-20 flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[78px] sm:w-[78px] sm:-translate-x-1/2 sm:translate-y-1/2">
                       <span className="font-heading text-[18px] font-bold leading-none text-primary sm:text-[28px]">
                         {card.price}
                       </span>
@@ -237,17 +270,14 @@ function RenderCardsContainer({
                         </div>
                       ))}
                     </div>
-                    <div className={`mt-auto flex items-end justify-center px-0 pt-5 sm:px-3 sm:pb-7 sm:pt-6 ${isPopular ? "" : "lg:mb-[6px]"}`}>
-                      <MaybeStateModalButton
+                    <div className={`-mx-2.5 mt-auto flex w-[calc(100%+20px)] items-end justify-center px-0 pt-5 sm:-mx-4 sm:w-[calc(100%+32px)] sm:px-0 sm:pb-7 sm:pt-6 ${isPopular ? "" : "lg:mb-[6px]"}`}>
+                      <PricingCardButton
                         href={ctaHref}
                         label={card.buttonText}
                         letter={letter}
-                        evaluationCta
-                        className="inline-flex h-11 w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-2 text-center font-sans text-[13px] font-bold leading-5 text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:h-[52px] sm:rounded-[42px] sm:px-2 sm:text-[14px] sm:font-semibold sm:leading-5 sm:shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
-                      >
-                        <span className="sm:hidden">{mobileButtonLabel(card)}</span>
-                        <span className="hidden sm:block">{card.buttonText}</span>
-                      </MaybeStateModalButton>
+                        mobileLabel={mobileButtonLabel(card)}
+                        desktopLabel={card.buttonText}
+                      />
                     </div>
                   </div>
                 </div>
@@ -377,7 +407,7 @@ export function PricingSection({
 
 export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ctaHref?: string; className?: string }) {
   return (
-    <div className={`w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 overflow-hidden ${className}`}>
+    <div className={`hover-card hover-surface w-[300px] bg-white rounded-[24px] border border-[#E1E1E1] shadow-[0px_4px_12px_rgba(0,0,0,0.08)] relative flex flex-col shrink-0 overflow-hidden ${className}`}>
       <div className="w-[300px] h-[285px] rounded-t-[24px] color-gradient pt-[22px] px-[24px] flex flex-col gap-2 relative text-left shrink-0">
         <h3 className="heading-h3 text-background capitalize">
           Not Sure Which One?
@@ -387,7 +417,7 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
         </p>
       </div>
 
-      <div className="w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[246px] z-20">
+      <div className="hover-badge w-[78px] h-[78px] rounded-full bg-accent shadow-[0px_2px_6px_rgba(0,0,0,0.15)] flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-[246px] z-20">
         <span className="heading-h4 font-heading font-bold text-primary">
           ?
         </span>
@@ -409,16 +439,13 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
         ))}
       </div>
 
-      <div className="pt-2 pb-7 flex justify-center items-center px-3">
-        <MaybeStateModalButton
+      <div className="flex items-center justify-center px-3 pb-7 pt-2">
+        <PricingCardButton
           href={ctaHref}
           label="Find the Right Option"
-          evaluationCta
-          className="inline-flex h-11 w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-3 text-center font-sans text-[13px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] sm:h-[52px] sm:rounded-[42px] sm:text-[14px] sm:font-semibold"
-        >
-          <span className="sm:hidden">Find Your Option</span>
-          <span className="hidden sm:block">Find the Right Option</span>
-        </MaybeStateModalButton>
+          mobileLabel="Find Your Option"
+          desktopLabel="Find the Right Option"
+        />
       </div>
     </div>
   );

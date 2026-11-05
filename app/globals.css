@@ -521,13 +521,84 @@ small,
 }
 
 
-.card-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
+/* Hover stays under the pointer. Scale and a single shadow ease together; a lift was leaving the cursor and flickering. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hover-card {
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(46, 90, 102, 0.12);
+  .hover-card:hover {
+    transform: scale(1.02);
+  }
+
+  .hover-card.hover-card-flat:hover {
+    transform: none;
+  }
+
+  .hover-card.hover-card-flat:hover,
+  .hover-card:hover .hover-surface,
+  .hover-card.hover-surface:hover {
+    box-shadow: 0 14px 28px rgba(26, 61, 79, 0.14);
+  }
+
+  .hover-card .hover-surface,
+  .hover-card.hover-surface,
+  .hover-card.hover-card-flat {
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-card .hover-badge img,
+  .hover-card .hover-badge svg,
+  .hover-card .hover-photo img {
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-card:hover .hover-badge img,
+  .hover-card:hover .hover-badge svg,
+  .hover-card:hover .hover-photo img {
+    transform: scale(1.06);
+  }
+
+  .hover-card .hover-pill {
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+  }
+
+  .hover-card:hover .hover-pill {
+    transform: scale(1.04);
+    background-color: #E8B92C;
+    color: #1A3D4F;
+    border-color: #E8B92C;
+  }
+
+  .badge-hover {
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .badge-hover:hover {
+    transform: scale(1.035);
+    box-shadow: 0 12px 24px rgba(26, 61, 79, 0.16);
+  }
+
+  .badge-hover img,
+  .badge-hover svg,
+  .badge-hover > span:first-child {
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .badge-hover > span:first-child {
+    display: inline-block;
+  }
+
+  .badge-hover:hover img,
+  .badge-hover:hover svg,
+  .badge-hover:hover > span:first-child {
+    transform: scale(1.05);
+  }
 }
 
 /* Marquee animation */

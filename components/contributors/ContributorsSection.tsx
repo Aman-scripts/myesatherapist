@@ -56,10 +56,10 @@ function Badge({ label, value, icon }: { label: string; value: string; icon?: st
 
 function ContributorCard({ person }: { person: ContributorCardData }) {
   return (
-    <div className="w-full bg-white rounded-[30px] border-2 border-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
+    <div className="hover-card hover-surface w-full bg-white rounded-[30px] border-2 border-accent shadow-[0px_1px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col">
       <div className="px-5 sm:px-7 py-4 flex items-center justify-between gap-3" style={{ backgroundImage: TEAL_GRADIENT }}>
         <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-          <div className="w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
+          <div className="hover-photo w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
             <Image
             quality={90} src={person.avatar} alt={person.name} fill className="object-cover object-top" sizes="67px" />
           </div>

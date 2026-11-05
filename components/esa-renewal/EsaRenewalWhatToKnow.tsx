@@ -48,7 +48,7 @@ export function EsaRenewalWhatToKnow() {
           {CARDS.map((card) => (
             <div
               key={card.title}
-              className="bg-white rounded-[30px] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col sm:flex-row sm:items-center xl:min-h-[298px]"
+              className="hover-card hover-surface bg-white rounded-[30px] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col sm:flex-row sm:items-center xl:min-h-[298px]"
             >
               {/* Left Photo */}
               <div className="relative w-full sm:w-[193px] lg:w-[150px] xl:w-[193px] h-[220px] sm:h-auto sm:self-stretch shrink-0 overflow-hidden">

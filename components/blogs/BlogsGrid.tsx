@@ -57,7 +57,7 @@ export function BlogsGrid() {
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className={`h-[54px] ${cat.pillWidth} max-w-full rounded-[30px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center px-6 body-large text-body-text hover:text-primary hover:shadow-md transition-all duration-200 cursor-pointer`}
+                className={`badge-hover h-[54px] ${cat.pillWidth} max-w-full rounded-[30px] bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex items-center justify-center px-6 body-large text-body-text hover:text-primary cursor-pointer`}
               >
                 {cat.title}
               </a>

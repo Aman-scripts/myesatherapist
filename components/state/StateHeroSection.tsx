@@ -90,7 +90,16 @@ interface EvaluationFormCardProps {
 
 // Figma: 44px fields, 5px radius, 0.2px body-text border on a translucent cream fill
 const INPUT_CLASS =
-  "w-full h-[44px] rounded-[5px] border-[0.2px] border-body-text bg-[rgba(250,247,242,0.3)] px-3.5 text-[16px] lg:text-[14px] font-medium text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary transition-all font-sans";
+  "w-full h-[44px] rounded-[5px] border-[0.2px] border-body-text px-3.5 text-[16px] lg:text-[14px] font-medium text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:!border-primary transition-[background-color,border-color,color,box-shadow] duration-150 font-sans";
+
+function inputClass(value: string, settled: boolean) {
+  const filled = settled && value.trim().length > 0;
+  return `${INPUT_CLASS} ${
+    filled
+      ? "!border-primary/30 !bg-background !font-semibold !text-primary"
+      : "bg-[rgba(250,247,242,0.3)]"
+  }`;
+}
 
 function EvaluationFormCard({
   formData,
@@ -101,7 +110,14 @@ function EvaluationFormCard({
   tight = false,
   titleAs = "p",
 }: EvaluationFormCardProps) {
+  const [settledFields, setSettledFields] = useState<Record<string, boolean>>({});
   const labelClass = "block whitespace-nowrap body-text text-body-text mb-1";
+  const fieldEvents = (key: string) => ({
+    onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
+      const hasValue = event.currentTarget.value.trim().length > 0;
+      setSettledFields((current) => ({ ...current, [key]: hasValue }));
+    },
+  });
 
   return (
     <div
@@ -139,7 +155,8 @@ function EvaluationFormCard({
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                className={INPUT_CLASS}
+                {...fieldEvents("firstName")}
+                className={inputClass(formData.firstName, !!settledFields.firstName)}
               />
               {errors.firstName && <p className="body-small mt-1 text-[#c00]">{errors.firstName}</p>}
             </div>
@@ -151,7 +168,8 @@ function EvaluationFormCard({
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                className={INPUT_CLASS}
+                {...fieldEvents("lastName")}
+                className={inputClass(formData.lastName, !!settledFields.lastName)}
               />
               {errors.lastName && <p className="body-small mt-1 text-[#c00]">{errors.lastName}</p>}
             </div>
@@ -165,7 +183,8 @@ function EvaluationFormCard({
               placeholder="your@email.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className={INPUT_CLASS}
+                {...fieldEvents("email")}
+                className={inputClass(formData.email, !!settledFields.email)}
               />
             {errors.email && <p className="body-small mt-1 text-[#c00]">{errors.email}</p>}
           </div>
@@ -179,7 +198,8 @@ function EvaluationFormCard({
               placeholder="999-999-9999"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
-              className={INPUT_CLASS}
+              {...fieldEvents("phone")}
+              className={inputClass(formData.phone, !!settledFields.phone)}
             />
             {errors.phone && <p className="body-small mt-1 text-[#c00]">{errors.phone}</p>}
           </div>
@@ -326,7 +346,7 @@ export function StateHeroSection({ data }: { data: StateData }) {
           {statsData.map((stat) => (
             <div
               key={stat.label}
-              className="flex h-[77px] min-w-[177px] flex-col items-center justify-center rounded-[30px] bg-background px-4 py-2.5 text-center"
+              className="badge-hover flex h-[77px] min-w-[177px] flex-col items-center justify-center rounded-[30px] bg-background px-4 py-2.5 text-center shadow-[0px_2px_4px_rgba(0,0,0,0.1)]"
             >
               <span className="body-large text-color-gradient">{stat.value}</span>
               <span className="body-small mt-0.5 whitespace-nowrap text-body-text">{stat.label}</span>

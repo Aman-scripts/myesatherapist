@@ -46,10 +46,10 @@ export function PricingWhyTrustSection() {
           {EVALUATION_STEPS.map((item, index) => (
             <div
               key={index}
-              className="relative w-full sm:max-w-[302px] mx-auto min-h-[210px] rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-end"
+              className="hover-card relative w-full sm:max-w-[302px] mx-auto min-h-[210px] rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-end"
             >
               {/* Floating Top Circular Badge with Icon */}
-              <div className="absolute -top-[32px] left-1/2 -translate-x-1/2 w-[74.56px] h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center p-3 z-20">
+              <div className="hover-badge absolute -top-[32px] left-1/2 -translate-x-1/2 w-[74.56px] h-[74.56px] rounded-full bg-white shadow-[0px_1.88955px_3.7791px_rgba(0,0,0,0.25)] flex items-center justify-center p-3 z-20">
                 <div className="w-[34px] h-[34px] relative flex items-center justify-center">
                   <Image
             quality={90}
@@ -64,7 +64,7 @@ export function PricingWhyTrustSection() {
               </div>
 
               {/* White Inner Card Body */}
-              <div className="w-full min-h-[202px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-12 pb-5 px-4 flex flex-col items-center justify-center text-center">
+              <div className="hover-surface w-full min-h-[202px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-12 pb-5 px-4 flex flex-col items-center justify-center text-center">
                 {/* Title with Teal Gradient */}
                 <h3
                   className="heading-h3 text-color-gradient mb-2"

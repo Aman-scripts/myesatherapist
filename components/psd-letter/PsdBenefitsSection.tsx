@@ -69,7 +69,7 @@ export function PsdBenefitsSection() {
           {benefitsData.map((item, index) => (
             <div
               key={index}
-              className={`relative pt-14 pb-9 px-6 sm:px-8 rounded-[20px] flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all duration-300 ${
+              className={`hover-card hover-surface relative pt-14 pb-9 px-6 sm:px-8 rounded-[20px] flex flex-col items-center text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
                 item.isDark
                   ? "text-background border-t-[5px] border-t-accent"
                   : "bg-white text-primary border-t-[5px] border-t-accent"
@@ -78,7 +78,7 @@ export function PsdBenefitsSection() {
             >
               {/* Floating Top-Center Circle Badge Icon */}
               <div
-                className={`absolute -top-[40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full flex items-center justify-center z-20 shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] ${
+                className={`hover-badge absolute -top-[40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full flex items-center justify-center z-20 shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] ${
                   item.isDark
                     ? "border border-white/10"
                     : "bg-white"
@@ -99,7 +99,7 @@ export function PsdBenefitsSection() {
 
               {/* Top-Right "Most Requested" Pill Badge */}
               {item.badge && (
-                <div className="absolute -top-3.5 right-3 sm:right-4 md:right-5 bg-background border-[0.2px] border-primary text-primary body-small px-3.5 sm:px-4 py-1 rounded-[12px] shadow-xs tracking-tight z-10 whitespace-nowrap">
+                <div className="hover-pill absolute -top-3.5 right-3 sm:right-4 md:right-5 bg-background border-[0.2px] border-primary text-primary body-small px-3.5 sm:px-4 py-1 rounded-[12px] shadow-xs tracking-tight z-10 whitespace-nowrap">
                   {item.badge}
                 </div>
               )}

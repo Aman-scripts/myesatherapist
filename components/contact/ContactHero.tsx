@@ -13,7 +13,12 @@ const cardStyle = {
 };
 
 const fieldClass =
-  "w-full h-[40px] px-3 rounded-[5px] bg-background/30 border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:border-primary transition-all";
+  "w-full h-[40px] px-3 rounded-[5px] border border-body-text/40 body-small text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:!border-primary transition-[background-color,border-color,color,box-shadow] duration-150";
+
+function filledFieldClass(value: string, settled: boolean, extra = "") {
+  const filled = settled && value.trim().length > 0;
+  return `${fieldClass} ${filled ? "!border-primary/30 !bg-background !font-semibold !text-primary" : "bg-background/30"} ${extra}`.trim();
+}
 
 export function ContactHero() {
   const [formData, setFormData] = useState({
@@ -22,7 +27,14 @@ export function ContactHero() {
     email: "",
     message: "",
   });
+  const [settledFields, setSettledFields] = useState<Record<string, boolean>>({});
   const [submitted, setSubmitted] = useState(false);
+  const fieldEvents = (key: string) => ({
+    onBlur: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const hasValue = event.currentTarget.value.trim().length > 0;
+      setSettledFields((current) => ({ ...current, [key]: hasValue }));
+    },
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -75,7 +87,8 @@ export function ContactHero() {
                   placeholder="First Name"
                   value={formData.firstName}
                   onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  className={fieldClass}
+                  {...fieldEvents("firstName")}
+                  className={filledFieldClass(formData.firstName, !!settledFields.firstName)}
                 />
               </label>
               <label className="block space-y-1">
@@ -86,7 +99,8 @@ export function ContactHero() {
                   placeholder="Last Name"
                   value={formData.lastName}
                   onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  className={fieldClass}
+                  {...fieldEvents("lastName")}
+                  className={filledFieldClass(formData.lastName, !!settledFields.lastName)}
                 />
               </label>
             </div>
@@ -98,7 +112,8 @@ export function ContactHero() {
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className={fieldClass}
+                {...fieldEvents("email")}
+                className={filledFieldClass(formData.email, !!settledFields.email)}
               />
             </label>
             <label className="block space-y-1">
@@ -108,7 +123,8 @@ export function ContactHero() {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className={`${fieldClass} h-[72px] py-2`}
+                {...fieldEvents("message")}
+                className={filledFieldClass(formData.message, !!settledFields.message, "h-[72px] py-2")}
               />
             </label>
             <div className="flex flex-col items-center space-y-1 pt-1">

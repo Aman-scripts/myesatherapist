@@ -293,7 +293,7 @@ export function VideoTestimonialsGridSection() {
           {VIDEO_REVIEWS.map((review) => (
             <div
               key={review.id}
-              className="bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-stretch transition-transform hover:-translate-y-1 duration-200 lg:last:col-span-2 lg:last:max-w-[616px] lg:last:w-full lg:last:mx-auto"
+              className="hover-card hover-surface bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-stretch lg:last:col-span-2 lg:last:max-w-[616px] lg:last:w-full lg:last:mx-auto"
             >
               {/* Left Video Thumbnail fills the card height so the photo meets the rounded corners */}
               <div

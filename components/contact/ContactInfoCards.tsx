@@ -44,7 +44,7 @@ export function ContactInfoCards() {
             const Content = (
               <>
                 {/* Frame 13: Left Icon Circle (45px x 45px) */}
-                <div className="w-[45px] h-[45px] rounded-full bg-white border border-[#EAE5DC] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <div className="hover-badge w-[45px] h-[45px] rounded-full bg-white border border-[#EAE5DC] flex items-center justify-center shrink-0">
                   <Image
                     quality={90}
                     src={card.icon}
@@ -80,14 +80,14 @@ export function ContactInfoCards() {
               <a
                 key={idx}
                 href={card.href}
-                className="bg-white rounded-[20px] px-5 py-4 min-h-[88px] shadow-[0px_1px_4px_rgba(0,0,0,0.25)] hover:shadow-md transition-all group flex items-center gap-3.5"
+                className="hover-card hover-surface group bg-white rounded-[20px] px-5 py-4 min-h-[88px] shadow-[0px_1px_4px_rgba(0,0,0,0.25)] flex items-center gap-3.5"
               >
                 {Content}
               </a>
             ) : (
               <div
                 key={idx}
-                className="bg-white rounded-[20px] px-5 py-4 min-h-[88px] shadow-[0px_1px_4px_rgba(0,0,0,0.25)] transition-all group flex items-center gap-3.5"
+                className="hover-card hover-surface group bg-white rounded-[20px] px-5 py-4 min-h-[88px] shadow-[0px_1px_4px_rgba(0,0,0,0.25)] flex items-center gap-3.5"
               >
                 {Content}
               </div>

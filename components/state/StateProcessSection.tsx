@@ -86,7 +86,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
           {steps.map((step) => (
             <div
               key={step.number}
-              className={`w-full max-w-[410px] mx-auto bg-white rounded-[30px] p-[24px_22px] border border-[#EAE5DC]/60 shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-between transition-all duration-300 hover:shadow-[0_16px_45px_rgba(26,61,79,0.08)] min-h-[303px] ${step.offsetClass}`}
+              className={`hover-card hover-surface w-full max-w-[410px] mx-auto bg-white rounded-[30px] p-[24px_22px] border border-[#EAE5DC]/60 shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-between min-h-[303px] ${step.offsetClass}`}
             >
               {/* Frame 1000011971: Top row with Icon and Number */}
               <div className="flex items-center w-full mb-4">
