@@ -65,10 +65,10 @@ export function ContactHero() {
             <p className="body-text text-white">Your message has been sent successfully.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form onSubmit={handleSubmit} className="space-y-3 text-left">
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <label className="block space-y-1">
-                <span className="body-text text-body-text">First Name</span>
+                <span className="body-text block text-left text-body-text">First Name</span>
                 <input
                   type="text"
                   required
@@ -79,7 +79,7 @@ export function ContactHero() {
                 />
               </label>
               <label className="block space-y-1">
-                <span className="body-text text-body-text">Last Name</span>
+                <span className="body-text block text-left text-body-text">Last Name</span>
                 <input
                   type="text"
                   required
@@ -91,7 +91,7 @@ export function ContactHero() {
               </label>
             </div>
             <label className="block space-y-1">
-              <span className="body-text text-body-text">Email Address</span>
+              <span className="body-text block text-left text-body-text">Email Address</span>
               <input
                 type="email"
                 required
@@ -102,7 +102,7 @@ export function ContactHero() {
               />
             </label>
             <label className="block space-y-1">
-              <span className="body-text text-body-text">Message</span>
+              <span className="body-text block text-left text-body-text">Message</span>
               <textarea
                 required
                 placeholder="Your Message"

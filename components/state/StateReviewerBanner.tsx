@@ -62,7 +62,6 @@ export function StateReviewerBanner({
             {/* Avatar with white 4px border */}
             {profileHref ? (
               <Link
-                prefetch={false}
                 href={profileHref}
                 aria-label={`${reviewerName} profile`}
                 className="relative w-[76px] h-[76px] sm:w-[89px] sm:h-[89px] rounded-full border-[3.5px] sm:border-[4px] border-[#FFFFFF] overflow-hidden shrink-0 shadow-sm hover:opacity-95 transition-opacity block cursor-pointer"
@@ -97,7 +96,6 @@ export function StateReviewerBanner({
                 <span>{reviewLabel}</span>
                 {profileHref ? (
                   <Link
-                    prefetch={false}
                     href={profileHref}
                     className="text-accent hover:opacity-80 transition-opacity cursor-pointer"
                   >

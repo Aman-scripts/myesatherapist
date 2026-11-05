@@ -357,7 +357,6 @@ export function TherapistsSection({
                       {/* View Profile: plain gold pill on mobile, icon button from tablet up */}
                       <div className="pt-2 flex justify-center">
                         <Link
-                          prefetch={false}
                           href={getTherapistProfileHref(t)}
                           onClick={(e) => e.stopPropagation()}
                           className="sm:hidden inline-flex h-11 min-w-[168px] items-center justify-center rounded-full bg-accent px-8 font-sans text-[16px] font-semibold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"

@@ -91,7 +91,7 @@ export function EsaTrainingBasicsSection() {
             ))}
           </div>
 
-          <Link prefetch={false}
+          <Link
             href="/blog/esa-training/8-basic-obedience-commands-every-esa-should-know/"
             className="text-center font-sans text-base font-semibold leading-[30px] text-body-text underline underline-offset-4 decoration-body-text/60 transition-colors hover:text-primary sm:text-[18px] lg:text-left lg:text-[1.25vw] xl:text-[18px]"
           >

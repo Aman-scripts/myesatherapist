@@ -42,7 +42,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
 
       if (linkText && linkUrl) {
         parts.push(
-          <Link prefetch={false}
+          <Link
             key={`${matchIndex}-${linkUrl}`}
             href={linkUrl}
             className="text-[#8A6A0B] font-semibold hover:underline transition-colors"
@@ -85,7 +85,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
       <p className="body-text text-body-text font-medium">
         {callout.prefix && <>{renderFormattedText(callout.prefix)} </>}
         {callout.linkText && callout.linkHref ? (
-          <Link prefetch={false}
+          <Link
             href={callout.linkHref}
             className="text-[#8A6A0B] font-semibold hover:underline transition-colors"
           >

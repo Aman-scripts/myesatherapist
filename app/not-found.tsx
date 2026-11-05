@@ -38,7 +38,7 @@ export default function NotFound() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <CtaButton href="/">Back to Home</CtaButton>
-            <Link prefetch={false} href="/state/" className="body-text font-semibold text-primary underline underline-offset-4">
+            <Link href="/state/" className="body-text font-semibold text-primary underline underline-offset-4">
               ESA letters by state
             </Link>
           </div>

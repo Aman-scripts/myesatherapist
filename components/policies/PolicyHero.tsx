@@ -21,13 +21,13 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
     <section className="w-full pt-8 pb-4 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto">
       {/* Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="body-small mb-6 flex items-center gap-2.5">
-        <Link prefetch={false} href="/" className="hover:text-primary transition-colors">
+        <Link href="/" className="hover:text-primary transition-colors">
           Home
         </Link>
         <span className="text-[#DECDBB]">/</span>
         {!["privacy-policy", "terms-of-use", "disclaimer", "disclaimer-and-policies", "hipaa-compliance", "refund-policy", "consent-for-telehealth", "editorial-policy", "accessibility-statement"].includes(policy.slug) && (
           <>
-            <Link prefetch={false} href="/privacy-policy/" className="hover:text-primary transition-colors text-body-text">
+            <Link href="/privacy-policy/" className="hover:text-primary transition-colors text-body-text">
               Policies
             </Link>
             <span className="text-[#DECDBB]">/</span>
@@ -130,7 +130,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
                 const mappedHref = slugMap[link.text.toLowerCase()] || link.href;
 
                 return (
-                  <Link prefetch={false}
+                  <Link
                     key={idx}
                     href={mappedHref}
                     className="button-text-small inline-flex items-center gap-1 rounded-full border border-[#EAE5DC] bg-background hover:bg-white hover:border-primary/40 px-3 py-1 text-primary transition-colors"

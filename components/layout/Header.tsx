@@ -124,7 +124,7 @@ function ResourcesMenu() {
           className="absolute left-1/2 top-full z-50 mt-4 w-[260px] -translate-x-1/2 rounded-[18px] border border-[#EAE5DC] bg-white py-2 shadow-[0_12px_32px_rgba(26,61,79,0.16)]"
         >
           {RESOURCE_LINKS.map((item) => (
-            <Link prefetch={false}
+            <Link
               key={item.href}
               href={item.href}
               role="menuitem"
@@ -161,7 +161,7 @@ export function Header() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] h-20 lg:h-[98px] flex items-center justify-between">
 
           {/* Logo (ESA LOGO FINAL-01 1: 171px x 71px) */}
-          <Link prefetch={false} href="/" className="flex items-center shrink min-w-0">
+          <Link href="/" className="flex items-center shrink min-w-0">
             <Image quality={90}
               src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
@@ -177,7 +177,7 @@ export function Header() {
 
           {/* Desktop Nav Links (clean spacing, no overlap with logo) */}
           <nav className="hidden lg:flex items-center gap-[28px] mx-6 shrink-0 text-body-text">
-            <Link prefetch={false}
+            <Link
               href="/esa-doctors/"
               className={`body-small text-body-text hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px] ${
                 isDoctors ? "text-[#1D6E72] font-bold" : ""
@@ -185,14 +185,14 @@ export function Header() {
             >
               Our Therapists
             </Link>
-            <Link prefetch={false}
+            <Link
               href="/about-us/"
               className="body-small text-body-text hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
             >
               About Us
             </Link>
             <ResourcesMenu />
-            <Link prefetch={false}
+            <Link
               href="/contact-us/"
               className="body-small text-body-text hover:text-[#1D6E72] transition-colors whitespace-nowrap text-[16px]"
             >
@@ -289,7 +289,7 @@ export function Header() {
                 pathname === `/esa-letter-${st.slug}`;
 
               return (
-                <Link prefetch={false}
+                <Link
                   key={st.slug}
                   href={href}
                   className={`font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text transition-colors whitespace-nowrap ${
@@ -303,7 +303,7 @@ export function Header() {
           </div>
 
           {/* Right: Frame 1000011909 (See all 50 States + Arrow) */}
-          <Link prefetch={false}
+          <Link
             href="/state/"
             className="font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
@@ -318,14 +318,14 @@ export function Header() {
 
       {mobileOpen && (
         <div id="mobile-navigation" className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
-          <Link prefetch={false}
+          <Link
             href="/esa-doctors/"
             className="block py-2 text-body-text font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             Our Therapists
           </Link>
-          <Link prefetch={false}
+          <Link
             href="/about-us/"
             className="block py-2 text-body-text font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
@@ -344,7 +344,7 @@ export function Header() {
           {mobileResourcesOpen && (
             <div className="ml-3 flex flex-col border-l-2 border-[#F6EBCB] pl-4">
               {RESOURCE_LINKS.map((item) => (
-                <Link prefetch={false}
+                <Link
                   key={item.href}
                   href={item.href}
                   className="py-2.5 text-body-text font-bold text-[15px] min-h-[44px] flex items-center"
@@ -358,14 +358,14 @@ export function Header() {
               ))}
             </div>
           )}
-          <Link prefetch={false}
+          <Link
             href="/contact-us/"
             className="block py-2 text-body-text font-medium text-base min-h-[44px] flex items-center"
             onClick={() => setMobileOpen(false)}
           >
             Contact Us
           </Link>
-          <Link prefetch={false}
+          <Link
             href="/state/"
             className="py-2 text-body-text font-medium text-base min-h-[44px] flex items-center justify-between gap-3"
             onClick={() => setMobileOpen(false)}

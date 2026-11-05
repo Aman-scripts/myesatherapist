@@ -132,7 +132,7 @@ export function CtaButton({
     const isInternal = resolvedHref.startsWith("/") || resolvedHref.startsWith("#");
     if (isInternal) {
       return (
-        <Link prefetch={false}
+        <Link
           href={resolvedHref}
           target={target}
           rel={rel}

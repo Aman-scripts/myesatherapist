@@ -22,7 +22,7 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
   return (
     <article className="w-full min-w-0 max-w-full sm:max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px] group hover:shadow-lg transition-all duration-300">
       {/* Card Image: 411px x 317px (rounded-t-[20px]) */}
-      <Link prefetch={false}
+      <Link
         href={article.url}
         className="w-full h-[317px] relative overflow-hidden block shrink-0 cursor-pointer rounded-t-[20px] bg-background"
       >
@@ -42,7 +42,7 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
         {/* Heading: 108px max height with inline author matching Figma Frame 1000011908 */}
         <div className="h-[108px] overflow-hidden">
           <h3 className="heading-h3 text-primary text-[26px] sm:text-[28px] leading-[34px] sm:leading-[36px] tracking-[-0.0003em] line-clamp-3">
-            <Link prefetch={false}
+            <Link
               href={article.url}
               className="group-hover:text-[#1D6E72] transition-colors"
             >
@@ -53,7 +53,6 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
                 by{" "}
                 {authorHref ? (
                   <Link
-                    prefetch={false}
                     href={authorHref}
                     className="underline decoration-[#69777C]/70 underline-offset-2 hover:text-primary"
                   >

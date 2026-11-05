@@ -159,7 +159,6 @@ export function SiteBreadcrumbs({
                 </span>
               ) : (
                 <Link
-                  prefetch={false}
                   href={crumb.path}
                   className={cn(
                     "font-medium transition-colors",

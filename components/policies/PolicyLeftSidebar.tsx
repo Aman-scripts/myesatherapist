@@ -148,7 +148,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
             {ALL_POLICIES_LIST.map((item) => {
               const isActive = item.slug === currentSlug;
               return (
-                <Link prefetch={false}
+                <Link
                   key={item.slug}
                   href={item.href}
                   className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl body-small transition-colors ${
@@ -309,7 +309,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                       {ALL_POLICIES_LIST.map((item) => {
                         const isActive = item.slug === currentSlug;
                         return (
-                          <Link prefetch={false}
+                          <Link
                             key={item.slug}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
