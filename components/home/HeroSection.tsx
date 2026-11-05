@@ -131,7 +131,7 @@ export function HeroSection() {
                   unoptimized
                   className="icon-sm shrink-0 object-contain"
                 />
-                <span className="truncate font-manrope text-primary">{stateLabel}</span>
+                <span className="truncate font-sans text-primary">{stateLabel}</span>
                 <ChevronDown className={`h-4 w-4 shrink-0 text-primary transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
 

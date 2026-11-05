@@ -126,7 +126,7 @@ function ResourcesMenu() {
               href={item.href}
               role="menuitem"
               onClick={() => setOpen(false)}
-              className="block px-7 py-3.5 body-text font-semibold text-body-text hover:bg-background hover:text-[#1D6E72] transition-colors font-manrope"
+              className="block px-7 py-3.5 body-text font-semibold text-body-text hover:bg-background hover:text-[#1D6E72] transition-colors font-sans"
             >
               {item.label}
             </Link>
@@ -276,7 +276,7 @@ export function Header() {
                 <Link
                   key={st.slug}
                   href={href}
-                  className={`font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text transition-colors whitespace-nowrap ${
+                  className={`font-sans font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text transition-colors whitespace-nowrap ${
                     isActive ? "font-bold" : ""
                   }`}
                 >
@@ -288,7 +288,7 @@ export function Header() {
 
           <Link
             href="/state/"
-            className="font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
+            className="font-sans font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
             <span>See All 50 States</span>
             <ArrowRight className="w-4 h-4 text-body-text" strokeWidth={1.5} />

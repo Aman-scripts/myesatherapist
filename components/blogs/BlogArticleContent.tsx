@@ -99,7 +99,7 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
   );
 
   return (
-    <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-body-text font-manrope">
+    <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-body-text font-sans">
       
       {article.questionCallout && (
         <div

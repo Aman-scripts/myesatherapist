@@ -128,7 +128,7 @@ export function SiteBreadcrumbs({
       {includeSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(schema) }} />
       )}
-      <ol className="pointer-events-auto no-scrollbar flex w-max min-w-0 max-w-full flex-nowrap items-center justify-center gap-x-1.5 overflow-x-auto font-manrope sm:gap-x-2 lg:w-auto lg:justify-start lg:overflow-visible">
+      <ol className="pointer-events-auto no-scrollbar flex w-max min-w-0 max-w-full flex-nowrap items-center justify-center gap-x-1.5 overflow-x-auto font-sans sm:gap-x-2 lg:w-auto lg:justify-start lg:overflow-visible">
         {crumbs.map((crumb, index) => {
           const current = index === crumbs.length - 1;
           return (

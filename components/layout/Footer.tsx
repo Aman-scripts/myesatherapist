@@ -93,7 +93,7 @@ function FooterContent() {
             href="/contact-us/"
             className="inline-flex items-center justify-center w-[151px] h-[50px] px-8 rounded-[67px] border border-background [filter:drop-shadow(0px_1px_4px_var(--color-accent))] hover:bg-white/10 transition-colors"
           >
-            <span className="font-manrope font-semibold text-[16px] leading-[26px] text-background whitespace-nowrap">
+            <span className="font-sans font-semibold text-[16px] leading-[26px] text-background whitespace-nowrap">
               Contact Us
             </span>
           </Link>
@@ -119,7 +119,7 @@ function FooterContent() {
           <div className="text-accent body-large tracking-wider uppercase">
             COMPANY
           </div>
-          <ul className="space-y-3 font-manrope">
+          <ul className="space-y-3 font-sans">
             {companyLinks.map((link) => (
               <li key={link.label}>
                 <Link
@@ -141,7 +141,7 @@ function FooterContent() {
           <div className="text-accent body-large tracking-wider uppercase">
             QUICK LINKS
           </div>
-          <ul className="space-y-3 font-manrope">
+          <ul className="space-y-3 font-sans">
             {quickLinks.map((link) => (
               <li key={link.label}>
                 <Link
@@ -163,7 +163,7 @@ function FooterContent() {
           <div className="text-accent body-large tracking-wider uppercase">
             LEGAL
           </div>
-          <ul className="space-y-3 font-manrope">
+          <ul className="space-y-3 font-sans">
             {legalLinks.map((link) => (
               <li key={link.label}>
                 <Link
@@ -185,7 +185,7 @@ function FooterContent() {
           <div className="text-accent body-large tracking-wider uppercase">
             GET IN TOUCH
           </div>
-          <div className="space-y-4 font-manrope">
+          <div className="space-y-4 font-sans">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image quality={90}

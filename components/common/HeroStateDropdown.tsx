@@ -70,7 +70,7 @@ export function HeroStateDropdown({
           unoptimized
           className="icon-sm shrink-0 object-contain"
         />
-        <span className="text-primary font-manrope">
+        <span className="text-primary font-sans">
           {selectedState ? STATE_INDEX_BY_SLUG[selectedState]?.name || placeholder : placeholder}
         </span>
         <ChevronDown className={`w-4 h-4 text-primary shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`} />

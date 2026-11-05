@@ -6,88 +6,28 @@
 
 @theme inline {
   --font-heading: var(--font-heading), 'Playfair Display', Georgia, serif;
-  --font-playfair: var(--font-heading), 'Playfair Display', Georgia, serif;
   --font-sans: var(--font-sans), 'Manrope', sans-serif;
-  --font-manrope: var(--font-sans), 'Manrope', sans-serif;
 
-  --color-teal-900: #1A3D4F;
-  --color-teal-700: #2E5A66;
-  --color-teal-500: #1D6E72;
   --color-gold-600: #DBA81F;
-  --color-gold-500: #E8B92C;
-  --color-gold-100: #FBF1D4;
-  --color-cream-50: #FAF7F2;
   --color-cream-100: #F5EFE6;
-  --color-ink-700: #5F6B6F;
-  --color-ink-500: #6B6B6B;
   --color-line-200: #EAE5DC;
-  --color-line-500: #8A7F70;
-  --color-green-800: #0F5B4C;
-  --color-green-50: #E7F5EE;
   --color-red-600: #CC191D;
 
   --color-primary: #2E5A66;
   --color-accent: #E8B92C;
   --color-background: #FAF7F2;
   --color-body-text: #5F6B6F;
-
-
-  --text-heading-h1: 48px;
-  --text-heading-h1--line-height: 56px;
-
-  --text-heading-h2: 40px;
-  --text-heading-h2--line-height: 48px;
-
-  --text-heading-h3: 28px;
-  --text-heading-h3--line-height: 36px;
-
-  --text-heading-h4: 20px;
-  --text-heading-h4--line-height: 28px;
-
-  --text-lead: 18px;
-  --text-lead--line-height: 28px;
-
-  --text-body-large: 18px;
-  --text-body-large--line-height: 28px;
-
-  --text-body: 16px;
-  --text-body--line-height: 26px;
-
-  --text-body-text: 16px;
-  --text-body-text--line-height: 26px;
-
-  --text-small: 14px;
-  --text-small--line-height: 22px;
-
-  --text-body-small: 14px;
-  --text-body-small--line-height: 22px;
-
-  --text-caption: 12px;
-  --text-caption--line-height: 16px;
-
-  --text-button: 16px;
-  --text-button--line-height: 20px;
-
-  --text-button-small: 14px;
-  --text-button-small--line-height: 20px;
 }
 
 :root {
   --teal-900: #1A3D4F;
   --teal-700: #2E5A66;
   --teal-500: #1D6E72;
-  --gold-600: #DBA81F;
   --gold-500: #E8B92C;
-  --gold-100: #FBF1D4;
   --cream-50: #FAF7F2;
-  --cream-100: #F5EFE6;
   --ink-700: #5F6B6F;
   --ink-500: #6B6B6B;
   --line-200: #EAE5DC;
-  --line-500: #8A7F70;
-  --green-800: #0F5B4C;
-  --green-50: #E7F5EE;
-  --red-600: #CC191D;
 
   --color-primary: var(--teal-700);
   --color-accent: var(--gold-500);
@@ -141,14 +81,6 @@ h6,
   letter-spacing: 0;
 }
 
-.type-stat {
-  font-family: var(--font-heading), "Playfair Display", Georgia, serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 0;
-}
-
 p,
 li,
 dd,
@@ -188,7 +120,6 @@ b {
 }
 
 small,
-.type-small,
 .body-small {
   font-family: var(--font-sans), "Manrope", sans-serif;
   font-weight: 500;
@@ -257,11 +188,6 @@ small,
     font-size: 20px;
     line-height: 28px;
   }
-
-  .type-stat {
-    font-size: 32px;
-    line-height: 40px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -292,11 +218,6 @@ small,
     line-height: 26px;
   }
 
-  .type-stat {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
   .lead,
   .body-large,
   .body-large p,
@@ -309,11 +230,11 @@ small,
 }
 
 @layer base {
-  :where(p, li, .lead, .body, .body-large, .body-text, .body-strong, .body-small, .type-small) {
+  :where(p, li, .lead, .body, .body-large, .body-text, .body-strong, .body-small) {
     color: var(--ink-700);
   }
 
-  :where(h1, h2, h3, h4, h5, h6, .heading-h1, .heading-h2, .heading-h3, .heading-h4, .type-stat) {
+  :where(h1, h2, h3, h4, h5, h6, .heading-h1, .heading-h2, .heading-h3, .heading-h4) {
     color: var(--color-primary);
   }
 
@@ -335,8 +256,6 @@ small,
 .color-gradient::selection,
 .bg-primary ::selection,
 .bg-primary::selection,
-.bg-color-primary ::selection,
-.bg-color-primary::selection,
 [style*="linear-gradient"] ::selection,
 [style*="linear-gradient"]::selection,
 .text-background ::selection,
@@ -349,96 +268,15 @@ small,
 }
 
 
-@utility color-primary {
-  color: #2E5A66;
-}
-
-@utility text-primary {
-  color: #2E5A66;
-}
-
-@utility bg-color-primary {
-  background-color: #2E5A66;
-}
-
-@utility bg-primary {
-  background-color: #2E5A66;
-}
-
-@utility border-color-primary {
-  border-color: #2E5A66;
-}
-
-@utility border-primary {
-  border-color: #2E5A66;
-}
-
-@utility color-accent {
-  color: #E8B92C;
-}
-
-@utility text-accent {
-  color: #E8B92C;
-}
-
-@utility bg-color-accent {
-  background-color: #E8B92C;
-}
-
-@utility bg-accent {
-  background-color: #E8B92C;
-}
-
-@utility border-color-accent {
-  border-color: #E8B92C;
-}
-
-@utility border-accent {
-  border-color: #E8B92C;
-}
-
-@utility color-background {
-  background-color: #FAF7F2;
-}
-
-@utility bg-background {
-  background-color: #FAF7F2;
-}
-
-@utility text-background {
-  color: #FAF7F2;
-}
-
-@utility color-body-text {
-  color: #5F6B6F;
-}
-
-@utility text-body-text {
-  color: #5F6B6F;
-}
-
-@utility color-gradient {
-  background-image: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%);
-}
-
-@utility text-color-gradient {
-  background-image: linear-gradient(135deg, #2E5A66 0%, #1D6E72 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .color-primary,
 .text-primary {
   color: #2E5A66;
 }
 
-.bg-color-primary,
 .bg-primary {
   background-color: #2E5A66;
 }
 
-.border-color-primary,
 .border-primary {
   border-color: #2E5A66;
 }
@@ -448,12 +286,10 @@ small,
   color: #E8B92C;
 }
 
-.bg-color-accent,
 .bg-accent {
   background-color: #E8B92C;
 }
 
-.border-color-accent,
 .border-accent {
   border-color: #E8B92C;
 }
@@ -470,17 +306,14 @@ small,
 }
 
 .color-background,
-.bg-background,
-.bg-color-background {
+.bg-background {
   background-color: #FAF7F2;
 }
 
-.text-background,
-.color-text-background {
+.text-background {
   color: #FAF7F2;
 }
 
-.color-body-text,
 .text-body-text {
   color: #5F6B6F;
 }
@@ -678,46 +511,25 @@ small,
   scrollbar-width: none;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(232, 185, 44, 0.6);
-}
-
-
 img[src$="/send-icon.svg"] {
   transform: translateX(-9%);
 }
 
-.icon-lg,
-.icon-large {
+.icon-lg {
   width: 32px;
   height: 32px;
   min-width: 32px;
   min-height: 32px;
 }
 
-.icon-md,
-.icon-medium {
+.icon-md {
   width: 24px;
   height: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.icon-sm,
-.icon-small {
+.icon-sm {
   width: 20px;
   height: 20px;
   min-width: 20px;
@@ -742,12 +554,12 @@ img[src$="/send-icon.svg"] {
 }
 
 :is(p, li, dd, dt, .body, .body-text, .lead):where(
-  :not(.text-white):not(.text-background):not(.text-accent):not(.text-primary):not(.text-color-gradient):not(.heading-h1):not(.heading-h2):not(.heading-h3):not(.heading-h4):not(.type-stat):not([class*="text-white"]):not([class*="text-background"]):not([class*="text-accent"]):not([class*="text-[#c00]"]):not([class*="text-[#CC191D]"]):not([class*="text-[#D6292B]"]):not([class*="text-[#D9383A]"]):not([class*="text-[#E42529]"]):not([class*="text-[#b8901a]"]):not([class*="text-[#8A6A0B]"]):not([class*="text-[#9A7710]"]):not([class*="text-[#DBA81F]"])
+  :not(.text-white):not(.text-background):not(.text-accent):not(.text-primary):not(.text-color-gradient):not(.heading-h1):not(.heading-h2):not(.heading-h3):not(.heading-h4):not([class*="text-white"]):not([class*="text-background"]):not([class*="text-accent"]):not([class*="text-[#c00]"]):not([class*="text-[#CC191D]"]):not([class*="text-[#D6292B]"]):not([class*="text-[#D9383A]"]):not([class*="text-[#E42529]"]):not([class*="text-[#b8901a]"]):not([class*="text-[#8A6A0B]"]):not([class*="text-[#9A7710]"]):not([class*="text-[#DBA81F]"])
 ) {
   color: #5F6B6F;
 }
 
-:is(.text-white, .text-background, .color-gradient, .bg-primary, .bg-color-primary, footer) :is(p, li, dd, dt, .body, .body-text, .lead):where(
+:is(.text-white, .text-background, .color-gradient, .bg-primary, footer) :is(p, li, dd, dt, .body, .body-text, .lead):where(
   :not(.text-white):not(.text-background):not(.text-accent):not(.text-primary):not(.text-color-gradient):not([class*="text-white"]):not([class*="text-background"]):not([class*="text-accent"])
 ) {
   color: inherit;
