@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const SHOW_DELAY_MS = 80;
+const SHOW_DELAY_MS = 400;
 const HIDE_AFTER_MS = 45000;
 
 function isPageNavigation(anchor: HTMLAnchorElement) {
