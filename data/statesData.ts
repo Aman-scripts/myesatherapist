@@ -1973,7 +1973,7 @@ export const STATES_DATA: Record<string, StateData> = {
       {
         title: "Expanded Housing Options",
         description: "An approved ESA accommodation may allow an assistance animal to be exempt from certain pet-related breed, weight, or size restrictions, subject to applicable housing laws and the specific animal.",
-        icon: "/states/california-benefits-workplaceconsideration.svg",
+        icon: "/esa-icons/icon-20.svg",
       },
       {
         title: "Reduced Work-Related Barriers",
@@ -11595,7 +11595,7 @@ export const STATES_DATA: Record<string, StateData> = {
       {
         title: "Expanded Housing Options",
         description: "With ESA recommendation letters, housing providers must consider accommodation requests in properties with pet restrictions, depending on the specific housing context and applicable regulations.",
-        icon: "/states/california-benefits-workplaceconsideration.svg",
+        icon: "/esa-icons/icon-20.svg",
       },
     ],
     emotionalBenefitsHeading: "Mental Health and\nEmotional Support",

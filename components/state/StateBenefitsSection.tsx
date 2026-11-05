@@ -10,6 +10,15 @@ const FINANCIAL_ICONS = [
   "/esa-icons/icon-10.svg",
 ];
 
+const HOUSING_ICON = "/esa-icons/icon-20.svg";
+const PET_ICON = "/esa-icons/icon-30.svg";
+
+function financialBenefitIcon(title: string, index: number) {
+  if (/pet-related housing denial/i.test(title)) return PET_ICON;
+  if (/housing/i.test(title)) return HOUSING_ICON;
+  return FINANCIAL_ICONS[index % FINANCIAL_ICONS.length];
+}
+
 const EMOTIONAL_ICONS = [
   "/esa-icons/icon-29.svg",
   "/esa-icons/icon-30.svg",
@@ -187,7 +196,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     key={item.title}
                     title={item.title}
                     description={item.description}
-                    icon={FINANCIAL_ICONS[idx % FINANCIAL_ICONS.length]}
+                    icon={financialBenefitIcon(item.title, idx)}
                   />
                 ))}
               </div>
