@@ -174,16 +174,16 @@ export function ContactSection() {
                 href={card.href}
                 className="bg-white rounded-[24px] p-6 shadow-sm border border-primary/10 hover:shadow-md hover:border-accent transition-all group flex flex-col items-center text-center space-y-4"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border border-primary/15 bg-background transition-all group-hover:border-accent group-hover:bg-accent/20">
+                <div className="w-14 h-14 rounded-full bg-background border border-primary/15 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent transition-all shrink-0">
                   <Image
-                    quality={90}
+            quality={90}
                     src={card.icon}
                     alt={card.title}
                     width={24}
-                    sizes="24px"
+          sizes="24px"
                     height={24}
-                    unoptimized
-                    className="block h-6 w-6 shrink-0 object-contain"
+                    className="object-contain"
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </div>
 

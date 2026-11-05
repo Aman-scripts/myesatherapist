@@ -91,15 +91,16 @@ export function PsdProcessSection() {
                 {step.number}
               </div>
 
-              <div className="mb-4 mt-2 flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#AEBBBE33] sm:mb-5 sm:mt-3 sm:h-18 sm:w-18 lg:h-20 lg:w-20">
+              <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-full bg-[#AEBBBE33] flex items-center justify-center mb-4 sm:mb-5 mt-2 sm:mt-3 shrink-0">
                 <Image quality={90}
                   src={step.icon}
                   alt={step.title}
                   width={32}
-                  sizes="32px"
+          sizes="32px"
                   height={32}
                   unoptimized
-                  className="block h-8 w-8 shrink-0 object-contain"
+                  className="icon-lg object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
 
