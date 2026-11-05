@@ -21,25 +21,17 @@ const ALIASES: Record<string, string> = {
   "/consent-for-telehealth/": "/telehealth-consent/",
 };
 
-function applyStagingRobots(response: NextResponse, request: NextRequest) {
-  const host = request.headers.get("host") || "";
-  if (host.endsWith(".vercel.app")) {
-    response.headers.set("X-Robots-Tag", "noindex, nofollow");
-  }
-  return response;
-}
-
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const lower = pathname.toLowerCase();
   const target = ALIASES[lower] ?? (lower !== pathname ? lower : null);
   if (!target || target === pathname) {
-    return applyStagingRobots(NextResponse.next(), request);
+    return NextResponse.next();
   }
 
   const url = request.nextUrl.clone();
   url.pathname = target;
-  return applyStagingRobots(NextResponse.redirect(url, 308), request);
+  return NextResponse.redirect(url, 308);
 }
 
 export const config = {

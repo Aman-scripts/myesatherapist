@@ -1,26 +1,19 @@
-import { headers } from "next/headers";
 import { SITE_URL } from "@/lib/site";
 
 export const revalidate = 3600;
 
 export async function GET() {
-  const host = (await headers()).get("host") || "";
-  const staging = host.endsWith(".vercel.app");
-  // Allow the crawl so Google can see the noindex header. Blocking the host in
-  // robots.txt can leave staging URLs indexed without a snippet.
-  const body = staging
-    ? ["User-agent: *", "Allow: /", ""].join("\n")
-    : [
-        "User-agent: *",
-        "Allow: /",
-        "Disallow: /api/",
-        "Disallow: /admin/",
-        "Disallow: /_next/",
-        "Disallow: /private/",
-        "",
-        `Sitemap: ${SITE_URL}/sitemap.xml`,
-        "",
-      ].join("\n");
+  const body = [
+    "User-agent: *",
+    "Allow: /",
+    "Disallow: /api/",
+    "Disallow: /admin/",
+    "Disallow: /_next/",
+    "Disallow: /private/",
+    "",
+    `Sitemap: ${SITE_URL}/sitemap.xml`,
+    "",
+  ].join("\n");
 
   return new Response(body, {
     headers: {
