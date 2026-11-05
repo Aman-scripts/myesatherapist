@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { ChevronDown } from "lucide-react";
+import { Check } from "lucide-react";
 import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { HeroStatPills } from "@/components/common/HeroStatPills";
@@ -185,21 +185,16 @@ function EvaluationFormCard({
           </div>
 
           <div>
-            <label className={labelClass}>Select Your State</label>
-            <div className="relative">
-              <select
-                required
-                value={formData.state}
-                onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                className={`${INPUT_CLASS} appearance-none pr-10 cursor-pointer`}
-              >
-                {STATE_INDEX.map((s) => (
-                  <option key={s.slug} value={s.name}>
-                    {s.name}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-body-text" />
+            <label className={labelClass} id="hero-prefilled-state">Your State</label>
+            <div
+              aria-labelledby="hero-prefilled-state"
+              className="flex h-[44px] w-full items-center justify-between rounded-[5px] border-[0.2px] border-primary/30 bg-background px-3.5 font-sans text-[16px] font-semibold text-primary lg:text-[14px]"
+            >
+              <span>{formData.state}</span>
+              <span className="inline-flex items-center gap-1 body-small font-semibold text-primary">
+                <Check className="h-4 w-4" aria-hidden="true" />
+                Prefilled
+              </span>
             </div>
           </div>
 
@@ -317,10 +312,10 @@ export function StateHeroSection({ data }: { data: StateData }) {
       </div>
 
       <div
-        className="responsive-hero-copy relative z-10 flex flex-col items-center px-4 pb-10 pt-4 text-center sm:px-10 lg:mx-auto lg:w-[1440px] lg:items-start lg:px-0 lg:pl-[82px] lg:pt-[82px] lg:text-left"
+        className="responsive-hero-copy relative z-10 flex flex-col items-center px-4 pb-10 pt-4 text-center sm:px-10 lg:mx-auto lg:w-full lg:max-w-[1440px] lg:items-start lg:px-0 lg:pl-[82px] lg:pr-[560px] lg:pt-[82px] lg:text-left"
         style={{ "--hero-tablet": "auto", "--hero-desktop": "808px" } as React.CSSProperties}
       >
-        <SiteBreadcrumbs className="mb-4 self-start lg:absolute lg:left-[82px] lg:top-[18px]" />
+        <SiteBreadcrumbs className="mb-4 self-start lg:absolute lg:left-[82px] lg:top-[18px] lg:w-auto lg:max-w-[calc(100%-82px)]" />
         <div className="hidden items-center gap-3 sm:flex sm:flex-wrap sm:justify-center lg:justify-start">
           {statsData.map((stat) => (
             <div

@@ -67,6 +67,7 @@ function FooterContent() {
               alt="My ESA Therapist"
               fill
           sizes="100vw"
+              loading="eager"
               unoptimized
               className="object-contain"
             />

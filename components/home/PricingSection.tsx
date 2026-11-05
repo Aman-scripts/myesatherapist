@@ -15,6 +15,7 @@ export interface PlanCard {
   isPopular?: boolean;
   features: string[];
   buttonText: string;
+  mobileButtonText?: string;
 }
 
 export interface PlanSet {
@@ -43,6 +44,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "Secure email delivery",
         ],
         buttonText: "Start Your ESA Evaluation",
+        mobileButtonText: "Start ESA Evaluation",
       },
       {
         title: "ESA Letter + PSD Letter Combo",
@@ -56,7 +58,8 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "PSD letter if clinically approved",
           "Secure email delivery",
         ],
-        buttonText: "Start Evaluation",
+        buttonText: "Apply for ESA + PSD Letter",
+        mobileButtonText: "Apply Now",
       },
       {
         title: "Not Sure Which One?",
@@ -69,7 +72,8 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "Guidance from a licensed professional",
           "Clear next steps after evaluation",
         ],
-        buttonText: "Find Your Eligibility in Minutes",
+        buttonText: "Find the Right Option",
+        mobileButtonText: "Find Your Option",
       },
     ],
   },
@@ -91,7 +95,8 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "PSD letter if clinically approved",
           "Secure email delivery",
         ],
-        buttonText: "Get Started",
+        buttonText: "Start Your ESA Evaluation",
+        mobileButtonText: "Start ESA Evaluation",
       },
       {
         title: "ESA Letter + PSD Letter Combo",
@@ -105,7 +110,8 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "PSD letter if clinically approved",
           "Secure email delivery",
         ],
-        buttonText: "Start Evaluation",
+        buttonText: "Apply for ESA + PSD Letter",
+        mobileButtonText: "Apply Now",
       },
       {
         title: "Not Sure Which One?",
@@ -118,7 +124,8 @@ export const PLANS: Record<PlanType, PlanSet> = {
           "Guidance from a licensed professional",
           "Clear next steps after evaluation",
         ],
-        buttonText: "Find Your Eligibility in Minutes",
+        buttonText: "Find the Right Option",
+        mobileButtonText: "Find Your Option",
       },
     ],
   },
@@ -138,9 +145,10 @@ function CheckmarkIcon() {
   );
 }
 
-function mobileButtonLabel(text: string) {
-  if (text.toLowerCase().startsWith("find your eligibility")) return "Find Your Eligibility";
-  return text;
+function mobileButtonLabel(card: PlanCard) {
+  if (card.mobileButtonText) return card.mobileButtonText;
+  if (card.buttonText === "Start Your ESA Evaluation") return "Start ESA Evaluation";
+  return card.buttonText;
 }
 
 function cardLetter(buttonText: string, directSurvey: boolean): StateModalLetter | undefined {
@@ -175,8 +183,6 @@ function RenderCardsContainer({
         {cards.map((card, idx) => {
           const isPopular = popularCardIndex !== undefined ? idx === popularCardIndex : !!card.isPopular;
           const letter = cardLetter(card.buttonText, directSurvey);
-          const isLongButton = card.buttonText.length > 18;
-          const buttonWidth = isLongButton ? "w-[272px] px-2 whitespace-nowrap" : "w-[154px]";
 
           return (
             <div
@@ -234,15 +240,13 @@ function RenderCardsContainer({
                     <div className={`mt-auto flex items-end justify-center px-0 pt-5 sm:px-3 sm:pb-7 sm:pt-6 ${isPopular ? "" : "lg:mb-[6px]"}`}>
                       <MaybeStateModalButton
                         href={ctaHref}
+                        label={card.buttonText}
                         letter={letter}
-                        className={`inline-flex items-center justify-center rounded-full bg-accent text-center font-sans font-bold text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:h-[52px] sm:rounded-[42px] sm:font-semibold sm:shadow-[0px_2px_4px_rgba(0,0,0,0.15)] ${
-                          isLongButton
-                            ? "h-auto min-h-11 w-full max-w-full whitespace-normal px-3 py-2 text-[14px] leading-5 sm:w-full sm:px-4 sm:text-[16px] sm:leading-5"
-                            : `h-11 w-fit whitespace-nowrap px-5 text-[14px] leading-5 sm:w-[154px] sm:text-[16px] sm:leading-[26px] ${buttonWidth}`
-                        }`}
+                        evaluationCta
+                        className="inline-flex h-11 w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-2 text-center font-sans text-[13px] font-bold leading-5 text-primary shadow-[0px_1px_4px_rgba(0,0,0,0.15)] sm:h-[52px] sm:rounded-[42px] sm:px-2 sm:text-[14px] sm:font-semibold sm:leading-5 sm:shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
                       >
-                        <span className="sm:hidden">{mobileButtonLabel(card.buttonText)}</span>
-                        <span className={`hidden sm:block ${isLongButton ? "w-full min-w-0 whitespace-normal" : ""}`}>{card.buttonText}</span>
+                        <span className="sm:hidden">{mobileButtonLabel(card)}</span>
+                        <span className="hidden sm:block">{card.buttonText}</span>
                       </MaybeStateModalButton>
                     </div>
                   </div>
@@ -408,9 +412,12 @@ export function HelpPlanCard({ ctaHref = "#how-it-works", className = "" }: { ct
       <div className="pt-2 pb-7 flex justify-center items-center px-3">
         <MaybeStateModalButton
           href={ctaHref}
-          className="inline-flex w-full items-center justify-center whitespace-normal rounded-[42px] bg-accent px-4 py-2 text-center font-sans text-[16px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 transition-opacity min-h-[52px]"
+          label="Find the Right Option"
+          evaluationCta
+          className="inline-flex h-11 w-full items-center justify-center whitespace-nowrap rounded-full bg-accent px-3 text-center font-sans text-[13px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] sm:h-[52px] sm:rounded-[42px] sm:text-[14px] sm:font-semibold"
         >
-          Find Your Eligibility in Minutes
+          <span className="sm:hidden">Find Your Option</span>
+          <span className="hidden sm:block">Find the Right Option</span>
         </MaybeStateModalButton>
       </div>
     </div>

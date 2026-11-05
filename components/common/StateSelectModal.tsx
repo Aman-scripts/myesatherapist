@@ -105,7 +105,7 @@ export function StateSelectModal() {
           </CtaButton>
         </div>
 
-        <p className="body-small text-body-text mt-4 flex items-center justify-center gap-2 text-center">
+        <p className="body-small text-body-text mt-4 flex items-start justify-center gap-2 text-left">
           <Image quality={90}
             src="/esa-icons/icon-46.svg"
             alt=""
@@ -113,9 +113,9 @@ export function StateSelectModal() {
           sizes="16px"
             height={16}
             unoptimized
-            className="h-4 w-4 shrink-0 object-contain"
+            className="mt-[3px] h-4 w-4 shrink-0 object-contain"
           />
-          Secure • HIPAA-Compliant • Licensed Providers
+          <span>Secure • HIPAA-Compliant • Licensed Providers</span>
         </p>
       </div>
     </div>

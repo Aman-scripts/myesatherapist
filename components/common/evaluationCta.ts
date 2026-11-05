@@ -6,7 +6,12 @@ const EVALUATION_CTA_LABELS = new Set([
   "start evaluation",
   "start your evaluation",
   "start your esa evaluation",
+  "start esa evaluation",
   "start your esa evaluation now",
+  "apply for esa + psd letter",
+  "apply now",
+  "find the right option",
+  "find your option",
   "schedule your evaluation",
   "schedule consultation",
   "schedule consultation now",
@@ -59,11 +64,13 @@ function scrollToStateHeroForm() {
     return rect.width > 0 && rect.height > 0;
   });
   if (!form) return false;
+  if (window.location.hash) {
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+  }
   const header = document.querySelector("header");
   const offset = header ? header.getBoundingClientRect().bottom : 0;
-  const scroller = document.scrollingElement ?? document.documentElement;
-  const top = scroller.scrollTop + form.getBoundingClientRect().top - offset - 16;
-  scroller.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  const top = window.scrollY + form.getBoundingClientRect().top - offset - 16;
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   return true;
 }
 

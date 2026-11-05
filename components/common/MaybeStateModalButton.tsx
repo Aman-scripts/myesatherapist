@@ -13,14 +13,21 @@ export function MaybeStateModalButton({
   children,
   stateModal = true,
   letter,
+  label,
+  evaluationCta = false,
 }: {
   href: string;
   className?: string;
   children: React.ReactNode;
   stateModal?: boolean;
   letter?: StateModalLetter;
+  /** Visible label when children are not a plain string, such as responsive spans. */
+  label?: string;
+  /** Pricing cards always start an evaluation, even when the visible label is split for mobile. */
+  evaluationCta?: boolean;
 }) {
-  if (stateModal && typeof children === "string" && isEvaluationCtaLabel(children)) {
+  const ctaLabel = label ?? (typeof children === "string" ? children : "");
+  if (stateModal && (evaluationCta || isEvaluationCtaLabel(ctaLabel))) {
     return (
       <button
         type="button"

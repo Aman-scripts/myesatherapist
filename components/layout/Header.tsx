@@ -169,6 +169,7 @@ export function Header() {
           sizes="171px"
               height={71}
               priority
+              loading="eager"
               unoptimized
               className="h-12 sm:h-16 lg:h-[71px] w-auto max-w-full object-contain"
             />

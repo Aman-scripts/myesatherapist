@@ -232,6 +232,7 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                         width={135}
           sizes="135px"
                         height={56}
+                        loading="eager"
                         className="w-full h-full object-contain"
                       />
                     </div>
