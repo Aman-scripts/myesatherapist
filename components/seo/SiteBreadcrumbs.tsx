@@ -97,6 +97,10 @@ export function SiteBreadcrumbs({
   if (OWN_BREADCRUMB.some((pattern) => pattern.test(pathname))) return null;
 
   const segments = pathname.split("/").filter(Boolean);
+  // Article URLs are /blog/{section}/{slug}/. The post title stays in the heading, not the trail.
+  if (segments[0] === "blog" && segments.length > 2) {
+    segments.pop();
+  }
   const crumbs = [{ name: "Home", path: "/" }];
 
   const isState = segments.length === 1 && isStateLetter(segments[0]);
@@ -122,11 +126,11 @@ export function SiteBreadcrumbs({
   };
 
   return (
-    <nav aria-label="Breadcrumb" className={cn("pointer-events-none w-full min-w-0 max-w-full overflow-hidden", className)}>
+    <nav aria-label="Breadcrumb" className={cn("pointer-events-none flex w-full min-w-0 max-w-full overflow-hidden max-lg:justify-center max-lg:!self-center", className)}>
       {includeSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeLd(schema) }} />
       )}
-      <ol className="pointer-events-auto no-scrollbar flex w-full min-w-0 max-w-full flex-nowrap items-center gap-x-1.5 overflow-x-auto font-manrope sm:w-auto sm:gap-x-2 sm:overflow-visible">
+      <ol className="pointer-events-auto no-scrollbar flex w-max min-w-0 max-w-full flex-nowrap items-center justify-center gap-x-1.5 overflow-x-auto font-manrope sm:gap-x-2 lg:w-auto lg:justify-start lg:overflow-visible">
         {crumbs.map((crumb, index) => {
           const current = index === crumbs.length - 1;
           return (
