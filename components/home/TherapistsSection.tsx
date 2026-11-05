@@ -279,7 +279,7 @@ export function TherapistsSection({
           <div className="w-full max-w-[1070px] overflow-hidden">
             <div
               ref={scrollRef}
-              className="flex items-stretch gap-0 sm:gap-6 lg:gap-8 xl:gap-[32px] overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-0 sm:px-1"
+              className="flex items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-[32px] overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-3 px-0 sm:px-1"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {therapists.map((t, idx) => {

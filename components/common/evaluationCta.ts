@@ -70,7 +70,9 @@ function scrollToStateHeroForm() {
   const header = document.querySelector("header");
   const offset = header ? header.getBoundingClientRect().bottom : 0;
   const top = window.scrollY + form.getBoundingClientRect().top - offset - 16;
-  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  // Instant on phones. A long smooth scroll is easy to cancel before the form arrives.
+  const behavior = window.innerWidth < 1024 ? "auto" : "smooth";
+  window.scrollTo({ top: Math.max(0, top), behavior });
   return true;
 }
 
