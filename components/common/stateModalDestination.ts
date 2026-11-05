@@ -32,7 +32,7 @@ export const SURVEY_STATE_SLUGS = new Set([
   "pennsylvania",
 ]);
 
-export const PSD_SURVEY_URL = "https://staging.survey.myesatherapist.com/";
+export const PSD_SURVEY_URL = "https://survey.myesatherapist.com/";
 export const PSD_SCHEDULE_URL =
   "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule";
 
