@@ -155,7 +155,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-6 px-4 sm:px-6 lg:px-0 pt-4 pb-4 sm:pb-6 lg:py-6 pr-0 lg:pr-2 xl:pr-4 flex flex-col justify-center">
+          <div className="order-2 lg:order-1 lg:col-span-6 pl-4 pr-4 sm:pl-6 sm:pr-6 lg:pl-0 lg:pr-2 xl:pr-4 pt-4 pb-4 sm:pb-6 lg:py-6 flex flex-col justify-center">
             <div className="mb-5 sm:mb-6 lg:mb-6 xl:mb-8">
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[32px] xl:text-[44px] font-bold text-primary leading-[1.16] tracking-tight mb-3 sm:mb-4 lg:mb-3.5 xl:mb-5">
                 {title}
