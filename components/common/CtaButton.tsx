@@ -37,6 +37,8 @@ export interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
    * Hero pickers pass false so they keep their own state control.
    */
   stateModal?: boolean;
+  /** Opens the state modal even on state pages, where other evaluation buttons scroll to the form. */
+  forceStateModal?: boolean;
   letter?: StateModalLetter;
 }
 
@@ -63,6 +65,7 @@ export function CtaButton({
   centerLabel = false,
   variant = "accent",
   stateModal,
+  forceStateModal = false,
   letter,
   onClick,
   disabled,
@@ -71,6 +74,7 @@ export function CtaButton({
 }: CtaButtonProps) {
   const label = typeof children === "string" ? children : "";
   const opensModal =
+    forceStateModal ||
     stateModal === true ||
     (stateModal !== false && type !== "submit" && isEvaluationCtaLabel(label));
   const resolvedHref = opensModal ? undefined : href;
@@ -78,7 +82,7 @@ export function CtaButton({
   const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     if (opensModal) {
       event.preventDefault();
-      openStateSelectModal(letter);
+      openStateSelectModal(letter, { force: forceStateModal });
     }
     onClick?.(event as React.MouseEvent<HTMLButtonElement>);
   };

@@ -232,6 +232,7 @@ export function Header() {
                 {/* Button 2: Get Started (Frame 1000011890) */}
                 <CtaButton
                   href="#pricing"
+                  forceStateModal
                   className="w-auto h-[54px] text-[16px]"
                 >
                   Start Your ESA Evaluation
@@ -245,6 +246,7 @@ export function Header() {
             <CtaButton
               variant="accent"
               letter={isPsd ? "psd" : "esa"}
+              forceStateModal
               className="!h-11 !min-w-0 w-auto !gap-2 !pl-4 !pr-1 !text-[13px] [&>span:last-child]:!h-8 [&>span:last-child]:!w-8 [&_img]:!h-4 [&_img]:!w-4"
               onClick={() => setMobileOpen(false)}
             >
@@ -387,6 +389,8 @@ export function Header() {
             <CtaButton
               href="#pricing"
               centerLabel
+              forceStateModal
+              letter={isPsd ? "psd" : "esa"}
               className="w-full h-[48px]"
               onClick={() => setMobileOpen(false)}
             >

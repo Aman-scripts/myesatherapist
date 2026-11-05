@@ -67,9 +67,11 @@ function scrollToStateHeroForm() {
   return true;
 }
 
-export function openStateSelectModal(letter?: StateModalLetter) {
+export function openStateSelectModal(letter?: StateModalLetter, options?: { force?: boolean }) {
   if (typeof window === "undefined") return;
-  if (scrollToStateHeroForm()) return;
+  // In-page evaluation buttons on a state page scroll to the hero form.
+  // Header buttons pass force so they still open the state modal.
+  if (!options?.force && scrollToStateHeroForm()) return;
   window.dispatchEvent(new CustomEvent(OPEN_STATE_MODAL_EVENT, { detail: { letter } }));
 }
 
