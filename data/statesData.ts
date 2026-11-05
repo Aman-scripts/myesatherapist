@@ -1682,7 +1682,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs and Emotional Support Animals in Arkansas",
     psdVsEsaSubtitle: "Knowing how these two support options differ can help individuals choose the type of documentation and protection that fits their situation.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Emotional support animals offer companionship that can support emotional well-being for individuals with qualifying conditions. They are not trained to perform specific tasks.",
       "In Arkansas, ESAs may be considered for housing accommodations under the Fair Housing Act when appropriate documentation is provided.",
@@ -2062,7 +2062,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in California",
     psdVsEsaSubtitle: "Understanding the difference between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) helps you find the right support for your mental health needs.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Emotional support animals provide comfort and support through companionship that may help reduce the impact of a mental or emotional disability.",
       "ESAs do not require specialized training and are protected under federal housing law for accommodation purposes.",
@@ -2526,7 +2526,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Colorado",
     psdVsEsaSubtitle: "Knowing the difference between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) can help you figure out which type of support fits your mental health needs best.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer comfort and help ease symptoms of anxiety, depression, trauma-related stress, and other emotional challenges.",
       "ESAs do not require specialized training, but you do need a valid ESA letter issued after a proper evaluation by a Colorado-licensed mental health professional to receive housing protections.",
@@ -4650,7 +4650,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Hawaii",
     psdVsEsaSubtitle: "In Hawaii, it’s important to understand the difference between psychiatric service dogs (PSDs) and emotional support animals (ESAs). While both can assist individuals with mental health conditions, they differ in their roles, legal recognition, and training requirements.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional comfort to individuals with mental or emotional health conditions.",
       "Do not require specialized task training; a valid ESA letter is typically needed for housing requests.",
@@ -5042,7 +5042,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Idaho",
     psdVsEsaSubtitle: "In Idaho, it’s important to clearly distinguish between emotional support animals (ESAs) and psychiatric service dogs (PSDs). While both support individuals with mental health conditions, they differ significantly in legal coverage, training requirements, and access rights.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer emotional relief and companionship to individuals dealing with conditions like anxiety, depression, PTSD, and related challenges.",
       "Do not need any specialized or task-based training.",
@@ -6998,7 +6998,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Kentucky",
     psdVsEsaSubtitle: "It’s important to understand the difference between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Kentucky. While both support individuals with mental health conditions, they differ in legal protections, public access rights, and the specific roles they perform in supporting their owners’ well-being.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer comfort and companionship to individuals dealing with conditions like anxiety, depression, PTSD, and similar emotional challenges.",
       "Do not need specialized task training. Housing protections may apply when an assistance animal is needed as a reasonable accommodation for a disability, with reliable supporting documentation when appropriate.",
@@ -7389,7 +7389,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Louisiana",
     psdVsEsaSubtitle: "In Louisiana, it’s important to understand the difference between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs). Each serves a different purpose under the law. Understanding how they differ can help you decide which type of support is most appropriate for your specific mental health needs.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional relief for individuals experiencing conditions such as anxiety, depression, PTSD, and other mental health concerns.",
       "Do not need task-specific training; however, housing protections require a valid ESA letter issued by a Louisiana-licensed mental health professional, consistent with applicable state and federal guidelines.",
@@ -7780,7 +7780,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Maine",
     psdVsEsaSubtitle: "Understanding the distinction between psychiatric service dogs (PSDs) and emotional support animals (ESAs) is important, as they differ in legal rights, access permissions, and roles in mental health support.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide comfort and companionship for individuals dealing with anxiety, depression, PTSD, and related conditions.",
       "Do not require specialized training; housing rights apply only with a valid ESA letter from a Maine-licensed professional.",
@@ -8557,7 +8557,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Massachusetts",
     psdVsEsaSubtitle: "It’s important to distinguish between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Massachusetts. Although they both help people with mental health issues, they differ in terms of legal safeguards, rights to public access, and the particular responsibilities they play in promoting the well-being of their owners.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide emotional comfort and support to individuals managing mental health conditions such as PTSD, anxiety disorders, depression, and related challenges.",
       "Do not require specialized task training. Housing protections may apply when an assistance animal is needed as a reasonable accommodation for a disability, with reliable supporting information when appropriate.",
@@ -8947,7 +8947,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Michigan",
     psdVsEsaSubtitle: "It’s critical to understand the differences between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Michigan. Both offer support to people with mental health issues, but they have different statutory regulations and serve different purposes.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer sympathy and emotional support to people dealing with mental health issues like depression, anxiety disorders, PTSD, and others.",
       "ESAs do not need specialized task training. Housing protections may apply when an assistance animal is needed as a reasonable accommodation for a disability, with reliable supporting information when appropriate.",
@@ -9726,7 +9726,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Mississippi",
     psdVsEsaSubtitle: "In Mississippi, understanding the difference between Emotional Support Animals (ESAs) and Psychiatric Service Dogs (PSDs) is essential. While both may help individuals living with mental health conditions, their legal protections, training standards, and access rights are very different.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide emotional comfort and companionship to individuals experiencing conditions such as anxiety disorders, depression, PTSD, or similar challenges.",
       "May be supported by reliable documentation of the person’s disability and disability-related need when documentation is appropriate for a housing accommodation request.",
@@ -10115,7 +10115,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Missouri",
     psdVsEsaSubtitle: "Having a clear understanding of how emotional support animals (ESAs) differ from psychiatric service dogs (PSDs) in Missouri can help you determine the best companion to support your mental health needs.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide consolation and companionship to people who are dealing with emotional or psychological difficulties, such as PTSD, sadness, or anxiety.",
       "Do not require specific task training. Housing protections may apply when an assistance animal is needed because of a disability and the person qualifies for a reasonable accommodation, with supporting documentation when appropriate.",
@@ -10900,7 +10900,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Nebraska",
     psdVsEsaSubtitle: "It’s critical to recognize the differences between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) in Nebraska. Despite the fact that both might help people manage mental health issues, their legal status, necessary training, and rights to public access are very different.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer comfort and emotional stability to individuals living with conditions such as anxiety, depression, PTSD, or related mental health challenges.",
       "Are not required to undergo specialized task-based training.",
@@ -11679,7 +11679,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in New York",
     psdVsEsaSubtitle: "Understanding the distinction helps you choose the right option for your needs and comply with New York’s emotional support animal laws.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide emotional comfort and help reduce symptoms of anxiety, depression, trauma, and more. Do not require special training.",
       "May qualify for housing accommodations under the Fair Housing Act when the applicable requirements for an assistance animal are met.",
@@ -12536,7 +12536,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Washington",
     psdVsEsaSubtitle: "It is critical to understand the distinctions between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Washington. While both help people with mental health issues, their training requirements, legal protections, and roles are very different.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional comfort for individuals with mental health conditions.",
       "No specialized training required; valid ESA letter needed for housing accommodations.",
@@ -12919,7 +12919,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Wisconsin",
     psdVsEsaSubtitle: "Understanding the differences between psychiatric service dogs and emotional support animals is crucial. Even though both can help manage mental health disorders, the law treats them quite differently in terms of training, legal standing, and access rights.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer emotional comfort and stability to individuals living with anxiety, depression, PTSD, or similar mental health conditions.",
       "Do not need specialized or task-specific training to qualify.",
@@ -13314,7 +13314,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Wyoming",
     psdVsEsaSubtitle: "It’s important to understand the distinctions between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in Wyoming. While both help individuals with mental health challenges, their training requirements, legal protections, and roles differ significantly.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional support to individuals dealing with conditions such as anxiety, depression, PTSD, or other similar emotional or psychological challenges.",
       "No specialized task training is necessary for an ESA. Housing accommodations generally require a valid ESA letter issued by a licensed mental health professional.",
@@ -13715,7 +13715,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in New Hampshire",
     psdVsEsaSubtitle: "It is important to understand the distinction between emotional support animals (ESAs) and psychiatric service dogs (PSDs) in New Hampshire. Both can assist individuals coping with mental health challenges, but they differ significantly in their roles, legal recognition, and training expectations.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional comfort for individuals dealing with mental or emotional health conditions.",
       "Do not require task-specific training; a valid ESA letter is typically needed to request housing accommodations.",
@@ -14105,7 +14105,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in New Jersey",
     psdVsEsaSubtitle: "In New Jersey, it’s important to comprehend the differences between emotional support animals (ESAs) and psychiatric service dogs (PSDs). Despite the fact that both might help people with mental health issues, their legal safeguards and training requirements differ.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer companionship and emotional comfort to individuals managing conditions such as PTSD, anxiety disorders, depression, or related challenges.",
       "Do not require specialized task training.",
@@ -14497,7 +14497,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in New Mexico",
     psdVsEsaSubtitle: "In New Mexico, it’s critical to understand the difference between psychiatric service dogs (PSDs) and emotional support animals (ESAs). Although they can both help people manage mental health issues, their legal position, the training they must complete, and the types of access privileges they are allowed to have differ greatly.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer companionship and emotional reassurance to individuals coping with anxiety, depression, PTSD, or similar challenges.",
       "Do not require specialized task-based training.",
@@ -14888,7 +14888,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in North Carolina",
     psdVsEsaSubtitle: "Although both support individuals with mental health challenges, ESAs and psychiatric service dogs differ in training requirements and legal protections.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide emotional support and companionship to people dealing with mental health issues like PTSD, anxiety, depression, and related difficulties.",
       "ESAs do not require specialized task training. Supporting documentation may be relevant to a housing accommodation request, but a letter does not guarantee approval.",
@@ -15278,7 +15278,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in North Dakota",
     psdVsEsaSubtitle: "Understanding the difference between psychiatric service dogs (PSDs) and emotional support animals (ESAs) is crucial in North Dakota. Although they both support people with mental health issues, they have different functions and are subject to different legal protections.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer companionship and emotional comfort to individuals experiencing mental health challenges such as anxiety, depression, PTSD, or similar conditions.",
       "Supporting documentation may be relevant to a housing accommodation request when the disability-related need is not apparent. North Dakota law does not categorically require every supporting professional to hold a North Dakota license.",
@@ -15668,7 +15668,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in Ohio",
     psdVsEsaSubtitle: "In Ohio, it’s critical to understand the actual difference between emotional support animals (ESAs) and psychiatric service dogs (PSDs). Despite the fact that they both assist people with mental health issues, they have different legal treatments and serve different purposes.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide emotional support and comfort to people dealing with mental health issues like PTSD, anxiety disorders, depression, and other conditions.",
       "Don’t need specific task instruction. However, in accordance with the Fair Housing Act, housing rights are dependent upon receiving a valid ESA letter Ohio from a mental health practitioner licensed in the state.",
@@ -16838,7 +16838,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals",
     psdVsEsaSubtitle: "Understanding the difference between these two helps you choose the type of support that fits your needs.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Emotional support animals provide comfort and emotional support to individuals with mental or emotional health conditions. They do not require specialized training.",
       "ESAs are protected under federal housing law as a reasonable accommodation but do not have public access rights.",
@@ -17228,7 +17228,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in South Dakota",
     psdVsEsaSubtitle: "In South Dakota, it’s important to understand the differences between emotional support animals (ESAs) and psychiatric service dogs (PSDs). Although they both help people with mental health issues, their responsibilities, qualifications, and legal safeguards are different.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional comfort to people experiencing conditions such as anxiety, depression, PTSD, or related challenges.",
       "No specialized task training is required for an ESA. Housing accommodation typically requires a valid ESA letter from a South Dakota-licensed mental health professional.",
@@ -18015,7 +18015,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in South Carolina",
     psdVsEsaSubtitle: "It’s critical to understand the differences between emotional support animals (ESAs) and psychiatric service dogs (PSDs) in South Carolina. Both assist people in managing mental health issues, although they differ greatly in terms of duties, legal recognition, and training requirements.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Offer companionship and emotional reassurance for people experiencing mental or emotional health challenges.",
       "Do not require specialized training; a legitimate ESA letter is generally needed for housing accommodations.",
@@ -18786,7 +18786,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     psdVsEsaTitle: "Psychiatric Service Dogs vs. Emotional Support Animals in West Virginia",
     psdVsEsaSubtitle: "It is critical to understand the differences between psychiatric service dogs (PSDs) and emotional support animals (ESAs) in West Virginia. While both assist people with mental health issues, their training requirements, legal protections, and roles are vastly different.",
-    esaCardTitle: "Emotional Support Animals (ESAs)",
+    esaCardTitle: "Emotional Support Animals",
     esaCardBullets: [
       "Provide companionship and emotional comfort for individuals with mental health conditions.",
       "No specialized training required; a valid ESA letter is typically needed for housing accommodations.",

@@ -21,7 +21,7 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
 
   const title = data.psdVsEsaTitle || `Psychiatric Service Dogs vs. Emotional Support Animals in ${stateName}`;
   const subtitle = data.psdVsEsaSubtitle || `Understanding the differences between Psychiatric Service Dogs (PSDs) and Emotional Support Animals (ESAs) will help you select the support that best meets your mental health needs in ${stateName}.`;
-  const esaTitle = data.esaCardTitle || "Emotional Support Animals (ESA)";
+  const esaTitle = data.esaCardTitle || "Emotional Support Animals";
   const esaBullets = data.esaCardBullets && data.esaCardBullets.length > 0
     ? data.esaCardBullets
     : defaultEsaBullets;
