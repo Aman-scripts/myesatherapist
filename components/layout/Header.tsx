@@ -140,6 +140,7 @@ function ResourcesMenu() {
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
   const isPsd = pathname === "/psd-letter/";
@@ -149,9 +150,87 @@ export function Header() {
     pathname?.includes("reviewer") ||
     pathname?.includes("contributors");
 
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileResourcesOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const html = document.documentElement;
+    const body = document.body;
+    const header = headerRef.current;
+    const scrollY = window.scrollY;
+    const previous = {
+      htmlOverflow: html.style.overflow,
+      bodyOverflow: body.style.overflow,
+      bodyPosition: body.style.position,
+      bodyTop: body.style.top,
+      bodyLeft: body.style.left,
+      bodyRight: body.style.right,
+      bodyWidth: body.style.width,
+      bodyPaddingTop: body.style.paddingTop,
+    };
+
+    if (header) {
+      header.style.position = "fixed";
+      header.style.top = "0";
+      header.style.left = "0";
+      header.style.right = "0";
+      header.style.width = "100%";
+      body.style.paddingTop = `${header.offsetHeight}px`;
+    }
+
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+
+    const blockBackgroundScroll = (event: Event) => {
+      const menu = document.getElementById("mobile-navigation");
+      if (menu && event.target instanceof Node && menu.contains(event.target)) {
+        if (menu.scrollHeight > menu.clientHeight + 1) return;
+      }
+      event.preventDefault();
+    };
+
+    document.addEventListener("touchmove", blockBackgroundScroll, { passive: false });
+    document.addEventListener("wheel", blockBackgroundScroll, { passive: false });
+
+    return () => {
+      html.style.overflow = previous.htmlOverflow;
+      body.style.overflow = previous.bodyOverflow;
+      body.style.position = previous.bodyPosition;
+      body.style.top = previous.bodyTop;
+      body.style.left = previous.bodyLeft;
+      body.style.right = previous.bodyRight;
+      body.style.width = previous.bodyWidth;
+      body.style.paddingTop = previous.bodyPaddingTop;
+      if (header) {
+        header.style.position = "";
+        header.style.top = "";
+        header.style.left = "";
+        header.style.right = "";
+        header.style.width = "";
+      }
+      window.scrollTo(0, scrollY);
+      document.removeEventListener("touchmove", blockBackgroundScroll);
+      document.removeEventListener("wheel", blockBackgroundScroll);
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    if (!mobileOpen || !headerRef.current) return;
+    document.body.style.paddingTop = `${headerRef.current.offsetHeight}px`;
+  }, [mobileOpen, mobileResourcesOpen]);
+
   return (
     <>
-    <header className="sticky top-0 z-50 bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
+    <header ref={headerRef} className="sticky top-0 z-50 bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
       <div className="w-full bg-white">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] h-20 lg:h-[98px] flex items-center justify-between">
 
@@ -299,7 +378,10 @@ export function Header() {
 
 
       {mobileOpen && (
-        <div id="mobile-navigation" className="lg:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
+        <div
+          id="mobile-navigation"
+          className="lg:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain bg-white px-6 py-5 space-y-4 shadow-lg"
+        >
           <Link
             href="/esa-doctors/"
             className="block py-2 text-body-text font-medium text-base min-h-[44px] flex items-center"
@@ -374,7 +456,7 @@ export function Header() {
               centerLabel
               forceStateModal
               letter={isPsd ? "psd" : "esa"}
-              className="w-full h-[48px]"
+              className="w-full !h-[54px] !px-12 !text-[14px] min-[380px]:!text-[16px] [&_.cta-icon]:!right-1 [&_.cta-icon]:!h-[38px] [&_.cta-icon]:!w-[38px] [&_.cta-icon_img]:!h-[18px] [&_.cta-icon_img]:!w-[18px]"
               onClick={() => setMobileOpen(false)}
             >
               {isPsd ? "Start Your Consultation" : "Start Your ESA Evaluation"}
