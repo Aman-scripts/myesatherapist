@@ -4,32 +4,89 @@ import Image from "next/image";
 import { StateData } from "@/data/statesData";
 import { CtaButton } from "@/components/common/CtaButton";
 
-const FINANCIAL_ICONS = [
-  "/esa-icons/icon-20.svg",
-  "/esa-icons/icon-28.svg",
-  "/esa-icons/icon-10.svg",
+const HOUSE = "/esa-icons/icon-20.svg";
+const PAW = "/esa-icons/icon-30.svg";
+const DOLLAR = "/esa-icons/icon-21.svg";
+const COIN = "/esa-icons/icon-22.svg";
+const PLANE = "/esa-icons/icon-28.svg";
+const SCALES = "/esa-icons/icon-25.svg";
+const SHIELD = "/esa-icons/glyph.svg";
+const HEART = "/esa-icons/icon-12.svg";
+const CALENDAR = "/esa-icons/icon-9.svg";
+const CALENDAR_CHECK = "/esa-icons/icon-16.svg";
+const PEOPLE = "/esa-icons/icon-8.svg";
+const MOOD = "/esa-icons/icon-7.svg";
+const BRAIN = "/esa-icons/icon.svg";
+const MOON = "/esa-icons/glyph-1.svg";
+const EYE = "/esa-icons/icon-26.svg";
+const DOCUMENT = "/esa-icons/icon-17.svg";
+const REFRESH = "/esa-icons/icon-27.svg";
+const CLIPBOARD = "/esa-icons/icon-18.svg";
+const CHAT = "/esa-icons/icon-34.svg";
+const LOCK = "/esa-icons/icon-14.svg";
+const HEART_ALT = "/esa-icons/icon-1.svg";
+const HOUSE_ALT = "/esa-icons/icon-29.svg";
+const PERSON = "/esa-icons/icon-10.svg";
+
+type IconRule = { test: RegExp; icons: string[] };
+
+const FINANCIAL_RULES: IconRule[] = [
+  { test: /breed|size|weight/i, icons: [PAW] },
+  { test: /relocat|moving|\bmoves?\b|transition/i, icons: [PLANE] },
+  { test: /\bchanges?\b/i, icons: [REFRESH] },
+  { test: /penalt|denial|violation|unfair|evict|reject|dispute|evaluat|disrupt/i, icons: [SCALES, SHIELD] },
+  { test: /fee|deposit|\brent\b|charge|premium|\bcost|expense|saving|budget|insurance|\bspend/i, icons: [DOLLAR, COIN] },
+  { test: /no extra fee|no additional fee/i, icons: [SHIELD] },
+  { test: /\bwork\b|workplace|employment|\bjob\b/i, icons: [CLIPBOARD] },
+  { test: /paperwork|privacy|document|negotiat/i, icons: [DOCUMENT, EYE] },
+  { test: /renewal/i, icons: [CALENDAR] },
+  { test: /no-pet|housing|accommodat|live with|living comfortably|live comfortably|\blease\b/i, icons: [HOUSE, HOUSE_ALT] },
+  { test: /pet restriction|pet rule|pet polic|restriction/i, icons: [PAW] },
+  { test: /protect|legal|fair|exempt/i, icons: [SHIELD, SCALES] },
+  { test: /therap|mental|anxiety|stress/i, icons: [HEART] },
 ];
 
-const HOUSING_ICON = "/esa-icons/icon-20.svg";
-const PET_ICON = "/esa-icons/icon-30.svg";
+const EMOTIONAL_RULES: IconRule[] = [
+  { test: /isolat|lonel|alone/i, icons: [PEOPLE, PERSON] },
+  { test: /social/i, icons: [PEOPLE, PERSON] },
+  { test: /winter|season|climate/i, icons: [MOON] },
+  { test: /safet|secur/i, icons: [SHIELD, LOCK] },
+  { test: /routine|structure|habit|accountab|responsib|purpose|motivat|function/i, icons: [CALENDAR, CALENDAR_CHECK] },
+  { test: /focus|attention|sensory|aware|regulat|mindful/i, icons: [BRAIN] },
+  { test: /anxiet|stress|worry|panic|overwhelm|burnout|trigger|coping/i, icons: [HEART, HEART_ALT] },
+  { test: /\bmood\b|depress|grief|joy|\bpositive\b/i, icons: [MOOD] },
+  { test: /express/i, icons: [CHAT] },
+  { test: /connection/i, icons: [PEOPLE] },
+  { test: /comfort|compan|presence|calm|ground|balance|stabil|consisten|well-being|wellbeing/i, icons: [PAW, HEART, HEART_ALT, MOOD] },
+];
 
-function financialBenefitIcon(title: string, index: number) {
-  if (/pet-related housing denial/i.test(title)) return PET_ICON;
-  if (/housing/i.test(title)) return HOUSING_ICON;
-  return FINANCIAL_ICONS[index % FINANCIAL_ICONS.length];
+const FINANCIAL_FALLBACKS = [HOUSE, PAW, DOLLAR, COIN, PLANE, SCALES, SHIELD, DOCUMENT, CALENDAR, HEART, REFRESH, CLIPBOARD];
+const EMOTIONAL_FALLBACKS = [HEART, SHIELD, CALENDAR, PAW, PEOPLE, MOOD, BRAIN, MOON, CHAT, DOCUMENT];
+
+function iconForText(text: string, rules: IconRule[], used: Set<string>) {
+  for (const rule of rules) {
+    if (!rule.test.test(text)) continue;
+    const icon = rule.icons.find((candidate) => !used.has(candidate));
+    if (icon) return icon;
+  }
+  return null;
 }
 
-const EMOTIONAL_ICONS = [
-  "/esa-icons/icon-29.svg",
-  "/esa-icons/icon-30.svg",
-  "/esa-icons/icon-17.svg",
-];
-
-const ISOLATION_ICON = "/esa-icons/icon-7.svg";
-
-function emotionalBenefitIcon(title: string, index: number) {
-  if (/isolat/i.test(title)) return ISOLATION_ICON;
-  return EMOTIONAL_ICONS[index % EMOTIONAL_ICONS.length];
+function assignBenefitIcons(
+  items: { title: string; description: string }[],
+  rules: IconRule[],
+  fallbacks: string[],
+  used = new Set<string>(),
+) {
+  return items.map((item) => {
+    const icon =
+      iconForText(item.title, rules, used) ??
+      iconForText(`${item.title} ${item.description}`, rules, used) ??
+      fallbacks.find((candidate) => !used.has(candidate)) ??
+      fallbacks[0];
+    used.add(icon);
+    return icon;
+  });
 }
 
 function BenefitCard({ title, description, icon }: { title: string; description: string; icon: string }) {
@@ -104,6 +161,9 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
     : (data.benefitsRefundNote || "100% Refund If No ESA Letter Is Issued");
 
   const isStateWhoBenefits = Boolean(data.benefitsImage?.includes("statewhobenefits"));
+  const usedBenefitIcons = new Set<string>();
+  const financialIcons = assignBenefitIcons(financialBenefits, FINANCIAL_RULES, FINANCIAL_FALLBACKS, usedBenefitIcons);
+  const emotionalIcons = assignBenefitIcons(emotionalBenefits, EMOTIONAL_RULES, EMOTIONAL_FALLBACKS, usedBenefitIcons);
 
   return (
     <section className="w-full bg-white overflow-hidden relative z-10">
@@ -203,7 +263,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     key={item.title}
                     title={item.title}
                     description={item.description}
-                    icon={financialBenefitIcon(item.title, idx)}
+                    icon={financialIcons[idx]}
                   />
                 ))}
               </div>
@@ -216,7 +276,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     key={item.title}
                     title={item.title}
                     description={item.description}
-                    icon={emotionalBenefitIcon(item.title, idx)}
+                    icon={emotionalIcons[idx]}
                   />
                 ))}
               </div>

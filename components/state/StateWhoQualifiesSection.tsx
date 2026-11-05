@@ -3,19 +3,54 @@ import React from "react";
 import Image from "next/image";
 import { StateData } from "@/data/statesData";
 
-const QUALIFY_ICONS = [
-  "/esa-icons/icon.svg",
-  "/esa-icons/icon-1.svg",
-  "/esa-icons/icon-2.svg",
-  "/esa-icons/icon-4.svg",
+const CONDITION_RULES: { test: RegExp; icons: string[] }[] = [
+  { test: /panic|agoraphob/i, icons: ["/esa-icons/icon-1.svg", "/esa-icons/icon-10.svg"] },
+  { test: /ptsd|trauma/i, icons: ["/esa-icons/icon-2.svg"] },
+  { test: /depress|dysthym|grief|sadness/i, icons: ["/esa-icons/icon-3.svg"] },
+  { test: /seasonal|affective|insomnia|sleep/i, icons: ["/esa-icons/glyph-1.svg"] },
+  { test: /neurodiverg|neurodev|cognitive|adhd|attention/i, icons: ["/esa-icons/icon-5.svg"] },
+  { test: /bipolar|cyclothym|\bmood\b/i, icons: ["/esa-icons/icon-4.svg", "/esa-icons/icon-7.svg"] },
+  { test: /obsess|ocd|compuls|excoriat|dermatill|hoard|skin pick|somatic/i, icons: ["/esa-icons/icon-6.svg", "/esa-icons/icon-14.svg"] },
+  { test: /communication/i, icons: ["/esa-icons/icon-34.svg"] },
+  { test: /social|phobia|mutism|avoidant|withdrawal/i, icons: ["/esa-icons/icon-8.svg", "/esa-icons/icon-10.svg"] },
+  { test: /schizo|psychos/i, icons: ["/esa-icons/icon-32.svg"] },
+  { test: /borderline|\bbpd\b|personality/i, icons: ["/esa-icons/icon-7.svg"] },
+  { test: /eating|binge/i, icons: ["/esa-icons/icon-12.svg"] },
+  { test: /burnout/i, icons: ["/esa-icons/icon-12.svg", "/esa-icons/icon-1.svg"] },
+  { test: /depersonal|dissociat|sensory/i, icons: ["/esa-icons/icon.svg"] },
+  { test: /anxiet|worry|stress|adjustment/i, icons: ["/esa-icons/icon.svg", "/esa-icons/icon-12.svg"] },
+  { test: /other/i, icons: ["/esa-icons/icon-18.svg"] },
 ];
 
-function qualifyIcon(src: string | undefined, index: number) {
-  if (src?.includes("chronicworry")) return "/esa-icons/icon.svg";
-  if (src?.includes("panicattack")) return "/esa-icons/icon-1.svg";
-  if (src?.includes("posttrauma")) return "/esa-icons/icon-2.svg";
-  if (src?.includes("moodconditions")) return "/esa-icons/icon-4.svg";
-  return src || QUALIFY_ICONS[index % QUALIFY_ICONS.length];
+const CONDITION_FALLBACKS = [
+  "/esa-icons/icon-18.svg",
+  "/esa-icons/icon-34.svg",
+  "/esa-icons/icon-17.svg",
+  "/esa-icons/icon-19.svg",
+  "/esa-icons/icon-9.svg",
+  "/esa-icons/icon-26.svg",
+];
+
+function iconFromRules(text: string, used: Set<string>) {
+  for (const rule of CONDITION_RULES) {
+    if (!rule.test.test(text)) continue;
+    const icon = rule.icons.find((candidate) => !used.has(candidate));
+    if (icon) return icon;
+  }
+  return null;
+}
+
+function conditionIcons(items: { title: string; description: string }[]) {
+  const used = new Set<string>();
+  return items.map((item) => {
+    const icon =
+      iconFromRules(item.title, used) ??
+      iconFromRules(`${item.title} ${item.description}`, used) ??
+      CONDITION_FALLBACKS.find((candidate) => !used.has(candidate)) ??
+      CONDITION_FALLBACKS[0];
+    used.add(icon);
+    return icon;
+  });
 }
 
 const defaultConditions = [
@@ -82,6 +117,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
   const title = data.whoQualifiesTitle || `Who May Eligible For ESA Letter in ${stateName}?`;
   const subtitle = data.whoQualifiesSubtitle || `${stateName} residents finding troubles in completing everyday tasks and activities can get themselves evaluated by licensed mental health professionals (LMHP) in ${stateName} to check the need for emotional support animals. During this process, clinicians may consider a range of medical conditions, which include but are not limited to:`;
   const sectionHeading = data.whoQualifiesSectionHeading ?? "Qualifying Conditions";
+  const icons = conditionIcons(conditions);
 
   return (
     <section className="w-full bg-white pt-0 pb-12 sm:pb-16 lg:py-0 overflow-hidden relative z-10">
@@ -181,7 +217,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     <div className="hover-badge relative flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
                       <Image
                         quality={90}
-                        src={qualifyIcon(item.icon, idx)}
+                        src={icons[idx]}
                         alt=""
                         width={26}
           sizes="26px"
