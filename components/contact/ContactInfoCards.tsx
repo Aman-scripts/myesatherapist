@@ -44,7 +44,7 @@ export function ContactInfoCards() {
             const Content = (
               <>
                 {/* Frame 13: Left Icon Circle (45px x 45px) */}
-                <div className="hover-badge w-[45px] h-[45px] rounded-full bg-white border border-[#EAE5DC] flex items-center justify-center shrink-0">
+                <div className="hover-badge relative w-[45px] h-[45px] rounded-full bg-white border border-[#EAE5DC] flex items-center justify-center shrink-0">
                   <Image
                     quality={90}
                     src={card.icon}

@@ -178,7 +178,7 @@ export function StateWhoQualifiesSection({ data }: { data: StateData }) {
                     key={item.title}
                     className="hover-card hover-surface bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left"
                   >
-                    <div className="hover-badge flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
+                    <div className="hover-badge relative flex h-12 w-12 items-center justify-center rounded-full bg-[#F6F1E8] shrink-0">
                       <Image
                         quality={90}
                         src={qualifyIcon(item.icon, idx)}
