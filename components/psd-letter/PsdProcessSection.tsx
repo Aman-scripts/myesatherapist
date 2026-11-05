@@ -21,7 +21,7 @@ const stepsData = [
   {
     number: "3",
     icon: "/esa-icons/icon-17.svg",
-    title: "Letter if Qualified",
+    title: "Letter If Qualified",
     description:
       "If you qualify, you may receive your PSD letter within 24-72 hours via email, signed by your licensed professional.",
   },

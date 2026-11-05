@@ -270,7 +270,7 @@ export const FAQ_DATA: FaqItem[] = [
   },
   {
     category: "Costs",
-    question: "Does My ESA Therapist Offer Refunds if My ESA Letter Is Rejected?",
+    question: "Does My ESA Therapist Offer Refunds If My ESA Letter Is Rejected?",
     answer:
       "Our ESA letters are fully compliant with the Fair Housing Act (FHA) guidelines and are widely accepted by landlords and housing providers. However, if your landlord raises concerns, our team can step in to speak with them directly and, if needed, provide supporting documentation to clarify the legal validity of your ESA letter.",
   },

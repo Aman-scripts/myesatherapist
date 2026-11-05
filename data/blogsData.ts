@@ -290,7 +290,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     sections: [
       {
         id: "what-makes-an-esa-letter-legit",
-        title: "What is a Legitimate ESA Letter?",
+        title: "What Is a Legitimate ESA Letter?",
         paragraphs: [
           "A legitimate ESA letter is a written recommendation from a licensed mental health professional (LMHP) stating that an individual has a qualifying mental or emotional health condition and benefits from the presence of an emotional support animal. The qualifying diagnosis itself does not have to be disclosed in the letter; a valid ESA letter should discuss how the ESA helps the individual with their disability.",
           "A valid ESA letter must also have an accompanying mental health assessment by a licensed mental health professional.",
@@ -316,7 +316,7 @@ export const BLOG_POSTS: BlogArticle[] = [
         bannerPosition: "bottom",
         subsections: [
           {
-            title: "Confirm the Provider is Licensed",
+            title: "Confirm the Provider Is Licensed",
             paragraphs: [
               "The most crucial requirement is that the letter must be from a mental health professional with an active state license and a National Provider Identifier (NPI) number. This may include:",
             ],
@@ -1557,7 +1557,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       },
       {
         id: "hud-service-animal-standard",
-        title: "HUD is Using a Service Animal Standard for Enforcement",
+        title: "HUD Is Using a Service Animal Standard for Enforcement",
         paragraphs: [
           "The new guidance shifts HUD’s enforcement approach closer to the Americans with Disabilities Act (ADA) model.",
           "Under this approach, HUD says it will focus on animals that are individually trained to perform disability-related work or tasks. Under the new guidance, untrained emotional support animals (ESAs) are no longer expected to receive the same enforcement treatment as trained service animals. Additionally, emotional support, comfort, or companionship alone are no longer considered disability-related tasks by HUD.",
@@ -1919,11 +1919,11 @@ export const BLOG_POSTS: BlogArticle[] = [
     categorySlug: "esa-guide",
     url: "/blog/esa-guide/emotional-support-animal/",
     canonicalUrl: "https://myesatherapist.com/blog/esa-guide/emotional-support-animal/",
-    metaTitle: "What is an Emotional Support Animal? Benefits & Rights Guide | My ESA Therapist",
+    metaTitle: "What Is an Emotional Support Animal? Benefits & Rights Guide | My ESA Therapist",
     metaDescription:
       "Learn everything about Emotional Support Animals, including ESA letters, landlord rules, and legal protections.",
     schema: whatIsAnEsaSchema,
-    title: "What is an Emotional Support Animal? Everything You Need to Know",
+    title: "What Is an Emotional Support Animal? Everything You Need to Know",
     shortDescription:
       "This complete guide covers everything you need to know about emotional support animals, including how ESAs work, who qualifies, federal ESA laws, housing rights, and the difference between ESAs and service animals. It also explains landlord rules, common misconceptions, and how emotional support animals help improve mental well-being.",
     category: "ESA Guide",
@@ -1998,7 +1998,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     sections: [
       {
         id: "what-is-an-esa",
-        title: "What is an Emotional Support Animal?",
+        title: "What Is an Emotional Support Animal?",
         paragraphs: [
           "An Emotional Support Animal (ESA) is a companion animal that helps people with mental or emotional health problems feel better and more stable. ESAs don't need special training like service animals. Their main job is simple but important: to provide companionship that helps reduce the symptoms of anxiety, depression, PTSD, panic disorders, and other similar conditions.",
           "Emotional support animals are recognized under federal housing laws, which means qualified individuals may legally keep their ESA even in many properties that normally restrict pets.",
@@ -2108,7 +2108,7 @@ export const BLOG_POSTS: BlogArticle[] = [
           "To officially have an ESA, you need an ESA letter from a licensed mental health professional (LMHP), such as a therapist, psychologist, or psychiatrist.",
         ],
         ctaBox: {
-          heading: "See If you Qualify?",
+          heading: "See If You Qualify?",
           description:
             "Our team of licensed mental health professionals can help you determine if an ESA is right for you and guide you through the certification process.",
           buttonText: "Schedule a Consultation",
@@ -2408,7 +2408,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "sections": [
     {
       "id": "what-is-an-emotional-support-animal",
-      "title": "What is an Emotional Support Animal?",
+      "title": "What Is an Emotional Support Animal?",
       "paragraphs": [
         "To understand eligibility, it’s important to first answer: [What is an emotional support animal?](/blog/esa-guide/emotional-support-animal/)",
         "An ESA is specifically trained to provide emotional and physical comfort, reduce depression and anxiety, and support overall mental well-being simply through companionship. Under federal housing laws, individuals with a valid ESA letter are entitled to certain protections even in “no-pet” housing.",
@@ -2999,7 +2999,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "tocItems": [
     {
       "id": "whatisdepression",
-      "label": "What is Depression?"
+      "label": "What Is Depression?"
     },
     {
       "id": "candepressionqualify",
@@ -3033,7 +3033,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   "sections": [
     {
       "id": "whatisdepression",
-      "title": "What is Depression and How It Can Impact Your Daily Life?",
+      "title": "What Is Depression and How It Can Impact Your Daily Life?",
       "paragraphs": [
         "Depression is a mental health condition that affects how a person thinks, feels, and handles daily tasks. It may cause persistent sadness, low energy, loss of interest in activities, difficulty concentrating, and changes in sleep or appetite.",
         "According to the National Institute of Mental Health (NIMH), depression can interfere with everyday activities, relationships, and work. It can also make it harder to maintain personal hygiene, manage household responsibilities, or stay connected with others. The severity of these effects varies from person to person, and symptoms may last for weeks or longer."
@@ -3139,7 +3139,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       "ctaBox": {
         "heading": "Request Housing Accommodations with Confidence",
         "description": "A valid ESA letter can help support your housing accommodation request. Connect with a licensed mental health professional to see if you qualify.",
-        "buttonText": "Start your Evaluation",
+        "buttonText": "Start Your Evaluation",
         "buttonHref": "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule"
       }
     }
@@ -3231,7 +3231,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   tocItems: [
     {
       id: "what-is-ptsd",
-      label: "What is PTSD?"
+      label: "What Is PTSD?"
     },
     {
       id: "does-ptsd-qualify-esa",
@@ -3265,7 +3265,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   sections: [
     {
       id: "what-is-ptsd",
-      title: "What is PTSD and How Can It Affect Daily Life?",
+      title: "What Is PTSD and How Can It Affect Daily Life?",
       paragraphs: [
         "Post-traumatic stress disorder (PTSD) can develop after experiencing or witnessing a traumatic event. It can affect how a person reacts to stress, processes memories, and responds to everyday life situations. Symptoms may include disturbing memories or flashbacks, nightmares, anxiety, avoidance, difficulty concentrating, sleep problems, emotional numbness, and feeling constantly on alert.",
         "PTSD can make everyday things feel harder. Some people avoid certain places or situations, struggle to concentrate, or have a hard time feeling safe and relaxed. For others, symptoms may come and go depending on what triggers them. Since PTSD can affect everybody differently, what matters is how your symptoms are affecting your daily life and whether an ESA may be appropriate or not."
@@ -3518,7 +3518,7 @@ export const BLOG_POSTS: BlogArticle[] = [
             ]
           },
           {
-            title: "Ensure that Your ESA is Fully House-Trained",
+            title: "Ensure that Your ESA Is Fully House-Trained",
             paragraphs: [
               "House training is especially important in rental situations. An accident in your apartment can cause damage to the carpet, floor, or walls. Repeated accidents can also escalate to warnings and termination of the lease agreement.",
               "To tackle this, make sure your ESA has a proper bathroom routine. Take your ESA out during predictable and specific times each day, such as after dinner, drinking water, or just before sleeping.",

@@ -80,7 +80,7 @@ export default function ReviewsPage() {
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
-          buttonText="Start your Evaluation"
+          buttonText="Start Your Evaluation"
           buttonHref="#trustpilot-reviews"
         />
       </main>

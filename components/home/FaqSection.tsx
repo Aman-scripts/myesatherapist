@@ -33,7 +33,7 @@ const defaultFaqs = [
   },
   {
     num: "04.",
-    q: "What are the Housing Protections for ESAs?",
+    q: "What Are the Housing Protections for ESAs?",
     a: "Under the Fair Housing Act, individuals with disabilities may request a reasonable accommodation to keep an assistance animal when the animal is needed because of their disability. When the disability or disability-related need is not readily apparent, reliable documentation from a healthcare professional may help support the request.",
   },
   {

@@ -86,7 +86,7 @@ const ABOUT_FAQS: FaqItem[] = [
   },
   {
     num: "07.",
-    q: "What Happens If a Refund is Needed?",
+    q: "What Happens If a Refund Is Needed?",
     a: "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued.",
   },
   {

@@ -1364,11 +1364,11 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "In Arizona, the cost of an ESA letter can vary based on the provider and evaluation process, but most legitimate services typically fall between $100–$300 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter issued upon approval.",
       },
       {
-        q: "What are the Requirements for Emotional Support Animals in Arizona?",
+        q: "What Are the Requirements for Emotional Support Animals in Arizona?",
         a: "To qualify for an emotional support animal in Arizona, you need a clinical evaluation and a valid ESA letter from a licensed mental health professional. Housing rights are protected under the federal Fair Housing Act.",
       },
       {
-        q: "Can My Child Qualify for an ESA if They Have Anxiety?",
+        q: "Can My Child Qualify for an ESA If They Have Anxiety?",
         a: "Yes. A child with anxiety may qualify for an emotional support animal if a licensed mental health professional determines it is clinically appropriate. Parental or guardian consent is required for minors.",
       },
       {
@@ -3319,7 +3319,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "Issue ESA letters instantly without conducting a legitimate clinical assessment",
       "Promise automatic or guaranteed housing acceptance",
     ],
-    scamsWhatYouNeedTitle: "What is Genuinely Required",
+    scamsWhatYouNeedTitle: "What Is Genuinely Required",
     scamsWhatYouNeedItems: [
       {
         title: "Valid ESA Letter from a Licensed Clinician",
@@ -3452,7 +3452,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "Although annual renewal is not universally required by law, a housing provider may request updated documentation when permitted under applicable fair housing laws and when reasonably necessary to evaluate an accommodation request.",
       },
       {
-        q: "What is the Cost of Getting an ESA Letter in Delaware?",
+        q: "What Is the Cost of Getting an ESA Letter in Delaware?",
         a: "In Delaware, ESA letter pricing depends on the provider and consultation process, but most reliable services generally fall between $100 to $200 for a licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
       },
       {
@@ -12203,7 +12203,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "Yes. Online ESA letters are legally valid in Texas as long as they are issued by a state-licensed mental health professional who conducts a proper mental health evaluation before approval.",
       },
       {
-        q: "How Long is ESA Documentation Typically Valid in Texas?",
+        q: "How Long Is ESA Documentation Typically Valid in Texas?",
         a: "There is no universal annual renewal requirement for ESA documentation under federal housing law. A housing provider may request relevant updated information when reasonably necessary to evaluate a particular accommodation request, subject to applicable law.",
       },
       {
@@ -12231,7 +12231,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "Yes. You can get an ESA letter for a dog you already have if a licensed mental health professional confirms that the animal helps manage symptoms of a legitimate emotional or mental health condition.",
       },
       {
-        q: "What Information is Included In A Texas ESA Letter?",
+        q: "What Information Is Included In A Texas ESA Letter?",
         a: "A Texas ESA letter includes the mental health professional’s license details, confirmation that you have a qualifying condition, and a statement stating that an emotional support animal is part of your treatment or support plan. It should be signed and dated by the provider.",
       },
       {
@@ -13024,7 +13024,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "You can file a complaint with HUD or pursue legal action in Wisconsin courts. Violations include refusing reasonable accommodations or charging illegal fees.",
       },
       {
-        q: "What is The Cost Of An ESA Letter In Wisconsin?",
+        q: "What Is The Cost Of An ESA Letter In Wisconsin?",
         a: "In Wisconsin, ESA letter pricing varies depending on the service and consultation process, ensuring compliance through a licensed mental health assessment. The $149 fee at My ESA Therapist covers both the evaluation and, if you are eligible, the issuance of the ESA letter.",
       },
       {
@@ -14590,7 +14590,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "Yes. In some cases, a licensed clinician may determine that more than one animal provides meaningful emotional support. This decision is always based on individual therapeutic needs.",
       },
       {
-        q: "What is Involved In The Cost Of An ESA Letter In New Mexico?",
+        q: "What Is Involved In The Cost Of An ESA Letter In New Mexico?",
         a: "In New Mexico, ESA letter costs vary depending on the provider and consultation process, with pricing reflecting the legitimacy and depth of the evaluation. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval.",
       },
       {
@@ -16537,7 +16537,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "In Oregon, ESA letter pricing varies based on the provider and how the evaluation is conducted, with a strong focus on a legitimate mental health assessment. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
       },
       {
-        q: "What If My ESA is An Uncommon Animal in Oregon Housing?",
+        q: "What If My ESA Is An Uncommon Animal in Oregon Housing?",
         a: "While dogs and cats are common, there are several animals which may qualify. Housing providers may ask for additional verification if the ESA poses a legitimate risk to health, surroundings and the property.",
       },
       {
@@ -17711,7 +17711,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "A housing provider may seek reliable information necessary to assess an accommodation request when the disability or disability-related need is not readily apparent. Requests should be limited to relevant information. Comprehensive medical records or disclosure of a specific diagnosis generally should not be required merely to evaluate an assistance-animal request.",
       },
       {
-        q: "How is The Cost Of An ESA Letter Determined In Utah?",
+        q: "How Is The Cost Of An ESA Letter Determined In Utah?",
         a: "In Utah, the price of an ESA letter varies based on the consultation process and the credentials of the professional handling the evaluation. At My ESA Therapist, the fee is $149, covering both the assessment and issuance of the ESA letter if you qualify.",
       },
       {
@@ -18111,7 +18111,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "In some situations, multiple animals may be considered if a licensed mental health professional determines each animal provides necessary emotional support.",
       },
       {
-        q: "What is The Average Cost Of An ESA Letter In South Carolina?",
+        q: "What Is The Average Cost Of An ESA Letter In South Carolina?",
         a: "In South Carolina, ESA letter costs are typically aligned with national standards, where licensed evaluations are often priced in the $149–$199 range. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
       },
       {
@@ -18889,7 +18889,7 @@ export const STATES_DATA: Record<string, StateData> = {
         a: "In some situations, a clinician may recommend more than one ESA if each animal provides a distinct form of therapeutic support.",
       },
       {
-        q: "How is ESA Letter Pricing Structured In West Virginia?",
+        q: "How Is ESA Letter Pricing Structured In West Virginia?",
         a: "In West Virginia, the cost of an ESA letter depends on the provider and the type of consultation, with emphasis on a valid assessment by a licensed professional. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the ESA letter if you qualify.",
       },
       {

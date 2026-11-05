@@ -304,7 +304,7 @@ export function Header() {
             href="/state/"
             className="font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
           >
-            <span>See all 50 States</span>
+            <span>See All 50 States</span>
             <ArrowRight className="w-4 h-4 text-body-text" strokeWidth={1.5} />
           </Link>
         </div>

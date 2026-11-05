@@ -211,7 +211,7 @@ export default async function DoctorInternalPage({ params }: PageProps) {
             doctor.ctaSection?.description ||
             "Understand how the ESA evaluation process works and begin your confidential telehealth assessment today."
           }
-          buttonText={doctor.ctaSection?.buttonText || "Start your Evaluation"}
+          buttonText={doctor.ctaSection?.buttonText || "Start Your Evaluation"}
           buttonHref={doctor.ctaSection?.buttonHref || "/pricing/"}
         />
 

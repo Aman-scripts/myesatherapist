@@ -12,7 +12,7 @@ export function WhatIsPsdSection() {
           <Image
             quality={90}
             src="/psd-letter/whatispsd-section-mobile.webp"
-            alt="What is a Psychiatric Service Dog Letter"
+            alt="What Is a Psychiatric Service Dog Letter"
             width={390}
           sizes="390px"
             height={547}
@@ -39,7 +39,7 @@ export function WhatIsPsdSection() {
           <Image
             quality={90}
             src="/psd-letter/whatispsd-section-tablet.webp"
-            alt="What is a Psychiatric Service Dog Letter"
+            alt="What Is a Psychiatric Service Dog Letter"
             width={834}
           sizes="834px"
             height={654}
@@ -65,7 +65,7 @@ export function WhatIsPsdSection() {
         <div className="w-full">
           {/* Heading */}
           <h2 className="heading-h2 capitalize mb-3 sm:mb-6">
-            What is a Psychiatric
+            What Is a Psychiatric
             <br className="hidden sm:inline" />
             {" "}Service Dog Letter?
           </h2>
@@ -108,7 +108,7 @@ export function WhatIsPsdSection() {
           {/* Frame 1000011698: Left Text Container (left: 87px, top: 31px, width: 626px, height: 416px) */}
           <div className="absolute left-[87px] top-[31px] w-[626px] z-10 flex flex-col justify-between">
             <p className="heading-h2 text-primary capitalize mb-6 w-[541px]">
-              What is a Psychiatric Service Dog Letter?
+              What Is a Psychiatric Service Dog Letter?
             </p>
 
             <div className="space-y-4 body-large text-body-text w-[626px]">

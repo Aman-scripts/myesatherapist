@@ -184,7 +184,7 @@ export default async function EsaTrainingBlogPage({ params }: PageProps) {
         <CtaBanner
           title="Need help with an ESA letter?"
           description="Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
-          buttonText="Start your Evaluation"
+          buttonText="Start Your Evaluation"
           buttonHref="#faq"
           bgColor="bg-background"
         />

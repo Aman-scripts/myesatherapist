@@ -64,7 +64,7 @@ export const metadata: Metadata = applySheetSeo({
 const PSD_FAQS: FaqItem[] = [
   {
     num: "01.",
-    q: "What is a Psychiatric Service Dog (PSD) Letter?",
+    q: "What Is a Psychiatric Service Dog (PSD) Letter?",
     a: "A PSD letter is an official document from a licensed mental health professional confirming you have a qualifying mental health condition under the ADA. It serves as backup documentation for your psychiatric service dog and includes the provider's license details, signature, and date of issue.",
   },
   {

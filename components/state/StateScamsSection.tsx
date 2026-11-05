@@ -128,7 +128,7 @@ export function StateScamsSection({ data }: { data: StateData }) {
               <Image
             quality={90}
                 src="/states/california-scams-commonesascams.webp"
-                alt="Common ESA Scams to avoid"
+                alt="Common ESA Scams to Avoid"
                 fill
                 className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"

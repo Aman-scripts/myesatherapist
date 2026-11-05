@@ -74,7 +74,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
       fullWidth: true,
     },
     tocItems: [
-      { id: "esaletter", label: "What is an ESA Letter?" },
+      { id: "esaletter", label: "What Is an ESA Letter?" },
       { id: "professionalswhoqualifiedtowriteanesaletter", label: "Which Professionals Are Qualified to Provide ESA Documentation?" },
       { id: "canonlinetherapistwriteanesaletter", label: "Can an Online Therapist Write an ESA Letter?" },
       { id: "cantherapistfromanotherstatewriteanesaletter", label: "Can a Therapist From Another State Write an ESA Letter?" },
@@ -86,7 +86,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     sections: [
       {
         id: "esaletter",
-        title: "What is an Emotional Support Animal Letter?",
+        title: "What Is an Emotional Support Animal Letter?",
         paragraphs: [
           "An emotional support animal (ESA) letter is a document from a qualified healthcare professional that explains why you need an emotional support animal because of a disability. If your landlord asks for disability documentation, an ESA letter can support a reasonable accommodation request under the Fair Housing Act. Unlike a registration or certificate, a valid letter comes from an individual assessment of your mental health needs and the licensed professional’s own clinical judgment.",
           "If you’re looking for an [ESA letter sample](/blog/esa-guide/esa-letter-sample/), this example can show you what a housing letter usually contains, including the licensed professional’s credentials, contact details, signature, and a statement supporting your disability-related need for an emotional support animal. The exact content can vary with your situation and the state requirements that apply to you.",
@@ -281,7 +281,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
       "If they determine that an ESA is appropriate, they may issue an ESA letter for bipolar disorder to document your need for an emotional support animal when requesting housing accommodations under applicable fair housing laws.",
     ],
     tocItems: [
-      { id: "bipolardisorder", label: "What is Bipolar Disorder?" },
+      { id: "bipolardisorder", label: "What Is Bipolar Disorder?" },
       { id: "canbipolardisorderqualifyforesa", label: "Can Bipolar Disorder Qualify You for an ESA?" },
       { id: "howesahelpinbipolardisorder", label: "ESA Benefits for Bipolar Disorder" },
       { id: "howesaevaluationprocessworks", label: "ESA Evaluation Process" },
@@ -292,7 +292,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     sections: [
       {
         id: "bipolardisorder",
-        title: "What is Bipolar Disorder?",
+        title: "What Is Bipolar Disorder?",
         paragraphs: [
           "Bipolar disorder is a mental health condition that shifts a person’s mood, energy, and activity levels far beyond the usual ups and downs. Someone living with it may go through manic or hypomanic episodes, where energy runs unusually high, they feel driven to do more, and they may act on impulse. At other times, they may slide into depression, feeling low, drained, and uninterested in things they normally enjoy. These swings can strain relationships, get in the way of work, disrupt sleep, and take a toll on overall well-being.",
           "Bipolar disorder is lifelong, but it is manageable. With the right treatment, which can include medication, therapy, and healthy daily habits, along with steady support, many people keep their symptoms under control. A qualified mental health professional can evaluate symptoms and suggest the right care.",
@@ -539,7 +539,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
       "Yes, it can. A diagnosis by itself doesn’t automatically get you there. It comes down to how much ADHD actually disrupts your life and whether a mental health professional agrees that an animal would genuinely help manage the condition.",
     ],
     tocItems: [
-      { id: "whatisadhd", label: "What is ADHD & Its Impact on Everyday Life?" },
+      { id: "whatisadhd", label: "What Is ADHD & Its Impact on Everyday Life?" },
       { id: "esaletterforadhd", label: "Can You Qualify for an ESA Letter If You Have ADHD?" },
       { id: "benefitsofesainadhd", label: "What Does Having an ESA Actually Do for ADHD?" },
       { id: "esaletterevaluationforadhd", label: "How the ESA Letter Evaluation Process Works for ADHD" },
@@ -549,7 +549,7 @@ export const NEW_BLOG_POSTS: BlogArticle[] = [
     sections: [
       {
         id: "whatisadhd",
-        title: "What is ADHD & Its Impact on Everyday Life?",
+        title: "What Is ADHD & Its Impact on Everyday Life?",
         paragraphs: [
           "Attention-deficit/hyperactivity disorder (ADHD) is one of the most common conditions that affect children. It also affects minors and adolescents, and it frequently continues into adulthood, so many adults live with ADHD as well, whether diagnosed or not. It is a neurodevelopmental disorder that interferes with the functioning of the brain. People with ADHD, whether children, minors, or adults, may have difficulty staying focused, organizing tasks, managing time, following instructions, or sitting still for extended periods. Symptoms can vary from person to person and may continue into adulthood.",
           "In daily life, ADHD can touch nearly everything: work, school, relationships, and the upkeep of a home. A person might find it hard to finish what they start, forget appointments, or stick to a steady routine. Over time, that can build into frustration, stress, or a constant sense of being overwhelmed. ADHD is manageable with the right treatment and support, though how much it affects someone depends on their own symptoms and what’s going on in their life. A qualified healthcare professional can evaluate the symptoms and suggest treatment that fits. [ESA for children and minors](/blog/esa-guide/esa-for-children/) may also be considered when a child has a qualifying mental or emotional disability and an emotional support animal helps address disability-related needs.",

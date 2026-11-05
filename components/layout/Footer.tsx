@@ -11,7 +11,7 @@ const FOOTER_GRADIENT = "linear-gradient(180deg, #082935 0%, #041821 50%, #00000
 const companyLinks = [
   { label: "About Us", href: "/about-us/" },
   { label: "Contact Us", href: "/contact-us/" },
-  { label: "Meet our Therapists", href: "/esa-doctors/" },
+  { label: "Meet Our Therapists", href: "/esa-doctors/" },
   { label: "Video Testimonials", href: "/video-testimonials/" },
   { label: "Customer Reviews", href: "/reviews/" },
 ];

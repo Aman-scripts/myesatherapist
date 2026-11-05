@@ -17,7 +17,7 @@ export function EmotionalSupportSection() {
           <Image
             quality={90} loading="lazy"
             src="/home/mobile-emotional-support.webp"
-            alt="What is an Emotional Support Animal"
+            alt="What Is an Emotional Support Animal"
             width={390}
           sizes="390px"
             height={425}
@@ -30,7 +30,7 @@ export function EmotionalSupportSection() {
           <Image
             quality={90} loading="lazy"
             src="/home/tablet-emotional-support-section.webp"
-            alt="What is an Emotional Support Animal"
+            alt="What Is an Emotional Support Animal"
             width={834}
           sizes="834px"
             height={521}

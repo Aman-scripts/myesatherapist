@@ -28,7 +28,7 @@ export function FederalHousingRulesSection() {
           href="/esa-laws/"
           className="w-auto min-w-[280px]"
         >
-          Check your State law
+          Check Your State Law
         </CtaButton>
 
       </div>

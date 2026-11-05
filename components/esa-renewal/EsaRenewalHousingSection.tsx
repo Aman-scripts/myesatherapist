@@ -29,7 +29,7 @@ export function EsaRenewalHousingSection() {
             href="#pricing"
             className="w-auto min-w-[270px]"
           >
-            Begin your Renewal Process
+            Begin Your Renewal Process
           </CtaButton>
         </div>
       </div>

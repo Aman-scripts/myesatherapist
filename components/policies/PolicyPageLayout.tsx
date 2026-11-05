@@ -33,7 +33,7 @@ export function PolicyPageLayout({ policy }: PolicyPageLayoutProps) {
         bgColor="bg-background"
         title="Ready to Start Your ESA Evaluation?"
         description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
-        buttonText="Start your Evaluation"
+        buttonText="Start Your Evaluation"
         buttonHref="/pricing/"
       />
     </div>

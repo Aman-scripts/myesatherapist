@@ -25,6 +25,13 @@ const EMOTIONAL_ICONS = [
   "/esa-icons/icon-17.svg",
 ];
 
+const ISOLATION_ICON = "/esa-icons/icon-7.svg";
+
+function emotionalBenefitIcon(title: string, index: number) {
+  if (/isolat/i.test(title)) return ISOLATION_ICON;
+  return EMOTIONAL_ICONS[index % EMOTIONAL_ICONS.length];
+}
+
 function BenefitCard({ title, description, icon }: { title: string; description: string; icon: string }) {
   return (
     <div className="bg-white rounded-[18px] border border-[#EAE5DC] shadow-[0px_1px_4px_rgba(0,0,0,0.08)] p-4 sm:p-5 flex flex-col items-start gap-3 h-full text-left">
@@ -209,7 +216,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
                     key={item.title}
                     title={item.title}
                     description={item.description}
-                    icon={EMOTIONAL_ICONS[idx % EMOTIONAL_ICONS.length]}
+                    icon={emotionalBenefitIcon(item.title, idx)}
                   />
                 ))}
               </div>
@@ -224,7 +231,7 @@ export function StateBenefitsSection({ data }: { data: StateData }) {
             <div className="flex justify-center lg:justify-start">
               <div className="flex flex-col items-center lg:items-start gap-2 w-fit">
                 <CtaButton href="#faq" className="w-auto">
-                  Apply your ESA Letter Now
+                  Apply Your ESA Letter Now
                 </CtaButton>
                 {refundNote ? (
                   <p className="body-small text-[#5F6B6F] text-center lg:text-left">

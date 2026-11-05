@@ -196,7 +196,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
             article.bottomCta?.description ||
             "Connect with a state-licensed mental health professional to discuss your needs and see if an emotional support animal letter may be right for you."
           }
-          buttonText={article.bottomCta?.buttonText || "Start your Evaluation"}
+          buttonText={article.bottomCta?.buttonText || "Start Your Evaluation"}
           buttonHref={article.bottomCta?.buttonHref || "#faq"}
           note={article.bottomCta?.note}
           bgColor="bg-background"

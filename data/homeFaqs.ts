@@ -12,7 +12,7 @@ export const HOME_FAQS = [
     a: "Yes. We take privacy extremely seriously. All personal and clinical information is encrypted, transmitted securely, and protected under strict HIPAA-compliant protocols. We will never share or sell your private information.",
   },
   {
-    q: "What are the Housing Protections for ESAs?",
+    q: "What Are the Housing Protections for ESAs?",
     a: "Under the Fair Housing Act, individuals with disabilities may request a reasonable accommodation to keep an assistance animal when the animal is needed because of their disability. When the disability or disability-related need is not readily apparent, reliable documentation from a healthcare professional may help support the request.",
   },
   {
@@ -28,7 +28,7 @@ export const HOME_FAQS = [
     a: "Yes. Evaluations and documentation are designed to align with current HUD guidance and Fair Housing Act (FHA) requirements, as applicable to each individual's circumstances.",
   },
   {
-    q: "Does My ESA Therapist Offer Support if My Landlord Asks For Verification?",
+    q: "Does My ESA Therapist Offer Support If My Landlord Asks For Verification?",
     a: "Yes. With the client's written authorization, licensed professionals or support staff can help clarify evaluation details or documentation when requested by a housing provider.",
   },
   {
@@ -48,7 +48,7 @@ export const HOME_FAQS = [
     a: "Major credit cards are accepted.",
   },
   {
-    q: "What if My Landlord Requires a Specific Form or Documentation?",
+    q: "What If My Landlord Requires a Specific Form or Documentation?",
     a: "If a housing provider requests specific documentation, assistance may be available depending on the request. Additional administrative fees may apply.",
   },
   {
