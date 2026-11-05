@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { Check } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { HeroStatPills } from "@/components/common/HeroStatPills";
@@ -185,16 +185,22 @@ function EvaluationFormCard({
           </div>
 
           <div>
-            <label className={labelClass} id="hero-prefilled-state">Your State</label>
-            <div
-              aria-labelledby="hero-prefilled-state"
-              className="flex h-[44px] w-full items-center justify-between rounded-[5px] border-[0.2px] border-primary/30 bg-background px-3.5 font-sans text-[16px] font-semibold text-primary lg:text-[14px]"
-            >
-              <span>{formData.state}</span>
-              <span className="inline-flex items-center gap-1 body-small font-semibold text-primary">
-                <Check className="h-4 w-4" aria-hidden="true" />
-                Prefilled
-              </span>
+            <label className={labelClass} htmlFor="hero-state">Your State</label>
+            <div className="relative">
+              <select
+                id="hero-state"
+                required
+                value={formData.state}
+                onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                className="h-[44px] w-full cursor-pointer appearance-none rounded-[5px] border-[0.2px] border-primary/30 bg-background px-3.5 pr-10 font-sans text-[16px] font-semibold text-primary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/25 lg:text-[14px]"
+              >
+                {STATE_INDEX.map((s) => (
+                  <option key={s.slug} value={s.name}>
+                    {s.name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-primary" />
             </div>
           </div>
 
