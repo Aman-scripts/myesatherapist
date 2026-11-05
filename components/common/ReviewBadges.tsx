@@ -63,16 +63,16 @@ export function ReviewBadges({ className = "" }: { className?: string }) {
         href="https://www.consumeraffairs.com/pets/my-esa-therapist.html"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="ConsumerAffair Reviews Reviews 4.9 (opens in a new tab)"
+        aria-label="ConsumerAffairs Reviews 4.9 (opens in a new tab)"
         className="box-border flex flex-col justify-center items-center py-2 sm:py-2.5 xl:py-3 px-2 sm:px-4 xl:px-6 min-w-0 flex-1 sm:flex-none sm:w-[235px] xl:w-[253px] min-h-[88px] sm:h-[102px] xl:h-[105px] rounded-[16px] sm:rounded-[20px] bg-white/55 border border-white/20 shadow-[0px_2px_4px_rgba(0,0,0,0.1)] backdrop-blur-[11.7px] transition-transform hover:-translate-y-0.5 hover:shadow-[0px_4px_12px_rgba(0,0,0,0.12)] cursor-pointer"
       >
-        {/* Header: Star + ConsumerAffair Reviews */}
+        {/* Header: Star + ConsumerAffairs */}
         <div className="flex items-center gap-1.5 mb-1.5 xl:mb-2">
           <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#095691] fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
             <polygon points={STAR_POLYGON} />
           </svg>
-          <span className="body-small text-body-text whitespace-nowrap sm:hidden">ConsumerAffair Reviews</span>
-          <span className="body-text text-body-text whitespace-nowrap hidden sm:inline">ConsumerAffair Reviews</span>
+          <span className="body-small text-body-text whitespace-nowrap sm:hidden">ConsumerAffairs</span>
+          <span className="body-text text-body-text whitespace-nowrap hidden sm:inline">ConsumerAffairs</span>
         </div>
 
         {/* 5 Stars Grid (all blue #095691, Reviews 4.9) */}
