@@ -1,3 +1,5 @@
+import { HOME_FAQS } from "@/data/homeFaqs";
+
 export const homeSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -182,56 +184,14 @@ export const homeSchema = {
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is My ESA Therapist Legitimate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. My ESA Therapist connects individuals directly with independent, state-licensed mental health professionals (LMHPs) who conduct clinical assessments designed to support applicable Fair Housing Act requirements and relevant HUD guidance."
-          }
+      "mainEntity": HOME_FAQS.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a,
         },
-        {
-          "@type": "Question",
-          "name": "How Does My ESA Therapist Work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our process is simple and transparent: 1. Complete a confidential online pre-screening questionnaire. 2. Schedule a telehealth consultation with a licensed clinician in your state. 3. If qualified, receive your official ESA recommendation letter delivered securely via email."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is My Information Safe With My ESA Therapist?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We take privacy extremely seriously. All personal and clinical information is encrypted, transmitted securely, and protected under strict HIPAA-compliant protocols. We will never share or sell your private information."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the Housing Protections for ESAs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Under the Fair Housing Act, individuals with disabilities may request a reasonable accommodation to keep an assistance animal when the animal is needed because of their disability. When the disability or disability-related need is not readily apparent, reliable documentation from a healthcare professional may help support the request."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How Quickly Can I Receive My ESA Letter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "After completing your telehealth evaluation with our licensed provider, approved ESA letters are delivered via secure digital PDF within 24 to 48 hours. Priority expedited delivery options are also available."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What If I Don't Qualify for an ESA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued."
-          }
-        }
-      ]
+      })),
     },
     {
       "@type": "HowTo",

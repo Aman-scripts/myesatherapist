@@ -19,6 +19,7 @@ import { CommunitySection } from "@/components/home/CommunitySection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { ComparisonTable } from "@/components/home/ComparisonTable";
 import { FaqSection } from "@/components/home/FaqSection";
+import { HOME_FAQS } from "@/data/homeFaqs";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Footer } from "@/components/layout/Footer";
 import { homeSchema } from "@/data/schemas/homeSchema";
@@ -95,7 +96,7 @@ export default function HomePage() {
 
         <ComparisonTable />
 
-        <FaqSection />
+        <FaqSection faqs={HOME_FAQS} />
 
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
