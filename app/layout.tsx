@@ -9,6 +9,8 @@ import { SITE_URL } from "@/lib/site";
 import { socialImage } from "@/data/socialImages";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { EsaEligibilityModal } from "@/components/common/EsaEligibilityModal";
+import { NavigationProgress } from "@/components/common/NavigationProgress";
+import { RoutePrefetch } from "@/components/common/RoutePrefetch";
 import { StateSelectModal } from "@/components/common/StateSelectModal";
 
 export const viewport: Viewport = {
@@ -239,6 +241,8 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
           }}
         />
         <GlobalDesktopScaler />
+        <NavigationProgress />
+        <RoutePrefetch />
         {children}
         <StateSelectModal />
         <EsaEligibilityModal />
