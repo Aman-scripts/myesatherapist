@@ -18,14 +18,12 @@ export function DoYouNeedEsaSection() {
 
   return (
     <section className="relative overflow-hidden bg-white w-full pt-0 pb-0 lg:py-0">
-      {/* Desktop & Laptop Container */}
       <DesktopScaleWrapper
         designWidth={1440}
         designHeight={701}
         className="hidden lg:block relative"
       >
         <div className="relative w-full h-[701px] flex items-center justify-between">
-          {/* Left Content Area */}
           <div className="w-[737px] pl-[78px] pr-4 my-auto py-0 z-10 flex flex-col justify-center shrink-0 space-y-5">
             <div className="space-y-4">
               <p className="heading-h2 capitalize">
@@ -52,7 +50,6 @@ export function DoYouNeedEsaSection() {
               </div>
             </div>
 
-            {/* CTA Button & Refund Reassurance */}
             <div className="pt-4 space-y-2">
               <CtaButton href="#how-it-works" variant="accent">Start Your ESA Evaluation</CtaButton>
               <p className="body-small">
@@ -61,9 +58,7 @@ export function DoYouNeedEsaSection() {
             </div>
           </div>
 
-          {/* Right Visual Frame: Exact 594x701 proportions matching Figma */}
           <div className="relative shrink-0 pointer-events-none w-[594px] h-[701px] z-0">
-            {/* Background Decorative Line SVG */}
             <div className="absolute left-0 top-[15px] w-[81px] h-[669px] z-0">
               <Image
                 quality={90} loading="lazy"
@@ -76,7 +71,6 @@ export function DoYouNeedEsaSection() {
               />
             </div>
 
-            {/* Main Photo (Natural aspect ratio, un-cropped) */}
             <div className="absolute right-0 top-0 w-[571px] h-[701px] z-10">
               <Image
                 quality={90} loading="lazy"
@@ -88,7 +82,6 @@ export function DoYouNeedEsaSection() {
               />
             </div>
 
-            {/* Floating Circle Badge at Curve Apex */}
             <div className="absolute left-[1px] top-[359px] -translate-x-1/2 -translate-y-1/2 w-[73px] h-[73px] z-20 drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)]">
               <Image
                 quality={90} loading="lazy"
@@ -104,11 +97,8 @@ export function DoYouNeedEsaSection() {
         </div>
       </DesktopScaleWrapper>
 
-      {/* Mobile / Tablet View (Rendered with 0 top gap) */}
       <div className="lg:hidden w-full overflow-hidden">
-        {/* Full-width Image Container (Edge to Edge, Image FIRST) */}
         <div className="w-full">
-          {/* Mobile Image (< 640px) */}
           <div className="sm:hidden w-full -mt-2.5">
             <Image
             quality={90} loading="lazy"
@@ -121,7 +111,6 @@ export function DoYouNeedEsaSection() {
             />
           </div>
 
-          {/* Tablet Image (640px to 1023px) */}
           <div className="hidden sm:block w-full -mt-3.5">
             <Image
             quality={90} loading="lazy"
@@ -135,7 +124,6 @@ export function DoYouNeedEsaSection() {
           </div>
         </div>
 
-        {/* Text & Button Container (Text SECOND) */}
         <div className="px-4 sm:px-6 max-w-3xl mx-auto pt-6 sm:pt-8 pb-3 sm:pb-4 space-y-6 sm:space-y-8">
           <div className="space-y-4">
             <h2 className="heading-h2 capitalize">
@@ -162,7 +150,6 @@ export function DoYouNeedEsaSection() {
             </div>
           </div>
 
-          {/* Action Button & Refund Reassurance */}
           <div className="flex flex-col items-center gap-2 pt-2">
             <CtaButton href="#how-it-works" variant="accent">Start Your ESA Evaluation</CtaButton>
             <p className="body-small text-center">

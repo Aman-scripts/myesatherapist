@@ -7,11 +7,9 @@ interface PolicyHeroProps {
 }
 
 export function PolicyHero({ policy }: PolicyHeroProps) {
-  // Title accent logic: highlight the accentWord or the last word
   const titleParts = policy.pageTitle.split(" ");
   const accentWord = policy.accentWord || titleParts[titleParts.length - 1];
   
-  // Find where the accent word is in the title
   const accentIdx = policy.pageTitle.toLowerCase().lastIndexOf(accentWord.toLowerCase());
   const beforeAccent = accentIdx !== -1 ? policy.pageTitle.substring(0, accentIdx) : policy.pageTitle;
   const matchAccent = accentIdx !== -1 ? policy.pageTitle.substring(accentIdx, accentIdx + accentWord.length) : "";
@@ -19,7 +17,6 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
 
   return (
     <section className="w-full pt-8 pb-4 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto">
-      {/* Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="body-small mb-6 flex items-center gap-2.5">
         <Link href="/" className="hover:text-primary transition-colors">
           Home
@@ -36,9 +33,7 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
         <span className="text-primary font-bold">{policy.pageTitle}</span>
       </nav>
 
-      {/* Hero Card with Project Brand Theme */}
       <div className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] bg-white border border-[#EAE5DC] p-6 sm:p-10 lg:p-12 shadow-[0px_4px_25px_rgba(26,61,79,0.06)]">
-        {/* Ambient Warm Accent Glow */}
         <div
           className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-accent/10 blur-3xl"
           aria-hidden="true"
@@ -49,7 +44,6 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
         />
 
         <div className="relative z-10 max-w-[840px]">
-          {/* Eyebrow Badge */}
           {policy.eyebrow && (
             <div className="button-text-small inline-flex items-center gap-2 rounded-full bg-background border border-[#EAE5DC] px-4 py-1.5 text-primary shadow-2xs mb-4 sm:mb-5">
               <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -60,7 +54,6 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             </div>
           )}
 
-          {/* Main Headline H1 */}
           <h1 className="heading-h1 mb-4">
             {accentIdx !== -1 ? (
               <>
@@ -73,14 +66,12 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             )}
           </h1>
 
-          {/* Subtitle / Lede */}
           {policy.lede && (
             <p className="body-large mb-6 max-w-[740px]">
               {policy.lede}
             </p>
           )}
 
-          {/* Hero Stats (e.g. HIPAA) */}
           {policy.heroStats && policy.heroStats.length > 0 && (
             <div className="grid grid-cols-3 gap-3 sm:gap-4 my-6 max-w-[540px]">
               {policy.heroStats.map((st, i) => (
@@ -92,7 +83,6 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             </div>
           )}
 
-          {/* Metadata Chips: Last updated date & Reviewer */}
           <div className="flex flex-wrap items-center gap-3 mb-4 pt-1">
             <div className="body-small inline-flex items-center gap-2 rounded-full bg-background border border-[#EAE5DC] px-3.5 py-1.5">
               <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -103,7 +93,6 @@ export function PolicyHero({ policy }: PolicyHeroProps) {
             </div>
           </div>
 
-          {/* Related Policy Pills */}
           {policy.relatedLinks && policy.relatedLinks.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-[#EAE5DC]/80 mt-5">
               <span className="eyebrow mr-1">Related Policies:</span>

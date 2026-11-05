@@ -95,14 +95,12 @@ export default async function DynamicStatePage({ params }: Props) {
     notFound();
   }
 
-  // Redirect any legacy or non-prefixed state routes to the canonical /esa-letter-[state]/ route
   if (state !== `esa-letter-${data.slug}`) {
     permanentRedirect(`/esa-letter-${data.slug}/`);
   }
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* State JSON-LD Structured Data */}
       {data.schema && (
         <script
           type="application/ld+json"
@@ -113,7 +111,6 @@ export default async function DynamicStatePage({ params }: Props) {
       <TopBanner />
       <Header />
 
-      {/* State Table of Contents Drawer & Left Edge Toggle */}
       <StateTableOfContents stateName={data.name} data={data} />
 
       <main className="flex-1 bg-background">

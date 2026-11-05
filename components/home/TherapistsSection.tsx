@@ -58,7 +58,6 @@ export function getTherapistLinkedin(t: Therapist): string {
   return "https://www.linkedin.com/company/myesatherapist/";
 }
 
-/** Internal doctor profile page for a therapist. */
 export function getTherapistProfileHref(t: Therapist): string {
   const lower = t.name.toLowerCase();
   if (lower.includes("robert") || lower.includes("staaf")) return "/esa-doctors/dr-robert-staaf/";
@@ -125,7 +124,6 @@ function StatBadge({
   return (
     <div className="hover-card hover-card-flat relative flex-1 min-w-0 rounded-[7.6px] bg-accent pt-[3px] shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] flex flex-col">
       <div className="bg-white rounded-[7.6px] pt-[20px] sm:pt-[22px] pb-2 px-1 sm:px-2 text-center flex-1 flex flex-col justify-start items-center relative shadow-[0px_0.76px_1.52px_rgba(0,0,0,0.15)] min-h-[62px] sm:min-h-[66px]">
-        {/* Floating badge icon at top center */}
         <div className="hover-badge absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_0.95px_1.89px_rgba(0,0,0,0.25)] flex items-center justify-center z-10 border border-background">
           <Image quality={90}
             src={iconSrc}
@@ -230,7 +228,6 @@ export function TherapistsSection({
   return (
     <section className={`py-16 lg:py-20 xl:py-24 ${bgColor} overflow-hidden ${className}`}>
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="text-center mb-8 lg:mb-10 space-y-3 max-w-[852px] mx-auto">
           <h2 className="heading-h2 capitalize">
             {title}
@@ -240,7 +237,6 @@ export function TherapistsSection({
           </p>
         </div>
 
-        {/* Licensure Note */}
         {licensureNote && (
           <div className="max-w-[950px] mx-auto mb-10 p-4 sm:p-4.5 rounded-[16px] bg-background border border-accent/30 text-center">
             <p className="body-small leading-relaxed">
@@ -258,9 +254,7 @@ export function TherapistsSection({
           </div>
         )}
 
-        {/* Therapist Carousel with Navigation Arrows */}
         <div className="relative flex items-center justify-center gap-3 sm:gap-4 lg:gap-5 w-full">
-          {/* Desktop/Tablet Prev Arrow Button */}
           <button
             type="button"
             onClick={handlePrev}
@@ -275,7 +269,6 @@ export function TherapistsSection({
             <ChevronLeft className="w-5 h-5 text-primary" />
           </button>
 
-          {/* Viewport Wrapper: sized so exactly 2 cards fit side-by-side */}
           <div className="w-full max-w-[1070px] overflow-hidden">
             <div
               ref={scrollRef}
@@ -290,7 +283,6 @@ export function TherapistsSection({
                     onClick={() => scrollToSlide(idx)}
                     className="hover-card hover-card-flat snap-start shrink-0 w-full min-w-full sm:min-w-0 sm:w-[calc(50%-12px)] lg:w-[519px] lg:min-h-[355px] rounded-[30px] overflow-hidden flex flex-col justify-between cursor-pointer border-2 border-accent bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)]"
                   >
-                    {/* Teal Header Bar */}
                     <div
                       className="px-4 sm:px-6 py-3.5 sm:py-4 xl:h-[92px] flex items-center justify-between gap-3 sm:gap-4 color-gradient"
                     >
@@ -315,7 +307,6 @@ export function TherapistsSection({
                         </div>
                       </div>
 
-                      {/* LinkedIn Badge */}
                       <a
                         href={getTherapistLinkedin(t)}
                         target="_blank"
@@ -328,14 +319,11 @@ export function TherapistsSection({
                       </a>
                     </div>
 
-                    {/* Card Body */}
                     <div className="p-5 sm:p-6 bg-white space-y-5 flex-1 flex flex-col justify-between">
-                      {/* Bio text */}
                       <p className="body-text">
                         {t.bio}
                       </p>
 
-                      {/* 3 Stat Badges (desktop and tablet) */}
                       <div className="hidden sm:flex items-stretch gap-2 sm:gap-3.5 pt-3 sm:pt-3.5">
                         <StatBadge
                           label="Licensed In"
@@ -354,7 +342,6 @@ export function TherapistsSection({
                         />
                       </div>
 
-                      {/* View Profile: plain gold pill on mobile, icon button from tablet up */}
                       <div className="pt-2 flex justify-center">
                         <Link
                           href={getTherapistProfileHref(t)}
@@ -381,7 +368,6 @@ export function TherapistsSection({
             </div>
           </div>
 
-          {/* Desktop/Tablet Next Arrow Button */}
           <button
             type="button"
             onClick={handleNext}
@@ -397,7 +383,6 @@ export function TherapistsSection({
           </button>
         </div>
 
-        {/* Mobile Controls Bar (Prev + Dots + Next) */}
         <div className="flex sm:hidden items-center justify-center gap-4 pt-4">
           <button
             type="button"
@@ -443,7 +428,6 @@ export function TherapistsSection({
           </button>
         </div>
 
-        {/* Desktop Carousel Pagination Dots */}
         <div className="hidden sm:flex items-center justify-center gap-2.5 pt-6 sm:pt-8">
           {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
             <button
@@ -463,7 +447,6 @@ export function TherapistsSection({
           ))}
         </div>
 
-        {/* Bottom Book Appointment Button */}
         <div className="flex flex-col items-center gap-2 pt-8 sm:pt-10">
           <CtaButton href="#how-it-works" variant="accent" className="w-[232px]">
             Book Appointment

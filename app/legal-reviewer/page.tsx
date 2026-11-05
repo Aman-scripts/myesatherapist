@@ -105,22 +105,18 @@ const legalReviewerSchema = {
 export default function LegalReviewerPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between selection:bg-accent/30 selection:text-current">
-      {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(legalReviewerSchema) }}
       />
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
-      {/* Main Legal Reviewer Content Area */}
       <main className="flex-1 bg-background">
         <LegalReviewerContent />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

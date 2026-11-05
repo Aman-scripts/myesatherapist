@@ -1,7 +1,6 @@
 import { STATES_DATA } from "@/data/statesData";
 import { SITE_URL } from "@/lib/site";
 
-// Regenerate at most once an hour; the state list is built from the site's data.
 export const revalidate = 3600;
 
 const HEADER = `# My ESA Therapist
@@ -135,7 +134,6 @@ State-specific ESA letter pages (all 50 states plus Washington, DC). Use the sta
 const LAST_REVIEWED = "November 5, 2026";
 
 export function GET() {
-  // State list is generated from the site's state data, alphabetically.
   const states = Object.values(STATES_DATA)
     .map((s) => ({ name: s.name, slug: s.slug }))
     .sort((a, b) => a.name.localeCompare(b.name))

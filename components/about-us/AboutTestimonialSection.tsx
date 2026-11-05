@@ -102,7 +102,6 @@ export function AboutTestimonialSection() {
     <section className="w-full bg-background py-14 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Frame 1261153623: Section Header */}
         <div className="text-center max-w-[709px] mx-auto mb-10 sm:mb-12 space-y-3 sm:space-y-4">
           <h2 className="heading-h2 text-primary">
             Trusted by Thousands of ESA Owners
@@ -112,16 +111,13 @@ export function AboutTestimonialSection() {
           </p>
         </div>
 
-        {/* Carousel Container */}
         <div
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
           className="max-w-[808px] mx-auto flex flex-col items-center select-none"
         >
-          {/* Main Speech Bubble Wrapper with Navigation Chevrons */}
           <div className="relative w-full">
-            {/* Left Chevron Button */}
             <button
               type="button"
               onClick={prevSlide}
@@ -131,7 +127,6 @@ export function AboutTestimonialSection() {
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
             </button>
 
-            {/* Right Chevron Button */}
             <button
               type="button"
               onClick={nextSlide}
@@ -141,25 +136,21 @@ export function AboutTestimonialSection() {
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
             </button>
 
-            {/* Gradient Card (Union / Rectangle 68) */}
             <div
               className="relative w-full rounded-[20px] p-6 sm:py-7 sm:px-8 md:py-8 md:px-12 flex flex-col items-center text-center shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-300 selection:bg-white/30 selection:text-white"
               style={{ background: "linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%)" }}
             >
-              {/* 5 Centered Golden Stars */}
               <div className="flex items-center justify-center gap-1 mb-2.5 sm:mb-3">
                 {[1, 2, 3, 4, 5].map((s) => (
                   <GoldStarIcon key={s} />
                 ))}
               </div>
 
-              {/* Quote Text */}
               <p className="body-text text-background max-w-[760px] mx-auto leading-relaxed selection:bg-white/30 selection:text-white">
                 {current.quote}
               </p>
             </div>
 
-            {/* Bubble Triangle Tail Pointing Down toward Avatar */}
             <div className="flex justify-center -mt-[1px]">
               <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 14L4 0H32L18 14Z" fill="#1D6E72" />
@@ -167,9 +158,7 @@ export function AboutTestimonialSection() {
             </div>
           </div>
 
-          {/* Reviewer Profile: Initials Avatar + Name */}
           <div className="flex flex-col items-center text-center mt-3.5 sm:mt-4">
-            {/* Circular Initials Avatar */}
             <div className="w-[60px] h-[60px] rounded-full shadow-md overflow-hidden relative border-[3px] border-white shrink-0 flex items-center justify-center bg-[#E8F0F1]">
               <InitialsAvatar
                 name={current.name}
@@ -178,13 +167,11 @@ export function AboutTestimonialSection() {
               />
             </div>
 
-            {/* Name, State */}
             <h3 className="heading-h3 text-primary mt-2">
               {current.name}
             </h3>
           </div>
 
-          {/* Carousel Pagination Dots */}
           <div className="flex items-center justify-center gap-1.5 mt-4">
             {TESTIMONIALS.map((_, idx) => (
               <button

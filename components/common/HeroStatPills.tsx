@@ -1,6 +1,5 @@
 type HeroStat = { value: string; label: string };
 
-/** Horizontal stat pills used above the review cards on mobile hero sections. */
 export function HeroStatPills({
   stats,
   className = "",

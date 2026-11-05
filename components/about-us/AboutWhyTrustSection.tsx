@@ -29,7 +29,6 @@ export function AboutWhyTrustSection() {
   return (
     <section className="w-full bg-background py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-[860px] mx-auto mb-14 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4">
           <h2 className="heading-h2 text-primary">
             Why Do Individuals Trust My ESA Therapist?
@@ -39,11 +38,9 @@ export function AboutWhyTrustSection() {
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-8 lg:gap-4 xl:gap-6 pt-2">
           {cards.map((card, idx) => (
             <div key={idx} className="hover-card relative flex flex-col items-center">
-              {/* Top Floating Circular Icon Badge */}
               <div className="hover-badge absolute -top-7 sm:-top-8 z-10 w-[64px] h-[64px] sm:w-[70px] sm:h-[70px] xl:w-[74px] xl:h-[74px] rounded-full bg-white shadow-[0px_4px_12px_rgba(0,0,0,0.12)] flex items-center justify-center p-3 sm:p-3.5 border border-background">
                 <Image quality={90}
                   src={card.icon}
@@ -56,7 +53,6 @@ export function AboutWhyTrustSection() {
                 />
               </div>
 
-              {/* Card Body with Gold Top Accent Bar */}
               <div className="hover-surface w-full min-h-[175px] sm:min-h-[185px] lg:min-h-[195px] bg-white rounded-[20px] shadow-[0px_4px_12px_rgba(0,0,0,0.06)] border-t-[6px] border-t-accent pt-12 sm:pt-14 pb-6 px-3 sm:px-4 xl:px-5 flex flex-col items-center justify-center text-center">
                 <h3 className="heading-h3 text-color-gradient mb-2 text-center">
                   {card.title}

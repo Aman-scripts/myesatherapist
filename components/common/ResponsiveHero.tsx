@@ -15,7 +15,6 @@ type ResponsiveHeroProps = {
   tabletMinHeight?: string;
   className?: string;
   contentClassName?: string;
-  /** Vertically center the copy on tablet and desktop. */
   centered?: boolean;
   overlay?: React.ReactNode;
   children: React.ReactNode;

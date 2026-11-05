@@ -66,7 +66,6 @@ export function WhyChooseUs({
   return (
     <section className={`py-16 lg:py-20 xl:py-24 ${bgColor}`}>
       <div className="max-w-[1279px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section heading */}
         <div className="text-center mb-14 lg:mb-16 space-y-2.5 max-w-[813px] mx-auto">
           <h2 className="heading-h2 capitalize">
             {title}
@@ -82,7 +81,6 @@ export function WhyChooseUs({
           </div>
         </div>
 
-        {/* 3-column 2-row grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-[23px] gap-y-14 lg:gap-y-16 pt-4">
           {items.map(({ icon, title: itemTitle, description }, idx) => {
             const resolvedIcon =
@@ -95,7 +93,6 @@ export function WhyChooseUs({
                 className="hover-card relative rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)] pt-1.5 px-0 pb-0 flex flex-col items-center"
               >
                 <div className="hover-surface w-full bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-6 sm:px-8 pt-12 pb-8 flex flex-col items-center text-center h-full min-h-[228px]">
-                  {/* Floating icon circle on top border */}
                   <div className="hover-badge absolute -top-6 sm:-top-7 left-1/2 -translate-x-1/2 w-[52px] h-[52px] sm:w-[58px] sm:h-[58px] lg:w-[64px] lg:h-[64px] rounded-full bg-white shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] border border-[#E2E8F0] flex items-center justify-center">
                     <Image quality={90}
                       src={resolvedIcon}
@@ -108,12 +105,10 @@ export function WhyChooseUs({
                     />
                   </div>
 
-                  {/* Title */}
                   <h3 className="heading-h3 text-color-gradient mb-3">
                     {itemTitle}
                   </h3>
 
-                  {/* Description */}
                   <p className="body-text max-w-[320px]">
                     {description}
                   </p>

@@ -12,7 +12,6 @@ interface StateReviewerBannerProps {
   reviewerHref?: string;
   reviewerLinkedin?: string;
   className?: string;
-  /** Profile pages have a 382px sidebar, so the card lines up with the article column. */
   variant?: "default" | "profile";
 }
 
@@ -59,7 +58,6 @@ export function StateReviewerBanner({
           style={{ background: "var(--color-gradient)" }}
         >
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 lg:gap-[40px] text-center sm:text-left">
-            {/* Avatar with white 4px border */}
             {profileHref ? (
               <Link
                 href={profileHref}
@@ -90,7 +88,6 @@ export function StateReviewerBanner({
               </div>
             )}
 
-            {/* Text details */}
             <div className="flex flex-col items-center sm:items-start space-y-1 sm:space-y-1.5">
               <h3 className="font-heading font-bold text-xl sm:text-[22px] lg:text-[24px] leading-tight sm:leading-[32px] text-background flex flex-wrap items-center justify-center sm:justify-start gap-x-2 gap-y-1">
                 <span>{reviewLabel}</span>

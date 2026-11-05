@@ -99,7 +99,6 @@ const ABOUT_FAQS: FaqItem[] = [
 export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(aboutUsSchema, "about-us")) }}
@@ -108,38 +107,28 @@ export default function AboutUsPage() {
       <TopBanner />
       <Header />
       <main className="flex-1 bg-background">
-        {/* Section 1: Hero */}
         <AboutHeroSection />
 
-        {/* Why Do Individuals Trust My ESA Therapist? */}
         <AboutWhyTrustSection />
 
-        {/* Legitimate ESA Letter Evaluations You Can Trust */}
         <AboutLegitimateSection />
 
-        {/* Section 4: Who We Help */}
         <AboutWhoWeHelpSection />
 
-        {/* Section 5: My ESA Therapist vs. Automated ESA Sites */}
         <AboutVsFakeSection />
 
-        {/* Section 6: How Does Our Online ESA Evaluation Work? */}
         <AboutProcessSection />
 
-        {/* Section 7: Clear Policies & Transparent Pricing for ESA Evaluations */}
         <AboutTransparentPricingSection />
 
-        {/* Section 8: Trusted by Thousands of ESA Owners */}
         <AboutTestimonialSection />
 
-        {/* Section 9: FAQ */}
         <FaqSection
           title="Frequently Asked Questions"
           subtitle="Get answers to common questions about our mission, evaluations, and process."
           faqs={ABOUT_FAQS}
         />
 
-        {/* Section 10: ESA Evaluation CTA Banner */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description="Begin the evaluation process today and connect with your state-licensed mental health professional for a clinical assessment."

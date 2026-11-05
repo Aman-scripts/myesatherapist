@@ -21,7 +21,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
     setMounted(true);
   }, []);
 
-  // Lock body scroll when mobile drawer is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -33,7 +32,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
     };
   }, [isOpen]);
 
-  // Close drawer on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -42,7 +40,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // IntersectionObserver to track active section while scrolling
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -94,25 +91,18 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
 
   return (
     <>
-      {/* ---------------------------------------------------- */}
-      {/* 1. DESKTOP VIEW (>= 1024px)                          */}
-      {/* Sticky sidebar with TOC and All Policies cards       */}
-      {/* ---------------------------------------------------- */}
       <aside
         className="hidden lg:block w-full lg:sticky lg:top-[148px] space-y-6 self-start max-h-[calc(100dvh-165px)] overflow-y-auto overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {/* 1. Table of Contents (On this page) */}
         {policy.tocItems && policy.tocItems.length > 0 && (
           <div className="bg-white border border-[#EAE5DC] rounded-[20px] shadow-xs flex flex-col overflow-hidden">
-            {/* Fixed Header: ON THIS PAGE (does not scroll away) */}
             <div className="px-5 pt-5 pb-3 sm:px-6 sm:pt-6 sm:pb-3 border-b border-[#EAE5DC]/60 bg-white shrink-0">
               <p className="eyebrow px-1">
                 On this page
               </p>
             </div>
 
-            {/* Scrollable navigation links */}
             <nav
               aria-label="Table of contents"
               className="p-3.5 sm:p-4 space-y-1 max-h-[340px] overflow-y-auto overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar"
@@ -139,7 +129,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
           </div>
         )}
 
-        {/* 2. All Policies Menu Card */}
         <div className="bg-white border border-[#EAE5DC] rounded-[20px] p-5 sm:p-6 shadow-xs">
           <p className="eyebrow mb-3.5 px-1">
             All Policies
@@ -180,13 +169,9 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
         </div>
       </aside>
 
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET & MOBILE TRIGGER + PORTAL DRAWER (< 1024px) */}
-      {/* ---------------------------------------------------- */}
       {mounted &&
         createPortal(
           <>
-            {/* Floating half-circle toggle button on left edge */}
             <button
               type="button"
               onClick={() => setIsOpen(true)}
@@ -197,7 +182,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
             </button>
 
-            {/* Slide-out Drawer & Backdrop */}
             <div
               className={`fixed inset-0 z-[99999] h-[100dvh] max-h-[100dvh] flex transition-all duration-300 ${
                 isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
@@ -205,7 +189,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
               role="dialog"
               aria-modal="true"
             >
-              {/* Backdrop Overlay with smooth fade */}
               <div
                 onClick={() => setIsOpen(false)}
                 className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ease-in-out touch-none ${
@@ -213,17 +196,14 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                 }`}
               />
 
-              {/* Sliding Content Panel with smooth transform */}
               <div
                 className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-[100dvh] max-h-[100dvh] overflow-hidden z-[100000] text-background shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
                   isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
                 style={{ background: "var(--color-gradient)" }}
               >
-                {/* Fixed Top Header (Logo Card + Close Button + Divider + Title) */}
                 <div className="shrink-0 px-6 sm:px-8 pt-8 sm:pt-10">
                   <div className="flex items-start justify-between mb-5">
-                    {/* Logo Card with Gold Border */}
                     <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                       <Image
             quality={90}
@@ -237,7 +217,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                       />
                     </div>
 
-                    {/* Close Button */}
                     <button
                       onClick={() => setIsOpen(false)}
                       className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
@@ -247,10 +226,8 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                     </button>
                   </div>
 
-                  {/* Divider Line */}
                   <div className="w-full h-[0.5px] bg-white/30 mb-4" />
 
-                  {/* Fixed Title Section: Table of Contents & On this page */}
                   <div className="space-y-1 pb-3">
                     <h2 className="heading-h3 text-background leading-tight">
                       Table of Contents
@@ -261,7 +238,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                   </div>
                 </div>
 
-                {/* Scrollable Navigation Sections */}
                 <div
                   className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-6 sm:px-8 pt-1 pb-14 space-y-7 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
                   style={{
@@ -273,7 +249,6 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                   }}
                   onTouchMove={(e) => e.stopPropagation()}
                 >
-                  {/* 1. Table of Contents Links (On this page) */}
                   {policy.tocItems && policy.tocItems.length > 0 && (
                     <ul className="space-y-3 font-sans">
                       {policy.tocItems.map((item) => {
@@ -297,10 +272,8 @@ export function PolicyLeftSidebar({ currentSlug, policy }: PolicyLeftSidebarProp
                     </ul>
                   )}
 
-                  {/* Divider */}
                   <div className="w-full h-[0.5px] bg-white/20" />
 
-                  {/* 2. All Policies Navigation */}
                   <div className="space-y-3">
                     <p className="eyebrow text-accent">
                       All Policies

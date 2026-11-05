@@ -101,7 +101,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
   return (
     <div className="w-full flex-1 max-w-[870px] space-y-10 lg:space-y-12 text-body-text font-manrope">
       
-      {/* 1. Question Callout Card (From top of doc) */}
       {article.questionCallout && (
         <div
           id={article.questionCallout.id}
@@ -124,7 +123,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         </div>
       )}
 
-      {/* 2. Intro Paragraphs */}
       <div className="space-y-4">
         {article.introParagraphs.map((para, idx) => (
           <p
@@ -136,7 +134,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         ))}
       </div>
 
-      {/* Intro Image (if present) */}
       {article.introImage && (
         <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${!article.introImage.fullWidth && (article.introImage.height ?? 550) > (article.introImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
           <Image
@@ -158,10 +155,8 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         </div>
       )}
 
-      {/* Intro Quote Callout (if present) */}
       {article.introQuoteBox && renderQuoteBox(article.introQuoteBox)}
 
-      {/* 3. Main Sections */}
       {article.sections.map((sec) => (
         <section key={sec.id} id={sec.id} className="space-y-5 scroll-mt-28">
           {sec.id.includes("doesnt") && (
@@ -171,7 +166,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             {sec.title}
           </h2>
 
-          {/* Highlight cards */}
           {sec.statCards && (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6">
               {sec.statCards.map((card) => {
@@ -205,7 +199,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Section Paragraphs */}
           {sec.paragraphs && (
             <div className="space-y-3">
               {sec.paragraphs.map((p, pIdx) => (
@@ -219,10 +212,8 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Quote Callout Box (Top position by default) */}
           {sec.quoteBox && (!sec.quoteBoxPosition || sec.quoteBoxPosition === "top") && renderQuoteBox(sec.quoteBox)}
 
-          {/* Section List Items */}
           {sec.listItems && (
             <ul className="space-y-2.5 my-3 pl-1">
               {sec.listItems.map((item, liIdx) => {
@@ -276,7 +267,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </ul>
           )}
 
-          {/* Section After-List Paragraphs */}
           {sec.afterListParagraphs && (
             <div className="space-y-3">
               {sec.afterListParagraphs.map((p, pIdx) => (
@@ -290,7 +280,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Section Banner / Content Image (Top position) */}
           {sec.bannerImage && (!sec.bannerPosition || sec.bannerPosition === "top") && (
             <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${!sec.bannerImage.fullWidth && (sec.bannerImage.height ?? 550) > (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
@@ -312,7 +301,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Specific Infographics for Article 1 (Tenant & Landlord Checklists) fallback */}
           {sec.id === "tenant-checklist" && !sec.bannerImage && (
             <div className="w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50">
               <Image
@@ -341,7 +329,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Sample Letter Display Box (Article 4) */}
           {sec.sampleLetter && (
             <div className="w-full my-8 rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
               <div className="bg-background border-b border-[#DECDBB] px-6 py-3.5 text-xs sm:text-sm font-sans font-semibold text-body-text">
@@ -376,7 +363,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Checklist Box (Article 5 HUD Guidance) */}
           {sec.checklist && (
             <div className="w-full my-8 rounded-[20px] bg-white border border-[#DECDBB] shadow-[0px_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
               <div className="color-gradient px-6 sm:px-8 py-5 text-white">
@@ -409,7 +395,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Comparison Table (Article 6 Landlord Deny) */}
           {sec.comparisonTable && (
             <div className="w-full my-8 space-y-4">
               <div className="w-full max-w-[900px] overflow-x-auto rounded-[8px] border border-[#d7dfe2] shadow-[0px_4px_16px_rgba(0,0,0,0.04)] bg-white">
@@ -457,7 +442,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Subsections */}
           {sec.subsections && (
             <div className="space-y-4 pt-2">
               {sec.subsections.map((sub, sIdx) => (
@@ -575,7 +559,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Section Paragraphs after the subsections */}
           {sec.afterSubsectionsParagraphs && (
             <div className="space-y-3">
               {sec.afterSubsectionsParagraphs.map((p, pIdx) => (
@@ -589,16 +572,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Section Callout Box */}
           {sec.calloutBox && renderCalloutBox(sec.calloutBox)}
 
-          {/* Section CTA Box */}
           {sec.ctaBox && (
             <div
               className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-12 text-left"
               style={{ background: "var(--color-gradient)" }}
             >
-              {/* Subtle Paw Prints in Bottom Right matching Figma */}
               <div className="absolute right-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[380px] h-[190px] sm:h-[230px] lg:h-[260px] pointer-events-none select-none z-0 opacity-25">
                 <Image
                   quality={90}
@@ -630,7 +610,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Section Banner / Content Image (Bottom position) */}
           {sec.bannerImage && sec.bannerPosition === "bottom" && (
             <div className={`w-full relative rounded-[20px] overflow-hidden shadow-md my-8 bg-white border border-[#DECDBB]/50 ${!sec.bannerImage.fullWidth && (sec.bannerImage.height ?? 550) > (sec.bannerImage.width ?? 870) ? "max-w-[560px] mx-auto" : ""}`}>
               <Image
@@ -652,19 +631,16 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             </div>
           )}
 
-          {/* Quote Callout Box (Bottom position) */}
           {sec.quoteBox && sec.quoteBoxPosition === "bottom" && renderQuoteBox(sec.quoteBox)}
         </section>
       ))}
 
-      {/* 4. Article CTA Box */}
       {article.cta && (
         <div
           id={article.cta.id || "request-housing-accommodation"}
           className="w-full relative overflow-hidden rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 shadow-[0px_10px_30px_rgba(26,61,79,0.18)] my-10 sm:my-14 text-left scroll-mt-28"
           style={{ background: "var(--color-gradient)" }}
         >
-          {/* Subtle Paw Prints in Bottom Right */}
           <div className="absolute right-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[380px] h-[190px] sm:h-[230px] lg:h-[260px] pointer-events-none select-none z-0 opacity-25">
             <Image
               quality={90}
@@ -676,7 +652,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
             />
           </div>
 
-          {/* Left Text & Action */}
           <div className="relative z-10 flex flex-col items-start space-y-4 sm:space-y-5 max-w-[560px]">
             <h3 className="heading-h3 text-background">
               {article.cta.heading}
@@ -697,7 +672,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         </div>
       )}
 
-      {/* 5. Final Thoughts */}
       {article.finalThoughts && (
         <section
           id={article.finalThoughts.id || "final-thoughts"}
@@ -719,7 +693,6 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
         </section>
       )}
 
-      {/* 6. FAQ Section (Directly Below Final Thoughts) */}
       {article.faqs && article.faqs.length > 0 && (
         <div id={article.faqSectionId || "faqs"} className="scroll-mt-28 space-y-6 sm:space-y-8">
           <div id="faq" className="scroll-mt-28" />

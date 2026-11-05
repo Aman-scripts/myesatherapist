@@ -10,9 +10,7 @@ const TEAL_GRADIENT = "var(--color-gradient)";
 export function EmotionalSupportSection() {
   return (
     <section className="relative overflow-hidden bg-white w-full pt-0 pb-8 sm:pb-12 lg:py-0">
-      {/* Mobile & Tablet Image Container (Rendered FIRST on Mobile/Tablet with 0 top gap) */}
       <div className="lg:hidden w-full overflow-hidden">
-        {/* Mobile Image (< 640px) */}
         <div className="sm:hidden w-full -mt-2.5">
           <Image
             quality={90} loading="lazy"
@@ -25,7 +23,6 @@ export function EmotionalSupportSection() {
           />
         </div>
 
-        {/* Tablet Image (640px to 1023px) */}
         <div className="hidden sm:block w-full -mt-3.5">
           <Image
             quality={90} loading="lazy"
@@ -39,7 +36,6 @@ export function EmotionalSupportSection() {
         </div>
       </div>
 
-      {/* Mobile & Tablet Content Area (Renders AFTER image on Mobile/Tablet) */}
       <div className="lg:hidden w-full px-4 sm:px-6 py-6 sm:py-8 space-y-6">
         <div className="space-y-3">
           <h2 className="heading-h2 capitalize">
@@ -55,7 +51,6 @@ export function EmotionalSupportSection() {
           </div>
         </div>
 
-        {/* Action Buttons & Refund Reassurance */}
         <div className="space-y-2 flex flex-col items-center sm:items-start w-full">
           <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
             <CtaButton
@@ -75,14 +70,12 @@ export function EmotionalSupportSection() {
         </div>
       </div>
 
-      {/* Desktop Container (>= 1024px) scaled proportionally to match 1440px design */}
       <DesktopScaleWrapper
         designWidth={1440}
         designHeight={760}
         className="hidden lg:block relative"
       >
         <div className="relative w-full h-[760px] flex items-center justify-between">
-          {/* Left Content Area (Exact 737px Figma Frame) */}
           <div className="w-[737px] pl-[78px] pr-4 z-10 space-y-8 my-auto">
             <div className="space-y-3.5">
               <p className="heading-h2 capitalize">
@@ -99,7 +92,6 @@ export function EmotionalSupportSection() {
               </div>
             </div>
 
-            {/* Action Buttons & Refund Reassurance */}
             <div className="space-y-2">
               <div className="flex flex-row items-center gap-6 pt-2">
                 <CtaButton
@@ -120,7 +112,6 @@ export function EmotionalSupportSection() {
             </div>
           </div>
 
-          {/* Desktop Right Graphics (607px natural curved frame) */}
           <div className="w-[607px] absolute right-0 top-0 bottom-0 h-full pointer-events-none z-0">
             <Image
               quality={90} loading="lazy"
@@ -132,7 +123,6 @@ export function EmotionalSupportSection() {
             />
           </div>
 
-          {/* Bottom-right teal wave (Figma: 423 x 110, flush to the section's bottom-right corner) */}
           <div className="absolute z-10 pointer-events-none right-0 bottom-0 w-[423px] h-[110px]">
             <Image
               quality={90} loading="lazy"
@@ -144,7 +134,6 @@ export function EmotionalSupportSection() {
             />
           </div>
 
-          {/* Bottom Paw Icon: sits on the teal wave in the bottom-right corner */}
           <div className="absolute z-20 pointer-events-none right-[20px] bottom-[2px] w-[84px] h-[84px]">
             <Image
               quality={90} loading="lazy"

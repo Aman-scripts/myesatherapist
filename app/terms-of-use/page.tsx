@@ -47,7 +47,6 @@ export default function TermsOfUsePage() {
     notFound();
   }
 
-  // Schema.org WebPage & BreadcrumbList structured data
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -93,16 +92,13 @@ export default function TermsOfUsePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(jsonLd) }}
       />
-      {/* Top Announcement Banner & Header */}
       <TopBanner />
       <Header />
 
-      {/* Main Content Area */}
       <main className="flex-1">
         <PolicyPageLayout policy={policy} />
       </main>
 
-      {/* Footer with Legal column */}
       <Footer />
     </div>
   );

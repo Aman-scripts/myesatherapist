@@ -17,11 +17,9 @@ import { EsaRenewalLicensedPros } from "@/components/esa-renewal/EsaRenewalLicen
 import { EsaRenewalForWhom } from "@/components/esa-renewal/EsaRenewalForWhom";
 import { EsaRenewalWhatToKnow } from "@/components/esa-renewal/EsaRenewalWhatToKnow";
 
-// Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
-// Schema.org Structured Data
 import { esaRenewalSchemas } from "@/data/schemas/esaRenewalSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -105,7 +103,6 @@ const esaRenewalFaqs = [
 export default function EsaRenewalPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Schema.org JSON-LD */}
       {esaRenewalSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -114,41 +111,29 @@ export default function EsaRenewalPage() {
         />
       ))}
 
-      {/* 1. Global Notification Banner */}
       <TopBanner />
 
-      {/* 2. Global Header */}
       <Header />
 
-      {/* 3. Page Content Sections */}
       <main className="flex-1">
-        {/* Hero Section with Quick States Ribbon, Stats, and Ratings */}
         <EsaRenewalHero />
 
-        {/* 4 Trust Feature Cards */}
         <EsaRenewalTrustCards />
 
-        {/* Why Consider Renewing Section */}
         <EsaRenewalWhySection />
 
-        {/* 3-Step Process: How the ESA Letter Renewal Process Works */}
         <EsaRenewalHowItWorks />
 
         <EsaRenewalPricing />
 
-        {/* Renewals for Housing Accommodation Requests */}
         <EsaRenewalHousingSection />
 
-        {/* Licensed Professionals Across All 50 States */}
         <EsaRenewalLicensedPros />
 
-        {/* Who This Renewal Service is For (Ideal For vs Not Intended For) */}
         <EsaRenewalForWhom />
 
-        {/* What to Know Before You Start */}
         <EsaRenewalWhatToKnow />
 
-        {/* Frequently Asked Questions */}
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
@@ -157,14 +142,12 @@ export default function EsaRenewalPage() {
           bg="bg-background"
         />
 
-        {/* Pre-Footer Call to Action Banner */}
         <CtaBanner
           buttonHref="#pricing"
           bgColor="bg-background"
         />
       </main>
 
-      {/* 4. Global Footer */}
       <Footer />
     </div>
   );

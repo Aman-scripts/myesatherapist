@@ -6,7 +6,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LegalReviewerContent } from "@/components/legal-reviewer/LegalReviewerContent";
 
-// Schema.org Structured Data
 import { awaisArshadSchemas } from "@/data/schemas/awaisArshadSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -51,7 +50,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function AwaisArshadContributorPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD */}
       {awaisArshadSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -60,16 +58,13 @@ export default function AwaisArshadContributorPage() {
         />
       ))}
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
-      {/* Main Legal Reviewer Content Area */}
       <main className="flex-1 bg-background">
         <LegalReviewerContent />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

@@ -128,7 +128,6 @@ export default async function ContributorProfilePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between selection:bg-accent/30 selection:text-current">
-      {/* Schema.org Structured Data */}
       {author.schemas && author.schemas.length > 0 ? (
         author.schemas.map((schemaObj, index) => (
           <script
@@ -144,16 +143,13 @@ export default async function ContributorProfilePage({ params }: PageProps) {
         />
       )}
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
-      {/* Main Author Content Area */}
       <main className="flex-1 bg-background">
         <AuthorProfileContent author={author} />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

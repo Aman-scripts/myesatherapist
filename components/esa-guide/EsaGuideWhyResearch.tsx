@@ -8,14 +8,12 @@ const ART_ALT = "Woman resting on the floor with her fluffy dog";
 export function EsaGuideWhyResearch() {
   return (
     <section className="relative w-full overflow-hidden bg-white lg:min-h-[36vw] xl:min-h-0 xl:h-[486px]">
-      {/* Artwork with the curved edge and heart badge built in (desktop) */}
       <div className="absolute inset-y-0 right-0 hidden aspect-[1911/1458] lg:block">
         <Image
             quality={90} src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 637px, 1px" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4vw] lg:pl-[5.8vw] lg:pr-0 xl:py-0 xl:pl-[83px]">
-        {/* Artwork for mobile / tablet (curve built in, heart badge added) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
             <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-guide/esa-guide-whypeopleresearch-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 68, w: 390, h: 444 } }} />

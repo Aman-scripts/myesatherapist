@@ -6,11 +6,9 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// Video Testimonials Components
 import { VideoTestimonialsHeroSection } from "@/components/video-testimonials/VideoTestimonialsHeroSection";
 import { VideoTestimonialsGridSection } from "@/components/video-testimonials/VideoTestimonialsGridSection";
 
-// Shared Components
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { videoTestimonialsSchemas } from "@/data/schemas/videoTestimonialsSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
@@ -53,7 +51,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function VideoTestimonialsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-body-text selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD Structured Data */}
       {videoTestimonialsSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -62,18 +59,14 @@ export default function VideoTestimonialsPage() {
         />
       ))}
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
       <main className="flex-1">
-        {/* 1. Hero Section (with Trust Stats Bar positioned exactly half on hero bottom and half on section below) */}
         <VideoTestimonialsHeroSection />
 
-        {/* 2. Client Video Testimonials Grid (23 Cards with Video Modal) */}
         <VideoTestimonialsGridSection />
 
-        {/* 4. Ready to Start Your ESA Evaluation? CTA Banner */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description={
@@ -87,7 +80,6 @@ export default function VideoTestimonialsPage() {
 
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

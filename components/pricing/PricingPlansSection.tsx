@@ -43,9 +43,6 @@ export function PricingPlansSection({
 
       <section className="pb-16 sm:pb-20 lg:pb-24 bg-background relative z-10 overflow-visible">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ==================================================== */}
-        {/* ADD-ON BANNER: More Than One Pet? (Frame 1000012004) */}
-        {/* ==================================================== */}
         <div className="max-w-[1065px] mx-auto bg-white rounded-[20px] shadow-[0px_2px_10px_rgba(103,103,103,0.08)] flex items-stretch gap-4 sm:gap-5 pl-4 sm:pl-5 pr-4 sm:pr-8 py-4 sm:py-5">
           <div className="hidden sm:block w-[7px] self-stretch rounded-full bg-primary shrink-0 my-1" />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 flex-1 min-w-0">

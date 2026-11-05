@@ -112,13 +112,10 @@ export function StatePsdVsEsaSection({ data }: { data: StateData }) {
           </p>
         )}
 
-        {/* Frame 1000012004: Bottom Callout Box (Only if provided in data) */}
         {calloutTitle && calloutText && (
           <div className="relative w-full max-w-[959px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] overflow-hidden flex flex-row items-center pr-4 sm:pr-8 md:pr-[67px] gap-3 sm:gap-[24px]">
-            {/* Rectangle 25: Left Accent */}
             <div className="w-[14px] sm:w-[19px] self-stretch min-h-[140px] sm:min-h-[181px] bg-accent shrink-0 rounded-l-[10px]" />
 
-            {/* Frame 1000012015: Content Area */}
             <div className="py-5 sm:py-8 flex flex-col justify-center items-start gap-1.5 max-w-[849px] flex-1">
               <h3 className="font-heading font-bold text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px] text-primary">
                 {calloutTitle}

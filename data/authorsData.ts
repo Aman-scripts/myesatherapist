@@ -13,7 +13,6 @@ export interface AuthorProfile {
   bioParagraphs: string[];
   skillTags?: string[];
   focusCards?: Array<{ title: string; subtitle: string }>;
-  /** Sidebar heading above sidebarEducation (defaults to "Education") */
   sidebarEducationTitle?: string;
   sidebarEducation: Array<{ label: string; year: string }>;
   sidebarFocusAreas?: string[];

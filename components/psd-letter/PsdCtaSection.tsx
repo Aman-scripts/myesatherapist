@@ -38,12 +38,10 @@ function PhoneIcon() {
 export function PsdCtaSection() {
   return (
     <section className="relative w-full bg-background pt-0 lg:pt-8 xl:pt-[125px] overflow-visible">
-      {/* Full-width Teal Gradient Banner */}
       <div
         className="w-full relative min-h-[440px]"
         style={{ backgroundImage: TEAL_GRADIENT }}
       >
-        {/* Paw Prints Background Accent */}
         <div className="absolute left-[35%] lg:left-[28%] xl:left-[41%] bottom-0 w-[160px] lg:w-[175px] xl:w-[240px] h-[110px] lg:h-[120px] xl:h-[160px] pointer-events-none z-0 hidden md:block opacity-40">
           <Image
             quality={90}
@@ -55,7 +53,6 @@ export function PsdCtaSection() {
           />
         </div>
 
-        {/* Overlapping Woman with Dog Photo on Desktop */}
         <div className="hidden lg:block absolute right-0 bottom-0 w-[480px] lg:w-[490px] xl:w-[653px] h-[390px] lg:h-[430px] xl:h-[530px] pointer-events-none z-20">
           <Image
             quality={90}
@@ -68,7 +65,6 @@ export function PsdCtaSection() {
         </div>
 
         <div className="max-w-[1442px] mx-auto px-6 sm:px-12 lg:px-[60px] xl:px-[104px] py-12 lg:py-[49px] relative min-h-[440px] flex items-center">
-          {/* Left Text & CTA Area */}
           <div className="relative z-10 max-w-[580px] lg:max-w-[650px] xl:max-w-[720px] space-y-6 text-left">
             <div className="space-y-3">
               <h2 className="heading-h2 text-background">
@@ -79,7 +75,6 @@ export function PsdCtaSection() {
               </p>
             </div>
 
-            {/* 4 Feature Bullet Points */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1 pb-1">
               {BULLET_POINTS.map((point, idx) => (
                 <div key={idx} className="flex items-center gap-2.5">
@@ -93,7 +88,6 @@ export function PsdCtaSection() {
               ))}
             </div>
 
-            {/* CTA Buttons: Schedule Consultation + Phone */}
             <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               <CtaButton
                 href="#pricing"
@@ -116,7 +110,6 @@ export function PsdCtaSection() {
           </div>
         </div>
 
-        {/* Mobile Photo fallback */}
         <div className="lg:hidden relative w-full h-[260px] sm:h-[320px] pointer-events-none">
           <Image
             quality={90}

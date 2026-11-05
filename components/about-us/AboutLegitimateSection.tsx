@@ -27,13 +27,8 @@ const items = [
 export function AboutLegitimateSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      {/* ---------------------------------------------------- */}
-      {/* 1. MOBILE & TABLET VIEW (< 1024px)                   */}
-      {/* ---------------------------------------------------- */}
       <div className="lg:hidden w-full">
-        {/* Full-width Responsive Image on Top */}
         <div className="relative w-full">
-          {/* Tablet Image (640px - 1023px) */}
           <div className="hidden sm:block relative w-full aspect-[834/1050]">
             <Image
               quality={90}
@@ -45,7 +40,6 @@ export function AboutLegitimateSection() {
             />
           </div>
 
-          {/* Mobile Image (< 640px) */}
           <div className="block sm:hidden relative w-full aspect-[390/513]">
             <Image
               quality={90}
@@ -57,7 +51,6 @@ export function AboutLegitimateSection() {
             />
           </div>
 
-          {/* Floating Heart & Paw Badge centered at bottom curve */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-[0px_4px_16px_rgba(0,0,0,0.15)] p-3 sm:p-3.5 flex items-center justify-center z-20 border border-[#EAE5DC]">
             <Image quality={90}
               src="/about-us/about-us-legimateesasection-hearticon.webp"
@@ -70,9 +63,7 @@ export function AboutLegitimateSection() {
           </div>
         </div>
 
-        {/* Content Area */}
         <div className="w-full px-5 sm:px-8 pt-10 sm:pt-14 pb-12 sm:pb-16 space-y-6 sm:space-y-8 max-w-[620px] mx-auto">
-          {/* Header Block */}
           <div className="space-y-3 sm:space-y-4 text-center">
             <h2 className="heading-h2 text-primary">
               Legitimate ESA Letter Evaluations You Can Trust
@@ -82,21 +73,18 @@ export function AboutLegitimateSection() {
             </p>
           </div>
 
-          {/* 3 Feature Cards */}
           <div className="space-y-3 sm:space-y-4">
             {items.map((item) => (
               <div
                 key={item.number}
                 className="w-full bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 p-3.5 sm:p-4 flex items-center gap-3.5 sm:gap-4 text-left transition-all duration-200 hover:shadow-md"
               >
-                {/* Number Badge */}
                 <div className="w-[48px] h-[48px] sm:w-[54px] sm:h-[54px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
                   <span className="heading-h3 leading-none text-body-text">
                     {item.number}
                   </span>
                 </div>
 
-                {/* Text Content */}
                 <div className="flex-1 min-w-0">
                   <h3 className="heading-h3 text-color-gradient">
                     {item.title}
@@ -111,18 +99,13 @@ export function AboutLegitimateSection() {
         </div>
       </div>
 
-      {/* ---------------------------------------------------- */}
-      {/* 2. DESKTOP VIEW (>= 1024px, Figma Frame 1000011784)  */}
-      {/* ---------------------------------------------------- */}
       <DesktopScaleWrapper
         designWidth={1440}
         designHeight={938}
         className="hidden lg:block relative"
       >
         <div className="relative w-full h-[938px] flex items-center bg-white overflow-hidden">
-          {/* Left Content Column (Figma Frame 1000011791) */}
           <div className="absolute left-[84px] top-[58px] w-[651px] flex flex-col items-start gap-10 z-10">
-            {/* Heading Block */}
             <div className="w-[525px] flex flex-col items-start gap-4 text-left">
               <p className="heading-h2 text-primary">
                 Legitimate ESA Letter Evaluations You Can Trust
@@ -132,21 +115,18 @@ export function AboutLegitimateSection() {
               </p>
             </div>
 
-            {/* 3 Feature Cards (Figma Frame 1000011790) */}
             <div className="w-[651px] flex flex-col items-start gap-4">
               {items.map((item) => (
                 <div
                   key={item.number}
                   className="w-[651px] min-h-[140px] bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 px-5 py-4 flex items-center gap-4 text-left transition-all duration-200 hover:shadow-md"
                 >
-                  {/* Number Badge (Figma Frame 1000011767) */}
                   <div className="w-[59px] h-[59px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
                     <span className="heading-h3 leading-none text-body-text">
                       {item.number}
                     </span>
                   </div>
 
-                  {/* Text Content */}
                   <div className="flex-1 min-w-0">
                     <p className="heading-h3 text-color-gradient">
                       {item.title}
@@ -160,7 +140,6 @@ export function AboutLegitimateSection() {
             </div>
           </div>
 
-          {/* Right Image (Figma Frame 1000011787) */}
           <div className="absolute right-0 top-0 bottom-0 w-[737px] h-[938px] pointer-events-none z-0">
             <Image
               quality={90}

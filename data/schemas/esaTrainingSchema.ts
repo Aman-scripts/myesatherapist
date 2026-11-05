@@ -1,5 +1,4 @@
 export const esaTrainingSchemas = [
-  // 1. COLLECTIONPAGE
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -28,7 +27,6 @@ export const esaTrainingSchemas = [
     }
   },
 
-  // 2. FAQPAGE
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -68,7 +66,6 @@ export const esaTrainingSchemas = [
     ]
   },
 
-  // 3. BREADCRUMBLIST
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

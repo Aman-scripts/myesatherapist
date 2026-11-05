@@ -60,7 +60,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-background overflow-x-clip">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(homeSchema, "homepage")) }}

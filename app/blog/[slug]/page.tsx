@@ -15,6 +15,5 @@ export default async function LegacyBlogSlugPage({ params }: PageProps) {
     permanentRedirect(article.url);
   }
 
-  // Default redirect to the first article
   permanentRedirect("/blog/esa-guide/how-to-verify-an-esa-letter/");
 }

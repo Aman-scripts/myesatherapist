@@ -14,9 +14,7 @@ export interface ProfileShellProps {
   avatarAlt: string;
   linkedin?: string;
   badges?: string[];
-  /** Sidebar content below the first divider (SidebarSection / SidebarDivider blocks) */
   sidebar: React.ReactNode;
-  /** Main column sections, separated by SectionDivider */
   children: React.ReactNode;
 }
 
@@ -42,7 +40,6 @@ function ActiveCheck() {
   );
 }
 
-// Avatar, name, title and status pills (Figma Frame 1000011839)
 function LinkedinIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -62,7 +59,6 @@ function ProfileIdentity({
   badges,
   inDrawer,
 }: Omit<ProfileShellProps, "sidebar" | "children"> & { inDrawer?: boolean }) {
-  // The drawer repeats the identity block, so it uses h2 to keep one h1 per page
   const NameHeading = inDrawer ? "h2" : "h1";
   return (
     <div className="flex flex-col gap-[27px]">
@@ -146,10 +142,6 @@ function SidebarBody(
   );
 }
 
-/**
- * Page layout for author / contributor / reviewer profiles (Figma "Legal Reviewer Page"):
- * a 382px teal sidebar on desktop, and a slide-out drawer below 1024px.
- */
 export function ProfileShell(props: ProfileShellProps) {
   const { name, children } = props;
   const [isOpen, setIsOpen] = React.useState(false);

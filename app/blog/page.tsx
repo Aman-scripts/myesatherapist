@@ -48,7 +48,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function BlogHubPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(blogSchema, "blog-hub-page")) }}
@@ -58,13 +57,10 @@ export default function BlogHubPage() {
       <Header />
 
       <main className="flex-1 bg-background">
-        {/* 1. Hero Banner */}
         <BlogsHero />
 
-        {/* 2. Categorized Blogs Grid (ESA Guide, Qualifying Conditions, ESA Training) */}
         <BlogsGrid />
 
-        {/* 3. Can ESA Be Right For You Call to Action */}
         <CtaBanner
           title="Could an ESA Be Right for You?"
           titleClassName="normal-case"

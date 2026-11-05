@@ -1,5 +1,4 @@
 export const esaGuideSchemas = [
-  // 1. COLLECTIONPAGE
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -63,7 +62,6 @@ export const esaGuideSchemas = [
       ]
     }
   },
-  // 2. FAQPAGE — matches the visible "Frequently Asked Questions" section
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -102,7 +100,6 @@ export const esaGuideSchemas = [
       }
     ]
   },
-  // 3. BREADCRUMBLIST
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

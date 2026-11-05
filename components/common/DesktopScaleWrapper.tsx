@@ -10,14 +10,6 @@ interface DesktopScaleWrapperProps {
   fullBleedBackground?: React.ReactNode;
 }
 
-/**
- * DesktopScaleWrapper
- * 
- * Container for 1440px desktop layouts that allows full-bleed backgrounds while
- * keeping content centered and overflow-visible. Global proportional scaling
- * between 1024px and 1440px is handled globally by GlobalDesktopScaler on <body>,
- * guaranteeing an exact 1:1 match with the 1440px Figma design.
- */
 export function DesktopScaleWrapper({
   children,
   designWidth = 1440,
@@ -30,14 +22,12 @@ export function DesktopScaleWrapper({
 
   return (
     <div className={`hidden lg:block relative w-full overflow-visible ${wrapperClassName}`}>
-      {/* Optional full-bleed background for screens wider than designWidth */}
       {bg && (
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
           {bg}
         </div>
       )}
 
-      {/* Design canvas. Caps at the Figma width and shrinks with the window so it cannot force a horizontal scrollbar. */}
       <div
         className={`relative z-10 mx-auto w-full ${className}`}
         style={{

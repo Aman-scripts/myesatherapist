@@ -23,7 +23,6 @@ export function EsaRenewalForWhom() {
   return (
     <section className="w-full bg-background py-16 sm:py-20 lg:py-24">
       <div className="max-w-[1312px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center max-w-[850px] mx-auto mb-14 sm:mb-16 space-y-3">
           <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-primary leading-tight sm:leading-[54px] lg:leading-[42px] xl:leading-[54px] tracking-tight">
             Who This Renewal Service is For?
@@ -33,11 +32,8 @@ export function EsaRenewalForWhom() {
           </p>
         </div>
 
-        {/* 2 Big Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-stretch">
-          {/* Card 1: Ideal For (Green Tint) */}
           <div className="rounded-[30px] bg-[#27A64A]/10 border border-[#27A64A]/20 overflow-hidden shadow-sm flex flex-col">
-            {/* Top Photo */}
             <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
               <Image
             quality={90}
@@ -49,7 +45,6 @@ export function EsaRenewalForWhom() {
               />
             </div>
 
-            {/* Content Area */}
             <div className="p-6 sm:p-8 lg:p-10 space-y-6 flex-1 flex flex-col">
               <h3 className="font-heading font-bold text-2xl sm:text-[28px] text-primary text-center">
                 Ideal For
@@ -58,7 +53,6 @@ export function EsaRenewalForWhom() {
               <div className="space-y-4 sm:space-y-5 flex-1">
                 {IDEAL_POINTS.map((point, idx) => (
                   <div key={idx} className="flex items-start gap-3.5">
-                    {/* Teal Gradient Checkmark Circle */}
                     <div className="w-5 h-5 rounded-full color-gradient flex items-center justify-center shrink-0 mt-1 shadow-xs">
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--color-background)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12" />
@@ -74,9 +68,7 @@ export function EsaRenewalForWhom() {
             </div>
           </div>
 
-          {/* Card 2: Not Intended For (Red Tint) */}
           <div className="rounded-[30px] bg-[#FF383C]/10 border border-[#E42529]/20 overflow-hidden shadow-sm flex flex-col">
-            {/* Top Photo */}
             <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
               <Image
             quality={90}
@@ -88,7 +80,6 @@ export function EsaRenewalForWhom() {
               />
             </div>
 
-            {/* Content Area */}
             <div className="p-6 sm:p-8 lg:p-10 space-y-6 flex-1 flex flex-col">
               <h3 className="font-heading font-bold text-2xl sm:text-[28px] text-[#CC191D] text-center">
                 Not Intended For
@@ -97,7 +88,6 @@ export function EsaRenewalForWhom() {
               <div className="space-y-4 sm:space-y-5 flex-1">
                 {NOT_INTENDED_POINTS.map((point, idx) => (
                   <div key={idx} className="flex items-start gap-3.5">
-                    {/* Red X Mark Circle */}
                     <div className="w-5 h-5 rounded-full bg-[#E42529] flex items-center justify-center shrink-0 mt-1 shadow-xs">
                       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--color-background)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18" />

@@ -25,7 +25,6 @@ interface TestimonialItem {
   quote: string;
   name: string;
   avatar?: string;
-  /** Star rating out of 5 (defaults to 5). */
   rating?: number;
 }
 
@@ -92,9 +91,7 @@ export function TrustedByPetOwnersSection({
   return (
     <section className={`w-full ${bgColor} py-14 sm:py-18 xl:py-[63px] overflow-hidden`}>
       <div className="max-w-[1436px] mx-auto px-4 sm:px-8 xl:px-[319px]">
-        {/* Frame 1261153623: Inner Column */}
         <div className="max-w-[798px] mx-auto flex flex-col items-center gap-10">
-          {/* Heading Container (709px x 130px) */}
           <div className="text-center max-w-[709px] mx-auto space-y-4">
             <h2 className="heading-h2">
               {displayTitle}
@@ -104,14 +101,12 @@ export function TrustedByPetOwnersSection({
             </p>
           </div>
 
-          {/* Reviews card (798px x 307px) */}
           <div
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
             className="w-full max-w-[798px] flex flex-col items-center gap-6 select-none"
           >
-            {/* Text+Stars: Gradient Speech Bubble */}
             <div className="w-full relative">
             <button
               type="button"
@@ -132,7 +127,6 @@ export function TrustedByPetOwnersSection({
               <div
                 className="w-full rounded-[20px] shadow-[0px_4px_10px_rgba(82,82,82,0.1)] p-6 sm:p-[24px] flex flex-col items-center text-center gap-3 transition-all duration-300 min-h-[148px] color-gradient"
               >
-                {/* 5 Stars (24px) */}
                 <div className="flex items-center justify-center gap-1 h-[24px]">
                   {[0, 1, 2, 3, 4].map((s) => (
                     <svg key={s} width="24" height="24" viewBox="0 0 24 24" fill={s < (current.rating ?? 5) ? "#FDD264" : "#FFEEC1"} className="w-6 h-6">
@@ -141,19 +135,15 @@ export function TrustedByPetOwnersSection({
                   ))}
                 </div>
 
-                {/* Quote Text */}
                 <p className="body-large text-background max-w-[750px] mx-auto">
                   {current.quote}
                 </p>
               </div>
 
-              {/* Centered Speech Bubble Tail */}
               <div className="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-t-[14px] border-t-[#1D6E72] mx-auto" />
             </div>
 
-            {/* Avatar + Name + Dots */}
             <div className="flex flex-col items-center gap-2">
-              {/* Avatar (60px x 60px with 4px white border) */}
               <div className="w-[60px] h-[60px] rounded-full border-[4px] border-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] overflow-hidden relative bg-[#E8F0F1] shrink-0">
                 {current.avatar ? (
                   <Image
@@ -163,7 +153,6 @@ export function TrustedByPetOwnersSection({
                 )}
               </div>
 
-              {/* Name */}
               <h3 className="heading-h3 text-center">
                 {reviewerName}
               </h3>

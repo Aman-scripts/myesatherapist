@@ -46,34 +46,25 @@ import { socialImage, withFeatureImage } from "@/data/socialImages";
 export default function DoctorsPage() {
   return (
     <>
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(esaDoctorsSchema, "our-therapist")) }}
       />
 
-      {/* Global Top Banner & Header */}
       <TopBanner />
       <Header />
 
-      {/* Main Content Area */}
       <main className="min-h-screen bg-background">
-        {/* Hero Section */}
         <DoctorsHeroSection />
 
-        {/* Doctors Grid Listing Section */}
         <DoctorsListingSection />
 
-        {/* We're in All 50 US States Section */}
         <DoctorsAllStatesSection />
 
-        {/* How You're Matched With a Provider Section */}
         <DoctorsMatchingSection />
 
-        {/* Important Provider Disclosure Section */}
         <DoctorsDisclosureSection />
 
-        {/* CTA Banner Section */}
         <CtaBanner
           title="Learn More About ESA Evaluations"
           description="See how licensed professionals evaluate your need for an emotional support animal."
@@ -81,11 +72,9 @@ export default function DoctorsPage() {
           buttonHref="/pricing/"
         />
 
-        {/* Clearance so the CTA photo does not meet the footer */}
         <div className="w-full h-16 sm:h-20 lg:h-28 bg-background" />
       </main>
 
-      {/* Global Footer */}
       <Footer />
     </>
   );

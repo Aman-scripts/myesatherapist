@@ -60,7 +60,6 @@ export function BenefitsSection() {
   return (
     <section id="benefits" className="py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6F3F0] text-[#0F5B4C] text-xs font-bold uppercase tracking-wider">
             Key ESA Advantages
@@ -73,7 +72,6 @@ export function BenefitsSection() {
           </p>
         </div>
 
-        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => {
             const Icon = benefit.icon;

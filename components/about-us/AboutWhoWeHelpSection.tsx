@@ -39,7 +39,6 @@ export function AboutWhoWeHelpSection() {
   return (
     <section className="w-full bg-background py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
           <h2 className="heading-h2 text-primary">
             Who We Help?
@@ -49,16 +48,13 @@ export function AboutWhoWeHelpSection() {
           </p>
         </div>
 
-        {/* 2 Columns: 5 Cards on Left & Photo on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-8 items-stretch">
-          {/* Left Column: 5 Cards (Order 2 on mobile/tablet, Order 1 on desktop) */}
           <div className="flex flex-col justify-between gap-3 sm:gap-3.5 xl:gap-4 order-2 lg:order-1">
             {groups.map((group, idx) => (
               <div
                 key={idx}
                 className="bg-white rounded-[10px] shadow-[0px_2px_4px_rgba(0,0,0,0.12)] border border-[#EAE5DC]/60 p-3 sm:p-4 xl:p-4.5 flex items-center gap-3.5 sm:gap-4 xl:gap-5 transition-all duration-200 hover:shadow-md"
               >
-                {/* Gradient Teal Icon Badge */}
                 <div className="w-[46px] h-[46px] sm:w-[52px] sm:h-[52px] xl:w-[59px] xl:h-[59px] rounded-full flex items-center justify-center shrink-0 bg-background border border-[#EAE5DC]">
                   <Image quality={90}
                     src={group.icon}
@@ -71,7 +67,6 @@ export function AboutWhoWeHelpSection() {
                   />
                 </div>
 
-                {/* Text */}
                 <div className="flex-1 min-w-0">
                   <h3 className="heading-h3 text-color-gradient">
                     {group.title}
@@ -84,7 +79,6 @@ export function AboutWhoWeHelpSection() {
             ))}
           </div>
 
-          {/* Right Column: Photo (Order 1 on mobile/tablet, Order 2 on desktop) */}
           <div className="order-1 lg:order-2 flex flex-col w-full h-full min-h-[360px] sm:min-h-[440px] lg:min-h-0">
             <div className="relative w-full flex-1 min-h-[360px] sm:min-h-[440px] lg:min-h-0 rounded-[24px] xl:rounded-[30px] overflow-hidden shadow-xl">
               <Image

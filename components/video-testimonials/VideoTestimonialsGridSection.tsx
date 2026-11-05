@@ -278,7 +278,6 @@ export function VideoTestimonialsGridSection() {
     <section className="relative w-full bg-background pt-[180px] sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-32">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
         <div className="text-center max-w-[820px] mx-auto mb-10 sm:mb-14">
           <h2 className="heading-h2 text-primary mb-3 sm:mb-4">
             Client Video Testimonials
@@ -288,14 +287,12 @@ export function VideoTestimonialsGridSection() {
           </p>
         </div>
 
-        {/* 7 Cards Grid: 2 Columns on desktop with 7th card centered */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[1256px] mx-auto">
           {VIDEO_REVIEWS.map((review) => (
             <div
               key={review.id}
               className="hover-card hover-surface bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.15)] rounded-[20px] overflow-hidden flex flex-col sm:flex-row items-stretch lg:last:col-span-2 lg:last:max-w-[616px] lg:last:w-full lg:last:mx-auto"
             >
-              {/* Left Video Thumbnail fills the card height so the photo meets the rounded corners */}
               <div
                 onClick={() => setActiveVideo(review)}
                 className="w-full sm:w-[301px] h-[340px] sm:h-auto sm:min-h-[370px] relative shrink-0 cursor-pointer group overflow-hidden bg-slate-900"
@@ -317,10 +314,8 @@ export function VideoTestimonialsGridSection() {
                   sizes="(max-width: 640px) 100vw, 301px"
                 />
 
-                {/* Subtle dark gradient overlay for contrast */}
                 <div className="absolute inset-0 bg-black/15 group-hover:bg-black/30 transition-colors" />
 
-                {/* YouTube Red Play Button Badge */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="w-16 h-16 rounded-full bg-[#FF0000] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
                     <svg className="w-7 h-7 fill-current ml-1" viewBox="0 0 24 24">
@@ -330,15 +325,12 @@ export function VideoTestimonialsGridSection() {
                 </div>
               </div>
 
-              {/* Right Content Panel (273px width on desktop) */}
               <div className="flex-1 w-full p-6 sm:py-9 sm:pr-7 sm:pl-[18px] flex flex-col justify-between h-full min-h-[290px] sm:min-h-[350px]">
-                {/* Name & Stars */}
                 <div className="space-y-2">
                   <h3 className="heading-h3 text-primary">
                     {review.name}
                   </h3>
 
-                  {/* 5 Accent Gold Stars */}
                   <div className="flex items-center gap-1">
                     {[...Array(review.rating)].map((_, i) => (
                       <svg
@@ -352,12 +344,10 @@ export function VideoTestimonialsGridSection() {
                   </div>
                 </div>
 
-                {/* Review Quote */}
                 <p className="font-sans font-semibold text-[15px] sm:text-[16px] leading-[25px] sm:leading-[26px] text-body-text my-4">
                   {review.quote}
                 </p>
 
-                {/* Date */}
                 <div className="text-right pt-2 border-t border-slate-100 sm:border-0">
                   <span className="font-sans font-semibold text-xs sm:text-[14px] leading-[26px] text-body-text">
                     {review.date}
@@ -370,7 +360,6 @@ export function VideoTestimonialsGridSection() {
 
       </div>
 
-      {/* Video Modal Popup */}
       {activeVideo && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
@@ -380,7 +369,6 @@ export function VideoTestimonialsGridSection() {
             className="relative w-full max-w-[420px] bg-black rounded-2xl overflow-hidden shadow-2xl aspect-[9/16] max-h-[85vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               onClick={() => setActiveVideo(null)}
               className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-black/60 text-white hover:bg-black/90 flex items-center justify-center transition-colors cursor-pointer"
@@ -389,7 +377,6 @@ export function VideoTestimonialsGridSection() {
               <X className="w-5 h-5" />
             </button>
 
-            {/* Embedded Video */}
             <iframe
               src={activeVideo.videoUrl}
               title={`${activeVideo.name} Testimonial Video`}

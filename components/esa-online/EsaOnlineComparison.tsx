@@ -37,7 +37,6 @@ export function EsaOnlineComparison() {
           </p>
         </div>
 
-        {/* Desktop: cream frame with a raised center column */}
         <div className="hidden lg:block relative w-full max-w-[1062px] pt-5 pb-5">
           <div className="w-full rounded-[20px] bg-background shadow-[0px_2px_5px_rgba(0,0,0,0.15)]">
             <div className="grid grid-cols-[1fr_297px_1fr] items-center h-[72px]">
@@ -96,7 +95,6 @@ export function EsaOnlineComparison() {
           </div>
         </div>
 
-        {/* Mobile & tablet (< 1024px): raised center card */}
         <div className="block lg:hidden w-full max-w-[361px] sm:max-w-[600px] md:max-w-[680px] relative mx-auto pt-6">
           <div className="w-full bg-background rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-4">
             <div className="flex items-center justify-between px-2 sm:px-6 h-[64px] sm:h-[72px]">

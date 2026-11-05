@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-/** Alternate paths that should resolve to one canonical, trailing-slash URL. */
 const ALIASES: Record<string, string> = {
   "/home": "/",
   "/home/": "/",

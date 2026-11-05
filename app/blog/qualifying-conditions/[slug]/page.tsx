@@ -88,7 +88,6 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
     notFound();
   }
 
-  // Generate structured schema JSON-LD for this article
   const articleSchema = article.schema || {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -127,7 +126,6 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
 
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30 selection:text-current">
-      {/* Article Schema.org JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(articleSchema, `blog-${article.slug}`)) }}
@@ -137,7 +135,6 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
       <Header />
 
       <main className="flex-1 bg-background">
-        {/* 1. Full-width Hero Section */}
         <BlogHeroSection
           title={article.title}
           subtitle={article.shortDescription}
@@ -158,9 +155,7 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
           }
         />
 
-        {/* 2. Main Article Content */}
         <div className="relative w-full">
-          {/* Main Article Content with Left-Aligned Sticky Table of Contents */}
           <div className="w-full relative flex flex-col lg:flex-row items-start justify-start z-10 pb-8 lg:pb-12">
             <BlogTableOfContents items={article.tocItems} />
             <div className="flex-1 min-w-0 max-w-[960px] xl:max-w-[1020px] px-4 sm:px-8 lg:pl-10 xl:pl-16 lg:pr-8 xl:pr-16 pt-8 sm:pt-10 lg:pt-[84px] xl:pt-[94px]">
@@ -169,12 +164,10 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
           </div>
         </div>
 
-        {/* 3. Google Source Highlight Banner (Separate from blogs content, centered below) */}
         <section className="w-full bg-background flex justify-center px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 pb-14 sm:pb-20 relative z-30">
           <BlogGoogleSourceBanner />
         </section>
 
-        {/* 4. About the Author */}
         <BlogAuthorBio
           name={article.aboutAuthor?.name}
           title={article.aboutAuthor?.title}
@@ -184,10 +177,8 @@ export default async function QualifyingConditionsBlogPage({ params }: PageProps
           linkedin={article.aboutAuthor?.linkedin}
         />
 
-        {/* 5. More ESA Resources (Other Blog Cards) */}
         <BlogMoreResources currentSlug={article.slug} />
 
-        {/* 6. PSD CTA Banner */}
         <CtaBanner
           title={article.bottomCta?.title || "Need help with an ESA letter?"}
           description={

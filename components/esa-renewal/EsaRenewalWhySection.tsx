@@ -35,9 +35,7 @@ const CARDS: WhyCard[] = [
 export function EsaRenewalWhySection() {
   return (
     <section className="w-full bg-white relative overflow-hidden lg:min-h-[85vw] xl:min-h-0">
-      {/* Illustration: natural 681x1226 artwork, full section height, flush to the right edge (xl and up) */}
       <div className="hidden lg:block absolute inset-y-0 right-0 aspect-[681/1226]">
-        {/* Floating Heart & Paw Circle Badge (Frame 1261153622) */}
         <div className="absolute left-[7%] top-[38.4%] z-20 w-[56px] h-[56px] xl:w-[73px] xl:h-[73px]">
           <Image
             quality={90}
@@ -65,9 +63,7 @@ export function EsaRenewalWhySection() {
           mobile={{ src: "/esa-renewal/esa-renwal-whyconsidering-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 237, w: 390, h: 274 } }}
           tablet={{ src: "/esa-renewal/esa-renwal-whyconsidering-tablet.webp", w: 834, h: 1049, crop: { x: 0, y: 449, w: 834, h: 600 } }}
         />
-        {/* Left Column: Heading + Subtitle + 3 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[46vw] xl:max-w-[626px] flex flex-col gap-10 lg:gap-[3vw] xl:gap-14">
-          {/* Header Text (Frame 1000011447) */}
           <div className="flex flex-col gap-5 lg:gap-[1.95vw] xl:gap-7 text-center lg:text-left">
             <h2 className="heading-h2 text-primary max-w-[541px] mx-auto lg:mx-0">
               Why Consider Renewing Your ESA Letter Through My ESA Therapist
@@ -77,22 +73,18 @@ export function EsaRenewalWhySection() {
             </p>
           </div>
 
-          {/* 3 Feature Cards (Frame 1261153772) */}
           <div className="flex flex-col gap-6 lg:gap-[1.6vw] xl:gap-8">
             {CARDS.map((card, idx) => (
               <div
                 key={idx}
                 className="bg-background rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex items-stretch"
               >
-                {/* Left 13px Teal Gradient Stripe (Frame 13) */}
                 <div
                   className="w-[13px] shrink-0"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 />
 
-                {/* Card Body */}
                 <div className="flex flex-1 flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-[1.7vw] xl:gap-6 py-6 lg:py-[1.8vw] xl:py-6 pl-5 sm:pl-6 lg:pl-[1.7vw] xl:pl-6 pr-5 sm:pr-8 lg:pr-[2vw] xl:pr-8">
-                  {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[66px] h-[66px] sm:w-[74.56px] sm:h-[74.56px] lg:w-[4.6vw] lg:h-[4.6vw] xl:w-[74.56px] xl:h-[74.56px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image quality={90}
                       src={card.icon}
@@ -105,7 +97,6 @@ export function EsaRenewalWhySection() {
                     />
                   </div>
 
-                  {/* Text Details */}
                   <div className="flex flex-col gap-1.5 flex-1">
                     <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.4vw] xl:text-[20px] text-primary leading-tight xl:leading-7">
                       {card.title}

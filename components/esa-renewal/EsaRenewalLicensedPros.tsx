@@ -24,7 +24,6 @@ const FEATURES: ProFeature[] = [
 export function EsaRenewalLicensedPros() {
   return (
     <section className="w-full bg-white relative overflow-hidden lg:min-h-[48vw] xl:min-h-0">
-      {/* Illustration: map + doctors artwork (with curve and heart badge built in), full section height, flush right (lg and up) */}
       <div className="hidden lg:block absolute inset-y-0 right-0 aspect-[2291/2205]">
         <Image
             quality={90}
@@ -42,9 +41,7 @@ export function EsaRenewalLicensedPros() {
           mobile={{ src: "/esa-renewal/esa-renwal-licensedprofessional-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 109, w: 390, h: 402 } }}
           tablet={{ src: "/esa-renewal/esa-renwal-licensedprofessional-tablet.webp", w: 834, h: 1050, crop: { x: 0, y: 209, w: 834, h: 840 } }}
         />
-        {/* Left Column: Heading + Text + 2 Cards (Frame 1261153773) */}
         <div className="w-full max-w-[626px] lg:max-w-[39vw] xl:max-w-[590px] flex flex-col gap-10 lg:gap-[2.8vw] xl:gap-14">
-          {/* Header Text (Frame 1000011447) */}
           <div className="flex flex-col gap-5 lg:gap-[1.9vw] xl:gap-7 text-center lg:text-left">
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.8vw] xl:text-[44px] font-bold text-primary leading-[1.2] lg:leading-[3.5vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
               Licensed Professionals Across All 50 States
@@ -54,22 +51,18 @@ export function EsaRenewalLicensedPros() {
             </p>
           </div>
 
-          {/* 2 Feature Cards (Frame 1261153772) */}
           <div className="flex flex-col gap-5 lg:gap-[2.2vw] xl:gap-8 xl:max-w-[590px]">
             {FEATURES.map((feat, idx) => (
               <div
                 key={idx}
                 className="bg-background rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex items-stretch"
               >
-                {/* Left 13px Teal Gradient Stripe (Frame 13) */}
                 <div
                   className="w-[13px] shrink-0"
                   style={{ backgroundImage: TEAL_GRADIENT }}
                 />
 
-                {/* Card Content Row */}
                 <div className="flex flex-1 items-center gap-4 sm:gap-6 lg:gap-[1.6vw] xl:gap-6 py-5 lg:py-[1vw] xl:py-[12px] pl-4 sm:pl-6 pr-4">
-                  {/* Circle Icon Badge (Frame 1000011444) */}
                   <div className="w-[60px] h-[60px] sm:w-[74px] sm:h-[74px] rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                     <Image quality={90}
                       src="/esa-icons/icon-33.svg"
@@ -82,7 +75,6 @@ export function EsaRenewalLicensedPros() {
                     />
                   </div>
 
-                  {/* Text (Frame 14) */}
                   <div className="flex flex-1 flex-col gap-1.5">
                     <h3 className="font-heading font-bold text-lg sm:text-[20px] lg:text-[1.5vw] xl:text-[20px] text-primary leading-tight xl:leading-7">
                       {feat.title}

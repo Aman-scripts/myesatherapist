@@ -46,10 +46,8 @@ export function EsaRenewalTrustCards() {
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14">
           {CARDS.map((card, idx) => (
             <div key={idx} className="hover-card relative flex w-full flex-col">
-              {/* Gold accent layer (Frame 1000011684) */}
               <div className="absolute inset-x-0 top-0 bottom-2 rounded-[20px] bg-accent shadow-[0px_2px_4px_rgba(0,0,0,0.15)]" />
 
-              {/* White card (Frame 1000011683) */}
               <div className="hover-surface relative mt-2 flex min-h-[160px] flex-1 flex-col items-center justify-center gap-2 rounded-[20px] bg-white px-4 pt-[60px] pb-[37px] text-center shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
                 <h3
                   className="heading-h3 text-color-gradient"
@@ -61,7 +59,6 @@ export function EsaRenewalTrustCards() {
                 </p>
               </div>
 
-              {/* Floating Top Circular Badge (Frame 1000011444) */}
               <div className="hover-badge absolute left-[calc(50%-37.28px-1px)] -top-8 z-10 flex h-[74.56px] w-[74.56px] items-center justify-center rounded-full bg-white shadow-[0px_1.89px_3.78px_rgba(0,0,0,0.25)]">
                 <Image quality={90}
                   src={card.icon}

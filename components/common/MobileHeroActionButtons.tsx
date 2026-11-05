@@ -24,9 +24,7 @@ export interface MobileHeroActionButtonsProps {
   placeholder?: string;
   className?: string;
   onGetStartedClick?: () => void;
-  /** Gold outline on the state button, used by the states hub mobile hero. */
   selectTone?: "teal" | "gold";
-  /** PSD hero: Get Started uses the 29-state survey, otherwise the Heally portal. */
   surveyOnStart?: boolean;
 }
 
@@ -73,7 +71,6 @@ export function MobileHeroActionButtons({
     <div
       className={`flex flex-col justify-center items-center gap-[16px] w-[246px] mx-auto ${className}`}
     >
-      {/* Frame 2: State Selector */}
       <div className="relative w-[246px] z-50" ref={dropdownRef}>
         <button
           type="button"
@@ -103,7 +100,6 @@ export function MobileHeroActionButtons({
           </div>
         </button>
 
-        {/* Dropdown Panel */}
         {isOpen && (
           <div
             className={STATE_DROPDOWN_PANEL}
@@ -126,7 +122,6 @@ export function MobileHeroActionButtons({
         )}
       </div>
 
-      {/* Frame 1000011890: Get Started Button */}
       <CtaButton
         href={
           activeSlug

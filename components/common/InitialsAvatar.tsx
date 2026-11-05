@@ -16,7 +16,6 @@ function initials(name: string): string {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-/** Circular initials avatar (like Trustpilot's) for reviewers without a photo. */
 export function InitialsAvatar({ name, index = 0, className = "" }: { name: string; index?: number; className?: string }) {
   const c = PALETTE[Math.abs(index) % PALETTE.length];
   return (

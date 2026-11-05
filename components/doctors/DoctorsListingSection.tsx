@@ -88,7 +88,6 @@ function DoctorStatBadge({
   return (
     <div className="relative flex-1 min-w-0 rounded-[10px] bg-accent pt-[2.5px] shadow-[0px_1px_3px_rgba(0,0,0,0.12)]">
       <div className="bg-white rounded-[8px] pt-[22px] sm:pt-[24px] pb-2 sm:pb-2.5 px-1.5 sm:px-2 text-center flex flex-col justify-start items-center relative min-h-[62px] sm:min-h-[66px]">
-        {/* Floating circular icon badge at top center */}
         <div className="absolute -top-[15px] sm:-top-[16px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] sm:w-[32px] sm:h-[32px] rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.2)] flex items-center justify-center border border-background">
           <Image quality={90}
             src={iconSrc}
@@ -119,7 +118,6 @@ export function DoctorsListingSection() {
     <section className="w-full py-16 sm:py-20 lg:py-24 bg-background relative">
       <div className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading Header */}
         <div className="text-center mb-12 lg:mb-14 max-w-[860px] mx-auto space-y-3 sm:space-y-4">
           <h2 className="heading-h2 capitalize">
             State-Licensed Mental Health Professionals
@@ -129,7 +127,6 @@ export function DoctorsListingSection() {
           </p>
         </div>
 
-        {/* 2-column Grid of Doctor Cards (Full size as with 4 cards) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[42px] max-w-[1100px] mx-auto">
           {DOCTORS.map((doc, idx) => (
             <div
@@ -138,13 +135,11 @@ export function DoctorsListingSection() {
                 idx === 2 ? "lg:col-span-2 lg:w-[calc(50%-21px)] lg:mx-auto" : ""
               }`}
             >
-              {/* Top Banner with Gradient & Doctor Identity */}
               <div
                 className="px-5 sm:px-7 py-4 sm:py-4.5 flex items-center justify-between gap-3 relative"
                 style={{ backgroundImage: "var(--color-gradient)" }}
               >
                 <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                  {/* Doctor Avatar with Gold Border */}
                   <div className="hover-photo w-[60px] h-[60px] sm:w-[67px] sm:h-[67px] rounded-full border-[2.8px] border-accent overflow-hidden shrink-0 relative bg-white/10 shadow-sm">
                     <Image
             quality={90}
@@ -156,7 +151,6 @@ export function DoctorsListingSection() {
                     />
                   </div>
 
-                  {/* Name and Title */}
                   <div className="min-w-0">
                     <h3 className="heading-h3 text-background sm:truncate">
                       {doc.name}
@@ -167,7 +161,6 @@ export function DoctorsListingSection() {
                   </div>
                 </div>
 
-                {/* LinkedIn Badge */}
                 <a
                   href={doc.linkedin}
                   target="_blank"
@@ -179,14 +172,11 @@ export function DoctorsListingSection() {
                 </a>
               </div>
 
-              {/* Card Body */}
               <div className="p-5 sm:p-7 flex flex-col justify-between flex-1 gap-6">
-                {/* Clinical Bio */}
                 <p className="body text-body-text">
                   {doc.bio}
                 </p>
 
-                {/* 3 Stat Badges Row (desktop and tablet) */}
                 <div className="hidden sm:flex items-stretch gap-2.5 sm:gap-3.5 pt-2">
                   <DoctorStatBadge
                     label="Licensed In"
@@ -205,7 +195,6 @@ export function DoctorsListingSection() {
                   />
                 </div>
 
-                {/* Card Action Button */}
                 <div className="pt-2 flex justify-center">
                   <Link
                     href={`/esa-doctors/${doc.slug}/`}

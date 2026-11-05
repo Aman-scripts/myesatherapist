@@ -44,9 +44,6 @@ const BLOG_CATEGORIES: BlogCategorySection[] = [
 export function BlogsGrid() {
   return (
     <div className="w-full">
-      {/* ---------------------------------------------------- */}
-      {/* Category Navigation Pills (Frame 1261153994)         */}
-      {/* ---------------------------------------------------- */}
       <div className="w-full bg-background pt-8 sm:pt-12 pb-0">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <nav
@@ -66,12 +63,8 @@ export function BlogsGrid() {
         </div>
       </div>
 
-      {/* ---------------------------------------------------- */}
-      {/* 3 Category Sections (Original Articles Only)        */}
-      {/* ---------------------------------------------------- */}
       <div>
         {BLOG_CATEGORIES.map((category, index) => {
-          // Filter strictly original posts from BLOG_POSTS
           const categoryPosts = BLOG_POSTS.filter(
             (art: BlogArticle) =>
               art.categorySlug === category.categorySlug ||
@@ -91,7 +84,6 @@ export function BlogsGrid() {
               } scroll-mt-24`}
             >
               <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center gap-10 sm:gap-14 lg:gap-[56px]">
-                {/* Section Header (Heading Frame) */}
                 <div className="flex flex-col items-center gap-4 text-center max-w-[978px] mx-auto">
                   <h2 className="heading-h2 text-primary capitalize text-center">
                     {category.title}
@@ -101,7 +93,6 @@ export function BlogsGrid() {
                   </p>
                 </div>
 
-                {/* 3-Column Card Grid (Frame 1000011907) */}
                 <div className="w-full max-w-[1283px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
                   {categoryPosts.map((art: BlogArticle, i: number) => (
                     <BlogCard key={art.id} article={art} priority={false} />

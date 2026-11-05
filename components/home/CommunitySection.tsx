@@ -7,12 +7,10 @@ export function CommunitySection() {
   return (
     <section className="py-16 lg:py-24 bg-background relative overflow-hidden">
       <div className="max-w-[1251px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        {/* Title */}
         <h2 className="heading-h2 capitalize max-w-[797px] mx-auto mb-6">
           My ESA Therapist Has Been Serving the Community Since 2019
         </h2>
 
-        {/* Description Paragraphs */}
         <div className="space-y-4 body-large text-center max-w-[958px] mx-auto mb-10">
           <p>
             Since 2019, My ESA Therapist has connected individuals with licensed mental health professionals for emotional support animal (ESA) evaluations. If an ESA is determined to be clinically appropriate following an independent assessment, providers may issue documentation to support housing accommodation requests under applicable federal housing laws.
@@ -22,7 +20,6 @@ export function CommunitySection() {
           </p>
         </div>
 
-        {/* CTA Button */}
         <div>
           <CtaButton href="/about-us" className="w-auto">
             About ESA Therapist

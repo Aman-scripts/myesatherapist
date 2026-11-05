@@ -29,7 +29,6 @@ export function GoldCallout({
   );
 }
 
-/** Card with gold top accent and a floating circular icon badge. */
 export function FeatureCard({
   icon,
   title,
@@ -47,17 +46,14 @@ export function FeatureCard({
   icon?: string;
   title?: string;
   description?: string;
-  /** Used when the icon itself contains text, such as a statistic. */
   iconAlt?: string;
   iconW?: number;
   iconH?: number;
   headingFont?: "heading" | "lato";
   dark?: boolean;
   headingAs?: "h2" | "h3";
-  /** Text statistic shown in the badge when there is no icon. */
   stat?: string;
   className?: string;
-  /** Extra content rendered inside the card, below the description. */
   footer?: React.ReactNode;
 }) {
   return (
@@ -101,10 +97,8 @@ export function FeatureCard({
 
 export interface WaveImageSource {
   src: string;
-  /** Natural size of the file. */
   w: number;
   h: number;
-  /** Visible region of the file, for artwork exported with a large transparent canvas. */
   crop?: { x: number; y: number; w: number; h: number };
 }
 
@@ -140,10 +134,6 @@ export function WaveImageFrame({ img, alt, priority }: { img: WaveImageSource; a
   );
 }
 
-/**
- * Full-bleed mobile (< sm) / tablet (sm to < lg) artwork with the curved bottom edge.
- * Place it as the first child of a section container that has horizontal padding of px-4 sm:px-8.
- */
 export function WaveImage({
   alt,
   mobile,

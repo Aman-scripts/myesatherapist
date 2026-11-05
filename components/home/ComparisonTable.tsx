@@ -108,7 +108,6 @@ export function ComparisonTable() {
   return (
     <section id="compare" className="py-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1441px] mx-auto px-3 sm:px-6 lg:px-2 flex flex-col items-center">
-        {/* Section Header */}
         <div className="text-center max-w-[758px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
           <h2 className="heading-h2 capitalize">
             Compare Our Approach to Other ESA Letter Services
@@ -118,16 +117,7 @@ export function ComparisonTable() {
           </p>
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* 1. MOBILE & TABLET 3-COLUMN LAYOUT (< 1024px)       */}
-        {/* Matches Frame 1000012119 / Frame 1000011728 exactly */}
-        {/* ---------------------------------------------------- */}
-        {/* ---------------------------------------------------- */}
-        {/* 1. MOBILE & TABLET 3-COLUMN LAYOUT (< 1024px)       */}
-        {/* Matches Frame 1000012119 / Frame 1000011728 exactly */}
-        {/* ---------------------------------------------------- */}
         <div className="block lg:hidden w-full max-w-[370px] sm:max-w-[620px] md:max-w-[700px] relative mx-auto pt-[14px]">
-          {/* Cream frame with Features / Others columns */}
           <div className="w-full bg-background rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-3">
             <div className="grid grid-cols-[minmax(0,1.28fr)_132px_minmax(0,0.86fr)] sm:grid-cols-[1fr_214px_1fr] md:grid-cols-[1fr_234px_1fr] items-center h-[62px] sm:h-[70px]">
               <h3 className="font-heading font-bold text-center text-xs sm:text-base text-primary">Features</h3>
@@ -156,7 +146,6 @@ export function ComparisonTable() {
             </div>
           </div>
 
-          {/* Raised center card sits on the middle track, right of center, so feature labels stay clear. */}
           <div
             className="absolute top-0 bottom-[-14px] w-[132px] sm:w-[214px] md:w-[234px] left-[calc((100%-132px)*1.28/2.14)] sm:left-1/2 sm:-translate-x-1/2 rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
           >
@@ -180,12 +169,6 @@ export function ComparisonTable() {
           </div>
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* 2. DESKTOP VIEW (>= 1024px)                          */}
-        {/* ---------------------------------------------------- */}
-        {/* 2. DESKTOP VIEW (>= 1024px)                          */}
-        {/* Full Spacious Horizontal Row Layout with scaling     */}
-        {/* ---------------------------------------------------- */}
         <DesktopScaleWrapper
           designWidth={1020}
           designHeight={665}
@@ -193,9 +176,7 @@ export function ComparisonTable() {
         >
           <div className="relative w-full pt-[17px] pb-[16px] flex justify-center">
             <div className="w-full relative">
-              {/* Main Background Frame */}
               <div className="w-full bg-background rounded-[20px] shadow-[0_2px_5.2px_rgba(0,0,0,0.15)] pb-[14px] relative z-0">
-                {/* Header Labels for FEATURES and OTHERS */}
                 <div className="flex items-center px-[25px] h-[74px]">
                   <div className="w-[300px] text-center shrink-0">
                     <p className="heading-h3">
@@ -210,11 +191,9 @@ export function ComparisonTable() {
                   </div>
                 </div>
 
-                {/* Table Rows */}
                 <div className="divide-y divide-[#C8B9A7]/60 mx-[25px] border-t border-[#C8B9A7]/60">
                   {comparisonRows.map((row, idx) => (
                     <div key={idx} className="flex items-center h-[60px]">
-                      {/* Features Column */}
                       <div className="w-[300px] shrink-0 flex items-center gap-3.5">
                         <div className="w-[36px] h-[36px] rounded-full bg-white shadow-[0_1px_1.5px_rgba(0,0,0,0.25)] flex items-center justify-center shrink-0">
                           <Image quality={90}
@@ -232,10 +211,8 @@ export function ComparisonTable() {
                         </span>
                       </div>
 
-                      {/* Spacer matches the elevated card width */}
                       <div className="w-[350px] shrink-0" />
 
-                      {/* Others Column */}
                       <div className="w-[320px] shrink-0 flex items-center justify-start gap-3 pl-5">
                         {row.othersType === "cross" ? <RedCrossIcon /> : <WarningOrangeIcon />}
                         <span className="body-text text-left whitespace-nowrap">
@@ -247,7 +224,6 @@ export function ComparisonTable() {
                 </div>
               </div>
 
-              {/* Elevated Center Card sits over the middle spacer */}
               <div
                 className="absolute left-[325px] top-[-17px] bottom-[-16px] w-[350px] rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden color-gradient"
               >
@@ -274,7 +250,6 @@ export function ComparisonTable() {
           </div>
         </DesktopScaleWrapper>
 
-        {/* Bottom CTA Button */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton href="#how-it-works">Start Your ESA Evaluation</CtaButton>
           <p className="body-small text-center">

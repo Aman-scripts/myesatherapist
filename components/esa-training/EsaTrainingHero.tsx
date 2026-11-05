@@ -11,7 +11,6 @@ const POINTS = [
 export function EsaTrainingHero() {
   return (
     <section className="relative grid w-full grid-cols-[minmax(0,1fr)] overflow-hidden bg-background lg:flex lg:min-h-[46vw] lg:items-center xl:min-h-[654px]">
-      {/* Mobile cream wash, same full-bleed background as the homepage and PSD letter */}
       <div className="pointer-events-none absolute inset-0 sm:hidden">
         <BreakpointImage
           media="(max-width: 639px)"
@@ -23,7 +22,6 @@ export function EsaTrainingHero() {
           sizes="(max-width: 639px) 100vw, 1px"
         />
       </div>
-      {/* Sizes the tablet hero to the portrait artwork */}
       <div aria-hidden="true" className="col-start-1 row-start-1 hidden aspect-[941/1672] sm:block lg:hidden" />
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 hidden aspect-[941/1672] sm:block lg:hidden"
@@ -63,7 +61,6 @@ export function EsaTrainingHero() {
           </div>
         </div>
 
-        {/* Right: frosted key-takeaway card */}
         <div className="mx-auto flex w-full max-w-[407px] justify-center rounded-[30px] border border-[#F5A636]/[0.09] bg-[#F5A636]/[0.26] px-3 py-8 backdrop-blur-[18px] sm:max-w-[440px] lg:mx-0 lg:w-[30vw] lg:max-w-none lg:px-[0.9vw] lg:py-[2.2vw] xl:w-[407px] xl:px-3 xl:py-8">
           <div className="flex w-full max-w-[360px] flex-col items-center gap-8 lg:max-w-none lg:gap-[2.2vw] xl:max-w-[360px] xl:gap-8">
             <div className="flex w-full flex-col items-center gap-2">

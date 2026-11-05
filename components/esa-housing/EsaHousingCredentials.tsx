@@ -6,7 +6,6 @@ import { SCALED_H2, SCALED_P } from "./EsaHousingShared";
 export function EsaHousingCredentials() {
   return (
     <section className="w-full bg-white relative overflow-hidden lg:min-h-[min(47.4vw,682px)]">
-      {/* Artwork with the curve and heart badge baked in, flush right */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(47.9%,690px)]">
         <Image
             quality={90}

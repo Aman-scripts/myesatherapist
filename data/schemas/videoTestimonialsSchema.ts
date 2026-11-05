@@ -1,5 +1,4 @@
 export const videoTestimonialsSchemas = [
-  // 1. CollectionPage
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -43,7 +42,6 @@ export const videoTestimonialsSchemas = [
       ]
     }
   },
-  // 2. WEBPAGE + SCHEDULEACTION (booking CTA on this page)
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -62,7 +60,6 @@ export const videoTestimonialsSchemas = [
       }
     }
   },
-  // 3. VIDEOOBJECT + nested Review — all 23, with confirmed upload dates
   [
     { "@context": "https://schema.org", "@type": "VideoObject", "name": "Sherry H — ESA Letter Review", "description": "Sherry H shares her experience getting connected with a licensed mental health expert and approved for her ESA letter through My ESA Therapist.", "thumbnailUrl": "https://i.ytimg.com/vi/5sBiyUaGksg/hqdefault.jpg", "embedUrl": "https://www.youtube.com/embed/5sBiyUaGksg", "uploadDate": "2026-01-28T00:00:00-05:00", "review": { "@type": "Review", "author": { "@type": "Person", "name": "Sherry H" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "publisher": { "@id": "https://myesatherapist.com/#organization" } } },
     { "@context": "https://schema.org", "@type": "VideoObject", "name": "Marianne C — ESA Letter Review", "description": "Marianne C describes being connected with a mental health professional for her ESA evaluation through My ESA Therapist.", "thumbnailUrl": "https://i.ytimg.com/vi/vTCV7ft0C9s/hqdefault.jpg", "embedUrl": "https://www.youtube.com/embed/vTCV7ft0C9s", "uploadDate": "2026-01-31T00:00:00-05:00", "review": { "@type": "Review", "author": { "@type": "Person", "name": "Marianne C" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "publisher": { "@id": "https://myesatherapist.com/#organization" } } },
@@ -88,7 +85,6 @@ export const videoTestimonialsSchemas = [
     { "@context": "https://schema.org", "@type": "VideoObject", "name": "Leighann — ESA Letter Review", "description": "Leighann, from Akron, Ohio, shares how she found a legitimate path to her ESA letter through My ESA Therapist.", "thumbnailUrl": "https://i.ytimg.com/vi/gxdipq0J2No/hqdefault.jpg", "embedUrl": "https://www.youtube.com/embed/gxdipq0J2No", "uploadDate": "2026-06-22T00:00:00-05:00", "review": { "@type": "Review", "author": { "@type": "Person", "name": "Leighann" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "publisher": { "@id": "https://myesatherapist.com/#organization" } } },
     { "@context": "https://schema.org", "@type": "VideoObject", "name": "Constance — ESA Letter Review", "description": "Constance, from Houston, Texas, shares how getting her ESA letter through My ESA Therapist was easier than expected.", "thumbnailUrl": "https://i.ytimg.com/vi/vId0sRVPY0I/hqdefault.jpg", "embedUrl": "https://www.youtube.com/embed/vId0sRVPY0I", "uploadDate": "2026-07-08T00:00:00-05:00", "review": { "@type": "Review", "author": { "@type": "Person", "name": "Constance" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "publisher": { "@id": "https://myesatherapist.com/#organization" } } }
   ],
-  // 4. BREADCRUMBLIST
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

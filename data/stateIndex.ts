@@ -1,9 +1,3 @@
-// Lightweight state directory (slug/name/abbreviation only) for client
-// components that render state pickers/dropdowns/grids. Deliberately
-// decoupled from statesData.ts, which pulls in every state's full page
-// content plus 47 JSON-LD schema graphs — importing that module from a
-// "use client" component ships all of it to the browser even when only
-// the state names are ever rendered.
 export interface StateIndexEntry {
   slug: string;
   name: string;

@@ -26,7 +26,6 @@ export function DoctorsDisclosureSection() {
     <section className="w-full bg-white overflow-visible py-16 lg:py-[70px]">
       <div className="max-w-[1448px] mx-auto px-4 sm:px-8 lg:px-[80px]">
         
-        {/* Frame: Heading (gap: 16px, height: 100px) */}
         <div className="flex flex-col items-center text-center gap-3 sm:gap-[16px] max-w-[854px] mx-auto mb-14 lg:mb-[67px]">
           <h2 className="heading-h2 text-primary max-w-[624px]">
             Important Provider Disclosure
@@ -36,7 +35,6 @@ export function DoctorsDisclosureSection() {
           </p>
         </div>
 
-        {/* Frame 1261153636 (Cards Grid: 1 col on mobile, 2x2 on tablet/1024px, 4 cols on xl desktop) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-14 sm:gap-y-16 xl:gap-y-0 gap-x-6 max-w-[680px] xl:max-w-[1288px] mx-auto pt-4 xl:pt-0">
           {cards.map((card) => (
             <div

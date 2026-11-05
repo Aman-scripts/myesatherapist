@@ -24,7 +24,6 @@ import {
   ALABAMA_TOC,
 } from "@/data/esaLawsAlabamaData";
 
-// Schema.org Structured Data
 import { esaLawsAlabamaSchemas } from "@/data/schemas/esaLawsAlabamaSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -58,7 +57,6 @@ export const metadata: Metadata = applySheetSeo({
   },
 });
 
-// BlogArticleContent only reads the body fields (intro, sections, cta, final thoughts).
 const article = {
   introParagraphs: [],
   sections: ALABAMA_SECTIONS,
@@ -69,7 +67,6 @@ const article = {
 export default function AlabamaEsaLawsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD */}
       {esaLawsAlabamaSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -90,7 +87,6 @@ export default function AlabamaEsaLawsPage() {
           imageAlt="Alabama ESA laws guide for tenants and landlords"
         />
 
-        {/* Floating Meta/Trust Bar */}
         <div className="-mt-12 sm:-mt-16 lg:-mt-[60px] relative z-30 px-4 sm:px-6 lg:px-8">
           <BlogMetaBar {...ALABAMA_META} />
         </div>

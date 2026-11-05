@@ -4,10 +4,6 @@ import { SEO_SETTINGS, sheetRobots } from "@/data/seoSettings";
 export const SITE_NAME = "My ESA Therapist";
 export const TWITTER_HANDLE = "@MyESATherapist";
 
-/**
- * Served URLs that moved, keyed to the spreadsheet pathname.
- * Canonical stays on the URL this app actually renders.
- */
 const SHEET_PATH_ALIASES: Record<string, string> = {
   "/telehealth-consent/": "/consent-for-telehealth/",
   "/esa-doctors/dr-robert-staaf/": "/esa-doctors/dr-robert-staff/",
@@ -16,11 +12,6 @@ const SHEET_PATH_ALIASES: Record<string, string> = {
   "/contributors/kiera-conrad/": "/author/kiera-conrad/",
 };
 
-/**
- * Overlay title, description, robots, Open Graph, and Twitter fields from the
- * SEO spreadsheet. A blank sheet description is left alone (those cells are
- * unfinished in the source sheet). Images already set on the page are kept.
- */
 export function applySheetSeo(metadata: Metadata): Metadata {
   const canonical = metadata.alternates?.canonical;
   if (typeof canonical !== "string" || !canonical) return metadata;
@@ -64,7 +55,6 @@ export function applySheetSeo(metadata: Metadata): Metadata {
   };
 }
 
-/** One customer-facing statement. Matches the Refund Policy: payment is for the evaluation, not an outcome. */
 export const CHARGE_AND_REFUND =
   "Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund under our Refund Policy. A completed evaluation is non-refundable, whether or not a letter is issued.";
 

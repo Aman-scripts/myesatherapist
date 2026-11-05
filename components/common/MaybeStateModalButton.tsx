@@ -6,7 +6,6 @@ import {
   type StateModalLetter,
 } from "@/components/common/evaluationCta";
 
-/** Link that opens the state modal when its label starts an evaluation. */
 export function MaybeStateModalButton({
   href,
   className,
@@ -21,9 +20,7 @@ export function MaybeStateModalButton({
   children: React.ReactNode;
   stateModal?: boolean;
   letter?: StateModalLetter;
-  /** Visible label when children are not a plain string, such as responsive spans. */
   label?: string;
-  /** Pricing cards always start an evaluation, even when the visible label is split for mobile. */
   evaluationCta?: boolean;
 }) {
   const ctaLabel = label ?? (typeof children === "string" ? children : "");

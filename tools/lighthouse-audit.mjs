@@ -1,12 +1,4 @@
 #!/usr/bin/env node
-// Lighthouse audit: builds the production app, serves it, and runs
-// Performance + Accessibility audits (mobile + desktop) against every
-// unique page template plus representative samples of each dynamic route.
-//
-// Usage:
-//   npm run lighthouse            # build + start + audit + teardown
-//   npm run lighthouse -- --skip-build   # reuse existing .next build
-//   npm run lighthouse -- --pages=/,/about/   # audit only specific paths
 
 import { mkdir, writeFile } from "node:fs/promises";
 import http from "node:http";
@@ -24,10 +16,6 @@ const args = process.argv.slice(2);
 const skipBuild = args.includes("--skip-build");
 const pagesArg = args.find((a) => a.startsWith("--pages="));
 
-// One entry per unique page template, plus 2-3 representative instances of
-// every dynamic route ([state], blog post categories, doctors, authors,
-// policies). Auditing every generated page (100+) is redundant since
-// instances of the same template share the same layout/components.
 const DEFAULT_PAGES = [
   "/",
   "/about-us/",
@@ -61,7 +49,6 @@ const DEFAULT_PAGES = [
   "/state/",
   "/terms-of-use/",
   "/video-testimonials/",
-  // dynamic route samples
   "/california/",
   "/texas/",
   "/new-york/",

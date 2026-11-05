@@ -31,23 +31,19 @@ export function TrustpilotReviewsSection() {
   return (
     <section id="trustpilot-reviews" className="w-full bg-background py-16 lg:py-24">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="heading-h2 text-primary">
             Trustpilot Reviews
           </h2>
         </div>
 
-        {/* Reviews Cards: Matches Figma Frame 1261153766 */}
         <div className="flex flex-col items-center gap-10 lg:gap-[68px]">
-          {/* Row 1: 3 cards on desktop, responsive wrap */}
           <div className="grid w-full max-w-[1281px] grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-[24px]">
             {rowOne.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
           </div>
 
-          {/* Row 2: 2 cards centered on desktop */}
           <div className="grid w-full max-w-[1281px] grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-[24px]">
             {rowTwo.map((review) => (
               <ReviewCard key={review.id} review={review} />
@@ -66,29 +62,24 @@ function ReviewCard({
 }) {
   return (
     <div className="flex h-full w-full max-w-[411px] flex-col items-start gap-5 sm:gap-6">
-      {/* Speech Bubble Box */}
       <div className="relative flex w-full flex-1 flex-col">
         <div
           className="flex min-h-[222px] w-full flex-1 flex-col gap-3 rounded-[20px] p-6 shadow-[0px_4px_10px_rgba(82,82,82,0.1)] transition-all duration-200 hover:shadow-lg"
           style={{ backgroundImage: "var(--color-gradient)" }}
         >
-          {/* Top row: Google / source logo + 5 Stars */}
           <div className="flex items-center gap-3 h-[24px]">
             <TrustpilotMark className="w-[24px] h-[24px] shrink-0" />
             <StarRating />
           </div>
 
-          {/* Quote Text */}
           <p className="font-sans font-semibold text-[15px] sm:text-[16px] text-background leading-[26px]">
             {review.quote}
           </p>
         </div>
 
-        {/* Speech Bubble Tail pointing down towards avatar at left: 42px */}
         <div className="absolute -bottom-[12px] left-[42px] w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[14px] border-t-[#1D6E72]" />
       </div>
 
-      {/* Avatar + Name + State */}
       <div className="flex items-center gap-4 pl-1">
         <div className="w-[60px] h-[60px] rounded-full overflow-hidden relative shadow-sm border-2 border-white/80 shrink-0 bg-[#E8F0F1]">
           <InitialsAvatar name={review.name} index={review.id - 1} className="absolute inset-0 text-[20px]" />

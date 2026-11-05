@@ -33,10 +33,8 @@ export function DoctorAboutPhilosophySection({
     >
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Bento layout — About takes the wider tile, Philosophy the narrower one, each sized to its own content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
 
-          {/* ── About Doctor card (wide tile) ── */}
           <div className="lg:col-span-2 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] space-y-4 sm:space-y-5">
 
             <div className="space-y-3 sm:space-y-4">
@@ -55,7 +53,6 @@ export function DoctorAboutPhilosophySection({
               </div>
             </div>
 
-            {/* CTA */}
             <div className="pt-1">
               <CtaButton
                 href={ctaHref}
@@ -67,7 +64,6 @@ export function DoctorAboutPhilosophySection({
             </div>
           </div>
 
-          {/* ── My Philosophy card (narrow tile) ── */}
           <div className="lg:col-span-1 bg-white rounded-[20px] lg:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_8px_30px_rgba(26,61,79,0.08)] flex flex-col gap-4">
             <h2 className="heading-h2 text-primary">
               {philosophyHeading}

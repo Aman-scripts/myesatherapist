@@ -24,16 +24,13 @@ export function EsaTrainingVsServiceDog() {
             </p>
           </div>
 
-          {/* Desktop table (lg and up) */}
           <div className="relative hidden w-full max-w-[1061px] rounded-[20px] bg-background shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] lg:block">
-            {/* Raised teal column for the ESA */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -bottom-[17px] -top-[17px] left-1/2 z-0 w-[33.1%] -translate-x-1/2 rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)]"
               style={{ backgroundImage: TEAL_GRADIENT }}
             />
             <div className="relative z-10 grid grid-cols-[1fr_33.1%_1fr] pb-[1.8vw] xl:pb-[26px]">
-              {/* Header row */}
               <div className={`flex items-center justify-center heading-h4 ${HEAD_H}`}>
                 FEATURES
               </div>
@@ -65,7 +62,6 @@ export function EsaTrainingVsServiceDog() {
             </div>
           </div>
 
-          {/* Mobile & tablet: stacked comparison cards */}
           <div className="flex w-full max-w-[640px] flex-col gap-4 lg:hidden">
             {ROWS.map((row) => (
               <div key={row.feature} className="overflow-hidden rounded-[20px] bg-background shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)]">
@@ -93,7 +89,6 @@ export function EsaTrainingVsServiceDog() {
         </div>
       </section>
 
-      {/* Closing note + CTA */}
       <section className="w-full bg-background">
         <div className="mx-auto flex w-full max-w-[1222px] flex-col items-center gap-4 px-4 text-center sm:px-8 lg:px-[4vw] xl:px-0">
           <div className="flex flex-col gap-6 lg:gap-8">

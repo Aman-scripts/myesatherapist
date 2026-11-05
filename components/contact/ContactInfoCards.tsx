@@ -38,12 +38,10 @@ export function ContactInfoCards() {
   return (
     <section className="w-full bg-background py-8 sm:py-10 lg:py-12">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Frame 1000011803: Responsive Grid (1280px x 88px, gap 24px) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {cards.map((card, idx) => {
             const Content = (
               <>
-                {/* Frame 13: Left Icon Circle (45px x 45px) */}
                 <div className="hover-badge relative w-[45px] h-[45px] rounded-full bg-white border border-[#EAE5DC] flex items-center justify-center shrink-0">
                   <Image
                     quality={90}
@@ -57,14 +55,11 @@ export function ContactInfoCards() {
                   />
                 </div>
 
-                {/* Frame 1000011796: Right Text Content Stack */}
                 <div className="min-w-0 flex-1 flex flex-col justify-center gap-0.5">
-                  {/* Title: body-large with text-color-gradient */}
                   <div className="body-large text-color-gradient uppercase tracking-tight">
                     {card.title}
                   </div>
 
-                  {/* Detail: body-text with text-body-text */}
                   <div
                     className={`body-text text-body-text leading-snug ${
                       card.isLink ? "hover:underline hover:text-primary transition-colors" : ""

@@ -18,7 +18,6 @@ import { ContributorArticles } from "@/components/author/ContributorArticles";
 import { AuthorProfile } from "@/data/authorsData";
 import { AUTHORS, REVIEWERS } from "@/data/contributorsData";
 
-// Author profile page (same layout as the Legal Reviewer Figma page)
 export function AuthorProfileContent({ author }: { author: AuthorProfile }) {
   const linkedin = [...AUTHORS, ...REVIEWERS].find((person) => person.id === author.slug)?.linkedin;
 

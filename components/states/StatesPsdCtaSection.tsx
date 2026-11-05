@@ -8,7 +8,6 @@ export function StatesPsdCtaSection() {
     <section className="relative w-full bg-background py-12 lg:py-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-[1320px] mx-auto rounded-[24px] lg:rounded-[32px] color-gradient relative overflow-hidden shadow-xl">
         
-        {/* Subtle Decorative Paw Prints in Background - Hidden on mobile */}
         <div className="hidden sm:block absolute right-[30%] bottom-4 w-48 h-48 opacity-20 pointer-events-none">
           <Image
             quality={90}
@@ -22,7 +21,6 @@ export function StatesPsdCtaSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center px-6 py-10 sm:px-12 sm:py-14 lg:px-16 lg:py-16">
           
-          {/* Left Text & CTA Content */}
           <div className="lg:col-span-7 flex flex-col items-start gap-6 z-10">
             <h2 className="heading-h2 text-background">
               Need help with a PSD letter?
@@ -40,7 +38,6 @@ export function StatesPsdCtaSection() {
             </MaybeStateModalButton>
           </div>
 
-          {/* Right Floating Dog & Owner Image */}
           <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[340px] lg:h-[380px] flex items-end justify-center lg:justify-end">
             <div className="relative w-full h-full max-w-[440px]">
               <Image

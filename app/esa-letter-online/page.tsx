@@ -17,7 +17,6 @@ import { EsaOnlineHousingRights } from "@/components/esa-online/EsaOnlineHousing
 import { EsaOnlineSupportAnimals } from "@/components/esa-online/EsaOnlineSupportAnimals";
 import { EsaOnlineAllStates } from "@/components/esa-online/EsaOnlineAllStates";
 
-// Shared Site Components
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { EsaOnlineComparison } from "@/components/esa-online/EsaOnlineComparison";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
@@ -55,7 +54,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function EsaLetterOnlinePage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(esaLetterOnlineSchema, "esa-letter-online")) }}

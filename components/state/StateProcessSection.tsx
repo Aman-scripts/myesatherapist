@@ -69,9 +69,7 @@ export function StateProcessSection({ data }: { data: StateData }) {
       id="process"
       className="w-full bg-background py-14 sm:py-18 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-mt-36 relative z-10"
     >
-      {/* Frame 1000012002 */}
       <div className="max-w-[1283px] mx-auto flex flex-col items-center gap-14 sm:gap-16 lg:gap-20">
-        {/* Frame 1000011447: Heading and Subtitle */}
         <div className="text-center max-w-[1030px] mx-auto space-y-3 sm:space-y-4">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold text-primary leading-tight lg:leading-[54px] tracking-[-0.00015em]">
             {title}
@@ -81,14 +79,12 @@ export function StateProcessSection({ data }: { data: StateData }) {
           </p>
         </div>
 
-        {/* Frame 1000011972: 3 Step Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-6 xl:gap-[26px] w-full max-w-[1283px] mx-auto items-start pb-6 md:pb-16 lg:pb-24">
           {steps.map((step) => (
             <div
               key={step.number}
               className={`hover-card hover-surface w-full max-w-[410px] mx-auto bg-white rounded-[30px] p-[24px_22px] border border-[#EAE5DC]/60 shadow-[0px_1px_7px_rgba(0,0,0,0.08)] flex flex-col justify-between min-h-[303px] ${step.offsetClass}`}
             >
-              {/* Frame 1000011971: Top row with Icon and Number */}
               <div className="flex items-center w-full mb-4">
                 <div className="flex h-[46px] w-[46px] items-center justify-center rounded-full bg-white shadow-[0px_1px_3px_rgba(0,0,0,0.15)]">
                   <Image
@@ -104,7 +100,6 @@ export function StateProcessSection({ data }: { data: StateData }) {
                 </div>
               </div>
 
-              {/* Frame 1000011970: Title and Description */}
               <div className="space-y-2 flex-1">
                 <h3 className="font-heading font-bold text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] text-primary">
                   {step.title}
@@ -117,13 +112,11 @@ export function StateProcessSection({ data }: { data: StateData }) {
           ))}
         </div>
 
-        {/* Frame 1000011978: Why Our Process Is Different / Unique */}
         <div className="w-full max-w-[760px] mx-auto rounded-[30px] bg-[rgba(232,185,44,0.1)] p-6 sm:p-[25px_45px] flex flex-col items-center gap-6 shadow-xs">
           <h4 className="heading-h4 text-primary text-center">
             {data.processDifferentiatorsTitle || "Why Our Process Is Different"}
           </h4>
 
-          {/* Frame 1000012001: Checklist */}
           <div className="flex flex-col items-start gap-2.5 w-full max-w-[620px]">
             {differentiators.map((item, idx) => (
               <div key={idx} className="flex items-start gap-3.5 w-full">
@@ -145,7 +138,6 @@ export function StateProcessSection({ data }: { data: StateData }) {
             ))}
           </div>
 
-          {/* Process Note if provided */}
           {data.processNote && (
             <div className="w-full bg-white/80 rounded-[16px] p-4 border border-accent/40 mt-2">
               <p className="body-small text-body-text">
@@ -155,7 +147,6 @@ export function StateProcessSection({ data }: { data: StateData }) {
           )}
         </div>
 
-        {/* Frame 1000011961: CTA Button and Subtitle */}
         <div className="flex flex-col items-center gap-2">
           <CtaButton href="/pricing/">Start Your ESA Evaluation</CtaButton>
           {data.benefitsRefundNote !== "" && (

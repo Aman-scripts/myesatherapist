@@ -25,7 +25,6 @@ export function DoctorsMatchingSection() {
     <section className="py-16 lg:py-24 bg-background w-full overflow-hidden">
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Frame 1000011447 (Header, gap: 8px) */}
         <div className="text-center mb-12 lg:mb-[80px] max-w-[987px] mx-auto flex flex-col items-center gap-[8px]">
           <h2 className="heading-h2 text-primary max-w-[742px]">
             How You&apos;re Matched With a Provider
@@ -35,7 +34,6 @@ export function DoctorsMatchingSection() {
           </p>
         </div>
 
-        {/* Three process cards, icons sit inside each card */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[20px] max-w-[1272px] mx-auto items-stretch">
           {steps.map((step, idx) => (
             <div

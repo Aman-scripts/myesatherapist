@@ -33,7 +33,6 @@ export function StateTrustBar({ data }: { data: StateData }) {
 
   return (
     <div className="hidden lg:block relative z-30 -mt-[62px] mb-[58px] px-8 pointer-events-auto">
-      {/* Figma: 1146px floating stat card overlapping the hero's bottom edge */}
       <div className="max-w-[1146px] mx-auto bg-white rounded-[30px] shadow-[0px_2px_14px_rgba(0,0,0,0.08)] py-[26px] px-6">
         <div className="grid grid-cols-5 items-center divide-x divide-line-200">
           {stats.map((stat, idx) => (

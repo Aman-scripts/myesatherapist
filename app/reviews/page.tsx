@@ -6,12 +6,10 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// Reviews Components
 import { ReviewsHeroSection } from "@/components/reviews/ReviewsHeroSection";
 import { TrustpilotReviewsSection } from "@/components/reviews/TrustpilotReviewsSection";
 import { ConsumerAffairsReviewsSection } from "@/components/reviews/ConsumerAffairsReviewsSection";
 
-// Shared Components
 import { CtaBanner } from "@/components/home/CtaBanner";
 
 import { reviewsSchema } from "@/data/schemas/reviewsSchema";
@@ -56,27 +54,21 @@ export const metadata: Metadata = applySheetSeo({
 export default function ReviewsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(reviewsSchema, "customer-reviews")) }}
       />
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
       <main className="flex-1">
-        {/* Section 1: Reviews Hero Section with Stat Pills, State Selector & Trustpilot badge */}
         <ReviewsHeroSection />
 
-        {/* Section 2: Trustpilot Reviews Grid */}
         <TrustpilotReviewsSection />
 
-        {/* Section 3: Consumer Affairs Reviews Grid with Verification Bar */}
         <ConsumerAffairsReviewsSection />
 
-        {/* Section 4: Ready to Start Your ESA Evaluation? CTA Banner */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
@@ -85,7 +77,6 @@ export default function ReviewsPage() {
         />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

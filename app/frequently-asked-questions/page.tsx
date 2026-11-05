@@ -8,7 +8,6 @@ import { Footer } from "@/components/layout/Footer";
 import { FaqHero } from "@/components/faq/FaqHero";
 import { FaqAccordionSection } from "@/components/faq/FaqAccordionSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
-// Schema.org Structured Data
 import { frequentlyAskedQuestionsSchemas } from "@/data/schemas/frequentlyAskedQuestionsSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -45,7 +44,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function FaqPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-body-text">
-      {/* Schema.org JSON-LD */}
       {frequentlyAskedQuestionsSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -54,18 +52,14 @@ export default function FaqPage() {
         />
       ))}
 
-      {/* Top Announcement Banner & Header */}
       <TopBanner />
       <Header />
 
       <main className="flex-1">
-        {/* 1. Hero Section with Responsive Background Artworks, Stat Pills, State Selector & Trustpilot */}
         <FaqHero />
 
-        {/* 2. Full 20 FAQ Accordions List */}
         <FaqAccordionSection />
 
-        {/* 3. Ready to Start Your ESA Evaluation CTA Banner (Project Standard CTA) */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description="If you believe an Emotional Support Animal may be appropriate for your situation, you can begin a professional evaluation today."
@@ -76,7 +70,6 @@ export default function FaqPage() {
 
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

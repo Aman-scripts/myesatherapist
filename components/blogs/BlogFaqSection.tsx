@@ -72,11 +72,9 @@ export function BlogFaqSection({
 
   return (
     <section id={id} className="w-full pb-12 sm:pb-16 scroll-mt-28">
-      {/* Anchor targets */}
       {id !== "faq" && <div id="faq" className="sr-only" />}
       {id !== "frequently-asked-questions" && <div id="frequently-asked-questions" className="sr-only" />}
 
-      {/* Frame 1000011447: Section Header */}
       <div className="w-full max-w-[951px] flex flex-col items-start gap-2 mb-8 sm:mb-10">
         <h2 className="heading-h2 text-primary">
           {title}
@@ -88,7 +86,6 @@ export function BlogFaqSection({
         )}
       </div>
 
-      {/* Full-width FAQ Accordions: Frame 1000011828 (width: 951px) */}
       <div className="w-full max-w-[951px] space-y-4 sm:space-y-5">
         {items.map((faq, idx) => {
           const isOpen = openIdx === idx;
@@ -107,12 +104,10 @@ export function BlogFaqSection({
                 className="w-full min-h-[64px] sm:min-h-[74px] px-6 sm:px-8 py-4 sm:py-[19px] flex items-center justify-between text-left rounded-[20px] transition-all duration-200 cursor-pointer group list-none [&::-webkit-details-marker]:hidden"
                 style={{ backgroundImage: TEAL_GRADIENT }}
               >
-                {/* Question Title in heading-h3 (Playfair Display 28px/36px) */}
                 <h3 className="heading-h3 text-white m-0 pr-4 flex-1">
                   {faq.q}
                 </h3>
 
-                {/* Plus (+) Icon that rotates 45deg to (x) when open */}
                 <span
                   className={`w-6 h-6 flex items-center justify-center shrink-0 transition-transform duration-300 ${
                     isOpen ? "rotate-45" : "group-hover:scale-110"

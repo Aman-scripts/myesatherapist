@@ -24,10 +24,6 @@ function labelOf(element: Element) {
   );
 }
 
-/**
- * Sends route changes and click events to GTM. GA4 (G-4Y59YKVXPF) and
- * Microsoft Clarity are tags inside GTM-MRLDDQG.
- */
 export function SiteAnalytics() {
   const pathname = usePathname();
   const first = useRef(true);

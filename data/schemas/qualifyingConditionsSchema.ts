@@ -1,5 +1,4 @@
 export const qualifyingConditionsSchemas = [
-  // 1. COLLECTIONPAGE
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -34,7 +33,6 @@ export const qualifyingConditionsSchemas = [
     }
   },
 
-  // 2. FAQPAGE
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -74,7 +72,6 @@ export const qualifyingConditionsSchemas = [
     ]
   },
 
-  // 3. BREADCRUMBLIST
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

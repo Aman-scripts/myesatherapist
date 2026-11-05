@@ -83,9 +83,7 @@ export function TestimonialsSection({
 
   return (
     <section className="py-16 lg:py-20 xl:py-24 bg-background overflow-hidden">
-      {/* Frame 1000011700: Section Container */}
       <div className="max-w-[1251px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10 lg:gap-14 xl:gap-[72px]">
-        {/* Frame 1000011447: Section Header */}
         <div className="flex flex-col items-center text-center gap-2 max-w-[512px] mx-auto">
           <h2 className="heading-h2 capitalize">
             {title}
@@ -95,11 +93,8 @@ export function TestimonialsSection({
           </p>
         </div>
 
-        {/* Frame 1000011697: Content Wrapper (Cards + Dots + CTA Button) */}
         <div className="flex flex-col items-center gap-8 w-full max-w-[1005px]">
-          {/* Frame 1000011695: Cards + Dots Wrapper */}
           <div className="flex flex-col items-center gap-4 w-full max-w-[1005px]">
-            {/* Frame 1000011695: Cards Row */}
             <div
               ref={scrollRef}
               onScroll={handleScroll}
@@ -114,7 +109,6 @@ export function TestimonialsSection({
                     key={review.id}
                     className="w-[85vw] sm:w-[320px] lg:w-[300px] xl:w-[306px] h-[419px] shrink-0 snap-center bg-white rounded-[20px] overflow-hidden shadow-[0px_2px_4px_rgba(0,0,0,0.15)] flex flex-col justify-between relative"
                   >
-                    {/* Top Area: Video / Thumbnail (276px high to match 419px - 143px = 276px exactly) */}
                     <div
                       className="relative w-full h-[276px] shrink-0 bg-black cursor-pointer group overflow-hidden"
                       onClick={() => setActiveVideo(review.id)}
@@ -129,7 +123,6 @@ export function TestimonialsSection({
                         />
                       ) : (
                         <>
-                          {/* Video Thumbnail */}
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={`https://img.youtube.com/vi/${review.id}/hqdefault.jpg`}
@@ -139,7 +132,6 @@ export function TestimonialsSection({
                             className="w-full h-full object-cover object-center absolute inset-0 transition-transform duration-300 group-hover:scale-105"
                           />
 
-                          {/* Frame 28: Gradient Overlay */}
                           <div
                             className="absolute inset-x-0 bottom-0 h-[150px] pointer-events-none"
                             style={{
@@ -148,12 +140,10 @@ export function TestimonialsSection({
                             }}
                           />
 
-                          {/* YouTube Center Play Button */}
                           <div className="absolute inset-0 flex items-center justify-center">
                             <YouTubePlayIcon className="w-16 h-12 drop-shadow-lg transition-transform duration-200 group-hover:scale-110" />
                           </div>
 
-                          {/* Client Name (Playfair Display 28px/36px) */}
                           <div className="absolute inset-x-0 bottom-[11px] text-center z-10 px-3 pointer-events-none">
                             <h3 className="heading-h3 text-white text-center drop-shadow-md">
                               {review.name}
@@ -163,7 +153,6 @@ export function TestimonialsSection({
                       )}
                     </div>
 
-                    {/* Frame 29: Solid Teal Gradient Quote Box (143px high exactly) */}
                     <div
                       className="w-full h-[143px] shrink-0 flex flex-col items-center justify-center px-[17.5px] rounded-b-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] color-gradient selection:bg-white/30 selection:text-white"
                     >
@@ -176,7 +165,6 @@ export function TestimonialsSection({
               })}
             </div>
 
-            {/* Frame 123: Pagination Dots */}
             <div className="flex items-center justify-center gap-[6px] h-2">
               {reviews.map((_, idx) => (
                 <button
@@ -198,7 +186,6 @@ export function TestimonialsSection({
             </div>
           </div>
 
-          {/* Frame 1000011890: CTA Button */}
           <div className="flex flex-col items-center">
             <CtaButton href={buttonHref} variant="accent" className="w-auto">
               {buttonText}

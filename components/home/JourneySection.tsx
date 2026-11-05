@@ -29,7 +29,6 @@ export function JourneySection() {
   return (
     <section className="py-12 sm:py-16 xl:py-[72px] bg-background">
       <div className="max-w-[1033px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <div className="mb-8 sm:mb-10 xl:mb-[72px] space-y-2 max-w-[999px] mx-auto text-center">
           <h2 className="heading-h2 capitalize">
             Your ESA Journey Starts Here
@@ -39,14 +38,12 @@ export function JourneySection() {
           </p>
         </div>
 
-        {/* 3 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-[18px]">
           {cards.map((card) => (
             <div
               key={card.stat}
               className="rounded-[20px] overflow-hidden shadow-[0_15px_35px_-5px_rgba(26,61,79,0.2)] flex flex-col bg-[#1A3D4F]"
             >
-              {/* Photo Area */}
               <div className="relative w-full h-[340px] sm:h-[370px] lg:h-[390px]">
                 <Image
                   quality={90}
@@ -57,12 +54,9 @@ export function JourneySection() {
                   sizes="(min-width: 1024px) 333px, 100vw"
                 />
 
-                {/* Dark gradient overlay at bottom of photo for text legibility */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none" />
 
-                {/* Overlaid content: Circular Icon Badge with stat inside + Gold Divider */}
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end pb-3 z-10">
-                  {/* Circular Icon + Stat Badge (Figma: 103px x 103px, rgba(239, 255, 241, 0.8)) */}
                   <div className="w-[103px] h-[103px] rounded-full bg-[rgba(239,255,241,0.85)] shadow-md flex flex-col items-center justify-center p-1.5 backdrop-blur-[2px]">
                     <Image
                       quality={90}
@@ -78,12 +72,10 @@ export function JourneySection() {
                     </span>
                   </div>
 
-                  {/* Gold Divider (Rectangle 6: width 80px, height 1px, accent) */}
                   <div className="w-20 h-[1px] bg-accent rounded-[10px] mt-2.5" />
                 </div>
               </div>
 
-              {/* Bottom Teal Gradient Block (Frame 29: 87px height, text 18px Manrope background) */}
               <div
                 className="px-5 py-4 text-center flex-1 flex items-center justify-center min-h-[87px] color-gradient"
               >

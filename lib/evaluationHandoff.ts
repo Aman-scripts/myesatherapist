@@ -46,7 +46,6 @@ export function validateEvaluationLead(lead: EvaluationLead, termsAccepted: bool
   return errors;
 }
 
-/** Survey site for the 29 listed states. Heally prefill for every other state. */
 export function evaluationDestination(lead: EvaluationLead) {
   const entry = STATE_INDEX.find((state) => state.name === lead.stateName);
   const abbreviation = entry?.abbreviation || "CA";

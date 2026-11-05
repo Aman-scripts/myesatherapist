@@ -8,7 +8,6 @@ const ART_ALT = "Woman hugging her cat, surrounded by icons for anxiety, stress,
 export function QualifyingConditionsHero() {
   return (
     <section className="relative grid w-full grid-cols-[minmax(0,1fr)] overflow-hidden bg-background lg:block lg:min-h-[55vw] xl:min-h-[804px]">
-      {/* Mobile cream wash, same full-bleed background as the homepage and PSD letter */}
       <div className="pointer-events-none absolute inset-0 sm:hidden">
         <BreakpointImage
           media="(max-width: 639px)"
@@ -20,7 +19,6 @@ export function QualifyingConditionsHero() {
           sizes="(max-width: 639px) 100vw, 1px"
         />
       </div>
-      {/* Sizes the tablet hero to the portrait artwork */}
       <div aria-hidden="true" className="col-start-1 row-start-1 hidden aspect-[834/1458] sm:block lg:hidden" />
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 hidden aspect-[834/1458] sm:block lg:hidden"

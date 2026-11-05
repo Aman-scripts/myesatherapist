@@ -2,11 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { CtaButton, WaveImage } from "./EsaOnlineShared";
 
-/*
- * From `lg` up, type and spacing scale with the viewport (vw) and cap at their 1440px design
- * values, so the section is a scaled copy of the 1440px design. That keeps the text column and
- * the artwork (fixed proportional width) from overlapping at any width.
- */
 const H2 =
   "font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-primary leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(28.4vw,409px)]";
 const P =
@@ -15,10 +10,7 @@ const P =
 export function EsaOnlineWhatIs() {
   return (
     <section className="w-full bg-white relative overflow-hidden">
-      {/* Illustration (curve built into the artwork), flush right */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(50.7%,730px)]">
-        {/* The artwork's curved bottom edge ends ~14% above its last row, so it is scaled up
-            and the empty strip overflows the section (clipped) — no gap under the image. */}
         <div className="absolute inset-x-0 top-0 h-[116.6%]">
           <Image
             quality={90}

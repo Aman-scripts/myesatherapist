@@ -15,9 +15,7 @@ interface HeroStateDropdownProps {
   buttonClassName?: string;
   iconSize?: number;
   placeholder?: string;
-  /** Called when a state is chosen. Navigation happens from the Get Started button. */
   onChange?: (slug: string) => void;
-  /** Replaces the floating list, used when the menu should sit inside a modal. */
   menuClassName?: string;
 }
 

@@ -12,7 +12,6 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { AUTHORS, REVIEWERS, CONTRIBUTORS_FAQS } from "@/data/contributorsData";
 
-// Schema.org Structured Data
 import { contributorsSchemas } from "@/data/schemas/contributorsSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -49,7 +48,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function ContributorsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Schema.org JSON-LD */}
       {contributorsSchemas.map((schemaObj, index) => (
         <script
           key={index}

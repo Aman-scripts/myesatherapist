@@ -5,12 +5,10 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// Pricing Page Components
 import { PricingHero } from "@/components/pricing/PricingHero";
 import { PricingPlansSection } from "@/components/pricing/PricingPlansSection";
 import { PricingWhyTrustSection } from "@/components/pricing/PricingWhyTrustSection";
 
-// Common Shared Components from Homepage / Project
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { pricingSchema } from "@/data/schemas/pricingSchema";
@@ -74,34 +72,27 @@ const PRICING_FAQS: FaqItem[] = [
 export default function PricingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(pricingSchema, "esa-letter-cost")) }}
       />
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
       <main className="flex-1">
-        {/* 1. Hero Section with Stat Pills, State Selector & Trustpilot */}
         <PricingHero />
 
-        {/* 2. Emotional Support Animal & Psychiatric Service Dog Plans + More Than One Pet Add-on */}
         <PricingPlansSection />
 
-        {/* 3. You Only Pay After Your Evaluation (Why Trust Us 4-Card Style) */}
         <PricingWhyTrustSection />
 
-        {/* 5. Common ESA Letter Pricing Questions (Shared Project FaqSection) */}
         <FaqSection
           title="Frequently Asked Questions"
           subtitle="Get answers to common questions about ESA letters and our service."
           faqs={PRICING_FAQS}
         />
 
-        {/* 6. Ready to Start Your ESA Evaluation? (Shared Project CtaBanner) */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description={
@@ -118,7 +109,6 @@ export default function PricingPage() {
 
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

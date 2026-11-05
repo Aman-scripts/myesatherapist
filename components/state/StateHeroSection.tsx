@@ -46,11 +46,6 @@ function renderHeroTitle(title?: string, stateName?: string) {
     ));
   }
 
-  // Break standard titles into exactly 3 balanced lines:
-  // e.g. "ESA Letter Evaluations by Alaska Licensed Professionals" ->
-  // Line 1: ESA Letter
-  // Line 2: Evaluations by
-  // Line 3: Alaska Licensed Professionals
   const match = title.match(/^(.*?ESA\s*Letter|.*?ESA)\s+(Evaluations\s+by)\s+(.*)$/i);
   if (match) {
     return (
@@ -83,12 +78,10 @@ interface EvaluationFormCardProps {
   handleSubmit: (e: React.FormEvent) => void;
   errors: EvaluationErrors;
   compact?: boolean;
-  /** Desktop hero card: shorter rhythm so the card clears the floating trust bar. */
   tight?: boolean;
   titleAs?: "h2" | "p";
 }
 
-// Figma: 44px fields, 5px radius, 0.2px body-text border on a translucent cream fill
 const INPUT_CLASS =
   "w-full h-[44px] rounded-[5px] border-[0.2px] border-body-text px-3.5 text-[16px] lg:text-[14px] font-medium text-body-text placeholder:text-body-text/70 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:!border-primary transition-[background-color,border-color,color,box-shadow] duration-150 font-sans";
 

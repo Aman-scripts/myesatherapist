@@ -20,11 +20,6 @@ const FACTORS = [
   { text: "How an ESA may support your emotional stability", icon: "/esa-icons/icon-12.svg" },
 ];
 
-/*
- * From `lg` up, type and spacing scale with the viewport (vw) and cap at their 1440px design
- * values, so the section is a scaled copy of the 1440px design and the text never runs into
- * the artwork (which has a fixed proportional width).
- */
 export function EsaOnlineEligible() {
   return (
     <section className="w-full bg-white relative overflow-hidden">

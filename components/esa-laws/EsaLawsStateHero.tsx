@@ -14,9 +14,7 @@ export function EsaLawsStateHero({
   title: string;
   description: string;
   image?: string;
-  /** Portrait artwork for < sm. With imageTablet, the hero uses a centered stacked layout below lg. */
   imageMobile?: string;
-  /** Portrait artwork for sm to < lg. */
   imageTablet?: string;
   imageAlt?: string;
 }) {

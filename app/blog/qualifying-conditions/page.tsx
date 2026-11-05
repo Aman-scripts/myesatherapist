@@ -12,7 +12,6 @@ import { QualifyingConditionsEligibility } from "@/components/qualifying-conditi
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
-// Schema.org Structured Data
 import { qualifyingConditionsSchemas } from "@/data/schemas/qualifyingConditionsSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -74,7 +73,6 @@ const qualifyingConditionsFaqs = [
 export default function QualifyingConditionsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-body-text selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD */}
       {qualifyingConditionsSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -88,7 +86,6 @@ export default function QualifyingConditionsPage() {
 
       <main className="flex-1">
         <QualifyingConditionsHero />
-        {/* Content sections, 94px apart on desktop */}
         <div className="flex flex-col gap-12 pb-12 pt-12 sm:gap-16 sm:pt-16 lg:gap-[6vw] lg:pb-[6vw] lg:pt-[5.9vw] xl:gap-[94px] xl:pb-[94px] xl:pt-[85px]">
           <QualifyingConditionsLearnMore />
           <QualifyingConditionsReasons />

@@ -6,7 +6,6 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// Page Components
 import { EsaTrainingHero } from "@/components/esa-training/EsaTrainingHero";
 import { EsaTrainingLegalSection } from "@/components/esa-training/EsaTrainingLegalSection";
 import { EsaTrainingVsServiceDog } from "@/components/esa-training/EsaTrainingVsServiceDog";
@@ -17,11 +16,9 @@ import { EsaTrainingConditionsSection } from "@/components/esa-training/EsaTrain
 import { EsaTrainingBondSection } from "@/components/esa-training/EsaTrainingBondSection";
 import { EsaTrainingMistakesSection } from "@/components/esa-training/EsaTrainingMistakesSection";
 
-// Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
-// Schema.org Structured Data
 import { esaTrainingSchemas } from "@/data/schemas/esaTrainingSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -81,7 +78,6 @@ const esaTrainingFaqs = [
 export default function EsaTrainingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-body-text selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD */}
       {esaTrainingSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -94,37 +90,26 @@ export default function EsaTrainingPage() {
       <Header />
 
       <main className="flex-1">
-        {/* 1. Hero */}
         <EsaTrainingHero />
 
-        {/* 2-9. Content sections, 94px apart on desktop */}
         <div className="flex flex-col gap-12 pb-12 pt-12 sm:gap-16 sm:pt-16 lg:gap-[6vw] lg:pb-[6vw] lg:pt-[7vw] xl:gap-[94px] xl:pb-[94px] xl:pt-[100px]">
-          {/* Legal Requirements */}
           <EsaTrainingLegalSection />
 
-          {/* ESA vs Service Dog comparison table */}
           <EsaTrainingVsServiceDog />
 
-          {/* Recommended Basics */}
           <EsaTrainingBasicsSection />
 
-          {/* Training by Animal Type */}
           <EsaTrainingBySpeciesSection />
 
-          {/* Can You Train Your ESA Yourself? */}
           <EsaTrainingDiySection />
 
-          {/* Mental Health Condition-Specific Training Support */}
           <EsaTrainingConditionsSection />
 
-          {/* The Human-Animal Bond */}
           <EsaTrainingBondSection />
 
-          {/* Common ESA Training Mistakes to Avoid */}
           <EsaTrainingMistakesSection />
         </div>
 
-        {/* 10. Frequently Asked Questions */}
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
@@ -133,7 +118,6 @@ export default function EsaTrainingPage() {
           bg="bg-background"
         />
 
-        {/* 11. CTA Banner */}
         <CtaBanner
           title="Training Helps. A Licensed Evaluation Makes It Official."
           description={

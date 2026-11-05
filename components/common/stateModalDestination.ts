@@ -1,6 +1,5 @@
 import { STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 
-/** The 29 states that continue on the survey site instead of Heally. */
 export const SURVEY_STATE_SLUGS = new Set([
   "maryland",
   "virginia",
@@ -57,7 +56,6 @@ function encodePreset(payload: object) {
     .replace(/=+$/, "");
 }
 
-/** Heally scheduling portal. Personal fields are included when the lead form collected them. */
 export function heallyPortalUrl(fields: {
   abbreviation: string;
   firstName?: string;
@@ -83,7 +81,6 @@ export function heallyPortalUrl(fields: {
   return `https://myesatherapist.getheally.com/patient_admin/prefill?redirect=sched&preset=${preset}`;
 }
 
-/** Survey for the 29 listed states. VideoVisit scheduling for every other state. */
 export function psdStateDestination(slug: string) {
   const entry = STATE_INDEX_BY_SLUG[slug];
   if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
@@ -100,7 +97,6 @@ export type SurveyRegisterFields = {
   state?: string;
 };
 
-/** Survey register URL. Password stays off the link; the person sets it there. */
 export function surveyRegisterUrl(fields: SurveyRegisterFields = {}) {
   const params = new URLSearchParams();
   const add = (key: string, value?: string) => {
@@ -123,7 +119,6 @@ export function letterFromPath(pathname: string): ModalLetter {
   return pathname.includes("/psd-letter") ? "psd" : "esa";
 }
 
-/** Where the modal's Get Started button goes after a state is chosen. */
 export function stateModalDestination(letter: ModalLetter, slug: string): string {
   if (letter === "psd") {
     return psdStateDestination(slug);

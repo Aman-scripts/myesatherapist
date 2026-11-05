@@ -71,18 +71,15 @@ const RESOURCE_LINKS = [
   { label: "ESA by State", href: "/state/" },
 ];
 
-/** Desktop "Resources" button that opens a dropdown of resource pages on click. */
 function ResourcesMenu() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  // close after navigating
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // close on outside click / Escape
   useEffect(() => {
     if (!open) return;
     const onDown = (e: MouseEvent) => {
@@ -145,7 +142,6 @@ export function Header() {
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const pathname = usePathname();
 
-  // Check route conditions
   const isPsd = pathname === "/psd-letter/";
   const isDoctors = pathname === "/esa-doctors/" || pathname === "/esa-doctors/";
   const isLegalReviewer =
@@ -156,11 +152,9 @@ export function Header() {
   return (
     <>
     <header className="sticky top-0 z-50 bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
-      {/* Main Navigation Bar (Frame 1000011803: 1440px x 98px, padding 13px 80px) */}
       <div className="w-full bg-white">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] h-20 lg:h-[98px] flex items-center justify-between">
 
-          {/* Logo (ESA LOGO FINAL-01 1: 171px x 71px) */}
           <Link href="/" className="flex items-center shrink min-w-0">
             <Image quality={90}
               src="/common/myesa-logo.svg"
@@ -175,7 +169,6 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Nav Links (clean spacing, no overlap with logo) */}
           <nav className="hidden lg:flex items-center gap-[28px] mx-6 shrink-0 text-body-text">
             <Link
               href="/esa-doctors/"
@@ -200,10 +193,8 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Desktop Right Action Buttons (Frame 1000011948: 442px x 48px, gap 8px) */}
           <div className="hidden lg:flex items-center gap-[8px] justify-end shrink-0">
             {isPsd ? (
-              /* PSD Letter Page: Single "Start Your Consultation" Button */
               <CtaButton
                 href="#pricing"
                 className="w-auto px-6 h-[54px] text-[16px]"
@@ -211,7 +202,6 @@ export function Header() {
                 Start Your Consultation
               </CtaButton>
             ) : isDoctors || isLegalReviewer ? (
-              /* Doctors / Legal Reviewer Page: Single "Get Started" Button */
               <CtaButton
                 href={isLegalReviewer ? "/#pricing" : "#therapists"}
                 className="w-auto px-6 h-[54px] text-[16px]"
@@ -219,9 +209,7 @@ export function Header() {
                 Start Your ESA Evaluation
               </CtaButton>
             ) : (
-              /* Homepage (Frame 1000011888 & Frame 1000011890) */
               <>
-                {/* Button 1: Free ESA Eligibility Checker (Frame 1000011888) */}
                 <CtaButton
                   variant="secondary"
                   className="w-auto px-6 h-[54px] text-[16px]"
@@ -230,7 +218,6 @@ export function Header() {
                   Free ESA Eligibility Checker
                 </CtaButton>
 
-                {/* Button 2: Get Started (Frame 1000011890) */}
                 <CtaButton
                   href="#pricing"
                   forceStateModal
@@ -242,7 +229,6 @@ export function Header() {
             )}
           </div>
 
-          {/* Mobile: Start Evaluation + menu */}
           <div className="lg:hidden flex items-center gap-2 shrink-0">
             <CtaButton
               variant="accent"
@@ -268,10 +254,8 @@ export function Header() {
         </div>
       </div>
 
-      {/* States Bar (Frame 1000011905: 1440px x 37px, bg background) */}
       <div className="hidden lg:block bg-background w-full h-[37px]">
         <div className="max-w-[1278px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-0 h-full flex items-center justify-between">
-          {/* Left: Frame 1000011907 (States with gap 26px) */}
           <div className="flex items-center gap-4 lg:gap-[26px] h-[26px] overflow-x-auto no-scrollbar">
             {[
               { name: "California", slug: "california" },
@@ -302,7 +286,6 @@ export function Header() {
             })}
           </div>
 
-          {/* Right: Frame 1000011909 (See all 50 States + Arrow) */}
           <Link
             href="/state/"
             className="font-manrope font-medium text-[13px] xl:text-[14px] leading-[26px] text-body-text hover:opacity-85 transition-opacity flex items-center gap-2 whitespace-nowrap shrink-0"
@@ -313,7 +296,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
 
 
       {mobileOpen && (

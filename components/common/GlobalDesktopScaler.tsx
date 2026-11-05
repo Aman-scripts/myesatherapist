@@ -6,17 +6,6 @@ const SCALER_STYLE_ID = "desktop-scaler-css";
 const DESIGN_WIDTH = 1440;
 const MIN_DESKTOP_WIDTH = 1024;
 
-/**
- * GlobalDesktopScaler
- *
- * Keeps the 1440px desktop design scaled to fit screens between 1024px and
- * 1439px on every page. The inline script in app/layout.tsx applies the same
- * <style> before first paint; this component only keeps it in sync on resize.
- *
- * Zoom is applied to <body>, never <html>, so html.clientWidth always reports
- * the real usable viewport width (excluding the scrollbar) and the measurement
- * never feeds back into itself.
- */
 export function GlobalDesktopScaler() {
   useEffect(() => {
     const root = document.documentElement;

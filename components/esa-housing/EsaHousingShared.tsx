@@ -1,9 +1,5 @@
 import React from "react";
 
-/*
- * Shared type styles. From `lg` up, sizes scale with the viewport (vw) and cap at their 1440px
- * design values, so image-beside-text sections stay proportional to the 1440px design.
- */
 export const SECTION_H2 =
   "font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em]";
 export const SECTION_LEAD = "body-large text-body-text";

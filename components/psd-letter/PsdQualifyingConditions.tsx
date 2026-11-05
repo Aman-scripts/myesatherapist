@@ -136,17 +136,14 @@ export function PsdQualifyingConditions() {
   return (
     <section className="pt-4 sm:pt-6 lg:pt-8 pb-14 sm:pb-16 md:pb-0 color-background overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="text-center mb-6 lg:mb-8 space-y-3 max-w-[1100px] mx-auto">
           <h2 className="heading-h2 capitalize max-w-[850px] mx-auto">
             Common Qualifying Conditions for a PSD Letter
           </h2>
         </div>
 
-        {/* Desktop / tablet: dog photo with hover-enabled floating badges */}
         <div className="hidden md:block relative mx-auto" style={{ maxWidth: 1278 }}>
           <div className="relative w-full" style={{ aspectRatio: "1278 / 418" }}>
-            {/* Photo */}
             <div
               className="absolute overflow-hidden pointer-events-none"
               style={{ left: "11.50%", top: "7.89%", width: "74.49%", aspectRatio: "952 / 493" }}
@@ -161,7 +158,6 @@ export function PsdQualifyingConditions() {
               />
             </div>
 
-            {/* Interactive Floating Condition Badges with Hover Trigger */}
             {conditions.map((c) => {
               const isVisible = hoveredCondition === c.label;
 
@@ -177,7 +173,6 @@ export function PsdQualifyingConditions() {
                   onMouseEnter={() => setHoveredCondition(c.label)}
                   onMouseLeave={() => setHoveredCondition(null)}
                 >
-                  {/* Badge */}
                   <div
                     onClick={() => setHoveredCondition(c.label)}
                     className="flex items-center gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-3 bg-white rounded-[6px] md:rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] pl-1 md:pl-1 lg:pl-1.5 xl:pl-2 pr-2.5 md:pr-2.5 lg:pr-3.5 xl:pr-4 h-[28px] md:h-[28px] lg:h-[36px] xl:h-12 shadow-[0_4px_12px_-6px_rgba(46,90,102,0.35)] lg:shadow-[0_6px_18px_-8px_rgba(46,90,102,0.35)] xl:shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit whitespace-nowrap transition-all duration-200 cursor-pointer hover:scale-[1.02]"
@@ -201,7 +196,6 @@ export function PsdQualifyingConditions() {
                     </span>
                   </div>
 
-                  {/* Popover Card (Shown on Hover/Active) */}
                   {isVisible && (
                     <div
                       className={`absolute ${
@@ -210,7 +204,6 @@ export function PsdQualifyingConditions() {
                         c.alignRight ? "right-0" : "left-0"
                       } w-[170px] lg:w-[210px] xl:w-[230px] bg-white rounded-[10px] lg:rounded-[14px] p-2.5 lg:p-3 shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-[#E2E8F0] z-50 animate-fadeIn pointer-events-auto`}
                     >
-                      {/* Arrow Pointer */}
                       <div
                         className={`absolute ${
                           c.top > 55
@@ -221,7 +214,6 @@ export function PsdQualifyingConditions() {
                         } w-3 h-3 lg:w-3.5 lg:h-3.5 bg-white rotate-45 border-[#E2E8F0]`}
                       />
 
-                      {/* Puppy Photo */}
                       <div className="relative w-full h-[65px] lg:h-[80px] xl:h-[95px] rounded-[6px] lg:rounded-[8px] overflow-hidden bg-slate-100">
                         <Image
             quality={90}
@@ -233,7 +225,6 @@ export function PsdQualifyingConditions() {
                         />
                       </div>
 
-                      {/* Description */}
                       <p className="body mt-2 text-left">
                         {c.description}
                       </p>
@@ -243,11 +234,9 @@ export function PsdQualifyingConditions() {
               );
             })}
           </div>
-          {/* The photo extends past the badge box; this spacer makes the section end at the photo edge (no gap) */}
           <div aria-hidden className="pointer-events-none" style={{ paddingTop: "8.44%" }} />
         </div>
 
-        {/* Mobile: stacked photo + wrapping badge grid */}
         <div className="md:hidden flex flex-col items-center gap-8">
           <div className="relative w-full max-w-sm aspect-[952/493] overflow-hidden">
             <Image
@@ -289,16 +278,13 @@ export function PsdQualifyingConditions() {
                     </span>
                   </button>
 
-                  {/* Mobile Modal/Popover */}
                   {isVisible && (
                     <>
-                      {/* Backdrop overlay */}
                       <div
                         className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 animate-fadeIn"
                         onClick={() => setHoveredCondition(null)}
                       />
                       <div className="fixed inset-x-4 top-1/2 -translate-y-1/2 bg-white rounded-[16px] px-3.5 pt-2.5 pb-3.5 sm:px-4 sm:pt-3 sm:pb-4 shadow-[0_12px_40px_rgba(0,0,0,0.2)] border border-slate-100 z-50 w-full max-w-[260px] mx-auto animate-fadeIn">
-                        {/* Top Close Row */}
                         <div className="flex justify-end mb-1.5">
                           <button
                             type="button"
@@ -312,7 +298,6 @@ export function PsdQualifyingConditions() {
                           </button>
                         </div>
 
-                        {/* Image */}
                         <div className="relative w-full h-[115px] rounded-[12px] overflow-hidden mb-3">
                           <Image
             quality={90}
@@ -324,7 +309,6 @@ export function PsdQualifyingConditions() {
                           />
                         </div>
 
-                        {/* Description text matching mockup */}
                         <p className="body text-left">
                           {c.description}
                         </p>

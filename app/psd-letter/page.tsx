@@ -6,7 +6,6 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// PSD Letter Dedicated Components
 import { PsdHeroSection } from "@/components/psd-letter/PsdHeroSection";
 import { AboutWhyTrustSection } from "@/components/about-us/AboutWhyTrustSection";
 import { WhatIsPsdSection } from "@/components/psd-letter/WhatIsPsdSection";
@@ -20,7 +19,6 @@ import { PsdCapabilitiesSection } from "@/components/psd-letter/PsdCapabilitiesS
 import { PsdWhyChooseSection } from "@/components/psd-letter/PsdWhyChooseSection";
 import { PsdCtaSection } from "@/components/psd-letter/PsdCtaSection";
 
-// Reused Common Components from Homepage
 import { PricingSection } from "@/components/home/PricingSection";
 import { FaqSection, FaqItem } from "@/components/home/FaqSection";
 import { psdLetterSchema } from "@/data/schemas/psdLetterSchema";
@@ -107,32 +105,25 @@ const PSD_FAQS: FaqItem[] = [
 export default function PsdLetterPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(psdLetterSchema, "psd-letter")) }}
       />
 
-      {/* Top Banner & Navigation */}
       <TopBanner />
       <Header />
 
       <main className="flex-1">
-        {/* 1. PSD Hero Section */}
         <PsdHeroSection />
 
         <AboutWhyTrustSection />
 
-        {/* 3. What is a PSD Letter Section */}
         <WhatIsPsdSection />
 
-        {/* 4. Understanding PSD Letter Benefits */}
         <PsdBenefitsSection />
 
-        {/* 5. Simple 3-Step Process */}
         <PsdProcessSection />
 
-        {/* 6. Plans & Pricing (Warm background bg-background matching Benefits Section) */}
         <div id="pricing">
           <PricingSection
             bgColor="bg-background"
@@ -141,19 +132,14 @@ export default function PsdLetterPage() {
           />
         </div>
 
-        {/* 7. PSD vs ESA Comparison Table */}
         <PsdComparisonTable />
 
-        {/* 8. Common Qualifying Conditions for a PSD Letter */}
         <PsdQualifyingConditions />
 
-        {/* 9. Who Benefits Most From PSD Letter */}
         <WhoBenefitsSection />
 
-        {/* 10. Our Licensed Professionals for PSD Support */}
         <LicensedProfessionalsSection />
 
-        {/* 11. What A Psychiatric Service Dog Can Do */}
         <PsdCapabilitiesSection />
 
         <PsdWhyChooseSection />
@@ -167,7 +153,6 @@ export default function PsdLetterPage() {
         <PsdCtaSection />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

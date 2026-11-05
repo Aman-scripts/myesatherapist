@@ -7,18 +7,15 @@ import { TopBanner } from "@/components/layout/TopBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// Page Components
 import { EsaGuideHero } from "@/components/esa-guide/EsaGuideHero";
 import { EsaGuideIntro } from "@/components/esa-guide/EsaGuideIntro";
 import { EsaGuideFilterableGrid } from "@/components/esa-guide/EsaGuideFilterableGrid";
 import { EsaGuideWhyResearch } from "@/components/esa-guide/EsaGuideWhyResearch";
 import { EsaGuideTrustHub } from "@/components/esa-guide/EsaGuideTrustHub";
 
-// Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
-// Schema.org Structured Data
 import { esaGuideSchemas } from "@/data/schemas/esaGuideSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -81,7 +78,6 @@ const esaGuideFaqs = [
 export default function EsaGuidePage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-body-text selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD Structured Data */}
       {esaGuideSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -90,16 +86,13 @@ export default function EsaGuidePage() {
         />
       ))}
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
 
       <main className="flex-1">
-        {/* 1. Hero: Resource Hub & Introduction */}
         <EsaGuideHero />
 
-        {/* Content sections, 94px apart on desktop */}
         <div className="flex flex-col gap-12 pb-12 pt-12 sm:gap-16 sm:pt-16 lg:gap-[6vw] lg:pb-[6vw] lg:pt-[5.9vw] xl:gap-[94px] xl:pb-[94px] xl:pt-[91px]">
           <EsaGuideIntro />
           <EsaGuideFilterableGrid />
@@ -107,7 +100,6 @@ export default function EsaGuidePage() {
           <EsaGuideTrustHub />
         </div>
 
-        {/* 6. Standard Project FAQ Section */}
         <FaqSection
           id="faq"
           title="Frequently Asked Questions"
@@ -116,14 +108,12 @@ export default function EsaGuidePage() {
           bg="bg-background"
         />
 
-        {/* 7. Standard Project CTA Banner */}
         <CtaBanner
           buttonHref="/pricing/"
           bgColor="bg-background"
         />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

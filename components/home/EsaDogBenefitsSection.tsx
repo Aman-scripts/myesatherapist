@@ -63,9 +63,7 @@ const BENEFITS: BenefitCard[] = [
 export function EsaDogBenefitsSection() {
   return (
     <section className="relative w-full bg-white py-14 sm:py-16 lg:py-24 overflow-hidden">
-      {/* Container matching Figma 1281px content width */}
       <div className="max-w-[1281px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-12 sm:mb-14 lg:mb-16 space-y-3 max-w-[680px] mx-auto">
           <h2 className="heading-h2 capitalize">
             Benefits Of Having An Emotional Support Animal
@@ -75,14 +73,12 @@ export function EsaDogBenefitsSection() {
           </p>
         </div>
 
-        {/* 8 Cards Grid (4 columns x 2 rows on desktop: 1281px, gap 23px col, 18px row) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[23px] gap-y-[18px]">
           {BENEFITS.map((benefit, idx) => (
             <div
               key={idx}
               className="bg-white rounded-[20px] p-5 sm:p-6 shadow-[0px_2px_8px_rgba(0,0,0,0.06)] border border-black/[0.04] flex flex-col items-start gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
             >
-              {/* Cream Tile Icon Container (Figma: #F5EFE6) */}
               <div className="w-12 h-12 rounded-[14px] bg-[#F5EFE6] flex items-center justify-center shrink-0">
                 <Image
                   quality={90}
@@ -95,7 +91,6 @@ export function EsaDogBenefitsSection() {
                 />
               </div>
 
-              {/* Title & Description */}
               <div className="flex flex-col items-start gap-2 w-full">
                 <h3 className="heading-h3 capitalize text-primary text-left">
                   {benefit.title}

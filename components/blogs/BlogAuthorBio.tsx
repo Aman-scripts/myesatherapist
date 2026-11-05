@@ -25,20 +25,16 @@ export function BlogAuthorBio({
     <section id="about-the-author" className="w-full bg-white py-10 sm:py-12 lg:py-[48px] px-4 sm:px-8 lg:px-12 xl:px-[165px] scroll-mt-24">
       <div className="max-w-[1117px] mx-auto space-y-4 sm:space-y-6">
         
-        {/* Section Heading: Frame 1261153657 */}
         <h2 className="heading-h2 text-primary text-center sm:text-left">
           About the Author
         </h2>
 
-        {/* Author Card: Frame 1261153657 */}
         <div
           className="rounded-[30px] p-6 sm:p-8 lg:py-[32px] lg:px-[70px] text-background shadow-sm"
           style={{ background: "var(--color-gradient)" }}
         >
-          {/* Frame 1261153665 */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 lg:gap-[64px]">
             
-            {/* Left Column: Frame 1261153664 */}
             <div className="flex flex-col items-center shrink-0 gap-2 w-[129px]">
               <div className="w-[110px] h-[110px] sm:w-[129px] sm:h-[129px] rounded-full overflow-hidden border-[4px] border-accent relative shadow-sm shrink-0">
                 <Image
@@ -51,7 +47,6 @@ export function BlogAuthorBio({
                 />
               </div>
 
-              {/* Frame 1261153663: See Full Bio & LinkedIn */}
               <div className="flex items-center gap-2">
                 {bioHref && (
                   <a href={bioHref} className="body-small text-accent underline hover:opacity-80 transition-opacity cursor-pointer whitespace-nowrap">
@@ -74,9 +69,7 @@ export function BlogAuthorBio({
               </div>
             </div>
 
-            {/* Right Column: Frame 1261153661 */}
             <div className="flex-1 max-w-[741px] text-center sm:text-left space-y-4">
-              {/* Frame 1261153660 */}
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-[17px]">
                 <h3 className="heading-h3 text-background">
                   {name}

@@ -3,22 +3,15 @@ export type ReviewSource = "trustpilot" | "consumeraffairs";
 export interface CustomerReview {
   id: number;
   source: ReviewSource;
-  /** Reviewer name exactly as shown on the review site. */
   name: string;
-  /** Location line shown on the review site. */
   location: string;
-  /** Review text exactly as written by the reviewer. */
   quote: string;
-  /** Review date shown on the review site. */
   date: string;
-  /** Star rating out of 5. */
   rating: number;
 }
 
-/** @deprecated use CustomerReview */
 export type TrustpilotReview = CustomerReview;
 
-// Real reviews from https://www.trustpilot.com/review/myesatherapist.com
 export const TRUSTPILOT_REVIEWS: CustomerReview[] = [
   {
     id: 1,
@@ -78,7 +71,6 @@ export const TRUSTPILOT_REVIEWS: CustomerReview[] = [
   },
 ];
 
-// Real reviews from https://www.consumeraffairs.com/pets/my-esa-therapist.html
 export const CONSUMERAFFAIRS_REVIEWS: CustomerReview[] = [
   {
     id: 101,
@@ -142,7 +134,6 @@ export const CONSUMERAFFAIRS_REVIEWS: CustomerReview[] = [
   },
 ];
 
-/** Both sources interleaved, for sliders that show one review at a time. */
 export const ALL_REVIEWS: CustomerReview[] = TRUSTPILOT_REVIEWS.flatMap((t, i) =>
   CONSUMERAFFAIRS_REVIEWS[i] ? [t, CONSUMERAFFAIRS_REVIEWS[i]] : [t],
 );

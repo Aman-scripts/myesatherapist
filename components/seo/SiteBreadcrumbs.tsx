@@ -89,7 +89,6 @@ export function SiteBreadcrumbs({
 }: {
   className?: string;
   includeSchema?: boolean;
-  /** Trail sits on the dark profile panel from the lg breakpoint up. */
   onDark?: boolean;
 }) {
   const pathname = usePathname() || "/";
@@ -97,7 +96,6 @@ export function SiteBreadcrumbs({
   if (OWN_BREADCRUMB.some((pattern) => pattern.test(pathname))) return null;
 
   const segments = pathname.split("/").filter(Boolean);
-  // Article URLs are /blog/{section}/{slug}/. The post title stays in the heading, not the trail.
   if (segments[0] === "blog" && segments.length > 2) {
     segments.pop();
   }

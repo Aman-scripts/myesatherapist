@@ -17,7 +17,6 @@ import {
   SidebarSection,
 } from "./ReviewerUI";
 
-// Max Phillips clinical reviewer profile (same layout as the Legal Reviewer Figma page)
 export function MaxPhillipsReviewerContent() {
   return (
     <ProfileShell

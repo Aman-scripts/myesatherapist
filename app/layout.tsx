@@ -145,7 +145,6 @@ export default function RootLayout({
         />
         <ThirdPartyErrorHandler />
         <SiteAnalytics />
-        {/* Suppress non-critical third-party telemetry errors (e.g. [Tawk/Logger]) from triggering Next.js dev overlay */}
         <Script
           id="tawk-logger-filter"
           strategy="afterInteractive"
@@ -189,7 +188,6 @@ export default function RootLayout({
 })();`,
           }}
         />
-        {/* Google Tag Manager. GA4 G-4Y59YKVXPF and Microsoft Clarity load from this container. */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -212,8 +210,6 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
 })(window,document,'script','dataLayer','GTM-MRLDDQG');`,
           }}
         />
-        {/* End Google Tag Manager */}
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MRLDDQG"
@@ -222,8 +218,6 @@ events.forEach(function(e){w.addEventListener(e,onInteract,{passive:true,once:tr
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {/* Scale the 1440px desktop design to fit 1024px-1439px screens before first paint.
-            Must stay in sync with GlobalDesktopScaler, which keeps it updated on resize. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){

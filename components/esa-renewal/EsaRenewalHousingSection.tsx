@@ -8,12 +8,10 @@ export function EsaRenewalHousingSection() {
   return (
     <section className="w-full bg-background pt-12 pb-16 sm:pb-20 lg:pb-24">
       <div className="max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 sm:space-y-10">
-        {/* Title */}
         <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-primary leading-tight sm:leading-[54px] lg:leading-[42px] xl:leading-[54px] tracking-tight max-w-[980px] mx-auto">
           Renewals for Housing Accommodation Requests
         </h2>
 
-        {/* Text Body */}
         <div className="space-y-4 max-w-[960px] mx-auto text-base sm:text-lg text-body-text font-semibold leading-[1.7] font-sans">
           <p>
             Landlords or property managers may ask for a current emotional support animal letter when reviewing an accommodation request. Renewed documentation helps show that your ESA evaluation is up to date and reflects your present circumstances, when permitted by law.
@@ -23,7 +21,6 @@ export function EsaRenewalHousingSection() {
           </p>
         </div>
 
-        {/* CTA Button */}
         <div>
           <CtaButton
             href="#pricing"

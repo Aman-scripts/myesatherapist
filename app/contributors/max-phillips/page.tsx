@@ -6,7 +6,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MaxPhillipsReviewerContent } from "@/components/legal-reviewer/MaxPhillipsReviewerContent";
 
-// Schema.org Structured Data
 import { maxPhillipsSchemas } from "@/data/schemas/maxPhillipsSchema";
 
 export const metadata: Metadata = applySheetSeo({
@@ -51,7 +50,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function MaxPhillipsContributorPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between selection:bg-accent/30 selection:text-current">
-      {/* Schema.org JSON-LD */}
       {maxPhillipsSchemas.map((schemaObj, index) => (
         <script
           key={index}
@@ -60,16 +58,13 @@ export default function MaxPhillipsContributorPage() {
         />
       ))}
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
-      {/* Main Reviewer Content Area */}
       <main className="flex-1 bg-background">
         <MaxPhillipsReviewerContent />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

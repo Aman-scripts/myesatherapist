@@ -71,7 +71,6 @@ export const REVIEWERS: ContributorCardData[] = [
   },
 ];
 
-/** Profile URL for a contributor, matched by the name shown on article cards. */
 export function contributorProfileHref(name?: string): string | undefined {
   if (!name) return undefined;
   const key = name.trim().toLowerCase();

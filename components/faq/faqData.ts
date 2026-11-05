@@ -29,7 +29,6 @@ export interface FaqItem {
 
 export const FAQ_DATA: FaqItem[] = [
 
-  // ESA
   {
     category: "ESA",
     question: "How Many Emotional Support Animals Can You Have?",
@@ -169,7 +168,6 @@ export const FAQ_DATA: FaqItem[] = [
       "No, Emotional Support Animals do not have public access rights under the ADA. This means you cannot take them into restaurants, malls, grocery stores, or other public establishments unless the business is pet-friendly. Only trained service animals are allowed in public spaces that typically prohibit animals.",
   },
 
-  // ESA Laws
   {
     category: "ESA Laws",
     question: "Is There an Official Registry or Certification for ESAs?",
@@ -261,7 +259,6 @@ export const FAQ_DATA: FaqItem[] = [
       "Not automatically. A landlord generally must consider whether the conflict can be reasonably addressed before denying an ESA accommodation. Another tenant's allergies may be relevant, but they do not automatically eliminate an otherwise valid accommodation request.",
   },
 
-  // Costs
   {
     category: "Costs",
     question: "How Much Does an ESA Letter Typically Cost?",
@@ -323,7 +320,6 @@ export const FAQ_DATA: FaqItem[] = [
       "It can. Providers may set different prices based on their services and operating costs, and some states have additional requirements for ESA evaluations or provider-patient relationships. Always check both the provider’s current pricing and your state’s requirements.",
   },
 
-  // Evaluation Process (from tab)
   {
     category: "Evaluation Process",
     question: "What Happens During an ESA Evaluation?",
@@ -445,7 +441,6 @@ export const FAQ_DATA: FaqItem[] = [
       "It depends on your circumstances, provider requirements, and applicable state or housing rules. If an updated letter is needed, a provider may require another evaluation to confirm that an ESA remains clinically appropriate.",
   },
 
-  // Housing Rights
   {
     category: "Housing Rights",
     question: "What Are My Rights If a Landlord or Housing Provider Discriminates Against My ESA?",
@@ -543,7 +538,6 @@ export const FAQ_DATA: FaqItem[] = [
       "Ask the landlord for the reason for the denial and provide any appropriate documentation supporting your accommodation request. If you believe your housing rights have been violated, you can consider contacting HUD, a fair housing agency, or a qualified housing attorney for guidance.",
   },
 
-  // ESA Letter
   {
     category: "ESA Letter",
     question: "Do I Need a Separate ESA Letter for Travel and Housing?",

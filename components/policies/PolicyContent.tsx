@@ -7,9 +7,7 @@ interface PolicyContentProps {
 }
 
 export function PolicyContent({ policy }: PolicyContentProps) {
-  // Helper to render inline HTML safely since the source HTML has inline links and tags
   const renderInlineHtml = (htmlContent: string) => {
-    // Rewrite any links to # or relative links, and style bold text
     const cleanHtml = htmlContent
       .replace(/<strong>/gi, '<strong class="font-bold text-primary">')
       .replace(/<b>/gi, '<b class="font-bold text-primary">')
@@ -223,7 +221,6 @@ export function PolicyContent({ policy }: PolicyContentProps) {
 
   return (
     <article className="w-full space-y-10 lg:space-y-12">
-      {/* 1. Summary / Highlight Block (Matching Ongo aboutBlock with Project Colors) */}
       {policy.sections.length > 0 && policy.sections[0].blocks.length > 0 && (
         <div
           id={policy.sections[0].id}
@@ -246,7 +243,6 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         </div>
       )}
 
-      {/* 2. Main Numbered Sections Stack (Sections 1 onwards) */}
       <div className="space-y-10">
         {policy.sections.slice(1).map((sec) => (
           <section
@@ -254,7 +250,6 @@ export function PolicyContent({ policy }: PolicyContentProps) {
             id={sec.id}
             className="scroll-mt-[148px] bg-white border border-[#EAE5DC] rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0px_2px_8px_rgba(0,0,0,0.04)] space-y-6 transition-all hover:shadow-[0px_8px_24px_rgba(46,90,102,0.08)]"
           >
-            {/* Section Header with Project-Style Numeral Badge */}
             <div className="flex items-center gap-4 pb-3 border-b border-[#EAE5DC]">
               <div className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] rounded-full bg-[#AEBBBE]/20 flex items-center justify-center shrink-0">
                 <span className="heading-h4">
@@ -266,7 +261,6 @@ export function PolicyContent({ policy }: PolicyContentProps) {
               </h2>
             </div>
 
-            {/* Section Body Blocks */}
             <div className="space-y-4 pt-1">
               {sec.blocks.map((block, bIdx) => renderBlock(block, bIdx))}
             </div>
@@ -274,7 +268,6 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         ))}
       </div>
 
-      {/* 3. Key Takeaways Section */}
       {policy.takeaways && policy.takeaways.length > 0 && (
         <section id="key-takeaways" className="scroll-mt-28 space-y-5 pt-4">
           <div className="flex items-center gap-3">
@@ -304,7 +297,6 @@ export function PolicyContent({ policy }: PolicyContentProps) {
         </section>
       )}
 
-      {/* 4. Reviewer Line Card */}
       {policy.reviewerLine && (
         <div className="flex items-center gap-4 p-5 sm:p-6 rounded-[20px] bg-white border border-[#EAE5DC] shadow-xs">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-accent font-bold text-sm">

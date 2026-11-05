@@ -10,7 +10,6 @@ export type SheetSeo = {
   ogType: SheetOgType;
 };
 
-/** SEO fields from the SEO Settings spreadsheet. Keys are pathnames. */
 export const SEO_SETTINGS: Record<string, SheetSeo> = {
   "/": {
     "title": "ESA Evaluations by Licensed Therapists- My ESA Therapist",

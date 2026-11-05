@@ -57,9 +57,7 @@ function HipaaBadge() {
 function FooterContent() {
   return (
     <>
-      {/* Top Centered Section */}
       <div className="flex flex-col items-center text-center max-w-[700px] mx-auto space-y-5">
-        {/* Logo Card with Gold Border (Frame 1000011910) */}
         <Link href="/" aria-label="My ESA Therapist home" className="w-[240px] h-[90px] bg-white rounded-2xl border-[3.5px] border-accent p-3 flex items-center justify-center shadow-xl">
           <div className="relative w-full h-full">
             <Image quality={90}
@@ -74,17 +72,14 @@ function FooterContent() {
           </div>
         </Link>
 
-        {/* Heading with Gold Highlight */}
         <h2 className="heading-h2 text-background capitalize text-center">
           My ESA <span className="text-accent">Therapist</span>
         </h2>
 
-        {/* Subtitle */}
         <p className="text-background body-large text-center max-w-[734px]">
           A 100% legal platform providing emotional support animal evaluations to those who suffer from any mental or emotional disability — trusted, professional &amp; confidential.
         </p>
 
-        {/* Action Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <CtaButton
             href="#how-it-works"
@@ -105,12 +100,9 @@ function FooterContent() {
         </div>
       </div>
 
-      {/* Full-width Divider Line */}
       <div className="w-full border-t border-white/15 my-14" />
 
-      {/* 5 Navigation Columns */}
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
-        {/* Column 1: ABOUT US */}
         <div className="space-y-4">
           <div className="text-accent body-large tracking-wider uppercase">
             ABOUT US
@@ -123,7 +115,6 @@ function FooterContent() {
           </div>
         </div>
 
-        {/* Column 2: COMPANY */}
         <div className="space-y-4">
           <div className="text-accent body-large tracking-wider uppercase">
             COMPANY
@@ -146,7 +137,6 @@ function FooterContent() {
           </ul>
         </div>
 
-        {/* Column 3: QUICK LINKS */}
         <div className="space-y-4">
           <div className="text-accent body-large tracking-wider uppercase">
             QUICK LINKS
@@ -169,7 +159,6 @@ function FooterContent() {
           </ul>
         </div>
 
-        {/* Column 4: LEGAL */}
         <div className="space-y-4">
           <div className="text-accent body-large tracking-wider uppercase">
             LEGAL
@@ -192,13 +181,11 @@ function FooterContent() {
           </ul>
         </div>
 
-        {/* Column 5: GET IN TOUCH */}
         <div className="space-y-4">
           <div className="text-accent body-large tracking-wider uppercase">
             GET IN TOUCH
           </div>
           <div className="space-y-4 font-manrope">
-            {/* Phone */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image quality={90}
@@ -221,7 +208,6 @@ function FooterContent() {
               </div>
             </div>
 
-            {/* Email */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image quality={90}
@@ -244,7 +230,6 @@ function FooterContent() {
               </div>
             </div>
 
-            {/* Hours */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image quality={90}
@@ -267,7 +252,6 @@ function FooterContent() {
               </div>
             </div>
 
-            {/* Location */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                 <Image quality={90}
@@ -293,10 +277,8 @@ function FooterContent() {
         </div>
       </div>
 
-      {/* Bottom Divider Line */}
       <div className="w-full border-t border-white/10 mt-14 mb-6" />
 
-      {/* Bottom Bar */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 body-small text-background">
         <p className="body-small text-background">
           &copy; 2026 <span className="text-accent">myesatherapist.com</span> — All Rights Reserved

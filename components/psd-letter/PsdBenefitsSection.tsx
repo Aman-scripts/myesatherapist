@@ -64,7 +64,6 @@ export function PsdBenefitsSection() {
           </p>
         </div>
 
-        {/* 6 Grid Cards (2 Rows x 3 Columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-7 pt-6">
           {benefitsData.map((item, index) => (
             <div
@@ -76,7 +75,6 @@ export function PsdBenefitsSection() {
               }`}
               style={item.isDark ? { backgroundImage: TEAL_GRADIENT } : {}}
             >
-              {/* Floating Top-Center Circle Badge Icon */}
               <div
                 className={`hover-badge absolute -top-[40px] left-1/2 -translate-x-1/2 w-[80px] h-[80px] rounded-full flex items-center justify-center z-20 shadow-[0px_2.5px_5px_rgba(0,0,0,0.25)] ${
                   item.isDark
@@ -97,14 +95,12 @@ export function PsdBenefitsSection() {
                 />
               </div>
 
-              {/* Top-Right "Most Requested" Pill Badge */}
               {item.badge && (
                 <div className="hover-pill absolute -top-3.5 right-3 sm:right-4 md:right-5 bg-background border-[0.2px] border-primary text-primary body-small px-3.5 sm:px-4 py-1 rounded-[12px] shadow-xs tracking-tight z-10 whitespace-nowrap">
                   {item.badge}
                 </div>
               )}
 
-              {/* Card Title */}
               <h3
                 className={`heading-h3 capitalize mb-3 mt-2 ${
                   item.isDark ? "text-background" : "text-color-gradient"
@@ -113,7 +109,6 @@ export function PsdBenefitsSection() {
                 {item.title}
               </h3>
 
-              {/* Card Description */}
               <p
                 className={`body-text ${
                   item.isDark ? "text-background/90" : ""

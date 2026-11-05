@@ -27,7 +27,6 @@ const STEPS = [
 export function EsaHousingDenied() {
   return (
     <section className="w-full bg-white relative overflow-hidden lg:min-h-[min(57.8vw,832px)]">
-      {/* Artwork with the curve and heart badge baked in, flush right */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[min(51.7%,745px)]">
         <Image
           quality={90}

@@ -5,7 +5,6 @@ export interface EsaLawStateEntry {
   bullets: string[];
 }
 
-/** States from the Resources doc that were not already on the ESA Laws page. */
 export const EXTRA_STATE_LAWS: EsaLawStateEntry[] = [
   {
     slug: "alaska",

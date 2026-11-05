@@ -1,7 +1,6 @@
 import React from "react";
 import { LATO } from "@/components/esa-online/EsaOnlineShared";
 
-/** Centered section heading: 44/54 Playfair title with an optional subtitle. */
 export function SectionHeader({
   title,
   subtitle,
@@ -15,7 +14,6 @@ export function SectionHeader({
   subtitleFont?: "manrope" | "lato";
   className?: string;
   titleClassName?: string;
-  /** Tailwind max-width class for the subtitle. */
   subtitleMaxWidth?: string;
 }) {
   return (
@@ -37,7 +35,6 @@ export function SectionHeader({
   );
 }
 
-/** Soft gold callout: 19px gold bar on the left, optional heading, then text. */
 export function GoldPill({
   title,
   children,
@@ -64,7 +61,6 @@ export function GoldPill({
   );
 }
 
-/** White card with a gold top edge and a round icon badge overlapping the top. */
 export function IconCard({
   icon,
   title,
@@ -75,9 +71,7 @@ export function IconCard({
   icon: string;
   title: string;
   text: string;
-  /** Four-up layout (mistakes) uses tighter type at 1024px. */
   compact?: boolean;
-  /** ESA Guide trust cards use Playfair Display for the title. */
   titleFont?: "manrope" | "playfair";
 }) {
   return (

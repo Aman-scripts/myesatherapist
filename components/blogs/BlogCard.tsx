@@ -21,7 +21,6 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
 
   return (
     <article className="hover-card hover-surface group w-full min-w-0 max-w-full sm:max-w-[411px] h-[626px] bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col items-center justify-between pb-[24px]">
-      {/* Card Image: 411px x 317px (rounded-t-[20px]) */}
       <Link
         href={article.url}
         className="w-full h-[317px] relative overflow-hidden block shrink-0 cursor-pointer rounded-t-[20px] bg-background"
@@ -37,9 +36,7 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
         />
       </Link>
 
-      {/* Content Frame: 374px width, gap 15px, flex-1 flex flex-col justify-between pt-[20px] */}
       <div className="w-full max-w-[374px] px-4 sm:px-0 flex-1 flex flex-col justify-between pt-[20px]">
-        {/* Heading: 108px max height with inline author matching Figma Frame 1000011908 */}
         <div className="h-[108px] overflow-hidden">
           <h3 className="heading-h3 text-primary text-[26px] sm:text-[28px] leading-[34px] sm:leading-[36px] tracking-[-0.0003em] line-clamp-3">
             <Link
@@ -66,14 +63,12 @@ export function BlogCard({ article, priority = false, showAuthor = true }: BlogC
           </h3>
         </div>
 
-        {/* Excerpt: 78px height */}
         <div className="h-[78px] overflow-hidden">
           <p className="body-text text-body-text line-clamp-3">
             {article.shortDescription}
           </p>
         </div>
 
-        {/* Action Button: Read More (171px x 48px) */}
         <div className="pt-1">
           <CtaButton
             href={article.url}

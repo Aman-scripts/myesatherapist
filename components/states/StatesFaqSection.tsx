@@ -60,7 +60,6 @@ export function StatesFaqSection() {
     <section className="w-full bg-background py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 border-t border-[#EAE5DC]/60">
       <div className="max-w-[1260px] mx-auto">
         
-        {/* Section Heading */}
         <div className="flex flex-col items-center text-center max-w-[780px] mx-auto mb-12 lg:mb-16">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[54px] tracking-tight text-primary mb-3">
             Frequently Asked Questions
@@ -70,10 +69,8 @@ export function StatesFaqSection() {
           </p>
         </div>
 
-        {/* 2-Column Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
-          {/* Left Column: Forest Dog Image */}
           <div className="lg:col-span-5 w-full relative min-h-[420px] lg:min-h-[640px] rounded-[20px] overflow-hidden shadow-md">
             <Image
             quality={90}
@@ -85,7 +82,6 @@ export function StatesFaqSection() {
             />
           </div>
 
-          {/* Right Column: 6 Gradient Accordion Cards */}
           <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-5">
             {FAQ_ITEMS.map((faq) => {
               const isOpen = openId === faq.id;
@@ -104,20 +100,17 @@ export function StatesFaqSection() {
                     className="w-full flex items-center justify-between p-4 sm:p-5 text-left cursor-pointer gap-4 group list-none [&::-webkit-details-marker]:hidden"
                   >
                     <div className="flex items-center gap-4 sm:gap-6">
-                      {/* Gold Number Badge */}
                       <div className="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] rounded-xl bg-accent flex items-center justify-center shrink-0 shadow-xs">
                         <span className="font-sans font-extrabold text-xl sm:text-2xl text-primary">
                           {faq.num}
                         </span>
                       </div>
 
-                      {/* Question Text */}
                       <h3 className="heading-h3 text-white group-hover:text-accent transition-colors text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] m-0 capitalize">
                         {faq.question}
                       </h3>
                     </div>
 
-                    {/* Toggle Icon */}
                     <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                       {isOpen ? (
                         <Minus className="w-5 h-5 text-accent" />

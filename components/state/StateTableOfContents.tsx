@@ -82,7 +82,6 @@ export function StateTableOfContents({ stateName, data }: Props) {
     setMounted(true);
   }, []);
 
-  // Lock background body scroll when drawer is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -136,9 +135,6 @@ export function StateTableOfContents({ stateName, data }: Props) {
 
   return createPortal(
     <>
-      {/* ---------------------------------------------------- */}
-      {/* 1. FLOATING TOGGLE BUTTON (Attached to left edge)    */}
-      {/* ---------------------------------------------------- */}
       <button
         type="button"
         onClick={() => setIsOpen(true)}
@@ -149,9 +145,6 @@ export function StateTableOfContents({ stateName, data }: Props) {
         <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-background stroke-[2.5] group-hover:translate-x-0.5 group-hover:text-accent transition-all" />
       </button>
 
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLE OF CONTENTS DRAWER & OVERLAY                */}
-      {/* ---------------------------------------------------- */}
       <div
         className={`fixed inset-0 z-[99999] flex transition-all duration-300 ${
           isOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
@@ -159,7 +152,6 @@ export function StateTableOfContents({ stateName, data }: Props) {
         role="dialog"
         aria-modal="true"
       >
-        {/* Backdrop Overlay with smooth fade */}
         <div
           onClick={() => setIsOpen(false)}
           className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ease-in-out ${
@@ -167,18 +159,14 @@ export function StateTableOfContents({ stateName, data }: Props) {
           }`}
         />
 
-        {/* Sliding Content Panel */}
         <div
           className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-background shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           style={{ background: "var(--color-gradient)" }}
         >
-          {/* Fixed Top Header (Logo + Close Button + Title + Divider) */}
           <div className="shrink-0 px-6 sm:px-8 xl:px-[41px] pt-8 sm:pt-10">
-            {/* Top Row: Logo Card + Close Button */}
             <div className="flex items-start justify-between mb-5 sm:mb-6">
-              {/* Frame 1000011910: White Box with Gold Border */}
               <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                 <Image
             quality={90}
@@ -192,7 +180,6 @@ export function StateTableOfContents({ stateName, data }: Props) {
                 />
               </div>
 
-              {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
                 className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
@@ -202,18 +189,15 @@ export function StateTableOfContents({ stateName, data }: Props) {
               </button>
             </div>
 
-            {/* Heading: Table of Contents */}
             <div className="space-y-2 mb-3 sm:mb-4">
               <h2 className="font-heading text-2xl sm:text-[28px] font-bold text-background leading-tight tracking-[-0.00015em]">
                 Table of Contents
               </h2>
             </div>
 
-            {/* Line 11 Divider (Placed directly at boundary) */}
             <div className="w-full h-[0.5px] bg-white/30" />
           </div>
 
-          {/* Scrollable Links List: Frame 1000011836 */}
           <div
             className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 sm:px-8 xl:px-[41px] pt-5 sm:pt-6 pb-10"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}

@@ -17,7 +17,6 @@ import {
   TagList,
 } from "./ReviewerUI";
 
-// Content follows the client-approved Awais Arshad profile doc verbatim.
 const FOCUS_AREAS = [
   "White Collar Criminal Defense",
   "Government Investigations and Enforcement",
@@ -29,7 +28,6 @@ const FOCUS_AREAS = [
   "Client-Facing Legal Education",
 ];
 
-// Awais Arshad legal reviewer profile (layout from the Legal Reviewer Figma page)
 export function LegalReviewerContent() {
   return (
     <ProfileShell

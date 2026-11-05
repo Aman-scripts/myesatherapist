@@ -98,19 +98,16 @@ export interface BlogSection {
   subsections?: BlogSubsection[];
   listItems?: string[];
   afterListParagraphs?: string[];
-  /** Paragraphs rendered after the subsections (afterListParagraphs render before them). */
   afterSubsectionsParagraphs?: string[];
   bannerImage?: {
     src: string;
     alt: string;
     caption?: string;
-    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered unless fullWidth is true. */
     width?: number;
     height?: number;
     fullWidth?: boolean;
   };
   bannerPosition?: "top" | "bottom";
-  /** Optional row of highlight cards shown under the section heading. */
   statCards?: BlogStatCard[];
   sampleLetter?: BlogSampleLetter;
   checklist?: BlogChecklist;
@@ -157,11 +154,9 @@ export interface BlogArticle {
   url: string;
   canonicalUrl: string;
   title: string;
-  /** Hub card heading when it differs from the article H1. */
   cardTitle?: string;
   metaTitle?: string;
   metaDescription?: string;
-  /** Optional Open Graph / Twitter description when it differs from the meta description. */
   ogDescription?: string;
   shortDescription: string;
   category: string;
@@ -193,13 +188,11 @@ export interface BlogArticle {
     answer: string;
   };
   introParagraphs: string[];
-  /** Quote callout shown right after the intro paragraphs. */
   introQuoteBox?: BlogQuoteBox;
   introImage?: {
     src: string;
     alt: string;
     caption?: string;
-    /** Intrinsic size; defaults to 870x550. Portrait images render narrower and centered unless fullWidth is true. */
     width?: number;
     height?: number;
     fullWidth?: boolean;
@@ -235,9 +228,6 @@ export interface BlogArticle {
 }
 
 export const BLOG_POSTS: BlogArticle[] = [
-  // =========================================================================
-  // BLOG 1: How to Verify If an ESA Letter Is Legitimate: A Landlord & Tenant Checklist
-  // =========================================================================
   {
     id: "how-to-verify-an-esa-letter",
     slug: "how-to-verify-an-esa-letter",
@@ -507,9 +497,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     ],
   },
 
-  // =========================================================================
-  // BLOG 2: Is ESA Registration Legit or Required? The Truth About ESA Registration
-  // =========================================================================
   {
     id: "is-esa-registration-legit",
     slug: "is-esa-registration-legit",
@@ -869,9 +856,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     faqSectionId: "frequently-asked-questions-about-esa-registration",
   },
 
-  // =========================================================================
-  // BLOG 3: ESA for Children and Minors: How It Works and Who Signs the Letter?
-  // =========================================================================
   {
     id: "esa-for-children",
     slug: "esa-for-children",
@@ -1210,9 +1194,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     ],
   },
 
-  // =========================================================================
-  // BLOG 4: ESA Letter Sample: What a Legitimate ESA Letter Looks Like in 2026
-  // =========================================================================
   {
     id: "esa-letter-sample",
     slug: "esa-letter-sample",
@@ -1465,9 +1446,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     ],
   },
 
-  // =========================================================================
-  // BLOG 5: HUD ESA Guidance 2026: What Changed for Emotional Support Animal Housing?
-  // =========================================================================
   {
     id: "hud-guidance-for-emotional-support-animals",
     slug: "hud-guidance-for-emotional-support-animals",
@@ -1710,9 +1688,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     faqSectionId: "frequently-asked-questions",
   },
 
-  // =========================================================================
-  // BLOG 6: Can a Landlord Deny an Emotional Support Animal? Know What the Law Says
-  // =========================================================================
   {
     id: "can-landlords-deny-emotional-support-animals",
     slug: "can-landlords-deny-emotional-support-animals",
@@ -1910,9 +1885,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     },
   },
 
-  // =========================================================================
-  // BLOG 7: What is an Emotional Support Animal? Everything You Need to Know
-  // =========================================================================
   {
     id: "emotional-support-animal",
     slug: "emotional-support-animal",
@@ -2333,9 +2305,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     faqSectionId: "faqs",
   },
 
-  // =========================================================================
-  // BLOG 8: Which DSM-5 Conditions Qualify for an ESA? A Condition-by-Condition Guide
-  // =========================================================================
   {
   "id": "conditions-that-may-qualify-for-an-esa",
   "slug": "conditions-that-may-qualify-for-an-esa",
@@ -2542,9 +2511,6 @@ export const BLOG_POSTS: BlogArticle[] = [
   ]
 },
 
-  // =========================================================================
-  // BLOG 9: Understanding ESA Eligibility for Anxiety and Its Benefits
-  // =========================================================================
   {
   "id": "esa-for-anxiety",
   "slug": "esa-for-anxiety",
@@ -2763,9 +2729,6 @@ export const BLOG_POSTS: BlogArticle[] = [
     }
   ]
 },
-  // =========================================================================
-  // BLOG 10: 8 Basic Obedience Commands Every ESA Should Know
-  // =========================================================================
   {
   "id": "8-basic-obedience-commands-every-esa-should-know",
   "slug": "8-basic-obedience-commands-every-esa-should-know",

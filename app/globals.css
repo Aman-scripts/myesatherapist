@@ -5,13 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Fonts: Only Playfair Display and Manrope */
   --font-heading: var(--font-heading), 'Playfair Display', Georgia, serif;
   --font-playfair: var(--font-heading), 'Playfair Display', Georgia, serif;
   --font-sans: var(--font-sans), 'Manrope', sans-serif;
   --font-manrope: var(--font-sans), 'Manrope', sans-serif;
 
-  /* Figma Foundations colour roles */
   --color-teal-900: #1A3D4F;
   --color-teal-700: #2E5A66;
   --color-teal-500: #1D6E72;
@@ -75,7 +73,6 @@
 }
 
 :root {
-  /* Figma Foundations. Roles are on the swatches in that file. */
   --teal-900: #1A3D4F;
   --teal-700: #2E5A66;
   --teal-500: #1D6E72;
@@ -331,7 +328,6 @@ small,
 
 ::selection {
   background-color: rgba(232, 185, 44, 0.35);
-  /* Accent gold highlight */
   color: inherit;
 }
 
@@ -432,7 +428,6 @@ small,
   background-clip: text;
 }
 
-/* Standalone CSS Class Selectors for Global Compatibility */
 .color-primary,
 .text-primary {
   color: #2E5A66;
@@ -508,7 +503,6 @@ small,
     font-size: 16px;
     line-height: 26px;
     font-feature-settings: "rlig" 1, "calt" 1;
-    /* Keep italic synthesis. Block faux-bold, which darkens text until the next paint. */
     font-synthesis: style;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -521,7 +515,6 @@ small,
 }
 
 
-/* Hover stays under the pointer. Scale and a single shadow ease together; a lift was leaving the cursor and flickering. */
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .hover-card {
     transform-origin: center;
@@ -633,7 +626,6 @@ small,
   }
 }
 
-/* Marquee animation */
 @keyframes marquee {
   0% {
     transform: translate3d(0, 0, 0);
@@ -668,7 +660,6 @@ small,
   animation-play-state: paused;
 }
 
-/* Prevent iOS Safari auto-zoom on input focus */
 @media screen and (max-width: 767px) {
 
   input,
@@ -678,7 +669,6 @@ small,
   }
 }
 
-/* Custom Scrollbar Utilities */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -734,7 +724,6 @@ img[src$="/send-icon.svg"] {
   min-height: 20px;
 }
 
-/* One hero content column. Height comes from the artwork, type size from .heading-h1. */
 .responsive-hero-copy {
   min-height: auto;
 }
@@ -752,15 +741,12 @@ img[src$="/send-icon.svg"] {
   }
 }
 
-/* Body copy is #5F6B6F. :where() keeps this from beating explicit brand, error, or light-on-dark colors.
-   Heading classes stay primary even when the heading is a p, li, or other body element. */
 :is(p, li, dd, dt, .body, .body-text, .lead):where(
   :not(.text-white):not(.text-background):not(.text-accent):not(.text-primary):not(.text-color-gradient):not(.heading-h1):not(.heading-h2):not(.heading-h3):not(.heading-h4):not(.type-stat):not([class*="text-white"]):not([class*="text-background"]):not([class*="text-accent"]):not([class*="text-[#c00]"]):not([class*="text-[#CC191D]"]):not([class*="text-[#D6292B]"]):not([class*="text-[#D9383A]"]):not([class*="text-[#E42529]"]):not([class*="text-[#b8901a]"]):not([class*="text-[#8A6A0B]"]):not([class*="text-[#9A7710]"]):not([class*="text-[#DBA81F]"])
 ) {
   color: #5F6B6F;
 }
 
-/* Unmarked body copy inside a dark surface keeps the light color inherited from that surface. */
 :is(.text-white, .text-background, .color-gradient, .bg-primary, .bg-color-primary, footer) :is(p, li, dd, dt, .body, .body-text, .lead):where(
   :not(.text-white):not(.text-background):not(.text-accent):not(.text-primary):not(.text-color-gradient):not([class*="text-white"]):not([class*="text-background"]):not([class*="text-accent"])
 ) {

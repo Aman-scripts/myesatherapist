@@ -25,7 +25,6 @@ export function AboutVsFakeSection() {
   return (
     <section className="w-full bg-white py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-[920px] mx-auto mb-12 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
           <h2 className="heading-h2 text-primary">
             My ESA Therapist vs. Automated ESA Sites
@@ -35,11 +34,8 @@ export function AboutVsFakeSection() {
           </p>
         </div>
 
-        {/* 2 Comparison Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-6 xl:gap-8 max-w-[1280px] mx-auto">
-          {/* Left Card: My ESA Therapist (Legitimate Green) */}
           <div className="hover-card hover-surface bg-[#EBF7EE] rounded-[24px] sm:rounded-[30px] border border-[#CDEED5] shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden">
-            {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
             quality={90}
@@ -51,7 +47,6 @@ export function AboutVsFakeSection() {
               />
             </div>
 
-            {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
               <h3 className="heading-h3 text-primary text-center mb-5 sm:mb-6 lg:mb-8">
                 My ESA Therapist
@@ -75,9 +70,7 @@ export function AboutVsFakeSection() {
             </div>
           </div>
 
-          {/* Right Card: Fake ESA Sites (Red Warning) */}
           <div className="hover-card hover-surface bg-[#FFF0F0] rounded-[24px] sm:rounded-[30px] border border-[#FCDADA] shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex flex-col overflow-hidden">
-            {/* Header Image */}
             <div className="relative w-full aspect-[626/268] sm:aspect-[16/8] overflow-hidden shrink-0">
               <Image
             quality={90}
@@ -89,7 +82,6 @@ export function AboutVsFakeSection() {
               />
             </div>
 
-            {/* Card Content */}
             <div className="p-5 sm:p-7 lg:p-7 xl:p-10 flex flex-col flex-1">
               <h3 className="heading-h3 text-[#CC191D] text-center mb-5 sm:mb-6 lg:mb-8">
                 Deceptive ESA Sites

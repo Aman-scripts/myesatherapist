@@ -9,7 +9,6 @@ interface BlogHeroSectionProps {
   subtitle?: string;
   category?: string;
   categorySlug?: string;
-  /** Author / published / reviewer card. Sits on the cream area on small screens. */
   meta?: React.ReactNode;
 }
 
@@ -20,7 +19,6 @@ export function BlogHeroSection({
 }: BlogHeroSectionProps = {}) {
   return (
     <section className="relative w-full bg-background lg:min-h-[500px] xl:min-h-[540px] flex flex-col items-center">
-      {/* Desktop illustration fills the hero. The author card hangs halfway below it. */}
       <div className="pointer-events-none absolute inset-0 hidden lg:block">
         <BreakpointImage
           media="(min-width: 1024px)"
@@ -33,7 +31,6 @@ export function BlogHeroSection({
         />
       </div>
 
-      {/* Mobile and tablet cream stops partway through the author card. */}
       <div className="relative w-full">
         <div className="pointer-events-none absolute inset-0 overflow-hidden lg:hidden">
           <BreakpointImage
@@ -47,23 +44,15 @@ export function BlogHeroSection({
           />
         </div>
 
-      {/* ---------------------------------------------------- */}
-      {/* Frame 1000011884: Centered Blog Header Container    */}
-      {/* Auto layout: column, align-items: center, gap: 30px */}
-      {/* ---------------------------------------------------- */}
       <div className="relative z-10 w-full max-w-[1018px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 lg:pt-[56px] xl:pt-[64px] pb-[234px] sm:pb-[238px] md:pb-[96px] lg:pb-[70px] xl:pb-[76px] flex flex-col items-center text-center">
         
         <SiteBreadcrumbs includeSchema={false} className="mb-6 self-start sm:mb-7 lg:mb-[30px] lg:flex lg:justify-center lg:[&>ol]:w-fit" />
 
-        {/* Frame 1000011902: Title and Subtitle Block */}
-        {/* Auto layout: column, align-items: center, gap: 24px */}
         <div className="w-full flex flex-col items-center text-center gap-4 sm:gap-5 lg:gap-[24px]">
-          {/* Main Headline */}
           <h1 className="heading-h1 text-primary text-center max-w-[839px] mx-auto capitalize">
             {title}
           </h1>
 
-          {/* Subtitle */}
           {subtitle && (
             <p className="body-large text-body-text text-center max-w-[320px] sm:max-w-[460px] lg:max-w-[574px] mx-auto">
               {subtitle}

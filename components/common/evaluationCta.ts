@@ -1,6 +1,5 @@
 import { STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 
-/** Labels that start an evaluation. The hero state picker opts out. */
 const EVALUATION_CTA_LABELS = new Set([
   "get started",
   "start evaluation",
@@ -55,7 +54,6 @@ function isStatePage(pathname: string) {
   return Boolean(match && STATE_INDEX_BY_SLUG[match[1]]);
 }
 
-/** State pages already show the short form, so evaluation buttons scroll to it. */
 function scrollToStateHeroForm() {
   if (!isStatePage(window.location.pathname)) return false;
   const forms = Array.from(document.querySelectorAll<HTMLElement>("[data-state-hero-form]"));
@@ -70,7 +68,6 @@ function scrollToStateHeroForm() {
   const header = document.querySelector("header");
   const offset = header ? header.getBoundingClientRect().bottom : 0;
   const top = window.scrollY + form.getBoundingClientRect().top - offset - 16;
-  // Instant on phones. A long smooth scroll is easy to cancel before the form arrives.
   const behavior = window.innerWidth < 1024 ? "auto" : "smooth";
   window.scrollTo({ top: Math.max(0, top), behavior });
   return true;
@@ -78,8 +75,6 @@ function scrollToStateHeroForm() {
 
 export function openStateSelectModal(letter?: StateModalLetter, options?: { force?: boolean }) {
   if (typeof window === "undefined") return;
-  // In-page evaluation buttons on a state page scroll to the hero form.
-  // Header buttons pass force so they still open the state modal.
   if (!options?.force && scrollToStateHeroForm()) return;
   window.dispatchEvent(new CustomEvent(OPEN_STATE_MODAL_EVENT, { detail: { letter } }));
 }

@@ -44,7 +44,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function ContactUsPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col justify-between selection:bg-accent/30 selection:text-current">
-      {/* Schema.org Structured Data */}
       {contactUsSchemas.map((schemaObj, index) => (
         <script
           key={index}

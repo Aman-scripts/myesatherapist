@@ -8,14 +8,12 @@ const ART_ALT = "Woman hugging her golden retriever at home";
 export function EsaTrainingBondSection() {
   return (
     <section className="relative w-full overflow-hidden bg-white lg:min-h-[46vw] xl:min-h-0 xl:h-[619px]">
-      {/* Artwork with the curved edge and heart badge built in (desktop) */}
       <div className="absolute inset-y-0 right-0 hidden aspect-[1911/1857] lg:block">
         <Image
             quality={90} src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 640px, 1px" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4.5vw] lg:pl-[5.8vw] lg:pr-0 xl:py-0 xl:pl-[83px]">
-        {/* Artwork for mobile / tablet (curve and heart badge built in) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
             <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-howtrainingstrength-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 144, w: 390, h: 368 } }} />
@@ -48,7 +46,6 @@ export function EsaTrainingBondSection() {
             <CtaButton href="/esa-doctors/">Work With Licensed Professionals</CtaButton>
           </div>
 
-          {/* Quote */}
           <div
             className="flex w-full max-w-[772px] items-stretch overflow-hidden rounded-[20px] text-left shadow-[0px_2px_4px_rgba(0,0,0,0.15)] lg:w-[54vw] lg:max-w-none xl:w-[772px]"
             style={{ backgroundImage: TEAL_GRADIENT }}

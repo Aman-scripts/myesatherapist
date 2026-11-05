@@ -27,32 +27,14 @@ export interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   className?: string;
   iconClassName?: string;
   showIcon?: boolean;
-  /** Lets a long label wrap instead of staying on one line. */
   wrap?: boolean;
-  /** Centers the label in the pill and keeps the icon on the right. */
   centerLabel?: boolean;
   variant?: "primary" | "secondary" | "accent";
-  /**
-   * Opens the state modal for evaluation labels.
-   * Hero pickers pass false so they keep their own state control.
-   */
   stateModal?: boolean;
-  /** Opens the state modal even on state pages, where other evaluation buttons scroll to the form. */
   forceStateModal?: boolean;
   letter?: StateModalLetter;
 }
 
-/**
- * Exact Figma Frame 1000011890 CTA Pill Button
- * - Dimensions: width: 192px, height: 54px
- * - Background: linear-gradient(135deg, #1A3D4F 0%, #1D6E72 100%) (color-gradient)
- * - Border-radius: 30px
- * - Box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
- * - Layout: display flex, pl-[34px] pr-[5px], gap: 8px, items-center, justify-between
- * - Typography: Manrope 600, 18px / 28px (body-large), color: #FFFFFF
- * - Badge (Ellipse 14): 42.48px x 42.48px, background: #FAF7F2, shadow: 0px 3.03px 6.07px rgba(0,0,0,0.15)
- * - Vector (Send Icon): 21.62px x 21.62px
- */
 export function CtaButton({
   href,
   target,
@@ -89,7 +71,6 @@ export function CtaButton({
   const isSecondary = variant === "secondary";
   const isAccent = variant === "accent";
 
-  // Icon defaults to true for primary/accent, false for secondary (unless explicitly overridden)
   const shouldShowIcon = showIcon !== undefined ? showIcon : !isSecondary;
 
   let bgClass = "color-gradient";
@@ -106,7 +87,6 @@ export function CtaButton({
   const hasExplicitWidth = /\bw-\[\S+\]|\bw-full|\bw-auto|\bw-fit\b|\bmin-w-\[\S+\]/.test(className);
   const defaultWidthClass = hasExplicitWidth ? "" : (isSecondary ? "w-auto" : "w-auto min-w-[192px]");
 
-  // In Figma Frame 1000011890: padding with 8px gap and 42.5px badge inside button
   const paddingClass = isSecondary
     ? "px-6 xl:px-8"
     : centerLabel

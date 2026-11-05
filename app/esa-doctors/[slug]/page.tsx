@@ -175,32 +175,26 @@ export default async function DoctorInternalPage({ params }: PageProps) {
         />
       )}
 
-      {/* Top Banner & Header */}
       <TopBanner />
       <Header />
 
       <main className="min-h-screen bg-white">
-        {/* 1. Doctors Internal Hero Section */}
         <DoctorInternalHeroSection doctor={doctor} />
 
-        {/* 2. Doctor About & Philosophy Section (Replaces 7 Things to Know / removed image) */}
         <DoctorAboutPhilosophySection doctor={doctor} />
 
-        {/* 3. Conditions Section */}
         {doctor.conditionsSection ? (
           <DoctorConditionsSection doctor={doctor} />
         ) : (
           <QualifyingConditions />
         )}
 
-        {/* 4. States Where Doctor Is Licensed Section */}
         <ChooseStateGridSection
           title={doctor.licensedStatesSection?.heading}
           description={doctor.licensedStatesSection?.description}
           allowedStates={doctor.licensedStatesSection?.states}
         />
 
-        {/* 5. CTA Banner */}
         <CtaBanner
           bgColor="bg-white"
           title={
@@ -215,11 +209,9 @@ export default async function DoctorInternalPage({ params }: PageProps) {
           buttonHref={doctor.ctaSection?.buttonHref || "/pricing/"}
         />
 
-        {/* Clearance so the CTA photo does not meet the footer */}
         <div className="w-full h-16 sm:h-20 lg:h-28 bg-background" />
       </main>
 
-      {/* Global Footer */}
       <Footer bgColor="bg-background" />
     </>
   );

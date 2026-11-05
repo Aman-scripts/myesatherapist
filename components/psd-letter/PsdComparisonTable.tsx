@@ -103,7 +103,6 @@ export function PsdComparisonTable() {
   return (
     <section id="compare" className="py-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1441px] mx-auto px-3 sm:px-6 lg:px-12 flex flex-col items-center">
-        {/* Section Header */}
         <div className="text-center max-w-[758px] mx-auto mb-10 sm:mb-12 lg:mb-14 space-y-3">
           <h2 className="heading-h2 capitalize">
             PSD Letter vs ESA Letter
@@ -113,25 +112,17 @@ export function PsdComparisonTable() {
           </p>
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* 1. MOBILE & TABLET 3-COLUMN LAYOUT (< 1024px)       */}
-        {/* ---------------------------------------------------- */}
         <div className="block lg:hidden w-full max-w-[361px] sm:max-w-[600px] md:max-w-[680px] relative mx-auto pt-6">
-          {/* Main Background Box */}
           <div className="w-full bg-background rounded-[20px] shadow-[0px_2px_5.2px_rgba(0,0,0,0.15)] relative z-0 pb-4">
-            {/* Header Row */}
             <div className="flex items-center justify-between px-2 sm:px-6 h-[64px] sm:h-[72px]">
-              {/* Features Heading */}
               <div className="w-[88px] sm:w-[150px] md:w-[170px] text-center">
                 <h3 className="heading-h3 text-base sm:text-xl">
                   Features
                 </h3>
               </div>
 
-              {/* Spacer for Center Elevated Card */}
               <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
 
-              {/* ESA Letter Heading */}
               <div className="w-[96px] sm:w-[150px] md:w-[170px] text-center">
                 <h3 className="heading-h3 text-base sm:text-xl">
                   ESA Letter
@@ -139,24 +130,20 @@ export function PsdComparisonTable() {
               </div>
             </div>
 
-            {/* Divider Rows */}
             <div className="divide-y divide-[#C8B9A7]/40">
               {psdComparisonRows.map((row, idx) => (
                 <div
                   key={idx}
                   className="flex items-center justify-between min-h-[94px] sm:min-h-[102px] px-2 sm:px-6"
                 >
-                  {/* Left Column: Feature Title */}
                   <div className="w-[88px] sm:w-[150px] md:w-[170px] flex items-center justify-center text-center">
                     <span className="heading-h4 text-sm sm:text-base leading-tight">
                       {row.feature}
                     </span>
                   </div>
 
-                  {/* Spacer for Center Card */}
                   <div className="w-[130px] sm:w-[210px] md:w-[230px] shrink-0" />
 
-                  {/* Right Column: ESA Letter (Icon on Top + Text Below) */}
                   <div className="w-[96px] sm:w-[150px] md:w-[170px] flex flex-col items-center justify-center text-center px-1">
                     <StatusIcon type={row.esa.type} />
                     <span className="body text-center mt-1.5">
@@ -168,9 +155,7 @@ export function PsdComparisonTable() {
             </div>
           </div>
 
-          {/* Elevated Center Overlay Card: PSD Letter */}
           <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[134px] sm:w-[214px] md:w-[234px] bg-white rounded-[20px] shadow-[3px_3px_47.6px_1px_rgba(0,0,0,0.1)] z-10 overflow-hidden pb-4">
-            {/* Top Teal Gradient Header Banner */}
             <div
               className="h-[68px] sm:h-[76px] rounded-b-[20px] flex flex-col items-center justify-center px-2 text-center shadow-md"
               style={{ backgroundImage: TEAL_GRADIENT }}
@@ -182,7 +167,6 @@ export function PsdComparisonTable() {
               </h3>
             </div>
 
-            {/* Elevated Rows: Status Icon on top + Description Below */}
             <div className="divide-y divide-[#C8B9A7]/30">
               {psdComparisonRows.map((row, idx) => (
                 <div
@@ -199,13 +183,8 @@ export function PsdComparisonTable() {
           </div>
         </div>
 
-        {/* ---------------------------------------------------- */}
-        {/* 2. DESKTOP VIEW (>= 1024px)                          */}
-        {/* ---------------------------------------------------- */}
         <div className="hidden lg:block w-full max-w-[1100px] relative">
-          {/* Main Background Frame */}
           <div className="w-full bg-background rounded-[24px] shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-[#EDE8DE] overflow-hidden pb-4">
-            {/* Header Row */}
             <div className="grid grid-cols-12 items-center h-[76px] border-b border-[#E6DEC8]/50">
               <div className="col-span-4" />
               <div className="col-span-4 text-center">
@@ -220,7 +199,6 @@ export function PsdComparisonTable() {
               </div>
             </div>
 
-            {/* Table Rows for PSD & ESA */}
             <div className="divide-y divide-[#E6DEC8]/50">
               {psdComparisonRows.map((row, idx) => (
                 <div key={idx} className="grid grid-cols-12 items-center h-[62px]">
@@ -242,7 +220,6 @@ export function PsdComparisonTable() {
             </div>
           </div>
 
-          {/* Elevated Left Card: FEATURES Column */}
           <div className="absolute left-0 top-0 w-[33.333%] bg-white rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,0.08)] border border-[#E2E8F0] z-10 overflow-hidden pb-4">
             <div
               className="h-[76px] flex items-center justify-center px-6"
@@ -275,7 +252,6 @@ export function PsdComparisonTable() {
           </div>
         </div>
 
-        {/* Bottom CTA Button */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center gap-2">
           <CtaButton
             href="#pricing"

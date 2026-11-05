@@ -1,17 +1,7 @@
 import React from "react";
 
-/*
- * Shared building blocks for author / contributor / reviewer profile pages.
- * Built from the "Legal Reviewer Page" Figma frame. Typography uses the global
- * heading-* / body-* classes and colors use the globals.css tokens only.
- */
 
-/* ------------------------------------------------------------------ */
-/* Main column                                                         */
-/* ------------------------------------------------------------------ */
 
-// Pill label above each section. Section titles are h2; the About label stays body text
-// because that block already has its own heading.
 export function SectionBadge({ title, heading = true }: { title: string; heading?: boolean }) {
   return (
     <div
@@ -28,12 +18,10 @@ export function SectionBadge({ title, heading = true }: { title: string; heading
   );
 }
 
-// Thin divider between sections (Figma Line 14: 0.2px, color-body-text)
 export function SectionDivider() {
   return <hr className="w-full border-0 border-t-[0.5px] border-body-text/40" />;
 }
 
-// Gold-rimmed tag (Figma Frame 1000011816: accent lip 5px, white inner pill h 32, body-small)
 export function GoldLipBadge({ children }: { children: React.ReactNode }) {
   return (
     <div className="inline-flex flex-col pt-[5px] bg-accent rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)]">
@@ -54,7 +42,6 @@ export function TagList({ tags, className = "" }: { tags: string[]; className?: 
   );
 }
 
-// Gold-rimmed title + subtitle card (Figma Frame 1000011816 in the About block: inner h 53)
 export function FocusCard({ title, subtitle }: { title: string; subtitle: string }) {
   return (
     <div className="flex flex-col pt-[5px] bg-accent rounded-[20px] shadow-[0px_1px_4px_rgba(0,0,0,0.15)]">
@@ -76,7 +63,6 @@ export function FocusCardRow({ cards }: { cards: Array<{ title: string; subtitle
   );
 }
 
-// About block: badge, H2 heading, body-large paragraphs, then cards/tags
 export function AboutSection({
   heading,
   paragraphs,
@@ -87,9 +73,7 @@ export function AboutSection({
   heading: React.ReactNode;
   paragraphs: string[];
   children?: React.ReactNode;
-  /** Show the heading exactly as written instead of Figma title case */
   keepCase?: boolean;
-  /** Show the "About" pill above the heading */
   showBadge?: boolean;
 }) {
   return (
@@ -110,7 +94,6 @@ export function AboutSection({
   );
 }
 
-// One education entry: H3 degree, optional field of study, institution, date on the right, optional honor tags
 export function EducationEntry({
   degree,
   field,
@@ -124,7 +107,6 @@ export function EducationEntry({
   institution: string;
   date?: string;
   honors?: string[];
-  /** Show the degree exactly as written instead of Figma title case */
   keepCase?: boolean;
 }) {
   return (
@@ -178,7 +160,6 @@ export function BulletList({ items }: { items: string[] }) {
   );
 }
 
-// Two-column bullet list (Figma Frame 1000011870 "Area of Expertise")
 export function BulletColumns({ title, items }: { title: string; items: string[] }) {
   const half = Math.ceil(items.length / 2);
   return (
@@ -192,7 +173,6 @@ export function BulletColumns({ title, items }: { title: string; items: string[]
   );
 }
 
-// Numbered responsibility row (Figma Frame 1000011854: number 44/54 at 46% opacity, gap 24)
 export function NumberedItem({
   number,
   title,
@@ -202,7 +182,6 @@ export function NumberedItem({
   number: string;
   title: string;
   description: string;
-  /** Show the title exactly as written instead of Figma title case */
   keepCase?: boolean;
 }) {
   return (
@@ -230,7 +209,6 @@ export function NumberedSection({
   title: string;
   items: Array<{ title: string; description: string }>;
   children?: React.ReactNode;
-  /** Show item titles exactly as written instead of Figma title case */
   keepCase?: boolean;
 }) {
   return (
@@ -254,7 +232,6 @@ export function NumberedSection({
   );
 }
 
-// Tag cloud with its own badge (Figma "Area I Specifically Evaluate")
 export function TagSection({ title, tags }: { title: string; tags: string[] }) {
   return (
     <div className="flex flex-col gap-[30px]">
@@ -281,7 +258,6 @@ function QuoteIcon() {
   );
 }
 
-// Quote block (Figma Frame 1000011877: badge, then quote icon + body-text, gap 19)
 export function QuoteStatement({ title, text }: { title: string; text: string }) {
   return (
     <div className="flex flex-col gap-12">
@@ -302,7 +278,6 @@ function DisclosureCheck() {
   );
 }
 
-// Dark gradient card (Figma Frame 1000011876: padding 33 37, radius 30)
 export function DisclosureCard({
   title,
   items,
@@ -312,7 +287,6 @@ export function DisclosureCard({
   title: string;
   items?: string[];
   paragraphs?: string[];
-  /** Show the title exactly as written instead of Figma uppercase */
   keepCase?: boolean;
 }) {
   return (
@@ -343,7 +317,6 @@ export function DisclosureCard({
   );
 }
 
-// Generic text section (badge + optional intro, bullets, closing)
 export function TextSection({
   title,
   intro,
@@ -367,16 +340,11 @@ export function TextSection({
   );
 }
 
-/* ------------------------------------------------------------------ */
-/* Sidebar                                                             */
-/* ------------------------------------------------------------------ */
 
-// Full-width 0.2px white line across the sidebar (Figma Line 11 / Line 13)
 export function SidebarDivider() {
   return <hr className="-mx-[31px] border-0 border-t-[0.5px] border-white/60" />;
 }
 
-// Sidebar group: H3 title at 40% cream, then content (Figma Frame 1000011837, gap 16)
 export function SidebarSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-4">
@@ -386,7 +354,6 @@ export function SidebarSection({ title, children }: { title: string; children: R
   );
 }
 
-// Bulleted list with optional year on the right (Figma "Licensure" rows)
 export function SidebarList({ items }: { items: Array<{ label: string; year?: string }> }) {
   return (
     <ul className="flex flex-col gap-[7px]">
@@ -403,7 +370,6 @@ export function SidebarList({ items }: { items: Array<{ label: string; year?: st
   );
 }
 
-// Inline dot-separated list (Figma "Authorize to Practice": New York · United Kingdom)
 export function SidebarInline({ items }: { items: string[] }) {
   return (
     <p className="body-text text-background flex flex-wrap gap-x-2">
@@ -434,7 +400,6 @@ function LinkIcon() {
   );
 }
 
-// Professional profile links (Figma Frame 1000011842: icon 16 + body-text, gap 4)
 export function SidebarLinks({
   links,
   onLinkClick,

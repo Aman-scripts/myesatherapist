@@ -55,7 +55,6 @@ export const metadata: Metadata = applySheetSeo({
 export default function EsaLawsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-body-text">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(esaLawsSchema, "esa-laws")) }}
@@ -64,22 +63,16 @@ export default function EsaLawsPage() {
       <Header />
 
       <main className="flex-1">
-        {/* 1. Hero Section */}
         <EsaLawsHero />
 
-        {/* 2. Understanding ESA Laws intro */}
         <EsaLawsIntroSection />
 
-        {/* 3. Federal Laws Governing Emotional Support Animals */}
         <EsaLawsFederalSection />
 
-        {/* 4. ESA Laws by State */}
         <EsaLawsStateSection />
 
-        {/* 5. ESA Laws by Situation */}
         <EsaLawsSituationSection />
 
-        {/* 6. Common Questions About ESA Laws */}
         <FaqSection
           title="Common Questions About ESA Laws"
           subtitle="Get clear answers to the most frequently asked questions about emotional support animal laws and regulations."
@@ -87,7 +80,6 @@ export default function EsaLawsPage() {
           bg="bg-background"
         />
 
-        {/* 7. CTA Banner */}
         <CtaBanner
           title="Ready to Start Your ESA Evaluation?"
           description="Understanding ESA laws is an important first step. If you believe an emotional support animal may be appropriate for your situation, you can start your professional evaluation today."

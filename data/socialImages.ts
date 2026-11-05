@@ -3,7 +3,6 @@ import { assetUrl, SITE_URL } from "@/lib/site";
 
 const SITE = SITE_URL;
 
-/** Feature / Open Graph card images in public/og, keyed by file name. Value is [width, height]. */
 const SIZES: Record<string, [number, number]> = {
   "about-us": [1640, 940],
   "blog-hub-page": [1672, 941],
@@ -91,7 +90,6 @@ const SIZES: Record<string, [number, number]> = {
   "blog-esa-for-adhd": [1536, 1024],
 };
 
-/** Public paths from the featured-image spreadsheet. State samples are derived from the key. */
 const PATHS: Record<string, string> = {
   homepage: "/images/pages/telehealth-with-a-happy-companion.webp",
   "about-us": "/images/about/esa-evaluations-online-image.webp",
@@ -139,10 +137,6 @@ export function hasSocialImage(key: string) {
   return key in SIZES || key in PATHS || key.startsWith("state-");
 }
 
-/**
- * Open Graph + Twitter image fields for a page. Spread into the metadata:
- *   openGraph: { ...socialImage("homepage", alt).openGraph }
- */
 export function socialImage(key: string, alt: string) {
   if (!hasSocialImage(key)) throw new Error(`Unknown social image: ${key}`);
   const url = assetUrl("/og/default-1200x630.jpg");
@@ -164,18 +158,12 @@ function localizeImageHosts<T>(schema: T): T {
   ) as T;
 }
 
-/**
- * Points a page's JSON-LD at its feature image (the same file as the OG card).
- * Updates an existing #primaryimage ImageObject, or adds one and links it from the page node;
- * BlogPosting nodes get it as `image`. The schema object itself is not modified.
- */
 export function withFeatureImage<T>(schema: T, key: string, caption?: string): T {
   const source = localizeImageHosts(schema);
   if (!hasSocialImage(key)) return source;
   const size = SIZES[key] ?? [1200, 800];
   const graph = (source as { "@graph"?: unknown })?.["@graph"];
 
-  // Standalone page object (not a @graph): attach the image directly.
   if (!Array.isArray(graph)) {
     const single = source as Record<string, any>;
     const types = ([] as string[]).concat(single?.["@type"] ?? []);

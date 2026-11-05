@@ -33,7 +33,6 @@ export function EsaRenewalWhatToKnow() {
   return (
     <section className="w-full bg-white py-16 sm:py-20 xl:py-[86px]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 flex flex-col gap-10 lg:gap-12 xl:gap-[60px]">
-        {/* Header (Frame 5) */}
         <div className="flex flex-col items-center gap-2 text-center">
           <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-primary leading-tight sm:leading-[54px] lg:leading-[42px] xl:leading-[54px] tracking-[-0.00015em]">
             What to Know Before You Start?
@@ -43,14 +42,12 @@ export function EsaRenewalWhatToKnow() {
           </p>
         </div>
 
-        {/* 2 Horizontal Feature Cards (Frame 1000012029) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[22px] items-stretch">
           {CARDS.map((card) => (
             <div
               key={card.title}
               className="hover-card hover-surface bg-white rounded-[30px] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col sm:flex-row sm:items-center xl:min-h-[298px]"
             >
-              {/* Left Photo */}
               <div className="relative w-full sm:w-[193px] lg:w-[150px] xl:w-[193px] h-[220px] sm:h-auto sm:self-stretch shrink-0 overflow-hidden">
                 <Image
             quality={90}
@@ -62,7 +59,6 @@ export function EsaRenewalWhatToKnow() {
                 />
               </div>
 
-              {/* Right Text (Frame 1000012027) */}
               <div className="flex flex-1 flex-col gap-[10px] p-6 sm:py-8 sm:pl-[25px] sm:pr-8 lg:pl-5 lg:pr-6 xl:py-[50px] xl:pl-[25px] xl:pr-[47px]">
                 <h3 className="font-heading font-bold text-xl sm:text-[24px] lg:text-[22px] xl:text-[28px] tracking-[-0.00015em] text-primary leading-snug xl:leading-9">
                   {card.title}

@@ -83,7 +83,6 @@ export function FaqSection({
     <section id={id} className={cn("relative pt-12 sm:pt-16 lg:pt-16 xl:pt-24 pb-10 sm:pb-12 lg:pb-10 xl:pb-24", bg, className)}>
       {id !== "faq" && <div id="faq" className="sr-only" />}
       <div className="max-w-[1442px] mx-auto px-4 sm:px-6 lg:px-12">
-        {/* Frame 1000011716: Section Header */}
         <div className="text-center max-w-[1254px] mx-auto mb-14 space-y-2">
           <h2 className="heading-h2 capitalize">
             {title}
@@ -95,9 +94,7 @@ export function FaqSection({
           )}
         </div>
 
-        {/* Frame 1000011803: Content Row (Image + Accordions) */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8 xl:gap-[60px] max-w-[1184px] mx-auto relative">
-          {/* Left: image (centered on mobile/tablet, sticky on desktop) */}
           <div className="w-full max-w-[551px] lg:w-[380px] xl:w-[551px] h-[360px] sm:h-[440px] lg:h-[540px] xl:h-[673px] shrink-0 self-center mx-auto lg:self-start lg:mx-0 lg:sticky lg:top-[104px]">
             <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-md">
               <Image
@@ -111,7 +108,6 @@ export function FaqSection({
             </div>
           </div>
 
-          {/* Right: Frame 1000011715 (Question Cards) */}
           <div className="w-full max-w-[566px] lg:max-w-none lg:flex-1 space-y-3.5 sm:space-y-5 xl:space-y-[25px] flex flex-col justify-center">
             {items.map((faq, idx) => {
               const isOpen = openIdx === idx;
@@ -128,18 +124,15 @@ export function FaqSection({
                     }}
                     className="w-full min-h-[58px] sm:min-h-[68px] xl:min-h-[74px] flex items-stretch text-left rounded-[20px] overflow-hidden transition-all duration-200 relative color-gradient cursor-pointer list-none [&::-webkit-details-marker]:hidden"
                   >
-                    {/* Gold Number Block: Frame 1000011949 (accent) */}
                     <div className="w-[56px] sm:w-[68px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center heading-h3 text-primary leading-none rounded-l-[20px] self-stretch">
                       {faq.num}
                     </div>
 
-                    {/* Question Title Area & Plus Icon (+) */}
                     <div className="flex-1 py-2.5 sm:py-3 px-3.5 sm:px-6 flex items-center justify-between gap-3 sm:gap-4">
                       <h3 className="heading-h3 text-white m-0 capitalize">
                         {faq.q}
                       </h3>
 
-                      {/* Figma Plus Icon (+) */}
                       <span
                         className={`w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] flex items-center justify-center shrink-0 transition-transform duration-300 ${
                           isOpen ? "rotate-45" : ""

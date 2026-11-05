@@ -2,19 +2,10 @@
 
 import { useEffect } from "react";
 
-/**
- * ThirdPartyErrorHandler
- *
- * Prevents non-fatal telemetry logger errors from third-party widgets
- * (specifically Tawk.to's `[Tawk/Logger]: Error report sent true`) from
- * triggering Next.js's development error overlay modal while preserving
- * standard console warning logs and allowing genuine application errors.
- */
 export function ThirdPartyErrorHandler() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // Ensure Tawk_API exists to avoid initialization reference issues
     const win = window as unknown as {
       Tawk_API?: Record<string, unknown>;
       Tawk_LoadStart?: Date;

@@ -19,11 +19,9 @@ import { EsaHousingCredentials } from "@/components/esa-housing/EsaHousingCreden
 import { EsaHousingLandlordRefuse } from "@/components/esa-housing/EsaHousingLandlordRefuse";
 import { EsaHousingDenied } from "@/components/esa-housing/EsaHousingDenied";
 
-// Shared Site Components
 import { FaqSection } from "@/components/home/FaqSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
-// Schema.org Structured Data
 import { esaLetterForHousingSchemas } from "@/data/schemas/esaLetterForHousingSchema";
 import { socialImage, withFeatureImage } from "@/data/socialImages";
 
@@ -100,7 +98,6 @@ const HOUSING_FAQS = [
 export default function EsaLetterForHousingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Schema.org JSON-LD */}
       {esaLetterForHousingSchemas.map((schemaObj, index) => (
         <script
           key={index}

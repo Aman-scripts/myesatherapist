@@ -32,7 +32,6 @@ export function AboutProcessSection() {
     <section id="how-it-works" className="pt-10 sm:pt-14 lg:pt-16 xl:pt-20 pb-8 sm:pb-10 lg:pb-16 xl:pb-20 bg-background">
       <div className="max-w-[1276px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-[20px] shadow-[0px_2px_4px_rgba(0,0,0,0.15)] px-5 py-8 sm:px-8 sm:py-12 md:px-6 lg:px-10 xl:px-[100px] lg:py-12 xl:py-[60px]">
-          {/* Heading */}
           <div className="text-center mb-8 sm:mb-10 xl:mb-[72px] space-y-2">
             <h2 className="heading-h2 text-primary capitalize">
               How Does Our Online ESA Evaluation Work?
@@ -42,9 +41,7 @@ export function AboutProcessSection() {
             </p>
           </div>
 
-          {/* 3 Step Cards with connecting arrows */}
           <div className="relative">
-            {/* Arrow 1 -> 2 (Desktop / Tablet) */}
             <div className="hidden md:block absolute top-[85px] lg:top-[113px] left-[33.33%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[30px] lg:w-[60px] h-auto">
                 <path d="M2 12H54" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
@@ -52,7 +49,6 @@ export function AboutProcessSection() {
               </svg>
             </div>
 
-            {/* Arrow 2 -> 3 (Desktop / Tablet) */}
             <div className="hidden md:block absolute top-[85px] lg:top-[113px] left-[66.66%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[30px] lg:w-[60px] h-auto">
                 <path d="M2 12H54" stroke="var(--color-primary)" strokeWidth="3" strokeLinecap="round" />
@@ -64,7 +60,6 @@ export function AboutProcessSection() {
               {steps.map((step, idx) => (
                 <React.Fragment key={step.number}>
                   <div className="flex flex-col items-center text-center">
-                    {/* Circular Image with inner container */}
                     <div className="relative w-[180px] h-[180px] md:w-[170px] md:h-[170px] lg:w-[228px] lg:h-[226px] shrink-0 flex items-center justify-center">
                       <div className="absolute inset-0 rounded-full bg-[#EFFFF1] shadow-[0px_2px_4px_rgba(0,0,0,0.25)]" />
                       <div className="relative w-[156px] h-[156px] md:w-[148px] md:h-[148px] lg:w-[200px] lg:h-[200px] rounded-full overflow-hidden">
@@ -79,7 +74,6 @@ export function AboutProcessSection() {
                       </div>
                     </div>
 
-                    {/* Text */}
                     <div className="space-y-2.5 pt-5 sm:pt-6 max-w-[340px] w-full flex flex-col items-center">
                       <h3 className="heading-h3 text-color-gradient capitalize lg:whitespace-nowrap">
                         {step.title}
@@ -90,7 +84,6 @@ export function AboutProcessSection() {
                     </div>
                   </div>
 
-                  {/* Mobile Downward Arrow between steps */}
                   {idx < steps.length - 1 && (
                     <div className="md:hidden flex justify-center py-2" aria-hidden="true">
                       <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +101,6 @@ export function AboutProcessSection() {
             <CtaButton href="/pricing/">Start Your ESA Evaluation</CtaButton>
           </div>
 
-          {/* Payment note */}
           <div className="mt-6 flex justify-center">
             <div className="inline-block bg-[rgba(252,228,220,0.4)] rounded-[8px] px-6 py-2 sm:px-8 sm:py-2 body-small text-center border border-[#E76F51]/20">
               We authorize your payment first, but we will only charge it after your evaluation is completed.

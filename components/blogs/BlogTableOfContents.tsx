@@ -30,7 +30,6 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
     setMounted(true);
   }, []);
 
-  // Lock background body scroll when drawer is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -94,26 +93,19 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
 
   return (
     <>
-      {/* ---------------------------------------------------- */}
-      {/* 1. DESKTOP VIEW (>= 1024px)                          */}
-      {/* Persistent Left-Aligned Sticky Sidebar: Frame 1000011828 */}
-      {/* ---------------------------------------------------- */}
       <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start lg:-mt-[1px] h-[calc(100dvh-80px)] lg:h-[calc(100dvh-90px)] xl:h-[calc(100dvh-95px)] overflow-hidden rounded-none flex flex-col shadow-sm">
         <div
           className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-8 lg:pt-[80px] xl:pt-[95px] pb-8 h-full flex flex-col text-background"
           style={{ background: "var(--color-gradient)" }}
         >
-          {/* Frame 1000011830: Fixed Header with Title & Edge-to-Edge Line 11 Divider */}
           <div className="shrink-0 mb-5 lg:mb-6">
             <h2 className="heading-h2 text-background max-w-[283px] leading-[1.15] mb-4 sm:mb-5">
               Table Of<br />Contents
             </h2>
 
-            {/* Line 11: Full-bleed divider across entire 382px width */}
             <div className="-mx-6 sm:-mx-8 xl:-mx-[41px] h-[1px] bg-white/20" />
           </div>
 
-          {/* Scrollable Links List: Frame 1000011841 */}
           <nav className="w-full flex-1 overflow-y-auto no-scrollbar pr-1 pb-4">
             <ul className="space-y-3 sm:space-y-3.5 lg:space-y-[14px]">
               {currentItems.map((item) => {
@@ -140,13 +132,9 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
         </div>
       </aside>
 
-      {/* ---------------------------------------------------- */}
-      {/* 2. TABLET & MOBILE TRIGGER + PORTAL DRAWER           */}
-      {/* ---------------------------------------------------- */}
       {mounted &&
         createPortal(
           <>
-            {/* Floating half-circle toggle button on left edge (z-[80] sits above meta card) */}
             <button
               type="button"
               onClick={() => setIsOpen(true)}
@@ -163,7 +151,6 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
               role="dialog"
               aria-modal="true"
             >
-              {/* Backdrop Overlay with smooth fade */}
               <div
                 onClick={() => setIsOpen(false)}
                 className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ease-in-out ${
@@ -171,18 +158,14 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                 }`}
               />
 
-              {/* Sliding Content Panel with smooth transform */}
               <div
                 className={`relative w-[320px] sm:w-[360px] md:w-[382px] h-full max-h-screen overflow-hidden z-[100000] text-background shadow-2xl flex flex-col justify-start transition-transform duration-300 ease-out transform ${
                   isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
                 style={{ background: "var(--color-gradient)" }}
               >
-                {/* Fixed Top Header (Logo + Close Button + Title + Divider) */}
                 <div className="shrink-0 px-6 sm:px-8 pt-8 sm:pt-10">
-                  {/* Top Row: Logo Card + Close Button */}
                   <div className="flex items-start justify-between mb-5 sm:mb-6">
-                    {/* Frame 1000011910: White Box with Gold Border */}
                     <div className="w-[170px] sm:w-[190px] h-[74px] sm:h-[81.5px] bg-white border-[4.5px] sm:border-[5.54px] border-accent rounded-[8px] flex items-center justify-center p-2.5 shadow-md">
                       <Image
                         quality={90}
@@ -196,7 +179,6 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                       />
                     </div>
 
-                    {/* Close Button */}
                     <button
                       onClick={() => setIsOpen(false)}
                       className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/40 hover:border-white text-white/90 hover:text-white hover:bg-white/10 flex items-center justify-center transition-all cursor-pointer mt-1"
@@ -206,18 +188,15 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
                     </button>
                   </div>
 
-                  {/* Heading: Table Of Contents */}
                   <div className="mb-4 sm:mb-5">
                     <p className="heading-h2 text-background leading-[1.15]">
                       Table Of<br />Contents
                     </p>
                   </div>
 
-                  {/* Line 11 Divider (Edge-to-Edge) */}
                   <div className="-mx-6 sm:-mx-8 h-[1px] bg-white/20" />
                 </div>
 
-                {/* Scrollable Links List: Frame 1000011841 */}
                 <div
                   className="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 sm:px-8 pt-5 sm:pt-6 pb-10"
                   style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}

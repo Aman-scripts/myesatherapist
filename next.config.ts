@@ -3,8 +3,6 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
-  // Dev keeps only a few routes compiled, then rebuilds the next click while
-  // the current page stays on screen. Hold recently opened routes in memory.
   onDemandEntries: {
     maxInactiveAge: 10 * 60 * 1000,
     pagesBufferLength: 60,
@@ -53,16 +51,12 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // Vercel compresses responses. Next's gzip adds a drain listener per chunk
-  // and warns once a large page, such as a state page, passes 10 listeners.
   compress: false,
   poweredByHeader: false,
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
   webpack: (config, { dev, isServer }) => {
-    // Next skips every prefetch in development, so a click always waits on a
-    // fresh server render. Allow router.prefetch to run so pages can be ready first.
     if (dev && !isServer) {
       config.module.rules.push({
         test: /app-router-utils\.js$/,

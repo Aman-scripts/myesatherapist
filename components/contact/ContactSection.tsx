@@ -51,9 +51,7 @@ export function ContactSection() {
 
   return (
     <div className="w-full bg-background">
-      {/* 1. HERO SECTION WITH FIGMA BACKGROUND & OVERLAY CARD (Frame 1261153618) */}
       <section className="relative w-full min-h-[640px] sm:min-h-[720px] lg:min-h-[780px] bg-[#F7EAD6] overflow-hidden flex items-center">
-        {/* Background Image: contact_us_hero-section.png */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             quality={90}
@@ -66,13 +64,10 @@ export function ContactSection() {
           />
         </div>
 
-        {/* Floating Card & Content Layer */}
         <div className="relative z-10 max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12 w-full py-12 lg:py-16">
           <div className="max-w-[580px]">
-            {/* Request Info Card (Frame 1000011950) */}
             <div className="bg-[#F8DFBE]/95 backdrop-blur-sm rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-[#EAC9A0]/60 shadow-2xl space-y-6">
               
-              {/* Header Title & Subtitle (Centered) */}
               <div className="text-center space-y-2">
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#1E3942] leading-tight">
                   Request Info
@@ -92,7 +87,6 @@ export function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* First Name & Last Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="block text-xs sm:text-sm font-sans font-semibold text-[#1E3942]">
@@ -123,7 +117,6 @@ export function ContactSection() {
                     </div>
                   </div>
 
-                  {/* Email Address */}
                   <div className="space-y-1.5">
                     <label className="block text-xs sm:text-sm font-sans font-semibold text-[#1E3942]">
                       Email Address
@@ -138,7 +131,6 @@ export function ContactSection() {
                     />
                   </div>
 
-                  {/* Message */}
                   <div className="space-y-1.5">
                     <label className="block text-xs sm:text-sm font-sans font-semibold text-[#1E3942]">
                       Message
@@ -153,7 +145,6 @@ export function ContactSection() {
                     />
                   </div>
 
-                  {/* Centered Button & Security Note */}
                   <div className="pt-2 flex flex-col items-center justify-center space-y-3">
                     <button
                       type="submit"
@@ -174,7 +165,6 @@ export function ContactSection() {
         </div>
       </section>
 
-      {/* 2. CONTACT INFO CARDS SECTION (4 Cards Grid) */}
       <section className="w-full py-12 sm:py-16 bg-background">
         <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -210,7 +200,6 @@ export function ContactSection() {
             ))}
           </div>
 
-          {/* 3. INTERACTIVE MAP CONTAINER */}
           <div id="map" className="mt-12 w-full rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-lg border border-primary/10 h-[360px] sm:h-[450px] relative">
             <iframe
               title="Office Location Map"

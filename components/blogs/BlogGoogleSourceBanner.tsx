@@ -7,16 +7,13 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
   return (
     <div className={`w-full max-w-[1065px] bg-white rounded-[15px] shadow-[0px_1px_4px_rgba(103,103,103,0.1)] overflow-hidden flex flex-row items-stretch min-h-[90px] sm:min-h-[100px] ${className}`}>
       
-      {/* Left teal accent */}
       <div
         className="w-[8px] sm:w-[17px] shrink-0 rounded-l-[10px]"
         style={{ background: "var(--color-gradient)" }}
       />
 
-      {/* Frame 1261153667: Content Area (padding: 0px 67px 0px 0px on desktop) */}
       <div className="flex-1 px-4 py-4 sm:py-3.5 sm:pl-6 sm:pr-8 lg:pr-[67px] flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         
-        {/* Frame 1261153666: Google Logo & Text */}
         <div className="flex flex-col items-start gap-3 text-left sm:flex-row sm:items-center sm:gap-[22px]">
           <div className="h-10 w-10 sm:h-[52px] sm:w-[58px] shrink-0 flex items-center justify-center">
             <svg className="h-10 w-10 sm:h-[48px] sm:w-[52px]" viewBox="0 0 24 24" aria-hidden="true">
@@ -39,7 +36,6 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
             </svg>
           </div>
 
-          {/* Frame 1000012015 */}
           <div className="space-y-1 text-left">
             <h4 className="heading-h4 text-primary text-left text-[18px]! sm:text-[20px]! leading-[26px] sm:leading-[28px] tracking-[-0.00015em]">
               See Our Articles Highlighted In Google Search
@@ -50,7 +46,6 @@ export function BlogGoogleSourceBanner({ className = "" }: { className?: string 
           </div>
         </div>
 
-        {/* Frame 1000011890: CTA Button */}
         <div className="shrink-0 self-end sm:self-auto">
           <a
             href="https://www.google.com/preferences/source?q=myesatherapist.com"

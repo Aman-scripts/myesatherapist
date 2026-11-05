@@ -33,7 +33,6 @@ export function FaqAccordionSection() {
           </p>
         </div>
 
-        {/* Topic Filters */}
         <div
           className="flex flex-wrap justify-center gap-2.5 sm:gap-3 w-full py-1"
           role="group"
@@ -70,7 +69,6 @@ export function FaqAccordionSection() {
               key={faq.question}
               className="w-full rounded-[20px] overflow-hidden shadow-sm transition-all duration-200"
             >
-              {/* Accordion Trigger Header */}
               <button
                 type="button"
                 onClick={() => toggleAccordion(idx)}
@@ -78,18 +76,15 @@ export function FaqAccordionSection() {
                 style={{ backgroundImage: TEAL_GRADIENT }}
                 aria-expanded={isOpen}
               >
-                {/* Gold Number Badge (Frame 1000011949: accent) */}
                 <div className="w-[60px] sm:w-[74px] xl:w-[78px] shrink-0 bg-accent flex items-center justify-center font-sans font-extrabold text-xl sm:text-2xl xl:text-[28px] text-primary leading-none rounded-l-[20px] self-stretch">
                   {String(idx + 1).padStart(2, "0")}.
                 </div>
 
-                {/* Question Title & Plus/Minus Icon */}
                 <div className="flex-1 py-3 sm:py-4 px-4 sm:px-6 xl:px-7 flex items-center justify-between gap-3 sm:gap-4">
                   <h3 className="heading-h3 text-white text-base sm:text-xl xl:text-[28px] leading-snug sm:leading-[32px] xl:leading-[36px] pr-2 m-0 capitalize">
                     {faq.question}
                   </h3>
 
-                  {/* Plus Icon (+) with smooth rotate */}
                   <span
                     className={`w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""
@@ -114,7 +109,6 @@ export function FaqAccordionSection() {
                 </div>
               </button>
 
-              {/* Accordion Body */}
               <div
                 hidden={!isOpen}
                 className="bg-background px-6 sm:px-8 py-5 sm:py-6 font-sans font-medium text-[16px] leading-[26px] border border-primary/15 border-t-0 rounded-b-[20px] animate-fadeIn whitespace-pre-line"

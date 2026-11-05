@@ -27,14 +27,12 @@ const BASICS = [
 export function EsaTrainingBasicsSection() {
   return (
     <section className="relative w-full overflow-hidden bg-white lg:min-h-[54vw] xl:min-h-0 xl:h-[834px]">
-      {/* Artwork with the curved edge and heart badge built in (desktop) */}
       <div className="absolute inset-y-0 right-0 hidden aspect-[2160/2502] lg:block">
         <Image
             quality={90} src={ART} alt={ART_ALT} fill className="object-cover object-right" sizes="(min-width: 1024px) 720px, 1px" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1448px] flex-col px-4 pb-14 sm:px-8 lg:h-full lg:justify-center lg:py-[4.5vw] lg:pl-[5.9vw] lg:pr-0 xl:py-0 xl:pl-[85px]">
-        {/* Artwork for mobile / tablet (curve and heart badge built in) */}
         <div className="relative -mx-4 mb-12 sm:-mx-8 lg:hidden">
           <div className="sm:hidden">
             <WaveImageFrame alt={ART_ALT} img={{ src: "/esa-training/esa-training-basicstraining-mobile.webp", w: 390, h: 512, crop: { x: 0, y: 42, w: 390, h: 470 } }} />

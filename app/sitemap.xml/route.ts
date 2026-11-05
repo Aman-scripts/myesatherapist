@@ -4,7 +4,6 @@ import { AUTHORS_DATA } from "@/data/authorsData";
 import { DOCTORS_DATA } from "@/data/doctorsData";
 import { SITE_URL } from "@/lib/site";
 
-// Regenerate at most once an hour; the list itself is built from the site's data files.
 export const revalidate = 3600;
 
 type ChangeFreq = "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
@@ -46,14 +45,12 @@ function buildEntries(): SitemapEntry[] {
   const entries: SitemapEntry[] = [
     { path: "/", changefreq: "weekly", priority: 1.0 },
 
-    // Core service pages
     { path: "/esa-letter-online/", changefreq: "monthly", priority: 0.9 },
     { path: "/esa-letter-for-housing/", changefreq: "monthly", priority: 0.9 },
     { path: "/psd-letter/", changefreq: "monthly", priority: 0.9 },
     { path: "/pricing/", changefreq: "monthly", priority: 0.9 },
     { path: "/esa-letter-renewal/", changefreq: "monthly", priority: 0.8 },
 
-    // Company pages
     { path: "/about-us/", changefreq: "monthly", priority: 0.6 },
     { path: "/contact-us/", changefreq: "monthly", priority: 0.6 },
     { path: "/reviews/", changefreq: "monthly", priority: 0.6 },
@@ -64,7 +61,6 @@ function buildEntries(): SitemapEntry[] {
     { path: "/contributors/awais-arshad/", changefreq: "monthly", priority: 0.5 },
     { path: "/esa-doctors/", changefreq: "weekly", priority: 0.7 },
 
-    // Resources
     { path: "/blog/", changefreq: "weekly", priority: 0.7 },
     { path: "/blog/esa-guide/", changefreq: "monthly", priority: 0.6 },
     { path: "/blog/esa-training/", changefreq: "monthly", priority: 0.6 },
@@ -78,19 +74,16 @@ function buildEntries(): SitemapEntry[] {
     { path: "/accessibility-statement/", changefreq: "yearly", priority: 0.3 },
     { path: "/telehealth-consent/", changefreq: "yearly", priority: 0.3 },
 
-    // Policies
     { path: "/privacy-policy/", changefreq: "yearly", priority: 0.3 },
     { path: "/terms-of-use/", changefreq: "yearly", priority: 0.3 },
     { path: "/refund-policy/", changefreq: "yearly", priority: 0.3 },
     { path: "/hipaa-compliance/", changefreq: "yearly", priority: 0.3 },
   ];
 
-  // State landing pages
   for (const state of Object.values(STATES_DATA)) {
     entries.push({ path: `/esa-letter-${state.slug}/`, changefreq: "monthly", priority: 0.8 });
   }
 
-  // Blog articles
   for (const post of BLOG_POSTS) {
     entries.push({
       path: post.canonicalUrl || post.url,
@@ -100,7 +93,6 @@ function buildEntries(): SitemapEntry[] {
     });
   }
 
-  // Authors and doctors
   for (const author of AUTHORS_DATA) {
     entries.push({ path: `/contributors/${author.slug}/`, changefreq: "monthly", priority: 0.5 });
   }
@@ -108,7 +100,6 @@ function buildEntries(): SitemapEntry[] {
     entries.push({ path: `/esa-doctors/${doctor.slug}/`, changefreq: "monthly", priority: 0.5 });
   }
 
-  // De-duplicate by absolute URL, keeping the first occurrence
   const seen = new Set<string>();
   return entries.filter((e) => {
     const key = absolute(e.path);

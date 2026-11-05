@@ -79,7 +79,6 @@ const STATES_FAQS: FaqItem[] = [
 export default function StatesDirectoryPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-accent/30">
-      {/* Schema.org JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeLd(withFeatureImage(statesSchema, "esa-by-state")) }}
@@ -89,24 +88,20 @@ export default function StatesDirectoryPage() {
       <Header />
 
       <main className="flex-1 bg-background">
-        {/* 1. Hero Section with Map Pin Icon and State Dropdown */}
         <StatesHeroSection />
 
-        {/* 2. Federal Housing Protections & State ESA Rules */}
         <FederalHousingRulesSection />
         <ChooseStateGridSection
           title="ESA Letter by State"
           description="Open a state page for the local rule, a short summary, and a link to start an evaluation with a clinician licensed in that state."
         />
 
-        {/* 4. Frequently Asked Questions Section */}
         <FaqSection
           title="Frequently Asked Questions"
           subtitle="Explore ESA letter information by state, including local requirements, housing rights, applicable laws, and the process for getting an ESA letter."
           faqs={STATES_FAQS}
         />
 
-        {/* 5. Common CTA Banner Section */}
         <CtaBanner buttonText="Start Your ESA Evaluation" buttonHref="/pricing/" />
       </main>
 
