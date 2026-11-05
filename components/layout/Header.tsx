@@ -456,7 +456,7 @@ export function Header() {
               centerLabel
               forceStateModal
               letter={isPsd ? "psd" : "esa"}
-              className="w-full !h-[54px] !px-12 !text-[14px] min-[380px]:!text-[16px] [&_.cta-icon]:!right-1 [&_.cta-icon]:!h-[38px] [&_.cta-icon]:!w-[38px] [&_.cta-icon_img]:!h-[18px] [&_.cta-icon_img]:!w-[18px]"
+              className="w-full !h-[54px] !text-[16px] [&_.cta-icon]:!absolute [&_.cta-icon]:!top-0 [&_.cta-icon]:!bottom-0 [&_.cta-icon]:!my-auto [&_.cta-icon]:!right-1 [&_.cta-icon]:!h-[42px] [&_.cta-icon]:!w-[42px] [&_.cta-icon_img]:!h-[22px] [&_.cta-icon_img]:!w-[22px]"
               onClick={() => setMobileOpen(false)}
             >
               {isPsd ? "Start Your Consultation" : "Start Your ESA Evaluation"}

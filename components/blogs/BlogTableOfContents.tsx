@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, ChevronRight } from "lucide-react";
@@ -25,6 +25,7 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
   const [activeId, setActiveId] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -76,6 +77,24 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
     };
   }, [currentItems]);
 
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav || !activeId) return;
+    const active = nav.querySelector<HTMLElement>(`[data-toc-id="${activeId}"]`);
+    if (!active) return;
+
+    const navRect = nav.getBoundingClientRect();
+    const itemRect = active.getBoundingClientRect();
+    const padding = 16;
+    const fullyVisible =
+      itemRect.top >= navRect.top + padding && itemRect.bottom <= navRect.bottom - padding;
+    if (fullyVisible) return;
+
+    const itemTop = itemRect.top - navRect.top + nav.scrollTop;
+    const nextTop = itemTop - nav.clientHeight / 2 + itemRect.height / 2;
+    nav.scrollTo({ top: Math.max(0, nextTop), behavior: "smooth" });
+  }, [activeId]);
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     setIsOpen(false);
@@ -95,7 +114,7 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
     <>
       <aside className="hidden lg:block w-[320px] xl:w-[382px] shrink-0 sticky top-[80px] lg:top-[90px] xl:top-[95px] z-20 self-start lg:-mt-[1px] h-[calc(100dvh-80px)] lg:h-[calc(100dvh-90px)] xl:h-[calc(100dvh-95px)] overflow-hidden rounded-none flex flex-col shadow-sm">
         <div
-          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-8 lg:pt-[80px] xl:pt-[95px] pb-8 h-full flex flex-col text-background"
+          className="rounded-none px-6 sm:px-8 xl:px-[41px] pt-8 lg:pt-[80px] xl:pt-[95px] pb-8 h-full min-h-0 overflow-hidden flex flex-col text-background"
           style={{ background: "var(--color-gradient)" }}
         >
           <div className="shrink-0 mb-5 lg:mb-6">
@@ -106,12 +125,12 @@ export function BlogTableOfContents({ items }: BlogTableOfContentsProps = {}) {
             <div className="-mx-6 sm:-mx-8 xl:-mx-[41px] h-[1px] bg-white/20" />
           </div>
 
-          <nav className="w-full flex-1 overflow-y-auto no-scrollbar pr-1 pb-4">
+          <nav ref={navRef} className="w-full min-h-0 flex-1 overflow-y-auto overscroll-contain no-scrollbar pr-1 pb-4">
             <ul className="space-y-3 sm:space-y-3.5 lg:space-y-[14px]">
               {currentItems.map((item) => {
                 const isActive = activeId === item.id;
                 return (
-                  <li key={item.id} className="flex items-start gap-2.5">
+                  <li key={item.id} data-toc-id={item.id} className="flex items-start gap-2.5">
                     <span className={`w-1.5 h-1.5 rounded-full mt-[9px] shrink-0 select-none ${isActive ? "bg-accent" : "bg-white/70"}`} />
                     <a
                       href={`#${item.id}`}
