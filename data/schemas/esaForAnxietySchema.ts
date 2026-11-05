@@ -89,9 +89,9 @@ export const esaForAnxietySchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/contributors/allyson-valley/",
+      "url": "https://myesatherapist.com/author/allyson-valley/",
       "jobTitle": "Mental Health Writer & Research Contributor",
       "description": "Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with experience across crisis services, behavioral health programs, and healthcare systems.",
       "image": "https://myesatherapist.com/images/authors/allyson-valley-image.webp",
@@ -139,9 +139,9 @@ export const esaForAnxietySchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person",
       "name": "Robert Staaf",
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
       "jobTitle": "Licensed Clinical Social Worker",
       "worksFor": {
         "@id": "https://myesatherapist.com/#organization"
@@ -192,7 +192,7 @@ export const esaForAnxietySchema = {
       "datePublished": "2026-08-26T09:42:01+00:00",
       "dateModified": "2026-08-27T07:28:42+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"
@@ -218,7 +218,7 @@ export const esaForAnxietySchema = {
       "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/#quote-staaf",
       "text": "The consistent companionship of an emotional support animal can be a valuable source of comfort for individuals whose anxiety affects their daily emotional well-being.",
       "creator": {
-        "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person"
+        "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person"
       },
       "isPartOf": {
         "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-anxiety/#blogposting"

@@ -89,9 +89,9 @@ export const conditionsThatMayQualifySchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/contributors/allyson-valley/",
+      "url": "https://myesatherapist.com/author/allyson-valley/",
       "jobTitle": "Mental Health Writer & Research Contributor",
       "description": "Licensed Professional Counselor (LPC-MHSP), Ph.D. in Counselor Education & Supervision, with experience across crisis services, behavioral health programs, and healthcare systems.",
       "image": "https://myesatherapist.com/images/authors/allyson-valley-image.webp",
@@ -192,7 +192,7 @@ export const conditionsThatMayQualifySchema = {
       "datePublished": "2026-07-10T07:48:39+00:00",
       "dateModified": "2026-09-01T11:49:31+00:00",
       "author": {
-        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
       },
       "reviewedBy": {
         "@id": "https://www.linkedin.com/in/max-phillips-883485a5/#person"

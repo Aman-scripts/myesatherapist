@@ -23,11 +23,11 @@ export const contributorsSchemas = [
             "position": 1,
             "item": {
               "@type": "Person",
-              "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
+              "@id": "https://myesatherapist.com/author/allyson-valley/#person",
               "name": "Allyson Valley",
               "honorificSuffix": "Ph.D., LPC",
               "jobTitle": "Mental Health Writer & Research Contributor",
-              "url": "https://myesatherapist.com/contributors/allyson-valley/",
+              "url": "https://myesatherapist.com/author/allyson-valley/",
               "image": "https://myesatherapist.com/images/authors/allyson-valley-profile-image.webp",
               "sameAs": ["https://www.linkedin.com/in/allyson-valley/"],
               "description": "Mental health writer, researcher, and Licensed Professional Counselor with more than 11 years of experience in emotional wellness, counseling support, and crisis management.",
@@ -103,11 +103,11 @@ export const contributorsSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://myesatherapist.com/contributors/allyson-valley/#webpage",
-    "url": "https://myesatherapist.com/contributors/allyson-valley/",
+    "@id": "https://myesatherapist.com/author/allyson-valley/#webpage",
+    "url": "https://myesatherapist.com/author/allyson-valley/",
     "name": "Allyson Valley, Ph.D., LPC | My ESA Therapist",
     "mainEntity": {
-      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
+      "@id": "https://myesatherapist.com/author/allyson-valley/#person"
     }
   },
   {

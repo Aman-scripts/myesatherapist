@@ -2,8 +2,8 @@ export const robertStaafSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#webpage",
-    "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
+    "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#webpage",
+    "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
     "name": "Robert Staaf, LCSW | My ESA Therapist",
     "description": "Profile of Robert Staaf, a Licensed Clinical Social Worker (LCSW) with My ESA Therapist, specializing in ESA evaluations, anxiety, and stress-related care.",
     "isPartOf": {
@@ -15,10 +15,10 @@ export const robertStaafSchemas = [
     },
     "mainEntity": {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person",
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker (LCSW)",
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
       "image": "https://myesatherapist.com/images/doctors/robert-staaf.webp",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
@@ -60,7 +60,7 @@ export const robertStaafSchemas = [
         "@type": "ListItem",
         "position": 3,
         "name": "Dr. Robert Staaf",
-        "item": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/"
+        "item": "https://myesatherapist.com/esa-doctors/dr-robert-staff/"
       }
     ]
   },
@@ -69,9 +69,9 @@ export const robertStaafSchemas = [
     "@type": "Service",
     "serviceType": "Emotional Support Animal (ESA) Evaluation",
     "name": "ESA Evaluation with Robert Staaf, LCSW",
-    "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
+    "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
     "provider": {
-      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/#person"
+      "@id": "https://myesatherapist.com/esa-doctors/dr-robert-staff/#person"
     },
     "areaServed": {
       "@type": "Country",

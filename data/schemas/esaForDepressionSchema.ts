@@ -23,9 +23,9 @@ export const esaForDepressionSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://myesatherapist.com/contributors/allyson-valley/#person",
+      "@id": "https://myesatherapist.com/author/allyson-valley/#person",
       "name": "Allyson Valley",
-      "url": "https://myesatherapist.com/contributors/allyson-valley/",
+      "url": "https://myesatherapist.com/author/allyson-valley/",
       "image": {
         "@type": "ImageObject",
         "url": "https://myesatherapist.com/images/authors/allyson-valley-profile-image.webp"
@@ -108,7 +108,7 @@ export const esaForDepressionSchema = {
         "@id": "https://myesatherapist.com/blog/qualifying-conditions/esa-for-depression/#primaryimage"
       },
       "author": {
-        "@id": "https://myesatherapist.com/contributors/allyson-valley/#person"
+        "@id": "https://myesatherapist.com/author/allyson-valley/#person"
       },
       "publisher": {
         "@id": "https://myesatherapist.com/#organization"

@@ -262,7 +262,7 @@ export const homeSchema = {
       "@type": "Person",
       "name": "Robert Staaf",
       "jobTitle": "Licensed Clinical Social Worker (LCSW)",
-      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staaf/",
+      "url": "https://myesatherapist.com/esa-doctors/dr-robert-staff/",
       "sameAs": [
         "https://www.linkedin.com/in/robert-staaf-b57b53333/"
       ],
