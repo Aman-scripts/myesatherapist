@@ -89,7 +89,7 @@ export function EsaOnlineHero({
       </div>
 
       <div
-        className={`responsive-hero-copy relative z-10 flex flex-col px-5 py-10 lg:mx-auto lg:w-[1440px] lg:justify-center lg:py-16 lg:pl-[82px] lg:pr-20 ${
+        className={`responsive-hero-copy relative z-10 flex flex-col px-5 py-10 lg:mx-auto lg:w-full lg:max-w-[1440px] lg:justify-center lg:py-16 lg:pl-[82px] lg:pr-20 ${
           showStats
             ? "items-center text-center sm:items-start sm:px-8 sm:py-14 sm:text-left"
             : "items-center px-5 text-center lg:items-start lg:text-left"

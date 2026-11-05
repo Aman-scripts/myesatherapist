@@ -135,7 +135,7 @@ export function PsdCapabilitiesSection() {
         designHeight={652}
         className="hidden lg:block relative"
       >
-        <div className="relative w-[1440px] h-[652px] mx-auto overflow-hidden bg-white flex items-center">
+        <div className="relative w-full h-[652px] mx-auto overflow-hidden bg-white flex items-center">
           {/* Frame 1000011791: Left Content (width: 704px, left: 84px) */}
           <div className="absolute left-[84px] top-1/2 -translate-y-1/2 w-[704px] z-20 flex flex-col items-start">
             {/* Heading */}

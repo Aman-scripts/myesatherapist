@@ -104,7 +104,7 @@ export function WhatIsPsdSection() {
         designHeight={699}
         className="hidden lg:block relative"
       >
-        <div className="relative w-[1440px] h-[699px] mx-auto overflow-hidden bg-white">
+        <div className="relative w-full h-[699px] mx-auto overflow-hidden bg-white">
           {/* Frame 1000011698: Left Text Container (left: 87px, top: 31px, width: 626px, height: 416px) */}
           <div className="absolute left-[87px] top-[31px] w-[626px] z-10 flex flex-col justify-between">
             <p className="heading-h2 text-primary capitalize mb-6 w-[541px]">

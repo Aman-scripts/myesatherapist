@@ -81,7 +81,7 @@ export function EmotionalSupportSection() {
         designHeight={760}
         className="hidden lg:block relative"
       >
-        <div className="relative w-[1440px] h-[760px] flex items-center justify-between">
+        <div className="relative w-full h-[760px] flex items-center justify-between">
           {/* Left Content Area (Exact 737px Figma Frame) */}
           <div className="w-[737px] pl-[78px] pr-4 z-10 space-y-8 my-auto">
             <div className="space-y-3.5">

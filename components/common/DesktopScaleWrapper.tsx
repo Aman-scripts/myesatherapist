@@ -37,11 +37,10 @@ export function DesktopScaleWrapper({
         </div>
       )}
 
-      {/* 1440px Design Canvas */}
+      {/* Design canvas. Caps at the Figma width and shrinks with the window so it cannot force a horizontal scrollbar. */}
       <div
-        className={`relative z-10 mx-auto ${className}`}
+        className={`relative z-10 mx-auto w-full ${className}`}
         style={{
-          width: `${designWidth}px`,
           maxWidth: `${designWidth}px`,
         }}
       >

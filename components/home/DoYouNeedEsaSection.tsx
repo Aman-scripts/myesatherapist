@@ -24,7 +24,7 @@ export function DoYouNeedEsaSection() {
         designHeight={701}
         className="hidden lg:block relative"
       >
-        <div className="relative w-[1440px] h-[701px] flex items-center justify-between">
+        <div className="relative w-full h-[701px] flex items-center justify-between">
           {/* Left Content Area */}
           <div className="w-[737px] pl-[78px] pr-4 my-auto py-0 z-10 flex flex-col justify-center shrink-0 space-y-5">
             <div className="space-y-4">

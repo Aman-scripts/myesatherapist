@@ -191,8 +191,8 @@ export function ComparisonTable() {
           designHeight={665}
           className="hidden lg:block relative"
         >
-          <div className="relative w-[1020px] pt-[17px] pb-[16px] flex justify-center">
-            <div className="w-[1020px] relative">
+          <div className="relative w-full pt-[17px] pb-[16px] flex justify-center">
+            <div className="w-full relative">
               {/* Main Background Frame */}
               <div className="w-full bg-background rounded-[20px] shadow-[0_2px_5.2px_rgba(0,0,0,0.15)] pb-[14px] relative z-0">
                 {/* Header Labels for FEATURES and OTHERS */}

@@ -52,7 +52,7 @@ export function ResponsiveHero({
           "responsive-hero-copy relative z-10 flex flex-col items-center px-6 pb-12 pt-10 text-center",
           "sm:items-start sm:px-10 sm:text-left",
           centered ? "sm:justify-center" : "sm:justify-start sm:pt-12",
-          "lg:mx-auto lg:w-[1440px] lg:px-0 lg:pl-[82px]",
+          "lg:mx-auto lg:w-full lg:max-w-[1440px] lg:px-0 lg:pl-[82px]",
           centered ? "lg:justify-center" : "lg:justify-start lg:pt-[92px]",
           contentClassName,
         )}

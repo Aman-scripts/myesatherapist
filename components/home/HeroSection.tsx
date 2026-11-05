@@ -85,7 +85,7 @@ export function HeroSection() {
         ))}
       </div>
 
-      <div className="relative z-10 sm:min-h-[900px] lg:mx-auto lg:h-[744px] lg:min-h-0 lg:w-[1440px]">
+      <div className="relative z-10 sm:min-h-[900px] lg:mx-auto lg:h-[744px] lg:min-h-0 lg:w-full lg:max-w-[1440px]">
         <div className="flex flex-col items-center px-4 pb-8 pt-8 text-center sm:px-6 sm:pt-12 lg:absolute lg:left-[82px] lg:top-[92px] lg:w-[678px] lg:items-start lg:p-0 lg:text-left">
           <div className="hidden items-center gap-3 sm:flex sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
             {statsData.map((stat) => (

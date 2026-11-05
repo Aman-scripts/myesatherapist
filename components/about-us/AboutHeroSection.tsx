@@ -12,17 +12,22 @@ export function AboutHeroSection() {
       desktopHeight={640}
       tabletMinHeight="720px"
       centered={false}
+      contentClassName="lg:pt-[196px]"
       backgrounds={standardHeroBackgrounds(
         "/hero-image-for-mobile-all.webp",
         "/about-us/about-us-tablet-hero-section.webp",
         "/about-us/hero-about-desktop.webp",
       )}
     >
-      <SiteBreadcrumbs className="mb-3 self-start sm:self-auto" />
-      <h1 className="heading-h1 text-primary max-w-[320px] sm:max-w-[620px]">About My ESA Therapist</h1>
-      <p className="body-large text-body-text mx-auto mt-4 max-w-[320px] sm:mx-0 sm:max-w-[500px]">
-        {DESCRIPTION}
-      </p>
+      <div className="flex w-full max-w-[320px] flex-col items-center text-center sm:max-w-[513px] sm:items-start sm:text-left">
+        <SiteBreadcrumbs className="mb-3 self-start sm:self-auto" />
+        <h1 className="heading-h1 text-primary max-w-[320px] sm:max-w-[513px] lg:max-w-[430px]">
+          About My ESA Therapist
+        </h1>
+        <p className="body-large text-body-text mt-4 max-w-[320px] sm:mt-6 sm:max-w-[470px]">
+          {DESCRIPTION}
+        </p>
+      </div>
     </ResponsiveHero>
   );
 }

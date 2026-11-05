@@ -119,7 +119,7 @@ export function AboutLegitimateSection() {
         designHeight={938}
         className="hidden lg:block relative"
       >
-        <div className="relative w-[1440px] h-[938px] flex items-center bg-white overflow-hidden">
+        <div className="relative w-full h-[938px] flex items-center bg-white overflow-hidden">
           {/* Left Content Column (Figma Frame 1000011791) */}
           <div className="absolute left-[84px] top-[58px] w-[651px] flex flex-col items-start gap-10 z-10">
             {/* Heading Block */}
