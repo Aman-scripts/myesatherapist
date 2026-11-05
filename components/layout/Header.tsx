@@ -161,7 +161,7 @@ export function Header() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[80px] h-20 lg:h-[98px] flex items-center justify-between">
 
           {/* Logo (ESA LOGO FINAL-01 1: 171px x 71px) */}
-          <Link prefetch={false} href="/" className="flex items-center shrink-0">
+          <Link prefetch={false} href="/" className="flex items-center shrink min-w-0">
             <Image quality={90}
               src="/common/myesa-logo.svg"
               alt="My ESA Therapist"
@@ -170,7 +170,7 @@ export function Header() {
               height={71}
               priority
               unoptimized
-              className="h-14 sm:h-16 lg:h-[71px] w-auto shrink-0 object-contain"
+              className="h-12 sm:h-16 lg:h-[71px] w-auto max-w-full object-contain"
             />
           </Link>
 
@@ -240,17 +240,27 @@ export function Header() {
             )}
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            type="button"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-navigation"
-            className="lg:hidden p-2 rounded-lg text-primary min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile: Start Evaluation + menu */}
+          <div className="lg:hidden flex items-center gap-2 shrink-0">
+            <CtaButton
+              variant="accent"
+              letter={isPsd ? "psd" : "esa"}
+              className="!h-11 !min-w-0 w-auto !gap-2 !pl-4 !pr-1 !text-[13px] [&>span:last-child]:!h-8 [&>span:last-child]:!w-8 [&_img]:!h-4 [&_img]:!w-4"
+              onClick={() => setMobileOpen(false)}
+            >
+              Start Evaluation
+            </CtaButton>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
+              className="h-10 w-8 text-primary flex items-center justify-center shrink-0"
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
 
         </div>
       </div>
@@ -351,6 +361,14 @@ export function Header() {
             onClick={() => setMobileOpen(false)}
           >
             Contact Us
+          </Link>
+          <Link prefetch={false}
+            href="/state/"
+            className="py-2 text-body-text font-medium text-base min-h-[44px] flex items-center justify-between gap-3"
+            onClick={() => setMobileOpen(false)}
+          >
+            <span>See All 50 States</span>
+            <ArrowRight className="w-4 h-4 text-body-text shrink-0" strokeWidth={1.5} />
           </Link>
 
           <div className="pt-2 space-y-2.5">
