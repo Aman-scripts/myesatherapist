@@ -110,7 +110,7 @@ function EvaluationFormCard({
         compact
           ? "rounded-[22px] p-4 sm:p-5"
           : tight
-            ? "rounded-[30px] px-[18px] pt-[22px] pb-5"
+            ? "rounded-[30px] px-[18px] pt-[22px] pb-5 lg:max-h-[calc(var(--hero-desktop,808px)-31px-62px)] lg:overflow-y-auto lg:overscroll-contain"
             : "rounded-[30px] px-[18px] pt-[30px] pb-[34px]"
       }`}
     >
