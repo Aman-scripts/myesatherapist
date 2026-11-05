@@ -532,6 +532,14 @@ img[src$="/send-icon.svg"] {
   transition: translate 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease;
 }
 
+.cta-anim > :not(.cta-ripple) {
+  z-index: 1;
+}
+
+.cta-anim > :not(.cta-ripple):not([class~="absolute"]) {
+  position: relative;
+}
+
 .cta-anim .cta-icon {
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }

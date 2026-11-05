@@ -176,13 +176,13 @@ function PricingCardButton({
       label={label}
       letter={letter}
       evaluationCta
-      className="inline-flex h-[46px] w-full min-w-0 items-center justify-between gap-1.5 rounded-full bg-accent pl-2.5 pr-1 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-all hover:bg-[#dba81f] active:scale-[0.99] sm:h-[54px] sm:gap-2 sm:rounded-[30px] sm:pl-3 sm:pr-[5px] sm:text-[16px] sm:leading-5"
+      className="inline-flex h-[46px] w-full min-w-0 items-center justify-between gap-1.5 rounded-full bg-accent pl-2.5 pr-1 font-sans text-[14px] font-bold leading-5 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)] sm:h-[54px] sm:gap-2 sm:rounded-[30px] sm:pl-3 sm:pr-[5px] sm:text-[16px] sm:leading-5"
     >
-      <span className="min-w-0 flex-1 whitespace-nowrap text-center">
+      <span className="relative z-[1] min-w-0 flex-1 whitespace-nowrap text-center">
         <span className="sm:hidden">{mobileLabel}</span>
         <span className="hidden sm:inline">{desktopLabel}</span>
       </span>
-      <span className="flex h-[36px] w-[36px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] sm:h-[42.5px] sm:w-[42.5px]">
+      <span className="cta-icon relative z-[1] flex h-[36px] w-[36px] shrink-0 items-center justify-center rounded-full bg-background shadow-[0px_3px_6px_rgba(0,0,0,0.15)] sm:h-[42.5px] sm:w-[42.5px]">
         <SendIcon className="h-[18px] w-[18px] sm:h-[22px] sm:w-[22px]" />
       </span>
     </MaybeStateModalButton>

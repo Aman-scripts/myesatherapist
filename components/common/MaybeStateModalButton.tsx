@@ -5,6 +5,7 @@ import {
   openStateSelectModal,
   type StateModalLetter,
 } from "@/components/common/evaluationCta";
+import { playCtaClick } from "@/components/common/ctaMotion";
 
 export function MaybeStateModalButton({
   href,
@@ -28,8 +29,11 @@ export function MaybeStateModalButton({
     return (
       <button
         type="button"
-        className={`cursor-pointer ${className ?? ""}`}
-        onClick={() => openStateSelectModal(letter)}
+        className={`cta-anim cursor-pointer ${className ?? ""}`}
+        onClick={(event) => {
+          playCtaClick(event);
+          openStateSelectModal(letter);
+        }}
       >
         {children}
       </button>
@@ -37,7 +41,7 @@ export function MaybeStateModalButton({
   }
 
   return (
-    <a href={href} className={className}>
+    <a href={href} className={`cta-anim ${className ?? ""}`} onClick={playCtaClick}>
       {children}
     </a>
   );
