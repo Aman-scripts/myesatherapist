@@ -525,6 +525,91 @@ img[src$="/send-icon.svg"] {
   transform: translateX(-9%);
 }
 
+.cta-anim {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: translate 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease;
+}
+
+.cta-anim .cta-icon {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta-ripple {
+  position: absolute;
+  z-index: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  margin-top: -8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  animation: cta-ripple 0.6s ease-out forwards;
+}
+
+.cta-anim--light .cta-ripple {
+  background: rgba(219, 168, 31, 0.4);
+}
+
+@keyframes cta-ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.75;
+  }
+
+  to {
+    transform: scale(28);
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .cta-anim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.58) 0%,
+      rgba(255, 255, 255, 0.24) 100%
+    );
+    transform: translate3d(-105%, 0, 0);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  .cta-anim--light::before {
+    background: linear-gradient(
+      105deg,
+      rgba(232, 185, 44, 0.72) 0%,
+      rgba(232, 185, 44, 0.28) 100%
+    );
+  }
+
+  .cta-anim:hover:not(:disabled)::before {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .cta-anim:hover:not(:disabled) {
+    translate: 0 -3px;
+    box-shadow: 0 12px 24px rgba(26, 61, 79, 0.2);
+  }
+
+  .cta-anim:hover:not(:disabled) .cta-icon {
+    transform: translateX(3px) scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-ripple {
+    animation: none;
+  }
+}
+
 .icon-lg {
   width: 32px;
   height: 32px;

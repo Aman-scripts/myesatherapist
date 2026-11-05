@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { isEvaluationCtaLabel, openStateSelectModal, type StateModalLetter } from "@/components/common/evaluationCta";
@@ -61,7 +61,54 @@ export function CtaButton({
     (stateModal !== false && type !== "submit" && isEvaluationCtaLabel(label));
   const resolvedHref = opensModal ? undefined : href;
 
+  const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
+  const rippleId = useRef(0);
+  const mounted = useRef(true);
+
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
+  }, []);
+
+  const playClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    if (disabled) return;
+    const target = event.currentTarget;
+    const rect = target.getBoundingClientRect();
+    const fromPointer = event.detail !== 0;
+    const x = fromPointer ? event.clientX - rect.left : rect.width / 2;
+    const y = fromPointer ? event.clientY - rect.top : rect.height / 2;
+    const id = rippleId.current + 1;
+    rippleId.current = id;
+    setRipples((current) => [...current, { id, x, y }]);
+    window.setTimeout(() => {
+      if (!mounted.current) return;
+      setRipples((current) => current.filter((ripple) => ripple.id !== id));
+    }, 650);
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    target.animate(
+      [
+        { scale: 1, offset: 0 },
+        { scale: 0.92, offset: 0.22 },
+        { scale: 1.04, offset: 0.58 },
+        { scale: 1, offset: 1 },
+      ],
+      { duration: 460, easing: "linear" },
+    );
+    target.querySelector(".cta-icon")?.animate(
+      [
+        { transform: "scale(1)", offset: 0 },
+        { transform: "scale(0.88)", offset: 0.22 },
+        { transform: "scale(1)", offset: 1 },
+      ],
+      { duration: 460, easing: "linear" },
+    );
+  };
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    playClick(event);
     if (opensModal) {
       event.preventDefault();
       openStateSelectModal(letter, { force: forceStateModal });
@@ -77,10 +124,10 @@ export function CtaButton({
   let textColor = "text-white";
 
   if (isSecondary) {
-    bgClass = "bg-background hover:bg-[#F5EFE6]";
+    bgClass = "bg-background";
     textColor = "text-color-gradient";
   } else if (isAccent) {
-    bgClass = "bg-accent hover:bg-[#dba81f]";
+    bgClass = "bg-accent";
     textColor = "text-primary";
   }
 
@@ -95,13 +142,20 @@ export function CtaButton({
 
   const heightClass = wrap ? "h-auto min-h-[54px] py-1.5" : "h-[54px]";
   const justifyClass = centerLabel || !(shouldShowIcon && !isSecondary) ? "justify-center" : "justify-between";
-  const baseClasses = `inline-flex items-center ${centerLabel ? "relative" : ""} ${justifyClass} ${heightClass} rounded-[30px] ${paddingClass} gap-2.5 sm:gap-3 ${bgClass} ${textColor} button-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] hover:opacity-95 active:scale-[0.99] transition-all cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
+  const baseClasses = `cta-anim ${isSecondary ? "cta-anim--light" : ""} inline-flex items-center ${justifyClass} ${heightClass} rounded-[30px] ${paddingClass} gap-2.5 sm:gap-3 ${bgClass} ${textColor} button-text shadow-[0px_2px_4px_rgba(0,0,0,0.15)] cursor-pointer select-none shrink-0 ${defaultWidthClass} ${className}`;
 
   const content = (
     <>
-      <span className={wrap ? "min-w-0 flex-1 whitespace-normal text-center text-inherit" : centerLabel ? "w-full text-center text-inherit" : "whitespace-nowrap text-inherit"}>{children}</span>
+      {ripples.map((ripple) => (
+        <span
+          key={ripple.id}
+          className="cta-ripple"
+          style={{ left: ripple.x, top: ripple.y }}
+        />
+      ))}
+      <span className={`relative z-[1] ${wrap ? "min-w-0 flex-1 whitespace-normal text-center text-inherit" : centerLabel ? "w-full text-center text-inherit" : "whitespace-nowrap text-inherit"}`}>{children}</span>
       {shouldShowIcon && (
-        <span className={`${centerLabel ? "absolute right-[5px]" : ""} w-[42.5px] h-[42.5px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0`}>
+        <span className={`cta-icon relative z-[1] ${centerLabel ? "absolute right-[5px]" : ""} w-[42.5px] h-[42.5px] rounded-full bg-background shadow-[0px_3.03px_6.07px_rgba(0,0,0,0.15)] flex items-center justify-center shrink-0`}>
           <SendIcon className={`w-[22px] h-[22px] ${iconClassName}`} />
         </span>
       )}
