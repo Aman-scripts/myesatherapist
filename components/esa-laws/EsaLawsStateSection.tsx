@@ -24,7 +24,7 @@ const STATE_LAWS: StateLawEntry[] = [
       "HUD update and Alabama impact: HUD withdrew its prior 2013 and 2020 assistance-animal guidance on May 22, 2026. This does not eliminate FHA housing protections in Alabama. Alabama housing providers must still apply the FHA’s reasonable-accommodation requirements, while the state’s assistance-animal law continues to address documentation and misrepresentation issues.",
     ],
     guideHref: "/esa-laws/alabama/",
-    guideLabel: "Alabama ESA Laws",
+    guideLabel: "Read more about Alabama ESA Laws",
   },
   {
     slug: "california",
