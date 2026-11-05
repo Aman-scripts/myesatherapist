@@ -196,15 +196,15 @@ export function QualifyingConditions({
                     onClick={() => setHoveredCondition(c.label)}
                     className="badge-hover flex items-center gap-1.5 md:gap-1.5 lg:gap-2 xl:gap-3 bg-white rounded-[6px] md:rounded-[6px] lg:rounded-[8px] xl:rounded-[10px] pl-1 md:pl-1 lg:pl-1.5 xl:pl-2 pr-2.5 md:pr-2.5 lg:pr-3.5 xl:pr-4 h-[28px] md:h-[28px] lg:h-[36px] xl:h-12 shadow-[0_4px_12px_-6px_rgba(46,90,102,0.35)] lg:shadow-[0_6px_18px_-8px_rgba(46,90,102,0.35)] xl:shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit whitespace-nowrap cursor-pointer"
                   >
-                    <span className="w-[20px] h-[20px] md:w-[20px] md:h-[20px] lg:w-[26px] lg:h-[26px] xl:w-[35px] xl:h-[35px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
+                    <span className="inline-flex w-[20px] h-[20px] md:w-[20px] md:h-[20px] lg:w-[26px] lg:h-[26px] xl:w-[35px] xl:h-[35px] rounded-full bg-[#E8EEF0] items-center justify-center shrink-0 overflow-hidden">
                       <Image quality={90}
                         src={c.icon}
                         alt={c.label}
                         width={20}
-          sizes="20px"
+                        sizes="20px"
                         height={20}
                         unoptimized
-                        className="icon-sm object-contain"
+                        className="block h-3 w-3 shrink-0 object-contain lg:h-4 lg:w-4 xl:h-5 xl:w-5"
                       />
                     </span>
                     <span
@@ -277,15 +277,15 @@ export function QualifyingConditions({
                     onClick={() => setHoveredCondition(isVisible ? null : c.label)}
                     className="badge-hover flex items-center gap-3 bg-white rounded-[10px] pl-2 pr-4 h-12 shadow-[0_10px_25px_-10px_rgba(46,90,102,0.35)] w-fit whitespace-nowrap cursor-pointer"
                   >
-                    <span className="w-[32px] h-[32px] rounded-full bg-[#E8EEF0] flex items-center justify-center shrink-0">
+                    <span className="inline-flex h-[32px] w-[32px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#E8EEF0]">
                       <Image quality={90}
                         src={c.icon}
                         alt={c.label}
-                        width={20}
-          sizes="20px"
-                        height={20}
+                        width={18}
+                        sizes="18px"
+                        height={18}
                         unoptimized
-                        className="icon-sm object-contain"
+                        className="block h-[18px] w-[18px] shrink-0 object-contain"
                       />
                     </span>
                     <span

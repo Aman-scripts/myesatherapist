@@ -448,14 +448,24 @@ small,
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* Keep icon circles as flex so the glyph stays centered. inline-block
+     dropped align/justify and pinned the icon to the top-left of the circle. */
   .badge-hover > span:first-child {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .badge-hover:hover img,
   .badge-hover:hover svg,
   .badge-hover:hover > span:first-child {
     transform: scale(1.05);
+  }
+
+  /* The circle already scales. Scaling the glyph again pushes it out of the circle. */
+  .badge-hover:hover > span:first-child img,
+  .badge-hover:hover > span:first-child svg {
+    transform: none;
   }
 }
 
