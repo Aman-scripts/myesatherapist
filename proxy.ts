@@ -29,7 +29,7 @@ function applyStagingRobots(response: NextResponse, request: NextRequest) {
   return response;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const lower = pathname.toLowerCase();
   const target = ALIASES[lower] ?? (lower !== pathname ? lower : null);
