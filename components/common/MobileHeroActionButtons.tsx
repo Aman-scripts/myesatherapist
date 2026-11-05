@@ -34,7 +34,7 @@ export function MobileHeroActionButtons({
   selectedState = "",
   onStateSelect,
   getStartedText = "Get Started",
-  placeholder = "Select your State",
+  placeholder = "Select Your State",
   className = "",
   onGetStartedClick,
   selectTone = "teal",

@@ -93,7 +93,7 @@ export function StateSelectModal() {
 
         <HeroStateDropdown
           className="relative z-20 mt-6 flex w-full flex-col items-center"
-          placeholder="Select your State"
+          placeholder="Select Your State"
           onChange={setSlug}
           buttonClassName="body-text flex h-[54px] w-auto items-center gap-2.5 rounded-[30px] border border-primary bg-white px-6 text-primary shadow-[0px_2px_4px_rgba(0,0,0,0.15)]"
           menuClassName="relative mt-2 max-h-[220px] w-full overflow-y-auto rounded-2xl bg-white p-2 text-left shadow-[0px_10px_30px_rgba(0,0,0,0.12)] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"

@@ -41,8 +41,8 @@ export function StatesHeroSection() {
   }, [isDropdownOpen]);
 
   const stateLabel = selectedState
-    ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
-    : "Select your State";
+    ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select Your State"
+    : "Select Your State";
 
   return (
     <ResponsiveHero
@@ -110,7 +110,7 @@ export function StatesHeroSection() {
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             aria-haspopup="listbox"
             aria-expanded={isDropdownOpen}
-            aria-label={selectedState ? `Selected state ${stateLabel}` : "Select your State"}
+            aria-label={selectedState ? `Selected state ${stateLabel}` : "Select Your State"}
             className="inline-flex h-[48px] min-w-[220px] items-center justify-between gap-3 rounded-full border border-primary bg-background px-6 shadow-sm lg:h-[54px] lg:min-w-[246px]"
           >
             <span className="flex items-center gap-2">

@@ -25,7 +25,7 @@ export function HeroStateDropdown({
   className = "relative z-50",
   buttonClassName = "flex items-center gap-2.5 px-6 py-3 rounded-[30px] bg-background font-semibold text-base hover:bg-white transition-colors min-h-[48px] shadow-sm border border-primary",
   iconSize = 20,
-  placeholder = "Select your State",
+  placeholder = "Select Your State",
   onChange,
   menuClassName,
 }: HeroStateDropdownProps) {

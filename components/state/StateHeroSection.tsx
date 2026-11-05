@@ -129,7 +129,7 @@ function EvaluationFormCard({
         </p>
       </div>
 
-      <form noValidate onSubmit={handleSubmit} className={compact || tight ? "space-y-3" : "space-y-[19px]"}>
+      <form noValidate onSubmit={handleSubmit} className={`text-left ${compact || tight ? "space-y-3" : "space-y-[19px]"}`}>
           <div className="grid grid-cols-2 gap-3 sm:gap-6">
             <div>
               <label className={labelClass}>First Name</label>
@@ -185,7 +185,7 @@ function EvaluationFormCard({
           </div>
 
           <div>
-            <label className={labelClass}>Select your State</label>
+            <label className={labelClass}>Select Your State</label>
             <div className="relative">
               <select
                 required

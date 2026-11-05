@@ -65,8 +65,8 @@ export function HeroSection() {
 
   const getStartedHref = selectedState ? `/esa-letter-${selectedState}/` : undefined;
   const stateLabel = selectedState
-    ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select your State"
-    : "Select your State";
+    ? STATE_INDEX_BY_SLUG[selectedState]?.name || "Select Your State"
+    : "Select Your State";
 
   return (
     <section className="relative z-40 bg-background">
@@ -118,7 +118,7 @@ export function HeroSection() {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 aria-haspopup="listbox"
                 aria-expanded={isDropdownOpen}
-                aria-label={selectedState ? `Selected state ${stateLabel}` : "Select your State"}
+                aria-label={selectedState ? `Selected state ${stateLabel}` : "Select Your State"}
                 className="flex h-[54px] w-[246px] items-center justify-center gap-2.5 rounded-[30px] border border-primary bg-background px-6 shadow-[0px_2px_4px_rgba(0,0,0,0.15)] transition-colors hover:bg-white sm:w-auto sm:justify-start sm:px-[29px]"
               >
                 <Image
