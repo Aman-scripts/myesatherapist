@@ -536,7 +536,7 @@ export const SEO_SETTINGS: Record<string, SheetSeo> = {
   },
   "/author/mohammed-ziauddin/": {
     "title": "Mohammed Ziauddin | My ESA Therapist",
-    "description": "",
+    "description": "Meet Mohammed Ziauddin, My ESA Therapist’s health writer and medical researcher covering ESA guidance, mental health, and wellness.",
     "robots": "full",
     "ogType": "website"
   },
