@@ -206,7 +206,7 @@ export const kentuckySchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-kentucky/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const kentuckySchema = {
           "name": "What Is The Typical Cost Of An ESA Letter In Kentucky?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Kentucky, the pricing of ESA letters varies by provider and the mental health evaluation process. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+            "text": "In Kentucky, the pricing of ESA letters varies by provider and the mental health evaluation process. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
           },
         },
         {

@@ -206,7 +206,7 @@ export const louisianaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-louisiana/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const louisianaSchema = {
           "name": "How Much Does An ESA Letter Usually Cost In Louisiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Louisiana, the cost of an ESA letter depends on the provider and consultation process, with most legitimate services typically ranging between $100–$200. At My ESA Therapist, the fee is $149, covering both the assessment and the ESA letter if you qualify.",
+            "text": "In Louisiana, the cost of an ESA letter depends on the provider and consultation process, with most legitimate services typically ranging between $100–$200. At My ESA Therapist, the fee is $99, covering both the assessment and the ESA letter if you qualify.",
           },
         },
         {

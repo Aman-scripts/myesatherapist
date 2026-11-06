@@ -200,7 +200,7 @@ export const georgiaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-georgia/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -321,7 +321,7 @@ export const georgiaSchema = {
           "name": "How Much Does An ESA Letter Cost In Georgia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of an ESA letter in Georgia can differ based on the provider and how the evaluation is conducted. At My ESA Therapist, the fee is $149, covering an assessment by a licensed mental health professional and the issuance of an ESA letter if you qualify.",
+            "text": "The cost of an ESA letter in Georgia can differ based on the provider and how the evaluation is conducted. At My ESA Therapist, the fee is $99, covering an assessment by a licensed mental health professional and the issuance of an ESA letter if you qualify.",
           },
         },
         {

@@ -206,7 +206,7 @@ export const texasSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-texas/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -317,7 +317,7 @@ export const texasSchema = {
           "name": "How Much Does an ESA Letter Evaluation Cost in Texas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At My ESA Therapist, the ESA evaluation costs $149. This includes a secure telehealth evaluation with a Texas-licensed professional and the platform fees. You are not paying for an ESA letter. An emotional support animal letter is provided only if the clinical evaluation supports the need for an emotional support animal.",
+            "text": "At My ESA Therapist, the ESA evaluation costs $99. This includes a secure telehealth evaluation with a Texas-licensed professional and the platform fees. You are not paying for an ESA letter. An emotional support animal letter is provided only if the clinical evaluation supports the need for an emotional support animal.",
           },
         },
         {

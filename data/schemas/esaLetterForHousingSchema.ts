@@ -184,7 +184,7 @@ export const esaLetterForHousingSchemas = [
       {
         "@type": "Offer",
         "@id": "https://myesatherapist.com/esa-letter-for-housing/#offer",
-        "price": "149",
+        "price": "99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "areaServed": {
@@ -198,7 +198,7 @@ export const esaLetterForHousingSchemas = [
         "seller": {
           "@id": "https://myesatherapist.com/#organization"
         },
-        "description": "One-time fee, no hidden costs. Payment is authorized at booking but only charged after the evaluation is completed. An ID card add-on is available for $199 total."
+        "description": "One-time fee, no hidden costs. Payment is authorized at booking but only charged after the evaluation is completed. An ESA Letter + PSD Letter Combo is available for $109 total."
       },
       {
         "@type": "Quotation",

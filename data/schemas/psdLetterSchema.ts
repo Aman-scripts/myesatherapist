@@ -204,7 +204,7 @@ export const psdLetterSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/psd-letter/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "areaServed": {

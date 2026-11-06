@@ -206,7 +206,7 @@ export const southCarolinaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-south-carolina/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -341,7 +341,7 @@ export const southCarolinaSchema = {
           "name": "What is The Average Cost Of An ESA Letter In South Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In South Carolina, ESA letter costs are typically aligned with national standards, where licensed evaluations are often priced in the $149–$199 range. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+            "text": "In South Carolina, ESA letter costs are typically aligned with national standards, where licensed evaluations are often priced in the $99–$199 range. At My ESA Therapist, the fee is $99, including the evaluation and ESA letter upon approval.",
           },
         },
         {

@@ -206,7 +206,7 @@ export const southDakotaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-south-dakota/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const southDakotaSchema = {
           "name": "How Much Does An ESA Letter Cost In South Dakota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In South Dakota, ESA letter pricing can vary depending on the service and evaluation method, with reputable providers ensuring a proper licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
+            "text": "In South Dakota, ESA letter pricing can vary depending on the service and evaluation method, with reputable providers ensuring a proper licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter if approved.",
           },
         },
         {

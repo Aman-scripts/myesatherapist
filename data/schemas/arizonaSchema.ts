@@ -200,7 +200,7 @@ export const arizonaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-arizona/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -313,7 +313,7 @@ export const arizonaSchema = {
           "name": "What Is The Typical Cost of an ESA Letter In Arizona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Arizona, the cost of an ESA letter can vary based on the provider and evaluation process, but most legitimate services typically fall between $100–$300 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter issued upon approval.",
+            "text": "In Arizona, the cost of an ESA letter can vary based on the provider and evaluation process, but most legitimate services typically fall between $100–$300 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter issued upon approval.",
           },
         },
         {

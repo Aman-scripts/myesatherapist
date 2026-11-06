@@ -206,7 +206,7 @@ export const wisconsinSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-wisconsin/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const wisconsinSchema = {
           "name": "What is The Cost Of An ESA Letter In Wisconsin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Wisconsin, ESA letter pricing varies depending on the service and consultation process, ensuring compliance through a licensed mental health assessment. The $149 fee at My ESA Therapist covers both the evaluation and, if you are eligible, the issuance of the ESA letter.",
+            "text": "In Wisconsin, ESA letter pricing varies depending on the service and consultation process, ensuring compliance through a licensed mental health assessment. The $99 fee at My ESA Therapist covers both the evaluation and, if you are eligible, the issuance of the ESA letter.",
           },
         },
         {

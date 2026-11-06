@@ -206,7 +206,7 @@ export const newMexicoSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-new-mexico/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const newMexicoSchema = {
           "name": "What is Involved In The Cost Of An ESA Letter In New Mexico?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In New Mexico, ESA letter costs vary depending on the provider and consultation process, with pricing reflecting the legitimacy and depth of the evaluation. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval.",
+            "text": "In New Mexico, ESA letter costs vary depending on the provider and consultation process, with pricing reflecting the legitimacy and depth of the evaluation. At My ESA Therapist, the fee is $99, including the assessment and ESA letter upon approval.",
           },
         },
         {

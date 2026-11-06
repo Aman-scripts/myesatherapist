@@ -206,7 +206,7 @@ export const idahoSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-idaho/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const idahoSchema = {
           "name": "How Much Does an ESA Letter Cost in Idaho?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Idaho, ESA letter pricing varies by provider, but most reliable services generally fall between $150–$250 for a proper licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In Idaho, ESA letter pricing varies by provider, but most reliable services generally fall between $150–$250 for a proper licensed evaluation. At My ESA Therapist, the fee is $99, covering the evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {

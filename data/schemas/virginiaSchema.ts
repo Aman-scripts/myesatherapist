@@ -206,7 +206,7 @@ export const virginiaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-virginia/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const virginiaSchema = {
           "name": "What Should You Expect To Pay For An ESA Letter In Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Virginia, ESA letter pricing varies by provider, but most reputable services generally fall within the $149–$199 range for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
+            "text": "In Virginia, ESA letter pricing varies by provider, but most reputable services generally fall within the $99–$199 range for a proper licensed evaluation. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter if approved.",
           },
         },
         {

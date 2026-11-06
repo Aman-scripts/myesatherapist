@@ -200,7 +200,7 @@ export const hawaiiSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-hawaii/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -321,7 +321,7 @@ export const hawaiiSchema = {
           "name": "What Is The Typical Cost Of An ESA Letter In Hawaii?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Hawaii, the cost of an ESA letter depends on the provider and evaluation process, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter upon approval.",
+            "text": "In Hawaii, the cost of an ESA letter depends on the provider and evaluation process, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter upon approval.",
           },
         },
         {

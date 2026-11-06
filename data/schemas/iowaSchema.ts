@@ -206,7 +206,7 @@ export const iowaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-iowa/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const iowaSchema = {
           "name": "How Much Should You Expect To Pay For An ESA Letter In Iowa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ESA letter costs in Iowa vary by service, though most legitimate providers typically charge around $100–$200 for a proper licensed assessment. At My ESA Therapist, the fee is $149, including the evaluation and, if approved, issuance of the ESA letter.",
+            "text": "ESA letter costs in Iowa vary by service, though most legitimate providers typically charge around $100–$200 for a proper licensed assessment. At My ESA Therapist, the fee is $99, including the evaluation and, if approved, issuance of the ESA letter.",
           },
         },
         {

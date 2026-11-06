@@ -206,7 +206,7 @@ export const michiganSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-michigan/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const michiganSchema = {
           "name": "How Much Does An ESA Letter Cost In Michigan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Michigan, ESA letter pricing can vary by provider, particularly depending on the method of consultation and the professional’s credentials. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the letter if you qualify.",
+            "text": "In Michigan, ESA letter pricing can vary by provider, particularly depending on the method of consultation and the professional’s credentials. At My ESA Therapist, the fee is $99, covering both the evaluation and issuance of the letter if you qualify.",
           },
         },
         {

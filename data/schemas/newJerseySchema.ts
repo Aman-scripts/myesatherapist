@@ -206,7 +206,7 @@ export const newJerseySchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-new-jersey/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const newJerseySchema = {
           "name": "How Much Does An ESA Letter Cost In New Jersey?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In New Jersey, the cost of an ESA letter can vary based on the provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $149, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In New Jersey, the cost of an ESA letter can vary based on the provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $99, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {

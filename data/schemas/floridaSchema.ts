@@ -200,7 +200,7 @@ export const floridaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-florida/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -321,7 +321,7 @@ export const floridaSchema = {
           "name": "How much does an ESA letter cost in Florida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Costs for ESA letters in Florida vary depending on the provider and evaluation process. At My ESA Therapist, we charge $149, which includes a licensed professional assessment and an ESA letter upon approval. Approval for an ESA is not guaranteed.",
+            "text": "Costs for ESA letters in Florida vary depending on the provider and evaluation process. At My ESA Therapist, we charge $99, which includes a licensed professional assessment and an ESA letter upon approval. Approval for an ESA is not guaranteed.",
           },
         },
         {

@@ -191,7 +191,7 @@ export const esaRenewalSchemas = [
         "@id": "https://myesatherapist.com/esa-letter-renewal/#offer-renewal",
         "name": "ESA Letter Renewal",
         "description": "For individuals with an existing ESA letter. Payment provides access to a professional evaluation only. We authorize your payment first, but only charge it after your evaluation is completed and the licensed mental health professional determines whether updated documentation is appropriate. Approval is not guaranteed.",
-        "price": "129",
+        "price": "99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "areaServed": {
@@ -211,7 +211,7 @@ export const esaRenewalSchemas = [
         "@id": "https://myesatherapist.com/esa-letter-renewal/#offer-new",
         "name": "New ESA Letter",
         "description": "For first-time applicants. Payment provides access to a professional evaluation only. We authorize your payment first, but only charge it after your evaluation is completed and the licensed mental health professional determines whether updated documentation is appropriate. Approval is not guaranteed.",
-        "price": "149",
+        "price": "99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "areaServed": {

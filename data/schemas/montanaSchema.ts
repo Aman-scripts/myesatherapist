@@ -206,7 +206,7 @@ export const montanaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-montana/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -341,7 +341,7 @@ export const montanaSchema = {
           "name": "How Much Does A Professionally Issued ESA Letter Cost In Montana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Montana, ESA letter pricing varies based on the provider and the depth of the consultation process. At My ESA Therapist, the fee is $149, which includes both the evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In Montana, ESA letter pricing varies based on the provider and the depth of the consultation process. At My ESA Therapist, the fee is $99, which includes both the evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {

@@ -206,7 +206,7 @@ export const vermontSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-vermont/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -338,7 +338,7 @@ export const vermontSchema = {
           "name": "What is The Price Of An ESA Letter In Vermont?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Vermont, ESA letter pricing varies based on the provider and how detailed the mental health evaluation process is. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval."
+            "text": "In Vermont, ESA letter pricing varies based on the provider and how detailed the mental health evaluation process is. At My ESA Therapist, the fee is $99, including the assessment and ESA letter upon approval."
           }
         },
         {

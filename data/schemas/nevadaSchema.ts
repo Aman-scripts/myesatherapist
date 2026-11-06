@@ -206,7 +206,7 @@ export const nevadaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-nevada/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {

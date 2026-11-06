@@ -200,7 +200,7 @@ export const coloradoSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-colorado/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -305,7 +305,7 @@ export const coloradoSchema = {
           "name": "What’s the price for getting ESA documentation here in Colorado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At My ESA Therapist, an ESA recommendation letter in Colorado is $149. That includes your evaluation with a Colorado-licensed mental health professional, your official letter, and ongoing support whenever you need it.",
+            "text": "At My ESA Therapist, an ESA recommendation letter in Colorado is $99. That includes your evaluation with a Colorado-licensed mental health professional, your official letter, and ongoing support whenever you need it.",
           },
         },
         {

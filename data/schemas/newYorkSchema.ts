@@ -206,7 +206,7 @@ export const newYorkSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-new-york/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const newYorkSchema = {
           "name": "What Is The Average Price Of An ESA Letter In New York?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In New York, ESA letter costs typically align with national pricing trends, where licensed evaluations and documentation are commonly offered within a moderate price range, depending on the provider. At My ESA Therapist, the fee is $149, which includes a licensed professional evaluation and the ESA letter if approved.",
+            "text": "In New York, ESA letter costs typically align with national pricing trends, where licensed evaluations and documentation are commonly offered within a moderate price range, depending on the provider. At My ESA Therapist, the fee is $99, which includes a licensed professional evaluation and the ESA letter if approved.",
           },
         },
         {

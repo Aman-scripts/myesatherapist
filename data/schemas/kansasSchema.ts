@@ -206,7 +206,7 @@ export const kansasSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-kansas/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const kansasSchema = {
           "name": "What Is The Usual Cost Of An ESA Letter In Kansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ESA letter pricing in Kansas can vary depending on the provider and the evaluation process. At My ESA Therapist, the fee is $149, which includes a complete assessment and the ESA letter if approved.",
+            "text": "ESA letter pricing in Kansas can vary depending on the provider and the evaluation process. At My ESA Therapist, the fee is $99, which includes a complete assessment and the ESA letter if approved.",
           },
         },
         {

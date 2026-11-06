@@ -206,7 +206,7 @@ export const northDakotaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-north-dakota/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const northDakotaSchema = {
           "name": "How Much Does An ESA Letter Cost In North Dakota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In North Dakota, the cost of an ESA letter is influenced by the provider and the requirement of a proper licensed evaluation, ensuring compliance with housing laws. At My ESA Therapist, the fee is $149, covering both the professional assessment and issuance of the ESA letter if you qualify.",
+            "text": "In North Dakota, the cost of an ESA letter is influenced by the provider and the requirement of a proper licensed evaluation, ensuring compliance with housing laws. At My ESA Therapist, the fee is $99, covering both the professional assessment and issuance of the ESA letter if you qualify.",
           },
         },
         {

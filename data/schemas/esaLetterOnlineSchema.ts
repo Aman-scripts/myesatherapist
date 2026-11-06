@@ -183,7 +183,7 @@ export const esaLetterOnlineSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-online/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "areaServed": {
@@ -297,7 +297,7 @@ export const esaLetterOnlineSchema = {
           "name": "How much does an ESA letter cost, and are there any hidden fees?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An ESA letter evaluation is $149. A combined ESA and PSD evaluation is $199. Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued. ID cards are not included."
+            "text": "An ESA letter evaluation is $99. A combined ESA and PSD evaluation is $109. Your card is charged when you book. If the evaluation cannot be completed, you receive a full refund. A completed evaluation is non-refundable, whether or not a letter is issued. ID cards are not included."
           }
         },
         {

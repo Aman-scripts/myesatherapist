@@ -206,7 +206,7 @@ export const tennesseeSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-tennessee/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -338,7 +338,7 @@ export const tennesseeSchema = {
           "name": "What Does It Typically Cost To Get An ESA Letter In Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Tennessee, ESA letter pricing depends on the provider and how the evaluation is conducted, with legitimate services focusing on a licensed mental health assessment. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval."
+            "text": "In Tennessee, ESA letter pricing depends on the provider and how the evaluation is conducted, with legitimate services focusing on a licensed mental health assessment. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval."
           }
         },
         {

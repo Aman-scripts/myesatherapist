@@ -206,7 +206,7 @@ export const minnesotaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-minnesota/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const minnesotaSchema = {
           "name": "What Can You Expect To Pay For An ESA Letter In Minnesota?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ESA letter costs in Minnesota vary depending on the service and assessment process, with reputable providers ensuring a proper licensed evaluation. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+            "text": "ESA letter costs in Minnesota vary depending on the service and assessment process, with reputable providers ensuring a proper licensed evaluation. At My ESA Therapist, the fee is $99, including the evaluation and ESA letter upon approval.",
           },
         },
         {

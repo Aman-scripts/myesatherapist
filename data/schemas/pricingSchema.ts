@@ -135,7 +135,7 @@ export const pricingSchema = {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/pricing/#offer-esa-letter",
       "name": "ESA Letter",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "areaServed": {
@@ -204,7 +204,7 @@ export const pricingSchema = {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/pricing/#offer-esa-letter-id",
       "name": "ESA Letter + PSD Letter Combo",
-      "price": "199",
+      "price": "109",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "areaServed": {
@@ -273,7 +273,7 @@ export const pricingSchema = {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/pricing/#offer-psd-letter",
       "name": "PSD Letter",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "areaServed": {
@@ -342,7 +342,7 @@ export const pricingSchema = {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/pricing/#offer-psd-letter-id",
       "name": "PSD Letter",
-      "price": "199",
+      "price": "109",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "areaServed": {

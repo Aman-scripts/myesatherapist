@@ -206,7 +206,7 @@ export const oregonSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-oregon/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const oregonSchema = {
           "name": "What Does An ESA Letter Cost In Oregon?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Oregon, ESA letter pricing varies based on the provider and how the evaluation is conducted, with a strong focus on a legitimate mental health assessment. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+            "text": "In Oregon, ESA letter pricing varies based on the provider and how the evaluation is conducted, with a strong focus on a legitimate mental health assessment. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
           },
         },
         {

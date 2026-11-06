@@ -202,7 +202,7 @@ export const alabamaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-alabama/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -318,7 +318,7 @@ export const alabamaSchema = {
           "name": "How Much Does an ESA Letter Cost in Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At My ESA Therapist, an ESA letter evaluation in Alabama starts at $149. It includes the clinical evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
+            "text": "At My ESA Therapist, an ESA letter evaluation in Alabama starts at $99. It includes the clinical evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
           },
         },
         {
