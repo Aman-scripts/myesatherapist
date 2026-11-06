@@ -4,10 +4,10 @@ import Image from "next/image";
 import { PricingSection } from "@/components/home/PricingSection";
 
 const ESA_INTRO =
-  "Choose the evaluation package that fits your needs. A one-time $149 fee covers an ESA letter evaluation, while $199 covers both, an ESA letter evaluation and a PSD letter evaluation. Documentation is provided only if approved by a licensed clinician.";
+  "Choose the evaluation package that fits your needs. A one-time $99 fee covers an ESA letter evaluation, while $109 covers both, an ESA letter evaluation and a PSD letter evaluation. Documentation is provided only if approved by a licensed clinician.";
 
 const PSD_INTRO =
-  "Get a Psychiatric Service Dog (PSD) letter evaluation for $149 or combine it with an ESA letter evaluation for $199. Documentation is provided only when approved by a licensed clinician.";
+  "Get a Psychiatric Service Dog (PSD) letter evaluation for $99 or combine it with an ESA letter evaluation for $109. Documentation is provided only when approved by a licensed clinician.";
 
 export function PricingPlansSection({
   ctaHref = "#evaluation",

@@ -25,7 +25,7 @@ export function StateTrustBar({ data }: { data: StateData }) {
       label: `Serving ${stateName}`,
     },
     {
-      value: "$149",
+      value: "$99",
       label: "All inclusive, no surprises",
     },
     stat5,

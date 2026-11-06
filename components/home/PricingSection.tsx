@@ -35,7 +35,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
         title: "ESA Letter - Housing",
         description:
           "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
-        price: "$149",
+        price: "$99",
         isPopular: true,
         features: [
           "Online ESA evaluation",
@@ -51,7 +51,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
         title: "ESA Letter + PSD Letter Combo",
         description:
           "Professional ESA and PSD letters from a state-licensed mental health professional for housing and service dog needs.",
-        price: "$199",
+        price: "$109",
         features: [
           "Online ESA evaluation",
           "Licensed mental health professional",
@@ -87,7 +87,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
         title: "PSD Letter - Service Dog",
         description:
           "Professional PSD letter from a state-licensed mental health professional for service dog needs.",
-        price: "$149",
+        price: "$99",
         isPopular: true,
         features: [
           "Online PSD evaluation",
@@ -103,7 +103,7 @@ export const PLANS: Record<PlanType, PlanSet> = {
         title: "ESA Letter + PSD Letter Combo",
         description:
           "Professional ESA and PSD letters from a state-licensed mental health professional for housing and service dog needs.",
-        price: "$199",
+        price: "$109",
         features: [
           "Online PSD evaluation",
           "Licensed mental health professional",

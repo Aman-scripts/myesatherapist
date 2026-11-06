@@ -6,7 +6,7 @@ const RENEWAL_CARDS = [
   {
     title: "ESA Letter\nRenewal",
     description: "For individuals with an existing ESA letter",
-    price: "$129",
+    price: "$99",
     features: [
       "Evaluation conducted by a state-licensed mental health professional",
       "Scheduled phone or secure video session",
@@ -20,7 +20,7 @@ const RENEWAL_CARDS = [
   {
     title: "New ESA\nLetter",
     description: "For first-time applicants",
-    price: "$149",
+    price: "$99",
     features: [
       "Initial evaluation completed by a licensed mental health professional",
       "ESA documentation may be issued based on the provider’s independent evaluation",

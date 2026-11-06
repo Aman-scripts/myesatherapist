@@ -263,7 +263,7 @@ export const FAQ_DATA: FaqItem[] = [
     category: "Costs",
     question: "How Much Does an ESA Letter Typically Cost?",
     answer:
-      "A legitimate ESA letter generally costs between $99 and $199, depending on the provider. Be cautious of ultra-low-cost options that skip proper evaluations; they’re often not legally valid and may be rejected by landlords. If you choose My ESA Therapist, you can get a legitimate ESA letter online for just $149.",
+      "A legitimate ESA letter generally costs between $99 and $199, depending on the provider. Be cautious of ultra-low-cost options that skip proper evaluations; they’re often not legally valid and may be rejected by landlords. If you choose My ESA Therapist, you can get a legitimate ESA letter online for just $99.",
   },
   {
     category: "Costs",
@@ -281,7 +281,7 @@ export const FAQ_DATA: FaqItem[] = [
     category: "Costs",
     question: "Do I Have to Pay for an ESA Evaluation Separately?",
     answer:
-      "Not always. Some providers include the clinical evaluation in the total ESA letter cost, while others charge an evaluation fee separately. With My ESA Therapist, the $149 package includes the evaluation and ESA letter if you qualify.",
+      "Not always. Some providers include the clinical evaluation in the total ESA letter cost, while others charge an evaluation fee separately. With My ESA Therapist, the $99 package includes the evaluation and ESA letter if you qualify.",
   },
   {
     category: "Costs",
@@ -311,7 +311,7 @@ export const FAQ_DATA: FaqItem[] = [
     category: "Costs",
     question: "How Much Does It Cost to Renew an ESA Letter?",
     answer:
-      "There is no standard federal renewal price for ESA letters. Renewal fees vary by provider and may depend on whether a new clinical evaluation is required. With My ESA Therapist, you can renew your ESA letter by paying $129.",
+      "There is no standard federal renewal price for ESA letters. Renewal fees vary by provider and may depend on whether a new clinical evaluation is required. With My ESA Therapist, you can renew your ESA letter by paying $99.",
   },
   {
     category: "Costs",
