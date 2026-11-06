@@ -404,7 +404,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
       {
         q: "What Is The Price Of An ESA Letter In Vermont?",
-        a: "In Vermont, ESA letter pricing varies based on the provider and how detailed the mental health evaluation process is. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval.",
+        a: "In Vermont, ESA letter pricing varies based on the provider and how detailed the mental health evaluation process is. At My ESA Therapist, the fee is $99, including the assessment and ESA letter upon approval.",
       },
       {
         q: "Are Exotic Animals Allowed As ESAs In Vermont Housing?",
@@ -693,7 +693,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
       {
         q: "What Does It Typically Cost To Get An ESA Letter In Tennessee?",
-        a: "In Tennessee, ESA letter pricing depends on the provider and how the evaluation is conducted, with legitimate services focusing on a licensed mental health assessment. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+        a: "In Tennessee, ESA letter pricing depends on the provider and how the evaluation is conducted, with legitimate services focusing on a licensed mental health assessment. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
       },
       {
         q: "Can Roommates Object To An ESA In Shared Housing?",
@@ -981,7 +981,7 @@ export const EXTRA_STATES: Record<string, StateData> = {
       },
       {
         q: "What Is the Cost of an ESA Letter in Rhode Island?",
-        a: "In Rhode Island, ESA letter costs depend on the provider and consultation process, with pricing reflecting the credibility and depth of the licensed evaluation. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval.",
+        a: "In Rhode Island, ESA letter costs depend on the provider and consultation process, with pricing reflecting the credibility and depth of the licensed evaluation. At My ESA Therapist, the fee is $99, including the assessment and ESA letter upon approval.",
       },
       {
         q: "Can More Than One Emotional Support Animal Be Approved For A Household?",

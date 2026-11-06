@@ -512,7 +512,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does an ESA Letter Cost in Alabama?",
-        a: "At My ESA Therapist, an ESA letter evaluation in Alabama starts at $149. It includes the clinical evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
+        a: "At My ESA Therapist, an ESA letter evaluation in Alabama starts at $99. It includes the clinical evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
       },
       {
         q: "Can Any Doctor Write an ESA Letter in Alabama?",
@@ -566,7 +566,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Choose the ESA package that fits your needs. Get a professional ESA evaluation and letter, The  plan adds a PSD letter when clinically appropriate. ID cards are not included.",
     pricingPlan1Title: "ESA Letter - Housing",
     pricingPlan1Description: "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Online ESA evaluation",
       "Licensed mental health professional",
@@ -576,7 +576,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "Professional ESA and PSD letters from a state-licensed mental health professional for housing and service dog needs.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Online ESA evaluation",
       "Licensed mental health professional",
@@ -906,7 +906,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does an ESA Letter Cost in Alaska?",
-        a: "At My ESA Therapist, the cost of an ESA letter in Alaska starts at $149, which includes a professional evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
+        a: "At My ESA Therapist, the cost of an ESA letter in Alaska starts at $99, which includes a professional evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
       },
       {
         q: "Does an ESA Letter Override All Breed Rules?",
@@ -959,7 +959,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Choose the ESA package that fits your needs. Get a professional ESA evaluation and letter, The  plan adds a PSD letter when clinically appropriate. ID cards are not included.",
     pricingPlan1Title: "ESA Letter - Housing",
     pricingPlan1Description: "Professional ESA letter from a state-licensed mental health professional for housing accommodations.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Online ESA evaluation",
       "Licensed mental health professional",
@@ -969,7 +969,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "Professional ESA and PSD letters from a state-licensed mental health professional for housing and service dog needs.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Online ESA evaluation",
       "Licensed mental health professional",
@@ -1289,7 +1289,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Arizona.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -1299,7 +1299,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -1361,7 +1361,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Typical Cost of an ESA Letter In Arizona?",
-        a: "In Arizona, the cost of an ESA letter can vary based on the provider and evaluation process, but most legitimate services typically fall between $100–$300 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter issued upon approval.",
+        a: "In Arizona, the cost of an ESA letter can vary based on the provider and evaluation process, but most legitimate services typically fall between $100–$300 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter issued upon approval.",
       },
       {
         q: "What Are the Requirements for Emotional Support Animals in Arizona?",
@@ -1697,7 +1697,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Arkansas.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -1707,7 +1707,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -1773,7 +1773,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In Arkansas?",
-        a: "An ESA letter in Arkansas can cost anywhere between $150 and $300, depending on the provider and evaluation process. My ESA Therapist charges $149, which includes a professional evaluation conducted by a state-accredited mental health expert and an ESA letter upon approval.",
+        a: "An ESA letter in Arkansas can cost anywhere between $150 and $300, depending on the provider and evaluation process. My ESA Therapist charges $99, which includes a professional evaluation conducted by a state-accredited mental health expert and an ESA letter upon approval.",
       },
       {
         q: "Does Arkansas recognize ESA registration websites?",
@@ -2078,7 +2078,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingTitle: "The Cost of an ESA Letter in California",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in California.",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
@@ -2088,7 +2088,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-secure telehealth experience",
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
@@ -2147,7 +2147,7 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "What is the cost of an ESA letter in California?",
-        a: "If you pursue an ESA evaluation through our platform, the fee is $149. This covers the clinical evaluation, the legally required 30-day client-provider relationship, and ESA documentation if a recommendation is made. If an ESA is not determined to be clinically appropriate, no letter is issued, and 100% refund is provided. Approval for an ESA is not guaranteed.",
+        a: "If you pursue an ESA evaluation through our platform, the fee is $99. This covers the clinical evaluation, the legally required 30-day client-provider relationship, and ESA documentation if a recommendation is made. If an ESA is not determined to be clinically appropriate, no letter is issued, and 100% refund is provided. Approval for an ESA is not guaranteed.",
       },
       {
         q: "Can I Get an ESA Letter Online in California?",
@@ -2569,7 +2569,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Colorado.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -2579,7 +2579,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -2637,7 +2637,7 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "What’s the price for getting ESA documentation here in Colorado?",
-        a: "At My ESA Therapist, an ESA recommendation letter in Colorado is $149. That includes your evaluation with a Colorado-licensed mental health professional, your official letter, and ongoing support whenever you need it.",
+        a: "At My ESA Therapist, an ESA recommendation letter in Colorado is $99. That includes your evaluation with a Colorado-licensed mental health professional, your official letter, and ongoing support whenever you need it.",
       },
       {
         q: "Can I use an online emotional support animal letter in Colorado?",
@@ -2974,7 +2974,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Connecticut.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -2984,7 +2984,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -3050,7 +3050,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Typical Cost Of An ESA Letter In Connecticut?",
-        a: "In Connecticut, ESA letter costs vary by provider and evaluation method, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter upon approval.",
+        a: "In Connecticut, ESA letter costs vary by provider and evaluation method, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter upon approval.",
       },
       {
         q: "Can landlords refuse housing for my teen’s ESA in Connecticut?",
@@ -3381,7 +3381,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Delaware.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -3391,7 +3391,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -3453,7 +3453,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is the Cost of Getting an ESA Letter in Delaware?",
-        a: "In Delaware, ESA letter pricing depends on the provider and consultation process, but most reliable services generally fall between $100 to $200 for a licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
+        a: "In Delaware, ESA letter pricing depends on the provider and consultation process, but most reliable services generally fall between $100 to $200 for a licensed evaluation. At My ESA Therapist, the fee is $99, covering the evaluation and issuance of the ESA letter if you qualify.",
       },
       {
         q: "What Makes An ESA Letter Legally Valid In Delaware?",
@@ -3793,7 +3793,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Florida.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -3803,7 +3803,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -3879,7 +3879,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How much does an ESA letter cost in Florida?",
-        a: "Costs for ESA letters in Florida vary depending on the provider and evaluation process. At My ESA Therapist, we charge $149, which includes a licensed professional assessment and an ESA letter upon approval. Approval for an ESA is not guaranteed.",
+        a: "Costs for ESA letters in Florida vary depending on the provider and evaluation process. At My ESA Therapist, we charge $99, which includes a licensed professional assessment and an ESA letter upon approval. Approval for an ESA is not guaranteed.",
       },
       {
         q: "Can an emotional support animal letter allow my animal in restaurants or public places in Florida?",
@@ -4276,7 +4276,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingTitle: "The Cost of an ESA Letter in Georgia",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Georgia.",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
@@ -4286,7 +4286,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-secure telehealth experience",
     ],
     pricingPlan2Title: "ESA Letter + ID Card",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Description: "Everything in the ESA Letter package, plus an official ESA ID card for added convenience when identifying your emotional support animal.",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
@@ -4353,7 +4353,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In Georgia?",
-        a: "The cost of an ESA letter in Georgia can differ based on the provider and how the evaluation is conducted. At My ESA Therapist, the fee is $149, covering an assessment by a licensed mental health professional and the issuance of an ESA letter if you qualify.",
+        a: "The cost of an ESA letter in Georgia can differ based on the provider and how the evaluation is conducted. At My ESA Therapist, the fee is $99, covering an assessment by a licensed mental health professional and the issuance of an ESA letter if you qualify.",
       },
       {
         q: "Do emotional support animals need special training?",
@@ -4667,7 +4667,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingTitle: "The Cost of an ESA Letter in Hawaii",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Hawaii.",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
@@ -4677,7 +4677,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-secure telehealth experience",
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
@@ -4744,7 +4744,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Typical Cost Of An ESA Letter In Hawaii?",
-        a: "In Hawaii, the cost of an ESA letter depends on the provider and evaluation process, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter upon approval.",
+        a: "In Hawaii, the cost of an ESA letter depends on the provider and evaluation process, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter upon approval.",
       },
       {
         q: "Do I Need To Renew My ESA Letter Every Year In Hawaii?",
@@ -5059,7 +5059,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingTitle: "The Cost of an ESA Letter in Idaho",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Idaho.",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
@@ -5069,7 +5069,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-secure telehealth experience",
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
@@ -5132,7 +5132,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does an ESA Letter Cost in Idaho?",
-        a: "In Idaho, ESA letter pricing varies by provider, but most reliable services generally fall between $150–$250 for a proper licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
+        a: "In Idaho, ESA letter pricing varies by provider, but most reliable services generally fall between $150–$250 for a proper licensed evaluation. At My ESA Therapist, the fee is $99, covering the evaluation and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Are Online ESA Evaluations Legally Valid in Idaho?",
@@ -5452,7 +5452,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingTitle: "The Cost of an ESA Letter in Illinois",
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Illinois.",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
@@ -5462,7 +5462,7 @@ export const STATES_DATA: Record<string, StateData> = {
       "HIPAA-secure telehealth experience",
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
@@ -5525,7 +5525,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Does An ESA Letter Typically Cost In Illinois?",
-        a: "ESA letter pricing in Illinois can differ based on the provider, but most reliable services usually charge between $100–$250 for a licensed mental health evaluation. At My ESA Therapist, the fee is $149, which includes the assessment and ESA letter upon approval.",
+        a: "ESA letter pricing in Illinois can differ based on the provider, but most reliable services usually charge between $100–$250 for a licensed mental health evaluation. At My ESA Therapist, the fee is $99, which includes the assessment and ESA letter upon approval.",
       },
       {
         q: "Under what circumstances can a landlord legally deny an Emotional Support Animal in Illinois?",
@@ -5842,7 +5842,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Indiana.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -5852,7 +5852,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -5918,7 +5918,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Average Price Of An ESA Letter In Indiana?",
-        a: "In Indiana, the cost of an ESA letter depends on the evaluation process, with most trusted providers generally falling within the $100–$200 range. At My ESA Therapist, the fee is $149, covering both the professional evaluation and the ESA letter if you qualify.",
+        a: "In Indiana, the cost of an ESA letter depends on the evaluation process, with most trusted providers generally falling within the $100–$200 range. At My ESA Therapist, the fee is $99, covering both the professional evaluation and the ESA letter if you qualify.",
       },
       {
         q: "Does My ESA Letter in Indiana Expire?",
@@ -6233,7 +6233,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Iowa.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -6243,7 +6243,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -6305,7 +6305,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Should You Expect To Pay For An ESA Letter In Iowa?",
-        a: "ESA letter costs in Iowa vary by service, though most legitimate providers typically charge around $100–$200 for a proper licensed assessment. At My ESA Therapist, the fee is $149, including the evaluation and, if approved, issuance of the ESA letter.",
+        a: "ESA letter costs in Iowa vary by service, though most legitimate providers typically charge around $100–$200 for a proper licensed assessment. At My ESA Therapist, the fee is $99, including the evaluation and, if approved, issuance of the ESA letter.",
       },
       {
         q: "Is My Out-Of-State ESA Letter Valid If I Move To Iowa?",
@@ -6624,7 +6624,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Kansas.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -6634,7 +6634,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -6700,7 +6700,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Usual Cost Of An ESA Letter In Kansas?",
-        a: "ESA letter pricing in Kansas can vary depending on the provider and the evaluation process. At My ESA Therapist, the fee is $149, which includes a complete assessment and the ESA letter if approved.",
+        a: "ESA letter pricing in Kansas can vary depending on the provider and the evaluation process. At My ESA Therapist, the fee is $99, which includes a complete assessment and the ESA letter if approved.",
       },
       {
         q: "Is An ESA Letter Transferable Between States If I Move From Kansas?",
@@ -7015,7 +7015,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Kentucky.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -7025,7 +7025,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -7091,7 +7091,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Typical Cost Of An ESA Letter In Kentucky?",
-        a: "In Kentucky, the pricing of ESA letters varies by provider and the mental health evaluation process. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+        a: "In Kentucky, the pricing of ESA letters varies by provider and the mental health evaluation process. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
       },
       {
         q: "Is An ESA Letter Valid If I Move Within Kentucky?",
@@ -7406,7 +7406,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Louisiana.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -7416,7 +7416,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -7482,7 +7482,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Usually Cost In Louisiana?",
-        a: "In Louisiana, the cost of an ESA letter depends on the provider and consultation process, with most legitimate services typically ranging between $100–$200. At My ESA Therapist, the fee is $149, covering both the assessment and the ESA letter if you qualify.",
+        a: "In Louisiana, the cost of an ESA letter depends on the provider and consultation process, with most legitimate services typically ranging between $100–$200. At My ESA Therapist, the fee is $99, covering both the assessment and the ESA letter if you qualify.",
       },
       {
         q: "Can My Landlord Delay Responding To My ESA Request?",
@@ -7797,7 +7797,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Maine.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -7807,7 +7807,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -7869,7 +7869,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Cost Of An ESA Letter In Maine?",
-        a: "ESA letter costs in Maine vary by provider, but most reliable services generally charge around $100 to $200 for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes the evaluation and issuance of the ESA letter upon approval.",
+        a: "ESA letter costs in Maine vary by provider, but most reliable services generally charge around $100 to $200 for a proper licensed evaluation. At My ESA Therapist, the fee is $99, which includes the evaluation and issuance of the ESA letter upon approval.",
       },
       {
         q: "Can Landlords Request Yearly Renewal Of An ESA Letter?",
@@ -8184,7 +8184,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Maryland.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -8194,7 +8194,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -8256,7 +8256,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Average Cost Of An ESA Letter In Maryland?",
-        a: "In Maryland, ESA letter pricing can differ based on the provider, though most legitimate services typically range between $100 to $200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation along with the ESA letter upon approval.",
+        a: "In Maryland, ESA letter pricing can differ based on the provider, though most legitimate services typically range between $100 to $200 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation along with the ESA letter upon approval.",
       },
       {
         q: "Does Maryland Require An In-Person Visit To Obtain An ESA Letter?",
@@ -8574,7 +8574,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Massachusetts.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -8584,7 +8584,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -8646,7 +8646,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Typical Cost Of An ESA Letter In Massachusetts?",
-        a: "In Massachusetts, the cost of an ESA letter depends on the provider and evaluation process, with pricing varying based on the level of professional assessment involved. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+        a: "In Massachusetts, the cost of an ESA letter depends on the provider and evaluation process, with pricing varying based on the level of professional assessment involved. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
       },
       {
         q: "How Long Is A Massachusetts ESA Letter Valid?",
@@ -8964,7 +8964,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Michigan.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -8974,7 +8974,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -9036,7 +9036,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In Michigan?",
-        a: "In Michigan, ESA letter pricing can vary by provider, particularly depending on the method of consultation and the professional’s credentials. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the letter if you qualify.",
+        a: "In Michigan, ESA letter pricing can vary by provider, particularly depending on the method of consultation and the professional’s credentials. At My ESA Therapist, the fee is $99, covering both the evaluation and issuance of the letter if you qualify.",
       },
       {
         q: "Does My ESA Letter Need To Be Renewed Every Year In Michigan?",
@@ -9352,7 +9352,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Minnesota.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -9362,7 +9362,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -9428,7 +9428,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Can You Expect To Pay For An ESA Letter In Minnesota?",
-        a: "ESA letter costs in Minnesota vary depending on the service and assessment process, with reputable providers ensuring a proper licensed evaluation. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+        a: "ESA letter costs in Minnesota vary depending on the service and assessment process, with reputable providers ensuring a proper licensed evaluation. At My ESA Therapist, the fee is $99, including the evaluation and ESA letter upon approval.",
       },
       {
         q: "Does An ESA Letter Allow My Emotional Support Animal In Public Places?",
@@ -9743,7 +9743,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Mississippi.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -9753,7 +9753,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -10132,7 +10132,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Missouri.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -10142,7 +10142,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -10204,7 +10204,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Should An ESA Letter Cost In Missouri?",
-        a: "In Missouri, the cost of an ESA letter depends on the provider and how thoroughly the evaluation is conducted. At My ESA Therapist, the fee is $149, covering a licensed professional assessment and the ESA letter upon approval.",
+        a: "In Missouri, the cost of an ESA letter depends on the provider and how thoroughly the evaluation is conducted. At My ESA Therapist, the fee is $99, covering a licensed professional assessment and the ESA letter upon approval.",
       },
       {
         q: "Can I Use An ESA Letter From Another State While Living In Missouri?",
@@ -10522,7 +10522,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Montana.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -10532,7 +10532,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -10602,7 +10602,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does A Professionally Issued ESA Letter Cost In Montana?",
-        a: "In Montana, ESA letter pricing varies based on the provider and the depth of the consultation process. At My ESA Therapist, the fee is $149, which includes both the evaluation and issuance of the ESA letter if you qualify.",
+        a: "In Montana, ESA letter pricing varies based on the provider and the depth of the consultation process. At My ESA Therapist, the fee is $99, which includes both the evaluation and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Can I Have More Than One ESA In Montana?",
@@ -10918,7 +10918,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Nebraska.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -10928,7 +10928,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -10990,7 +10990,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Average Cost Of An ESA Letter In Nebraska?",
-        a: "In Nebraska, the cost of an ESA letter can differ depending on the provider and evaluation method, typically ranging between $150 and $300. At My ESA Therapist, the fee is $149, covering the professional evaluation and ESA letter upon approval.",
+        a: "In Nebraska, the cost of an ESA letter can differ depending on the provider and evaluation method, typically ranging between $150 and $300. At My ESA Therapist, the fee is $99, covering the professional evaluation and ESA letter upon approval.",
       },
       {
         q: "Does My ESA Letter Need To Be Renewed Every Year In Nebraska?",
@@ -11308,7 +11308,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Nevada.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -11318,7 +11318,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -11691,7 +11691,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingTitle: "The Cost of an ESA Letter in New York",
     pricingSubtitle: "Choose the ESA package that fits your needs. Get a professional ESA evaluation and letter, The  plan adds a PSD letter when clinically appropriate. ID cards are not included.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -11701,7 +11701,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -11763,7 +11763,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Average Price Of An ESA Letter In New York?",
-        a: "In New York, ESA letter costs typically align with national pricing trends, where licensed evaluations and documentation are commonly offered within a moderate price range, depending on the provider. At My ESA Therapist, the fee is $149, which includes a licensed professional evaluation and the ESA letter if approved.",
+        a: "In New York, ESA letter costs typically align with national pricing trends, where licensed evaluations and documentation are commonly offered within a moderate price range, depending on the provider. At My ESA Therapist, the fee is $99, which includes a licensed professional evaluation and the ESA letter if approved.",
       },
       {
         q: "Is ESA documentation valid across all of New York?",
@@ -12128,7 +12128,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Texas.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -12138,7 +12138,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -12196,7 +12196,7 @@ export const STATES_DATA: Record<string, StateData> = {
     faqs: [
       {
         q: "How Much Does an ESA Letter Evaluation Cost in Texas?",
-        a: "At My ESA Therapist, the ESA evaluation costs $149. This includes a secure telehealth evaluation with a Texas-licensed professional and the platform fees. You are not paying for an ESA letter. An emotional support animal letter is provided only if the clinical evaluation supports the need for an emotional support animal.",
+        a: "At My ESA Therapist, the ESA evaluation costs $99. This includes a secure telehealth evaluation with a Texas-licensed professional and the platform fees. You are not paying for an ESA letter. An emotional support animal letter is provided only if the clinical evaluation supports the need for an emotional support animal.",
       },
       {
         q: "Are Online ESA Letters Valid in Texas?",
@@ -12553,7 +12553,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Washington.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -12563,7 +12563,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -12629,7 +12629,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In Washington?",
-        a: "In Washington, ESA letter pricing can differ by provider, with costs reflecting the credibility and depth of the licensed consultation. At My ESA Therapist, the fee is $149, covering the evaluation and ESA letter upon approval.",
+        a: "In Washington, ESA letter pricing can differ by provider, with costs reflecting the credibility and depth of the licensed consultation. At My ESA Therapist, the fee is $99, covering the evaluation and ESA letter upon approval.",
       },
       {
         q: "What Happens If A Landlord Denies An ESA Request In Washington?",
@@ -12949,7 +12949,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Wisconsin.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -12959,7 +12959,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -13025,7 +13025,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Cost Of An ESA Letter In Wisconsin?",
-        a: "In Wisconsin, ESA letter pricing varies depending on the service and consultation process, ensuring compliance through a licensed mental health assessment. The $149 fee at My ESA Therapist covers both the evaluation and, if you are eligible, the issuance of the ESA letter.",
+        a: "In Wisconsin, ESA letter pricing varies depending on the service and consultation process, ensuring compliance through a licensed mental health assessment. The $99 fee at My ESA Therapist covers both the evaluation and, if you are eligible, the issuance of the ESA letter.",
       },
       {
         q: "Do I Need To Renew My ESA Letter In Wisconsin Each Year?",
@@ -13342,7 +13342,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Wyoming.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -13352,7 +13352,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -13414,7 +13414,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Should You Expect When Paying For An ESA Letter In Wyoming?",
-        a: "In Wyoming, ESA letter costs depend on the provider and evaluation method, with legitimate services focusing on proper clinical review. At My ESA Therapist, the fee is $149, which includes a licensed evaluation and the ESA letter if approved.",
+        a: "In Wyoming, ESA letter costs depend on the provider and evaluation method, with legitimate services focusing on proper clinical review. At My ESA Therapist, the fee is $99, which includes a licensed evaluation and the ESA letter if approved.",
       },
       {
         q: "Can A Landlord Request A New ESA Letter During Tenancy?",
@@ -13732,7 +13732,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in New Hampshire.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -13742,7 +13742,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -13804,7 +13804,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Does An ESA Letter Typically Cost In New Hampshire?",
-        a: "In New Hampshire, ESA letter pricing depends on the provider and evaluation approach, with costs generally influenced by a number of influencing factors. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+        a: "In New Hampshire, ESA letter pricing depends on the provider and evaluation approach, with costs generally influenced by a number of influencing factors. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
       },
       {
         q: "Can A Landlord Ask About My Medical Diagnosis When I Request An ESA?",
@@ -14123,7 +14123,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in New Jersey.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -14133,7 +14133,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -14199,7 +14199,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In New Jersey?",
-        a: "In New Jersey, the cost of an ESA letter can vary based on the provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $149, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
+        a: "In New Jersey, the cost of an ESA letter can vary based on the provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $99, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Can A Housing Provider Limit The Type Of Animal That Qualifies As An ESA In New Jersey?",
@@ -14515,7 +14515,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in New Mexico.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -14525,7 +14525,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -14591,7 +14591,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is Involved In The Cost Of An ESA Letter In New Mexico?",
-        a: "In New Mexico, ESA letter costs vary depending on the provider and consultation process, with pricing reflecting the legitimacy and depth of the evaluation. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval.",
+        a: "In New Mexico, ESA letter costs vary depending on the provider and consultation process, with pricing reflecting the legitimacy and depth of the evaluation. At My ESA Therapist, the fee is $99, including the assessment and ESA letter upon approval.",
       },
       {
         q: "Is An In-Person Visit Required To Obtain An ESA Letter?",
@@ -14905,7 +14905,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in North Carolina.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -14915,7 +14915,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -14977,7 +14977,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Does It Cost To Get An ESA Letter In North Carolina?",
-        a: "In North Carolina, ESA letter pricing varies based on the provider and consultation process, with some services offering evaluations around the $100–$150 range, depending on coverage or insurance. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+        a: "In North Carolina, ESA letter pricing varies based on the provider and consultation process, with some services offering evaluations around the $100–$150 range, depending on coverage or insurance. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
       },
       {
         q: "Can Landlords Ask About The Type Of Animal Listed In An ESA Letter?",
@@ -15295,7 +15295,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in North Dakota.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -15305,7 +15305,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -15371,7 +15371,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In North Dakota?",
-        a: "In North Dakota, the cost of an ESA letter is influenced by the provider and the requirement of a proper licensed evaluation, ensuring compliance with housing laws. At My ESA Therapist, the fee is $149, covering both the professional assessment and issuance of the ESA letter if you qualify.",
+        a: "In North Dakota, the cost of an ESA letter is influenced by the provider and the requirement of a proper licensed evaluation, ensuring compliance with housing laws. At My ESA Therapist, the fee is $99, covering both the professional assessment and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Can Housing Providers Verify An ESA Letter In North Dakota?",
@@ -15685,7 +15685,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Ohio.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -15695,7 +15695,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -15757,7 +15757,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does It Cost To Get An ESA Letter In Ohio?",
-        a: "In Ohio, ESA letter costs depend on the provider and how the evaluation is conducted, with legitimate services focusing on a verified mental health assessment. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+        a: "In Ohio, ESA letter costs depend on the provider and how the evaluation is conducted, with legitimate services focusing on a verified mental health assessment. At My ESA Therapist, the fee is $99, including the evaluation and ESA letter upon approval.",
       },
       {
         q: "Can A Landlord In Ohio Verify My Therapist’s License Number?",
@@ -16074,7 +16074,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Oklahoma.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -16084,7 +16084,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -16150,7 +16150,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Typically Cost In Oklahoma?",
-        a: "In Oklahoma, ESA letter pricing can vary by provider, but legitimate services generally involve a paid consultation with a licensed professional before approval. At My ESA Therapist, the fee is $149, which includes a licensed evaluation and the ESA letter if approved.",
+        a: "In Oklahoma, ESA letter pricing can vary by provider, but legitimate services generally involve a paid consultation with a licensed professional before approval. At My ESA Therapist, the fee is $99, which includes a licensed evaluation and the ESA letter if approved.",
       },
       {
         q: "If My ESA Causes Minor Damage, Can My Oklahoma Landlord Revoke The Accommodation?",
@@ -16462,7 +16462,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Oregon.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -16472,7 +16472,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -16534,7 +16534,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Does An ESA Letter Cost In Oregon?",
-        a: "In Oregon, ESA letter pricing varies based on the provider and how the evaluation is conducted, with a strong focus on a legitimate mental health assessment. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+        a: "In Oregon, ESA letter pricing varies based on the provider and how the evaluation is conducted, with a strong focus on a legitimate mental health assessment. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
       },
       {
         q: "What If My ESA Is An Uncommon Animal in Oregon Housing?",
@@ -16852,7 +16852,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Pennsylvania.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -16862,7 +16862,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -16928,7 +16928,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In Pennsylvania?",
-        a: "In Pennsylvania, the cost of an ESA letter can vary by provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $149, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
+        a: "In Pennsylvania, the cost of an ESA letter can vary by provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $99, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Do I Need to Renew my ESA Letter Every Year in Pennsylvania?",
@@ -17245,7 +17245,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in South Dakota.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -17255,7 +17255,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -17317,7 +17317,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Much Does An ESA Letter Cost In South Dakota?",
-        a: "In South Dakota, ESA letter pricing can vary depending on the service and evaluation method, with reputable providers ensuring a proper licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
+        a: "In South Dakota, ESA letter pricing can vary depending on the service and evaluation method, with reputable providers ensuring a proper licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter if approved.",
       },
       {
         q: "What Happens If A Housing Provider Delays Responding To An ESA Request?",
@@ -17640,7 +17640,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Utah.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -17650,7 +17650,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -17712,7 +17712,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Is The Cost Of An ESA Letter Determined In Utah?",
-        a: "In Utah, the price of an ESA letter varies based on the consultation process and the credentials of the professional handling the evaluation. At My ESA Therapist, the fee is $149, covering both the assessment and issuance of the ESA letter if you qualify.",
+        a: "In Utah, the price of an ESA letter varies based on the consultation process and the credentials of the professional handling the evaluation. At My ESA Therapist, the fee is $99, covering both the assessment and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Does Utah Require In-Person Visits To Qualify For An ESA Letter?",
@@ -18032,7 +18032,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in South Carolina.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -18042,7 +18042,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -18112,7 +18112,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Is The Average Cost Of An ESA Letter In South Carolina?",
-        a: "In South Carolina, ESA letter costs are typically aligned with national standards, where licensed evaluations are often priced in the $149–$199 range. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+        a: "In South Carolina, ESA letter costs are typically aligned with national standards, where licensed evaluations are often priced in the $99–$199 range. At My ESA Therapist, the fee is $99, including the evaluation and ESA letter upon approval.",
       },
       {
         q: "Is An In-Person Evaluation Required To Obtain An ESA Letter In South Carolina?",
@@ -18421,7 +18421,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in Virginia.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -18431,7 +18431,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -18497,7 +18497,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "What Should You Expect To Pay For An ESA Letter In Virginia?",
-        a: "In Virginia, ESA letter pricing varies by provider, but most reputable services generally fall within the $149–$199 range for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter if approved.",
+        a: "In Virginia, ESA letter pricing varies by provider, but most reputable services generally fall within the $99–$199 range for a proper licensed evaluation. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter if approved.",
       },
       {
         q: "Can I request accommodation for more than one ESA in Virginia?",
@@ -18814,7 +18814,7 @@ export const STATES_DATA: Record<string, StateData> = {
     pricingSubtitle: "Different needs can call for different levels of support. Compare our two ESA letter plans and choose the option that gives you the right fit, clarity, and professional support for your ESA journey.",
     pricingPlan1Title: "ESA Letter",
     pricingPlan1Description: "Professional ESA documentation for qualified individuals, provided after an evaluation with a licensed mental health professional in West Virginia.",
-    pricingPlan1Price: "$149",
+    pricingPlan1Price: "$99",
     pricingPlan1Features: [
       "Live telehealth evaluation with a licensed LMHP",
       "Official ESA letter delivered by email",
@@ -18824,7 +18824,7 @@ export const STATES_DATA: Record<string, StateData> = {
     ],
     pricingPlan2Title: "ESA Letter + PSD Letter Combo",
     pricingPlan2Description: "The ESA letter plus a PSD letter when a licensed clinician determines each is clinically appropriate. ID cards are not included.",
-    pricingPlan2Price: "$199",
+    pricingPlan2Price: "$109",
     pricingPlan2Features: [
       "Everything included with the ESA letter",
       "PSD letter if clinically appropriate",
@@ -18890,7 +18890,7 @@ export const STATES_DATA: Record<string, StateData> = {
       },
       {
         q: "How Is ESA Letter Pricing Structured In West Virginia?",
-        a: "In West Virginia, the cost of an ESA letter depends on the provider and the type of consultation, with emphasis on a valid assessment by a licensed professional. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the ESA letter if you qualify.",
+        a: "In West Virginia, the cost of an ESA letter depends on the provider and the type of consultation, with emphasis on a valid assessment by a licensed professional. At My ESA Therapist, the fee is $99, covering both the evaluation and issuance of the ESA letter if you qualify.",
       },
       {
         q: "Do ESA Letters Expire In West Virginia?",
