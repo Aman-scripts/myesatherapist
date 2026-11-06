@@ -206,7 +206,7 @@ export const mississippiSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-mississippi/#offer",
-      "price": "99",
+      "price": "149",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {

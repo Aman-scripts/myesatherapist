@@ -21,7 +21,7 @@ export function DoctorTrustBar({ doctor }: DoctorTrustBarProps) {
       label: "Clinical Experience",
     },
     {
-      value: "$99",
+      value: "$149",
       label: "All inclusive, no surprises",
     },
     {

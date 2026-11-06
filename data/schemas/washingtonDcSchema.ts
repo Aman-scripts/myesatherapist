@@ -206,7 +206,7 @@ export const washingtonDcSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-washington-dc/#offer",
-      "price": "99",
+      "price": "149",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {

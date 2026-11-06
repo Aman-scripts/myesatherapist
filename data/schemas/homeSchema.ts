@@ -171,7 +171,7 @@ export const homeSchema = {
       },
       "offers": {
         "@type": "Offer",
-        "price": "99",
+        "price": "149",
         "priceCurrency": "USD",
         "url": "https://myesatherapist.com/pricing/",
         "availability": "https://schema.org/InStock",
