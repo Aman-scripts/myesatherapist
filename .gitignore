@@ -56,8 +56,9 @@ figma_frame_*.png
 # lighthouse audit output
 /lighthouse-reports/
 
-# local design reference dump
-homepage.md
+# local design reference dumps and notes (README.md stays tracked)
+*.md
+!README.md
 
 # temporary audit scripts and unzipped asset drops
 public/*20261030*
