@@ -178,13 +178,13 @@ export function BlogArticleContent({ article }: BlogArticleContentProps) {
                     }`}
                     style={v === "teal" ? { backgroundImage: "var(--color-gradient)" } : undefined}
                   >
-                    <div
-                      className={`font-heading font-bold text-[32px] sm:text-[36px] leading-[44px] tracking-[-0.00015em] ${
+                    <h2
+                      className={`heading-h2 m-0 ${
                         v === "teal" ? "text-background" : "text-body-text"
                       }`}
                     >
                       {card.value}
-                    </div>
+                    </h2>
                     <div className="flex flex-col gap-1">
                       <p className={`body-text ${v === "teal" ? "text-background" : "text-body-text"}`}>
                         {card.label}
