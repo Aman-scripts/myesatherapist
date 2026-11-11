@@ -18,7 +18,7 @@ export function EsaLawsIntroSection() {
           {PARAGRAPHS.map((p, idx) => (
             <p
               key={idx}
-              className="body-large text-center text-body-text"
+              className="body text-center text-body-text"
             >
               {p}
             </p>

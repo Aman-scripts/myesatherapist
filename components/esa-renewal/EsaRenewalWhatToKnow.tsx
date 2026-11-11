@@ -37,7 +37,7 @@ export function EsaRenewalWhatToKnow() {
           <h2 className="font-heading text-2xl sm:text-4xl lg:text-[34px] xl:text-[44px] font-bold text-primary leading-tight sm:leading-[54px] lg:leading-[42px] xl:leading-[54px] tracking-[-0.00015em]">
             What to Know Before You Start?
           </h2>
-          <p className="font-sans text-base sm:text-[18px] lg:text-[16px] xl:text-[18px] font-semibold text-body-text leading-[30px] lg:leading-[27px] xl:leading-[30px]">
+          <p className="body-large text-body-text">
             Before beginning, it’s important to understand a few key details about the renewal process.
           </p>
         </div>

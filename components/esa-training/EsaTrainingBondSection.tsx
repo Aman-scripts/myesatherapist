@@ -38,7 +38,7 @@ export function EsaTrainingBondSection() {
               <h2 className="mx-auto max-w-[541px] font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-primary sm:text-4xl sm:leading-[46px] lg:mx-0 lg:text-[3.05vw] lg:leading-[3.75vw] xl:text-[44px] xl:leading-[54px]">
                 How Training Strengthens The ESA-Owner Bond
               </h2>
-              <p className="font-sans text-base font-semibold leading-[1.67] text-body-text sm:text-[18px] lg:text-[1.25vw] xl:text-[18px] xl:leading-[30px]">
+              <p className="body-large text-body-text">
                 Teaching your animal something new, watching them learn, and building a shared language of trust deepens
                 the bond in a way little else does.
               </p>

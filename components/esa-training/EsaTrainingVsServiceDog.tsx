@@ -19,7 +19,7 @@ export function EsaTrainingVsServiceDog() {
         <div className="mx-auto flex w-full max-w-[1254px] flex-col items-center gap-10 px-4 sm:px-8 lg:gap-[4.5vw] lg:px-[5vw] xl:gap-[60px] xl:px-0">
           <div className="flex flex-col items-center gap-2 text-center">
             <h2 className="heading-h2">ESA Training Vs. Service Dog Training</h2>
-            <p className="body-text max-w-[1002px]">
+            <p className="body-large max-w-[1002px] text-body-text">
               ESAs and service dogs are often confused, but they differ in legal status, training requirements, and public access rights.
             </p>
           </div>

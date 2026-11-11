@@ -48,7 +48,7 @@ export function EsaOnlineWhatComes() {
           <h2 className="font-heading text-3xl sm:text-4xl xl:text-[44px] font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em]">
             What Comes With Your ESA Recommendation Letter?
           </h2>
-          <p className="font-sans text-base sm:text-[18px] text-body-text font-semibold leading-[30px] max-w-[661px]">
+          <p className="body-large text-body-text max-w-[661px]">
             When issued, the letter provides you with the professional details typically requested by housing providers.
           </p>
         </div>

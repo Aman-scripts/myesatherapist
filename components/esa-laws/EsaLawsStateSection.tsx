@@ -288,7 +288,7 @@ function StateCard({ entry }: { entry: StateLawEntry }) {
             {entry.bullets.map((bullet, idx) => (
               <li
                 key={idx}
-                className="relative pl-5 font-sans font-semibold text-[15px] sm:text-[17px] lg:text-[18px] leading-[26px] sm:leading-[28px] lg:leading-[30px] text-body-text before:content-['•'] before:absolute before:left-0 before:top-0 before:text-primary"
+                className="relative pl-5 font-sans font-semibold text-[16px] leading-[26px] text-body-text before:content-['•'] before:absolute before:left-0 before:top-0 before:text-primary"
               >
                 {bullet}
               </li>
@@ -326,7 +326,7 @@ export function EsaLawsStateSection() {
           </h2>
           <div className="flex max-w-[1156px] flex-col gap-5 sm:gap-6">
             {STATE_LAWS_INTRO.map((paragraph) => (
-              <p key={paragraph} className="body-large text-center text-body-text">
+              <p key={paragraph} className="body text-center text-body-text">
                 {paragraph}
               </p>
             ))}

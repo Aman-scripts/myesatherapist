@@ -36,7 +36,7 @@ export function QualifyingConditionsReasons() {
           <h2 className="mx-auto max-w-[541px] font-heading text-[28px] font-bold leading-[36px] tracking-[-0.00015em] text-primary sm:text-4xl sm:leading-[46px] lg:mx-0 lg:text-[3.05vw] lg:leading-[3.75vw] xl:text-[44px] xl:leading-[54px]">
             Common Reasons People Explore ESAs
           </h2>
-          <div className="flex flex-col gap-[22px] font-sans text-base font-semibold leading-[1.67] text-body-text sm:text-[18px] lg:gap-[2vw] lg:text-[1.25vw] xl:gap-[30px] xl:text-[18px] xl:leading-[30px]">
+          <div className="body-large flex flex-col gap-[22px] text-body-text lg:gap-[2vw] xl:gap-[30px]">
             <p>
               People often explore emotional support animals to understand whether the companionship of an animal may
               provide meaningful emotional support during periods of stress, anxiety, loneliness, or other mental

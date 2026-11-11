@@ -46,7 +46,7 @@ export function EsaRenewalLicensedPros() {
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[2.8vw] xl:text-[44px] font-bold text-primary leading-[1.2] lg:leading-[3.5vw] xl:leading-[54px] tracking-[-0.00015em] max-w-[541px] mx-auto lg:mx-0">
               Licensed Professionals Across All 50 States
             </h2>
-            <p className="font-sans text-base sm:text-[18px] lg:text-[1.2vw] xl:text-[18px] text-body-text font-semibold leading-[1.67] xl:max-w-[560px]">
+            <p className="body-large text-body-text xl:max-w-[560px]">
               Each ESA letter renewal on our platform is completed by an independent, licensed mental health professional authorized to practice in your state. Providers evaluate DSM-recognized mental health conditions such as anxiety, depression, PTSD, and similar emotional health concerns when reviewing renewal requests. All determinations are made independently based on professional judgment and applicable clinical guidelines.
             </p>
           </div>

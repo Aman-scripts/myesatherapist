@@ -14,7 +14,7 @@ export function EsaTrainingLegalSection() {
           </GoldPill>
         </div>
 
-        <div className="font-sans text-base font-semibold leading-[28px] text-body-text text-center sm:text-[18px] sm:leading-[30px] lg:text-[1.25vw] lg:leading-[2.1vw] xl:text-[18px] xl:leading-[30px]">
+        <div className="body-large text-center text-body-text">
           <p>
             No, and that part hasn&apos;t changed. The Fair Housing Act has never required emotional support animals to
             have specialized training.

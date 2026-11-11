@@ -25,7 +25,7 @@ export function SectionHeader({
       </h2>
       {subtitle && (
         <p
-          className={`${subtitleFont === "lato" ? "text-body-text text-base leading-7 sm:text-[20px] sm:leading-8 lg:text-[1.4vw] lg:leading-[2.2vw] xl:text-[20px] xl:leading-8 max-w-[1100px]" : "font-sans font-semibold text-body-text text-base leading-7 sm:text-[18px] sm:leading-[30px] lg:text-[1.25vw] lg:leading-[2.1vw] xl:text-[18px] xl:leading-[30px]"} ${subtitleFont === "lato" ? "" : subtitleMaxWidth}`}
+          className={`body-large text-body-text ${subtitleFont === "lato" ? "max-w-[1100px]" : subtitleMaxWidth}`}
           style={subtitleFont === "lato" ? LATO : undefined}
         >
           {subtitle}

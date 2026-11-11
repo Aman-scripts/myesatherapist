@@ -9,7 +9,7 @@ export function EsaOnlineAllStates() {
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] text-balance font-bold text-primary leading-[1.2] xl:leading-[54px] tracking-[-0.00015em] max-w-[915px]">
             Online ESA Letter Consultations Available in All 50 States
           </h2>
-          <p className="font-sans text-base font-semibold leading-[26px] text-body-text">
+          <p className="body-large text-body-text">
             You’re connected with a licensed mental health professional in your state who conducts your ESA evaluation and may issue documentation when appropriate. ESA requirements vary by state; for example, California requires a 30-day therapeutic relationship before ESA documentation may be issued.
           </p>
         </div>

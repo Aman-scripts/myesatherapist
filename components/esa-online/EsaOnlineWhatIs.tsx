@@ -4,8 +4,7 @@ import { CtaButton, WaveImage } from "./EsaOnlineShared";
 
 const H2 =
   "font-heading text-3xl sm:text-4xl lg:text-[length:min(3.06vw,44px)] font-bold text-primary leading-[1.2] lg:leading-[min(3.75vw,54px)] tracking-[-0.00015em] lg:max-w-[min(28.4vw,409px)]";
-const P =
-  "font-sans text-base sm:text-[18px] lg:text-[length:min(1.25vw,18px)] text-body-text font-semibold leading-[1.67]";
+const P = "body-large text-body-text";
 
 export function EsaOnlineWhatIs() {
   return (

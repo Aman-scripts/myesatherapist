@@ -34,7 +34,7 @@ function LawCard({
           <h3 className="heading-h3 text-primary">
             {title}
           </h3>
-          <div className="body-large text-body-text flex flex-col gap-4">
+          <div className="body text-body-text flex flex-col gap-4">
             {children}
           </div>
         </div>
