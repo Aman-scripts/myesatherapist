@@ -206,7 +206,7 @@ export const missouriSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-missouri/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const missouriSchema = {
           "name": "What Should An ESA Letter Cost In Missouri?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Missouri, the cost of an ESA letter depends on the provider and how thoroughly the evaluation is conducted. At My ESA Therapist, the fee is $149, covering a licensed professional assessment and the ESA letter upon approval.",
+            "text": "In Missouri, the cost of an ESA letter depends on the provider and how thoroughly the evaluation is conducted. At My ESA Therapist, the fee is $99, covering a licensed professional assessment and the ESA letter upon approval.",
           },
         },
         {

@@ -200,7 +200,7 @@ export const connecticutSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-connecticut/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -321,7 +321,7 @@ export const connecticutSchema = {
           "name": "What Is The Typical Cost Of An ESA Letter In Connecticut?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Connecticut, ESA letter costs vary by provider and evaluation method, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation and the ESA letter upon approval.",
+            "text": "In Connecticut, ESA letter costs vary by provider and evaluation method, with most legitimate services typically ranging between $100–$200 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation and the ESA letter upon approval.",
           },
         },
         {

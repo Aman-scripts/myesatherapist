@@ -206,7 +206,7 @@ export const ohioSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-ohio/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const ohioSchema = {
           "name": "How Much Does It Cost To Get An ESA Letter In Ohio?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Ohio, ESA letter costs depend on the provider and how the evaluation is conducted, with legitimate services focusing on a verified mental health assessment. At My ESA Therapist, the fee is $149, including the evaluation and ESA letter upon approval.",
+            "text": "In Ohio, ESA letter costs depend on the provider and how the evaluation is conducted, with legitimate services focusing on a verified mental health assessment. At My ESA Therapist, the fee is $99, including the evaluation and ESA letter upon approval.",
           },
         },
         {

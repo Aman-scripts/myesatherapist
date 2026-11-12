@@ -206,7 +206,7 @@ export const massachusettsSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-massachusetts/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const massachusettsSchema = {
           "name": "What Is The Typical Cost Of An ESA Letter In Massachusetts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Massachusetts, the cost of an ESA letter depends on the provider and evaluation process, with pricing varying based on the level of professional assessment involved. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+            "text": "In Massachusetts, the cost of an ESA letter depends on the provider and evaluation process, with pricing varying based on the level of professional assessment involved. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
           },
         },
         {

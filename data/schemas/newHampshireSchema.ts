@@ -206,7 +206,7 @@ export const newHampshireSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-new-hampshire/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const newHampshireSchema = {
           "name": "What Does An ESA Letter Typically Cost In New Hampshire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In New Hampshire, ESA letter pricing depends on the provider and evaluation approach, with costs generally influenced by a number of influencing factors. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+            "text": "In New Hampshire, ESA letter pricing depends on the provider and evaluation approach, with costs generally influenced by a number of influencing factors. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
           },
         },
         {

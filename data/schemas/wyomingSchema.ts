@@ -206,7 +206,7 @@ export const wyomingSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-wyoming/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const wyomingSchema = {
           "name": "What Should You Expect When Paying For An ESA Letter In Wyoming?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Wyoming, ESA letter costs depend on the provider and evaluation method, with legitimate services focusing on proper clinical review. At My ESA Therapist, the fee is $149, which includes a licensed evaluation and the ESA letter if approved.",
+            "text": "In Wyoming, ESA letter costs depend on the provider and evaluation method, with legitimate services focusing on proper clinical review. At My ESA Therapist, the fee is $99, which includes a licensed evaluation and the ESA letter if approved.",
           },
         },
         {

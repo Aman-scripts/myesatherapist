@@ -206,7 +206,7 @@ export const nebraskaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-nebraska/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const nebraskaSchema = {
           "name": "What Is The Average Cost Of An ESA Letter In Nebraska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Nebraska, the cost of an ESA letter can differ depending on the provider and evaluation method, typically ranging between $150 and $300. At My ESA Therapist, the fee is $149, covering the professional evaluation and ESA letter upon approval.",
+            "text": "In Nebraska, the cost of an ESA letter can differ depending on the provider and evaluation method, typically ranging between $150 and $300. At My ESA Therapist, the fee is $99, covering the professional evaluation and ESA letter upon approval.",
           },
         },
         {

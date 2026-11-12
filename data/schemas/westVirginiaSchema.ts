@@ -206,7 +206,7 @@ export const westVirginiaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-west-virginia/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const westVirginiaSchema = {
           "name": "How is ESA Letter Pricing Structured In West Virginia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In West Virginia, the cost of an ESA letter depends on the provider and the type of consultation, with emphasis on a valid assessment by a licensed professional. At My ESA Therapist, the fee is $149, covering both the evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In West Virginia, the cost of an ESA letter depends on the provider and the type of consultation, with emphasis on a valid assessment by a licensed professional. At My ESA Therapist, the fee is $99, covering both the evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {

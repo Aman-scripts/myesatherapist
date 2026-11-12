@@ -206,7 +206,7 @@ export const marylandSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-maryland/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const marylandSchema = {
           "name": "What Is The Average Cost Of An ESA Letter In Maryland?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Maryland, ESA letter pricing can differ based on the provider, though most legitimate services typically range between $100 to $200 for a licensed assessment. At My ESA Therapist, the fee is $149, which includes a professional evaluation along with the ESA letter upon approval.",
+            "text": "In Maryland, ESA letter pricing can differ based on the provider, though most legitimate services typically range between $100 to $200 for a licensed assessment. At My ESA Therapist, the fee is $99, which includes a professional evaluation along with the ESA letter upon approval.",
           },
         },
         {

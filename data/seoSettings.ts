@@ -475,7 +475,7 @@ export const SEO_SETTINGS: Record<string, SheetSeo> = {
   },
   "/esa-letter-puerto-rico/": {
     "title": "Get Your Legitimate ESA Letter Online in Puerto Rico: Fast & Easy - My ESA Therapist",
-    "description": "Follow our three-step process to get your ESA letter in Puerto Rico at $149 only. Fill in the form and get evaluated by licensed practitioners on the same day.",
+    "description": "Follow our three-step process to get your ESA letter in Puerto Rico at $99 only. Fill in the form and get evaluated by licensed practitioners on the same day.",
     "robots": "full",
     "ogType": "website"
   },

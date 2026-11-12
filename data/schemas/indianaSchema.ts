@@ -206,7 +206,7 @@ export const indianaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-indiana/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const indianaSchema = {
           "name": "What Is The Average Price Of An ESA Letter In Indiana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Indiana, the cost of an ESA letter depends on the evaluation process, with most trusted providers generally falling within the $100–$200 range. At My ESA Therapist, the fee is $149, covering both the professional evaluation and the ESA letter if you qualify.",
+            "text": "In Indiana, the cost of an ESA letter depends on the evaluation process, with most trusted providers generally falling within the $100–$200 range. At My ESA Therapist, the fee is $99, covering both the professional evaluation and the ESA letter if you qualify.",
           },
         },
         {

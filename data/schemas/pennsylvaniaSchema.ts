@@ -206,7 +206,7 @@ export const pennsylvaniaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-pennsylvania/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const pennsylvaniaSchema = {
           "name": "How Much Does An ESA Letter Cost In Pennsylvania?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Pennsylvania, the cost of an ESA letter can vary by provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $149, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In Pennsylvania, the cost of an ESA letter can vary by provider, but many services typically price their evaluations and documentation in the range of $120–$200. At My ESA Therapist, the fee is $99, covering both the professional evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {

@@ -206,7 +206,7 @@ export const oklahomaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-oklahoma/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const oklahomaSchema = {
           "name": "How Much Does An ESA Letter Typically Cost In Oklahoma?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Oklahoma, ESA letter pricing can vary by provider, but legitimate services generally involve a paid consultation with a licensed professional before approval. At My ESA Therapist, the fee is $149, which includes a licensed evaluation and the ESA letter if approved.",
+            "text": "In Oklahoma, ESA letter pricing can vary by provider, but legitimate services generally involve a paid consultation with a licensed professional before approval. At My ESA Therapist, the fee is $99, which includes a licensed evaluation and the ESA letter if approved.",
           },
         },
         {

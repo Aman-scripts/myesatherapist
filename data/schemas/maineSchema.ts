@@ -206,7 +206,7 @@ export const maineSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-maine/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const maineSchema = {
           "name": "What Is The Cost Of An ESA Letter In Maine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ESA letter costs in Maine vary by provider, but most reliable services generally charge around $100 to $200 for a proper licensed evaluation. At My ESA Therapist, the fee is $149, which includes the evaluation and issuance of the ESA letter upon approval.",
+            "text": "ESA letter costs in Maine vary by provider, but most reliable services generally charge around $100 to $200 for a proper licensed evaluation. At My ESA Therapist, the fee is $99, which includes the evaluation and issuance of the ESA letter upon approval.",
           },
         },
         {

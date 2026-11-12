@@ -206,7 +206,7 @@ export const utahSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-utah/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const utahSchema = {
           "name": "How is The Cost Of An ESA Letter Determined In Utah?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Utah, the price of an ESA letter varies based on the consultation process and the credentials of the professional handling the evaluation. At My ESA Therapist, the fee is $149, covering both the assessment and issuance of the ESA letter if you qualify.",
+            "text": "In Utah, the price of an ESA letter varies based on the consultation process and the credentials of the professional handling the evaluation. At My ESA Therapist, the fee is $99, covering both the assessment and issuance of the ESA letter if you qualify.",
           },
         },
         {

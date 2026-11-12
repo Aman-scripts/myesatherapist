@@ -200,7 +200,7 @@ export const delawareSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-delaware/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -313,7 +313,7 @@ export const delawareSchema = {
           "name": "What is the Cost of Getting an ESA Letter in Delaware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Delaware, ESA letter pricing depends on the provider and consultation process, but most reliable services generally fall between $100 to $200 for a licensed evaluation. At My ESA Therapist, the fee is $149, covering the evaluation and issuance of the ESA letter if you qualify.",
+            "text": "In Delaware, ESA letter pricing depends on the provider and consultation process, but most reliable services generally fall between $100 to $200 for a licensed evaluation. At My ESA Therapist, the fee is $99, covering the evaluation and issuance of the ESA letter if you qualify.",
           },
         },
         {

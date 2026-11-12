@@ -206,7 +206,7 @@ export const northCarolinaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-north-carolina/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const northCarolinaSchema = {
           "name": "What Does It Cost To Get An ESA Letter In North Carolina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In North Carolina, ESA letter pricing varies based on the provider and consultation process, with some services offering evaluations around the $100–$150 range, depending on coverage or insurance. At My ESA Therapist, the fee is $149, which includes the evaluation and ESA letter upon approval.",
+            "text": "In North Carolina, ESA letter pricing varies based on the provider and consultation process, with some services offering evaluations around the $100–$150 range, depending on coverage or insurance. At My ESA Therapist, the fee is $99, which includes the evaluation and ESA letter upon approval.",
           },
         },
         {

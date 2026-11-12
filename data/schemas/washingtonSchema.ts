@@ -206,7 +206,7 @@ export const washingtonSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-washington/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -333,7 +333,7 @@ export const washingtonSchema = {
           "name": "How Much Does An ESA Letter Cost In Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Washington, ESA letter pricing can differ by provider, with costs reflecting the credibility and depth of the licensed consultation. At My ESA Therapist, the fee is $149, covering the evaluation and ESA letter upon approval.",
+            "text": "In Washington, ESA letter pricing can differ by provider, with costs reflecting the credibility and depth of the licensed consultation. At My ESA Therapist, the fee is $99, covering the evaluation and ESA letter upon approval.",
           },
         },
         {

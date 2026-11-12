@@ -200,7 +200,7 @@ export const alaskaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-alaska/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -313,7 +313,7 @@ export const alaskaSchema = {
           "name": "How Much Does an ESA Letter Cost in Alaska?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At My ESA Therapist, the cost of an ESA letter in Alaska starts at $149, which includes a professional evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
+            "text": "At My ESA Therapist, the cost of an ESA letter in Alaska starts at $99, which includes a professional evaluation and ESA documentation when the clinician determines that a recommendation is appropriate.",
           },
         },
         {

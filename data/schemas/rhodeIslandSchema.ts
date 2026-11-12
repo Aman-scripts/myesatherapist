@@ -206,7 +206,7 @@ export const rhodeIslandSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-rhode-island/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -338,7 +338,7 @@ export const rhodeIslandSchema = {
           "name": "What is the Cost of an ESA Letter in Rhode Island?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Rhode Island, ESA letter costs depend on the provider and consultation process, with pricing reflecting the credibility and depth of the licensed evaluation. At My ESA Therapist, the fee is $149, including the assessment and ESA letter upon approval."
+            "text": "In Rhode Island, ESA letter costs depend on the provider and consultation process, with pricing reflecting the credibility and depth of the licensed evaluation. At My ESA Therapist, the fee is $99, including the assessment and ESA letter upon approval."
           }
         },
         {

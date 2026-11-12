@@ -200,7 +200,7 @@ export const californiaSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-california/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -305,7 +305,7 @@ export const californiaSchema = {
           "name": "What is the cost of an ESA letter in California?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If you pursue an ESA evaluation through our platform, the fee is $149. This covers the clinical evaluation, the legally required 30-day client-provider relationship, and ESA documentation if a recommendation is made. If an ESA is not determined to be clinically appropriate, no letter is issued, and 100% refund is provided. Approval for an ESA is not guaranteed.",
+            "text": "If you pursue an ESA evaluation through our platform, the fee is $99. This covers the clinical evaluation, the legally required 30-day client-provider relationship, and ESA documentation if a recommendation is made. If an ESA is not determined to be clinically appropriate, no letter is issued, and 100% refund is provided. Approval for an ESA is not guaranteed.",
           },
         },
         {

@@ -206,7 +206,7 @@ export const illinoisSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-illinois/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -325,7 +325,7 @@ export const illinoisSchema = {
           "name": "What Does An ESA Letter Typically Cost In Illinois?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ESA letter pricing in Illinois can differ based on the provider, but most reliable services usually charge between $100–$250 for a licensed mental health evaluation. At My ESA Therapist, the fee is $149, which includes the assessment and ESA letter upon approval.",
+            "text": "ESA letter pricing in Illinois can differ based on the provider, but most reliable services usually charge between $100–$250 for a licensed mental health evaluation. At My ESA Therapist, the fee is $99, which includes the assessment and ESA letter upon approval.",
           },
         },
         {

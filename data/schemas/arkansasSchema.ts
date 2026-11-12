@@ -200,7 +200,7 @@ export const arkansasSchema = {
     {
       "@type": "Offer",
       "@id": "https://myesatherapist.com/esa-letter-arkansas/#offer",
-      "price": "149",
+      "price": "99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "eligibleRegion": {
@@ -321,7 +321,7 @@ export const arkansasSchema = {
           "name": "How Much Does An ESA Letter Cost In Arkansas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An ESA letter in Arkansas can cost anywhere between $150 and $300, depending on the provider and evaluation process. My ESA Therapist charges $149, which includes a professional evaluation conducted by a state-accredited mental health expert and an ESA letter upon approval.",
+            "text": "An ESA letter in Arkansas can cost anywhere between $150 and $300, depending on the provider and evaluation process. My ESA Therapist charges $99, which includes a professional evaluation conducted by a state-accredited mental health expert and an ESA letter upon approval.",
           },
         },
         {
