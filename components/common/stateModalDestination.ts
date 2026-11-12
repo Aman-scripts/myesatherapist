@@ -1,92 +1,97 @@
 import { STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 
-export const SURVEY_STATE_SLUGS = new Set([
-  "maryland",
-  "virginia",
-  "florida",
-  "massachusetts",
-  "maine",
-  "minnesota",
-  "oklahoma",
-  "utah",
-  "connecticut",
-  "north-carolina",
-  "vermont",
-  "illinois",
-  "idaho",
-  "alabama",
-  "texas",
-  "washington-dc",
-  "new-jersey",
-  "michigan",
-  "mississippi",
-  "south-carolina",
-  "kentucky",
-  "nevada",
-  "arizona",
-  "new-mexico",
-  "colorado",
-  "indiana",
-  "rhode-island",
-  "montana",
-  "pennsylvania",
-]);
+// All 50 states + DC now go to the survey (survey.myesatherapist.com) for both
+// ESA and PSD, so the per-state allow-list below is no longer used.
+// export const SURVEY_STATE_SLUGS = new Set([
+//   "maryland",
+//   "virginia",
+//   "florida",
+//   "massachusetts",
+//   "maine",
+//   "minnesota",
+//   "oklahoma",
+//   "utah",
+//   "connecticut",
+//   "north-carolina",
+//   "vermont",
+//   "illinois",
+//   "idaho",
+//   "alabama",
+//   "texas",
+//   "washington-dc",
+//   "new-jersey",
+//   "michigan",
+//   "mississippi",
+//   "south-carolina",
+//   "kentucky",
+//   "nevada",
+//   "arizona",
+//   "new-mexico",
+//   "colorado",
+//   "indiana",
+//   "rhode-island",
+//   "montana",
+//   "pennsylvania",
+// ]);
 
 export const PSD_SURVEY_URL = "https://survey.myesatherapist.com/";
-export const PSD_SCHEDULE_URL =
-  "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule";
+// Previous PSD fallback for states outside the survey list (disabled).
+// export const PSD_SCHEDULE_URL =
+//   "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule";
 
-const STATE_TIMEZONES: Record<string, string> = {
-  AL: "CST", AK: "AKST", AZ: "MST", AR: "CST", CA: "PST",
-  CO: "MST", CT: "EST", DE: "EST", FL: "EST", GA: "EST",
-  HI: "HST", ID: "MST", IL: "CST", IN: "EST", IA: "CST",
-  KS: "CST", KY: "EST", LA: "CST", ME: "EST", MD: "EST",
-  MA: "EST", MI: "EST", MN: "CST", MS: "CST", MO: "CST",
-  MT: "MST", NE: "CST", NV: "PST", NH: "EST", NJ: "EST",
-  NM: "MST", NY: "EST", NC: "EST", ND: "CST", OH: "EST",
-  OK: "CST", OR: "PST", PA: "EST", RI: "EST", SC: "EST",
-  SD: "CST", TN: "CST", TX: "CST", UT: "MST", VT: "EST",
-  VA: "EST", WA: "PST", DC: "EST", WV: "EST", WI: "CST", WY: "MST",
-};
-
-function encodePreset(payload: object) {
-  return btoa(unescape(encodeURIComponent(JSON.stringify(payload))))
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-}
-
-export function heallyPortalUrl(fields: {
-  abbreviation: string;
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  phone?: string;
-}) {
-  const abbreviation = fields.abbreviation || "CA";
-  const payload = {
-    first_name: fields.firstName?.trim() ?? "",
-    last_name: fields.lastName?.trim() ?? "",
-    email: fields.email?.trim() ?? "",
-    phone: fields.phone?.trim() ?? "",
-    state: abbreviation,
-    state_of_evaluation: abbreviation,
-    timezone: STATE_TIMEZONES[abbreviation] || "PST",
-    extra_data: {
-      "contact[contact_type]": "Web Form",
-      "product[name]": "Eva",
-    },
-  };
-  const preset = encodeURIComponent(encodePreset(payload));
-  return `https://myesatherapist.getheally.com/patient_admin/prefill?redirect=sched&preset=${preset}`;
-}
+// Heally (getheally.com) portal handoff, disabled: ESA and PSD use the survey for all states.
+// const STATE_TIMEZONES: Record<string, string> = {
+//   AL: "CST", AK: "AKST", AZ: "MST", AR: "CST", CA: "PST",
+//   CO: "MST", CT: "EST", DE: "EST", FL: "EST", GA: "EST",
+//   HI: "HST", ID: "MST", IL: "CST", IN: "EST", IA: "CST",
+//   KS: "CST", KY: "EST", LA: "CST", ME: "EST", MD: "EST",
+//   MA: "EST", MI: "EST", MN: "CST", MS: "CST", MO: "CST",
+//   MT: "MST", NE: "CST", NV: "PST", NH: "EST", NJ: "EST",
+//   NM: "MST", NY: "EST", NC: "EST", ND: "CST", OH: "EST",
+//   OK: "CST", OR: "PST", PA: "EST", RI: "EST", SC: "EST",
+//   SD: "CST", TN: "CST", TX: "CST", UT: "MST", VT: "EST",
+//   VA: "EST", WA: "PST", DC: "EST", WV: "EST", WI: "CST", WY: "MST",
+// };
+//
+// function encodePreset(payload: object) {
+//   return btoa(unescape(encodeURIComponent(JSON.stringify(payload))))
+//     .replace(/\+/g, "-")
+//     .replace(/\//g, "_")
+//     .replace(/=+$/, "");
+// }
+//
+// export function heallyPortalUrl(fields: {
+//   abbreviation: string;
+//   firstName?: string;
+//   lastName?: string;
+//   email?: string;
+//   phone?: string;
+// }) {
+//   const abbreviation = fields.abbreviation || "CA";
+//   const payload = {
+//     first_name: fields.firstName?.trim() ?? "",
+//     last_name: fields.lastName?.trim() ?? "",
+//     email: fields.email?.trim() ?? "",
+//     phone: fields.phone?.trim() ?? "",
+//     state: abbreviation,
+//     state_of_evaluation: abbreviation,
+//     timezone: STATE_TIMEZONES[abbreviation] || "PST",
+//     extra_data: {
+//       "contact[contact_type]": "Web Form",
+//       "product[name]": "Eva",
+//     },
+//   };
+//   const preset = encodeURIComponent(encodePreset(payload));
+//   return `https://myesatherapist.getheally.com/patient_admin/prefill?redirect=sched&preset=${preset}`;
+// }
 
 export function psdStateDestination(slug: string) {
   const entry = STATE_INDEX_BY_SLUG[slug];
-  if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
-    return surveyRegisterUrl({ state: entry.name });
-  }
-  return PSD_SCHEDULE_URL;
+  // if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
+  //   return surveyRegisterUrl({ state: entry.name });
+  // }
+  // return PSD_SCHEDULE_URL;
+  return surveyRegisterUrl({ state: entry?.name });
 }
 
 export type SurveyRegisterFields = {

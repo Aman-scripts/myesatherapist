@@ -1,5 +1,6 @@
-import { STATE_INDEX } from "@/data/stateIndex";
-import { heallyPortalUrl, SURVEY_STATE_SLUGS, surveyRegisterUrl } from "@/components/common/stateModalDestination";
+// import { STATE_INDEX } from "@/data/stateIndex";
+// import { heallyPortalUrl, SURVEY_STATE_SLUGS, surveyRegisterUrl } from "@/components/common/stateModalDestination";
+import { surveyRegisterUrl } from "@/components/common/stateModalDestination";
 
 export type EvaluationLead = {
   firstName: string;
@@ -46,26 +47,27 @@ export function validateEvaluationLead(lead: EvaluationLead, termsAccepted: bool
   return errors;
 }
 
+// All 50 states + DC now go to the survey (survey.myesatherapist.com).
 export function evaluationDestination(lead: EvaluationLead) {
-  const entry = STATE_INDEX.find((state) => state.name === lead.stateName);
-  const abbreviation = entry?.abbreviation || "CA";
-  if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
-    return surveyRegisterUrl({
-      firstName: lead.firstName,
-      lastName: lead.lastName,
-      email: lead.email,
-      phone: lead.phone,
-      state: lead.stateName,
-    });
-  }
-
-  return heallyPortalUrl({
-    abbreviation,
+  // const entry = STATE_INDEX.find((state) => state.name === lead.stateName);
+  // const abbreviation = entry?.abbreviation || "CA";
+  // if (entry && SURVEY_STATE_SLUGS.has(entry.slug)) {
+  return surveyRegisterUrl({
     firstName: lead.firstName,
     lastName: lead.lastName,
     email: lead.email,
     phone: lead.phone,
+    state: lead.stateName,
   });
+  // }
+  //
+  // return heallyPortalUrl({
+  //   abbreviation,
+  //   firstName: lead.firstName,
+  //   lastName: lead.lastName,
+  //   email: lead.email,
+  //   phone: lead.phone,
+  // });
 }
 
 export function trackHeallySubmit(email: string, stateAbbreviation: string) {

@@ -12,7 +12,7 @@ import { STATE_INDEX } from "@/data/stateIndex";
 import {
   evaluationDestination,
   formatPhone,
-  trackHeallySubmit,
+  // trackHeallySubmit,
   validateEvaluationLead,
   type EvaluationErrors,
 } from "@/lib/evaluationHandoff";
@@ -287,10 +287,11 @@ export function StateHeroSection({ data }: { data: StateData }) {
     if (Object.keys(nextErrors).length > 0) return;
 
     const destination = evaluationDestination(lead);
-    if (destination.includes("getheally.com")) {
-      const abbreviation = STATE_INDEX.find((state) => state.name === formData.state)?.abbreviation || "CA";
-      trackHeallySubmit(formData.email.trim(), abbreviation);
-    }
+    // Heally handoff is disabled; every state now goes to the survey.
+    // if (destination.includes("getheally.com")) {
+    //   const abbreviation = STATE_INDEX.find((state) => state.name === formData.state)?.abbreviation || "CA";
+    //   trackHeallySubmit(formData.email.trim(), abbreviation);
+    // }
     window.location.assign(destination);
   };
 
