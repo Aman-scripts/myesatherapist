@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import { BreakpointImage } from "@/components/common/BreakpointImage";
-import { ChevronDown } from "lucide-react";
+// import { ChevronDown } from "lucide-react";
 import { StateData } from "@/data/statesData";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { HeroStatPills } from "@/components/common/HeroStatPills";
 import { CtaButton } from "@/components/common/CtaButton";
 import { SiteBreadcrumbs } from "@/components/seo/SiteBreadcrumbs";
-import { STATE_INDEX } from "@/data/stateIndex";
+// import { STATE_INDEX } from "@/data/stateIndex";
 import {
   evaluationDestination,
   formatPhone,
@@ -197,6 +197,7 @@ function EvaluationFormCard({
             {errors.phone && <p className="body-small mt-1 text-[#c00]">{errors.phone}</p>}
           </div>
 
+          {/* State dropdown is unnecessary on a state page; the page already is that state.
           <div>
             <label className={labelClass} htmlFor="hero-state">Your State</label>
             <div className="relative">
@@ -216,6 +217,7 @@ function EvaluationFormCard({
               <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-primary" />
             </div>
           </div>
+          */}
 
           <div className="space-y-2">
             <label className="flex items-start gap-2 text-left body-small text-body-text">
