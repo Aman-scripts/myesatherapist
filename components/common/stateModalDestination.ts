@@ -1,6 +1,6 @@
 import { STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 
-// All 50 states + DC now go to the survey (survey.myesatherapist.com) for both
+// All 50 states + DC now go to the survey (staging.survey.myesatherapist.com) for both
 // ESA and PSD, so the per-state allow-list below is no longer used.
 // export const SURVEY_STATE_SLUGS = new Set([
 //   "maryland",
@@ -34,7 +34,7 @@ import { STATE_INDEX_BY_SLUG } from "@/data/stateIndex";
 //   "pennsylvania",
 // ]);
 
-export const PSD_SURVEY_URL = "https://survey.myesatherapist.com/";
+export const PSD_SURVEY_URL = "https://staging.survey.myesatherapist.com/";
 // Previous PSD fallback for states outside the survey list (disabled).
 // export const PSD_SCHEDULE_URL =
 //   "https://myesatherapist.videovisitmd.com/f/vshop-signIN?straitTo=schedule";

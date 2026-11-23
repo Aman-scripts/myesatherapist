@@ -47,7 +47,7 @@ export function validateEvaluationLead(lead: EvaluationLead, termsAccepted: bool
   return errors;
 }
 
-// All 50 states + DC now go to the survey (survey.myesatherapist.com).
+// All 50 states + DC now go to the survey (staging.survey.myesatherapist.com).
 export function evaluationDestination(lead: EvaluationLead) {
   // const entry = STATE_INDEX.find((state) => state.name === lead.stateName);
   // const abbreviation = entry?.abbreviation || "CA";
