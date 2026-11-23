@@ -14,8 +14,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "Read the Privacy Policy of My ESA Therapist to learn how we collect, use, and protect your personal and health information with secure data practices.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

@@ -14,8 +14,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

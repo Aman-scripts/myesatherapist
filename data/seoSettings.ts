@@ -633,8 +633,8 @@ export const SEO_SETTINGS: Record<string, SheetSeo> = {
 
 export function sheetRobots(kind: SheetRobots): Metadata["robots"] {
   return {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
     ...(kind === "full"
       ? { "max-snippet": -1 as const, "max-video-preview": -1 as const }

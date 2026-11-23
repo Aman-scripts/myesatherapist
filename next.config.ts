@@ -3,6 +3,14 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
   onDemandEntries: {
     maxInactiveAge: 10 * 60 * 1000,
     pagesBufferLength: 60,

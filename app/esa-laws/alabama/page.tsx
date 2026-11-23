@@ -31,8 +31,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "Learn Alabama ESA laws, FHA housing protections, ESA letter requirements, tenant rights, landlord rules, fees, and assistance animal regulations.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

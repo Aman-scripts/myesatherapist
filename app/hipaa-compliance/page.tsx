@@ -14,8 +14,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

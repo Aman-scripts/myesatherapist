@@ -14,8 +14,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

@@ -63,8 +63,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       "max-snippet": -1,
       "max-image-preview": "large",
       "max-video-preview": -1,

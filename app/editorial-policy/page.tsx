@@ -14,8 +14,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

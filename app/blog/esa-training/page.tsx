@@ -29,8 +29,8 @@ export const metadata: Metadata = applySheetSeo({
     canonical: "https://myesatherapist.com/blog/esa-training/",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   openGraph: {

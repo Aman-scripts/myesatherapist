@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "The page you requested is not on My ESA Therapist. Visit the homepage or browse ESA letter resources.",
   robots: {
     index: false,
-    follow: true,
+    follow: false,
   },
 };
 

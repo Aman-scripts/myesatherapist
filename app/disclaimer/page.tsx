@@ -14,8 +14,8 @@ export const metadata: Metadata = applySheetSeo({
   description:
     "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   alternates: {

@@ -18,8 +18,8 @@ export const metadata: Metadata = applySheetSeo({
     canonical: "https://myesatherapist.com/frequently-asked-questions/",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   openGraph: {

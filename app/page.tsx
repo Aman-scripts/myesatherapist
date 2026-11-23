@@ -42,8 +42,8 @@ export const metadata: Metadata = applySheetSeo({
     canonical: "https://myesatherapist.com/",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     "max-image-preview": "large",
   },
   ...pageSocial({

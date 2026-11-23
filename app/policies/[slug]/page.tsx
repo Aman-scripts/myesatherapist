@@ -51,8 +51,8 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description:
         "Review the My ESA Therapist disclaimer covering website information, educational content, professional services, and important limitations of information provided online.",
       robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-image-preview": "large",
       },
       alternates: {
@@ -67,8 +67,8 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description:
         "My ESA Therapist follows HIPAA-aligned standards to protect your data during ESA evaluations conducted by licensed mental health professionals.",
       robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-image-preview": "large",
       },
       alternates: {
@@ -83,8 +83,8 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description:
         "Review the refund policy of My ESA Therapist. Learn about eligibility, conditions, and how refunds are handled for ESA letter evaluations and services.",
       robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-image-preview": "large",
       },
       alternates: {
@@ -99,8 +99,8 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description:
         "Review My ESA Therapist’s telehealth consent information, including virtual care, communication, privacy, and important considerations before receiving services online.",
       robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-image-preview": "large",
       },
       alternates: {
@@ -115,8 +115,8 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description:
         "Learn how My ESA Therapist creates, reviews, updates, and maintains accurate, trustworthy, and helpful educational content about emotional support animals and mental health.",
       robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-image-preview": "large",
       },
       alternates: {
@@ -131,8 +131,8 @@ export async function generateMetadata({ params }: PolicyPageProps): Promise<Met
       description:
         "Learn about My ESA Therapist’s commitment to digital accessibility and efforts to provide an accessible, inclusive online experience for all visitors.",
       robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-image-preview": "large",
       },
       alternates: {
